@@ -1,3 +1,10 @@
+#Visual Studio files
+/.vs/
+
+#CMake files and output
+/CMakeFiles/
+/out/
+
 # Prerequisites
 *.d
 
