@@ -1,10 +1,142 @@
 {
     "books": [
         {
-            "code": "5605",
-            "name": "Mentalism Companion -> 5814",
-            "abbr": "MenCo*",
-            "isbn": "1-55806-380-3"
+            "code": "0000",
+            "name": "Custom\/Unknown",
+            "abbr": "Cust",
+            "isbn": "0-00000-000-0"
+        },
+        {
+            "code": "1130",
+            "name": "Sea Law",
+            "abbr": "SeaL*",
+            "isbn": "1-55806-202-5"
+        },
+        {
+            "code": "1305",
+            "name": "Arabian Nights",
+            "abbr": "ArN*",
+            "isbn": "1-55806-209-2"
+        },
+        {
+            "code": "1410",
+            "name": "Creatures & Treasures 2",
+            "abbr": "C&T2*",
+            "isbn": "1-55806-079-0"
+        },
+        {
+            "code": "1430",
+            "name": "Creatures & Treasures 3",
+            "abbr": "C&T3*",
+            "isbn": "1-55806-200-9"
+        },
+        {
+            "code": "1500",
+            "name": "Rolemaster Companion 1",
+            "abbr": "RMC1*",
+            "isbn": "0-915795-12-4"
+        },
+        {
+            "code": "1530",
+            "name": "Alchemy Companion",
+            "abbr": "AlCo*",
+            "isbn": "1-55806-161-4"
+        },
+        {
+            "code": "1540",
+            "name": "Oriental Companion",
+            "abbr": "OrCo*",
+            "isbn": "1-55806-175-4"
+        },
+        {
+            "code": "1600",
+            "name": "Rolemaster Companion 2",
+            "abbr": "RMC2*",
+            "isbn": "0-915795-97-3"
+        },
+        {
+            "code": "1700",
+            "name": "Rolemaster Companion 3",
+            "abbr": "RMC3*",
+            "isbn": "1-55806-050-2"
+        },
+        {
+            "code": "1800",
+            "name": "Rolemaster Companion 4",
+            "abbr": "RMC4*",
+            "isbn": "1-55806-127-4"
+        },
+        {
+            "code": "1900",
+            "name": "Rolemaster Companion 5",
+            "abbr": "RMC5*",
+            "isbn": "1-55806-145-2"
+        },
+        {
+            "code": "1901",
+            "name": "Rolemaster Companion 6",
+            "abbr": "RMC6*",
+            "isbn": "1-55806-164-9"
+        },
+        {
+            "code": "1902",
+            "name": "Rolemaster Companion 7",
+            "abbr": "RMC7*",
+            "isbn": "1-55806-185-1"
+        },
+        {
+            "code": "5500",
+            "name": "Rolemaster Standard Rules -> 5800",
+            "abbr": "RMSR*",
+            "isbn": "1-55806-233-5"
+        },
+        {
+            "code": "5504",
+            "name": "Rolemaster Character Records",
+            "abbr": "RCR*",
+            "isbn": "1-55806-247-5"
+        },
+        {
+            "code": "5505",
+            "name": "Rolemaster Annual 1996",
+            "abbr": "RA96*",
+            "isbn": "1-55806-299-8"
+        },
+        {
+            "code": "5506",
+            "name": "Rolemaster Annual 1997",
+            "abbr": "RA97*",
+            "isbn": "1-55806-323-4"
+        },
+        {
+            "code": "5520",
+            "name": "Arms Law -> 5810",
+            "abbr": "AL*",
+            "isbn": "1-55806-214-9"
+        },
+        {
+            "code": "5521",
+            "name": "Gamemaster Law -> 5807",
+            "abbr": "GL*",
+            "isbn": "1-55806-217-3"
+        },
+        {
+            "code": "5522",
+            "name": "Spell Law -> 5803, 5804, 5805",
+            "abbr": "SL*",
+            "isbn": "1-55806-226-2"
+        },
+        {
+            "code": "5523",
+            "name": "Talent Law -> 5806",
+            "abbr": "TL*",
+            "isbn": "1-55806-252-1"
+        },
+        {
+            "code": "5540",
+            "name": "Creatures & Monsters -> 5802",
+            "abbr": "C&M*",
+            "isbn": "1-55806-221-1"
         },
         {
             "code": "5541",
@@ -13,10 +145,100 @@
             "isbn": "1-55806-276-9"
         },
         {
-            "code": "5520",
-            "name": "Arms Law -> 5810",
-            "abbr": "AL*",
-            "isbn": "1-55806-214-9"
+            "code": "5542",
+            "name": "Castles & Ruins",
+            "abbr": "C&R",
+            "isbn": "1-55806-277-7"
+        },
+        {
+            "code": "5600",
+            "name": "Arcane Companion",
+            "abbr": "ArcCo",
+            "isbn": "1-55806-239-4"
+        },
+        {
+            "code": "5601",
+            "name": "Treasure Companion -> 5811",
+            "abbr": "TrCo*",
+            "isbn": "1-55806-254-8"
+        },
+        {
+            "code": "5602",
+            "name": "Martial Arts Companion",
+            "abbr": "MarCo",
+            "isbn": "1-55806-313-7"
+        },
+        {
+            "code": "5603",
+            "name": "Essence Companion",
+            "abbr": "EssCo",
+            "isbn": "1-55806-318-8"
+        },
+        {
+            "code": "5604",
+            "name": "Channeling Companion -> 5809",
+            "abbr": "ChaCo*",
+            "isbn": "1-55806-322-6"
+        },
+        {
+            "code": "5605",
+            "name": "Mentalism Companion -> 5814",
+            "abbr": "MenCo*",
+            "isbn": "1-55806-380-3"
+        },
+        {
+            "code": "5703",
+            "name": "... and a 10-Foot Pole",
+            "abbr": "aaTFP",
+            "isbn": "1-55806-370-6"
+        },
+        {
+            "code": "5800",
+            "name": "Fantasy Role Playing",
+            "abbr": "FRP",
+            "isbn": "1-55806-550-4"
+        },
+        {
+            "code": "5802",
+            "name": "Creatures & Monsters",
+            "abbr": "C&M",
+            "isbn": "1-55806-552-0"
+        },
+        {
+            "code": "5803",
+            "name": "Spell Law of Channeling",
+            "abbr": "SLCha",
+            "isbn": "1-55806-553-9"
+        },
+        {
+            "code": "5804",
+            "name": "Spell Law of Essence",
+            "abbr": "SLEss",
+            "isbn": "1-55806-554-7"
+        },
+        {
+            "code": "5805",
+            "name": "Spell Law of Mentalism",
+            "abbr": "SLMen",
+            "isbn": "1-55806-555-5"
+        },
+        {
+            "code": "5806",
+            "name": "Character Law",
+            "abbr": "ChL",
+            "isbn": "1-55806-556-3"
+        },
+        {
+            "code": "5807",
+            "name": "Gamemaster Law",
+            "abbr": "GL",
+            "isbn": "1-55806-557-1"
+        },
+        {
+            "code": "5808",
+            "name": "School of Hard Knocks",
+            "abbr": "ScHK",
+            "isbn": "1-55806-560-1"
         },
         {
             "code": "5809",
@@ -31,40 +253,10 @@
             "isbn": "1-55806-598-9"
         },
         {
-            "code": "5600",
-            "name": "Arcane Companion",
-            "abbr": "ArcCo",
-            "isbn": "1-55806-239-4"
-        },
-        {
-            "code": "1305",
-            "name": "Arabian Nights",
-            "abbr": "ArN*",
-            "isbn": "1-55806-209-2"
-        },
-        {
-            "code": "1530",
-            "name": "Alchemy Companion",
-            "abbr": "AlCo*",
-            "isbn": "1-55806-161-4"
-        },
-        {
-            "code": "5901",
-            "name": "Gamesmaster Screen",
-            "abbr": "GMScr",
-            "isbn": "1-55806-615-2"
-        },
-        {
-            "code": "1430",
-            "name": "Creatures & Treasures 3",
-            "abbr": "C&T3*",
-            "isbn": "1-55806-200-9"
-        },
-        {
-            "code": "1410",
-            "name": "Creatures & Treasures 2",
-            "abbr": "C&T2*",
-            "isbn": "1-55806-079-0"
+            "code": "5811",
+            "name": "Treasure Companion",
+            "abbr": "TrCo",
+            "isbn": "1-55806-592-x"
         },
         {
             "code": "5812",
@@ -73,28 +265,10 @@
             "isbn": "1-55806-573-3"
         },
         {
-            "code": "RMQ2",
-            "name": "Rolemaster Quarterly 2",
-            "abbr": "RQ2*",
+            "code": "5812A",
+            "name": "Fire and Ice The Elemental Companion - Addendum",
+            "abbr": "F&IA",
             "isbn": "n\/a"
-        },
-        {
-            "code": "RMQ1",
-            "name": "Rolemaster Quarterly 1",
-            "abbr": "RQ1*",
-            "isbn": "n\/a"
-        },
-        {
-            "code": "5540",
-            "name": "Creatures & Monsters -> 5802",
-            "abbr": "C&M*",
-            "isbn": "1-55806-221-1"
-        },
-        {
-            "code": "5811",
-            "name": "Treasure Companion",
-            "abbr": "TrCo",
-            "isbn": "1-55806-592-x"
         },
         {
             "code": "5813",
@@ -103,142 +277,10 @@
             "isbn": "1-55806-595-4"
         },
         {
-            "code": "RMQ3",
-            "name": "Rolemaster Quarterly 3",
-            "abbr": "RQ3*",
-            "isbn": "n\/a"
-        },
-        {
-            "code": "1900",
-            "name": "Rolemaster Companion 5",
-            "abbr": "RMC5*",
-            "isbn": "1-55806-145-2"
-        },
-        {
-            "code": "1800",
-            "name": "Rolemaster Companion 4",
-            "abbr": "RMC4*",
-            "isbn": "1-55806-127-4"
-        },
-        {
-            "code": "1902",
-            "name": "Rolemaster Companion 7",
-            "abbr": "RMC7*",
-            "isbn": "1-55806-185-1"
-        },
-        {
-            "code": "1901",
-            "name": "Rolemaster Companion 6",
-            "abbr": "RMC6*",
-            "isbn": "1-55806-164-9"
-        },
-        {
-            "code": "5500",
-            "name": "Rolemaster Standard Rules -> 5800",
-            "abbr": "RMSR*",
-            "isbn": "1-55806-233-5"
-        },
-        {
-            "code": "5807",
-            "name": "Gamemaster Law",
-            "abbr": "GL",
-            "isbn": "1-55806-557-1"
-        },
-        {
-            "code": "5804",
-            "name": "Spell Law of Essence",
-            "abbr": "SLEss",
-            "isbn": "1-55806-554-7"
-        },
-        {
-            "code": "1500",
-            "name": "Rolemaster Companion 1",
-            "abbr": "RMC1*",
-            "isbn": "0-915795-12-4"
-        },
-        {
-            "code": "5806",
-            "name": "Character Law",
-            "abbr": "ChL",
-            "isbn": "1-55806-556-3"
-        },
-        {
-            "code": "1700",
-            "name": "Rolemaster Companion 3",
-            "abbr": "RMC3*",
-            "isbn": "1-55806-050-2"
-        },
-        {
-            "code": "1600",
-            "name": "Rolemaster Companion 2",
-            "abbr": "RMC2*",
-            "isbn": "0-915795-97-3"
-        },
-        {
-            "code": "5523",
-            "name": "Talent Law -> 5806",
-            "abbr": "TL*",
-            "isbn": "1-55806-252-1"
-        },
-        {
-            "code": "5812A",
-            "name": "Fire and Ice The Elemental Companion - Addendum",
-            "abbr": "F&IA",
-            "isbn": "n\/a"
-        },
-        {
-            "code": "5808",
-            "name": "School of Hard Knocks",
-            "abbr": "ScHK",
-            "isbn": "1-55806-560-1"
-        },
-        {
-            "code": "5522",
-            "name": "Spell Law -> 5803, 5804, 5805",
-            "abbr": "SL*",
-            "isbn": "1-55806-226-2"
-        },
-        {
-            "code": "5542",
-            "name": "Castles & Ruins",
-            "abbr": "C&R",
-            "isbn": "1-55806-277-7"
-        },
-        {
-            "code": "5521",
-            "name": "Gamemaster Law -> 5807",
-            "abbr": "GL*",
-            "isbn": "1-55806-217-3"
-        },
-        {
-            "code": "5800",
-            "name": "Fantasy Role Playing",
-            "abbr": "FRP",
-            "isbn": "1-55806-550-4"
-        },
-        {
-            "code": "5506",
-            "name": "Rolemaster Annual 1997",
-            "abbr": "RA97*",
-            "isbn": "1-55806-323-4"
-        },
-        {
-            "code": "5604",
-            "name": "Channeling Companion -> 5809",
-            "abbr": "ChaCo*",
-            "isbn": "1-55806-322-6"
-        },
-        {
             "code": "5814",
             "name": "Mentalism Companion",
             "abbr": "MenCo",
             "isbn": "1-55806-596-2"
-        },
-        {
-            "code": "5505",
-            "name": "Rolemaster Annual 1996",
-            "abbr": "RA96*",
-            "isbn": "1-55806-299-8"
         },
         {
             "code": "5815",
@@ -247,76 +289,34 @@
             "isbn": "1-55806-601-2"
         },
         {
-            "code": "5602",
-            "name": "Martial Arts Companion",
-            "abbr": "MarCo",
-            "isbn": "1-55806-313-7"
-        },
-        {
-            "code": "1540",
-            "name": "Oriental Companion",
-            "abbr": "OrCo*",
-            "isbn": "1-55806-175-4"
-        },
-        {
-            "code": "1130",
-            "name": "Sea Law",
-            "abbr": "SeaL*",
-            "isbn": "1-55806-202-5"
-        },
-        {
-            "code": "5803",
-            "name": "Spell Law of Channeling",
-            "abbr": "SLCha",
-            "isbn": "1-55806-553-9"
-        },
-        {
-            "code": "5504",
-            "name": "Rolemaster Character Records",
-            "abbr": "RCR*",
-            "isbn": "1-55806-247-5"
-        },
-        {
-            "code": "5603",
-            "name": "Essence Companion",
-            "abbr": "EssCo",
-            "isbn": "1-55806-318-8"
-        },
-        {
-            "code": "5703",
-            "name": "... and a 10-Foot Pole",
-            "abbr": "aaTFP",
-            "isbn": "1-55806-370-6"
-        },
-        {
-            "code": "5805",
-            "name": "Spell Law of Mentalism",
-            "abbr": "SLMen",
-            "isbn": "1-55806-555-5"
-        },
-        {
             "code": "5816",
             "name": "Races and Cultures",
             "abbr": "R&Cu",
             "isbn": "1-55806-606-3"
         },
         {
-            "code": "5802",
-            "name": "Creatures & Monsters",
-            "abbr": "C&M",
-            "isbn": "1-55806-552-0"
+            "code": "5901",
+            "name": "Gamesmaster Screen",
+            "abbr": "GMScr",
+            "isbn": "1-55806-615-2"
         },
         {
-            "code": "5601",
-            "name": "Treasure Companion -> 5811",
-            "abbr": "TrCo*",
-            "isbn": "1-55806-254-8"
+            "code": "RMQ1",
+            "name": "Rolemaster Quarterly 1",
+            "abbr": "RQ1*",
+            "isbn": "n\/a"
         },
         {
-            "code": "0000",
-            "name": "Custom\/Unknown",
-            "abbr": "Cust",
-            "isbn": "0-00000-000-0"
+            "code": "RMQ2",
+            "name": "Rolemaster Quarterly 2",
+            "abbr": "RQ2*",
+            "isbn": "n\/a"
+        },
+        {
+            "code": "RMQ3",
+            "name": "Rolemaster Quarterly 3",
+            "abbr": "RQ3*",
+            "isbn": "n\/a"
         }
     ]
 }

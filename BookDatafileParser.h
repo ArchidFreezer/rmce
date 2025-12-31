@@ -17,5 +17,5 @@ public:
 
 private:
 //	std::map<std::string_view, Book> m_books{};
-	std::vector<Book> m_books{};
+	std::map<std::string, Book> m_books{};
 };
