@@ -23,8 +23,11 @@ void BookDatafileParser::parse() {
 	
 	const pt::ptree& bookTree = m_ptree.get_child(rootNode);
 	for (const auto& v : bookTree) {
-		Book book(v.second.get<std::string>("code"), v.second.get<std::string>("name"), v.second.get<std::string>("abbr"), v.second.get<std::string>("isbn"));
-		m_books.insert({ static_cast<std::string>(book.getCode()), book });
+		std::string name = v.second.get<std::string>("name");
+		std::string id = v.second.get("id", getID(TYPE, name));
+
+		Book book(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbr"), v.second.get<std::string>("isbn"));
+		m_books.insert({ id, book });
 		std::cout << "\tBook name: " << book.getName() << std::endl;
 	}
 	std::cout << " done" << std::endl;
@@ -62,6 +65,7 @@ void BookDatafileParser::saveJSON(const std::string& filename)
 	for (auto b : m_books) {
 		// Individual book
 		pt::ptree book;
+		book.put("id", b.second.getID());
 		book.put("code", b.second.getCode());
 		book.put("name", b.second.getName());
 		book.put("abbr", b.second.getAbbreviation());

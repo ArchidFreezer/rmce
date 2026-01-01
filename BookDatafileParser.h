@@ -5,6 +5,8 @@
 #include "Book.h"
 #include "DatafileParser.h"
 
+static const std::string TYPE{ "Book" };
+
 class BookDatafileParser : public DatafileParser
 {
 public:
@@ -16,6 +18,5 @@ public:
 	void saveJSON(const std::string& filename);
 
 private:
-//	std::map<std::string_view, Book> m_books{};
 	std::map<std::string, Book> m_books{};
 };

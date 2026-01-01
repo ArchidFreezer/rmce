@@ -27,6 +27,13 @@ public:
 	virtual void save(const std::string& filename, FileFormat const filetype) = 0;
 	virtual void save(const std::string& filename) = 0;
 
+	/*
+	* Creates a string that is a combination of the type and val parameters
+	* The returned string will only contain ucase letters, numbers and the underscore character
+	* Any character that is not an alphanum will be converted to an underscore with consecutive underscores being discarded
+	*/
+	static const std::string getID(std::string_view type, std::string_view val);
+
 protected:
 	std::string m_datafile{};
 	FileFormat m_filetype{ FileFormat::json };
