@@ -2,7 +2,7 @@
 
 #include <map>
 #include <vector>
-#include "Book.h"
+#include "BookData.h"
 #include "DatafileParser.h"
 
 static const std::string TYPE{ "Book" };
@@ -18,5 +18,5 @@ public:
 	void saveJSON(const std::string& filename);
 
 private:
-	std::map<std::string, Book> m_books{};
+	std::map<std::string, BookData> m_books{};
 };

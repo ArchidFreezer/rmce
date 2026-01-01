@@ -26,7 +26,7 @@ void BookDatafileParser::parse() {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", getID(TYPE, name));
 
-		Book book(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbr"), v.second.get<std::string>("isbn"));
+		BookData book(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbr"), v.second.get<std::string>("isbn"));
 		m_books.insert({ id, book });
 		std::cout << "\tBook name: " << book.getName() << std::endl;
 	}

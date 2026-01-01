@@ -2,10 +2,10 @@
 
 #include <string>
 
-class Book
+class BookData
 {
 public:
-	Book(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn);
+	BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn);
 
 	const std::string_view getID() { return m_id; }
 	const std::string_view getCode() { return m_code; }
@@ -21,7 +21,7 @@ private:
 	std::string m_isbn{};
 };
 
-inline Book::Book(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn) :
+inline BookData::BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn) :
 	m_id{ id },
 	m_code{ code },
 	m_name{ name },

@@ -16,7 +16,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
 
 # Add source to this project's executable.
-add_executable (dataload "dataload.cpp"  "DatafileParser.h" "ArmourType.h" "Book.h"  "DatafileParser.cpp" "BookDatafileParser.h" "BookDatafileParser.cpp" "CreatureSize.h" "StringUtils.h" "CriticalTableType.h" "CriticalType.h")
+add_executable (dataload "dataload.cpp"  "DatafileParser.h" "ArmourType.h" "BookData.h"  "DatafileParser.cpp" "BookDatafileParser.h" "BookDatafileParser.cpp" "CreatureSize.h" "StringUtils.h" "CriticalTableType.h" "CriticalType.h")
 
 target_include_directories(dataload PUBLIC
                            "${PROJECT_BINARY_DIR}"
