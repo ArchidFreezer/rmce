@@ -1,21 +1,21 @@
 #include "DatafileParser.h"
 
 DatafileParser::DatafileParser(std::string_view filename, DatafileParser::FileFormat const filetype) :
-	m_datafile{ filename },
-	m_filetype{ filetype }
+	datafile_{ filename },
+	filetype_{ filetype }
 {}
 
 DatafileParser::DatafileParser(std::string_view filename) :	DatafileParser(filename, DatafileParser::xml) {}
 
 void DatafileParser::read() {
-	if (m_datafile.empty()) return;
+	if (datafile_.empty()) return;
 
-	switch (m_filetype) {
+	switch (filetype_) {
 	case DatafileParser::xml:
-		pt::read_xml(m_datafile, m_ptree, pt::xml_parser::trim_whitespace);
+		pt::read_xml(datafile_, ptree_, pt::xml_parser::trim_whitespace);
 		break;
 	case DatafileParser::json:
-		pt::read_json(m_datafile, m_ptree);
+		pt::read_json(datafile_, ptree_);
 		break;
 	}
 

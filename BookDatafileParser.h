@@ -18,5 +18,5 @@ public:
 	void saveJSON(const std::string& filename);
 
 private:
-	std::map<std::string, BookData> m_books{};
+	std::map<std::string, BookData> books_{};
 };

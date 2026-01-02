@@ -18,9 +18,10 @@ public:
 
 	DatafileParser(std::string_view filename, FileFormat const filetype);
 	DatafileParser(std::string_view filename);
+	virtual ~DatafileParser() = default;
 		
-	void setDataType(FileFormat const filetype) { m_filetype = filetype; }
-	FileFormat getDataType() const { return m_filetype; }
+	void setDataType(FileFormat const filetype) { filetype_ = filetype; }
+	FileFormat getDataType() const { return filetype_; }
 
 	void read();
 	virtual void parse() = 0;
@@ -35,9 +36,9 @@ public:
 	static const std::string getID(std::string_view type, std::string_view val);
 
 protected:
-	std::string m_datafile{};
-	FileFormat m_filetype{ FileFormat::json };
-	pt::ptree m_ptree{};
+	std::string datafile_{};
+	FileFormat filetype_{ FileFormat::json };
+	pt::ptree ptree_{};
 };
 
 

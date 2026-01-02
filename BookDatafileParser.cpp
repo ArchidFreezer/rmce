@@ -10,7 +10,7 @@ void BookDatafileParser::parse() {
 	std::cout << "Loading Book data ...";
 
 	std::string rootNode{};
-	switch (m_filetype) {
+	switch (filetype_) {
 	case DatafileParser::xml:
 	{
 		rootNode = "BookData.books";
@@ -21,13 +21,13 @@ void BookDatafileParser::parse() {
 		break;
 	}
 	
-	const pt::ptree& bookTree = m_ptree.get_child(rootNode);
+	const pt::ptree& bookTree = ptree_.get_child(rootNode);
 	for (const auto& v : bookTree) {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", getID(TYPE, name));
 
 		BookData book(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbr"), v.second.get<std::string>("isbn"));
-		m_books.insert({ id, book });
+		books_.insert({ id, book });
 		std::cout << "\tBook name: " << book.getName() << std::endl;
 	}
 	std::cout << " done" << std::endl;
@@ -39,7 +39,7 @@ void BookDatafileParser::save(const std::string& filename, FileFormat const file
 	case DatafileParser::xml:
 	{
 		pt::xml_writer_settings<std::string> settings('\t', 1);
-		pt::write_xml(filename, m_ptree, std::locale(), settings);
+		pt::write_xml(filename, ptree_, std::locale(), settings);
 		break;
 	}
 	case DatafileParser::json:
@@ -51,7 +51,7 @@ void BookDatafileParser::save(const std::string& filename, FileFormat const file
 
 void BookDatafileParser::save(const std::string &filename)
 {
-	save(filename, m_filetype);
+	save(filename, filetype_);
 }
 
 void BookDatafileParser::saveJSON(const std::string& filename)
@@ -62,7 +62,7 @@ void BookDatafileParser::saveJSON(const std::string& filename)
 	// Array of books
 	pt::ptree pbooks;
 
-	for (auto b : m_books) {
+	for (auto b : books_) {
 		// Individual book
 		pt::ptree book;
 		book.put("id", b.second.getID());
