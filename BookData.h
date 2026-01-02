@@ -2,16 +2,18 @@
 
 #include <string>
 
-class BookData
+#include "GameRuleData.h"
+
+class BookData : GameRuleData
 {
 public:
 	BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn);
 
-	const std::string_view getID() { return id_; }
-	const std::string_view getCode() { return code_; }
-	const std::string_view getName() { return name_; }
-	const std::string_view getAbbreviation() { return abbr_; }
-	const std::string_view getISBN() { return isbn_; }
+	const std::string& getID() { return id_; }
+	const std::string& getCode() { return code_; }
+	const std::string& getName() { return name_; }
+	const std::string& getAbbreviation() { return abbr_; }
+	const std::string& getISBN() { return isbn_; }
 
 private:
 	std::string id_{};
@@ -22,6 +24,7 @@ private:
 };
 
 inline BookData::BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn) :
+	GameRuleData(GameRuleDataType::kBook),
 	id_{ id },
 	code_{ code },
 	name_{ name },
