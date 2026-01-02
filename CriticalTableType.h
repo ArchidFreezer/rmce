@@ -7,11 +7,11 @@
 #include "StringUtils.h"
 
 enum class CriticalTableType {
-	normal,
-	large_creature_physical,
-	super_large_creature_physical,
-	large_creature_spell,
-	super_large_creature_spell
+	kNormal,
+	kLargeCreaturePhysical,
+	kSuperLargeCreaturePhysical,
+	kLargeCreatureSpell,
+	kSuperLargeCreatureSpell
 };
 
 /**
@@ -22,11 +22,11 @@ constexpr std::string_view getCriticalTableType(CriticalTableType type) {
 
 	switch (type)
 	{
-	case normal: return "Normal";
-	case large_creature_physical: return "Large Creature Physical";
-	case super_large_creature_physical: return "Super Large Creature Physical";
-	case large_creature_spell: return "Large Creature Spell";
-	case super_large_creature_spell: return "Super Large Creature Spell";
+	case kNormal: return "Normal";
+	case kLargeCreaturePhysical: return "Large Creature Physical";
+	case kSuperLargeCreaturePhysical: return "Super Large Creature Physical";
+	case kLargeCreatureSpell: return "Large Creature Spell";
+	case kSuperLargeCreatureSpell: return "Super Large Creature Spell";
 	}
 }
 
@@ -45,19 +45,19 @@ constexpr std::optional<CriticalTableType> getCriticalTableTypeFromString(std::s
 	using enum CriticalTableType;
 
 	std::string val = toASCIILowerCase(sv);
-	if (val == "normal") return normal;
-	if (val == "largecreaturephysical") return large_creature_physical;
-	if (val == "large_creature_physical") return large_creature_physical;
-	if (val == "large creature physical") return large_creature_physical;
-	if (val == "superlargecreaturephysical") return super_large_creature_physical;
-	if (val == "super_large_creature_physical") return super_large_creature_physical;
-	if (val == "super large creature physical") return super_large_creature_physical;
-	if (val == "largecreaturespell") return large_creature_spell;
-	if (val == "large_creature_spell") return large_creature_spell;
-	if (val == "large creature spell") return large_creature_spell;
-	if (val == "superlargecreaturespell") return super_large_creature_spell;
-	if (val == "super_large_creature_spell") return super_large_creature_spell;
-	if (val == "super large creature spell") return super_large_creature_spell;
+	if (val == "normal") return kNormal;
+	if (val == "largecreaturephysical") return kLargeCreaturePhysical;
+	if (val == "large_creature_physical") return kLargeCreaturePhysical;
+	if (val == "large creature physical") return kLargeCreaturePhysical;
+	if (val == "superlargecreaturephysical") return kSuperLargeCreaturePhysical;
+	if (val == "super_large_creature_physical") return kSuperLargeCreaturePhysical;
+	if (val == "super large creature physical") return kSuperLargeCreaturePhysical;
+	if (val == "largecreaturespell") return kLargeCreatureSpell;
+	if (val == "large_creature_spell") return kLargeCreatureSpell;
+	if (val == "large creature spell") return kLargeCreatureSpell;
+	if (val == "superlargecreaturespell") return kSuperLargeCreatureSpell;
+	if (val == "super_large_creature_spell") return kSuperLargeCreatureSpell;
+	if (val == "super large creature spell") return kSuperLargeCreatureSpell;
 
 	return {};
 }

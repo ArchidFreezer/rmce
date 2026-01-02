@@ -11,12 +11,12 @@ void BookDatafileParser::parse() {
 
 	std::string rootNode{};
 	switch (filetype_) {
-	case DatafileParser::xml:
+	case DatafileParser::kXml:
 	{
 		rootNode = "BookData.books";
 		break;
 	}
-	case DatafileParser::json:
+	case DatafileParser::kJson:
 		rootNode = "books";
 		break;
 	}
@@ -36,13 +36,13 @@ void BookDatafileParser::parse() {
 void BookDatafileParser::save(const std::string& filename, FileFormat const filetype)
 {
 	switch (filetype) {
-	case DatafileParser::xml:
+	case DatafileParser::kXml:
 	{
 		pt::xml_writer_settings<std::string> settings('\t', 1);
 		pt::write_xml(filename, ptree_, std::locale(), settings);
 		break;
 	}
-	case DatafileParser::json:
+	case DatafileParser::kJson:
 		saveJSON(filename);
 		break;
 	}

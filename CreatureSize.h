@@ -7,11 +7,11 @@
 #include "StringUtils.h"
 
 enum class CreatureSize {
-	tiny,
-	small,
-	medium,
-	large,
-	super_large
+	kTiny,
+	kSmall,
+	kMedium,
+	kLarge,
+	kSuperLarge
 };
 
 /**
@@ -22,11 +22,11 @@ constexpr std::string_view getCreatureSize(CreatureSize size) {
 
 	switch (size)
 	{
-	case tiny: return "Tiny";
-	case small: return "Small";
-	case medium: return "Medium";
-	case large: return "Large";
-	case super_large: return "Super Large";
+	case kTiny: return "Tiny";
+	case kSmall: return "Small";
+	case kMedium: return "Medium";
+	case kLarge: return "Large";
+	case kSuperLarge: return "Super Large";
 	}
 }
 
@@ -45,13 +45,13 @@ constexpr std::optional<CreatureSize> getCreatureSizeFromString(std::string_view
 	using enum CreatureSize;
 
 	std::string val = toASCIILowerCase(sv);
-	if (val == "tiny") return tiny;
-	if (val == "small") return small;
-	if (val == "medium") return medium;
-	if (val == "large") return large;
-	if (val == "superlarge") return super_large;
-	if (val == "super_large") return super_large;
-	if (val == "super large") return super_large;
+	if (val == "tiny") return kTiny;
+	if (val == "small") return kSmall;
+	if (val == "medium") return kMedium;
+	if (val == "large") return kLarge;
+	if (val == "superlarge") return kSuperLarge;
+	if (val == "super_large") return kSuperLarge;
+	if (val == "super large") return kSuperLarge;
 
 	return {};
 }

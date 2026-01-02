@@ -5,16 +5,16 @@ DatafileParser::DatafileParser(std::string_view filename, DatafileParser::FileFo
 	filetype_{ filetype }
 {}
 
-DatafileParser::DatafileParser(std::string_view filename) :	DatafileParser(filename, DatafileParser::xml) {}
+DatafileParser::DatafileParser(std::string_view filename) :	DatafileParser(filename, DatafileParser::kXml) {}
 
 void DatafileParser::read() {
 	if (datafile_.empty()) return;
 
 	switch (filetype_) {
-	case DatafileParser::xml:
+	case DatafileParser::kXml:
 		pt::read_xml(datafile_, ptree_, pt::xml_parser::trim_whitespace);
 		break;
-	case DatafileParser::json:
+	case DatafileParser::kJson:
 		pt::read_json(datafile_, ptree_);
 		break;
 	}

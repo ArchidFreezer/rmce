@@ -7,22 +7,22 @@
 #include "StringUtils.h"
 
 enum class CriticalType {
-	brawling,
-	grapple,
-	impact,
-	krush,
-	martial_arts_strikes,
-	martial_arts_sweeps,
-	puncture,
-	slash,
-	subdual,
-	tiny,
-	unbalance,
-	aether,
-	cold,
-	electrical,
-	heat,
-	nether
+	kBrawling,
+	kGrapple,
+	kImpact,
+	kKrush,
+	kMartialArtsStrikes,
+	kMartialArtsSweeps,
+	kPuncture,
+	kSlash,
+	kSubdual,
+	kTiny,
+	kUnbalance,
+	kAether,
+	kCold,
+	kElectrical,
+	kHeat,
+	kNether
 };
 
 /**
@@ -33,22 +33,22 @@ constexpr std::string_view getCriticalType(CriticalType type) {
 
 	switch (type)
 	{
-	case brawling: return "Brawling";
-	case grapple: return "Grapple";
-	case impact: return "Impact";
-	case krush: return "Krush";
-	case martial_arts_strikes: return "Martial Arts Strikes";
-	case martial_arts_sweeps: return "Martial Arts Sweeps";
-	case puncture: return "Puncture";
-	case slash: return "Slash";
-	case subdual: return "Subdual";
-	case tiny: return "Tiny";
-	case unbalance: return "Unbalance";
-	case aether: return "Aether";
-	case cold: return "Cold";
-	case electrical: return "Electrical";
-	case heat: return "Heat";
-	case nether: return "Nether";
+	case kBrawling: return "Brawling";
+	case kGrapple: return "Grapple";
+	case kImpact: return "Impact";
+	case kKrush: return "Krush";
+	case kMartialArtsStrikes: return "Martial Arts Strikes";
+	case kMartialArtsSweeps: return "Martial Arts Sweeps";
+	case kPuncture: return "Puncture";
+	case kSlash: return "Slash";
+	case kSubdual: return "Subdual";
+	case kTiny: return "Tiny";
+	case kUnbalance: return "Unbalance";
+	case kAether: return "Aether";
+	case kCold: return "Cold";
+	case kElectrical: return "Electrical";
+	case kHeat: return "Heat";
+	case kNether: return "Nether";
 	}
 }
 
@@ -67,26 +67,26 @@ constexpr std::optional<CriticalType> getCriticalTypeFromString(std::string_view
 	using enum CriticalType;
 
 	std::string val = toASCIILowerCase(sv);
-	if (val == "brawling") return brawling;
-	if (val == "grapple") return grapple;
-	if (val == "impact") return impact;
-	if (val == "krush") return krush;
-	if (val == "martialartsstrikes") return martial_arts_strikes;
-	if (val == "martial_arts_strikes") return martial_arts_strikes;
-	if (val == "martial arts strikes") return martial_arts_strikes;
-	if (val == "martialartssweeps") return martial_arts_sweeps;
-	if (val == "martial_arts_sweeps") return martial_arts_sweeps;
-	if (val == "martial arts sweeps") return martial_arts_sweeps;
-	if (val == "puncture") return puncture;
-	if (val == "slash") return slash;
-	if (val == "subdual") return subdual;
-	if (val == "tiny") return tiny;
-	if (val == "unbalance") return unbalance;
-	if (val == "aether") return aether;
-	if (val == "cold") return cold;
-	if (val == "electrical") return electrical;
-	if (val == "heat") return heat;
-	if (val == "nether") return nether;
+	if (val == "brawling") return kBrawling;
+	if (val == "grapple") return kGrapple;
+	if (val == "impact") return kImpact;
+	if (val == "krush") return kKrush;
+	if (val == "martialartsstrikes") return kMartialArtsStrikes;
+	if (val == "martial_arts_strikes") return kMartialArtsStrikes;
+	if (val == "martial arts strikes") return kMartialArtsStrikes;
+	if (val == "martialartssweeps") return kMartialArtsSweeps;
+	if (val == "martial_arts_sweeps") return kMartialArtsSweeps;
+	if (val == "martial arts sweeps") return kMartialArtsSweeps;
+	if (val == "puncture") return kPuncture;
+	if (val == "slash") return kSlash;
+	if (val == "subdual") return kSubdual;
+	if (val == "tiny") return kTiny;
+	if (val == "unbalance") return kUnbalance;
+	if (val == "aether") return kAether;
+	if (val == "cold") return kCold;
+	if (val == "electrical") return kElectrical;
+	if (val == "heat") return kHeat;
+	if (val == "nether") return kNether;
 
 	return {};
 }

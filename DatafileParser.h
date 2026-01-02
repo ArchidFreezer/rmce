@@ -11,8 +11,8 @@ class DatafileParser
 public:
 
 	enum class FileFormat {
-		json,
-		xml
+		kJson,
+		kXml
 	};
 	using enum FileFormat; // Bring enumerations into current scope (C++20) so we can use DatafileParser::<val> rather than DatafileParser::FileFormat::<val>
 
@@ -37,7 +37,7 @@ public:
 
 protected:
 	std::string datafile_{};
-	FileFormat filetype_{ FileFormat::json };
+	FileFormat filetype_{ FileFormat::kJson };
 	pt::ptree ptree_{};
 };
 

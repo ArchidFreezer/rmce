@@ -7,7 +7,7 @@ int main()
 	std::cout << "Current path is " << std::filesystem::current_path() << '\n';
 	
 	
-	BookDatafileParser books("../../../data/Books.json", DatafileParser::json);
+	BookDatafileParser books("../../../data/Books.json", DatafileParser::kJson);
 	books.read();
 	books.saveJSON("../../../data/Books2.json");
 	
