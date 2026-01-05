@@ -2,6 +2,7 @@
 #include <memory>
 #include <mutex>
 #include <set>
+#include <stdexcept>
 #include <string>
 #include <typeindex>
 #include <unordered_map>
@@ -27,10 +28,7 @@ public:
 	GameRuleDataCache& operator=(GameRuleDataCache&&) = delete;
 
 	// Get the rule data with the given ID
-	// If the data is not found a new empty rule is created and added to the cache, this
-	// is probably not what is wanted so it is typically better to test if the data exists
-	// prior to calling this function
-	// TODO: Create and throw an exception if the data is not found
+	// Throws out_of_range exception if there is no rule data for the id with the given type
 	template <class T>
 	T& GetRuleData(std::string& id);
 
@@ -73,15 +71,9 @@ inline T& GameRuleDataCache::GetRuleData(std::string& id)
 	if (ruledata_it != ruledata_hash_map.end())	{
 		return *dynamic_cast<T*>(ruledata_it->second.get());
 	}
-
-	// Otherwise if the resource was not found, we create a dummy value
-	auto new_ruledata = std::make_unique<T>(id);
-
-	// Move it to the hash map so that the cache owns it
-	auto ret = ruledata_hash_map.emplace(id, std::move(new_ruledata));
-
-	// We return it as a reference
-	return *dynamic_cast<T*>(ret.first->second.get());
+	else {
+		throw std::out_of_range("There is no rule data with id " + id);
+	}
 }
 
 template<class T>
