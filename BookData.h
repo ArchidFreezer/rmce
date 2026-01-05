@@ -24,7 +24,6 @@ private:
 };
 
 inline BookData::BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn) :
-	GameRuleData(GameRuleDataType::kBook),
 	id_{ id },
 	code_{ code },
 	name_{ name },
