@@ -3,6 +3,7 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/xml_parser.hpp>
 #include <boost/property_tree/json_parser.hpp>
+#include "GameRuleDataCache.h"
 
 namespace pt = boost::property_tree;
 
@@ -16,8 +17,8 @@ public:
 	};
 	using enum FileFormat; // Bring enumerations into current scope (C++20) so we can use DatafileParser::<val> rather than DatafileParser::FileFormat::<val>
 
-	DatafileParser(std::string_view filename, FileFormat const filetype);
-	DatafileParser(std::string_view filename);
+	DatafileParser(std::string_view filename, GameRuleDataCache& cache, FileFormat const filetype);
+	DatafileParser(std::string_view filename, GameRuleDataCache& cache);
 	virtual ~DatafileParser() = default;
 		
 	void setDataType(FileFormat const filetype) { filetype_ = filetype; }
@@ -39,6 +40,8 @@ protected:
 	std::string datafile_{};
 	FileFormat filetype_{ FileFormat::kJson };
 	pt::ptree ptree_{};
+	GameRuleDataCache& cache_;
+
 };
 
 

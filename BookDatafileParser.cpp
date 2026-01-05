@@ -1,13 +1,14 @@
 #include <iostream>
+#include <stdexcept>
 #include "BookDatafileParser.h"
 
 
-BookDatafileParser::BookDatafileParser(std::string_view filename, FileFormat const filetype) : DatafileParser(filename, filetype) {}
+BookDatafileParser::BookDatafileParser(std::string_view filename, GameRuleDataCache& cache, FileFormat const filetype) : DatafileParser(filename, cache, filetype) {}
 
-BookDatafileParser::BookDatafileParser(std::string_view filename) : DatafileParser(filename) {}
+BookDatafileParser::BookDatafileParser(std::string_view filename, GameRuleDataCache& cache) : DatafileParser(filename, cache) {}
 
 void BookDatafileParser::parse() {
-	std::cout << "Loading Book data ...";
+	std::cout << "Loading Book data ..." << std::endl;
 
 	std::string rootNode{};
 	switch (filetype_) {
@@ -26,9 +27,10 @@ void BookDatafileParser::parse() {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", getID(TYPE, name));
 
-		BookData book(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbr"), v.second.get<std::string>("isbn"));
-		books_.insert({ id, book });
-		std::cout << "\tBook name: " << book.getName() << std::endl;
+		std::unique_ptr<BookData> book = std::make_unique<BookData>(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbr"), v.second.get<std::string>("isbn"));
+		cache_.AddRuleData<BookData>(std::move(book), id);
+		std::cout << "\tBook name: " << name << std::endl;
+
 	}
 	std::cout << " done" << std::endl;
 }
@@ -62,15 +64,21 @@ void BookDatafileParser::saveJSON(const std::string& filename)
 	// Array of books
 	pt::ptree pbooks;
 
-	for (auto b : books_) {
-		// Individual book
-		pt::ptree book;
-		book.put("id", b.second.getID());
-		book.put("code", b.second.getCode());
-		book.put("name", b.second.getName());
-		book.put("abbr", b.second.getAbbreviation());
-		book.put("isbn", b.second.getISBN());
-		pbooks.push_back(std::make_pair("", book));
+	for (std::string b : cache_.GetRuleDataIds<BookData>()) {
+		try {
+			BookData& book_data = cache_.GetRuleData<BookData>(b);
+			// Individual book
+			pt::ptree book;
+			book.put("id", book_data.getID());
+			book.put("code", book_data.getCode());
+			book.put("name", book_data.getName());
+			book.put("abbr", book_data.getAbbreviation());
+			book.put("isbn", book_data.getISBN());
+			pbooks.push_back(std::make_pair("", book));
+		}
+		catch (const std::out_of_range& e) {
+			std::cout << "Error: " << e.what() << std::endl;
+		}
 	}
 
 	tree.add_child("books", pbooks);
