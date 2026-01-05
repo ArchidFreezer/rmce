@@ -25,7 +25,7 @@ void BookDatafileParser::parse() {
 	const pt::ptree& bookTree = ptree_.get_child(rootNode);
 	for (const auto& v : bookTree) {
 		std::string name = v.second.get<std::string>("name");
-		std::string id = v.second.get("id", getID(TYPE, name));
+		std::string id = v.second.get("id", getID(kRuleDataName, name));
 
 		std::unique_ptr<BookData> book = std::make_unique<BookData>(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbr"), v.second.get<std::string>("isbn"));
 		cache_.AddRuleData<BookData>(std::move(book), id);

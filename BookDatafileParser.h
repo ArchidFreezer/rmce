@@ -6,7 +6,7 @@
 #include "DatafileParser.h"
 #include "GameRuleDataCache.h"
 
-static const std::string TYPE{ "Book" };
+static const std::string kRuleDataName{ "Book" };
 
 class BookDatafileParser : public DatafileParser
 {
