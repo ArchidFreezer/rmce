@@ -8,7 +8,7 @@
 
 // This function returns a std::string that is the lower-case version of the std::string_view passed in.
 // Only 1:1 character mapping can be performed by this function
-std::string toASCIILowerCase(std::string_view sv)
+const std::string& toASCIILowerCase(std::string_view sv)
 {
   std::string lower{};
   std::transform(sv.begin(), sv.end(), std::back_inserter(lower),

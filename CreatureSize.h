@@ -44,7 +44,7 @@ std::ostream& operator<<(std::ostream& out, CreatureSize size) {
 constexpr std::optional<CreatureSize> getCreatureSizeFromString(std::string_view sv) {
 	using enum CreatureSize;
 
-	std::string val = toASCIILowerCase(sv);
+	const std::string& val = toASCIILowerCase(sv);
 	if (val == "tiny") return kTiny;
 	if (val == "small") return kSmall;
 	if (val == "medium") return kMedium;

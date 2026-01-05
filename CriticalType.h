@@ -66,7 +66,7 @@ std::ostream& operator<<(std::ostream& out, CriticalType type) {
 constexpr std::optional<CriticalType> getCriticalTypeFromString(std::string_view sv) {
 	using enum CriticalType;
 
-	std::string val = toASCIILowerCase(sv);
+	const std::string& val = toASCIILowerCase(sv);
 	if (val == "brawling") return kBrawling;
 	if (val == "grapple") return kGrapple;
 	if (val == "impact") return kImpact;

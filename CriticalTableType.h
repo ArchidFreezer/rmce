@@ -44,7 +44,7 @@ std::ostream& operator<<(std::ostream& out, CriticalTableType type) {
 constexpr std::optional<CriticalTableType> getCriticalTableTypeFromString(std::string_view sv) {
 	using enum CriticalTableType;
 
-	std::string val = toASCIILowerCase(sv);
+	const std::string& val = toASCIILowerCase(sv);
 	if (val == "normal") return kNormal;
 	if (val == "largecreaturephysical") return kLargeCreaturePhysical;
 	if (val == "large_creature_physical") return kLargeCreaturePhysical;
