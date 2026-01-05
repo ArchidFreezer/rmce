@@ -4,7 +4,7 @@
 
 #include "GameRuleData.h"
 
-class BookData : GameRuleData
+class BookData : public GameRuleData
 {
 public:
 	BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn);
