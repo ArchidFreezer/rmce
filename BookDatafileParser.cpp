@@ -3,11 +3,11 @@
 #include "BookDatafileParser.h"
 
 
-BookDatafileParser::BookDatafileParser(std::string_view filename, GameRuleDataCache& cache, FileFormat const filetype) : DatafileParser(filename, cache, filetype) {
+BookDatafileParser::BookDatafileParser(GameRuleDataCache& cache, FileFormat const filetype) : DatafileParser(cache, filetype) {
 	datatype_ = "Book";
 }
 
-BookDatafileParser::BookDatafileParser(std::string_view filename, GameRuleDataCache& cache) : BookDatafileParser(filename, cache, DatafileParser::kJson) {}
+BookDatafileParser::BookDatafileParser(GameRuleDataCache& cache) : BookDatafileParser(cache, DatafileParser::kJson) {}
 
 void BookDatafileParser::parse() {
 	std::cout << "Loading Book data ..." << std::endl;

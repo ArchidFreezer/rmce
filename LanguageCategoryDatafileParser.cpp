@@ -3,11 +3,11 @@
 #include "LanguageCategoryDatafileParser.h"
 
 
-LanguageCategoryDatafileParser::LanguageCategoryDatafileParser(std::string_view filename, GameRuleDataCache& cache, FileFormat const filetype) : DatafileParser(filename, cache, filetype) {
+LanguageCategoryDatafileParser::LanguageCategoryDatafileParser(GameRuleDataCache& cache, FileFormat const filetype) : DatafileParser(cache, filetype) {
 	datatype_ = "LanguageCategory";
 }
 
-LanguageCategoryDatafileParser::LanguageCategoryDatafileParser(std::string_view filename, GameRuleDataCache& cache) : LanguageCategoryDatafileParser(filename, cache, DatafileParser::kXml) {}
+LanguageCategoryDatafileParser::LanguageCategoryDatafileParser(GameRuleDataCache& cache) : LanguageCategoryDatafileParser(cache, DatafileParser::kXml) {}
 
 void LanguageCategoryDatafileParser::parse() {
 	std::cout << "Loading Language category data ..." << std::endl;

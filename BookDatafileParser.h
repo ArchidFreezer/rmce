@@ -9,8 +9,8 @@
 class BookDatafileParser : public DatafileParser
 {
 public:
-	BookDatafileParser(std::string_view filename, GameRuleDataCache& cache, FileFormat const filetype);
-	BookDatafileParser(std::string_view filename, GameRuleDataCache& cache);
+	BookDatafileParser(GameRuleDataCache& cache, FileFormat const filetype);
+	BookDatafileParser(GameRuleDataCache& cache);
 
 protected:
 	void parse();

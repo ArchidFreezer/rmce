@@ -10,12 +10,12 @@ int main()
 	// Create the cache to store the game data
 	GameRuleDataCache cache{};
 	
-	BookDatafileParser books("../../../data/Books.json", cache, DatafileParser::kJson);
-	books.read();
+	BookDatafileParser books(cache, DatafileParser::kJson);
+	books.read("../../../data/Books.json");
 	books.save("../../../data/Books2.json");
 
-	LanguageCategoryDatafileParser language_categories("../../../data/LanguageCategories.json", cache, DatafileParser::kJson);
-	language_categories.read();
+	LanguageCategoryDatafileParser language_categories(cache, DatafileParser::kJson);
+	language_categories.read("../../../data/LanguageCategories.json");
 	language_categories.save("../../../data/LanguageCategories2.json");
 	
 	return 0;

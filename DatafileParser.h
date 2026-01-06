@@ -17,15 +17,15 @@ public:
 	};
 	using enum FileFormat; // Bring enumerations into current scope (C++20) so we can use DatafileParser::<val> rather than DatafileParser::FileFormat::<val>
 
-	DatafileParser(std::string_view filename, GameRuleDataCache& cache, FileFormat const filetype);
-	DatafileParser(std::string_view filename, GameRuleDataCache& cache);
+	DatafileParser(GameRuleDataCache& cache, FileFormat const filetype);
+	DatafileParser(GameRuleDataCache& cache);
 	virtual ~DatafileParser() = default;
 		
 	void setDataType(FileFormat const filetype) { filetype_ = filetype; }
 	FileFormat getDatafileType() const { return filetype_; }
 	const std::string& getDataType() { return datatype_; }
 
-	void read();
+	void read(const std::string& filename);
 	void save(const std::string& filename, FileFormat const filetype);
 	void save(const std::string& filename);
 

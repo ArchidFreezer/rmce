@@ -1,15 +1,15 @@
 #include "DatafileParser.h"
 
-DatafileParser::DatafileParser(std::string_view filename, GameRuleDataCache& cache, DatafileParser::FileFormat const filetype) :
-	datafile_{ filename },
+DatafileParser::DatafileParser(GameRuleDataCache& cache, DatafileParser::FileFormat const filetype) :
 	filetype_{ filetype },
 	cache_{ cache }
 {}
 
-DatafileParser::DatafileParser(std::string_view filename, GameRuleDataCache& cache) :	DatafileParser(filename, cache, DatafileParser::kXml) {}
+DatafileParser::DatafileParser(GameRuleDataCache& cache) :	DatafileParser(cache, DatafileParser::kXml) {}
 
-void DatafileParser::read() {
-	if (datafile_.empty()) return;
+void DatafileParser::read(const std::string& filename) {
+	if (filename.empty()) return;
+	datafile_ = filename;
 
 	switch (filetype_) {
 	case DatafileParser::kXml:
