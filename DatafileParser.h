@@ -22,7 +22,8 @@ public:
 	virtual ~DatafileParser() = default;
 		
 	void setDataType(FileFormat const filetype) { filetype_ = filetype; }
-	FileFormat getDataType() const { return filetype_; }
+	FileFormat getDatafileType() const { return filetype_; }
+	const std::string& getDataType() { return datatype_; }
 
 	void read();
 	virtual void parse() = 0;
@@ -38,10 +39,10 @@ public:
 
 protected:
 	std::string datafile_{};
-	FileFormat filetype_{ FileFormat::kJson };
+	std::string datatype_{};
 	pt::ptree ptree_{};
+	FileFormat filetype_{ FileFormat::kJson };
 	GameRuleDataCache& cache_;
-
 };
 
 

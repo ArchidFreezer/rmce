@@ -3,9 +3,11 @@
 #include "BookDatafileParser.h"
 
 
-BookDatafileParser::BookDatafileParser(std::string_view filename, GameRuleDataCache& cache, FileFormat const filetype) : DatafileParser(filename, cache, filetype) {}
+BookDatafileParser::BookDatafileParser(std::string_view filename, GameRuleDataCache& cache, FileFormat const filetype) : DatafileParser(filename, cache, filetype) {
+	datatype_ = "Book";
+}
 
-BookDatafileParser::BookDatafileParser(std::string_view filename, GameRuleDataCache& cache) : DatafileParser(filename, cache) {}
+BookDatafileParser::BookDatafileParser(std::string_view filename, GameRuleDataCache& cache) : BookDatafileParser(filename, cache, DatafileParser::kJson) {}
 
 void BookDatafileParser::parse() {
 	std::cout << "Loading Book data ..." << std::endl;
@@ -25,7 +27,7 @@ void BookDatafileParser::parse() {
 	const pt::ptree& bookTree = ptree_.get_child(rootNode);
 	for (const auto& v : bookTree) {
 		std::string name = v.second.get<std::string>("name");
-		std::string id = v.second.get("id", getID(kRuleDataName, name));
+		std::string id = v.second.get("id", getID(getDataType(), name));
 
 		std::unique_ptr<BookData> book = std::make_unique<BookData>(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbreviation"), v.second.get<std::string>("isbn"));
 		cache_.AddRuleData<BookData>(std::move(book), id);
