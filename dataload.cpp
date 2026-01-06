@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <filesystem>
 #include "BookDatafileParser.h"
+#include "LanguageDatafileParser.h"
 #include "LanguageCategoryDatafileParser.h"
 
 int main()
@@ -18,5 +19,9 @@ int main()
 	language_categories.read("../../../data/LanguageCategories.json");
 	language_categories.save("../../../data/LanguageCategories2.json");
 	
+	LanguageDatafileParser languages(cache, DatafileParser::kJson);
+	languages.read("../../../data/Languages.json");
+	languages.save("../../../data/Languages2.json");
+
 	return 0;
 }
