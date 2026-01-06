@@ -11,6 +11,8 @@ class BookDatafileParser : public DatafileParser
 public:
 	BookDatafileParser(std::string_view filename, GameRuleDataCache& cache, FileFormat const filetype);
 	BookDatafileParser(std::string_view filename, GameRuleDataCache& cache);
+
+protected:
 	void parse();
 	void saveJson(const std::string& filename);
 };

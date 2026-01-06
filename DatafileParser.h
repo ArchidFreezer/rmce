@@ -26,8 +26,6 @@ public:
 	const std::string& getDataType() { return datatype_; }
 
 	void read();
-	virtual void parse() = 0;
-	virtual void saveJson(const std::string& filename) = 0;
 	void save(const std::string& filename, FileFormat const filetype);
 	void save(const std::string& filename);
 
@@ -39,6 +37,9 @@ public:
 	static const std::string getID(std::string_view type, std::string_view val);
 
 protected:
+	virtual void parse() = 0;
+	virtual void saveJson(const std::string& filename) = 0;
+
 	std::string datafile_{};
 	std::string datatype_{};
 	pt::ptree ptree_{};
