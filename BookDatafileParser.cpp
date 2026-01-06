@@ -27,7 +27,7 @@ void BookDatafileParser::parse() {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", getID(kRuleDataName, name));
 
-		std::unique_ptr<BookData> book = std::make_unique<BookData>(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbr"), v.second.get<std::string>("isbn"));
+		std::unique_ptr<BookData> book = std::make_unique<BookData>(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbreviation"), v.second.get<std::string>("isbn"));
 		cache_.AddRuleData<BookData>(std::move(book), id);
 		std::cout << "\tBook name: " << name << std::endl;
 
@@ -72,7 +72,7 @@ void BookDatafileParser::saveJSON(const std::string& filename)
 			book.put("id", book_data.getID());
 			book.put("code", book_data.getCode());
 			book.put("name", book_data.getName());
-			book.put("abbr", book_data.getAbbreviation());
+			book.put("abbreviation", book_data.getAbbreviation());
 			book.put("isbn", book_data.getISBN());
 			pbooks.push_back(std::make_pair("", book));
 		}

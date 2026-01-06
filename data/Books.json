@@ -4,364 +4,364 @@
             "id": "BOOK_ALCHEMY_COMPANION",
             "code": "1530",
             "name": "Alchemy Companion",
-            "abbr": "AlCo*",
+            "abbreviation": "AlCo*",
             "isbn": "1-55806-161-4"
         },
         {
             "id": "BOOK_AND_A_10_FOOT_POLE",
             "code": "5703",
             "name": "... and a 10-Foot Pole",
-            "abbr": "aaTFP",
+            "abbreviation": "aaTFP",
             "isbn": "1-55806-370-6"
         },
         {
             "id": "BOOK_ARABIAN_NIGHTS",
             "code": "1305",
             "name": "Arabian Nights",
-            "abbr": "ArN*",
+            "abbreviation": "ArN*",
             "isbn": "1-55806-209-2"
         },
         {
             "id": "BOOK_ARCANE_COMPANION",
             "code": "5600",
             "name": "Arcane Companion",
-            "abbr": "ArcCo",
+            "abbreviation": "ArcCo",
             "isbn": "1-55806-239-4"
         },
         {
             "id": "BOOK_ARMS_LAW",
             "code": "5810",
             "name": "Arms Law",
-            "abbr": "AL",
+            "abbreviation": "AL",
             "isbn": "1-55806-598-9"
         },
         {
             "id": "BOOK_ARMS_LAW_5810",
             "code": "5520",
             "name": "Arms Law -> 5810",
-            "abbr": "AL*",
+            "abbreviation": "AL*",
             "isbn": "1-55806-214-9"
         },
         {
             "id": "BOOK_CASTLES_RUINS",
             "code": "5542",
             "name": "Castles & Ruins",
-            "abbr": "C&R",
+            "abbreviation": "C&R",
             "isbn": "1-55806-277-7"
         },
         {
             "id": "BOOK_CHANNELING_COMPANION",
             "code": "5809",
             "name": "Channeling Companion",
-            "abbr": "ChaCo",
+            "abbreviation": "ChaCo",
             "isbn": "1-55806-559-8"
         },
         {
             "id": "BOOK_CHANNELING_COMPANION_5809",
             "code": "5604",
             "name": "Channeling Companion -> 5809",
-            "abbr": "ChaCo*",
+            "abbreviation": "ChaCo*",
             "isbn": "1-55806-322-6"
         },
         {
             "id": "BOOK_CHARACTER_LAW",
             "code": "5806",
             "name": "Character Law",
-            "abbr": "ChL",
+            "abbreviation": "ChL",
             "isbn": "1-55806-556-3"
         },
         {
             "id": "BOOK_CONSTRUCT_COMPANION",
             "code": "5815",
             "name": "Construct Companion",
-            "abbr": "ConCo",
+            "abbreviation": "ConCo",
             "isbn": "1-55806-601-2"
         },
         {
             "id": "BOOK_CREATURES_MONSTERS",
             "code": "5802",
             "name": "Creatures & Monsters",
-            "abbr": "C&M",
+            "abbreviation": "C&M",
             "isbn": "1-55806-552-0"
         },
         {
             "id": "BOOK_CREATURES_MONSTERS_5802",
             "code": "5540",
             "name": "Creatures & Monsters -> 5802",
-            "abbr": "C&M*",
+            "abbreviation": "C&M*",
             "isbn": "1-55806-221-1"
         },
         {
             "id": "BOOK_CREATURES_TREASURES_2",
             "code": "1410",
             "name": "Creatures & Treasures 2",
-            "abbr": "C&T2*",
+            "abbreviation": "C&T2*",
             "isbn": "1-55806-079-0"
         },
         {
             "id": "BOOK_CREATURES_TREASURES_3",
             "code": "1430",
             "name": "Creatures & Treasures 3",
-            "abbr": "C&T3*",
+            "abbreviation": "C&T3*",
             "isbn": "1-55806-200-9"
         },
         {
             "id": "BOOK_ESSENCE_COMPANION",
             "code": "5603",
             "name": "Essence Companion",
-            "abbr": "EssCo",
+            "abbreviation": "EssCo",
             "isbn": "1-55806-318-8"
         },
         {
             "id": "BOOK_FANTASY_ROLE_PLAYING",
             "code": "5800",
             "name": "Fantasy Role Playing",
-            "abbr": "FRP",
+            "abbreviation": "FRP",
             "isbn": "1-55806-550-4"
         },
         {
             "id": "BOOK_FIRE_AND_ICE_THE_ELEMENTAL_COMPANION",
             "code": "5812",
             "name": "Fire and Ice The Elemental Companion",
-            "abbr": "F&I",
+            "abbreviation": "F&I",
             "isbn": "1-55806-573-3"
         },
         {
             "id": "BOOK_FIRE_AND_ICE_THE_ELEMENTAL_COMPANION_ADDENDUM",
             "code": "5812A",
             "name": "Fire and Ice The Elemental Companion - Addendum",
-            "abbr": "F&IA",
+            "abbreviation": "F&IA",
             "isbn": "n\/a"
         },
         {
             "id": "BOOK_GAMEMASTER_LAW",
             "code": "5807",
             "name": "Gamemaster Law",
-            "abbr": "GL",
+            "abbreviation": "GL",
             "isbn": "1-55806-557-1"
         },
         {
             "id": "BOOK_GAMEMASTER_LAW_5807",
             "code": "5521",
             "name": "Gamemaster Law -> 5807",
-            "abbr": "GL*",
+            "abbreviation": "GL*",
             "isbn": "1-55806-217-3"
         },
         {
             "id": "BOOK_GAMESMASTER_SCREEN",
             "code": "5901",
             "name": "Gamesmaster Screen",
-            "abbr": "GMScr",
+            "abbreviation": "GMScr",
             "isbn": "1-55806-615-2"
         },
         {
             "id": "BOOK_MARTIAL_ARTS_COMPANION",
             "code": "5602",
             "name": "Martial Arts Companion",
-            "abbr": "MarCo",
+            "abbreviation": "MarCo",
             "isbn": "1-55806-313-7"
         },
         {
             "id": "BOOK_MENTALISM_COMPANION",
             "code": "5814",
             "name": "Mentalism Companion",
-            "abbr": "MenCo",
+            "abbreviation": "MenCo",
             "isbn": "1-55806-596-2"
         },
         {
             "id": "BOOK_MENTALISM_COMPANION_5814",
             "code": "5605",
             "name": "Mentalism Companion -> 5814",
-            "abbr": "MenCo*",
+            "abbreviation": "MenCo*",
             "isbn": "1-55806-380-3"
         },
         {
             "id": "BOOK_ORIENTAL_COMPANION",
             "code": "1540",
             "name": "Oriental Companion",
-            "abbr": "OrCo*",
+            "abbreviation": "OrCo*",
             "isbn": "1-55806-175-4"
         },
         {
             "id": "BOOK_RACES_AND_CULTURES",
             "code": "5816",
             "name": "Races and Cultures",
-            "abbr": "R&Cu",
+            "abbreviation": "R&Cu",
             "isbn": "1-55806-606-3"
         },
         {
             "id": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
             "code": "5541",
             "name": "Races & Cultures: Underground Races",
-            "abbr": "R&C:U",
+            "abbreviation": "R&C:U",
             "isbn": "1-55806-276-9"
         },
         {
             "id": "BOOK_ROLEMASTER_ANNUAL_1996",
             "code": "5505",
             "name": "Rolemaster Annual 1996",
-            "abbr": "RA96*",
+            "abbreviation": "RA96*",
             "isbn": "1-55806-299-8"
         },
         {
             "id": "BOOK_ROLEMASTER_ANNUAL_1997",
             "code": "5506",
             "name": "Rolemaster Annual 1997",
-            "abbr": "RA97*",
+            "abbreviation": "RA97*",
             "isbn": "1-55806-323-4"
         },
         {
             "id": "BOOK_ROLEMASTER_CHARACTER_RECORDS",
             "code": "5504",
             "name": "Rolemaster Character Records",
-            "abbr": "RCR*",
+            "abbreviation": "RCR*",
             "isbn": "1-55806-247-5"
         },
         {
             "id": "BOOK_ROLEMASTER_COMPANION_1",
             "code": "1500",
             "name": "Rolemaster Companion 1",
-            "abbr": "RMC1*",
+            "abbreviation": "RMC1*",
             "isbn": "0-915795-12-4"
         },
         {
             "id": "BOOK_ROLEMASTER_COMPANION_2",
             "code": "1600",
             "name": "Rolemaster Companion 2",
-            "abbr": "RMC2*",
+            "abbreviation": "RMC2*",
             "isbn": "0-915795-97-3"
         },
         {
             "id": "BOOK_ROLEMASTER_COMPANION_3",
             "code": "1700",
             "name": "Rolemaster Companion 3",
-            "abbr": "RMC3*",
+            "abbreviation": "RMC3*",
             "isbn": "1-55806-050-2"
         },
         {
             "id": "BOOK_ROLEMASTER_COMPANION_4",
             "code": "1800",
             "name": "Rolemaster Companion 4",
-            "abbr": "RMC4*",
+            "abbreviation": "RMC4*",
             "isbn": "1-55806-127-4"
         },
         {
             "id": "BOOK_ROLEMASTER_COMPANION_5",
             "code": "1900",
             "name": "Rolemaster Companion 5",
-            "abbr": "RMC5*",
+            "abbreviation": "RMC5*",
             "isbn": "1-55806-145-2"
         },
         {
             "id": "BOOK_ROLEMASTER_COMPANION_6",
             "code": "1901",
             "name": "Rolemaster Companion 6",
-            "abbr": "RMC6*",
+            "abbreviation": "RMC6*",
             "isbn": "1-55806-164-9"
         },
         {
             "id": "BOOK_ROLEMASTER_COMPANION_7",
             "code": "1902",
             "name": "Rolemaster Companion 7",
-            "abbr": "RMC7*",
+            "abbreviation": "RMC7*",
             "isbn": "1-55806-185-1"
         },
         {
             "id": "BOOK_ROLEMASTER_QUARTERLY_1",
             "code": "RMQ1",
             "name": "Rolemaster Quarterly 1",
-            "abbr": "RQ1*",
+            "abbreviation": "RQ1*",
             "isbn": "n\/a"
         },
         {
             "id": "BOOK_ROLEMASTER_QUARTERLY_2",
             "code": "RMQ2",
             "name": "Rolemaster Quarterly 2",
-            "abbr": "RQ2*",
+            "abbreviation": "RQ2*",
             "isbn": "n\/a"
         },
         {
             "id": "BOOK_ROLEMASTER_QUARTERLY_3",
             "code": "RMQ3",
             "name": "Rolemaster Quarterly 3",
-            "abbr": "RQ3*",
+            "abbreviation": "RQ3*",
             "isbn": "n\/a"
         },
         {
             "id": "BOOK_ROLEMASTER_STANDARD_RULES_5800",
             "code": "5500",
             "name": "Rolemaster Standard Rules -> 5800",
-            "abbr": "RMSR*",
+            "abbreviation": "RMSR*",
             "isbn": "1-55806-233-5"
         },
         {
             "id": "BOOK_SCHOOL_OF_HARD_KNOCKS",
             "code": "5808",
             "name": "School of Hard Knocks",
-            "abbr": "ScHK",
+            "abbreviation": "ScHK",
             "isbn": "1-55806-560-1"
         },
         {
             "id": "BOOK_SEA_LAW",
             "code": "1130",
             "name": "Sea Law",
-            "abbr": "SeaL*",
+            "abbreviation": "SeaL*",
             "isbn": "1-55806-202-5"
         },
         {
             "id": "BOOK_SPELL_LAW_5803_5804_5805",
             "code": "5522",
             "name": "Spell Law -> 5803, 5804, 5805",
-            "abbr": "SL*",
+            "abbreviation": "SL*",
             "isbn": "1-55806-226-2"
         },
         {
             "id": "BOOK_SPELL_LAW_OF_CHANNELING",
             "code": "5803",
             "name": "Spell Law of Channeling",
-            "abbr": "SLCha",
+            "abbreviation": "SLCha",
             "isbn": "1-55806-553-9"
         },
         {
             "id": "BOOK_SPELL_LAW_OF_ESSENCE",
             "code": "5804",
             "name": "Spell Law of Essence",
-            "abbr": "SLEss",
+            "abbreviation": "SLEss",
             "isbn": "1-55806-554-7"
         },
         {
             "id": "BOOK_SPELL_LAW_OF_MENTALISM",
             "code": "5805",
             "name": "Spell Law of Mentalism",
-            "abbr": "SLMen",
+            "abbreviation": "SLMen",
             "isbn": "1-55806-555-5"
         },
         {
             "id": "BOOK_TALENT_LAW_5806",
             "code": "5523",
             "name": "Talent Law -> 5806",
-            "abbr": "TL*",
+            "abbreviation": "TL*",
             "isbn": "1-55806-252-1"
         },
         {
             "id": "BOOK_THE_ARMOURY",
             "code": "5813",
             "name": "The Armoury",
-            "abbr": "TA",
+            "abbreviation": "TA",
             "isbn": "1-55806-595-4"
         },
         {
             "id": "BOOK_TREASURE_COMPANION",
             "code": "5811",
             "name": "Treasure Companion",
-            "abbr": "TrCo",
+            "abbreviation": "TrCo",
             "isbn": "1-55806-592-x"
         },
         {
             "id": "BOOK_TREASURE_COMPANION_5811",
             "code": "5601",
             "name": "Treasure Companion -> 5811",
-            "abbr": "TrCo*",
+            "abbreviation": "TrCo*",
             "isbn": "1-55806-254-8"
         }
     ]
