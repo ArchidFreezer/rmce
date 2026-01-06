@@ -37,26 +37,7 @@ void LanguageCategoryDatafileParser::parse() {
 	std::cout << " done" << std::endl;
 }
 
-void LanguageCategoryDatafileParser::save(const std::string& filename, FileFormat const filetype) {
-	switch (filetype) {
-	case DatafileParser::kXml:
-	{
-		pt::xml_writer_settings<std::string> settings('\t', 1);
-		pt::write_xml(filename, ptree_, std::locale(), settings);
-		break;
-	}
-	case DatafileParser::kJson:
-		saveJSON(filename);
-		break;
-	}
-
-}
-
-void LanguageCategoryDatafileParser::save(const std::string& filename) {
-	save(filename, filetype_);
-}
-
-void LanguageCategoryDatafileParser::saveJSON(const std::string& filename) {
+void LanguageCategoryDatafileParser::saveJson(const std::string& filename) {
 	// Main tree
 	pt::ptree tree;
 

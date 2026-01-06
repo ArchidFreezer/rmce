@@ -27,8 +27,9 @@ public:
 
 	void read();
 	virtual void parse() = 0;
-	virtual void save(const std::string& filename, FileFormat const filetype) = 0;
-	virtual void save(const std::string& filename) = 0;
+	virtual void saveJson(const std::string& filename) = 0;
+	void save(const std::string& filename, FileFormat const filetype);
+	void save(const std::string& filename);
 
 	/*
 	* Creates a string that is a combination of the type and val parameters

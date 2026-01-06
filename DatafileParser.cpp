@@ -62,3 +62,23 @@ const std::string DatafileParser::getID(std::string_view type, std::string_view 
 
 	return ret;
 }
+
+void DatafileParser::save(const std::string& filename, FileFormat const filetype) {
+	switch (filetype) {
+	case DatafileParser::kXml:
+	{
+		pt::xml_writer_settings<std::string> settings('\t', 1);
+		pt::write_xml(filename, ptree_, std::locale(), settings);
+		break;
+	}
+	case DatafileParser::kJson:
+		saveJson(filename);
+		break;
+	}
+
+}
+
+void DatafileParser::save(const std::string& filename) {
+	save(filename, filetype_);
+}
+
