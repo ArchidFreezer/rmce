@@ -12,14 +12,14 @@ public:
 	const std::string& getID() { return id_; }
 	const std::string& getCode() { return code_; }
 	const std::string& getName() { return name_; }
-	const std::string& getAbbreviation() { return abbr_; }
+	const std::string& getAbbreviation() { return abbreviation_; }
 	const std::string& getISBN() { return isbn_; }
 
 private:
 	std::string id_{};
 	std::string code_{};
 	std::string name_{};
-	std::string abbr_{};
+	std::string abbreviation_{};
 	std::string isbn_{};
 };
 
@@ -27,6 +27,6 @@ inline BookData::BookData(std::string_view id, std::string_view code, std::strin
 	id_{ id },
 	code_{ code },
 	name_{ name },
-	abbr_{ abbreviation },
+	abbreviation_{ abbreviation },
 	isbn_{ isbn }
 {}
