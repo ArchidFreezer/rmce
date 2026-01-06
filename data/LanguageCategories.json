@@ -1,0 +1,16 @@
+{
+    "languageCategories": [
+        {
+            "id": "LANGUAGECATEGORY_DWARVEN",
+            "name": "Dwarven"
+        },
+        {
+            "id": "LANGUAGECATEGORY_ELVEN",
+            "name": "Elven"
+        },
+        {
+            "id": "LANGUAGECATEGORY_HUMAN",
+            "name": "Human"
+        }
+    ]
+}
