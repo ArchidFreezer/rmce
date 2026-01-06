@@ -7,7 +7,7 @@ LanguageCategoryDatafileParser::LanguageCategoryDatafileParser(GameRuleDataCache
 	datatype_ = "LanguageCategory";
 }
 
-LanguageCategoryDatafileParser::LanguageCategoryDatafileParser(GameRuleDataCache& cache) : LanguageCategoryDatafileParser(cache, DatafileParser::kXml) {}
+LanguageCategoryDatafileParser::LanguageCategoryDatafileParser(GameRuleDataCache& cache) : LanguageCategoryDatafileParser(cache, DatafileParser::kJson) {}
 
 void LanguageCategoryDatafileParser::parse() {
 	std::cout << "Loading Language category data ..." << std::endl;
