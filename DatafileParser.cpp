@@ -2,7 +2,7 @@
 
 DatafileParser::DatafileParser(GameRuleDataCache& cache, const std::string& datatype) :
 	cache_{ cache },
-	datatype_ { datatype }
+	rule_datatype_ { datatype }
 {}
 
 const std::string DatafileParser::generateId(std::string_view type, std::string_view val) {

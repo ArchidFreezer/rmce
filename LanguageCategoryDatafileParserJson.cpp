@@ -14,7 +14,7 @@ void LanguageCategoryDatafileParserJson::parse() {
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
-		std::string id = v.second.get("id", generateId(get_data_type(), name));
+		std::string id = v.second.get("id", generateId(ruleDatatype(), name));
 
 		std::unique_ptr<LanguageCategoryData> datum = std::make_unique<LanguageCategoryData>(id, name);
 		cache().add<LanguageCategoryData>(std::move(datum), id);

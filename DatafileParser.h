@@ -14,7 +14,7 @@ public:
 	DatafileParser(GameRuleDataCache& cache, const std::string& datatype);
 	virtual ~DatafileParser() = default;
 		
-	const std::string& get_data_type() { return datatype_; }
+	const std::string& ruleDatatype() { return rule_datatype_; }
 
 	// Read game rule data from a file, convert to objects and store in the game rule data cache
 	virtual void read(const std::string& filename) = 0;
@@ -36,11 +36,11 @@ protected:
 	// Parse a boost::ptree containing rule data from a json file, convert to objects and store in the game rule data cache
 	virtual void parse() = 0;
 
-	std::string datatype_{};
 
 private:
 	GameRuleDataCache& cache_;
 	pt::ptree ptree_{};
+	std::string rule_datatype_{};
 };
 
 

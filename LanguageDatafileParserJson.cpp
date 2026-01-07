@@ -14,7 +14,7 @@ void LanguageDatafileParserJson::parse() {
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
-		std::string id = v.second.get("id", generateId(get_data_type(), name));
+		std::string id = v.second.get("id", generateId(ruleDatatype(), name));
 		std::string category = v.second.get<std::string>("category");
 		bool isSpoken = v.second.get<bool>("isSpoken");
 		bool isWritten = v.second.get<bool>("isWritten");

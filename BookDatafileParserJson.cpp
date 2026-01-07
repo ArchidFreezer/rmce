@@ -14,7 +14,7 @@ void BookDatafileParserJson::parse() {
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
-		std::string id = v.second.get("id", generateId(get_data_type(), name));
+		std::string id = v.second.get("id", generateId(ruleDatatype(), name));
 		std::string code = v.second.get<std::string>("code");
 		std::string abbreviation = v.second.get<std::string>("abbreviation");
 		std::string isbn = v.second.get<std::string>("isbn");
