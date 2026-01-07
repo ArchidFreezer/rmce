@@ -17,7 +17,7 @@ enum class CreatureSize {
 /**
 * Get the string representation of the enum values
 */
-constexpr std::string_view getCreatureSize(CreatureSize size) {
+constexpr std::string_view toString(CreatureSize size) {
 	using enum CreatureSize;
 
 	switch (size)
@@ -34,17 +34,17 @@ constexpr std::string_view getCreatureSize(CreatureSize size) {
 * Teach operator<< how to print a CreatureSize
 */
 std::ostream& operator<<(std::ostream& out, CreatureSize size) {
-	return out << getCreatureSize(size);
+	return out << toString(size);
 }
 
 /**
 * Get the enumeration value based on a string
 * Accepts both lower case and mixed case strings
 */
-constexpr std::optional<CreatureSize> getCreatureSizeFromString(std::string_view sv) {
+constexpr std::optional<CreatureSize> fromString(std::string_view sv) {
 	using enum CreatureSize;
 
-	const std::string& val = toASCIILowerCase(sv);
+	const std::string& val = lcase(sv);
 	if (val == "tiny") return kTiny;
 	if (val == "small") return kSmall;
 	if (val == "medium") return kMedium;

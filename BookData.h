@@ -9,11 +9,11 @@ class BookData : public GameRuleData
 public:
 	BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn);
 
-	const std::string& getID() { return id_; }
-	const std::string& getCode() { return code_; }
-	const std::string& getName() { return name_; }
-	const std::string& getAbbreviation() { return abbreviation_; }
-	const std::string& getISBN() { return isbn_; }
+	const std::string& id() { return id_; }
+	const std::string& code() { return code_; }
+	const std::string& name() { return name_; }
+	const std::string& abbreviation() { return abbreviation_; }
+	const std::string& isbn() { return isbn_; }
 
 private:
 	std::string id_{};

@@ -30,20 +30,20 @@ public:
 	// Get the rule data with the given ID
 	// Throws out_of_range exception if there is no rule data for the id with the given type
 	template <class T>
-	T& GetRuleData(std::string& id);
+	T& get(std::string& id);
 
 	// Move rule data to the cache
 	// This changes ownership of the rule data to the cache
 	template <class T>
-	void AddRuleData(std::unique_ptr <T> datum, std::string& id);
+	void add(std::unique_ptr <T> datum, std::string& id);
 
 	// Check if data exists in the cache
 	template <class T>
-	bool RuleDataExists(std::string& id);
+	bool exists(std::string& id);
 
 	// Gets a list of all the rule data ids for a specific rule type
 	template <class T>
-	std::set<std::string> GetRuleDataIds();
+	std::set<std::string> keys();
 	
 private:
 	// Store the state of the cache
@@ -54,7 +54,7 @@ private:
 };
 
 template<class T>
-inline T& GameRuleDataCache::GetRuleData(std::string& id)
+inline T& GameRuleDataCache::get(std::string& id)
 {
 	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
 
@@ -77,7 +77,7 @@ inline T& GameRuleDataCache::GetRuleData(std::string& id)
 }
 
 template<class T>
-inline void GameRuleDataCache::AddRuleData(std::unique_ptr <T> datum, std::string& id)
+inline void GameRuleDataCache::add(std::unique_ptr <T> datum, std::string& id)
 {
 	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
 
@@ -92,7 +92,7 @@ inline void GameRuleDataCache::AddRuleData(std::unique_ptr <T> datum, std::strin
 }
 
 template<class T>
-inline bool GameRuleDataCache::RuleDataExists(std::string& id)
+inline bool GameRuleDataCache::exists(std::string& id)
 {
 	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
 
@@ -110,7 +110,7 @@ inline bool GameRuleDataCache::RuleDataExists(std::string& id)
 }
 
 template<class T>
-inline std::set<std::string> GameRuleDataCache::GetRuleDataIds()
+inline std::set<std::string> GameRuleDataCache::keys()
 {
 	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
 

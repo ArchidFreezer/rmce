@@ -17,7 +17,7 @@ enum class CriticalTableType {
 /**
 * Get the string representation of the enum values
 */
-constexpr std::string_view getCriticalTableType(CriticalTableType type) {
+constexpr std::string_view toString(CriticalTableType type) {
 	using enum CriticalTableType;
 
 	switch (type)
@@ -34,17 +34,17 @@ constexpr std::string_view getCriticalTableType(CriticalTableType type) {
 * Teach operator<< how to print a CriticalTableType
 */
 std::ostream& operator<<(std::ostream& out, CriticalTableType type) {
-	return out << getCriticalTableType(type);
+	return out << toString(type);
 }
 
 /**
 * Get the enumeration value based on a string
 * Accepts both lower case and mixed case strings
 */
-constexpr std::optional<CriticalTableType> getCriticalTableTypeFromString(std::string_view sv) {
+constexpr std::optional<CriticalTableType> fromString(std::string_view sv) {
 	using enum CriticalTableType;
 
-	const std::string& val = toASCIILowerCase(sv);
+	const std::string& val = lcase(sv);
 	if (val == "normal") return kNormal;
 	if (val == "largecreaturephysical") return kLargeCreaturePhysical;
 	if (val == "large_creature_physical") return kLargeCreaturePhysical;

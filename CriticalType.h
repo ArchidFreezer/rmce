@@ -28,7 +28,7 @@ enum class CriticalType {
 /**
 * Get the string representation of the enum values
 */
-constexpr std::string_view getCriticalType(CriticalType type) {
+constexpr std::string_view toString(CriticalType type) {
 	using enum CriticalType;
 
 	switch (type)
@@ -56,17 +56,17 @@ constexpr std::string_view getCriticalType(CriticalType type) {
 * Teach operator<< how to print a CriticalType
 */
 std::ostream& operator<<(std::ostream& out, CriticalType type) {
-	return out << getCriticalType(type);
+	return out << toString(type);
 }
 
 /**
 * Get the enumeration value based on a string
 * Accepts both lower case and mixed case strings
 */
-constexpr std::optional<CriticalType> getCriticalTypeFromString(std::string_view sv) {
+constexpr std::optional<CriticalType> fromString(std::string_view sv) {
 	using enum CriticalType;
 
-	const std::string& val = toASCIILowerCase(sv);
+	const std::string& val = lcase(sv);
 	if (val == "brawling") return kBrawling;
 	if (val == "grapple") return kGrapple;
 	if (val == "impact") return kImpact;

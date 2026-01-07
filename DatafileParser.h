@@ -14,19 +14,17 @@ public:
 	DatafileParser(GameRuleDataCache& cache, const std::string& datatype);
 	virtual ~DatafileParser() = default;
 		
-	const std::string& getDataType() { return datatype_; }
+	const std::string& get_data_type() { return datatype_; }
 
 	// Read game rule data from a file, convert to objects and store in the game rule data cache
 	virtual void read(const std::string& filename) = 0;
 	// Write game rule data from the cache to a file
 	virtual void save(const std::string& filename) = 0;
 
-	/*
-	* Creates a string that is a combination of the type and val parameters
-	* The returned string will only contain ucase letters, numbers and the underscore character
-	* Any character that is not an alphanum will be converted to an underscore with consecutive underscores being discarded
-	*/
-	static const std::string getID(std::string_view type, std::string_view val);
+	// Creates a string that is a combination of the type and val parameters
+	// The returned string will only contain ucase letters, numbers and the underscore character
+	// Any character that is not an alphanum will be converted to an underscore with consecutive underscores being discarded
+	static const std::string generateId(std::string_view type, std::string_view val);
 
 protected:
 	// Parse a boost::ptree containing rule data from a json file, convert to objects and store in the game rule data cache

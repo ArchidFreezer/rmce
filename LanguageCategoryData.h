@@ -18,8 +18,8 @@
 class LanguageCategoryData : public GameRuleData {
 public:
 	LanguageCategoryData(std::string_view id, std::string_view name);
-	const std::string& getID() { return id_; }
-  const std::string& getName() { return name_; }
+	const std::string& id() { return id_; }
+  const std::string& name() { return name_; }
 
 private:
 	std::string id_{};

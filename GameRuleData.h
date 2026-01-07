@@ -8,6 +8,6 @@ public:
 	GameRuleData() = default;
 	virtual ~GameRuleData() = default;
 
-	virtual const std::string& getID() = 0;
+	virtual const std::string& id() = 0;
 
 };
