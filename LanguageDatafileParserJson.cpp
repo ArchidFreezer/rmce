@@ -1,30 +1,17 @@
 #include <iostream>
 #include <stdexcept>
-#include "LanguageDatafileParser.h"
+#include "LanguageData.h"
+#include "LanguageDatafileParserJson.h"
 
 
-LanguageDatafileParser::LanguageDatafileParser(GameRuleDataCache& cache, FileFormat const filetype) : DatafileParser(cache, filetype) {
-	datatype_ = "Language";
+LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache) : DatafileParserJson(cache, "Language") {
+	root_node_ = "languages";
 }
 
-LanguageDatafileParser::LanguageDatafileParser(GameRuleDataCache& cache) : LanguageDatafileParser(cache, DatafileParser::kJson) {}
-
-void LanguageDatafileParser::parse() {
+void LanguageDatafileParserJson::parse() {
 	std::cout << "Loading Language data ..." << std::endl;
 
-	std::string rootNode{};
-	switch (filetype_) {
-	case DatafileParser::kXml:
-	{
-		rootNode = "LanguageData.languages";
-		break;
-	}
-	case DatafileParser::kJson:
-		rootNode = "languages";
-		break;
-	}
-
-	const pt::ptree& tree = ptree_.get_child(rootNode);
+	const pt::ptree& tree = ptree_.get_child(root_node_);
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", getID(getDataType(), name));
@@ -41,7 +28,7 @@ void LanguageDatafileParser::parse() {
 	std::cout << " done" << std::endl;
 }
 
-void LanguageDatafileParser::saveJson(const std::string& filename) {
+void LanguageDatafileParserJson::save(const std::string& filename) {
 	// Main tree
 	pt::ptree tree;
 
@@ -65,7 +52,7 @@ void LanguageDatafileParser::saveJson(const std::string& filename) {
 		}
 	}
 
-	tree.add_child("languages", plangs);
+	tree.add_child(root_node_, plangs);
 
 	pt::write_json(filename, tree);
 }
