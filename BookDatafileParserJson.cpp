@@ -11,7 +11,7 @@ BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache) : Dataf
 void BookDatafileParserJson::parse() {
 	std::cout << "Loading Book data ..." << std::endl;
 
-	const pt::ptree& tree = ptree_.get_child(rootNode());
+	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", generateId(get_data_type(), name));

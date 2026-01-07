@@ -26,13 +26,18 @@ public:
 	// Any character that is not an alphanum will be converted to an underscore with consecutive underscores being discarded
 	static const std::string generateId(std::string_view type, std::string_view val);
 
+	// Get a reference to the boost ptree used when reading the datafile
+	inline pt::ptree& ptree() { return ptree_; };
+
 protected:
 	// Parse a boost::ptree containing rule data from a json file, convert to objects and store in the game rule data cache
 	virtual void parse() = 0;
 
 	std::string datatype_{};
-	pt::ptree ptree_{};
 	GameRuleDataCache& cache_;
+
+private:
+	pt::ptree ptree_{};
 };
 
 

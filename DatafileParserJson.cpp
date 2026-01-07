@@ -5,7 +5,7 @@ DatafileParserJson::DatafileParserJson(GameRuleDataCache& cache, const std::stri
 void DatafileParserJson::read(const std::string& filename) {
 	if (filename.empty()) return;
 
-	pt::read_json(filename, ptree_);
+	pt::read_json(filename, ptree());
 	parse();
 }
 
