@@ -15,8 +15,11 @@ void BookDatafileParserJson::parse() {
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", generateId(get_data_type(), name));
+		std::string code = v.second.get<std::string>("code");
+		std::string abbreviation = v.second.get<std::string>("abbreviation");
+		std::string isbn = v.second.get<std::string>("isbn");
 
-		std::unique_ptr<BookData> datum = std::make_unique<BookData>(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbreviation"), v.second.get<std::string>("isbn"));
+		std::unique_ptr<BookData> datum = std::make_unique<BookData>(id, code, name, abbreviation, isbn);
 		cache().add<BookData>(std::move(datum), id);
 		std::cout << "\tBook name: " << name << std::endl;
 
