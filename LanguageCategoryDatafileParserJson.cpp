@@ -17,7 +17,7 @@ void LanguageCategoryDatafileParserJson::parse() {
 		std::string id = v.second.get("id", generateId(get_data_type(), name));
 
 		std::unique_ptr<LanguageCategoryData> datum = std::make_unique<LanguageCategoryData>(id, name);
-		cache_.add<LanguageCategoryData>(std::move(datum), id);
+		cache().add<LanguageCategoryData>(std::move(datum), id);
 		std::cout << "\tLanguage category name: " << name << std::endl;
 
 	}
@@ -31,9 +31,9 @@ void LanguageCategoryDatafileParserJson::save(const std::string& filename) {
 	// Array of language categories
 	pt::ptree plangs;
 
-	for (std::string b : cache_.keys<LanguageCategoryData>()) {
+	for (std::string b : cache().keys<LanguageCategoryData>()) {
 		try {
-			LanguageCategoryData& lang_data = cache_.get<LanguageCategoryData>(b);
+			LanguageCategoryData& lang_data = cache().get<LanguageCategoryData>(b);
 			// Individual book
 			pt::ptree plangcat;
 			plangcat.put("id", lang_data.id());

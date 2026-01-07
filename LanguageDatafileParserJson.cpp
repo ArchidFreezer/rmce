@@ -21,7 +21,7 @@ void LanguageDatafileParserJson::parse() {
 		bool isSomantic = v.second.get<bool>("isSomantic");
 
 		std::unique_ptr<LanguageData> datum = std::make_unique<LanguageData>(id, name, category, isSpoken, isWritten, isSomantic);
-		cache_.add<LanguageData>(std::move(datum), id);
+		cache().add<LanguageData>(std::move(datum), id);
 		std::cout << "\tLanguage name: " << name << std::endl;
 
 	}
@@ -35,9 +35,9 @@ void LanguageDatafileParserJson::save(const std::string& filename) {
 	// Array of books
 	pt::ptree plangs;
 
-	for (std::string b : cache_.keys<LanguageData>()) {
+	for (std::string b : cache().keys<LanguageData>()) {
 		try {
-			LanguageData& language_data = cache_.get<LanguageData>(b);
+			LanguageData& language_data = cache().get<LanguageData>(b);
 			// Individual language
 			pt::ptree datum;
 			datum.put("id", language_data.id());

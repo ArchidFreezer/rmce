@@ -17,7 +17,7 @@ void BookDatafileParserJson::parse() {
 		std::string id = v.second.get("id", generateId(get_data_type(), name));
 
 		std::unique_ptr<BookData> datum = std::make_unique<BookData>(id, v.second.get<std::string>("code"), name, v.second.get<std::string>("abbreviation"), v.second.get<std::string>("isbn"));
-		cache_.add<BookData>(std::move(datum), id);
+		cache().add<BookData>(std::move(datum), id);
 		std::cout << "\tBook name: " << name << std::endl;
 
 	}
@@ -34,9 +34,9 @@ void BookDatafileParserJson::save(const std::string& filename)
 	// Array of books
 	pt::ptree pbooks;
 
-	for (std::string b : cache_.keys<BookData>()) {
+	for (std::string b : cache().keys<BookData>()) {
 		try {
-			BookData& book_data = cache_.get<BookData>(b);
+			BookData& book_data = cache().get<BookData>(b);
 			// Individual book
 			pt::ptree book;
 			book.put("id", book_data.id());

@@ -29,14 +29,17 @@ public:
 	// Get a reference to the boost ptree used when reading the datafile
 	inline pt::ptree& ptree() { return ptree_; };
 
+	// Get a reference to the game rule data cache
+	inline GameRuleDataCache& cache() { return cache_; };
+
 protected:
 	// Parse a boost::ptree containing rule data from a json file, convert to objects and store in the game rule data cache
 	virtual void parse() = 0;
 
 	std::string datatype_{};
-	GameRuleDataCache& cache_;
 
 private:
+	GameRuleDataCache& cache_;
 	pt::ptree ptree_{};
 };
 
