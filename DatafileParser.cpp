@@ -1,27 +1,9 @@
 #include "DatafileParser.h"
 
-DatafileParser::DatafileParser(GameRuleDataCache& cache, DatafileParser::FileFormat const filetype) :
-	filetype_{ filetype },
-	cache_{ cache }
+DatafileParser::DatafileParser(GameRuleDataCache& cache, const std::string& datatype) :
+	cache_{ cache },
+	datatype_ { datatype }
 {}
-
-DatafileParser::DatafileParser(GameRuleDataCache& cache) :	DatafileParser(cache, DatafileParser::kXml) {}
-
-void DatafileParser::read(const std::string& filename) {
-	if (filename.empty()) return;
-	datafile_ = filename;
-
-	switch (filetype_) {
-	case DatafileParser::kXml:
-		pt::read_xml(datafile_, ptree_, pt::xml_parser::trim_whitespace);
-		break;
-	case DatafileParser::kJson:
-		pt::read_json(datafile_, ptree_);
-		break;
-	}
-
-	parse();
-}
 
 const std::string DatafileParser::getID(std::string_view type, std::string_view val) {
 	std::stringstream ss{};
@@ -63,6 +45,7 @@ const std::string DatafileParser::getID(std::string_view type, std::string_view 
 	return ret;
 }
 
+/*
 void DatafileParser::save(const std::string& filename, FileFormat const filetype) {
 	switch (filetype) {
 	case DatafileParser::kXml:
@@ -77,8 +60,4 @@ void DatafileParser::save(const std::string& filename, FileFormat const filetype
 	}
 
 }
-
-void DatafileParser::save(const std::string& filename) {
-	save(filename, filetype_);
-}
-
+*/

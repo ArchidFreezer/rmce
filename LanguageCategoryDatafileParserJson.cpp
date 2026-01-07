@@ -1,30 +1,17 @@
 #include <iostream>
 #include <stdexcept>
-#include "LanguageCategoryDatafileParser.h"
+#include "LanguageCategoryData.h"
+#include "LanguageCategoryDatafileParserJson.h"
 
 
-LanguageCategoryDatafileParser::LanguageCategoryDatafileParser(GameRuleDataCache& cache, FileFormat const filetype) : DatafileParser(cache, filetype) {
-	datatype_ = "LanguageCategory";
+LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleDataCache& cache) : DatafileParserJson(cache, "LanguageCategory") {
+	root_node_ = "languageCategories";
 }
 
-LanguageCategoryDatafileParser::LanguageCategoryDatafileParser(GameRuleDataCache& cache) : LanguageCategoryDatafileParser(cache, DatafileParser::kJson) {}
-
-void LanguageCategoryDatafileParser::parse() {
+void LanguageCategoryDatafileParserJson::parse() {
 	std::cout << "Loading Language category data ..." << std::endl;
 
-	std::string rootNode{};
-	switch (filetype_) {
-	case DatafileParser::kXml:
-	{
-		rootNode = "LanguageCategoryData.books";
-		break;
-	}
-	case DatafileParser::kJson:
-		rootNode = "languageCategories";
-		break;
-	}
-
-	const pt::ptree& tree = ptree_.get_child(rootNode);
+	const pt::ptree& tree = ptree_.get_child(root_node_);
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", getID(getDataType(), name));
@@ -37,7 +24,7 @@ void LanguageCategoryDatafileParser::parse() {
 	std::cout << " done" << std::endl;
 }
 
-void LanguageCategoryDatafileParser::saveJson(const std::string& filename) {
+void LanguageCategoryDatafileParserJson::save(const std::string& filename) {
 	// Main tree
 	pt::ptree tree;
 
@@ -57,7 +44,7 @@ void LanguageCategoryDatafileParser::saveJson(const std::string& filename) {
 		}
 	}
 
-	tree.add_child("languageCategories", plangs);
+	tree.add_child(root_node_, plangs);
 
 	pt::write_json(filename, tree);
 }

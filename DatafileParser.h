@@ -11,23 +11,15 @@ class DatafileParser
 {
 public:
 
-	enum class FileFormat {
-		kJson,
-		kXml
-	};
-	using enum FileFormat; // Bring enumerations into current scope (C++20) so we can use DatafileParser::<val> rather than DatafileParser::FileFormat::<val>
-
-	DatafileParser(GameRuleDataCache& cache, FileFormat const filetype);
-	DatafileParser(GameRuleDataCache& cache);
+	DatafileParser(GameRuleDataCache& cache, const std::string& datatype);
 	virtual ~DatafileParser() = default;
 		
-	void setDataType(FileFormat const filetype) { filetype_ = filetype; }
-	FileFormat getDatafileType() const { return filetype_; }
 	const std::string& getDataType() { return datatype_; }
 
-	void read(const std::string& filename);
-	void save(const std::string& filename, FileFormat const filetype);
-	void save(const std::string& filename);
+	// Read game rule data from a file, convert to objects and store in the game rule data cache
+	virtual void read(const std::string& filename) = 0;
+	// Write game rule data from the cache to a file
+	virtual void save(const std::string& filename) = 0;
 
 	/*
 	* Creates a string that is a combination of the type and val parameters
@@ -37,13 +29,11 @@ public:
 	static const std::string getID(std::string_view type, std::string_view val);
 
 protected:
+	// Parse a boost::ptree containing rule data from a json file, convert to objects and store in the game rule data cache
 	virtual void parse() = 0;
-	virtual void saveJson(const std::string& filename) = 0;
 
-	std::string datafile_{};
 	std::string datatype_{};
 	pt::ptree ptree_{};
-	FileFormat filetype_{ FileFormat::kJson };
 	GameRuleDataCache& cache_;
 };
 
