@@ -67,7 +67,7 @@ std::ostream& operator<<(std::ostream& out, ResistanceType resistance) {
 /**
  * @brief Get the enumeration value based on a string
  *
- * Accepts values that are returned by the toString() in a case insensitive manner.
+ * Accepts values that are returned by toString() in a case insensitive manner.
  *
  * For values that contain strings this function will accept these with the
  * space, with the space removed or with the space changed to an underscore:
