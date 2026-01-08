@@ -13,7 +13,6 @@
             "id": "LANGUAGE_DWARVISH",
             "name": "Dwarvish",
             "category": "LANGUAGECATEGORY_DWARVEN",
-            "baseLanguage": "Dwarvish",
             "isSpoken": "true",
             "isWritten": "true",
             "isSomantic": "false"
@@ -22,7 +21,6 @@
             "id": "LANGUAGE_ELVISH",
             "name": "Elvish",
             "category": "LANGUAGECATEGORY_ELVEN",
-            "baseLanguage": "Elvish",
             "isSpoken": "true",
             "isWritten": "true",
             "isSomantic": "false"
