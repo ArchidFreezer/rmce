@@ -19,22 +19,22 @@
  * the possible types.
  */
 enum class CriticalType {
-	kBrawling,
-	kGrapple,
-	kImpact,
-	kKrush,
-	kMartialArtsStrikes,
-	kMartialArtsSweeps,
-	kPuncture,
-	kSlash,
-	kSubdual,
-	kTiny,
-	kUnbalance,
-	kAether,
-	kCold,
-	kElectrical,
-	kHeat,
-	kNether
+	kBrawling, /**< Combat without weapons */
+	kGrapple, /**< Combat where the attacker is trying to grab the target */
+	kImpact, /**< Certain spell attacks such a bolts, or the use of pure force */
+	kKrush, /**< Weapons that use blunt force */
+	kMartialArtsStrikes, /**< Soft martial arts such as Judo or Wrestling */
+	kMartialArtsSweeps, /**< Hard martial atrs such as Karate, Boxing or Tackling */
+	kPuncture, /**< Weapons that use a point to pierce the target such as arrows or animal teeth/horns */
+	kSlash, /**< Weapons that use an edge to attack */
+	kSubdual, /**< The point is immobilize or render a target unconscious */
+	kTiny, /**< Creatures of #CreatureSize::kTiny or other irritants */
+	kUnbalance, /**< Attempt to knock the target over or off-balance them */
+	kAether, /**< Elemental force of creation */
+	kCold, /**< Elemental cold damage */
+	kElectrical,  /**< Elemental electrical damage */
+	kHeat,  /**< Elemental heat damage */
+	kNether /**< Elemental force of destruction */
 };
 
 /**

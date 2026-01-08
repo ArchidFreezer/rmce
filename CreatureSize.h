@@ -18,11 +18,11 @@
  * valid sizes that there are tables for.
  */
 enum class CreatureSize {
-	kTiny,
-	kSmall,
-	kMedium,
-	kLarge,
-	kSuperLarge
+	kTiny, /**< Tiny creatures are insect sized */
+	kSmall, /**< Small creatures are cat or dog sized */
+	kMedium, /**< Medium creatures are approximately human sized such as deer or most sharks */
+	kLarge, /**< Large creatures are buffalo or lions */
+	kSuperLarge /**< Super Large or Huge creatures are elephant or whale sized */
 };
 
 /**

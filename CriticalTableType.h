@@ -19,11 +19,11 @@
  * damage being the only factors. This class represents the valid types of critical table to use.
  */
 enum class CriticalTableType {
-	kNormal,
-	kLargeCreaturePhysical,
-	kSuperLargeCreaturePhysical,
-	kLargeCreatureSpell,
-	kSuperLargeCreatureSpell
+	kNormal, /**< Normal criticals are those that do not fit in the other categories */
+	kLargeCreaturePhysical, /**< These are non-magical attacks against creatures with a #CreatureSize::kLarge */
+	kSuperLargeCreaturePhysical, /**< These are non-magical attacks against creatures with a #CreatureSize::kSuperLarge */
+	kLargeCreatureSpell, /**< These are magical attacks against creatures with #CreatureSize::kLarge */
+	kSuperLargeCreatureSpell /**< These are magical attacks against creatures with #CreatureSize::kSuperLarge */
 };
 
 /**

@@ -126,12 +126,12 @@ Include dependency graph for CriticalTableType.h:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a723f9630e4fe994cbfe2fd6a3ac98e40" id="r_a723f9630e4fe994cbfe2fd6a3ac98e40"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a723f9630e4fe994cbfe2fd6a3ac98e40">CriticalTableType</a> { <br />
-&#160;&#160;<b>kNormal</b>
-, <b>kLargeCreaturePhysical</b>
-, <b>kSuperLargeCreaturePhysical</b>
-, <b>kLargeCreatureSpell</b>
+&#160;&#160;<a class="el" href="#a723f9630e4fe994cbfe2fd6a3ac98e40a07fa7a19aa722c635a15e94cb7f50416">kNormal</a>
+, <a class="el" href="#a723f9630e4fe994cbfe2fd6a3ac98e40aea77e777f06ddc8e1b262ec7338565b7">kLargeCreaturePhysical</a>
+, <a class="el" href="#a723f9630e4fe994cbfe2fd6a3ac98e40aa49eca5ade84888b60f27eb8fd3f2615">kSuperLargeCreaturePhysical</a>
+, <a class="el" href="#a723f9630e4fe994cbfe2fd6a3ac98e40a9f6e20e82520583d8de05ee85fd65cc0">kLargeCreatureSpell</a>
 , <br />
-&#160;&#160;<b>kSuperLargeCreatureSpell</b>
+&#160;&#160;<a class="el" href="#a723f9630e4fe994cbfe2fd6a3ac98e40a8344191ff8fcec5771226f7e4ee882a9">kSuperLargeCreatureSpell</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a723f9630e4fe994cbfe2fd6a3ac98e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration class representing the type of critical tables.  <a href="#a723f9630e4fe994cbfe2fd6a3ac98e40">More...</a><br /></td></tr>
@@ -170,6 +170,18 @@ Functions</h2></td></tr>
 
 <p>Enumeration class representing the type of critical tables. </p>
 <p>Normally when resolving a critical strike the type of criticalk determines the lookup table used, but for large creatures it is the size of the creature and the nature of the damage that determines this, with Physical and Spell damage being the only factors. This class represents the valid types of critical table to use. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a723f9630e4fe994cbfe2fd6a3ac98e40a07fa7a19aa722c635a15e94cb7f50416" name="a723f9630e4fe994cbfe2fd6a3ac98e40a07fa7a19aa722c635a15e94cb7f50416"></a>kNormal&#160;</td><td class="fielddoc"><p>Normal criticals are those that do not fit in the other categories </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a723f9630e4fe994cbfe2fd6a3ac98e40aea77e777f06ddc8e1b262ec7338565b7" name="a723f9630e4fe994cbfe2fd6a3ac98e40aea77e777f06ddc8e1b262ec7338565b7"></a>kLargeCreaturePhysical&#160;</td><td class="fielddoc"><p>These are non-magical attacks against creatures with a <a class="el" href="_creature_size_8h.html#a330e3a3f0dc7d4bfce122da8e685af6ca995e7b7e33ea3f37a72770505adf016e">CreatureSize::kLarge</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a723f9630e4fe994cbfe2fd6a3ac98e40aa49eca5ade84888b60f27eb8fd3f2615" name="a723f9630e4fe994cbfe2fd6a3ac98e40aa49eca5ade84888b60f27eb8fd3f2615"></a>kSuperLargeCreaturePhysical&#160;</td><td class="fielddoc"><p>These are non-magical attacks against creatures with a <a class="el" href="_creature_size_8h.html#a330e3a3f0dc7d4bfce122da8e685af6ca57141464ed1fe04093cd3e749594a608">CreatureSize::kSuperLarge</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a723f9630e4fe994cbfe2fd6a3ac98e40a9f6e20e82520583d8de05ee85fd65cc0" name="a723f9630e4fe994cbfe2fd6a3ac98e40a9f6e20e82520583d8de05ee85fd65cc0"></a>kLargeCreatureSpell&#160;</td><td class="fielddoc"><p>These are magical attacks against creatures with <a class="el" href="_creature_size_8h.html#a330e3a3f0dc7d4bfce122da8e685af6ca995e7b7e33ea3f37a72770505adf016e">CreatureSize::kLarge</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a723f9630e4fe994cbfe2fd6a3ac98e40a8344191ff8fcec5771226f7e4ee882a9" name="a723f9630e4fe994cbfe2fd6a3ac98e40a8344191ff8fcec5771226f7e4ee882a9"></a>kSuperLargeCreatureSpell&#160;</td><td class="fielddoc"><p>These are magical attacks against creatures with <a class="el" href="_creature_size_8h.html#a330e3a3f0dc7d4bfce122da8e685af6ca57141464ed1fe04093cd3e749594a608">CreatureSize::kSuperLarge</a> </p>
+</td></tr>
+</table>
 
 </div>
 </div>
