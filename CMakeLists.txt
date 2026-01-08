@@ -22,3 +22,12 @@ target_include_directories(dataload PUBLIC
                            "${PROJECT_BINARY_DIR}"
                            "${PROJECT_SOURCE_DIR}/../Libraries/boost_1_90_0"
                            )
+
+find_package(Doxygen REQUIRED COMPONENTS dot)
+
+if (Doxygen_FOUND)
+  set(DOXYGEN_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/docs)
+  set(DOXYGEN_PROJECT_NAME "Rolemaster Character Editor")
+  set(DOXYGEN_HAVE_DOT YES)
+  doxygen_add_docs(project_docs ${PROJECT_SOURCE_DIR} ALL)
+endif()

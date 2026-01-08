@@ -1,0 +1,11 @@
+<map id="GameRuleData" name="GameRuleData">
+<area shape="rect" id="Node000001" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="209,5,321,32"/>
+<area shape="rect" id="Node000002" href="$class_book_data.html" title="Class representing a Rolemaster rule book used in the campaign world." alt="" coords="5,80,85,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,40,84,82,83,77,211,35"/>
+<area shape="rect" id="Node000003" href="$class_language_category_data.html" title="Class to represent language families as described in Spell Law &#45; Mentalism Companion (BOOK_MENTALISM_..." alt="" coords="108,80,267,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,42,202,82,200,77,238,44"/>
+<area shape="rect" id="Node000004" href="$class_language_data.html" title="Class representing an individual language used in the campaign world." alt="" coords="291,80,396,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="291,40,333,80,327,79,289,45"/>
+<area shape="rect" id="Node000005" href="$class_language_dialect_data.html" title="Class representing the dialects that exist for a language." alt="" coords="420,80,566,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="320,34,456,79,450,80,319,40"/>
+</map>
