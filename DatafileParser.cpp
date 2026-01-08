@@ -8,7 +8,8 @@ DatafileParser::DatafileParser(GameRuleDataCache& cache, const std::string& data
 const std::string DatafileParser::generateId(std::string_view type, std::string_view val) {
 	std::stringstream ss{};
 
-	// Add the chracters from the type
+	// Add the characters from the type, replacing non alphanum characters with an underscore
+	// discarding consecutive underscores.
 	bool last_alpha { false };
 	for (char c : type) {
 		if (isalnum(c)) {
@@ -24,7 +25,8 @@ const std::string DatafileParser::generateId(std::string_view type, std::string_
 	// Add the type/val separator
 	if (last_alpha) ss.put('_');
 
-	// Add the chracters from the val
+	// Add the chracters from the val, replacing non alphanum characters with an underscore
+	// discarding consecutive underscores.
 	last_alpha = false;
 	for (char c : val) {
 		if (isalnum(c)) {

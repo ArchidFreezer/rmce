@@ -6,6 +6,13 @@
 
 #include "StringUtils.h"
 
+/**
+ * @brief Enumeration class representing types of critical damage
+ *
+ * During combat and in other situations a characte may receive critical damage with the actual damage taken determined
+ * by a lookup table. There are different types of critical based on the source of the damage and this enum lists all
+ * the possible types.
+ */
 enum class CriticalType {
 	kBrawling,
 	kGrapple,
@@ -26,8 +33,10 @@ enum class CriticalType {
 };
 
 /**
-* Get the string representation of the enum values
-*/
+ * @brief Get the string representation of the given enum
+ * @param size The #CriticalType to get the string of
+ * @return Game display form of the enum value as a string_view
+ */
 constexpr std::string_view toString(CriticalType type) {
 	using enum CriticalType;
 
@@ -53,16 +62,34 @@ constexpr std::string_view toString(CriticalType type) {
 }
 
 /**
-* Teach operator<< how to print a CriticalType
-*/
+ * @brief Teach operator<< how to print a CriticalType
+ * @param out Output stream that the enum should be printed to
+ * @param size Enum value to output
+ * @return Output stream reference containing the output enum value
+ */
 std::ostream& operator<<(std::ostream& out, CriticalType type) {
 	return out << toString(type);
 }
 
 /**
-* Get the enumeration value based on a string
-* Accepts both lower case and mixed case strings
-*/
+ * @brief Get the enumeration value based on a string
+ *
+ * Accepts values that are returned by the toString() in a case insensitive manner.
+ *
+ * For values that contain strings thie function will accept these with the
+ * space, with the space removed or with the space changed to an underscore:
+ * - "Martial Arts Strikes"
+ * - "martial arts strikes"
+ * - "MartialArtsStrikes"
+ * - "martialartsstrikes"
+ * - "SMartial_Arts_Strikes"
+ * - "martial_arts_strikes"
+ *
+ * @param sv string_view to get the enumeration for
+ * @return #CriticalType represented by the string
+ *
+ * @see toString()
+ */
 constexpr std::optional<CriticalType> fromString(std::string_view sv) {
 	using enum CriticalType;
 

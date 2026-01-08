@@ -12,6 +12,7 @@ LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache)
 void LanguageDatafileParserJson::parse() {
 	std::cout << "Loading Language data ..." << std::endl;
 
+	// Get the languages to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
@@ -24,7 +25,8 @@ void LanguageDatafileParserJson::parse() {
 
 		std::cout << "\tLanguage name: " << name << std::endl;
 
-		// Process the language object
+		// We create a LanguageData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
+		// to the cache when we add it
 		std::unique_ptr<LanguageData> datum = std::make_unique<LanguageData>(id, name, category, base_language, is_spoken, is_written, is_somantic);
 		cache().add<LanguageData>(std::move(datum), id);
 

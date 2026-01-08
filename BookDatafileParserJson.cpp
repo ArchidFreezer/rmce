@@ -11,6 +11,7 @@ BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache) : Dataf
 void BookDatafileParserJson::parse() {
 	std::cout << "Loading Book data ..." << std::endl;
 
+	// Get the books to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
@@ -19,6 +20,8 @@ void BookDatafileParserJson::parse() {
 		std::string abbreviation = v.second.get<std::string>("abbreviation");
 		std::string isbn = v.second.get<std::string>("isbn");
 
+		// We create a BookData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
+		// to the cache when we add it
 		std::unique_ptr<BookData> datum = std::make_unique<BookData>(id, code, name, abbreviation, isbn);
 		cache().add<BookData>(std::move(datum), id);
 		std::cout << "\tBook name: " << name << std::endl;
@@ -34,7 +37,7 @@ void BookDatafileParserJson::save(const std::string& filename)
 	// Main tree
 	pt::ptree tree;
 
-	// Array of books
+	// Tree of books
 	pt::ptree pbooks;
 
 	for (std::string b : cache().keys<BookData>()) {

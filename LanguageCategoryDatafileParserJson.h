@@ -3,14 +3,38 @@
 #include "DatafileParserJson.h"
 #include "GameRuleDataCache.h"
 
+/**
+ * @class LanguageCategoryDatafileParserJson
+ * @brief Process #LanguageCategoryData objects for json files
+ * 
+ * This class can read a well-formed json file creating #LanguageCategoryData objects from the contents, adding them to a
+ * #GameRuleDataCache cache.
+ * 
+ * The reverse operation is also available where the objects from the cache may be written out to a json file.
+ * 
+ * @see #LanguageCategoryData
+ * @see #GameRuleDataCache
+ */
 class LanguageCategoryDatafileParserJson : public DatafileParserJson {
 public:
+	/**
+	 * @brief Constructor
+	 * @param cache Cache to use for #LanguageCategoryData objects
+	 */
 	LanguageCategoryDatafileParserJson(GameRuleDataCache& cache);
 
-	// Write language category game rule data from the cache to a json file
+	/**
+	 * @brief Write language category game rule data from the cache to a json file
+	 * @param filename Path to the json file to write
+	 */
 	void save(const std::string& filename);
 
 private:
-	// Parse a boost::ptree containing the language category rule data from a json file, convert to objects and store in the game rule data cache
+	/**
+	 * @brief Parse a ptree into #LanguageCategoryData objects
+	 * 
+	 * Parse a boost::ptree containing the language category rule datas, convert to #LanguageCategoryData objects and store in
+	 * a data cache
+	 */
 	void parse();
 };

@@ -6,6 +6,8 @@
 #include "GameRuleData.h"
 
 /**
+ * @class LanguageDialectData
+ * 
  * @brief Class representing the dialects that exist for a language
  * 
  * In game dialects come into play more strongly in verbal communication more than written.
@@ -15,6 +17,8 @@
  * 
  * For verbal communication where understanding needs to be quicker, unless the speaker deliberately
  * slows down their speaking the listeners skill ranks should be considered as 3/4 (round up).
+ * 
+ * @see #LanguageData
  */
 class LanguageDialectData : public GameRuleData {
 public:

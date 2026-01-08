@@ -6,6 +6,13 @@
 
 #include "StringUtils.h"
 
+/**
+ * @brief Enumeration class representing the type of critical tables
+ *
+ * Normally when resolving a critical strike the type of criticalk determines the lookup table used, but for large
+ * creatures it is the size of the creature and the nature of the damage that determines this, with Physical and Spell
+ * damage being the only factors. This class represents the valid types of critical table to use.
+ */
 enum class CriticalTableType {
 	kNormal,
 	kLargeCreaturePhysical,
@@ -15,8 +22,10 @@ enum class CriticalTableType {
 };
 
 /**
-* Get the string representation of the enum values
-*/
+ * @brief Get the string representation of the given enum
+ * @param size The #CriticalTableType to get the string of
+ * @return Game display form of the enum value as a string_view
+ */
 constexpr std::string_view toString(CriticalTableType type) {
 	using enum CriticalTableType;
 
@@ -31,16 +40,34 @@ constexpr std::string_view toString(CriticalTableType type) {
 }
 
 /**
-* Teach operator<< how to print a CriticalTableType
-*/
+ * @brief Teach operator<< how to print a CriticalTableType
+ * @param out Output stream that the enum should be printed to
+ * @param size Enum value to output
+ * @return Output stream reference containing the output enum value
+ */
 std::ostream& operator<<(std::ostream& out, CriticalTableType type) {
 	return out << toString(type);
 }
 
 /**
-* Get the enumeration value based on a string
-* Accepts both lower case and mixed case strings
-*/
+ * @brief Get the enumeration value based on a string
+ *
+ * Accepts values that are returned by the toString() in a case insensitive manner.
+ *
+ * For values that contain strings thie function will accept these with the
+ * space, with the space removed or with the space changed to an underscore:
+ * - "Large Creature Spell"
+ * - "large creature spell"
+ * - "LargeCreatureSpell"
+ * - "largecreaturespell"
+ * - "Large_Creature_Spell"
+ * - "large_creature_spell"
+ *
+ * @param sv String to get the enumeration for
+ * @return  #CriticalTableType represented by the string
+ *
+ * @see toString()
+ */
 constexpr std::optional<CriticalTableType> fromString(std::string_view sv) {
 	using enum CriticalTableType;
 

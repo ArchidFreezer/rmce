@@ -11,11 +11,14 @@ LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleD
 void LanguageCategoryDatafileParserJson::parse() {
 	std::cout << "Loading Language category data ..." << std::endl;
 
+	// Get the language categories to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", generateId(ruleDatatype(), name));
 
+		// We create a LanguageCategoryData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
+		// to the cache when we add it
 		std::unique_ptr<LanguageCategoryData> datum = std::make_unique<LanguageCategoryData>(id, name);
 		cache().add<LanguageCategoryData>(std::move(datum), id);
 		std::cout << "\tLanguage category name: " << name << std::endl;
@@ -34,7 +37,7 @@ void LanguageCategoryDatafileParserJson::save(const std::string& filename) {
 	for (std::string b : cache().keys<LanguageCategoryData>()) {
 		try {
 			LanguageCategoryData& lang_data = cache().get<LanguageCategoryData>(b);
-			// Individual book
+			// Individual category
 			pt::ptree plangcat;
 			plangcat.put("id", lang_data.id());
 			plangcat.put("name", lang_data.name());

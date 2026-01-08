@@ -9,47 +9,114 @@
 
 #include "GameRuleData.h"
 
-// Class that caches static game rule data, such as professions, spell lists, etc.
-// The class can cache any object type that is derived from the polymorphic GameRuleData class.
-// The class is thread safe 
+/**
+ * @class GameRuleDataCache
+ * @brief Class to store game rule data, such as profession definitions, spell lists, etc.
+ * 
+ * The class is thread safe and can cache any object type that is derived from the polymorphic #GameRuleData class
+ * 
+ * The game rule data that is stored must be passed as a unique_ptr which ensures that there is only a single copy and it
+ * is the cache that owns the object. This ensures that all objects are correctly
+ */
 class GameRuleDataCache {
 public:
+	/**
+	 * @brief Default constructor
+	 */
 	GameRuleDataCache() = default;
+	/**
+	 * @brief Default destructor
+	 */
 	~GameRuleDataCache() = default;
 
-	// Remove the copy constuctor as there should one be a single cache instance
+	/**
+	 * @brief Copy constructor
+	 * 
+	 * This is removed as there should one be a single cache instance
+	 * 
+	 * @param GameRuleDataCache to copy
+	 */
 	GameRuleDataCache(const GameRuleDataCache&) = delete;
-	// Remove the assignment operator as there should one be a single cache instance
+	/**
+	 * @brief Assignment operator
+	 * 
+	 * This is removed as there should one be a single cache instance
+	 * 
+	 * @param GameRuleDataCache to assign
+	 * @return New cache object
+	 */
 	GameRuleDataCache& operator=(const GameRuleDataCache&) = delete;
 
-	// Remove the move constuctor as it should never need to be moved
+	/**
+	 * @brief Move constructor
+	 *
+	 * This is removed as there should one be a single cache instance
+	 *
+	 * @param GameRuleDataCache to copy
+	 */
 	GameRuleDataCache(GameRuleDataCache&&) = delete;
-	// Remove the assignment operator as it should never need to be moved
+	/**
+	 * @brief Move assignment operator
+	 *
+	 * This is removed as there should one be a single cache instance
+	 *
+	 * @param GameRuleDataCache to assign
+	 * @return New cache object
+	 */
 	GameRuleDataCache& operator=(GameRuleDataCache&&) = delete;
 
-	// Get the rule data with the given ID
-	// Throws out_of_range exception if there is no rule data for the id with the given type
+	/**
+	 * @brief Get the rule data object with the given id
+	 * 
+	 * @tparam T Class of the data object to be retrieved
+	 *           Must be derived from #GameRuleData
+	 * @param id Id of the object being retrieved
+	 * @return Reference to the data object
+	 * @throws out_of_range if there is no rule data for the id with the given type
+	 */
 	template <class T>
 	T& get(std::string& id);
 
-	// Move rule data to the cache
-	// This changes ownership of the rule data to the cache
+	/**
+	 * @brief Move rule data object to the cache
+	 * 
+	 * This changes ownership of the rule data to the cache
+	 * 
+	 * @tparam T Class of the data object to be retrieved
+	 *           Must be derived from #GameRuleData
+	 * @param datum Object to move to the cache
+	 * @param id Identifier of the data object
+	 */
 	template <class T>
 	void add(std::unique_ptr <T> datum, std::string& id);
 
-	// Check if data exists in the cache
+	/**
+	 * @brief Check if data object exists in the cache
+	 * @tparam T Class of the data object to be retrieved
+	 *           Must be derived from #GameRuleData
+	 * @param id Identifier of the data object
+	 * @return Reference to the data object
+	 */
 	template <class T>
 	bool exists(std::string& id);
 
-	// Gets a list of all the rule data ids for a specific rule type
+	/**
+	 * @brief Gets an ordered collection of all the rule data ids for a specific rule type
+	 * @tparam T Class of the data object to be retrieved
+	 *           Must be derived from #GameRuleData
+	 * @return Set of ids for all the data objects of the requested type
+	 */
 	template <class T>
 	std::set<std::string> keys();
 	
 private:
-	// Store the state of the cache
-	// This is made static so that all instances of the cache are reading the same data
+	/**
+	 * @brief Stores the state of the cache
+	 */
 	std::unordered_map<std::type_index, std::unordered_map<std::string, std::unique_ptr<GameRuleData>>> state;
-	// Store mutexes to make the class threads safe
+	/**
+	 * @brief Stores mutexes to make the class threads safe
+	 */
 	std::unordered_map<std::type_index, std::mutex> mutexes;
 };
 
@@ -58,6 +125,7 @@ inline T& GameRuleDataCache::get(std::string& id)
 {
 	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
 
+	// Grab a mutex for thread safety
 	auto& mutex = mutexes[typeid(T)];
 	std::lock_guard<std::mutex> guard(mutex);
 
@@ -79,8 +147,10 @@ inline T& GameRuleDataCache::get(std::string& id)
 template<class T>
 inline void GameRuleDataCache::add(std::unique_ptr <T> datum, std::string& id)
 {
+	// Check we are requesting an appropriate class
 	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
 
+	// Grab a mutex for thread safety
 	auto& mutex = mutexes[typeid(T)];
 	std::lock_guard<std::mutex> guard(mutex);
 
@@ -94,8 +164,10 @@ inline void GameRuleDataCache::add(std::unique_ptr <T> datum, std::string& id)
 template<class T>
 inline bool GameRuleDataCache::exists(std::string& id)
 {
+	// Check we are requesting an appropriate class
 	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
 
+	// Grab a mutex for thread safety
 	auto& mutex = mutexes[typeid(T)];
 	std::lock_guard<std::mutex> guard(mutex);
 		
@@ -112,8 +184,10 @@ inline bool GameRuleDataCache::exists(std::string& id)
 template<class T>
 inline std::set<std::string> GameRuleDataCache::keys()
 {
+	// Check we are requesting an appropriate class
 	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
 
+	// Grab a mutex for thread safety
 	auto& mutex = mutexes[typeid(T)];
 	std::lock_guard<std::mutex> guard(mutex);
 
