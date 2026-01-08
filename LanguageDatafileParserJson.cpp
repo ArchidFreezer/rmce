@@ -2,6 +2,7 @@
 #include <stdexcept>
 #include "LanguageData.h"
 #include "LanguageDatafileParserJson.h"
+#include "LanguageDialectData.h"
 
 
 LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache) : DatafileParserJson(cache, "Language") {
@@ -16,14 +17,26 @@ void LanguageDatafileParserJson::parse() {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", generateId(ruleDatatype(), name));
 		std::string category = v.second.get<std::string>("category");
-		bool isSpoken = v.second.get<bool>("isSpoken");
-		bool isWritten = v.second.get<bool>("isWritten");
-		bool isSomantic = v.second.get<bool>("isSomantic");
+		std::string base_language = v.second.get<std::string>("baseLanguage");
+		bool is_spoken = v.second.get<bool>("isSpoken");
+		bool is_written = v.second.get<bool>("isWritten");
+		bool is_somantic = v.second.get<bool>("isSomantic");
 
-		std::unique_ptr<LanguageData> datum = std::make_unique<LanguageData>(id, name, category, isSpoken, isWritten, isSomantic);
-		cache().add<LanguageData>(std::move(datum), id);
 		std::cout << "\tLanguage name: " << name << std::endl;
 
+		// Process the language object
+		std::unique_ptr<LanguageData> datum = std::make_unique<LanguageData>(id, name, category, base_language, is_spoken, is_written, is_somantic);
+		cache().add<LanguageData>(std::move(datum), id);
+
+		// Add the language to the appropriate dialect collection
+		if (cache().exists<LanguageDialectData>(base_language)) {
+			std::cout << "\t\tExisting dialect: " << base_language << std::endl;
+			cache().get<LanguageDialectData>(base_language).add(id);
+		} else {
+			std::cout << "\t\New dialect: " << base_language << std::endl;
+			std::unique_ptr<LanguageDialectData> dialects = std::make_unique<LanguageDialectData>(base_language);
+			cache().add<LanguageDialectData>(std::move(dialects), base_language);
+		}
 	}
 	std::cout << " done" << std::endl;
 }
@@ -43,6 +56,7 @@ void LanguageDatafileParserJson::save(const std::string& filename) {
 			datum.put("id", language_data.id());
 			datum.put("name", language_data.name());
 			datum.put("category", language_data.category());
+			datum.put("baseLanguage", language_data.baseLanguage());
 			datum.put("isSpoken", language_data.isSpoken());
 			datum.put("isWritten", language_data.isWritten());
 			datum.put("isSomantic", language_data.isSomantic());

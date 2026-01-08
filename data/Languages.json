@@ -4,14 +4,16 @@
             "id": "LANGUAGE_COMMON_SPEACH",
             "name": "Common-Speach",
             "category": "LANGUAGECATEGORY_HUMAN",
+            "baseLanguage": "Common",
             "isSpoken": "true",
             "isWritten": "true",
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_DWARVEN",
+            "id": "LANGUAGE_DWARVISH",
             "name": "Dwarvish",
             "category": "LANGUAGECATEGORY_DWARVEN",
+            "baseLanguage": "Dwarvish",
             "isSpoken": "true",
             "isWritten": "true",
             "isSomantic": "false"
@@ -20,6 +22,7 @@
             "id": "LANGUAGE_ELVISH",
             "name": "Elvish",
             "category": "LANGUAGECATEGORY_ELVEN",
+            "baseLanguage": "Elvish",
             "isSpoken": "true",
             "isWritten": "true",
             "isSomantic": "false"
@@ -28,6 +31,7 @@
             "id": "LANGUAGE_GREY_ELVISH",
             "name": "Grey-Elvish",
             "category": "LANGUAGECATEGORY_ELVEN",
+            "baseLanguage": "Elvish",
             "isSpoken": "true",
             "isWritten": "true",
             "isSomantic": "false"
@@ -36,6 +40,7 @@
             "id": "LANGUAGE_HIGH_ELVISH",
             "name": "High-Elvish",
             "category": "LANGUAGECATEGORY_ELVEN",
+            "baseLanguage": "Elvish",
             "isSpoken": "true",
             "isWritten": "true",
             "isSomantic": "false"
@@ -44,6 +49,7 @@
             "id": "LANGUAGE_NORTHERN_SPEACH",
             "name": "Northern-Speach",
             "category": "LANGUAGECATEGORY_HUMAN",
+            "baseLanguage": "Common",
             "isSpoken": "true",
             "isWritten": "true",
             "isSomantic": "false"
@@ -52,6 +58,7 @@
             "id": "LANGUAGE_PLAINS_SPEACH",
             "name": "Plains-Speach",
             "category": "LANGUAGECATEGORY_HUMAN",
+            "baseLanguage": "Common",
             "isSpoken": "true",
             "isWritten": "true",
             "isSomantic": "false"
