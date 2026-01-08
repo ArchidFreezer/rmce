@@ -38,5 +38,8 @@ public:
 	const std::string& rootNode() { return root_node_; };
 
 protected:
+	void setRootNode(std::string root_node) { root_node_ = root_node; };
+
+private:
 	std::string root_node_{}; /**< Key of the root node of the json file */
 };

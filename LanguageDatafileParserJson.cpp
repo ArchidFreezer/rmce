@@ -6,7 +6,7 @@
 
 
 LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache) : DatafileParserJson(cache, "Language") {
-	root_node_ = "languages";
+	setRootNode("languages");
 }
 
 void LanguageDatafileParserJson::parse() {

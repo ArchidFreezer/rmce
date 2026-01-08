@@ -5,7 +5,7 @@
 
 
 BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache) : DatafileParserJson(cache, "Book") {
-	root_node_ = "books";
+	setRootNode("books");
 }
 
 void BookDatafileParserJson::parse() {
