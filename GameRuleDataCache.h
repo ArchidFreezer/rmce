@@ -34,36 +34,36 @@ public:
 	 * 
 	 * This is removed as there should one be a single cache instance
 	 * 
-	 * @param GameRuleDataCache to copy
+	 * @param other GameRuleDataCache to copy
 	 */
-	GameRuleDataCache(const GameRuleDataCache&) = delete;
+	GameRuleDataCache(const GameRuleDataCache& other) = delete;
 	/**
 	 * @brief Assignment operator
 	 * 
 	 * This is removed as there should one be a single cache instance
 	 * 
-	 * @param GameRuleDataCache to assign
+	 * @param other GameRuleDataCache to assign
 	 * @return New cache object
 	 */
-	GameRuleDataCache& operator=(const GameRuleDataCache&) = delete;
+	GameRuleDataCache& operator=(const GameRuleDataCache& other) = delete;
 
 	/**
 	 * @brief Move constructor
 	 *
 	 * This is removed as there should one be a single cache instance
 	 *
-	 * @param GameRuleDataCache to copy
+	 * @param other GameRuleDataCache to copy
 	 */
-	GameRuleDataCache(GameRuleDataCache&&) = delete;
+	GameRuleDataCache(GameRuleDataCache&& other) = delete;
 	/**
 	 * @brief Move assignment operator
 	 *
 	 * This is removed as there should one be a single cache instance
 	 *
-	 * @param GameRuleDataCache to assign
+	 * @param other GameRuleDataCache to assign
 	 * @return New cache object
 	 */
-	GameRuleDataCache& operator=(GameRuleDataCache&&) = delete;
+	GameRuleDataCache& operator=(GameRuleDataCache&& other) = delete;
 
 	/**
 	 * @brief Get the rule data object with the given id
