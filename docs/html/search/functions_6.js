@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['id_0',['id',['../class_book_data.html#af05075c192f4cd85a323deec022b486e',1,'BookData::id()'],['../class_game_rule_data.html#a8849e43f15a2cace174ed615b3ffe9d3',1,'GameRuleData::id()'],['../class_language_category_data.html#ab1474a9eec745fb3b32978c0e69aa0db',1,'LanguageCategoryData::id()'],['../class_language_data.html#a7e7e734c91638469cf38f4412ff7e2d9',1,'LanguageData::id()'],['../class_language_dialect_data.html#a98276720918fb71286a7b5a4527b8a8c',1,'LanguageDialectData::id()']]],
-  ['isbn_1',['isbn',['../class_book_data.html#a6d51833a938e313ac580532f6c411f08',1,'BookData']]],
-  ['isdialect_2',['isDialect',['../class_language_dialect_data.html#a1a20ef806f51f6cebacdc0f97acaea55',1,'LanguageDialectData']]],
-  ['issomantic_3',['isSomantic',['../class_language_data.html#a075cacfa802c1415cf49561e8092fa0f',1,'LanguageData']]],
-  ['isspoken_4',['isSpoken',['../class_language_data.html#a3076cc2183309f617c8e361c01ada6a0',1,'LanguageData']]],
-  ['iswritten_5',['isWritten',['../class_language_data.html#a64f0406b4df83eae6246a743609c47af',1,'LanguageData']]]
+  ['gameruledata_0',['GameRuleData',['../class_game_rule_data.html#a4c930443525e35d642c997af8186c6d4',1,'GameRuleData']]],
+  ['gameruledatacache_1',['GameRuleDataCache',['../class_game_rule_data_cache.html#ac8989bb024b18fccb1f07b5cb4e20d38',1,'GameRuleDataCache::GameRuleDataCache()=default'],['../class_game_rule_data_cache.html#a130c22f3b4861761007319257cc4d094',1,'GameRuleDataCache::GameRuleDataCache(const GameRuleDataCache &amp;)=delete'],['../class_game_rule_data_cache.html#a4a464f284c010a0b4d595159c2229794',1,'GameRuleDataCache::GameRuleDataCache(GameRuleDataCache &amp;&amp;)=delete']]],
+  ['generateid_2',['generateId',['../class_datafile_parser.html#a6cce5b0efad446ace5703e3dc5c16fa5',1,'DatafileParser']]],
+  ['get_3',['get',['../class_game_rule_data_cache.html#a221a95c7323d89322519d7b8d2711277',1,'GameRuleDataCache']]]
 ];

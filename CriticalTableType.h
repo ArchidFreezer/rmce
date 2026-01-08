@@ -5,6 +5,11 @@
 #include <string_view>
 
 #include "StringUtils.h"
+/**
+ * @file CriticalTableType.h
+ *
+ * Contains the CriticalTableType enum and associated functions
+ */
 
 /**
  * @brief Enumeration class representing the type of critical tables

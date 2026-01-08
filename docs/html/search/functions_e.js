@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['_7edatafileparser_0',['~DatafileParser',['../class_datafile_parser.html#a4b4af1c04bba4982985960e1839f7ccb',1,'DatafileParser']]],
-  ['_7edatafileparserjson_1',['~DatafileParserJson',['../class_datafile_parser_json.html#ab58556ce6adae817a5e37a3fdfd0691b',1,'DatafileParserJson']]],
-  ['_7egameruledata_2',['~GameRuleData',['../class_game_rule_data.html#abcd57cd1f04642956ba72a183135df42',1,'GameRuleData']]],
-  ['_7egameruledatacache_3',['~GameRuleDataCache',['../class_game_rule_data_cache.html#a26bbcd66f1fa055a5b0a72a84b1b7158',1,'GameRuleDataCache']]]
+  ['save_0',['save',['../class_book_datafile_parser_json.html#a437a31c84a9a6d909e166f6b307ef27e',1,'BookDatafileParserJson::save()'],['../class_datafile_parser.html#a3526c473cc854a37a8c508ce5e8a3c4d',1,'DatafileParser::save()'],['../class_datafile_parser_xml.html#add16ff078380a3651a7629a5282c3e74',1,'DatafileParserXml::save()'],['../class_language_category_datafile_parser_json.html#af1d1b39b3596ec447030c4ab029f4e04',1,'LanguageCategoryDatafileParserJson::save()'],['../class_language_datafile_parser_json.html#a6c2d5e3ec73d8ddcc2e19d85fc7fe69b',1,'LanguageDatafileParserJson::save()']]]
 ];

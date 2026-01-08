@@ -5,6 +5,11 @@
 #include <string_view>
 
 #include "StringUtils.h"
+/**
+ * @file CriticalType.h
+ *
+ * Contains the CriticalType enum and associated functions
+ */
 
 /**
  * @brief Enumeration class representing types of critical damage

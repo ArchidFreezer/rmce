@@ -5,6 +5,11 @@
 #include <string_view>
 
 #include "StringUtils.h"
+/**
+ * @file CreatureSize.h
+ * 
+ * Contains the CreatureSize enum and associated functions
+ */
 
 /** 
  * @brief Enumeration class representing the size of creatures
