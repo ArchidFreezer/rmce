@@ -16,5 +16,6 @@ var files_dup =
     [ "LanguageData.h", "_language_data_8h_source.html", null ],
     [ "LanguageDatafileParserJson.h", "_language_datafile_parser_json_8h_source.html", null ],
     [ "LanguageDialectData.h", "_language_dialect_data_8h_source.html", null ],
+    [ "Realm.h", "_realm_8h.html", "_realm_8h" ],
     [ "StringUtils.h", "_string_utils_8h_source.html", null ]
 ];
