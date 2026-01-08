@@ -6,61 +6,62 @@
 
 #include "StringUtils.h"
 /**
- * @file Realm.h
+ * @file ResistanceType.h
  *
- * Contains the Realm enum and associated functions
+ * Contains the ResistanceType enum and associated functions
  */
 
  /**
 	* @brief Enumeration class representing the realms in a campaign
 	*
-	* The majority of realms are realms of magic, with only two, Arms and Subterfuge, being non-magical
 	*/
-enum class Realm {
-	kArcane, /**< Arcane magic realm */
-	kArms, /**< Non-magical realm of Arms */
-	kChanneling, /**< Magical realm of Channeling */
-	kChannelingEssence, /**< Magical hybrid realm of Channeling and Essence */
-	kChannelingMentalism,  /**< Magical hybrid realm of Channeling and Mentalism */
-	kEssence, /**< Magical realm of Essence */
-	kEssenceMentalism,  /**< Magical hybrid realm of Essence and Mentalism */
-	kMentalism, /**< Magical realm of Mentalism */
-	kMundane, /**< Magical realm of Mundane - not suitable for all campaigns */
-	kNeutral, /**< Magical realm of Neutral - not suitable for all campaigns */
-	kSubterfuge  /**< Non-magical realm of Subterfuge  - not suitable for all campaigns */
+enum class ResistanceType {
+	kArcane, /**< Resistance to Arcane magic */
+	kChanneling, /**< Resistance to Channeling magic */
+	kChannelingEssence, /**< Resistance to hybrid Channeling / Essence magic */
+	kChannelingMentalism, /**< Resistance to hybrid Channeling / Mentalism magic */
+	kCold, /**< Resistance to elemental cold */
+	kDisease, /**< Resistance to diseases */
+	kEssence, /**< Resistance to Essence magic */
+	kEssenceMentalism, /**< Resistance to hybrid Essence / Mentalism magic */
+	kFear, /**< Resistance to fear */
+	kHeat, /**< Resistance to elemental heat */
+	kMentalism, /**< Magical resistance of Mentalism */
+	kPoison, /**< Resistance to poisons */
 };
 
 /**
  * @brief Get the string representation of the given enum
- * @param size The #Realm to get the string of
+ * @param size The #ResistanceType to get the string of
  * @return Game display form of the enum value as a string_view
  */
-constexpr std::string_view toString(Realm realm) {
-	using enum Realm;
+constexpr std::string_view toString(ResistanceType resistance) {
+	using enum ResistanceType;
 
-	switch (realm) {
+	switch (resistance) {
 	case kArcane: return "Arcane";
-	case kArms: return "Arms";
 	case kChanneling: return "Channeling";
 	case kChannelingEssence: return "Channeling / Essence";
 	case kChannelingMentalism: return "Channeling / Mentalism";
+	case kCold: return "Cold";
+	case kDisease: return "Disease";
 	case kEssence: return "Essence";
 	case kEssenceMentalism: return "Essence / Mentalism";
+	case kFear: return "Fear";
+	case kHeat: return "Heat";
 	case kMentalism: return "Mentalism";
-	case kMundane: return "Mundane";
-	case kNeutral: return "Neutral";
-	case kSubterfuge: return "Subterfuge";
+	case kPoison: return "Poison";
 	}
 }
 
 /**
- * @brief Teach operator<< how to print a Realm
+ * @brief Teach operator<< how to print a ResistanceType
  * @param out Output stream that the enum should be printed to
  * @param size Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, Realm realm) {
-	return out << toString(realm);
+std::ostream& operator<<(std::ostream& out, ResistanceType resistance) {
+	return out << toString(resistance);
 }
 
 /**
@@ -77,16 +78,15 @@ std::ostream& operator<<(std::ostream& out, Realm realm) {
 
  *
  * @param sv string_view to get the enumeration for
- * @return #Realm represented by the string
+ * @return #ResistanceType represented by the string
  *
  * @see toString()
  */
-constexpr std::optional<Realm> fromString(std::string_view sv) {
-	using enum Realm;
+constexpr std::optional<ResistanceType> fromString(std::string_view sv) {
+	using enum ResistanceType;
 
 	const std::string& val = lcase(sv);
 	if (val == "Arcane") return kArcane;
-	if (val == "Arms") return kArms;
 	if (val == "Channeling") return kChanneling;
 	if (val == "Channeling / Essence") return kChannelingEssence;
 	if (val == "Channeling Essence") return kChannelingEssence;
@@ -96,31 +96,36 @@ constexpr std::optional<Realm> fromString(std::string_view sv) {
 	if (val == "Channeling Mentalism") return kChannelingMentalism;
 	if (val == "ChannelingMentalism") return kChannelingMentalism;
 	if (val == "Channeling_Mentalism") return kChannelingMentalism;
+	if (val == "Cold") return kCold;
+	if (val == "Disease") return kDisease;
 	if (val == "Essence") return kEssence;
 	if (val == "Essence / Mentalism") return kEssenceMentalism;
 	if (val == "Essence Mentalism") return kEssenceMentalism;
 	if (val == "EssenceMentalism") return kEssenceMentalism;
 	if (val == "Essence_Mentalism") return kEssenceMentalism;
+	if (val == "Fear") return kFear;
+	if (val == "Heat") return kHeat;
 	if (val == "Mentalism") return kMentalism;
-	if (val == "Mundane") return kMundane;
-	if (val == "Neutral") return kNeutral;
-	if (val == "Subterfuge") return kSubterfuge;
+	if (val == "Poison") return kPoison;
 
 	return {};
 }
 
 /**
- * @brief Checks if the realm is magical or not
- * @param realm Realm to test
- * @return `true` if the Realm is magical
- * @return `false` if the Realm is not magical
+ * @brief Checks if the resistance is magical or not
+ * @param resistance ResistanceType to test
+ * @return `true` if the ResistanceType is magical
+ * @return `false` if the ResistanceType is not magical
  */
-constexpr bool isMagical(Realm realm) {
-	using enum Realm;
+constexpr bool isMagical(ResistanceType resistance) {
+	using enum ResistanceType;
 
-	switch (realm) {
-	case kArms:
-	case kSubterfuge: return false;
+	switch (resistance) {
+	case kCold:
+	case kDisease:
+	case kFear:
+	case kHeat:
+	case kPoison: return false;
 	default: return true;
 	}
 }
