@@ -50,7 +50,10 @@ void LanguageDatafileParserJson::save(const std::string& filename) {
 	// Array of books
 	pt::ptree plangs;
 
-	for (std::string b : cache().keys<LanguageData>()) {
+	std::set<std::string> keys{};
+	cache().keys<LanguageData>(keys);
+
+	for (std::string b : keys) {
 		try {
 			LanguageData& language_data = cache().get<LanguageData>(b);
 			// Individual language

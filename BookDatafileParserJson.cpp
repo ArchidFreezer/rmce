@@ -40,7 +40,10 @@ void BookDatafileParserJson::save(const std::string& filename)
 	// Tree of books
 	pt::ptree pbooks;
 
-	for (std::string b : cache().keys<BookData>()) {
+	std::set<std::string> keys{};
+	cache().keys<BookData>(keys);
+
+	for (std::string b : keys) {
 		try {
 			BookData& book_data = cache().get<BookData>(b);
 			// Individual book

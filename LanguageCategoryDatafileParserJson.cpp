@@ -34,7 +34,10 @@ void LanguageCategoryDatafileParserJson::save(const std::string& filename) {
 	// Array of language categories
 	pt::ptree plangs;
 
-	for (std::string b : cache().keys<LanguageCategoryData>()) {
+	std::set<std::string> keys{};
+	cache().keys<LanguageCategoryData>(keys);
+
+	for (std::string b : keys) {
 		try {
 			LanguageCategoryData& lang_data = cache().get<LanguageCategoryData>(b);
 			// Individual category

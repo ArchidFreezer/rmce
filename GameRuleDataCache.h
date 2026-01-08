@@ -101,13 +101,16 @@ public:
 	bool exists(std::string& id);
 
 	/**
-	 * @brief Gets an ordered collection of all the rule data ids for a specific rule type
+	 * @brief Populates a set with all the rule data ids for a specific rule type
+	 * 
+	 * The parameter is first erased and then populated with the key data so following the call it will only contain the ids
+	 * 
 	 * @tparam T Class of the data object to be retrieved
 	 *           Must be derived from #GameRuleData
-	 * @return Set of ids for all the data objects of the requested type
+	 * @param keys Set of strings to populate with the ids of the data objects
 	 */
 	template <class T>
-	std::set<std::string> keys();
+	void keys(std::set<std::string>& keys);
 	
 private:
 	/**
@@ -182,7 +185,7 @@ inline bool GameRuleDataCache::exists(std::string& id)
 }
 
 template<class T>
-inline std::set<std::string> GameRuleDataCache::keys()
+inline void GameRuleDataCache::keys(std::set<std::string>& keys)
 {
 	// Check we are requesting an appropriate class
 	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
@@ -191,14 +194,14 @@ inline std::set<std::string> GameRuleDataCache::keys()
 	auto& mutex = mutexes[typeid(T)];
 	std::lock_guard<std::mutex> guard(mutex);
 
-	std::set<std::string> keys{};
-
 	// Grab a reference to the hash map for the particular type of data we want
 	auto& ruledata_hash_map = state[typeid(T)];
 
+	// Empty the set before we start so we ensure that it only contains the keys
+	keys.clear();
+
+	// Iterate through the map keys and add them to the set
 	for (auto it = ruledata_hash_map.begin(); it != ruledata_hash_map.end(); ++it) {
 		keys.insert(it->first);
 	}
-
-	return keys;
 }
