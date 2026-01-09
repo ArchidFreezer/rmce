@@ -14,6 +14,12 @@
  /**
 	* @brief Enumeration class representing the realms in a campaign
 	*
+	* Realms of power define the primary area that skiulls or abilities gain their strength from. The magical realms have the
+	* most in-game impact in some ways as each character must belong to one and only one of these, be it a primary or hybrid
+	* real, and this limits their ability with skills tied to other realms. The non-magical realms are available equally to
+	* all characters, with professions being limiting factor on how well the character can develop skills in that realm
+	* rather that the character themselves.
+	* 
 	* The majority of realms are realms of magic, with only two, Arms and Subterfuge, being non-magical
 	*/
 enum class Realm {

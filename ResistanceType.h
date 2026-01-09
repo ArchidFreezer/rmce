@@ -12,7 +12,13 @@
  */
 
  /**
-	* @brief Enumeration class representing the realms in a campaign
+	* @brief Enumeration class representing the character resistance types in a campaign
+	* 
+	* As part of normal game play characters will be subject to various hazards. These may come in form of combat,
+	* be environmental or some other action. A character is capable of mitigating some of the effects of these hazards
+	* through reistances, which may be innate, magical or otherwise gained.
+	* 
+	* This enum lists the various hazard types that a character may acquire resistance to.
 	*
 	*/
 enum class ResistanceType {
