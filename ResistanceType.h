@@ -69,11 +69,15 @@ std::ostream& operator<<(std::ostream& out, ResistanceType resistance) {
  *
  * Accepts values that are returned by toString() in a case insensitive manner.
  *
- * For values that contain strings this function will accept these with the
- * space, with the space removed or with the space changed to an underscore:
+ * For values that contain strings with a space or slash this function will accept these with the
+ * character, with the character removed or with the character changed to an underscore:
+ * - "channelingessence"
+ * - "channeling_essence"
+ * - "channeling/essence"
+ * - "channeling essence"
  * - "ChannelingEssence"
  * - "Channeling_Essence"
- * - "Channeling / Essence"
+ * - "Channeling/Essence"
  * - "Channeling Essence"
 
  *
@@ -88,18 +92,18 @@ constexpr std::optional<ResistanceType> fromString(std::string_view sv) {
 	const std::string& val = lcase(sv);
 	if (val == "Arcane") return kArcane;
 	if (val == "Channeling") return kChanneling;
-	if (val == "Channeling / Essence") return kChannelingEssence;
+	if (val == "Channeling/Essence") return kChannelingEssence;
 	if (val == "Channeling Essence") return kChannelingEssence;
 	if (val == "ChannelingEssence") return kChannelingEssence;
 	if (val == "Channeling_Essence") return kChannelingEssence;
-	if (val == "Channeling / Mentalism") return kChannelingMentalism;
+	if (val == "Channeling/Mentalism") return kChannelingMentalism;
 	if (val == "Channeling Mentalism") return kChannelingMentalism;
 	if (val == "ChannelingMentalism") return kChannelingMentalism;
 	if (val == "Channeling_Mentalism") return kChannelingMentalism;
 	if (val == "Cold") return kCold;
 	if (val == "Disease") return kDisease;
 	if (val == "Essence") return kEssence;
-	if (val == "Essence / Mentalism") return kEssenceMentalism;
+	if (val == "Essence/Mentalism") return kEssenceMentalism;
 	if (val == "Essence Mentalism") return kEssenceMentalism;
 	if (val == "EssenceMentalism") return kEssenceMentalism;
 	if (val == "Essence_Mentalism") return kEssenceMentalism;

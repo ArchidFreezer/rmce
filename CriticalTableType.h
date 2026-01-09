@@ -59,7 +59,7 @@ std::ostream& operator<<(std::ostream& out, CriticalTableType type) {
  *
  * Accepts values that are returned by toString() in a case insensitive manner.
  *
- * For values that contain strings thie function will accept these with the
+ * For values that contain strings this function will accept these with the
  * space, with the space removed or with the space changed to an underscore:
  * - "Large Creature Spell"
  * - "large creature spell"
