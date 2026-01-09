@@ -8,5 +8,7 @@ var searchData=
   ['skillgroup_2eh_5',['SkillGroup.h',['../_skill_group_8h.html',1,'']]],
   ['skillprogressiontype_6',['SkillProgressionType',['../_skill_progression_type_8h.html#aab09b4b767322e28083b5cf34833953a',1,'SkillProgressionType.h']]],
   ['skillprogressiontype_2eh_7',['SkillProgressionType.h',['../_skill_progression_type_8h.html',1,'']]],
-  ['standards_8',['Standards',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]]
+  ['spelllisttype_8',['SpellListType',['../_spell_list_type_8h.html#aa199fa9bbf650bb54f934e43f4c8dfa9',1,'SpellListType.h']]],
+  ['spelllisttype_2eh_9',['SpellListType.h',['../_spell_list_type_8h.html',1,'']]],
+  ['standards_10',['Standards',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]]
 ];

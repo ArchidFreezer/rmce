@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: SkillProgressionType.h File Reference</title>
+<title>Rolemaster Character Editor: SpellListType.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('_skill_progression_type_8h.html','',''); });
+$(function(){initNavTree('_spell_list_type_8h.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,7 +88,7 @@ $(function(){initNavTree('_skill_progression_type_8h.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">SkillProgressionType.h File Reference</div></div>
+  <div class="headertitle"><div class="title">SpellListType.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
@@ -96,11 +96,11 @@ $(function(){initNavTree('_skill_progression_type_8h.html','',''); });
 <code>#include &lt;string_view&gt;</code><br />
 <code>#include &quot;StringUtils.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for SkillProgressionType.h:</div>
+Include dependency graph for SpellListType.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="_skill_progression_type_8h__incl.png" border="0" usemap="#a_skill_progression_type_8h" loading="lazy" alt=""/></div>
-<map name="a_skill_progression_type_8h" id="a_skill_progression_type_8h">
-<area shape="rect" title=" " alt="" coords="92,5,246,32"/>
+<div class="center"><img src="_spell_list_type_8h__incl.png" border="0" usemap="#a_spell_list_type_8h" loading="lazy" alt=""/></div>
+<map name="a_spell_list_type_8h" id="a_spell_list_type_8h">
+<area shape="rect" title=" " alt="" coords="114,5,224,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,77,107"/>
 <area shape="poly" title=" " alt="" coords="145,35,78,74,75,70,148,30"/>
 <area shape="rect" title=" " alt="" coords="101,80,168,107"/>
@@ -121,31 +121,35 @@ Include dependency graph for SkillProgressionType.h:</div>
 </map>
 </div>
 </div>
-<p><a href="_skill_progression_type_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="_spell_list_type_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:aab09b4b767322e28083b5cf34833953a" id="r_aab09b4b767322e28083b5cf34833953a"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a> { <a class="el" href="#aab09b4b767322e28083b5cf34833953aab6478482a1841fc3ef2d3e5af27f0cc7">kCombined</a>
-, <a class="el" href="#aab09b4b767322e28083b5cf34833953aaf842b9d7c6733e37e7a26b70bcf28c5b">kLimited</a>
-, <a class="el" href="#aab09b4b767322e28083b5cf34833953aa1f0d5fe7d41b5fec009974b34c8ba95e">kSpecial</a>
-, <a class="el" href="#aab09b4b767322e28083b5cf34833953aa821da62632c491ea619ead7b31c094bf">kStandard</a>
+<tr class="memitem:aa199fa9bbf650bb54f934e43f4c8dfa9" id="r_aa199fa9bbf650bb54f934e43f4c8dfa9"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9">SpellListType</a> { <br />
+&#160;&#160;<a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9ad972115f06325253781715b97744abdd">kBase</a>
+, <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9af9be16a4ac9fcc9b545ff52f0606eb09">kClosed</a>
+, <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9ac76ad31b0ff1fcbb03eeae06f73420c8">kOpen</a>
+, <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9a39f741e416e95deb20cc27862c66e3dc">kTrainingPackage</a>
+, <br />
+&#160;&#160;<a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9a0fab1fc4a5f67676f1ef3e5ed0aaaddb">kRacial</a>
+<br />
  }</td></tr>
-<tr class="memdesc:aab09b4b767322e28083b5cf34833953a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration class representing progression types of skills.  <a href="#aab09b4b767322e28083b5cf34833953a">More...</a><br /></td></tr>
+<tr class="memdesc:aa199fa9bbf650bb54f934e43f4c8dfa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration class representing the type of a spell list.  <a href="#aa199fa9bbf650bb54f934e43f4c8dfa9">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa0a05e141413b76a382e60903eaf8303" id="r_aa0a05e141413b76a382e60903eaf8303"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#aa0a05e141413b76a382e60903eaf8303">toString</a> (<a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a> action)</td></tr>
-<tr class="memdesc:aa0a05e141413b76a382e60903eaf8303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string representation of the given enum.  <br /></td></tr>
-<tr class="memitem:ab23a187bcf4ce75059c410169382bc7d" id="r_ab23a187bcf4ce75059c410169382bc7d"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab23a187bcf4ce75059c410169382bc7d">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a> action)</td></tr>
-<tr class="memdesc:ab23a187bcf4ce75059c410169382bc7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teach operator&lt;&lt; how to print a <a class="el" href="#aab09b4b767322e28083b5cf34833953a" title="Enumeration class representing progression types of skills.">SkillProgressionType</a>.  <br /></td></tr>
-<tr class="memitem:a5c1124467da0e0bcb20e754a18b0aa24" id="r_a5c1124467da0e0bcb20e754a18b0aa24"><td class="memItemLeft">constexpr std::optional&lt; <a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5c1124467da0e0bcb20e754a18b0aa24">fromString</a> (std::string_view sv)</td></tr>
-<tr class="memdesc:a5c1124467da0e0bcb20e754a18b0aa24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
+<tr class="memitem:a787bce134af14c3cd2c5bc6ee1d24597" id="r_a787bce134af14c3cd2c5bc6ee1d24597"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a787bce134af14c3cd2c5bc6ee1d24597">toString</a> (<a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9">SpellListType</a> action)</td></tr>
+<tr class="memdesc:a787bce134af14c3cd2c5bc6ee1d24597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string representation of the given enum.  <br /></td></tr>
+<tr class="memitem:a2b0db3ad20e885e858a6283255b1078a" id="r_a2b0db3ad20e885e858a6283255b1078a"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2b0db3ad20e885e858a6283255b1078a">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9">SpellListType</a> action)</td></tr>
+<tr class="memdesc:a2b0db3ad20e885e858a6283255b1078a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teach operator&lt;&lt; how to print a <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9" title="Enumeration class representing the type of a spell list.">SpellListType</a>.  <br /></td></tr>
+<tr class="memitem:a0516e3c0682973299cf0941c63128609" id="r_a0516e3c0682973299cf0941c63128609"><td class="memItemLeft">constexpr std::optional&lt; <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9">SpellListType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0516e3c0682973299cf0941c63128609">fromString</a> (std::string_view sv)</td></tr>
+<tr class="memdesc:a0516e3c0682973299cf0941c63128609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains the <a class="el" href="#aab09b4b767322e28083b5cf34833953a" title="Enumeration class representing progression types of skills.">SkillProgressionType</a> enum and associated functions </p>
+<div class="textblock"><p>Contains the <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9" title="Enumeration class representing the type of a spell list.">SpellListType</a> enum and associated functions </p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
-<a id="aab09b4b767322e28083b5cf34833953a" name="aab09b4b767322e28083b5cf34833953a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab09b4b767322e28083b5cf34833953a">&#9670;&#160;</a></span>SkillProgressionType</h2>
+<a id="aa199fa9bbf650bb54f934e43f4c8dfa9" name="aa199fa9bbf650bb54f934e43f4c8dfa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa199fa9bbf650bb54f934e43f4c8dfa9">&#9670;&#160;</a></span>SpellListType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -154,7 +158,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a></td>
+          <td class="memname">enum class <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9">SpellListType</a></td>
         </tr>
       </table>
   </td>
@@ -164,25 +168,26 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Enumeration class representing progression types of skills. </p>
-<p>When a character developes either a skillcategory or a skill they spend a development point and gain a certain bonus to the use of applicable skills. The size of the bonus gained depends on two things: the number of development points spent and also the progression type.</p>
-<p>The progression types are applied at both the skill category and skill level. A skill may have any of the progression type, but the only one available to categories is <a class="el" href="#aab09b4b767322e28083b5cf34833953aa821da62632c491ea619ead7b31c094bf">SkillProgressionType::kStandard</a> and only then if the skill being used has the saame progression. If the skill has any other progression type the category adds nothing. </p>
+<p>Enumeration class representing the type of a spell list. </p>
+<p>Each spell list has a classification that determines the difficulty in accessing and learning them. This classification is used to determine whether a character has access to the spell list at all, and if they do the cost in development points to learn any spells it contains. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aab09b4b767322e28083b5cf34833953aab6478482a1841fc3ef2d3e5af27f0cc7" name="aab09b4b767322e28083b5cf34833953aab6478482a1841fc3ef2d3e5af27f0cc7"></a>kCombined&#160;</td><td class="fielddoc"><p>Skill and skill category progressions are combined into one </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa199fa9bbf650bb54f934e43f4c8dfa9ad972115f06325253781715b97744abdd" name="aa199fa9bbf650bb54f934e43f4c8dfa9ad972115f06325253781715b97744abdd"></a>kBase&#160;</td><td class="fielddoc"><p>The spells on these lists represent specialties of magical professions </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aab09b4b767322e28083b5cf34833953aaf842b9d7c6733e37e7a26b70bcf28c5b" name="aab09b4b767322e28083b5cf34833953aaf842b9d7c6733e37e7a26b70bcf28c5b"></a>kLimited&#160;</td><td class="fielddoc"><p>Skills bonus develops much slower and have no category bonus </p>
+<tr><td class="fieldname"><a id="aa199fa9bbf650bb54f934e43f4c8dfa9af9be16a4ac9fcc9b545ff52f0606eb09" name="aa199fa9bbf650bb54f934e43f4c8dfa9af9be16a4ac9fcc9b545ff52f0606eb09"></a>kClosed&#160;</td><td class="fielddoc"><p>Deepest and most powerful concepts common to each realm of magic </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aab09b4b767322e28083b5cf34833953aa1f0d5fe7d41b5fec009974b34c8ba95e" name="aab09b4b767322e28083b5cf34833953aa1f0d5fe7d41b5fec009974b34c8ba95e"></a>kSpecial&#160;</td><td class="fielddoc"><p>Skills develop faster but have no category bonus </p>
+<tr><td class="fieldname"><a id="aa199fa9bbf650bb54f934e43f4c8dfa9ac76ad31b0ff1fcbb03eeae06f73420c8" name="aa199fa9bbf650bb54f934e43f4c8dfa9ac76ad31b0ff1fcbb03eeae06f73420c8"></a>kOpen&#160;</td><td class="fielddoc"><p>Easiest concepts to master in each realm of power, </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aab09b4b767322e28083b5cf34833953aa821da62632c491ea619ead7b31c094bf" name="aab09b4b767322e28083b5cf34833953aa821da62632c491ea619ead7b31c094bf"></a>kStandard&#160;</td><td class="fielddoc"><p>Both skills and category use the same progression with the sum being used </p>
+<tr><td class="fieldname"><a id="aa199fa9bbf650bb54f934e43f4c8dfa9a39f741e416e95deb20cc27862c66e3dc" name="aa199fa9bbf650bb54f934e43f4c8dfa9a39f741e416e95deb20cc27862c66e3dc"></a>kTrainingPackage&#160;</td><td class="fielddoc"><p>Only available through the association with a training package </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa199fa9bbf650bb54f934e43f4c8dfa9a0fab1fc4a5f67676f1ef3e5ed0aaaddb" name="aa199fa9bbf650bb54f934e43f4c8dfa9a0fab1fc4a5f67676f1ef3e5ed0aaaddb"></a>kRacial&#160;</td><td class="fielddoc"><p>Only available to members of specific races </p>
 </td></tr>
 </table>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a5c1124467da0e0bcb20e754a18b0aa24" name="a5c1124467da0e0bcb20e754a18b0aa24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c1124467da0e0bcb20e754a18b0aa24">&#9670;&#160;</a></span>fromString()</h2>
+<a id="a0516e3c0682973299cf0941c63128609" name="a0516e3c0682973299cf0941c63128609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0516e3c0682973299cf0941c63128609">&#9670;&#160;</a></span>fromString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,7 +196,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt; <a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a> &gt; fromString </td>
+          <td class="memname">std::optional&lt; <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9">SpellListType</a> &gt; fromString </td>
           <td>(</td>
           <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>sv</em></span></td><td>)</td>
           <td></td>
@@ -205,20 +210,29 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the enumeration value based on a string. </p>
-<p>Accepts values that are returned by <a class="el" href="#aa0a05e141413b76a382e60903eaf8303" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
+<p>Accepts values that are returned by <a class="el" href="#a787bce134af14c3cd2c5bc6ee1d24597" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
+<p>For values that contain strings with a space or slash this function will accept these with the character, with the character removed or with the character changed to an underscore:</p>
+<ul>
+<li>"TrainingPackage"</li>
+<li>"Training_Package"</li>
+<li>"Training Package"</li>
+<li>"trainingpackage"</li>
+<li>"training_package"</li>
+<li>"training package"</li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sv</td><td>string_view to get the enumeration for </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="#aab09b4b767322e28083b5cf34833953a" title="Enumeration class representing progression types of skills.">SkillProgressionType</a> represented by the string</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa0a05e141413b76a382e60903eaf8303" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9" title="Enumeration class representing the type of a spell list.">SpellListType</a> represented by the string</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a787bce134af14c3cd2c5bc6ee1d24597" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
 
 </div>
 </div>
-<a id="ab23a187bcf4ce75059c410169382bc7d" name="ab23a187bcf4ce75059c410169382bc7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab23a187bcf4ce75059c410169382bc7d">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+<a id="a2b0db3ad20e885e858a6283255b1078a" name="a2b0db3ad20e885e858a6283255b1078a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b0db3ad20e885e858a6283255b1078a">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,12 +245,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a></td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9">SpellListType</a></td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Teach operator&lt;&lt; how to print a <a class="el" href="#aab09b4b767322e28083b5cf34833953a" title="Enumeration class representing progression types of skills.">SkillProgressionType</a>. </p>
+<p>Teach operator&lt;&lt; how to print a <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9" title="Enumeration class representing the type of a spell list.">SpellListType</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">out</td><td>Output stream that the enum should be printed to </td></tr>
@@ -248,8 +262,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa0a05e141413b76a382e60903eaf8303" name="aa0a05e141413b76a382e60903eaf8303"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0a05e141413b76a382e60903eaf8303">&#9670;&#160;</a></span>toString()</h2>
+<a id="a787bce134af14c3cd2c5bc6ee1d24597" name="a787bce134af14c3cd2c5bc6ee1d24597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a787bce134af14c3cd2c5bc6ee1d24597">&#9670;&#160;</a></span>toString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +274,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">std::string_view toString </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a></td>          <td class="paramname"><span class="paramname"><em>action</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9">SpellListType</a></td>          <td class="paramname"><span class="paramname"><em>action</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -274,7 +288,7 @@ Functions</h2></td></tr>
 <p>Get the string representation of the given enum. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">action</td><td>The <a class="el" href="#aab09b4b767322e28083b5cf34833953a" title="Enumeration class representing progression types of skills.">SkillProgressionType</a> to get the string of </td></tr>
+    <tr><td class="paramname">action</td><td>The <a class="el" href="#aa199fa9bbf650bb54f934e43f4c8dfa9" title="Enumeration class representing the type of a spell list.">SpellListType</a> to get the string of </td></tr>
   </table>
   </dd>
 </dl>
@@ -295,7 +309,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="_skill_progression_type_8h.html">SkillProgressionType.h</a></li>
+    <li class="navelem"><a href="_spell_list_type_8h.html">SpellListType.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>
