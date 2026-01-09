@@ -31,13 +31,13 @@ enum class SkillProgressionType {
 
 /**
  * @brief Get the string representation of the given enum
- * @param action The #SkillProgressionType to get the string of
+ * @param type The #SkillProgressionType to get the string of
  * @return Game display form of the enum value as a string_view
  */
-constexpr std::string_view toString(SkillProgressionType action) {
+constexpr std::string_view toString(SkillProgressionType type) {
 	using enum SkillProgressionType;
 
-	switch (action) {
+	switch (type) {
 	case kCombined: return "Combined";
 	case kLimited: return "Limited";
 	case kSpecial: return "Special";
@@ -48,11 +48,11 @@ constexpr std::string_view toString(SkillProgressionType action) {
 /**
  * @brief Teach operator<< how to print a SkillProgressionType
  * @param out Output stream that the enum should be printed to
- * @param action Enum value to output
+ * @param type Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, SkillProgressionType action) {
-	return out << toString(action);
+std::ostream& operator<<(std::ostream& out, SkillProgressionType type) {
+	return out << toString(type);
 }
 
 /**

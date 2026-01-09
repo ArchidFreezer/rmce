@@ -7,6 +7,6 @@ var _skill_progression_type_8h =
       [ "kStandard", "_skill_progression_type_8h.html#aab09b4b767322e28083b5cf34833953aa821da62632c491ea619ead7b31c094bf", null ]
     ] ],
     [ "fromString", "_skill_progression_type_8h.html#a5c1124467da0e0bcb20e754a18b0aa24", null ],
-    [ "operator<<", "_skill_progression_type_8h.html#ab23a187bcf4ce75059c410169382bc7d", null ],
-    [ "toString", "_skill_progression_type_8h.html#aa0a05e141413b76a382e60903eaf8303", null ]
+    [ "operator<<", "_skill_progression_type_8h.html#aa8c86f96c9b1b5d8459d6f8e00c5e301", null ],
+    [ "toString", "_skill_progression_type_8h.html#aa31c6b1205d12dcad24a2c13f71d4f9f", null ]
 ];

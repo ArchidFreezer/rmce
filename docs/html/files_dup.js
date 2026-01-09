@@ -19,6 +19,7 @@ var files_dup =
     [ "Realm.h", "_realm_8h.html", "_realm_8h" ],
     [ "ResistanceType.h", "_resistance_type_8h.html", "_resistance_type_8h" ],
     [ "SkillAction.h", "_skill_action_8h.html", "_skill_action_8h" ],
+    [ "SkillDevelopmentType.h", "_skill_development_type_8h.html", "_skill_development_type_8h" ],
     [ "SkillGroup.h", "_skill_group_8h.html", "_skill_group_8h" ],
     [ "SkillProgressionType.h", "_skill_progression_type_8h.html", "_skill_progression_type_8h" ],
     [ "SpellListType.h", "_spell_list_type_8h.html", "_spell_list_type_8h" ],

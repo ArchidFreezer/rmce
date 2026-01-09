@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: SkillProgressionType.h File Reference</title>
+<title>Rolemaster Character Editor: SkillDevelopmentType.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('_skill_progression_type_8h.html','',''); });
+$(function(){initNavTree('_skill_development_type_8h.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,7 +88,7 @@ $(function(){initNavTree('_skill_progression_type_8h.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">SkillProgressionType.h File Reference</div></div>
+  <div class="headertitle"><div class="title">SkillDevelopmentType.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
@@ -96,11 +96,11 @@ $(function(){initNavTree('_skill_progression_type_8h.html','',''); });
 <code>#include &lt;string_view&gt;</code><br />
 <code>#include &quot;StringUtils.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for SkillProgressionType.h:</div>
+Include dependency graph for SkillDevelopmentType.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="_skill_progression_type_8h__incl.png" border="0" usemap="#a_skill_progression_type_8h" loading="lazy" alt=""/></div>
-<map name="a_skill_progression_type_8h" id="a_skill_progression_type_8h">
-<area shape="rect" title=" " alt="" coords="92,5,246,32"/>
+<div class="center"><img src="_skill_development_type_8h__incl.png" border="0" usemap="#a_skill_development_type_8h" loading="lazy" alt=""/></div>
+<map name="a_skill_development_type_8h" id="a_skill_development_type_8h">
+<area shape="rect" title=" " alt="" coords="88,5,250,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,77,107"/>
 <area shape="poly" title=" " alt="" coords="145,35,78,74,75,70,148,30"/>
 <area shape="rect" title=" " alt="" coords="101,80,168,107"/>
@@ -121,31 +121,31 @@ Include dependency graph for SkillProgressionType.h:</div>
 </map>
 </div>
 </div>
-<p><a href="_skill_progression_type_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="_skill_development_type_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:aab09b4b767322e28083b5cf34833953a" id="r_aab09b4b767322e28083b5cf34833953a"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a> { <a class="el" href="#aab09b4b767322e28083b5cf34833953aab6478482a1841fc3ef2d3e5af27f0cc7">kCombined</a>
-, <a class="el" href="#aab09b4b767322e28083b5cf34833953aaf842b9d7c6733e37e7a26b70bcf28c5b">kLimited</a>
-, <a class="el" href="#aab09b4b767322e28083b5cf34833953aa1f0d5fe7d41b5fec009974b34c8ba95e">kSpecial</a>
-, <a class="el" href="#aab09b4b767322e28083b5cf34833953aa821da62632c491ea619ead7b31c094bf">kStandard</a>
+<tr class="memitem:a6caae2ea431b7603b2c14aa41b28931d" id="r_a6caae2ea431b7603b2c14aa41b28931d"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d">SkillDevelopmentType</a> { <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931da272488319413a0318c1de9e9fa61b7e5">kEveryman</a>
+, <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931da90443e6f295091a059b0a150ddee8778">kOccupational</a>
+, <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931dae412484be1c558bb641a11d900b98f6b">kRestricted</a>
+, <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931da821da62632c491ea619ead7b31c094bf">kStandard</a>
  }</td></tr>
-<tr class="memdesc:aab09b4b767322e28083b5cf34833953a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration class representing progression types of skills.  <a href="#aab09b4b767322e28083b5cf34833953a">More...</a><br /></td></tr>
+<tr class="memdesc:a6caae2ea431b7603b2c14aa41b28931d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration class representing number of skill ranks gained for each rank purchased.  <a href="#a6caae2ea431b7603b2c14aa41b28931d">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa31c6b1205d12dcad24a2c13f71d4f9f" id="r_aa31c6b1205d12dcad24a2c13f71d4f9f"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#aa31c6b1205d12dcad24a2c13f71d4f9f">toString</a> (<a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a> type)</td></tr>
-<tr class="memdesc:aa31c6b1205d12dcad24a2c13f71d4f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string representation of the given enum.  <br /></td></tr>
-<tr class="memitem:aa8c86f96c9b1b5d8459d6f8e00c5e301" id="r_aa8c86f96c9b1b5d8459d6f8e00c5e301"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa8c86f96c9b1b5d8459d6f8e00c5e301">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a> type)</td></tr>
-<tr class="memdesc:aa8c86f96c9b1b5d8459d6f8e00c5e301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teach operator&lt;&lt; how to print a <a class="el" href="#aab09b4b767322e28083b5cf34833953a" title="Enumeration class representing progression types of skills.">SkillProgressionType</a>.  <br /></td></tr>
-<tr class="memitem:a5c1124467da0e0bcb20e754a18b0aa24" id="r_a5c1124467da0e0bcb20e754a18b0aa24"><td class="memItemLeft">constexpr std::optional&lt; <a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5c1124467da0e0bcb20e754a18b0aa24">fromString</a> (std::string_view sv)</td></tr>
-<tr class="memdesc:a5c1124467da0e0bcb20e754a18b0aa24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
+<tr class="memitem:a65d4d81a6c980c8d4a25aced88e3bfd8" id="r_a65d4d81a6c980c8d4a25aced88e3bfd8"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a65d4d81a6c980c8d4a25aced88e3bfd8">toString</a> (<a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d">SkillDevelopmentType</a> type)</td></tr>
+<tr class="memdesc:a65d4d81a6c980c8d4a25aced88e3bfd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string representation of the given enum.  <br /></td></tr>
+<tr class="memitem:af593102dd70183bd94d8d5852d9c1134" id="r_af593102dd70183bd94d8d5852d9c1134"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af593102dd70183bd94d8d5852d9c1134">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d">SkillDevelopmentType</a> type)</td></tr>
+<tr class="memdesc:af593102dd70183bd94d8d5852d9c1134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teach operator&lt;&lt; how to print a <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType</a>.  <br /></td></tr>
+<tr class="memitem:a13da905805ff8d30d51d867b823732f6" id="r_a13da905805ff8d30d51d867b823732f6"><td class="memItemLeft">constexpr std::optional&lt; <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d">SkillDevelopmentType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a13da905805ff8d30d51d867b823732f6">fromString</a> (std::string_view sv)</td></tr>
+<tr class="memdesc:a13da905805ff8d30d51d867b823732f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains the <a class="el" href="#aab09b4b767322e28083b5cf34833953a" title="Enumeration class representing progression types of skills.">SkillProgressionType</a> enum and associated functions </p>
+<div class="textblock"><p>Contains the <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType</a> enum and associated functions </p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
-<a id="aab09b4b767322e28083b5cf34833953a" name="aab09b4b767322e28083b5cf34833953a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab09b4b767322e28083b5cf34833953a">&#9670;&#160;</a></span>SkillProgressionType</h2>
+<a id="a6caae2ea431b7603b2c14aa41b28931d" name="a6caae2ea431b7603b2c14aa41b28931d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6caae2ea431b7603b2c14aa41b28931d">&#9670;&#160;</a></span>SkillDevelopmentType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -154,7 +154,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a></td>
+          <td class="memname">enum class <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d">SkillDevelopmentType</a></td>
         </tr>
       </table>
   </td>
@@ -164,25 +164,25 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Enumeration class representing progression types of skills. </p>
-<p>When a character developes either a skillcategory or a skill they spend a development point and gain a certain bonus to the use of applicable skills. The size of the bonus gained depends on two things: the number of development points spent and also the progression type.</p>
-<p>The progression types are applied at both the skill category and skill level. A skill may have any of the progression type, but the only one available to categories is <a class="el" href="#aab09b4b767322e28083b5cf34833953aa821da62632c491ea619ead7b31c094bf">SkillProgressionType::kStandard</a> and only then if the skill being used has the saame progression. If the skill has any other progression type the category adds nothing. </p>
+<p>Enumeration class representing number of skill ranks gained for each rank purchased. </p>
+<p>When purchasing ranks in a skill the number of ranks actually gained depends on whether the skill is treated as special for the character. Certain races and professions have affinities or aversions to specific skills which modify the number of skill ranks gained for each onew purchased.</p>
+<p>You cannot develop part of a rank and you must spend enough points to gain a full rank. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aab09b4b767322e28083b5cf34833953aab6478482a1841fc3ef2d3e5af27f0cc7" name="aab09b4b767322e28083b5cf34833953aab6478482a1841fc3ef2d3e5af27f0cc7"></a>kCombined&#160;</td><td class="fielddoc"><p>Skill and skill category progressions are combined into one </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6caae2ea431b7603b2c14aa41b28931da272488319413a0318c1de9e9fa61b7e5" name="a6caae2ea431b7603b2c14aa41b28931da272488319413a0318c1de9e9fa61b7e5"></a>kEveryman&#160;</td><td class="fielddoc"><p>For every rank developed, the character gains two ranks </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aab09b4b767322e28083b5cf34833953aaf842b9d7c6733e37e7a26b70bcf28c5b" name="aab09b4b767322e28083b5cf34833953aaf842b9d7c6733e37e7a26b70bcf28c5b"></a>kLimited&#160;</td><td class="fielddoc"><p>Skills bonus develops much slower and have no category bonus </p>
+<tr><td class="fieldname"><a id="a6caae2ea431b7603b2c14aa41b28931da90443e6f295091a059b0a150ddee8778" name="a6caae2ea431b7603b2c14aa41b28931da90443e6f295091a059b0a150ddee8778"></a>kOccupational&#160;</td><td class="fielddoc"><p>For every rank developed, the character gains three ranks </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aab09b4b767322e28083b5cf34833953aa1f0d5fe7d41b5fec009974b34c8ba95e" name="aab09b4b767322e28083b5cf34833953aa1f0d5fe7d41b5fec009974b34c8ba95e"></a>kSpecial&#160;</td><td class="fielddoc"><p>Skills develop faster but have no category bonus </p>
+<tr><td class="fieldname"><a id="a6caae2ea431b7603b2c14aa41b28931dae412484be1c558bb641a11d900b98f6b" name="a6caae2ea431b7603b2c14aa41b28931dae412484be1c558bb641a11d900b98f6b"></a>kRestricted&#160;</td><td class="fielddoc"><p>For every two ranks developed, the character gains only one rank </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aab09b4b767322e28083b5cf34833953aa821da62632c491ea619ead7b31c094bf" name="aab09b4b767322e28083b5cf34833953aa821da62632c491ea619ead7b31c094bf"></a>kStandard&#160;</td><td class="fielddoc"><p>Both skills and category use the same progression with the sum being used </p>
+<tr><td class="fieldname"><a id="a6caae2ea431b7603b2c14aa41b28931da821da62632c491ea619ead7b31c094bf" name="a6caae2ea431b7603b2c14aa41b28931da821da62632c491ea619ead7b31c094bf"></a>kStandard&#160;</td><td class="fielddoc"><p>For every rank developed, the character gains one rank </p>
 </td></tr>
 </table>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a5c1124467da0e0bcb20e754a18b0aa24" name="a5c1124467da0e0bcb20e754a18b0aa24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c1124467da0e0bcb20e754a18b0aa24">&#9670;&#160;</a></span>fromString()</h2>
+<a id="a13da905805ff8d30d51d867b823732f6" name="a13da905805ff8d30d51d867b823732f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13da905805ff8d30d51d867b823732f6">&#9670;&#160;</a></span>fromString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,7 +191,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt; <a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a> &gt; fromString </td>
+          <td class="memname">std::optional&lt; <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d">SkillDevelopmentType</a> &gt; fromString </td>
           <td>(</td>
           <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>sv</em></span></td><td>)</td>
           <td></td>
@@ -205,20 +205,20 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the enumeration value based on a string. </p>
-<p>Accepts values that are returned by <a class="el" href="#aa31c6b1205d12dcad24a2c13f71d4f9f" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
+<p>Accepts values that are returned by <a class="el" href="#a65d4d81a6c980c8d4a25aced88e3bfd8" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sv</td><td>string_view to get the enumeration for </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="#aab09b4b767322e28083b5cf34833953a" title="Enumeration class representing progression types of skills.">SkillProgressionType</a> represented by the string</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa31c6b1205d12dcad24a2c13f71d4f9f" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType</a> represented by the string</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a65d4d81a6c980c8d4a25aced88e3bfd8" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
 
 </div>
 </div>
-<a id="aa8c86f96c9b1b5d8459d6f8e00c5e301" name="aa8c86f96c9b1b5d8459d6f8e00c5e301"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8c86f96c9b1b5d8459d6f8e00c5e301">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+<a id="af593102dd70183bd94d8d5852d9c1134" name="af593102dd70183bd94d8d5852d9c1134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af593102dd70183bd94d8d5852d9c1134">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,12 +231,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d">SkillDevelopmentType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Teach operator&lt;&lt; how to print a <a class="el" href="#aab09b4b767322e28083b5cf34833953a" title="Enumeration class representing progression types of skills.">SkillProgressionType</a>. </p>
+<p>Teach operator&lt;&lt; how to print a <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">out</td><td>Output stream that the enum should be printed to </td></tr>
@@ -248,8 +248,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa31c6b1205d12dcad24a2c13f71d4f9f" name="aa31c6b1205d12dcad24a2c13f71d4f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa31c6b1205d12dcad24a2c13f71d4f9f">&#9670;&#160;</a></span>toString()</h2>
+<a id="a65d4d81a6c980c8d4a25aced88e3bfd8" name="a65d4d81a6c980c8d4a25aced88e3bfd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d4d81a6c980c8d4a25aced88e3bfd8">&#9670;&#160;</a></span>toString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +260,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">std::string_view toString </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#aab09b4b767322e28083b5cf34833953a">SkillProgressionType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d">SkillDevelopmentType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -274,7 +274,7 @@ Functions</h2></td></tr>
 <p>Get the string representation of the given enum. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>The <a class="el" href="#aab09b4b767322e28083b5cf34833953a" title="Enumeration class representing progression types of skills.">SkillProgressionType</a> to get the string of </td></tr>
+    <tr><td class="paramname">type</td><td>The <a class="el" href="#a6caae2ea431b7603b2c14aa41b28931d" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType</a> to get the string of </td></tr>
   </table>
   </dd>
 </dl>
@@ -295,7 +295,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="_skill_progression_type_8h.html">SkillProgressionType.h</a></li>
+    <li class="navelem"><a href="_skill_development_type_8h.html">SkillDevelopmentType.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>
