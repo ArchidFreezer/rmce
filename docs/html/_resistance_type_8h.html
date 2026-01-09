@@ -142,21 +142,21 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a1d94edadc954ef7f52d587b5412c740ba031091a5909dbce8aef8a8425abebb1f">kPoison</a>
 <br />
  }</td></tr>
-<tr class="memdesc:a1d94edadc954ef7f52d587b5412c740b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration class representing the realms in a campaign.  <a href="#a1d94edadc954ef7f52d587b5412c740b">More...</a><br /></td></tr>
+<tr class="memdesc:a1d94edadc954ef7f52d587b5412c740b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration class representing the character resistance types in a campaign.  <a href="#a1d94edadc954ef7f52d587b5412c740b">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a63db266f7eccb372a1fcbb62d34ef417" id="r_a63db266f7eccb372a1fcbb62d34ef417"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a63db266f7eccb372a1fcbb62d34ef417">toString</a> (<a class="el" href="#a1d94edadc954ef7f52d587b5412c740b">ResistanceType</a> resistance)</td></tr>
 <tr class="memdesc:a63db266f7eccb372a1fcbb62d34ef417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string representation of the given enum.  <br /></td></tr>
 <tr class="memitem:ad98cbc2f8a5c36cf08fcaf30381ae8ca" id="r_ad98cbc2f8a5c36cf08fcaf30381ae8ca"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad98cbc2f8a5c36cf08fcaf30381ae8ca">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b">ResistanceType</a> resistance)</td></tr>
-<tr class="memdesc:ad98cbc2f8a5c36cf08fcaf30381ae8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teach operator&lt;&lt; how to print a <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the realms in a campaign.">ResistanceType</a>.  <br /></td></tr>
+<tr class="memdesc:ad98cbc2f8a5c36cf08fcaf30381ae8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teach operator&lt;&lt; how to print a <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the character resistance types in a campaign.">ResistanceType</a>.  <br /></td></tr>
 <tr class="memitem:ad018c851c3c1e86f90080a79a6476816" id="r_ad018c851c3c1e86f90080a79a6476816"><td class="memItemLeft">constexpr std::optional&lt; <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b">ResistanceType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad018c851c3c1e86f90080a79a6476816">fromString</a> (std::string_view sv)</td></tr>
 <tr class="memdesc:ad018c851c3c1e86f90080a79a6476816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
 <tr class="memitem:a02c4f06dbc534236689082d2d3cdd54d" id="r_a02c4f06dbc534236689082d2d3cdd54d"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a02c4f06dbc534236689082d2d3cdd54d">isMagical</a> (<a class="el" href="#a1d94edadc954ef7f52d587b5412c740b">ResistanceType</a> resistance)</td></tr>
 <tr class="memdesc:a02c4f06dbc534236689082d2d3cdd54d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the resistance is magical or not.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains the <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the realms in a campaign.">ResistanceType</a> enum and associated functions </p>
+<div class="textblock"><p>Contains the <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the character resistance types in a campaign.">ResistanceType</a> enum and associated functions </p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
 <a id="a1d94edadc954ef7f52d587b5412c740b" name="a1d94edadc954ef7f52d587b5412c740b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d94edadc954ef7f52d587b5412c740b">&#9670;&#160;</a></span>ResistanceType</h2>
@@ -178,7 +178,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Enumeration class representing the realms in a campaign. </p>
+<p>Enumeration class representing the character resistance types in a campaign. </p>
+<p>As part of normal game play characters will be subject to various hazards. These may come in form of combat, be environmental or some other action. A character is capable of mitigating some of the effects of these hazards through reistances, which may be innate, magical or otherwise gained.</p>
+<p>This enum lists the various hazard types that a character may acquire resistance to. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1d94edadc954ef7f52d587b5412c740bab3d0636957c6f093c040ecdf1648ab6f" name="a1d94edadc954ef7f52d587b5412c740bab3d0636957c6f093c040ecdf1648ab6f"></a>kArcane&#160;</td><td class="fielddoc"><p>Resistance to Arcane magic </p>
 </td></tr>
@@ -250,7 +252,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the realms in a campaign.">ResistanceType</a> represented by the string</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the character resistance types in a campaign.">ResistanceType</a> represented by the string</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a63db266f7eccb372a1fcbb62d34ef417" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
 
 </div>
@@ -281,13 +283,13 @@ Functions</h2></td></tr>
 <p>Checks if the resistance is magical or not. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">resistance</td><td><a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the realms in a campaign.">ResistanceType</a> to test </td></tr>
+    <tr><td class="paramname">resistance</td><td><a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the character resistance types in a campaign.">ResistanceType</a> to test </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the realms in a campaign.">ResistanceType</a> is magical </dd>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the character resistance types in a campaign.">ResistanceType</a> is magical </dd>
 <dd>
-<span class="tt">false</span> if the <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the realms in a campaign.">ResistanceType</a> is not magical </dd></dl>
+<span class="tt">false</span> if the <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the character resistance types in a campaign.">ResistanceType</a> is not magical </dd></dl>
 
 </div>
 </div>
@@ -310,7 +312,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Teach operator&lt;&lt; how to print a <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the realms in a campaign.">ResistanceType</a>. </p>
+<p>Teach operator&lt;&lt; how to print a <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the character resistance types in a campaign.">ResistanceType</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">out</td><td>Output stream that the enum should be printed to </td></tr>
@@ -348,7 +350,7 @@ Functions</h2></td></tr>
 <p>Get the string representation of the given enum. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>The <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the realms in a campaign.">ResistanceType</a> to get the string of </td></tr>
+    <tr><td class="paramname">size</td><td>The <a class="el" href="#a1d94edadc954ef7f52d587b5412c740b" title="Enumeration class representing the character resistance types in a campaign.">ResistanceType</a> to get the string of </td></tr>
   </table>
   </dd>
 </dl>
