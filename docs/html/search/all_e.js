@@ -12,5 +12,7 @@ var searchData=
   ['skillprogressiontype_2eh_9',['SkillProgressionType.h',['../_skill_progression_type_8h.html',1,'']]],
   ['spelllisttype_10',['SpellListType',['../_spell_list_type_8h.html#aa199fa9bbf650bb54f934e43f4c8dfa9',1,'SpellListType.h']]],
   ['spelllisttype_2eh_11',['SpellListType.h',['../_spell_list_type_8h.html',1,'']]],
-  ['standards_12',['Standards',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]]
+  ['standards_12',['Standards',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['stat_13',['Stat',['../_stat_8h.html#a8538fbca586b33d353cbe769bfa8e305',1,'Stat.h']]],
+  ['stat_2eh_14',['Stat.h',['../_stat_8h.html',1,'']]]
 ];

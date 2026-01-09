@@ -1,5 +1,23 @@
 var NAVTREEINDEX1 =
 {
+"class_language_dialect_data.html#a1a20ef806f51f6cebacdc0f97acaea55":[1,0,12,5],
+"class_language_dialect_data.html#a1c0666edebc8b7f7404530b9cae4f1e8":[1,0,12,1],
+"class_language_dialect_data.html#a4d3ad512c39a0693f0be3ac15af4de47":[1,0,12,0],
+"class_language_dialect_data.html#a60d30420877b334fbe49ec6e4b07a1a3":[1,0,12,3],
+"class_language_dialect_data.html#a9096f84005bd952c823c5bcfac2a429e":[1,0,12,7],
+"class_language_dialect_data.html#a98276720918fb71286a7b5a4527b8a8c":[1,0,12,4],
+"class_language_dialect_data.html#abba293e2b22e9394edb609d372740276":[1,0,12,6],
+"class_language_dialect_data.html#abc9bbaae6d4ac2e8a6a601fe3f616392":[1,0,12,2],
+"classes.html":[1,1],
+"files.html":[2,0],
+"functions.html":[1,3,0],
+"functions_func.html":[1,3,1],
+"globals.html":[2,1,0],
+"globals_enum.html":[2,1,2],
+"globals_func.html":[2,1,1],
+"hierarchy.html":[1,2],
+"index.html":[],
+"md__r_e_a_d_m_e.html":[0],
 "md__r_e_a_d_m_e.html#autotoc_md1":[0,0],
 "md__r_e_a_d_m_e.html#autotoc_md2":[0,1],
 "pages.html":[]

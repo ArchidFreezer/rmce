@@ -23,5 +23,6 @@ var files_dup =
     [ "SkillGroup.h", "_skill_group_8h.html", "_skill_group_8h" ],
     [ "SkillProgressionType.h", "_skill_progression_type_8h.html", "_skill_progression_type_8h" ],
     [ "SpellListType.h", "_spell_list_type_8h.html", "_spell_list_type_8h" ],
+    [ "Stat.h", "_stat_8h.html", "_stat_8h" ],
     [ "StringUtils.h", "_string_utils_8h_source.html", null ]
 ];

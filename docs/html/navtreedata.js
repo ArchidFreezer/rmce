@@ -52,7 +52,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"md__r_e_a_d_m_e.html#autotoc_md1"
+"class_language_dialect_data.html#a1a20ef806f51f6cebacdc0f97acaea55"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
