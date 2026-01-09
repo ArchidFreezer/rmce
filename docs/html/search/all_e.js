@@ -14,5 +14,7 @@ var searchData=
   ['spelllisttype_2eh_11',['SpellListType.h',['../_spell_list_type_8h.html',1,'']]],
   ['standards_12',['Standards',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
   ['stat_13',['Stat',['../_stat_8h.html#a8538fbca586b33d353cbe769bfa8e305',1,'Stat.h']]],
-  ['stat_2eh_14',['Stat.h',['../_stat_8h.html',1,'']]]
+  ['stat_2eh_14',['Stat.h',['../_stat_8h.html',1,'']]],
+  ['statlosstype_15',['StatLossType',['../_stat_loss_type_8h.html#a584cb081537d9217b5aab214e420d6f7',1,'StatLossType.h']]],
+  ['statlosstype_2eh_16',['StatLossType.h',['../_stat_loss_type_8h.html',1,'']]]
 ];

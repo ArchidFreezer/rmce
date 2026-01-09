@@ -1,5 +1,16 @@
 var NAVTREEINDEX1 =
 {
+"class_language_data.html#a075cacfa802c1415cf49561e8092fa0f":[1,0,10,4],
+"class_language_data.html#a3076cc2183309f617c8e361c01ada6a0":[1,0,10,5],
+"class_language_data.html#a64f0406b4df83eae6246a743609c47af":[1,0,10,6],
+"class_language_data.html#a7e7e734c91638469cf38f4412ff7e2d9":[1,0,10,3],
+"class_language_data.html#aa53120119217e45ecbed302e6984412a":[1,0,10,7],
+"class_language_data.html#ab3a9a882a49a54cee03eefef0bb7a0c4":[1,0,10,1],
+"class_language_data.html#af4f09316012946c188ede4a767b8891c":[1,0,10,2],
+"class_language_datafile_parser_json.html":[1,0,11],
+"class_language_datafile_parser_json.html#a6c2d5e3ec73d8ddcc2e19d85fc7fe69b":[1,0,11,1],
+"class_language_datafile_parser_json.html#a7f75e960b7de5b0b1095638bcc143b99":[1,0,11,0],
+"class_language_dialect_data.html":[1,0,12],
 "class_language_dialect_data.html#a1a20ef806f51f6cebacdc0f97acaea55":[1,0,12,5],
 "class_language_dialect_data.html#a1c0666edebc8b7f7404530b9cae4f1e8":[1,0,12,1],
 "class_language_dialect_data.html#a4d3ad512c39a0693f0be3ac15af4de47":[1,0,12,0],
