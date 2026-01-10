@@ -29,20 +29,9 @@ enum class CriticalTableType {
 /**
  * @brief Get the string representation of the given enum
  * @param type The #CriticalTableType to get the string of
- * @return Game display form of the enum value as a string_view
+ * @return Game display form of the enum value as a string
  */
-constexpr std::string_view toString(CriticalTableType type) {
-	using enum CriticalTableType;
-
-	switch (type)
-	{
-	case kNormal: return "Normal";
-	case kLargeCreaturePhysical: return "Large Creature Physical";
-	case kSuperLargeCreaturePhysical: return "Super Large Creature Physical";
-	case kLargeCreatureSpell: return "Large Creature Spell";
-	case kSuperLargeCreatureSpell: return "Super Large Creature Spell";
-	}
-}
+const std::string toString(CriticalTableType type);
 
 /**
  * @brief Teach operator<< how to print a CriticalTableType
@@ -50,7 +39,7 @@ constexpr std::string_view toString(CriticalTableType type) {
  * @param type Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, CriticalTableType type) {
+inline std::ostream& operator<<(std::ostream& out, CriticalTableType type) {
 	return out << toString(type);
 }
 
@@ -73,23 +62,4 @@ std::ostream& operator<<(std::ostream& out, CriticalTableType type) {
  *
  * @see toString()
  */
-constexpr std::optional<CriticalTableType> fromString(std::string_view sv) {
-	using enum CriticalTableType;
-
-	const std::string& val = lcase(sv);
-	if (val == "normal") return kNormal;
-	if (val == "largecreaturephysical") return kLargeCreaturePhysical;
-	if (val == "large_creature_physical") return kLargeCreaturePhysical;
-	if (val == "large creature physical") return kLargeCreaturePhysical;
-	if (val == "superlargecreaturephysical") return kSuperLargeCreaturePhysical;
-	if (val == "super_large_creature_physical") return kSuperLargeCreaturePhysical;
-	if (val == "super large creature physical") return kSuperLargeCreaturePhysical;
-	if (val == "largecreaturespell") return kLargeCreatureSpell;
-	if (val == "large_creature_spell") return kLargeCreatureSpell;
-	if (val == "large creature spell") return kLargeCreatureSpell;
-	if (val == "superlargecreaturespell") return kSuperLargeCreatureSpell;
-	if (val == "super_large_creature_spell") return kSuperLargeCreatureSpell;
-	if (val == "super large creature spell") return kSuperLargeCreatureSpell;
-
-	return {};
-}
+const std::optional<CriticalTableType> fromString(std::string_view sv);

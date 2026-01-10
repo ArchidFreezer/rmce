@@ -35,14 +35,14 @@ public:
 	 * @brief Get the key of the root node of the json file
 	 * @return String reference to the root key
 	 */
-	const std::string& rootNode() { return root_node_; };
+	inline const std::string& rootNode() { return root_node_; };
 
 protected:
 	/**
 	 * @brief Set value of the root node key in the json file
 	 * @param root_node value of teh root node key
 	 */
-	void setRootNode(std::string root_node) { root_node_ = root_node; };
+	inline void setRootNode(std::string root_node) { root_node_ = root_node; };
 
 private:
 	std::string root_node_{}; /**< Key of the root node of the json file */

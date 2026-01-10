@@ -30,18 +30,9 @@ enum class SkillDevelopmentType {
 /**
  * @brief Get the string representation of the given enum
  * @param type The #SkillDevelopmentType to get the string of
- * @return Game display form of the enum value as a string_view
+ * @return Game display form of the enum value as a string
  */
-constexpr std::string_view toString(SkillDevelopmentType type) {
-	using enum SkillDevelopmentType;
-
-	switch (type) {
-	case kEveryman: return "Everyman";
-	case kOccupational: return "Occupational";
-	case kRestricted: return "Restricted";
-	case kStandard: return "Standard";
-	}
-}
+const std::string toString(SkillDevelopmentType type);
 
 /**
  * @brief Teach operator<< how to print a SkillDevelopmentType
@@ -49,7 +40,7 @@ constexpr std::string_view toString(SkillDevelopmentType type) {
  * @param type Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, SkillDevelopmentType type) {
+inline std::ostream& operator<<(std::ostream& out, SkillDevelopmentType type) {
 	return out << toString(type);
 }
 
@@ -63,14 +54,4 @@ std::ostream& operator<<(std::ostream& out, SkillDevelopmentType type) {
  *
  * @see toString()
  */
-constexpr std::optional<SkillDevelopmentType> fromString(std::string_view sv) {
-	using enum SkillDevelopmentType;
-
-	const std::string& val = lcase(sv);
-	if (val == "everyman") return kEveryman;
-	if (val == "occupational") return kOccupational;
-	if (val == "restricted") return kRestricted;
-	if (val == "standard") return kStandard;
-
-	return {};
-}
+const std::optional<SkillDevelopmentType> fromString(std::string_view sv);

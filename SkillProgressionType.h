@@ -25,6 +25,7 @@
 enum class SkillProgressionType {
 	kCombined, /**< Skill and skill category progressions are combined into one */
 	kLimited, /**< Skills bonus develops much slower and have no category bonus */
+	kNone, /**< No skill development for any number of ranks */
 	kSpecial, /**< Skills develop faster but have no category bonus */
 	kStandard /**< Both skills and category use the same progression with the sum being used */
 };
@@ -32,18 +33,9 @@ enum class SkillProgressionType {
 /**
  * @brief Get the string representation of the given enum
  * @param type The #SkillProgressionType to get the string of
- * @return Game display form of the enum value as a string_view
+ * @return Game display form of the enum value as a string
  */
-constexpr std::string_view toString(SkillProgressionType type) {
-	using enum SkillProgressionType;
-
-	switch (type) {
-	case kCombined: return "Combined";
-	case kLimited: return "Limited";
-	case kSpecial: return "Special";
-	case kStandard: return "Standard";
-	}
-}
+const std::string toString(SkillProgressionType type);
 
 /**
  * @brief Teach operator<< how to print a SkillProgressionType
@@ -51,7 +43,7 @@ constexpr std::string_view toString(SkillProgressionType type) {
  * @param type Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, SkillProgressionType type) {
+inline std::ostream& operator<<(std::ostream& out, SkillProgressionType type) {
 	return out << toString(type);
 }
 
@@ -65,14 +57,4 @@ std::ostream& operator<<(std::ostream& out, SkillProgressionType type) {
  *
  * @see toString()
  */
-constexpr std::optional<SkillProgressionType> fromString(std::string_view sv) {
-	using enum SkillProgressionType;
-
-	const std::string& val = lcase(sv);
-	if (val == "combined") return kCombined;
-	if (val == "limited") return kLimited;
-	if (val == "special") return kSpecial;
-	if (val == "standard") return kStandard;
-
-	return {};
-}
+const std::optional<SkillProgressionType> fromString(std::string_view sv);

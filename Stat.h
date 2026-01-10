@@ -33,24 +33,9 @@ enum class Stat {
 /**
  * @brief Get the string representation of the given enum
  * @param stat The #Stat to get the string of
- * @return Game display form of the enum value as a string_view
+ * @return Game display form of the enum value as a string
  */
-constexpr std::string_view toString(Stat stat) {
-	using enum Stat;
-
-	switch (stat) {
-	case kAgility: return "Agility";
-	case kConstitution: return "Constitution";
-	case kEmpathy: return "Empathy";
-	case kIntuition: return "Intuition";
-	case kMemory: return "Memory";
-	case kPresence: return "Presence";
-	case kQuickness: return "Quickness";
-	case kReasoning: return "Reasoning";
-	case kSelfDiscipline : return "Self Discipline";
-	case kStrength: return "Strength";
-	}
-}
+const std::string toString(Stat stat);
 
 /**
  * @brief Teach operator<< how to print a Stat
@@ -58,7 +43,7 @@ constexpr std::string_view toString(Stat stat) {
  * @param stat Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, Stat stat) {
+inline std::ostream& operator<<(std::ostream& out, Stat stat) {
 	return out << toString(stat);
 }
 
@@ -81,25 +66,7 @@ std::ostream& operator<<(std::ostream& out, Stat stat) {
  *
  * @see toString()
  */
-constexpr std::optional<Stat> fromString(std::string_view sv) {
-	using enum Stat;
-
-	const std::string& val = lcase(sv);
-	if (val == "agility") return kAgility;
-	if (val == "constitution") return kConstitution;
-	if (val == "empathy") return kEmpathy;
-	if (val == "intuition") return kIntuition;
-	if (val == "memory") return kMemory;
-	if (val == "presence") return kPresence;
-	if (val == "quickness") return kQuickness;
-	if (val == "reasoning") return kReasoning;
-	if (val == "selfdiscipline") return kSelfDiscipline;
-	if (val == "self_discipline") return kSelfDiscipline;
-	if (val == "self discipline") return kSelfDiscipline;
-	if (val == "strength") return kStrength;
-
-	return {};
-}
+const std::optional<Stat> fromString(std::string_view sv);
 
 /**
  * @brief Checks if the stat is a primary stat or not
@@ -107,18 +74,7 @@ constexpr std::optional<Stat> fromString(std::string_view sv) {
  * @return `true` if the Stat is a primary stat
  * @return `false` if the Stat is not a primary stat
  */
-constexpr bool isPrimary(Stat stat) {
-	using enum Stat;
-
-	switch (stat) {
-	case kEmpathy:
-	case kIntuition:
-	case kPresence:
-	case kQuickness:
-	case kStrength: return true;
-	default: return false;
-	}
-}
+constexpr bool isPrimary(Stat stat);
 
 /**
  * @brief Checks if the stat is a development stat or not
@@ -126,15 +82,4 @@ constexpr bool isPrimary(Stat stat) {
  * @return `true` if the Stat is a development stat
  * @return `false` if the Stat is not a development stat
  */
-constexpr bool isDevelopment(Stat stat) {
-	using enum Stat;
-
-	switch (stat) {
-	case kAgility:
-	case kConstitution:
-	case kMemory:
-	case kReasoning:
-	case kSelfDiscipline: return true;
-	default: return false;
-	}
-}
+constexpr bool isDevelopment(Stat stat);

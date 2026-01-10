@@ -28,19 +28,9 @@ enum class StatLossType {
 /**
  * @brief Get the string representation of the given enum
  * @param type The #StatLossType to get the string of
- * @return Game display form of the enum value as a string_view
+ * @return Game display form of the enum value as a string
  */
-constexpr std::string_view toString(StatLossType type) {
-	using enum StatLossType;
-
-	switch (type) {
-	case kSlow: return "Slow";
-	case kNormal: return "Normal";
-	case kFast: return "Fast";
-	case kVeryFast : return "Very Fast";
-	case kExtreme: return "Extreme";
-	}
-}
+const std::string toString(StatLossType type);
 
 /**
  * @brief Teach operator<< how to print a StatLossType
@@ -48,7 +38,7 @@ constexpr std::string_view toString(StatLossType type) {
  * @param type Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, StatLossType type) {
+inline std::ostream& operator<<(std::ostream& out, StatLossType type) {
 	return out << toString(type);
 }
 
@@ -62,17 +52,4 @@ std::ostream& operator<<(std::ostream& out, StatLossType type) {
  *
  * @see toString()
  */
-constexpr std::optional<StatLossType> fromString(std::string_view sv) {
-	using enum StatLossType;
-
-	const std::string& val = lcase(sv);
-	if (val == "slow") return kSlow;
-	if (val == "normal") return kNormal;
-	if (val == "fast") return kFast;
-	if (val == "veryfast") return kVeryFast;
-	if (val == "very_fast") return kVeryFast;
-	if (val == "very fast") return kVeryFast;
-	if (val == "extreme") return kExtreme;
-
-	return {};
-}
+const std::optional<StatLossType> fromString(std::string_view sv);

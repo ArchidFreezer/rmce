@@ -28,20 +28,9 @@ enum class CreatureSize {
 /**
  * @brief Get the string representation of the given enum
  * @param size The #CreatureSize to get the string of
- * @return Game display form of the enum value as a string_view
+ * @return Game display form of the enum value as a string
  */
-constexpr std::string_view toString(CreatureSize size) {
-	using enum CreatureSize;
-
-	switch (size)
-	{
-	case kTiny: return "Tiny";
-	case kSmall: return "Small";
-	case kMedium: return "Medium";
-	case kLarge: return "Large";
-	case kSuperLarge: return "Super Large";
-	}
-}
+const std::string toString(CreatureSize size);
 
 /**
  * @brief Teach operator<< how to print a CreatureSize
@@ -49,7 +38,7 @@ constexpr std::string_view toString(CreatureSize size) {
  * @param size Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, CreatureSize size) {
+inline std::ostream& operator<<(std::ostream& out, CreatureSize size) {
 	return out << toString(size);
 }
 
@@ -72,17 +61,4 @@ std::ostream& operator<<(std::ostream& out, CreatureSize size) {
  * 
  * @see toString()
  */
-constexpr std::optional<CreatureSize> fromString(std::string_view sv) {
-	using enum CreatureSize;
-
-	const std::string& val = lcase(sv);
-	if (val == "tiny") return kTiny;
-	if (val == "small") return kSmall;
-	if (val == "medium") return kMedium;
-	if (val == "large") return kLarge;
-	if (val == "superlarge") return kSuperLarge;
-	if (val == "super_large") return kSuperLarge;
-	if (val == "super large") return kSuperLarge;
-
-	return {};
-}
+const std::optional<CreatureSize> fromString(std::string_view sv);

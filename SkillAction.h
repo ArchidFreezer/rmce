@@ -26,18 +26,9 @@ enum class SkillAction {
 /**
  * @brief Get the string representation of the given enum
  * @param action The #SkillAction to get the string of
- * @return Game display form of the enum value as a string_view
+ * @return Game display form of the enum value as a string
  */
-constexpr std::string_view toString(SkillAction action) {
-	using enum SkillAction;
-
-	switch (action) {
-	case kMoving: return "Moving";
-	case kOB: return "OB";
-	case kSpecial: return "Special";
-	case kStatic: return "Static";
-	}
-}
+const std::string toString(SkillAction action);
 
 /**
  * @brief Teach operator<< how to print a SkillAction
@@ -45,7 +36,7 @@ constexpr std::string_view toString(SkillAction action) {
  * @param action Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, SkillAction action) {
+inline std::ostream& operator<<(std::ostream& out, SkillAction action) {
 	return out << toString(action);
 }
 
@@ -59,14 +50,4 @@ std::ostream& operator<<(std::ostream& out, SkillAction action) {
  *
  * @see toString()
  */
-constexpr std::optional<SkillAction> fromString(std::string_view sv) {
-	using enum SkillAction;
-
-	const std::string& val = lcase(sv);
-	if (val == "moving") return kMoving;
-	if (val == "ob") return kOB;
-	if (val == "special") return kSpecial;
-	if (val == "static") return kStatic;
-
-	return {};
-}
+const std::optional<SkillAction> fromString(std::string_view sv);

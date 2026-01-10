@@ -32,12 +32,12 @@ public:
 	 * @brief get the unique identifier of the language category
 	 * @return Unique identifier as a string reference
 	 */
-	const std::string& id() { return id_; }
+	inline const std::string& id() { return id_; }
   /**
    * @brief Get the name of the category as seen in-game
    * @return Name as a string reference
    */
-  const std::string& name() { return name_; }
+  inline const std::string& name() { return name_; }
 
 private:
 	std::string id_{}; /**< Unique identifier of the language category */

@@ -30,27 +30,27 @@ public:
 	 * @brief Get the unique identifier for the book
 	 * @return Unique identifier as a string reference
 	 */
-	const std::string& id() { return id_; }
+	inline const std::string& id() { return id_; }
 	/**
 	 * @brief Get the book reference number from the publisher
 	 * @return Book reference number as a string reference
 	 */
-	const std::string& code() { return code_; }
+	inline const std::string& code() { return code_; }
 	/**
 	 * @brief Get the name of the book
 	 * @return Book name as a string reference
 	 */
-	const std::string& name() { return name_; }
+	inline const std::string& name() { return name_; }
 	/**
 	 * @brief Get the abbreviation of the book as used by the publisher
 	 * @return Book abbreviation as a string reference
 	 */
-	const std::string& abbreviation() { return abbreviation_; }
+	inline const std::string& abbreviation() { return abbreviation_; }
 	/**
 	 * @brief Get the ISBN book number
 	 * @return Book ISBN as a string reference
 	 */
-	const std::string& isbn() { return isbn_; }
+	inline const std::string& isbn() { return isbn_; }
 
 private:
 	std::string id_{}; /**< Unique identifier for the book */

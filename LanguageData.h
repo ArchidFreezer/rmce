@@ -31,17 +31,17 @@ public:
 	 * @brief Unique identifier of the language
 	 * @return Unique identifier string reference
 	 */
-	const std::string& id() { return id_; }
+	inline const std::string& id() { return id_; }
 	/**
 	 * @brief In-game name of the language as used by players and NPCs
 	 * @return Name of the language
 	 */
-	const std::string& name() { return name_; }
+	inline const std::string& name() { return name_; }
 	/**
 	 * @brief Language category representing the root language this has developed from
 	 * @return Category as a string reference
 	 */
-	const std::string& category() { return category_; }
+	inline const std::string& category() { return category_; }
 	/**
 	 * @brief For dialects this is the language it is a dialect of.
 	 * 
@@ -49,22 +49,22 @@ public:
 	 * 
 	 * @return Dialects base language as a string reference
 	 */
-	const std::string& baseLanguage() { return base_language_; }
+	inline const std::string& baseLanguage() { return base_language_; }
 	/**
 	 * @brief Whether the language has a spoken component
 	 * @return `true` if the language is spoken; `false` otherwise
 	 */
-	const bool isSpoken() const { return is_spoken_;	}
+	inline const bool isSpoken() const { return is_spoken_;	}
 	/**
 	 * @brief Whether the language has a written component
 	 * @return `true` if the language is written; `false` otherwise
 	 */
-	const bool isWritten() const { return is_written_; }
+	inline const bool isWritten() const { return is_written_; }
 	/**
 	 * @brief Whether the language has a somantic component
 	 * @return `true` if the language is somantic; `false` otherwise
 	 */
-	const bool isSomantic() const { return is_somantic_; }
+	inline const bool isSomantic() const { return is_somantic_; }
 
 private:
 	std::string id_{}; /**< Unique identifier */

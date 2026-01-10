@@ -29,19 +29,9 @@ enum class SpellListType {
 /**
  * @brief Get the string representation of the given enum
  * @param type The #SpellListType to get the string of
- * @return Game display form of the enum value as a string_view
+ * @return Game display form of the enum value as a string
  */
-constexpr std::string_view toString(SpellListType type) {
-	using enum SpellListType;
-
-	switch (type) {
-	case kBase: return "Base";
-	case kClosed: return "Closed";
-	case kOpen: return "Open";
-	case kTrainingPackage : return "Training Package";
-	case kRacial: return "Racial";
-	}
-}
+const std::string toString(SpellListType type);
 
 /**
  * @brief Teach operator<< how to print a SpellListType
@@ -49,7 +39,7 @@ constexpr std::string_view toString(SpellListType type) {
  * @param type Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, SpellListType type) {
+inline std::ostream& operator<<(std::ostream& out, SpellListType type) {
 	return out << toString(type);
 }
 
@@ -73,17 +63,4 @@ std::ostream& operator<<(std::ostream& out, SpellListType type) {
  *
  * @see toString()
  */
-constexpr std::optional<SpellListType> fromString(std::string_view sv) {
-	using enum SpellListType;
-
-	const std::string& val = lcase(sv);
-	if (val == "base") return kBase;
-	if (val == "closed") return kClosed;
-	if (val == "open") return kOpen;
-	if (val == "trainingpackage") return kTrainingPackage;
-	if (val == "training_package") return kTrainingPackage;
-	if (val == "training tackage") return kTrainingPackage;
-	if (val == "racial") return kRacial;
-
-	return {};
-}
+const std::optional<SpellListType> fromString(std::string_view sv);

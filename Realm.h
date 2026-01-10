@@ -38,34 +38,18 @@ enum class Realm {
 
 /**
  * @brief Get the string representation of the given enum
- * @param size The #Realm to get the string of
- * @return Game display form of the enum value as a string_view
+ * @param realm The #Realm to get the string of
+ * @return Game display form of the enum value as a string
  */
-constexpr std::string_view toString(Realm realm) {
-	using enum Realm;
-
-	switch (realm) {
-	case kArcane: return "Arcane";
-	case kArms: return "Arms";
-	case kChanneling: return "Channeling";
-	case kChannelingEssence: return "Channeling / Essence";
-	case kChannelingMentalism: return "Channeling / Mentalism";
-	case kEssence: return "Essence";
-	case kEssenceMentalism: return "Essence / Mentalism";
-	case kMentalism: return "Mentalism";
-	case kMundane: return "Mundane";
-	case kNeutral: return "Neutral";
-	case kSubterfuge: return "Subterfuge";
-	}
-}
+const std::string toString(Realm realm);
 
 /**
  * @brief Teach operator<< how to print a Realm
  * @param out Output stream that the enum should be printed to
- * @param size Enum value to output
+ * @param realm Enum value to output
  * @return Output stream reference containing the output enum value
  */
-std::ostream& operator<<(std::ostream& out, Realm realm) {
+inline std::ostream& operator<<(std::ostream& out, Realm realm) {
 	return out << toString(realm);
 }
 
@@ -87,33 +71,7 @@ std::ostream& operator<<(std::ostream& out, Realm realm) {
  *
  * @see toString()
  */
-constexpr std::optional<Realm> fromString(std::string_view sv) {
-	using enum Realm;
-
-	const std::string& val = lcase(sv);
-	if (val == "Arcane") return kArcane;
-	if (val == "Arms") return kArms;
-	if (val == "Channeling") return kChanneling;
-	if (val == "Channeling / Essence") return kChannelingEssence;
-	if (val == "Channeling Essence") return kChannelingEssence;
-	if (val == "ChannelingEssence") return kChannelingEssence;
-	if (val == "Channeling_Essence") return kChannelingEssence;
-	if (val == "Channeling / Mentalism") return kChannelingMentalism;
-	if (val == "Channeling Mentalism") return kChannelingMentalism;
-	if (val == "ChannelingMentalism") return kChannelingMentalism;
-	if (val == "Channeling_Mentalism") return kChannelingMentalism;
-	if (val == "Essence") return kEssence;
-	if (val == "Essence / Mentalism") return kEssenceMentalism;
-	if (val == "Essence Mentalism") return kEssenceMentalism;
-	if (val == "EssenceMentalism") return kEssenceMentalism;
-	if (val == "Essence_Mentalism") return kEssenceMentalism;
-	if (val == "Mentalism") return kMentalism;
-	if (val == "Mundane") return kMundane;
-	if (val == "Neutral") return kNeutral;
-	if (val == "Subterfuge") return kSubterfuge;
-
-	return {};
-}
+const std::optional<Realm> fromString(std::string_view sv);
 
 /**
  * @brief Checks if the realm is magical or not
@@ -121,12 +79,4 @@ constexpr std::optional<Realm> fromString(std::string_view sv) {
  * @return `true` if the Realm is magical
  * @return `false` if the Realm is not magical
  */
-constexpr bool isMagical(Realm realm) {
-	using enum Realm;
-
-	switch (realm) {
-	case kArms:
-	case kSubterfuge: return false;
-	default: return true;
-	}
-}
+constexpr bool isMagical(Realm realm);
