@@ -151,12 +151,12 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aea1690655195f079d9a218fae1f86893" id="r_aea1690655195f079d9a218fae1f86893"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#aea1690655195f079d9a218fae1f86893">toString</a> (<a class="el" href="#aba563ac088326863c5db30d91a14e235">CriticalType</a> type)</td></tr>
-<tr class="memdesc:aea1690655195f079d9a218fae1f86893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string representation of the given enum.  <br /></td></tr>
+<tr class="memitem:a437a2e73c0c25773f95f0c250c617075" id="r_a437a2e73c0c25773f95f0c250c617075"><td class="memItemLeft">const std::string&#160;</td><td class="memItemRight"><a class="el" href="#a437a2e73c0c25773f95f0c250c617075">toString</a> (<a class="el" href="#aba563ac088326863c5db30d91a14e235">CriticalType</a> type)</td></tr>
+<tr class="memdesc:a437a2e73c0c25773f95f0c250c617075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string representation of the given enum.  <br /></td></tr>
 <tr class="memitem:a9b58e8d40d7f9fcfc5f9018ecec8dd4d" id="r_a9b58e8d40d7f9fcfc5f9018ecec8dd4d"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9b58e8d40d7f9fcfc5f9018ecec8dd4d">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="#aba563ac088326863c5db30d91a14e235">CriticalType</a> type)</td></tr>
 <tr class="memdesc:a9b58e8d40d7f9fcfc5f9018ecec8dd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teach operator&lt;&lt; how to print a <a class="el" href="#aba563ac088326863c5db30d91a14e235" title="Enumeration class representing types of critical damage.">CriticalType</a>.  <br /></td></tr>
-<tr class="memitem:a40e2fb7341cfe91841b62ce6870e64c3" id="r_a40e2fb7341cfe91841b62ce6870e64c3"><td class="memItemLeft">constexpr std::optional&lt; <a class="el" href="#aba563ac088326863c5db30d91a14e235">CriticalType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a40e2fb7341cfe91841b62ce6870e64c3">fromString</a> (std::string_view sv)</td></tr>
-<tr class="memdesc:a40e2fb7341cfe91841b62ce6870e64c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
+<tr class="memitem:a94086739cae4dcdb3703a0ab68beebda" id="r_a94086739cae4dcdb3703a0ab68beebda"><td class="memItemLeft">const std::optional&lt; <a class="el" href="#aba563ac088326863c5db30d91a14e235">CriticalType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a94086739cae4dcdb3703a0ab68beebda">fromString</a> (std::string_view sv)</td></tr>
+<tr class="memdesc:a94086739cae4dcdb3703a0ab68beebda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the <a class="el" href="#aba563ac088326863c5db30d91a14e235" title="Enumeration class representing types of critical damage.">CriticalType</a> enum and associated functions </p>
@@ -221,31 +221,23 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a40e2fb7341cfe91841b62ce6870e64c3" name="a40e2fb7341cfe91841b62ce6870e64c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40e2fb7341cfe91841b62ce6870e64c3">&#9670;&#160;</a></span>fromString()</h2>
+<a id="a94086739cae4dcdb3703a0ab68beebda" name="a94086739cae4dcdb3703a0ab68beebda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94086739cae4dcdb3703a0ab68beebda">&#9670;&#160;</a></span>fromString()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt; <a class="el" href="#aba563ac088326863c5db30d91a14e235">CriticalType</a> &gt; fromString </td>
+          <td class="memname">const std::optional&lt; <a class="el" href="#aba563ac088326863c5db30d91a14e235">CriticalType</a> &gt; fromString </td>
           <td>(</td>
           <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>sv</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the enumeration value based on a string. </p>
-<p>Accepts values that are returned by <a class="el" href="#aea1690655195f079d9a218fae1f86893" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
+<p>Accepts values that are returned by <a class="el" href="_creature_size_8h.html#a27d79742b37eb1a212d17d8c64233a30" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
 <p>For values that contain strings this function will accept these with the space, with the space removed or with the space changed to an underscore:</p><ul>
 <li>"Martial Arts Strikes"</li>
 <li>"martial arts strikes"</li>
@@ -261,7 +253,24 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="#aba563ac088326863c5db30d91a14e235" title="Enumeration class representing types of critical damage.">CriticalType</a> represented by the string</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#aea1690655195f079d9a218fae1f86893" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_creature_size_8h.html#a27d79742b37eb1a212d17d8c64233a30" title="Get the string representation of the given enum.">toString()</a></dd></dl>
+<p>Accepts values that are returned by <a class="el" href="_creature_size_8h.html#a27d79742b37eb1a212d17d8c64233a30" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
+<p>For values that contain strings this function will accept these with the space, with the space removed or with the space changed to an underscore:</p><ul>
+<li>"Super Large"</li>
+<li>"super large"</li>
+<li>"SuperLarge"</li>
+<li>"superlarge"</li>
+<li>"Super_Large"</li>
+<li>"super_large"</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sv</td><td>string_view to get the enumeration for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="_creature_size_8h.html#a330e3a3f0dc7d4bfce122da8e685af6c" title="Enumeration class representing the size of creatures.">CreatureSize</a> represented by the string</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_creature_size_8h.html#a27d79742b37eb1a212d17d8c64233a30" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
 
 </div>
 </div>
@@ -270,6 +279,9 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
@@ -282,6 +294,11 @@ Functions</h2></td></tr>
           <td class="paramtype"><a class="el" href="#aba563ac088326863c5db30d91a14e235">CriticalType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Teach operator&lt;&lt; how to print a <a class="el" href="#aba563ac088326863c5db30d91a14e235" title="Enumeration class representing types of critical damage.">CriticalType</a>. </p>
@@ -296,27 +313,19 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aea1690655195f079d9a218fae1f86893" name="aea1690655195f079d9a218fae1f86893"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea1690655195f079d9a218fae1f86893">&#9670;&#160;</a></span>toString()</h2>
+<a id="a437a2e73c0c25773f95f0c250c617075" name="a437a2e73c0c25773f95f0c250c617075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a437a2e73c0c25773f95f0c250c617075">&#9670;&#160;</a></span>toString()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string_view toString </td>
+          <td class="memname">const std::string toString </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#aba563ac088326863c5db30d91a14e235">CriticalType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the string representation of the given enum. </p>
@@ -326,7 +335,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Game display form of the enum value as a string_view </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Game display form of the enum value as a string </dd></dl>
 
 </div>
 </div>

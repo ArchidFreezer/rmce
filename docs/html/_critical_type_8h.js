@@ -18,7 +18,7 @@ var _critical_type_8h =
       [ "kHeat", "_critical_type_8h.html#aba563ac088326863c5db30d91a14e235aece059b52386d38cd6da9729cca08b4e", null ],
       [ "kNether", "_critical_type_8h.html#aba563ac088326863c5db30d91a14e235ae85d4c291006e586446d5b20b231c8b4", null ]
     ] ],
-    [ "fromString", "_critical_type_8h.html#a40e2fb7341cfe91841b62ce6870e64c3", null ],
+    [ "fromString", "_critical_type_8h.html#a94086739cae4dcdb3703a0ab68beebda", null ],
     [ "operator<<", "_critical_type_8h.html#a9b58e8d40d7f9fcfc5f9018ecec8dd4d", null ],
-    [ "toString", "_critical_type_8h.html#aea1690655195f079d9a218fae1f86893", null ]
+    [ "toString", "_critical_type_8h.html#a437a2e73c0c25773f95f0c250c617075", null ]
 ];

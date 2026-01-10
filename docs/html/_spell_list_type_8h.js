@@ -7,7 +7,7 @@ var _spell_list_type_8h =
       [ "kTrainingPackage", "_spell_list_type_8h.html#aa199fa9bbf650bb54f934e43f4c8dfa9a39f741e416e95deb20cc27862c66e3dc", null ],
       [ "kRacial", "_spell_list_type_8h.html#aa199fa9bbf650bb54f934e43f4c8dfa9a0fab1fc4a5f67676f1ef3e5ed0aaaddb", null ]
     ] ],
-    [ "fromString", "_spell_list_type_8h.html#a0516e3c0682973299cf0941c63128609", null ],
+    [ "fromString", "_spell_list_type_8h.html#ad5f9644249b7170aad1add2441b19157", null ],
     [ "operator<<", "_spell_list_type_8h.html#a4352ab60c9d58d521666ae40f83ecaa6", null ],
-    [ "toString", "_spell_list_type_8h.html#a7c9acbc0e0077b4d45c02b37a8f2cf8a", null ]
+    [ "toString", "_spell_list_type_8h.html#a0d9a55232aaada15ab2f36eb5cf8ab92", null ]
 ];

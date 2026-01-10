@@ -12,5 +12,6 @@ var annotated_dup =
     [ "LanguageCategoryDatafileParserJson", "class_language_category_datafile_parser_json.html", "class_language_category_datafile_parser_json" ],
     [ "LanguageData", "class_language_data.html", "class_language_data" ],
     [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", "class_language_datafile_parser_json" ],
-    [ "LanguageDialectData", "class_language_dialect_data.html", "class_language_dialect_data" ]
+    [ "LanguageDialectData", "class_language_dialect_data.html", "class_language_dialect_data" ],
+    [ "SkillProgressionData", "class_skill_progression_data.html", "class_skill_progression_data" ]
 ];

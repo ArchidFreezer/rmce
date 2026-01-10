@@ -13,8 +13,8 @@ var _realm_8h =
       [ "kNeutral", "_realm_8h.html#af74711963d52fe005982ec3411f019bfa5c9755c01963e8444ea5ee1802139851", null ],
       [ "kSubterfuge", "_realm_8h.html#af74711963d52fe005982ec3411f019bfa7e1fe9e6691db650fda0f10318a70fde", null ]
     ] ],
-    [ "fromString", "_realm_8h.html#af9bfc3382789cec757f7df15b4c0f404", null ],
+    [ "fromString", "_realm_8h.html#a46b4cb09bdb6b21fd43189464f9ff9b8", null ],
     [ "isMagical", "_realm_8h.html#aefab2ca1ffb393feda8043d7c7a43bbc", null ],
     [ "operator<<", "_realm_8h.html#a5c9d54f328be3412018c0423b1157dcd", null ],
-    [ "toString", "_realm_8h.html#a4ea5f3b1bbbcbcde968ad80fb726e71a", null ]
+    [ "toString", "_realm_8h.html#a126bdb8e8d407a6de6a2576a2841875a", null ]
 ];

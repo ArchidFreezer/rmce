@@ -7,7 +7,7 @@ var _creature_size_8h =
       [ "kLarge", "_creature_size_8h.html#a330e3a3f0dc7d4bfce122da8e685af6ca995e7b7e33ea3f37a72770505adf016e", null ],
       [ "kSuperLarge", "_creature_size_8h.html#a330e3a3f0dc7d4bfce122da8e685af6ca57141464ed1fe04093cd3e749594a608", null ]
     ] ],
-    [ "fromString", "_creature_size_8h.html#aa89d3fdf19019455542b98ef5ed1778f", null ],
+    [ "fromString", "_creature_size_8h.html#a697eaee3863233d86b56c5592ce9650a", null ],
     [ "operator<<", "_creature_size_8h.html#ad8a8553b97a4b9f1119cd5fd3fcbb7bd", null ],
-    [ "toString", "_creature_size_8h.html#ae4acd63befe48150f60a70f4f1583e54", null ]
+    [ "toString", "_creature_size_8h.html#a27d79742b37eb1a212d17d8c64233a30", null ]
 ];

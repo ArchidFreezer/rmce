@@ -144,12 +144,12 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6293ad9e9c8e33871a733ff05c0fb37d" id="r_a6293ad9e9c8e33871a733ff05c0fb37d"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a6293ad9e9c8e33871a733ff05c0fb37d">toString</a> (<a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a> stat)</td></tr>
-<tr class="memdesc:a6293ad9e9c8e33871a733ff05c0fb37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string representation of the given enum.  <br /></td></tr>
+<tr class="memitem:a8f79cab0dcd527f3234b5b52d53e924b" id="r_a8f79cab0dcd527f3234b5b52d53e924b"><td class="memItemLeft">const std::string&#160;</td><td class="memItemRight"><a class="el" href="#a8f79cab0dcd527f3234b5b52d53e924b">toString</a> (<a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a> stat)</td></tr>
+<tr class="memdesc:a8f79cab0dcd527f3234b5b52d53e924b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string representation of the given enum.  <br /></td></tr>
 <tr class="memitem:a74bac46580c6b0ff52383064b706559e" id="r_a74bac46580c6b0ff52383064b706559e"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a74bac46580c6b0ff52383064b706559e">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a> stat)</td></tr>
 <tr class="memdesc:a74bac46580c6b0ff52383064b706559e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teach operator&lt;&lt; how to print a <a class="el" href="#a8538fbca586b33d353cbe769bfa8e305" title="Enumeration class representing the type of base stats of a character.">Stat</a>.  <br /></td></tr>
-<tr class="memitem:afc9de1b7c0b447b994d8c2e1990df937" id="r_afc9de1b7c0b447b994d8c2e1990df937"><td class="memItemLeft">constexpr std::optional&lt; <a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afc9de1b7c0b447b994d8c2e1990df937">fromString</a> (std::string_view sv)</td></tr>
-<tr class="memdesc:afc9de1b7c0b447b994d8c2e1990df937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
+<tr class="memitem:a648d46fcba1b478b372cdeaff66edb21" id="r_a648d46fcba1b478b372cdeaff66edb21"><td class="memItemLeft">const std::optional&lt; <a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a648d46fcba1b478b372cdeaff66edb21">fromString</a> (std::string_view sv)</td></tr>
+<tr class="memdesc:a648d46fcba1b478b372cdeaff66edb21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
 <tr class="memitem:ade7f65418741a56c694673cba3f3b464" id="r_ade7f65418741a56c694673cba3f3b464"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#ade7f65418741a56c694673cba3f3b464">isPrimary</a> (<a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a> stat)</td></tr>
 <tr class="memdesc:ade7f65418741a56c694673cba3f3b464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the stat is a primary stat or not.  <br /></td></tr>
 <tr class="memitem:a525d650eaa5f88841554c2cb8b51ebc5" id="r_a525d650eaa5f88841554c2cb8b51ebc5"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a525d650eaa5f88841554c2cb8b51ebc5">isDevelopment</a> (<a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a> stat)</td></tr>
@@ -206,31 +206,23 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="afc9de1b7c0b447b994d8c2e1990df937" name="afc9de1b7c0b447b994d8c2e1990df937"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc9de1b7c0b447b994d8c2e1990df937">&#9670;&#160;</a></span>fromString()</h2>
+<a id="a648d46fcba1b478b372cdeaff66edb21" name="a648d46fcba1b478b372cdeaff66edb21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a648d46fcba1b478b372cdeaff66edb21">&#9670;&#160;</a></span>fromString()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt; <a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a> &gt; fromString </td>
+          <td class="memname">const std::optional&lt; <a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a> &gt; fromString </td>
           <td>(</td>
           <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>sv</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the enumeration value based on a string. </p>
-<p>Accepts values that are returned by <a class="el" href="#a6293ad9e9c8e33871a733ff05c0fb37d" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
+<p>Accepts values that are returned by <a class="el" href="_creature_size_8h.html#a27d79742b37eb1a212d17d8c64233a30" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
 <p>For values that contain strings this function will accept these with the space, with the space removed or with the space changed to an underscore:</p><ul>
 <li>"SelfDiscipline"</li>
 <li>"Self_Discipline"</li>
@@ -246,7 +238,24 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="#a8538fbca586b33d353cbe769bfa8e305" title="Enumeration class representing the type of base stats of a character.">Stat</a> represented by the string</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6293ad9e9c8e33871a733ff05c0fb37d" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_creature_size_8h.html#a27d79742b37eb1a212d17d8c64233a30" title="Get the string representation of the given enum.">toString()</a></dd></dl>
+<p>Accepts values that are returned by <a class="el" href="_creature_size_8h.html#a27d79742b37eb1a212d17d8c64233a30" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
+<p>For values that contain strings this function will accept these with the space, with the space removed or with the space changed to an underscore:</p><ul>
+<li>"Super Large"</li>
+<li>"super large"</li>
+<li>"SuperLarge"</li>
+<li>"superlarge"</li>
+<li>"Super_Large"</li>
+<li>"super_large"</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sv</td><td>string_view to get the enumeration for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="_creature_size_8h.html#a330e3a3f0dc7d4bfce122da8e685af6c" title="Enumeration class representing the size of creatures.">CreatureSize</a> represented by the string</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_creature_size_8h.html#a27d79742b37eb1a212d17d8c64233a30" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
 
 </div>
 </div>
@@ -327,6 +336,9 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
@@ -339,6 +351,11 @@ Functions</h2></td></tr>
           <td class="paramtype"><a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a></td>          <td class="paramname"><span class="paramname"><em>stat</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Teach operator&lt;&lt; how to print a <a class="el" href="#a8538fbca586b33d353cbe769bfa8e305" title="Enumeration class representing the type of base stats of a character.">Stat</a>. </p>
@@ -353,27 +370,19 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6293ad9e9c8e33871a733ff05c0fb37d" name="a6293ad9e9c8e33871a733ff05c0fb37d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6293ad9e9c8e33871a733ff05c0fb37d">&#9670;&#160;</a></span>toString()</h2>
+<a id="a8f79cab0dcd527f3234b5b52d53e924b" name="a8f79cab0dcd527f3234b5b52d53e924b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f79cab0dcd527f3234b5b52d53e924b">&#9670;&#160;</a></span>toString()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string_view toString </td>
+          <td class="memname">const std::string toString </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a8538fbca586b33d353cbe769bfa8e305">Stat</a></td>          <td class="paramname"><span class="paramname"><em>stat</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the string representation of the given enum. </p>
@@ -383,7 +392,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Game display form of the enum value as a string_view </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Game display form of the enum value as a string </dd></dl>
 
 </div>
 </div>

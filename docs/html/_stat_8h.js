@@ -12,9 +12,9 @@ var _stat_8h =
       [ "kSelfDiscipline", "_stat_8h.html#a8538fbca586b33d353cbe769bfa8e305a0fae248a4ce56dc1fecb988e0fd1125b", null ],
       [ "kStrength", "_stat_8h.html#a8538fbca586b33d353cbe769bfa8e305a6fce47e612f62a75603a515fce9e975e", null ]
     ] ],
-    [ "fromString", "_stat_8h.html#afc9de1b7c0b447b994d8c2e1990df937", null ],
+    [ "fromString", "_stat_8h.html#a648d46fcba1b478b372cdeaff66edb21", null ],
     [ "isDevelopment", "_stat_8h.html#a525d650eaa5f88841554c2cb8b51ebc5", null ],
     [ "isPrimary", "_stat_8h.html#ade7f65418741a56c694673cba3f3b464", null ],
     [ "operator<<", "_stat_8h.html#a74bac46580c6b0ff52383064b706559e", null ],
-    [ "toString", "_stat_8h.html#a6293ad9e9c8e33871a733ff05c0fb37d", null ]
+    [ "toString", "_stat_8h.html#a8f79cab0dcd527f3234b5b52d53e924b", null ]
 ];

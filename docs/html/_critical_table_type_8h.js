@@ -7,7 +7,7 @@ var _critical_table_type_8h =
       [ "kLargeCreatureSpell", "_critical_table_type_8h.html#a723f9630e4fe994cbfe2fd6a3ac98e40a9f6e20e82520583d8de05ee85fd65cc0", null ],
       [ "kSuperLargeCreatureSpell", "_critical_table_type_8h.html#a723f9630e4fe994cbfe2fd6a3ac98e40a8344191ff8fcec5771226f7e4ee882a9", null ]
     ] ],
-    [ "fromString", "_critical_table_type_8h.html#a0039328872139e48e9b31ee7ab61a1a4", null ],
+    [ "fromString", "_critical_table_type_8h.html#aa7caf8c36ef36f50bdefef9ea9e204ec", null ],
     [ "operator<<", "_critical_table_type_8h.html#a191cd598d189962f1badf52ca3f46538", null ],
-    [ "toString", "_critical_table_type_8h.html#a111c056af433cabc335a478532e6e859", null ]
+    [ "toString", "_critical_table_type_8h.html#ad95e015fcd5a077abe6b4111b3bbe036", null ]
 ];

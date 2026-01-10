@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"class_language_data.html":[1,0,10],
+"class_language_data.html#a020e7df325efe67e0988b5730152f6da":[1,0,10,0],
 "class_language_data.html#a075cacfa802c1415cf49561e8092fa0f":[1,0,10,4],
 "class_language_data.html#a3076cc2183309f617c8e361c01ada6a0":[1,0,10,5],
 "class_language_data.html#a64f0406b4df83eae6246a743609c47af":[1,0,10,6],
@@ -19,6 +21,10 @@ var NAVTREEINDEX1 =
 "class_language_dialect_data.html#a98276720918fb71286a7b5a4527b8a8c":[1,0,12,4],
 "class_language_dialect_data.html#abba293e2b22e9394edb609d372740276":[1,0,12,6],
 "class_language_dialect_data.html#abc9bbaae6d4ac2e8a6a601fe3f616392":[1,0,12,2],
+"class_skill_progression_data.html":[1,0,13],
+"class_skill_progression_data.html#abb49a870ffe0f21e71865dc0ab06e5b5":[1,0,13,0],
+"class_skill_progression_data.html#ac1166c8c04671813640f02cd5d857c2f":[1,0,13,2],
+"class_skill_progression_data.html#af4c523f413a1a28d699306b3bed355ad":[1,0,13,1],
 "classes.html":[1,1],
 "files.html":[2,0],
 "functions.html":[1,3,0],

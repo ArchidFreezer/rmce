@@ -14,8 +14,8 @@ var _resistance_type_8h =
       [ "kMentalism", "_resistance_type_8h.html#a1d94edadc954ef7f52d587b5412c740ba5d142d23f5ce95990e7f55e722179a94", null ],
       [ "kPoison", "_resistance_type_8h.html#a1d94edadc954ef7f52d587b5412c740ba031091a5909dbce8aef8a8425abebb1f", null ]
     ] ],
-    [ "fromString", "_resistance_type_8h.html#ad018c851c3c1e86f90080a79a6476816", null ],
+    [ "fromString", "_resistance_type_8h.html#a75d80afb08f6efbd4712a7da7e1553d1", null ],
     [ "isMagical", "_resistance_type_8h.html#a02c4f06dbc534236689082d2d3cdd54d", null ],
     [ "operator<<", "_resistance_type_8h.html#ad98cbc2f8a5c36cf08fcaf30381ae8ca", null ],
-    [ "toString", "_resistance_type_8h.html#a63db266f7eccb372a1fcbb62d34ef417", null ]
+    [ "toString", "_resistance_type_8h.html#a8eca2caf77f9a9975ece982162978ec8", null ]
 ];

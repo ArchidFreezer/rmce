@@ -27,7 +27,7 @@ var _skill_group_8h =
       [ "kUrban", "_skill_group_8h.html#a1d02ce7626537eed21904458e7ec6d3aa9a3c818ab4eca9f47a0aa6e5643f892a", null ],
       [ "kWeapon", "_skill_group_8h.html#a1d02ce7626537eed21904458e7ec6d3aa8731796709e7e0bc210e8e3cf68ce75d", null ]
     ] ],
-    [ "fromString", "_skill_group_8h.html#a19b5792db698dc8ee3e47d4b978ea73d", null ],
+    [ "fromString", "_skill_group_8h.html#aac345bdf1d49d0e93977d380c583d79b", null ],
     [ "operator<<", "_skill_group_8h.html#a08459ddd033ab583b42f20f44a6627eb", null ],
-    [ "toString", "_skill_group_8h.html#a81c9fbd975850cf9840cff891c7eecd7", null ]
+    [ "toString", "_skill_group_8h.html#ad7f5d4cbb2dd786e66f101f4aa644a5e", null ]
 ];

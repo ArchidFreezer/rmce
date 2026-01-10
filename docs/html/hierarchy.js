@@ -13,7 +13,8 @@ var hierarchy =
       [ "BookData", "class_book_data.html", null ],
       [ "LanguageCategoryData", "class_language_category_data.html", null ],
       [ "LanguageData", "class_language_data.html", null ],
-      [ "LanguageDialectData", "class_language_dialect_data.html", null ]
+      [ "LanguageDialectData", "class_language_dialect_data.html", null ],
+      [ "SkillProgressionData", "class_skill_progression_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ]
 ];

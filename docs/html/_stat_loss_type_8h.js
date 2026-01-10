@@ -7,7 +7,7 @@ var _stat_loss_type_8h =
       [ "kVeryFast", "_stat_loss_type_8h.html#a584cb081537d9217b5aab214e420d6f7a3168216f8b9713802baf426f123e63db", null ],
       [ "kExtreme", "_stat_loss_type_8h.html#a584cb081537d9217b5aab214e420d6f7a83f6a4a8e8ba6e526ce7b08458853b75", null ]
     ] ],
-    [ "fromString", "_stat_loss_type_8h.html#acddd0f565b01b343886958f23041c574", null ],
+    [ "fromString", "_stat_loss_type_8h.html#a7c00eb2b9c938a63fcbd64d4419310e5", null ],
     [ "operator<<", "_stat_loss_type_8h.html#a70074f6fb33a75ea759c00193a12cb4f", null ],
-    [ "toString", "_stat_loss_type_8h.html#ae38f42bb4b79eb005b4f0b027bbec1de", null ]
+    [ "toString", "_stat_loss_type_8h.html#ad428af044de92216f6caa2767a65735b", null ]
 ];
