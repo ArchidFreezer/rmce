@@ -9,3 +9,5 @@ I do not slavishly follow these, but use them when I have no personal preference
 
 One area where this project differs is the naming of functions where lowerCamelCase is used in preference to the Google UpperCamelCase standard.
 In case where this creates awkward or difficult to read values snake_case is acceptable.
+
+The project is build using CMake and there is a good reference for best practices on github [Modern CMake](https://cliutils.gitlab.io/modern-cmake/README.html)
