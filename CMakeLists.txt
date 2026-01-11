@@ -11,6 +11,9 @@ endif()
 
 project ("dataload")
 
+enable_testing()
+include(CTest)
+
 find_package(Doxygen REQUIRED COMPONENTS dot)
 
 if (Doxygen_FOUND)
@@ -20,3 +23,5 @@ else()
 endif()
 
 add_subdirectory(src)
+
+add_subdirectory(test)
