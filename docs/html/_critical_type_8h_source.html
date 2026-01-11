@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: CriticalType.h Source File</title>
+<title>Rolemaster Character Editor: ruledata/CriticalType.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,7 +98,7 @@ $(function(){initNavTree('_critical_type_8h_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;StringUtils.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_string_utils_8h.html">StringUtils.h</a>&quot;</span></div>
 <div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespace_critical_type.html">   15</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_critical_type.html">CriticalType</a> {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
@@ -124,7 +124,7 @@ $(function(){initNavTree('_critical_type_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">using </span>enum <a class="code hl_enumeration" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">Type</a>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00">toString</a>(<a class="code hl_enumeration" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">Type</a> type);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00">   45</a></span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00">toString</a>(<a class="code hl_enumeration" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">Type</a> type);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
 <div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="namespace_critical_type.html#aaf4b519542f7dab4d0719845732e3499">   53</a></span>    <span class="keyword">inline</span> std::ostream&amp; <a class="code hl_function" href="namespace_critical_type.html#aaf4b519542f7dab4d0719845732e3499">operator&lt;&lt;</a>(std::ostream&amp; out, <a class="code hl_enumeration" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">Type</a> type) {</div>
@@ -132,9 +132,10 @@ $(function(){initNavTree('_critical_type_8h_source.html','',''); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_critical_type.html#a788aee284f08d77942b88d44a8dc4e49">fromString</a>(std::string_view sv);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespace_critical_type.html#adc01bddbdf0713049439ccbe09c5fdc0">   76</a></span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_critical_type.html#adc01bddbdf0713049439ccbe09c5fdc0">fromString</a>(std::string_view sv);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
 </div>
+<div class="ttc" id="a_string_utils_8h_html"><div class="ttname"><a href="_string_utils_8h.html">StringUtils.h</a></div></div>
 <div class="ttc" id="anamespace_critical_type_html"><div class="ttname"><a href="namespace_critical_type.html">CriticalType</a></div><div class="ttdoc">Contains the CriticalType::Type enum and associated functions.</div><div class="ttdef"><b>Definition</b> CriticalType.h:15</div></div>
 <div class="ttc" id="anamespace_critical_type_html_a49a54e0a6d9681ac61f96f9bbac7cbd1"><div class="ttname"><a href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration class representing types of critical damage.</div><div class="ttdef"><b>Definition</b> CriticalType.h:20</div></div>
 <div class="ttc" id="anamespace_critical_type_html_a49a54e0a6d9681ac61f96f9bbac7cbd1a25a6647039e20e14dbbd74ec98cb63cd"><div class="ttname"><a href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1a25a6647039e20e14dbbd74ec98cb63cd">CriticalType::Type::kGrapple</a></div><div class="ttdeci">@ kGrapple</div><div class="ttdef"><b>Definition</b> CriticalType.h:22</div></div>
@@ -153,16 +154,16 @@ $(function(){initNavTree('_critical_type_8h_source.html','',''); });
 <div class="ttc" id="anamespace_critical_type_html_a49a54e0a6d9681ac61f96f9bbac7cbd1ae85d4c291006e586446d5b20b231c8b4"><div class="ttname"><a href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1ae85d4c291006e586446d5b20b231c8b4">CriticalType::Type::kNether</a></div><div class="ttdeci">@ kNether</div><div class="ttdef"><b>Definition</b> CriticalType.h:36</div></div>
 <div class="ttc" id="anamespace_critical_type_html_a49a54e0a6d9681ac61f96f9bbac7cbd1aece059b52386d38cd6da9729cca08b4e"><div class="ttname"><a href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aece059b52386d38cd6da9729cca08b4e">CriticalType::Type::kHeat</a></div><div class="ttdeci">@ kHeat</div><div class="ttdef"><b>Definition</b> CriticalType.h:35</div></div>
 <div class="ttc" id="anamespace_critical_type_html_a49a54e0a6d9681ac61f96f9bbac7cbd1af329fb93dca56544a1f81e4df7b663c7"><div class="ttname"><a href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1af329fb93dca56544a1f81e4df7b663c7">CriticalType::Type::kSubdual</a></div><div class="ttdeci">@ kSubdual</div><div class="ttdef"><b>Definition</b> CriticalType.h:29</div></div>
-<div class="ttc" id="anamespace_critical_type_html_a788aee284f08d77942b88d44a8dc4e49"><div class="ttname"><a href="namespace_critical_type.html#a788aee284f08d77942b88d44a8dc4e49">CriticalType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div><div class="ttdef"><b>Definition</b> CriticalType.cpp:27</div></div>
 <div class="ttc" id="anamespace_critical_type_html_aaf4b519542f7dab4d0719845732e3499"><div class="ttname"><a href="namespace_critical_type.html#aaf4b519542f7dab4d0719845732e3499">CriticalType::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, Type type)</div><div class="ttdoc">Teach operator&lt;&lt; how to print a CriticalType::Type.</div><div class="ttdef"><b>Definition</b> CriticalType.h:53</div></div>
-<div class="ttc" id="anamespace_critical_type_html_ae8d4573dda55ce3f3ee5fcbd08078a00"><div class="ttname"><a href="namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00">CriticalType::toString</a></div><div class="ttdeci">const std::string toString(Type type)</div><div class="ttdoc">Get the string representation of the given enum.</div><div class="ttdef"><b>Definition</b> CriticalType.cpp:3</div></div>
+<div class="ttc" id="anamespace_critical_type_html_adc01bddbdf0713049439ccbe09c5fdc0"><div class="ttname"><a href="namespace_critical_type.html#adc01bddbdf0713049439ccbe09c5fdc0">CriticalType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div></div>
+<div class="ttc" id="anamespace_critical_type_html_ae8d4573dda55ce3f3ee5fcbd08078a00"><div class="ttname"><a href="namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00">CriticalType::toString</a></div><div class="ttdeci">const std::string toString(Type type)</div><div class="ttdoc">Get the string representation of the given enum.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>CriticalType.h</b></li>
+    <li class="navelem"><b>ruledata</b></li><li class="navelem"><b>CriticalType.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>

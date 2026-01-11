@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: CreatureSizeType.h Source File</title>
+<title>Rolemaster Character Editor: ruledata/CreatureSizeType.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,7 +98,7 @@ $(function(){initNavTree('_creature_size_type_8h_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;StringUtils.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_string_utils_8h.html">StringUtils.h</a>&quot;</span></div>
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespace_creature_size_type.html">   14</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_creature_size_type.html">CreatureSizeType</a> {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
@@ -113,7 +113,7 @@ $(function(){initNavTree('_creature_size_type_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">using </span>enum <a class="code hl_enumeration" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">Type</a>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_creature_size_type.html#a243625f7ae7c758e9e3a9e4d6a256c8a">toString</a>(<a class="code hl_enumeration" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">Type</a> size);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="namespace_creature_size_type.html#a243625f7ae7c758e9e3a9e4d6a256c8a">   33</a></span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_creature_size_type.html#a243625f7ae7c758e9e3a9e4d6a256c8a">toString</a>(<a class="code hl_enumeration" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">Type</a> size);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
 <div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2">   41</a></span>    <span class="keyword">inline</span> std::ostream&amp; <a class="code hl_function" href="namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2">operator&lt;&lt;</a>(std::ostream&amp; out, <a class="code hl_enumeration" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">Type</a> size) {</div>
@@ -121,26 +121,27 @@ $(function(){initNavTree('_creature_size_type_8h_source.html','',''); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_creature_size_type.html#ab1237f56587c7d483e494840e9f0f7ad">fromString</a>(std::string_view sv);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa">   64</a></span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa">fromString</a>(std::string_view sv);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
 </div>
+<div class="ttc" id="a_string_utils_8h_html"><div class="ttname"><a href="_string_utils_8h.html">StringUtils.h</a></div></div>
 <div class="ttc" id="anamespace_creature_size_type_html"><div class="ttname"><a href="namespace_creature_size_type.html">CreatureSizeType</a></div><div class="ttdoc">Contains the CreatureSizeType::Type enum and associated functions.</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:14</div></div>
-<div class="ttc" id="anamespace_creature_size_type_html_a243625f7ae7c758e9e3a9e4d6a256c8a"><div class="ttname"><a href="namespace_creature_size_type.html#a243625f7ae7c758e9e3a9e4d6a256c8a">CreatureSizeType::toString</a></div><div class="ttdeci">const std::string toString(Type size)</div><div class="ttdoc">Get the string representation of the given enum.</div><div class="ttdef"><b>Definition</b> CreatureSizeType.cpp:3</div></div>
+<div class="ttc" id="anamespace_creature_size_type_html_a243625f7ae7c758e9e3a9e4d6a256c8a"><div class="ttname"><a href="namespace_creature_size_type.html#a243625f7ae7c758e9e3a9e4d6a256c8a">CreatureSizeType::toString</a></div><div class="ttdeci">const std::string toString(Type size)</div><div class="ttdoc">Get the string representation of the given enum.</div></div>
 <div class="ttc" id="anamespace_creature_size_type_html_a5a93c3494093263d09281ce2aaad0471"><div class="ttname"><a href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration class representing the size of creatures.</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:19</div></div>
 <div class="ttc" id="anamespace_creature_size_type_html_a5a93c3494093263d09281ce2aaad0471a03674d7b145783567b9a65ea62f974b9"><div class="ttname"><a href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a03674d7b145783567b9a65ea62f974b9">CreatureSizeType::Type::kSmall</a></div><div class="ttdeci">@ kSmall</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:21</div></div>
 <div class="ttc" id="anamespace_creature_size_type_html_a5a93c3494093263d09281ce2aaad0471a3ce9d817402b59f65fb01ea044bb1ee9"><div class="ttname"><a href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a3ce9d817402b59f65fb01ea044bb1ee9">CreatureSizeType::Type::kMedium</a></div><div class="ttdeci">@ kMedium</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:22</div></div>
 <div class="ttc" id="anamespace_creature_size_type_html_a5a93c3494093263d09281ce2aaad0471a57141464ed1fe04093cd3e749594a608"><div class="ttname"><a href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a57141464ed1fe04093cd3e749594a608">CreatureSizeType::Type::kSuperLarge</a></div><div class="ttdeci">@ kSuperLarge</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:24</div></div>
 <div class="ttc" id="anamespace_creature_size_type_html_a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e"><div class="ttname"><a href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e">CreatureSizeType::Type::kLarge</a></div><div class="ttdeci">@ kLarge</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:23</div></div>
 <div class="ttc" id="anamespace_creature_size_type_html_a5a93c3494093263d09281ce2aaad0471ae1ce0ec846f3ba0c8966ef540ae472aa"><div class="ttname"><a href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ae1ce0ec846f3ba0c8966ef540ae472aa">CreatureSizeType::Type::kTiny</a></div><div class="ttdeci">@ kTiny</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:20</div></div>
+<div class="ttc" id="anamespace_creature_size_type_html_a819b37e373e2847cb0d0b88bd9009afa"><div class="ttname"><a href="namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa">CreatureSizeType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div></div>
 <div class="ttc" id="anamespace_creature_size_type_html_aa1b6ad16866e2f043cd0982e53d8d4e2"><div class="ttname"><a href="namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2">CreatureSizeType::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, Type size)</div><div class="ttdoc">Teach operator&lt;&lt; how to print a CreatureSizeType::Type.</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:41</div></div>
-<div class="ttc" id="anamespace_creature_size_type_html_ab1237f56587c7d483e494840e9f0f7ad"><div class="ttname"><a href="namespace_creature_size_type.html#ab1237f56587c7d483e494840e9f0f7ad">CreatureSizeType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div><div class="ttdef"><b>Definition</b> CreatureSizeType.cpp:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>CreatureSizeType.h</b></li>
+    <li class="navelem"><b>ruledata</b></li><li class="navelem"><b>CreatureSizeType.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>

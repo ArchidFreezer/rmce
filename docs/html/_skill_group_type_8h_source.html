@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: SkillGroupType.h Source File</title>
+<title>Rolemaster Character Editor: ruledata/SkillGroupType.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,7 +98,7 @@ $(function(){initNavTree('_skill_group_type_8h_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;StringUtils.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_string_utils_8h.html">StringUtils.h</a>&quot;</span></div>
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespace_skill_group_type.html">   16</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_skill_group_type.html">SkillGroupType</a> {</div>
 <div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
@@ -131,7 +131,7 @@ $(function(){initNavTree('_skill_group_type_8h_source.html','',''); });
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
 </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_skill_group_type.html#aea6f50ed0e43634813cc8d3b410589c7">toString</a>(<a class="code hl_enumeration" href="namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268">Type</a> group);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="namespace_skill_group_type.html#aea6f50ed0e43634813cc8d3b410589c7">   53</a></span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_skill_group_type.html#aea6f50ed0e43634813cc8d3b410589c7">toString</a>(<a class="code hl_enumeration" href="namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268">Type</a> group);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
 <div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="namespace_skill_group_type.html#ab59e74252440062c7e8c105d11353b03">   61</a></span>    <span class="keyword">inline</span> std::ostream&amp; <a class="code hl_function" href="namespace_skill_group_type.html#ab59e74252440062c7e8c105d11353b03">operator&lt;&lt;</a>(std::ostream&amp; out, <a class="code hl_enumeration" href="namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268">Type</a> group) {</div>
@@ -139,9 +139,10 @@ $(function(){initNavTree('_skill_group_type_8h_source.html','',''); });
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_skill_group_type.html#addc93c79b80df6c621186c93464cca60">fromString</a>(std::string_view sv);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="namespace_skill_group_type.html#a7f77fa4481252512ae0ab5097aa44663">   86</a></span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_skill_group_type.html#a7f77fa4481252512ae0ab5097aa44663">fromString</a>(std::string_view sv);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
 </div>
+<div class="ttc" id="a_string_utils_8h_html"><div class="ttname"><a href="_string_utils_8h.html">StringUtils.h</a></div></div>
 <div class="ttc" id="anamespace_skill_group_type_html"><div class="ttname"><a href="namespace_skill_group_type.html">SkillGroupType</a></div><div class="ttdoc">Contains the SkillGroupType::Type enum and associated functions.</div><div class="ttdef"><b>Definition</b> SkillGroupType.h:16</div></div>
 <div class="ttc" id="anamespace_skill_group_type_html_a0f6465243e557ad0ac49f4c0925fb268"><div class="ttname"><a href="namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268">SkillGroupType::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration class representing groups of skill categories.</div><div class="ttdef"><b>Definition</b> SkillGroupType.h:20</div></div>
 <div class="ttc" id="anamespace_skill_group_type_html_a0f6465243e557ad0ac49f4c0925fb268a024499b1a3307093b94d16604da5d309"><div class="ttname"><a href="namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a024499b1a3307093b94d16604da5d309">SkillGroupType::Type::kSpecialAttacks</a></div><div class="ttdeci">@ kSpecialAttacks</div><div class="ttdef"><b>Definition</b> SkillGroupType.h:39</div></div>
@@ -169,16 +170,16 @@ $(function(){initNavTree('_skill_group_type_8h_source.html','',''); });
 <div class="ttc" id="anamespace_skill_group_type_html_a0f6465243e557ad0ac49f4c0925fb268af76278212914a73b04deffcbb3fec3ff"><div class="ttname"><a href="namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268af76278212914a73b04deffcbb3fec3ff">SkillGroupType::Type::kOutdoor</a></div><div class="ttdeci">@ kOutdoor</div><div class="ttdef"><b>Definition</b> SkillGroupType.h:33</div></div>
 <div class="ttc" id="anamespace_skill_group_type_html_a0f6465243e557ad0ac49f4c0925fb268afee44530430d8948ef4cfd059128a9cc"><div class="ttname"><a href="namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268afee44530430d8948ef4cfd059128a9cc">SkillGroupType::Type::kSpells</a></div><div class="ttdeci">@ kSpells</div><div class="ttdef"><b>Definition</b> SkillGroupType.h:41</div></div>
 <div class="ttc" id="anamespace_skill_group_type_html_a0f6465243e557ad0ac49f4c0925fb268aff4f17a21a22f309f9a7c29b7c64dbe6"><div class="ttname"><a href="namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268aff4f17a21a22f309f9a7c29b7c64dbe6">SkillGroupType::Type::kCombatManoeuvres</a></div><div class="ttdeci">@ kCombatManoeuvres</div><div class="ttdef"><b>Definition</b> SkillGroupType.h:26</div></div>
+<div class="ttc" id="anamespace_skill_group_type_html_a7f77fa4481252512ae0ab5097aa44663"><div class="ttname"><a href="namespace_skill_group_type.html#a7f77fa4481252512ae0ab5097aa44663">SkillGroupType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div></div>
 <div class="ttc" id="anamespace_skill_group_type_html_ab59e74252440062c7e8c105d11353b03"><div class="ttname"><a href="namespace_skill_group_type.html#ab59e74252440062c7e8c105d11353b03">SkillGroupType::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, Type group)</div><div class="ttdoc">Teach operator&lt;&lt; how to print a SkillGroupType::Type.</div><div class="ttdef"><b>Definition</b> SkillGroupType.h:61</div></div>
-<div class="ttc" id="anamespace_skill_group_type_html_addc93c79b80df6c621186c93464cca60"><div class="ttname"><a href="namespace_skill_group_type.html#addc93c79b80df6c621186c93464cca60">SkillGroupType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div><div class="ttdef"><b>Definition</b> SkillGroupType.cpp:36</div></div>
-<div class="ttc" id="anamespace_skill_group_type_html_aea6f50ed0e43634813cc8d3b410589c7"><div class="ttname"><a href="namespace_skill_group_type.html#aea6f50ed0e43634813cc8d3b410589c7">SkillGroupType::toString</a></div><div class="ttdeci">const std::string toString(Type group)</div><div class="ttdoc">Get the string representation of the given enum.</div><div class="ttdef"><b>Definition</b> SkillGroupType.cpp:3</div></div>
+<div class="ttc" id="anamespace_skill_group_type_html_aea6f50ed0e43634813cc8d3b410589c7"><div class="ttname"><a href="namespace_skill_group_type.html#aea6f50ed0e43634813cc8d3b410589c7">SkillGroupType::toString</a></div><div class="ttdeci">const std::string toString(Type group)</div><div class="ttdoc">Get the string representation of the given enum.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>SkillGroupType.h</b></li>
+    <li class="navelem"><b>ruledata</b></li><li class="navelem"><b>SkillGroupType.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>

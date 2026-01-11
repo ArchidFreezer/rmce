@@ -1,3 +1,6 @@
+#include <algorithm> // for std::transform
+#include <cctype>    // for std::tolower
+#include <iterator>  // for std::back_inserter
 #include "StringUtils.h"
 
 const std::string lcase(std::string_view sv) {

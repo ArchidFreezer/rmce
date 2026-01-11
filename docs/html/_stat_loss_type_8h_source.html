@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: StatLossType.h Source File</title>
+<title>Rolemaster Character Editor: ruledata/StatLossType.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,7 +98,7 @@ $(function(){initNavTree('_stat_loss_type_8h_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;StringUtils.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_string_utils_8h.html">StringUtils.h</a>&quot;</span></div>
 <div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespace_stat_loss_type.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_stat_loss_type.html">StatLossType</a> {</div>
 <div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
@@ -111,7 +111,7 @@ $(function(){initNavTree('_stat_loss_type_8h_source.html','',''); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
 </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_stat_loss_type.html#a78470c97f524221d28eddbf3cef16f5f">toString</a>(<a class="code hl_enumeration" href="namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337">Type</a> type);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespace_stat_loss_type.html#a78470c97f524221d28eddbf3cef16f5f">   31</a></span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_stat_loss_type.html#a78470c97f524221d28eddbf3cef16f5f">toString</a>(<a class="code hl_enumeration" href="namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337">Type</a> type);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespace_stat_loss_type.html#ab9116a14217b4c49d49000720da44fa1">   39</a></span>    <span class="keyword">inline</span> std::ostream&amp; <a class="code hl_function" href="namespace_stat_loss_type.html#ab9116a14217b4c49d49000720da44fa1">operator&lt;&lt;</a>(std::ostream&amp; out, <a class="code hl_enumeration" href="namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337">Type</a> type) {</div>
@@ -119,13 +119,14 @@ $(function(){initNavTree('_stat_loss_type_8h_source.html','',''); });
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
 </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_stat_loss_type.html#a4abec7a8d4a18148e6e9a367d0bb8b00">fromString</a>(std::string_view sv);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="namespace_stat_loss_type.html#ac1e8a5e218f86fc7f96f24dc1a6c6098">   53</a></span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_stat_loss_type.html#ac1e8a5e218f86fc7f96f24dc1a6c6098">fromString</a>(std::string_view sv);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
 </div>
+<div class="ttc" id="a_string_utils_8h_html"><div class="ttname"><a href="_string_utils_8h.html">StringUtils.h</a></div></div>
 <div class="ttc" id="anamespace_stat_loss_type_html"><div class="ttname"><a href="namespace_stat_loss_type.html">StatLossType</a></div><div class="ttdoc">Contains the StatLossType::Type enum and associated functions.</div><div class="ttdef"><b>Definition</b> StatLossType.h:11</div></div>
-<div class="ttc" id="anamespace_stat_loss_type_html_a4abec7a8d4a18148e6e9a367d0bb8b00"><div class="ttname"><a href="namespace_stat_loss_type.html#a4abec7a8d4a18148e6e9a367d0bb8b00">StatLossType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div><div class="ttdef"><b>Definition</b> StatLossType.cpp:16</div></div>
-<div class="ttc" id="anamespace_stat_loss_type_html_a78470c97f524221d28eddbf3cef16f5f"><div class="ttname"><a href="namespace_stat_loss_type.html#a78470c97f524221d28eddbf3cef16f5f">StatLossType::toString</a></div><div class="ttdeci">const std::string toString(Type type)</div><div class="ttdoc">Get the string representation of the given enum.</div><div class="ttdef"><b>Definition</b> StatLossType.cpp:3</div></div>
+<div class="ttc" id="anamespace_stat_loss_type_html_a78470c97f524221d28eddbf3cef16f5f"><div class="ttname"><a href="namespace_stat_loss_type.html#a78470c97f524221d28eddbf3cef16f5f">StatLossType::toString</a></div><div class="ttdeci">const std::string toString(Type type)</div><div class="ttdoc">Get the string representation of the given enum.</div></div>
 <div class="ttc" id="anamespace_stat_loss_type_html_ab9116a14217b4c49d49000720da44fa1"><div class="ttname"><a href="namespace_stat_loss_type.html#ab9116a14217b4c49d49000720da44fa1">StatLossType::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, Type type)</div><div class="ttdoc">Teach operator&lt;&lt; how to print a StatLossType::Type.</div><div class="ttdef"><b>Definition</b> StatLossType.h:39</div></div>
+<div class="ttc" id="anamespace_stat_loss_type_html_ac1e8a5e218f86fc7f96f24dc1a6c6098"><div class="ttname"><a href="namespace_stat_loss_type.html#ac1e8a5e218f86fc7f96f24dc1a6c6098">StatLossType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div></div>
 <div class="ttc" id="anamespace_stat_loss_type_html_adf9c1985aaa68ff99becef64bd4bd337"><div class="ttname"><a href="namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337">StatLossType::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration class representing the racial type regarding mental stat loss after death.</div><div class="ttdef"><b>Definition</b> StatLossType.h:18</div></div>
 <div class="ttc" id="anamespace_stat_loss_type_html_adf9c1985aaa68ff99becef64bd4bd337a07fa7a19aa722c635a15e94cb7f50416"><div class="ttname"><a href="namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a07fa7a19aa722c635a15e94cb7f50416">StatLossType::Type::kNormal</a></div><div class="ttdeci">@ kNormal</div><div class="ttdef"><b>Definition</b> StatLossType.h:20</div></div>
 <div class="ttc" id="anamespace_stat_loss_type_html_adf9c1985aaa68ff99becef64bd4bd337a3168216f8b9713802baf426f123e63db"><div class="ttname"><a href="namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a3168216f8b9713802baf426f123e63db">StatLossType::Type::kVeryFast</a></div><div class="ttdeci">@ kVeryFast</div><div class="ttdef"><b>Definition</b> StatLossType.h:22</div></div>
@@ -138,7 +139,7 @@ $(function(){initNavTree('_stat_loss_type_8h_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>StatLossType.h</b></li>
+    <li class="navelem"><b>ruledata</b></li><li class="navelem"><b>StatLossType.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>

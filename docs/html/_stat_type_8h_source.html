@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: StatType.h Source File</title>
+<title>Rolemaster Character Editor: ruledata/StatType.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,7 +98,7 @@ $(function(){initNavTree('_stat_type_8h_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;StringUtils.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_string_utils_8h.html">StringUtils.h</a>&quot;</span></div>
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespace_stat_type.html">   14</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_stat_type.html">StatType</a> {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
@@ -117,7 +117,7 @@ $(function(){initNavTree('_stat_type_8h_source.html','',''); });
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    };</div>
 </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_stat_type.html#ab5677773150878dce987c539a56d5580">toString</a>(<a class="code hl_enumeration" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">Type</a> stat);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespace_stat_type.html#ab5677773150878dce987c539a56d5580">   37</a></span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_stat_type.html#ab5677773150878dce987c539a56d5580">toString</a>(<a class="code hl_enumeration" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">Type</a> stat);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
 <div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespace_stat_type.html#a2d76ec9118654faf46dbcc93820337e2">   45</a></span>    <span class="keyword">inline</span> std::ostream&amp; <a class="code hl_function" href="namespace_stat_type.html#a2d76ec9118654faf46dbcc93820337e2">operator&lt;&lt;</a>(std::ostream&amp; out, <a class="code hl_enumeration" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">Type</a> stat) {</div>
@@ -125,15 +125,17 @@ $(function(){initNavTree('_stat_type_8h_source.html','',''); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
 </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_stat_type.html#acb73f322975f02490eaa1eed938d4d3f">fromString</a>(std::string_view sv);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="namespace_stat_type.html#a2f85576f2fed028b417137f93b43636a">   68</a></span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_stat_type.html#a2f85576f2fed028b417137f93b43636a">fromString</a>(std::string_view sv);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b">isPrimary</a>(<a class="code hl_enumeration" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">Type</a> stat);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b">   76</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b">isPrimary</a>(<a class="code hl_enumeration" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">Type</a> stat);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e">isDevelopment</a>(<a class="code hl_enumeration" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">Type</a> stat);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e">   84</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e">isDevelopment</a>(<a class="code hl_enumeration" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">Type</a> stat);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
 </div>
+<div class="ttc" id="a_string_utils_8h_html"><div class="ttname"><a href="_string_utils_8h.html">StringUtils.h</a></div></div>
 <div class="ttc" id="anamespace_stat_type_html"><div class="ttname"><a href="namespace_stat_type.html">StatType</a></div><div class="ttdoc">Contains the StatType::Type enum and associated functions.</div><div class="ttdef"><b>Definition</b> StatType.h:14</div></div>
 <div class="ttc" id="anamespace_stat_type_html_a2d76ec9118654faf46dbcc93820337e2"><div class="ttname"><a href="namespace_stat_type.html#a2d76ec9118654faf46dbcc93820337e2">StatType::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, Type stat)</div><div class="ttdoc">Teach operator&lt;&lt; how to print a StatType::Type.</div><div class="ttdef"><b>Definition</b> StatType.h:45</div></div>
+<div class="ttc" id="anamespace_stat_type_html_a2f85576f2fed028b417137f93b43636a"><div class="ttname"><a href="namespace_stat_type.html#a2f85576f2fed028b417137f93b43636a">StatType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div></div>
 <div class="ttc" id="anamespace_stat_type_html_a460b688487711eed2df8a48dbc81f1fd"><div class="ttname"><a href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration class representing the type of base stats of a character.</div><div class="ttdef"><b>Definition</b> StatType.h:19</div></div>
 <div class="ttc" id="anamespace_stat_type_html_a460b688487711eed2df8a48dbc81f1fda0fae248a4ce56dc1fecb988e0fd1125b"><div class="ttname"><a href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda0fae248a4ce56dc1fecb988e0fd1125b">StatType::Type::kSelfDiscipline</a></div><div class="ttdeci">@ kSelfDiscipline</div><div class="ttdef"><b>Definition</b> StatType.h:28</div></div>
 <div class="ttc" id="anamespace_stat_type_html_a460b688487711eed2df8a48dbc81f1fda10bc3eeea6471cd730616a1dda9e2cd4"><div class="ttname"><a href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda10bc3eeea6471cd730616a1dda9e2cd4">StatType::Type::kMemory</a></div><div class="ttdeci">@ kMemory</div><div class="ttdef"><b>Definition</b> StatType.h:24</div></div>
@@ -145,17 +147,16 @@ $(function(){initNavTree('_stat_type_8h_source.html','',''); });
 <div class="ttc" id="anamespace_stat_type_html_a460b688487711eed2df8a48dbc81f1fdacbbc3e5427d839d272b7fe4233096bb4"><div class="ttname"><a href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fdacbbc3e5427d839d272b7fe4233096bb4">StatType::Type::kEmpathy</a></div><div class="ttdeci">@ kEmpathy</div><div class="ttdef"><b>Definition</b> StatType.h:22</div></div>
 <div class="ttc" id="anamespace_stat_type_html_a460b688487711eed2df8a48dbc81f1fdaf7bae3f1592247f9ab6ffd856c139d5d"><div class="ttname"><a href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fdaf7bae3f1592247f9ab6ffd856c139d5d">StatType::Type::kQuickness</a></div><div class="ttdeci">@ kQuickness</div><div class="ttdef"><b>Definition</b> StatType.h:26</div></div>
 <div class="ttc" id="anamespace_stat_type_html_a460b688487711eed2df8a48dbc81f1fdafd7275ddeffa7c4405d0e9f3c5bcf6ba"><div class="ttname"><a href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fdafd7275ddeffa7c4405d0e9f3c5bcf6ba">StatType::Type::kPresence</a></div><div class="ttdeci">@ kPresence</div><div class="ttdef"><b>Definition</b> StatType.h:25</div></div>
-<div class="ttc" id="anamespace_stat_type_html_a5aeda3248844e3b589b773ba2707ab8e"><div class="ttname"><a href="namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e">StatType::isDevelopment</a></div><div class="ttdeci">constexpr bool isDevelopment(Type stat)</div><div class="ttdoc">Checks if the stat is a development stat or not.</div><div class="ttdef"><b>Definition</b> StatType.cpp:54</div></div>
-<div class="ttc" id="anamespace_stat_type_html_a6766e88fd04db40b10c5a1479026f39b"><div class="ttname"><a href="namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b">StatType::isPrimary</a></div><div class="ttdeci">constexpr bool isPrimary(Type stat)</div><div class="ttdoc">Checks if the stat is a primary stat or not.</div><div class="ttdef"><b>Definition</b> StatType.cpp:41</div></div>
-<div class="ttc" id="anamespace_stat_type_html_ab5677773150878dce987c539a56d5580"><div class="ttname"><a href="namespace_stat_type.html#ab5677773150878dce987c539a56d5580">StatType::toString</a></div><div class="ttdeci">const std::string toString(Type stat)</div><div class="ttdoc">Get the string representation of the given enum.</div><div class="ttdef"><b>Definition</b> StatType.cpp:3</div></div>
-<div class="ttc" id="anamespace_stat_type_html_acb73f322975f02490eaa1eed938d4d3f"><div class="ttname"><a href="namespace_stat_type.html#acb73f322975f02490eaa1eed938d4d3f">StatType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div><div class="ttdef"><b>Definition</b> StatType.cpp:21</div></div>
+<div class="ttc" id="anamespace_stat_type_html_a5aeda3248844e3b589b773ba2707ab8e"><div class="ttname"><a href="namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e">StatType::isDevelopment</a></div><div class="ttdeci">constexpr bool isDevelopment(Type stat)</div><div class="ttdoc">Checks if the stat is a development stat or not.</div></div>
+<div class="ttc" id="anamespace_stat_type_html_a6766e88fd04db40b10c5a1479026f39b"><div class="ttname"><a href="namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b">StatType::isPrimary</a></div><div class="ttdeci">constexpr bool isPrimary(Type stat)</div><div class="ttdoc">Checks if the stat is a primary stat or not.</div></div>
+<div class="ttc" id="anamespace_stat_type_html_ab5677773150878dce987c539a56d5580"><div class="ttname"><a href="namespace_stat_type.html#ab5677773150878dce987c539a56d5580">StatType::toString</a></div><div class="ttdeci">const std::string toString(Type stat)</div><div class="ttdoc">Get the string representation of the given enum.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>StatType.h</b></li>
+    <li class="navelem"><b>ruledata</b></li><li class="navelem"><b>StatType.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>

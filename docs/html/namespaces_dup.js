@@ -9,7 +9,7 @@ var namespaces_dup =
         [ "kLarge", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e", null ],
         [ "kSuperLarge", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a57141464ed1fe04093cd3e749594a608", null ]
       ] ],
-      [ "fromString", "namespace_creature_size_type.html#ab1237f56587c7d483e494840e9f0f7ad", null ],
+      [ "fromString", "namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa", null ],
       [ "operator<<", "namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2", null ],
       [ "toString", "namespace_creature_size_type.html#a243625f7ae7c758e9e3a9e4d6a256c8a", null ]
     ] ],
@@ -22,7 +22,7 @@ var namespaces_dup =
         [ "kLargeCreatureSpell", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a9f6e20e82520583d8de05ee85fd65cc0", null ],
         [ "kSuperLargeCreatureSpell", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a8344191ff8fcec5771226f7e4ee882a9", null ]
       ] ],
-      [ "fromString", "namespace_critical_table_type.html#a173e67e56b6cf867dee1d75177e13665", null ],
+      [ "fromString", "namespace_critical_table_type.html#a313b88a386987728d8027d79f8d6037d", null ],
       [ "operator<<", "namespace_critical_table_type.html#a439e93fa90539a088714b27a6b880702", null ],
       [ "toString", "namespace_critical_table_type.html#a2e9522e03d12fe02878b31b00f2663bf", null ]
     ] ],
@@ -46,7 +46,7 @@ var namespaces_dup =
         [ "kHeat", "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aece059b52386d38cd6da9729cca08b4e", null ],
         [ "kNether", "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1ae85d4c291006e586446d5b20b231c8b4", null ]
       ] ],
-      [ "fromString", "namespace_critical_type.html#a788aee284f08d77942b88d44a8dc4e49", null ],
+      [ "fromString", "namespace_critical_type.html#adc01bddbdf0713049439ccbe09c5fdc0", null ],
       [ "operator<<", "namespace_critical_type.html#aaf4b519542f7dab4d0719845732e3499", null ],
       [ "toString", "namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00", null ]
     ] ],
@@ -64,7 +64,7 @@ var namespaces_dup =
         [ "kNeutral", "namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8a5c9755c01963e8444ea5ee1802139851", null ],
         [ "kSubterfuge", "namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8a7e1fe9e6691db650fda0f10318a70fde", null ]
       ] ],
-      [ "fromString", "namespace_realm_type.html#a628f826fbd3133fce66a5d8df6d0f482", null ],
+      [ "fromString", "namespace_realm_type.html#ab198257d527cb6752850138553566e6e", null ],
       [ "isMagical", "namespace_realm_type.html#a925eae689753e8add14afd4f39fddb39", null ],
       [ "operator<<", "namespace_realm_type.html#a4b7e1e1ded953974db3b781b023918c7", null ],
       [ "toString", "namespace_realm_type.html#aa1216a3092b07e13f22660504137628d", null ]
@@ -85,7 +85,7 @@ var namespaces_dup =
         [ "kMentalism", "namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a5d142d23f5ce95990e7f55e722179a94", null ],
         [ "kPoison", "namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a031091a5909dbce8aef8a8425abebb1f", null ]
       ] ],
-      [ "fromString", "namespace_resistance_type.html#a638305e4c4fb544bf300ae6c3acada50", null ],
+      [ "fromString", "namespace_resistance_type.html#acfff2a0e137639fb170a93715ae4448f", null ],
       [ "isMagical", "namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844", null ],
       [ "operator<<", "namespace_resistance_type.html#aa0e58f5579a107ce647f4cc7763fc6e5", null ],
       [ "toString", "namespace_resistance_type.html#a361aae8f6aea41c5f7d98a117f753996", null ]
@@ -97,7 +97,7 @@ var namespaces_dup =
         [ "kSpecial", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1a1f0d5fe7d41b5fec009974b34c8ba95e", null ],
         [ "kStatic", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1aeb9af1ba35d0a6f48fd1e6218a4d82c9", null ]
       ] ],
-      [ "fromString", "namespace_skill_action_type.html#acfc8f213f2b922512e64a5bc989d329b", null ],
+      [ "fromString", "namespace_skill_action_type.html#abc1e846657bd836e013dc878eda0c866", null ],
       [ "operator<<", "namespace_skill_action_type.html#aa1f4a1ecdf8906d8d02613021b5f2d00", null ],
       [ "toString", "namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa", null ]
     ] ],
@@ -108,7 +108,7 @@ var namespaces_dup =
         [ "kRestricted", "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055bae412484be1c558bb641a11d900b98f6b", null ],
         [ "kStandard", "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba821da62632c491ea619ead7b31c094bf", null ]
       ] ],
-      [ "fromString", "namespace_skill_development_type.html#abbb08199c00d0eea57d3f42190c8fb4e", null ],
+      [ "fromString", "namespace_skill_development_type.html#af6cc51b583e4c9f762214a2d0e2b76e7", null ],
       [ "operator<<", "namespace_skill_development_type.html#a0c8feea403ee3e058364f7fcd135f976", null ],
       [ "toString", "namespace_skill_development_type.html#a6d7ff6ceb406f3f60ee4d3f6a23d53f5", null ]
     ] ],
@@ -140,7 +140,7 @@ var namespaces_dup =
         [ "kUrban", "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a9a3c818ab4eca9f47a0aa6e5643f892a", null ],
         [ "kWeapon", "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a8731796709e7e0bc210e8e3cf68ce75d", null ]
       ] ],
-      [ "fromString", "namespace_skill_group_type.html#addc93c79b80df6c621186c93464cca60", null ],
+      [ "fromString", "namespace_skill_group_type.html#a7f77fa4481252512ae0ab5097aa44663", null ],
       [ "operator<<", "namespace_skill_group_type.html#ab59e74252440062c7e8c105d11353b03", null ],
       [ "toString", "namespace_skill_group_type.html#aea6f50ed0e43634813cc8d3b410589c7", null ]
     ] ],
@@ -153,7 +153,7 @@ var namespaces_dup =
         [ "kSpecial", "namespace_skill_progression_type.html#a322621a4a17d567aad73c1f6f3561c78a1f0d5fe7d41b5fec009974b34c8ba95e", null ],
         [ "kStandard", "namespace_skill_progression_type.html#a322621a4a17d567aad73c1f6f3561c78a821da62632c491ea619ead7b31c094bf", null ]
       ] ],
-      [ "fromString", "namespace_skill_progression_type.html#a6ed7af33b961c329b701d9c65f77fd40", null ],
+      [ "fromString", "namespace_skill_progression_type.html#a22f25dea87d94346689594428b207ecf", null ],
       [ "operator<<", "namespace_skill_progression_type.html#af8a86cca7a808ad60d60ba7cfd05292e", null ],
       [ "toString", "namespace_skill_progression_type.html#a0c1ad5e39dd6225d611c8c1c9e6fd23c", null ]
     ] ],
@@ -166,7 +166,7 @@ var namespaces_dup =
         [ "kTrainingPackage", "namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3a39f741e416e95deb20cc27862c66e3dc", null ],
         [ "kRacial", "namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3a0fab1fc4a5f67676f1ef3e5ed0aaaddb", null ]
       ] ],
-      [ "fromString", "namespace_spell_list_type.html#abfea448994e529489f65c1c541f6fbfc", null ],
+      [ "fromString", "namespace_spell_list_type.html#a1418463326c56e317c2dc43ee6890857", null ],
       [ "operator<<", "namespace_spell_list_type.html#ab85d398ecaa1c893cee156c90bb5034d", null ],
       [ "toString", "namespace_spell_list_type.html#a370cb5d3754c853872d74c8e2f244196", null ]
     ] ],
@@ -178,7 +178,7 @@ var namespaces_dup =
         [ "kVeryFast", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a3168216f8b9713802baf426f123e63db", null ],
         [ "kExtreme", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a83f6a4a8e8ba6e526ce7b08458853b75", null ]
       ] ],
-      [ "fromString", "namespace_stat_loss_type.html#a4abec7a8d4a18148e6e9a367d0bb8b00", null ],
+      [ "fromString", "namespace_stat_loss_type.html#ac1e8a5e218f86fc7f96f24dc1a6c6098", null ],
       [ "operator<<", "namespace_stat_loss_type.html#ab9116a14217b4c49d49000720da44fa1", null ],
       [ "toString", "namespace_stat_loss_type.html#a78470c97f524221d28eddbf3cef16f5f", null ]
     ] ],
@@ -195,7 +195,7 @@ var namespaces_dup =
         [ "kSelfDiscipline", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda0fae248a4ce56dc1fecb988e0fd1125b", null ],
         [ "kStrength", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda6fce47e612f62a75603a515fce9e975e", null ]
       ] ],
-      [ "fromString", "namespace_stat_type.html#acb73f322975f02490eaa1eed938d4d3f", null ],
+      [ "fromString", "namespace_stat_type.html#a2f85576f2fed028b417137f93b43636a", null ],
       [ "isDevelopment", "namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e", null ],
       [ "isPrimary", "namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b", null ],
       [ "operator<<", "namespace_stat_type.html#a2d76ec9118654faf46dbcc93820337e2", null ],

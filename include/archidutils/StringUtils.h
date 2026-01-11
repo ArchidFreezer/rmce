@@ -1,11 +1,19 @@
 #pragma once
 
-#include <algorithm> // for std::transform
-#include <cctype>    // for std::tolower
-#include <iterator>  // for std::back_inserter
 #include <string>
 #include <string_view>
+/**
+ * @file StringUtils.h
+ * 
+ * Set of utility finctions for string handling
+ */
 
-// This function returns a std::string that is the lower-case version of the std::string_view passed in.
-// Only 1:1 character mapping can be performed by this function
+/**
+ * @brief Gets a lower case std::string from a std::string_view
+ * 
+ * Only 1:1 character mapping can be performed by this function
+ * 
+ * @param sv std::string_view to transform
+ * @return std::string of the parameter in lowercase
+ */
 const std::string lcase(std::string_view sv);

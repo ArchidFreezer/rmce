@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: ResistanceType.h Source File</title>
+<title>Rolemaster Character Editor: ruledata/ResistanceType.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,7 +98,7 @@ $(function(){initNavTree('_resistance_type_8h_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;StringUtils.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_string_utils_8h.html">StringUtils.h</a>&quot;</span></div>
 <div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespace_resistance_type.html">   18</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_resistance_type.html">ResistanceType</a> {</div>
 <div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
@@ -119,7 +119,7 @@ $(function(){initNavTree('_resistance_type_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">using </span>enum <a class="code hl_enumeration" href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411">Type</a>;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_resistance_type.html#a361aae8f6aea41c5f7d98a117f753996">toString</a>(<a class="code hl_enumeration" href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411">Type</a> resistance);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespace_resistance_type.html#a361aae8f6aea41c5f7d98a117f753996">   43</a></span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_resistance_type.html#a361aae8f6aea41c5f7d98a117f753996">toString</a>(<a class="code hl_enumeration" href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411">Type</a> resistance);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
 <div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespace_resistance_type.html#aa0e58f5579a107ce647f4cc7763fc6e5">   51</a></span>    <span class="keyword">inline</span> std::ostream&amp; <a class="code hl_function" href="namespace_resistance_type.html#aa0e58f5579a107ce647f4cc7763fc6e5">operator&lt;&lt;</a>(std::ostream&amp; out, <a class="code hl_enumeration" href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411">Type</a> resistance) {</div>
@@ -127,16 +127,16 @@ $(function(){initNavTree('_resistance_type_8h_source.html','',''); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
 </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_resistance_type.html#a638305e4c4fb544bf300ae6c3acada50">fromString</a>(std::string_view sv);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="namespace_resistance_type.html#acfff2a0e137639fb170a93715ae4448f">   77</a></span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_resistance_type.html#acfff2a0e137639fb170a93715ae4448f">fromString</a>(std::string_view sv);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844">isMagical</a>(<a class="code hl_enumeration" href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411">Type</a> resistance);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844">   85</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844">isMagical</a>(<a class="code hl_enumeration" href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411">Type</a> resistance);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
 </div>
+<div class="ttc" id="a_string_utils_8h_html"><div class="ttname"><a href="_string_utils_8h.html">StringUtils.h</a></div></div>
 <div class="ttc" id="anamespace_resistance_type_html"><div class="ttname"><a href="namespace_resistance_type.html">ResistanceType</a></div><div class="ttdoc">Contains the ResistanceType::Type enum and associated functions.</div><div class="ttdef"><b>Definition</b> ResistanceType.h:18</div></div>
-<div class="ttc" id="anamespace_resistance_type_html_a361aae8f6aea41c5f7d98a117f753996"><div class="ttname"><a href="namespace_resistance_type.html#a361aae8f6aea41c5f7d98a117f753996">ResistanceType::toString</a></div><div class="ttdeci">const std::string toString(Type resistance)</div><div class="ttdoc">Get the string representation of the given enum.</div><div class="ttdef"><b>Definition</b> ResistanceType.cpp:3</div></div>
-<div class="ttc" id="anamespace_resistance_type_html_a638305e4c4fb544bf300ae6c3acada50"><div class="ttname"><a href="namespace_resistance_type.html#a638305e4c4fb544bf300ae6c3acada50">ResistanceType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div><div class="ttdef"><b>Definition</b> ResistanceType.cpp:23</div></div>
+<div class="ttc" id="anamespace_resistance_type_html_a361aae8f6aea41c5f7d98a117f753996"><div class="ttname"><a href="namespace_resistance_type.html#a361aae8f6aea41c5f7d98a117f753996">ResistanceType::toString</a></div><div class="ttdeci">const std::string toString(Type resistance)</div><div class="ttdoc">Get the string representation of the given enum.</div></div>
 <div class="ttc" id="anamespace_resistance_type_html_aa0e58f5579a107ce647f4cc7763fc6e5"><div class="ttname"><a href="namespace_resistance_type.html#aa0e58f5579a107ce647f4cc7763fc6e5">ResistanceType::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, Type resistance)</div><div class="ttdoc">Teach operator&lt;&lt; how to print a ResistanceType::Type.</div><div class="ttdef"><b>Definition</b> ResistanceType.h:51</div></div>
-<div class="ttc" id="anamespace_resistance_type_html_aaa069bb0e3bc6ff69023c291bd451844"><div class="ttname"><a href="namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844">ResistanceType::isMagical</a></div><div class="ttdeci">constexpr bool isMagical(Type resistance)</div><div class="ttdoc">Checks if the resistance is magical or not.</div><div class="ttdef"><b>Definition</b> ResistanceType.cpp:52</div></div>
+<div class="ttc" id="anamespace_resistance_type_html_aaa069bb0e3bc6ff69023c291bd451844"><div class="ttname"><a href="namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844">ResistanceType::isMagical</a></div><div class="ttdeci">constexpr bool isMagical(Type resistance)</div><div class="ttdoc">Checks if the resistance is magical or not.</div></div>
 <div class="ttc" id="anamespace_resistance_type_html_abfaba2ccf07237c2443093eed82b5411"><div class="ttname"><a href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411">ResistanceType::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration class representing the character resistance types in a campaign.</div><div class="ttdef"><b>Definition</b> ResistanceType.h:22</div></div>
 <div class="ttc" id="anamespace_resistance_type_html_abfaba2ccf07237c2443093eed82b5411a031091a5909dbce8aef8a8425abebb1f"><div class="ttname"><a href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a031091a5909dbce8aef8a8425abebb1f">ResistanceType::Type::kPoison</a></div><div class="ttdeci">@ kPoison</div><div class="ttdef"><b>Definition</b> ResistanceType.h:34</div></div>
 <div class="ttc" id="anamespace_resistance_type_html_abfaba2ccf07237c2443093eed82b5411a1e962ce642526eee0bb6c7120dcd6b99"><div class="ttname"><a href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a1e962ce642526eee0bb6c7120dcd6b99">ResistanceType::Type::kChanneling</a></div><div class="ttdeci">@ kChanneling</div><div class="ttdef"><b>Definition</b> ResistanceType.h:24</div></div>
@@ -150,13 +150,14 @@ $(function(){initNavTree('_resistance_type_8h_source.html','',''); });
 <div class="ttc" id="anamespace_resistance_type_html_abfaba2ccf07237c2443093eed82b5411ad7f6da955ae2a5788fc5a31c3a7555c6"><div class="ttname"><a href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411ad7f6da955ae2a5788fc5a31c3a7555c6">ResistanceType::Type::kChannelingMentalism</a></div><div class="ttdeci">@ kChannelingMentalism</div><div class="ttdef"><b>Definition</b> ResistanceType.h:26</div></div>
 <div class="ttc" id="anamespace_resistance_type_html_abfaba2ccf07237c2443093eed82b5411aece059b52386d38cd6da9729cca08b4e"><div class="ttname"><a href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411aece059b52386d38cd6da9729cca08b4e">ResistanceType::Type::kHeat</a></div><div class="ttdeci">@ kHeat</div><div class="ttdef"><b>Definition</b> ResistanceType.h:32</div></div>
 <div class="ttc" id="anamespace_resistance_type_html_abfaba2ccf07237c2443093eed82b5411afa7ddc2fc4573cfbf9721e732113e7d3"><div class="ttname"><a href="namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411afa7ddc2fc4573cfbf9721e732113e7d3">ResistanceType::Type::kChannelingEssence</a></div><div class="ttdeci">@ kChannelingEssence</div><div class="ttdef"><b>Definition</b> ResistanceType.h:25</div></div>
+<div class="ttc" id="anamespace_resistance_type_html_acfff2a0e137639fb170a93715ae4448f"><div class="ttname"><a href="namespace_resistance_type.html#acfff2a0e137639fb170a93715ae4448f">ResistanceType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>ResistanceType.h</b></li>
+    <li class="navelem"><b>ruledata</b></li><li class="navelem"><b>ResistanceType.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>

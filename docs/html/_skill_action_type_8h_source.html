@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: SkillActionType.h Source File</title>
+<title>Rolemaster Character Editor: ruledata/SkillActionType.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,7 +98,7 @@ $(function(){initNavTree('_skill_action_type_8h_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;StringUtils.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_string_utils_8h.html">StringUtils.h</a>&quot;</span></div>
 <div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespace_skill_action_type.html">   13</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_skill_action_type.html">SkillActionType</a> {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
@@ -111,7 +111,7 @@ $(function(){initNavTree('_skill_action_type_8h_source.html','',''); });
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    };</div>
 </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa">toString</a>(<a class="code hl_enumeration" href="namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1">Type</a> action);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa">   30</a></span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa">toString</a>(<a class="code hl_enumeration" href="namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1">Type</a> action);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
 <div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespace_skill_action_type.html#aa1f4a1ecdf8906d8d02613021b5f2d00">   38</a></span>    <span class="keyword">inline</span> std::ostream&amp; <a class="code hl_function" href="namespace_skill_action_type.html#aa1f4a1ecdf8906d8d02613021b5f2d00">operator&lt;&lt;</a>(std::ostream&amp; out, <a class="code hl_enumeration" href="namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1">Type</a> action) {</div>
@@ -119,13 +119,14 @@ $(function(){initNavTree('_skill_action_type_8h_source.html','',''); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
 </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_skill_action_type.html#acfc8f213f2b922512e64a5bc989d329b">fromString</a>(std::string_view sv);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="namespace_skill_action_type.html#abc1e846657bd836e013dc878eda0c866">   52</a></span>    <span class="keyword">const</span> std::optional&lt;Type&gt; <a class="code hl_function" href="namespace_skill_action_type.html#abc1e846657bd836e013dc878eda0c866">fromString</a>(std::string_view sv);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
 </div>
+<div class="ttc" id="a_string_utils_8h_html"><div class="ttname"><a href="_string_utils_8h.html">StringUtils.h</a></div></div>
 <div class="ttc" id="anamespace_skill_action_type_html"><div class="ttname"><a href="namespace_skill_action_type.html">SkillActionType</a></div><div class="ttdoc">Contains the SkillActionType::Type enum and associated functions.</div><div class="ttdef"><b>Definition</b> SkillActionType.h:13</div></div>
-<div class="ttc" id="anamespace_skill_action_type_html_a9abaf1587836162a4209f7d46f1cafaa"><div class="ttname"><a href="namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa">SkillActionType::toString</a></div><div class="ttdeci">const std::string toString(Type action)</div><div class="ttdoc">Get the string representation of the given enum.</div><div class="ttdef"><b>Definition</b> SkillActionType.cpp:3</div></div>
+<div class="ttc" id="anamespace_skill_action_type_html_a9abaf1587836162a4209f7d46f1cafaa"><div class="ttname"><a href="namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa">SkillActionType::toString</a></div><div class="ttdeci">const std::string toString(Type action)</div><div class="ttdoc">Get the string representation of the given enum.</div></div>
 <div class="ttc" id="anamespace_skill_action_type_html_aa1f4a1ecdf8906d8d02613021b5f2d00"><div class="ttname"><a href="namespace_skill_action_type.html#aa1f4a1ecdf8906d8d02613021b5f2d00">SkillActionType::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, Type action)</div><div class="ttdoc">Teach operator&lt;&lt; how to print a SkillActionType::Type.</div><div class="ttdef"><b>Definition</b> SkillActionType.h:38</div></div>
-<div class="ttc" id="anamespace_skill_action_type_html_acfc8f213f2b922512e64a5bc989d329b"><div class="ttname"><a href="namespace_skill_action_type.html#acfc8f213f2b922512e64a5bc989d329b">SkillActionType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div><div class="ttdef"><b>Definition</b> SkillActionType.cpp:15</div></div>
+<div class="ttc" id="anamespace_skill_action_type_html_abc1e846657bd836e013dc878eda0c866"><div class="ttname"><a href="namespace_skill_action_type.html#abc1e846657bd836e013dc878eda0c866">SkillActionType::fromString</a></div><div class="ttdeci">const std::optional&lt; Type &gt; fromString(std::string_view sv)</div><div class="ttdoc">Get the enumeration value based on a string.</div></div>
 <div class="ttc" id="anamespace_skill_action_type_html_ad0f96873022bba25ead1499306ca8de1"><div class="ttname"><a href="namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1">SkillActionType::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration class representing action types of skills.</div><div class="ttdef"><b>Definition</b> SkillActionType.h:18</div></div>
 <div class="ttc" id="anamespace_skill_action_type_html_ad0f96873022bba25ead1499306ca8de1a1f0d5fe7d41b5fec009974b34c8ba95e"><div class="ttname"><a href="namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1a1f0d5fe7d41b5fec009974b34c8ba95e">SkillActionType::Type::kSpecial</a></div><div class="ttdeci">@ kSpecial</div><div class="ttdef"><b>Definition</b> SkillActionType.h:21</div></div>
 <div class="ttc" id="anamespace_skill_action_type_html_ad0f96873022bba25ead1499306ca8de1a458fe8603674d721aac782985750730b"><div class="ttname"><a href="namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1a458fe8603674d721aac782985750730b">SkillActionType::Type::kOB</a></div><div class="ttdeci">@ kOB</div><div class="ttdef"><b>Definition</b> SkillActionType.h:20</div></div>
@@ -137,7 +138,7 @@ $(function(){initNavTree('_skill_action_type_8h_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>SkillActionType.h</b></li>
+    <li class="navelem"><b>ruledata</b></li><li class="navelem"><b>SkillActionType.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>
