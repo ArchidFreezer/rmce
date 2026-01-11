@@ -26,8 +26,7 @@ target_include_directories(dataload PUBLIC
 find_package(Doxygen REQUIRED COMPONENTS dot)
 
 if (Doxygen_FOUND)
-  set(DOXYGEN_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/docs)
-  set(DOXYGEN_PROJECT_NAME "Rolemaster Character Editor")
-  set(DOXYGEN_HAVE_DOT YES)
-  doxygen_add_docs(project_docs ${PROJECT_SOURCE_DIR}/src ALL)
+  add_subdirectory(docs)
+else()
+  message(STATUS "Doxygen not found, not building docs")
 endif()

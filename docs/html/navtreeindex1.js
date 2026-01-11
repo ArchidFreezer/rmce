@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"namespace_spell_list_type.html":[0,0,9],
 "namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3":[0,0,9,0],
 "namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3":[0,0,9,1],
 "namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3a0fab1fc4a5f67676f1ef3e5ed0aaaddb":[0,0,9,1,4],

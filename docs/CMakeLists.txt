@@ -1,0 +1,5 @@
+set(DOXYGEN_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/docs)
+set(DOXYGEN_PROJECT_NAME "Rolemaster Character Editor")
+set(DOXYGEN_HAVE_DOT YES)
+doxygen_add_docs(docs ${PROJECT_SOURCE_DIR}/src ALL
+                 WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src)
