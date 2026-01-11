@@ -29,6 +29,14 @@ var NAVTREE =
       [ "Overview", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
       [ "Standards", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
     ] ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -52,7 +60,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"class_language_data.html"
+"class_language_datafile_parser_json.html#a6c2d5e3ec73d8ddcc2e19d85fc7fe69b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

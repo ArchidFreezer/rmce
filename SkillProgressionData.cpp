@@ -1,9 +1,9 @@
 #include "SkillProgressionData.h"
 
-SkillProgressionData::SkillProgressionData(SkillProgressionType type) : type_{ type }, id_{toString(type)} {}
+SkillProgressionData::SkillProgressionData(SkillProgressionType::Type type) : type_{ type }, id_{toString(type)} {}
 
 int SkillProgressionData::getBonus(int ranks) {
-	using enum SkillProgressionType;
+	using enum SkillProgressionType::Type;
 
 	switch (type_) {
 	case kCombined:

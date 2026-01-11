@@ -22,7 +22,7 @@ var files_dup =
     [ "SkillDevelopmentType.h", "_skill_development_type_8h.html", "_skill_development_type_8h" ],
     [ "SkillGroup.h", "_skill_group_8h.html", "_skill_group_8h" ],
     [ "SkillProgressionData.h", "_skill_progression_data_8h_source.html", null ],
-    [ "SkillProgressionType.h", "_skill_progression_type_8h.html", "_skill_progression_type_8h" ],
+    [ "SkillProgressionType.h", "_skill_progression_type_8h_source.html", null ],
     [ "SpellListType.h", "_spell_list_type_8h.html", "_spell_list_type_8h" ],
     [ "Stat.h", "_stat_8h.html", "_stat_8h" ],
     [ "StatLossType.h", "_stat_loss_type_8h.html", "_stat_loss_type_8h" ],

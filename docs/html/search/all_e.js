@@ -8,14 +8,13 @@ var searchData=
   ['skilldevelopmenttype_2eh_5',['SkillDevelopmentType.h',['../_skill_development_type_8h.html',1,'']]],
   ['skillgroup_6',['SkillGroup',['../_skill_group_8h.html#a1d02ce7626537eed21904458e7ec6d3a',1,'SkillGroup.h']]],
   ['skillgroup_2eh_7',['SkillGroup.h',['../_skill_group_8h.html',1,'']]],
-  ['skillprogressiondata_8',['SkillProgressionData',['../class_skill_progression_data.html',1,'SkillProgressionData'],['../class_skill_progression_data.html#abb49a870ffe0f21e71865dc0ab06e5b5',1,'SkillProgressionData::SkillProgressionData()']]],
-  ['skillprogressiontype_9',['SkillProgressionType',['../_skill_progression_type_8h.html#aab09b4b767322e28083b5cf34833953a',1,'SkillProgressionType.h']]],
-  ['skillprogressiontype_2eh_10',['SkillProgressionType.h',['../_skill_progression_type_8h.html',1,'']]],
-  ['spelllisttype_11',['SpellListType',['../_spell_list_type_8h.html#aa199fa9bbf650bb54f934e43f4c8dfa9',1,'SpellListType.h']]],
-  ['spelllisttype_2eh_12',['SpellListType.h',['../_spell_list_type_8h.html',1,'']]],
-  ['standards_13',['Standards',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
-  ['stat_14',['Stat',['../_stat_8h.html#a8538fbca586b33d353cbe769bfa8e305',1,'Stat.h']]],
-  ['stat_2eh_15',['Stat.h',['../_stat_8h.html',1,'']]],
-  ['statlosstype_16',['StatLossType',['../_stat_loss_type_8h.html#a584cb081537d9217b5aab214e420d6f7',1,'StatLossType.h']]],
-  ['statlosstype_2eh_17',['StatLossType.h',['../_stat_loss_type_8h.html',1,'']]]
+  ['skillprogressiondata_8',['SkillProgressionData',['../class_skill_progression_data.html',1,'SkillProgressionData'],['../class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f',1,'SkillProgressionData::SkillProgressionData()']]],
+  ['skillprogressiontype_9',['SkillProgressionType',['../namespace_skill_progression_type.html',1,'']]],
+  ['spelllisttype_10',['SpellListType',['../_spell_list_type_8h.html#aa199fa9bbf650bb54f934e43f4c8dfa9',1,'SpellListType.h']]],
+  ['spelllisttype_2eh_11',['SpellListType.h',['../_spell_list_type_8h.html',1,'']]],
+  ['standards_12',['Standards',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['stat_13',['Stat',['../_stat_8h.html#a8538fbca586b33d353cbe769bfa8e305',1,'Stat.h']]],
+  ['stat_2eh_14',['Stat.h',['../_stat_8h.html',1,'']]],
+  ['statlosstype_15',['StatLossType',['../_stat_loss_type_8h.html#a584cb081537d9217b5aab214e420d6f7',1,'StatLossType.h']]],
+  ['statlosstype_2eh_16',['StatLossType.h',['../_stat_loss_type_8h.html',1,'']]]
 ];

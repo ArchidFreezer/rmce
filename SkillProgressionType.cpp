@@ -1,7 +1,7 @@
 #include "SkillProgressionType.h"
 
-const std::string toString(SkillProgressionType type) {
-	using enum SkillProgressionType;
+const std::string SkillProgressionType::toString(Type type) {
+	using enum Type;
 
 	switch (type) {
 	case kCombined: return "Combined";
@@ -13,8 +13,8 @@ const std::string toString(SkillProgressionType type) {
 	}
 }
 
-const std::optional<SkillProgressionType> fromString(std::string_view sv) {
-	using enum SkillProgressionType;
+const std::optional<SkillProgressionType::Type> SkillProgressionType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "combined") return kCombined;

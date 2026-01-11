@@ -20,7 +20,7 @@ public:
 	 * @brief Constructor
 	 * @param type #SkillProgressionType that the progression uses
 	 */
-	SkillProgressionData(SkillProgressionType type);
+	SkillProgressionData(SkillProgressionType::Type type);
 
 	/**
 	 * @brief Get the skill bonus provided by the progression type for the number of ranks defined in the parameter
@@ -48,6 +48,6 @@ private:
 	 */
 	int getBonus(int ranks, float zero, float ten, float twenty, float thirty, float remaining);
 
-	SkillProgressionType type_;
+	SkillProgressionType::Type type_;
 	std::string id_{};
 };
