@@ -6,15 +6,17 @@
 
 #include "StringUtils.h"
 /**
- * @brief Rules for the bonus skill ranks provide
-	 *
-	 * When a character developes either a skillcategory or a skill they spend a development point and gain a certain bonus to
-	 * the use of applicable skills. The size of the bonus gained depends on two things: the number of development points
-	 * spent and also the progression type.
-	 *
-	 * The progression types are applied at both the skill category and skill level. A skill may have any of the progression
-	 * type, but the only one available to categories is SkillProgressionType::Type::kStandard and only then if the skill being
-	 * used has the saame progression. If the skill has any other progression type the category adds nothing.
+ * @brief Contains the SkillProgressionType::Type enum and associated functions
+ * 
+ * Contains the rules for the bonus skill ranks provide
+ *
+ * When a character developes either a skillcategory or a skill they spend a development point and gain a certain bonus to
+ * the use of applicable skills. The size of the bonus gained depends on two things: the number of development points
+ * spent and also the progression type.
+ *
+ * The progression types are applied at both the skill category and skill level. A skill may have any of the progression
+ * type, but the only one available to categories is SkillProgressionType::Type::kStandard and only then if the skill being
+ * used has the saame progression. If the skill has any other progression type the category adds nothing.
  */
 namespace SkillProgressionType {
 

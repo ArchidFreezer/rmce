@@ -1,7 +1,7 @@
 #include "SkillDevelopmentType.h"
 
-const std::string toString(SkillDevelopmentType type) {
-	using enum SkillDevelopmentType;
+const std::string SkillDevelopmentType::toString(Type type) {
+	using enum Type;
 
 	switch (type) {
 	case kEveryman: return "Everyman";
@@ -12,8 +12,8 @@ const std::string toString(SkillDevelopmentType type) {
 	}
 }
 
-const std::optional<SkillDevelopmentType> fromString(std::string_view sv) {
-	using enum SkillDevelopmentType;
+const std::optional<SkillDevelopmentType::Type> SkillDevelopmentType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "everyman") return kEveryman;

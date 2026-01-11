@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['skillaction_0',['SkillAction',['../_skill_action_8h.html#aa45a32f222da20218fd450225148ea8f',1,'SkillAction.h']]],
-  ['skilldevelopmenttype_1',['SkillDevelopmentType',['../_skill_development_type_8h.html#a6caae2ea431b7603b2c14aa41b28931d',1,'SkillDevelopmentType.h']]],
-  ['skillgroup_2',['SkillGroup',['../_skill_group_8h.html#a1d02ce7626537eed21904458e7ec6d3a',1,'SkillGroup.h']]],
-  ['spelllisttype_3',['SpellListType',['../_spell_list_type_8h.html#aa199fa9bbf650bb54f934e43f4c8dfa9',1,'SpellListType.h']]],
-  ['stat_4',['Stat',['../_stat_8h.html#a8538fbca586b33d353cbe769bfa8e305',1,'Stat.h']]],
-  ['statlosstype_5',['StatLossType',['../_stat_loss_type_8h.html#a584cb081537d9217b5aab214e420d6f7',1,'StatLossType.h']]]
+  ['type_0',['Type',['../namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737',1,'CriticalTableType::Type'],['../namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1',1,'CriticalType::Type'],['../namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8',1,'RealmType::Type'],['../namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411',1,'ResistanceType::Type'],['../namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b',1,'SkillDevelopmentType::Type'],['../namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268',1,'SkillGroupType::Type'],['../namespace_skill_progression_type.html#a322621a4a17d567aad73c1f6f3561c78',1,'SkillProgressionType::Type'],['../namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3',1,'SpellListType::Type'],['../namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd',1,'StatType::Type'],['../namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737',1,'CriticalTableType::Type'],['../namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1',1,'CriticalType::Type'],['../namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411',1,'ResistanceType::Type'],['../namespace_skill_progression_type.html#a322621a4a17d567aad73c1f6f3561c78',1,'SkillProgressionType::Type'],['../namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3',1,'SpellListType::Type']]]
 ];

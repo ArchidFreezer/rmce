@@ -1,7 +1,7 @@
 #include "CriticalType.h"
 
-const std::string toString(CriticalType type) {
-	using enum CriticalType;
+const std::string CriticalType::toString(Type type) {
+	using enum Type;
 
 	switch (type) {
 	case kBrawling: return "Brawling";
@@ -24,8 +24,8 @@ const std::string toString(CriticalType type) {
 	}
 }
 
-const std::optional<CriticalType> fromString(std::string_view sv) {
-	using enum CriticalType;
+const std::optional<CriticalType::Type> CriticalType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "brawling") return kBrawling;

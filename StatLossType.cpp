@@ -1,7 +1,7 @@
 #include "StatLossType.h"
 
-const std::string toString(StatLossType type) {
-	using enum StatLossType;
+const std::string StatLossType::toString(Type type) {
+	using enum Type;
 
 	switch (type) {
 	case kSlow: return "Slow";
@@ -13,8 +13,8 @@ const std::string toString(StatLossType type) {
 	}
 }
 
-const std::optional<StatLossType> fromString(std::string_view sv) {
-	using enum StatLossType;
+const std::optional<StatLossType::Type> StatLossType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "slow") return kSlow;

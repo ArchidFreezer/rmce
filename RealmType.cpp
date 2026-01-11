@@ -1,7 +1,7 @@
-#include "Realm.h"
+#include "RealmType.h"
 
-const std::string toString(Realm realm) {
-	using enum Realm;
+const std::string RealmType::toString(Type realm) {
+	using enum Type;
 
 	switch (realm) {
 	case kArcane: return "Arcane";
@@ -19,8 +19,8 @@ const std::string toString(Realm realm) {
 	}
 }
 
-const std::optional<Realm> fromString(std::string_view sv) {
-	using enum Realm;
+const std::optional<RealmType::Type> RealmType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "Arcane") return kArcane;
@@ -47,8 +47,8 @@ const std::optional<Realm> fromString(std::string_view sv) {
 	return {};
 }
 
-constexpr bool isMagical(Realm realm) {
-	using enum Realm;
+constexpr bool RealmType::isMagical(Type realm) {
+	using enum Type;
 
 	switch (realm) {
 	case kArms:

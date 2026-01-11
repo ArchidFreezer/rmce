@@ -2,19 +2,12 @@ var searchData=
 [
   ['save_0',['save',['../class_book_datafile_parser_json.html#a437a31c84a9a6d909e166f6b307ef27e',1,'BookDatafileParserJson::save()'],['../class_datafile_parser.html#a3526c473cc854a37a8c508ce5e8a3c4d',1,'DatafileParser::save()'],['../class_datafile_parser_xml.html#add16ff078380a3651a7629a5282c3e74',1,'DatafileParserXml::save()'],['../class_language_category_datafile_parser_json.html#af1d1b39b3596ec447030c4ab029f4e04',1,'LanguageCategoryDatafileParserJson::save()'],['../class_language_datafile_parser_json.html#a6c2d5e3ec73d8ddcc2e19d85fc7fe69b',1,'LanguageDatafileParserJson::save()']]],
   ['setrootnode_1',['setRootNode',['../class_datafile_parser_json.html#ae063087e2bf89348b1fda607a8f50f5a',1,'DatafileParserJson']]],
-  ['skillaction_2',['SkillAction',['../_skill_action_8h.html#aa45a32f222da20218fd450225148ea8f',1,'SkillAction.h']]],
-  ['skillaction_2eh_3',['SkillAction.h',['../_skill_action_8h.html',1,'']]],
-  ['skilldevelopmenttype_4',['SkillDevelopmentType',['../_skill_development_type_8h.html#a6caae2ea431b7603b2c14aa41b28931d',1,'SkillDevelopmentType.h']]],
-  ['skilldevelopmenttype_2eh_5',['SkillDevelopmentType.h',['../_skill_development_type_8h.html',1,'']]],
-  ['skillgroup_6',['SkillGroup',['../_skill_group_8h.html#a1d02ce7626537eed21904458e7ec6d3a',1,'SkillGroup.h']]],
-  ['skillgroup_2eh_7',['SkillGroup.h',['../_skill_group_8h.html',1,'']]],
-  ['skillprogressiondata_8',['SkillProgressionData',['../class_skill_progression_data.html',1,'SkillProgressionData'],['../class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f',1,'SkillProgressionData::SkillProgressionData()']]],
-  ['skillprogressiontype_9',['SkillProgressionType',['../namespace_skill_progression_type.html',1,'']]],
-  ['spelllisttype_10',['SpellListType',['../_spell_list_type_8h.html#aa199fa9bbf650bb54f934e43f4c8dfa9',1,'SpellListType.h']]],
-  ['spelllisttype_2eh_11',['SpellListType.h',['../_spell_list_type_8h.html',1,'']]],
-  ['standards_12',['Standards',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
-  ['stat_13',['Stat',['../_stat_8h.html#a8538fbca586b33d353cbe769bfa8e305',1,'Stat.h']]],
-  ['stat_2eh_14',['Stat.h',['../_stat_8h.html',1,'']]],
-  ['statlosstype_15',['StatLossType',['../_stat_loss_type_8h.html#a584cb081537d9217b5aab214e420d6f7',1,'StatLossType.h']]],
-  ['statlosstype_2eh_16',['StatLossType.h',['../_stat_loss_type_8h.html',1,'']]]
+  ['skillactiontype_2',['SkillActionType',['../namespace_skill_action_type.html',1,'']]],
+  ['skilldevelopmenttype_3',['SkillDevelopmentType',['../namespace_skill_development_type.html',1,'']]],
+  ['skillgrouptype_4',['SkillGroupType',['../namespace_skill_group_type.html',1,'']]],
+  ['skillprogressiondata_5',['SkillProgressionData',['../class_skill_progression_data.html',1,'SkillProgressionData'],['../class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f',1,'SkillProgressionData::SkillProgressionData()']]],
+  ['skillprogressiontype_6',['SkillProgressionType',['../namespace_skill_progression_type.html',1,'']]],
+  ['spelllisttype_7',['SpellListType',['../namespace_spell_list_type.html',1,'']]],
+  ['standards_8',['Standards',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['stattype_9',['StatType',['../namespace_stat_type.html',1,'']]]
 ];

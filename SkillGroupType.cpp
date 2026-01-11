@@ -1,7 +1,7 @@
-#include "SkillGroup.h"
+#include "SkillGroupType.h"
 
-const std::string toString(SkillGroup group) {
-	using enum SkillGroup;
+const std::string SkillGroupType::toString(Type group) {
+	using enum Type;
 
 	switch (group) {
 	case kArmour: return "Armour";
@@ -33,8 +33,8 @@ const std::string toString(SkillGroup group) {
 	}
 }
 
-const std::optional<SkillGroup> fromString(std::string_view sv) {
-	using enum SkillGroup;
+const std::optional<SkillGroupType::Type> SkillGroupType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "armour") return kArmour;

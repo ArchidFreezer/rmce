@@ -1,7 +1,7 @@
 #include "CriticalTableType.h"
 
-const std::string toString(CriticalTableType type) {
-	using enum CriticalTableType;
+const std::string CriticalTableType::toString(Type type) {
+	using enum Type;
 
 	switch (type) {
 	case kNormal: return "Normal";
@@ -13,8 +13,8 @@ const std::string toString(CriticalTableType type) {
 	}
 }
 
-const std::optional<CriticalTableType> fromString(std::string_view sv) {
-	using enum CriticalTableType;
+const std::optional<CriticalTableType::Type> CriticalTableType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "normal") return kNormal;

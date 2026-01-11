@@ -1,7 +1,7 @@
 #include "SpellListType.h"
 
-const std::string toString(SpellListType type) {
-	using enum SpellListType;
+const std::string SpellListType::toString(Type type) {
+	using enum Type;
 
 	switch (type) {
 	case kBase: return "Base";
@@ -13,8 +13,8 @@ const std::string toString(SpellListType type) {
 	}
 }
 
-const std::optional<SpellListType> fromString(std::string_view sv) {
-	using enum SpellListType;
+const std::optional<SpellListType::Type> SpellListType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "base") return kBase;

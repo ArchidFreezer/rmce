@@ -1,7 +1,7 @@
 #include "ResistanceType.h"
 
-const std::string toString(ResistanceType resistance) {
-	using enum ResistanceType;
+const std::string ResistanceType::toString(Type resistance) {
+	using enum Type;
 
 	switch (resistance) {
 	case kArcane: return "Arcane";
@@ -20,8 +20,8 @@ const std::string toString(ResistanceType resistance) {
 	}
 }
 
-const std::optional<ResistanceType> fromString(std::string_view sv) {
-	using enum ResistanceType;
+const std::optional<ResistanceType::Type> ResistanceType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "Arcane") return kArcane;
@@ -49,8 +49,8 @@ const std::optional<ResistanceType> fromString(std::string_view sv) {
 	return {};
 }
 
-constexpr bool isMagical(ResistanceType resistance) {
-	using enum ResistanceType;
+constexpr bool ResistanceType::isMagical(Type resistance) {
+	using enum Type;
 
 	switch (resistance) {
 	case kCold:

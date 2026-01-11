@@ -1,7 +1,7 @@
-#include "Stat.h"
+#include "StatType.h"
 
-const std::string toString(Stat stat) {
-	using enum Stat;
+const std::string StatType::toString(Type stat) {
+	using enum Type;
 
 	switch (stat) {
 	case kAgility: return "Agility";
@@ -18,8 +18,8 @@ const std::string toString(Stat stat) {
 	}
 }
 
-const std::optional<Stat> fromString(std::string_view sv) {
-	using enum Stat;
+const std::optional<StatType::Type> StatType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "agility") return kAgility;
@@ -38,8 +38,8 @@ const std::optional<Stat> fromString(std::string_view sv) {
 	return {};
 }
 
-constexpr bool isPrimary(Stat stat) {
-	using enum Stat;
+constexpr bool StatType::isPrimary(Type stat) {
+	using enum Type;
 
 	switch (stat) {
 	case kEmpathy:
@@ -51,8 +51,8 @@ constexpr bool isPrimary(Stat stat) {
 	}
 }
 
-constexpr bool isDevelopment(Stat stat) {
-	using enum Stat;
+constexpr bool StatType::isDevelopment(Type stat) {
+	using enum Type;
 
 	switch (stat) {
 	case kAgility:

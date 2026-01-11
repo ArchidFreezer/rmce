@@ -1,7 +1,7 @@
-#include "SkillAction.h"
+#include "SkillActionType.h"
 
-const std::string toString(SkillAction action) {
-	using enum SkillAction;
+const std::string SkillActionType::toString(Type action) {
+	using enum Type;
 
 	switch (action) {
 	case kMoving: return "Moving";
@@ -12,8 +12,8 @@ const std::string toString(SkillAction action) {
 	}
 }
 
-const std::optional<SkillAction> fromString(std::string_view sv) {
-	using enum SkillAction;
+const std::optional<SkillActionType::Type> SkillActionType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string& val = lcase(sv);
 	if (val == "moving") return kMoving;

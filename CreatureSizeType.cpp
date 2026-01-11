@@ -1,7 +1,7 @@
-#include "CreatureSize.h"
+#include "CreatureSizeType.h"
 
-const std::string toString(CreatureSize size) {
-	using enum CreatureSize;
+const std::string CreatureSizeType::toString(Type size) {
+	using enum Type;
 
 	switch (size) {
 	case kTiny: return "Tiny";
@@ -13,8 +13,8 @@ const std::string toString(CreatureSize size) {
 	}
 }
 
-const std::optional<CreatureSize> fromString(std::string_view sv) {
-	using enum CreatureSize;
+const std::optional<CreatureSizeType::Type> CreatureSizeType::fromString(std::string_view sv) {
+	using enum Type;
 
 	const std::string val = lcase(sv);
 	if (val == "tiny") return kTiny;
