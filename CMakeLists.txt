@@ -16,7 +16,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
 
 # Add source to this project's executable.
-add_executable (dataload "dataload.cpp"  "DatafileParser.h" "ArmourType.h" "BookData.h"  "DatafileParser.cpp" "BookDatafileParserJson.h" "BookDatafileParserJson.cpp" "CreatureSizeType.h" "StringUtils.h" "CriticalTableType.h" "CriticalType.h" "GameRuleData.h" "GameRuleDataCache.h" "LanguageCategoryData.h" "LanguageCategoryDatafileParserJson.h" "LanguageCategoryDatafileParserJson.cpp" "LanguageData.h" "LanguageDatafileParserJson.h" "LanguageDatafileParserJson.cpp" "DatafileParserXml.h" "DatafileParserXml.cpp" "DatafileParserJson.h" "DatafileParserJson.cpp" "LanguageDialectData.h" "RealmType.h" "ResistanceType.h" "SkillActionType.h" "SkillGroupType.h" "SkillProgressionType.h" "SpellListType.h" "SkillDevelopmentType.h" "StatType.h" "StatLossType.h" "SkillProgressionData.h" "SkillProgressionData.cpp" "SkillProgressionType.cpp" "CreatureSizeType.cpp" "StringUtils.cpp" "CriticalTableType.cpp" "CriticalType.cpp" "RealmType.cpp" "ResistanceType.cpp" "SpellListType.cpp" "StatLossType.cpp" "SkillActionType.cpp" "SkillDevelopmentType.cpp" "SkillGroupType.cpp" "StatType.cpp")
+add_executable (dataload "src/dataload.cpp"  "src/DatafileParser.h" "src/ArmourType.h" "src/BookData.h"  "src/DatafileParser.cpp" "src/BookDatafileParserJson.h" "src/BookDatafileParserJson.cpp" "src/CreatureSizeType.h" "src/StringUtils.h" "src/CriticalTableType.h" "src/CriticalType.h" "src/GameRuleData.h" "src/GameRuleDataCache.h" "src/LanguageCategoryData.h" "src/LanguageCategoryDatafileParserJson.h" "src/LanguageCategoryDatafileParserJson.cpp" "src/LanguageData.h" "src/LanguageDatafileParserJson.h" "src/LanguageDatafileParserJson.cpp" "src/DatafileParserXml.h" "src/DatafileParserXml.cpp" "src/DatafileParserJson.h" "src/DatafileParserJson.cpp" "src/LanguageDialectData.h" "src/RealmType.h" "src/ResistanceType.h" "src/SkillActionType.h" "src/SkillGroupType.h" "src/SkillProgressionType.h" "src/SpellListType.h" "src/SkillDevelopmentType.h" "src/StatType.h" "src/StatLossType.h" "src/SkillProgressionData.h" "src/SkillProgressionData.cpp" "src/SkillProgressionType.cpp" "src/CreatureSizeType.cpp" "src/StringUtils.cpp" "src/CriticalTableType.cpp" "src/CriticalType.cpp" "src/RealmType.cpp" "src/ResistanceType.cpp" "src/SpellListType.cpp" "src/StatLossType.cpp" "src/SkillActionType.cpp" "src/SkillDevelopmentType.cpp" "src/SkillGroupType.cpp" "src/StatType.cpp")
 
 target_include_directories(dataload PUBLIC
                            "${PROJECT_BINARY_DIR}"
@@ -29,5 +29,5 @@ if (Doxygen_FOUND)
   set(DOXYGEN_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/docs)
   set(DOXYGEN_PROJECT_NAME "Rolemaster Character Editor")
   set(DOXYGEN_HAVE_DOT YES)
-  doxygen_add_docs(project_docs ${PROJECT_SOURCE_DIR} ALL)
+  doxygen_add_docs(project_docs ${PROJECT_SOURCE_DIR}/src ALL)
 endif()

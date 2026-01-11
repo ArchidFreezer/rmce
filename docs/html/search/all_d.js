@@ -4,7 +4,6 @@ var searchData=
   ['realmtype_1',['RealmType',['../namespace_realm_type.html',1,'']]],
   ['remove_2',['remove',['../class_language_dialect_data.html#a9096f84005bd952c823c5bcfac2a429e',1,'LanguageDialectData']]],
   ['resistancetype_3',['ResistanceType',['../namespace_resistance_type.html',1,'']]],
-  ['rolemaster_20character_20editor_4',['Rolemaster Character Editor',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['rootnode_5',['rootNode',['../class_datafile_parser_json.html#a92c670034b136d142761b61fe1e7185d',1,'DatafileParserJson']]],
-  ['ruledatatype_6',['ruleDatatype',['../class_datafile_parser.html#ada329abd34718ae7ebd192dc50a02aec',1,'DatafileParser']]]
+  ['rootnode_4',['rootNode',['../class_datafile_parser_json.html#a92c670034b136d142761b61fe1e7185d',1,'DatafileParserJson']]],
+  ['ruledatatype_5',['ruleDatatype',['../class_datafile_parser.html#ada329abd34718ae7ebd192dc50a02aec',1,'DatafileParser']]]
 ];

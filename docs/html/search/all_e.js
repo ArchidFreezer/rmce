@@ -8,6 +8,6 @@ var searchData=
   ['skillprogressiondata_5',['SkillProgressionData',['../class_skill_progression_data.html',1,'SkillProgressionData'],['../class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f',1,'SkillProgressionData::SkillProgressionData()']]],
   ['skillprogressiontype_6',['SkillProgressionType',['../namespace_skill_progression_type.html',1,'']]],
   ['spelllisttype_7',['SpellListType',['../namespace_spell_list_type.html',1,'']]],
-  ['standards_8',['Standards',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['statlosstype_8',['StatLossType',['../namespace_stat_loss_type.html',1,'']]],
   ['stattype_9',['StatType',['../namespace_stat_type.html',1,'']]]
 ];

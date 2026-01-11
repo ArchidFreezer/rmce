@@ -1,30 +1,4 @@
 var files_dup =
 [
-    [ "ArmourType.h", "_armour_type_8h_source.html", null ],
-    [ "BookData.h", "_book_data_8h_source.html", null ],
-    [ "BookDatafileParserJson.h", "_book_datafile_parser_json_8h_source.html", null ],
-    [ "CreatureSizeType.h", "_creature_size_type_8h_source.html", null ],
-    [ "CriticalTableType.h", "_critical_table_type_8h_source.html", null ],
-    [ "CriticalType.h", "_critical_type_8h_source.html", null ],
-    [ "DatafileParser.h", "_datafile_parser_8h_source.html", null ],
-    [ "DatafileParserJson.h", "_datafile_parser_json_8h_source.html", null ],
-    [ "DatafileParserXml.h", "_datafile_parser_xml_8h_source.html", null ],
-    [ "GameRuleData.h", "_game_rule_data_8h_source.html", null ],
-    [ "GameRuleDataCache.h", "_game_rule_data_cache_8h_source.html", null ],
-    [ "LanguageCategoryData.h", "_language_category_data_8h_source.html", null ],
-    [ "LanguageCategoryDatafileParserJson.h", "_language_category_datafile_parser_json_8h_source.html", null ],
-    [ "LanguageData.h", "_language_data_8h_source.html", null ],
-    [ "LanguageDatafileParserJson.h", "_language_datafile_parser_json_8h_source.html", null ],
-    [ "LanguageDialectData.h", "_language_dialect_data_8h_source.html", null ],
-    [ "RealmType.h", "_realm_type_8h_source.html", null ],
-    [ "ResistanceType.h", "_resistance_type_8h_source.html", null ],
-    [ "SkillActionType.h", "_skill_action_type_8h_source.html", null ],
-    [ "SkillDevelopmentType.h", "_skill_development_type_8h_source.html", null ],
-    [ "SkillGroupType.h", "_skill_group_type_8h_source.html", null ],
-    [ "SkillProgressionData.h", "_skill_progression_data_8h_source.html", null ],
-    [ "SkillProgressionType.h", "_skill_progression_type_8h_source.html", null ],
-    [ "SpellListType.h", "_spell_list_type_8h_source.html", null ],
-    [ "StatLossType.h", "_stat_loss_type_8h_source.html", null ],
-    [ "StatType.h", "_stat_type_8h_source.html", null ],
-    [ "StringUtils.h", "_string_utils_8h_source.html", null ]
+    [ "src", "dir_68267d1309a1af8e8297ef4c3efbcdba.html", "dir_68267d1309a1af8e8297ef4c3efbcdba" ]
 ];

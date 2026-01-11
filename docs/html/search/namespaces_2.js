@@ -5,5 +5,6 @@ var searchData=
   ['skillgrouptype_2',['SkillGroupType',['../namespace_skill_group_type.html',1,'']]],
   ['skillprogressiontype_3',['SkillProgressionType',['../namespace_skill_progression_type.html',1,'']]],
   ['spelllisttype_4',['SpellListType',['../namespace_spell_list_type.html',1,'']]],
-  ['stattype_5',['StatType',['../namespace_stat_type.html',1,'']]]
+  ['statlosstype_5',['StatLossType',['../namespace_stat_loss_type.html',1,'']]],
+  ['stattype_6',['StatType',['../namespace_stat_type.html',1,'']]]
 ];

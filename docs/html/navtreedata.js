@@ -25,10 +25,6 @@
 var NAVTREE =
 [
   [ "Rolemaster Character Editor", "index.html", [
-    [ "Rolemaster Character Editor", "md__r_e_a_d_m_e.html", [
-      [ "Overview", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Standards", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
-    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -55,7 +51,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"namespace_skill_progression_type.html#a6ed7af33b961c329b701d9c65f77fd40"
+"namespace_spell_list_type.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

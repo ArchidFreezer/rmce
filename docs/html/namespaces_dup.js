@@ -170,6 +170,18 @@ var namespaces_dup =
       [ "operator<<", "namespace_spell_list_type.html#ab85d398ecaa1c893cee156c90bb5034d", null ],
       [ "toString", "namespace_spell_list_type.html#a370cb5d3754c853872d74c8e2f244196", null ]
     ] ],
+    [ "StatLossType", "namespace_stat_loss_type.html", [
+      [ "Type", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337", [
+        [ "kSlow", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a75805a3bb93806d0866f78b38555dd48", null ],
+        [ "kNormal", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a07fa7a19aa722c635a15e94cb7f50416", null ],
+        [ "kFast", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337ae250345d92c29e0a7d8d215ac3b67997", null ],
+        [ "kVeryFast", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a3168216f8b9713802baf426f123e63db", null ],
+        [ "kExtreme", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a83f6a4a8e8ba6e526ce7b08458853b75", null ]
+      ] ],
+      [ "fromString", "namespace_stat_loss_type.html#a4abec7a8d4a18148e6e9a367d0bb8b00", null ],
+      [ "operator<<", "namespace_stat_loss_type.html#ab9116a14217b4c49d49000720da44fa1", null ],
+      [ "toString", "namespace_stat_loss_type.html#a78470c97f524221d28eddbf3cef16f5f", null ]
+    ] ],
     [ "StatType", "namespace_stat_type.html", [
       [ "Type", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd", [
         [ "kAgility", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda342f835d4c32cbd41915852120737e8d", null ],
