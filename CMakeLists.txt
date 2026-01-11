@@ -24,8 +24,13 @@ else()
   message(STATUS "Doxygen not found, not building docs")
 endif()
 
-add_subdirectory(src)
+# Build the libraries
+add_subdirectory("src/archidutils")
+add_subdirectory("src/dataparsers")
+add_subdirectory("src/ruledata")
 
-add_subdirectory(apps)
+# Build the main executables
+add_subdirectory("apps")
 
-add_subdirectory(test)
+# Build the test code
+add_subdirectory("test")
