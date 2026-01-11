@@ -12,16 +12,16 @@ int main()
 	GameRuleDataCache cache{};
 	
 	BookDatafileParserJson books(cache);
-	books.read("../../../data/Books.json");
-	books.save("../../../data/Books2.json");
+	books.read("../../../../data/Books.json");
+	books.save("../../../../data/Books2.json");
 
 	LanguageCategoryDatafileParserJson language_categories(cache);
-	language_categories.read("../../../data/LanguageCategories.json");
-	language_categories.save("../../../data/LanguageCategories2.json");
+	language_categories.read("../../../../data/LanguageCategories.json");
+	language_categories.save("../../../../data/LanguageCategories2.json");
 	
 	LanguageDatafileParserJson languages(cache);
-	languages.read("../../../data/Languages.json");
-	languages.save("../../../data/Languages2.json");
+	languages.read("../../../../data/Languages.json");
+	languages.save("../../../../data/Languages2.json");
 
 	return 0;
 }
