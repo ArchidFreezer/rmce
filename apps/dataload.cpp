@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 #include <filesystem>
-#include "BookDatafileParserJson.h"
-#include "LanguageDatafileParserJson.h"
-#include "LanguageCategoryDatafileParserJson.h"
+#include "../src/BookDatafileParserJson.h"
+#include "../src/LanguageDatafileParserJson.h"
+#include "../src/LanguageCategoryDatafileParserJson.h"
 
 int main()
 {
