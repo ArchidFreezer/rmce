@@ -7,7 +7,7 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(dataload_test "SkillProgressionData_test.cpp")
+add_executable(dataload_test "SkillProgressionData_test.cpp" "SkillCategoryData_test.cpp")
 target_compile_features(dataload_test PRIVATE cxx_std_20)
 target_include_directories(dataload_test PUBLIC "${PROJECT_SOURCE_DIR}/src")
 target_link_libraries(

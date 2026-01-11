@@ -1,13 +1,15 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="5,107,117,133"/>
+<area shape="rect" id="Node000000" href="$class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="5,132,117,159"/>
 <area shape="rect" id="Node000001" href="$class_book_data.html" title="Class representing a Rolemaster rule book used in the campaign world." alt="" coords="204,5,284,32"/>
-<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="87,95,122,67,163,42,206,27,202,30,166,46,125,72,91,99"/>
+<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="80,118,116,79,163,42,206,26,202,29,166,46,120,83,84,122"/>
 <area shape="rect" id="Node000002" href="$class_language_category_data.html" title="Class to represent language families as described in Spell Law &#45; Mentalism Companion (BOOK_MENTALISM_..." alt="" coords="165,56,323,83"/>
-<area shape="poly" id="edge7_Node000000_Node000002" title=" " alt="" coords="126,99,195,82,191,85,128,104"/>
+<area shape="poly" id="edge7_Node000000_Node000002" title=" " alt="" coords="100,122,164,92,198,82,194,85,166,97,103,127"/>
 <area shape="rect" id="Node000003" href="$class_language_data.html" title="Class representing an individual language used in the campaign world." alt="" coords="191,107,296,133"/>
-<area shape="poly" id="edge8_Node000000_Node000003" title=" " alt="" coords="132,117,193,119,188,121,133,123"/>
+<area shape="poly" id="edge8_Node000000_Node000003" title=" " alt="" coords="131,133,193,126,188,129,133,138"/>
 <area shape="rect" id="Node000004" href="$class_language_dialect_data.html" title="Class representing the dialects that exist for a language." alt="" coords="171,157,317,184"/>
-<area shape="poly" id="edge9_Node000000_Node000004" title=" " alt="" coords="127,135,195,156,191,158,127,141"/>
-<area shape="rect" id="Node000005" href="$class_skill_progression_data.html" title="Class representing a skill progression for a skill or skill category." alt="" coords="172,208,316,235"/>
-<area shape="poly" id="edge10_Node000000_Node000005" title=" " alt="" coords="89,141,125,168,166,194,194,207,189,207,163,198,122,173,88,146"/>
+<area shape="poly" id="edge9_Node000000_Node000004" title=" " alt="" coords="131,152,173,159,168,162,132,158"/>
+<area shape="rect" id="Node000005" href="$class_skill_category_data.html" title="Class to represent a skill category." alt="" coords="180,208,308,235"/>
+<area shape="poly" id="edge10_Node000000_Node000005" title=" " alt="" coords="102,164,166,194,199,207,193,208,164,198,101,169"/>
+<area shape="rect" id="Node000006" href="$class_skill_progression_data.html" title="Class representing a skill progression for a skill or skill category." alt="" coords="172,259,316,285"/>
+<area shape="poly" id="edge11_Node000000_Node000006" title=" " alt="" coords="83,168,120,208,166,244,191,258,186,258,163,249,116,212,81,173"/>
 </map>

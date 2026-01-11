@@ -1,0 +1,5 @@
+<map id="SkillCategoryData" name="SkillCategoryData">
+<area shape="rect" id="Node000001" title="Class to represent a skill category." alt="" coords="5,80,133,107"/>
+<area shape="rect" id="Node000002" href="$class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="13,5,125,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,46,72,80,66,79,67,50"/>
+</map>

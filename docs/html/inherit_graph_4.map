@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,129,57"/>
+<area shape="rect" id="Node000001" href="$class_invalid_skill_progression.html" title="Thrown when there is an attempt to set either the skill progression or category progression in an inv..." alt="" coords="182,5,335,32"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="144,31,184,28,179,30,145,36"/>
+<area shape="rect" id="Node000002" href="$class_too_many_stats_exception.html" title="Thrown when more skill category stats than are allowed are attempted to be added." alt="" coords="177,56,340,83"/>
+<area shape="poly" id="edge13_Node000000_Node000002" title=" " alt="" coords="144,52,179,58,173,59,144,57"/>
+</map>

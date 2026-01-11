@@ -13,6 +13,7 @@ var dir_d27df6bdec76b9f4631be2492a3421fa =
     [ "RealmType.h", "_realm_type_8h_source.html", null ],
     [ "ResistanceType.h", "_resistance_type_8h_source.html", null ],
     [ "SkillActionType.h", "_skill_action_type_8h_source.html", null ],
+    [ "SkillCategoryData.h", "_skill_category_data_8h_source.html", null ],
     [ "SkillDevelopmentType.h", "_skill_development_type_8h_source.html", null ],
     [ "SkillGroupType.h", "_skill_group_type_8h_source.html", null ],
     [ "SkillProgressionData.h", "_skill_progression_data_8h_source.html", null ],
