@@ -107,6 +107,13 @@ public:
 	static const std::string generateId(std::string_view type, std::string_view val);
 
 	/**
+	 * @brief Clears all children from the boost ptree
+	 * 
+	 * This forces the datafile to be re-read
+	 */
+	inline void resetPtree() { ptree_.clear(); };
+
+	/**
 	 * @brief Get the boost ptree used when reading the datafile
 	 * @return  Reference to the boost ptree
 	 */
