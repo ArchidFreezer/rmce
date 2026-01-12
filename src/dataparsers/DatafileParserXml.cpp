@@ -6,7 +6,7 @@ void DatafileParserXml::read(const std::string& filename) {
 	// Read the file and place the contents into the boost ptree
 	pt::read_xml(filename, ptree(), pt::xml_parser::trim_whitespace);
 	// Call the virtual method to parse the ptree into data objects
-	parse();
+	parse(false);
 }
 
 void DatafileParserXml::save(const std::string& filename) {

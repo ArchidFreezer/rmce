@@ -2,12 +2,17 @@ var searchData=
 [
   ['save_0',['save',['../class_book_datafile_parser_json.html#a437a31c84a9a6d909e166f6b307ef27e',1,'BookDatafileParserJson::save()'],['../class_datafile_parser.html#a3526c473cc854a37a8c508ce5e8a3c4d',1,'DatafileParser::save(const std::string &amp;filename)=0'],['../class_datafile_parser.html#acee6344e37ab0f16e68cce025c63cd25',1,'DatafileParser::save()'],['../class_datafile_parser_xml.html#add16ff078380a3651a7629a5282c3e74',1,'DatafileParserXml::save()'],['../class_language_category_datafile_parser_json.html#af1d1b39b3596ec447030c4ab029f4e04',1,'LanguageCategoryDatafileParserJson::save()'],['../class_language_datafile_parser_json.html#a6c2d5e3ec73d8ddcc2e19d85fc7fe69b',1,'LanguageDatafileParserJson::save()'],['../class_book_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25',1,'BookDatafileParserJson::save()'],['../class_language_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25',1,'LanguageDatafileParserJson::save()']]],
   ['setabbreviation_1',['setAbbreviation',['../class_book_data.html#aeb3054da579619e91f39f140d9b0a45a',1,'BookData']]],
-  ['setcode_2',['setCode',['../class_book_data.html#a9ed657ce6a01d19df9bb8fbaec429473',1,'BookData']]],
-  ['setfilename_3',['setFilename',['../class_datafile_parser.html#a68666b626124d4f7109a4373441aa3f3',1,'DatafileParser']]],
-  ['setisbn_4',['setIsbn',['../class_book_data.html#a46689da868f9da007a039d1859972956',1,'BookData']]],
-  ['setname_5',['setName',['../class_book_data.html#ae8b0b3f1ac49e7409522ca11658709a0',1,'BookData']]],
-  ['setrootnode_6',['setRootNode',['../class_datafile_parser_json.html#ae063087e2bf89348b1fda607a8f50f5a',1,'DatafileParserJson']]],
-  ['setskillprogressions_7',['setSkillProgressions',['../class_skill_category_data.html#ae1b46c461efbacc8c14149682c3df46f',1,'SkillCategoryData']]],
-  ['skillcategorydata_8',['SkillCategoryData',['../class_skill_category_data.html#a8e85c51b8b93707334e67631b6083571',1,'SkillCategoryData::SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group)'],['../class_skill_category_data.html#a456a81521c2bf6c5c69ea58c5971a893',1,'SkillCategoryData::SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionType::Type skillProgression, SkillProgressionType::Type categoryProgression)']]],
-  ['skillprogressiondata_9',['SkillProgressionData',['../class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f',1,'SkillProgressionData']]]
+  ['setbaselanguage_2',['setBaseLanguage',['../class_language_data.html#a0d05f8a39ab8c17757e72198bdc77b23',1,'LanguageData']]],
+  ['setcategory_3',['setCategory',['../class_language_data.html#a643b00bd03408398716280147370a896',1,'LanguageData']]],
+  ['setcode_4',['setCode',['../class_book_data.html#a9ed657ce6a01d19df9bb8fbaec429473',1,'BookData']]],
+  ['setfilename_5',['setFilename',['../class_datafile_parser.html#a68666b626124d4f7109a4373441aa3f3',1,'DatafileParser']]],
+  ['setisbn_6',['setIsbn',['../class_book_data.html#a46689da868f9da007a039d1859972956',1,'BookData']]],
+  ['setissomantic_7',['setIsSomantic',['../class_language_data.html#a5f5c28b3f9598ce5158e6d17cd6e0429',1,'LanguageData']]],
+  ['setisspoken_8',['setIsSpoken',['../class_language_data.html#adc0f7a2c2ae171b84c9911d56a30e15e',1,'LanguageData']]],
+  ['setiswritten_9',['setIsWritten',['../class_language_data.html#a5ade03bddb9a8857fba33b0f5dc743ba',1,'LanguageData']]],
+  ['setname_10',['setName',['../class_book_data.html#ae8b0b3f1ac49e7409522ca11658709a0',1,'BookData::setName()'],['../class_language_category_data.html#a2a53d96d7dc87c130b51adef1bb9364d',1,'LanguageCategoryData::setName()'],['../class_language_data.html#ade16648fa674e117d683a1325b2d3be9',1,'LanguageData::setName()']]],
+  ['setrootnode_11',['setRootNode',['../class_datafile_parser_json.html#ae063087e2bf89348b1fda607a8f50f5a',1,'DatafileParserJson']]],
+  ['setskillprogressions_12',['setSkillProgressions',['../class_skill_category_data.html#ae1b46c461efbacc8c14149682c3df46f',1,'SkillCategoryData']]],
+  ['skillcategorydata_13',['SkillCategoryData',['../class_skill_category_data.html#a8e85c51b8b93707334e67631b6083571',1,'SkillCategoryData::SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group)'],['../class_skill_category_data.html#a456a81521c2bf6c5c69ea58c5971a893',1,'SkillCategoryData::SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionType::Type skillProgression, SkillProgressionType::Type categoryProgression)']]],
+  ['skillprogressiondata_14',['SkillProgressionData',['../class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f',1,'SkillProgressionData']]]
 ];

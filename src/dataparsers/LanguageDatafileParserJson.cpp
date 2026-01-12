@@ -11,7 +11,7 @@ LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache,
 
 LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache) : LanguageDatafileParserJson(cache, "") {}
 
-void LanguageDatafileParserJson::parse() {
+void LanguageDatafileParserJson::parse(bool id_only) {
 	std::cout << "Loading Language data ..." << std::endl;
 
 	// Get the languages to parse and loop through them
@@ -25,20 +25,21 @@ void LanguageDatafileParserJson::parse() {
 		bool is_written = v.second.get<bool>("isWritten");
 		bool is_somantic = v.second.get<bool>("isSomantic");
 
-		// We create a LanguageData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
-		// to the cache when we add it
-		std::unique_ptr<LanguageData> datum = std::make_unique<LanguageData>(id);
-		cache().add<LanguageData>(std::move(datum), id);
-
-		LanguageData& ref = cache().get<LanguageData>(id);
-		ref.setBaseLanguage(base_language);
-		ref.setCategory(category);
-		ref.setIsSomantic(is_somantic);
-		ref.setIsSpoken(is_spoken);
-		ref.setIsWritten(is_written);
-		ref.setName(name);
-		std::cout << "\tLanguage name: " << ref.name() << std::endl;
-
+		if (id_only) {
+			// We create a LanguageData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
+			// to the cache when we add it
+			std::unique_ptr<LanguageData> datum = std::make_unique<LanguageData>(id);
+			cache().add<LanguageData>(std::move(datum), id);
+		} else {
+			LanguageData& ref = cache().get<LanguageData>(id);
+			ref.setBaseLanguage(base_language);
+			ref.setCategory(category);
+			ref.setIsSomantic(is_somantic);
+			ref.setIsSpoken(is_spoken);
+			ref.setIsWritten(is_written);
+			ref.setName(name);
+			std::cout << "\tLanguage name: " << ref.name() << std::endl;
+		}
 
 		// Add the language to the appropriate dialect collection
 		if (cache().exists<LanguageDialectData>(base_language)) {

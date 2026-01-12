@@ -18,7 +18,10 @@ int main()
 	parsers.push_back(std::move(std::make_unique<LanguageDatafileParserJson>(cache, "../../../../data/Languages.json")));
 
 	for (auto& parser : parsers) {
-		parser->read();
+		parser->read(true);
+	}
+	for (auto& parser : parsers) {
+		parser->read(false);
 	}
 
 	BookDatafileParserJson books(cache);
