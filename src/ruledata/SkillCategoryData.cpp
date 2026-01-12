@@ -1,5 +1,14 @@
 #include "SkillCategoryData.h"
 
+SkillCategoryData::SkillCategoryData(std::string_view id) :	GameRuleData(id) {}
+	
+SkillCategoryData::SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionTypeData& skillProgression, SkillProgressionTypeData& categoryProgression) :
+	GameRuleData(id),
+	group_{ group },
+	name_{ name },
+	skillProgression_{ &skillProgression },
+	skillCategoryProgression_{ &categoryProgression } {}
+
 int SkillCategoryData::addStat(StatType::Type stat) {
 	if (stats_.size() < 3) {
 		stats_.push_back(stat);
@@ -20,15 +29,15 @@ bool SkillCategoryData::removeStat(StatType::Type stat) {
 	return false;
 }
 
-void SkillCategoryData::setSkillProgressions(SkillProgressionType::Type skillProgression, SkillProgressionType::Type categoryProgression) {
+void SkillCategoryData::setSkillProgressions(const SkillProgressionTypeData& skillProgression, const SkillProgressionTypeData& categoryProgression) {
 	// Check for invlaid combinations first
-	if (categoryProgression != SkillProgressionType::kStandard && categoryProgression != SkillProgressionType::kNone) {
-		throw InvalidSkillProgression("Category progression may only be kStandard or kNone.");
+	if (categoryProgression.name() != "Standard" && categoryProgression.name() != "None") {
+		throw InvalidSkillProgression("Category progression may only be Standard or None.");
 	}
-	if (categoryProgression == SkillProgressionType::kStandard && skillProgression != SkillProgressionType::kStandard) {
-		throw InvalidSkillProgression("Category progression may only be kStandard if the skill progression is also set to kStandard.");
+	if (categoryProgression.name() == "Standard" && skillProgression.name() != "Standard") {
+		throw InvalidSkillProgression("Category progression may only be Standard if the skill progression is also set to Standard.");
 	}
 	// Combination is valid
-	skillProgression_ = skillProgression;
-	skillCategoryProgression_ = categoryProgression;
+	skillProgression_ = &skillProgression;
+	skillCategoryProgression_ = &categoryProgression;
 }

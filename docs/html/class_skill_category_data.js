@@ -1,15 +1,15 @@
 var class_skill_category_data =
 [
-    [ "SkillCategoryData", "class_skill_category_data.html#a8e85c51b8b93707334e67631b6083571", null ],
-    [ "SkillCategoryData", "class_skill_category_data.html#a456a81521c2bf6c5c69ea58c5971a893", null ],
+    [ "SkillCategoryData", "class_skill_category_data.html#ab4a4332ae31c49b5d33b800767ebe3d3", null ],
+    [ "SkillCategoryData", "class_skill_category_data.html#a9c2b39ef48d84ec9afe929378304b398", null ],
     [ "addStat", "class_skill_category_data.html#ae92350c9d91937939523110732fae66a", null ],
     [ "clearStats", "class_skill_category_data.html#aebd62a7951f85ada98ea67d7291d5d3b", null ],
-    [ "getDefaultSkillProgression", "class_skill_category_data.html#af0518028f06c4f0116a001b325750f5b", null ],
-    [ "getFullName", "class_skill_category_data.html#a047ce9403b03f1695009ab47fcf80dcc", null ],
-    [ "getGroup", "class_skill_category_data.html#a328a79d321099f9ac82035b34c5f8792", null ],
-    [ "getNumberOfStats", "class_skill_category_data.html#a163c5ba95e969524eeff83c63c97990f", null ],
-    [ "getSkillCategoryProgression", "class_skill_category_data.html#aff83d33d59702f452ddfad862bc4e924", null ],
-    [ "name", "class_skill_category_data.html#a23379b6afab387af02e8276e6fc8ecdf", null ],
+    [ "getDefaultSkillProgression", "class_skill_category_data.html#a80cf578f3f17a660981cb234880daf4d", null ],
+    [ "getFullName", "class_skill_category_data.html#aab409dce8c2a4830c27806717b295648", null ],
+    [ "getGroup", "class_skill_category_data.html#a5f80b6053b2eaf39ec83bd809e1a92d5", null ],
+    [ "getNumberOfStats", "class_skill_category_data.html#ab29b88f044746a77f4f681ca33581bfa", null ],
+    [ "getSkillCategoryProgression", "class_skill_category_data.html#a1c324b4c098e7a1efebb2bf6687cf3fb", null ],
+    [ "name", "class_skill_category_data.html#a69fd0ed4a9d021cb70e91b29abd26f6a", null ],
     [ "removeStat", "class_skill_category_data.html#a2d6385496a88d0adde854904a5f2b083", null ],
-    [ "setSkillProgressions", "class_skill_category_data.html#ae1b46c461efbacc8c14149682c3df46f", null ]
+    [ "setSkillProgressions", "class_skill_category_data.html#ab6f8f0a9fa9602aff099d2919e3abdac", null ]
 ];

@@ -93,27 +93,15 @@ $(function(){initNavTree('_skill_progression_data_8h_source.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;GameRuleData.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;SkillProgressionType.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_skill_progression_data.html">   17</a></span><span class="keyword">class </span><a class="code hl_function" href="class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f">SkillProgressionData</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_game_rule_data.html#a4c930443525e35d642c997af8186c6d4">GameRuleData</a> {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f">   23</a></span>    <a class="code hl_function" href="class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f">SkillProgressionData</a>(<a class="code hl_enumeration" href="namespace_skill_progression_type.html#a322621a4a17d567aad73c1f6f3561c78">SkillProgressionType::Type</a> type);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_skill_progression_data.html#af4c523f413a1a28d699306b3bed355ad">   30</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_skill_progression_data.html#af4c523f413a1a28d699306b3bed355ad">getBonus</a>(<span class="keywordtype">int</span> ranks);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_skill_progression_data.html#af4c523f413a1a28d699306b3bed355ad">getBonus</a>(<span class="keywordtype">int</span> ranks, <span class="keywordtype">float</span> zero, <span class="keywordtype">float</span> ten, <span class="keywordtype">float</span> twenty, <span class="keywordtype">float</span> thirty, <span class="keywordtype">float</span> remaining);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_enumeration" href="namespace_skill_progression_type.html#a322621a4a17d567aad73c1f6f3561c78">SkillProgressionType::Type</a> type_;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_skill_progression_data.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_skill_progression_data.html">SkillProgressionData</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_skill_progression_data.html#af4c523f413a1a28d699306b3bed355ad">   20</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_skill_progression_data.html#af4c523f413a1a28d699306b3bed355ad">getBonus</a>(<span class="keywordtype">int</span> ranks);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
 </div>
-<div class="ttc" id="aclass_game_rule_data_html_a4c930443525e35d642c997af8186c6d4"><div class="ttname"><a href="class_game_rule_data.html#a4c930443525e35d642c997af8186c6d4">GameRuleData::GameRuleData</a></div><div class="ttdeci">GameRuleData()=default</div><div class="ttdoc">Default constructor.</div></div>
-<div class="ttc" id="aclass_skill_progression_data_html_aad9f7ff93677095b1acbdbaea625429f"><div class="ttname"><a href="class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f">SkillProgressionData::SkillProgressionData</a></div><div class="ttdeci">SkillProgressionData(SkillProgressionType::Type type)</div><div class="ttdoc">Constructor.</div></div>
+<div class="ttc" id="aclass_skill_progression_data_html"><div class="ttname"><a href="class_skill_progression_data.html">SkillProgressionData</a></div><div class="ttdoc">Class representing the bonus a skill progression provides for a skill or skill category.</div><div class="ttdef"><b>Definition</b> SkillProgressionData.h:13</div></div>
 <div class="ttc" id="aclass_skill_progression_data_html_af4c523f413a1a28d699306b3bed355ad"><div class="ttname"><a href="class_skill_progression_data.html#af4c523f413a1a28d699306b3bed355ad">SkillProgressionData::getBonus</a></div><div class="ttdeci">int getBonus(int ranks)</div><div class="ttdoc">Get the skill bonus provided by the progression type for the number of ranks defined in the parameter...</div></div>
-<div class="ttc" id="anamespace_skill_progression_type_html_a322621a4a17d567aad73c1f6f3561c78"><div class="ttname"><a href="namespace_skill_progression_type.html#a322621a4a17d567aad73c1f6f3561c78">SkillProgressionType::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration class representing progression types of skills.</div><div class="ttdef"><b>Definition</b> SkillProgressionType.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

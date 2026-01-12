@@ -5,23 +5,27 @@
 #include "StatType.h"
 
 namespace {
-
 	TEST(SkillCategoryData, Constructor) {
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic);
-		EXPECT_EQ(0, strcmp(scd.id().c_str(), "SKILLCATEGORY_ARTISTIC_TESTCATEGORY"));
-		EXPECT_EQ(0, strcmp(scd.name().c_str(), "TestCategory"));
+		SkillProgressionTypeData spd_std("STANDARD_ID", "Standard", -15.0, 3.0, 2.0, 1.0, 0.5);
+		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std);
+		EXPECT_STREQ(scd.id().c_str(), "SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
+		EXPECT_STREQ(scd.name().c_str(), "TestCategory");
 		EXPECT_EQ(scd.getGroup(), SkillGroupType::Type::kArtistic);
-		EXPECT_EQ(0, strcmp(scd.getFullName().c_str(), "Artistic - TestCategory"));
-		EXPECT_EQ(scd.getDefaultSkillProgression(), SkillProgressionType::kStandard);
-		EXPECT_EQ(scd.getSkillCategoryProgression(), SkillProgressionType::kStandard);
+		EXPECT_STREQ(scd.getFullName().c_str(), "Artistic - TestCategory");
+		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), spd_std.name().c_str());
+		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), spd_std.name().c_str());
 
-		SkillCategoryData scd2("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, SkillProgressionType::kLimited, SkillProgressionType::kNone);
-		EXPECT_EQ(scd2.getDefaultSkillProgression(), SkillProgressionType::kLimited);
-		EXPECT_EQ(scd2.getSkillCategoryProgression(), SkillProgressionType::kNone);
+
+		SkillProgressionTypeData spd_ltd("LIMITED_ID", "Limited", 0.0, 1.0, 1.0, 0.5, 0.0);
+		SkillProgressionTypeData spd_none("NONE_ID", "None", 0.0, 0.0, 0.0, 0.0, 0.0);
+		SkillCategoryData scd2("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_ltd, spd_none);
+		EXPECT_STREQ(scd2.getDefaultSkillProgression().name().c_str(), spd_ltd.name().c_str());
+		EXPECT_STREQ(scd2.getSkillCategoryProgression().name().c_str(), spd_none.name().c_str());
 	}
 
 	TEST(SkillCategoryData, Stats) {
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic);
+		SkillProgressionTypeData spd_std("STANDARD_ID", "Standard", -15.0, 3.0, 2.0, 1.0, 0.5);
+		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std);
 		int i{};
 		i = scd.addStat(StatType::Type::kAgility);
 		EXPECT_EQ(scd.getNumberOfStats(), 1);
@@ -59,88 +63,93 @@ namespace {
 		scd.clearStats();
 		EXPECT_EQ(scd.getNumberOfStats(), 0);
 	}
-
+	
 	TEST(SkillCategoryData, SkillProgression) {
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic);
+		SkillProgressionTypeData spd_cmb("COMBINED_ID", "Combined", -30.0, 5.0, 3.0, 1.5, 0.5);
+		SkillProgressionTypeData spd_ltd("LIMITED_ID", "Limited", 0.0, 1.0, 1.0, 0.5, 0.0);
+		SkillProgressionTypeData spd_none("NONE_ID", "None", 0.0, 0.0, 0.0, 0.0, 0.0);
+		SkillProgressionTypeData spd_spc("SPECIAL_ID", "Special", 0.0, 6.0, 5.0, 4.0, 3.0);
+		SkillProgressionTypeData spd_std("STANDARD_ID", "Standard", -15.0, 3.0, 2.0, 1.0, 0.5);
+		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std);
 
 		// Invalid category type
 		try {
-			scd.setSkillProgressions(SkillProgressionType::kStandard, SkillProgressionType::kCombined);
+			scd.setSkillProgressions(spd_std, spd_cmb);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be kStandard or kNone."));
+			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard or None."));
 		} catch (...) {
 			FAIL();
 		}
 		try {
-			scd.setSkillProgressions(SkillProgressionType::kStandard, SkillProgressionType::kLimited);
+			scd.setSkillProgressions(spd_std, spd_ltd);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be kStandard or kNone."));
+			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard or None."));
 		} catch (...) {
 			FAIL();
 		}
 		try {
-			scd.setSkillProgressions(SkillProgressionType::kStandard, SkillProgressionType::kSpecial);
+			scd.setSkillProgressions(spd_std, spd_spc);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be kStandard or kNone."));
+			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard or None."));
 		} catch (...) {
 			FAIL();
 		}
 
 		// Invalid combinations
 		try {
-			scd.setSkillProgressions(SkillProgressionType::kCombined, SkillProgressionType::kStandard);
+			scd.setSkillProgressions(spd_cmb, spd_std);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be kStandard if the skill progression is also set to kStandard."));
+			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
 		} catch (...) {
 			FAIL();
 		}
 		try {
-			scd.setSkillProgressions(SkillProgressionType::kLimited, SkillProgressionType::kStandard);
+			scd.setSkillProgressions(spd_ltd, spd_std);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be kStandard if the skill progression is also set to kStandard."));
+			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
 		} catch (...) {
 			FAIL();
 		}
 		try {
-			scd.setSkillProgressions(SkillProgressionType::kNone, SkillProgressionType::kStandard);
+			scd.setSkillProgressions(spd_none, spd_std);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be kStandard if the skill progression is also set to kStandard."));
+			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
 		} catch (...) {
 			FAIL();
 		}
 		try {
-			scd.setSkillProgressions(SkillProgressionType::kSpecial, SkillProgressionType::kStandard);
+			scd.setSkillProgressions(spd_spc, spd_std);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be kStandard if the skill progression is also set to kStandard."));
+			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
 		} catch (...) {
 			FAIL();
 		}
 
-		scd.setSkillProgressions(SkillProgressionType::kStandard, SkillProgressionType::kStandard);
-		EXPECT_EQ(scd.getDefaultSkillProgression(), SkillProgressionType::kStandard);
-		EXPECT_EQ(scd.getSkillCategoryProgression(), SkillProgressionType::kStandard);
+		scd.setSkillProgressions(spd_std, spd_std);
+		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), "Standard");
+		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), "Standard");
 
-		scd.setSkillProgressions(SkillProgressionType::kCombined, SkillProgressionType::kNone);
-		EXPECT_EQ(scd.getDefaultSkillProgression(), SkillProgressionType::kCombined);
-		EXPECT_EQ(scd.getSkillCategoryProgression(), SkillProgressionType::kNone);
+		scd.setSkillProgressions(spd_cmb, spd_none);
+		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), "Combined");
+		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), "None");
 
-		scd.setSkillProgressions(SkillProgressionType::kLimited, SkillProgressionType::kNone);
-		EXPECT_EQ(scd.getDefaultSkillProgression(), SkillProgressionType::kLimited);
-		EXPECT_EQ(scd.getSkillCategoryProgression(), SkillProgressionType::kNone);
+		scd.setSkillProgressions(spd_ltd, spd_none);
+		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), "Limited");
+		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), "None");
 
-		scd.setSkillProgressions(SkillProgressionType::kNone, SkillProgressionType::kNone);
-		EXPECT_EQ(scd.getDefaultSkillProgression(), SkillProgressionType::kNone);
-		EXPECT_EQ(scd.getSkillCategoryProgression(), SkillProgressionType::kNone);
+		scd.setSkillProgressions(spd_none, spd_none);
+		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), "None");
+		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), "None");
 
-		scd.setSkillProgressions(SkillProgressionType::kSpecial, SkillProgressionType::kNone);
-		EXPECT_EQ(scd.getDefaultSkillProgression(), SkillProgressionType::kSpecial);
-		EXPECT_EQ(scd.getSkillCategoryProgression(), SkillProgressionType::kNone);
+		scd.setSkillProgressions(spd_spc, spd_none);
+		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), "Special");
+		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), "None");
 	}
 }

@@ -6,7 +6,7 @@
 #include "GameRuleData.h"
 #include "SkillGroupType.h"
 #include "StatType.h"
-#include <SkillProgressionType.h>
+#include <SkillProgressionTypeData.h>
 
 /**
  * @brief Thrown when more skill category stats than are allowed are attempted to be added
@@ -57,10 +57,8 @@ public:
 	/**
 	 * @brief Constructor
 	 * @param group Skill group that the category belongs to
-	 * @param id Unique identifier of the skill category
-	 * @param name Name of the category as seen in-game
 	 */
-	SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group);
+	SkillCategoryData(std::string_view id);
 
 	/**
 	 * @brief Constructor
@@ -70,25 +68,25 @@ public:
 	 * @param skillProgression Default progression type for skills in the category
 	 * @param categoryProgression Progression type for the skill category
 	 */
-	SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionType::Type skillProgression, SkillProgressionType::Type categoryProgression);
+	SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionTypeData& skillProgression, SkillProgressionTypeData& categoryProgression);
 
 	/**
 	 * @brief Get the name of the category as seen in-game
 	 * @return Name as a string reference
 	 */
-	inline const std::string& name() { return name_; }
+	inline const std::string& name() const { return name_; }
 
 	/**
 	 * @brief Gets the full name of the skill category which includes the skill group
 	 * @return Name including the skill group
 	 */
-	inline const std::string getFullName() { return toString(group_) + " - " + name_; }
+	inline const std::string getFullName() const { return toString(group_) + " - " + name_; }
 
 	/**
 	 * @brief Get the group the category belongs to
 	 * @return SkillGroupType::Type categories skill group
 	 */
-	inline const SkillGroupType::Type getGroup() { return group_; }
+	inline const SkillGroupType::Type getGroup() const { return group_; }
 
 	/**
 	 * @brief Add stat that applies stat boinus to skills in the category
@@ -107,7 +105,7 @@ public:
 	 * Up to 3 stats bonuses may be applied to skills in a skill category. This function returns the current number applied
 	 * @return Number of stats applied
 	 */
-	inline const int getNumberOfStats() {	return stats_.size();	}
+	inline const int getNumberOfStats() const {	return stats_.size();	}
 
 	/**
 	 * @brief Remove a stats from those currently associated with the category
@@ -140,12 +138,12 @@ public:
 	 *  - kNone: All other cases
 	 * Any attempt to set another combination will throw an exception
 	 * 
-	 * @param skillProgression SkillProgressionType::Type progression to set for skills in the category
-	 * @param skillProgression SkillProgressionType::Type progression to set for the category
+	 * @param skillProgression SkillProgressionTypeData&  progression to set for skills in the category
+	 * @param skillProgression SkillProgressionTypeData&  progression to set for the category
 	 * 
 	 * @throws InvalidSkillProgression if the combination of progressions is invalid
 	 */
-	void setSkillProgressions(SkillProgressionType::Type skillProgression, SkillProgressionType::Type categoryProgression);
+	void setSkillProgressions(const SkillProgressionTypeData& skillProgression, const SkillProgressionTypeData& categoryProgression);
 
 	/**
 	 * @brief Gets the default skill progression for skills in the category
@@ -155,9 +153,9 @@ public:
 	 * characters, such as training packages, or professions, so this may not be the progression used after the skill has been
 	 * initialised.
 	 * 
-	 * @return SkillProgressionType::Type default skill progressiomn type
+	 * @return SkillProgressionTypeData&  default skill progressiomn type
 	 */
-	inline const SkillProgressionType::Type getDefaultSkillProgression() { return skillProgression_; }
+	inline const SkillProgressionTypeData& getDefaultSkillProgression() const { return *skillProgression_; }
 
 	/**
 	 * @brief Gets the skill progression for the skill category
@@ -168,25 +166,13 @@ public:
 	 *
 	 * @return SkillProgressionType::Type default skill progressiomn type
 	 */
-	inline const SkillProgressionType::Type getSkillCategoryProgression() { return skillCategoryProgression_; }
+	inline const SkillProgressionTypeData& getSkillCategoryProgression() const { return *skillCategoryProgression_; }
 
 private:
 	SkillGroupType::Type group_{}; /**< Name of the skill group; the category belongs to */
-	SkillProgressionType::Type skillProgression_{}; /**< How many bonus points each skill rank provides by default in skills in the category */
-	SkillProgressionType::Type skillCategoryProgression_{}; /**< How many bonus points each skill rank provides to the category */
+	const SkillProgressionTypeData* skillProgression_{}; /**< How many bonus points each skill rank provides by default in skills in the category */
+	const SkillProgressionTypeData* skillCategoryProgression_{}; /**< How many bonus points each skill rank provides to the category */
 	std::string name_{}; /**< Name of the category as seen in-game */
 	std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the category */
 
 };
-
-// Constructor
-inline SkillCategoryData::SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group) :
-	SkillCategoryData(id, name, group, SkillProgressionType::kStandard, SkillProgressionType::kStandard)
-{}
-
-inline SkillCategoryData::SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionType::Type skillProgression, SkillProgressionType::Type categoryProgression) :
-	GameRuleData(id),
-	group_{ group },
-	name_{ name },
-	skillProgression_{ skillProgression },
-	skillCategoryProgression_{ categoryProgression } {}

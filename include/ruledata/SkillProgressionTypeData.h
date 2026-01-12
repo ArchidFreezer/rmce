@@ -3,6 +3,7 @@
 #include <string>
 
 #include "GameRuleData.h"
+#include "SkillProgressionData.h"
 
 /**
  * @class SkillProgressionTypeData
@@ -15,7 +16,7 @@
  *
  * The progression types are applied at both the skill category and skill level.
  */
-class SkillProgressionTypeData : public GameRuleData {
+class SkillProgressionTypeData : public GameRuleData, SkillProgressionData {
 public:
 	/**
 	 * @brief Constructor
@@ -40,12 +41,12 @@ public:
 	 * @param name Progression type name
 	 */
 	inline void setName(std::string_view name) { name_ = name; }
-	
+
 	/**
 	 * @brief Get the name of the progression type
 	 * @return Progression type name as a string reference
 	 */
-	inline const std::string& name() { return name_; }
+	inline const std::string& name() const { return name_; }
 
 	/**
 	 * @brief Set the bonus provided with 0 skill ranks
@@ -56,7 +57,7 @@ public:
 	 * @brief Get the bonus provided with 0 skill ranks
 	 * @return Bonus for 0 skill ranks
 	 */
-	inline float zero() { return zero_; }
+	inline float zero() const { return zero_; }
 
 	/**
 	 * @brief Set the bonus provided per rank for between 1 and 10 ranks
@@ -67,7 +68,7 @@ public:
 	 * @brief Get the bonus provided per rank for between 1 and 10 ranks
 	 * @return Bonus provided per rank for between 1 and 10 ranks
 	 */
-	inline float ten() { return ten_; }
+	inline float ten() const { return ten_; }
 
 	/**
 	 * @brief Set the bonus provided per rank for between 11 and 20 ranks
@@ -78,7 +79,7 @@ public:
 	 * @brief Get the bonus provided per rank for between 11 and 20 ranks
 	 * @return Bonus provided per rank for between 11 and 20 ranks
 	 */
-	inline float twenty() { return twenty_; }
+	inline float twenty() const { return twenty_; }
 
 	/**
 	 * @brief Set the bonus provided per rank for between 21 and 30 ranks
@@ -89,7 +90,7 @@ public:
 	 * @brief Get the bonus provided per rank for between 21 and 30 ranks
 	 * @return Bonus provided per rank for between 21 and 30 ranks
 	 */
-	inline float thirty() { return thirty_; }
+	inline float thirty() const { return thirty_; }
 
 	/**
 	 * @brief Set the bonus provided per rank above 30
@@ -100,7 +101,14 @@ public:
 	 * @brief Get the bonus provided per rank above 30
 	 * @return Bonus provided per rank for above 30
 	 */
-	inline float remaining() { return remaining_; }
+	inline float remaining() const { return remaining_; }
+
+	/**
+	 * @brief Get the skill bonus provided by the progression type for the number of ranks defined in the parameter
+	 * @param ranks Number of ranks to get the bonus for
+	 * @return int containing the skill bonus
+	 */
+	int getBonus(int ranks) const;
 
 private:
 	std::string name_{};  /**< Name of the progression type */
@@ -109,15 +117,16 @@ private:
 	float twenty_{}; /**< Bonus provided for between 11 and 20 skill ranks */
 	float thirty_{}; /**< Bonus provided for between 21 and 30 skill ranks */
 	float remaining_{}; /**< Bonus provided for over 30 skill ranks */
+
+	/**
+	 * @brief Get the bonus given the number of ranks and the bonus per rank provided
+	 * @param ranks Number of ranks to get the bonus for
+	 * @param zero Bonus for 0 ranks
+	 * @param ten Bonus for the first 10 ranks
+	 * @param twenty Bonus for ranks 11 to 20
+	 * @param thirty Bonus for ranks 21 to 30
+	 * @param remaining Bonus for any ranks over 30
+	 * @return int containing the skill bonus
+	 */
+	int getBonus(int ranks, float zero, float ten, float twenty, float thirty, float remaining) const;
 };
-
-inline SkillProgressionTypeData::SkillProgressionTypeData(std::string_view id) : GameRuleData(id) {}
-
-inline SkillProgressionTypeData::SkillProgressionTypeData(std::string_view id, std::string_view name, float zero, float ten, float twenty, float thirty, float remaining) :
-	GameRuleData(id),
-	name_{ name },
-	zero_{ zero },
-	ten_{ ten },
-	twenty_{ twenty },
-	thirty_{ thirty },
-	remaining_{ remaining } {}

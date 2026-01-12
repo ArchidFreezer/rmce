@@ -16,7 +16,6 @@ var hierarchy =
       [ "LanguageData", "class_language_data.html", null ],
       [ "LanguageDialectData", "class_language_dialect_data.html", null ],
       [ "SkillCategoryData", "class_skill_category_data.html", null ],
-      [ "SkillProgressionData", "class_skill_progression_data.html", null ],
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
@@ -24,5 +23,8 @@ var hierarchy =
       [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
       [ "InvalidSkillProgression", "class_invalid_skill_progression.html", null ],
       [ "TooManyStatsException", "class_too_many_stats_exception.html", null ]
+    ] ],
+    [ "SkillProgressionData", "class_skill_progression_data.html", [
+      [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ]
 ];
