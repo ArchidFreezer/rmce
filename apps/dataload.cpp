@@ -3,6 +3,7 @@
 #include "BookDatafileParserJson.h"
 #include "LanguageDatafileParserJson.h"
 #include "LanguageCategoryDatafileParserJson.h"
+#include "SkillProgressionTypeDatafileParserJson.h"
 
 int main()
 {
@@ -16,6 +17,7 @@ int main()
 	parsers.push_back(std::move(std::make_unique<BookDatafileParserJson>(cache, "../../../../data/Books.json")));
 	parsers.push_back(std::move(std::make_unique<LanguageCategoryDatafileParserJson>(cache, "../../../../data/LanguageCategories.json")));
 	parsers.push_back(std::move(std::make_unique<LanguageDatafileParserJson>(cache, "../../../../data/Languages.json")));
+	parsers.push_back(std::move(std::make_unique<SkillProgressionTypeDatafileParserJson>(cache, "../../../../data/SkillProgressionTypes.json")));
 
 	for (auto& parser : parsers) {
 		parser->read(true);
@@ -33,6 +35,9 @@ int main()
 	
 	LanguageDatafileParserJson languages(cache);
 	languages.save("../../../../data/Languages2.json");
+
+	SkillProgressionTypeDatafileParserJson skill_progressions(cache);
+	skill_progressions.save("../../../../data/SkillProgressionTypes2.json");
 
 	return 0;
 }

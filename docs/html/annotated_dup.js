@@ -17,6 +17,7 @@ var annotated_dup =
     [ "LanguageDialectData", "class_language_dialect_data.html", "class_language_dialect_data" ],
     [ "SkillCategoryData", "class_skill_category_data.html", "class_skill_category_data" ],
     [ "SkillProgressionData", "class_skill_progression_data.html", "class_skill_progression_data" ],
-    [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ],
+    [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", "class_skill_progression_type_data" ],
+    [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", "class_skill_progression_type_datafile_parser_json" ],
     [ "TooManyStatsException", "class_too_many_stats_exception.html", "class_too_many_stats_exception" ]
 ];
