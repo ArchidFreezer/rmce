@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"namespace_skill_development_type.html#a6d7ff6ceb406f3f60ee4d3f6a23d53f5":[0,0,6,3],
+"namespace_skill_development_type.html#af6cc51b583e4c9f762214a2d0e2b76e7":[0,0,6,1],
+"namespace_skill_group_type.html":[0,0,7],
+"namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268":[0,0,7,0],
 "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a024499b1a3307093b94d16604da5d309":[0,0,7,0,18],
 "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a0bcfcd5ad44f84b15d8810a8c1e1af77":[0,0,7,0,7],
 "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a0c5350e42a38f0bab15173a00ba9af6f":[0,0,7,0,2],

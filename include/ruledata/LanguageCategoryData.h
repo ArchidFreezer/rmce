@@ -29,15 +29,25 @@ public:
 	 */
 	LanguageCategoryData(std::string_view id, std::string_view name);
 	/**
+	 * @brief Constructor
+	 * @param id Unique identifier of the language category
+	 */
+	LanguageCategoryData(std::string_view id);
+	/**
 	 * @brief get the unique identifier of the language category
 	 * @return Unique identifier as a string reference
 	 */
 	inline const std::string& id() { return id_; }
-  /**
-   * @brief Get the name of the category as seen in-game
-   * @return Name as a string reference
-   */
-  inline const std::string& name() { return name_; }
+	/**
+	 * @brief Set the name of the category
+	 * @param name Category name
+	 */
+	inline void setName(std::string_view name) { name_ = name; }
+	/**
+	 * @brief Get the name of the category as seen in-game
+	 * @return Name as a string reference
+	 */
+	inline const std::string& name() { return name_; }
 
 private:
 	std::string id_{}; /**< Unique identifier of the language category */
@@ -45,7 +55,7 @@ private:
 
 };
 
-inline LanguageCategoryData::LanguageCategoryData(std::string_view id, std::string_view name) :
-	id_{ id },
-	name_{ name }
-{}
+inline LanguageCategoryData::LanguageCategoryData(std::string_view id) : id_{ id } {}
+
+inline LanguageCategoryData::LanguageCategoryData(std::string_view id, std::string_view name) : id_{ id }, name_{ name } {}
+

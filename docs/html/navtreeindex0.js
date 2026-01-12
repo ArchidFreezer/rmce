@@ -34,10 +34,14 @@ var NAVTREEINDEX0 =
 "class_armour_type.html":[1,0,0],
 "class_book_data.html":[1,0,1],
 "class_book_data.html#a38821c97987e43ba9343fbe384359819":[1,0,1,2],
+"class_book_data.html#a46689da868f9da007a039d1859972956":[1,0,1,8],
 "class_book_data.html#a6ab2c4f56fed1bb4bc1f45b1c720ccc4":[1,0,1,5],
 "class_book_data.html#a6d51833a938e313ac580532f6c411f08":[1,0,1,4],
 "class_book_data.html#a862f50ac4e07d1287d07f39bd98e4423":[1,0,1,1],
-"class_book_data.html#aae42fe8ae20b62075f2c6977eb834778":[1,0,1,0],
+"class_book_data.html#a9c7ea5df6c88eda5d22db4590ec42e63":[1,0,1,0],
+"class_book_data.html#a9ed657ce6a01d19df9bb8fbaec429473":[1,0,1,7],
+"class_book_data.html#ae8b0b3f1ac49e7409522ca11658709a0":[1,0,1,9],
+"class_book_data.html#aeb3054da579619e91f39f140d9b0a45a":[1,0,1,6],
 "class_book_data.html#af05075c192f4cd85a323deec022b486e":[1,0,1,3],
 "class_book_datafile_parser_json.html":[1,0,2],
 "class_book_datafile_parser_json.html#a04210d650f2346d99a5c04ccd0cff925":[1,0,2,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX0 =
 "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba821da62632c491ea619ead7b31c094bf":[0,0,6,0,3],
 "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba90443e6f295091a059b0a150ddee8778":[0,0,6,0,1],
 "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055bae412484be1c558bb641a11d900b98f6b":[0,0,6,0,2],
-"namespace_skill_development_type.html#a0c8feea403ee3e058364f7fcd135f976":[0,0,6,2],
-"namespace_skill_development_type.html#a6d7ff6ceb406f3f60ee4d3f6a23d53f5":[0,0,6,3],
-"namespace_skill_development_type.html#af6cc51b583e4c9f762214a2d0e2b76e7":[0,0,6,1],
-"namespace_skill_group_type.html":[0,0,7],
-"namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268":[0,0,7,0]
+"namespace_skill_development_type.html#a0c8feea403ee3e058364f7fcd135f976":[0,0,6,2]
 };

@@ -24,9 +24,15 @@ void BookDatafileParserJson::parse() {
 
 		// We create a BookData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
 		// to the cache when we add it
-		std::unique_ptr<BookData> datum = std::make_unique<BookData>(id, code, name, abbreviation, isbn);
+		std::unique_ptr<BookData> datum = std::make_unique<BookData>(id);
 		cache().add<BookData>(std::move(datum), id);
-		std::cout << "\tBook name: " << name << std::endl;
+
+		BookData& ref = cache().get<BookData>(id);
+		ref.setAbbreviation(abbreviation);
+		ref.setCode(code);
+		ref.setIsbn(isbn);
+		ref.setName(name);
+		std::cout << "\tBook name: " << ref.name() << std::endl;
 
 	}
 	std::cout << " done" << std::endl;

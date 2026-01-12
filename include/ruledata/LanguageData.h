@@ -25,7 +25,22 @@
  */
 class LanguageData : public GameRuleData {
 public:
+	/**
+	 * @brief Constructor
+	 * @param id Unique id
+	 * @param name Name as seen in-game
+	 * @param category Language category the lasnguage belongs to
+	 * @param base_language Language this is considered to be a dialect of, may be the same
+	 * @param isSpoken Whether the language has a spoken form
+	 * @param isWritten Whether the language has a written form
+	 * @param isSomantic Whether the language has a somantic form
+	 */
 	LanguageData(std::string_view id, std::string_view name, std::string_view category, std::string_view base_language, bool isSpoken, bool isWritten, bool isSomantic);
+	/**
+	 * @brief Constructor
+	 * @param id Unique identifier of the language
+	 */
+	LanguageData(std::string_view id);
 
 	/**
 	 * @brief Unique identifier of the language
@@ -33,17 +48,35 @@ public:
 	 */
 	inline const std::string& id() { return id_; }
 	/**
+	 * @brief Set the name of the language
+	 * @param name Language name
+	 */
+	inline void setName(std::string_view name) { name_ = name; }
+	/**
 	 * @brief In-game name of the language as used by players and NPCs
 	 * @return Name of the language
 	 */
 	inline const std::string& name() { return name_; }
 	/**
-	 * @brief Language category representing the root language this has developed from
+	 * @brief Set the language category representing the root language this has developed from
+	 * @param category Language category
+	 */
+	inline void setCategory(std::string_view category) { category_ = category; }
+	/**
+	 * @brief get the language category representing the root language this has developed from
 	 * @return Category as a string reference
 	 */
 	inline const std::string& category() { return category_; }
 	/**
-	 * @brief For dialects this is the language it is a dialect of.
+	 * @brief For dialects get the language it is a dialect of.
+	 *
+	 * For some languages it may be the same as the language name, indicating it is the most prevalent dialect.
+	 *
+	 * @param base_language Dialects base language
+	 */
+	inline void setBaseLanguage(std::string base_language) { base_language_ = base_language; }
+	/**
+	 * @brief For dialects set the language it is a dialect of.
 	 * 
 	 * For some languages it may be the same as the language name, indicating it is the most prevalent dialect.
 	 * 
@@ -51,15 +84,30 @@ public:
 	 */
 	inline const std::string& baseLanguage() { return base_language_; }
 	/**
+	 * @brief Sets if the language has a spoken component
+	 * @param is_spoken `true` if the langauge is even spoken; `false` otherwise
+	 */
+	inline void setIsSpoken(bool is_spoken) { is_spoken_ = is_spoken; }
+	/**
 	 * @brief Whether the language has a spoken component
 	 * @return `true` if the language is spoken; `false` otherwise
 	 */
 	inline const bool isSpoken() const { return is_spoken_;	}
 	/**
+	 * @brief Sets if the language has a written component
+	 * @param is_written `true` if the langauge is written; `false` otherwise
+	 */
+	inline void setIsWritten(bool is_written) { is_written_ = is_written; }
+	/**
 	 * @brief Whether the language has a written component
 	 * @return `true` if the language is written; `false` otherwise
 	 */
 	inline const bool isWritten() const { return is_written_; }
+	/**
+	 * @brief Sets if the language has a somantic component
+	 * @param is_somantic `true` if the langauge is somantic; `false` otherwise 
+	 */
+	inline void setIsSomantic(bool is_somantic) { is_somantic_ = is_somantic; }
 	/**
 	 * @brief Whether the language has a somantic component
 	 * @return `true` if the language is somantic; `false` otherwise
@@ -76,16 +124,8 @@ private:
 	bool is_somantic_{}; /**< Whether the language has a somantic form */
 };
 
-/**
- * @brief Constructor
- * @param id Unique id
- * @param name Name as seen in-game
- * @param category Language category the lasnguage belongs to
- * @param base_language Language this is considered to be a dialect of, may be the same
- * @param isSpoken Whether the language has a spoken form
- * @param isWritten Whether the language has a written form
- * @param isSomantic Whether the language has a somantic form
- */
+inline LanguageData::LanguageData(std::string_view id) : id_{ id } {}
+
 inline LanguageData::LanguageData(std::string_view id, std::string_view name, std::string_view category, std::string_view base_language, bool isSpoken, bool isWritten, bool isSomantic) :
 	id_{ id },
 	name_{ name },
@@ -93,5 +133,4 @@ inline LanguageData::LanguageData(std::string_view id, std::string_view name, st
 	base_language_{ base_language },
 	is_spoken_{ isSpoken },
 	is_written_{ isWritten },
-	is_somantic_{ isSomantic }
-{}
+	is_somantic_{ isSomantic } {}

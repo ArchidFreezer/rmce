@@ -21,9 +21,12 @@ void LanguageCategoryDatafileParserJson::parse() {
 
 		// We create a LanguageCategoryData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
 		// to the cache when we add it
-		std::unique_ptr<LanguageCategoryData> datum = std::make_unique<LanguageCategoryData>(id, name);
+		std::unique_ptr<LanguageCategoryData> datum = std::make_unique<LanguageCategoryData>(id);
 		cache().add<LanguageCategoryData>(std::move(datum), id);
-		std::cout << "\tLanguage category name: " << name << std::endl;
+
+		LanguageCategoryData& ref = cache().get<LanguageCategoryData>(id);
+		ref.setName(name);
+		std::cout << "\tLanguage category name: " << ref.name() << std::endl;
 
 	}
 	std::cout << " done" << std::endl;
