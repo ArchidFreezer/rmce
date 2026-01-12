@@ -33,12 +33,6 @@ public:
 	BookData(std::string_view id);
 
 	/**
-	 * @brief Get the unique identifier for the book
-	 * @return Unique identifier as a string reference
-	 */
-	inline const std::string& id() { return id_; }
-
-	/**
 	 * @brief Set the book reference number from the publisher
 	 * @param id Book reference number
 	 */
@@ -80,17 +74,16 @@ public:
 	inline const std::string& isbn() { return isbn_; }
 
 private:
-	std::string id_{}; /**< Unique identifier for the book */
 	std::string code_{}; /**< Book reference number from the publisher */
 	std::string name_{}; /**< Name of the book */
 	std::string abbreviation_{}; /**< Abbreviation of the book as used by the publisher */
 	std::string isbn_{}; /**< ISBN book number */
 };
 
-inline BookData::BookData(std::string_view id) : id_{ id } {}
+inline BookData::BookData(std::string_view id) : GameRuleData(id) {}
 
 inline BookData::BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn) :
-	id_{ id },
+	GameRuleData(id),
 	code_{ code },
 	name_{ name },
 	abbreviation_{ abbreviation },

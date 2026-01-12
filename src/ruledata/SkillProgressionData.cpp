@@ -1,6 +1,6 @@
 #include "SkillProgressionData.h"
 
-SkillProgressionData::SkillProgressionData(SkillProgressionType::Type type) : type_{ type }, id_{toString(type)} {}
+SkillProgressionData::SkillProgressionData(SkillProgressionType::Type type) : GameRuleData(toString(type)), type_{ type } {}
 
 int SkillProgressionData::getBonus(int ranks) {
 	using enum SkillProgressionType::Type;

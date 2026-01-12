@@ -15,7 +15,8 @@ var hierarchy =
       [ "LanguageData", "class_language_data.html", null ],
       [ "LanguageDialectData", "class_language_dialect_data.html", null ],
       [ "SkillCategoryData", "class_skill_category_data.html", null ],
-      [ "SkillProgressionData", "class_skill_progression_data.html", null ]
+      [ "SkillProgressionData", "class_skill_progression_data.html", null ],
+      [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
     [ "std::runtime_error", null, [

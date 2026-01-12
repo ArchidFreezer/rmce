@@ -73,11 +73,6 @@ public:
 	SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionType::Type skillProgression, SkillProgressionType::Type categoryProgression);
 
 	/**
-	 * @brief Get the unique identifier of the skill category
-	 * @return Unique identifier as a string reference
-	 */
-	inline const std::string& id() { return id_; }
-	/**
 	 * @brief Get the name of the category as seen in-game
 	 * @return Name as a string reference
 	 */
@@ -179,7 +174,6 @@ private:
 	SkillGroupType::Type group_{}; /**< Name of the skill group; the category belongs to */
 	SkillProgressionType::Type skillProgression_{}; /**< How many bonus points each skill rank provides by default in skills in the category */
 	SkillProgressionType::Type skillCategoryProgression_{}; /**< How many bonus points each skill rank provides to the category */
-	std::string id_{}; /**< Unique identifier of the skill category */
 	std::string name_{}; /**< Name of the category as seen in-game */
 	std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the category */
 
@@ -191,8 +185,8 @@ inline SkillCategoryData::SkillCategoryData(std::string_view id, std::string_vie
 {}
 
 inline SkillCategoryData::SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionType::Type skillProgression, SkillProgressionType::Type categoryProgression) :
+	GameRuleData(id),
 	group_{ group },
-	id_{ id },
 	name_{ name },
 	skillProgression_{ skillProgression },
 	skillCategoryProgression_{ categoryProgression } {}

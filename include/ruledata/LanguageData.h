@@ -43,11 +43,6 @@ public:
 	LanguageData(std::string_view id);
 
 	/**
-	 * @brief Unique identifier of the language
-	 * @return Unique identifier string reference
-	 */
-	inline const std::string& id() { return id_; }
-	/**
 	 * @brief Set the name of the language
 	 * @param name Language name
 	 */
@@ -115,7 +110,6 @@ public:
 	inline const bool isSomantic() const { return is_somantic_; }
 
 private:
-	std::string id_{}; /**< Unique identifier */
 	std::string name_{}; /**< Name as used in-game */
 	std::string category_{}; /**< Language category this belongs to */
 	std::string base_language_{}; /**< Language this language is a dialect of */
@@ -124,10 +118,10 @@ private:
 	bool is_somantic_{}; /**< Whether the language has a somantic form */
 };
 
-inline LanguageData::LanguageData(std::string_view id) : id_{ id } {}
+inline LanguageData::LanguageData(std::string_view id) : GameRuleData(id) {}
 
 inline LanguageData::LanguageData(std::string_view id, std::string_view name, std::string_view category, std::string_view base_language, bool isSpoken, bool isWritten, bool isSomantic) :
-	id_{ id },
+	GameRuleData(id),
 	name_{ name },
 	category_{ category },
 	base_language_{ base_language },

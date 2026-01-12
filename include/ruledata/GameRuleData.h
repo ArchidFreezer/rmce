@@ -18,6 +18,12 @@ public:
 	GameRuleData() = default;
 
 	/**
+	 * @brief Constructor
+	 * @param id Unique identifier for the object
+	 */
+	GameRuleData(std::string_view id);
+
+	/**
 	 * @brief Default destructor
 	 * 
 	 * This is made virtual to define the class as polymorphic as a standard practice, even though there is another virtial method.
@@ -32,6 +38,11 @@ public:
 	 * 
 	 * @return Identifier as a string reference.
 	 */
-	virtual const std::string& id() = 0;
+	inline const std::string& id() {	return id_;	}
+
+protected:
+	std::string id_{}; /**< Unique identifier for the object */
 
 };
+
+inline GameRuleData::GameRuleData(std::string_view id) : id_ { id } {}

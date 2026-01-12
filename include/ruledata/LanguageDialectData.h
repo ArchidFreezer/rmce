@@ -18,6 +18,10 @@
  * For verbal communication where understanding needs to be quicker, unless the speaker deliberately
  * slows down their speaking the listeners skill ranks should be considered as 3/4 (round up).
  * 
+ * Typically the data id for a GameRuleData object would be generated from a type prefix
+ * combined with a data value, but for dialects we use the base language name to allow it to be
+ * retrievd more easily.
+ * 
  * @see #LanguageData
  */
 class LanguageDialectData : public GameRuleData {
@@ -35,16 +39,6 @@ public:
    *        _invalidate_ the object referenced in the parameter
 	 */
 	LanguageDialectData(std::string_view name, std::set<std::string>& dialects);
-
-	/**
-	 * @brief Unique id
-	 * 
-	 * Typically the data id for a [GameRuleData](#GameRuleData) object would be generated from a type prefix
-	 * combined with a data value, but for dialects we use the base language name.
-	 * 
-	 * @return Name of the base language
-	 */
-	inline const std::string& id() { return name(); }
 
 	/**
 	 * @brief Base language of the dialects
@@ -94,9 +88,11 @@ private:
 };
 
 inline LanguageDialectData::LanguageDialectData(std::string_view name) :
+	GameRuleData(name),
 	name_{ name } {}
 
 inline LanguageDialectData::LanguageDialectData(std::string_view name, std::set<std::string>& dialects) :
+	GameRuleData(name),
 	name_{ name },
 	dialects_{ std::move(dialects) }
 {}

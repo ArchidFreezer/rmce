@@ -19,8 +19,9 @@ var searchData=
   ['skillgrouptype_16',['SkillGroupType',['../namespace_skill_group_type.html',1,'']]],
   ['skillprogressiondata_17',['SkillProgressionData',['../class_skill_progression_data.html',1,'SkillProgressionData'],['../class_skill_progression_data.html#aad9f7ff93677095b1acbdbaea625429f',1,'SkillProgressionData::SkillProgressionData()']]],
   ['skillprogressiontype_18',['SkillProgressionType',['../namespace_skill_progression_type.html',1,'']]],
-  ['spelllisttype_19',['SpellListType',['../namespace_spell_list_type.html',1,'']]],
-  ['statlosstype_20',['StatLossType',['../namespace_stat_loss_type.html',1,'']]],
-  ['stattype_21',['StatType',['../namespace_stat_type.html',1,'']]],
-  ['stringutils_2eh_22',['StringUtils.h',['../_string_utils_8h.html',1,'']]]
+  ['skillprogressiontypedata_19',['SkillProgressionTypeData',['../class_skill_progression_type_data.html',1,'']]],
+  ['spelllisttype_20',['SpellListType',['../namespace_spell_list_type.html',1,'']]],
+  ['statlosstype_21',['StatLossType',['../namespace_stat_loss_type.html',1,'']]],
+  ['stattype_22',['StatType',['../namespace_stat_type.html',1,'']]],
+  ['stringutils_2eh_23',['StringUtils.h',['../_string_utils_8h.html',1,'']]]
 ];

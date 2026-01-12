@@ -29,12 +29,6 @@ public:
 	 */
 	int getBonus(int ranks);
 
-	/**
-	 * @brief Get the unique identifier for the book
-	 * @return Unique identifier as a string reference
-	 */
-	inline const std::string& id() { return id_; }
-
 private:
 	/**
 	 * @brief Get the bonus given the number of ranks and the bonus per rank provided
@@ -49,5 +43,4 @@ private:
 	int getBonus(int ranks, float zero, float ten, float twenty, float thirty, float remaining);
 
 	SkillProgressionType::Type type_;
-	std::string id_{};
 };

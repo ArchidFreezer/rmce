@@ -34,11 +34,6 @@ public:
 	 */
 	LanguageCategoryData(std::string_view id);
 	/**
-	 * @brief get the unique identifier of the language category
-	 * @return Unique identifier as a string reference
-	 */
-	inline const std::string& id() { return id_; }
-	/**
 	 * @brief Set the name of the category
 	 * @param name Category name
 	 */
@@ -50,12 +45,11 @@ public:
 	inline const std::string& name() { return name_; }
 
 private:
-	std::string id_{}; /**< Unique identifier of the language category */
 	std::string name_{}; /**< Name of the category as seen in-game */
 
 };
 
-inline LanguageCategoryData::LanguageCategoryData(std::string_view id) : id_{ id } {}
+inline LanguageCategoryData::LanguageCategoryData(std::string_view id) : GameRuleData(id) {}
 
-inline LanguageCategoryData::LanguageCategoryData(std::string_view id, std::string_view name) : id_{ id }, name_{ name } {}
+inline LanguageCategoryData::LanguageCategoryData(std::string_view id, std::string_view name) : GameRuleData(id), name_{ name } {}
 
