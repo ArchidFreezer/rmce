@@ -51,7 +51,7 @@ public:
 	 * @brief In-game name of the language as used by players and NPCs
 	 * @return Name of the language
 	 */
-	inline const std::string& name() { return name_; }
+	inline const std::string& name() const { return name_; }
 	/**
 	 * @brief Set the language category representing the root language this has developed from
 	 * @param category Language category
@@ -61,7 +61,7 @@ public:
 	 * @brief get the language category representing the root language this has developed from
 	 * @return Category as a string reference
 	 */
-	inline const std::string& category() { return category_; }
+	inline const std::string& category() const { return category_; }
 	/**
 	 * @brief For dialects get the language it is a dialect of.
 	 *
@@ -77,7 +77,7 @@ public:
 	 * 
 	 * @return Dialects base language as a string reference
 	 */
-	inline const std::string& baseLanguage() { return base_language_; }
+	inline const std::string& baseLanguage() const { return base_language_; }
 	/**
 	 * @brief Sets if the language has a spoken component
 	 * @param is_spoken `true` if the langauge is even spoken; `false` otherwise
@@ -87,7 +87,7 @@ public:
 	 * @brief Whether the language has a spoken component
 	 * @return `true` if the language is spoken; `false` otherwise
 	 */
-	inline const bool isSpoken() const { return is_spoken_;	}
+	inline bool isSpoken() const { return is_spoken_;	}
 	/**
 	 * @brief Sets if the language has a written component
 	 * @param is_written `true` if the langauge is written; `false` otherwise
@@ -97,7 +97,7 @@ public:
 	 * @brief Whether the language has a written component
 	 * @return `true` if the language is written; `false` otherwise
 	 */
-	inline const bool isWritten() const { return is_written_; }
+	inline bool isWritten() const { return is_written_; }
 	/**
 	 * @brief Sets if the language has a somantic component
 	 * @param is_somantic `true` if the langauge is somantic; `false` otherwise 
@@ -107,7 +107,7 @@ public:
 	 * @brief Whether the language has a somantic component
 	 * @return `true` if the language is somantic; `false` otherwise
 	 */
-	inline const bool isSomantic() const { return is_somantic_; }
+	inline bool isSomantic() const { return is_somantic_; }
 
 private:
 	std::string name_{}; /**< Name as used in-game */

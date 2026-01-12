@@ -49,7 +49,7 @@ public:
 	 * @brief Get the key of the root node of the json file
 	 * @return String reference to the root key
 	 */
-	inline const std::string& rootNode() { return root_node_; };
+	inline const std::string& rootNode() const { return root_node_; };
 
 protected:
 	/**

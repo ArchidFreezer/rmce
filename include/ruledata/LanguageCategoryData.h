@@ -42,7 +42,7 @@ public:
 	 * @brief Get the name of the category as seen in-game
 	 * @return Name as a string reference
 	 */
-	inline const std::string& name() { return name_; }
+	inline const std::string& name() const { return name_; }
 
 private:
 	std::string name_{}; /**< Name of the category as seen in-game */

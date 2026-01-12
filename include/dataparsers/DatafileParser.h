@@ -62,7 +62,7 @@ public:
 	 * @brief Getter for the type of data being processed
 	 * @return String containing the name of the type of data being processed
 	 */
-	const std::string& ruleDatatype() { return rule_datatype_; }
+	const std::string& ruleDatatype() const { return rule_datatype_; }
 
 	/**
 	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache
@@ -131,7 +131,7 @@ public:
 	 * @brief Get the file to parse
 	 * @return Pathe to the file to parse
 	 */
-	inline const std::string& filename() { return filename_; };
+	inline const std::string& filename() const { return filename_; };
 
 	/**
 	 * @brief Set the file to pasre

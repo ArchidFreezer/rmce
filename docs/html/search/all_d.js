@@ -7,6 +7,6 @@ var searchData=
   ['removestat_4',['removeStat',['../class_skill_category_data.html#a2d6385496a88d0adde854904a5f2b083',1,'SkillCategoryData']]],
   ['resetptree_5',['resetPtree',['../class_datafile_parser.html#a0b85b756d72b4b8835a34198fd769522',1,'DatafileParser']]],
   ['resistancetype_6',['ResistanceType',['../namespace_resistance_type.html',1,'']]],
-  ['rootnode_7',['rootNode',['../class_datafile_parser_json.html#a92c670034b136d142761b61fe1e7185d',1,'DatafileParserJson']]],
-  ['ruledatatype_8',['ruleDatatype',['../class_datafile_parser.html#ada329abd34718ae7ebd192dc50a02aec',1,'DatafileParser']]]
+  ['rootnode_7',['rootNode',['../class_datafile_parser_json.html#a3a9921d44a3a84d683c8e571c7cd4789',1,'DatafileParserJson']]],
+  ['ruledatatype_8',['ruleDatatype',['../class_datafile_parser.html#ac06196a9d5d1fc94c1b34f9fa53a878f',1,'DatafileParser']]]
 ];
