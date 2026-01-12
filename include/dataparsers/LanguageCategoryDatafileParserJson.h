@@ -16,6 +16,9 @@
  * @see #GameRuleDataCache
  */
 class LanguageCategoryDatafileParserJson : public DatafileParserJson {
+	// We need this to prevent name hiding as we have a method with the same name defined in this class
+	using DatafileParser::save;
+
 public:
 	/**
 	 * @brief Constructor

@@ -12,6 +12,9 @@
  */
 class DatafileParserJson : public DatafileParser {
 public:
+	// We need this to prevent name hiding as we have a method with the same name defined in this class
+	using DatafileParser::read;
+
 	/**
 	 * @brief Constructor
 	 * @param cache Cache to use for #LanguageCategoryData objects
@@ -35,9 +38,11 @@ public:
 	virtual ~DatafileParserJson() = default;
 
 	/**
-	 * @brief Read game rule data from a json file, convert to objects and store in the game rule data cache
+	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache
+	 * @param filename Path to the file to read the output from
 	 */
-	void read();
+	void read(const std::string& filename);
+
 
 	/**
 	 * @brief Get the key of the root node of the json file

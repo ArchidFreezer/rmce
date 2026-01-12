@@ -17,6 +17,9 @@
  */
 class LanguageDatafileParserJson : public DatafileParserJson {
 public:
+	// We need this to prevent name hiding as we have a method with the same name defined in this class
+	using DatafileParser::save;
+
 	/**
 	 * @brief Constructor
 	 * @param cache Cache to use for #LanguageCategoryData objects

@@ -66,17 +66,31 @@ public:
 
 	/**
 	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache
+	 * @param filename Path to the file to read the output from
+	 */
+	virtual void read(const std::string& filename) = 0;
+
+	/**
+	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache
 	 * 
-	 * The filename may be set in either the constructor or via methods
+	 * The file to be read from may be set in either the constructor or via methods
 	 * @see setFilename
 	 */
-	virtual void read() = 0;
+	inline void read() { read(filename()); }
 
 	/**
 	 * @brief Write game rule data from the cache to a file
 	 * @param filename Path to the file to write the output to
 	 */
 	virtual void save(const std::string& filename) = 0;
+
+	/**
+	 * @brief Write game rule data from the cache to a file
+	 *
+	 * The file to save to from may be set in either the constructor or via methods
+	 * @see setFilename
+	 */
+	inline void save() { save(filename()); }
 
 	/**
 	 * @brief Creates a string that can be used as a unique identifier for an object

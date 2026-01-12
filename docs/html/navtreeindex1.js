@@ -1,5 +1,10 @@
 var NAVTREEINDEX1 =
 {
+"namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a024499b1a3307093b94d16604da5d309":[0,0,7,0,18],
+"namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a0bcfcd5ad44f84b15d8810a8c1e1af77":[0,0,7,0,7],
+"namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a0c5350e42a38f0bab15173a00ba9af6f":[0,0,7,0,2],
+"namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a1e6acf8400a34f0007e33961f76c6d44":[0,0,7,0,6],
+"namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a204e156cce6e6ec74c691b5e7999c887":[0,0,7,0,4],
 "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a22c459a7040334ab3bcb7a6b28eab518":[0,0,7,0,10],
 "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a28b0461fb416cbd63b95c6cf395d868b":[0,0,7,0,15],
 "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a2e9ea4ce886cfe79bfa4dfd5b3003ff0":[0,0,7,0,13],
