@@ -6,6 +6,7 @@ var annotated_dup =
     [ "DatafileParser", "class_datafile_parser.html", "class_datafile_parser" ],
     [ "DatafileParserJson", "class_datafile_parser_json.html", "class_datafile_parser_json" ],
     [ "DatafileParserXml", "class_datafile_parser_xml.html", "class_datafile_parser_xml" ],
+    [ "FilenameNotSetException", "class_filename_not_set_exception.html", "class_filename_not_set_exception" ],
     [ "GameRuleData", "class_game_rule_data.html", "class_game_rule_data" ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", "class_game_rule_data_cache" ],
     [ "InvalidSkillProgression", "class_invalid_skill_progression.html", "class_invalid_skill_progression" ],

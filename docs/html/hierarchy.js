@@ -19,6 +19,7 @@ var hierarchy =
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
     [ "std::runtime_error", null, [
+      [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
       [ "InvalidSkillProgression", "class_invalid_skill_progression.html", null ],
       [ "TooManyStatsException", "class_too_many_stats_exception.html", null ]
     ] ]

@@ -16,8 +16,17 @@ public:
 	 * @brief Constructor
 	 * @param cache Cache to use for #LanguageCategoryData objects
 	 * @param datatype String containing the type of data to parse
+	 * @param filename Path to the datafile to parse
 	 */
-	DatafileParserJson(GameRuleDataCache& cache, const std::string& datatype);
+	DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename);
+
+	/**
+	 * @brief Constructor
+	 * @param cache Cache to use for #LanguageCategoryData objects
+	 * @param datatype String containing the type of data to parse
+	 */
+	DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype);
+
 	/**
 	 * @brief Default destructor
 	 *
@@ -27,9 +36,8 @@ public:
 
 	/**
 	 * @brief Read game rule data from a json file, convert to objects and store in the game rule data cache
-	 * @param filename Path to the file to read
 	 */
-	void read(const std::string& filename);
+	void read();
 
 	/**
 	 * @brief Get the key of the root node of the json file

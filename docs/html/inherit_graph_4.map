@@ -1,7 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,129,57"/>
-<area shape="rect" id="Node000001" href="$class_invalid_skill_progression.html" title="Thrown when there is an attempt to set either the skill progression or category progression in an inv..." alt="" coords="182,5,335,32"/>
-<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="144,31,184,28,179,30,145,36"/>
-<area shape="rect" id="Node000002" href="$class_too_many_stats_exception.html" title="Thrown when more skill category stats than are allowed are attempted to be added." alt="" coords="177,56,340,83"/>
-<area shape="poly" id="edge13_Node000000_Node000002" title=" " alt="" coords="144,52,179,58,173,59,144,57"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,56,129,83"/>
+<area shape="rect" id="Node000001" href="$class_filename_not_set_exception.html" title="Exception thrown if a call is made to read from a file when the filename has not been set." alt="" coords="177,5,350,32"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="136,49,211,31,206,34,137,54"/>
+<area shape="rect" id="Node000002" href="$class_invalid_skill_progression.html" title="Thrown when there is an attempt to set either the skill progression or category progression in an inv..." alt="" coords="187,56,340,83"/>
+<area shape="poly" id="edge13_Node000000_Node000002" title=" " alt="" coords="144,67,189,69,184,70,145,72"/>
+<area shape="rect" id="Node000003" href="$class_too_many_stats_exception.html" title="Thrown when more skill category stats than are allowed are attempted to be added." alt="" coords="182,107,345,133"/>
+<area shape="poly" id="edge14_Node000000_Node000003" title=" " alt="" coords="137,85,211,105,206,107,136,90"/>
 </map>

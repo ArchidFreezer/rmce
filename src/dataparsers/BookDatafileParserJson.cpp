@@ -4,9 +4,11 @@
 #include "BookDatafileParserJson.h"
 
 
-BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache) : DatafileParserJson(cache, "Book") {
+BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Book", filename) {
 	setRootNode("books");
 }
+
+BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache) : BookDatafileParserJson(cache, "") {}
 
 void BookDatafileParserJson::parse() {
 	std::cout << "Loading Book data ..." << std::endl;

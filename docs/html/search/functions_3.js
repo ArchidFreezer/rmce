@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['datafileparser_0',['DatafileParser',['../class_datafile_parser.html#a7551d667b6179f1bab4f70f72af9bfb9',1,'DatafileParser']]],
-  ['datafileparserjson_1',['DatafileParserJson',['../class_datafile_parser_json.html#a391d543e02c272729476b3b05d6521ec',1,'DatafileParserJson']]],
+  ['datafileparser_0',['DatafileParser',['../class_datafile_parser.html#ab4bef336cadb9d056d7677cd9fa68f8f',1,'DatafileParser::DatafileParser(GameRuleDataCache &amp;cache, std::string_view datatype, std::string_view filename)'],['../class_datafile_parser.html#aa2f884cb38d9262080a6d2194f8adaf6',1,'DatafileParser::DatafileParser(GameRuleDataCache &amp;cache, std::string_view datatype)']]],
+  ['datafileparserjson_1',['DatafileParserJson',['../class_datafile_parser_json.html#aa941b6ed5bd0757ddcb1d0bfec08d20b',1,'DatafileParserJson::DatafileParserJson(GameRuleDataCache &amp;cache, std::string_view datatype, std::string_view filename)'],['../class_datafile_parser_json.html#ae8a994860a741fbbfe30307fd3e98466',1,'DatafileParserJson::DatafileParserJson(GameRuleDataCache &amp;cache, std::string_view datatype)']]],
   ['dialects_2',['dialects',['../class_language_dialect_data.html#a60d30420877b334fbe49ec6e4b07a1a3',1,'LanguageDialectData']]]
 ];

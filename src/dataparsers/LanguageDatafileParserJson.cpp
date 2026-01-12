@@ -5,9 +5,11 @@
 #include "LanguageDialectData.h"
 
 
-LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache) : DatafileParserJson(cache, "Language") {
+LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Language", filename) {
 	setRootNode("languages");
 }
+
+LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache) : LanguageDatafileParserJson(cache, "") {}
 
 void LanguageDatafileParserJson::parse() {
 	std::cout << "Loading Language data ..." << std::endl;

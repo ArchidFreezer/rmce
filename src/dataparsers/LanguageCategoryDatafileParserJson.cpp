@@ -4,9 +4,11 @@
 #include "LanguageCategoryDatafileParserJson.h"
 
 
-LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleDataCache& cache) : DatafileParserJson(cache, "LanguageCategory") {
+LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "LanguageCategory", filename) {
 	setRootNode("languageCategories");
 }
+
+LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleDataCache& cache) : LanguageCategoryDatafileParserJson(cache, "") {}
 
 void LanguageCategoryDatafileParserJson::parse() {
 	std::cout << "Loading Language category data ..." << std::endl;

@@ -8,6 +8,21 @@
 namespace pt = boost::property_tree;
 
 /**
+ * @brief Exception thrown if a call is made to read from a file when the filename has not been set
+ */
+class FilenameNotSetException : public std::runtime_error {
+public:
+	/**
+	 * @brief Exception constructor
+	 *
+	 * std::runtime_error will handle the string
+	 *
+	 * @param error String to display for the error
+	 */
+	FilenameNotSetException(const std::string& error) : std::runtime_error{ error }	{}
+};
+
+/**
  * @class DatafileParser
  * 
  * @brief Abstract class to facilitate reading and writing of game rule data to and from files.
@@ -25,8 +40,17 @@ public:
 	 * @brief Consructor
 	 * @param cache Reference to a cache object to store the data objects
 	 * @param datatype String containing the name of the type of data being processed
+	 * @param filename Path to the datafile to parse
 	 */
-	DatafileParser(GameRuleDataCache& cache, const std::string& datatype);
+	DatafileParser(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename);
+
+	/**
+	 * @brief Consructor
+	 * @param cache Reference to a cache object to store the data objects
+	 * @param datatype String containing the name of the type of data being processed
+	 */
+	DatafileParser(GameRuleDataCache& cache, std::string_view datatype);
+
 	/**
 	 * @brief Default destructor
 	 *
@@ -41,11 +65,13 @@ public:
 	const std::string& ruleDatatype() { return rule_datatype_; }
 
 	/**
-	 * @brief Read game rule data from a file, convert to objects and store in the game rule data cache
-	 * @param filename Path to the file to read
+	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache
+	 * 
+	 * The filename may be set in either the constructor or via methods
+	 * @see setFilename
 	 */
-	virtual void read(const std::string& filename) = 0;
-	
+	virtual void read() = 0;
+
 	/**
 	 * @brief Write game rule data from the cache to a file
 	 * @param filename Path to the file to write the output to
@@ -78,6 +104,18 @@ public:
 	 */
 	inline GameRuleDataCache& cache() { return cache_; };
 
+	/**
+	 * @brief Get the file to parse
+	 * @return Pathe to the file to parse
+	 */
+	inline const std::string& filename() { return filename_; };
+
+	/**
+	 * @brief Set the file to pasre
+	 * @param filename Path to the file to parse
+	 */
+	inline void setFilename(const std::string& filename) { filename_ = filename; };
+
 protected:
 	/**
 	 * @brief Parse a ptree into game data objects
@@ -86,11 +124,12 @@ protected:
 	 */
 	virtual void parse() = 0;
 
-
 private:
 	GameRuleDataCache& cache_; /**< Reference to a cache object to store the data objects */
-	pt::ptree ptree_{}; /**< Boost ptree to use when reading structured data fiel files */
+	pt::ptree ptree_{}; /**< Boost ptree to use when reading structured data file files */
 	std::string rule_datatype_{}; /**< Name of the type of data being processed */
+	std::string filename_{}; /**< Path to the file to parse */
+
 };
 
 

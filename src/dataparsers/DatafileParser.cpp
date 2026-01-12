@@ -1,9 +1,13 @@
 #include "DatafileParser.h"
 
-DatafileParser::DatafileParser(GameRuleDataCache& cache, const std::string& datatype) :
+DatafileParser::DatafileParser(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) :
 	cache_{ cache },
-	rule_datatype_ { datatype }
+	rule_datatype_ { datatype },
+	filename_ {filename}
 {}
+
+DatafileParser::DatafileParser(GameRuleDataCache& cache, std::string_view datatype) :
+	DatafileParser(cache, datatype, "") {}
 
 const std::string DatafileParser::generateId(std::string_view type, std::string_view val) {
 	std::stringstream ss{};

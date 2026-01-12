@@ -20,6 +20,13 @@ public:
 	/**
 	 * @brief Constructor
 	 * @param cache Cache to use for #LanguageCategoryData objects
+	 * @param filename Path to the datafile to parse
+	 */
+	LanguageCategoryDatafileParserJson(GameRuleDataCache& cache, std::string_view filename);
+
+	/**
+	 * @brief Constructor
+	 * @param cache Cache to use for #LanguageCategoryData objects
 	 */
 	LanguageCategoryDatafileParserJson(GameRuleDataCache& cache);
 
