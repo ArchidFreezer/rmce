@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['name_0',['name',['../class_book_data.html#aa9b763083e38c4b53353e02f524f2403',1,'BookData::name()'],['../class_language_category_data.html#a8532c04ddef072a9b4b899e7f48c7835',1,'LanguageCategoryData::name()'],['../class_language_data.html#a3b143b4d6979343d8d39ed701fb38a22',1,'LanguageData::name()'],['../class_language_dialect_data.html#a07d3c1de1af8b7de27e3b4ed6aacf1b0',1,'LanguageDialectData::name()'],['../class_skill_category_data.html#a69fd0ed4a9d021cb70e91b29abd26f6a',1,'SkillCategoryData::name()'],['../class_skill_progression_type_data.html#a2fb561755266f2779e5bd1e6252595c4',1,'SkillProgressionTypeData::name()']]]
+  ['maxopenlow_0',['maxOpenLow',['../class_dice.html#a0914b010f7777a2b5508b1760a52e884',1,'Dice']]],
+  ['minopenhigh_1',['minOpenHigh',['../class_dice.html#a283a1d67202dbe120f7b1f2facfdc1ac',1,'Dice']]],
+  ['mt_2',['mt',['../namespace_random.html#aa4354db31fa7d64040939b905ab12ee1',1,'Random']]]
 ];

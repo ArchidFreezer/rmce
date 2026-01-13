@@ -10,6 +10,7 @@ var hierarchy =
       ] ],
       [ "DatafileParserXml", "class_datafile_parser_xml.html", null ]
     ] ],
+    [ "Dice", "class_dice.html", null ],
     [ "GameRuleData", "class_game_rule_data.html", [
       [ "BookData", "class_book_data.html", null ],
       [ "LanguageCategoryData", "class_language_category_data.html", null ],

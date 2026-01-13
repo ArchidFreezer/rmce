@@ -50,6 +50,13 @@ var namespaces_dup =
       [ "operator<<", "namespace_critical_type.html#aaf4b519542f7dab4d0719845732e3499", null ],
       [ "toString", "namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00", null ]
     ] ],
+    [ "Random", "namespace_random.html", [
+      [ "generate", "namespace_random.html#a00531c42906741611a38c489e8723280", null ],
+      [ "get", "namespace_random.html#a47378d26d412b6b6238c03a27f33a04f", null ],
+      [ "get", "namespace_random.html#ac0711bde793b216f2b241d2587db2b1d", null ],
+      [ "get", "namespace_random.html#a23e711619804cd68f6732e0b3dd8059e", null ],
+      [ "mt", "namespace_random.html#aa4354db31fa7d64040939b905ab12ee1", null ]
+    ] ],
     [ "RealmType", "namespace_realm_type.html", [
       [ "Type", "namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8", [
         [ "kArcane", "namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8ab3d0636957c6f093c040ecdf1648ab6f", null ],
