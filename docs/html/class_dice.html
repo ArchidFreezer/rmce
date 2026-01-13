@@ -101,52 +101,81 @@ $(function(){initNavTree('class_dice.html','','class_dice-members'); });
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7509585b71b23823f0ce2e24c94d222b" id="r_a7509585b71b23823f0ce2e24c94d222b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7509585b71b23823f0ce2e24c94d222b">Dice</a> (int <a class="el" href="#aaa356bf6d3416f4eec98207bbe7dbc48">sides</a>)</td></tr>
-<tr class="memdesc:a7509585b71b23823f0ce2e24c94d222b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memdesc:a7509585b71b23823f0ce2e24c94d222b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that does not allow open ended rolls.  <br /></td></tr>
 <tr class="memitem:a5cd66ae7b1346b78d293f6c2d98d18b5" id="r_a5cd66ae7b1346b78d293f6c2d98d18b5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5cd66ae7b1346b78d293f6c2d98d18b5">Dice</a> (int <a class="el" href="#aaa356bf6d3416f4eec98207bbe7dbc48">sides</a>, int open_ended_range)</td></tr>
-<tr class="memdesc:a5cd66ae7b1346b78d293f6c2d98d18b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memdesc:a5cd66ae7b1346b78d293f6c2d98d18b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that allows open ended rolls.  <br /></td></tr>
 <tr class="memitem:a2686e68cf797d06616e92b95522d7e2a" id="r_a2686e68cf797d06616e92b95522d7e2a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2686e68cf797d06616e92b95522d7e2a">Dice</a> (int <a class="el" href="#aaa356bf6d3416f4eec98207bbe7dbc48">sides</a>, int open_ended_high_range, int open_ended_low_range)</td></tr>
-<tr class="memdesc:a2686e68cf797d06616e92b95522d7e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memdesc:a2686e68cf797d06616e92b95522d7e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that allows control of which open ended rolls may be made.  <br /></td></tr>
 <tr class="memitem:a283a1d67202dbe120f7b1f2facfdc1ac" id="r_a283a1d67202dbe120f7b1f2facfdc1ac"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a283a1d67202dbe120f7b1f2facfdc1ac">minOpenHigh</a> () const</td></tr>
-<tr class="memdesc:a283a1d67202dbe120f7b1f2facfdc1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number at which an open-ended high roll is triggered. If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll which is below this is rolled.  <br /></td></tr>
+<tr class="memdesc:a283a1d67202dbe120f7b1f2facfdc1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number at which an open ended high roll is triggered. If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll which is below this is rolled.  <br /></td></tr>
 <tr class="memitem:a2cc7ef17ea454a3f79c149340183d9e1" id="r_a2cc7ef17ea454a3f79c149340183d9e1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2cc7ef17ea454a3f79c149340183d9e1">setMinOpenHigh</a> (int min_open_high)</td></tr>
-<tr class="memdesc:a2cc7ef17ea454a3f79c149340183d9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number at which an open-ended high roll is triggered. If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll which is below this is rolled.  <br /></td></tr>
+<tr class="memdesc:a2cc7ef17ea454a3f79c149340183d9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number at which an open ended high roll is triggered. If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll which is below this is rolled.  <br /></td></tr>
 <tr class="memitem:a0914b010f7777a2b5508b1760a52e884" id="r_a0914b010f7777a2b5508b1760a52e884"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0914b010f7777a2b5508b1760a52e884">maxOpenLow</a> () const</td></tr>
-<tr class="memdesc:a0914b010f7777a2b5508b1760a52e884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number at which an open-ended low roll is triggered. If the dice roll is this value or lower then the dice are re-rolled open-ended high and the new roll subtracted from the existing value.  <br /></td></tr>
+<tr class="memdesc:a0914b010f7777a2b5508b1760a52e884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number at which an open ended low roll is triggered. If the dice roll is this value or lower then the dice are re-rolled open ended high and the new roll subtracted from the existing value.  <br /></td></tr>
 <tr class="memitem:ab2cfc994f6a75e2c0f8cbb8a77bb9cc1" id="r_ab2cfc994f6a75e2c0f8cbb8a77bb9cc1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab2cfc994f6a75e2c0f8cbb8a77bb9cc1">setMaxOpenLow</a> (int max_open_low)</td></tr>
-<tr class="memdesc:ab2cfc994f6a75e2c0f8cbb8a77bb9cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number at which an open-ended low roll is triggered. If the dice roll is this value or lower then the dice are re-rolled open-ended high and the new roll subtracted from the existing value.  <br /></td></tr>
+<tr class="memdesc:ab2cfc994f6a75e2c0f8cbb8a77bb9cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number at which an open ended low roll is triggered. If the dice roll is this value or lower then the dice are re-rolled open ended high and the new roll subtracted from the existing value.  <br /></td></tr>
 <tr class="memitem:aaa356bf6d3416f4eec98207bbe7dbc48" id="r_aaa356bf6d3416f4eec98207bbe7dbc48"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aaa356bf6d3416f4eec98207bbe7dbc48">sides</a> () const</td></tr>
 <tr class="memdesc:aaa356bf6d3416f4eec98207bbe7dbc48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of sides currently configured on the dice.  <br /></td></tr>
 <tr class="memitem:a6e19f02119b4bc52f53b416fb1b49ed9" id="r_a6e19f02119b4bc52f53b416fb1b49ed9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6e19f02119b4bc52f53b416fb1b49ed9">setSides</a> (int <a class="el" href="#aaa356bf6d3416f4eec98207bbe7dbc48">sides</a>)</td></tr>
 <tr class="memdesc:a6e19f02119b4bc52f53b416fb1b49ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of sides of the dice to use.  <br /></td></tr>
-<tr class="memitem:a7ea78182f2098afa9624ec4a2f20aae7" id="r_a7ea78182f2098afa9624ec4a2f20aae7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7ea78182f2098afa9624ec4a2f20aae7">roll</a> (bool open_ended=true) const</td></tr>
-<tr class="memdesc:a7ea78182f2098afa9624ec4a2f20aae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll them bones.  <br /></td></tr>
-<tr class="memitem:a756d14d6a845c647a41a7f85b29ad4ad" id="r_a756d14d6a845c647a41a7f85b29ad4ad"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a756d14d6a845c647a41a7f85b29ad4ad">roll</a> (int num_dice) const</td></tr>
-<tr class="memdesc:a756d14d6a845c647a41a7f85b29ad4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll multiple dice.  <br /></td></tr>
-<tr class="memitem:acdb7a433957cb4c05adfb3b87c3f48c1" id="r_acdb7a433957cb4c05adfb3b87c3f48c1"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acdb7a433957cb4c05adfb3b87c3f48c1">rollOpenHigh</a> () const</td></tr>
-<tr class="memdesc:acdb7a433957cb4c05adfb3b87c3f48c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an open ended high roll.  <br /></td></tr>
-<tr class="memitem:afe1271a8cfb632ceea097c6037a58124" id="r_afe1271a8cfb632ceea097c6037a58124"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#afe1271a8cfb632ceea097c6037a58124">rollOpenLow</a> () const</td></tr>
-<tr class="memdesc:afe1271a8cfb632ceea097c6037a58124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an open ended low roll.  <br /></td></tr>
-<tr class="memitem:ab92266aa68eb5301abd4eeac7a6f5bae" id="r_ab92266aa68eb5301abd4eeac7a6f5bae"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab92266aa68eb5301abd4eeac7a6f5bae">rollOpenEnded</a> () const</td></tr>
-<tr class="memdesc:ab92266aa68eb5301abd4eeac7a6f5bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an open ended roll.  <br /></td></tr>
+<tr class="memitem:a3720f49eb14428369bc6289cdae2c404" id="r_a3720f49eb14428369bc6289cdae2c404"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a3720f49eb14428369bc6289cdae2c404">result</a> () const</td></tr>
+<tr class="memdesc:a3720f49eb14428369bc6289cdae2c404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the total value of the last dice roll.  <br /></td></tr>
+<tr class="memitem:ab4355c9c99b5d2fd82893a08cfc1e740" id="r_ab4355c9c99b5d2fd82893a08cfc1e740"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab4355c9c99b5d2fd82893a08cfc1e740">unmodified</a> () const</td></tr>
+<tr class="memdesc:ab4355c9c99b5d2fd82893a08cfc1e740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unmodified first roll value of the last dice roll.  <br /></td></tr>
+<tr class="memitem:aefa156949b8d3f9b2a4bbced23311a0a" id="r_aefa156949b8d3f9b2a4bbced23311a0a"><td class="memItemLeft"><a class="el" href="class_dice.html">Dice</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aefa156949b8d3f9b2a4bbced23311a0a">roll</a> (bool open_ended=true)</td></tr>
+<tr class="memdesc:aefa156949b8d3f9b2a4bbced23311a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll them bones.  <br /></td></tr>
+<tr class="memitem:a7752a14ec4f8c3fd81eef71c467b6905" id="r_a7752a14ec4f8c3fd81eef71c467b6905"><td class="memItemLeft"><a class="el" href="class_dice.html">Dice</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7752a14ec4f8c3fd81eef71c467b6905">roll</a> (int num_dice)</td></tr>
+<tr class="memdesc:a7752a14ec4f8c3fd81eef71c467b6905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll multiple dice.  <br /></td></tr>
+<tr class="memitem:a2fc5e8d8534a4b20fefffad328caf1af" id="r_a2fc5e8d8534a4b20fefffad328caf1af"><td class="memItemLeft"><a class="el" href="class_dice.html">Dice</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2fc5e8d8534a4b20fefffad328caf1af">rollOpenHigh</a> ()</td></tr>
+<tr class="memdesc:a2fc5e8d8534a4b20fefffad328caf1af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an open ended high roll.  <br /></td></tr>
+<tr class="memitem:a09d3dbfc32d278e9646421ae01b60677" id="r_a09d3dbfc32d278e9646421ae01b60677"><td class="memItemLeft"><a class="el" href="class_dice.html">Dice</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a09d3dbfc32d278e9646421ae01b60677">rollOpenLow</a> ()</td></tr>
+<tr class="memdesc:a09d3dbfc32d278e9646421ae01b60677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an open ended low roll.  <br /></td></tr>
+<tr class="memitem:a9100da1340be0f754e7a907f18dd7ed1" id="r_a9100da1340be0f754e7a907f18dd7ed1"><td class="memItemLeft"><a class="el" href="class_dice.html">Dice</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9100da1340be0f754e7a907f18dd7ed1">rollOpenEnded</a> ()</td></tr>
+<tr class="memdesc:a9100da1340be0f754e7a907f18dd7ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an open ended roll.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a single die object. </p>
-<p>The dice may be rolled as a standard die with an equal spread of results from 1 to the number of sides.</p>
-<p>Additionally the dice may be rolled as open ended which is a scenario where if the rolled number is close to the edge values it is rolled again and the subsequent result add/subtracted. A typical example is for D100 rolls where the top and bottom 5 results (1-5 and 96-100) casue the dice to be rolled again. In the case of an open-ended low roll the resulting number is subtracted rather than added. When an open-ended roll is triggered, either high or low, rolls continue to be made and summed until one results in a value less than the open-ended high value.</p>
-<p>Some examples follow:</p><ul>
-<li>Roll 1: 03 (open-ended low range triggers extra roll)</li>
-<li>Roll 2: 47 (not in open-ended high range so we stop here)</li>
+<p>The dice may be rolled as a standard die with an equal spread of results from 1 to the number of sides or open ended which is a scenario where if the rolled number is close to the edge values it is rolled again and the subsequent result added/subtracted.</p>
+<p>The methods to roll the dice return a reference to the dice object itself rather than the result as there are cases where we want both the result of an open ended roll, plus the initial unmodified results. Both these values may be retrieved following a roll using the <a class="el" href="#a3720f49eb14428369bc6289cdae2c404" title="Gets the total value of the last dice roll.">result()</a> and <a class="el" href="#ab4355c9c99b5d2fd82893a08cfc1e740" title="Gets the unmodified first roll value of the last dice roll.">unmodified()</a> methods.</p>
+<div class="fragment"><div class="line"><span class="comment">// Roll a single 6 sided dice (D6) and get the result</span></div>
+<div class="line"><a class="code hl_function" href="#a7509585b71b23823f0ce2e24c94d222b">Dice</a>(6).roll().result();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Roll 2D6</span></div>
+<div class="line"><a class="code hl_function" href="#a7509585b71b23823f0ce2e24c94d222b">Dice</a>(6).roll(2).result();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Roll an open ended D100 with the top and bottom 5 numbers triggering an open ended roll and retrieving both</span></div>
+<div class="line"><span class="comment">// unmodifed roll and the total with any open ended rolls added.</span></div>
+<div class="line"><a class="code hl_function" href="#a7509585b71b23823f0ce2e24c94d222b">Dice</a>(100,5) d100{};</div>
+<div class="line"><span class="keywordtype">int</span> total = d100.roll().result();</div>
+<div class="line"><span class="keywordtype">int</span> unmod = d100.unmodified();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Roll an open ended high D100 with the top 5 numbers triggering an open ended roll and retrieving both unmodifed roll</span></div>
+<div class="line"><span class="comment">// and the total with any open ended rolls added</span></div>
+<div class="line"><a class="code hl_function" href="#a7509585b71b23823f0ce2e24c94d222b">Dice</a>(100,5) d100{};</div>
+<div class="line"><span class="keywordtype">int</span> total = d100.rollOpenHigh().result();</div>
+<div class="line"><span class="keywordtype">int</span> unmod = d100.unmodified();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// An alternative for open ended high only would be to use a different constructor which prevents any open low rolls.</span></div>
+<div class="line"><span class="comment">// This would, however, prevent this d100 object from being used for open ended low rolls later</span></div>
+<div class="line"><a class="code hl_function" href="#a7509585b71b23823f0ce2e24c94d222b">Dice</a>(100,5,0) d100{};</div>
+<div class="line"><span class="keywordtype">int</span> total = d100.roll().result();</div>
+<div class="line"><span class="keywordtype">int</span> unmod = d100.unmodified();</div>
+<div class="ttc" id="aclass_dice_html_a7509585b71b23823f0ce2e24c94d222b"><div class="ttname"><a href="#a7509585b71b23823f0ce2e24c94d222b">Dice::Dice</a></div><div class="ttdeci">Dice(int sides)</div><div class="ttdoc">Constructor that does not allow open ended rolls.</div></div>
+</div><!-- fragment --><p>A typical example is for D100 rolls where the top and bottom 5 results (1-5 and 96-100) cause the dice to be rolled again. In the case of an open ended low roll the resulting number is subtracted rather than added. When an open ended roll is triggered, either high or low, rolls continue to be made and summed until one results in a value less than the open ended high value.</p>
+<p>Some examples of open ended rolls follow:</p><ul>
+<li>Roll 1: 03 (open ended low range triggers extra roll)</li>
+<li>Roll 2: 47 (not in open ended high range so we stop here)</li>
 <li>Result: 03 - 47 = -44</li>
 </ul>
 <ul>
-<li>Roll 1: 03 (open-ended low range triggers extra roll)</li>
-<li>Roll 2: 97 (open-ended-high range so roll again)</li>
-<li>Roll 3: 68 (not in open-ended high range so we stop here)</li>
+<li>Roll 1: 03 (open ended low range triggers extra roll)</li>
+<li>Roll 2: 97 (open ended high range so roll again)</li>
+<li>Roll 3: 68 (not in open ended high range so we stop here)</li>
 <li>Result: 03 - 97 - 68 = -162</li>
 </ul>
 <ul>
-<li>Roll 1: 98 (open-ended high range triggers extra roll)</li>
-<li>Roll 2: 04 (not in open-ended high range so we stop here)</li>
+<li>Roll 1: 98 (open ended high range triggers extra roll)</li>
+<li>Roll 2: 04 (not in open ended high range so we stop here)</li>
 <li>Result: 98 + 04 = 102 </li>
 </ul>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -165,7 +194,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor. </p>
+<p>Constructor that does not allow open ended rolls. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sides</td><td>Number of sides on the dice </td></tr>
@@ -194,11 +223,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor. </p>
+<p>Constructor that allows open ended rolls. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sides</td><td>Number of sides on the dice </td></tr>
-    <tr><td class="paramname">open_ended_range</td><td>The range of numbers at the top and bottom end that will trigger an open-ended roll Use a value of 0 to disable open-ended rolls </td></tr>
+    <tr><td class="paramname">open_ended_range</td><td>The range of numbers at the top and bottom end that will trigger an open ended roll Use a value of 0 to disable open ended rolls </td></tr>
   </table>
   </dd>
 </dl>
@@ -229,12 +258,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor. </p>
+<p>Constructor that allows control of which open ended rolls may be made. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sides</td><td>Number of sides on the dice </td></tr>
-    <tr><td class="paramname">open_ended_high_range</td><td>The range of numbers at the top end that will trigger an open-ended high roll; 0 to disable </td></tr>
-    <tr><td class="paramname">open_ended_low_range</td><td>The range of numbers at the top end that will trigger an open-ended low roll; 0 to disable </td></tr>
+    <tr><td class="paramname">open_ended_high_range</td><td>The range of numbers at the top end that will trigger an open ended high roll; 0 to disable </td></tr>
+    <tr><td class="paramname">open_ended_low_range</td><td>The range of numbers at the bottom end that will trigger an open ended low roll; 0 to disable </td></tr>
   </table>
   </dd>
 </dl>
@@ -265,7 +294,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the number at which an open-ended low roll is triggered. If the dice roll is this value or lower then the dice are re-rolled open-ended high and the new roll subtracted from the existing value. </p>
+<p>Gets the number at which an open ended low roll is triggered. If the dice roll is this value or lower then the dice are re-rolled open ended high and the new roll subtracted from the existing value. </p>
 <dl class="section return"><dt>Returns</dt><dd>the maximum value to trigger another roll </dd></dl>
 
 </div>
@@ -293,22 +322,50 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the number at which an open-ended high roll is triggered. If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll which is below this is rolled. </p>
+<p>Gets the number at which an open ended high roll is triggered. If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll which is below this is rolled. </p>
 <dl class="section return"><dt>Returns</dt><dd>the minimum value to trigger another roll </dd></dl>
 
 </div>
 </div>
-<a id="a7ea78182f2098afa9624ec4a2f20aae7" name="a7ea78182f2098afa9624ec4a2f20aae7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ea78182f2098afa9624ec4a2f20aae7">&#9670;&#160;</a></span>roll() <span class="overload">[1/2]</span></h2>
+<a id="a3720f49eb14428369bc6289cdae2c404" name="a3720f49eb14428369bc6289cdae2c404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3720f49eb14428369bc6289cdae2c404">&#9670;&#160;</a></span>result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Dice::result </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the total value of the last dice roll. </p>
+<dl class="section return"><dt>Returns</dt><dd>int <a class="el" href="class_dice.html" title="Represents a single die object.">Dice</a> roll value, including any open ended rolls </dd></dl>
+
+</div>
+</div>
+<a id="aefa156949b8d3f9b2a4bbced23311a0a" name="aefa156949b8d3f9b2a4bbced23311a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa156949b8d3f9b2a4bbced23311a0a">&#9670;&#160;</a></span>roll() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Dice::roll </td>
+          <td class="memname"><a class="el" href="class_dice.html">Dice</a> &amp; Dice::roll </td>
           <td>(</td>
           <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>open_ended</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -317,25 +374,25 @@ Public Member Functions</h2></td></tr>
 <p>Defaults to open ended rolls, use the parameter to prevent this.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">open_ended</td><td><span class="tt">true</span> to roll open-ended; <span class="tt">false</span> otherwse </td></tr>
+    <tr><td class="paramname">open_ended</td><td><span class="tt">true</span> to roll open ended; <span class="tt">false</span> otherwse </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The result of the dice roll </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to this dice object </dd></dl>
 
 </div>
 </div>
-<a id="a756d14d6a845c647a41a7f85b29ad4ad" name="a756d14d6a845c647a41a7f85b29ad4ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a756d14d6a845c647a41a7f85b29ad4ad">&#9670;&#160;</a></span>roll() <span class="overload">[2/2]</span></h2>
+<a id="a7752a14ec4f8c3fd81eef71c467b6905" name="a7752a14ec4f8c3fd81eef71c467b6905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7752a14ec4f8c3fd81eef71c467b6905">&#9670;&#160;</a></span>roll() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Dice::roll </td>
+          <td class="memname"><a class="el" href="class_dice.html">Dice</a> &amp; Dice::roll </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_dice</em></span></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -348,79 +405,79 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The result of the dice roll </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to this dice object </dd></dl>
 
 </div>
 </div>
-<a id="ab92266aa68eb5301abd4eeac7a6f5bae" name="ab92266aa68eb5301abd4eeac7a6f5bae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab92266aa68eb5301abd4eeac7a6f5bae">&#9670;&#160;</a></span>rollOpenEnded()</h2>
+<a id="a9100da1340be0f754e7a907f18dd7ed1" name="a9100da1340be0f754e7a907f18dd7ed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9100da1340be0f754e7a907f18dd7ed1">&#9670;&#160;</a></span>rollOpenEnded()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Dice::rollOpenEnded </td>
+          <td class="memname"><a class="el" href="class_dice.html">Dice</a> &amp; Dice::rollOpenEnded </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns an open ended roll. </p>
 <p>If the initial roll is greater than getMinOpenHigh() then an additional open ended high roll is made and the value added. If the initial roll is between 1 and getMaxOpenLow() then an additional open ended high roll is made and the value subtracted.</p>
-<dl class="section return"><dt>Returns</dt><dd>int result of roll </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#acdb7a433957cb4c05adfb3b87c3f48c1" title="Returns an open ended high roll.">rollOpenHigh()</a> </dd>
+<dl class="section return"><dt>Returns</dt><dd>Reference to this dice object </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2fc5e8d8534a4b20fefffad328caf1af" title="Returns an open ended high roll.">rollOpenHigh()</a> </dd>
 <dd>
-<a class="el" href="#afe1271a8cfb632ceea097c6037a58124" title="Returns an open ended low roll.">rollOpenLow()</a> </dd></dl>
+<a class="el" href="#a09d3dbfc32d278e9646421ae01b60677" title="Returns an open ended low roll.">rollOpenLow()</a> </dd></dl>
 
 </div>
 </div>
-<a id="acdb7a433957cb4c05adfb3b87c3f48c1" name="acdb7a433957cb4c05adfb3b87c3f48c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdb7a433957cb4c05adfb3b87c3f48c1">&#9670;&#160;</a></span>rollOpenHigh()</h2>
+<a id="a2fc5e8d8534a4b20fefffad328caf1af" name="a2fc5e8d8534a4b20fefffad328caf1af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc5e8d8534a4b20fefffad328caf1af">&#9670;&#160;</a></span>rollOpenHigh()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Dice::rollOpenHigh </td>
+          <td class="memname"><a class="el" href="class_dice.html">Dice</a> &amp; Dice::rollOpenHigh </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns an open ended high roll. </p>
 <p>If the initial result of the roll is greater than getMinOpenHigh() then the dice is re-rolled and the value of this roll added. This continues until a roll of less than getMinOpenHigh() is made.</p>
-<dl class="section return"><dt>Returns</dt><dd>int result of roll </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#afe1271a8cfb632ceea097c6037a58124" title="Returns an open ended low roll.">rollOpenLow()</a> </dd>
+<dl class="section return"><dt>Returns</dt><dd>Reference to this dice object </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a09d3dbfc32d278e9646421ae01b60677" title="Returns an open ended low roll.">rollOpenLow()</a> </dd>
 <dd>
-<a class="el" href="#ab92266aa68eb5301abd4eeac7a6f5bae" title="Returns an open ended roll.">rollOpenEnded()</a> </dd></dl>
+<a class="el" href="#a9100da1340be0f754e7a907f18dd7ed1" title="Returns an open ended roll.">rollOpenEnded()</a> </dd></dl>
 
 </div>
 </div>
-<a id="afe1271a8cfb632ceea097c6037a58124" name="afe1271a8cfb632ceea097c6037a58124"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe1271a8cfb632ceea097c6037a58124">&#9670;&#160;</a></span>rollOpenLow()</h2>
+<a id="a09d3dbfc32d278e9646421ae01b60677" name="a09d3dbfc32d278e9646421ae01b60677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09d3dbfc32d278e9646421ae01b60677">&#9670;&#160;</a></span>rollOpenLow()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Dice::rollOpenLow </td>
+          <td class="memname"><a class="el" href="class_dice.html">Dice</a> &amp; Dice::rollOpenLow </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns an open ended low roll. </p>
 <p>If the initial result of the roll is between 1 and getMaxOpenLow() then the dice is re-rolled open ended high and the value of this roll subtracted.</p>
-<dl class="section return"><dt>Returns</dt><dd>int result of roll </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#acdb7a433957cb4c05adfb3b87c3f48c1" title="Returns an open ended high roll.">rollOpenHigh()</a> </dd>
+<dl class="section return"><dt>Returns</dt><dd>Reference to this dice object </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2fc5e8d8534a4b20fefffad328caf1af" title="Returns an open ended high roll.">rollOpenHigh()</a> </dd>
 <dd>
-<a class="el" href="#ab92266aa68eb5301abd4eeac7a6f5bae" title="Returns an open ended roll.">rollOpenEnded()</a> </dd></dl>
+<a class="el" href="#a9100da1340be0f754e7a907f18dd7ed1" title="Returns an open ended roll.">rollOpenEnded()</a> </dd></dl>
 
 </div>
 </div>
@@ -447,7 +504,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the number at which an open-ended low roll is triggered. If the dice roll is this value or lower then the dice are re-rolled open-ended high and the new roll subtracted from the existing value. </p>
+<p>Sets the number at which an open ended low roll is triggered. If the dice roll is this value or lower then the dice are re-rolled open ended high and the new roll subtracted from the existing value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">max_open_low</td><td>The maximum value to trigger another roll </td></tr>
@@ -480,7 +537,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the number at which an open-ended high roll is triggered. If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll which is below this is rolled. </p>
+<p>Sets the number at which an open ended high roll is triggered. If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll which is below this is rolled. </p>
 <p>If <span class="tt">min_open_high</span> &lt; 0 then the minimum will be set to 0</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -551,6 +608,34 @@ Public Member Functions</h2></td></tr>
 <p>Returns the number of sides currently configured on the dice. </p>
 <p>When rolling the dice a number will be returned between 1 and this number.</p>
 <dl class="section return"><dt>Returns</dt><dd>int number of sides </dd></dl>
+
+</div>
+</div>
+<a id="ab4355c9c99b5d2fd82893a08cfc1e740" name="ab4355c9c99b5d2fd82893a08cfc1e740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4355c9c99b5d2fd82893a08cfc1e740">&#9670;&#160;</a></span>unmodified()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Dice::unmodified </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the unmodified first roll value of the last dice roll. </p>
+<p>This function gets the initial dice roll value before any open ended rolls are applied </p><dl class="section return"><dt>Returns</dt><dd>int <a class="el" href="class_dice.html" title="Represents a single die object.">Dice</a> roll value, excluding any open ended rolls </dd></dl>
 
 </div>
 </div>

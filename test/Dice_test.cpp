@@ -6,9 +6,10 @@ namespace {
 
 	int get_max_roll(Dice& die, int num_rolls, bool open) {
 		int result{ 0 };
+		int threshold = die.sides();
 
 		for (int i{ 0 }; i < num_rolls; i++) {
-			result = std::max(result, die.roll(open));
+			result = std::max(result, die.roll(open).result());
 		}
 		return result;
 	}
@@ -17,7 +18,7 @@ namespace {
 		int result{ die.sides() + 1 };
 
 		for (int i{ 0 }; i < num_rolls; i++) {
-			result = std::min(result, die.roll(open));
+			result = std::min(result, die.roll(open).result());
 		}
 		return result;
 	}
@@ -26,7 +27,7 @@ namespace {
 		int result{ 0 };
 
 		for (int i{ 0 }; i < num_rolls; i++) {
-			result = std::max(result, die.rollOpenEnded());
+			result = std::max(result, die.rollOpenEnded().result());
 		}
 		return result;
 	}
@@ -35,7 +36,7 @@ namespace {
 		int result{ die.sides() + 1 };
 
 		for (int i{ 0 }; i < num_rolls; i++) {
-			result = std::min(result, die.rollOpenEnded());
+			result = std::min(result, die.rollOpenEnded().result());
 		}
 		return result;
 	}
@@ -44,7 +45,7 @@ namespace {
 		int result{ 0 };
 
 		for (int i{ 0 }; i < num_rolls; i++) {
-			result = std::max(result, die.rollOpenHigh());
+			result = std::max(result, die.rollOpenHigh().result());
 		}
 		return result;
 	}
@@ -53,7 +54,7 @@ namespace {
 		int result{ die.sides() + 1 };
 
 		for (int i{ 0 }; i < num_rolls; i++) {
-			result = std::max(result, die.rollOpenHigh());
+			result = std::max(result, die.rollOpenHigh().result());
 		}
 		return result;
 	}
@@ -62,7 +63,7 @@ namespace {
 		int result{ 0 };
 
 		for (int i{ 0 }; i < num_rolls; i++) {
-			result = std::max(result, die.rollOpenLow());
+			result = std::max(result, die.rollOpenLow().result());
 		}
 		return result;
 	}
@@ -71,7 +72,7 @@ namespace {
 		int result{ die.sides() + 1 };
 
 		for (int i{ 0 }; i < num_rolls; i++) {
-			result = std::min(result, die.rollOpenLow());
+			result = std::min(result, die.rollOpenLow().result());
 		}
 		return result;
 	}
@@ -111,5 +112,15 @@ namespace {
 		Dice d6(6, 1);
 		EXPECT_LE(get_max_roll_ol(d6, 50), 6);
 		EXPECT_LT(get_min_roll_ol(d6, 50), 1);
+	}
+
+	TEST(Dice, Unmodifed) {
+		Dice d6(6, 1);
+		bool unmodified_different{ false };
+		for (int i{ 0 }; i < 50 && !unmodified_different; i++) {
+			d6.rollOpenHigh();
+			unmodified_different = (d6.unmodified() < d6.result());
+		}
+		EXPECT_TRUE(unmodified_different);
 	}
 }

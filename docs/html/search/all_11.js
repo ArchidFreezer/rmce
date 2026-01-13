@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zero_0',['zero',['../class_skill_progression_type_data.html#a065ce1356c42b1169dceafa14a137cdb',1,'SkillProgressionTypeData']]]
+  ['unmodified_0',['unmodified',['../class_dice.html#ab4355c9c99b5d2fd82893a08cfc1e740',1,'Dice']]]
 ];
