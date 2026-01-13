@@ -17,3 +17,11 @@
  * @return std::string of the parameter in lowercase
  */
 const std::string lcase(std::string_view sv);
+
+/** 
+ * @brief Creates a lowercase string, removing all non alphanum characters
+ * 
+ * @param sv string_view to transform
+ * @return std::string lowercase string with all non alphanum characters removed
+ */
+const std::string lcaseconcat(std::string_view sv);

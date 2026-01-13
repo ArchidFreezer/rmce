@@ -32,6 +32,7 @@ var NAVTREEINDEX0 =
 "_stat_loss_type_8h_source.html":[2,0,2,19],
 "_stat_type_8h_source.html":[2,0,2,20],
 "_string_utils_8h.html":[2,0,0,3],
+"_string_utils_8h.html#a31cee08b448da5eaab597ae9aa8d9424":[2,0,0,3,1],
 "_string_utils_8h.html#acd53b635966070e138dea419304de22f":[2,0,0,3,0],
 "_string_utils_8h_source.html":[2,0,0,3],
 "annotated.html":[1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aece059b52386d38cd6da9729cca08b4e":[0,0,2,1,14],
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1af329fb93dca56544a1f81e4df7b663c7":[0,0,2,1,8],
 "namespace_critical_type.html#aaf4b519542f7dab4d0719845732e3499":[0,0,2,3],
-"namespace_critical_type.html#adc01bddbdf0713049439ccbe09c5fdc0":[0,0,2,2],
-"namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00":[0,0,2,4]
+"namespace_critical_type.html#adc01bddbdf0713049439ccbe09c5fdc0":[0,0,2,2]
 };

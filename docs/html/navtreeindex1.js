@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00":[0,0,2,4],
 "namespace_random.html":[0,0,3],
 "namespace_random.html#a00531c42906741611a38c489e8723280":[0,0,3,0],
 "namespace_random.html#a23e711619804cd68f6732e0b3dd8059e":[0,0,3,3],
