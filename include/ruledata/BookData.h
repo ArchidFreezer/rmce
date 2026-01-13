@@ -34,7 +34,7 @@ public:
 
 	/**
 	 * @brief Set the book reference number from the publisher
-	 * @param id Book reference number
+	 * @param code Book reference number
 	 */
 	inline void setCode(std::string_view code) { code_ = code; }
 	/**

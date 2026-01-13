@@ -72,7 +72,7 @@ public:
 
 	/**
 	 * @brief Set the bonus provided per rank for between 11 and 20 ranks
-	 * @param ten Bonus provided per rank for between 11 and 20 ranks
+	 * @param twenty Bonus provided per rank for between 11 and 20 ranks
 	 */
 	inline void setTwenty(float twenty) { twenty_ = twenty; }
 	/**
@@ -83,7 +83,7 @@ public:
 
 	/**
 	 * @brief Set the bonus provided per rank for between 21 and 30 ranks
-	 * @param ten Bonus provided per rank for between 21 and 30 ranks
+	 * @param thirty Bonus provided per rank for between 21 and 30 ranks
 	 */
 	inline void setThirty(float thirty) { thirty_ = thirty; }
 	/**
@@ -94,7 +94,7 @@ public:
 
 	/**
 	 * @brief Set the bonus provided per rank above 30
-	 * @param ten Bonus provided per rank above 30
+	 * @param remaining Bonus provided per rank above 30
 	 */
 	inline void setRemaining(float remaining) { remaining_ = remaining; }
 	/**

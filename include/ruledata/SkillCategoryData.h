@@ -56,7 +56,7 @@ class SkillCategoryData : public GameRuleData {
 public:
 	/**
 	 * @brief Constructor
-	 * @param group Skill group that the category belongs to
+	 * @param id Unique identifier of the skill category
 	 */
 	SkillCategoryData(std::string_view id);
 
@@ -139,7 +139,7 @@ public:
 	 * Any attempt to set another combination will throw an exception
 	 * 
 	 * @param skillProgression SkillProgressionTypeData&  progression to set for skills in the category
-	 * @param skillProgression SkillProgressionTypeData&  progression to set for the category
+	 * @param categoryProgression SkillProgressionTypeData&  progression to set for the category
 	 * 
 	 * @throws InvalidSkillProgression if the combination of progressions is invalid
 	 */
