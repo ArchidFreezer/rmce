@@ -27,17 +27,13 @@ const std::string CriticalType::toString(Type type) {
 const std::optional<CriticalType::Type> CriticalType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcase(sv);
+	const std::string& val = lcaseconcat(sv);
 	if (val == "brawling") return kBrawling;
 	if (val == "grapple") return kGrapple;
 	if (val == "impact") return kImpact;
 	if (val == "krush") return kKrush;
 	if (val == "martialartsstrikes") return kMartialArtsStrikes;
-	if (val == "martial_arts_strikes") return kMartialArtsStrikes;
-	if (val == "martial arts strikes") return kMartialArtsStrikes;
 	if (val == "martialartssweeps") return kMartialArtsSweeps;
-	if (val == "martial_arts_sweeps") return kMartialArtsSweeps;
-	if (val == "martial arts sweeps") return kMartialArtsSweeps;
 	if (val == "puncture") return kPuncture;
 	if (val == "slash") return kSlash;
 	if (val == "subdual") return kSubdual;

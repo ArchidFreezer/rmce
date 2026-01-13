@@ -21,7 +21,7 @@ const std::string StatType::toString(Type stat) {
 const std::optional<StatType::Type> StatType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcase(sv);
+	const std::string& val = lcaseconcat(sv);
 	if (val == "agility") return kAgility;
 	if (val == "constitution") return kConstitution;
 	if (val == "empathy") return kEmpathy;
@@ -31,8 +31,6 @@ const std::optional<StatType::Type> StatType::fromString(std::string_view sv) {
 	if (val == "quickness") return kQuickness;
 	if (val == "reasoning") return kReasoning;
 	if (val == "selfdiscipline") return kSelfDiscipline;
-	if (val == "self_discipline") return kSelfDiscipline;
-	if (val == "self discipline") return kSelfDiscipline;
 	if (val == "strength") return kStrength;
 
 	return {};

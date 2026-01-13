@@ -23,28 +23,19 @@ const std::string ResistanceType::toString(Type resistance) {
 const std::optional<ResistanceType::Type> ResistanceType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcase(sv);
-	if (val == "Arcane") return kArcane;
-	if (val == "Channeling") return kChanneling;
-	if (val == "Channeling/Essence") return kChannelingEssence;
-	if (val == "Channeling Essence") return kChannelingEssence;
-	if (val == "ChannelingEssence") return kChannelingEssence;
-	if (val == "Channeling_Essence") return kChannelingEssence;
-	if (val == "Channeling/Mentalism") return kChannelingMentalism;
-	if (val == "Channeling Mentalism") return kChannelingMentalism;
-	if (val == "ChannelingMentalism") return kChannelingMentalism;
-	if (val == "Channeling_Mentalism") return kChannelingMentalism;
-	if (val == "Cold") return kCold;
-	if (val == "Disease") return kDisease;
-	if (val == "Essence") return kEssence;
-	if (val == "Essence/Mentalism") return kEssenceMentalism;
-	if (val == "Essence Mentalism") return kEssenceMentalism;
-	if (val == "EssenceMentalism") return kEssenceMentalism;
-	if (val == "Essence_Mentalism") return kEssenceMentalism;
-	if (val == "Fear") return kFear;
-	if (val == "Heat") return kHeat;
-	if (val == "Mentalism") return kMentalism;
-	if (val == "Poison") return kPoison;
+	const std::string& val = lcaseconcat(sv);
+	if (val == "arcane") return kArcane;
+	if (val == "channeling") return kChanneling;
+	if (val == "channelingessence") return kChannelingEssence;
+	if (val == "channelingmentalism") return kChannelingMentalism;
+	if (val == "cold") return kCold;
+	if (val == "disease") return kDisease;
+	if (val == "essence") return kEssence;
+	if (val == "essencementalism") return kEssenceMentalism;
+	if (val == "fear") return kFear;
+	if (val == "heat") return kHeat;
+	if (val == "mentalism") return kMentalism;
+	if (val == "poison") return kPoison;
 
 	return {};
 }

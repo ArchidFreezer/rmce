@@ -15,7 +15,7 @@ const std::string SkillDevelopmentType::toString(Type type) {
 const std::optional<SkillDevelopmentType::Type> SkillDevelopmentType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcase(sv);
+	const std::string& val = lcaseconcat(sv);
 	if (val == "everyman") return kEveryman;
 	if (val == "occupational") return kOccupational;
 	if (val == "restricted") return kRestricted;

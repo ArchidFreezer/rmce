@@ -16,13 +16,11 @@ const std::string SpellListType::toString(Type type) {
 const std::optional<SpellListType::Type> SpellListType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcase(sv);
+	const std::string& val = lcaseconcat(sv);
 	if (val == "base") return kBase;
 	if (val == "closed") return kClosed;
 	if (val == "open") return kOpen;
 	if (val == "trainingpackage") return kTrainingPackage;
-	if (val == "training_package") return kTrainingPackage;
-	if (val == "training tackage") return kTrainingPackage;
 	if (val == "racial") return kRacial;
 
 	return {};

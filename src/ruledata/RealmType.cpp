@@ -22,27 +22,18 @@ const std::string RealmType::toString(Type realm) {
 const std::optional<RealmType::Type> RealmType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcase(sv);
-	if (val == "Arcane") return kArcane;
-	if (val == "Arms") return kArms;
-	if (val == "Channeling") return kChanneling;
-	if (val == "Channeling / Essence") return kChannelingEssence;
-	if (val == "Channeling Essence") return kChannelingEssence;
-	if (val == "ChannelingEssence") return kChannelingEssence;
-	if (val == "Channeling_Essence") return kChannelingEssence;
-	if (val == "Channeling / Mentalism") return kChannelingMentalism;
-	if (val == "Channeling Mentalism") return kChannelingMentalism;
-	if (val == "ChannelingMentalism") return kChannelingMentalism;
-	if (val == "Channeling_Mentalism") return kChannelingMentalism;
-	if (val == "Essence") return kEssence;
-	if (val == "Essence / Mentalism") return kEssenceMentalism;
-	if (val == "Essence Mentalism") return kEssenceMentalism;
-	if (val == "EssenceMentalism") return kEssenceMentalism;
-	if (val == "Essence_Mentalism") return kEssenceMentalism;
-	if (val == "Mentalism") return kMentalism;
-	if (val == "Mundane") return kMundane;
-	if (val == "Neutral") return kNeutral;
-	if (val == "Subterfuge") return kSubterfuge;
+	const std::string& val = lcaseconcat(sv);
+	if (val == "arcane") return kArcane;
+	if (val == "arms") return kArms;
+	if (val == "channeling") return kChanneling;
+	if (val == "channelingessence") return kChannelingEssence;
+	if (val == "channelingmentalism") return kChannelingMentalism;
+	if (val == "essence") return kEssence;
+	if (val == "essencementalism") return kEssenceMentalism;
+	if (val == "mentalism") return kMentalism;
+	if (val == "mundane") return kMundane;
+	if (val == "neutral") return kNeutral;
+	if (val == "subterfuge") return kSubterfuge;
 
 	return {};
 }
