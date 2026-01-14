@@ -25,6 +25,7 @@ namespace SkillDevelopmentType {
 		kRestricted, /**< For every two ranks developed, the character gains only one rank */
 		kStandard /**< For every rank developed, the character gains one rank */
 	};
+	using enum Type;
 
 	/**
 	 * @brief Get the string representation of the given enum

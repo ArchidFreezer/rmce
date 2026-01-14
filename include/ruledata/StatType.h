@@ -28,6 +28,7 @@ namespace StatType {
 		kSelfDiscipline, /**<  The control of mind over body, the ability to push harder in pursuit of some goal, or to draw upon the inner reserves of strength */
 		kStrength /**<  Not brute musculature, but the ability to use existing muscles to their greatest advantage */
 	};
+	using enum Type;
 
 	/**
 	 * @brief Get the string representation of the given enum

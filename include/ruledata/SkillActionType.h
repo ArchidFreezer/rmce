@@ -21,6 +21,7 @@ namespace SkillActionType {
 		kSpecial, /**< Action does not fit in the other categories such as communicating */
 		kStatic /**< Action does not involve significant movement such as hiding or picking a lock */
 	};
+	using enum Type;
 
 	/**
 	 * @brief Get the string representation of the given enum

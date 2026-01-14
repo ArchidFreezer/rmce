@@ -44,6 +44,7 @@ namespace SkillGroupType {
 		kUrban, /**< Skills pertaining to an urban environment */
 		kWeapon /**< Use of weapons in combat */
 	};
+	using enum Type;
 
 	/**
 	 * @brief Get the string representation of the given enum

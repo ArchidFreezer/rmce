@@ -33,6 +33,7 @@ namespace RealmType {
 		kNeutral, /**< Magical realm of Neutral - not suitable for all campaigns */
 		kSubterfuge  /**< Non-magical realm of Subterfuge  - not suitable for all campaigns */
 	};
+	using enum Type;
 
 	/**
 	 * @brief Get the string representation of the given enum

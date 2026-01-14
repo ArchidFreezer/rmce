@@ -22,6 +22,7 @@ namespace StatLossType {
 		kVeryFast, /**< Rate for Grey Elves */
 		kExtreme, /**< Rate for High Elves */
 	};
+	using enum Type;
 
 	/**
 	 * @brief Get the string representation of the given enum

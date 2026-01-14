@@ -58,6 +58,7 @@ var namespaces_dup =
       [ "mt", "namespace_random.html#aa4354db31fa7d64040939b905ab12ee1", null ]
     ] ],
     [ "RealmType", "namespace_realm_type.html", [
+      [ "Type", "namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8", null ],
       [ "Type", "namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8", [
         [ "kArcane", "namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8ab3d0636957c6f093c040ecdf1648ab6f", null ],
         [ "kArms", "namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8a839322814a3dbd82ba36c620a5569bc1", null ],
@@ -98,6 +99,7 @@ var namespaces_dup =
       [ "toString", "namespace_resistance_type.html#a361aae8f6aea41c5f7d98a117f753996", null ]
     ] ],
     [ "SkillActionType", "namespace_skill_action_type.html", [
+      [ "Type", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1", null ],
       [ "Type", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1", [
         [ "kMoving", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1aad80bddb2c53a0c7605e23e62491797b", null ],
         [ "kOB", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1a458fe8603674d721aac782985750730b", null ],
@@ -109,6 +111,7 @@ var namespaces_dup =
       [ "toString", "namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa", null ]
     ] ],
     [ "SkillDevelopmentType", "namespace_skill_development_type.html", [
+      [ "Type", "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b", null ],
       [ "Type", "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b", [
         [ "kEveryman", "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba272488319413a0318c1de9e9fa61b7e5", null ],
         [ "kOccupational", "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba90443e6f295091a059b0a150ddee8778", null ],
@@ -120,6 +123,7 @@ var namespaces_dup =
       [ "toString", "namespace_skill_development_type.html#a6d7ff6ceb406f3f60ee4d3f6a23d53f5", null ]
     ] ],
     [ "SkillGroupType", "namespace_skill_group_type.html", [
+      [ "Type", "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268", null ],
       [ "Type", "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268", [
         [ "kArmour", "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a60ae600f53f641d0fa46410ab3334021", null ],
         [ "kArtistic", "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268acde0bcb794c6f93c65b00569ff493de0", null ],
@@ -165,6 +169,7 @@ var namespaces_dup =
       [ "toString", "namespace_spell_list_type.html#a370cb5d3754c853872d74c8e2f244196", null ]
     ] ],
     [ "StatLossType", "namespace_stat_loss_type.html", [
+      [ "Type", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337", null ],
       [ "Type", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337", [
         [ "kSlow", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a75805a3bb93806d0866f78b38555dd48", null ],
         [ "kNormal", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a07fa7a19aa722c635a15e94cb7f50416", null ],
@@ -177,6 +182,7 @@ var namespaces_dup =
       [ "toString", "namespace_stat_loss_type.html#a78470c97f524221d28eddbf3cef16f5f", null ]
     ] ],
     [ "StatType", "namespace_stat_type.html", [
+      [ "Type", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd", null ],
       [ "Type", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd", [
         [ "kAgility", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda342f835d4c32cbd41915852120737e8d", null ],
         [ "kConstitution", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda6f3793e6a6aec2bae30b72b9ae63fa6c", null ],
