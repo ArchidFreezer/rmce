@@ -31,6 +31,7 @@ add_subdirectory("src/ruledata")
 
 # Build the main executables
 add_subdirectory("apps")
+add_subdirectory("sandbox")
 
 # Build the test code
 add_subdirectory("test")

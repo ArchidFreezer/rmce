@@ -4,6 +4,7 @@
 #CMake files and output
 /CMakeFiles/
 /out/
+/sandbox/
 
 # Prerequisites
 *.d
