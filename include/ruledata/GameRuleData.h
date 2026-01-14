@@ -26,7 +26,7 @@ public:
 	/**
 	 * @brief Default destructor
 	 * 
-	 * This is made virtual to define the class as polymorphic as a standard practice, even though there is another virtial method.
+	 * This is made virtual to define the class as polymorphic as a standard best practice.
 	 */
 	virtual ~GameRuleData() = default;
 
