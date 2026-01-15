@@ -65,6 +65,5 @@ public:
 	}
 
 private:
-
 	std::map<std::shared_ptr<MatcherClass>, TableRow<CellDatatype>> table_; /**< Data structure representing the table */
 };
