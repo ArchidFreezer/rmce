@@ -42,7 +42,7 @@ public:
 	 * The new column is added at the end of the row
 	 * @param val Cell to add
 	 */
-	void addCell(T val) { cells_.push_back(val); }
+	TableRow& addCell(T val) { cells_.push_back(val); return *this; }
 
 	/**
 	 * @brief Gets the number of columns in the row
