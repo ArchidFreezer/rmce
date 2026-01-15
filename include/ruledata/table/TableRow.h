@@ -1,6 +1,20 @@
 #pragma once
 
+#include <stdexcept>
 #include <vector>
+
+/**
+ * @class ColNotFoundException
+ * @brief Exception throw if an attempt was made to access a column index in the row that does not exist
+ */
+class ColNotFoundException : public std::runtime_error {
+public:
+	/**
+	 * @brief Constructor
+	 * @param error Error message to be displayed by the what() function
+	 */
+	ColNotFoundException(const std::string& error) : std::runtime_error{ error } {}
+};
 
 /**
  * @class TableRow
@@ -15,10 +29,10 @@ public:
 	 * @brief Return a specific cell in the row
 	 * @param index Column number of the cell to retrieve, with the first column having an index of 0
 	 * @return T contents of the cell
-	 * @throws std::out_of_range if an attempt is made to access a column that does not exist
+	 * @throws ColNotFoundException if an attempt is made to access a column that does not exist
 	 */
 	const T& getCell(int index) const { 
-		if (index >= colCount() || index < 0) throw std::out_of_range("Attempted to access a column that does not exist");
+		if (index >= colCount() || index < 0) throw ColNotFoundException("Attempt to access a column in the row that does not exist");
 
 		return cells_[index];
 	}

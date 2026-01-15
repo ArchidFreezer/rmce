@@ -31,7 +31,7 @@ namespace {
 		try {
 			tr.getCell(2);
 			FAIL();
-		} catch (std::out_of_range err) {
+		} catch (ColNotFoundException err) {
 			SUCCEED();
 		} catch (...) {
 			FAIL();
