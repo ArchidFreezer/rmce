@@ -16,10 +16,12 @@ var annotated_dup =
     [ "LanguageData", "class_language_data.html", "class_language_data" ],
     [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", "class_language_datafile_parser_json" ],
     [ "LanguageDialectData", "class_language_dialect_data.html", "class_language_dialect_data" ],
+    [ "Matcher", "class_matcher.html", "class_matcher" ],
     [ "NumberRange", "class_number_range.html", "class_number_range" ],
     [ "SkillCategoryData", "class_skill_category_data.html", "class_skill_category_data" ],
     [ "SkillProgressionData", "class_skill_progression_data.html", "class_skill_progression_data" ],
     [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", "class_skill_progression_type_data" ],
     [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", "class_skill_progression_type_datafile_parser_json" ],
+    [ "TableRow", "class_table_row.html", "class_table_row" ],
     [ "TooManyStatsException", "class_too_many_stats_exception.html", "class_too_many_stats_exception" ]
 ];

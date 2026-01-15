@@ -20,7 +20,10 @@ var hierarchy =
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
-    [ "NumberRange&lt; T &gt;", "class_number_range.html", null ],
+    [ "is_matcher", null, [
+      [ "NumberRange< T >", "class_number_range.html", null ]
+    ] ],
+    [ "Matcher&lt; T, U &gt;", "class_matcher.html", null ],
     [ "std::runtime_error", null, [
       [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
       [ "InvalidSkillProgression", "class_invalid_skill_progression.html", null ],
@@ -28,5 +31,6 @@ var hierarchy =
     ] ],
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
-    ] ]
+    ] ],
+    [ "TableRow&lt; T &gt;", "class_table_row.html", null ]
 ];

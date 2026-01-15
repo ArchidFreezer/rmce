@@ -34,6 +34,7 @@ var NAVTREE =
         [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
+    [ "Concepts", "concepts.html", "concepts" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -57,7 +58,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00"
+"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1a99ef3eb0f9a73736f680724632ab0a19"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

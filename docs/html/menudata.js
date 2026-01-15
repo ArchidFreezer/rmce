@@ -42,6 +42,7 @@ var menudata={children:[
 {text:"t",url:"namespacemembers_func.html#index_t"}]},
 {text:"Variables",url:"namespacemembers_vars.html"},
 {text:"Enumerations",url:"namespacemembers_enum.html"}]}]},
+{text:"Concepts",url:"concepts.html"},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
 {text:"Class Index",url:"classes.html"},
