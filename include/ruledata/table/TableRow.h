@@ -1,0 +1,42 @@
+#pragma once
+
+#include <vector>
+
+/**
+ * @class TableRow
+ * @brief Class representing a row in a table
+ * @tparam T Type of the value being stored in each cell in the row
+ */
+template<typename T>
+class TableRow {
+public:
+
+	/**
+	 * @brief Return a specific cell in the row
+	 * @param index Column number of the cell to retrieve, with the first column having an index of 0
+	 * @return T contents of the cell
+	 * @throws std::out_of_range if an attempt is made to access a column that does not exist
+	 */
+	const T& getCell(int index) const { 
+		if (index >= colCount() || index < 0) throw std::out_of_range("Attempted to access a column that does not exist");
+
+		return cells_[index];
+	}
+
+	/**
+	 * @brief Appends a new column to the row
+	 * The new column is added at the end of the row
+	 * @param val Cell to add
+	 */
+	void addCell(T val) { cells_.push_back(val); }
+
+	/**
+	 * @brief Gets the number of columns in the row
+	 * @return int number of columns
+	 */
+	int colCount() const { return cells_.size(); }
+
+private:
+	std::vector<T> cells_; /**< Container storing the cells in the row */
+};
+
