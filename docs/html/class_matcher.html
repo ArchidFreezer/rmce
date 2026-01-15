@@ -100,8 +100,8 @@ $(function(){initNavTree('class_matcher.html','','class_matcher-members'); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac49852451cc0d477465499480936b9a2" id="r_ac49852451cc0d477465499480936b9a2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac49852451cc0d477465499480936b9a2">Matcher</a> (T matcher)</td></tr>
-<tr class="memdesc:ac49852451cc0d477465499480936b9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a8ef95ad69f9caba52bc787e1cf792040" id="r_a8ef95ad69f9caba52bc787e1cf792040"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8ef95ad69f9caba52bc787e1cf792040">Matcher</a> (std::shared_ptr&lt; T &gt; matcher)</td></tr>
+<tr class="memdesc:a8ef95ad69f9caba52bc787e1cf792040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:a8d6a4292a2c3020dae1d3775500839cd" id="r_a8d6a4292a2c3020dae1d3775500839cd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8d6a4292a2c3020dae1d3775500839cd">matches</a> (U val) const</td></tr>
 <tr class="memdesc:a8d6a4292a2c3020dae1d3775500839cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the value matches the data stored in the matcher.  <br /></td></tr>
 <tr class="memitem:a688c757a06b3277e7eaf1fc8fc2c121c" id="r_a688c757a06b3277e7eaf1fc8fc2c121c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a688c757a06b3277e7eaf1fc8fc2c121c">operator&lt;</a> (const <a class="el" href="class_matcher.html">Matcher</a>&lt; T, U &gt; &amp;other) const</td></tr>
@@ -121,8 +121,8 @@ class Matcher&lt; T, U &gt;</div><p>Class that is a container for classes implem
   </dd>
 </dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac49852451cc0d477465499480936b9a2" name="ac49852451cc0d477465499480936b9a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac49852451cc0d477465499480936b9a2">&#9670;&#160;</a></span>Matcher()</h2>
+<a id="a8ef95ad69f9caba52bc787e1cf792040" name="a8ef95ad69f9caba52bc787e1cf792040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef95ad69f9caba52bc787e1cf792040">&#9670;&#160;</a></span>Matcher()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +135,7 @@ template&lt;typename T, typename U&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="class_matcher.html">Matcher</a>&lt; T, U &gt;::Matcher </td>
           <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>matcher</em></span></td><td>)</td>
+          <td class="paramtype">std::shared_ptr&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>matcher</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -147,6 +147,7 @@ template&lt;typename T, typename U&gt; </div>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
+<p>The matcher is a shared pointer to allow the matchers to be re-used safely</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">matcher</td><td><a class="el" href="class_matcher.html" title="Class that is a container for classes implementing the is_matcher concept.">Matcher</a> object to wrap </td></tr>

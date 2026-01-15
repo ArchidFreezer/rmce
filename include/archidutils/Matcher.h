@@ -42,9 +42,12 @@ class Matcher {
 public:
 	/**
 	 * @brief Constructor
+	 * 
+	 * The matcher is a shared pointer to allow the matchers to be re-used safely
+	 * 
 	 * @param matcher Matcher object to wrap
 	 */
-	Matcher(T matcher) : matcher_{ &matcher } {}
+	Matcher(std::shared_ptr<T> matcher) : matcher_{ matcher } {}
 	
 	/**
 	 * @brief Determines if the value matches the data stored in the matcher
@@ -64,9 +67,10 @@ public:
 	 * @return `false` if this object is not considered less than \a other
 	 */
 	bool operator<(const Matcher<T, U>& other) const {
-		return (*matcher_ < *other.matcher_);
+		// The matchers are stored as pointers so we need to dereference them before we use them for the comparison
+		return ((*matcher_) < (*other.matcher_));
 	}
 	
 private:
-	T* matcher_{}; /**< Matcher object we are wrapping */
+	std::shared_ptr<T> matcher_{}; /**< Matcher object we are wrapping */
 };
