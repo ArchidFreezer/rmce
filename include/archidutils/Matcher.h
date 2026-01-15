@@ -17,10 +17,6 @@ concept is_matcher =
 	requires(T v, U n) {
 		{ v.operator<(v) } -> std::convertible_to<bool>;
 		{ v.matches(n) } -> std::convertible_to<bool>;
-}
-&&
-	requires(U n) {
-	std::integral<U> || std::floating_point<U>;
 };
 
 /**
