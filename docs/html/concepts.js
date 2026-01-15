@@ -1,4 +1,4 @@
 var concepts =
 [
-    [ "is_matcher", "conceptis__matcher.html", null ]
+    [ "is_row_matcher", "conceptis__row__matcher.html", null ]
 ];

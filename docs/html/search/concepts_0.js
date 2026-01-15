@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5fmatcher_0',['is_matcher',['../conceptis__matcher.html',1,'']]]
+  ['is_5frow_5fmatcher_0',['is_row_matcher',['../conceptis__row__matcher.html',1,'']]]
 ];

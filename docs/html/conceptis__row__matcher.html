@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: ruledata/table Directory Reference</title>
+<title>Rolemaster Character Editor: is_row_matcher Concept Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('dir_7fc3274234d3b28f30f13cd33169f0a9.html','',''); });
+$(function(){initNavTree('conceptis__row__matcher.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,39 +89,33 @@ $(function(){initNavTree('dir_7fc3274234d3b28f30f13cd33169f0a9.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">table Directory Reference</div></div>
+  <div class="headertitle"><div class="title">is_row_matcher Concept Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Directory dependency graph for table:</div>
-<div class="dyncontent">
-<div class="center"><img src="dir_7fc3274234d3b28f30f13cd33169f0a9_dep.png" border="0" usemap="#adir__7fc3274234d3b28f30f13cd33169f0a9__dep" loading="lazy" alt="ruledata/table"/></div>
-<map name="adir__7fc3274234d3b28f30f13cd33169f0a9__dep" id="adir__7fc3274234d3b28f30f13cd33169f0a9__dep">
-<area shape="rect" href="dir_7fc3274234d3b28f30f13cd33169f0a9.html" title="table" alt="" coords="27,53,77,80"/>
-<area shape="rect" href="dir_d27df6bdec76b9f4631be2492a3421fa.html" title="ruledata" alt="" coords="16,16,88,91"/>
-</map>
-</div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:LookupTable_2Eh" id="r_LookupTable_2Eh"><td class="memItemLeft"><a href="_lookup_table_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>LookupTable.h</b></td></tr>
-<tr class="memitem:TableRow_2Eh" id="r_TableRow_2Eh"><td class="memItemLeft"><a href="_table_row_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>TableRow.h</b></td></tr>
-<tr class="memitem:TableRowMatcher_2Eh" id="r_TableRowMatcher_2Eh"><td class="memItemLeft"><a href="_table_row_matcher_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>TableRowMatcher.h</b></td></tr>
-</table>
-</div><!-- contents -->
+
+<p>Concept that defines the requirements for a matcher class.  
+<a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_table_row_matcher_8h_source.html">TableRowMatcher.h</a>&gt;</code></p>
+<h2 id="header-conceptdef" class="groupheader">Concept definition</h2>
+<div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> MatcherClass, <span class="keyword">typename</span> MatcherDatatype&gt;</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptis__row__matcher.html">is_row_matcher</a> =</div>
+<div class="line">    <span class="keyword">requires</span>(MatcherClass v, MatcherDatatype n) {</div>
+<div class="line">        { v.operator&lt;(v) } -&gt; std::convertible_to&lt;bool&gt;;</div>
+<div class="line">        { v.matches(n) } -&gt; std::convertible_to&lt;bool&gt;;</div>
+<div class="line">}</div>
+<div class="ttc" id="aconceptis__row__matcher_html"><div class="ttname"><a href="conceptis__row__matcher.html">is_row_matcher</a></div><div class="ttdoc">Concept that defines the requirements for a matcher class.</div><div class="ttdef"><b>Definition</b> TableRowMatcher.h:16</div></div>
+</div><!-- fragment --><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Concept that defines the requirements for a matcher class. </p>
+<p>A matcher contains the definition of a set of values or objects and then allows another object or value to be tested against this set to determine if it is considered to match the defined set or not.</p>
+<p>The matcher must also override the less than operator allowing it to be used as a key in the standard library ordered containers. Note that it is only the less than operator that is required and there is no requirement for a custom hashing function so the class is not guaranteed to be usable in unordered containers. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>ruledata</b></li><li class="navelem"><b>table</b></li>
+    <li class="navelem"><a href="conceptis__row__matcher.html">is_row_matcher</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>

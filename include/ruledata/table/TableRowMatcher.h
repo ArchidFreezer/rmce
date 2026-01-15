@@ -13,7 +13,7 @@
  * hashing function so the class is not guaranteed to be usable in unordered containers.
  */
 template <class MatcherClass, typename MatcherDatatype>
-concept is_matcher =
+concept is_row_matcher =
 	requires(MatcherClass v, MatcherDatatype n) {
 		{ v.operator<(v) } -> std::convertible_to<bool>;
 		{ v.matches(n) } -> std::convertible_to<bool>;

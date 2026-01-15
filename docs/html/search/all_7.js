@@ -3,7 +3,7 @@ var searchData=
   ['id_0',['id',['../class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e',1,'GameRuleData']]],
   ['id_5f_1',['id_',['../class_game_rule_data.html#aa984e728567bfff2df2e0f1adcfbe76a',1,'GameRuleData']]],
   ['invalidskillprogression_2',['InvalidSkillProgression',['../class_invalid_skill_progression.html',1,'InvalidSkillProgression'],['../class_invalid_skill_progression.html#a2452c77ea82227f7eb4296e94090f4e6',1,'InvalidSkillProgression::InvalidSkillProgression()']]],
-  ['is_5fmatcher_3',['is_matcher',['../conceptis__matcher.html',1,'']]],
+  ['is_5frow_5fmatcher_3',['is_row_matcher',['../conceptis__row__matcher.html',1,'']]],
   ['isbn_4',['isbn',['../class_book_data.html#a746ff8194a77123b41ad75658a93df23',1,'BookData']]],
   ['isdevelopment_5',['isDevelopment',['../namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e',1,'StatType']]],
   ['isdialect_6',['isDialect',['../class_language_dialect_data.html#a0cf45d16adcc39cab0545c4613e89623',1,'LanguageDialectData']]],

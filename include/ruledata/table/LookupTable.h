@@ -2,7 +2,7 @@
 
 #include <string>
 #include <memory>
-#include <Matcher.h>
+#include <table/TableRowMatcher.h>
 #include <table/TableRow.h>
 
 /**
@@ -30,7 +30,7 @@ public:
  * @tparam CellDatatype Data type that is stored in each cell in the table
  */
 template<typename MatcherClass, typename MatcherDatatype, typename CellDatatype>
-	requires is_matcher<MatcherClass, MatcherDatatype>
+	requires is_row_matcher<MatcherClass, MatcherDatatype>
 class LookupTable {
 public:
 	/**

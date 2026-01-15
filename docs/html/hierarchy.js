@@ -20,7 +20,7 @@ var hierarchy =
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
-    [ "is_matcher", null, [
+    [ "is_row_matcher", null, [
       [ "NumberRange< NumberType >", "class_number_range.html", null ]
     ] ],
     [ "LookupTable&lt; MatcherClass, MatcherDatatype, CellDatatype &gt;", "class_lookup_table.html", null ],
