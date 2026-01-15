@@ -40,68 +40,68 @@ public:
 	 * @brief Set the name of the progression type
 	 * @param name Progression type name
 	 */
-	inline void setName(std::string_view name) { name_ = name; }
+	void setName(std::string_view name) { name_ = name; }
 
 	/**
 	 * @brief Get the name of the progression type
 	 * @return Progression type name as a string reference
 	 */
-	inline const std::string& name() const { return name_; }
+	const std::string& name() const { return name_; }
 
 	/**
 	 * @brief Set the bonus provided with 0 skill ranks
 	 * @param zero Bonus for 0 skill ranks
 	 */
-	inline void setZero(float zero) { zero_ = zero; }
+	void setZero(float zero) { zero_ = zero; }
 	/**
 	 * @brief Get the bonus provided with 0 skill ranks
 	 * @return Bonus for 0 skill ranks
 	 */
-	inline float zero() const { return zero_; }
+	float zero() const { return zero_; }
 
 	/**
 	 * @brief Set the bonus provided per rank for between 1 and 10 ranks
 	 * @param ten Bonus provided per rank for between 1 and 10 ranks
 	 */
-	inline void setTen(float ten) { ten_ = ten; }
+	void setTen(float ten) { ten_ = ten; }
 	/**
 	 * @brief Get the bonus provided per rank for between 1 and 10 ranks
 	 * @return Bonus provided per rank for between 1 and 10 ranks
 	 */
-	inline float ten() const { return ten_; }
+	float ten() const { return ten_; }
 
 	/**
 	 * @brief Set the bonus provided per rank for between 11 and 20 ranks
 	 * @param twenty Bonus provided per rank for between 11 and 20 ranks
 	 */
-	inline void setTwenty(float twenty) { twenty_ = twenty; }
+	void setTwenty(float twenty) { twenty_ = twenty; }
 	/**
 	 * @brief Get the bonus provided per rank for between 11 and 20 ranks
 	 * @return Bonus provided per rank for between 11 and 20 ranks
 	 */
-	inline float twenty() const { return twenty_; }
+	float twenty() const { return twenty_; }
 
 	/**
 	 * @brief Set the bonus provided per rank for between 21 and 30 ranks
 	 * @param thirty Bonus provided per rank for between 21 and 30 ranks
 	 */
-	inline void setThirty(float thirty) { thirty_ = thirty; }
+	void setThirty(float thirty) { thirty_ = thirty; }
 	/**
 	 * @brief Get the bonus provided per rank for between 21 and 30 ranks
 	 * @return Bonus provided per rank for between 21 and 30 ranks
 	 */
-	inline float thirty() const { return thirty_; }
+	float thirty() const { return thirty_; }
 
 	/**
 	 * @brief Set the bonus provided per rank above 30
 	 * @param remaining Bonus provided per rank above 30
 	 */
-	inline void setRemaining(float remaining) { remaining_ = remaining; }
+	void setRemaining(float remaining) { remaining_ = remaining; }
 	/**
 	 * @brief Get the bonus provided per rank above 30
 	 * @return Bonus provided per rank for above 30
 	 */
-	inline float remaining() const { return remaining_; }
+	float remaining() const { return remaining_; }
 
 	/**
 	 * @brief Get the skill bonus provided by the progression type for the number of ranks defined in the parameter

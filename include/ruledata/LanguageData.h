@@ -46,22 +46,22 @@ public:
 	 * @brief Set the name of the language
 	 * @param name Language name
 	 */
-	inline void setName(std::string_view name) { name_ = name; }
+	void setName(std::string_view name) { name_ = name; }
 	/**
 	 * @brief In-game name of the language as used by players and NPCs
 	 * @return Name of the language
 	 */
-	inline const std::string& name() const { return name_; }
+	const std::string& name() const { return name_; }
 	/**
 	 * @brief Set the language category representing the root language this has developed from
 	 * @param category Language category
 	 */
-	inline void setCategory(std::string_view category) { category_ = category; }
+	void setCategory(std::string_view category) { category_ = category; }
 	/**
 	 * @brief get the language category representing the root language this has developed from
 	 * @return Category as a string reference
 	 */
-	inline const std::string& category() const { return category_; }
+	const std::string& category() const { return category_; }
 	/**
 	 * @brief For dialects get the language it is a dialect of.
 	 *
@@ -69,7 +69,7 @@ public:
 	 *
 	 * @param base_language Dialects base language
 	 */
-	inline void setBaseLanguage(std::string base_language) { base_language_ = base_language; }
+	void setBaseLanguage(std::string base_language) { base_language_ = base_language; }
 	/**
 	 * @brief For dialects set the language it is a dialect of.
 	 * 
@@ -77,37 +77,37 @@ public:
 	 * 
 	 * @return Dialects base language as a string reference
 	 */
-	inline const std::string& baseLanguage() const { return base_language_; }
+	const std::string& baseLanguage() const { return base_language_; }
 	/**
 	 * @brief Sets if the language has a spoken component
 	 * @param is_spoken `true` if the langauge is even spoken; `false` otherwise
 	 */
-	inline void setIsSpoken(bool is_spoken) { is_spoken_ = is_spoken; }
+	void setIsSpoken(bool is_spoken) { is_spoken_ = is_spoken; }
 	/**
 	 * @brief Whether the language has a spoken component
 	 * @return `true` if the language is spoken; `false` otherwise
 	 */
-	inline bool isSpoken() const { return is_spoken_;	}
+	bool isSpoken() const { return is_spoken_;	}
 	/**
 	 * @brief Sets if the language has a written component
 	 * @param is_written `true` if the langauge is written; `false` otherwise
 	 */
-	inline void setIsWritten(bool is_written) { is_written_ = is_written; }
+	void setIsWritten(bool is_written) { is_written_ = is_written; }
 	/**
 	 * @brief Whether the language has a written component
 	 * @return `true` if the language is written; `false` otherwise
 	 */
-	inline bool isWritten() const { return is_written_; }
+	bool isWritten() const { return is_written_; }
 	/**
 	 * @brief Sets if the language has a somantic component
 	 * @param is_somantic `true` if the langauge is somantic; `false` otherwise 
 	 */
-	inline void setIsSomantic(bool is_somantic) { is_somantic_ = is_somantic; }
+	void setIsSomantic(bool is_somantic) { is_somantic_ = is_somantic; }
 	/**
 	 * @brief Whether the language has a somantic component
 	 * @return `true` if the language is somantic; `false` otherwise
 	 */
-	inline bool isSomantic() const { return is_somantic_; }
+	bool isSomantic() const { return is_somantic_; }
 
 private:
 	std::string name_{}; /**< Name as used in-game */

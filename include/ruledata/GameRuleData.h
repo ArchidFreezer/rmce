@@ -38,7 +38,7 @@ public:
 	 * 
 	 * @return Identifier as a string reference.
 	 */
-	inline const std::string& id() const { return id_; }
+	const std::string& id() const { return id_; }
 
 protected:
 	std::string id_{}; /**< Unique identifier for the object */

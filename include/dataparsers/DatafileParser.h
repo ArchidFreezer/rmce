@@ -78,7 +78,7 @@ public:
 	 * @param id_only `true` if the game rule object should be populated with its id only; `false` otherwise
 	 * @see setFilename
 	 */
-	inline void read(bool id_only) { read(filename(), id_only); }
+	void read(bool id_only) { read(filename(), id_only); }
 
 	/**
 	 * @brief Write game rule data from the cache to a file
@@ -92,7 +92,7 @@ public:
 	 * The file to save to from may be set in either the constructor or via methods
 	 * @see setFilename
 	 */
-	inline void save() { save(filename()); }
+	void save() { save(filename()); }
 
 	/**
 	 * @brief Creates a string that can be used as a unique identifier for an object
@@ -113,31 +113,31 @@ public:
 	 * 
 	 * This forces the datafile to be re-read
 	 */
-	inline void resetPtree() { ptree_.clear(); };
+	void resetPtree() { ptree_.clear(); };
 
 	/**
 	 * @brief Get the boost ptree used when reading the datafile
 	 * @return  Reference to the boost ptree
 	 */
-	inline pt::ptree& ptree() { return ptree_; };
+	pt::ptree& ptree() { return ptree_; };
 
 	/**
 	 * @brief Get the game rule data cache
 	 * @return Reference to the game rule data cache
 	 */
-	inline GameRuleDataCache& cache() { return cache_; };
+	GameRuleDataCache& cache() { return cache_; };
 
 	/**
 	 * @brief Get the file to parse
 	 * @return Pathe to the file to parse
 	 */
-	inline const std::string& filename() const { return filename_; };
+	const std::string& filename() const { return filename_; };
 
 	/**
 	 * @brief Set the file to pasre
 	 * @param filename Path to the file to parse
 	 */
-	inline void setFilename(const std::string& filename) { filename_ = filename; };
+	void setFilename(const std::string& filename) { filename_ = filename; };
 
 protected:
 	/**

@@ -49,32 +49,32 @@ public:
 	 * 
 	 * @return Name of the base language
 	 */
-	inline const std::string& name() const { return name_; }
+	const std::string& name() const { return name_; }
 	
 	/**
 	 * @brief Collection of dialects
 	 * @return Ordered set of languages that are considered dialects
 	 */
-	inline const std::set<std::string>& dialects() const { return dialects_; }
+	const std::set<std::string>& dialects() const { return dialects_; }
 	
 	/**
 	 * @brief Checks if a language is considered a dialect
 	 * @param language id of the language to check
 	 * @return true if the language is a dialect; false otherwise
 	 */
-	inline bool isDialect(const std::string& language) const { return dialects_.count(language) >  0; }
+	bool isDialect(const std::string& language) const { return dialects_.count(language) >  0; }
 
 	/**
 	 * @brief Add a language as a dialect
 	 * @param language id of the language to add
 	 */
-	inline void add(const std::string language) { dialects_.insert(language); }
+	void add(const std::string language) { dialects_.insert(language); }
 	
 	/**
 	 * @brief Remove a language to the set of dialects
 	 * @param language Identifier of the language to remove from the collection
 	 */
-	inline void remove(const std::string language) { dialects_.erase(language); }
+	void remove(const std::string language) { dialects_.erase(language); }
 
 private:
 	/**

@@ -37,12 +37,12 @@ public:
 	 * @brief Set the name of the category
 	 * @param name Category name
 	 */
-	inline void setName(std::string_view name) { name_ = name; }
+	void setName(std::string_view name) { name_ = name; }
 	/**
 	 * @brief Get the name of the category as seen in-game
 	 * @return Name as a string reference
 	 */
-	inline const std::string& name() const { return name_; }
+	const std::string& name() const { return name_; }
 
 private:
 	std::string name_{}; /**< Name of the category as seen in-game */

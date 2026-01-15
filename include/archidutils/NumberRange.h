@@ -42,7 +42,7 @@ public:
 	 * @return `true` if \a val is in the range;
 	 * @return `false` if \a val is not in the range;
 	 */
-	inline bool matches(NumberType val) const { return (val >= min_) && (val <= max_); }
+	bool matches(NumberType val) const { return (val >= min_) && (val <= max_); }
 
 private:
 	NumberType min_{}; /**< Lower bound of the range */

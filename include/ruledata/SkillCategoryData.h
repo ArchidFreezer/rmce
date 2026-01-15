@@ -74,19 +74,19 @@ public:
 	 * @brief Get the name of the category as seen in-game
 	 * @return Name as a string reference
 	 */
-	inline const std::string& name() const { return name_; }
+	const std::string& name() const { return name_; }
 
 	/**
 	 * @brief Gets the full name of the skill category which includes the skill group
 	 * @return Name including the skill group
 	 */
-	inline const std::string getFullName() const { return toString(group_) + " - " + name_; }
+	const std::string getFullName() const { return toString(group_) + " - " + name_; }
 
 	/**
 	 * @brief Get the group the category belongs to
 	 * @return SkillGroupType::Type categories skill group
 	 */
-	inline const SkillGroupType::Type getGroup() const { return group_; }
+	const SkillGroupType::Type getGroup() const { return group_; }
 
 	/**
 	 * @brief Add stat that applies stat boinus to skills in the category
@@ -105,7 +105,7 @@ public:
 	 * Up to 3 stats bonuses may be applied to skills in a skill category. This function returns the current number applied
 	 * @return Number of stats applied
 	 */
-	inline const int getNumberOfStats() const {	return stats_.size();	}
+	const int getNumberOfStats() const {	return stats_.size();	}
 
 	/**
 	 * @brief Remove a stats from those currently associated with the category
@@ -122,7 +122,7 @@ public:
 	/**
 	 * @brief Empties the list of stats associated with the category
 	 */
-	inline void clearStats() { stats_.clear(); }
+	void clearStats() { stats_.clear(); }
 
 	/**
 	 * @brief Sets the skill progressions for both skills in the category and the catehory itself
@@ -155,7 +155,7 @@ public:
 	 * 
 	 * @return SkillProgressionTypeData&  default skill progressiomn type
 	 */
-	inline const SkillProgressionTypeData& getDefaultSkillProgression() const { return *skillProgression_; }
+	const SkillProgressionTypeData& getDefaultSkillProgression() const { return *skillProgression_; }
 
 	/**
 	 * @brief Gets the skill progression for the skill category
@@ -166,7 +166,7 @@ public:
 	 *
 	 * @return SkillProgressionType::Type default skill progressiomn type
 	 */
-	inline const SkillProgressionTypeData& getSkillCategoryProgression() const { return *skillCategoryProgression_; }
+	const SkillProgressionTypeData& getSkillCategoryProgression() const { return *skillCategoryProgression_; }
 
 private:
 	SkillGroupType::Type group_{}; /**< Name of the skill group; the category belongs to */

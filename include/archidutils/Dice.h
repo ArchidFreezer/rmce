@@ -90,7 +90,7 @@ public:
 	 *
 	 * @return the minimum value to trigger another roll
 	 */
-	inline int minOpenHigh() const { return min_open_high_; }
+	int minOpenHigh() const { return min_open_high_; }
 
 	/**
 	 * @brief Sets the number at which an open ended high roll is triggered.
@@ -101,7 +101,7 @@ public:
 	 *
 	 * @param min_open_high The minimum value to trigger another roll
 	 */
-	inline void setMinOpenHigh(int min_open_high) { min_open_high_ = std::min(0,min_open_high); }
+	void setMinOpenHigh(int min_open_high) { min_open_high_ = std::min(0,min_open_high); }
 
 	/**
 	 * @brief Gets the number at which an open ended low roll is triggered.
@@ -110,7 +110,7 @@ public:
 	 *
 	 * @return the maximum value to trigger another roll
 	 */
-	inline int maxOpenLow() const { return max_open_low_; }
+	int maxOpenLow() const { return max_open_low_; }
 
 	/**
 	 * @brief Sets the number at which an open ended low roll is triggered.
@@ -119,7 +119,7 @@ public:
 	 *
 	 * @param max_open_low The maximum value to trigger another roll
 	 */
-	inline void setMaxOpenLow(int max_open_low) { max_open_low_ = max_open_low; }
+	void setMaxOpenLow(int max_open_low) { max_open_low_ = max_open_low; }
 
 	/**
 	 * @brief Returns the number of sides currently configured on the dice.
@@ -128,7 +128,7 @@ public:
 	 *
 	 * @return int number of sides
 	 */
-	inline int sides() const { return sides_; }
+	int sides() const { return sides_; }
 
 	/**
 	 * @brief Sets the number of sides of the dice to use.
@@ -138,13 +138,13 @@ public:
 	 *
 	 * @param sides Number of sides
 	 */
-	inline void setSides(int sides) { sides_ = std::max(1, sides); }
+	void setSides(int sides) { sides_ = std::max(1, sides); }
 
 	/**
 	 * @brief Gets the total value of the last dice roll
 	 * @return int Dice roll value, including any open ended rolls
 	 */
-	inline int result() const { return result_.first; }
+	int result() const { return result_.first; }
 
 	/**
 	 * @brief Gets the unmodified first roll value of the last dice roll
@@ -152,7 +152,7 @@ public:
 	 * This function gets the initial dice roll value before any open ended rolls are applied
 	 * @return int Dice roll value, excluding any open ended rolls
 	 */
-	inline int unmodified() const { return result_.second; }
+	int unmodified() const { return result_.second; }
 
 	/**
 	 * @brief Roll them bones

@@ -36,42 +36,42 @@ public:
 	 * @brief Set the book reference number from the publisher
 	 * @param code Book reference number
 	 */
-	inline void setCode(std::string_view code) { code_ = code; }
+	void setCode(std::string_view code) { code_ = code; }
 	/**
 	 * @brief Get the book reference number from the publisher
 	 * @return Book reference number as a string reference
 	 */
-	inline const std::string& code() const { return code_; }
+	const std::string& code() const { return code_; }
 	/**
 	 * @brief Set the name of the book
 	 * @param name Book name
 	 */
-	inline void setName(std::string_view name) { name_ = name; }
+	void setName(std::string_view name) { name_ = name; }
 	/**
 	 * @brief Get the name of the book
 	 * @return Book name as a string reference
 	 */
-	inline const std::string& name() const { return name_; }
+	const std::string& name() const { return name_; }
 	/**
 	 * @brief Set the abbreviation of the book as used by the publisher
 	 * @param abbreviation Book abbreviation
 	 */
-	inline void setAbbreviation(std::string_view abbreviation) { abbreviation_ = abbreviation; }
+	void setAbbreviation(std::string_view abbreviation) { abbreviation_ = abbreviation; }
 	/**
 	 * @brief Get the abbreviation of the book as used by the publisher
 	 * @return Book abbreviation as a string reference
 	 */
-	inline const std::string& abbreviation() const { return abbreviation_; }
+	const std::string& abbreviation() const { return abbreviation_; }
 	/**
 	 * @brief Set the ISBN book number
 	 * @param isbn Book ISBN
 	 */
-	inline void setIsbn(std::string_view isbn) { isbn_ = isbn; }
+	void setIsbn(std::string_view isbn) { isbn_ = isbn; }
 	/**
 	 * @brief Get the ISBN book number
 	 * @return Book ISBN as a string reference
 	 */
-	inline const std::string& isbn() const { return isbn_; }
+	const std::string& isbn() const { return isbn_; }
 
 private:
 	std::string code_{}; /**< Book reference number from the publisher */
