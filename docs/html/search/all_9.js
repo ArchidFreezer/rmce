@@ -6,5 +6,6 @@ var searchData=
   ['languagedatafileparserjson_3',['LanguageDatafileParserJson',['../class_language_datafile_parser_json.html',1,'LanguageDatafileParserJson'],['../class_language_datafile_parser_json.html#ab15b7280cb51b381ea11b4c62b042374',1,'LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache &amp;cache, std::string_view filename)'],['../class_language_datafile_parser_json.html#a7f75e960b7de5b0b1095638bcc143b99',1,'LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache &amp;cache)']]],
   ['languagedialectdata_4',['LanguageDialectData',['../class_language_dialect_data.html',1,'LanguageDialectData'],['../class_language_dialect_data.html#a4d3ad512c39a0693f0be3ac15af4de47',1,'LanguageDialectData::LanguageDialectData(std::string_view name)'],['../class_language_dialect_data.html#a1c0666edebc8b7f7404530b9cae4f1e8',1,'LanguageDialectData::LanguageDialectData(std::string_view name, std::set&lt; std::string &gt; &amp;dialects)']]],
   ['lcase_5',['lcase',['../_string_utils_8h.html#acd53b635966070e138dea419304de22f',1,'StringUtils.h']]],
-  ['lcaseconcat_6',['lcaseconcat',['../_string_utils_8h.html#a31cee08b448da5eaab597ae9aa8d9424',1,'StringUtils.h']]]
+  ['lcaseconcat_6',['lcaseconcat',['../_string_utils_8h.html#a31cee08b448da5eaab597ae9aa8d9424',1,'StringUtils.h']]],
+  ['lookuptable_7',['LookupTable',['../class_lookup_table.html',1,'']]]
 ];

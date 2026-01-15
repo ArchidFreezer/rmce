@@ -14,5 +14,6 @@ var searchData=
   ['rollopenhigh_11',['rollOpenHigh',['../class_dice.html#a2fc5e8d8534a4b20fefffad328caf1af',1,'Dice']]],
   ['rollopenlow_12',['rollOpenLow',['../class_dice.html#a09d3dbfc32d278e9646421ae01b60677',1,'Dice']]],
   ['rootnode_13',['rootNode',['../class_datafile_parser_json.html#a3a9921d44a3a84d683c8e571c7cd4789',1,'DatafileParserJson']]],
-  ['ruledatatype_14',['ruleDatatype',['../class_datafile_parser.html#ac06196a9d5d1fc94c1b34f9fa53a878f',1,'DatafileParser']]]
+  ['rownotfoundexception_14',['RowNotFoundException',['../class_row_not_found_exception.html',1,'RowNotFoundException'],['../class_row_not_found_exception.html#aa85b0412c85ad14a6011ce15e196d80d',1,'RowNotFoundException::RowNotFoundException()']]],
+  ['ruledatatype_15',['ruleDatatype',['../class_datafile_parser.html#ac06196a9d5d1fc94c1b34f9fa53a878f',1,'DatafileParser']]]
 ];

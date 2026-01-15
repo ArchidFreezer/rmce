@@ -12,9 +12,9 @@
  * containers. Note that it is only the less than operator that is required and there is no requirement for a custom
  * hashing function so the class is not guaranteed to be usable in unordered containers.
  */
-template <typename T, typename U>
+template <class MatcherClass, typename MatcherDatatype>
 concept is_matcher =
-	requires(T v, U n) {
+	requires(MatcherClass v, MatcherDatatype n) {
 		{ v.operator<(v) } -> std::convertible_to<bool>;
 		{ v.matches(n) } -> std::convertible_to<bool>;
 };

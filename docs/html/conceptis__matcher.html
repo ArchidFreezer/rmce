@@ -98,15 +98,11 @@ $(function(){initNavTree('conceptis__matcher.html','',''); });
 
 <p><code>#include &lt;<a class="el" href="_matcher_8h_source.html">Matcher.h</a>&gt;</code></p>
 <h2 id="header-conceptdef" class="groupheader">Concept definition</h2>
-<div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U&gt;</div>
+<div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> MatcherClass, <span class="keyword">typename</span> MatcherDatatype&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptis__matcher.html">is_matcher</a> =</div>
-<div class="line">    <span class="keyword">requires</span>(T v, U n) {</div>
+<div class="line">    <span class="keyword">requires</span>(MatcherClass v, MatcherDatatype n) {</div>
 <div class="line">        { v.operator&lt;(v) } -&gt; std::convertible_to&lt;bool&gt;;</div>
 <div class="line">        { v.matches(n) } -&gt; std::convertible_to&lt;bool&gt;;</div>
-<div class="line">}</div>
-<div class="line">&amp;&amp;</div>
-<div class="line">    <span class="keyword">requires</span>(U n) {</div>
-<div class="line">    std::integral&lt;U&gt; || std::floating_point&lt;U&gt;;</div>
 <div class="line">}</div>
 <div class="ttc" id="aconceptis__matcher_html"><div class="ttname"><a href="conceptis__matcher.html">is_matcher</a></div><div class="ttdoc">Concept that defines the requirements for a matcher class.</div><div class="ttdef"><b>Definition</b> Matcher.h:16</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>

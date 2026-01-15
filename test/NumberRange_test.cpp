@@ -25,11 +25,11 @@ namespace {
 		EXPECT_FALSE(nr.matches(11));
 	}
 
-	template<typename T, typename U>
-		requires is_matcher<T, U>
+	template<typename MatcherClass, typename MatcherDatatype>
+		requires is_matcher<MatcherClass, MatcherDatatype>
 	class NumberRangeTest {
 	public:
-		NumberRangeTest(T matcher, U val) {};
+		NumberRangeTest(MatcherClass matcher, MatcherDatatype val) {};
 	};
 
 	TEST(NumberRange, is_matcher) {

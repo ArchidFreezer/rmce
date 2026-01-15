@@ -21,16 +21,18 @@ var hierarchy =
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
     [ "is_matcher", null, [
-      [ "NumberRange< T >", "class_number_range.html", null ]
+      [ "NumberRange< NumberType >", "class_number_range.html", null ]
     ] ],
-    [ "Matcher&lt; T, U &gt;", "class_matcher.html", null ],
+    [ "LookupTable&lt; MatcherClass, MatcherDatatype, CellDatatype &gt;", "class_lookup_table.html", null ],
     [ "std::runtime_error", null, [
+      [ "ColNotFoundException", "class_col_not_found_exception.html", null ],
       [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
       [ "InvalidSkillProgression", "class_invalid_skill_progression.html", null ],
+      [ "RowNotFoundException", "class_row_not_found_exception.html", null ],
       [ "TooManyStatsException", "class_too_many_stats_exception.html", null ]
     ] ],
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
-    [ "TableRow&lt; T &gt;", "class_table_row.html", null ]
+    [ "TableRow&lt; CellDataType &gt;", "class_table_row.html", null ]
 ];

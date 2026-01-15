@@ -94,7 +94,8 @@ $(function(){initNavTree('functions_func.html','',''); });
 <h3 class="doxsection"><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>abbreviation()&#160;:&#160;<a class="el" href="class_book_data.html#a0c3b48f44c6c9a44998b24cde5c7b98c">BookData</a></li>
 <li>add()&#160;:&#160;<a class="el" href="class_game_rule_data_cache.html#a6f07712516ace6fa0c29e877d2b388de">GameRuleDataCache</a>, <a class="el" href="class_language_dialect_data.html#abc9bbaae6d4ac2e8a6a601fe3f616392">LanguageDialectData</a></li>
-<li>addCell()&#160;:&#160;<a class="el" href="class_table_row.html#a40aeef31b0086636a99dac9db7c5affe">TableRow&lt; T &gt;</a></li>
+<li>addCell()&#160;:&#160;<a class="el" href="class_table_row.html#a0acb30329157bc6ee809895481044c56">TableRow&lt; CellDataType &gt;</a></li>
+<li>addRow()&#160;:&#160;<a class="el" href="class_lookup_table.html#afb5b804a13412583f702a882322c05c0">LookupTable&lt; MatcherClass, MatcherDatatype, CellDatatype &gt;</a></li>
 <li>addStat()&#160;:&#160;<a class="el" href="class_skill_category_data.html#ae92350c9d91937939523110732fae66a">SkillCategoryData</a></li>
 </ul>
 
@@ -111,7 +112,8 @@ $(function(){initNavTree('functions_func.html','',''); });
 <li>category()&#160;:&#160;<a class="el" href="class_language_data.html#a4177a44d3e7802bebb18cac0d183b865">LanguageData</a></li>
 <li>clearStats()&#160;:&#160;<a class="el" href="class_skill_category_data.html#aebd62a7951f85ada98ea67d7291d5d3b">SkillCategoryData</a></li>
 <li>code()&#160;:&#160;<a class="el" href="class_book_data.html#a0e5569ad4b94a8c924cebdfa2780be63">BookData</a></li>
-<li>colCount()&#160;:&#160;<a class="el" href="class_table_row.html#a2e4e9e844eef6d45b75300c385d201f8">TableRow&lt; T &gt;</a></li>
+<li>colCount()&#160;:&#160;<a class="el" href="class_table_row.html#a301723f9e0d4caab39c6acea169f8578">TableRow&lt; CellDataType &gt;</a></li>
+<li>ColNotFoundException()&#160;:&#160;<a class="el" href="class_col_not_found_exception.html#ae0485c1006d6d7939f4671c15bc21a01">ColNotFoundException</a></li>
 </ul>
 
 
@@ -140,7 +142,7 @@ $(function(){initNavTree('functions_func.html','',''); });
 <li>generateId()&#160;:&#160;<a class="el" href="class_datafile_parser.html#a808ab327048b0aafa00c86b2ef360f27">DatafileParser</a></li>
 <li>get()&#160;:&#160;<a class="el" href="class_game_rule_data_cache.html#a221a95c7323d89322519d7b8d2711277">GameRuleDataCache</a></li>
 <li>getBonus()&#160;:&#160;<a class="el" href="class_skill_progression_data.html#a936d52be890b533bc8497f9bfa70fa0e">SkillProgressionData</a>, <a class="el" href="class_skill_progression_type_data.html#a24a83b8e3b720f9300043a3268eb77a0">SkillProgressionTypeData</a></li>
-<li>getCell()&#160;:&#160;<a class="el" href="class_table_row.html#a1d3cd42a4ee6386a0ebbb299ee33d6c8">TableRow&lt; T &gt;</a></li>
+<li>getCell()&#160;:&#160;<a class="el" href="class_lookup_table.html#a5aa942b72e051293e0e481f248d575c2">LookupTable&lt; MatcherClass, MatcherDatatype, CellDatatype &gt;</a>, <a class="el" href="class_table_row.html#ad1b9d5f9ca3b0bbfef4c329e0f0fd219">TableRow&lt; CellDataType &gt;</a></li>
 <li>getDefaultSkillProgression()&#160;:&#160;<a class="el" href="class_skill_category_data.html#a80cf578f3f17a660981cb234880daf4d">SkillCategoryData</a></li>
 <li>getFullName()&#160;:&#160;<a class="el" href="class_skill_category_data.html#aab409dce8c2a4830c27806717b295648">SkillCategoryData</a></li>
 <li>getGroup()&#160;:&#160;<a class="el" href="class_skill_category_data.html#a5f80b6053b2eaf39ec83bd809e1a92d5">SkillCategoryData</a></li>
@@ -175,8 +177,7 @@ $(function(){initNavTree('functions_func.html','',''); });
 
 
 <h3 class="doxsection"><a id="index_m" name="index_m"></a>- m -</h3><ul>
-<li>Matcher()&#160;:&#160;<a class="el" href="class_matcher.html#a8ef95ad69f9caba52bc787e1cf792040">Matcher&lt; T, U &gt;</a></li>
-<li>matches()&#160;:&#160;<a class="el" href="class_matcher.html#a8d6a4292a2c3020dae1d3775500839cd">Matcher&lt; T, U &gt;</a>, <a class="el" href="class_number_range.html#ab23831adf44bca479419e7f87b15eaa3">NumberRange&lt; T &gt;</a></li>
+<li>matches()&#160;:&#160;<a class="el" href="class_number_range.html#acbd0f5d218335feaa537e669e5531bec">NumberRange&lt; NumberType &gt;</a></li>
 <li>maxOpenLow()&#160;:&#160;<a class="el" href="class_dice.html#a0914b010f7777a2b5508b1760a52e884">Dice</a></li>
 <li>minOpenHigh()&#160;:&#160;<a class="el" href="class_dice.html#a283a1d67202dbe120f7b1f2facfdc1ac">Dice</a></li>
 </ul>
@@ -184,12 +185,12 @@ $(function(){initNavTree('functions_func.html','',''); });
 
 <h3 class="doxsection"><a id="index_n" name="index_n"></a>- n -</h3><ul>
 <li>name()&#160;:&#160;<a class="el" href="class_book_data.html#aa9b763083e38c4b53353e02f524f2403">BookData</a>, <a class="el" href="class_language_category_data.html#a8532c04ddef072a9b4b899e7f48c7835">LanguageCategoryData</a>, <a class="el" href="class_language_data.html#a3b143b4d6979343d8d39ed701fb38a22">LanguageData</a>, <a class="el" href="class_language_dialect_data.html#a07d3c1de1af8b7de27e3b4ed6aacf1b0">LanguageDialectData</a>, <a class="el" href="class_skill_category_data.html#a69fd0ed4a9d021cb70e91b29abd26f6a">SkillCategoryData</a>, <a class="el" href="class_skill_progression_type_data.html#a2fb561755266f2779e5bd1e6252595c4">SkillProgressionTypeData</a></li>
-<li>NumberRange()&#160;:&#160;<a class="el" href="class_number_range.html#a72402ff2e4270e4d3b554087a3e0eff7">NumberRange&lt; T &gt;</a></li>
+<li>NumberRange()&#160;:&#160;<a class="el" href="class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0">NumberRange&lt; NumberType &gt;</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_o" name="index_o"></a>- o -</h3><ul>
-<li>operator&lt;()&#160;:&#160;<a class="el" href="class_matcher.html#a688c757a06b3277e7eaf1fc8fc2c121c">Matcher&lt; T, U &gt;</a>, <a class="el" href="class_number_range.html#a4174951ad5ed163feb966cfe1925663e">NumberRange&lt; T &gt;</a></li>
+<li>operator&lt;()&#160;:&#160;<a class="el" href="class_number_range.html#a7bf19dce6e11e87faef0b28faa060285">NumberRange&lt; NumberType &gt;</a></li>
 <li>operator=()&#160;:&#160;<a class="el" href="class_game_rule_data_cache.html#a36dea59a22820f6277b51b10f85efec5">GameRuleDataCache</a></li>
 </ul>
 
@@ -212,6 +213,7 @@ $(function(){initNavTree('functions_func.html','',''); });
 <li>rollOpenHigh()&#160;:&#160;<a class="el" href="class_dice.html#a2fc5e8d8534a4b20fefffad328caf1af">Dice</a></li>
 <li>rollOpenLow()&#160;:&#160;<a class="el" href="class_dice.html#a09d3dbfc32d278e9646421ae01b60677">Dice</a></li>
 <li>rootNode()&#160;:&#160;<a class="el" href="class_datafile_parser_json.html#a3a9921d44a3a84d683c8e571c7cd4789">DatafileParserJson</a></li>
+<li>RowNotFoundException()&#160;:&#160;<a class="el" href="class_row_not_found_exception.html#aa85b0412c85ad14a6011ce15e196d80d">RowNotFoundException</a></li>
 <li>ruleDatatype()&#160;:&#160;<a class="el" href="class_datafile_parser.html#ac06196a9d5d1fc94c1b34f9fa53a878f">DatafileParser</a></li>
 </ul>
 
@@ -268,6 +270,7 @@ $(function(){initNavTree('functions_func.html','',''); });
 <li>~DatafileParserJson()&#160;:&#160;<a class="el" href="class_datafile_parser_json.html#ab58556ce6adae817a5e37a3fdfd0691b">DatafileParserJson</a></li>
 <li>~GameRuleData()&#160;:&#160;<a class="el" href="class_game_rule_data.html#abcd57cd1f04642956ba72a183135df42">GameRuleData</a></li>
 <li>~GameRuleDataCache()&#160;:&#160;<a class="el" href="class_game_rule_data_cache.html#a26bbcd66f1fa055a5b0a72a84b1b7158">GameRuleDataCache</a></li>
+<li>~LookupTable()&#160;:&#160;<a class="el" href="class_lookup_table.html#a6697af6db42569c4eeeb3d837f22e713">LookupTable&lt; MatcherClass, MatcherDatatype, CellDatatype &gt;</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

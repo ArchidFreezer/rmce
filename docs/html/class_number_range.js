@@ -1,6 +1,6 @@
 var class_number_range =
 [
-    [ "NumberRange", "class_number_range.html#a72402ff2e4270e4d3b554087a3e0eff7", null ],
-    [ "matches", "class_number_range.html#ab23831adf44bca479419e7f87b15eaa3", null ],
-    [ "operator<", "class_number_range.html#a4174951ad5ed163feb966cfe1925663e", null ]
+    [ "NumberRange", "class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0", null ],
+    [ "matches", "class_number_range.html#acbd0f5d218335feaa537e669e5531bec", null ],
+    [ "operator<", "class_number_range.html#a7bf19dce6e11e87faef0b28faa060285", null ]
 ];

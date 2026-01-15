@@ -96,42 +96,14 @@ $(function(){initNavTree('_matcher_8h_source.html','',''); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatcherClass, <span class="keyword">typename</span> MatcherDatatype&gt;</div>
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="conceptis__matcher.html">   16</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptis__matcher.html">is_matcher</a> =</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">requires</span>(T v, U n) {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">requires</span>(MatcherClass v, MatcherDatatype n) {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        { v.operator&lt;(v) } -&gt; std::convertible_to&lt;bool&gt;;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        { v.matches(n) } -&gt; std::convertible_to&lt;bool&gt;;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>&amp;&amp;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">requires</span>(U n) {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::integral&lt;U&gt; || std::floating_point&lt;U&gt;;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptis__matcher.html">is_matcher&lt;T, U&gt;</a></div>
-<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_matcher.html">   41</a></span><span class="keyword">class </span><a class="code hl_function" href="class_matcher.html#a8ef95ad69f9caba52bc787e1cf792040">Matcher</a> {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_matcher.html#a8ef95ad69f9caba52bc787e1cf792040">   50</a></span>    <a class="code hl_function" href="class_matcher.html#a8ef95ad69f9caba52bc787e1cf792040">Matcher</a>(std::shared_ptr&lt;T&gt; matcher) : matcher_{ matcher } {}</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_matcher.html#a8d6a4292a2c3020dae1d3775500839cd">   58</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_matcher.html#a8d6a4292a2c3020dae1d3775500839cd">matches</a>(U val)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> matcher_-&gt;matches(val); }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_matcher.html#a688c757a06b3277e7eaf1fc8fc2c121c">   69</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_matcher.html#a688c757a06b3277e7eaf1fc8fc2c121c">operator&lt;</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_matcher.html#a8ef95ad69f9caba52bc787e1cf792040">Matcher&lt;T, U&gt;</a>&amp; other)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="comment">// The matchers are stored as pointers so we need to dereference them before we use them for the comparison</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> ((*matcher_) &lt; (*other.matcher_));</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
-</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    std::shared_ptr&lt;T&gt; matcher_{}; </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
-</div>
-<div class="ttc" id="aclass_matcher_html_a688c757a06b3277e7eaf1fc8fc2c121c"><div class="ttname"><a href="class_matcher.html#a688c757a06b3277e7eaf1fc8fc2c121c">Matcher::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Matcher&lt; T, U &gt; &amp;other) const</div><div class="ttdoc">Implement an operator&lt; method for the class.</div><div class="ttdef"><b>Definition</b> Matcher.h:69</div></div>
-<div class="ttc" id="aclass_matcher_html_a8d6a4292a2c3020dae1d3775500839cd"><div class="ttname"><a href="class_matcher.html#a8d6a4292a2c3020dae1d3775500839cd">Matcher::matches</a></div><div class="ttdeci">bool matches(U val) const</div><div class="ttdoc">Determines if the value matches the data stored in the matcher.</div><div class="ttdef"><b>Definition</b> Matcher.h:58</div></div>
-<div class="ttc" id="aclass_matcher_html_a8ef95ad69f9caba52bc787e1cf792040"><div class="ttname"><a href="class_matcher.html#a8ef95ad69f9caba52bc787e1cf792040">Matcher::Matcher</a></div><div class="ttdeci">Matcher(std::shared_ptr&lt; T &gt; matcher)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> Matcher.h:50</div></div>
 <div class="ttc" id="aconceptis__matcher_html"><div class="ttname"><a href="conceptis__matcher.html">is_matcher</a></div><div class="ttdoc">Concept that defines the requirements for a matcher class.</div><div class="ttdef"><b>Definition</b> Matcher.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

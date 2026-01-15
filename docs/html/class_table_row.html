@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: TableRow&lt; T &gt; Class Template Reference</title>
+<title>Rolemaster Character Editor: TableRow&lt; CellDataType &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,7 +89,7 @@ $(function(){initNavTree('class_table_row.html','','class_table_row-members'); }
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">TableRow&lt; T &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">TableRow&lt; CellDataType &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -100,38 +100,38 @@ $(function(){initNavTree('class_table_row.html','','class_table_row-members'); }
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1d3cd42a4ee6386a0ebbb299ee33d6c8" id="r_a1d3cd42a4ee6386a0ebbb299ee33d6c8"><td class="memItemLeft">const T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1d3cd42a4ee6386a0ebbb299ee33d6c8">getCell</a> (int index) const</td></tr>
-<tr class="memdesc:a1d3cd42a4ee6386a0ebbb299ee33d6c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a specific cell in the row.  <br /></td></tr>
-<tr class="memitem:a40aeef31b0086636a99dac9db7c5affe" id="r_a40aeef31b0086636a99dac9db7c5affe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a40aeef31b0086636a99dac9db7c5affe">addCell</a> (T val)</td></tr>
-<tr class="memdesc:a40aeef31b0086636a99dac9db7c5affe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new column to the row The new column is added at the end of the row.  <br /></td></tr>
-<tr class="memitem:a2e4e9e844eef6d45b75300c385d201f8" id="r_a2e4e9e844eef6d45b75300c385d201f8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a2e4e9e844eef6d45b75300c385d201f8">colCount</a> () const</td></tr>
-<tr class="memdesc:a2e4e9e844eef6d45b75300c385d201f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of columns in the row.  <br /></td></tr>
+<tr class="memitem:ad1b9d5f9ca3b0bbfef4c329e0f0fd219" id="r_ad1b9d5f9ca3b0bbfef4c329e0f0fd219"><td class="memItemLeft">const CellDataType &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad1b9d5f9ca3b0bbfef4c329e0f0fd219">getCell</a> (int index) const</td></tr>
+<tr class="memdesc:ad1b9d5f9ca3b0bbfef4c329e0f0fd219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a specific cell in the row.  <br /></td></tr>
+<tr class="memitem:a0acb30329157bc6ee809895481044c56" id="r_a0acb30329157bc6ee809895481044c56"><td class="memItemLeft"><a class="el" href="class_table_row.html">TableRow</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0acb30329157bc6ee809895481044c56">addCell</a> (CellDataType val)</td></tr>
+<tr class="memdesc:a0acb30329157bc6ee809895481044c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new column to the row The new column is added at the end of the row.  <br /></td></tr>
+<tr class="memitem:a301723f9e0d4caab39c6acea169f8578" id="r_a301723f9e0d4caab39c6acea169f8578"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a301723f9e0d4caab39c6acea169f8578">colCount</a> () const</td></tr>
+<tr class="memdesc:a301723f9e0d4caab39c6acea169f8578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of columns in the row.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class TableRow&lt; T &gt;</div><p>Class representing a row in a table. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename CellDataType&gt;<br />
+class TableRow&lt; CellDataType &gt;</div><p>Class representing a row in a table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of the value being stored in each cell in the row </td></tr>
+    <tr><td class="paramname">CellDataType</td><td>Type of the value being stored in each cell in the row </td></tr>
   </table>
   </dd>
 </dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a40aeef31b0086636a99dac9db7c5affe" name="a40aeef31b0086636a99dac9db7c5affe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40aeef31b0086636a99dac9db7c5affe">&#9670;&#160;</a></span>addCell()</h2>
+<a id="a0acb30329157bc6ee809895481044c56" name="a0acb30329157bc6ee809895481044c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0acb30329157bc6ee809895481044c56">&#9670;&#160;</a></span>addCell()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename CellDataType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_table_row.html">TableRow</a>&lt; T &gt;::addCell </td>
+          <td class="memname"><a class="el" href="class_table_row.html">TableRow</a> &amp; <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDataType &gt;::addCell </td>
           <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td class="paramtype">CellDataType</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -152,19 +152,19 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a2e4e9e844eef6d45b75300c385d201f8" name="a2e4e9e844eef6d45b75300c385d201f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e4e9e844eef6d45b75300c385d201f8">&#9670;&#160;</a></span>colCount()</h2>
+<a id="a301723f9e0d4caab39c6acea169f8578" name="a301723f9e0d4caab39c6acea169f8578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a301723f9e0d4caab39c6acea169f8578">&#9670;&#160;</a></span>colCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename CellDataType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="class_table_row.html">TableRow</a>&lt; T &gt;::colCount </td>
+          <td class="memname">int <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDataType &gt;::colCount </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -182,19 +182,19 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a1d3cd42a4ee6386a0ebbb299ee33d6c8" name="a1d3cd42a4ee6386a0ebbb299ee33d6c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d3cd42a4ee6386a0ebbb299ee33d6c8">&#9670;&#160;</a></span>getCell()</h2>
+<a id="ad1b9d5f9ca3b0bbfef4c329e0f0fd219" name="ad1b9d5f9ca3b0bbfef4c329e0f0fd219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b9d5f9ca3b0bbfef4c329e0f0fd219">&#9670;&#160;</a></span>getCell()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename CellDataType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const T &amp; <a class="el" href="class_table_row.html">TableRow</a>&lt; T &gt;::getCell </td>
+          <td class="memname">const CellDataType &amp; <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDataType &gt;::getCell </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
           <td> const</td>
@@ -214,10 +214,10 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>T contents of the cell </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CellDataType contents of the cell </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::out_of_range</td><td>if an attempt is made to access a column that does not exist </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_col_not_found_exception.html" title="Exception throw if an attempt was made to access a column index in the row that does not exist.">ColNotFoundException</a></td><td>if an attempt is made to access a column that does not exist </td></tr>
   </table>
   </dd>
 </dl>
