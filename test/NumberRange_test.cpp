@@ -1,8 +1,9 @@
 #include <gtest/gtest.h>
+#include <Matcher.h>
 #include <NumberRange.h>
 
 namespace {
-	TEST(NumberTest, IntRange) {
+	TEST(NumberRange, IntRange) {
 		NumberRange nr(1, 10);
 		EXPECT_TRUE(nr.matches(1));
 		EXPECT_TRUE(nr.matches(7));
@@ -13,7 +14,7 @@ namespace {
 		EXPECT_FALSE(nr.matches(11));
 	}
 
-	TEST(NumberTest, FloatRange) {
+	TEST(NumberRange, FloatRange) {
 		NumberRange nr(1.0f, 10.8f);
 		EXPECT_TRUE(nr.matches(1.0f));
 		EXPECT_TRUE(nr.matches(7.3f));
@@ -22,6 +23,19 @@ namespace {
 		EXPECT_FALSE(nr.matches(0.99999f));
 		EXPECT_FALSE(nr.matches(10.80001f));
 		EXPECT_FALSE(nr.matches(11));
+	}
+
+	template<typename T, typename U>
+		requires is_matcher<T, U>
+	class NumberRangeTest {
+	public:
+		NumberRangeTest(T matcher, U val) {};
+	};
+
+	TEST(NumberRange, is_matcher) {
+		NumberRange nr(1, 10);
+		// The line below will fail to compile if NumberRange does not adhere to is_matcher concept
+		NumberRangeTest<NumberRange<int>, int>(nr, 1);
 	}
 
 }
