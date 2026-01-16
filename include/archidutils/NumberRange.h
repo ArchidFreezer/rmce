@@ -8,7 +8,7 @@
  * row to use
  * 
  * @tparam NumberType Type that the class uses to match against
- * @implements is_row_matcher
+ * @implements table_row_matcher
  */
 template<typename NumberType> requires std::integral<NumberType> || std::floating_point<NumberType>
 class NumberRange {

@@ -37,7 +37,7 @@ public:
  * @tparam CellDatatype Data type that is stored in each cell in the table
  */
 template<typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype>
-	requires is_row_matcher<RowMatcherClass, RowDatatype> && table_column_matcher< ColumnMatcherClass, ColumnDataType>
+	requires table_row_matcher<RowMatcherClass, RowDatatype> && table_column_matcher< ColumnMatcherClass, ColumnDataType>
 class LookupTable {
 public:
 	/**

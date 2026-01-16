@@ -26,15 +26,15 @@ namespace {
 	}
 
 	template<typename MatcherClass, typename MatcherDatatype>
-		requires is_row_matcher<MatcherClass, MatcherDatatype>
+		requires table_row_matcher<MatcherClass, MatcherDatatype>
 	class NumberRangeTest {
 	public:
 		NumberRangeTest(MatcherClass matcher, MatcherDatatype val) {};
 	};
 
-	TEST(NumberRange, is_row_matcher) {
+	TEST(NumberRange, table_row_matcher) {
 		NumberRange nr(1, 10);
-		// The line below will fail to compile if NumberRange does not adhere to is_row_matcher concept
+		// The line below will fail to compile if NumberRange does not adhere to table_row_matcher concept
 		NumberRangeTest<NumberRange<int>, int>(nr, 1);
 	}
 

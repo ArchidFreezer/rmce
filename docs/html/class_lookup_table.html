@@ -112,7 +112,7 @@ virtual&#160;</td><td class="memItemRight"><b>~LookupTable</b> ()=default</td></
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype&gt;<br />
-requires is_row_matcher&lt;RowMatcherClass, RowDatatype&gt; &amp;&amp; <a class="el" href="concepttable__column__matcher.html">table_column_matcher</a>&lt; ColumnMatcherClass, ColumnDataType&gt;<br />
+requires table_row_matcher&lt;RowMatcherClass, RowDatatype&gt; &amp;&amp; <a class="el" href="concepttable__column__matcher.html">table_column_matcher</a>&lt; ColumnMatcherClass, ColumnDataType&gt;<br />
 class LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</div><p>Base class representing a lookup table index by row and column. </p>
 <p>Each row is indexed using a matcher class <code class="param">RowMatcherClass</code> that adheres to the is_matcher concept that matches on the datatype <code class="param">RowDatatype</code>. When performing a lookup on the table the class will iterate through the rows until it finds a matcher that matches and then from the associated row retrieves the data value of type <code class="param">CellDatatype</code> based on a lookup in the column matcher.</p>
 <p>The TableColumnMatcher matcher is added via the <a class="el" href="#aa8b34807f6c7a4338ec46ee454858129" title="Set the column matcher object.">setColumnMatcher()</a> method and must be set prior to attempting to retrieve data from the table.</p>
