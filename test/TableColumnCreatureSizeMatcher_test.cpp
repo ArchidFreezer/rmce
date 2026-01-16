@@ -6,11 +6,10 @@ namespace {
 	TEST(TableColumnCreatureSizeMatcher, All) {
 		TableColumnCreatureSizeMatcher matcher = TableColumnCreatureSizeMatcher();
 		// Check the default
-		EXPECT_EQ(matcher.getColumn(), 0);
-		EXPECT_EQ(matcher.setMatch(CreatureSizeType::kTiny).getColumn(), 0);
-		EXPECT_EQ(matcher.setMatch(CreatureSizeType::kSmall).getColumn(), 1);
-		EXPECT_EQ(matcher.setMatch(CreatureSizeType::kMedium).getColumn(), 2);
-		EXPECT_EQ(matcher.setMatch(CreatureSizeType::kLarge).getColumn(), 3);
-		EXPECT_EQ(matcher.setMatch(CreatureSizeType::kSuperLarge).getColumn(), 4);
+		EXPECT_EQ(matcher.getColumn(CreatureSizeType::kTiny), 0);
+		EXPECT_EQ(matcher.getColumn(CreatureSizeType::kSmall), 1);
+		EXPECT_EQ(matcher.getColumn(CreatureSizeType::kMedium), 2);
+		EXPECT_EQ(matcher.getColumn(CreatureSizeType::kLarge), 3);
+		EXPECT_EQ(matcher.getColumn(CreatureSizeType::kSuperLarge), 4);
 	}
 }

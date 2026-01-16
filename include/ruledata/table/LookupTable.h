@@ -29,11 +29,8 @@ public:
  * finds a matcher that matches and then from the associated row retrieves the data value of type \p CellDatatype based on
  * a lookup in the column matcher.
  * 
- * The column matcher is added via the setColumnMatcher() method which must becalled prior to attempting to retrieve data
- * from the table and must be of class TableColumnMatcher. Prior to any call to retrieve cell data this must be set to the
- * appropriate value for the type defining the columns, which are typically enumerations.
- * 
- * 
+ * The TableColumnMatcher matcher is added via the setColumnMatcher() method and must be set prior to attempting to
+ * retrieve data from the table.
  * 
  * @tparam MatcherClass Matcher that is used to identify the correct row
  * @tparam MatcherDatatype Data type that the matcher \p MatcherClass matches on
@@ -60,48 +57,19 @@ public:
 	 * @brief Gets the value of a cell in the table
 	 * 
 	 * @param row Value to identify the row, must be of the same type as the matcher
-	 * @param col Column index from the row
-	 * 
+	 * @param col Value to match against the column
+	 *
 	 * @return Contents of the cell from the row that matches \a row and column \a col
-	 * 
+	 *
 	 * @throw RowNotFoundException if \a row does not match any matchers
 	 * @throw ColNotFoundException if \a col is an invalid column
 	 */
-	const CellDatatype& cell(MatcherDatatype row, int col) const {
+	const CellDatatype& cell(MatcherDatatype row, ColumnType col) const {
 		for (auto& tr : table_) {
-			if ((*tr.first).matches(row)) return tr.second.cell(col);
+			if ((*tr.first).matches(row)) return tr.second.cell(col_matcher_->getColumn(col));
 		}
 		throw RowNotFoundException("No row was found matching the value: " + std::to_string(row));
 	}
-
-	/**
-	 * @brief Gets the value of a cell in the table
-	 * 
-	 * The column is determined by the configuration of the TableColumnMatcher
-	 *
-	 * @param row Value to identify the row, must be of the same type as the matcher
-	 *
-	 * @return Contents of the cell from the row that matches \a row and column \a col
-	 *
-	 * @throw RowNotFoundException if \a row does not match any matchers
-	 * @throw ColNotFoundException if \a col is an invalid column
-	 */
-	const CellDatatype& cell(MatcherDatatype row) const {
-		return cell(row, col_matcher_->getColumn());
-	}
-
-	/**
-	 * @brief Gets the value of a cell in the table
-	 *
-	 * The row is randomly generated using an even spread
-	 * The column is determined by the configuration of the TableColumnMatcher
-	 *
-	 * @return Contents of the cell from the row that matches \a row and column \a col
-	 *
-	 * @throw RowNotFoundException if \a row does not match any matchers
-	 * @throw ColNotFoundException if \a col is an invalid column
-	 */
-	virtual const CellDatatype& cell() const = 0;
 
 	/**
 	 * @brief Set the column matcher object
@@ -112,13 +80,7 @@ public:
 	 */
 	void setColumnMatcher(std::unique_ptr<TableColumnMatcher<ColumnType>> col_matcher) { col_matcher_ = std::move(col_matcher); }
 
-	/**
-	 * @brief Gets the object to determine the table column to retriev values from
-	 * @return TableColumnMatcher table column matcher
-	 */
-	TableColumnMatcher<ColumnType>& columnMatcher() { return *col_matcher_; }
-
-protected:
+private:
 	std::map<std::shared_ptr<MatcherClass>, TableRow<CellDatatype>> table_; /**< Data structure representing the table */
 	std::unique_ptr<TableColumnMatcher<ColumnType>> col_matcher_{}; /**< Object to determine table column to retrieve cell data from */
 };

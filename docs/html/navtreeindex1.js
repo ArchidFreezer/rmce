@@ -1,12 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ae1ce0ec846f3ba0c8966ef540ae472aa":[0,0,0,1,0],
-"namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa":[0,0,0,2],
-"namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2":[0,0,0,3],
-"namespace_critical_table_type.html":[0,0,1],
-"namespace_critical_table_type.html#a2e9522e03d12fe02878b31b00f2663bf":[0,0,1,4],
-"namespace_critical_table_type.html#a313b88a386987728d8027d79f8d6037d":[0,0,1,2],
-"namespace_critical_table_type.html#a439e93fa90539a088714b27a6b880702":[0,0,1,3],
 "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737":[0,0,1,0],
 "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737":[0,0,1,1],
 "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a07fa7a19aa722c635a15e94cb7f50416":[0,0,1,1,0],

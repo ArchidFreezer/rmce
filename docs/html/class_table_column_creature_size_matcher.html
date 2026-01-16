@@ -122,27 +122,19 @@ Collaboration diagram for TableColumnCreatureSizeMatcher:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0692c0482302021c0977e4b6f8abd05e" id="r_a0692c0482302021c0977e4b6f8abd05e"><td class="memItemLeft"><a id="a0692c0482302021c0977e4b6f8abd05e" name="a0692c0482302021c0977e4b6f8abd05e"></a>
 &#160;</td><td class="memItemRight"><b>TableColumnCreatureSizeMatcher</b> ()</td></tr>
-<tr class="memdesc:a0692c0482302021c0977e4b6f8abd05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to set the header type and initialise member variables. <br /></td></tr>
-<tr class="memitem:a8318c93fea9798360ec6f174fa3d3f51" id="r_a8318c93fea9798360ec6f174fa3d3f51"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a8318c93fea9798360ec6f174fa3d3f51">getColumn</a> () const override</td></tr>
-<tr class="memdesc:a8318c93fea9798360ec6f174fa3d3f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index of the table column.  <br /></td></tr>
+<tr class="memdesc:a0692c0482302021c0977e4b6f8abd05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to set the header type. <br /></td></tr>
+<tr class="memitem:a9729b51c59d5628179ba4995dd2d4598" id="r_a9729b51c59d5628179ba4995dd2d4598"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9729b51c59d5628179ba4995dd2d4598">getColumn</a> (<a class="el" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a> match) const override</td></tr>
+<tr class="memdesc:a9729b51c59d5628179ba4995dd2d4598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index of the table column.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_table_column_matcher"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_table_column_matcher')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_table_column_matcher.html">TableColumnMatcher&lt; CreatureSizeType::Type &gt;</a></td></tr>
 <tr class="memitem:a801335ab2bd0988fdb2dca7fac9c3807 inherit pub_methods_class_table_column_matcher" id="r_a801335ab2bd0988fdb2dca7fac9c3807"><td class="memItemLeft">
 virtual&#160;</td><td class="memItemRight"><b>~TableColumnMatcher</b> ()=default</td></tr>
 <tr class="memdesc:a801335ab2bd0988fdb2dca7fac9c3807 inherit pub_methods_class_table_column_matcher"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor to allow for polymorphism. <br /></td></tr>
-<tr class="memitem:a922be55eaaad316fe834fc1bdf15036b inherit pub_methods_class_table_column_matcher" id="r_a922be55eaaad316fe834fc1bdf15036b"><td class="memItemLeft"><a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_table_column_matcher.html#a922be55eaaad316fe834fc1bdf15036b">setMatch</a> (<a class="el" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a> match)</td></tr>
-<tr class="memdesc:a922be55eaaad316fe834fc1bdf15036b inherit pub_methods_class_table_column_matcher"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to identify the column index.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_class_table_column_matcher"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_table_column_matcher')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="class_table_column_matcher.html">TableColumnMatcher&lt; CreatureSizeType::Type &gt;</a></td></tr>
-<tr class="memitem:a96e29721f1bf8c42c953f983bf0d89e8 inherit pro_attribs_class_table_column_matcher" id="r_a96e29721f1bf8c42c953f983bf0d89e8"><td class="memItemLeft"><a class="el" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a>&#160;</td><td class="memItemRight"><a class="el" href="class_table_column_matcher.html#a96e29721f1bf8c42c953f983bf0d89e8">match_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to identify the column index in a table using <a class="el" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471" title="Enumeration class representing the size of creatures.">CreatureSizeType::Type</a> as the header. </p>
-<p>Has <a class="el" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ae1ce0ec846f3ba0c8966ef540ae472aa">CreatureSizeType::kTiny</a> as the default type </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a8318c93fea9798360ec6f174fa3d3f51" name="a8318c93fea9798360ec6f174fa3d3f51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8318c93fea9798360ec6f174fa3d3f51">&#9670;&#160;</a></span>getColumn()</h2>
+<a id="a9729b51c59d5628179ba4995dd2d4598" name="a9729b51c59d5628179ba4995dd2d4598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9729b51c59d5628179ba4995dd2d4598">&#9670;&#160;</a></span>getColumn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,7 +145,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">int TableColumnCreatureSizeMatcher::getColumn </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a></td>          <td class="paramname"><span class="paramname"><em>match</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -167,7 +159,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Get the index of the table column. </p>
 <dl class="section return"><dt>Returns</dt><dd>int table column index </dd></dl>
 
-<p>Implements <a class="el" href="class_table_column_matcher.html#a81a56739b494ca34e1fcde282dbc03e4">TableColumnMatcher&lt; CreatureSizeType::Type &gt;</a>.</p>
+<p>Implements <a class="el" href="class_table_column_matcher.html#a9b26bbc278410c14b384d9b4cead96a0">TableColumnMatcher&lt; CreatureSizeType::Type &gt;</a>.</p>
 
 </div>
 </div>
