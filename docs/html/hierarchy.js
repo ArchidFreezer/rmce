@@ -1,6 +1,9 @@
 var hierarchy =
 [
     [ "ArmourTypeData", "class_armour_type_data.html", null ],
+    [ "column_row_matcher", null, [
+      [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", null ]
+    ] ],
     [ "DatafileParser", "class_datafile_parser.html", [
       [ "DatafileParserJson", "class_datafile_parser_json.html", [
         [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", null ],
@@ -34,6 +37,5 @@ var hierarchy =
     [ "table_row_matcher", null, [
       [ "NumberRange< NumberType >", "class_number_range.html", null ]
     ] ],
-    [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", null ],
     [ "TableRow&lt; CellDataType &gt;", "class_table_row.html", null ]
 ];

@@ -6,6 +6,7 @@
  * @class TableColumnCreatureSizeMatcher
  * @brief Class to identify the column index in a table using CreatureSizeType::Type as the header
  * 
+ * @implements column_row_matcher
  */
 class TableColumnCreatureSizeMatcher {
 public:

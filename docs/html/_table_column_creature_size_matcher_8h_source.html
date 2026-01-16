@@ -96,26 +96,26 @@ $(function(){initNavTree('_table_column_creature_size_matcher_8h_source.html',''
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;CreatureSizeType.h&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;table/TableColumnMatcher.h&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_table_column_creature_size_matcher.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_table_column_creature_size_matcher.html">TableColumnCreatureSizeMatcher</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670">column</a>(<a class="code hl_enumeration" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a> match)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">using </span><a class="code hl_enumeration" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">switch</span> (match) {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">case</span> Type::kTiny: <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">case</span> Type::kSmall: <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">case</span> Type::kMedium: <span class="keywordflow">return</span> 2;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">case</span> Type::kLarge: <span class="keywordflow">return</span> 3;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">case</span> Type::kSuperLarge: <span class="keywordflow">return</span> 4;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_table_column_creature_size_matcher.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_table_column_creature_size_matcher.html">TableColumnCreatureSizeMatcher</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670">column</a>(<a class="code hl_enumeration" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a> match)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">using </span><a class="code hl_enumeration" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">switch</span> (match) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">case</span> Type::kTiny: <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">case</span> Type::kSmall: <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">case</span> Type::kMedium: <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">case</span> Type::kLarge: <span class="keywordflow">return</span> 3;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">case</span> Type::kSuperLarge: <span class="keywordflow">return</span> 4;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
 </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
 </div>
-<div class="ttc" id="aclass_table_column_creature_size_matcher_html"><div class="ttname"><a href="class_table_column_creature_size_matcher.html">TableColumnCreatureSizeMatcher</a></div><div class="ttdoc">Class to identify the column index in a table using CreatureSizeType::Type as the header.</div><div class="ttdef"><b>Definition</b> TableColumnCreatureSizeMatcher.h:10</div></div>
-<div class="ttc" id="aclass_table_column_creature_size_matcher_html_a5cf2a4b6b2eec449c2fe51b296e40670"><div class="ttname"><a href="class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670">TableColumnCreatureSizeMatcher::column</a></div><div class="ttdeci">int column(CreatureSizeType::Type match) const</div><div class="ttdoc">Get the index of the table column.</div><div class="ttdef"><b>Definition</b> TableColumnCreatureSizeMatcher.h:16</div></div>
+<div class="ttc" id="aclass_table_column_creature_size_matcher_html"><div class="ttname"><a href="class_table_column_creature_size_matcher.html">TableColumnCreatureSizeMatcher</a></div><div class="ttdoc">Class to identify the column index in a table using CreatureSizeType::Type as the header.</div><div class="ttdef"><b>Definition</b> TableColumnCreatureSizeMatcher.h:11</div></div>
+<div class="ttc" id="aclass_table_column_creature_size_matcher_html_a5cf2a4b6b2eec449c2fe51b296e40670"><div class="ttname"><a href="class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670">TableColumnCreatureSizeMatcher::column</a></div><div class="ttdeci">int column(CreatureSizeType::Type match) const</div><div class="ttdoc">Get the index of the table column.</div><div class="ttdef"><b>Definition</b> TableColumnCreatureSizeMatcher.h:17</div></div>
 <div class="ttc" id="anamespace_creature_size_type_html_a5a93c3494093263d09281ce2aaad0471"><div class="ttname"><a href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Enumeration class representing the size of creatures.</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
