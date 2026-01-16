@@ -40,7 +40,11 @@ template<typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherC
 	requires table_row_matcher<RowMatcherClass, RowDatatype> && table_column_matcher< ColumnMatcherClass, ColumnDataType>
 class LookupTable : public GameRuleData {
 public:
-	LookupTable(std::string_view id) : GameRuleData(id) {}
+	/**
+	 * @brief Constructor with id
+	 * @param id Unique identifier for the table
+	 */
+	LookupTable(std::string_view id) : GameRuleData(GameRuleData::generateId("LOOKUPTABLE", id)) {}
 
 	/**
 	 * @brief Default destructor to allow polymorphism
