@@ -15,7 +15,7 @@ public:
 	/**
 	 * @brief Default constructor
 	 */
-	GameRuleData() = default;
+	GameRuleData() = delete;
 
 	/**
 	 * @brief Constructor

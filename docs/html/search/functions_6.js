@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gameruledata_0',['GameRuleData',['../class_game_rule_data.html#a4c930443525e35d642c997af8186c6d4',1,'GameRuleData::GameRuleData()=default'],['../class_game_rule_data.html#a4d60329cf6a183d3033134f32a13a672',1,'GameRuleData::GameRuleData(std::string_view id)']]],
+  ['gameruledata_0',['GameRuleData',['../class_game_rule_data.html#ae41e24b7b627445273425b0b6baf1968',1,'GameRuleData::GameRuleData()=delete'],['../class_game_rule_data.html#a4d60329cf6a183d3033134f32a13a672',1,'GameRuleData::GameRuleData(std::string_view id)']]],
   ['gameruledatacache_1',['GameRuleDataCache',['../class_game_rule_data_cache.html#ac8989bb024b18fccb1f07b5cb4e20d38',1,'GameRuleDataCache::GameRuleDataCache()=default'],['../class_game_rule_data_cache.html#ae6d5a43fe2eb71e40d34e4b15b0e064b',1,'GameRuleDataCache::GameRuleDataCache(const GameRuleDataCache &amp;other)=delete'],['../class_game_rule_data_cache.html#a068758e14a7214b674b8e6860ce56d03',1,'GameRuleDataCache::GameRuleDataCache(GameRuleDataCache &amp;&amp;other)=delete']]],
   ['generate_2',['generate',['../namespace_random.html#a00531c42906741611a38c489e8723280',1,'Random']]],
   ['generateid_3',['generateId',['../class_datafile_parser.html#a808ab327048b0aafa00c86b2ef360f27',1,'DatafileParser']]],
