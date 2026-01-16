@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['armourtype_0',['ArmourType',['../class_armour_type.html',1,'']]]
+  ['armourtypedata_0',['ArmourTypeData',['../class_armour_type_data.html',1,'']]]
 ];

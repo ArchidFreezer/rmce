@@ -5,5 +5,5 @@ var searchData=
   ['addcell_2',['addCell',['../class_table_row.html#a0acb30329157bc6ee809895481044c56',1,'TableRow']]],
   ['addrow_3',['addRow',['../class_lookup_table.html#afb5b804a13412583f702a882322c05c0',1,'LookupTable']]],
   ['addstat_4',['addStat',['../class_skill_category_data.html#ae92350c9d91937939523110732fae66a',1,'SkillCategoryData']]],
-  ['armourtype_5',['ArmourType',['../class_armour_type.html',1,'']]]
+  ['armourtypedata_5',['ArmourTypeData',['../class_armour_type_data.html',1,'']]]
 ];

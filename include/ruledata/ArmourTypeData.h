@@ -1,7 +1,11 @@
 #pragma once
 #include <string>
 
-class ArmourType
+/**
+ * @class ArmourTypeData
+ * @brief Class representing data about armour types
+ */
+class ArmourTypeData
 {
 	std::string name_ = "";
 	std::string description_ = "";

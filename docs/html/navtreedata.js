@@ -57,7 +57,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_armour_type_8h_source.html",
+"_armour_type_data_8h_source.html",
 "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737"
 ];
 

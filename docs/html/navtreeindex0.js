@@ -1,6 +1,6 @@
 var NAVTREEINDEX0 =
 {
-"_armour_type_8h_source.html":[3,0,2,1],
+"_armour_type_data_8h_source.html":[3,0,2,1],
 "_book_data_8h_source.html":[3,0,2,2],
 "_book_datafile_parser_json_8h_source.html":[3,0,1,0],
 "_creature_size_type_8h_source.html":[3,0,2,3],
@@ -41,7 +41,7 @@ var NAVTREEINDEX0 =
 "_table_row_8h_source.html":[3,0,2,0,3],
 "_table_row_matcher_8h_source.html":[3,0,2,0,4],
 "annotated.html":[2,0],
-"class_armour_type.html":[2,0,0],
+"class_armour_type_data.html":[2,0,0],
 "class_book_data.html":[2,0,1],
 "class_book_data.html#a0c3b48f44c6c9a44998b24cde5c7b98c":[2,0,1,2],
 "class_book_data.html#a0e5569ad4b94a8c924cebdfa2780be63":[2,0,1,3],

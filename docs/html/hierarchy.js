@@ -1,6 +1,6 @@
 var hierarchy =
 [
-    [ "ArmourType", "class_armour_type.html", null ],
+    [ "ArmourTypeData", "class_armour_type_data.html", null ],
     [ "DatafileParser", "class_datafile_parser.html", [
       [ "DatafileParserJson", "class_datafile_parser_json.html", [
         [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", null ],

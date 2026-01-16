@@ -1,6 +1,6 @@
 var annotated_dup =
 [
-    [ "ArmourType", "class_armour_type.html", null ],
+    [ "ArmourTypeData", "class_armour_type_data.html", null ],
     [ "BookData", "class_book_data.html", "class_book_data" ],
     [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", "class_book_datafile_parser_json" ],
     [ "ColNotFoundException", "class_col_not_found_exception.html", "class_col_not_found_exception" ],
