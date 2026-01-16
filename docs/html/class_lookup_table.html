@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: LookupTable&lt; MatcherClass, MatcherDatatype, CellDatatype, ColumnType &gt; Class Template Reference</title>
+<title>Rolemaster Character Editor: LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,7 +89,7 @@ $(function(){initNavTree('class_lookup_table.html','','class_lookup_table-member
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">LookupTable&lt; MatcherClass, MatcherDatatype, CellDatatype, ColumnType &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -100,46 +100,46 @@ $(function(){initNavTree('class_lookup_table.html','','class_lookup_table-member
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a60f66731a9c74f701007a749dcde3b62" id="r_a60f66731a9c74f701007a749dcde3b62"><td class="memItemLeft"><a id="a60f66731a9c74f701007a749dcde3b62" name="a60f66731a9c74f701007a749dcde3b62"></a>
+<tr class="memitem:a79baa60def4bde036545c713d3f6c340" id="r_a79baa60def4bde036545c713d3f6c340"><td class="memItemLeft"><a id="a79baa60def4bde036545c713d3f6c340" name="a79baa60def4bde036545c713d3f6c340"></a>
 virtual&#160;</td><td class="memItemRight"><b>~LookupTable</b> ()=default</td></tr>
-<tr class="memdesc:a60f66731a9c74f701007a749dcde3b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor to allow polymorphism. <br /></td></tr>
-<tr class="memitem:a22968f2e2afef00f0cd42df43927463b" id="r_a22968f2e2afef00f0cd42df43927463b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a22968f2e2afef00f0cd42df43927463b">addRow</a> (std::shared_ptr&lt; MatcherClass &gt; matcher, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; row)</td></tr>
-<tr class="memdesc:a22968f2e2afef00f0cd42df43927463b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a row to the table.  <br /></td></tr>
-<tr class="memitem:a6a58dd1970769fccfadb322421a97027" id="r_a6a58dd1970769fccfadb322421a97027"><td class="memItemLeft">const CellDatatype &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6a58dd1970769fccfadb322421a97027">cell</a> (MatcherDatatype row, ColumnType col) const</td></tr>
-<tr class="memdesc:a6a58dd1970769fccfadb322421a97027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of a cell in the table.  <br /></td></tr>
-<tr class="memitem:ab756e4d8bbd96760408eea5024cd16ac" id="r_ab756e4d8bbd96760408eea5024cd16ac"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab756e4d8bbd96760408eea5024cd16ac">setColumnMatcher</a> (std::unique_ptr&lt; <a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a>&lt; ColumnType &gt; &gt; col_matcher)</td></tr>
-<tr class="memdesc:ab756e4d8bbd96760408eea5024cd16ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the column matcher object.  <br /></td></tr>
+<tr class="memdesc:a79baa60def4bde036545c713d3f6c340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor to allow polymorphism. <br /></td></tr>
+<tr class="memitem:a4dc36214386547551e7332905d4d6219" id="r_a4dc36214386547551e7332905d4d6219"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4dc36214386547551e7332905d4d6219">addRow</a> (std::shared_ptr&lt; RowMatcherClass &gt; matcher, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; row)</td></tr>
+<tr class="memdesc:a4dc36214386547551e7332905d4d6219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a row to the table.  <br /></td></tr>
+<tr class="memitem:a3859e0611c939043f993b0619d0aebf1" id="r_a3859e0611c939043f993b0619d0aebf1"><td class="memItemLeft">const CellDatatype &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3859e0611c939043f993b0619d0aebf1">cell</a> (RowDatatype row, ColumnDataType col) const</td></tr>
+<tr class="memdesc:a3859e0611c939043f993b0619d0aebf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of a cell in the table.  <br /></td></tr>
+<tr class="memitem:aa8b34807f6c7a4338ec46ee454858129" id="r_aa8b34807f6c7a4338ec46ee454858129"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa8b34807f6c7a4338ec46ee454858129">setColumnMatcher</a> (std::unique_ptr&lt; ColumnMatcherClass &gt; col_matcher)</td></tr>
+<tr class="memdesc:aa8b34807f6c7a4338ec46ee454858129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the column matcher object.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename MatcherClass, typename MatcherDatatype, typename CellDatatype, typename ColumnType&gt;<br />
-requires is_row_matcher&lt;MatcherClass, MatcherDatatype&gt;<br />
-class LookupTable&lt; MatcherClass, MatcherDatatype, CellDatatype, ColumnType &gt;</div><p>Base class representing a lookup table index by row and column. </p>
-<p>Each row is indexed using a matcher class <code class="param">MatcherClass</code> that adheres to the is_matcher concept that matches on the datatype <code class="param">MatcherDatatype</code>. When performing a lookup on the table the class will iterate through the rows until it finds a matcher that matches and then from the associated row retrieves the data value of type <code class="param">CellDatatype</code> based on a lookup in the column matcher.</p>
-<p>The <a class="el" href="class_table_column_matcher.html" title="Abstract class to identify the column index in a table.">TableColumnMatcher</a> matcher is added via the <a class="el" href="#ab756e4d8bbd96760408eea5024cd16ac" title="Set the column matcher object.">setColumnMatcher()</a> method and must be set prior to attempting to retrieve data from the table.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype&gt;<br />
+requires is_row_matcher&lt;RowMatcherClass, RowDatatype&gt; &amp;&amp; <a class="el" href="concepttable__column__matcher.html">table_column_matcher</a>&lt; ColumnMatcherClass, ColumnDataType&gt;<br />
+class LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</div><p>Base class representing a lookup table index by row and column. </p>
+<p>Each row is indexed using a matcher class <code class="param">RowMatcherClass</code> that adheres to the is_matcher concept that matches on the datatype <code class="param">RowDatatype</code>. When performing a lookup on the table the class will iterate through the rows until it finds a matcher that matches and then from the associated row retrieves the data value of type <code class="param">CellDatatype</code> based on a lookup in the column matcher.</p>
+<p>The TableColumnMatcher matcher is added via the <a class="el" href="#aa8b34807f6c7a4338ec46ee454858129" title="Set the column matcher object.">setColumnMatcher()</a> method and must be set prior to attempting to retrieve data from the table.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">MatcherClass</td><td>Matcher that is used to identify the correct row </td></tr>
-    <tr><td class="paramname">MatcherDatatype</td><td>Data type that the matcher <code class="param">MatcherClass</code> matches on </td></tr>
+    <tr><td class="paramname">RowMatcherClass</td><td>Matcher that is used to identify the correct row </td></tr>
+    <tr><td class="paramname">RowDatatype</td><td>Data type that the matcher <code class="param">RowMatcherClass</code> matches on </td></tr>
     <tr><td class="paramname">CellDatatype</td><td>Data type that is stored in each cell in the table </td></tr>
   </table>
   </dd>
 </dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a22968f2e2afef00f0cd42df43927463b" name="a22968f2e2afef00f0cd42df43927463b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22968f2e2afef00f0cd42df43927463b">&#9670;&#160;</a></span>addRow()</h2>
+<a id="a4dc36214386547551e7332905d4d6219" name="a4dc36214386547551e7332905d4d6219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc36214386547551e7332905d4d6219">&#9670;&#160;</a></span>addRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename MatcherClass, typename MatcherDatatype, typename CellDatatype, typename ColumnType&gt; </div>
+template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; MatcherClass, MatcherDatatype, CellDatatype, ColumnType &gt;::addRow </td>
+          <td class="memname">void <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;::addRow </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; MatcherClass &gt;</td>          <td class="paramname"><span class="paramname"><em>matcher</em></span>, </td>
+          <td class="paramtype">std::shared_ptr&lt; RowMatcherClass &gt;</td>          <td class="paramname"><span class="paramname"><em>matcher</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -165,26 +165,26 @@ template&lt;typename MatcherClass, typename MatcherDatatype, typename CellDataty
 
 </div>
 </div>
-<a id="a6a58dd1970769fccfadb322421a97027" name="a6a58dd1970769fccfadb322421a97027"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a58dd1970769fccfadb322421a97027">&#9670;&#160;</a></span>cell()</h2>
+<a id="a3859e0611c939043f993b0619d0aebf1" name="a3859e0611c939043f993b0619d0aebf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3859e0611c939043f993b0619d0aebf1">&#9670;&#160;</a></span>cell()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename MatcherClass, typename MatcherDatatype, typename CellDatatype, typename ColumnType&gt; </div>
+template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const CellDatatype &amp; <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; MatcherClass, MatcherDatatype, CellDatatype, ColumnType &gt;::cell </td>
+          <td class="memname">const CellDatatype &amp; <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;::cell </td>
           <td>(</td>
-          <td class="paramtype">MatcherDatatype</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+          <td class="paramtype">RowDatatype</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ColumnType</td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;) const</td>
+          <td class="paramtype">ColumnDataType</td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -213,21 +213,21 @@ template&lt;typename MatcherClass, typename MatcherDatatype, typename CellDataty
 
 </div>
 </div>
-<a id="ab756e4d8bbd96760408eea5024cd16ac" name="ab756e4d8bbd96760408eea5024cd16ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab756e4d8bbd96760408eea5024cd16ac">&#9670;&#160;</a></span>setColumnMatcher()</h2>
+<a id="aa8b34807f6c7a4338ec46ee454858129" name="aa8b34807f6c7a4338ec46ee454858129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8b34807f6c7a4338ec46ee454858129">&#9670;&#160;</a></span>setColumnMatcher()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename MatcherClass, typename MatcherDatatype, typename CellDatatype, typename ColumnType&gt; </div>
+template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; MatcherClass, MatcherDatatype, CellDatatype, ColumnType &gt;::setColumnMatcher </td>
+          <td class="memname">void <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;::setColumnMatcher </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a>&lt; ColumnType &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>col_matcher</em></span></td><td>)</td>
+          <td class="paramtype">std::unique_ptr&lt; ColumnMatcherClass &gt;</td>          <td class="paramname"><span class="paramname"><em>col_matcher</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -242,7 +242,7 @@ template&lt;typename MatcherClass, typename MatcherDatatype, typename CellDataty
 <p>Sets the object that will be used to determine the row column to retrieve the cell for</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">col_matcher</td><td><a class="el" href="class_table_column_matcher.html" title="Abstract class to identify the column index in a table.">TableColumnMatcher</a> column matcher object </td></tr>
+    <tr><td class="paramname">col_matcher</td><td>TableColumnMatcher column matcher object </td></tr>
   </table>
   </dd>
 </dl>

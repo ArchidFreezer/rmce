@@ -24,20 +24,20 @@ public:
  * @class LookupTable
  * @brief Base class representing a lookup table index by row and column
  * 
- * Each row is indexed using a matcher class \p MatcherClass that adheres to the is_matcher concept that matches on the
- * datatype \p MatcherDatatype. When performing a lookup on the table the class will iterate through the rows until it
+ * Each row is indexed using a matcher class \p RowMatcherClass that adheres to the is_matcher concept that matches on the
+ * datatype \p RowDatatype. When performing a lookup on the table the class will iterate through the rows until it
  * finds a matcher that matches and then from the associated row retrieves the data value of type \p CellDatatype based on
  * a lookup in the column matcher.
  * 
  * The TableColumnMatcher matcher is added via the setColumnMatcher() method and must be set prior to attempting to
  * retrieve data from the table.
  * 
- * @tparam MatcherClass Matcher that is used to identify the correct row
- * @tparam MatcherDatatype Data type that the matcher \p MatcherClass matches on
+ * @tparam RowMatcherClass Matcher that is used to identify the correct row
+ * @tparam RowDatatype Data type that the matcher \p RowMatcherClass matches on
  * @tparam CellDatatype Data type that is stored in each cell in the table
  */
-template<typename MatcherClass, typename MatcherDatatype, typename CellDatatype, typename ColumnType>
-	requires is_row_matcher<MatcherClass, MatcherDatatype>
+template<typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype>
+	requires is_row_matcher<RowMatcherClass, RowDatatype> && table_column_matcher< ColumnMatcherClass, ColumnDataType>
 class LookupTable {
 public:
 	/**
@@ -51,7 +51,7 @@ public:
 	 * @param matcher Matcher that is used to identify the row
 	 * @param row TableRow object that contains the cells in the row
 	 */
-	void addRow(std::shared_ptr<MatcherClass> matcher, TableRow<CellDatatype> row) { table_.emplace(matcher, row); }
+	void addRow(std::shared_ptr<RowMatcherClass> matcher, TableRow<CellDatatype> row) { table_.emplace(matcher, row); }
 
 	/**
 	 * @brief Gets the value of a cell in the table
@@ -64,9 +64,9 @@ public:
 	 * @throw RowNotFoundException if \a row does not match any matchers
 	 * @throw ColNotFoundException if \a col is an invalid column
 	 */
-	const CellDatatype& cell(MatcherDatatype row, ColumnType col) const {
+	const CellDatatype& cell(RowDatatype row, ColumnDataType col) const {
 		for (auto& tr : table_) {
-			if ((*tr.first).matches(row)) return tr.second.cell(col_matcher_->getColumn(col));
+			if ((*tr.first).matches(row)) return tr.second.cell(col_matcher_->column(col));
 		}
 		throw RowNotFoundException("No row was found matching the value: " + std::to_string(row));
 	}
@@ -78,9 +78,9 @@ public:
 	 * 
 	 * @param col_matcher TableColumnMatcher column matcher object
 	 */
-	void setColumnMatcher(std::unique_ptr<TableColumnMatcher<ColumnType>> col_matcher) { col_matcher_ = std::move(col_matcher); }
+	void setColumnMatcher(std::unique_ptr<ColumnMatcherClass> col_matcher) { col_matcher_ = std::move(col_matcher); }
 
 private:
-	std::map<std::shared_ptr<MatcherClass>, TableRow<CellDatatype>> table_; /**< Data structure representing the table */
-	std::unique_ptr<TableColumnMatcher<ColumnType>> col_matcher_{}; /**< Object to determine table column to retrieve cell data from */
+	std::map<std::shared_ptr<RowMatcherClass>, TableRow<CellDatatype>> table_; /**< Data structure representing the table */
+	std::unique_ptr<ColumnMatcherClass> col_matcher_{}; /**< Object to determine table column to retrieve cell data from */
 };

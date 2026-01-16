@@ -8,7 +8,7 @@
 /**
  * @brief Dummy class to test LookupTable abstract class
  */
-class DummyLookupTable : public LookupTable<NumberRange<int>, int, std::string, CreatureSizeType::Type> {};
+class DummyLookupTable : public LookupTable<NumberRange<int>, int, TableColumnCreatureSizeMatcher, CreatureSizeType::Type, std::string> {};
 
 TEST(LookupTable, General) {
 	DummyLookupTable lut;

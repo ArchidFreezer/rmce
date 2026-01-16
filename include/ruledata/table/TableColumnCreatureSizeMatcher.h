@@ -7,15 +7,13 @@
  * @brief Class to identify the column index in a table using CreatureSizeType::Type as the header
  * 
  */
-class TableColumnCreatureSizeMatcher : public TableColumnMatcher<CreatureSizeType::Type> {
+class TableColumnCreatureSizeMatcher {
 public:
-
 	/**
-	 * @brief Constructor to set the header type
+	 * @brief Get the index of the table column
+	 * @return int table column index
 	 */
-	TableColumnCreatureSizeMatcher() : TableColumnMatcher<CreatureSizeType::Type>() {}
-
-	int getColumn(CreatureSizeType::Type match) const override {
+	int column(CreatureSizeType::Type match) const {
 		using CreatureSizeType::Type;
 		switch (match) {
 		case Type::kTiny: return 0;

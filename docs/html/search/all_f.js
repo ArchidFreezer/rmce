@@ -5,7 +5,7 @@ var searchData=
   ['setbaselanguage_2',['setBaseLanguage',['../class_language_data.html#a0d05f8a39ab8c17757e72198bdc77b23',1,'LanguageData']]],
   ['setcategory_3',['setCategory',['../class_language_data.html#a643b00bd03408398716280147370a896',1,'LanguageData']]],
   ['setcode_4',['setCode',['../class_book_data.html#a9ed657ce6a01d19df9bb8fbaec429473',1,'BookData']]],
-  ['setcolumnmatcher_5',['setColumnMatcher',['../class_lookup_table.html#ab756e4d8bbd96760408eea5024cd16ac',1,'LookupTable']]],
+  ['setcolumnmatcher_5',['setColumnMatcher',['../class_lookup_table.html#aa8b34807f6c7a4338ec46ee454858129',1,'LookupTable']]],
   ['setfilename_6',['setFilename',['../class_datafile_parser.html#a68666b626124d4f7109a4373441aa3f3',1,'DatafileParser']]],
   ['setisbn_7',['setIsbn',['../class_book_data.html#a46689da868f9da007a039d1859972956',1,'BookData']]],
   ['setissomantic_8',['setIsSomantic',['../class_language_data.html#a5f5c28b3f9598ce5158e6d17cd6e0429',1,'LanguageData']]],
