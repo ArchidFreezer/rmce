@@ -107,6 +107,16 @@ virtual&#160;</td><td class="memItemRight"><b>~LookupTable</b> ()=default</td></
 <tr class="memdesc:afb5b804a13412583f702a882322c05c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a row to the table.  <br /></td></tr>
 <tr class="memitem:a5aa942b72e051293e0e481f248d575c2" id="r_a5aa942b72e051293e0e481f248d575c2"><td class="memItemLeft">const CellDatatype &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5aa942b72e051293e0e481f248d575c2">getCell</a> (MatcherDatatype row, int col)</td></tr>
 <tr class="memdesc:a5aa942b72e051293e0e481f248d575c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of a cell in the table.  <br /></td></tr>
+<tr class="memitem:a8530df649cd8b3d61d139027cf18d2e9" id="r_a8530df649cd8b3d61d139027cf18d2e9"><td class="memItemLeft"><a id="a8530df649cd8b3d61d139027cf18d2e9" name="a8530df649cd8b3d61d139027cf18d2e9"></a>
+void&#160;</td><td class="memItemRight"><b>setColumnMatcher</b> (std::unique_ptr&lt; <a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a> &gt; col_matcher)</td></tr>
+<tr class="memitem:afe651ac81f859e3d2791f5b0fbaaf355" id="r_afe651ac81f859e3d2791f5b0fbaaf355"><td class="memItemLeft"><a id="afe651ac81f859e3d2791f5b0fbaaf355" name="afe651ac81f859e3d2791f5b0fbaaf355"></a>
+<a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a> &amp;&#160;</td><td class="memItemRight"><b>getColumnMatcher</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a702587e7f428148aec2d9c7dacf1fc7b" id="r_a702587e7f428148aec2d9c7dacf1fc7b"><td class="memItemLeft">std::map&lt; std::shared_ptr&lt; MatcherClass &gt;, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a702587e7f428148aec2d9c7dacf1fc7b">table_</a></td></tr>
+<tr class="memitem:a7f364c98c5b9149e6e7600272b954b01" id="r_a7f364c98c5b9149e6e7600272b954b01"><td class="memItemLeft"><a id="a7f364c98c5b9149e6e7600272b954b01" name="a7f364c98c5b9149e6e7600272b954b01"></a>
+std::unique_ptr&lt; <a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a> &gt;&#160;</td><td class="memItemRight"><b>col_matcher_</b> {}</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename MatcherClass, typename MatcherDatatype, typename CellDatatype&gt;<br />
@@ -207,6 +217,32 @@ template&lt;typename MatcherClass, typename MatcherDatatype, typename CellDataty
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a702587e7f428148aec2d9c7dacf1fc7b" name="a702587e7f428148aec2d9c7dacf1fc7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a702587e7f428148aec2d9c7dacf1fc7b">&#9670;&#160;</a></span>table_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MatcherClass, typename MatcherDatatype, typename CellDatatype&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::shared_ptr&lt;MatcherClass&gt;, <a class="el" href="class_table_row.html">TableRow</a>&lt;CellDatatype&gt; &gt; <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; MatcherClass, MatcherDatatype, CellDatatype &gt;::table_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Data structure representing the table </p>
 
 </div>
 </div>

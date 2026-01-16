@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: ruledata/table Directory Reference</title>
+<title>Rolemaster Character Editor: ruledata/table/TableColumnMatcher.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('dir_7fc3274234d3b28f30f13cd33169f0a9.html','',''); });
+$(function(){initNavTree('_table_column_matcher_8h_source.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,41 +89,29 @@ $(function(){initNavTree('dir_7fc3274234d3b28f30f13cd33169f0a9.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">table Directory Reference</div></div>
+  <div class="headertitle"><div class="title">TableColumnMatcher.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Directory dependency graph for table:</div>
-<div class="dyncontent">
-<div class="center"><img src="dir_7fc3274234d3b28f30f13cd33169f0a9_dep.png" border="0" usemap="#adir__7fc3274234d3b28f30f13cd33169f0a9__dep" loading="lazy" alt="ruledata/table"/></div>
-<map name="adir__7fc3274234d3b28f30f13cd33169f0a9__dep" id="adir__7fc3274234d3b28f30f13cd33169f0a9__dep">
-<area shape="rect" href="dir_7fc3274234d3b28f30f13cd33169f0a9.html" title="table" alt="" coords="27,53,77,80"/>
-<area shape="rect" href="dir_d27df6bdec76b9f4631be2492a3421fa.html" title="ruledata" alt="" coords="16,16,88,91"/>
-</map>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_table_column_matcher.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="class_table_column_matcher.html">TableColumnMatcher</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_table_column_matcher.html#a517b474556c1333bd1343d3dd295feb7">   12</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_table_column_matcher.html#a517b474556c1333bd1343d3dd295feb7">~TableColumnMatcher</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_table_column_matcher.html#a40d3186c069774fae3c84c857f500a13">   18</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_table_column_matcher.html#a40d3186c069774fae3c84c857f500a13">getColumn</a>() = 0;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
 </div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:LookupTable_2Eh" id="r_LookupTable_2Eh"><td class="memItemLeft"><a href="_lookup_table_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>LookupTable.h</b></td></tr>
-<tr class="memitem:TableColumnCreatureSizeMatcher_2Eh" id="r_TableColumnCreatureSizeMatcher_2Eh"><td class="memItemLeft"><a href="_table_column_creature_size_matcher_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>TableColumnCreatureSizeMatcher.h</b></td></tr>
-<tr class="memitem:TableColumnMatcher_2Eh" id="r_TableColumnMatcher_2Eh"><td class="memItemLeft"><a href="_table_column_matcher_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>TableColumnMatcher.h</b></td></tr>
-<tr class="memitem:TableRow_2Eh" id="r_TableRow_2Eh"><td class="memItemLeft"><a href="_table_row_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>TableRow.h</b></td></tr>
-<tr class="memitem:TableRowMatcher_2Eh" id="r_TableRowMatcher_2Eh"><td class="memItemLeft"><a href="_table_row_matcher_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><b>TableRowMatcher.h</b></td></tr>
-</table>
-</div><!-- contents -->
+<div class="ttc" id="aclass_table_column_matcher_html"><div class="ttname"><a href="class_table_column_matcher.html">TableColumnMatcher</a></div><div class="ttdoc">Abstract class to identify the column index in a table.</div><div class="ttdef"><b>Definition</b> TableColumnMatcher.h:7</div></div>
+<div class="ttc" id="aclass_table_column_matcher_html_a40d3186c069774fae3c84c857f500a13"><div class="ttname"><a href="class_table_column_matcher.html#a40d3186c069774fae3c84c857f500a13">TableColumnMatcher::getColumn</a></div><div class="ttdeci">virtual int getColumn()=0</div><div class="ttdoc">Get the index of the table column.</div></div>
+<div class="ttc" id="aclass_table_column_matcher_html_a517b474556c1333bd1343d3dd295feb7"><div class="ttname"><a href="class_table_column_matcher.html#a517b474556c1333bd1343d3dd295feb7">TableColumnMatcher::~TableColumnMatcher</a></div><div class="ttdeci">virtual ~TableColumnMatcher()=default</div><div class="ttdoc">Virtual destructor to allow for polymorphism.</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>ruledata</b></li><li class="navelem"><b>table</b></li>
+    <li class="navelem"><b>ruledata</b></li><li class="navelem"><b>table</b></li><li class="navelem"><b>TableColumnMatcher.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.0 </li>
   </ul>
 </div>

@@ -1,5 +1,14 @@
 var NAVTREEINDEX1 =
 {
+"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737":[0,0,1,0],
+"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737":[0,0,1,1],
+"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a07fa7a19aa722c635a15e94cb7f50416":[0,0,1,1,0],
+"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a8344191ff8fcec5771226f7e4ee882a9":[0,0,1,1,4],
+"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a9f6e20e82520583d8de05ee85fd65cc0":[0,0,1,1,3],
+"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737aa49eca5ade84888b60f27eb8fd3f2615":[0,0,1,1,2],
+"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737aea77e777f06ddc8e1b262ec7338565b7":[0,0,1,1,1],
+"namespace_critical_type.html":[0,0,2],
+"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1":[0,0,2,0],
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1":[0,0,2,1],
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1a25a6647039e20e14dbbd74ec98cb63cd":[0,0,2,1,1],
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1a735ea69825df35eefc36aeb4533bc83a":[0,0,2,1,12],

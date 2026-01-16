@@ -34,5 +34,8 @@ var hierarchy =
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
+    [ "TableColumnMatcher", "class_table_column_matcher.html", [
+      [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", null ]
+    ] ],
     [ "TableRow&lt; CellDataType &gt;", "class_table_row.html", null ]
 ];
