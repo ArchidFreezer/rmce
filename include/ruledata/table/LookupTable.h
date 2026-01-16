@@ -87,10 +87,7 @@ public:
 	 * @throw ColNotFoundException if \a col is an invalid column
 	 */
 	const CellDatatype& cell(MatcherDatatype row) const {
-		for (auto& tr : table_) {
-			if ((*tr.first).matches(row)) return tr.second.cell(col_matcher_->getColumn());
-		}
-		throw RowNotFoundException("No row was found matching the value: " + std::to_string(row));
+		return cell(row, col_matcher_->getColumn());
 	}
 
 	/**
