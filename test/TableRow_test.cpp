@@ -13,14 +13,14 @@ public:
 namespace {
 	TEST(TableRow, FindCell) {
 		TableRow<Cell> tr = TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
-		EXPECT_STREQ(tr.getCell(0).getVal().c_str(), "A");
-		EXPECT_STREQ(tr.getCell(1).getVal().c_str(), "B");
+		EXPECT_STREQ(tr.cell(0).getVal().c_str(), "A");
+		EXPECT_STREQ(tr.cell(1).getVal().c_str(), "B");
 	}
 
 	TEST(TableRow, Exception) {
 		TableRow<Cell> tr = TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
 		try {
-			tr.getCell(2);
+			tr.cell(2);
 			FAIL();
 		} catch (ColNotFoundException err) {
 			SUCCEED();

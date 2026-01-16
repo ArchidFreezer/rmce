@@ -31,7 +31,7 @@ public:
 	 * @return CellDataType contents of the cell
 	 * @throws ColNotFoundException if an attempt is made to access a column that does not exist
 	 */
-	const CellDataType& getCell(int index) const { 
+	const CellDataType& cell(int index) const { 
 		if (index >= colCount() || index < 0) throw ColNotFoundException("Attempt to access a column in the row that does not exist");
 
 		return cells_[index];
