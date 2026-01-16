@@ -130,6 +130,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4059ad4327c807504f53df4b1c04600e" id="r_a4059ad4327c807504f53df4b1c04600e"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a4059ad4327c807504f53df4b1c04600e">id</a> () const</td></tr>
 <tr class="memdesc:a4059ad4327c807504f53df4b1c04600e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the unique id of the game data object.  <br /></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad51f77b8a4054fca57268e29e0da5718" id="r_ad51f77b8a4054fca57268e29e0da5718"><td class="memItemLeft">static const std::string&#160;</td><td class="memItemRight"><a class="el" href="#ad51f77b8a4054fca57268e29e0da5718">generateId</a> (std::string_view type, std::string_view val)</td></tr>
+<tr class="memdesc:ad51f77b8a4054fca57268e29e0da5718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a string that can be used as a unique identifier for an object.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aa984e728567bfff2df2e0f1adcfbe76a" id="r_aa984e728567bfff2df2e0f1adcfbe76a"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#aa984e728567bfff2df2e0f1adcfbe76a">id_</a> {}</td></tr>
@@ -200,6 +205,46 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ad51f77b8a4054fca57268e29e0da5718" name="ad51f77b8a4054fca57268e29e0da5718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad51f77b8a4054fca57268e29e0da5718">&#9670;&#160;</a></span>generateId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string GameRuleData::generateId </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a string that can be used as a unique identifier for an object. </p>
+<p>Each object requires a unique identifier and this is a helper function that can create one in a standard format. The output is a string that is a combination of the type and val parameters that only contain ucase letters, numbers and the underscore character. Any character that is not an alphanum will be converted to an underscore with consecutive underscores being discarded.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The type of data object </td></tr>
+    <tr><td class="paramname">val</td><td>The unique name of the data object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String containing an id in standard format </dd></dl>
+
+</div>
+</div>
 <a id="a4059ad4327c807504f53df4b1c04600e" name="a4059ad4327c807504f53df4b1c04600e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4059ad4327c807504f53df4b1c04600e">&#9670;&#160;</a></span>id()</h2>
 

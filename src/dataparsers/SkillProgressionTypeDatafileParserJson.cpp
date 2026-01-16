@@ -16,7 +16,7 @@ void SkillProgressionTypeDatafileParserJson::parse(bool id_only) {
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
 		std::string name = v.second.get<std::string>("name");
-		std::string id = v.second.get("id", generateId(ruleDatatype(), name));
+		std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
 		float zero = std::stof(v.second.get<std::string>("zero"));
 		float ten = std::stof(v.second.get<std::string>("ten"));
 		float twenty = std::stof(v.second.get<std::string>("twenty"));

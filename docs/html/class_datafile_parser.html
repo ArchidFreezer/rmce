@@ -147,11 +147,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a68666b626124d4f7109a4373441aa3f3" id="r_a68666b626124d4f7109a4373441aa3f3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a68666b626124d4f7109a4373441aa3f3">setFilename</a> (const std::string &amp;<a class="el" href="#a810f729c20b10e7cd71c1d902f8e336a">filename</a>)</td></tr>
 <tr class="memdesc:a68666b626124d4f7109a4373441aa3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the file to pasre.  <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a808ab327048b0aafa00c86b2ef360f27" id="r_a808ab327048b0aafa00c86b2ef360f27"><td class="memItemLeft">static const std::string&#160;</td><td class="memItemRight"><a class="el" href="#a808ab327048b0aafa00c86b2ef360f27">generateId</a> (std::string_view type, std::string_view val)</td></tr>
-<tr class="memdesc:a808ab327048b0aafa00c86b2ef360f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a string that can be used as a unique identifier for an object.  <br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6bf544798efb4c68857c9aaebc0ef9e4" id="r_a6bf544798efb4c68857c9aaebc0ef9e4"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6bf544798efb4c68857c9aaebc0ef9e4">parse</a> (bool id_only)=0</td></tr>
@@ -310,46 +305,6 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get the file to parse. </p>
 <dl class="section return"><dt>Returns</dt><dd>Pathe to the file to parse </dd></dl>
-
-</div>
-</div>
-<a id="a808ab327048b0aafa00c86b2ef360f27" name="a808ab327048b0aafa00c86b2ef360f27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a808ab327048b0aafa00c86b2ef360f27">&#9670;&#160;</a></span>generateId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string DatafileParser::generateId </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates a string that can be used as a unique identifier for an object. </p>
-<p>Each object requires a unique identifier and this is a helper function that can create one in a standard format. The output is a string that is a combination of the type and val parameters that only contain ucase letters, numbers and the underscore character. Any character that is not an alphanum will be converted to an underscore with consecutive underscores being discarded.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>The type of data object </td></tr>
-    <tr><td class="paramname">val</td><td>The unique name of the data object </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>String containing an id in standard format </dd></dl>
 
 </div>
 </div>
