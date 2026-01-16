@@ -2,6 +2,7 @@
 
 #include <string>
 #include <map>
+#include <GameRuleData.h>
 #include <table/TableColumnMatcher.h>
 #include <table/TableRowMatcher.h>
 #include <table/TableRow.h>
@@ -37,8 +38,10 @@ public:
  */
 template<typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype>
 	requires table_row_matcher<RowMatcherClass, RowDatatype> && table_column_matcher< ColumnMatcherClass, ColumnDataType>
-class LookupTable {
+class LookupTable : public GameRuleData {
 public:
+	LookupTable(std::string_view id) : GameRuleData(id) {}
+
 	/**
 	 * @brief Default destructor to allow polymorphism
 	 */

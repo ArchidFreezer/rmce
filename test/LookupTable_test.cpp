@@ -8,10 +8,13 @@
 /**
  * @brief Dummy class to test LookupTable abstract class
  */
-class DummyLookupTable : public LookupTable<NumberRange<int>, int, TableColumnCreatureSizeMatcher, CreatureSizeType::Type, std::string> {};
+class DummyLookupTable : public LookupTable<NumberRange<int>, int, TableColumnCreatureSizeMatcher, CreatureSizeType::Type, std::string> {
+public:
+	DummyLookupTable(std::string_view id) : LookupTable(id) {}
+};
 
 TEST(LookupTable, General) {
-	DummyLookupTable lut;
+	DummyLookupTable lut("DummyTable");
 	std::unique_ptr<TableColumnCreatureSizeMatcher> matcher = std::make_unique<TableColumnCreatureSizeMatcher>(TableColumnCreatureSizeMatcher());
 	lut.setColumnMatcher(std::move(matcher));
 	TableRow<std::string> tr1 = TableRow<std::string>().addCell("Row 1, kTiny").addCell("Row 1, kSmall").addCell("Row 1, kMedium").addCell("Row 1, kLarge").addCell("Row 1, kSuperLarge");

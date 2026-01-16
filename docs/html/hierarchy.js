@@ -19,11 +19,11 @@ var hierarchy =
       [ "LanguageCategoryData", "class_language_category_data.html", null ],
       [ "LanguageData", "class_language_data.html", null ],
       [ "LanguageDialectData", "class_language_dialect_data.html", null ],
+      [ "LookupTable< RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype >", "class_lookup_table.html", null ],
       [ "SkillCategoryData", "class_skill_category_data.html", null ],
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
-    [ "LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;", "class_lookup_table.html", null ],
     [ "std::runtime_error", null, [
       [ "ColNotFoundException", "class_col_not_found_exception.html", null ],
       [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
