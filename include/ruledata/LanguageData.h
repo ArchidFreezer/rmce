@@ -35,12 +35,20 @@ public:
 	 * @param isWritten Whether the language has a written form
 	 * @param isSomantic Whether the language has a somantic form
 	 */
-	LanguageData(std::string_view id, std::string_view name, std::string_view category, std::string_view base_language, bool isSpoken, bool isWritten, bool isSomantic);
+	LanguageData(std::string_view id, std::string_view name, std::string_view category, std::string_view base_language, bool isSpoken, bool isWritten, bool isSomantic) :
+		GameRuleData(id),
+		name_{ name },
+		category_{ category },
+		base_language_{ base_language },
+		is_spoken_{ isSpoken },
+		is_written_{ isWritten },
+		is_somantic_{ isSomantic } {}
+
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier of the language
 	 */
-	LanguageData(std::string_view id);
+	LanguageData(std::string_view id) : GameRuleData(id) {}
 
 	/**
 	 * @brief Set the name of the language
@@ -117,14 +125,3 @@ private:
 	bool is_written_{}; /**< Whether the language has a written form */
 	bool is_somantic_{}; /**< Whether the language has a somantic form */
 };
-
-inline LanguageData::LanguageData(std::string_view id) : GameRuleData(id) {}
-
-inline LanguageData::LanguageData(std::string_view id, std::string_view name, std::string_view category, std::string_view base_language, bool isSpoken, bool isWritten, bool isSomantic) :
-	GameRuleData(id),
-	name_{ name },
-	category_{ category },
-	base_language_{ base_language },
-	is_spoken_{ isSpoken },
-	is_written_{ isWritten },
-	is_somantic_{ isSomantic } {}

@@ -1,16 +1,5 @@
 #include "SkillProgressionTypeData.h"
 
-SkillProgressionTypeData::SkillProgressionTypeData(std::string_view id) : GameRuleData(id) {}
-
-SkillProgressionTypeData::SkillProgressionTypeData(std::string_view id, std::string_view name, float zero, float ten, float twenty, float thirty, float remaining) :
-	GameRuleData(id),
-	name_{ name },
-	zero_{ zero },
-	ten_{ ten },
-	twenty_{ twenty },
-	thirty_{ thirty },
-	remaining_{ remaining } {}
-
 int SkillProgressionTypeData::getBonus(int ranks) const {
 	return getBonus(ranks, zero_, ten_, twenty_, thirty_, remaining_);
 }

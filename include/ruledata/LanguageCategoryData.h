@@ -27,12 +27,12 @@ public:
 	 * @param id Unique identifier of the language category
 	 * @param name Name of the category as seen in-game
 	 */
-	LanguageCategoryData(std::string_view id, std::string_view name);
+	LanguageCategoryData(std::string_view id, std::string_view name) : GameRuleData(id), name_{ name } {}
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier of the language category
 	 */
-	LanguageCategoryData(std::string_view id);
+	LanguageCategoryData(std::string_view id) : GameRuleData(id) {}
 	/**
 	 * @brief Set the name of the category
 	 * @param name Category name
@@ -48,8 +48,4 @@ private:
 	std::string name_{}; /**< Name of the category as seen in-game */
 
 };
-
-inline LanguageCategoryData::LanguageCategoryData(std::string_view id) : GameRuleData(id) {}
-
-inline LanguageCategoryData::LanguageCategoryData(std::string_view id, std::string_view name) : GameRuleData(id), name_{ name } {}
 

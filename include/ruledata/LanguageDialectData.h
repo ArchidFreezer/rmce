@@ -30,7 +30,9 @@ public:
 	 * @brief Constructor
 	 * @param name Name of the base language of the dialects
 	 */
-	LanguageDialectData(std::string_view name);
+	LanguageDialectData(std::string_view name) :
+		GameRuleData(name),
+		name_{ name } {}
 
 	/**
 	 * @brief Constructor
@@ -38,7 +40,11 @@ public:
 	 * @param dialects Set to initilise the object with. __WARNING__: This constructor uses move semantics so will 
    *        _invalidate_ the object referenced in the parameter
 	 */
-	LanguageDialectData(std::string_view name, std::set<std::string>& dialects);
+	LanguageDialectData(std::string_view name, std::set<std::string>& dialects) :
+		GameRuleData(name),
+		name_{ name },
+		dialects_{ std::move(dialects) } {}
+
 
 	/**
 	 * @brief Base language of the dialects
@@ -86,13 +92,3 @@ private:
 	 */
 	std::set<std::string> dialects_{};
 };
-
-inline LanguageDialectData::LanguageDialectData(std::string_view name) :
-	GameRuleData(name),
-	name_{ name } {}
-
-inline LanguageDialectData::LanguageDialectData(std::string_view name, std::set<std::string>& dialects) :
-	GameRuleData(name),
-	name_{ name },
-	dialects_{ std::move(dialects) }
-{}

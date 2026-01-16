@@ -21,7 +21,7 @@ public:
 	 * @brief Constructor
 	 * @param id Unique identifier for the object
 	 */
-	GameRuleData(std::string_view id);
+	GameRuleData(std::string_view id) : id_{ id } {}
 
 	/**
 	 * @brief Default destructor
@@ -44,5 +44,3 @@ protected:
 	std::string id_{}; /**< Unique identifier for the object */
 
 };
-
-inline GameRuleData::GameRuleData(std::string_view id) : id_ { id } {}

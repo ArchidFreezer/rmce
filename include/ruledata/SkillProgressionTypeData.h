@@ -28,13 +28,20 @@ public:
 	 * @param thirty Bonus provided per rank for between 21 and 30 ranks
 	 * @param remaining Bonus provided per rank for over 30 ranks
 	 */
-	SkillProgressionTypeData(std::string_view id, std::string_view name, float zero, float ten, float twenty, float thirty, float remaining);
+	SkillProgressionTypeData(std::string_view id, std::string_view name, float zero, float ten, float twenty, float thirty, float remaining) :
+		GameRuleData(id),
+		name_{ name },
+		zero_{ zero },
+		ten_{ ten },
+		twenty_{ twenty },
+		thirty_{ thirty },
+		remaining_{ remaining } {}
 
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier for the progression type
 	 */
-	SkillProgressionTypeData(std::string_view id);
+	SkillProgressionTypeData(std::string_view id) : GameRuleData(id) {}
 
 	/**
 	 * @brief Set the name of the progression type

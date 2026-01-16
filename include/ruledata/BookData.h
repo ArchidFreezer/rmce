@@ -24,13 +24,18 @@ public:
 	 * @param abbreviation Abbreviation of the book as used by the publisher
 	 * @param isbn ISBN book number
 	 */
-	BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn);
+	BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn) :
+		GameRuleData(id),
+		code_{ code },
+		name_{ name },
+		abbreviation_{ abbreviation },
+		isbn_{ isbn } {}
 
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier for the book
 	 */
-	BookData(std::string_view id);
+	BookData(std::string_view id) : GameRuleData(id) {}
 
 	/**
 	 * @brief Set the book reference number from the publisher
@@ -79,13 +84,3 @@ private:
 	std::string abbreviation_{}; /**< Abbreviation of the book as used by the publisher */
 	std::string isbn_{}; /**< ISBN book number */
 };
-
-inline BookData::BookData(std::string_view id) : GameRuleData(id) {}
-
-inline BookData::BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn) :
-	GameRuleData(id),
-	code_{ code },
-	name_{ name },
-	abbreviation_{ abbreviation },
-	isbn_{ isbn }
-{}

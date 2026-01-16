@@ -1,14 +1,5 @@
 #include "SkillCategoryData.h"
-
-SkillCategoryData::SkillCategoryData(std::string_view id) :	GameRuleData(id) {}
 	
-SkillCategoryData::SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionTypeData& skillProgression, SkillProgressionTypeData& categoryProgression) :
-	GameRuleData(id),
-	group_{ group },
-	name_{ name },
-	skillProgression_{ &skillProgression },
-	skillCategoryProgression_{ &categoryProgression } {}
-
 int SkillCategoryData::addStat(StatType::Type stat) {
 	if (stats_.size() < 3) {
 		stats_.push_back(stat);

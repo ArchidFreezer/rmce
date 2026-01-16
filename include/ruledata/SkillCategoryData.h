@@ -58,7 +58,7 @@ public:
 	 * @brief Constructor
 	 * @param id Unique identifier of the skill category
 	 */
-	SkillCategoryData(std::string_view id);
+	SkillCategoryData(std::string_view id) : GameRuleData(id) {}
 
 	/**
 	 * @brief Constructor
@@ -68,7 +68,13 @@ public:
 	 * @param skillProgression Default progression type for skills in the category
 	 * @param categoryProgression Progression type for the skill category
 	 */
-	SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionTypeData& skillProgression, SkillProgressionTypeData& categoryProgression);
+	SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionTypeData& skillProgression, SkillProgressionTypeData& categoryProgression) :
+		GameRuleData(id),
+		group_{ group },
+		name_{ name },
+		skillProgression_{ &skillProgression },
+		skillCategoryProgression_{ &categoryProgression } {}
+
 
 	/**
 	 * @brief Get the name of the category as seen in-game
