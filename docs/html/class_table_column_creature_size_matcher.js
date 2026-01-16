@@ -1,5 +1,5 @@
 var class_table_column_creature_size_matcher =
 [
-    [ "getColumn", "class_table_column_creature_size_matcher.html#ada0d27a9bd3a5ae197f94b50303e39a9", null ],
-    [ "setMatch", "class_table_column_creature_size_matcher.html#a348339cb047d1fca8ec3a59d2f374d39", null ]
+    [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html#a0692c0482302021c0977e4b6f8abd05e", null ],
+    [ "getColumn", "class_table_column_creature_size_matcher.html#a8318c93fea9798360ec6f174fa3d3f51", null ]
 ];

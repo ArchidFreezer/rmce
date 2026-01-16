@@ -23,7 +23,7 @@ var hierarchy =
     [ "is_row_matcher", null, [
       [ "NumberRange< NumberType >", "class_number_range.html", null ]
     ] ],
-    [ "LookupTable&lt; MatcherClass, MatcherDatatype, CellDatatype &gt;", "class_lookup_table.html", null ],
+    [ "LookupTable&lt; MatcherClass, MatcherDatatype, CellDatatype, ColumnType &gt;", "class_lookup_table.html", null ],
     [ "std::runtime_error", null, [
       [ "ColNotFoundException", "class_col_not_found_exception.html", null ],
       [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
@@ -34,7 +34,8 @@ var hierarchy =
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
-    [ "TableColumnMatcher", "class_table_column_matcher.html", [
+    [ "TableColumnMatcher&lt; ColumnType &gt;", "class_table_column_matcher.html", null ],
+    [ "TableColumnMatcher&lt; CreatureSizeType::Type &gt;", "class_table_column_matcher.html", [
       [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", null ]
     ] ],
     [ "TableRow&lt; CellDataType &gt;", "class_table_row.html", null ]

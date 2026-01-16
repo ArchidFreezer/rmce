@@ -100,8 +100,8 @@ $(function(){initNavTree('class_table_row.html','','class_table_row-members'); }
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad1b9d5f9ca3b0bbfef4c329e0f0fd219" id="r_ad1b9d5f9ca3b0bbfef4c329e0f0fd219"><td class="memItemLeft">const CellDataType &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad1b9d5f9ca3b0bbfef4c329e0f0fd219">getCell</a> (int index) const</td></tr>
-<tr class="memdesc:ad1b9d5f9ca3b0bbfef4c329e0f0fd219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a specific cell in the row.  <br /></td></tr>
+<tr class="memitem:abdff975c410db4100b78cd26dbaf07a9" id="r_abdff975c410db4100b78cd26dbaf07a9"><td class="memItemLeft">const CellDataType &amp;&#160;</td><td class="memItemRight"><a class="el" href="#abdff975c410db4100b78cd26dbaf07a9">cell</a> (int index) const</td></tr>
+<tr class="memdesc:abdff975c410db4100b78cd26dbaf07a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a specific cell in the row.  <br /></td></tr>
 <tr class="memitem:a0acb30329157bc6ee809895481044c56" id="r_a0acb30329157bc6ee809895481044c56"><td class="memItemLeft"><a class="el" href="class_table_row.html">TableRow</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0acb30329157bc6ee809895481044c56">addCell</a> (CellDataType val)</td></tr>
 <tr class="memdesc:a0acb30329157bc6ee809895481044c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new column to the row The new column is added at the end of the row.  <br /></td></tr>
 <tr class="memitem:a301723f9e0d4caab39c6acea169f8578" id="r_a301723f9e0d4caab39c6acea169f8578"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a301723f9e0d4caab39c6acea169f8578">colCount</a> () const</td></tr>
@@ -152,6 +152,48 @@ template&lt;typename CellDataType&gt; </div>
 
 </div>
 </div>
+<a id="abdff975c410db4100b78cd26dbaf07a9" name="abdff975c410db4100b78cd26dbaf07a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdff975c410db4100b78cd26dbaf07a9">&#9670;&#160;</a></span>cell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CellDataType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const CellDataType &amp; <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDataType &gt;::cell </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a specific cell in the row. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Column number of the cell to retrieve, with the first column having an index of 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CellDataType contents of the cell </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_col_not_found_exception.html" title="Exception throw if an attempt was made to access a column index in the row that does not exist.">ColNotFoundException</a></td><td>if an attempt is made to access a column that does not exist </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a301723f9e0d4caab39c6acea169f8578" name="a301723f9e0d4caab39c6acea169f8578"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a301723f9e0d4caab39c6acea169f8578">&#9670;&#160;</a></span>colCount()</h2>
 
@@ -179,48 +221,6 @@ template&lt;typename CellDataType&gt; </div>
 
 <p>Gets the number of columns in the row. </p>
 <dl class="section return"><dt>Returns</dt><dd>int number of columns </dd></dl>
-
-</div>
-</div>
-<a id="ad1b9d5f9ca3b0bbfef4c329e0f0fd219" name="ad1b9d5f9ca3b0bbfef4c329e0f0fd219"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1b9d5f9ca3b0bbfef4c329e0f0fd219">&#9670;&#160;</a></span>getCell()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename CellDataType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const CellDataType &amp; <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDataType &gt;::getCell </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return a specific cell in the row. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>Column number of the cell to retrieve, with the first column having an index of 0 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>CellDataType contents of the cell </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="class_col_not_found_exception.html" title="Exception throw if an attempt was made to access a column index in the row that does not exist.">ColNotFoundException</a></td><td>if an attempt is made to access a column that does not exist </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

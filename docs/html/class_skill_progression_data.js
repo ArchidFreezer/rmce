@@ -1,4 +1,4 @@
 var class_skill_progression_data =
 [
-    [ "getBonus", "class_skill_progression_data.html#a936d52be890b533bc8497f9bfa70fa0e", null ]
+    [ "getBonus", "class_skill_progression_data.html#a745044c11b442e064fc114899726c515", null ]
 ];

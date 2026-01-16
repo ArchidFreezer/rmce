@@ -1,7 +1,7 @@
 var searchData=
 [
   ['random_0',['Random',['../namespace_random.html',1,'']]],
-  ['read_1',['read',['../class_datafile_parser.html#a05e7c3945306f581e8ffafdc0bd20639',1,'DatafileParser::read(const std::string &amp;filename, bool id_only)=0'],['../class_datafile_parser.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParser::read(bool id_only)'],['../class_datafile_parser_json.html#ac326ea2a2ba1de4c7f77a8c5b884d061',1,'DatafileParserJson::read()'],['../class_datafile_parser_xml.html#a6c1763cb004da451f66fc7fb5b3003f1',1,'DatafileParserXml::read()'],['../class_datafile_parser_json.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParserJson::read()']]],
+  ['read_1',['read',['../class_datafile_parser.html#a05e7c3945306f581e8ffafdc0bd20639',1,'DatafileParser::read(const std::string &amp;filename, bool id_only)=0'],['../class_datafile_parser.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParser::read(bool id_only)'],['../class_datafile_parser_json.html#a18873bbb775ba6b408acea2b23711a7f',1,'DatafileParserJson::read()'],['../class_datafile_parser_xml.html#a6c1763cb004da451f66fc7fb5b3003f1',1,'DatafileParserXml::read()'],['../class_datafile_parser_json.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParserJson::read()']]],
   ['realmtype_2',['RealmType',['../namespace_realm_type.html',1,'']]],
   ['remaining_3',['remaining',['../class_skill_progression_type_data.html#a282160bc7d1a509b8c76261469d12c63',1,'SkillProgressionTypeData']]],
   ['remove_4',['remove',['../class_language_dialect_data.html#a9096f84005bd952c823c5bcfac2a429e',1,'LanguageDialectData']]],

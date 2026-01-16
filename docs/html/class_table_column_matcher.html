@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rolemaster Character Editor: TableColumnMatcher Class Reference</title>
+<title>Rolemaster Character Editor: TableColumnMatcher&lt; ColumnType &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,7 +89,7 @@ $(function(){initNavTree('class_table_column_matcher.html','','class_table_colum
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">TableColumnMatcher Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">TableColumnMatcher&lt; ColumnType &gt; Class Template Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -97,42 +97,41 @@ $(function(){initNavTree('class_table_column_matcher.html','','class_table_colum
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_table_column_matcher_8h_source.html">TableColumnMatcher.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for TableColumnMatcher:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_table_column_matcher__inherit__graph.png" border="0" usemap="#a_table_column_matcher_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
-<map name="a_table_column_matcher_inherit__map" id="a_table_column_matcher_inherit__map">
-<area shape="rect" title="Abstract class to identify the column index in a table." alt="" coords="43,5,188,32"/>
-<area shape="rect" href="class_table_column_creature_size_matcher.html" title="Class to identify the column index in a table using CreatureSizeType::Type as the header." alt="" coords="5,80,226,107"/>
-<area shape="poly" title=" " alt="" coords="117,46,118,81,113,78,114,50"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a517b474556c1333bd1343d3dd295feb7" id="r_a517b474556c1333bd1343d3dd295feb7"><td class="memItemLeft"><a id="a517b474556c1333bd1343d3dd295feb7" name="a517b474556c1333bd1343d3dd295feb7"></a>
+<tr class="memitem:a801335ab2bd0988fdb2dca7fac9c3807" id="r_a801335ab2bd0988fdb2dca7fac9c3807"><td class="memItemLeft"><a id="a801335ab2bd0988fdb2dca7fac9c3807" name="a801335ab2bd0988fdb2dca7fac9c3807"></a>
 virtual&#160;</td><td class="memItemRight"><b>~TableColumnMatcher</b> ()=default</td></tr>
-<tr class="memdesc:a517b474556c1333bd1343d3dd295feb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor to allow for polymorphism. <br /></td></tr>
-<tr class="memitem:a40d3186c069774fae3c84c857f500a13" id="r_a40d3186c069774fae3c84c857f500a13"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#a40d3186c069774fae3c84c857f500a13">getColumn</a> ()=0</td></tr>
-<tr class="memdesc:a40d3186c069774fae3c84c857f500a13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index of the table column.  <br /></td></tr>
+<tr class="memdesc:a801335ab2bd0988fdb2dca7fac9c3807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor to allow for polymorphism. <br /></td></tr>
+<tr class="memitem:a81a56739b494ca34e1fcde282dbc03e4" id="r_a81a56739b494ca34e1fcde282dbc03e4"><td class="memItemLeft">virtual int&#160;</td><td class="memItemRight"><a class="el" href="#a81a56739b494ca34e1fcde282dbc03e4">getColumn</a> () const =0</td></tr>
+<tr class="memdesc:a81a56739b494ca34e1fcde282dbc03e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index of the table column.  <br /></td></tr>
+<tr class="memitem:a922be55eaaad316fe834fc1bdf15036b" id="r_a922be55eaaad316fe834fc1bdf15036b"><td class="memItemLeft"><a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a922be55eaaad316fe834fc1bdf15036b">setMatch</a> (ColumnType match)</td></tr>
+<tr class="memdesc:a922be55eaaad316fe834fc1bdf15036b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value to identify the column index.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a96e29721f1bf8c42c953f983bf0d89e8" id="r_a96e29721f1bf8c42c953f983bf0d89e8"><td class="memItemLeft">ColumnType&#160;</td><td class="memItemRight"><a class="el" href="#a96e29721f1bf8c42c953f983bf0d89e8">match_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract class to identify the column index in a table. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class ColumnType&gt;<br />
+class TableColumnMatcher&lt; ColumnType &gt;</div><p>Abstract class to identify the column index in a table. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a40d3186c069774fae3c84c857f500a13" name="a40d3186c069774fae3c84c857f500a13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40d3186c069774fae3c84c857f500a13">&#9670;&#160;</a></span>getColumn()</h2>
+<a id="a81a56739b494ca34e1fcde282dbc03e4" name="a81a56739b494ca34e1fcde282dbc03e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a56739b494ca34e1fcde282dbc03e4">&#9670;&#160;</a></span>getColumn()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class ColumnType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int TableColumnMatcher::getColumn </td>
+          <td class="memname">virtual int <a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a>&lt; ColumnType &gt;::getColumn </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -145,7 +144,79 @@ virtual&#160;</td><td class="memItemRight"><b>~TableColumnMatcher</b> ()=default
 <p>Get the index of the table column. </p>
 <dl class="section return"><dt>Returns</dt><dd>int table column index </dd></dl>
 
-<p>Implemented in <a class="el" href="class_table_column_creature_size_matcher.html#ada0d27a9bd3a5ae197f94b50303e39a9">TableColumnCreatureSizeMatcher</a>.</p>
+<p>Implemented in <a class="el" href="class_table_column_creature_size_matcher.html#a8318c93fea9798360ec6f174fa3d3f51">TableColumnCreatureSizeMatcher</a>.</p>
+
+</div>
+</div>
+<a id="a922be55eaaad316fe834fc1bdf15036b" name="a922be55eaaad316fe834fc1bdf15036b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a922be55eaaad316fe834fc1bdf15036b">&#9670;&#160;</a></span>setMatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ColumnType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a> &amp; <a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a>&lt; ColumnType &gt;::setMatch </td>
+          <td>(</td>
+          <td class="paramtype">ColumnType</td>          <td class="paramname"><span class="paramname"><em>match</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value to identify the column index. </p>
+<p>This function returns a reference to the matcher allowing for method chaining, an example of usage would be:</p>
+<div class="fragment"><div class="line"><span class="comment">// Use a named matcher</span></div>
+<div class="line">TableColumnMatcherDerivative matcher = <a class="code hl_class" href="class_table_column_matcher.html">TableColumnMatcher</a>();</div>
+<div class="line"><span class="keywordtype">int</span> col = matcher.setMatch(<a class="code hl_enumvalue" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e">CreatureSizeType::kLarge</a>).getColumn();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Use an anonymous matcher</span></div>
+<div class="line"><span class="keywordtype">int</span> col = TableColumnMatcherDerivative().setMatch(<a class="code hl_enumvalue" href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a3ce9d817402b59f65fb01ea044bb1ee9">CreatureSizeType::kMedium</a>).getColumn();</div>
+<div class="ttc" id="aclass_table_column_matcher_html"><div class="ttname"><a href="class_table_column_matcher.html">TableColumnMatcher</a></div><div class="ttdoc">Abstract class to identify the column index in a table.</div><div class="ttdef"><b>Definition</b> TableColumnMatcher.h:8</div></div>
+<div class="ttc" id="anamespace_creature_size_type_html_a5a93c3494093263d09281ce2aaad0471a3ce9d817402b59f65fb01ea044bb1ee9"><div class="ttname"><a href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a3ce9d817402b59f65fb01ea044bb1ee9">CreatureSizeType::Type::kMedium</a></div><div class="ttdeci">@ kMedium</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:22</div></div>
+<div class="ttc" id="anamespace_creature_size_type_html_a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e"><div class="ttname"><a href="namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e">CreatureSizeType::Type::kLarge</a></div><div class="ttdeci">@ kLarge</div><div class="ttdef"><b>Definition</b> CreatureSizeType.h:23</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">match</td><td>Value to match </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_table_column_matcher.html" title="Abstract class to identify the column index in a table.">TableColumnMatcher</a>&amp; reference to this matcher </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a96e29721f1bf8c42c953f983bf0d89e8" name="a96e29721f1bf8c42c953f983bf0d89e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e29721f1bf8c42c953f983bf0d89e8">&#9670;&#160;</a></span>match_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ColumnType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColumnType <a class="el" href="class_table_column_matcher.html">TableColumnMatcher</a>&lt; ColumnType &gt;::match_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stores the value used to match the column </p>
 
 </div>
 </div>
