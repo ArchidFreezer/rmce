@@ -17,5 +17,5 @@ public:
 	 * @param ranks Number of ranks to get the bonus for
 	 * @return int containing the skill bonus
 	 */
-	int getBonus(int ranks) const;
+	virtual int getBonus(int ranks) const = 0;
 };

@@ -108,7 +108,7 @@ public:
 	 * @param ranks Number of ranks to get the bonus for
 	 * @return int containing the skill bonus
 	 */
-	int getBonus(int ranks) const;
+	int getBonus(int ranks) const override;
 
 private:
 	std::string name_{};  /**< Name of the progression type */

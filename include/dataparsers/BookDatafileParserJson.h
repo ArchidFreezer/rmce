@@ -38,7 +38,7 @@ public:
 	 * @brief Write book game rule data from the cache to a json file
 	 * @param filename Path to the json file to write
 	 */
-	void save(const std::string& filename);
+	void save(const std::string& filename) override;
 
 private:
 	/**
@@ -47,5 +47,5 @@ private:
 	 * Parse a boost::ptree containing the book rule datas, convert to #BookData objects and store in a data cache
 	 * @param id_only `true` if the game rule object should be populated with its id only; `false` otherwise
 	 */
-	void parse(bool id_only);
+	void parse(bool id_only) override;
 };

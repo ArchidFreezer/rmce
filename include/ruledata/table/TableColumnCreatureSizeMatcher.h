@@ -18,7 +18,7 @@ public:
 		match_ = CreatureSizeType::Type::kTiny;
 	}
 
-	int getColumn() const {
+	int getColumn() const override {
 		using CreatureSizeType::Type;
 		switch (match_) {
 		case Type::kTiny: return 0;
