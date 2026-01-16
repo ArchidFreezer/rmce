@@ -2,7 +2,6 @@
 
 #include <string>
 #include <map>
-#include <memory>
 #include <table/TableColumnMatcher.h>
 #include <table/TableRowMatcher.h>
 #include <table/TableRow.h>
