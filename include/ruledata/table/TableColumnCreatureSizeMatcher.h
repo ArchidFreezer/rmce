@@ -1,6 +1,5 @@
 #pragma once
 #include <CreatureSizeType.h>
-#include <table/TableColumnMatcher.h>
 
 /**
  * @class TableColumnCreatureSizeMatcher
