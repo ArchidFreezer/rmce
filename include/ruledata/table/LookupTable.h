@@ -32,9 +32,11 @@ public:
  * The TableColumnMatcher matcher is added via the setColumnMatcher() method and must be set prior to attempting to
  * retrieve data from the table.
  * 
- * @tparam RowMatcherClass Matcher that is used to identify the correct row
- * @tparam RowDatatype Data type that the matcher \p RowMatcherClass matches on
- * @tparam CellDatatype Data type that is stored in each cell in the table
+ * @tparam RowMatcherClass Class that identifies the table row to use
+ * @tparam RowDatatype Data type of rows, used as input to the RowMatcherClass
+ * @tparam ColumnMatcherClass Class that identifies the table column to use
+ * @tparam ColumnDataType Data type of columns, used as input to the ColumnMatcherClass
+ * @tparam CellDatatype Data type stored in the table cells
  */
 template<typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype>
 	requires table_row_matcher<RowMatcherClass, RowDatatype> && table_column_matcher< ColumnMatcherClass, ColumnDataType>

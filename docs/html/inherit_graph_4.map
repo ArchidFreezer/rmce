@@ -1,19 +1,23 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="21,157,133,184"/>
-<area shape="rect" id="Node000001" href="$class_book_data.html" title="Class representing a Rolemaster rule book used in the campaign world." alt="" coords="279,5,358,32"/>
-<area shape="poly" id="edge8_Node000000_Node000001" title=" " alt="" coords="93,143,135,91,163,64,195,42,237,26,280,19,276,22,238,31,198,46,167,68,139,94,97,146"/>
-<area shape="rect" id="Node000002" href="$class_language_category_data.html" title="Class to represent language families as described in Spell Law &#45; Mentalism Companion (BOOK_MENTALISM_..." alt="" coords="239,56,398,83"/>
-<area shape="poly" id="edge9_Node000000_Node000002" title=" " alt="" coords="105,146,147,118,196,92,241,80,237,83,198,97,149,122,109,150"/>
-<area shape="rect" id="Node000003" href="$class_language_data.html" title="Class representing an individual language used in the campaign world." alt="" coords="266,107,371,133"/>
-<area shape="poly" id="edge10_Node000000_Node000003" title=" " alt="" coords="147,153,196,143,268,129,263,132,197,148,149,158"/>
-<area shape="rect" id="Node000004" href="$class_language_dialect_data.html" title="Class representing the dialects that exist for a language." alt="" coords="245,157,392,184"/>
-<area shape="poly" id="edge11_Node000000_Node000004" title=" " alt="" coords="148,168,247,169,243,172,149,173"/>
-<area shape="rect" id="Node000005" href="$class_lookup_table.html" title="Base class representing a lookup table index by row and column." alt="" coords="197,208,440,267"/>
-<area shape="poly" id="edge12_Node000000_Node000005" title=" " alt="" coords="143,186,212,206,208,209,143,191"/>
-<area shape="rect" id="Node000006" href="$class_skill_category_data.html" title="Class to represent a skill category." alt="" coords="255,291,382,317"/>
-<area shape="poly" id="edge13_Node000000_Node000006" title=" " alt="" coords="99,193,143,237,169,258,198,276,226,287,257,297,252,298,224,293,195,281,166,263,139,241,98,199"/>
-<area shape="rect" id="Node000007" href="$class_skill_progression_type_data.html" title="Class representing the rules for the bonus that skill ranks provide." alt="" coords="233,341,404,368"/>
-<area shape="poly" id="edge14_Node000000_Node000007" title=" " alt="" coords="91,195,110,228,134,263,163,298,198,327,235,345,230,345,195,332,159,302,129,267,106,231,90,201"/>
-<area shape="rect" id="Node000008" href="$class_skill_progression_data.html" title="Class representing the bonus a skill progression provides for a skill or skill category." alt="" coords="5,341,149,368"/>
-<area shape="poly" id="edge15_Node000008_Node000007" title=" " alt="" coords="164,352,235,354,230,355,164,357"/>
+<area shape="rect" id="Node000000" href="$class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="21,215,133,241"/>
+<area shape="rect" id="Node000001" href="$class_lookup_table.html" title=" " alt="" coords="207,5,430,64"/>
+<area shape="poly" id="edge8_Node000000_Node000001" title=" " alt="" coords="91,199,132,137,161,103,195,74,217,62,214,66,198,78,165,107,137,140,95,202"/>
+<area shape="rect" id="Node000003" href="$class_book_data.html" title="Class representing a Rolemaster rule book used in the campaign world." alt="" coords="279,88,358,115"/>
+<area shape="poly" id="edge10_Node000000_Node000003" title=" " alt="" coords="98,201,141,161,167,141,196,124,237,109,281,103,276,106,239,115,198,129,170,145,144,165,103,205"/>
+<area shape="rect" id="Node000004" href="$class_language_category_data.html" title="Class to represent language families as described in Spell Law &#45; Mentalism Companion (BOOK_MENTALISM_..." alt="" coords="239,139,398,165"/>
+<area shape="poly" id="edge11_Node000000_Node000004" title=" " alt="" coords="119,206,196,175,241,164,237,168,198,180,122,210"/>
+<area shape="rect" id="Node000005" href="$class_language_data.html" title="Class representing an individual language used in the campaign world." alt="" coords="266,189,371,216"/>
+<area shape="poly" id="edge12_Node000000_Node000005" title=" " alt="" coords="147,218,267,206,263,210,149,223"/>
+<area shape="rect" id="Node000006" href="$class_language_dialect_data.html" title="Class representing the dialects that exist for a language." alt="" coords="245,240,392,267"/>
+<area shape="poly" id="edge13_Node000000_Node000006" title=" " alt="" coords="147,233,247,244,243,247,149,238"/>
+<area shape="rect" id="Node000007" href="$class_lookup_table.html" title="Base class representing a lookup table index by row and column." alt="" coords="197,291,440,349"/>
+<area shape="poly" id="edge14_Node000000_Node000007" title=" " alt="" coords="123,245,198,276,230,289,225,291,196,281,123,251"/>
+<area shape="rect" id="Node000008" href="$class_skill_category_data.html" title="Class to represent a skill category." alt="" coords="255,373,382,400"/>
+<area shape="poly" id="edge15_Node000000_Node000008" title=" " alt="" coords="95,252,138,308,166,336,198,359,226,371,257,381,252,381,224,376,195,364,163,340,134,311,94,257"/>
+<area shape="rect" id="Node000009" href="$class_skill_progression_type_data.html" title="Class representing the rules for the bonus that skill ranks provide." alt="" coords="233,424,404,451"/>
+<area shape="poly" id="edge16_Node000000_Node000009" title=" " alt="" coords="89,253,106,291,130,333,160,375,198,410,235,429,230,428,195,414,156,379,125,336,102,293,88,259"/>
+<area shape="rect" id="Node000002" href="$class_bound_int_row_lookup_table.html" title="Lookup table class with inetegers for the rows and sets the minimum and maximum row value." alt="" coords="488,5,710,64"/>
+<area shape="poly" id="edge9_Node000001_Node000002" title=" " alt="" coords="444,32,490,34,485,36,446,37"/>
+<area shape="rect" id="Node000010" href="$class_skill_progression_data.html" title="Class representing the bonus a skill progression provides for a skill or skill category." alt="" coords="5,424,149,451"/>
+<area shape="poly" id="edge17_Node000010_Node000009" title=" " alt="" coords="164,435,235,437,230,438,164,440"/>
 </map>

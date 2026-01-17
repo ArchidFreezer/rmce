@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('class_lookup_table.html','',''); });
+$(function(){initNavTree('class_int_row_lookup_table.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,23 +89,24 @@ $(function(){initNavTree('class_lookup_table.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt; Member List</div></div>
+  <div class="headertitle"><div class="title">IntRowLookupTable&lt; ColumnMatcherClass, ColumnDataType, CellDatatype &gt; Member List</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="class_lookup_table.html">LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="class_int_row_lookup_table.html">IntRowLookupTable&lt; ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_lookup_table.html#a4dc36214386547551e7332905d4d6219">addRow</a>(std::shared_ptr&lt; RowMatcherClass &gt; matcher, TableRow&lt; CellDatatype &gt; row)</td><td class="entry"><a class="el" href="class_lookup_table.html">LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_lookup_table.html#a3859e0611c939043f993b0619d0aebf1">cell</a>(RowDatatype row, ColumnDataType col) const</td><td class="entry"><a class="el" href="class_lookup_table.html">LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_lookup_table.html#a4dc36214386547551e7332905d4d6219">addRow</a>(std::shared_ptr&lt; NumberRange&lt; int &gt; &gt; matcher, TableRow&lt; CellDatatype &gt; row)</td><td class="entry"><a class="el" href="class_lookup_table.html">LookupTable&lt; NumberRange&lt; int &gt;, int, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>cell</b>(int row, ColumnDataType col) const (defined in <a class="el" href="class_int_row_lookup_table.html">IntRowLookupTable&lt; ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a>)</td><td class="entry"><a class="el" href="class_int_row_lookup_table.html">IntRowLookupTable&lt; ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_game_rule_data.html#ae41e24b7b627445273425b0b6baf1968">GameRuleData</a>()=delete</td><td class="entry"><a class="el" href="class_game_rule_data.html">GameRuleData</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_game_rule_data.html#a4d60329cf6a183d3033134f32a13a672">GameRuleData</a>(std::string_view id)</td><td class="entry"><a class="el" href="class_game_rule_data.html">GameRuleData</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_game_rule_data.html#ad51f77b8a4054fca57268e29e0da5718">generateId</a>(std::string_view type, std::string_view val)</td><td class="entry"><a class="el" href="class_game_rule_data.html">GameRuleData</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>() const</td><td class="entry"><a class="el" href="class_game_rule_data.html">GameRuleData</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_game_rule_data.html#aa984e728567bfff2df2e0f1adcfbe76a">id_</a></td><td class="entry"><a class="el" href="class_game_rule_data.html">GameRuleData</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_lookup_table.html#a908db0b57ea5e680deccb80d7fe6f7ab">LookupTable</a>(std::string_view id)</td><td class="entry"><a class="el" href="class_lookup_table.html">LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_lookup_table.html#aa8b34807f6c7a4338ec46ee454858129">setColumnMatcher</a>(std::unique_ptr&lt; ColumnMatcherClass &gt; col_matcher)</td><td class="entry"><a class="el" href="class_lookup_table.html">LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_game_rule_data.html#abcd57cd1f04642956ba72a183135df42">~GameRuleData</a>()=default</td><td class="entry"><a class="el" href="class_game_rule_data.html">GameRuleData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_lookup_table.html#a79baa60def4bde036545c713d3f6c340">~LookupTable</a>()=default</td><td class="entry"><a class="el" href="class_lookup_table.html">LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>IntRowLookupTable</b>(std::string_view id) (defined in <a class="el" href="class_int_row_lookup_table.html">IntRowLookupTable&lt; ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a>)</td><td class="entry"><a class="el" href="class_int_row_lookup_table.html">IntRowLookupTable&lt; ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_lookup_table.html#a908db0b57ea5e680deccb80d7fe6f7ab">LookupTable</a>(std::string_view id)</td><td class="entry"><a class="el" href="class_lookup_table.html">LookupTable&lt; NumberRange&lt; int &gt;, int, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_lookup_table.html#aa8b34807f6c7a4338ec46ee454858129">setColumnMatcher</a>(std::unique_ptr&lt; ColumnMatcherClass &gt; col_matcher)</td><td class="entry"><a class="el" href="class_lookup_table.html">LookupTable&lt; NumberRange&lt; int &gt;, int, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_game_rule_data.html#abcd57cd1f04642956ba72a183135df42">~GameRuleData</a>()=default</td><td class="entry"><a class="el" href="class_game_rule_data.html">GameRuleData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_lookup_table.html#a79baa60def4bde036545c713d3f6c340">~LookupTable</a>()=default</td><td class="entry"><a class="el" href="class_lookup_table.html">LookupTable&lt; NumberRange&lt; int &gt;, int, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

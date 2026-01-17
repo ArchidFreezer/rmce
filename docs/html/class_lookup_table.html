@@ -120,8 +120,8 @@ Collaboration diagram for LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMa
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a908db0b57ea5e680deccb80d7fe6f7ab" id="r_a908db0b57ea5e680deccb80d7fe6f7ab"><td class="memItemLeft"><a id="a908db0b57ea5e680deccb80d7fe6f7ab" name="a908db0b57ea5e680deccb80d7fe6f7ab"></a>
-&#160;</td><td class="memItemRight"><b>LookupTable</b> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>)</td></tr>
+<tr class="memitem:a908db0b57ea5e680deccb80d7fe6f7ab" id="r_a908db0b57ea5e680deccb80d7fe6f7ab"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a908db0b57ea5e680deccb80d7fe6f7ab">LookupTable</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>)</td></tr>
+<tr class="memdesc:a908db0b57ea5e680deccb80d7fe6f7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with id.  <br /></td></tr>
 <tr class="memitem:a79baa60def4bde036545c713d3f6c340" id="r_a79baa60def4bde036545c713d3f6c340"><td class="memItemLeft"><a id="a79baa60def4bde036545c713d3f6c340" name="a79baa60def4bde036545c713d3f6c340"></a>
 virtual&#160;</td><td class="memItemRight"><b>~LookupTable</b> ()=default</td></tr>
 <tr class="memdesc:a79baa60def4bde036545c713d3f6c340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor to allow polymorphism. <br /></td></tr>
@@ -158,13 +158,51 @@ class LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDa
 <p>The TableColumnMatcher matcher is added via the <a class="el" href="#aa8b34807f6c7a4338ec46ee454858129" title="Set the column matcher object.">setColumnMatcher()</a> method and must be set prior to attempting to retrieve data from the table.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">RowMatcherClass</td><td>Matcher that is used to identify the correct row </td></tr>
-    <tr><td class="paramname">RowDatatype</td><td>Data type that the matcher <code class="param">RowMatcherClass</code> matches on </td></tr>
-    <tr><td class="paramname">CellDatatype</td><td>Data type that is stored in each cell in the table </td></tr>
+    <tr><td class="paramname">RowMatcherClass</td><td>Class that identifies the table row to use </td></tr>
+    <tr><td class="paramname">RowDatatype</td><td>Data type of rows, used as input to the RowMatcherClass </td></tr>
+    <tr><td class="paramname">ColumnMatcherClass</td><td>Class that identifies the table column to use </td></tr>
+    <tr><td class="paramname">ColumnDataType</td><td>Data type of columns, used as input to the ColumnMatcherClass </td></tr>
+    <tr><td class="paramname">CellDatatype</td><td>Data type stored in the table cells </td></tr>
   </table>
   </dd>
 </dl>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a908db0b57ea5e680deccb80d7fe6f7ab" name="a908db0b57ea5e680deccb80d7fe6f7ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a908db0b57ea5e680deccb80d7fe6f7ab">&#9670;&#160;</a></span>LookupTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_lookup_table.html">LookupTable</a>&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;::LookupTable </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor with id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Unique identifier for the table </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a4dc36214386547551e7332905d4d6219" name="a4dc36214386547551e7332905d4d6219"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4dc36214386547551e7332905d4d6219">&#9670;&#160;</a></span>addRow()</h2>
 

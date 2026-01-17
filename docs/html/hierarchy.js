@@ -15,6 +15,9 @@ var hierarchy =
     ] ],
     [ "Dice", "class_dice.html", null ],
     [ "GameRuleData", "class_game_rule_data.html", [
+      [ "LookupTable< NumberRange< int >, int, ColumnMatcherClass, ColumnDataType, CellDatatype >", "class_lookup_table.html", [
+        [ "BoundIntRowLookupTable< ColumnMatcherClass, ColumnDataType, CellDatatype >", "class_bound_int_row_lookup_table.html", null ]
+      ] ],
       [ "BookData", "class_book_data.html", null ],
       [ "LanguageCategoryData", "class_language_category_data.html", null ],
       [ "LanguageData", "class_language_data.html", null ],

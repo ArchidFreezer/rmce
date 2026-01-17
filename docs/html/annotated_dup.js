@@ -3,6 +3,7 @@ var annotated_dup =
     [ "ArmourTypeData", "class_armour_type_data.html", null ],
     [ "BookData", "class_book_data.html", "class_book_data" ],
     [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", "class_book_datafile_parser_json" ],
+    [ "BoundIntRowLookupTable", "class_bound_int_row_lookup_table.html", "class_bound_int_row_lookup_table" ],
     [ "ColNotFoundException", "class_col_not_found_exception.html", "class_col_not_found_exception" ],
     [ "DatafileParser", "class_datafile_parser.html", "class_datafile_parser" ],
     [ "DatafileParserJson", "class_datafile_parser_json.html", "class_datafile_parser_json" ],
