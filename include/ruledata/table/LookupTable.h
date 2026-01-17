@@ -54,29 +54,50 @@ public:
 	virtual ~LookupTable() = default;
 
 	/**
-	 * @brief Add a row to the table
+	 * @brief Add a row to the table that may be accessed by any row index value
 	 * 
 	 * @param matcher Matcher that is used to identify the row
 	 * @param row TableRow object that contains the cells in the row
 	 */
-	void addRow(std::shared_ptr<RowMatcherClass> matcher, TableRow<CellDatatype> row) { table_.emplace(matcher, row); }
+	void addRow(std::shared_ptr<RowMatcherClass> matcher, TableRow<CellDatatype> row) { modified_rows_.emplace(matcher, row); }
+
+	/**
+	 * @brief Add a row to the table that may only be accessed by row index values that have not been modified
+	 *
+	 * @param matcher Matcher that is used to identify the row
+	 * @param row TableRow object that contains the cells in the row
+	 */
+	void addUnmodifiedRow(std::shared_ptr<RowMatcherClass> matcher, TableRow<CellDatatype> row) { unmodified_rows_.emplace(matcher, row); }
 
 	/**
 	 * @brief Gets the value of a cell in the table
 	 * 
-	 * @param col Value to match against the column
-	 * @param row Value to identify the row, must be of the same type as the matcher
+	 * @param col_index Value to match against the column
+	 * @param row_index Value to match against the row
 	 *
-	 * @return Contents of the cell from the row that matches \a row and column \a col
+	 * @return Contents of the cell from the row that matches \a row_index and column \a col_index
 	 *
-	 * @throw RowNotFoundException if \a row does not match any matchers
-	 * @throw ColNotFoundException if \a col is an invalid column
+	 * @throw RowNotFoundException if \a row_index does not match any matchers
+	 * @throw ColNotFoundException if \a col_index is an invalid column
 	 */
-	const CellDatatype& cell(ColumnDataType col, RowDatatype row) const {
-		for (auto& tr : table_) {
-			if ((*tr.first).matches(row)) return tr.second.cell(col_matcher_->column(col));
-		}
-		throw RowNotFoundException("No row was found matching the value: " + std::to_string(row));
+	const CellDatatype& cell(ColumnDataType col_index, RowDatatype row_index) const {
+		return cell(col_index, row_index, row_index, false);
+	}
+
+	/**
+	 * @brief Gets the value of a cell in the table
+	 *
+	 * @param col_index Value to match against the column
+	 * @param row_index Value to match against the row
+	 * @param unmodified_row_index Value to match against the rows that are for unmodified values
+	 *
+	 * @return Contents of the cell from the row that matches the indexes
+	 *
+	 * @throw RowNotFoundException if neither \a row_index nor \a unmodified_row_index are matched
+	 * @throw ColNotFoundException if \a col_index is an invalid column
+	 */
+	const CellDatatype& cell(ColumnDataType col_index, RowDatatype row_index, RowDatatype unmodified_row_index) const {
+		return cell(col_index, row_index, unmodified_row_index, true);
 	}
 
 	/**
@@ -89,6 +110,45 @@ public:
 	void setColumnMatcher(std::unique_ptr<ColumnMatcherClass> col_matcher) { col_matcher_ = std::move(col_matcher); }
 
 private:
-	std::map<std::shared_ptr<RowMatcherClass>, TableRow<CellDatatype>> table_; /**< Data structure representing the table */
+	/**
+	 * @brief Gets the value of a cell in the table
+	 *
+	 * This function implements the core lookup functionality and is used by all other methods. It has a flag that indicates
+	 * whether there should be any check against unmodified rows as this may be called by a function that does not expect this.
+	 *
+	 * @param col_index Value to match against the column
+	 * @param row_index Value to match against the row
+	 * @param unmodified_row_index Value to match against the rows that are for unmodified values
+	 * @param use_unmodified Whether to test for unmodified rows
+	 *
+	 * @return Contents of the cell from the row that matches the indexes
+	 *
+	 * @throw RowNotFoundException if neither \a row_index nor \a unmodified_row_index are matched
+	 * @throw ColNotFoundException if \a col_index is an invalid column
+	 */
+	const CellDatatype& cell(ColumnDataType col_index, RowDatatype row_index, RowDatatype unmodified_row_index, bool use_unmodified) const;
+
+	std::map<std::shared_ptr<RowMatcherClass>, TableRow<CellDatatype>> modified_rows_; /**< Container for row that may be returned by any row index value */
+	std::map<std::shared_ptr<RowMatcherClass>, TableRow<CellDatatype>> unmodified_rows_; /**< Container for row that may be only returned by unmodified row index values */
 	std::unique_ptr<ColumnMatcherClass> col_matcher_{}; /**< Object to determine table column to retrieve cell data from */
 };
+
+template<typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype>
+	requires table_row_matcher<RowMatcherClass, RowDatatype>&& table_column_matcher< ColumnMatcherClass, ColumnDataType>
+inline const CellDatatype& LookupTable<RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype>::cell(ColumnDataType col_index, RowDatatype row_index, RowDatatype unmodified_row_index, bool use_unmodified) const {
+	if (use_unmodified) {
+		for (auto& tr : unmodified_rows_) {
+			if ((*tr.first).matches(unmodified_row_index)) return tr.second.cell(col_matcher_->column(col_index));
+		}
+	}
+
+	for (auto& tr : modified_rows_) {
+		if ((*tr.first).matches(row_index)) return tr.second.cell(col_matcher_->column(col_index));
+	}
+
+	// We didn't find a row so build the message to put in the exception
+	std::string msg{ "No rows found matching index(s): [" + std::to_string(row_index) };
+	if (unmodified_row_index != row_index) msg += ", " + std::to_string(unmodified_row_index);
+	msg += "]";
+	throw RowNotFoundException(msg);
+}

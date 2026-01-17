@@ -36,21 +36,42 @@ public:
 	/**
 	 * @brief Gets the value of a cell in the table
 	 * 
-	 * Constrains the value of the \a row parameter to be within the bounds set on the table so that it will never be larger
+	 * Constrains the value of the \a row_index parameter to be within the bounds set on the table so that it will never be larger
 	 * than the maximum bound and never smaller than the minimum bound.
 	 *
-	 * @param col Value to match against the column
-	 * @param row Value to identify the row, must be of the same type as the matcher
+	 * @param col_index Value to match against the column
+	 * @param row_index Value to identify the row, must be of the same type as the matcher
 	 *
-	 * @return Contents of the cell from the row that matches \a row and column \a col
+	 * @return Contents of the cell from the row that matches \a row_index and column \a col_index
 	 *
-	 * @throw RowNotFoundException if \a row does not match any matchers
-	 * @throw ColNotFoundException if \a col is an invalid column
+	 * @throw RowNotFoundException if \a row_index does not match any matchers
+	 * @throw ColNotFoundException if \a col_index is an invalid column
 	 */
-	const CellDatatype& cell(ColumnDataType col, int row) const {
-		row = std::min(row, max_row_);
-		row = std::max(row, min_row_);
-		return LookupTable<NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>::cell(col, row);
+	const CellDatatype& cell(ColumnDataType col_index, int row_index) const {
+		row_index = std::min(row_index, max_row_);
+		row_index = std::max(row_index, min_row_);
+		return LookupTable<NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>::cell(col_index, row_index);
+	}
+
+	/**
+ * @brief Gets the value of a cell in the table
+ *
+ * Constrains the value of the \a row_index parameter to be within the bounds set on the table so that it will never be larger
+ * than the maximum bound and never smaller than the minimum bound.
+ *
+ * @param col_index Value to match against the column
+ * @param row_index Value to match against the row
+ * @param unmodified_row_index Value to match against the rows that are for unmodified values
+ *
+ * @return Contents of the cell from the row that matches the indexes
+ *
+ * @throw RowNotFoundException if neither \a row_index nor \a unmodified_row_index are matched
+ * @throw ColNotFoundException if \a col_index is an invalid column
+ */
+	const CellDatatype& cell(ColumnDataType col_index, int row_index, int unmodified_row_index) const {
+		row_index = std::min(row_index, max_row_);
+		row_index = std::max(row_index, min_row_);
+		return LookupTable<NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>::cell(col_index, row_index, unmodified_row_index);
 	}
 
 private:
