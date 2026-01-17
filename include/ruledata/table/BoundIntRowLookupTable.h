@@ -1,10 +1,7 @@
 #pragma once
 
-#include <CreatureSizeType.h>
 #include <NumberRange.h>
 #include <table/LookupTable.h>
-#include <table/TableColumnCreatureSizeMatcher.h>
-#include <table/TableColumnMatcher.h>
 
 /**
  * @class  BoundIntRowLookupTable
