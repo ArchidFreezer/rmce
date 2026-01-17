@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 
+#include <ArmourType.h>
 #include <CreatureSizeType.h>
 #include <CriticalTableType.h>
 #include <CriticalType.h>
@@ -147,4 +148,28 @@ namespace {
 		EXPECT_EQ(CriticalType::fromString(toString(CriticalType::kHeat)), CriticalType::kHeat);
 		EXPECT_EQ(CriticalType::fromString(toString(CriticalType::kNether)), CriticalType::kNether);
 	}
+
+	TEST(RuleDataEnums, ArmourType) {
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT1)), ArmourType::kAT1);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT2)), ArmourType::kAT2);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT3)), ArmourType::kAT3);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT4)), ArmourType::kAT4);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT5)), ArmourType::kAT5);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT6)), ArmourType::kAT6);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT7)), ArmourType::kAT7);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT8)), ArmourType::kAT8);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT9)), ArmourType::kAT9);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT10)), ArmourType::kAT10);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT11)), ArmourType::kAT11);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT12)), ArmourType::kAT12);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT13)), ArmourType::kAT13);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT14)), ArmourType::kAT14);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT15)), ArmourType::kAT15);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT16)), ArmourType::kAT16);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT17)), ArmourType::kAT17);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT18)), ArmourType::kAT18);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT19)), ArmourType::kAT19);
+		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT20)), ArmourType::kAT20);
+	}
+
 }
