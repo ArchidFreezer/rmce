@@ -1,13 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" title=" " alt="" coords="5,107,129,133"/>
 <area shape="rect" id="Node000001" href="$class_col_not_found_exception.html" title="Exception throw if an attempt was made to access a column index in the row that does not exist." alt="" coords="185,5,342,32"/>
-<area shape="poly" id="edge19_Node000000_Node000001" title=" " alt="" coords="95,95,132,67,176,42,208,31,203,34,178,46,135,72,98,98"/>
+<area shape="poly" id="edge22_Node000000_Node000001" title=" " alt="" coords="95,95,132,67,176,42,208,31,203,34,178,46,135,72,98,98"/>
 <area shape="rect" id="Node000002" href="$class_filename_not_set_exception.html" title="Exception thrown if a call is made to read from a file when the filename has not been set." alt="" coords="177,56,350,83"/>
-<area shape="poly" id="edge20_Node000000_Node000002" title=" " alt="" coords="135,100,211,82,207,85,138,105"/>
+<area shape="poly" id="edge23_Node000000_Node000002" title=" " alt="" coords="135,100,211,82,207,85,138,105"/>
 <area shape="rect" id="Node000003" href="$class_invalid_skill_progression.html" title="Thrown when there is an attempt to set either the skill progression or category progression in an inv..." alt="" coords="187,107,340,133"/>
-<area shape="poly" id="edge21_Node000000_Node000003" title=" " alt="" coords="144,117,189,119,184,121,145,123"/>
+<area shape="poly" id="edge24_Node000000_Node000003" title=" " alt="" coords="144,117,189,119,184,121,145,123"/>
 <area shape="rect" id="Node000004" href="$class_row_not_found_exception.html" title="Exception throw if no row was found during table lookup." alt="" coords="182,157,345,184"/>
-<area shape="poly" id="edge22_Node000000_Node000004" title=" " alt="" coords="137,135,211,156,206,158,136,141"/>
+<area shape="poly" id="edge25_Node000000_Node000004" title=" " alt="" coords="137,135,211,156,206,158,136,141"/>
 <area shape="rect" id="Node000005" href="$class_too_many_stats_exception.html" title="Thrown when more skill category stats than are allowed are attempted to be added." alt="" coords="182,208,345,235"/>
-<area shape="poly" id="edge23_Node000000_Node000005" title=" " alt="" coords="97,141,135,168,178,194,208,207,203,207,176,198,132,173,96,146"/>
+<area shape="poly" id="edge26_Node000000_Node000005" title=" " alt="" coords="97,141,135,168,178,194,208,207,203,207,176,198,132,173,96,146"/>
 </map>

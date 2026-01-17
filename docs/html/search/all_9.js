@@ -8,5 +8,6 @@ var searchData=
   ['lcase_5',['lcase',['../_string_utils_8h.html#acd53b635966070e138dea419304de22f',1,'StringUtils.h']]],
   ['lcaseconcat_6',['lcaseconcat',['../_string_utils_8h.html#a31cee08b448da5eaab597ae9aa8d9424',1,'StringUtils.h']]],
   ['lookuptable_7',['LookupTable',['../class_lookup_table.html',1,'LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;'],['../class_lookup_table.html#a908db0b57ea5e680deccb80d7fe6f7ab',1,'LookupTable::LookupTable()']]],
-  ['lookuptable_3c_20numberrange_3c_20int_20_3e_2c_20int_2c_20columnmatcherclass_2c_20columndatatype_2c_20celldatatype_20_3e_8',['LookupTable&lt; NumberRange&lt; int &gt;, int, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;',['../class_lookup_table.html',1,'']]]
+  ['lookuptable_3c_20numberrange_3c_20int_20_3e_2c_20int_2c_20columnmatcherclass_2c_20columndatatype_2c_20celldatatype_20_3e_8',['LookupTable&lt; NumberRange&lt; int &gt;, int, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;',['../class_lookup_table.html',1,'']]],
+  ['lookuptable_3c_20numberrange_3c_20int_20_3e_2c_20int_2c_20tablecolumnarmourtypematcher_2c_20armourtype_3a_3atype_2c_20std_3a_3astring_20_3e_9',['LookupTable&lt; NumberRange&lt; int &gt;, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string &gt;',['../class_lookup_table.html',1,'']]]
 ];
