@@ -20,7 +20,7 @@ public:
 		case Type::kSmall: return 1;
 		case Type::kMedium: return 2;
 		case Type::kLarge: return 3;
-		case Type::kSuperLarge: return 4;
+		case Type::kHuge: return 4;
 		}
 		return 0;
 	}

@@ -19,10 +19,10 @@ namespace CriticalTableType {
 	 */
 	enum class Type {
 		kNormal, /**< Normal criticals are those that do not fit in the other categories */
-		kLargeCreaturePhysical, /**< These are non-magical attacks against creatures with a #CreatureSizeType::kLarge */
-		kSuperLargeCreaturePhysical, /**< These are non-magical attacks against creatures with a #CreatureSizeType::kSuperLarge */
-		kLargeCreatureSpell, /**< These are magical attacks against creatures with #CreatureSizeType::kLarge */
-		kSuperLargeCreatureSpell /**< These are magical attacks against creatures with #CreatureSizeType::kSuperLarge */
+		kLargeCreaturePhysical, /**< These are non-magical attacks against creatures with a CreatureSizeType::kLarge */
+		kHugeCreaturePhysical, /**< These are non-magical attacks against creatures with a CreatureSizeType::kHuge */
+		kLargeCreatureSpell, /**< These are magical attacks against creatures with CreatureSizeType::kLarge */
+		kHugeCreatureSpell /**< These are magical attacks against creatures with CreatureSizeType::kHuge */
 	};
 	using enum Type;
 

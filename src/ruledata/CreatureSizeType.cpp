@@ -8,7 +8,7 @@ const std::string CreatureSizeType::toString(Type size) {
 	case kSmall: return "Small";
 	case kMedium: return "Medium";
 	case kLarge: return "Large";
-	case kSuperLarge: return "Super Large";
+	case kHuge: return "Huge";
 	default: return "";
 	}
 }
@@ -21,7 +21,7 @@ const std::optional<CreatureSizeType::Type> CreatureSizeType::fromString(std::st
 	if (val == "small") return kSmall;
 	if (val == "medium") return kMedium;
 	if (val == "large") return kLarge;
-	if (val == "superlarge") return kSuperLarge;
+	if (val == "huge") return kHuge;
 
 	return {};
 }

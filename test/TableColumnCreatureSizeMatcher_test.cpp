@@ -10,6 +10,6 @@ namespace {
 		EXPECT_EQ(matcher.column(CreatureSizeType::kSmall), 1);
 		EXPECT_EQ(matcher.column(CreatureSizeType::kMedium), 2);
 		EXPECT_EQ(matcher.column(CreatureSizeType::kLarge), 3);
-		EXPECT_EQ(matcher.column(CreatureSizeType::kSuperLarge), 4);
+		EXPECT_EQ(matcher.column(CreatureSizeType::kHuge), 4);
 	}
 }

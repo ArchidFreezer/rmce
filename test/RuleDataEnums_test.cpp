@@ -117,16 +117,16 @@ namespace {
 		EXPECT_EQ(CreatureSizeType::fromString(toString(CreatureSizeType::kLarge)), CreatureSizeType::kLarge);
 		EXPECT_EQ(CreatureSizeType::fromString(toString(CreatureSizeType::kMedium)), CreatureSizeType::kMedium);
 		EXPECT_EQ(CreatureSizeType::fromString(toString(CreatureSizeType::kSmall)), CreatureSizeType::kSmall);
-		EXPECT_EQ(CreatureSizeType::fromString(toString(CreatureSizeType::kSuperLarge)), CreatureSizeType::kSuperLarge);
+		EXPECT_EQ(CreatureSizeType::fromString(toString(CreatureSizeType::kHuge)), CreatureSizeType::kHuge);
 		EXPECT_EQ(CreatureSizeType::fromString(toString(CreatureSizeType::kTiny)), CreatureSizeType::kTiny);
 	}
 
 	TEST(RuleDataEnums, CriticalTableType) {
 		EXPECT_EQ(CriticalTableType::fromString(toString(CriticalTableType::kNormal)), CriticalTableType::kNormal);
 		EXPECT_EQ(CriticalTableType::fromString(toString(CriticalTableType::kLargeCreaturePhysical)), CriticalTableType::kLargeCreaturePhysical);
-		EXPECT_EQ(CriticalTableType::fromString(toString(CriticalTableType::kSuperLargeCreaturePhysical)), CriticalTableType::kSuperLargeCreaturePhysical);
+		EXPECT_EQ(CriticalTableType::fromString(toString(CriticalTableType::kHugeCreaturePhysical)), CriticalTableType::kHugeCreaturePhysical);
 		EXPECT_EQ(CriticalTableType::fromString(toString(CriticalTableType::kLargeCreatureSpell)), CriticalTableType::kLargeCreatureSpell);
-		EXPECT_EQ(CriticalTableType::fromString(toString(CriticalTableType::kSuperLargeCreatureSpell)), CriticalTableType::kSuperLargeCreatureSpell);
+		EXPECT_EQ(CriticalTableType::fromString(toString(CriticalTableType::kHugeCreatureSpell)), CriticalTableType::kHugeCreatureSpell);
 	}
 
 	TEST(RuleDataEnums, CriticalType) {

@@ -6,9 +6,9 @@ const std::string CriticalTableType::toString(Type type) {
 	switch (type) {
 	case kNormal: return "Normal";
 	case kLargeCreaturePhysical: return "Large Creature Physical";
-	case kSuperLargeCreaturePhysical: return "Super Large Creature Physical";
+	case kHugeCreaturePhysical: return "Super Large Creature Physical";
 	case kLargeCreatureSpell: return "Large Creature Spell";
-	case kSuperLargeCreatureSpell: return "Super Large Creature Spell";
+	case kHugeCreatureSpell: return "Super Large Creature Spell";
 	default: return "";
 	}
 }
@@ -19,9 +19,9 @@ const std::optional<CriticalTableType::Type> CriticalTableType::fromString(std::
 	const std::string& val = lcaseconcat(sv);
 	if (val == "normal") return kNormal;
 	if (val == "largecreaturephysical") return kLargeCreaturePhysical;
-	if (val == "superlargecreaturephysical") return kSuperLargeCreaturePhysical;
+	if (val == "superlargecreaturephysical") return kHugeCreaturePhysical;
 	if (val == "largecreaturespell") return kLargeCreatureSpell;
-	if (val == "superlargecreaturespell") return kSuperLargeCreatureSpell;
+	if (val == "superlargecreaturespell") return kHugeCreatureSpell;
 
 	return {};
 }

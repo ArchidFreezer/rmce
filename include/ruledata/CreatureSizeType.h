@@ -21,7 +21,7 @@ namespace CreatureSizeType {
 		kSmall, /**< Small creatures are cat or dog sized */
 		kMedium, /**< Medium creatures are approximately human sized such as deer or most sharks */
 		kLarge, /**< Large creatures are buffalo or lions */
-		kSuperLarge /**< Super Large or Huge creatures are elephant or whale sized */
+		kHuge /**< Super Large or Huge creatures are elephant or whale sized */
 	};
 	using enum Type;
 
@@ -46,15 +46,6 @@ namespace CreatureSizeType {
 	 * @brief Get the enumeration value based on a string
 	 *
 	 * Accepts values that are returned by toString() in a case insensitive manner.
-	 *
-	 * For values that contain strings this function will accept these with the
-	 * space, with the space removed or with the space changed to an underscore:
-	 * - "Super Large"
-	 * - "super large"
-	 * - "SuperLarge"
-	 * - "superlarge"
-	 * - "Super_Large"
-	 * - "super_large"
 	 *
 	 * @param sv string_view to get the enumeration for
 	 * @return CreatureSizeType::Type represented by the string

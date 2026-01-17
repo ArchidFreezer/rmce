@@ -35,7 +35,7 @@ var namespaces_dup =
         [ "kSmall", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a03674d7b145783567b9a65ea62f974b9", null ],
         [ "kMedium", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a3ce9d817402b59f65fb01ea044bb1ee9", null ],
         [ "kLarge", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e", null ],
-        [ "kSuperLarge", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a57141464ed1fe04093cd3e749594a608", null ]
+        [ "kHuge", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ad464fb18dfeee2966a78fd644162e011", null ]
       ] ],
       [ "fromString", "namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa", null ],
       [ "operator<<", "namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2", null ],
@@ -46,9 +46,9 @@ var namespaces_dup =
       [ "Type", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737", [
         [ "kNormal", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a07fa7a19aa722c635a15e94cb7f50416", null ],
         [ "kLargeCreaturePhysical", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737aea77e777f06ddc8e1b262ec7338565b7", null ],
-        [ "kSuperLargeCreaturePhysical", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737aa49eca5ade84888b60f27eb8fd3f2615", null ],
+        [ "kHugeCreaturePhysical", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a1b1fb6c530fa716085438bd0828fda85", null ],
         [ "kLargeCreatureSpell", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a9f6e20e82520583d8de05ee85fd65cc0", null ],
-        [ "kSuperLargeCreatureSpell", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a8344191ff8fcec5771226f7e4ee882a9", null ]
+        [ "kHugeCreatureSpell", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a414b8a61a97d278df48dbfa2a8346198", null ]
       ] ],
       [ "fromString", "namespace_critical_table_type.html#a313b88a386987728d8027d79f8d6037d", null ],
       [ "operator<<", "namespace_critical_table_type.html#a439e93fa90539a088714b27a6b880702", null ],

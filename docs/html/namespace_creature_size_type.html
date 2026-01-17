@@ -104,7 +104,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a5a93c3494093263d09281ce2aaad0471a3ce9d817402b59f65fb01ea044bb1ee9">kMedium</a>
 , <a class="el" href="#a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e">kLarge</a>
 , <br />
-&#160;&#160;<a class="el" href="#a5a93c3494093263d09281ce2aaad0471a57141464ed1fe04093cd3e749594a608">kSuperLarge</a>
+&#160;&#160;<a class="el" href="#a5a93c3494093263d09281ce2aaad0471ad464fb18dfeee2966a78fd644162e011">kHuge</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a5a93c3494093263d09281ce2aaad0471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration class representing the size of creatures.  <a href="#a5a93c3494093263d09281ce2aaad0471">More...</a><br /></td></tr>
@@ -154,7 +154,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e" name="a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e"></a>kLarge&#160;</td><td class="fielddoc"><p>Large creatures are buffalo or lions </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5a93c3494093263d09281ce2aaad0471a57141464ed1fe04093cd3e749594a608" name="a5a93c3494093263d09281ce2aaad0471a57141464ed1fe04093cd3e749594a608"></a>kSuperLarge&#160;</td><td class="fielddoc"><p>Super Large or Huge creatures are elephant or whale sized </p>
+<tr><td class="fieldname"><a id="a5a93c3494093263d09281ce2aaad0471ad464fb18dfeee2966a78fd644162e011" name="a5a93c3494093263d09281ce2aaad0471ad464fb18dfeee2966a78fd644162e011"></a>kHuge&#160;</td><td class="fielddoc"><p>Super Large or Huge creatures are elephant or whale sized </p>
 </td></tr>
 </table>
 
@@ -178,14 +178,6 @@ Functions</h2></td></tr>
 
 <p>Get the enumeration value based on a string. </p>
 <p>Accepts values that are returned by <a class="el" href="#a243625f7ae7c758e9e3a9e4d6a256c8a" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
-<p>For values that contain strings this function will accept these with the space, with the space removed or with the space changed to an underscore:</p><ul>
-<li>"Super Large"</li>
-<li>"super large"</li>
-<li>"SuperLarge"</li>
-<li>"superlarge"</li>
-<li>"Super_Large"</li>
-<li>"super_large"</li>
-</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sv</td><td>string_view to get the enumeration for </td></tr>
