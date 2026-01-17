@@ -39,18 +39,18 @@ public:
 	 * Constrains the value of the \a row parameter to be within the bounds set on the table so that it will never be larger
 	 * than the maximum bound and never smaller than the minimum bound.
 	 *
-	 * @param row Value to identify the row, must be of the same type as the matcher
 	 * @param col Value to match against the column
+	 * @param row Value to identify the row, must be of the same type as the matcher
 	 *
 	 * @return Contents of the cell from the row that matches \a row and column \a col
 	 *
 	 * @throw RowNotFoundException if \a row does not match any matchers
 	 * @throw ColNotFoundException if \a col is an invalid column
 	 */
-	const CellDatatype& cell(int row, ColumnDataType col) const {
+	const CellDatatype& cell(ColumnDataType col, int row) const {
 		row = std::min(row, max_row_);
 		row = std::max(row, min_row_);
-		return LookupTable<NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>::cell(row, col);
+		return LookupTable<NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>::cell(col, row);
 	}
 
 private:

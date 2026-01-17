@@ -64,15 +64,15 @@ public:
 	/**
 	 * @brief Gets the value of a cell in the table
 	 * 
-	 * @param row Value to identify the row, must be of the same type as the matcher
 	 * @param col Value to match against the column
+	 * @param row Value to identify the row, must be of the same type as the matcher
 	 *
 	 * @return Contents of the cell from the row that matches \a row and column \a col
 	 *
 	 * @throw RowNotFoundException if \a row does not match any matchers
 	 * @throw ColNotFoundException if \a col is an invalid column
 	 */
-	const CellDatatype& cell(RowDatatype row, ColumnDataType col) const {
+	const CellDatatype& cell(ColumnDataType col, RowDatatype row) const {
 		for (auto& tr : table_) {
 			if ((*tr.first).matches(row)) return tr.second.cell(col_matcher_->column(col));
 		}

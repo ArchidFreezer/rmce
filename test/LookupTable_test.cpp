@@ -23,6 +23,6 @@ TEST(LookupTable, General) {
 	lut.addRow(std::make_shared<NumberRange<int>>(4, 6), tr2);
 
 	// We are not testing the matchers here so we don't need to test too many combinations
-	EXPECT_STREQ(lut.cell(2, CreatureSizeType::kLarge).c_str(), "Row 1, kLarge");
-	EXPECT_STREQ(lut.cell(4, CreatureSizeType::kSmall).c_str(), "Row 2, kSmall");
+	EXPECT_STREQ(lut.cell(CreatureSizeType::kLarge, 2).c_str(), "Row 1, kLarge");
+	EXPECT_STREQ(lut.cell(CreatureSizeType::kSmall, 4).c_str(), "Row 2, kSmall");
 }
