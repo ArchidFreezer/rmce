@@ -61,12 +61,6 @@ namespace CriticalType {
 	 *
 	 * For values that contain strings this function will accept these with the
 	 * space, with the space removed or with the space changed to an underscore:
-	 * - "Martial Arts Strikes"
-	 * - "martial arts strikes"
-	 * - "MartialArtsStrikes"
-	 * - "martialartsstrikes"
-	 * - "SMartial_Arts_Strikes"
-	 * - "martial_arts_strikes"
 	 *
 	 * @param sv string_view to get the enumeration for
 	 * @return CriticalType::Type represented by the string
