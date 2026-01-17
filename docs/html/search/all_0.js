@@ -8,5 +8,6 @@ var searchData=
   ['addunmodifiedrow_5',['addUnmodifiedRow',['../class_lookup_table.html#afdb5dd81c6977ef86496124c8162041c',1,'LookupTable']]],
   ['armourtype_6',['ArmourType',['../namespace_armour_type.html',1,'']]],
   ['armourtypedata_7',['ArmourTypeData',['../class_armour_type_data.html',1,'']]],
-  ['attacktable_8',['AttackTable',['../class_attack_table.html',1,'AttackTable'],['../class_attack_table.html#adec8ed3fb25f5757d2774357ab47f52a',1,'AttackTable::AttackTable()']]]
+  ['attacksizetype_8',['AttackSizeType',['../namespace_attack_size_type.html',1,'']]],
+  ['attacktable_9',['AttackTable',['../class_attack_table.html',1,'AttackTable'],['../class_attack_table.html#adec8ed3fb25f5757d2774357ab47f52a',1,'AttackTable::AttackTable()']]]
 ];

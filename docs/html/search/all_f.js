@@ -30,8 +30,9 @@ var searchData=
   ['skillprogressiondata_27',['SkillProgressionData',['../class_skill_progression_data.html',1,'']]],
   ['skillprogressiontypedata_28',['SkillProgressionTypeData',['../class_skill_progression_type_data.html',1,'SkillProgressionTypeData'],['../class_skill_progression_type_data.html#a18392611b4170002265b4b048e103de3',1,'SkillProgressionTypeData::SkillProgressionTypeData(std::string_view id, std::string_view name, float zero, float ten, float twenty, float thirty, float remaining)'],['../class_skill_progression_type_data.html#a951619d33cdf197bb58be9233d54c5a5',1,'SkillProgressionTypeData::SkillProgressionTypeData(std::string_view id)']]],
   ['skillprogressiontypedatafileparserjson_29',['SkillProgressionTypeDatafileParserJson',['../class_skill_progression_type_datafile_parser_json.html',1,'SkillProgressionTypeDatafileParserJson'],['../class_skill_progression_type_datafile_parser_json.html#a7c0426639ed93b313fff375eed739e97',1,'SkillProgressionTypeDatafileParserJson::SkillProgressionTypeDatafileParserJson(GameRuleDataCache &amp;cache, std::string_view filename)'],['../class_skill_progression_type_datafile_parser_json.html#a655c5c2153c3fbf23a87b3afea1b3355',1,'SkillProgressionTypeDatafileParserJson::SkillProgressionTypeDatafileParserJson(GameRuleDataCache &amp;cache)']]],
-  ['spelllisttype_30',['SpellListType',['../namespace_spell_list_type.html',1,'']]],
-  ['statlosstype_31',['StatLossType',['../namespace_stat_loss_type.html',1,'']]],
-  ['stattype_32',['StatType',['../namespace_stat_type.html',1,'']]],
-  ['stringutils_2eh_33',['StringUtils.h',['../_string_utils_8h.html',1,'']]]
+  ['specialattacktable_30',['SpecialAttackTable',['../class_special_attack_table.html',1,'SpecialAttackTable'],['../class_special_attack_table.html#ac5a6017f05aaab4d43d7bbd3ac3ac9cc',1,'SpecialAttackTable::SpecialAttackTable()=delete'],['../class_special_attack_table.html#a0e96e7ab22750a497b755c149029ea3f',1,'SpecialAttackTable::SpecialAttackTable(std::string_view id, int small, int medium, int large, int huge)'],['../class_special_attack_table.html#a28d9001ca4805cebbc341884cda4daaa',1,'SpecialAttackTable::SpecialAttackTable(std::string_view id, std::map&lt; AttackSizeType::Type, int &gt; &amp;limits)']]],
+  ['spelllisttype_31',['SpellListType',['../namespace_spell_list_type.html',1,'']]],
+  ['statlosstype_32',['StatLossType',['../namespace_stat_loss_type.html',1,'']]],
+  ['stattype_33',['StatType',['../namespace_stat_type.html',1,'']]],
+  ['stringutils_2eh_34',['StringUtils.h',['../_string_utils_8h.html',1,'']]]
 ];

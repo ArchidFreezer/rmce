@@ -28,6 +28,18 @@ var namespaces_dup =
       [ "operator<<", "namespace_armour_type.html#a4c137afb08a8b57023c3ae619afb9f5b", null ],
       [ "toString", "namespace_armour_type.html#a404f3424a5617fa5d2c6a9f96f923dbd", null ]
     ] ],
+    [ "AttackSizeType", "namespace_attack_size_type.html", [
+      [ "Type", "namespace_attack_size_type.html#a4fd4bb84b9ce7cf340a7148f8f40459b", null ],
+      [ "Type", "namespace_attack_size_type.html#a4fd4bb84b9ce7cf340a7148f8f40459b", [
+        [ "kSmall", "namespace_attack_size_type.html#a4fd4bb84b9ce7cf340a7148f8f40459ba03674d7b145783567b9a65ea62f974b9", null ],
+        [ "kMedium", "namespace_attack_size_type.html#a4fd4bb84b9ce7cf340a7148f8f40459ba3ce9d817402b59f65fb01ea044bb1ee9", null ],
+        [ "kLarge", "namespace_attack_size_type.html#a4fd4bb84b9ce7cf340a7148f8f40459ba995e7b7e33ea3f37a72770505adf016e", null ],
+        [ "kHuge", "namespace_attack_size_type.html#a4fd4bb84b9ce7cf340a7148f8f40459bad464fb18dfeee2966a78fd644162e011", null ]
+      ] ],
+      [ "fromString", "namespace_attack_size_type.html#ac04e5882094dec301532a84ebcadb908", null ],
+      [ "operator<<", "namespace_attack_size_type.html#a7d47fc102743a20a968047fa70c61cbb", null ],
+      [ "toString", "namespace_attack_size_type.html#a4a8f34e111bf071fef6df044f1f37fbd", null ]
+    ] ],
     [ "CreatureSizeType", "namespace_creature_size_type.html", [
       [ "Type", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471", null ],
       [ "Type", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471", [

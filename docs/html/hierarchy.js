@@ -18,7 +18,8 @@ var hierarchy =
     [ "GameRuleData", "class_game_rule_data.html", [
       [ "LookupTable< NumberRange< int >, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string >", "class_lookup_table.html", [
         [ "BoundIntRowLookupTable< TableColumnArmourTypeMatcher, ArmourType::Type, std::string >", "class_bound_int_row_lookup_table.html", [
-          [ "AttackTable", "class_attack_table.html", null ]
+          [ "AttackTable", "class_attack_table.html", null ],
+          [ "SpecialAttackTable", "class_special_attack_table.html", null ]
         ] ]
       ] ],
       [ "LookupTable< NumberRange< int >, int, ColumnMatcherClass, ColumnDataType, CellDatatype >", "class_lookup_table.html", [
