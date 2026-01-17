@@ -140,10 +140,6 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad51f77b8a4054fca57268e29e0da5718" id="r_ad51f77b8a4054fca57268e29e0da5718"><td class="memItemLeft">static const std::string&#160;</td><td class="memItemRight"><a class="el" href="#ad51f77b8a4054fca57268e29e0da5718">generateId</a> (std::string_view type, std::string_view val)</td></tr>
 <tr class="memdesc:ad51f77b8a4054fca57268e29e0da5718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a string that can be used as a unique identifier for an object.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:aa984e728567bfff2df2e0f1adcfbe76a" id="r_aa984e728567bfff2df2e0f1adcfbe76a"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#aa984e728567bfff2df2e0f1adcfbe76a">id_</a> {}</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Polymorphic class that is the base for objects that store data on the rules of the game. </p>
@@ -277,30 +273,6 @@ Protected Attributes</h2></td></tr>
 <p>Get the unique id of the game data object. </p>
 <p>Each object containing game rule data requires a unique identifier to allow it to be referenced. Having this virtual method in this base class ensures that all derived classes have to provide one.</p>
 <dl class="section return"><dt>Returns</dt><dd>Identifier as a string reference. </dd></dl>
-
-</div>
-</div>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="aa984e728567bfff2df2e0f1adcfbe76a" name="aa984e728567bfff2df2e0f1adcfbe76a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa984e728567bfff2df2e0f1adcfbe76a">&#9670;&#160;</a></span>id_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GameRuleData::id_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Unique identifier for the object </p>
 
 </div>
 </div>

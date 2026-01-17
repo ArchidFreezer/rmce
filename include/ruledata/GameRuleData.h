@@ -54,7 +54,7 @@ public:
 	 */
 	static const std::string generateId(std::string_view type, std::string_view val);
 
-protected:
+private:
 	std::string id_{}; /**< Unique identifier for the object */
 
 };

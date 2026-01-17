@@ -112,7 +112,6 @@ var NAVTREEINDEX0 =
 "class_game_rule_data.html":[2,0,10],
 "class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e":[2,0,10,3],
 "class_game_rule_data.html#a4d60329cf6a183d3033134f32a13a672":[2,0,10,1],
-"class_game_rule_data.html#aa984e728567bfff2df2e0f1adcfbe76a":[2,0,10,4],
 "class_game_rule_data.html#abcd57cd1f04642956ba72a183135df42":[2,0,10,2],
 "class_game_rule_data.html#ae41e24b7b627445273425b0b6baf1968":[2,0,10,0],
 "class_game_rule_data_cache.html":[2,0,11],
@@ -232,7 +231,6 @@ var NAVTREEINDEX0 =
 "files.html":[3,0],
 "functions.html":[2,3,0],
 "functions_func.html":[2,3,1],
-"functions_vars.html":[2,3,2],
 "globals.html":[3,1,0],
 "globals_func.html":[3,1,1],
 "hierarchy.html":[2,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX0 =
 "namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa":[0,0,0,2],
 "namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2":[0,0,0,3],
 "namespace_critical_table_type.html":[0,0,1],
-"namespace_critical_table_type.html#a2e9522e03d12fe02878b31b00f2663bf":[0,0,1,4]
+"namespace_critical_table_type.html#a2e9522e03d12fe02878b31b00f2663bf":[0,0,1,4],
+"namespace_critical_table_type.html#a313b88a386987728d8027d79f8d6037d":[0,0,1,2],
+"namespace_critical_table_type.html#a439e93fa90539a088714b27a6b880702":[0,0,1,3]
 };
