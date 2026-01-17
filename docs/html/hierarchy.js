@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "ArmourTypeData", "class_armour_type_data.html", null ],
     [ "column_row_matcher", null, [
+      [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", null ],
       [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", null ]
     ] ],
     [ "DatafileParser", "class_datafile_parser.html", [

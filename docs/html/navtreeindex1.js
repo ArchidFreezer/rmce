@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453bea49cddf6ebc941da93b02eaeed3caf022":[0,0,0,1,18],
+"namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453bea56a4a6afb44e4eb1d3925d04f3973a51":[0,0,0,1,14],
+"namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453bea7b98778a8c9fc2bfd42aea1026168eae":[0,0,0,1,12],
 "namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453bea8c160cab89cc371915ab31d73a3ff19b":[0,0,0,1,6],
 "namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453bea97175d5627fa52299d861f1b0c5c1101":[0,0,0,1,11],
 "namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453beaa00d4afecb06dc54c65f9cea7b13e22d":[0,0,0,1,13],

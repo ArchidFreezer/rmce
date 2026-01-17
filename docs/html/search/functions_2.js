@@ -7,5 +7,5 @@ var searchData=
   ['code_4',['code',['../class_book_data.html#a0e5569ad4b94a8c924cebdfa2780be63',1,'BookData']]],
   ['colcount_5',['colCount',['../class_table_row.html#a301723f9e0d4caab39c6acea169f8578',1,'TableRow']]],
   ['colnotfoundexception_6',['ColNotFoundException',['../class_col_not_found_exception.html#ae0485c1006d6d7939f4671c15bc21a01',1,'ColNotFoundException']]],
-  ['column_7',['column',['../class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670',1,'TableColumnCreatureSizeMatcher']]]
+  ['column_7',['column',['../class_table_column_armour_type_matcher.html#a51317a962f264a604bcac140018fb749',1,'TableColumnArmourTypeMatcher::column()'],['../class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670',1,'TableColumnCreatureSizeMatcher::column()']]]
 ];
