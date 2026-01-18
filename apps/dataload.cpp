@@ -12,12 +12,17 @@ int main()
 	// Create the cache to store the game data
 	GameRuleDataCache cache{};
 
+	BookDatafileParserJson book_parser(cache, "../../../../data/Books.json");
+	LanguageCategoryDatafileParserJson language_category_parser(cache, "../../../../data/LanguageCategories.json");
+	LanguageDatafileParserJson language_parser(cache, "../../../../data/Languages.json");
+	SkillProgressionTypeDatafileParserJson skill_progression_parser(cache, "../../../../data/SkillProgressionTypes.json");
+
 	// Store the parsers in a vector so we can iterate through them
-	std::vector<std::unique_ptr<DatafileParser>> parsers;
-	parsers.push_back(std::move(std::make_unique<BookDatafileParserJson>(cache, "../../../../data/Books.json")));
-	parsers.push_back(std::move(std::make_unique<LanguageCategoryDatafileParserJson>(cache, "../../../../data/LanguageCategories.json")));
-	parsers.push_back(std::move(std::make_unique<LanguageDatafileParserJson>(cache, "../../../../data/Languages.json")));
-	parsers.push_back(std::move(std::make_unique<SkillProgressionTypeDatafileParserJson>(cache, "../../../../data/SkillProgressionTypes.json")));
+	std::vector<DatafileParser*> parsers;
+	parsers.push_back(&book_parser);
+	parsers.push_back(&language_category_parser);
+	parsers.push_back(&language_parser);
+	parsers.push_back(&skill_progression_parser);
 
 	for (auto& parser : parsers) {
 		parser->read(true);
@@ -26,18 +31,10 @@ int main()
 		parser->read(false);
 	}
 
-	BookDatafileParserJson books(cache);
-	books.setFilename("../../../../data/Books2.json");
-	books.save();
-
-	LanguageCategoryDatafileParserJson language_categories(cache);
-	language_categories.save("../../../../data/LanguageCategories2.json");
-	
-	LanguageDatafileParserJson languages(cache);
-	languages.save("../../../../data/Languages2.json");
-
-	SkillProgressionTypeDatafileParserJson skill_progressions(cache);
-	skill_progressions.save("../../../../data/SkillProgressionTypes2.json");
+	book_parser.save("../../../../data/Books2.json");
+	language_category_parser.save("../../../../data/LanguageCategories2.json");
+	language_parser.save("../../../../data/Languages2.json");
+	skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
 
 	return 0;
 }
