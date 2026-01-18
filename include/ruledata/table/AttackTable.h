@@ -27,5 +27,15 @@ public:
 	 * It should be noted that this class hard-codes the type of object used in the game data id.
 	 * @param id std::string Unique identifier of the table, typically the table name
 	 */
-	AttackTable(std::string id) : BoundIntRowLookupTable(generateId("AttackTable", id), 0, 150) {}
+	AttackTable(std::string id) : AttackTable(id, 150) {}
+
+	/**
+ * @brief Constructor defining the name of the table
+ *
+ * It should be noted that this class hard-codes the type of object used in the game data id.
+ * @param id std::string Unique identifier of the table, typically the table name
+ * @param max_rows The maximum roll that the table has a row matcher for
+ */
+	AttackTable(std::string id, int max_rows) : BoundIntRowLookupTable(generateId("AttackTable", id), 0, max_rows) {}
+
 };
