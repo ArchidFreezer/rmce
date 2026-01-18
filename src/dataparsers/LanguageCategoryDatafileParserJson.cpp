@@ -11,6 +11,9 @@ LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleD
 LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleDataCache& cache) : LanguageCategoryDatafileParserJson(cache, "") {}
 
 void LanguageCategoryDatafileParserJson::parse(bool id_only) {
+	// We know there are no references in language catagories so we create the complete object in the cache on the first pass
+	if (!id_only) return;
+
 	std::cout << "Loading Language category data ..." << std::endl;
 
 	// Get the language categories to parse and loop through them
@@ -19,16 +22,12 @@ void LanguageCategoryDatafileParserJson::parse(bool id_only) {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
 
-		if (id_only) {
-			// We create a LanguageCategoryData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
-			// to the cache when we add it
-			std::unique_ptr<LanguageCategoryData> datum = std::make_unique<LanguageCategoryData>(id);
-			cache().add<LanguageCategoryData>(std::move(datum), id);
-		} else {
-			LanguageCategoryData& ref = cache().get<LanguageCategoryData>(id);
-			ref.setName(name);
-			std::cout << "\tLanguage category name: " << ref.name() << std::endl;
-		}
+		// We create a LanguageCategoryData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
+		// to the cache when we add it
+		std::unique_ptr<LanguageCategoryData> datum = std::make_unique<LanguageCategoryData>(id);
+		datum->setName(name);
+		std::cout << "\tLanguage category name: " << datum->name() << std::endl;
+		cache().add<LanguageCategoryData>(std::move(datum), id);
 	}
 	std::cout << " done" << std::endl;
 }

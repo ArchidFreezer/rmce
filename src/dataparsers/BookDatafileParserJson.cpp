@@ -11,6 +11,9 @@ BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache, std::st
 BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache) : BookDatafileParserJson(cache, "") {}
 
 void BookDatafileParserJson::parse(bool id_only) {
+	// We know there are no references in books so we create the complete object in the cache on the first pass
+	if (!id_only) return;
+
 	std::cout << "Loading Book data ..." << std::endl;
 
 	// Get the books to parse and loop through them
@@ -22,19 +25,15 @@ void BookDatafileParserJson::parse(bool id_only) {
 		std::string abbreviation = v.second.get<std::string>("abbreviation");
 		std::string isbn = v.second.get<std::string>("isbn");
 
-		if (id_only) {
-			// We create a BookData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
-			// to the cache when we add it
-			std::unique_ptr<BookData> datum = std::make_unique<BookData>(id);
-			cache().add<BookData>(std::move(datum), id);
-		} else {
-			BookData& ref = cache().get<BookData>(id);
-			ref.setAbbreviation(abbreviation);
-			ref.setCode(code);
-			ref.setIsbn(isbn);
-			ref.setName(name);
-			std::cout << "\tBook name: " << ref.name() << std::endl;
-		}
+		// We create a BookData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
+		// to the cache when we add it
+		std::unique_ptr<BookData> datum = std::make_unique<BookData>(id);
+		datum->setAbbreviation(abbreviation);
+		datum->setCode(code);
+		datum->setIsbn(isbn);
+		datum->setName(name);
+		std::cout << "\tBook name: " << datum->name() << std::endl;
+		cache().add<BookData>(std::move(datum), id);
 
 	}
 	std::cout << " done" << std::endl;

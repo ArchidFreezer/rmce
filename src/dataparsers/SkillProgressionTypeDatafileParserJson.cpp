@@ -10,6 +10,9 @@ SkillProgressionTypeDatafileParserJson::SkillProgressionTypeDatafileParserJson(G
 SkillProgressionTypeDatafileParserJson::SkillProgressionTypeDatafileParserJson(GameRuleDataCache& cache) : SkillProgressionTypeDatafileParserJson(cache, "") {}
 
 void SkillProgressionTypeDatafileParserJson::parse(bool id_only) {
+	// We know there are no references in skill progression types so we create the complete object in the cache on the first pass
+	if (!id_only) return;
+
 	std::cout << "Loading SkillProgressionTypeData data ..." << std::endl;
 
 	// Get the books to parse and loop through them
@@ -23,21 +26,17 @@ void SkillProgressionTypeDatafileParserJson::parse(bool id_only) {
 		float thirty = std::stof(v.second.get<std::string>("thirty"));
 		float remaining = std::stof(v.second.get<std::string>("remaining"));
 
-		if (id_only) {
-			// We create a SkillProgressionTypeData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
-			// to the cache when we add it
-			std::unique_ptr<SkillProgressionTypeData> datum = std::make_unique<SkillProgressionTypeData>(id);
-			cache().add<SkillProgressionTypeData>(std::move(datum), id);
-		} else {
-			SkillProgressionTypeData& ref = cache().get<SkillProgressionTypeData>(id);
-			ref.setName(name);
-			ref.setZero(zero);
-			ref.setTen(ten);
-			ref.setTwenty(twenty);
-			ref.setThirty(thirty);
-			ref.setRemaining(remaining);
-			std::cout << "\tSkillProgressionTypeData name: " << ref.name() << std::endl;
-		}
+		// We create a SkillProgressionTypeData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
+		// to the cache when we add it
+		std::unique_ptr<SkillProgressionTypeData> datum = std::make_unique<SkillProgressionTypeData>(id);
+		datum->setName(name);
+		datum->setZero(zero);
+		datum->setTen(ten);
+		datum->setTwenty(twenty);
+		datum->setThirty(thirty);
+		datum->setRemaining(remaining);
+		std::cout << "\tSkillProgressionTypeData name: " << datum->name() << std::endl;
+		cache().add<SkillProgressionTypeData>(std::move(datum), id);
 
 	}
 	std::cout << " done" << std::endl;
