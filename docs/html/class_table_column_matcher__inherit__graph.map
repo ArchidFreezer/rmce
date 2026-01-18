@@ -1,5 +1,0 @@
-<map id="TableColumnMatcher" name="TableColumnMatcher">
-<area shape="rect" id="Node000001" title="Abstract class to identify the column index in a table." alt="" coords="43,5,188,32"/>
-<area shape="rect" id="Node000002" href="$class_table_column_creature_size_matcher.html" title="Class to identify the column index in a table using CreatureSizeType::Type as the header." alt="" coords="5,80,226,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,46,118,81,113,78,114,50"/>
-</map>

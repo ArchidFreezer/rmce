@@ -9,5 +9,6 @@ var searchData=
   ['armourtype_6',['ArmourType',['../namespace_armour_type.html',1,'']]],
   ['armourtypedata_7',['ArmourTypeData',['../class_armour_type_data.html',1,'']]],
   ['attacksizetype_8',['AttackSizeType',['../namespace_attack_size_type.html',1,'']]],
-  ['attacktable_9',['AttackTable',['../class_attack_table.html',1,'AttackTable'],['../class_attack_table.html#adec8ed3fb25f5757d2774357ab47f52a',1,'AttackTable::AttackTable()']]]
+  ['attacktable_9',['AttackTable',['../class_attack_table.html',1,'AttackTable'],['../class_attack_table.html#adec8ed3fb25f5757d2774357ab47f52a',1,'AttackTable::AttackTable(std::string id)'],['../class_attack_table.html#ac7f0acc10b0991ff9433ca21d6fb10c9',1,'AttackTable::AttackTable(std::string id, int max_rows)']]],
+  ['attacktabledatafileparserxml_10',['AttackTableDatafileParserXml',['../class_attack_table_datafile_parser_xml.html',1,'AttackTableDatafileParserXml'],['../class_attack_table_datafile_parser_xml.html#a20c9c3bde60ae967481fac260bfd493c',1,'AttackTableDatafileParserXml::AttackTableDatafileParserXml(GameRuleDataCache &amp;cache, std::string_view filename)'],['../class_attack_table_datafile_parser_xml.html#a5ee1ef9667e9d77cdd18d26319b149a8',1,'AttackTableDatafileParserXml::AttackTableDatafileParserXml(GameRuleDataCache &amp;cache)']]]
 ];

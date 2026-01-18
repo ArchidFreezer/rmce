@@ -2,6 +2,7 @@ var annotated_dup =
 [
     [ "ArmourTypeData", "class_armour_type_data.html", null ],
     [ "AttackTable", "class_attack_table.html", "class_attack_table" ],
+    [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", "class_attack_table_datafile_parser_xml" ],
     [ "BookData", "class_book_data.html", "class_book_data" ],
     [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", "class_book_datafile_parser_json" ],
     [ "BoundIntRowLookupTable", "class_bound_int_row_lookup_table.html", "class_bound_int_row_lookup_table" ],

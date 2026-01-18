@@ -12,7 +12,9 @@ var hierarchy =
         [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", null ],
         [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", null ]
       ] ],
-      [ "DatafileParserXml", "class_datafile_parser_xml.html", null ]
+      [ "DatafileParserXml", "class_datafile_parser_xml.html", [
+        [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", null ]
+      ] ]
     ] ],
     [ "Dice", "class_dice.html", null ],
     [ "GameRuleData", "class_game_rule_data.html", [
