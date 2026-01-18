@@ -7,5 +7,6 @@ var searchData=
   ['languagedialectdata_4',['LanguageDialectData',['../class_language_dialect_data.html#a4d3ad512c39a0693f0be3ac15af4de47',1,'LanguageDialectData::LanguageDialectData(std::string_view name)'],['../class_language_dialect_data.html#a6133ca8e98452a5eda55202493dbb00a',1,'LanguageDialectData::LanguageDialectData(std::string_view name, std::set&lt; const LanguageData * &gt; &amp;dialects)']]],
   ['lcase_5',['lcase',['../_string_utils_8h.html#acd53b635966070e138dea419304de22f',1,'StringUtils.h']]],
   ['lcaseconcat_6',['lcaseconcat',['../_string_utils_8h.html#a31cee08b448da5eaab597ae9aa8d9424',1,'StringUtils.h']]],
-  ['lookuptable_7',['LookupTable',['../class_lookup_table.html#a908db0b57ea5e680deccb80d7fe6f7ab',1,'LookupTable']]]
+  ['limit_7',['limit',['../class_special_attack_table.html#a628d67fd6e52224219e2a9fe6e37f036',1,'SpecialAttackTable']]],
+  ['lookuptable_8',['LookupTable',['../class_lookup_table.html#a908db0b57ea5e680deccb80d7fe6f7ab',1,'LookupTable']]]
 ];

@@ -101,8 +101,27 @@ public:
 		return LookupTable<NumberRange<int>, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string>::cell(armour, row_index, unmodified_row_index);
 	}
 
+	/**
+	 * @brief Set the name of the table
+	 * @param name table name
+	 */
+	void setName(std::string_view name) { name_ = name; }
+	/**
+	 * @brief In-game name of the table as used by players and NPCs
+	 * @return Name of the table
+	 */
+	const std::string& name() const { return name_; }
+
+	/**
+	 * @brief Get the maximum roll allowed for an attack size
+	 * @param type AttakcSizeType to get the limit for
+	 * @return int Maximum roll allowed
+	 */
+	const int limit(AttackSizeType::Type type) { return limits_.at(type); }
 
 private:
+	std::string name_{}; /**< Name of the attack table */
+
 	std::map<AttackSizeType::Type, int> limits_{}; /**< The maximum row index that each attack size may use */
 
 	/**

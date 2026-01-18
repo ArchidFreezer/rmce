@@ -29,6 +29,7 @@ var annotated_dup =
     [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", "class_skill_progression_type_data" ],
     [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", "class_skill_progression_type_datafile_parser_json" ],
     [ "SpecialAttackTable", "class_special_attack_table.html", "class_special_attack_table" ],
+    [ "SpecialAttackTableDatafileParserJson", "class_special_attack_table_datafile_parser_json.html", "class_special_attack_table_datafile_parser_json" ],
     [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", "class_table_column_armour_type_matcher" ],
     [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", "class_table_column_creature_size_matcher" ],
     [ "TableRow", "class_table_row.html", "class_table_row" ],

@@ -5,6 +5,7 @@
 #include "LanguageCategoryDatafileParserJson.h"
 #include "SkillProgressionTypeDatafileParserJson.h"
 #include <AttackTableDatafileParserJson.h>
+#include <SpecialAttackTableDatafileParserJson.h>
 
 int main()
 {
@@ -18,6 +19,7 @@ int main()
 	LanguageDatafileParserJson language_parser(cache, "../../../../data/Languages.json");
 	SkillProgressionTypeDatafileParserJson skill_progression_parser(cache, "../../../../data/SkillProgressionTypes.json");
 	AttackTableDatafileParserJson attack_table_parser(cache, "../../../../data/AttackTables.json");
+	SpecialAttackTableDatafileParserJson special_attack_table_parser(cache, "../../../../data/SpecialAttackTables.json");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
@@ -26,6 +28,7 @@ int main()
 	parsers.push_back(&language_parser);
 	parsers.push_back(&skill_progression_parser);
 	parsers.push_back(&attack_table_parser);
+	parsers.push_back(&special_attack_table_parser);
 
 	for (auto& parser : parsers) {
 		parser->read(true);

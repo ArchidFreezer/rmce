@@ -36,6 +36,7 @@ var NAVTREEINDEX0 =
 "_skill_progression_type_data_8h_source.html":[3,0,2,20],
 "_skill_progression_type_datafile_parser_json_8h_source.html":[3,0,1,8],
 "_special_attack_table_8h_source.html":[3,0,2,0,3],
+"_special_attack_table_datafile_parser_json_8h_source.html":[3,0,1,9],
 "_spell_list_type_8h_source.html":[3,0,2,21],
 "_stat_loss_type_8h_source.html":[3,0,2,22],
 "_stat_type_8h_source.html":[3,0,2,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "class_special_attack_table.html#a0e96e7ab22750a497b755c149029ea3f":[2,0,28,1],
 "class_special_attack_table.html#a26a3180443e63697c26aaf2a300f0e3a":[2,0,28,4],
 "class_special_attack_table.html#a28d9001ca4805cebbc341884cda4daaa":[2,0,28,2],
-"class_special_attack_table.html#ac5a6017f05aaab4d43d7bbd3ac3ac9cc":[2,0,28,0],
-"class_special_attack_table.html#ac9eed1be5a4d1b07fcc5fc6bd9cf4275":[2,0,28,3]
+"class_special_attack_table.html#a628d67fd6e52224219e2a9fe6e37f036":[2,0,28,5]
 };

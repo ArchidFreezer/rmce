@@ -36,6 +36,7 @@ void AttackTableDatafileParserXml::parse(bool id_only) {
 
 		// Now we can create the specific type of table
 		std::unique_ptr<SpecialAttackTable>special_table = std::make_unique <SpecialAttackTable>(name, limits);
+		special_table->setName(name);
 		std::unique_ptr<AttackTable>attack_table = std::make_unique <AttackTable>(name, max_row_val);
 		attack_table->setName(name);
 
