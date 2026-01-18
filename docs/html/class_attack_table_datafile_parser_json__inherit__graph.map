@@ -1,0 +1,7 @@
+<map id="AttackTableDatafileParserJson" name="AttackTableDatafileParserJson">
+<area shape="rect" id="Node000001" title="Process AttackTable objects for json files." alt="" coords="5,155,207,181"/>
+<area shape="rect" id="Node000002" href="$class_datafile_parser_json.html" title="Abstract class to parse json files containing game rule data." alt="" coords="40,80,172,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,121,108,155,104,153,104,124"/>
+<area shape="rect" id="Node000003" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="54,5,158,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,45,109,80,103,79,105,50"/>
+</map>

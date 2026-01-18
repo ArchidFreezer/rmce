@@ -7,6 +7,7 @@ var hierarchy =
     ] ],
     [ "DatafileParser", "class_datafile_parser.html", [
       [ "DatafileParserJson", "class_datafile_parser_json.html", [
+        [ "AttackTableDatafileParserJson", "class_attack_table_datafile_parser_json.html", null ],
         [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", null ],
         [ "LanguageCategoryDatafileParserJson", "class_language_category_datafile_parser_json.html", null ],
         [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", null ],

@@ -6,5 +6,7 @@ var class_lookup_table =
     [ "addUnmodifiedRow", "class_lookup_table.html#afdb5dd81c6977ef86496124c8162041c", null ],
     [ "cell", "class_lookup_table.html#a8ec5b9fe6f25c737bb3e09fec3ce5bd4", null ],
     [ "cell", "class_lookup_table.html#a259db3187ece523a7f57735fd3ec8b31", null ],
-    [ "setColumnMatcher", "class_lookup_table.html#aa8b34807f6c7a4338ec46ee454858129", null ]
+    [ "modified", "class_lookup_table.html#ab2d4034179862b3c915660bac8573cef", null ],
+    [ "setColumnMatcher", "class_lookup_table.html#aa8b34807f6c7a4338ec46ee454858129", null ],
+    [ "unmodified", "class_lookup_table.html#a357f6e384b034593e3fe24370b8bb204", null ]
 ];

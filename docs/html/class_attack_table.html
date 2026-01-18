@@ -132,6 +132,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adec8ed3fb25f5757d2774357ab47f52a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor defining the name of the table.  <br /></td></tr>
 <tr class="memitem:ac7f0acc10b0991ff9433ca21d6fb10c9" id="r_ac7f0acc10b0991ff9433ca21d6fb10c9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac7f0acc10b0991ff9433ca21d6fb10c9">AttackTable</a> (std::string <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>, int max_rows)</td></tr>
 <tr class="memdesc:ac7f0acc10b0991ff9433ca21d6fb10c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor defining the name of the table.  <br /></td></tr>
+<tr class="memitem:a44f2da5a21f7a224e42f6121e3f7fdc7" id="r_a44f2da5a21f7a224e42f6121e3f7fdc7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44f2da5a21f7a224e42f6121e3f7fdc7">setName</a> (std::string_view <a class="el" href="#a2a71a75e42b866e471c938c115376450">name</a>)</td></tr>
+<tr class="memdesc:a44f2da5a21f7a224e42f6121e3f7fdc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name of the table.  <br /></td></tr>
+<tr class="memitem:a2a71a75e42b866e471c938c115376450" id="r_a2a71a75e42b866e471c938c115376450"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2a71a75e42b866e471c938c115376450">name</a> () const</td></tr>
+<tr class="memdesc:a2a71a75e42b866e471c938c115376450"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-game name of the table as used by players and NPCs.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bound_int_row_lookup_table"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_bound_int_row_lookup_table')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_bound_int_row_lookup_table.html">BoundIntRowLookupTable&lt; TableColumnArmourTypeMatcher, ArmourType::Type, std::string &gt;</a></td></tr>
 <tr class="memitem:a4b7079e56884cfe4bf75eb5152ca0932 inherit pub_methods_class_bound_int_row_lookup_table" id="r_a4b7079e56884cfe4bf75eb5152ca0932"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_bound_int_row_lookup_table.html#a4b7079e56884cfe4bf75eb5152ca0932">BoundIntRowLookupTable</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>, int min_row, int max_row)</td></tr>
 <tr class="memdesc:a4b7079e56884cfe4bf75eb5152ca0932 inherit pub_methods_class_bound_int_row_lookup_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor defining bounds.  <br /></td></tr>
@@ -151,6 +155,10 @@ virtual&#160;</td><td class="memItemRight"><b>~LookupTable</b> ()=default</td></
 <tr class="memdesc:a8ec5b9fe6f25c737bb3e09fec3ce5bd4 inherit pub_methods_class_lookup_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of a cell in the table.  <br /></td></tr>
 <tr class="memitem:aa8b34807f6c7a4338ec46ee454858129 inherit pub_methods_class_lookup_table" id="r_aa8b34807f6c7a4338ec46ee454858129"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_lookup_table.html#aa8b34807f6c7a4338ec46ee454858129">setColumnMatcher</a> (std::unique_ptr&lt; <a class="el" href="class_table_column_armour_type_matcher.html">TableColumnArmourTypeMatcher</a> &gt; col_matcher)</td></tr>
 <tr class="memdesc:aa8b34807f6c7a4338ec46ee454858129 inherit pub_methods_class_lookup_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the column matcher object.  <br /></td></tr>
+<tr class="memitem:ab2d4034179862b3c915660bac8573cef inherit pub_methods_class_lookup_table" id="r_ab2d4034179862b3c915660bac8573cef"><td class="memItemLeft">const std::map&lt; std::shared_ptr&lt; <a class="el" href="class_number_range.html">NumberRange</a>&lt; int &gt; &gt;, <a class="el" href="class_table_row.html">TableRow</a>&lt; std::string &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_lookup_table.html#ab2d4034179862b3c915660bac8573cef">modified</a> ()</td></tr>
+<tr class="memdesc:ab2d4034179862b3c915660bac8573cef inherit pub_methods_class_lookup_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the map with the rows that may be returned by any row index value.  <br /></td></tr>
+<tr class="memitem:a357f6e384b034593e3fe24370b8bb204 inherit pub_methods_class_lookup_table" id="r_a357f6e384b034593e3fe24370b8bb204"><td class="memItemLeft">const std::map&lt; std::shared_ptr&lt; <a class="el" href="class_number_range.html">NumberRange</a>&lt; int &gt; &gt;, <a class="el" href="class_table_row.html">TableRow</a>&lt; std::string &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_lookup_table.html#a357f6e384b034593e3fe24370b8bb204">unmodified</a> ()</td></tr>
+<tr class="memdesc:a357f6e384b034593e3fe24370b8bb204 inherit pub_methods_class_lookup_table"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the map with the rows that may be only returned by unmodified row index values.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
 <tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
@@ -240,6 +248,68 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">id</td><td>std::string Unique identifier of the table, typically the table name </td></tr>
     <tr><td class="paramname">max_rows</td><td>The maximum roll that the table has a row matcher for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a2a71a75e42b866e471c938c115376450" name="a2a71a75e42b866e471c938c115376450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a71a75e42b866e471c938c115376450">&#9670;&#160;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; AttackTable::name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>In-game name of the table as used by players and NPCs. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of the table </dd></dl>
+
+</div>
+</div>
+<a id="a44f2da5a21f7a224e42f6121e3f7fdc7" name="a44f2da5a21f7a224e42f6121e3f7fdc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44f2da5a21f7a224e42f6121e3f7fdc7">&#9670;&#160;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AttackTable::setName </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the name of the table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>table name </td></tr>
   </table>
   </dd>
 </dl>

@@ -98,7 +98,7 @@ $(function(){initNavTree('_number_range_8h_source.html','',''); });
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_number_range.html">   14</a></span><span class="keyword">class </span><a class="code hl_function" href="class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0">NumberRange</a> {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0">   21</a></span>    <a class="code hl_function" href="class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0">NumberRange</a>(NumberType min, NumberType max) : min_{ min }, max_{ max } {}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0">   21</a></span>    <a class="code hl_function" href="class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0">NumberRange</a>(NumberType <a class="code hl_function" href="class_number_range.html#a6a6680dc76a7ad42b9736d2965b58875">min</a>, NumberType <a class="code hl_function" href="class_number_range.html#afcf3c53e2a60b2346e76e7e043df8efb">max</a>) : min_{ <a class="code hl_function" href="class_number_range.html#a6a6680dc76a7ad42b9736d2965b58875">min</a> }, max_{ <a class="code hl_function" href="class_number_range.html#afcf3c53e2a60b2346e76e7e043df8efb">max</a> } {}</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
 <div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_number_range.html#a7bf19dce6e11e87faef0b28faa060285">   32</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_number_range.html#a7bf19dce6e11e87faef0b28faa060285">operator&lt;</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0">NumberRange&lt;NumberType&gt;</a>&amp; other)<span class="keyword"> const </span>{</div>
@@ -107,15 +107,21 @@ $(function(){initNavTree('_number_range_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_number_range.html#acbd0f5d218335feaa537e669e5531bec">   45</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_number_range.html#acbd0f5d218335feaa537e669e5531bec">matches</a>(NumberType val)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (val &gt;= min_) &amp;&amp; (val &lt;= max_); }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    NumberType min_{}; </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    NumberType max_{}; </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_number_range.html#a6a6680dc76a7ad42b9736d2965b58875">   51</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_number_range.html#a6a6680dc76a7ad42b9736d2965b58875">min</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> min_; }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_number_range.html#afcf3c53e2a60b2346e76e7e043df8efb">   57</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_number_range.html#afcf3c53e2a60b2346e76e7e043df8efb">max</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> max_; }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    NumberType min_{}; </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    NumberType max_{}; </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
 </div>
+<div class="ttc" id="aclass_number_range_html_a6a6680dc76a7ad42b9736d2965b58875"><div class="ttname"><a href="class_number_range.html#a6a6680dc76a7ad42b9736d2965b58875">NumberRange::min</a></div><div class="ttdeci">int min() const</div><div class="ttdoc">Get the minimum number that this range matches.</div><div class="ttdef"><b>Definition</b> NumberRange.h:51</div></div>
 <div class="ttc" id="aclass_number_range_html_a7a8997531308d3318b6b8e4e3beb66e0"><div class="ttname"><a href="class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0">NumberRange::NumberRange</a></div><div class="ttdeci">NumberRange(NumberType min, NumberType max)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> NumberRange.h:21</div></div>
 <div class="ttc" id="aclass_number_range_html_a7bf19dce6e11e87faef0b28faa060285"><div class="ttname"><a href="class_number_range.html#a7bf19dce6e11e87faef0b28faa060285">NumberRange::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const NumberRange&lt; NumberType &gt; &amp;other) const</div><div class="ttdoc">Implement an operator&lt; method for the class.</div><div class="ttdef"><b>Definition</b> NumberRange.h:32</div></div>
 <div class="ttc" id="aclass_number_range_html_acbd0f5d218335feaa537e669e5531bec"><div class="ttname"><a href="class_number_range.html#acbd0f5d218335feaa537e669e5531bec">NumberRange::matches</a></div><div class="ttdeci">bool matches(NumberType val) const</div><div class="ttdoc">Determines if the value lies in the range or not.</div><div class="ttdef"><b>Definition</b> NumberRange.h:45</div></div>
+<div class="ttc" id="aclass_number_range_html_afcf3c53e2a60b2346e76e7e043df8efb"><div class="ttname"><a href="class_number_range.html#afcf3c53e2a60b2346e76e7e043df8efb">NumberRange::max</a></div><div class="ttdeci">int max() const</div><div class="ttdoc">Get the maximum number that this range matches.</div><div class="ttdef"><b>Definition</b> NumberRange.h:57</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

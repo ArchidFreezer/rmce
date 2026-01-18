@@ -37,6 +37,8 @@ void AttackTableDatafileParserXml::parse(bool id_only) {
 		// Now we can create the specific type of table
 		std::unique_ptr<SpecialAttackTable>special_table = std::make_unique <SpecialAttackTable>(name, limits);
 		std::unique_ptr<AttackTable>attack_table = std::make_unique <AttackTable>(name, max_row_val);
+		attack_table->setName(name);
+
 
 		// Process the modified rows
 		if (boost::optional<const pt::ptree&> mod_rows_tree = v.second.get_child_optional("modified-rows")) {
@@ -93,7 +95,7 @@ void AttackTableDatafileParserXml::parse(bool id_only) {
 		}
 
 		// We should now have the table parsed so add it to the cache
-		std::cout << "\Table name: " << name << std::endl;
+		std::cout << "\nTable name: " << name << std::endl;
 
 
 		std::string id = GameRuleData::generateId(ruleDatatype(), name);;

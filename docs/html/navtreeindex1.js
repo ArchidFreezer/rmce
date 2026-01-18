@@ -1,5 +1,17 @@
 var NAVTREEINDEX1 =
 {
+"class_table_column_armour_type_matcher.html":[2,0,29],
+"class_table_column_armour_type_matcher.html#a51317a962f264a604bcac140018fb749":[2,0,29,0],
+"class_table_column_creature_size_matcher.html":[2,0,30],
+"class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670":[2,0,30,0],
+"class_table_row.html":[2,0,31],
+"class_table_row.html#a0acb30329157bc6ee809895481044c56":[2,0,31,0],
+"class_table_row.html#a301723f9e0d4caab39c6acea169f8578":[2,0,31,2],
+"class_table_row.html#abdff975c410db4100b78cd26dbaf07a9":[2,0,31,1],
+"class_too_many_stats_exception.html":[2,0,32],
+"class_too_many_stats_exception.html#a9619eef421bd75825f09049cc85c70c6":[2,0,32,0],
+"classes.html":[2,1],
+"concepts.html":[1],
 "concepttable__column__matcher.html":[1,0],
 "concepttable__row__matcher.html":[1,1],
 "dir_4bfa4dec9ef0656325d787c5e94cf9ff.html":[3,0,0],

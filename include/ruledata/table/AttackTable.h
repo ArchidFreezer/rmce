@@ -38,4 +38,17 @@ public:
  */
 	AttackTable(std::string id, int max_rows) : BoundIntRowLookupTable(generateId("AttackTable", id), 0, max_rows) {}
 
+	/**
+	 * @brief Set the name of the table
+	 * @param name table name
+	 */
+	void setName(std::string_view name) { name_ = name; }
+	/**
+	 * @brief In-game name of the table as used by players and NPCs
+	 * @return Name of the table
+	 */
+	const std::string& name() const { return name_; }
+
+private:
+	std::string name_{};
 };
