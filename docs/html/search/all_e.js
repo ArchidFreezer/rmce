@@ -4,7 +4,7 @@ var searchData=
   ['read_1',['read',['../class_datafile_parser.html#a05e7c3945306f581e8ffafdc0bd20639',1,'DatafileParser::read(const std::string &amp;filename, bool id_only)=0'],['../class_datafile_parser.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParser::read(bool id_only)'],['../class_datafile_parser_json.html#a18873bbb775ba6b408acea2b23711a7f',1,'DatafileParserJson::read()'],['../class_datafile_parser_xml.html#a23443f7992b6d7079c09cafa56d4f1fa',1,'DatafileParserXml::read()'],['../class_datafile_parser_json.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParserJson::read()'],['../class_datafile_parser_xml.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParserXml::read()']]],
   ['realmtype_2',['RealmType',['../namespace_realm_type.html',1,'']]],
   ['remaining_3',['remaining',['../class_skill_progression_type_data.html#a282160bc7d1a509b8c76261469d12c63',1,'SkillProgressionTypeData']]],
-  ['remove_4',['remove',['../class_language_dialect_data.html#a9096f84005bd952c823c5bcfac2a429e',1,'LanguageDialectData']]],
+  ['remove_4',['remove',['../class_language_dialect_data.html#ae0b417d7604423fe01389fec301474ef',1,'LanguageDialectData']]],
   ['removestat_5',['removeStat',['../class_skill_category_data.html#a2d6385496a88d0adde854904a5f2b083',1,'SkillCategoryData']]],
   ['resetptree_6',['resetPtree',['../class_datafile_parser.html#a0b85b756d72b4b8835a34198fd769522',1,'DatafileParser']]],
   ['resistancetype_7',['ResistanceType',['../namespace_resistance_type.html',1,'']]],
