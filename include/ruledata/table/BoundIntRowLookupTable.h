@@ -19,6 +19,12 @@ template<typename ColumnMatcherClass, typename ColumnDataType, typename CellData
 	requires table_column_matcher< ColumnMatcherClass, ColumnDataType>
 class BoundIntRowLookupTable : public LookupTable <NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype> {
 public:
+
+	/**
+	 * @brief Default constructor deleted
+	 */
+	BoundIntRowLookupTable() = delete;
+
 	/**
 	 * @brief Constructor defining bounds
 	 * @param id Unique identifier for the table

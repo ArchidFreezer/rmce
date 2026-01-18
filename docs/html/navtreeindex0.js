@@ -81,9 +81,10 @@ var NAVTREEINDEX0 =
 "class_book_datafile_parser_json.html#a74a803654bf17554d313a3ec9dc458c5":[2,0,5,3],
 "class_book_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,5,2],
 "class_bound_int_row_lookup_table.html":[2,0,6],
-"class_bound_int_row_lookup_table.html#a01c53643e6a7e7e52e3966348f8b453b":[2,0,6,1],
-"class_bound_int_row_lookup_table.html#a1ff418e568ba939337e8ccb56572802e":[2,0,6,2],
-"class_bound_int_row_lookup_table.html#a4b7079e56884cfe4bf75eb5152ca0932":[2,0,6,0],
+"class_bound_int_row_lookup_table.html#a01c53643e6a7e7e52e3966348f8b453b":[2,0,6,2],
+"class_bound_int_row_lookup_table.html#a1ff418e568ba939337e8ccb56572802e":[2,0,6,3],
+"class_bound_int_row_lookup_table.html#a4b7079e56884cfe4bf75eb5152ca0932":[2,0,6,1],
+"class_bound_int_row_lookup_table.html#a75cb6e6b9902dd3fca2e0d2292b6e025":[2,0,6,0],
 "class_col_not_found_exception.html":[2,0,7],
 "class_col_not_found_exception.html#ae0485c1006d6d7939f4671c15bc21a01":[2,0,7,0],
 "class_datafile_parser.html":[2,0,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "class_special_attack_table.html":[2,0,28],
 "class_special_attack_table.html#a0e96e7ab22750a497b755c149029ea3f":[2,0,28,1],
 "class_special_attack_table.html#a26a3180443e63697c26aaf2a300f0e3a":[2,0,28,4],
-"class_special_attack_table.html#a28d9001ca4805cebbc341884cda4daaa":[2,0,28,2],
-"class_special_attack_table.html#a628d67fd6e52224219e2a9fe6e37f036":[2,0,28,5]
+"class_special_attack_table.html#a28d9001ca4805cebbc341884cda4daaa":[2,0,28,2]
 };

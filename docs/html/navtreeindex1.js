@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"class_special_attack_table.html#a628d67fd6e52224219e2a9fe6e37f036":[2,0,28,5],
 "class_special_attack_table.html#ac5a6017f05aaab4d43d7bbd3ac3ac9cc":[2,0,28,0],
 "class_special_attack_table.html#ac659fe76c9313ad41d40e0fb40674bc9":[2,0,28,7],
 "class_special_attack_table.html#ac9eed1be5a4d1b07fcc5fc6bd9cf4275":[2,0,28,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e":[0,0,13,3],
 "namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b":[0,0,13,4],
 "namespace_stat_type.html#ab5677773150878dce987c539a56d5580":[0,0,13,6],
-"namespacemembers.html":[0,1,0],
-"namespacemembers_enum.html":[0,1,3]
+"namespacemembers.html":[0,1,0]
 };
