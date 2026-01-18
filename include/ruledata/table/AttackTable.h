@@ -50,5 +50,5 @@ public:
 	const std::string& name() const { return name_; }
 
 private:
-	std::string name_{};
+	std::string name_{}; /**< Name of the attack table */
 };
