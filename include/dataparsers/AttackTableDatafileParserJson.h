@@ -27,7 +27,7 @@ public:
 	 * @param filename Path to the datafile to parse
 	 */
 	AttackTableDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "AttackTable", filename) {
-		setRootNode("attack_tables");
+		setRootNode("attack-tables");
 	}
 
 
