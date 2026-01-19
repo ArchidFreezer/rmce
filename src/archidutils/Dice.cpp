@@ -14,7 +14,7 @@ Dice& Dice::roll(int num_dice) {
 	// Don't use silly values
 	assert(num_dice > 0 && "Attempt to roll dice with too few die");
 
-	int num_rolls{ std::min(1,num_dice) };
+	int num_rolls{ std::max(1,num_dice) };
 	int result{};
 
 	for (int i = 0; i < num_rolls; i++) {
