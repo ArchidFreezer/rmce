@@ -3,6 +3,7 @@
 #include <string>
 #include <SpecialAttackTableDatafileParserJson.h>
 #include <table/SpecialAttackTable.h>
+#include <table/TableRowNumberMatcherFactory.h>
 
 void SpecialAttackTableDatafileParserJson::save(const std::string& filename) {
 	if (filename.empty()) return;
@@ -132,6 +133,8 @@ void SpecialAttackTableDatafileParserJson::parse(bool id_only) {
 		std::unique_ptr<SpecialAttackTable>table = std::make_unique <SpecialAttackTable>(name, small, medium, large, huge);
 		table->setName(name);
 
+		TableRowNumberMatcherFactory matchers;
+
 		if (boost::optional<const pt::ptree&> pmods = ptable.second.get_child_optional("modified-rows")) {
 			for (const auto& pmod : pmods.get()) {
 				TableRow<std::string> row{};
@@ -140,7 +143,7 @@ void SpecialAttackTableDatafileParserJson::parse(bool id_only) {
 				for (int i{ 1 }; i < 21; i++) {
 					row.addCell(pmod.second.get<std::string>("at" + std::to_string(i)));
 				}
-				table->addRow(std::make_unique<NumberRange<int>>(min, max), row);
+				table->addRow(matchers.matcher(min, max), row);
 			}
 		}
 
@@ -152,7 +155,7 @@ void SpecialAttackTableDatafileParserJson::parse(bool id_only) {
 				for (int i{ 1 }; i < 21; i++) {
 					row.addCell(pumod.second.get<std::string>("at" + std::to_string(i)));
 				}
-				table->addUnmodifiedRow(std::make_unique<NumberRange<int>>(min, max), row);
+				table->addUnmodifiedRow(matchers.matcher(min, max), row);
 			}
 		}
 

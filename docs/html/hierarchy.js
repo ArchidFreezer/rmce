@@ -51,5 +51,7 @@ var hierarchy =
     [ "table_row_matcher", null, [
       [ "NumberRange< NumberType >", "class_number_range.html", null ]
     ] ],
-    [ "TableRow&lt; CellDataType &gt;", "class_table_row.html", null ]
+    [ "TableDatafileParser", "class_table_datafile_parser.html", null ],
+    [ "TableRow&lt; CellDataType &gt;", "class_table_row.html", null ],
+    [ "TableRowNumberMatcherFactory", "class_table_row_number_matcher_factory.html", null ]
 ];

@@ -32,6 +32,8 @@ var annotated_dup =
     [ "SpecialAttackTableDatafileParserJson", "class_special_attack_table_datafile_parser_json.html", "class_special_attack_table_datafile_parser_json" ],
     [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", "class_table_column_armour_type_matcher" ],
     [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", "class_table_column_creature_size_matcher" ],
+    [ "TableDatafileParser", "class_table_datafile_parser.html", null ],
     [ "TableRow", "class_table_row.html", "class_table_row" ],
+    [ "TableRowNumberMatcherFactory", "class_table_row_number_matcher_factory.html", "class_table_row_number_matcher_factory" ],
     [ "TooManyStatsException", "class_too_many_stats_exception.html", "class_too_many_stats_exception" ]
 ];

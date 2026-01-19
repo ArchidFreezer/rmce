@@ -125,20 +125,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a79baa60def4bde036545c713d3f6c340" id="r_a79baa60def4bde036545c713d3f6c340"><td class="memItemLeft"><a id="a79baa60def4bde036545c713d3f6c340" name="a79baa60def4bde036545c713d3f6c340"></a>
 virtual&#160;</td><td class="memItemRight"><b>~LookupTable</b> ()=default</td></tr>
 <tr class="memdesc:a79baa60def4bde036545c713d3f6c340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor to allow polymorphism. <br /></td></tr>
-<tr class="memitem:a6df091f7c384301a539ee65a22aeef8f" id="r_a6df091f7c384301a539ee65a22aeef8f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6df091f7c384301a539ee65a22aeef8f">addRow</a> (std::unique_ptr&lt; RowMatcherClass &gt; matcher, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; row)</td></tr>
-<tr class="memdesc:a6df091f7c384301a539ee65a22aeef8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a row to the table that may be accessed by any row index value.  <br /></td></tr>
-<tr class="memitem:a611b30a69c2f8347b78ee28d5d98a042" id="r_a611b30a69c2f8347b78ee28d5d98a042"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a611b30a69c2f8347b78ee28d5d98a042">addUnmodifiedRow</a> (std::unique_ptr&lt; RowMatcherClass &gt; matcher, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; row)</td></tr>
-<tr class="memdesc:a611b30a69c2f8347b78ee28d5d98a042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a row to the table that may only be accessed by row index values that have not been modified.  <br /></td></tr>
+<tr class="memitem:ad91800d3977424edd2bccec07d7dca76" id="r_ad91800d3977424edd2bccec07d7dca76"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad91800d3977424edd2bccec07d7dca76">addRow</a> (const RowMatcherClass *matcher, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; row)</td></tr>
+<tr class="memdesc:ad91800d3977424edd2bccec07d7dca76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a row to the table that may be accessed by any row index value.  <br /></td></tr>
+<tr class="memitem:ac94dcfe09b8e9c5218eacd8f433aeb7d" id="r_ac94dcfe09b8e9c5218eacd8f433aeb7d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac94dcfe09b8e9c5218eacd8f433aeb7d">addUnmodifiedRow</a> (const RowMatcherClass *matcher, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; row)</td></tr>
+<tr class="memdesc:ac94dcfe09b8e9c5218eacd8f433aeb7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a row to the table that may only be accessed by row index values that have not been modified.  <br /></td></tr>
 <tr class="memitem:a8ec5b9fe6f25c737bb3e09fec3ce5bd4" id="r_a8ec5b9fe6f25c737bb3e09fec3ce5bd4"><td class="memItemLeft">const CellDatatype &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8ec5b9fe6f25c737bb3e09fec3ce5bd4">cell</a> (ColumnDataType col_index, RowDatatype row_index) const</td></tr>
 <tr class="memdesc:a8ec5b9fe6f25c737bb3e09fec3ce5bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of a cell in the table.  <br /></td></tr>
 <tr class="memitem:a259db3187ece523a7f57735fd3ec8b31" id="r_a259db3187ece523a7f57735fd3ec8b31"><td class="memItemLeft">const CellDatatype &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a259db3187ece523a7f57735fd3ec8b31">cell</a> (ColumnDataType col_index, RowDatatype row_index, RowDatatype unmodified_row_index) const</td></tr>
 <tr class="memdesc:a259db3187ece523a7f57735fd3ec8b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of a cell in the table.  <br /></td></tr>
 <tr class="memitem:aa8b34807f6c7a4338ec46ee454858129" id="r_aa8b34807f6c7a4338ec46ee454858129"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa8b34807f6c7a4338ec46ee454858129">setColumnMatcher</a> (std::unique_ptr&lt; ColumnMatcherClass &gt; col_matcher)</td></tr>
 <tr class="memdesc:aa8b34807f6c7a4338ec46ee454858129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the column matcher object.  <br /></td></tr>
-<tr class="memitem:ac36908f779e47a812622e47186278198" id="r_ac36908f779e47a812622e47186278198"><td class="memItemLeft">const std::map&lt; std::unique_ptr&lt; RowMatcherClass &gt;, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac36908f779e47a812622e47186278198">modified</a> ()</td></tr>
-<tr class="memdesc:ac36908f779e47a812622e47186278198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the map with the rows that may be returned by any row index value.  <br /></td></tr>
-<tr class="memitem:aa330ad6b572ddc00ce97b607215750fb" id="r_aa330ad6b572ddc00ce97b607215750fb"><td class="memItemLeft">const std::map&lt; std::unique_ptr&lt; RowMatcherClass &gt;, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa330ad6b572ddc00ce97b607215750fb">unmodified</a> ()</td></tr>
-<tr class="memdesc:aa330ad6b572ddc00ce97b607215750fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the map with the rows that may be only returned by unmodified row index values.  <br /></td></tr>
+<tr class="memitem:a3d7dcb3255fcb3fe89a39c4709a24aec" id="r_a3d7dcb3255fcb3fe89a39c4709a24aec"><td class="memItemLeft">const std::map&lt; const RowMatcherClass *, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3d7dcb3255fcb3fe89a39c4709a24aec">modified</a> ()</td></tr>
+<tr class="memdesc:a3d7dcb3255fcb3fe89a39c4709a24aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the map with the rows that may be returned by any row index value.  <br /></td></tr>
+<tr class="memitem:ab9defeeeef4d6fddb0d67c985927ea1b" id="r_ab9defeeeef4d6fddb0d67c985927ea1b"><td class="memItemLeft">const std::map&lt; const RowMatcherClass *, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab9defeeeef4d6fddb0d67c985927ea1b">unmodified</a> ()</td></tr>
+<tr class="memdesc:ab9defeeeef4d6fddb0d67c985927ea1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the map with the rows that may be only returned by unmodified row index values.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
 <tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
@@ -209,8 +209,8 @@ template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatch
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a6df091f7c384301a539ee65a22aeef8f" name="a6df091f7c384301a539ee65a22aeef8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6df091f7c384301a539ee65a22aeef8f">&#9670;&#160;</a></span>addRow()</h2>
+<a id="ad91800d3977424edd2bccec07d7dca76" name="ad91800d3977424edd2bccec07d7dca76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad91800d3977424edd2bccec07d7dca76">&#9670;&#160;</a></span>addRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,7 +223,7 @@ template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatch
         <tr>
           <td class="memname">void <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;::addRow </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; RowMatcherClass &gt;</td>          <td class="paramname"><span class="paramname"><em>matcher</em></span>, </td>
+          <td class="paramtype">const RowMatcherClass *</td>          <td class="paramname"><span class="paramname"><em>matcher</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -249,8 +249,8 @@ template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatch
 
 </div>
 </div>
-<a id="a611b30a69c2f8347b78ee28d5d98a042" name="a611b30a69c2f8347b78ee28d5d98a042"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a611b30a69c2f8347b78ee28d5d98a042">&#9670;&#160;</a></span>addUnmodifiedRow()</h2>
+<a id="ac94dcfe09b8e9c5218eacd8f433aeb7d" name="ac94dcfe09b8e9c5218eacd8f433aeb7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94dcfe09b8e9c5218eacd8f433aeb7d">&#9670;&#160;</a></span>addUnmodifiedRow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +263,7 @@ template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatch
         <tr>
           <td class="memname">void <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;::addUnmodifiedRow </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; RowMatcherClass &gt;</td>          <td class="paramname"><span class="paramname"><em>matcher</em></span>, </td>
+          <td class="paramtype">const RowMatcherClass *</td>          <td class="paramname"><span class="paramname"><em>matcher</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -391,8 +391,8 @@ template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatch
 
 </div>
 </div>
-<a id="ac36908f779e47a812622e47186278198" name="ac36908f779e47a812622e47186278198"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac36908f779e47a812622e47186278198">&#9670;&#160;</a></span>modified()</h2>
+<a id="a3d7dcb3255fcb3fe89a39c4709a24aec" name="a3d7dcb3255fcb3fe89a39c4709a24aec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d7dcb3255fcb3fe89a39c4709a24aec">&#9670;&#160;</a></span>modified()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -403,7 +403,7 @@ template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatch
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::map&lt; std::unique_ptr&lt; RowMatcherClass &gt;, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; &gt; &amp; <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;::modified </td>
+          <td class="memname">const std::map&lt; const RowMatcherClass *, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; &gt; &amp; <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;::modified </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -457,8 +457,8 @@ template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatch
 
 </div>
 </div>
-<a id="aa330ad6b572ddc00ce97b607215750fb" name="aa330ad6b572ddc00ce97b607215750fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa330ad6b572ddc00ce97b607215750fb">&#9670;&#160;</a></span>unmodified()</h2>
+<a id="ab9defeeeef4d6fddb0d67c985927ea1b" name="ab9defeeeef4d6fddb0d67c985927ea1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9defeeeef4d6fddb0d67c985927ea1b">&#9670;&#160;</a></span>unmodified()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -469,7 +469,7 @@ template&lt;typename RowMatcherClass, typename RowDatatype, typename ColumnMatch
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::map&lt; std::unique_ptr&lt; RowMatcherClass &gt;, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; &gt; &amp; <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;::unmodified </td>
+          <td class="memname">const std::map&lt; const RowMatcherClass *, <a class="el" href="class_table_row.html">TableRow</a>&lt; CellDatatype &gt; &gt; &amp; <a class="el" href="class_lookup_table.html">LookupTable</a>&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;::unmodified </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>

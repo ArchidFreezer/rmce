@@ -4,6 +4,7 @@
 #include <NumberRange.h>
 #include <table/LookupTable.h>
 #include <table/TableColumnCreatureSizeMatcher.h>
+#include <table/TableRowNumberMatcherFactory.h>
 
 /**
  * @brief Dummy class to test LookupTable abstract class
@@ -17,16 +18,19 @@ TEST(LookupTable, General) {
 	DummyLookupTable lut("DummyTable");
 	std::unique_ptr<TableColumnCreatureSizeMatcher> matcher = std::make_unique<TableColumnCreatureSizeMatcher>(TableColumnCreatureSizeMatcher());
 	lut.setColumnMatcher(std::move(matcher));
+
+	TableRowNumberMatcherFactory matchers;
+
 	TableRow<std::string> tr1 = TableRow<std::string>().addCell("Row 1, kTiny").addCell("Row 1, kSmall").addCell("Row 1, kMedium").addCell("Row 1, kLarge").addCell("Row 1, kHuge");
-	lut.addRow(std::make_unique<NumberRange<int>>(1, 3), tr1);
+	lut.addRow(matchers.matcher(1, 3), tr1);
 	TableRow<std::string> tr2 = TableRow<std::string>().addCell("Row 2, kTiny").addCell("Row 2, kSmall").addCell("Row 2, kMedium").addCell("Row 2, kLarge").addCell("Row 2, kHuge");
-	lut.addRow(std::make_unique<NumberRange<int>>(4, 6), tr2);
+	lut.addRow(matchers.matcher(4, 6), tr2);
 
 	// We add unmodified rows that overlap the normal rows
 	TableRow<std::string> utr1 = TableRow<std::string>().addCell("URow 1, kTiny").addCell("URow 1, kSmall").addCell("URow 1, kMedium").addCell("URow 1, kLarge").addCell("URow 1, kHuge");
-	lut.addUnmodifiedRow(std::make_unique<NumberRange<int>>(1, 1), utr1);
+	lut.addUnmodifiedRow(matchers.matcher(1, 1), utr1);
 	TableRow<std::string> utr2 = TableRow<std::string>().addCell("URow 2, kTiny").addCell("URow 2, kSmall").addCell("URow 2, kMedium").addCell("URow 2, kLarge").addCell("URow 2, kHuge");
-	lut.addUnmodifiedRow(std::make_unique<NumberRange<int>>(6, 6), utr2);
+	lut.addUnmodifiedRow(matchers.matcher(6, 6), utr2);
 
 	// We are not testing the matchers here so we don't need to test too many combinations
 	// Test basic operation without unmodifiers

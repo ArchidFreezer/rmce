@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 
 #include <table/SpecialAttackTable.h>
+#include <table/TableRowNumberMatcherFactory.h>
 
 namespace {
 
@@ -20,12 +21,14 @@ namespace {
 		limits.emplace(AttackSizeType::kLarge, 4);
 		limits.emplace(AttackSizeType::kHuge, 5);
 
+		TableRowNumberMatcherFactory matchers;
+
 		SpecialAttackTable at{ "TestGeneral" , limits};
 		for (int i{ 1 }; i < 6; i++) {
-			at.addRow(std::make_unique<NumberRange<int>>(i, i), buildATRow("Row ", i));
+			at.addRow(matchers.matcher(i, i), buildATRow("Row ", i));
 		}
-		at.addUnmodifiedRow(std::make_unique<NumberRange<int>>(1, 1), buildATRow("URow ", 1));
-		at.addUnmodifiedRow(std::make_unique<NumberRange<int>>(6, 6), buildATRow("URow ", 6));
+		at.addUnmodifiedRow(matchers.matcher(1, 1), buildATRow("URow ", 1));
+		at.addUnmodifiedRow(matchers.matcher(6, 6), buildATRow("URow ", 6));
 
 		EXPECT_STREQ(at.cell(ArmourType::kAT12, AttackSizeType::kSmall, 3).c_str(), "Row 2, kAT12");     // Capped by type
 		EXPECT_STREQ(at.cell(ArmourType::kAT12, AttackSizeType::kLarge, 3).c_str(), "Row 3, kAT12");     // Uncapped
@@ -35,13 +38,16 @@ namespace {
 	}
 
 	TEST(SpecialAttackTable, GeneralExplicit) {
+
+		TableRowNumberMatcherFactory matchers;
+
 		// Populate a table with 6 rows
 		SpecialAttackTable at{ "TestGeneral", 2, 3, 4, 5 };
 		for (int i{ 1 }; i < 6; i++) {
-			at.addRow(std::make_unique<NumberRange<int>>(i, i), buildATRow("Row ", i));
+			at.addRow(matchers.matcher(i, i), buildATRow("Row ", i));
 		}
-		at.addUnmodifiedRow(std::make_unique<NumberRange<int>>(1, 1), buildATRow("URow ", 1));
-		at.addUnmodifiedRow(std::make_unique<NumberRange<int>>(6, 6), buildATRow("URow ", 6));
+		at.addUnmodifiedRow(matchers.matcher(1, 1), buildATRow("URow ", 1));
+		at.addUnmodifiedRow(matchers.matcher(6, 6), buildATRow("URow ", 6));
 
 		EXPECT_STREQ(at.cell(ArmourType::kAT12, AttackSizeType::kSmall, 3).c_str(), "Row 2, kAT12");     // Capped by type
 		EXPECT_STREQ(at.cell(ArmourType::kAT12, AttackSizeType::kLarge, 3).c_str(), "Row 3, kAT12");     // Uncapped
@@ -62,11 +68,12 @@ namespace {
 	}
 
 	TEST(SpecialAttackTable, Exception) {
+		TableRowNumberMatcherFactory matchers;
 		// Populate a table with 6 rows, but only 10 columns
 		SpecialAttackTable at{ "TestException", 2, 3, 4, 5 };
 		for (int i{ 1 }; i < 6; i++) {
 //			auto rm = std::make_unique<NumberRange<int>>(i, i);
-			at.addRow(std::make_unique<NumberRange<int>>(i, i), buildBrokenATRow("Row ", i));
+			at.addRow(matchers.matcher(i, i), buildBrokenATRow("Row ", i));
 		}
 
 		try {

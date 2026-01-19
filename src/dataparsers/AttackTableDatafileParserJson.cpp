@@ -3,6 +3,7 @@
 #include <string>
 #include <AttackTableDatafileParserJson.h>
 #include <table/AttackTable.h>
+#include <table/TableRowNumberMatcherFactory.h>
 
 void AttackTableDatafileParserJson::save(const std::string& filename) {
 	if (filename.empty()) return;
@@ -124,6 +125,9 @@ void AttackTableDatafileParserJson::parse(bool id_only) {
 		std::unique_ptr<AttackTable>table = std::make_unique <AttackTable>(name, max_rows);
 		table->setName(name);
 
+		// Get a factory for the matchers
+		TableRowNumberMatcherFactory matchers;
+
 		if (boost::optional<const pt::ptree&> pmods = ptable.second.get_child_optional("modified-rows")) {
 			for (const auto& pmod : pmods.get()) {
 				TableRow<std::string> row{};
@@ -132,7 +136,7 @@ void AttackTableDatafileParserJson::parse(bool id_only) {
 				for (int i{ 1 }; i < 21; i++) {
 					row.addCell(pmod.second.get<std::string>("at" + std::to_string(i)));
 				}
-				table->addRow(std::make_unique<NumberRange<int>>(min, max), row);
+				table->addRow(matchers.matcher(min, max), row);
 			}
 		}
 
@@ -144,7 +148,7 @@ void AttackTableDatafileParserJson::parse(bool id_only) {
 				for (int i{ 1 }; i < 21; i++) {
 					row.addCell(pumod.second.get<std::string>("at" + std::to_string(i)));
 				}
-				table->addUnmodifiedRow(std::make_unique<NumberRange<int>>(min, max), row);
+				table->addUnmodifiedRow(matchers.matcher(min, max), row);
 			}
 		}
 
