@@ -59,7 +59,7 @@ public:
 	 * @param matcher Matcher that is used to identify the row
 	 * @param row TableRow object that contains the cells in the row
 	 */
-	void addRow(std::shared_ptr<RowMatcherClass> matcher, TableRow<CellDatatype> row) { modified_rows_.emplace(matcher, row); }
+	void addRow(std::unique_ptr<RowMatcherClass> matcher, TableRow<CellDatatype> row) { modified_rows_.emplace(std::move(matcher), row); }
 
 	/**
 	 * @brief Add a row to the table that may only be accessed by row index values that have not been modified
@@ -67,7 +67,7 @@ public:
 	 * @param matcher Matcher that is used to identify the row
 	 * @param row TableRow object that contains the cells in the row
 	 */
-	void addUnmodifiedRow(std::shared_ptr<RowMatcherClass> matcher, TableRow<CellDatatype> row) { unmodified_rows_.emplace(matcher, row); }
+	void addUnmodifiedRow(std::unique_ptr<RowMatcherClass> matcher, TableRow<CellDatatype> row) { unmodified_rows_.emplace(std::move(matcher), row); }
 
 	/**
 	 * @brief Gets the value of a cell in the table
@@ -111,15 +111,15 @@ public:
 
 	/**
 	 * @brief Get the map with the rows that may be returned by any row index value
-	 * @return std::map<std::shared_ptr<RowMatcherClass>, TableRow<CellDatatype>> Map of rows
+	 * @return std::map<std::unique_ptr<RowMatcherClass>, TableRow<CellDatatype>> Map of rows
 	 */
-	const std::map<std::shared_ptr<RowMatcherClass>, TableRow<CellDatatype>>& modified() { return modified_rows_; }
+	const std::map<std::unique_ptr<RowMatcherClass>, TableRow<CellDatatype>>& modified() { return modified_rows_; }
 
 	/**
 	 * @brief Get the map with the rows that may be only returned by unmodified row index values
-	 * @return std::map<std::shared_ptr<RowMatcherClass>, TableRow<CellDatatype>> Map of rows
+	 * @return std::map<std::unique_ptr<RowMatcherClass>, TableRow<CellDatatype>> Map of rows
 	 */
-	const std::map<std::shared_ptr<RowMatcherClass>, TableRow<CellDatatype>>& unmodified() { return unmodified_rows_; }
+	const std::map<std::unique_ptr<RowMatcherClass>, TableRow<CellDatatype>>& unmodified() { return unmodified_rows_; }
 
 private:
 	/**
@@ -140,8 +140,8 @@ private:
 	 */
 	const CellDatatype& cell(ColumnDataType col_index, RowDatatype row_index, RowDatatype unmodified_row_index, bool use_unmodified) const;
 
-	std::map<std::shared_ptr<RowMatcherClass>, TableRow<CellDatatype>> modified_rows_; /**< Container for rows that may be returned by any row index value */
-	std::map<std::shared_ptr<RowMatcherClass>, TableRow<CellDatatype>> unmodified_rows_; /**< Container for rows that may be only returned by unmodified row index values */
+	std::map<std::unique_ptr<RowMatcherClass>, TableRow<CellDatatype>> modified_rows_; /**< Container for rows that may be returned by any row index value */
+	std::map<std::unique_ptr<RowMatcherClass>, TableRow<CellDatatype>> unmodified_rows_; /**< Container for rows that may be only returned by unmodified row index values */
 	std::unique_ptr<ColumnMatcherClass> col_matcher_{}; /**< Object to determine table column to retrieve cell data from */
 };
 

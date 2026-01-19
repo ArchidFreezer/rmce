@@ -62,9 +62,9 @@ void AttackTableDatafileParserXml::parse(bool id_only) {
 					row.addCell(cells.at(i));
 				}
 				if (special)
-					special_table->addRow(std::make_shared<NumberRange<int>>(min, max), row);
+					special_table->addRow(std::make_unique<NumberRange<int>>(min, max), row);
 				else
-					attack_table->addRow(std::make_shared<NumberRange<int>>(min, max), row);
+					attack_table->addRow(std::make_unique<NumberRange<int>>(min, max), row);
 			}
 		}
 
@@ -89,9 +89,9 @@ void AttackTableDatafileParserXml::parse(bool id_only) {
 					row.addCell(cells.at(i));
 				}
 				if (special)
-					special_table->addUnmodifiedRow(std::make_shared<NumberRange<int>>(min, max), row);
+					special_table->addUnmodifiedRow(std::make_unique<NumberRange<int>>(min, max), row);
 				else
-					attack_table->addUnmodifiedRow(std::make_shared<NumberRange<int>>(min, max), row);
+					attack_table->addUnmodifiedRow(std::make_unique<NumberRange<int>>(min, max), row);
 			}
 		}
 

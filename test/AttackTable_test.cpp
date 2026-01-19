@@ -16,10 +16,10 @@ namespace {
 		// Populate a table with 6 rows
 		AttackTable at{"TestGeneral"};
 		for (int i{ 1 }; i < 6; i++) {
-			at.addRow(std::make_shared<NumberRange<int>>(i, i), buildATRow("Row ", i));
+			at.addRow(std::make_unique<NumberRange<int>>(i, i), buildATRow("Row ", i));
 		}
-		at.addUnmodifiedRow(std::make_shared<NumberRange<int>>(1, 1), buildATRow("URow ", 1));
-		at.addUnmodifiedRow(std::make_shared<NumberRange<int>>(6, 6), buildATRow("URow ", 6));
+		at.addUnmodifiedRow(std::make_unique<NumberRange<int>>(1, 1), buildATRow("URow ", 1));
+		at.addUnmodifiedRow(std::make_unique<NumberRange<int>>(6, 6), buildATRow("URow ", 6));
 
 		EXPECT_STREQ(at.cell(ArmourType::kAT12, 3).c_str(), "Row 3, kAT12");     // No unmodifier
 		EXPECT_STREQ(at.cell(ArmourType::kAT12, 3, 1).c_str(), "URow 1, kAT12"); // Unmodified match
@@ -41,7 +41,7 @@ namespace {
 		// Populate a table with 6 rows, but only 10 columns
 		AttackTable at{"TestException"};
 		for (int i{ 1 }; i < 6; i++) {
-			at.addRow(std::make_shared<NumberRange<int>>(i, i), buildBrokenATRow("Row ", i));
+			at.addRow(std::make_unique<NumberRange<int>>(i, i), buildBrokenATRow("Row ", i));
 		}
 
 		try {

@@ -37,13 +37,12 @@ void SpecialAttackTableDatafileParserJson::save(const std::string& filename) {
 			for (auto& m : table_data.modified()) {
 				pt::ptree prow;
 
-				std::shared_ptr<NumberRange<int>> rn = m.first;
 				TableRow tr = m.second;
 
-				max_row = std::max(max_row, rn->max());
+				max_row = std::max(max_row, m.first->max());
 
-				prow.put("min", rn->min());
-				prow.put("max", rn->max());
+				prow.put("min", m.first->min());
+				prow.put("max", m.first->max());
 				prow.put("at1", tr.cell(0));
 				prow.put("at2", tr.cell(1));
 				prow.put("at3", tr.cell(2));
@@ -71,11 +70,10 @@ void SpecialAttackTableDatafileParserJson::save(const std::string& filename) {
 			for (auto& m : table_data.unmodified()) {
 				pt::ptree prow;
 
-				std::shared_ptr<NumberRange<int>> rn = m.first;
 				TableRow tr = m.second;
 
-				prow.put("min", rn->min());
-				prow.put("max", rn->max());
+				prow.put("min", m.first->min());
+				prow.put("max", m.first->max());
 				prow.put("at1", tr.cell(0));
 				prow.put("at2", tr.cell(1));
 				prow.put("at3", tr.cell(2));
@@ -142,7 +140,7 @@ void SpecialAttackTableDatafileParserJson::parse(bool id_only) {
 				for (int i{ 1 }; i < 21; i++) {
 					row.addCell(pmod.second.get<std::string>("at" + std::to_string(i)));
 				}
-				table->addRow(std::make_shared<NumberRange<int>>(min, max), row);
+				table->addRow(std::make_unique<NumberRange<int>>(min, max), row);
 			}
 		}
 
@@ -154,7 +152,7 @@ void SpecialAttackTableDatafileParserJson::parse(bool id_only) {
 				for (int i{ 1 }; i < 21; i++) {
 					row.addCell(pumod.second.get<std::string>("at" + std::to_string(i)));
 				}
-				table->addUnmodifiedRow(std::make_shared<NumberRange<int>>(min, max), row);
+				table->addUnmodifiedRow(std::make_unique<NumberRange<int>>(min, max), row);
 			}
 		}
 
