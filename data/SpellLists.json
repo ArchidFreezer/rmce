@@ -1,0 +1,3108 @@
+{
+    "spell-lists": [
+        {
+            "id": "SPELLLIST_AIR_MASTERY",
+            "name": "Air Mastery",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ALLUREMENT",
+            "name": "Allurement",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_AMPLIFICATIONS",
+            "name": "Amplifications",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ANIMAL_BONDING",
+            "name": "Animal Bonding",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ANIMAL_MASTERY",
+            "name": "Animal Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ANIMAL_SUMMONS",
+            "name": "Animal Summons",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_ANTICIPATIONS",
+            "name": "Anticipations",
+            "realm": "Mentalism",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_AQUATIC_FORMS",
+            "name": "Aquatic Forms",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARACHNEMANCY",
+            "name": "Arachnemancy",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARCANE_BARRIERS",
+            "name": "Arcane Barriers",
+            "realm": "Arcane",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARCANE_FORCES",
+            "name": "Arcane Forces",
+            "realm": "Arcane",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARCANE_HEALING",
+            "name": "Arcane Healing",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARCANE_MOTIONS",
+            "name": "Arcane Motions",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARCANE_SENSES",
+            "name": "Arcane Senses",
+            "realm": "Arcane",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARCANE_SHIELD",
+            "name": "Arcane Shield",
+            "realm": "Arcane",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARCANE_SIGNS",
+            "name": "Arcane Signs",
+            "realm": "Arcane",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARCANE_SUMMONS",
+            "name": "Arcane Summons",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARCANE_VISIONS",
+            "name": "Arcane Visions",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARMOR_ENHANCEMENTS",
+            "name": "Armor Enhancements",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ARMOR_MASTERY",
+            "name": "Armor Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ASSASSINATION_MASTERY",
+            "name": "Assassination Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ATTACK_AVOIDANCE",
+            "name": "Attack Avoidance",
+            "realm": "Mentalism",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ATTACK_MASTERY",
+            "name": "Attack Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_AURA_LORE",
+            "name": "Aura Lore",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BANISHMENTS",
+            "name": "Banishments",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BARRIER_LAW",
+            "name": "Barrier Law",
+            "realm": "Channeling",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BATTLEFIELD_HEALING",
+            "name": "Battlefield Healing",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BATTLE_LAW",
+            "name": "Battle Law",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BLADERUNES",
+            "name": "Bladerunes",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BLOOD_LAW",
+            "name": "Blood Law",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BLOOD_MASTERY",
+            "name": "Blood Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BLOOD_WAYS",
+            "name": "Blood Ways",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BODY_CONTROL",
+            "name": "Body Control",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BODY_REINS",
+            "name": "Body Reins",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BODY_RENEWAL",
+            "name": "Body Renewal",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BODY_SHIFTING",
+            "name": "Body Shifting",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BONE_LAW",
+            "name": "Bone Law",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BONE_MASTERY",
+            "name": "Bone Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BONE_WAYS",
+            "name": "Bone Ways",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BREWING_LORE",
+            "name": "Brewing Lore",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_BRILLIANCE",
+            "name": "Brilliance",
+            "realm": "Mentalism",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CALM_SPIRITS",
+            "name": "Calm Spirits",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CEREMONIES",
+            "name": "Ceremonies",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CHANGES",
+            "name": "Changes",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CHANNELS",
+            "name": "Channels",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CHANTS",
+            "name": "Chants",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CHAOTIC_SENSES",
+            "name": "Chaotic Senses",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CHARADES",
+            "name": "Charades",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CIRCLE_MASTERY",
+            "name": "Circle Mastery",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CLEANSING",
+            "name": "Cleansing",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CLOAKING",
+            "name": "Cloaking",
+            "realm": "Mentalism",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_COMBAT_ILLUSIONS",
+            "name": "Combat Illusions",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_COMBAT_WAYS",
+            "name": "Combat Ways",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_COMMANDING_WILL",
+            "name": "Commanding Will",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_COMMUNAL_WAYS",
+            "name": "Communal Ways",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_COMMUNION",
+            "name": "Communion",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CONCEALMENT_MASTERY",
+            "name": "Concealment Mastery",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CONCUSSION_MASTERY",
+            "name": "Concussion Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CONCUSSION_S_WAY",
+            "name": "Concussion's Way",
+            "realm": "Channeling",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CONFUSING_WAYS",
+            "name": "Confusing Ways",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CONTAINING_WAYS",
+            "name": "Containing Ways",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CONTROLLING_SONGS",
+            "name": "Controlling Songs",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CORPIST_CASTING",
+            "name": "Corpist Casting",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_COUNTERSPELLS",
+            "name": "Counterspells",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CREATIONS",
+            "name": "Creations",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CRUSADE",
+            "name": "Crusade",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CRYSTALIST_CASTING",
+            "name": "Crystalist Casting",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_CURSES",
+            "name": "Curses",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DAMAGE_RESISTANCE",
+            "name": "Damage Resistance",
+            "realm": "Mentalism",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DARKNESS",
+            "name": "Darkness",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DARK_CHANNELS",
+            "name": "Dark Channels",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DARK_CONTACTS",
+            "name": "Dark Contacts",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DARK_ENTITIES",
+            "name": "Dark Entities",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DARK_LORE",
+            "name": "Dark Lore",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DARK_SUMMONS",
+            "name": "Dark Summons",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_DEATH_MASTERY",
+            "name": "Death Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DEFENSE_MASTERY",
+            "name": "Defense Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DELVING",
+            "name": "Delving",
+            "realm": "Mentalism",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DELVING_WAYS",
+            "name": "Delving Ways",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DETECTING_WAYS",
+            "name": "Detecting Ways",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DETECTIONS",
+            "name": "Detections",
+            "realm": "Mentalism",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DETECTION_LAW",
+            "name": "Detection Law",
+            "realm": "Arcane",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DETECTION_MASTERY",
+            "name": "Detection Mastery",
+            "realm": "Channeling",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DISEASE",
+            "name": "Disease",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DISGUISES",
+            "name": "Disguises",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DISPELLING_WAYS",
+            "name": "Dispelling Ways",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DIVINE_AURA",
+            "name": "Divine Aura",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DIVINE_MAGIC",
+            "name": "Divine Magic",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DOOM_S_LAW",
+            "name": "Doom's Law",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DREAM_LAW",
+            "name": "Dream Law",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DREAM_LORE",
+            "name": "Dream Lore",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_DREAM_TRAVEL",
+            "name": "Dream Travel",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_EARTH_LAW",
+            "name": "Earth Law",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_EARTH_MASTERY",
+            "name": "Earth Mastery",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ELEMENTAL_SHIELDS",
+            "name": "Elemental Shields",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ELEMENTAL_SUMMONS",
+            "name": "Elemental Summons",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_ENTERTAINING_WAYS",
+            "name": "Entertaining Ways",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ENTITY_SUMMONS",
+            "name": "Entity Summons",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_ESCAPES",
+            "name": "Escapes",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ESSENCE_HAND",
+            "name": "Essence Hand",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ESSENCE_PERCEPTIONS",
+            "name": "Essence Perceptions",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_EVASIONS",
+            "name": "Evasions",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_EXORCISM",
+            "name": "Exorcism",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_EXTERNAL_CONCENTRATION",
+            "name": "External Concentration",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FAITH_BREAKER",
+            "name": "Faith Breaker",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FAITH_DESTRUCTION",
+            "name": "Faith Destruction",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FAITH_S_SHIELD",
+            "name": "Faith's Shield",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FAMILIAR_MASTERY",
+            "name": "Familiar Mastery",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FAR_VISIONS",
+            "name": "Far Visions",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FAR_VOICE",
+            "name": "Far Voice",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FEEL_TASTE_SMELL",
+            "name": "Feel - Taste - Smell",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FEY_CONJURY",
+            "name": "Fey Conjury",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_FIRE_LAW",
+            "name": "Fire Law",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FIRE_MANIPULATION",
+            "name": "Fire Manipulation",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FIRE_MASTERY",
+            "name": "Fire Mastery",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FLESH_DESTRUCTION",
+            "name": "Flesh Destruction",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FLUID_DESTRUCTION",
+            "name": "Fluid Destruction",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FORTRESS_LAW",
+            "name": "Fortress Law",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_FUTURE_VISIONS",
+            "name": "Future Visions",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_GARGOYLE_MASTERY",
+            "name": "Gargoyle Mastery",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_GAS_ALTERATION",
+            "name": "Gas Alteration",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_GAS_DESTRUCTION",
+            "name": "Gas Destruction",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_GAS_MANIPULATION",
+            "name": "Gas Manipulation",
+            "realm": "Mentalism",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_GATE_MASTERY",
+            "name": "Gate Mastery",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_GATHERING_SECRETS",
+            "name": "Gathering Secrets",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_GENERAL_ENHANCEMENTS",
+            "name": "General Enhancements",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_GLASS_CERAMIC_CRAFTING",
+            "name": "Glass\/Ceramic Crafting",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_GLYPHS",
+            "name": "Glyphs",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_GUILDCRAFT_MASTERY",
+            "name": "Guildcraft Mastery",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_GUISES",
+            "name": "Guises",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HAND_OF_CHAOS",
+            "name": "Hand of Chaos",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HEARTH_MAGIC",
+            "name": "Hearth Magic",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HERBALIST_CASTING",
+            "name": "Herbalist Casting",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HERB_MASTERY",
+            "name": "Herb Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HIDING",
+            "name": "Hiding",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_ARMORING",
+            "name": "Holy Armoring",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_ARMS",
+            "name": "Holy Arms",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_DEFENSES",
+            "name": "Holy Defenses",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_DISCIPLE",
+            "name": "Holy Disciple",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_ELEMENT",
+            "name": "Holy Element",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_HEALING",
+            "name": "Holy Healing",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_MISSION",
+            "name": "Holy Mission",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_OFFICE",
+            "name": "Holy Office",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_SHIELDS",
+            "name": "Holy Shields",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_SYMBOL",
+            "name": "Holy Symbol",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_TRANCES",
+            "name": "Holy Trances",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_VISION",
+            "name": "Holy Vision",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_WARDS",
+            "name": "Holy Wards",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_WEAPON",
+            "name": "Holy Weapon",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_WEAPONS",
+            "name": "Holy Weapons",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_WIND",
+            "name": "Holy Wind",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_WORKS",
+            "name": "Holy Works",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOLY_WRATH",
+            "name": "Holy Wrath",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HORSE_MASTERY",
+            "name": "Horse Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOURI_S_BEGUILEMENT",
+            "name": "Houri's Beguilement",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HOURI_S_KISSES",
+            "name": "Houri's Kisses",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HUNTER_S_CALL",
+            "name": "Hunter's Call",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_HUNTING_MASTERY",
+            "name": "Hunting Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ICE_LAW",
+            "name": "Ice Law",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ILLUSIONS",
+            "name": "Illusions",
+            "realm": "Mentalism",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ILLUSION_MASTERY",
+            "name": "Illusion Mastery",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_INFLUENCES",
+            "name": "Influences",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_INNER_EYE",
+            "name": "Inner Eye",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_INNER_WALLS",
+            "name": "Inner Walls",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_INORGANIC_SKILLS",
+            "name": "Inorganic Skills",
+            "realm": "Neutral",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_INSCRIPTIONS",
+            "name": "Inscriptions",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_INSECT_MASTERY",
+            "name": "Insect Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_INSPIRING_WAYS",
+            "name": "Inspiring Ways",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_INVISIBLE_WAYS",
+            "name": "Invisible Ways",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ITEM_ANALYSIS",
+            "name": "Item Analysis",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ITEM_ENHANCEMENT",
+            "name": "Item Enhancement",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ITEM_LORE",
+            "name": "Item Lore",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_KNOWLEDGE_MASTERY",
+            "name": "Knowledge Mastery",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LAND_FORMS",
+            "name": "Land Forms",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LESSER_ILLUSIONS",
+            "name": "Lesser Illusions",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LIFE_MASTERY",
+            "name": "Life Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LIGHT_LAW",
+            "name": "Light Law",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LIGHT_MANIPULATION",
+            "name": "Light Manipulation",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LIGHT_MASTERY",
+            "name": "Light Mastery",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LIGHT_MOLDING",
+            "name": "Light Molding",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LIGHT_S_WAY",
+            "name": "Light's Way",
+            "realm": "Channeling",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LIQUID_ALTERATION",
+            "name": "Liquid Alteration",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LIQUID_GAS_SKILLS",
+            "name": "Liquid \/ Gas Skills",
+            "realm": "Neutral",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LIQUID_MANIPULATION",
+            "name": "Liquid Manipulation",
+            "realm": "Mentalism",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LIVING_CHANGE",
+            "name": "Living Change",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LOCATING_WAYS",
+            "name": "Locating Ways",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LOFTY_BRIDGE",
+            "name": "Lofty Bridge",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LOFTY_MOVEMENT",
+            "name": "Lofty Movement",
+            "realm": "Channeling",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LOOK_OF_TERROR",
+            "name": "Look of Terror",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LORE",
+            "name": "Lore",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_LORES",
+            "name": "Lores",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MAGICAL_ROPES",
+            "name": "Magical Ropes",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MAGIC_STAFF",
+            "name": "Magic Staff",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MANA_BARRIERS",
+            "name": "Mana Barriers",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MANA_ITEMS",
+            "name": "Mana Items",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MANA_LAW",
+            "name": "Mana Law",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MANA_MOLDING",
+            "name": "Mana Molding",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MANA_SERVANTS",
+            "name": "Mana Servants",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MANA_WARRIORS",
+            "name": "Mana Warriors",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MARTIAL_LAW",
+            "name": "Martial Law",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MATTER_DISRUPTION",
+            "name": "Matter Disruption",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MATTER_SHAPING",
+            "name": "Matter Shaping",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MECHANISMS",
+            "name": "Mechanisms",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MECHANISM_S_WAY",
+            "name": "Mechanism's Way",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MEDICAL_LAW",
+            "name": "Medical Law",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MEDITATIVE_HEALING",
+            "name": "Meditative Healing",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MENDING_WAYS",
+            "name": "Mending Ways",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_METAL_CRAFTING",
+            "name": "Metal Crafting",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_ATTACK",
+            "name": "Mind Attack",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_BREAKER",
+            "name": "Mind Breaker",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_CONTROL",
+            "name": "Mind Control",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_DEATH",
+            "name": "Mind Death",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_DESTRUCTION",
+            "name": "Mind Destruction",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_DISEASE",
+            "name": "Mind Disease",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_DOMINATION",
+            "name": "Mind Domination",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_EROSION",
+            "name": "Mind Erosion",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_ILLUSIONS",
+            "name": "Mind Illusions",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_MASTERY",
+            "name": "Mind Mastery",
+            "realm": "Mentalism",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_MERGE",
+            "name": "Mind Merge",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_SENSE_MOLDING",
+            "name": "Mind Sense Molding",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_SHIFTING",
+            "name": "Mind Shifting",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_SPEECH",
+            "name": "Mind Speech",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_SUBVERSION",
+            "name": "Mind Subversion",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_S_DOOR",
+            "name": "Mind's Door",
+            "realm": "Mentalism",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_S_SHADOW",
+            "name": "Mind's Shadow",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIND_VISIONS",
+            "name": "Mind Visions",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MIRROR_MAGIC",
+            "name": "Mirror Magic",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MISDIRECTIONS",
+            "name": "Misdirections",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MONK_S_BRIDGE",
+            "name": "Monk's Bridge",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MONK_S_SENSE",
+            "name": "Monk's Sense",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MOVEMENT",
+            "name": "Movement",
+            "realm": "Mentalism",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MOVEMENT_MASTERY",
+            "name": "Movement Mastery",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MOVING_WAYS",
+            "name": "Moving Ways",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MUSCLE_LAW",
+            "name": "Muscle Law",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MUSCLE_MASTERY",
+            "name": "Muscle Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MUSCLE_WAYS",
+            "name": "Muscle Ways",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_MYSTICAL_CHANGE",
+            "name": "Mystical Change",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_DOMINATION",
+            "name": "Nature Domination",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_MANIPULATION",
+            "name": "Nature Manipulation",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_S_FORMS",
+            "name": "Nature's Forms",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_S_GUISES",
+            "name": "Nature's Guises",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_S_HARMONY",
+            "name": "Nature's Harmony",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_S_LAW",
+            "name": "Nature's Law",
+            "realm": "Channeling",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_S_LORE",
+            "name": "Nature's Lore",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_S_MOVEMENT_SENSES",
+            "name": "Nature's Movement \/ Senses",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_S_PROTECTION",
+            "name": "Nature's Protection",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_S_SUMMONS",
+            "name": "Nature's Summons",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NATURE_S_WAY",
+            "name": "Nature's Way",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NECROMANCY",
+            "name": "Necromancy",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NERVE_AND_ORGAN_MASTERY",
+            "name": "Nerve and Organ Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NERVE_LAW",
+            "name": "Nerve Law",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NOMENCLATURE_MASTERY",
+            "name": "Nomenclature Mastery",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_NOMENIST_CASTING",
+            "name": "Nomenist Casting",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_OCEAN_LAW",
+            "name": "Ocean Law",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ORGANIC_SKILLS",
+            "name": "Organic Skills",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ORGAN_LAW",
+            "name": "Organ Law",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ORGAN_WAYS",
+            "name": "Organ Ways",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_OTHER_REALM_IMBEDDING",
+            "name": "Other Realm Imbedding",
+            "realm": "Neutral",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_OWN_REALM_IMBEDDING",
+            "name": "Own Realm Imbedding",
+            "realm": "Neutral",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PAST_VISIONS",
+            "name": "Past Visions",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PATH_MASTERY",
+            "name": "Path Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PERIMETER_WARDINGS",
+            "name": "Perimeter Wardings",
+            "realm": "Channeling",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PHYSICAL_ENHANCEMENT",
+            "name": "Physical Enhancement",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PHYSICAL_EROSION",
+            "name": "Physical Erosion",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PHYSICAL_MANIPULATION",
+            "name": "Physical Manipulation",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PHYSICKS",
+            "name": "Physicks",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PLANAR_SUMMONS",
+            "name": "Planar Summons",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_PLANT_MASTERY",
+            "name": "Plant Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_POISON_MASTERY",
+            "name": "Poison Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_POWER_FOCUS",
+            "name": "Power Focus",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_POWER_LEECH",
+            "name": "Power Leech",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_POWER_LORE",
+            "name": "Power Lore",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_POWER_MANIPULATION",
+            "name": "Power Manipulation",
+            "realm": "Arcane",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_POWER_MASTERY",
+            "name": "Power Mastery",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_POWER_SUBVERSION",
+            "name": "Power Subversion",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_POWER_S_MASTER",
+            "name": "Power's Master",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PREDICTIONS",
+            "name": "Predictions",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PRESENCE",
+            "name": "Presence",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PROSELYTIZING",
+            "name": "Proselytizing",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PROSTHETICS",
+            "name": "Prosthetics",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PROTECTIONS",
+            "name": "Protections",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_PURIFICATIONS",
+            "name": "Purifications",
+            "realm": "Channeling",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_RAPID_WAYS",
+            "name": "Rapid Ways",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_REALM_LAW",
+            "name": "Realm Law",
+            "realm": "Arcane",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_REPULSIONS",
+            "name": "Repulsions",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_REVENGING_LAW",
+            "name": "Revenging Law",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_RUNE_MASTERY",
+            "name": "Rune Mastery",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SACRED_GROUNDS",
+            "name": "Sacred Grounds",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SAILING_MASTERY",
+            "name": "Sailing Mastery",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SEA_MASTERY",
+            "name": "Sea Mastery",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SEEMING_DEFENSES",
+            "name": "Seeming Defenses",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SEEMING_ENCHANTMENT",
+            "name": "Seeming Enchantment",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SEEMING_LAW",
+            "name": "Seeming Law",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SEEMING_MASTERY",
+            "name": "Seeming Mastery",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SEEMING_MEMORIES",
+            "name": "Seeming Memories",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SEEMING_PROJECTION",
+            "name": "Seeming Projection",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SELF_HEALING",
+            "name": "Self Healing",
+            "realm": "Mentalism",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SENSES",
+            "name": "Senses",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SENSE_CONTROL",
+            "name": "Sense Control",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SENSE_MASTERY",
+            "name": "Sense Mastery",
+            "realm": "Mentalism",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SENSE_THROUGH_OTHERS",
+            "name": "Sense Through Others",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SERPENT_LAW",
+            "name": "Serpent Law",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SHADOW_MASTERY",
+            "name": "Shadow Mastery",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SHIELD_MASTERY",
+            "name": "Shield Mastery",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SHIFTING",
+            "name": "Shifting",
+            "realm": "Mentalism",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SHIFTING_LAW",
+            "name": "Shifting Law",
+            "realm": "Arcane",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SOLID_ALTERATION",
+            "name": "Solid Alteration",
+            "realm": "Essence \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SOLID_DESTRUCTION",
+            "name": "Solid Destruction",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SOLID_MANIPULATION",
+            "name": "Solid Manipulation",
+            "realm": "Mentalism",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SOUL_DESTRUCTION",
+            "name": "Soul Destruction",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SOUND_CONTROL",
+            "name": "Sound Control",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SOUND_MASTERY",
+            "name": "Sound Mastery",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SOUND_MOLDING",
+            "name": "Sound Molding",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SOUND_PROJECTION",
+            "name": "Sound Projection",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SOUND_S_WAY",
+            "name": "Sound's Way",
+            "realm": "Channeling",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPEED",
+            "name": "Speed",
+            "realm": "Mentalism",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_BANE",
+            "name": "Spell Bane",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_COORDINATION",
+            "name": "Spell Coordination",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_DEFENSE",
+            "name": "Spell Defense",
+            "realm": "Channeling",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_DEFENSES",
+            "name": "Spell Defenses",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_ENHANCEMENT",
+            "name": "Spell Enhancement",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_HAND",
+            "name": "Spell Hand",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_INHIBITORS",
+            "name": "Spell Inhibitors",
+            "realm": "Arcane",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_PROTECTION",
+            "name": "Spell Protection",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_REINS",
+            "name": "Spell Reins",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_RESISTANCE",
+            "name": "Spell Resistance",
+            "realm": "Mentalism",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_SHAPING",
+            "name": "Spell Shaping",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_SHIELD",
+            "name": "Spell Shield",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_TRACKER",
+            "name": "Spell Tracker",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_TRIGGERS",
+            "name": "Spell Triggers",
+            "realm": "Arcane",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPELL_WALL",
+            "name": "Spell Wall",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPIRITUAL_VISION",
+            "name": "Spiritual Vision",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPIRIT_DOMINATION",
+            "name": "Spirit Domination",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPIRIT_LAW",
+            "name": "Spirit Law",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SPIRIT_MASTERY",
+            "name": "Spirit Mastery",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_STARLIGHTS",
+            "name": "Starlights",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_STARLORE",
+            "name": "Starlore",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_STARSENSE",
+            "name": "Starsense",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_STONE_CRAFTING",
+            "name": "Stone Crafting",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_STONE_MASTERY",
+            "name": "Stone Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_STRUCTURE_WARDINGS",
+            "name": "Structure Wardings",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SUMMONING_BOND",
+            "name": "Summoning Bond",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_SUMMONING_CIRCLES",
+            "name": "Summoning Circles",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_SUMMONING_MASTERY",
+            "name": "Summoning Mastery",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_SUMMONS",
+            "name": "Summons",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "true"
+        },
+        {
+            "id": "SPELLLIST_SURFACE_WAYS",
+            "name": "Surface Ways",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SUSTAIN_BODY",
+            "name": "Sustain Body",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SYMBOLIC_WAYS",
+            "name": "Symbolic Ways",
+            "realm": "Channeling",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_SYMBOLISM",
+            "name": "Symbolism",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_TELEKINESIS",
+            "name": "Telekinesis",
+            "realm": "Mentalism",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_TELEPORTALS",
+            "name": "Teleportals",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_TERROR",
+            "name": "Terror",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_THE_DEFENDER",
+            "name": "The Defender",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_THE_EYE",
+            "name": "The Eye",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_THE_HUNTER",
+            "name": "The Hunter",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_THE_MASK",
+            "name": "The Mask",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_THE_WILL",
+            "name": "The Will",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_THIEVING_LAW",
+            "name": "Thieving Law",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_TIME_LORE",
+            "name": "Time Lore",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_TIME_S_BRIDGE",
+            "name": "Time's Bridge",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_TRANSFORMATIONS",
+            "name": "Transformations",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_TRAVELER_S_WAYS",
+            "name": "Traveler's Ways",
+            "realm": "Essence",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_TREE_MASTERY",
+            "name": "Tree Mastery",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_TRUE_PERCEPTION",
+            "name": "True Perception",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_TRUE_SIGHT",
+            "name": "True Sight",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_UNBARRING_WAYS",
+            "name": "Unbarring Ways",
+            "realm": "Essence",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_UNDERSTANDING_MASTERY",
+            "name": "Understanding Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_VENGEANCE",
+            "name": "Vengeance",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_VOID_LAW",
+            "name": "Void Law",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_VOODOO_MAGIC",
+            "name": "Voodoo Magic",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WARDING_WAYS",
+            "name": "Warding Ways",
+            "realm": "Channeling \/ Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WARDS",
+            "name": "Wards",
+            "realm": "Arcane",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WARRIOR_LAW",
+            "name": "Warrior Law",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WARRIOR_S_ENHANCEMENTS",
+            "name": "Warrior's Enhancements",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WARRIOR_S_WEAPON",
+            "name": "Warrior's Weapon",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WATER_LAW",
+            "name": "Water Law",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WATER_MASTERY",
+            "name": "Water Mastery",
+            "realm": "Essence",
+            "type": "Closed",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WAY_OF_THE_VOICE",
+            "name": "Way of the Voice",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WEAPON_ENHANCEMENTS",
+            "name": "Weapon Enhancements",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WEAPON_MASTERY",
+            "name": "Weapon Mastery",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WEATHER_WAYS",
+            "name": "Weather Ways",
+            "realm": "Channeling",
+            "type": "Open",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WILL_OF_THE_WARRIOR",
+            "name": "Will of the Warrior",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WIND_LAW",
+            "name": "Wind Law",
+            "realm": "Essence",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WOOD_CRAFTING",
+            "name": "Wood Crafting",
+            "realm": "Neutral",
+            "type": "Training Package",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WOUNDING",
+            "name": "Wounding",
+            "realm": "Channeling",
+            "type": "Base",
+            "evil": "true",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_WYRD_MASTERY",
+            "name": "Wyrd Mastery",
+            "realm": "Channeling \/ Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ZEN_AWARENESS",
+            "name": "Zen Awareness",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        },
+        {
+            "id": "SPELLLIST_ZEN_FOCUS",
+            "name": "Zen Focus",
+            "realm": "Mentalism",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false"
+        }
+    ]
+}

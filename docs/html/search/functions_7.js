@@ -5,9 +5,11 @@ var searchData=
   ['isbn_2',['isbn',['../class_book_data.html#a746ff8194a77123b41ad75658a93df23',1,'BookData']]],
   ['isdevelopment_3',['isDevelopment',['../namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e',1,'StatType']]],
   ['isdialect_4',['isDialect',['../class_language_dialect_data.html#a32aeb22364b30f998493151a24a99851',1,'LanguageDialectData']]],
-  ['ismagical_5',['isMagical',['../namespace_realm_type.html#a925eae689753e8add14afd4f39fddb39',1,'RealmType::isMagical()'],['../namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844',1,'ResistanceType::isMagical()']]],
-  ['isprimary_6',['isPrimary',['../namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b',1,'StatType']]],
-  ['issomantic_7',['isSomantic',['../class_language_data.html#a69e765bb580248b28f7904fa73aa18fe',1,'LanguageData']]],
-  ['isspoken_8',['isSpoken',['../class_language_data.html#ad6e3d452c38d41bdfde205882a1b075b',1,'LanguageData']]],
-  ['iswritten_9',['isWritten',['../class_language_data.html#af84b4226cfb0decabda010a08b3a2808',1,'LanguageData']]]
+  ['isevil_5',['isEvil',['../class_spell_list_data.html#a72dae77ba546a4ca97d66c7c67925908',1,'SpellListData']]],
+  ['ismagical_6',['isMagical',['../namespace_realm_type.html#a925eae689753e8add14afd4f39fddb39',1,'RealmType::isMagical()'],['../namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844',1,'ResistanceType::isMagical()']]],
+  ['isprimary_7',['isPrimary',['../namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b',1,'StatType']]],
+  ['issomantic_8',['isSomantic',['../class_language_data.html#a69e765bb580248b28f7904fa73aa18fe',1,'LanguageData']]],
+  ['isspoken_9',['isSpoken',['../class_language_data.html#ad6e3d452c38d41bdfde205882a1b075b',1,'LanguageData']]],
+  ['issummoning_10',['isSummoning',['../class_spell_list_data.html#a0cc14d7b38cae643061dd1b7915895a5',1,'SpellListData']]],
+  ['iswritten_11',['isWritten',['../class_language_data.html#af84b4226cfb0decabda010a08b3a2808',1,'LanguageData']]]
 ];

@@ -198,14 +198,7 @@ Functions</h2></td></tr>
 
 <p>Get the enumeration value based on a string. </p>
 <p>Accepts values that are returned by <a class="el" href="#ab5677773150878dce987c539a56d5580" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
-<p>For values that contain strings this function will accept these with the space, with the space removed or with the space changed to an underscore:</p><ul>
-<li>"SelfDiscipline"</li>
-<li>"Self_Discipline"</li>
-<li>"Self Discipline"</li>
-<li>"selfdiscipline"</li>
-<li>"self_discipline"</li>
-<li>"self discipline"</li>
-</ul>
+<p>Any characters in <em class="arg">sv</em> that are not letters or numbers will be removed before comparison</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sv</td><td>string_view to get the enumeration for </td></tr>

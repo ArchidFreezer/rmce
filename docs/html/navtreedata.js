@@ -40,8 +40,8 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -57,8 +57,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"class_special_attack_table.html#a26a3180443e63697c26aaf2a300f0e3a",
-"namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fdafd7275ddeffa7c4405d0e9f3c5bcf6ba"
+"class_skill_progression_type_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25",
+"namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a024499b1a3307093b94d16604da5d309"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -21,6 +21,7 @@ var dir_d27df6bdec76b9f4631be2492a3421fa =
     [ "SkillGroupType.h", "_skill_group_type_8h_source.html", null ],
     [ "SkillProgressionData.h", "_skill_progression_data_8h_source.html", null ],
     [ "SkillProgressionTypeData.h", "_skill_progression_type_data_8h_source.html", null ],
+    [ "SpellListData.h", "_spell_list_data_8h_source.html", null ],
     [ "SpellListType.h", "_spell_list_type_8h_source.html", null ],
     [ "StatLossType.h", "_stat_loss_type_8h_source.html", null ],
     [ "StatType.h", "_stat_type_8h_source.html", null ]

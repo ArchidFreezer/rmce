@@ -12,10 +12,12 @@ var hierarchy =
         [ "LanguageCategoryDatafileParserJson", "class_language_category_datafile_parser_json.html", null ],
         [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", null ],
         [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", null ],
-        [ "SpecialAttackTableDatafileParserJson", "class_special_attack_table_datafile_parser_json.html", null ]
+        [ "SpecialAttackTableDatafileParserJson", "class_special_attack_table_datafile_parser_json.html", null ],
+        [ "SpellListDatafileParserJson", "class_spell_list_datafile_parser_json.html", null ]
       ] ],
       [ "DatafileParserXml", "class_datafile_parser_xml.html", [
-        [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", null ]
+        [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", null ],
+        [ "SpellListDatafileParserXml", "class_spell_list_datafile_parser_xml.html", null ]
       ] ]
     ] ],
     [ "Dice", "class_dice.html", null ],
@@ -35,7 +37,8 @@ var hierarchy =
       [ "LanguageDialectData", "class_language_dialect_data.html", null ],
       [ "LookupTable< RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype >", "class_lookup_table.html", null ],
       [ "SkillCategoryData", "class_skill_category_data.html", null ],
-      [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
+      [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ],
+      [ "SpellListData", "class_spell_list_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
     [ "std::runtime_error", null, [

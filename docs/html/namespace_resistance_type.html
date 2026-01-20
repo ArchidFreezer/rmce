@@ -203,16 +203,7 @@ Functions</h2></td></tr>
 
 <p>Get the enumeration value based on a string. </p>
 <p>Accepts values that are returned by <a class="el" href="#a361aae8f6aea41c5f7d98a117f753996" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
-<p>For values that contain strings with a space or slash this function will accept these with the character, with the character removed or with the character changed to an underscore:</p><ul>
-<li>"channelingessence"</li>
-<li>"channeling_essence"</li>
-<li>"channeling/essence"</li>
-<li>"channeling essence"</li>
-<li>"ChannelingEssence"</li>
-<li>"Channeling_Essence"</li>
-<li>"Channeling/Essence"</li>
-<li>"Channeling Essence"</li>
-</ul>
+<p>Any characters in <em class="arg">sv</em> that are not letters or numbers will be removed before comparison</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sv</td><td>string_view to get the enumeration for </td></tr>
