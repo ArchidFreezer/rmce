@@ -1,13 +1,6 @@
 #include <LanguageCategoryData.h>
 #include <LanguageCategoryDatafileParserJson.h>
 
-
-LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "LanguageCategory", filename) {
-	setRootNode("languageCategories");
-}
-
-LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleDataCache& cache) : LanguageCategoryDatafileParserJson(cache, "") {}
-
 void LanguageCategoryDatafileParserJson::parse(bool id_only) {
 	// We know there are no references in language catagories so we create the complete object in the cache on the first pass
 	if (!id_only) return;

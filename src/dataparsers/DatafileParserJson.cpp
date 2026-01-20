@@ -1,9 +1,5 @@
 #include <DatafileParserJson.h>
 
-DatafileParserJson::DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) : DatafileParser(cache, datatype, filename) {}
-
-DatafileParserJson::DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype) : DatafileParser(cache, datatype) {}
-
 void DatafileParserJson::read(const std::string& filename, bool id_only) {
 
 	if (filename.empty()) throw FilenameNotSetException("You are attempting to read file a file without setting the filename first.");

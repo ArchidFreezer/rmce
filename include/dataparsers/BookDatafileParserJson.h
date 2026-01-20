@@ -27,13 +27,15 @@ public:
 	 * @param cache Cache to use for #BookData objects
 	 * @param filename Path to the datafile to parse
 	 */
-	BookDatafileParserJson(GameRuleDataCache& cache, std::string_view filename);
+	BookDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Book", filename) {
+		setRootNode("books");
+	}
 
 	/**
 	 * @brief Constructor
 	 * @param cache Cache to use for #BookData objects
 	 */
-	BookDatafileParserJson(GameRuleDataCache& cache);
+	BookDatafileParserJson(GameRuleDataCache& cache) : BookDatafileParserJson(cache, "") {}
 
 	/**
 	 * @brief Write book game rule data from the cache to a json file

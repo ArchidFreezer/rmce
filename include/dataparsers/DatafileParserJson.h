@@ -22,14 +22,14 @@ public:
 	 * @param datatype String containing the type of data to parse
 	 * @param filename Path to the datafile to parse
 	 */
-	DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename);
+	DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) : DatafileParser(cache, datatype, filename) {}
 
 	/**
 	 * @brief Constructor
 	 * @param cache Cache to use for #LanguageCategoryData objects
 	 * @param datatype String containing the type of data to parse
 	 */
-	DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype);
+	DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype) : DatafileParser(cache, datatype) {}
 
 	/**
 	 * @brief Default destructor

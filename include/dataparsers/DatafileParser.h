@@ -42,14 +42,17 @@ public:
 	 * @param datatype String containing the name of the type of data being processed
 	 * @param filename Path to the datafile to parse
 	 */
-	DatafileParser(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename);
+	DatafileParser(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) :
+		cache_{ cache },
+		rule_datatype_{ datatype },
+		filename_{ filename } {}
 
 	/**
 	 * @brief Consructor
 	 * @param cache Reference to a cache object to store the data objects
 	 * @param datatype String containing the name of the type of data being processed
 	 */
-	DatafileParser(GameRuleDataCache& cache, std::string_view datatype);
+	DatafileParser(GameRuleDataCache& cache, std::string_view datatype) :	DatafileParser(cache, datatype, "") {}
 
 	/**
 	 * @brief Default destructor

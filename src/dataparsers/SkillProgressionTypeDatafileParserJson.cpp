@@ -1,12 +1,6 @@
 #include <SkillProgressionTypeData.h>
 #include <SkillProgressionTypeDatafileParserJson.h>
 
-SkillProgressionTypeDatafileParserJson::SkillProgressionTypeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "SkillProgressionType", filename) {
-	setRootNode("skillProgressions");
-}
-
-SkillProgressionTypeDatafileParserJson::SkillProgressionTypeDatafileParserJson(GameRuleDataCache& cache) : SkillProgressionTypeDatafileParserJson(cache, "") {}
-
 void SkillProgressionTypeDatafileParserJson::parse(bool id_only) {
 	// We know there are no references in skill progression types so we create the complete object in the cache on the first pass
 	if (!id_only) return;

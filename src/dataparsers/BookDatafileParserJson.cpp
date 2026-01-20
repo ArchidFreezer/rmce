@@ -1,13 +1,6 @@
 #include <BookData.h>
 #include <BookDatafileParserJson.h>
 
-
-BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Book", filename) {
-	setRootNode("books");
-}
-
-BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache) : BookDatafileParserJson(cache, "") {}
-
 void BookDatafileParserJson::parse(bool id_only) {
 	// We know there are no references in books so we create the complete object in the cache on the first pass
 	if (!id_only) return;

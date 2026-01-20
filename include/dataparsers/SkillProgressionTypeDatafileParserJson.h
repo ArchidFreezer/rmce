@@ -27,13 +27,15 @@ public:
 	 * @param cache Cache to use for SkillProgressionTypeData objects
 	 * @param filename Path to the datafile to parse
 	 */
-	SkillProgressionTypeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename);
+	SkillProgressionTypeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "SkillProgressionType", filename) {
+		setRootNode("skillProgressions");
+	}
 
 	/**
 	 * @brief Constructor
 	 * @param cache Cache to use for SkillProgressionTypeData objects
 	 */
-	SkillProgressionTypeDatafileParserJson(GameRuleDataCache& cache);
+	SkillProgressionTypeDatafileParserJson(GameRuleDataCache& cache) : SkillProgressionTypeDatafileParserJson(cache, "") {}
 
 	/**
 	 * @brief Write book game rule data from the cache to a json file

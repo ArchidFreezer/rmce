@@ -2,13 +2,6 @@
 #include <LanguageDatafileParserJson.h>
 #include <LanguageDialectData.h>
 
-
-LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Language", filename) {
-	setRootNode("languages");
-}
-
-LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache) : LanguageDatafileParserJson(cache, "") {}
-
 void LanguageDatafileParserJson::parse(bool id_only) {
 	std::cout << "Loading Language data ... ";
 	std::cout << (id_only ? "[Pass 1]" : "[Pass 2]") << std::endl;

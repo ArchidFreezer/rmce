@@ -26,13 +26,15 @@ public:
 	 * @param cache Cache to use for #LanguageCategoryData objects
 	 * @param filename Path to the datafile to parse
 	 */
-	LanguageCategoryDatafileParserJson(GameRuleDataCache& cache, std::string_view filename);
+	LanguageCategoryDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "LanguageCategory", filename) {
+		setRootNode("languageCategories");
+	}
 
 	/**
 	 * @brief Constructor
 	 * @param cache Cache to use for #LanguageCategoryData objects
 	 */
-	LanguageCategoryDatafileParserJson(GameRuleDataCache& cache);
+	LanguageCategoryDatafileParserJson(GameRuleDataCache& cache) : LanguageCategoryDatafileParserJson(cache, "") {}
 
 	/**
 	 * @brief Write language category game rule data from the cache to a json file
