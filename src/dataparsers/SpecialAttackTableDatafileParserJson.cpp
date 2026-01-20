@@ -1,116 +1,87 @@
-#include <iostream>
-#include <stdexcept>
 #include <string>
 #include <SpecialAttackTableDatafileParserJson.h>
 #include <table/SpecialAttackTable.h>
 #include <table/TableRowNumberMatcherFactory.h>
 
-void SpecialAttackTableDatafileParserJson::save(const std::string& filename) {
-	if (filename.empty()) return;
+void SpecialAttackTableDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
+	SpecialAttackTable& game_data = cache().get<SpecialAttackTable>(id);
 
-	// Main tree
-	pt::ptree tree;
+	datum.put("id", game_data.id());
+	datum.put("name", game_data.name());
+	datum.put("small", game_data.limit(AttackSizeType::kSmall));
+	datum.put("medium", game_data.limit(AttackSizeType::kMedium));
+	datum.put("large", game_data.limit(AttackSizeType::kLarge));
+	datum.put("huge", game_data.limit(AttackSizeType::kHuge));
 
-	// Tree of attack tables
-	pt::ptree ptables;
+	int max_row{ 0 };
 
-	std::set<std::string> keys{};
-	cache().keys<SpecialAttackTable>(keys);
+	pt::ptree mrows; // Modified rows
+	for (auto& m : game_data.modified()) {
+		pt::ptree prow;
 
-	// Loop through the tables
-	for (std::string t : keys) {
-		// Individual table
-		pt::ptree ptable;
-		try {
-			SpecialAttackTable& table_data = cache().get<SpecialAttackTable>(t);
+		TableRow tr = m.second;
 
+		max_row = std::max(max_row, m.first->max());
 
-			ptable.put("id", table_data.id());
-			ptable.put("name", table_data.name());
-			ptable.put("small", table_data.limit(AttackSizeType::kSmall));
-			ptable.put("medium", table_data.limit(AttackSizeType::kMedium));
-			ptable.put("large", table_data.limit(AttackSizeType::kLarge));
-			ptable.put("huge", table_data.limit(AttackSizeType::kHuge));
-
-			int max_row{ 0 };
-
-			pt::ptree mrows; // Modified rows
-			for (auto& m : table_data.modified()) {
-				pt::ptree prow;
-
-				TableRow tr = m.second;
-
-				max_row = std::max(max_row, m.first->max());
-
-				prow.put("min", m.first->min());
-				prow.put("max", m.first->max());
-				prow.put("at1", tr.cell(0));
-				prow.put("at2", tr.cell(1));
-				prow.put("at3", tr.cell(2));
-				prow.put("at4", tr.cell(3));
-				prow.put("at5", tr.cell(4));
-				prow.put("at6", tr.cell(5));
-				prow.put("at7", tr.cell(6));
-				prow.put("at8", tr.cell(7));
-				prow.put("at9", tr.cell(8));
-				prow.put("at10", tr.cell(9));
-				prow.put("at11", tr.cell(10));
-				prow.put("at12", tr.cell(11));
-				prow.put("at13", tr.cell(12));
-				prow.put("at14", tr.cell(13));
-				prow.put("at15", tr.cell(14));
-				prow.put("at16", tr.cell(15));
-				prow.put("at17", tr.cell(16));
-				prow.put("at18", tr.cell(17));
-				prow.put("at19", tr.cell(18));
-				prow.put("at20", tr.cell(19));
-				mrows.push_back(std::make_pair("", prow));
-			}
-
-			pt::ptree umrows; // Modified rows
-			for (auto& m : table_data.unmodified()) {
-				pt::ptree prow;
-
-				TableRow tr = m.second;
-
-				prow.put("min", m.first->min());
-				prow.put("max", m.first->max());
-				prow.put("at1", tr.cell(0));
-				prow.put("at2", tr.cell(1));
-				prow.put("at3", tr.cell(2));
-				prow.put("at4", tr.cell(3));
-				prow.put("at5", tr.cell(4));
-				prow.put("at6", tr.cell(5));
-				prow.put("at7", tr.cell(6));
-				prow.put("at8", tr.cell(7));
-				prow.put("at9", tr.cell(8));
-				prow.put("at10", tr.cell(9));
-				prow.put("at11", tr.cell(10));
-				prow.put("at12", tr.cell(11));
-				prow.put("at13", tr.cell(12));
-				prow.put("at14", tr.cell(13));
-				prow.put("at15", tr.cell(14));
-				prow.put("at16", tr.cell(15));
-				prow.put("at17", tr.cell(16));
-				prow.put("at18", tr.cell(17));
-				prow.put("at19", tr.cell(18));
-				prow.put("at20", tr.cell(19));
-				umrows.push_back(std::make_pair("", prow));
-			}
-
-			ptable.put("max_row", max_row);
-			ptable.push_back(std::make_pair("modified-rows", mrows));
-			if (!umrows.empty()) ptable.push_back(std::make_pair("unmodified-rows", umrows));
-
-		} catch (const std::out_of_range& e) {
-			std::cout << "Error: " << e.what() << std::endl;
-		}
-		ptables.push_back(std::make_pair("", ptable));
+		prow.put("min", m.first->min());
+		prow.put("max", m.first->max());
+		prow.put("at1", tr.cell(0));
+		prow.put("at2", tr.cell(1));
+		prow.put("at3", tr.cell(2));
+		prow.put("at4", tr.cell(3));
+		prow.put("at5", tr.cell(4));
+		prow.put("at6", tr.cell(5));
+		prow.put("at7", tr.cell(6));
+		prow.put("at8", tr.cell(7));
+		prow.put("at9", tr.cell(8));
+		prow.put("at10", tr.cell(9));
+		prow.put("at11", tr.cell(10));
+		prow.put("at12", tr.cell(11));
+		prow.put("at13", tr.cell(12));
+		prow.put("at14", tr.cell(13));
+		prow.put("at15", tr.cell(14));
+		prow.put("at16", tr.cell(15));
+		prow.put("at17", tr.cell(16));
+		prow.put("at18", tr.cell(17));
+		prow.put("at19", tr.cell(18));
+		prow.put("at20", tr.cell(19));
+		mrows.push_back(std::make_pair("", prow));
 	}
 
-	tree.add_child(rootNode(), ptables);
+	pt::ptree umrows; // Modified rows
+	for (auto& m : game_data.unmodified()) {
+		pt::ptree prow;
 
-	pt::write_json(filename, tree);
+		TableRow tr = m.second;
+
+		prow.put("min", m.first->min());
+		prow.put("max", m.first->max());
+		prow.put("at1", tr.cell(0));
+		prow.put("at2", tr.cell(1));
+		prow.put("at3", tr.cell(2));
+		prow.put("at4", tr.cell(3));
+		prow.put("at5", tr.cell(4));
+		prow.put("at6", tr.cell(5));
+		prow.put("at7", tr.cell(6));
+		prow.put("at8", tr.cell(7));
+		prow.put("at9", tr.cell(8));
+		prow.put("at10", tr.cell(9));
+		prow.put("at11", tr.cell(10));
+		prow.put("at12", tr.cell(11));
+		prow.put("at13", tr.cell(12));
+		prow.put("at14", tr.cell(13));
+		prow.put("at15", tr.cell(14));
+		prow.put("at16", tr.cell(15));
+		prow.put("at17", tr.cell(16));
+		prow.put("at18", tr.cell(17));
+		prow.put("at19", tr.cell(18));
+		prow.put("at20", tr.cell(19));
+		umrows.push_back(std::make_pair("", prow));
+	}
+
+	datum.put("max_row", max_row);
+	datum.push_back(std::make_pair("modified-rows", mrows));
+	if (!umrows.empty()) datum.push_back(std::make_pair("unmodified-rows", umrows));
 }
 
 void SpecialAttackTableDatafileParserJson::parse(bool id_only) {

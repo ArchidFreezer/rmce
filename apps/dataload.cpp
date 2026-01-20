@@ -6,6 +6,7 @@
 #include "SkillProgressionTypeDatafileParserJson.h"
 #include <AttackTableDatafileParserJson.h>
 #include <SpecialAttackTableDatafileParserJson.h>
+#include <SpellListDatafileParserJson.h>
 
 int main()
 {
@@ -20,6 +21,7 @@ int main()
 	SkillProgressionTypeDatafileParserJson skill_progression_parser(cache, "../../../../data/SkillProgressionTypes.json");
 	AttackTableDatafileParserJson attack_table_parser(cache, "../../../../data/AttackTables.json");
 	SpecialAttackTableDatafileParserJson special_attack_table_parser(cache, "../../../../data/SpecialAttackTables.json");
+	SpellListDatafileParserJson spell_list_parser(cache, "../../../../data/SpellLists.json");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
@@ -29,6 +31,7 @@ int main()
 	parsers.push_back(&skill_progression_parser);
 	parsers.push_back(&attack_table_parser);
 	parsers.push_back(&special_attack_table_parser);
+	parsers.push_back(&spell_list_parser);
 
 	for (auto& parser : parsers) {
 		parser->read(true);
@@ -41,6 +44,7 @@ int main()
 	language_category_parser.save("../../../../data/LanguageCategories2.json");
 	language_parser.save("../../../../data/Languages2.json");
 	skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
+	spell_list_parser.save("../../../../data/SpellLists2.json");
 	// We don't resave the attack tables as the nature of the objects means the rows are unordered so the files won't match
 
 	return 0;

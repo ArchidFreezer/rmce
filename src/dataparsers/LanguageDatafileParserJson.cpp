@@ -1,8 +1,6 @@
-#include <iostream>
-#include <stdexcept>
-#include "LanguageData.h"
-#include "LanguageDatafileParserJson.h"
-#include "LanguageDialectData.h"
+#include <LanguageData.h>
+#include <LanguageDatafileParserJson.h>
+#include <LanguageDialectData.h>
 
 
 LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Language", filename) {
@@ -54,37 +52,15 @@ void LanguageDatafileParserJson::parse(bool id_only) {
 	std::cout << " done" << std::endl;
 }
 
-void LanguageDatafileParserJson::save(const std::string& filename) {
-	// Main tree
-	pt::ptree tree;
-
-	// Array of books
-	pt::ptree plangs;
-
-	std::set<std::string> keys{};
-	cache().keys<LanguageData>(keys);
-
-	for (std::string b : keys) {
-		try {
-			LanguageData& language_data = cache().get<LanguageData>(b);
-			// Individual language
-			pt::ptree datum;
-			datum.put("id", language_data.id());
-			datum.put("name", language_data.name());
-			datum.put("category", language_data.category());
-			if (language_data.baseLanguage() != language_data.name()) {
-				datum.put("baseLanguage", language_data.baseLanguage());
-			}
-			datum.put("isSpoken", language_data.isSpoken());
-			datum.put("isWritten", language_data.isWritten());
-			datum.put("isSomantic", language_data.isSomantic());
-			plangs.push_back(std::make_pair("", datum));
-		} catch (const std::out_of_range& e) {
-			std::cout << "Error: " << e.what() << std::endl;
-		}
+void LanguageDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
+	LanguageData& game_data = cache().get<LanguageData>(id);
+	datum.put("id", game_data.id());
+	datum.put("name", game_data.name());
+	datum.put("category", game_data.category());
+	if (game_data.baseLanguage() != game_data.name()) {
+		datum.put("baseLanguage", game_data.baseLanguage());
 	}
-
-	tree.add_child(rootNode(), plangs);
-
-	pt::write_json(filename, tree);
+	datum.put("isSpoken", game_data.isSpoken());
+	datum.put("isWritten", game_data.isWritten());
+	datum.put("isSomantic", game_data.isSomantic());
 }

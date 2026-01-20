@@ -1,7 +1,8 @@
 #pragma once
 
-#include "DatafileParserJson.h"
-#include "GameRuleDataCache.h"
+#include <DatafileParserJson.h>
+#include <GameRuleDataCache.h>
+#include <SpellListData.h>
 
 /**
  * @class SpellListDatafileParserJson
@@ -19,7 +20,7 @@
 class SpellListDatafileParserJson : public DatafileParserJson {
 public:
 	// We need this to prevent name hiding as we have a method with the same name defined in this class
-	using DatafileParser::save;
+//	using DatafileParser::save;
 
 	/**
 	 * @brief Constructor
@@ -40,7 +41,14 @@ public:
 	 * @brief Write spell list game rule data from the cache to a json file
 	 * @param filename Path to the json file to write
 	 */
-	void save(const std::string& filename) override;
+	void save(const std::string& filename) override { saveData<SpellListData>(filename); }
+
+	/**
+	 * @brief Populate the given boost tree with the data from a spell list
+	 * @param id Id of the spell list to populate from
+	 * @param pdatum boost tree to populate
+	 */
+	void populateDatum(std::string& id, pt::ptree& pdatum) override;
 
 private:
 	/**

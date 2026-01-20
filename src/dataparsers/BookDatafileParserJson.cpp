@@ -1,7 +1,5 @@
-#include <iostream>
-#include <stdexcept>
-#include "BookData.h"
-#include "BookDatafileParserJson.h"
+#include <BookData.h>
+#include <BookDatafileParserJson.h>
 
 
 BookDatafileParserJson::BookDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Book", filename) {
@@ -39,37 +37,11 @@ void BookDatafileParserJson::parse(bool id_only) {
 	std::cout << " done" << std::endl;
 }
 
-void BookDatafileParserJson::save(const std::string& filename)
-{
-	if (filename.empty()) return;
-
-	// Main tree
-	pt::ptree tree;
-
-	// Tree of books
-	pt::ptree pbooks;
-
-	std::set<std::string> keys{};
-	cache().keys<BookData>(keys);
-
-	for (std::string b : keys) {
-		try {
-			BookData& book_data = cache().get<BookData>(b);
-			// Individual book
-			pt::ptree book;
-			book.put("id", book_data.id());
-			book.put("code", book_data.code());
-			book.put("name", book_data.name());
-			book.put("abbreviation", book_data.abbreviation());
-			book.put("isbn", book_data.isbn());
-			pbooks.push_back(std::make_pair("", book));
-		}
-		catch (const std::out_of_range& e) {
-			std::cout << "Error: " << e.what() << std::endl;
-		}
-	}
-
-	tree.add_child(rootNode(), pbooks);
-
-	pt::write_json(filename, tree);
+void BookDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
+	BookData& game_data = cache().get<BookData>(id);
+	datum.put("id", game_data.id());
+	datum.put("code", game_data.code());
+	datum.put("name", game_data.name());
+	datum.put("abbreviation", game_data.abbreviation());
+	datum.put("isbn", game_data.isbn());
 }

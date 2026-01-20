@@ -1,5 +1,4 @@
-#include "DatafileParserJson.h"
-#include <iostream>
+#include <DatafileParserJson.h>
 
 DatafileParserJson::DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) : DatafileParser(cache, datatype, filename) {}
 
@@ -20,4 +19,3 @@ void DatafileParserJson::read(const std::string& filename, bool id_only) {
 	}
 
 }
-

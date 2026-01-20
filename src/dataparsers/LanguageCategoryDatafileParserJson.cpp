@@ -1,7 +1,5 @@
-#include <iostream>
-#include <stdexcept>
-#include "LanguageCategoryData.h"
-#include "LanguageCategoryDatafileParserJson.h"
+#include <LanguageCategoryData.h>
+#include <LanguageCategoryDatafileParserJson.h>
 
 
 LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "LanguageCategory", filename) {
@@ -32,30 +30,8 @@ void LanguageCategoryDatafileParserJson::parse(bool id_only) {
 	std::cout << " done" << std::endl;
 }
 
-void LanguageCategoryDatafileParserJson::save(const std::string& filename) {
-	// Main tree
-	pt::ptree tree;
-
-	// Array of language categories
-	pt::ptree plangs;
-
-	std::set<std::string> keys{};
-	cache().keys<LanguageCategoryData>(keys);
-
-	for (std::string b : keys) {
-		try {
-			LanguageCategoryData& lang_data = cache().get<LanguageCategoryData>(b);
-			// Individual category
-			pt::ptree plangcat;
-			plangcat.put("id", lang_data.id());
-			plangcat.put("name", lang_data.name());
-			plangs.push_back(std::make_pair("", plangcat));
-		} catch (const std::out_of_range& e) {
-			std::cout << "Error: " << e.what() << std::endl;
-		}
-	}
-
-	tree.add_child(rootNode(), plangs);
-
-	pt::write_json(filename, tree);
+void LanguageCategoryDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
+	LanguageCategoryData& game_data = cache().get<LanguageCategoryData>(id);
+	datum.put("id", game_data.id());
+	datum.put("name", game_data.name());
 }

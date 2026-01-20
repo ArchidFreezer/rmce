@@ -1,5 +1,3 @@
-#include <iostream>
-#include <stdexcept>
 #include <RealmType.h>
 #include <SpellListData.h>
 #include <SpellListDatafileParserJson.h>
@@ -35,37 +33,12 @@ void SpellListDatafileParserJson::parse(bool id_only) {
 
 }
 
-void SpellListDatafileParserJson::save(const std::string& filename) {
-	if (filename.empty()) return;
-
-	// Main tree
-	pt::ptree tree;
-
-	// Tree of spell lists
-	pt::ptree datums;
-
-	std::set<std::string> keys{};
-	cache().keys<SpellListData>(keys);
-
-	for (std::string key : keys) {
-		try {
-			SpellListData& game_data = cache().get<SpellListData>(key);
-			// Individual book
-			pt::ptree datum;
-			datum.put("id", game_data.id());
-			datum.put("name", game_data.name());
-			datum.put("realm", RealmType::toString(game_data.realm()));
-			datum.put("type", SpellListType::toString(game_data.type()));
-			datum.put("evil", game_data.isEvil());
-			datum.put("summoning", game_data.isSummoning());
-
-			datums.push_back(std::make_pair("", datum));
-		} catch (const std::out_of_range& e) {
-			std::cout << "Error: " << e.what() << std::endl;
-		}
-	}
-
-	tree.add_child(rootNode(), datums);
-
-	pt::write_json(filename, tree);
+void SpellListDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
+	SpellListData& game_data = cache().get<SpellListData>(id);
+	datum.put("id", game_data.id());
+	datum.put("name", game_data.name());
+	datum.put("realm", RealmType::toString(game_data.realm()));
+	datum.put("type", SpellListType::toString(game_data.type()));
+	datum.put("evil", game_data.isEvil());
+	datum.put("summoning", game_data.isSummoning());
 }

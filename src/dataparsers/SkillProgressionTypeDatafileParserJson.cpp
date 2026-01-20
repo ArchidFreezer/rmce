@@ -1,7 +1,5 @@
-#include <iostream>
-#include <stdexcept>
-#include "SkillProgressionTypeData.h"
-#include "SkillProgressionTypeDatafileParserJson.h"
+#include <SkillProgressionTypeData.h>
+#include <SkillProgressionTypeDatafileParserJson.h>
 
 SkillProgressionTypeDatafileParserJson::SkillProgressionTypeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "SkillProgressionType", filename) {
 	setRootNode("skillProgressions");
@@ -42,37 +40,13 @@ void SkillProgressionTypeDatafileParserJson::parse(bool id_only) {
 	std::cout << " done" << std::endl;
 }
 
-void SkillProgressionTypeDatafileParserJson::save(const std::string& filename) {
-	if (filename.empty()) return;
-
-	// Main tree
-	pt::ptree tree;
-
-	// Tree of progressions
-	pt::ptree progressions;
-
-	std::set<std::string> keys{};
-	cache().keys<SkillProgressionTypeData>(keys);
-
-	for (std::string key : keys) {
-		try {
-			SkillProgressionTypeData& progression_data = cache().get<SkillProgressionTypeData>(key);
-			// Individual book
-			pt::ptree datum;
-			datum.put("id", progression_data.id());
-			datum.put("name", progression_data.name());
-			datum.put("zero", progression_data.zero());
-			datum.put("ten", progression_data.ten());
-			datum.put("twenty", progression_data.twenty());
-			datum.put("thirty", progression_data.thirty());
-			datum.put("remaining", progression_data.remaining());
-			progressions.push_back(std::make_pair("", datum));
-		} catch (const std::out_of_range& e) {
-			std::cout << "Error: " << e.what() << std::endl;
-		}
-	}
-
-	tree.add_child(rootNode(), progressions);
-
-	pt::write_json(filename, tree);
+void SkillProgressionTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
+	SkillProgressionTypeData& game_data = cache().get<SkillProgressionTypeData>(id);
+	datum.put("id", game_data.id());
+	datum.put("name", game_data.name());
+	datum.put("zero", game_data.zero());
+	datum.put("ten", game_data.ten());
+	datum.put("twenty", game_data.twenty());
+	datum.put("thirty", game_data.thirty());
+	datum.put("remaining", game_data.remaining());
 }

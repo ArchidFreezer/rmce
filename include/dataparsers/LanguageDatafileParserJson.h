@@ -1,7 +1,8 @@
 #pragma once
 
-#include "DatafileParserJson.h"
-#include "GameRuleDataCache.h"
+#include <DatafileParserJson.h>
+#include <GameRuleDataCache.h>
+#include <LanguageData.h>
 
 /**
  * @class LanguageDatafileParserJson
@@ -37,7 +38,14 @@ public:
 	 * @brief Write language game rule data from the cache to a json file
 	 * @param filename Path to the json file to write
 	 */
-	void save(const std::string& filename) override;
+	void save(const std::string& filename) override { saveData<LanguageData>(filename); }
+
+	/**
+	 * @brief Populate the given boost tree with the data from a language
+	 * @param id Id of the language to populate from
+	 * @param pdatum boost tree to populate
+	 */
+	void populateDatum(std::string& id, pt::ptree& pdatum) override;
 
 private:
 	/**

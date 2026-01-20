@@ -1,7 +1,8 @@
 #pragma once
 
-#include "DatafileParserJson.h"
-#include "GameRuleDataCache.h"
+#include <DatafileParserJson.h>
+#include <GameRuleDataCache.h>
+#include <SkillProgressionTypeData.h>
 
 /**
  * @class SkillProgressionTypeDatafileParserJson
@@ -38,7 +39,14 @@ public:
 	 * @brief Write book game rule data from the cache to a json file
 	 * @param filename Path to the json file to write
 	 */
-	void save(const std::string& filename) override;
+	void save(const std::string& filename) override { saveData<SkillProgressionTypeData>(filename); }
+
+	/**
+	 * @brief Populate the given boost tree with the data from a skill progression type
+	 * @param id Id of the skill progression type to populate from
+	 * @param pdatum boost tree to populate
+	 */
+	void populateDatum(std::string& id, pt::ptree& pdatum) override;
 
 private:
 	/**

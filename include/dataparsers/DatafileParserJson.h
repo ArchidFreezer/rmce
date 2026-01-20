@@ -1,6 +1,7 @@
 #pragma once
 
-#include "DatafileParser.h"
+#include <iostream>
+#include <DatafileParser.h>
 
 /**
  * @class DatafileParserJson
@@ -14,7 +15,7 @@ class DatafileParserJson : public DatafileParser {
 public:
 	// We need this to prevent name hiding as we have a method with the same name defined in this class
 	using DatafileParser::read;
-
+	
 	/**
 	 * @brief Constructor
 	 * @param cache Cache to use for #LanguageCategoryData objects
@@ -50,6 +51,45 @@ public:
 	 * @return String reference to the root key
 	 */
 	const std::string& rootNode() const { return root_node_; };
+
+	/**
+ * @brief Write game rule data from the cache to a file
+ * @param filename Path to the file to write the output to
+ */
+	template<class T>
+	void saveData(const std::string& filename) {
+		if (filename.empty()) return;
+
+		// Main tree
+		pt::ptree tree;
+
+		// Tree of spell lists
+		pt::ptree data;
+
+		std::set<std::string> keys{};
+		cache().keys<T>(keys);
+
+		for (std::string key : keys) {
+			try {
+				pt::ptree datum;
+				populateDatum(key, datum);
+				data.push_back(std::make_pair("", datum));
+			} catch (const std::out_of_range& e) {
+				std::cout << "Error: " << e.what() << std::endl;
+			}
+		}
+
+		tree.add_child(rootNode(), data);
+
+		pt::write_json(filename, tree);
+	}
+
+	/**
+	 * @brief Populate the given boost tree with the data from a game data object
+	 * @param id Id of the object to populate from
+	 * @param pdatum boost tree to populate
+	 */
+	virtual void populateDatum(std::string& id, pt::ptree& pdatum) = 0;
 
 protected:
 	/**

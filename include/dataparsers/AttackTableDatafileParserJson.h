@@ -1,7 +1,8 @@
 #pragma once
 
-#include "DatafileParserJson.h"
-#include "GameRuleDataCache.h"
+#include <DatafileParserJson.h>
+#include <GameRuleDataCache.h>
+#include <table/AttackTable.h>
 
 /**
  * @class AttackTableDatafileParserJson
@@ -41,7 +42,14 @@ public:
 	 * @brief Write attack tables from the cache to a json file
 	 * @param filename Path to the json file to write
 	 */
-	void save(const std::string& filename) override;
+	void save(const std::string& filename) override { saveData<AttackTable>(filename); }
+
+	/**
+	 * @brief Populate the given boost tree with the data from an attack table
+	 * @param id Id of the attack table to populate from
+	 * @param pdatum boost tree to populate
+	 */
+	void populateDatum(std::string& id, pt::ptree& pdatum) override;
 
 private:
 	/**

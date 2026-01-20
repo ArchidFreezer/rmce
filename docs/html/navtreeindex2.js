@@ -1,5 +1,13 @@
 var NAVTREEINDEX2 =
 {
+"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba90443e6f295091a059b0a150ddee8778":[0,0,9,1,1],
+"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055bae412484be1c558bb641a11d900b98f6b":[0,0,9,1,2],
+"namespace_skill_development_type.html#a0c8feea403ee3e058364f7fcd135f976":[0,0,9,3],
+"namespace_skill_development_type.html#a6d7ff6ceb406f3f60ee4d3f6a23d53f5":[0,0,9,4],
+"namespace_skill_development_type.html#af6cc51b583e4c9f762214a2d0e2b76e7":[0,0,9,2],
+"namespace_skill_group_type.html":[0,0,10],
+"namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268":[0,0,10,0],
+"namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268":[0,0,10,1],
 "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a024499b1a3307093b94d16604da5d309":[0,0,10,1,18],
 "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a0bcfcd5ad44f84b15d8810a8c1e1af77":[0,0,10,1,7],
 "namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268a0c5350e42a38f0bab15173a00ba9af6f":[0,0,10,1,2],
