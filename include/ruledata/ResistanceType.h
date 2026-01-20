@@ -57,17 +57,7 @@ namespace ResistanceType {
 	 *
 	 * Accepts values that are returned by toString() in a case insensitive manner.
 	 *
-	 * For values that contain strings with a space or slash this function will accept these with the
-	 * character, with the character removed or with the character changed to an underscore:
-	 * - "channelingessence"
-	 * - "channeling_essence"
-	 * - "channeling/essence"
-	 * - "channeling essence"
-	 * - "ChannelingEssence"
-	 * - "Channeling_Essence"
-	 * - "Channeling/Essence"
-	 * - "Channeling Essence"
-
+	 * Any characters in \a sv that are not letters or numbers will be removed before comparison
 	 *
 	 * @param sv string_view to get the enumeration for
 	 * @return ResistanceType::Type represented by the string

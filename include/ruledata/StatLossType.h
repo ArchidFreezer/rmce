@@ -46,6 +46,8 @@ namespace StatLossType {
 	 *
 	 * Accepts values that are returned by toString() in a case insensitive manner.
 	 *
+	 * Any characters in \a sv that are not letters or numbers will be removed before comparison
+	 * 
 	 * @param sv string_view to get the enumeration for
 	 * @return StatLossType::Type represented by the string
 	 *

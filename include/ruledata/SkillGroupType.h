@@ -68,16 +68,7 @@ namespace SkillGroupType {
 	 *
 	 * Accepts values that are returned by toString() in a case insensitive manner.
 	 *
-	 * For values that contain strings with a space or slash this function will accept these with the
-	 * character, with the character removed or with the character changed to an underscore:
-	 * - "scienceanalytic"
-	 * - "science analytic"
-	 * - "science_analytic"
-	 * - "science/analytic"
-	 * - "ScienceAnalytic"
-	 * - "Science Analytic"
-	 * - "Science_Analytic"
-	 * - "Science/Analytic"
+	 * Any characters in \a sv that are not letters or numbers will be removed before comparison
 	 *
 	 * @param sv string_view to get the enumeration for
 	 * @return SkillGroupType::Type represented by the string
