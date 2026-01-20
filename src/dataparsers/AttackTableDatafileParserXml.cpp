@@ -10,7 +10,7 @@ void AttackTableDatafileParserXml::parse(bool id_only) {
 
 	std::cout << "Loading AttackTable data ..." << std::endl;
 
-	const pt::ptree& tree = ptree().get_child("AttackTableData.attackTables");
+	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
 
 		std::string name = v.second.get<std::string>("name");
