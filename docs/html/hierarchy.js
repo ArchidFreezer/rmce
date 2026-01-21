@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "ArmourTypeData", "class_armour_type_data.html", null ],
     [ "column_row_matcher", null, [
       [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", null ],
       [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", null ]
@@ -33,6 +32,7 @@ var hierarchy =
       [ "LookupTable< NumberRange< int >, int, ColumnMatcherClass, ColumnDataType, CellDatatype >", "class_lookup_table.html", [
         [ "BoundIntRowLookupTable< ColumnMatcherClass, ColumnDataType, CellDatatype >", "class_bound_int_row_lookup_table.html", null ]
       ] ],
+      [ "ArmourTypeData", "class_armour_type_data.html", null ],
       [ "BookData", "class_book_data.html", null ],
       [ "LanguageCategoryData", "class_language_category_data.html", null ],
       [ "LanguageData", "class_language_data.html", null ],

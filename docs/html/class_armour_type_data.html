@@ -97,9 +97,781 @@ $(function(){initNavTree('class_armour_type_data.html','','class_armour_type_dat
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_armour_type_data_8h_source.html">ArmourTypeData.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ArmourTypeData:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_armour_type_data__inherit__graph.png" border="0" usemap="#a_armour_type_data_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_armour_type_data_inherit__map" id="a_armour_type_data_inherit__map">
+<area shape="rect" title="Class representing data about armour types." alt="" coords="5,80,125,107"/>
+<area shape="rect" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="9,5,121,32"/>
+<area shape="poly" title=" " alt="" coords="67,46,68,80,62,79,63,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for ArmourTypeData:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_armour_type_data__coll__graph.png" border="0" usemap="#a_armour_type_data_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_armour_type_data_coll__map" id="a_armour_type_data_coll__map">
+<area shape="rect" title="Class representing data about armour types." alt="" coords="5,80,125,107"/>
+<area shape="rect" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="9,5,121,32"/>
+<area shape="poly" title=" " alt="" coords="67,46,68,80,62,79,63,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4639edf60ec344dd8060f6af63e5526e" id="r_a4639edf60ec344dd8060f6af63e5526e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4639edf60ec344dd8060f6af63e5526e">ArmourTypeData</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>, <a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a> <a class="el" href="#aec25856e02cf0e9034af28b3b98fc05d">type</a>, std::string_view <a class="el" href="#af80961e29ce839199a8646f30d4f7724">name</a>, std::string_view <a class="el" href="#a2144214a669fd5c4b1c42eb367e89da4">description</a>, int min_manoeuvre_mod, int max_manoeuvre_mod, int missile_attack_penalty, int quickness_penalty, bool animal_only, bool includes_greaves)</td></tr>
+<tr class="memdesc:a4639edf60ec344dd8060f6af63e5526e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to fully populate the object.  <br /></td></tr>
+<tr class="memitem:a9f01466ec106e2b766fb6d382f940305" id="r_a9f01466ec106e2b766fb6d382f940305"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9f01466ec106e2b766fb6d382f940305">ArmourTypeData</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>)</td></tr>
+<tr class="memdesc:a9f01466ec106e2b766fb6d382f940305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a19c58748d97f7c2b9b8857da77ec9845" id="r_a19c58748d97f7c2b9b8857da77ec9845"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a19c58748d97f7c2b9b8857da77ec9845">setType</a> (<a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a> <a class="el" href="#aec25856e02cf0e9034af28b3b98fc05d">type</a>)</td></tr>
+<tr class="memdesc:a19c58748d97f7c2b9b8857da77ec9845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be" title="Enumeration class representing the size of creatures.">ArmourType::Type</a> enumeration value of armour.  <br /></td></tr>
+<tr class="memitem:aec25856e02cf0e9034af28b3b98fc05d" id="r_aec25856e02cf0e9034af28b3b98fc05d"><td class="memItemLeft"><a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#aec25856e02cf0e9034af28b3b98fc05d">type</a> () const</td></tr>
+<tr class="memdesc:aec25856e02cf0e9034af28b3b98fc05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be" title="Enumeration class representing the size of creatures.">ArmourType::Type</a> enumeration value of armour.  <br /></td></tr>
+<tr class="memitem:a61228935f7a207e2d1274608e2126e65" id="r_a61228935f7a207e2d1274608e2126e65"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61228935f7a207e2d1274608e2126e65">setName</a> (std::string_view <a class="el" href="#af80961e29ce839199a8646f30d4f7724">name</a>)</td></tr>
+<tr class="memdesc:a61228935f7a207e2d1274608e2126e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name of the armour type as seen in-game.  <br /></td></tr>
+<tr class="memitem:af80961e29ce839199a8646f30d4f7724" id="r_af80961e29ce839199a8646f30d4f7724"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af80961e29ce839199a8646f30d4f7724">name</a> () const</td></tr>
+<tr class="memdesc:af80961e29ce839199a8646f30d4f7724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the armour type as seen in-game.  <br /></td></tr>
+<tr class="memitem:aaad70e69160dcaa36ea058c8fdbe0acd" id="r_aaad70e69160dcaa36ea058c8fdbe0acd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaad70e69160dcaa36ea058c8fdbe0acd">setDescription</a> (std::string_view <a class="el" href="#a2144214a669fd5c4b1c42eb367e89da4">description</a>)</td></tr>
+<tr class="memdesc:aaad70e69160dcaa36ea058c8fdbe0acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the description of what the armour type consists of.  <br /></td></tr>
+<tr class="memitem:a2144214a669fd5c4b1c42eb367e89da4" id="r_a2144214a669fd5c4b1c42eb367e89da4"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2144214a669fd5c4b1c42eb367e89da4">description</a> () const</td></tr>
+<tr class="memdesc:a2144214a669fd5c4b1c42eb367e89da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description of what the armour type consists of.  <br /></td></tr>
+<tr class="memitem:af7c8253b419c8ffd5aa9970aaa6b23dc" id="r_af7c8253b419c8ffd5aa9970aaa6b23dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af7c8253b419c8ffd5aa9970aaa6b23dc">setMinManoeuvreMod</a> (int mod)</td></tr>
+<tr class="memdesc:af7c8253b419c8ffd5aa9970aaa6b23dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum modification to manoeuvres wearing the armour applies.  <br /></td></tr>
+<tr class="memitem:a8de27c49305300eb51144e5e9f2a6c2d" id="r_a8de27c49305300eb51144e5e9f2a6c2d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a8de27c49305300eb51144e5e9f2a6c2d">minManoeuvreMod</a> () const</td></tr>
+<tr class="memdesc:a8de27c49305300eb51144e5e9f2a6c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum modification to manoeuvres wearing the armour applies.  <br /></td></tr>
+<tr class="memitem:a689bbbbbf97266435783c091fda1fa48" id="r_a689bbbbbf97266435783c091fda1fa48"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a689bbbbbf97266435783c091fda1fa48">setMaxManoeuvreMod</a> (int mod)</td></tr>
+<tr class="memdesc:a689bbbbbf97266435783c091fda1fa48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum modification to manoeuvres wearing the armour applies.  <br /></td></tr>
+<tr class="memitem:adf84d414d7103c0a31a035fb18a69947" id="r_adf84d414d7103c0a31a035fb18a69947"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#adf84d414d7103c0a31a035fb18a69947">maxManoeuvreMod</a> () const</td></tr>
+<tr class="memdesc:adf84d414d7103c0a31a035fb18a69947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum modification to manoeuvres wearing the armour applies.  <br /></td></tr>
+<tr class="memitem:a2731727b319aacb9533734a7fa13f3ed" id="r_a2731727b319aacb9533734a7fa13f3ed"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2731727b319aacb9533734a7fa13f3ed">setMissileAttackPenalty</a> (int penalty)</td></tr>
+<tr class="memdesc:a2731727b319aacb9533734a7fa13f3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the penalty that is applied to missile attack OB when wearing this armour.  <br /></td></tr>
+<tr class="memitem:af0ef249e52760634960a4f0c9a075f24" id="r_af0ef249e52760634960a4f0c9a075f24"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af0ef249e52760634960a4f0c9a075f24">missileAttackPenalty</a> () const</td></tr>
+<tr class="memdesc:af0ef249e52760634960a4f0c9a075f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the penalty that is applied to missile attack OB when wearing this armour.  <br /></td></tr>
+<tr class="memitem:af5f27dcf2ae7c48cf1b8551b3ce068ff" id="r_af5f27dcf2ae7c48cf1b8551b3ce068ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af5f27dcf2ae7c48cf1b8551b3ce068ff">setQuicknessPenalty</a> (int penalty)</td></tr>
+<tr class="memdesc:af5f27dcf2ae7c48cf1b8551b3ce068ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the reduction in combatant’s Quickness stat bonus for his DB.  <br /></td></tr>
+<tr class="memitem:a92c7c99089d2cb0321095958fd898a9d" id="r_a92c7c99089d2cb0321095958fd898a9d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a92c7c99089d2cb0321095958fd898a9d">quicknessPenalty</a> () const</td></tr>
+<tr class="memdesc:a92c7c99089d2cb0321095958fd898a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the reduction in combatant’s Quickness stat bonus for his DB.  <br /></td></tr>
+<tr class="memitem:a082e5def61f4038aa3ae40d63d4f51b6" id="r_a082e5def61f4038aa3ae40d63d4f51b6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a082e5def61f4038aa3ae40d63d4f51b6">setIsAnimalOnly</a> (bool animal_only)</td></tr>
+<tr class="memdesc:a082e5def61f4038aa3ae40d63d4f51b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets if the armour type is only appliable to animal skin.  <br /></td></tr>
+<tr class="memitem:ab96238c3155edb9f18b760add3fecc4e" id="r_ab96238c3155edb9f18b760add3fecc4e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab96238c3155edb9f18b760add3fecc4e">animalOnly</a> () const</td></tr>
+<tr class="memdesc:ab96238c3155edb9f18b760add3fecc4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets if the armour type is only appliable to animal skin.  <br /></td></tr>
+<tr class="memitem:a1b3fe5cbd2439c384754663076e1c127" id="r_a1b3fe5cbd2439c384754663076e1c127"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1b3fe5cbd2439c384754663076e1c127">setIncludesGreaves</a> (bool greaves)</td></tr>
+<tr class="memdesc:a1b3fe5cbd2439c384754663076e1c127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the armour has protection for the forearms and lower legs.  <br /></td></tr>
+<tr class="memitem:abacd00d663bdcfc9ae23b55edd33019f" id="r_abacd00d663bdcfc9ae23b55edd33019f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abacd00d663bdcfc9ae23b55edd33019f">includesGreaves</a> () const</td></tr>
+<tr class="memdesc:abacd00d663bdcfc9ae23b55edd33019f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the armour has protection for the forearms and lower legs.  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
+<tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
+&#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
+<tr class="memdesc:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="memitem:a4d60329cf6a183d3033134f32a13a672 inherit pub_methods_class_game_rule_data" id="r_a4d60329cf6a183d3033134f32a13a672"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_game_rule_data.html#a4d60329cf6a183d3033134f32a13a672">GameRuleData</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>)</td></tr>
+<tr class="memdesc:a4d60329cf6a183d3033134f32a13a672 inherit pub_methods_class_game_rule_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:abcd57cd1f04642956ba72a183135df42 inherit pub_methods_class_game_rule_data" id="r_abcd57cd1f04642956ba72a183135df42"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_game_rule_data.html#abcd57cd1f04642956ba72a183135df42">~GameRuleData</a> ()=default</td></tr>
+<tr class="memdesc:abcd57cd1f04642956ba72a183135df42 inherit pub_methods_class_game_rule_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <br /></td></tr>
+<tr class="memitem:a4059ad4327c807504f53df4b1c04600e inherit pub_methods_class_game_rule_data" id="r_a4059ad4327c807504f53df4b1c04600e"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a> () const</td></tr>
+<tr class="memdesc:a4059ad4327c807504f53df4b1c04600e inherit pub_methods_class_game_rule_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the unique id of the game data object.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
+<tr class="memitem:ad51f77b8a4054fca57268e29e0da5718 inherit pub_static_methods_class_game_rule_data" id="r_ad51f77b8a4054fca57268e29e0da5718"><td class="memItemLeft">static const std::string&#160;</td><td class="memItemRight"><a class="el" href="class_game_rule_data.html#ad51f77b8a4054fca57268e29e0da5718">generateId</a> (std::string_view type, std::string_view val)</td></tr>
+<tr class="memdesc:ad51f77b8a4054fca57268e29e0da5718 inherit pub_static_methods_class_game_rule_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a string that can be used as a unique identifier for an object.  <br /></td></tr>
+</table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing data about armour types. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p>Armour types are designed to reflect the protective capability of one’s covering. Heavier coverings (e.g., ATs 15, 16, 19, 20, etc.) are usually much more cumbersome than light armour or mere clothing. It is easier to make contact with combatants in heavy armour in combat, but it resists penetration better than the less cumbersome armour types. Therefore, "critical strikes" achieved against the more cumbersome armour types will be less frequent and lower in severity. However attacks resulting in just concussion hits will be more frequent (i.e., the hindrance due to these coverings make the target easier to strike but harder to seriously damage).</p>
+<p>Less cumbersome armour types have the advantage of providing the wearer with mobility. Fewer swings will make contact because the agile defender will completely avoid the blows. However, when a swing does make contact, the result is usually more severe than it would be against the more cumbersome armour types: frequent and severe criticals along with more concussion hits are the rule. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4639edf60ec344dd8060f6af63e5526e" name="a4639edf60ec344dd8060f6af63e5526e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4639edf60ec344dd8060f6af63e5526e">&#9670;&#160;</a></span>ArmourTypeData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArmourTypeData::ArmourTypeData </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>description</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>min_manoeuvre_mod</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max_manoeuvre_mod</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>missile_attack_penalty</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>quickness_penalty</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>animal_only</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>includes_greaves</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor to fully populate the object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Unique identifier for the armour type </td></tr>
+    <tr><td class="paramname">type</td><td>Actual <a class="el" href="namespace_armour_type.html" title="Contains the ArmourType::Type enum and associated functions.">ArmourType</a> that the data represents </td></tr>
+    <tr><td class="paramname">name</td><td>Name of the armour type as seen in-game </td></tr>
+    <tr><td class="paramname">description</td><td>Description of what the armour type consists of </td></tr>
+    <tr><td class="paramname">min_manoeuvre_mod</td><td>The minimum modification applied to manoeuvres that the armour applies </td></tr>
+    <tr><td class="paramname">max_manoeuvre_mod</td><td>The maximum modification applied to manoeuvres that the armour applies </td></tr>
+    <tr><td class="paramname">missile_attack_penalty</td><td>The penalty applied to missile weapons attacks </td></tr>
+    <tr><td class="paramname">quickness_penalty</td><td>The penalty applied to the weaerers Quickness bonus </td></tr>
+    <tr><td class="paramname">animal_only</td><td>Whether the armour type is for animal skin/hide only </td></tr>
+    <tr><td class="paramname">includes_greaves</td><td>Whether the armour type is considered to have greaves </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9f01466ec106e2b766fb6d382f940305" name="a9f01466ec106e2b766fb6d382f940305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f01466ec106e2b766fb6d382f940305">&#9670;&#160;</a></span>ArmourTypeData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArmourTypeData::ArmourTypeData </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Unique identifier for the book </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab96238c3155edb9f18b760add3fecc4e" name="ab96238c3155edb9f18b760add3fecc4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab96238c3155edb9f18b760add3fecc4e">&#9670;&#160;</a></span>animalOnly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ArmourTypeData::animalOnly </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets if the armour type is only appliable to animal skin. </p>
+<p>Some armour types are animal armors, natural body coverings with no normal armor equivalents. One cannot achieve such an AT without acquiring some enchanted and specially designed armor (e.g., magic fell beast skin).</p>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the armour type is animal covering only </dd>
+<dd>
+<span class="tt">false</span> if the armour type is standard armour </dd></dl>
+
+</div>
+</div>
+<a id="a2144214a669fd5c4b1c42eb367e89da4" name="a2144214a669fd5c4b1c42eb367e89da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2144214a669fd5c4b1c42eb367e89da4">&#9670;&#160;</a></span>description()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; ArmourTypeData::description </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the description of what the armour type consists of. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string reference ot the decsription </dd></dl>
+
+</div>
+</div>
+<a id="abacd00d663bdcfc9ae23b55edd33019f" name="abacd00d663bdcfc9ae23b55edd33019f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abacd00d663bdcfc9ae23b55edd33019f">&#9670;&#160;</a></span>includesGreaves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ArmourTypeData::includesGreaves </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get whether the armour has protection for the forearms and lower legs. </p>
+<p>Not all armour types have protection for the forearms or lower legs and this indicates whether this one does or not. The use of the word greaves does not mean that the greaves have to be separate items as they may be fully incorporated such as in full plate armour.</p>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the armour covers the forearms and lower legs </dd>
+<dd>
+<span class="tt">false</span> if the armour does not cover the forearms and lower legs </dd></dl>
+
+</div>
+</div>
+<a id="adf84d414d7103c0a31a035fb18a69947" name="adf84d414d7103c0a31a035fb18a69947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf84d414d7103c0a31a035fb18a69947">&#9670;&#160;</a></span>maxManoeuvreMod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ArmourTypeData::maxManoeuvreMod </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the minimum modification to manoeuvres wearing the armour applies. </p>
+<p>Wearing some types of armour can restrict movement and this applies a penalty when trying to perform some manoeuvres.</p>
+<p>It is possible to develop skill in armour types that reduces this penalty; this value defines the penalty that is applied if the wearer has not been trained at all in manoeuverring in the armour.</p>
+<dl class="section return"><dt>Returns</dt><dd>Minimum modification possible when fully trained in the armours use </dd></dl>
+
+</div>
+</div>
+<a id="a8de27c49305300eb51144e5e9f2a6c2d" name="a8de27c49305300eb51144e5e9f2a6c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de27c49305300eb51144e5e9f2a6c2d">&#9670;&#160;</a></span>minManoeuvreMod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ArmourTypeData::minManoeuvreMod </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the minimum modification to manoeuvres wearing the armour applies. </p>
+<p>Wearing some types of armour can restrict movement and this applies a penalty when trying to perform some manoeuvres.</p>
+<p>It is possible to develop skill in armour types that reduces this penalty but it may not be possible to remove it, this value defines the minimum that the penalty may be reduced to when fully trained in the armour.</p>
+<dl class="section return"><dt>Returns</dt><dd>Minimum modification possible when fully trained in the armours use </dd></dl>
+
+</div>
+</div>
+<a id="af0ef249e52760634960a4f0c9a075f24" name="af0ef249e52760634960a4f0c9a075f24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ef249e52760634960a4f0c9a075f24">&#9670;&#160;</a></span>missileAttackPenalty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ArmourTypeData::missileAttackPenalty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the penalty that is applied to missile attack OB when wearing this armour. </p>
+<p>The missile attack penalty acts as a modification to the missile OB for a combatant wearing the given armor. This is meant to reflect the disadvantageous effect of armor worn on the arms and hands of a combatant.</p>
+<dl class="section return"><dt>Returns</dt><dd>int Modification to missile OB </dd></dl>
+
+</div>
+</div>
+<a id="af80961e29ce839199a8646f30d4f7724" name="af80961e29ce839199a8646f30d4f7724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80961e29ce839199a8646f30d4f7724">&#9670;&#160;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; ArmourTypeData::name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the name of the armour type as seen in-game. </p>
+<dl class="section return"><dt>Returns</dt><dd>Armour type name as a string reference </dd></dl>
+
+</div>
+</div>
+<a id="a92c7c99089d2cb0321095958fd898a9d" name="a92c7c99089d2cb0321095958fd898a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c7c99089d2cb0321095958fd898a9d">&#9670;&#160;</a></span>quicknessPenalty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ArmourTypeData::quicknessPenalty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the reduction in combatant’s Quickness stat bonus for his DB. </p>
+<p>This penalty can only reduce the armor wearer’s Quickness stat bonus. It will not reduce a combatant’s overall DB below the level that it would be at with a zero Quickness stat bonus.</p>
+<dl class="section return"><dt>Returns</dt><dd>int Reduction in stat bonus </dd></dl>
+
+</div>
+</div>
+<a id="aaad70e69160dcaa36ea058c8fdbe0acd" name="aaad70e69160dcaa36ea058c8fdbe0acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad70e69160dcaa36ea058c8fdbe0acd">&#9670;&#160;</a></span>setDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArmourTypeData::setDescription </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>description</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the description of what the armour type consists of. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">description</td><td>std::string_view armour type description </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1b3fe5cbd2439c384754663076e1c127" name="a1b3fe5cbd2439c384754663076e1c127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3fe5cbd2439c384754663076e1c127">&#9670;&#160;</a></span>setIncludesGreaves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArmourTypeData::setIncludesGreaves </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>greaves</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set whether the armour has protection for the forearms and lower legs. </p>
+<p>Not all armour types have protection for the forearms or lower legs and this indicates whether this one does or not. The use of the word greaves does not mean that the greaves have to be separate items as they may be fully incorporated such as in full plate armour.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">greaves</td><td>Whether the armour is consdered to be protected as with greaves </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a082e5def61f4038aa3ae40d63d4f51b6" name="a082e5def61f4038aa3ae40d63d4f51b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a082e5def61f4038aa3ae40d63d4f51b6">&#9670;&#160;</a></span>setIsAnimalOnly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArmourTypeData::setIsAnimalOnly </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>animal_only</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets if the armour type is only appliable to animal skin. </p>
+<p>Some armour types are animal armors, natural body coverings with no normal armor equivalents. One cannot achieve such an AT without acquiring some enchanted and specially designed armor (e.g., magic fell beast skin).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animal_only</td><td>Whether the armour type is for animal armour only </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a689bbbbbf97266435783c091fda1fa48" name="a689bbbbbf97266435783c091fda1fa48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a689bbbbbf97266435783c091fda1fa48">&#9670;&#160;</a></span>setMaxManoeuvreMod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArmourTypeData::setMaxManoeuvreMod </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mod</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the maximum modification to manoeuvres wearing the armour applies. </p>
+<p>Wearing some types of armour can restrict movement and this applies a penalty when trying to perform some manoeuvres.</p>
+<p>It is possible to develop skill in armour types that reduces this penalty; this value defines the penalty that is applied if the wearer has not been trained at all in manoeuverring in the armour.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mod</td><td>Minimum modification possible when fully trained in the armours use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af7c8253b419c8ffd5aa9970aaa6b23dc" name="af7c8253b419c8ffd5aa9970aaa6b23dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c8253b419c8ffd5aa9970aaa6b23dc">&#9670;&#160;</a></span>setMinManoeuvreMod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArmourTypeData::setMinManoeuvreMod </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mod</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the minimum modification to manoeuvres wearing the armour applies. </p>
+<p>Wearing some types of armour can restrict movement and this applies a penalty when trying to perform some manoeuvres.</p>
+<p>It is possible to develop skill in armour types that reduces this penalty but it may not be possible to remove it, this value defines the minimum that the penalty may be reduced to when fully trained in the armour.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mod</td><td>Minimum modification possible when fully trained in the armours use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2731727b319aacb9533734a7fa13f3ed" name="a2731727b319aacb9533734a7fa13f3ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2731727b319aacb9533734a7fa13f3ed">&#9670;&#160;</a></span>setMissileAttackPenalty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArmourTypeData::setMissileAttackPenalty </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>penalty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the penalty that is applied to missile attack OB when wearing this armour. </p>
+<p>The missile attack penalty acts as a modification to the missile OB for a combatant wearing the given armor. This is meant to reflect the disadvantageous effect of armor worn on the arms and hands of a combatant.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">penalty</td><td>Modification to missile OB </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a61228935f7a207e2d1274608e2126e65" name="a61228935f7a207e2d1274608e2126e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61228935f7a207e2d1274608e2126e65">&#9670;&#160;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArmourTypeData::setName </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the name of the armour type as seen in-game. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Armour type name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af5f27dcf2ae7c48cf1b8551b3ce068ff" name="af5f27dcf2ae7c48cf1b8551b3ce068ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5f27dcf2ae7c48cf1b8551b3ce068ff">&#9670;&#160;</a></span>setQuicknessPenalty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArmourTypeData::setQuicknessPenalty </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>penalty</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the reduction in combatant’s Quickness stat bonus for his DB. </p>
+<p>This penalty can only reduce the armor wearer’s Quickness stat bonus. It will not reduce a combatant’s overall DB below the level that it would be at with a zero Quickness stat bonus.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">penalty</td><td>Reduction in stat bonus </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a19c58748d97f7c2b9b8857da77ec9845" name="a19c58748d97f7c2b9b8857da77ec9845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19c58748d97f7c2b9b8857da77ec9845">&#9670;&#160;</a></span>setType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArmourTypeData::setType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the <a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be" title="Enumeration class representing the size of creatures.">ArmourType::Type</a> enumeration value of armour. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td><a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be" title="Enumeration class representing the size of creatures.">ArmourType::Type</a> type of armour </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aec25856e02cf0e9034af28b3b98fc05d" name="aec25856e02cf0e9034af28b3b98fc05d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec25856e02cf0e9034af28b3b98fc05d">&#9670;&#160;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a> ArmourTypeData::type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be" title="Enumeration class representing the size of creatures.">ArmourType::Type</a> enumeration value of armour. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be" title="Enumeration class representing the size of creatures.">ArmourType::Type</a> type of armour </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>ruledata/<a class="el" href="_armour_type_data_8h_source.html">ArmourTypeData.h</a></li>
 </ul>
 </div><!-- contents -->
