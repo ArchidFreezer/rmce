@@ -28,6 +28,7 @@ var annotated_dup =
     [ "NumberRange", "class_number_range.html", "class_number_range" ],
     [ "RowNotFoundException", "class_row_not_found_exception.html", "class_row_not_found_exception" ],
     [ "SkillCategoryData", "class_skill_category_data.html", "class_skill_category_data" ],
+    [ "SkillCategoryDatafileParserJson", "class_skill_category_datafile_parser_json.html", "class_skill_category_datafile_parser_json" ],
     [ "SkillCategoryDatafileParserXml", "class_skill_category_datafile_parser_xml.html", "class_skill_category_datafile_parser_xml" ],
     [ "SkillProgressionData", "class_skill_progression_data.html", "class_skill_progression_data" ],
     [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", "class_skill_progression_type_data" ],
