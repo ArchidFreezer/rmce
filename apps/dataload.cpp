@@ -1,17 +1,18 @@
 ﻿#include <iostream>
 #include <filesystem>
-#include "BookDatafileParserJson.h"
-#include "LanguageDatafileParserJson.h"
-#include "LanguageCategoryDatafileParserJson.h"
-#include "SkillProgressionTypeDatafileParserJson.h"
+#include <BookDatafileParserJson.h>
+#include <LanguageDatafileParserJson.h>
+#include <LanguageCategoryDatafileParserJson.h>
+#include <SkillProgressionTypeDatafileParserJson.h>
 #include <AttackTableDatafileParserJson.h>
 #include <SpecialAttackTableDatafileParserJson.h>
 #include <SpellListDatafileParserJson.h>
+#include <SkillCategoryDatafileParserXml.h>
+#include <SkillCategoryDatafileParserJson.h>
 
-int main()
-{
+int main() {
 	std::cout << "Current path is " << std::filesystem::current_path() << '\n';
-	
+
 	// Create the cache to store the game data
 	GameRuleDataCache cache{};
 
@@ -22,6 +23,8 @@ int main()
 	AttackTableDatafileParserJson attack_table_parser(cache, "../../../../data/AttackTables.json");
 	SpecialAttackTableDatafileParserJson special_attack_table_parser(cache, "../../../../data/SpecialAttackTables.json");
 	SpellListDatafileParserJson spell_list_parser(cache, "../../../../data/SpellLists.json");
+	SkillCategoryDatafileParserXml skill_category_parser_xml(cache, "../../../../data/SkillCategories.xml");
+	SkillCategoryDatafileParserJson skill_category_parser(cache, "../../../../data/SkillCategories.json");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
@@ -32,20 +35,29 @@ int main()
 	parsers.push_back(&attack_table_parser);
 	parsers.push_back(&special_attack_table_parser);
 	parsers.push_back(&spell_list_parser);
+	parsers.push_back(&skill_category_parser);
 
-	for (auto& parser : parsers) {
-		parser->read(true);
-	}
-	for (auto& parser : parsers) {
-		parser->read(false);
-	}
+	try {
+		// Iterate through the parsers retrieving the ID only and populating the cache with empty game data objects
+		for (auto& parser : parsers) {
+			parser->read(true);
+		}
+		// Now the cache is fully populated we can complete poarsing the game data properties knowing cross-references should work.
+		for (auto& parser : parsers) {
+			parser->read(false);
+		}
 
-	book_parser.save("../../../../data/Books2.json");
-	language_category_parser.save("../../../../data/LanguageCategories2.json");
-	language_parser.save("../../../../data/Languages2.json");
-	skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
-	spell_list_parser.save("../../../../data/SpellLists2.json");
-	// We don't resave the attack tables as the nature of the objects means the rows are unordered so the files won't match
+
+//		book_parser.save("../../../../data/Books2.json");
+//		language_category_parser.save("../../../../data/LanguageCategories2.json");
+//		language_parser.save("../../../../data/Languages2.json");
+//		skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
+//		spell_list_parser.save("../../../../data/SpellLists2.json");
+//		skill_category_parser.save("../../../../data/SkillCategories2.json");
+		// We don't resave the attack tables as the nature of the objects means the rows are unordered so the files won't match
+	} catch (std::runtime_error e) {
+		std::cout << e.what() << std::endl;
+	}
 
 	return 0;
 }
