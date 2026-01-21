@@ -111,7 +111,7 @@ public:
 	 * @brief Gets the full name of the skill category which includes the skill group
 	 * @return Name including the skill group
 	 */
-	const std::string getFullName() const { return toString(group_) + " - " + name_; }
+	const std::string fullName() const { return toString(group_) + " - " + name_; }
 
 	/**
 	 * @brief Set the skill group of the category
@@ -123,7 +123,7 @@ public:
 	 * @brief Get the group the category belongs to
 	 * @return SkillGroupType::Type categories skill group
 	 */
-	const SkillGroupType::Type getGroup() const { return group_; }
+	const SkillGroupType::Type group() const { return group_; }
 
 	/**
 	 * @brief Add stat that applies stat boinus to skills in the category
@@ -144,7 +144,7 @@ public:
 	 * Up to 3 stats bonuses may be applied to skills in a skill category. This function returns the current number applied
 	 * @return Number of stats applied
 	 */
-	const int getNumberOfStats() const {	return stats_.size();	}
+	const int numberOfStats() const {	return stats_.size();	}
 
 	/**
 	 * @brief Remove a stats from those currently associated with the category
@@ -170,13 +170,13 @@ public:
 	 * 
 	 * @return std::vector of stats
 	 */
-	const std::vector<StatType::Type>& getStats() { return stats_; }
+	const std::vector<StatType::Type>& stats() { return stats_; }
 
 	/**
 	 * @brief Set whether to use the characters realm stats for determining the bonus
 	 * 
 	 * Some skill categories such as those from the Spell skill group use the characters realm stats for determining the
-	 * bonus provided. If this flag is set then the getStats() method should not be used.
+	 * bonus provided. If this flag is set then the stats() method should not be used.
 	 * 
 	 * If this flag is set then any stats previously set on the category using addStat() will be removed.
 	 * 
@@ -188,10 +188,10 @@ public:
 	 * @brief Gets whether to use the characters realm stats for determining the bonus
 	 *
 	 * Some skill categories such as those from the Spell skill group use the characters realm stats for determining the
-	 * bonus provided. If this flag is set then the getStats() method should not be used.
+	 * bonus provided. If this flag is set then the stats() method should not be used.
 	 *
 	 * @return `true` if the character realm stats should be used
-	 * @return `false` if the stats from getStats() should be used
+	 * @return `false` if the stats from stats() should be used
 	 */
 	bool useRealmStats() const { return use_realm_stats_; }
 
@@ -226,7 +226,7 @@ public:
 	 * 
 	 * @return SkillProgressionTypeData&  default skill progressiomn type
 	 */
-	const SkillProgressionTypeData& getDefaultSkillProgression() const { return *skill_progression_; }
+	const SkillProgressionTypeData& defaultSkillProgression() const { return *skill_progression_; }
 
 	/**
 	 * @brief Gets the skill progression for the skill category
@@ -237,7 +237,7 @@ public:
 	 *
 	 * @return SkillProgressionType::Type default skill progressiomn type
 	 */
-	const SkillProgressionTypeData& getSkillCategoryProgression() const { return *skill_category_progression_; }
+	const SkillProgressionTypeData& skillCategoryProgression() const { return *skill_category_progression_; }
 
 private:
 	SkillGroupType::Type group_{}; /**< Name of the skill group; the category belongs to */

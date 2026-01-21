@@ -10,17 +10,17 @@ namespace {
 		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std, false);
 		EXPECT_STREQ(scd.id().c_str(), "SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		EXPECT_STREQ(scd.name().c_str(), "TestCategory");
-		EXPECT_EQ(scd.getGroup(), SkillGroupType::Type::kArtistic);
-		EXPECT_STREQ(scd.getFullName().c_str(), "Artistic - TestCategory");
-		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), spd_std.name().c_str());
-		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), spd_std.name().c_str());
+		EXPECT_EQ(scd.group(), SkillGroupType::Type::kArtistic);
+		EXPECT_STREQ(scd.fullName().c_str(), "Artistic - TestCategory");
+		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), spd_std.name().c_str());
+		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), spd_std.name().c_str());
 
 
 		SkillProgressionTypeData spd_ltd("LIMITED_ID", "Limited", 0.0, 1.0, 1.0, 0.5, 0.0);
 		SkillProgressionTypeData spd_none("NONE_ID", "None", 0.0, 0.0, 0.0, 0.0, 0.0);
 		SkillCategoryData scd2("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_ltd, spd_none, false);
-		EXPECT_STREQ(scd2.getDefaultSkillProgression().name().c_str(), spd_ltd.name().c_str());
-		EXPECT_STREQ(scd2.getSkillCategoryProgression().name().c_str(), spd_none.name().c_str());
+		EXPECT_STREQ(scd2.defaultSkillProgression().name().c_str(), spd_ltd.name().c_str());
+		EXPECT_STREQ(scd2.skillCategoryProgression().name().c_str(), spd_none.name().c_str());
 	}
 
 	TEST(SkillCategoryData, Stats) {
@@ -28,15 +28,15 @@ namespace {
 		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std, false);
 		int i{};
 		i = scd.addStat(StatType::Type::kAgility);
-		EXPECT_EQ(scd.getNumberOfStats(), 1);
+		EXPECT_EQ(scd.numberOfStats(), 1);
 		EXPECT_EQ(i, 1);
 
 		i = scd.addStat(StatType::Type::kAgility);
-		EXPECT_EQ(scd.getNumberOfStats(), 2);
+		EXPECT_EQ(scd.numberOfStats(), 2);
 		EXPECT_EQ(i, 2);
 		
 		i = scd.addStat(StatType::Type::kStrength);
-		EXPECT_EQ(scd.getNumberOfStats(), 3);
+		EXPECT_EQ(scd.numberOfStats(), 3);
 		EXPECT_EQ(i, 3);
 
 		try {
@@ -49,19 +49,19 @@ namespace {
 			FAIL();
 		}
 
-		EXPECT_EQ(scd.getNumberOfStats(), 3);
+		EXPECT_EQ(scd.numberOfStats(), 3);
 
 		bool removed{};
 		removed = scd.removeStat(StatType::Type::kAgility);
 		EXPECT_EQ(removed, true);
-		EXPECT_EQ(scd.getNumberOfStats(), 2);
+		EXPECT_EQ(scd.numberOfStats(), 2);
 
 		removed = scd.removeStat(StatType::Type::kMemory);
 		EXPECT_EQ(removed, false);
-		EXPECT_EQ(scd.getNumberOfStats(), 2);
+		EXPECT_EQ(scd.numberOfStats(), 2);
 
 		scd.clearStats();
-		EXPECT_EQ(scd.getNumberOfStats(), 0);
+		EXPECT_EQ(scd.numberOfStats(), 0);
 	}
 	
 	TEST(SkillCategoryData, CharStats) {
@@ -69,19 +69,19 @@ namespace {
 		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std, false);
 		int i{};
 		i = scd.addStat(StatType::Type::kAgility);
-		EXPECT_EQ(scd.getNumberOfStats(), 1);
+		EXPECT_EQ(scd.numberOfStats(), 1);
 		EXPECT_EQ(i, 1);
 
 		i = scd.addStat(StatType::Type::kAgility);
-		EXPECT_EQ(scd.getNumberOfStats(), 2);
+		EXPECT_EQ(scd.numberOfStats(), 2);
 		EXPECT_EQ(i, 2);
 
 		i = scd.addStat(StatType::Type::kStrength);
-		EXPECT_EQ(scd.getNumberOfStats(), 3);
+		EXPECT_EQ(scd.numberOfStats(), 3);
 		EXPECT_EQ(i, 3);
 
 		scd.setUseRealmStats(true);
-		EXPECT_EQ(scd.getNumberOfStats(), 0);
+		EXPECT_EQ(scd.numberOfStats(), 0);
 
 		try {
 			scd.addStat(StatType::Type::kStrength);
@@ -100,7 +100,7 @@ namespace {
 		} catch (...) {
 			FAIL();
 		}
-		EXPECT_EQ(scd.getNumberOfStats(), 1);
+		EXPECT_EQ(scd.numberOfStats(), 1);
 	}
 
 	TEST(SkillCategoryData, SkillProgression) {
@@ -172,23 +172,23 @@ namespace {
 		}
 
 		scd.setSkillProgressions(spd_std, spd_std);
-		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), "Standard");
-		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), "Standard");
+		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), "Standard");
+		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), "Standard");
 
 		scd.setSkillProgressions(spd_cmb, spd_none);
-		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), "Combined");
-		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), "None");
+		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), "Combined");
+		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), "None");
 
 		scd.setSkillProgressions(spd_ltd, spd_none);
-		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), "Limited");
-		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), "None");
+		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), "Limited");
+		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), "None");
 
 		scd.setSkillProgressions(spd_none, spd_none);
-		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), "None");
-		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), "None");
+		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), "None");
+		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), "None");
 
 		scd.setSkillProgressions(spd_spc, spd_none);
-		EXPECT_STREQ(scd.getDefaultSkillProgression().name().c_str(), "Special");
-		EXPECT_STREQ(scd.getSkillCategoryProgression().name().c_str(), "None");
+		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), "Special");
+		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), "None");
 	}
 }
