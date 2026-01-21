@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdexcept>
 #include <iostream>
 #include <optional>
 #include <string_view>
@@ -12,6 +13,22 @@
  * a penalty to the characters quickness bonus.
  */
 namespace ArmourType {
+
+	/**
+	* @brief Thrown to indicate that no ArmourType::Type enum was found
+	*
+	*/
+	class ArmourTypeNotFoundException : public std::runtime_error {
+	public:
+		/**
+		 * @brief Exception constructor
+		 *
+		 * std::runtime_error will handle the string
+		 *
+		 * @param error String to display for the error
+		 */
+		ArmourTypeNotFoundException(const std::string& error) : std::runtime_error{ error }	{}
+	};
 
 	/**
 	 * @brief Enumeration class representing the size of creatures
