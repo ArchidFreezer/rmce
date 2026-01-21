@@ -95,6 +95,11 @@ public:
 		skill_category_progression_{ &category_progression },
 		use_realm_stats_{ use_realm_stats } {}
 
+	/**
+	 * @brief Set the name of the skill category
+	 * @param name skill category name
+	 */
+	void setName(std::string_view name) { name_ = name; }
 
 	/**
 	 * @brief Get the name of the category as seen in-game
@@ -107,6 +112,12 @@ public:
 	 * @return Name including the skill group
 	 */
 	const std::string getFullName() const { return toString(group_) + " - " + name_; }
+
+	/**
+	 * @brief Set the skill group of the category
+	 * @param group SkillGroupType::Type category group
+	 */
+	void setGroup(SkillGroupType::Type group) { group_ = group; }
 
 	/**
 	 * @brief Get the group the category belongs to
