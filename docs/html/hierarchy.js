@@ -17,6 +17,7 @@ var hierarchy =
       ] ],
       [ "DatafileParserXml", "class_datafile_parser_xml.html", [
         [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", null ],
+        [ "SkillCategoryDatafileParserXml", "class_skill_category_datafile_parser_xml.html", null ],
         [ "SpellListDatafileParserXml", "class_spell_list_datafile_parser_xml.html", null ]
       ] ]
     ] ],
@@ -46,6 +47,7 @@ var hierarchy =
       [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
       [ "InvalidSkillProgression", "class_invalid_skill_progression.html", null ],
       [ "RowNotFoundException", "class_row_not_found_exception.html", null ],
+      [ "SkillGroupType::SkillGroupNotFoundException", "class_skill_group_type_1_1_skill_group_not_found_exception.html", null ],
       [ "TooManyStatsException", "class_too_many_stats_exception.html", null ],
       [ "UsingCharacterRealmStatsException", "class_using_character_realm_stats_exception.html", null ]
     ] ],

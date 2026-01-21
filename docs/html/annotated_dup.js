@@ -1,5 +1,8 @@
 var annotated_dup =
 [
+    [ "SkillGroupType", "namespace_skill_group_type.html", [
+      [ "SkillGroupNotFoundException", "class_skill_group_type_1_1_skill_group_not_found_exception.html", "class_skill_group_type_1_1_skill_group_not_found_exception" ]
+    ] ],
     [ "ArmourTypeData", "class_armour_type_data.html", null ],
     [ "AttackTable", "class_attack_table.html", "class_attack_table" ],
     [ "AttackTableDatafileParserJson", "class_attack_table_datafile_parser_json.html", "class_attack_table_datafile_parser_json" ],
@@ -25,6 +28,7 @@ var annotated_dup =
     [ "NumberRange", "class_number_range.html", "class_number_range" ],
     [ "RowNotFoundException", "class_row_not_found_exception.html", "class_row_not_found_exception" ],
     [ "SkillCategoryData", "class_skill_category_data.html", "class_skill_category_data" ],
+    [ "SkillCategoryDatafileParserXml", "class_skill_category_datafile_parser_xml.html", "class_skill_category_datafile_parser_xml" ],
     [ "SkillProgressionData", "class_skill_progression_data.html", "class_skill_progression_data" ],
     [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", "class_skill_progression_type_data" ],
     [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", "class_skill_progression_type_datafile_parser_json" ],
