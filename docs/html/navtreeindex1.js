@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"class_skill_group_type_1_1_skill_group_not_found_exception.html":[0,0,10,0],
 "class_skill_group_type_1_1_skill_group_not_found_exception.html":[2,0,0,0],
 "class_skill_group_type_1_1_skill_group_not_found_exception.html#ab5e7b3ae424d7d7878c970dad82e3150":[0,0,10,0,0],
 "class_skill_group_type_1_1_skill_group_not_found_exception.html#ab5e7b3ae424d7d7878c970dad82e3150":[2,0,0,0,0],
@@ -68,17 +67,16 @@ var NAVTREEINDEX1 =
 "class_table_column_armour_type_matcher.html#a51317a962f264a604bcac140018fb749":[2,0,36,0],
 "class_table_column_creature_size_matcher.html":[2,0,37],
 "class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670":[2,0,37,0],
-"class_table_datafile_parser.html":[2,0,38],
-"class_table_row.html":[2,0,39],
-"class_table_row.html#a0acb30329157bc6ee809895481044c56":[2,0,39,0],
-"class_table_row.html#a301723f9e0d4caab39c6acea169f8578":[2,0,39,2],
-"class_table_row.html#abdff975c410db4100b78cd26dbaf07a9":[2,0,39,1],
-"class_table_row_number_matcher_factory.html":[2,0,40],
-"class_table_row_number_matcher_factory.html#a673959d387acb0602e7d96fe16fadadf":[2,0,40,0],
-"class_too_many_stats_exception.html":[2,0,41],
-"class_too_many_stats_exception.html#a9619eef421bd75825f09049cc85c70c6":[2,0,41,0],
-"class_using_character_realm_stats_exception.html":[2,0,42],
-"class_using_character_realm_stats_exception.html#aca69eda896d30a56c82383e396819be1":[2,0,42,0],
+"class_table_row.html":[2,0,38],
+"class_table_row.html#a0acb30329157bc6ee809895481044c56":[2,0,38,0],
+"class_table_row.html#a301723f9e0d4caab39c6acea169f8578":[2,0,38,2],
+"class_table_row.html#abdff975c410db4100b78cd26dbaf07a9":[2,0,38,1],
+"class_table_row_number_matcher_factory.html":[2,0,39],
+"class_table_row_number_matcher_factory.html#a673959d387acb0602e7d96fe16fadadf":[2,0,39,0],
+"class_too_many_stats_exception.html":[2,0,40],
+"class_too_many_stats_exception.html#a9619eef421bd75825f09049cc85c70c6":[2,0,40,0],
+"class_using_character_realm_stats_exception.html":[2,0,41],
+"class_using_character_realm_stats_exception.html#aca69eda896d30a56c82383e396819be1":[2,0,41,0],
 "classes.html":[2,1],
 "concepts.html":[1],
 "concepttable__column__matcher.html":[1,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX1 =
 "namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a1eba4cc5a4f440e52872df04de2f9f71":[0,0,7,1,5],
 "namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a5d142d23f5ce95990e7f55e722179a94":[0,0,7,1,10],
 "namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a6a145ec4cad224a6ab6c01e208b46eab":[0,0,7,1,7],
-"namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a735ea69825df35eefc36aeb4533bc83a":[0,0,7,1,4]
+"namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a735ea69825df35eefc36aeb4533bc83a":[0,0,7,1,4],
+"namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a786c504e2a003944ba896a962fa9f57f":[0,0,7,1,8],
+"namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411ab3d0636957c6f093c040ecdf1648ab6f":[0,0,7,1,0]
 };

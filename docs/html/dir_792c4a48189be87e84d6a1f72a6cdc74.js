@@ -13,6 +13,5 @@ var dir_792c4a48189be87e84d6a1f72a6cdc74 =
     [ "SkillProgressionTypeDatafileParserJson.h", "_skill_progression_type_datafile_parser_json_8h_source.html", null ],
     [ "SpecialAttackTableDatafileParserJson.h", "_special_attack_table_datafile_parser_json_8h_source.html", null ],
     [ "SpellListDatafileParserJson.h", "_spell_list_datafile_parser_json_8h_source.html", null ],
-    [ "SpellListDatafileParserXml.h", "_spell_list_datafile_parser_xml_8h_source.html", null ],
-    [ "TableDatafileParser.h", "_table_datafile_parser_8h_source.html", null ]
+    [ "SpellListDatafileParserXml.h", "_spell_list_datafile_parser_xml_8h_source.html", null ]
 ];

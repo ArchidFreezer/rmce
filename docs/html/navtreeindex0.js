@@ -52,7 +52,6 @@ var NAVTREEINDEX0 =
 "_table_column_armour_type_matcher_8h_source.html":[3,0,2,0,4],
 "_table_column_creature_size_matcher_8h_source.html":[3,0,2,0,5],
 "_table_column_matcher_8h_source.html":[3,0,2,0,6],
-"_table_datafile_parser_8h_source.html":[3,0,1,14],
 "_table_row_8h_source.html":[3,0,2,0,7],
 "_table_row_matcher_8h_source.html":[3,0,2,0,8],
 "_table_row_number_matcher_factory_8h_source.html":[3,0,2,0,9],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "class_skill_category_datafile_parser_json.html#ad6f0a7988af9ad12f561799ff24c68c0":[2,0,26,4],
 "class_skill_category_datafile_parser_xml.html":[2,0,27],
 "class_skill_category_datafile_parser_xml.html#a1a04fcd7bba3bbed4bff19a9b9cb0a36":[2,0,27,1],
-"class_skill_category_datafile_parser_xml.html#a90c57f8b5e4a7a9d5bc3349906508cc7":[2,0,27,0]
+"class_skill_category_datafile_parser_xml.html#a90c57f8b5e4a7a9d5bc3349906508cc7":[2,0,27,0],
+"class_skill_group_type_1_1_skill_group_not_found_exception.html":[0,0,10,0]
 };
