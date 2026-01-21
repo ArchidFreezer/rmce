@@ -122,8 +122,8 @@ Collaboration diagram for SkillCategoryData:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4a4332ae31c49b5d33b800767ebe3d3" id="r_ab4a4332ae31c49b5d33b800767ebe3d3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab4a4332ae31c49b5d33b800767ebe3d3">SkillCategoryData</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>)</td></tr>
 <tr class="memdesc:ab4a4332ae31c49b5d33b800767ebe3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:a9c2b39ef48d84ec9afe929378304b398" id="r_a9c2b39ef48d84ec9afe929378304b398"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9c2b39ef48d84ec9afe929378304b398">SkillCategoryData</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>, std::string_view <a class="el" href="#a69fd0ed4a9d021cb70e91b29abd26f6a">name</a>, <a class="el" href="namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268">SkillGroupType::Type</a> group, <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;skillProgression, <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;categoryProgression)</td></tr>
-<tr class="memdesc:a9c2b39ef48d84ec9afe929378304b398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a45f62268287beaba382b068fc07b85e2" id="r_a45f62268287beaba382b068fc07b85e2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a45f62268287beaba382b068fc07b85e2">SkillCategoryData</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>, std::string_view <a class="el" href="#a69fd0ed4a9d021cb70e91b29abd26f6a">name</a>, <a class="el" href="namespace_skill_group_type.html#a0f6465243e557ad0ac49f4c0925fb268">SkillGroupType::Type</a> group, <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;skill_progression, <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;category_progression, bool use_realm_stats)</td></tr>
+<tr class="memdesc:a45f62268287beaba382b068fc07b85e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:a69fd0ed4a9d021cb70e91b29abd26f6a" id="r_a69fd0ed4a9d021cb70e91b29abd26f6a"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a69fd0ed4a9d021cb70e91b29abd26f6a">name</a> () const</td></tr>
 <tr class="memdesc:a69fd0ed4a9d021cb70e91b29abd26f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the category as seen in-game.  <br /></td></tr>
 <tr class="memitem:aab409dce8c2a4830c27806717b295648" id="r_aab409dce8c2a4830c27806717b295648"><td class="memItemLeft">const std::string&#160;</td><td class="memItemRight"><a class="el" href="#aab409dce8c2a4830c27806717b295648">getFullName</a> () const</td></tr>
@@ -139,8 +139,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aebd62a7951f85ada98ea67d7291d5d3b" id="r_aebd62a7951f85ada98ea67d7291d5d3b"><td class="memItemLeft"><a id="aebd62a7951f85ada98ea67d7291d5d3b" name="aebd62a7951f85ada98ea67d7291d5d3b"></a>
 void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:aebd62a7951f85ada98ea67d7291d5d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empties the list of stats associated with the category. <br /></td></tr>
-<tr class="memitem:ab6f8f0a9fa9602aff099d2919e3abdac" id="r_ab6f8f0a9fa9602aff099d2919e3abdac"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab6f8f0a9fa9602aff099d2919e3abdac">setSkillProgressions</a> (const <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;skillProgression, const <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;categoryProgression)</td></tr>
-<tr class="memdesc:ab6f8f0a9fa9602aff099d2919e3abdac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the skill progressions for both skills in the category and the catehory itself.  <br /></td></tr>
+<tr class="memitem:a189f65f11c6617369dd3510475d32a9f" id="r_a189f65f11c6617369dd3510475d32a9f"><td class="memItemLeft">const std::vector&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a189f65f11c6617369dd3510475d32a9f">getStats</a> ()</td></tr>
+<tr class="memdesc:a189f65f11c6617369dd3510475d32a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the stats that that provide a bonus to the category and skills within it.  <br /></td></tr>
+<tr class="memitem:a2506401b5a99ff90c19a563e2750057d" id="r_a2506401b5a99ff90c19a563e2750057d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2506401b5a99ff90c19a563e2750057d">setUseRealmStats</a> (bool use_realm_stats)</td></tr>
+<tr class="memdesc:a2506401b5a99ff90c19a563e2750057d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to use the characters realm stats for determining the bonus.  <br /></td></tr>
+<tr class="memitem:a442f484cf558716a4806f0259316b93d" id="r_a442f484cf558716a4806f0259316b93d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a442f484cf558716a4806f0259316b93d">useRealmStats</a> () const</td></tr>
+<tr class="memdesc:a442f484cf558716a4806f0259316b93d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets whether to use the characters realm stats for determining the bonus.  <br /></td></tr>
+<tr class="memitem:a4a8759a6ebe1d24ac4576894198fc3fc" id="r_a4a8759a6ebe1d24ac4576894198fc3fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4a8759a6ebe1d24ac4576894198fc3fc">setSkillProgressions</a> (const <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;skill_progression, const <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;category_progression)</td></tr>
+<tr class="memdesc:a4a8759a6ebe1d24ac4576894198fc3fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the skill progressions for both skills in the category and the catehory itself.  <br /></td></tr>
 <tr class="memitem:a80cf578f3f17a660981cb234880daf4d" id="r_a80cf578f3f17a660981cb234880daf4d"><td class="memItemLeft">const <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a80cf578f3f17a660981cb234880daf4d">getDefaultSkillProgression</a> () const</td></tr>
 <tr class="memdesc:a80cf578f3f17a660981cb234880daf4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default skill progression for skills in the category.  <br /></td></tr>
 <tr class="memitem:a1c324b4c098e7a1efebb2bf6687cf3fb" id="r_a1c324b4c098e7a1efebb2bf6687cf3fb"><td class="memItemLeft">const <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1c324b4c098e7a1efebb2bf6687cf3fb">getSkillCategoryProgression</a> () const</td></tr>
@@ -199,8 +205,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c2b39ef48d84ec9afe929378304b398" name="a9c2b39ef48d84ec9afe929378304b398"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c2b39ef48d84ec9afe929378304b398">&#9670;&#160;</a></span>SkillCategoryData() <span class="overload">[2/2]</span></h2>
+<a id="a45f62268287beaba382b068fc07b85e2" name="a45f62268287beaba382b068fc07b85e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f62268287beaba382b068fc07b85e2">&#9670;&#160;</a></span>SkillCategoryData() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,12 +232,17 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>skillProgression</em></span>, </td>
+          <td class="paramtype"><a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>skill_progression</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>categoryProgression</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category_progression</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>use_realm_stats</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -247,8 +258,9 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">group</td><td>Skill group that the category belongs to </td></tr>
     <tr><td class="paramname">id</td><td>Unique identifier of the skill category </td></tr>
     <tr><td class="paramname">name</td><td>Name of the category as seen in-game </td></tr>
-    <tr><td class="paramname">skillProgression</td><td>Default progression type for skills in the category </td></tr>
-    <tr><td class="paramname">categoryProgression</td><td>Progression type for the skill category </td></tr>
+    <tr><td class="paramname">skill_progression</td><td>Default progression type for skills in the category </td></tr>
+    <tr><td class="paramname">category_progression</td><td>Progression type for the skill category </td></tr>
+    <tr><td class="paramname">use_realm_stats</td><td>Whether to use characters realm stats for bonus rather than category stats </td></tr>
   </table>
   </dd>
 </dl>
@@ -283,9 +295,11 @@ Additional Inherited Members</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="class_too_many_stats_exception.html" title="Thrown when more skill category stats than are allowed are attempted to be added.">TooManyStatsException</a></td><td>if attempting to add a stat when 3 already have been applied </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_using_character_realm_stats_exception.html" title="Thrown when attempting to add a skill category stats when the category is set to use character realm ...">UsingCharacterRealmStatsException</a></td><td>if attempting to add a stat when using character realm stats </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2506401b5a99ff90c19a563e2750057d" title="Set whether to use the characters realm stats for determining the bonus.">setUseRealmStats()</a> </dd></dl>
 
 </div>
 </div>
@@ -431,6 +445,35 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a189f65f11c6617369dd3510475d32a9f" name="a189f65f11c6617369dd3510475d32a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a189f65f11c6617369dd3510475d32a9f">&#9670;&#160;</a></span>getStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; &amp; SkillCategoryData::getStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the stats that that provide a bonus to the category and skills within it. </p>
+<p>A stat may appear more than once in the list</p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector of stats </dd></dl>
+
+</div>
+</div>
 <a id="a69fd0ed4a9d021cb70e91b29abd26f6a" name="a69fd0ed4a9d021cb70e91b29abd26f6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69fd0ed4a9d021cb70e91b29abd26f6a">&#9670;&#160;</a></span>name()</h2>
 
@@ -488,8 +531,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab6f8f0a9fa9602aff099d2919e3abdac" name="ab6f8f0a9fa9602aff099d2919e3abdac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6f8f0a9fa9602aff099d2919e3abdac">&#9670;&#160;</a></span>setSkillProgressions()</h2>
+<a id="a4a8759a6ebe1d24ac4576894198fc3fc" name="a4a8759a6ebe1d24ac4576894198fc3fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8759a6ebe1d24ac4576894198fc3fc">&#9670;&#160;</a></span>setSkillProgressions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -497,12 +540,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void SkillCategoryData::setSkillProgressions </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>skillProgression</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>skill_progression</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>categoryProgression</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="class_skill_progression_type_data.html">SkillProgressionTypeData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category_progression</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -516,8 +559,8 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">skillProgression</td><td><a class="el" href="class_skill_progression_type_data.html" title="Class representing the rules for the bonus that skill ranks provide.">SkillProgressionTypeData</a>&amp; progression to set for skills in the category </td></tr>
-    <tr><td class="paramname">categoryProgression</td><td><a class="el" href="class_skill_progression_type_data.html" title="Class representing the rules for the bonus that skill ranks provide.">SkillProgressionTypeData</a>&amp; progression to set for the category</td></tr>
+    <tr><td class="paramname">skill_progression</td><td><a class="el" href="class_skill_progression_type_data.html" title="Class representing the rules for the bonus that skill ranks provide.">SkillProgressionTypeData</a>&amp; progression to set for skills in the category </td></tr>
+    <tr><td class="paramname">category_progression</td><td><a class="el" href="class_skill_progression_type_data.html" title="Class representing the rules for the bonus that skill ranks provide.">SkillProgressionTypeData</a>&amp; progression to set for the category</td></tr>
   </table>
   </dd>
 </dl>
@@ -527,6 +570,64 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a2506401b5a99ff90c19a563e2750057d" name="a2506401b5a99ff90c19a563e2750057d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2506401b5a99ff90c19a563e2750057d">&#9670;&#160;</a></span>setUseRealmStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkillCategoryData::setUseRealmStats </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>use_realm_stats</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set whether to use the characters realm stats for determining the bonus. </p>
+<p>Some skill categories such as those from the Spell skill group use the characters realm stats for determining the bonus provided. If this flag is set then the <a class="el" href="#a189f65f11c6617369dd3510475d32a9f" title="Gets the stats that that provide a bonus to the category and skills within it.">getStats()</a> method should not be used.</p>
+<p>If this flag is set then any stats previously set on the category using <a class="el" href="#ae92350c9d91937939523110732fae66a" title="Add stat that applies stat boinus to skills in the category.">addStat()</a> will be removed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">use_realm_stats</td><td>bool Whether to use character realm stats </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a442f484cf558716a4806f0259316b93d" name="a442f484cf558716a4806f0259316b93d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a442f484cf558716a4806f0259316b93d">&#9670;&#160;</a></span>useRealmStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SkillCategoryData::useRealmStats </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets whether to use the characters realm stats for determining the bonus. </p>
+<p>Some skill categories such as those from the Spell skill group use the characters realm stats for determining the bonus provided. If this flag is set then the <a class="el" href="#a189f65f11c6617369dd3510475d32a9f" title="Gets the stats that that provide a bonus to the category and skills within it.">getStats()</a> method should not be used.</p>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the character realm stats should be used </dd>
+<dd>
+<span class="tt">false</span> if the stats from <a class="el" href="#a189f65f11c6617369dd3510475d32a9f" title="Gets the stats that that provide a bonus to the category and skills within it.">getStats()</a> should be used </dd></dl>
 
 </div>
 </div>

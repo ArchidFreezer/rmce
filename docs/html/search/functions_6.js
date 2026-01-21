@@ -10,5 +10,6 @@ var searchData=
   ['getfullname_7',['getFullName',['../class_skill_category_data.html#aab409dce8c2a4830c27806717b295648',1,'SkillCategoryData']]],
   ['getgroup_8',['getGroup',['../class_skill_category_data.html#a5f80b6053b2eaf39ec83bd809e1a92d5',1,'SkillCategoryData']]],
   ['getnumberofstats_9',['getNumberOfStats',['../class_skill_category_data.html#ab29b88f044746a77f4f681ca33581bfa',1,'SkillCategoryData']]],
-  ['getskillcategoryprogression_10',['getSkillCategoryProgression',['../class_skill_category_data.html#a1c324b4c098e7a1efebb2bf6687cf3fb',1,'SkillCategoryData']]]
+  ['getskillcategoryprogression_10',['getSkillCategoryProgression',['../class_skill_category_data.html#a1c324b4c098e7a1efebb2bf6687cf3fb',1,'SkillCategoryData']]],
+  ['getstats_11',['getStats',['../class_skill_category_data.html#a189f65f11c6617369dd3510475d32a9f',1,'SkillCategoryData']]]
 ];

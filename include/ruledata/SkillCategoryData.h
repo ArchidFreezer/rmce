@@ -3,9 +3,9 @@
 #include <string_view>
 #include <vector>
 
-#include "GameRuleData.h"
-#include "SkillGroupType.h"
-#include "StatType.h"
+#include <GameRuleData.h>
+#include <SkillGroupType.h>
+#include <StatType.h>
 #include <SkillProgressionTypeData.h>
 
 /**
@@ -24,6 +24,24 @@ public:
 	 * @param error String to display for the error
 	 */
 	TooManyStatsException(const std::string& error) : std::runtime_error{ error }	{}
+};
+
+/**
+ * @brief Thrown when attempting to add a skill category stats when the category is set to use character realm stats
+ * 
+ * It is invalid to have both skill category stats and also to use the characters realm stats as these are mutually
+ * exclusive options.
+ */
+class UsingCharacterRealmStatsException : public std::runtime_error {
+public:
+	/**
+	 * @brief Exception constructor
+	 *
+	 * std::runtime_error will handle the string
+	 *
+	 * @param error String to display for the error
+	 */
+	UsingCharacterRealmStatsException(const std::string& error) : std::runtime_error{ error }{}
 };
 
 /**
@@ -65,15 +83,17 @@ public:
 	 * @param group Skill group that the category belongs to
 	 * @param id Unique identifier of the skill category
 	 * @param name Name of the category as seen in-game
-	 * @param skillProgression Default progression type for skills in the category
-	 * @param categoryProgression Progression type for the skill category
+	 * @param skill_progression Default progression type for skills in the category
+	 * @param category_progression Progression type for the skill category
+	 * @param use_realm_stats Whether to use characters realm stats for bonus rather than category stats
 	 */
-	SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionTypeData& skillProgression, SkillProgressionTypeData& categoryProgression) :
+	SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionTypeData& skill_progression, SkillProgressionTypeData& category_progression, bool use_realm_stats) :
 		GameRuleData(id),
 		group_{ group },
 		name_{ name },
-		skillProgression_{ &skillProgression },
-		skillCategoryProgression_{ &categoryProgression } {}
+		skill_progression_{ &skill_progression },
+		skill_category_progression_{ &category_progression },
+		use_realm_stats_{ use_realm_stats } {}
 
 
 	/**
@@ -102,6 +122,8 @@ public:
 	 * @param stat whose bonus should be applied to skills category
 	 * @returns Number of stats associated withthe category after the operation
 	 * @throws TooManyStatsException if attempting to add a stat when 3 already have been applied
+	 * @throws UsingCharacterRealmStatsException if attempting to add a stat when using character realm stats
+	 * @see setUseRealmStats()
 	 */
 	int addStat(StatType::Type stat);
 
@@ -131,6 +153,38 @@ public:
 	void clearStats() { stats_.clear(); }
 
 	/**
+	 * @brief Gets the stats that that provide a bonus to the category and skills within it
+	 * 
+	 * A stat may appear more than once in the list
+	 * 
+	 * @return std::vector of stats
+	 */
+	const std::vector<StatType::Type>& getStats() { return stats_; }
+
+	/**
+	 * @brief Set whether to use the characters realm stats for determining the bonus
+	 * 
+	 * Some skill categories such as those from the Spell skill group use the characters realm stats for determining the
+	 * bonus provided. If this flag is set then the getStats() method should not be used.
+	 * 
+	 * If this flag is set then any stats previously set on the category using addStat() will be removed.
+	 * 
+	 * @param use_realm_stats bool Whether to use character realm stats
+	 */
+	void setUseRealmStats(bool use_realm_stats);
+
+	/**
+	 * @brief Gets whether to use the characters realm stats for determining the bonus
+	 *
+	 * Some skill categories such as those from the Spell skill group use the characters realm stats for determining the
+	 * bonus provided. If this flag is set then the getStats() method should not be used.
+	 *
+	 * @return `true` if the character realm stats should be used
+	 * @return `false` if the stats from getStats() should be used
+	 */
+	bool useRealmStats() const { return use_realm_stats_; }
+
+	/**
 	 * @brief Sets the skill progressions for both skills in the category and the catehory itself
 	 * 
 	 * Each skill in the category has a skill progression that defines the bonus each skill rank provides. This function sets
@@ -144,12 +198,12 @@ public:
 	 *  - kNone: All other cases
 	 * Any attempt to set another combination will throw an exception
 	 * 
-	 * @param skillProgression SkillProgressionTypeData&  progression to set for skills in the category
-	 * @param categoryProgression SkillProgressionTypeData&  progression to set for the category
+	 * @param skill_progression SkillProgressionTypeData&  progression to set for skills in the category
+	 * @param category_progression SkillProgressionTypeData&  progression to set for the category
 	 * 
 	 * @throws InvalidSkillProgression if the combination of progressions is invalid
 	 */
-	void setSkillProgressions(const SkillProgressionTypeData& skillProgression, const SkillProgressionTypeData& categoryProgression);
+	void setSkillProgressions(const SkillProgressionTypeData& skill_progression, const SkillProgressionTypeData& category_progression);
 
 	/**
 	 * @brief Gets the default skill progression for skills in the category
@@ -161,7 +215,7 @@ public:
 	 * 
 	 * @return SkillProgressionTypeData&  default skill progressiomn type
 	 */
-	const SkillProgressionTypeData& getDefaultSkillProgression() const { return *skillProgression_; }
+	const SkillProgressionTypeData& getDefaultSkillProgression() const { return *skill_progression_; }
 
 	/**
 	 * @brief Gets the skill progression for the skill category
@@ -172,13 +226,14 @@ public:
 	 *
 	 * @return SkillProgressionType::Type default skill progressiomn type
 	 */
-	const SkillProgressionTypeData& getSkillCategoryProgression() const { return *skillCategoryProgression_; }
+	const SkillProgressionTypeData& getSkillCategoryProgression() const { return *skill_category_progression_; }
 
 private:
 	SkillGroupType::Type group_{}; /**< Name of the skill group; the category belongs to */
-	const SkillProgressionTypeData* skillProgression_{}; /**< How many bonus points each skill rank provides by default in skills in the category */
-	const SkillProgressionTypeData* skillCategoryProgression_{}; /**< How many bonus points each skill rank provides to the category */
+	const SkillProgressionTypeData* skill_progression_{}; /**< How many bonus points each skill rank provides by default in skills in the category */
+	const SkillProgressionTypeData* skill_category_progression_{}; /**< How many bonus points each skill rank provides to the category */
 	std::string name_{}; /**< Name of the category as seen in-game */
 	std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the category */
+	bool use_realm_stats_{}; /**< Whether the realm stat of the character should determine the applicable stats */
 
 };

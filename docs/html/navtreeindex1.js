@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"class_skill_progression_type_data.html#a951619d33cdf197bb58be9233d54c5a5":[2,0,26,1],
+"class_skill_progression_type_data.html#aa124385e708f575188ddc4f1ab277cc9":[2,0,26,6],
+"class_skill_progression_type_data.html#aab5699ac4a157015e7cda755c726f412":[2,0,26,13],
 "class_skill_progression_type_data.html#ab2ed300888d62ecd26e6fd6c426b837f":[2,0,26,9],
 "class_skill_progression_type_data.html#acf56ca725ea11d3871bf96beec6d7588":[2,0,26,2],
 "class_skill_progression_type_datafile_parser_json.html":[2,0,27],
@@ -57,6 +60,8 @@ var NAVTREEINDEX1 =
 "class_table_row_number_matcher_factory.html#a673959d387acb0602e7d96fe16fadadf":[2,0,37,0],
 "class_too_many_stats_exception.html":[2,0,38],
 "class_too_many_stats_exception.html#a9619eef421bd75825f09049cc85c70c6":[2,0,38,0],
+"class_using_character_realm_stats_exception.html":[2,0,39],
+"class_using_character_realm_stats_exception.html#aca69eda896d30a56c82383e396819be1":[2,0,39,0],
 "classes.html":[2,1],
 "concepts.html":[1],
 "concepttable__column__matcher.html":[1,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX1 =
 "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1a1f0d5fe7d41b5fec009974b34c8ba95e":[0,0,8,1,2],
 "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1a458fe8603674d721aac782985750730b":[0,0,8,1,1],
 "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1aad80bddb2c53a0c7605e23e62491797b":[0,0,8,1,0],
-"namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1aeb9af1ba35d0a6f48fd1e6218a4d82c9":[0,0,8,1,3],
-"namespace_skill_development_type.html":[0,0,9],
-"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b":[0,0,9,0],
-"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b":[0,0,9,1],
-"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba272488319413a0318c1de9e9fa61b7e5":[0,0,9,1,0],
-"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba821da62632c491ea619ead7b31c094bf":[0,0,9,1,3]
+"namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1aeb9af1ba35d0a6f48fd1e6218a4d82c9":[0,0,8,1,3]
 };

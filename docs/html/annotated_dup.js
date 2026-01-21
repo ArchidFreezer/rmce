@@ -38,5 +38,6 @@ var annotated_dup =
     [ "TableDatafileParser", "class_table_datafile_parser.html", null ],
     [ "TableRow", "class_table_row.html", "class_table_row" ],
     [ "TableRowNumberMatcherFactory", "class_table_row_number_matcher_factory.html", "class_table_row_number_matcher_factory" ],
-    [ "TooManyStatsException", "class_too_many_stats_exception.html", "class_too_many_stats_exception" ]
+    [ "TooManyStatsException", "class_too_many_stats_exception.html", "class_too_many_stats_exception" ],
+    [ "UsingCharacterRealmStatsException", "class_using_character_realm_stats_exception.html", "class_using_character_realm_stats_exception" ]
 ];

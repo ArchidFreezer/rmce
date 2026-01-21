@@ -1,6 +1,7 @@
-#include "SkillCategoryData.h"
+#include <SkillCategoryData.h>
 	
 int SkillCategoryData::addStat(StatType::Type stat) {
+	if (useRealmStats()) throw UsingCharacterRealmStatsException("Cannot add category stat when also using character realm stats");
 	if (stats_.size() < 3) {
 		stats_.push_back(stat);
 	} else {
@@ -20,15 +21,22 @@ bool SkillCategoryData::removeStat(StatType::Type stat) {
 	return false;
 }
 
-void SkillCategoryData::setSkillProgressions(const SkillProgressionTypeData& skillProgression, const SkillProgressionTypeData& categoryProgression) {
+void SkillCategoryData::setSkillProgressions(const SkillProgressionTypeData& skill_progression, const SkillProgressionTypeData& skill_category_progression) {
 	// Check for invlaid combinations first
-	if (categoryProgression.name() != "Standard" && categoryProgression.name() != "None") {
+	if (skill_category_progression.name() != "Standard" && skill_category_progression.name() != "None") {
 		throw InvalidSkillProgression("Category progression may only be Standard or None.");
 	}
-	if (categoryProgression.name() == "Standard" && skillProgression.name() != "Standard") {
+	if (skill_category_progression.name() == "Standard" && skill_progression.name() != "Standard") {
 		throw InvalidSkillProgression("Category progression may only be Standard if the skill progression is also set to Standard.");
 	}
 	// Combination is valid
-	skillProgression_ = &skillProgression;
-	skillCategoryProgression_ = &categoryProgression;
+	skill_progression_ = &skill_progression;
+	skill_category_progression_ = &skill_category_progression;
+}
+
+void SkillCategoryData::setUseRealmStats(bool use_realm_stats) {
+	use_realm_stats_ = use_realm_stats;
+
+	// If we are using the character realm stats then any set on the category should be removed
+	if (use_realm_stats_) clearStats();
 }

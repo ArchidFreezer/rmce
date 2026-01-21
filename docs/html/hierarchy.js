@@ -46,7 +46,8 @@ var hierarchy =
       [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
       [ "InvalidSkillProgression", "class_invalid_skill_progression.html", null ],
       [ "RowNotFoundException", "class_row_not_found_exception.html", null ],
-      [ "TooManyStatsException", "class_too_many_stats_exception.html", null ]
+      [ "TooManyStatsException", "class_too_many_stats_exception.html", null ],
+      [ "UsingCharacterRealmStatsException", "class_using_character_realm_stats_exception.html", null ]
     ] ],
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
