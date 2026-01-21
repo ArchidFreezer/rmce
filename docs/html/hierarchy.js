@@ -6,6 +6,7 @@ var hierarchy =
     ] ],
     [ "DatafileParser", "class_datafile_parser.html", [
       [ "DatafileParserJson", "class_datafile_parser_json.html", [
+        [ "ArmourTypeDatafileParserXml", "class_armour_type_datafile_parser_xml.html", null ],
         [ "AttackTableDatafileParserJson", "class_attack_table_datafile_parser_json.html", null ],
         [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", null ],
         [ "LanguageCategoryDatafileParserJson", "class_language_category_datafile_parser_json.html", null ],
@@ -44,6 +45,7 @@ var hierarchy =
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
     [ "std::runtime_error", null, [
+      [ "ArmourType::ArmourTypeNotFoundException", "class_armour_type_1_1_armour_type_not_found_exception.html", null ],
       [ "ColNotFoundException", "class_col_not_found_exception.html", null ],
       [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
       [ "InvalidSkillProgression", "class_invalid_skill_progression.html", null ],

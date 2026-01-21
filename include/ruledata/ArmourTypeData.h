@@ -186,7 +186,7 @@ public:
 	 * 
 	 * @param animal_only Whether the armour type is for animal armour only
 	 */
-	void setIsAnimalOnly(bool animal_only) { animal_only_ = animal_only; }
+	void setAnimalOnly(bool animal_only) { animal_only_ = animal_only; }
 
 	/**
 	 * @brief Sets if the armour type is only appliable to animal skin

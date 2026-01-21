@@ -152,8 +152,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af5f27dcf2ae7c48cf1b8551b3ce068ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the reduction in combatant’s Quickness stat bonus for his DB.  <br /></td></tr>
 <tr class="memitem:a92c7c99089d2cb0321095958fd898a9d" id="r_a92c7c99089d2cb0321095958fd898a9d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a92c7c99089d2cb0321095958fd898a9d">quicknessPenalty</a> () const</td></tr>
 <tr class="memdesc:a92c7c99089d2cb0321095958fd898a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the reduction in combatant’s Quickness stat bonus for his DB.  <br /></td></tr>
-<tr class="memitem:a082e5def61f4038aa3ae40d63d4f51b6" id="r_a082e5def61f4038aa3ae40d63d4f51b6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a082e5def61f4038aa3ae40d63d4f51b6">setIsAnimalOnly</a> (bool animal_only)</td></tr>
-<tr class="memdesc:a082e5def61f4038aa3ae40d63d4f51b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets if the armour type is only appliable to animal skin.  <br /></td></tr>
+<tr class="memitem:ab019500862753c3cb3e4c580ea7e0897" id="r_ab019500862753c3cb3e4c580ea7e0897"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab019500862753c3cb3e4c580ea7e0897">setAnimalOnly</a> (bool animal_only)</td></tr>
+<tr class="memdesc:ab019500862753c3cb3e4c580ea7e0897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets if the armour type is only appliable to animal skin.  <br /></td></tr>
 <tr class="memitem:ab96238c3155edb9f18b760add3fecc4e" id="r_ab96238c3155edb9f18b760add3fecc4e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab96238c3155edb9f18b760add3fecc4e">animalOnly</a> () const</td></tr>
 <tr class="memdesc:ab96238c3155edb9f18b760add3fecc4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets if the armour type is only appliable to animal skin.  <br /></td></tr>
 <tr class="memitem:a1b3fe5cbd2439c384754663076e1c127" id="r_a1b3fe5cbd2439c384754663076e1c127"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1b3fe5cbd2439c384754663076e1c127">setIncludesGreaves</a> (bool greaves)</td></tr>
@@ -538,6 +538,40 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab019500862753c3cb3e4c580ea7e0897" name="ab019500862753c3cb3e4c580ea7e0897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab019500862753c3cb3e4c580ea7e0897">&#9670;&#160;</a></span>setAnimalOnly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ArmourTypeData::setAnimalOnly </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>animal_only</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets if the armour type is only appliable to animal skin. </p>
+<p>Some armour types are animal armors, natural body coverings with no normal armor equivalents. One cannot achieve such an AT without acquiring some enchanted and specially designed armor (e.g., magic fell beast skin).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animal_only</td><td>Whether the armour type is for animal armour only </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aaad70e69160dcaa36ea058c8fdbe0acd" name="aaad70e69160dcaa36ea058c8fdbe0acd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaad70e69160dcaa36ea058c8fdbe0acd">&#9670;&#160;</a></span>setDescription()</h2>
 
@@ -599,40 +633,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">greaves</td><td>Whether the armour is consdered to be protected as with greaves </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a082e5def61f4038aa3ae40d63d4f51b6" name="a082e5def61f4038aa3ae40d63d4f51b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a082e5def61f4038aa3ae40d63d4f51b6">&#9670;&#160;</a></span>setIsAnimalOnly()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ArmourTypeData::setIsAnimalOnly </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>animal_only</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets if the armour type is only appliable to animal skin. </p>
-<p>Some armour types are animal armors, natural body coverings with no normal armor equivalents. One cannot achieve such an AT without acquiring some enchanted and specially designed armor (e.g., magic fell beast skin).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">animal_only</td><td>Whether the armour type is for animal armour only </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,9 +1,13 @@
 var annotated_dup =
 [
+    [ "ArmourType", "namespace_armour_type.html", [
+      [ "ArmourTypeNotFoundException", "class_armour_type_1_1_armour_type_not_found_exception.html", "class_armour_type_1_1_armour_type_not_found_exception" ]
+    ] ],
     [ "SkillGroupType", "namespace_skill_group_type.html", [
       [ "SkillGroupNotFoundException", "class_skill_group_type_1_1_skill_group_not_found_exception.html", "class_skill_group_type_1_1_skill_group_not_found_exception" ]
     ] ],
     [ "ArmourTypeData", "class_armour_type_data.html", "class_armour_type_data" ],
+    [ "ArmourTypeDatafileParserXml", "class_armour_type_datafile_parser_xml.html", "class_armour_type_datafile_parser_xml" ],
     [ "AttackTable", "class_attack_table.html", "class_attack_table" ],
     [ "AttackTableDatafileParserJson", "class_attack_table_datafile_parser_json.html", "class_attack_table_datafile_parser_json" ],
     [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", "class_attack_table_datafile_parser_xml" ],
