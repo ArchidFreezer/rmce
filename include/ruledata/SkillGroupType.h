@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <optional>
+#include <stdexcept>
 #include <string_view>
 
 #include "StringUtils.h"
@@ -14,6 +15,23 @@
  *
  */
 namespace SkillGroupType {
+
+	/**
+	* @brief Thrown to indicate that no SkillGroupType::Type enum was found
+	*
+	*/
+	class SkillGroupNotFoundException : public std::runtime_error {
+	public:
+		/**
+		 * @brief Exception constructor
+		 *
+		 * std::runtime_error will handle the string
+		 *
+		 * @param error String to display for the error
+		 */
+		SkillGroupNotFoundException(const std::string& error) : std::runtime_error{ error }	{}
+	};
+
 	/**
 	 * @brief Enumeration class representing groups of skill categories
 	 */
