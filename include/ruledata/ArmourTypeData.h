@@ -43,7 +43,7 @@ public:
 		description_{ description },
 		min_manoeuvre_mod_{ min_manoeuvre_mod },
 		max_manoeuvre_mod_{ max_manoeuvre_mod },
-		missile_attack_penalty_{ missile_attack_penalty_ },
+		missile_attack_penalty_{ missile_attack_penalty },
 		quickness_penalty_{ quickness_penalty },
 		animal_only_{ animal_only },
 		includes_greaves_{ includes_greaves } {}
