@@ -1,5 +1,6 @@
 var dir_792c4a48189be87e84d6a1f72a6cdc74 =
 [
+    [ "ArmourTypeDatafileParserJson.h", "_armour_type_datafile_parser_json_8h_source.html", null ],
     [ "ArmourTypeDatafileParserXml.h", "_armour_type_datafile_parser_xml_8h_source.html", null ],
     [ "AttackTableDatafileParserJson.h", "_attack_table_datafile_parser_json_8h_source.html", null ],
     [ "AttackTableDatafileParserXml.h", "_attack_table_datafile_parser_xml_8h_source.html", null ],

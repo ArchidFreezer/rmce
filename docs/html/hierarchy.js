@@ -6,7 +6,7 @@ var hierarchy =
     ] ],
     [ "DatafileParser", "class_datafile_parser.html", [
       [ "DatafileParserJson", "class_datafile_parser_json.html", [
-        [ "ArmourTypeDatafileParserXml", "class_armour_type_datafile_parser_xml.html", null ],
+        [ "ArmourTypeDatafileParserJson", "class_armour_type_datafile_parser_json.html", null ],
         [ "AttackTableDatafileParserJson", "class_attack_table_datafile_parser_json.html", null ],
         [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", null ],
         [ "LanguageCategoryDatafileParserJson", "class_language_category_datafile_parser_json.html", null ],
@@ -17,6 +17,7 @@ var hierarchy =
         [ "SpellListDatafileParserJson", "class_spell_list_datafile_parser_json.html", null ]
       ] ],
       [ "DatafileParserXml", "class_datafile_parser_xml.html", [
+        [ "ArmourTypeDatafileParserXml", "class_armour_type_datafile_parser_xml.html", null ],
         [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", null ],
         [ "SkillCategoryDatafileParserXml", "class_skill_category_datafile_parser_xml.html", null ],
         [ "SpellListDatafileParserXml", "class_spell_list_datafile_parser_xml.html", null ]

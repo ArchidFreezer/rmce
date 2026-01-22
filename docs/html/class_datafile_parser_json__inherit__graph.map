@@ -1,6 +1,6 @@
 <map id="DatafileParserJson" name="DatafileParserJson">
 <area shape="rect" id="Node000001" title="Abstract class to parse json files containing game rule data." alt="" coords="158,224,290,251"/>
-<area shape="rect" id="Node000003" href="$class_armour_type_datafile_parser_xml.html" title="Process ArmourTypeData objects for xml files." alt="" coords="344,5,542,32"/>
+<area shape="rect" id="Node000003" href="$class_armour_type_datafile_parser_json.html" title="Process ArmourTypeData objects for json files." alt="" coords="342,5,544,32"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,208,246,170,268,125,298,80,336,42,360,31,356,34,340,46,302,83,272,128,250,173,236,211"/>
 <area shape="rect" id="Node000004" href="$class_attack_table_datafile_parser_json.html" title="Process AttackTable objects for json files." alt="" coords="342,56,544,83"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="237,209,276,149,304,118,337,92,363,82,359,85,339,97,308,122,281,153,241,212"/>
