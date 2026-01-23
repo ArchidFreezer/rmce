@@ -6,7 +6,7 @@
             "group": "Armour",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Strength",
                 "Agility",
@@ -19,7 +19,7 @@
             "group": "Armour",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Agility",
                 "Strength",
@@ -32,7 +32,7 @@
             "group": "Armour",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Strength",
                 "Agility",
@@ -45,7 +45,7 @@
             "group": "Artistic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Presence",
                 "Empathy",
@@ -58,7 +58,7 @@
             "group": "Artistic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Empathy",
                 "Intuition",
@@ -71,7 +71,7 @@
             "group": "Athletic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Strength",
                 "Constitution",
@@ -84,7 +84,7 @@
             "group": "Athletic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Constitution",
                 "Agility",
@@ -97,7 +97,7 @@
             "group": "Athletic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Agility",
                 "Quickness",
@@ -123,7 +123,7 @@
             "group": "Awareness",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Intuition",
                 "Reasoning",
@@ -136,7 +136,7 @@
             "group": "Awareness",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Intuition",
                 "Self Discipline",
@@ -175,7 +175,7 @@
             "group": "Communications",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Reasoning",
                 "Memory",
@@ -201,7 +201,7 @@
             "group": "Directed Spells",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Agility",
                 "Self Discipline",
@@ -214,7 +214,7 @@
             "group": "Influence",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Presence",
                 "Empathy",
@@ -227,7 +227,7 @@
             "group": "Lore",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Memory",
                 "Reasoning",
@@ -240,7 +240,7 @@
             "group": "Lore",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Memory",
                 "Reasoning",
@@ -253,7 +253,7 @@
             "group": "Lore",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Memory",
                 "Reasoning",
@@ -266,7 +266,7 @@
             "group": "Lore",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Memory",
                 "Reasoning",
@@ -292,7 +292,7 @@
             "group": "Martial Arts",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Strength",
                 "Agility",
@@ -305,7 +305,7 @@
             "group": "Martial Arts",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Agility",
                 "Strength",
@@ -318,7 +318,7 @@
             "group": "Outdoor",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Empathy",
                 "Agility",
@@ -331,7 +331,7 @@
             "group": "Outdoor",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Self Discipline",
                 "Intuition",
@@ -344,7 +344,7 @@
             "group": "Power Awareness",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Empathy",
                 "Intuition",
@@ -379,7 +379,7 @@
             "group": "Science\/Analytic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Reasoning",
                 "Memory",
@@ -405,7 +405,7 @@
             "group": "Self Control",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Self Discipline",
                 "Presence",
@@ -548,7 +548,7 @@
             "group": "Subterfuge",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Agility",
                 "Self Discipline",
@@ -561,7 +561,7 @@
             "group": "Subterfuge",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Intuition",
                 "Agility",
@@ -574,7 +574,7 @@
             "group": "Subterfuge",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Agility",
                 "Self Discipline",
@@ -587,7 +587,7 @@
             "group": "Technical\/Trade",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Reasoning",
                 "Memory",
@@ -626,7 +626,7 @@
             "group": "Urban",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Intuition",
                 "Presence",
@@ -639,7 +639,7 @@
             "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Strength",
                 "Agility",
@@ -652,7 +652,7 @@
             "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Strength",
                 "Agility",
@@ -665,7 +665,7 @@
             "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Strength",
                 "Agility",
@@ -678,7 +678,7 @@
             "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Agility",
                 "Strength",
@@ -691,7 +691,7 @@
             "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Intuition",
                 "Agility",
@@ -704,7 +704,7 @@
             "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Strength",
                 "Agility",
@@ -717,7 +717,7 @@
             "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
-            "category-progression": "Standard",
+            "category-progression": "Category Standard",
             "stats": [
                 "Agility",
                 "Strength",

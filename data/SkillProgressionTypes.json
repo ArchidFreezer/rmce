@@ -44,6 +44,15 @@
             "twenty": "2",
             "thirty": "1",
             "remaining": "0.5"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+            "name": "Category Standard",
+            "zero": "-15",
+            "ten": "2",
+            "twenty": "1",
+            "thirty": "0.5",
+            "remaining": "0"
         }
     ]
 }
