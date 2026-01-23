@@ -8,7 +8,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Strength",
+                "Agility",
+                "Strength"
             ]
         },
         {
@@ -19,7 +21,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Agility",
+                "Strength",
+                "Agility"
             ]
         },
         {
@@ -30,7 +34,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Strength",
+                "Agility",
+                "Strength"
             ]
         },
         {
@@ -41,9 +47,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution",
-                "Quickness",
-                "Self Discipline"
+                "Presence",
+                "Empathy",
+                "Agility"
             ]
         },
         {
@@ -54,9 +60,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Quickness",
-                "Reasoning",
-                "Self Discipline"
+                "Empathy",
+                "Intuition",
+                "Presence"
             ]
         },
         {
@@ -67,8 +73,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
+                "Strength",
                 "Constitution",
-                "Empathy"
+                "Agility"
             ]
         },
         {
@@ -80,7 +87,8 @@
             "category-progression": "Standard",
             "stats": [
                 "Constitution",
-                "Empathy"
+                "Agility",
+                "Strength"
             ]
         },
         {
@@ -91,8 +99,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution",
-                "Strength"
+                "Agility",
+                "Quickness",
+                "Agility"
             ]
         },
         {
@@ -103,8 +112,9 @@
             "skill-progression": "Limited",
             "category-progression": "None",
             "stats": [
-                "Presence",
-                "Reasoning"
+                "Intuition",
+                "Self Discipline",
+                "Intuition"
             ]
         },
         {
@@ -115,9 +125,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Memory",
-                "Presence",
-                "Reasoning"
+                "Intuition",
+                "Reasoning",
+                "Self Discipline"
             ]
         },
         {
@@ -128,8 +138,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Presence",
-                "Reasoning"
+                "Intuition",
+                "Self Discipline",
+                "Intuition"
             ]
         },
         {
@@ -140,8 +151,9 @@
             "skill-progression": "None",
             "category-progression": "None",
             "stats": [
-                "Empathy",
-                "Presence"
+                "Constitution",
+                "Self Discipline",
+                "Constitution"
             ]
         },
         {
@@ -152,9 +164,9 @@
             "skill-progression": "Combined",
             "category-progression": "None",
             "stats": [
-                "Constitution",
-                "Presence",
-                "Strength"
+                "Agility",
+                "Quickness",
+                "Self Discipline"
             ]
         },
         {
@@ -165,9 +177,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Intuition",
+                "Reasoning",
                 "Memory",
-                "Quickness"
+                "Empathy"
             ]
         },
         {
@@ -178,9 +190,9 @@
             "skill-progression": "Combined",
             "category-progression": "None",
             "stats": [
-                "Constitution",
-                "Intuition",
-                "Presence"
+                "Agility",
+                "Memory",
+                "Self Discipline"
             ]
         },
         {
@@ -191,8 +203,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution",
-                "Presence"
+                "Agility",
+                "Self Discipline",
+                "Agility"
             ]
         },
         {
@@ -203,9 +216,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Quickness",
-                "Reasoning",
-                "Self Discipline"
+                "Presence",
+                "Empathy",
+                "Intuition"
             ]
         },
         {
@@ -216,7 +229,8 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Intuition",
+                "Memory",
+                "Reasoning",
                 "Memory"
             ]
         },
@@ -228,7 +242,8 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Intuition",
+                "Memory",
+                "Reasoning",
                 "Memory"
             ]
         },
@@ -240,7 +255,8 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Intuition",
+                "Memory",
+                "Reasoning",
                 "Memory"
             ]
         },
@@ -252,7 +268,8 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Intuition",
+                "Memory",
+                "Reasoning",
                 "Memory"
             ]
         },
@@ -264,9 +281,9 @@
             "skill-progression": "Combined",
             "category-progression": "None",
             "stats": [
-                "Constitution",
-                "Presence",
-                "Strength"
+                "Agility",
+                "Quickness",
+                "Self Discipline"
             ]
         },
         {
@@ -277,7 +294,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Strength",
+                "Agility",
+                "Strength"
             ]
         },
         {
@@ -288,7 +307,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Agility",
+                "Strength",
+                "Agility"
             ]
         },
         {
@@ -299,8 +320,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution",
-                "Quickness"
+                "Empathy",
+                "Agility",
+                "Empathy"
             ]
         },
         {
@@ -311,9 +333,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
+                "Self Discipline",
                 "Intuition",
-                "Presence",
-                "Reasoning"
+                "Memory"
             ]
         },
         {
@@ -324,9 +346,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Quickness",
-                "Reasoning",
-                "Self Discipline"
+                "Empathy",
+                "Intuition",
+                "Presence"
             ]
         },
         {
@@ -337,9 +359,9 @@
             "skill-progression": "Combined",
             "category-progression": "None",
             "stats": [
-                "Quickness",
-                "Reasoning",
-                "Self Discipline"
+                "Empathy",
+                "Intuition",
+                "Presence"
             ]
         },
         {
@@ -359,8 +381,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Intuition",
-                "Memory"
+                "Reasoning",
+                "Memory",
+                "Reasoning"
             ]
         },
         {
@@ -371,8 +394,9 @@
             "skill-progression": "Combined",
             "category-progression": "None",
             "stats": [
-                "Intuition",
-                "Memory"
+                "Reasoning",
+                "Memory",
+                "Reasoning"
             ]
         },
         {
@@ -383,6 +407,7 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
+                "Self Discipline",
                 "Presence",
                 "Self Discipline"
             ]
@@ -395,8 +420,9 @@
             "skill-progression": "Combined",
             "category-progression": "None",
             "stats": [
-                "Constitution",
-                "Presence"
+                "Strength",
+                "Agility",
+                "Self Discipline"
             ]
         },
         {
@@ -524,9 +550,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution",
-                "Presence",
-                "Reasoning"
+                "Agility",
+                "Self Discipline",
+                "Intuition"
             ]
         },
         {
@@ -537,8 +563,8 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution",
-                "Memory",
+                "Intuition",
+                "Agility",
                 "Reasoning"
             ]
         },
@@ -550,9 +576,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution",
-                "Presence",
-                "Reasoning"
+                "Agility",
+                "Self Discipline",
+                "Intuition"
             ]
         },
         {
@@ -563,9 +589,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Intuition",
+                "Reasoning",
                 "Memory",
-                "Presence"
+                "Self Discipline"
             ]
         },
         {
@@ -576,9 +602,9 @@
             "skill-progression": "Combined",
             "category-progression": "None",
             "stats": [
-                "Intuition",
+                "Reasoning",
                 "Memory",
-                "Reasoning"
+                "Intuition"
             ]
         },
         {
@@ -589,8 +615,8 @@
             "skill-progression": "Combined",
             "category-progression": "None",
             "stats": [
-                "Intuition",
                 "Memory",
+                "Intuition",
                 "Reasoning"
             ]
         },
@@ -602,9 +628,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Memory",
-                "Reasoning",
-                "Self Discipline"
+                "Intuition",
+                "Presence",
+                "Reasoning"
             ]
         },
         {
@@ -615,7 +641,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Strength",
+                "Agility",
+                "Strength"
             ]
         },
         {
@@ -626,7 +654,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Strength",
+                "Agility",
+                "Strength"
             ]
         },
         {
@@ -637,7 +667,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Strength",
+                "Agility",
+                "Strength"
             ]
         },
         {
@@ -648,7 +680,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Agility",
+                "Strength",
+                "Agility"
             ]
         },
         {
@@ -659,8 +693,8 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution",
-                "Memory",
+                "Intuition",
+                "Agility",
                 "Reasoning"
             ]
         },
@@ -672,7 +706,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Strength",
+                "Agility",
+                "Strength"
             ]
         },
         {
@@ -683,7 +719,9 @@
             "skill-progression": "Standard",
             "category-progression": "Standard",
             "stats": [
-                "Constitution"
+                "Agility",
+                "Strength",
+                "Agility"
             ]
         }
     ]
