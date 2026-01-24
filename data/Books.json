@@ -365,11 +365,11 @@
             "isbn": "1-55806-254-8"
         },
         {
-            "id": "BOOK_UNKNOWN",
+            "id": "BOOK_CUSTOM_UNKNOWN",
             "code": "1111",
             "name": "Custom/Unknown",
             "abbreviation": "None",
             "isbn": "1-11111-111-x"
-        },
+        }
     ]
 }
