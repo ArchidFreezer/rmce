@@ -9,42 +9,6 @@
 #include <SkillProgressionTypeData.h>
 
 /**
- * @brief Thrown when more skill category stats than are allowed are attempted to be added
- * 
- * Skill categories allow the bonus for 3 stats to be applied to the total skill bonus. If more than this number are
- * attempted to be added this exception should be thrown.
- */
-class TooManyStatsException : public std::runtime_error {
-public:
-	/**
-	 * @brief Exception constructor
-	 *
-	 * std::runtime_error will handle the string
-	 *
-	 * @param error String to display for the error
-	 */
-	TooManyStatsException(const std::string& error) : std::runtime_error{ error }	{}
-};
-
-/**
- * @brief Thrown when attempting to add a skill category stats when the category is set to use character realm stats
- * 
- * It is invalid to have both skill category stats and also to use the characters realm stats as these are mutually
- * exclusive options.
- */
-class UsingCharacterRealmStatsException : public std::runtime_error {
-public:
-	/**
-	 * @brief Exception constructor
-	 *
-	 * std::runtime_error will handle the string
-	 *
-	 * @param error String to display for the error
-	 */
-	UsingCharacterRealmStatsException(const std::string& error) : std::runtime_error{ error }{}
-};
-
-/**
  * @brief Thrown when there is an attempt to set either the skill progression or category progression in an invalad combination
  * 
  * The category progression can only be kStandard or kNone and only kStandard if the skill progression is also kStandard
@@ -238,6 +202,24 @@ public:
 	 * @return SkillProgressionType::Type default skill progressiomn type
 	 */
 	const SkillProgressionTypeData& skillCategoryProgression() const { return *skill_category_progression_; }
+
+	/**
+	 * @brief Thrown when attempting to add a skill category stats when the category is set to use character realm stats
+	 *
+	 * It is invalid to have both skill category stats and also to use the characters realm stats as these are mutually
+	 * exclusive options.
+	 */
+	class UsingCharacterRealmStatsException : public std::runtime_error {
+	public:
+		/**
+		 * @brief Exception constructor
+		 *
+		 * std::runtime_error will handle the string
+		 *
+		 * @param error String to display for the error
+		 */
+		UsingCharacterRealmStatsException(const std::string& error) : std::runtime_error{ error }{}
+	};
 
 private:
 	SkillGroupType::Type group_{}; /**< Name of the skill group; the category belongs to */

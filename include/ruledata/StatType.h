@@ -14,6 +14,24 @@
 namespace StatType {
 
 	/**
+	 * @brief Thrown when more stats than are allowed are attempted to be added
+	 *
+	 * Some game rules allow a specific number of stats to be applied to them. If more than this number are attempted to be
+	 * added this exception should be thrown.
+	 */
+	class TooManyStatsException : public std::runtime_error {
+	public:
+		/**
+		 * @brief Exception constructor
+		 *
+		 * std::runtime_error will handle the string
+		 *
+		 * @param error String to display for the error
+		 */
+		TooManyStatsException(const std::string& error) : std::runtime_error{ error }	{}
+	};
+
+	/**
 	 * @brief Enumeration class representing the type of base stats of a character
 	 */
 	enum class Type {

@@ -42,7 +42,7 @@ namespace {
 		try {
 			scd.addStat(StatType::Type::kStrength);
 			FAIL();
-		} catch (TooManyStatsException err) {
+		} catch (StatType::TooManyStatsException err) {
 			// SUCCEED(); Could have used this if we don't care about the actual exception text
 			EXPECT_EQ(err.what(),std::string("You attempted to add more than 3 stat bonuses to a skill category."));
 		} catch (...) {
@@ -86,7 +86,7 @@ namespace {
 		try {
 			scd.addStat(StatType::Type::kStrength);
 			FAIL();
-		} catch (UsingCharacterRealmStatsException err) {
+		} catch (SkillCategoryData::UsingCharacterRealmStatsException err) {
 			SUCCEED();
 		} catch (...) {
 			FAIL();
@@ -109,6 +109,7 @@ namespace {
 		SkillProgressionTypeData spd_none("NONE_ID", "None", 0.0, 0.0, 0.0, 0.0, 0.0);
 		SkillProgressionTypeData spd_spc("SPECIAL_ID", "Special", 0.0, 6.0, 5.0, 4.0, 3.0);
 		SkillProgressionTypeData spd_std("STANDARD_ID", "Standard", -15.0, 3.0, 2.0, 1.0, 0.5);
+		SkillProgressionTypeData spd_cstd("CATEGORY_STANDARD_ID", "Category Standard", -15.0, 2.0, 1.0, 0.5, 0.0);
 		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std, false);
 
 		// Invalid category type
@@ -139,7 +140,7 @@ namespace {
 
 		// Invalid combinations
 		try {
-			scd.setSkillProgressions(spd_cmb, spd_std);
+			scd.setSkillProgressions(spd_cmb, spd_cstd);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
 			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
@@ -147,7 +148,7 @@ namespace {
 			FAIL();
 		}
 		try {
-			scd.setSkillProgressions(spd_ltd, spd_std);
+			scd.setSkillProgressions(spd_ltd, spd_cstd);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
 			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
@@ -155,7 +156,7 @@ namespace {
 			FAIL();
 		}
 		try {
-			scd.setSkillProgressions(spd_none, spd_std);
+			scd.setSkillProgressions(spd_none, spd_cstd);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
 			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
@@ -163,7 +164,7 @@ namespace {
 			FAIL();
 		}
 		try {
-			scd.setSkillProgressions(spd_spc, spd_std);
+			scd.setSkillProgressions(spd_spc, spd_cstd);
 			FAIL();
 		} catch (InvalidSkillProgression err) {
 			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
@@ -171,9 +172,9 @@ namespace {
 			FAIL();
 		}
 
-		scd.setSkillProgressions(spd_std, spd_std);
+		scd.setSkillProgressions(spd_std, spd_cstd);
 		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), "Standard");
-		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), "Standard");
+		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), "Category Standard");
 
 		scd.setSkillProgressions(spd_cmb, spd_none);
 		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), "Combined");

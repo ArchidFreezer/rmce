@@ -5,7 +5,7 @@ int SkillCategoryData::addStat(StatType::Type stat) {
 	if (stats_.size() < 3) {
 		stats_.push_back(stat);
 	} else {
-		throw TooManyStatsException("You attempted to add more than 3 stat bonuses to a skill category.");
+		throw StatType::TooManyStatsException("You attempted to add more than 3 stat bonuses to a skill category.");
 	}
 
 	return stats_.size();
@@ -22,7 +22,7 @@ bool SkillCategoryData::removeStat(StatType::Type stat) {
 }
 
 void SkillCategoryData::setSkillProgressions(const SkillProgressionTypeData& skill_progression, const SkillProgressionTypeData& skill_category_progression) {
-	// Check for invlaid combinations first
+	// Check for invalid combinations first
 	if (skill_category_progression.name() != "Category Standard" && skill_category_progression.name() != "None") {
 		throw InvalidSkillProgression("Category progression may only be Standard or None.");
 	}
