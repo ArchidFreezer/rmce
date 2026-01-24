@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdexcept>
 #include <iostream>
 #include <optional>
 #include <string_view>
@@ -11,6 +12,22 @@
  * Each skill when used performs a type of action and this enum defines these
  */
 namespace SkillActionType {
+
+	/**
+	* @brief Thrown to indicate that no SkillActionType::Type enum was found
+	*
+	*/
+	class SkillActionNotFoundException : public std::runtime_error {
+	public:
+		/**
+		 * @brief Exception constructor
+		 *
+		 * std::runtime_error will handle the string
+		 *
+		 * @param error String to display for the error
+		 */
+		SkillActionNotFoundException(const std::string& error) : std::runtime_error{ error }	{}
+	};
 
 	/**
 	 * @brief Enumeration class representing action types of skills
