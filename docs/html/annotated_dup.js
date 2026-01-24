@@ -3,8 +3,14 @@ var annotated_dup =
     [ "ArmourType", "namespace_armour_type.html", [
       [ "ArmourTypeNotFoundException", "class_armour_type_1_1_armour_type_not_found_exception.html", "class_armour_type_1_1_armour_type_not_found_exception" ]
     ] ],
+    [ "SkillActionType", "namespace_skill_action_type.html", [
+      [ "SkillActionNotFoundException", "class_skill_action_type_1_1_skill_action_not_found_exception.html", "class_skill_action_type_1_1_skill_action_not_found_exception" ]
+    ] ],
     [ "SkillGroupType", "namespace_skill_group_type.html", [
       [ "SkillGroupNotFoundException", "class_skill_group_type_1_1_skill_group_not_found_exception.html", "class_skill_group_type_1_1_skill_group_not_found_exception" ]
+    ] ],
+    [ "StatType", "namespace_stat_type.html", [
+      [ "TooManyStatsException", "class_stat_type_1_1_too_many_stats_exception.html", "class_stat_type_1_1_too_many_stats_exception" ]
     ] ],
     [ "ArmourTypeData", "class_armour_type_data.html", "class_armour_type_data" ],
     [ "ArmourTypeDatafileParserJson", "class_armour_type_datafile_parser_json.html", "class_armour_type_datafile_parser_json" ],
@@ -35,6 +41,9 @@ var annotated_dup =
     [ "SkillCategoryData", "class_skill_category_data.html", "class_skill_category_data" ],
     [ "SkillCategoryDatafileParserJson", "class_skill_category_datafile_parser_json.html", "class_skill_category_datafile_parser_json" ],
     [ "SkillCategoryDatafileParserXml", "class_skill_category_datafile_parser_xml.html", "class_skill_category_datafile_parser_xml" ],
+    [ "SkillData", "class_skill_data.html", "class_skill_data" ],
+    [ "SkillDatafileParserJson", "class_skill_datafile_parser_json.html", "class_skill_datafile_parser_json" ],
+    [ "SkillDatafileParserXml", "class_skill_datafile_parser_xml.html", "class_skill_datafile_parser_xml" ],
     [ "SkillProgressionData", "class_skill_progression_data.html", "class_skill_progression_data" ],
     [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", "class_skill_progression_type_data" ],
     [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", "class_skill_progression_type_datafile_parser_json" ],
@@ -46,7 +55,5 @@ var annotated_dup =
     [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", "class_table_column_armour_type_matcher" ],
     [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", "class_table_column_creature_size_matcher" ],
     [ "TableRow", "class_table_row.html", "class_table_row" ],
-    [ "TableRowNumberMatcherFactory", "class_table_row_number_matcher_factory.html", "class_table_row_number_matcher_factory" ],
-    [ "TooManyStatsException", "class_too_many_stats_exception.html", "class_too_many_stats_exception" ],
-    [ "UsingCharacterRealmStatsException", "class_using_character_realm_stats_exception.html", "class_using_character_realm_stats_exception" ]
+    [ "TableRowNumberMatcherFactory", "class_table_row_number_matcher_factory.html", "class_table_row_number_matcher_factory" ]
 ];

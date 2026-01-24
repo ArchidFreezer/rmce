@@ -12,6 +12,7 @@ var hierarchy =
         [ "LanguageCategoryDatafileParserJson", "class_language_category_datafile_parser_json.html", null ],
         [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", null ],
         [ "SkillCategoryDatafileParserJson", "class_skill_category_datafile_parser_json.html", null ],
+        [ "SkillDatafileParserJson", "class_skill_datafile_parser_json.html", null ],
         [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", null ],
         [ "SpecialAttackTableDatafileParserJson", "class_special_attack_table_datafile_parser_json.html", null ],
         [ "SpellListDatafileParserJson", "class_spell_list_datafile_parser_json.html", null ]
@@ -20,6 +21,7 @@ var hierarchy =
         [ "ArmourTypeDatafileParserXml", "class_armour_type_datafile_parser_xml.html", null ],
         [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", null ],
         [ "SkillCategoryDatafileParserXml", "class_skill_category_datafile_parser_xml.html", null ],
+        [ "SkillDatafileParserXml", "class_skill_datafile_parser_xml.html", null ],
         [ "SpellListDatafileParserXml", "class_spell_list_datafile_parser_xml.html", null ]
       ] ]
     ] ],
@@ -41,6 +43,7 @@ var hierarchy =
       [ "LanguageDialectData", "class_language_dialect_data.html", null ],
       [ "LookupTable< RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype >", "class_lookup_table.html", null ],
       [ "SkillCategoryData", "class_skill_category_data.html", null ],
+      [ "SkillData", "class_skill_data.html", null ],
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ],
       [ "SpellListData", "class_spell_list_data.html", null ]
     ] ],
@@ -51,9 +54,11 @@ var hierarchy =
       [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
       [ "InvalidSkillProgression", "class_invalid_skill_progression.html", null ],
       [ "RowNotFoundException", "class_row_not_found_exception.html", null ],
+      [ "SkillActionType::SkillActionNotFoundException", "class_skill_action_type_1_1_skill_action_not_found_exception.html", null ],
+      [ "SkillCategoryData::UsingCharacterRealmStatsException", "class_skill_category_data_1_1_using_character_realm_stats_exception.html", null ],
+      [ "SkillData::UsingCharacterRealmStatsException", "class_skill_data_1_1_using_character_realm_stats_exception.html", null ],
       [ "SkillGroupType::SkillGroupNotFoundException", "class_skill_group_type_1_1_skill_group_not_found_exception.html", null ],
-      [ "TooManyStatsException", "class_too_many_stats_exception.html", null ],
-      [ "UsingCharacterRealmStatsException", "class_using_character_realm_stats_exception.html", null ]
+      [ "StatType::TooManyStatsException", "class_stat_type_1_1_too_many_stats_exception.html", null ]
     ] ],
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]

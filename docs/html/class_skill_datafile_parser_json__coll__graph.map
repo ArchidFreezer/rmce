@@ -1,0 +1,7 @@
+<map id="SkillDatafileParserJson" name="SkillDatafileParserJson">
+<area shape="rect" id="Node000001" title="Process SkillData objects for json files." alt="" coords="5,155,163,181"/>
+<area shape="rect" id="Node000002" href="$class_datafile_parser_json.html" title="Abstract class to parse json files containing game rule data." alt="" coords="18,80,150,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,121,86,155,82,153,82,124"/>
+<area shape="rect" id="Node000003" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="32,5,136,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,45,87,80,81,79,83,50"/>
+</map>

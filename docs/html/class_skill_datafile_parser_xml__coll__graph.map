@@ -1,0 +1,7 @@
+<map id="SkillDatafileParserXml" name="SkillDatafileParserXml">
+<area shape="rect" id="Node000001" title="Process SkillData objects from xml files." alt="" coords="5,155,158,181"/>
+<area shape="rect" id="Node000002" href="$class_datafile_parser_xml.html" title="Abstract class to parse xml files containing game rule data." alt="" coords="18,80,145,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,121,84,155,79,153,80,124"/>
+<area shape="rect" id="Node000003" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="29,5,134,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,45,84,80,79,79,80,50"/>
+</map>

@@ -111,18 +111,7 @@ var namespaces_dup =
       [ "operator<<", "namespace_resistance_type.html#aa0e58f5579a107ce647f4cc7763fc6e5", null ],
       [ "toString", "namespace_resistance_type.html#a361aae8f6aea41c5f7d98a117f753996", null ]
     ] ],
-    [ "SkillActionType", "namespace_skill_action_type.html", [
-      [ "Type", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1", null ],
-      [ "Type", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1", [
-        [ "kMoving", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1aad80bddb2c53a0c7605e23e62491797b", null ],
-        [ "kOB", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1a458fe8603674d721aac782985750730b", null ],
-        [ "kSpecial", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1a1f0d5fe7d41b5fec009974b34c8ba95e", null ],
-        [ "kStatic", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1aeb9af1ba35d0a6f48fd1e6218a4d82c9", null ]
-      ] ],
-      [ "fromString", "namespace_skill_action_type.html#abc1e846657bd836e013dc878eda0c866", null ],
-      [ "operator<<", "namespace_skill_action_type.html#aa1f4a1ecdf8906d8d02613021b5f2d00", null ],
-      [ "toString", "namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa", null ]
-    ] ],
+    [ "SkillActionType", "namespace_skill_action_type.html", "namespace_skill_action_type" ],
     [ "SkillDevelopmentType", "namespace_skill_development_type.html", [
       [ "Type", "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b", null ],
       [ "Type", "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b", [
@@ -162,24 +151,5 @@ var namespaces_dup =
       [ "operator<<", "namespace_stat_loss_type.html#ab9116a14217b4c49d49000720da44fa1", null ],
       [ "toString", "namespace_stat_loss_type.html#a78470c97f524221d28eddbf3cef16f5f", null ]
     ] ],
-    [ "StatType", "namespace_stat_type.html", [
-      [ "Type", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd", null ],
-      [ "Type", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd", [
-        [ "kAgility", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda342f835d4c32cbd41915852120737e8d", null ],
-        [ "kConstitution", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda6f3793e6a6aec2bae30b72b9ae63fa6c", null ],
-        [ "kEmpathy", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fdacbbc3e5427d839d272b7fe4233096bb4", null ],
-        [ "kIntuition", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda63df0ac83157b2df6d9be5835ed825cd", null ],
-        [ "kMemory", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda10bc3eeea6471cd730616a1dda9e2cd4", null ],
-        [ "kPresence", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fdafd7275ddeffa7c4405d0e9f3c5bcf6ba", null ],
-        [ "kQuickness", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fdaf7bae3f1592247f9ab6ffd856c139d5d", null ],
-        [ "kReasoning", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fdaa8945a13817844703aebc573b2ae46a3", null ],
-        [ "kSelfDiscipline", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda0fae248a4ce56dc1fecb988e0fd1125b", null ],
-        [ "kStrength", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda6fce47e612f62a75603a515fce9e975e", null ]
-      ] ],
-      [ "fromString", "namespace_stat_type.html#a2f85576f2fed028b417137f93b43636a", null ],
-      [ "isDevelopment", "namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e", null ],
-      [ "isPrimary", "namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b", null ],
-      [ "operator<<", "namespace_stat_type.html#a2d76ec9118654faf46dbcc93820337e2", null ],
-      [ "toString", "namespace_stat_type.html#ab5677773150878dce987c539a56d5580", null ]
-    ] ]
+    [ "StatType", "namespace_stat_type.html", "namespace_stat_type" ]
 ];
