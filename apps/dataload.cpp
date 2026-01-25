@@ -64,11 +64,12 @@ int main() {
 //		language_category_parser.save("../../../../data/LanguageCategories2.json");
 //		language_parser.save("../../../../data/Languages2.json");
 //		skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
+//		attack_table_parser.save("../../../../data/AttackTables2.json");
 //		spell_list_parser.save("../../../../data/SpellLists2.json");
 //		skill_category_parser.save("../../../../data/SkillCategories2.json");
 //		armour_type_parser.save("../../../../data/ArmourTypes2.json");
 //		skill_parser.save("../../../../data/Skills2.json");
-		weapon_type_parser.save("../../../../data/WeaponTypes2.json");
+//		weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 		// We don't resave the attack tables as the nature of the objects means the rows are unordered so the files won't match
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;

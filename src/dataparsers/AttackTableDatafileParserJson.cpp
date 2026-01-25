@@ -12,66 +12,77 @@ void AttackTableDatafileParserJson::populateDatum(std::string& id, pt::ptree& da
 	int max_row{ 0 };
 
 	pt::ptree mrows; // Modified rows
+	// The game data stores the ranges as pointers, which is essentially a random sort. We want them ordered so derefence
+	// the pointers and place them into a set which will order them as we want
+	std::set<NumberRange<int>> ranges{};
 	for (auto& m : game_data.modified()) {
+		ranges.insert(*m.first);
+		max_row = std::max(max_row, m.first->max());
+	}
+	for (auto& range : ranges) {
 		pt::ptree prow;
 
-		TableRow tr = m.second;
+		int min = range.min();
 
-		max_row = std::max(max_row, m.first->max());
-
-		prow.put("min", m.first->min());
-		prow.put("max", m.first->max());
-		prow.put("at1", tr.cell(0));
-		prow.put("at2", tr.cell(1));
-		prow.put("at3", tr.cell(2));
-		prow.put("at4", tr.cell(3));
-		prow.put("at5", tr.cell(4));
-		prow.put("at6", tr.cell(5));
-		prow.put("at7", tr.cell(6));
-		prow.put("at8", tr.cell(7));
-		prow.put("at9", tr.cell(8));
-		prow.put("at10", tr.cell(9));
-		prow.put("at11", tr.cell(10));
-		prow.put("at12", tr.cell(11));
-		prow.put("at13", tr.cell(12));
-		prow.put("at14", tr.cell(13));
-		prow.put("at15", tr.cell(14));
-		prow.put("at16", tr.cell(15));
-		prow.put("at17", tr.cell(16));
-		prow.put("at18", tr.cell(17));
-		prow.put("at19", tr.cell(18));
-		prow.put("at20", tr.cell(19));
+		prow.put("min", min);
+		prow.put("max", range.max());
+		prow.put("at1", game_data.cell(ArmourType::kAT1, min));
+		prow.put("at2", game_data.cell(ArmourType::kAT2, min));
+		prow.put("at3", game_data.cell(ArmourType::kAT3, min));
+		prow.put("at4", game_data.cell(ArmourType::kAT4, min));
+		prow.put("at5", game_data.cell(ArmourType::kAT5, min));
+		prow.put("at6", game_data.cell(ArmourType::kAT6, min));
+		prow.put("at7", game_data.cell(ArmourType::kAT7, min));
+		prow.put("at8", game_data.cell(ArmourType::kAT8, min));
+		prow.put("at9", game_data.cell(ArmourType::kAT9, min));
+		prow.put("at10", game_data.cell(ArmourType::kAT10, min));
+		prow.put("at11", game_data.cell(ArmourType::kAT11, min));
+		prow.put("at12", game_data.cell(ArmourType::kAT12, min));
+		prow.put("at13", game_data.cell(ArmourType::kAT13, min));
+		prow.put("at14", game_data.cell(ArmourType::kAT14, min));
+		prow.put("at15", game_data.cell(ArmourType::kAT15, min));
+		prow.put("at16", game_data.cell(ArmourType::kAT16, min));
+		prow.put("at17", game_data.cell(ArmourType::kAT17, min));
+		prow.put("at18", game_data.cell(ArmourType::kAT18, min));
+		prow.put("at19", game_data.cell(ArmourType::kAT19, min));
+		prow.put("at20", game_data.cell(ArmourType::kAT20, min));
 		mrows.push_back(std::make_pair("", prow));
 	}
 
-	pt::ptree umrows; // Modified rows
+	pt::ptree umrows; // Unmodified rows
+	// The game data stores the ranges as pointers, which is essentially a random sort. We want them ordered so derefence
+	// the pointers and place them into a set which will order them as we want
+	ranges.clear(); // Reset so we can reuse the container
 	for (auto& m : game_data.unmodified()) {
+		ranges.insert(*m.first);
+	}
+	for (auto& range : ranges) {
 		pt::ptree prow;
 
-		TableRow tr = m.second;
+		int min = range.min();
 
-		prow.put("min", m.first->min());
-		prow.put("max", m.first->max());
-		prow.put("at1", tr.cell(0));
-		prow.put("at2", tr.cell(1));
-		prow.put("at3", tr.cell(2));
-		prow.put("at4", tr.cell(3));
-		prow.put("at5", tr.cell(4));
-		prow.put("at6", tr.cell(5));
-		prow.put("at7", tr.cell(6));
-		prow.put("at8", tr.cell(7));
-		prow.put("at9", tr.cell(8));
-		prow.put("at10", tr.cell(9));
-		prow.put("at11", tr.cell(10));
-		prow.put("at12", tr.cell(11));
-		prow.put("at13", tr.cell(12));
-		prow.put("at14", tr.cell(13));
-		prow.put("at15", tr.cell(14));
-		prow.put("at16", tr.cell(15));
-		prow.put("at17", tr.cell(16));
-		prow.put("at18", tr.cell(17));
-		prow.put("at19", tr.cell(18));
-		prow.put("at20", tr.cell(19));
+		prow.put("min", min);
+		prow.put("max", range.max());
+		prow.put("at1", game_data.cell(ArmourType::kAT1, min, min));
+		prow.put("at2", game_data.cell(ArmourType::kAT2, min, min));
+		prow.put("at3", game_data.cell(ArmourType::kAT3, min, min));
+		prow.put("at4", game_data.cell(ArmourType::kAT4, min, min));
+		prow.put("at5", game_data.cell(ArmourType::kAT5, min, min));
+		prow.put("at6", game_data.cell(ArmourType::kAT6, min, min));
+		prow.put("at7", game_data.cell(ArmourType::kAT7, min, min));
+		prow.put("at8", game_data.cell(ArmourType::kAT8, min, min));
+		prow.put("at9", game_data.cell(ArmourType::kAT9, min, min));
+		prow.put("at10", game_data.cell(ArmourType::kAT10, min, min));
+		prow.put("at11", game_data.cell(ArmourType::kAT11, min, min));
+		prow.put("at12", game_data.cell(ArmourType::kAT12, min, min));
+		prow.put("at13", game_data.cell(ArmourType::kAT13, min, min));
+		prow.put("at14", game_data.cell(ArmourType::kAT14, min, min));
+		prow.put("at15", game_data.cell(ArmourType::kAT15, min, min));
+		prow.put("at16", game_data.cell(ArmourType::kAT16, min, min));
+		prow.put("at17", game_data.cell(ArmourType::kAT17, min, min));
+		prow.put("at18", game_data.cell(ArmourType::kAT18, min, min));
+		prow.put("at19", game_data.cell(ArmourType::kAT19, min, min));
+		prow.put("at20", game_data.cell(ArmourType::kAT20, min, min));
 		umrows.push_back(std::make_pair("", prow));
 	}
 
