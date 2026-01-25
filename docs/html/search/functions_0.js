@@ -5,7 +5,7 @@ var searchData=
   ['add_2',['add',['../class_game_rule_data_cache.html#a6f07712516ace6fa0c29e877d2b388de',1,'GameRuleDataCache::add()'],['../class_language_dialect_data.html#a20a23e5c00a3c393f5ed435d830f899a',1,'LanguageDialectData::add()']]],
   ['addcell_3',['addCell',['../class_table_row.html#a0acb30329157bc6ee809895481044c56',1,'TableRow']]],
   ['addcriticalmodifier_4',['addCriticalModifier',['../class_weapon_type_data.html#a0867f63ec3d071edab88db5c11d73526',1,'WeaponTypeData']]],
-  ['addrange_5',['addRange',['../class_weapon_type_data.html#a639d2ae981f98308d1c999cec3ba9441',1,'WeaponTypeData']]],
+  ['addrange_5',['addRange',['../class_weapon_type_data.html#ac277ca05a84e9ac5ae193b6d44c58370',1,'WeaponTypeData']]],
   ['addrow_6',['addRow',['../class_lookup_table.html#ad91800d3977424edd2bccec07d7dca76',1,'LookupTable']]],
   ['addstat_7',['addStat',['../class_skill_category_data.html#ae92350c9d91937939523110732fae66a',1,'SkillCategoryData::addStat()'],['../class_skill_data.html#abf10402cb53bce7b58e876d26cf8f927',1,'SkillData::addStat(StatType::Type stat)']]],
   ['addsubcategory_8',['addSubcategory',['../class_skill_data.html#a79b8349328a647d01b639de8b8d58771',1,'SkillData']]],

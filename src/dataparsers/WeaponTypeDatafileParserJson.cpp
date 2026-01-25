@@ -1,3 +1,4 @@
+#include <NumberMatcherFactory.h>
 #include <WeaponTypeDatafileParserJson.h>
 
 void WeaponTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
@@ -28,7 +29,13 @@ void WeaponTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	datum.push_back(std::make_pair("criticals", pcriticals));
 	
 	pt::ptree pranges;
-	for (auto& range: game_data.ranges()) {
+	// The game data stores the ranges as pointers, which is essentially a random sort. We want them ordered so derefence
+	// the pointers and place them into a set which will order them as we want
+	std::set<NumberRange<int>> ranges{};
+	for (auto& range : game_data.ranges()) {
+		ranges.insert(*range);
+	}
+	for (auto& range: ranges) {
 		pt::ptree prange;
 		prange.put("min", range.min());
 		prange.put("max", range.max());
@@ -42,6 +49,9 @@ void WeaponTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 void WeaponTypeDatafileParserJson::parse(bool id_only) {
 	std::cout << "Loading WeaponType data ... ";
 	std::cout << (id_only ? "[Pass 1]" : "[Pass 2]") << std::endl;
+
+	// Get a factory for the matchers
+	NumberMatcherFactory matchers;
 
 	// Get the lists to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
@@ -97,7 +107,7 @@ void WeaponTypeDatafileParserJson::parse(bool id_only) {
 					int min = range.second.get<int>("min");
 					int max = range.second.get<int>("max");
 					int mod = range.second.get<int>("modifier");
-					ref.addRange(NumberRange<int>(min, max), mod);
+					ref.addRange(*matchers.matcher(min, max), mod);
 				}
 			}
 			std::cout << "\tWeaponType name: " << ref.name() << std::endl;

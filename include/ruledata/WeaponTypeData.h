@@ -288,7 +288,7 @@ public:
 	 * 
 	 * @return CriticalType::Type primary critical type
 	 */
-	const CriticalType::Type primaryCritical()  const{
+	const CriticalType::Type primaryCritical() const {
 		CriticalType::Type primary{};
 		int max{-500};
 		for (auto crit : std::views::keys(criticals_)) {
@@ -313,7 +313,7 @@ public:
 	 * @param range NumberRange containing the minimum and maximum range for this modifier
 	 * @param modifier int attack modifier
 	 */
-	void addRange(const NumberRange<int> range, int modifier) { ranges_.insert(std::make_pair(range, modifier)); }
+	void addRange(const NumberRange<int>& range, int modifier) { ranges_.insert(std::make_pair(&range, modifier)); }
 
 	/**
 	 * @brief Get the attack range modifier for a range in feet
@@ -321,9 +321,9 @@ public:
 	 * @return int attack modifier
 	 * @throws InvalidWeaponRangeException if the weapon may not be used at the range
 	 */
-	int rangeModifier(int range) {
+	int rangeModifier(int range) const {
 		for (auto& matcher : std::views::keys(ranges_)) {
-			if (matcher.matches(range)) return ranges_.at(matcher);
+			if (matcher->matches(range)) return ranges_.at(matcher);
 		}
 		throw InvalidWeaponRangeException(name_ + " cannot be used at range " + std::to_string(range));
 	}
@@ -333,7 +333,7 @@ public:
  *
  * @return std::vector<NumberRange<int>*> containing the available ranges
  */
-	std::vector<NumberRange<int>> ranges() {
+	const std::vector<const NumberRange<int>*> ranges() const {
 		auto keys = std::views::keys(ranges_);
 		return { keys.begin(), keys.end() };
 	}
@@ -369,5 +369,5 @@ private:
 	float max_weight_{};
 	bool wooden_haft_{};
 	std::map<CriticalType::Type, int> criticals_{};
-	std::map<const NumberRange<int>, int> ranges_;
+	std::map<const NumberRange<int>*, int> ranges_;
 };

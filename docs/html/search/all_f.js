@@ -1,8 +1,8 @@
 var searchData=
 [
   ['random_0',['Random',['../namespace_random.html',1,'']]],
-  ['rangemodifier_1',['rangeModifier',['../class_weapon_type_data.html#aae4ab8d0e217057d694136d28a4d621f',1,'WeaponTypeData']]],
-  ['ranges_2',['ranges',['../class_weapon_type_data.html#a2c85692ae28ec24c247cf2fc041546cd',1,'WeaponTypeData']]],
+  ['rangemodifier_1',['rangeModifier',['../class_weapon_type_data.html#ab1029384cfdfe02e29238e8b6dd98e9e',1,'WeaponTypeData']]],
+  ['ranges_2',['ranges',['../class_weapon_type_data.html#ae9212870e5cb67a0c6f2cc05fee00dda',1,'WeaponTypeData']]],
   ['read_3',['read',['../class_datafile_parser.html#a05e7c3945306f581e8ffafdc0bd20639',1,'DatafileParser::read(const std::string &amp;filename, bool id_only)=0'],['../class_datafile_parser.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParser::read(bool id_only)'],['../class_datafile_parser_json.html#a18873bbb775ba6b408acea2b23711a7f',1,'DatafileParserJson::read()'],['../class_datafile_parser_xml.html#a23443f7992b6d7079c09cafa56d4f1fa',1,'DatafileParserXml::read()'],['../class_datafile_parser_json.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParserJson::read()'],['../class_datafile_parser_xml.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParserXml::read()']]],
   ['realm_4',['realm',['../class_spell_list_data.html#ad21b9bcdcd4bc2a6600fe9108ffac238',1,'SpellListData']]],
   ['realmtype_5',['RealmType',['../namespace_realm_type.html',1,'']]],
