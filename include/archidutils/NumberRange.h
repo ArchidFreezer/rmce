@@ -48,13 +48,13 @@ public:
 	 * @brief Get the minimum number that this range matches
 	 * @return int Minimum matched number
 	 */
-	int min() const { return min_; }
+	NumberType min() const { return min_; }
 
 	/**
 	 * @brief Get the maximum number that this range matches
 	 * @return int Maximum matched number
 	 */
-	int max() const { return max_; }
+	NumberType max() const { return max_; }
 
 private:
 	NumberType min_{}; /**< Lower bound of the range */
