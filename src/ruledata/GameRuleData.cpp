@@ -9,7 +9,7 @@ const std::string GameRuleData::generateId(std::string_view type, std::string_vi
 	// discarding consecutive underscores.
 	bool last_alpha{ false };
 	for (char c : type) {
-		if (isalnum(c)) {
+		if (iswalnum(c)) {
 			last_alpha = true;
 			ss.put(toupper(c));
 		} else if (last_alpha) {
@@ -25,7 +25,7 @@ const std::string GameRuleData::generateId(std::string_view type, std::string_vi
 	// discarding consecutive underscores.
 	last_alpha = false;
 	for (char c : val) {
-		if (isalnum(c)) {
+		if (iswalnum(c)) {
 			last_alpha = true;
 			ss.put(toupper(c));
 		} else if (last_alpha) {
