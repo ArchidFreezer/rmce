@@ -45,7 +45,8 @@ var hierarchy =
       [ "SkillCategoryData", "class_skill_category_data.html", null ],
       [ "SkillData", "class_skill_data.html", null ],
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ],
-      [ "SpellListData", "class_spell_list_data.html", null ]
+      [ "SpellListData", "class_spell_list_data.html", null ],
+      [ "WeaponTypeData", "class_weapon_type_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
     [ "std::runtime_error", null, [
@@ -58,7 +59,8 @@ var hierarchy =
       [ "SkillCategoryData::UsingCharacterRealmStatsException", "class_skill_category_data_1_1_using_character_realm_stats_exception.html", null ],
       [ "SkillData::UsingCharacterRealmStatsException", "class_skill_data_1_1_using_character_realm_stats_exception.html", null ],
       [ "SkillGroupType::SkillGroupNotFoundException", "class_skill_group_type_1_1_skill_group_not_found_exception.html", null ],
-      [ "StatType::TooManyStatsException", "class_stat_type_1_1_too_many_stats_exception.html", null ]
+      [ "StatType::TooManyStatsException", "class_stat_type_1_1_too_many_stats_exception.html", null ],
+      [ "WeaponTypeData::InvalidWeaponRangeException", "class_weapon_type_data_1_1_invalid_weapon_range_exception.html", null ]
     ] ],
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]

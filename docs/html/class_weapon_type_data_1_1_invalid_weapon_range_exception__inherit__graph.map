@@ -1,0 +1,5 @@
+<map id="WeaponTypeData::InvalidWeaponRangeException" name="WeaponTypeData::InvalidWeaponRangeException">
+<area shape="rect" id="Node000001" title="Thrown when attempting to retrieve an attack modifier for a range that the weapon cannot be used at." alt="" coords="5,80,223,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="52,5,176,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,46,116,81,112,79,112,50"/>
+</map>

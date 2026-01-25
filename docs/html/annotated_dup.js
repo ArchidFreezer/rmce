@@ -55,5 +55,6 @@ var annotated_dup =
     [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", "class_table_column_armour_type_matcher" ],
     [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", "class_table_column_creature_size_matcher" ],
     [ "TableRow", "class_table_row.html", "class_table_row" ],
-    [ "TableRowNumberMatcherFactory", "class_table_row_number_matcher_factory.html", "class_table_row_number_matcher_factory" ]
+    [ "TableRowNumberMatcherFactory", "class_table_row_number_matcher_factory.html", "class_table_row_number_matcher_factory" ],
+    [ "WeaponTypeData", "class_weapon_type_data.html", "class_weapon_type_data" ]
 ];

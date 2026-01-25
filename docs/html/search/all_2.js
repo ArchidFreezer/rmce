@@ -10,6 +10,8 @@ var searchData=
   ['colnotfoundexception_7',['ColNotFoundException',['../class_col_not_found_exception.html',1,'ColNotFoundException'],['../class_col_not_found_exception.html#ae0485c1006d6d7939f4671c15bc21a01',1,'ColNotFoundException::ColNotFoundException()']]],
   ['column_8',['column',['../class_table_column_armour_type_matcher.html#a51317a962f264a604bcac140018fb749',1,'TableColumnArmourTypeMatcher::column()'],['../class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670',1,'TableColumnCreatureSizeMatcher::column()']]],
   ['creaturesizetype_9',['CreatureSizeType',['../namespace_creature_size_type.html',1,'']]],
-  ['criticaltabletype_10',['CriticalTableType',['../namespace_critical_table_type.html',1,'']]],
-  ['criticaltype_11',['CriticalType',['../namespace_critical_type.html',1,'']]]
+  ['critical_10',['critical',['../class_weapon_type_data.html#a26ccb50dcf3c5463b40d9c46908be1b9',1,'WeaponTypeData']]],
+  ['criticalmodifier_11',['criticalModifier',['../class_weapon_type_data.html#a41ec7b81ea63307d8acc67700657b573',1,'WeaponTypeData']]],
+  ['criticaltabletype_12',['CriticalTableType',['../namespace_critical_table_type.html',1,'']]],
+  ['criticaltype_13',['CriticalType',['../namespace_critical_type.html',1,'']]]
 ];

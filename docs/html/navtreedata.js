@@ -57,8 +57,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"class_lookup_table.html#aa8b34807f6c7a4338ec46ee454858129",
-"namespace_attack_size_type.html"
+"class_lookup_table.html#a908db0b57ea5e680deccb80d7fe6f7ab",
+"functions_n.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

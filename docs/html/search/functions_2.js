@@ -8,5 +8,7 @@ var searchData=
   ['code_5',['code',['../class_book_data.html#a0e5569ad4b94a8c924cebdfa2780be63',1,'BookData']]],
   ['colcount_6',['colCount',['../class_table_row.html#a301723f9e0d4caab39c6acea169f8578',1,'TableRow']]],
   ['colnotfoundexception_7',['ColNotFoundException',['../class_col_not_found_exception.html#ae0485c1006d6d7939f4671c15bc21a01',1,'ColNotFoundException']]],
-  ['column_8',['column',['../class_table_column_armour_type_matcher.html#a51317a962f264a604bcac140018fb749',1,'TableColumnArmourTypeMatcher::column()'],['../class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670',1,'TableColumnCreatureSizeMatcher::column()']]]
+  ['column_8',['column',['../class_table_column_armour_type_matcher.html#a51317a962f264a604bcac140018fb749',1,'TableColumnArmourTypeMatcher::column()'],['../class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670',1,'TableColumnCreatureSizeMatcher::column()']]],
+  ['critical_9',['critical',['../class_weapon_type_data.html#a26ccb50dcf3c5463b40d9c46908be1b9',1,'WeaponTypeData']]],
+  ['criticalmodifier_10',['criticalModifier',['../class_weapon_type_data.html#a41ec7b81ea63307d8acc67700657b573',1,'WeaponTypeData']]]
 ];
