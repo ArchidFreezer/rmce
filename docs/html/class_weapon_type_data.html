@@ -185,16 +185,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a564ca672760708f9aefed67a0e561951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get if the weapon typically has a wooden haft During breakage checks a weapon with a wooden haft that hits an 'edged' weapon has its strength reduced by 15.  <br /></td></tr>
 <tr class="memitem:a0867f63ec3d071edab88db5c11d73526" id="r_a0867f63ec3d071edab88db5c11d73526"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0867f63ec3d071edab88db5c11d73526">addCriticalModifier</a> (<a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a> type, int modifier)</td></tr>
 <tr class="memdesc:a0867f63ec3d071edab88db5c11d73526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a critical type that these weapons may inflict along with any associated bonus.  <br /></td></tr>
-<tr class="memitem:a3a7de543f50f1fe1fdfb2b040f805cbc" id="r_a3a7de543f50f1fe1fdfb2b040f805cbc"><td class="memItemLeft">const std::vector&lt; <a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3a7de543f50f1fe1fdfb2b040f805cbc">getCriticals</a> () const</td></tr>
-<tr class="memdesc:a3a7de543f50f1fe1fdfb2b040f805cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the critical types that the weapon can inflict.  <br /></td></tr>
-<tr class="memitem:a26ccb50dcf3c5463b40d9c46908be1b9" id="r_a26ccb50dcf3c5463b40d9c46908be1b9"><td class="memItemLeft">const <a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a26ccb50dcf3c5463b40d9c46908be1b9">critical</a> () const</td></tr>
-<tr class="memdesc:a26ccb50dcf3c5463b40d9c46908be1b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the primaty dcritical type weapons of this type inflict.  <br /></td></tr>
-<tr class="memitem:a41ec7b81ea63307d8acc67700657b573" id="r_a41ec7b81ea63307d8acc67700657b573"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a41ec7b81ea63307d8acc67700657b573">criticalModifier</a> (<a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a> <a class="el" href="#a26ccb50dcf3c5463b40d9c46908be1b9">critical</a>) const</td></tr>
+<tr class="memitem:a4207a14692f13124d7bab36bdd8416d4" id="r_a4207a14692f13124d7bab36bdd8416d4"><td class="memItemLeft">const std::vector&lt; <a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4207a14692f13124d7bab36bdd8416d4">criticals</a> () const</td></tr>
+<tr class="memdesc:a4207a14692f13124d7bab36bdd8416d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the critical types that the weapon can inflict.  <br /></td></tr>
+<tr class="memitem:ab83eb04391e978c0e9f19937a6caadd5" id="r_ab83eb04391e978c0e9f19937a6caadd5"><td class="memItemLeft">const <a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab83eb04391e978c0e9f19937a6caadd5">primaryCritical</a> () const</td></tr>
+<tr class="memdesc:ab83eb04391e978c0e9f19937a6caadd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the primary critical type weapons of this type inflict.  <br /></td></tr>
+<tr class="memitem:a41ec7b81ea63307d8acc67700657b573" id="r_a41ec7b81ea63307d8acc67700657b573"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a41ec7b81ea63307d8acc67700657b573">criticalModifier</a> (<a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a> critical) const</td></tr>
 <tr class="memdesc:a41ec7b81ea63307d8acc67700657b573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modifier associated with the critical type.  <br /></td></tr>
 <tr class="memitem:ac277ca05a84e9ac5ae193b6d44c58370" id="r_ac277ca05a84e9ac5ae193b6d44c58370"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac277ca05a84e9ac5ae193b6d44c58370">addRange</a> (const <a class="el" href="class_number_range.html">NumberRange</a>&lt; int &gt; &amp;range, int modifier)</td></tr>
 <tr class="memdesc:ac277ca05a84e9ac5ae193b6d44c58370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the weap[on attack modifier for a range of distances.  <br /></td></tr>
 <tr class="memitem:aae4ab8d0e217057d694136d28a4d621f" id="r_aae4ab8d0e217057d694136d28a4d621f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aae4ab8d0e217057d694136d28a4d621f">rangeModifier</a> (int range)</td></tr>
 <tr class="memdesc:aae4ab8d0e217057d694136d28a4d621f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the attack range modifier for a range in feet.  <br /></td></tr>
+<tr class="memitem:a2c85692ae28ec24c247cf2fc041546cd" id="r_a2c85692ae28ec24c247cf2fc041546cd"><td class="memItemLeft">std::vector&lt; <a class="el" href="class_number_range.html">NumberRange</a>&lt; int &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2c85692ae28ec24c247cf2fc041546cd">ranges</a> ()</td></tr>
+<tr class="memdesc:a2c85692ae28ec24c247cf2fc041546cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the ranges that the weapon can attack from.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
 <tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
@@ -413,35 +415,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a26ccb50dcf3c5463b40d9c46908be1b9" name="a26ccb50dcf3c5463b40d9c46908be1b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26ccb50dcf3c5463b40d9c46908be1b9">&#9670;&#160;</a></span>critical()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a> WeaponTypeData::critical </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the primaty dcritical type weapons of this type inflict. </p>
-<p>Weapons have a primary type of critical that they inflict, they may be capable of inflicting other types but those will cause less damage on average, reflected by a negative modifier applied to the critical roll.</p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1" title="Enumeration class representing types of critical damage.">CriticalType::Type</a> primary critical type </dd></dl>
-
-</div>
-</div>
 <a id="a41ec7b81ea63307d8acc67700657b573" name="a41ec7b81ea63307d8acc67700657b573"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a41ec7b81ea63307d8acc67700657b573">&#9670;&#160;</a></span>criticalModifier()</h2>
 
@@ -476,6 +449,36 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a4207a14692f13124d7bab36bdd8416d4" name="a4207a14692f13124d7bab36bdd8416d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4207a14692f13124d7bab36bdd8416d4">&#9670;&#160;</a></span>criticals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a> &gt; WeaponTypeData::criticals </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with the critical types that the weapon can inflict. </p>
+<p>Weapons may inflict multiple different types of criticals depending on how they are used and this method returns those available to the weapon. Each weapon has a standard critical that is uses that should be applied unless the player actively states they are using the weapon in a specific way, available via the critical() method.</p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;CriticalType::Type&gt; containing the available criticals </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>critical() </dd></dl>
+
+</div>
+</div>
 <a id="a2708d5388cf60550af97f9dcb538de9c" name="a2708d5388cf60550af97f9dcb538de9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2708d5388cf60550af97f9dcb538de9c">&#9670;&#160;</a></span>fumble()</h2>
 
@@ -502,36 +505,6 @@ Additional Inherited Members</h2></td></tr>
 <p>Set the fumble range for the weapon. </p>
 <p>If an unmodified attack roll falls within the range shown, the attacker fumbles his weapon and must then roll on the appropriate Fumble Table.</p>
 <dl class="section return"><dt>Returns</dt><dd>max unmodified roll considered a fumble </dd></dl>
-
-</div>
-</div>
-<a id="a3a7de543f50f1fe1fdfb2b040f805cbc" name="a3a7de543f50f1fe1fdfb2b040f805cbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a7de543f50f1fe1fdfb2b040f805cbc">&#9670;&#160;</a></span>getCriticals()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a> &gt; WeaponTypeData::getCriticals </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a container with the critical types that the weapon can inflict. </p>
-<p>Weapons may inflict multiple different types of criticals depending on how they are used and this method returns those available to the weapon. Each weapon has a standard critical that is uses that should be applied unless the player actively states they are using the weapon in a specific way, available via the <a class="el" href="#a26ccb50dcf3c5463b40d9c46908be1b9" title="Get the primaty dcritical type weapons of this type inflict.">critical()</a> method.</p>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;CriticalType::Type&gt; containing the available criticals </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a26ccb50dcf3c5463b40d9c46908be1b9" title="Get the primaty dcritical type weapons of this type inflict.">critical()</a> </dd></dl>
 
 </div>
 </div>
@@ -765,6 +738,35 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab83eb04391e978c0e9f19937a6caadd5" name="ab83eb04391e978c0e9f19937a6caadd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab83eb04391e978c0e9f19937a6caadd5">&#9670;&#160;</a></span>primaryCritical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1">CriticalType::Type</a> WeaponTypeData::primaryCritical </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the primary critical type weapons of this type inflict. </p>
+<p>Weapons have a primary type of critical that they inflict, they may be capable of inflicting other types but those will cause less damage on average, reflected by a negative modifier applied to the critical roll.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1" title="Enumeration class representing types of critical damage.">CriticalType::Type</a> primary critical type </dd></dl>
+
+</div>
+</div>
 <a id="aae4ab8d0e217057d694136d28a4d621f" name="aae4ab8d0e217057d694136d28a4d621f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae4ab8d0e217057d694136d28a4d621f">&#9670;&#160;</a></span>rangeModifier()</h2>
 
@@ -802,6 +804,34 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a2c85692ae28ec24c247cf2fc041546cd" name="a2c85692ae28ec24c247cf2fc041546cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c85692ae28ec24c247cf2fc041546cd">&#9670;&#160;</a></span>ranges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_number_range.html">NumberRange</a>&lt; int &gt; &gt; WeaponTypeData::ranges </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with the ranges that the weapon can attack from. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;<a class="el" href="class_number_range.html" title="Stores a range of contiguous numbers allowing checking against another number.">NumberRange&lt;int&gt;</a>*&gt; containing the available ranges </dd></dl>
 
 </div>
 </div>

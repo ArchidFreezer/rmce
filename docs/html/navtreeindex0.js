@@ -61,6 +61,8 @@ var NAVTREEINDEX0 =
 "_table_row_matcher_8h_source.html":[3,0,2,0,8],
 "_table_row_number_matcher_factory_8h_source.html":[3,0,2,0,9],
 "_weapon_type_data_8h_source.html":[3,0,2,26],
+"_weapon_type_datafile_parser_json_8h_source.html":[3,0,1,18],
+"_weapon_type_datafile_parser_xml_8h_source.html":[3,0,1,19],
 "annotated.html":[2,0],
 "class_armour_type_1_1_armour_type_not_found_exception.html":[0,0,0,0],
 "class_armour_type_1_1_armour_type_not_found_exception.html":[2,0,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "class_language_dialect_data.html#ae0b417d7604423fe01389fec301474ef":[2,0,26,6],
 "class_lookup_table.html":[2,0,27],
 "class_lookup_table.html#a259db3187ece523a7f57735fd3ec8b31":[2,0,27,5],
-"class_lookup_table.html#a3d7dcb3255fcb3fe89a39c4709a24aec":[2,0,27,6],
-"class_lookup_table.html#a79baa60def4bde036545c713d3f6c340":[2,0,27,1],
-"class_lookup_table.html#a8ec5b9fe6f25c737bb3e09fec3ce5bd4":[2,0,27,4]
+"class_lookup_table.html#a3d7dcb3255fcb3fe89a39c4709a24aec":[2,0,27,6]
 };

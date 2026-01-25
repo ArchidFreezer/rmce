@@ -12,6 +12,8 @@
 #include <ArmourTypeDatafileParserJson.h>
 #include <SkillDatafileParserXml.h>
 #include <SkillDatafileParserJson.h>
+#include <WeaponTypeDatafileParserXml.h>
+#include <WeaponTypeDatafileParserJson.h>
 
 int main() {
 	std::cout << "Current path is " << std::filesystem::current_path() << '\n';
@@ -28,8 +30,9 @@ int main() {
 	SpellListDatafileParserJson spell_list_parser(cache, "../../../../data/SpellLists.json");
 	SkillCategoryDatafileParserJson skill_category_parser(cache, "../../../../data/SkillCategories.json");
 	ArmourTypeDatafileParserJson armour_type_parser(cache, "../../../../data/ArmourTypes.json");
-	SkillDatafileParserXml skill_parser_xml(cache, "../../../../data/Skills.xml");
 	SkillDatafileParserJson skill_parser(cache, "../../../../data/Skills.json");
+	WeaponTypeDatafileParserXml weapon_type_parser_xml(cache, "../../../../data/WeaponTypes.xml");
+	WeaponTypeDatafileParserJson weapon_type_parser(cache, "../../../../data/WeaponTypes.json");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
@@ -43,6 +46,7 @@ int main() {
 	parsers.push_back(&skill_category_parser);
 	parsers.push_back(&armour_type_parser);
 	parsers.push_back(&skill_parser);
+	parsers.push_back(&weapon_type_parser);
 
 	try {
 		// Iterate through the parsers retrieving the ID only and populating the cache with empty game data objects
@@ -54,7 +58,6 @@ int main() {
 			parser->read(false);
 		}
 
-		skill_parser.save("../../../../data/Skills2.json");
 
 
 //		book_parser.save("../../../../data/Books2.json");
@@ -64,6 +67,8 @@ int main() {
 //		spell_list_parser.save("../../../../data/SpellLists2.json");
 //		skill_category_parser.save("../../../../data/SkillCategories2.json");
 //		armour_type_parser.save("../../../../data/ArmourTypes2.json");
+//		skill_parser.save("../../../../data/Skills2.json");
+		weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 		// We don't resave the attack tables as the nature of the objects means the rows are unordered so the files won't match
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
