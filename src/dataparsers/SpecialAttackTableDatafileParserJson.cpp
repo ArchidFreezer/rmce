@@ -1,7 +1,7 @@
 #include <string>
 #include <SpecialAttackTableDatafileParserJson.h>
 #include <table/SpecialAttackTable.h>
-#include <table/TableRowNumberMatcherFactory.h>
+#include <NumberMatcherFactory.h>
 
 void SpecialAttackTableDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	SpecialAttackTable& game_data = cache().get<SpecialAttackTable>(id);
@@ -104,7 +104,7 @@ void SpecialAttackTableDatafileParserJson::parse(bool id_only) {
 		std::unique_ptr<SpecialAttackTable>table = std::make_unique <SpecialAttackTable>(name, small, medium, large, huge);
 		table->setName(name);
 
-		TableRowNumberMatcherFactory matchers;
+		NumberMatcherFactory matchers;
 
 		if (boost::optional<const pt::ptree&> pmods = ptable.second.get_child_optional("modified-rows")) {
 			for (const auto& pmod : pmods.get()) {

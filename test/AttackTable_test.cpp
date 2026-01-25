@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 #include <table/AttackTable.h>
-#include <table/TableRowNumberMatcherFactory.h>
+#include <NumberMatcherFactory.h>
 
 namespace {
 
@@ -15,7 +15,7 @@ namespace {
 
 	TEST(AttackTable, General) {
 
-		TableRowNumberMatcherFactory matchers;
+		NumberMatcherFactory matchers;
 
 		// Populate a table with 6 rows
 		AttackTable at{"TestGeneral"};
@@ -43,7 +43,7 @@ namespace {
 
 	TEST(AttackTable, Exception) {
 
-		TableRowNumberMatcherFactory matchers;
+		NumberMatcherFactory matchers;
 
 		// Populate a table with 6 rows, but only 10 columns
 		AttackTable at{"TestException"};

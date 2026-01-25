@@ -2,7 +2,7 @@
 #include <AttackTableDatafileParserXml.h>
 #include <table/AttackTable.h>
 #include <table/SpecialAttackTable.h>
-#include <table/TableRowNumberMatcherFactory.h>
+#include <NumberMatcherFactory.h>
 
 void AttackTableDatafileParserXml::parse(bool id_only) {
 	// We know there are no references in attack tables so we create the complete object in the cache on the first pass
@@ -41,7 +41,7 @@ void AttackTableDatafileParserXml::parse(bool id_only) {
 		std::unique_ptr<AttackTable>attack_table = std::make_unique <AttackTable>(name, max_row_val);
 		attack_table->setName(name);
 
-		TableRowNumberMatcherFactory matchers;
+		NumberMatcherFactory matchers;
 
 		// Process the modified rows
 		if (boost::optional<const pt::ptree&> mod_rows_tree = v.second.get_child_optional("modified-rows")) {

@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 #include <table/SpecialAttackTable.h>
-#include <table/TableRowNumberMatcherFactory.h>
+#include <NumberMatcherFactory.h>
 
 namespace {
 
@@ -21,7 +21,7 @@ namespace {
 		limits.emplace(AttackSizeType::kLarge, 4);
 		limits.emplace(AttackSizeType::kHuge, 5);
 
-		TableRowNumberMatcherFactory matchers;
+		NumberMatcherFactory matchers;
 
 		SpecialAttackTable at{ "TestGeneral" , limits};
 		for (int i{ 1 }; i < 6; i++) {
@@ -39,7 +39,7 @@ namespace {
 
 	TEST(SpecialAttackTable, GeneralExplicit) {
 
-		TableRowNumberMatcherFactory matchers;
+		NumberMatcherFactory matchers;
 
 		// Populate a table with 6 rows
 		SpecialAttackTable at{ "TestGeneral", 2, 3, 4, 5 };
@@ -68,7 +68,7 @@ namespace {
 	}
 
 	TEST(SpecialAttackTable, Exception) {
-		TableRowNumberMatcherFactory matchers;
+		NumberMatcherFactory matchers;
 		// Populate a table with 6 rows, but only 10 columns
 		SpecialAttackTable at{ "TestException", 2, 3, 4, 5 };
 		for (int i{ 1 }; i < 6; i++) {

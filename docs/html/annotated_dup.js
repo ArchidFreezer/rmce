@@ -36,6 +36,7 @@ var annotated_dup =
     [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", "class_language_datafile_parser_json" ],
     [ "LanguageDialectData", "class_language_dialect_data.html", "class_language_dialect_data" ],
     [ "LookupTable", "class_lookup_table.html", "class_lookup_table" ],
+    [ "NumberMatcherFactory", "class_number_matcher_factory.html", "class_number_matcher_factory" ],
     [ "NumberRange", "class_number_range.html", "class_number_range" ],
     [ "RowNotFoundException", "class_row_not_found_exception.html", "class_row_not_found_exception" ],
     [ "SkillCategoryData", "class_skill_category_data.html", "class_skill_category_data" ],
@@ -55,7 +56,6 @@ var annotated_dup =
     [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", "class_table_column_armour_type_matcher" ],
     [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", "class_table_column_creature_size_matcher" ],
     [ "TableRow", "class_table_row.html", "class_table_row" ],
-    [ "TableRowNumberMatcherFactory", "class_table_row_number_matcher_factory.html", "class_table_row_number_matcher_factory" ],
     [ "WeaponTypeData", "class_weapon_type_data.html", "class_weapon_type_data" ],
     [ "WeaponTypeDatafileParserJson", "class_weapon_type_datafile_parser_json.html", "class_weapon_type_datafile_parser_json" ],
     [ "WeaponTypeDatafileParserXml", "class_weapon_type_datafile_parser_xml.html", "class_weapon_type_datafile_parser_xml" ]

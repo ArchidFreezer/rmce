@@ -4,7 +4,7 @@
 #include <NumberRange.h>
 #include <table/LookupTable.h>
 #include <table/TableColumnCreatureSizeMatcher.h>
-#include <table/TableRowNumberMatcherFactory.h>
+#include <NumberMatcherFactory.h>
 
 /**
  * @brief Dummy class to test LookupTable abstract class
@@ -19,7 +19,7 @@ TEST(LookupTable, General) {
 	std::unique_ptr<TableColumnCreatureSizeMatcher> matcher = std::make_unique<TableColumnCreatureSizeMatcher>(TableColumnCreatureSizeMatcher());
 	lut.setColumnMatcher(std::move(matcher));
 
-	TableRowNumberMatcherFactory matchers;
+	NumberMatcherFactory matchers;
 
 	TableRow<std::string> tr1 = TableRow<std::string>().addCell("Row 1, kTiny").addCell("Row 1, kSmall").addCell("Row 1, kMedium").addCell("Row 1, kLarge").addCell("Row 1, kHuge");
 	lut.addRow(matchers.matcher(1, 3), tr1);

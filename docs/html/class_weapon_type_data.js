@@ -3,7 +3,7 @@ var class_weapon_type_data =
     [ "InvalidWeaponRangeException", "class_weapon_type_data_1_1_invalid_weapon_range_exception.html", "class_weapon_type_data_1_1_invalid_weapon_range_exception" ],
     [ "WeaponTypeData", "class_weapon_type_data.html#ab2e4e905306d39ddad56f4e79b24ca27", null ],
     [ "addCriticalModifier", "class_weapon_type_data.html#a0867f63ec3d071edab88db5c11d73526", null ],
-    [ "addRange", "class_weapon_type_data.html#ac277ca05a84e9ac5ae193b6d44c58370", null ],
+    [ "addRange", "class_weapon_type_data.html#a639d2ae981f98308d1c999cec3ba9441", null ],
     [ "attackTable", "class_weapon_type_data.html#a0430db75db42c84119f9b26b4d2e387b", null ],
     [ "book", "class_weapon_type_data.html#a97311fe076de813b446cd163628c7d56", null ],
     [ "breakage", "class_weapon_type_data.html#ac89e9a2894dd3f3035a2bb1e87f884d1", null ],

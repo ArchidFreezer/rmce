@@ -1,7 +1,7 @@
 #include <string>
 #include <AttackTableDatafileParserJson.h>
 #include <table/AttackTable.h>
-#include <table/TableRowNumberMatcherFactory.h>
+#include <NumberMatcherFactory.h>
 
 void AttackTableDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	AttackTable& game_data = cache().get<AttackTable>(id);
@@ -97,7 +97,7 @@ void AttackTableDatafileParserJson::parse(bool id_only) {
 		table->setName(name);
 
 		// Get a factory for the matchers
-		TableRowNumberMatcherFactory matchers;
+		NumberMatcherFactory matchers;
 
 		if (boost::optional<const pt::ptree&> pmods = ptable.second.get_child_optional("modified-rows")) {
 			for (const auto& pmod : pmods.get()) {

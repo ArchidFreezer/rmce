@@ -51,6 +51,7 @@ var hierarchy =
       [ "WeaponTypeData", "class_weapon_type_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
+    [ "NumberMatcherFactory", "class_number_matcher_factory.html", null ],
     [ "std::runtime_error", null, [
       [ "ArmourType::ArmourTypeNotFoundException", "class_armour_type_1_1_armour_type_not_found_exception.html", null ],
       [ "ColNotFoundException", "class_col_not_found_exception.html", null ],
@@ -70,6 +71,5 @@ var hierarchy =
     [ "table_row_matcher", null, [
       [ "NumberRange< NumberType >", "class_number_range.html", null ]
     ] ],
-    [ "TableRow&lt; CellDataType &gt;", "class_table_row.html", null ],
-    [ "TableRowNumberMatcherFactory", "class_table_row_number_matcher_factory.html", null ]
+    [ "TableRow&lt; CellDataType &gt;", "class_table_row.html", null ]
 ];

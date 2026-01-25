@@ -1,7 +1,7 @@
 var searchData=
 [
   ['mandatorysubcategory_0',['mandatorySubcategory',['../class_skill_data.html#aff733308308a6e04fef182646d2c5073',1,'SkillData']]],
-  ['matcher_1',['matcher',['../class_table_row_number_matcher_factory.html#a673959d387acb0602e7d96fe16fadadf',1,'TableRowNumberMatcherFactory']]],
+  ['matcher_1',['matcher',['../class_number_matcher_factory.html#a4224f744ca0994863d99ebec4ca481ec',1,'NumberMatcherFactory']]],
   ['matches_2',['matches',['../class_number_range.html#acbd0f5d218335feaa537e669e5531bec',1,'NumberRange']]],
   ['max_3',['max',['../class_number_range.html#a833414ec6a11e7ad7ec4f55ed1faa74d',1,'NumberRange']]],
   ['maxlength_4',['maxLength',['../class_weapon_type_data.html#ab8a1eecc35a24439f32763d9ec741ec1',1,'WeaponTypeData']]],
