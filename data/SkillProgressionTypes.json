@@ -1,6 +1,87 @@
 {
     "skillProgressions": [
         {
+            "id": "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
+            "name": "BD Above Average",
+            "zero": "0",
+            "ten": "7",
+            "twenty": "3",
+            "thirty": "2",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_BD_AVERAGE",
+            "name": "BD Average",
+            "zero": "0",
+            "ten": "6",
+            "twenty": "5",
+            "thirty": "2",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_BD_BELOW_AVERAGE",
+            "name": "BD Below Average",
+            "zero": "0",
+            "ten": "6",
+            "twenty": "4",
+            "thirty": "2",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_BD_HIGH",
+            "name": "BD High",
+            "zero": "0",
+            "ten": "7",
+            "twenty": "4",
+            "thirty": "2",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_BD_LOW",
+            "name": "BD Low",
+            "zero": "0",
+            "ten": "6",
+            "twenty": "3",
+            "thirty": "2",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_BD_MINIMAL",
+            "name": "BD Minimal",
+            "zero": "0",
+            "ten": "5",
+            "twenty": "3",
+            "thirty": "2",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_BD_VERY_HIGH",
+            "name": "BD Very High",
+            "zero": "0",
+            "ten": "7",
+            "twenty": "5",
+            "thirty": "3",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
+            "name": "BD Very Low",
+            "zero": "0",
+            "ten": "6",
+            "twenty": "2",
+            "thirty": "2",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+            "name": "Category Standard",
+            "zero": "-15",
+            "ten": "2",
+            "twenty": "1",
+            "thirty": "0.5",
+            "remaining": "0"
+        },
+        {
             "id": "SKILLPROGRESSIONTYPE_COMBINED",
             "name": "Combined",
             "zero": "-30",
@@ -28,6 +109,96 @@
             "remaining": "0"
         },
         {
+            "id": "SKILLPROGRESSIONTYPE_PP_ABOVE_AVERAGE",
+            "name": "PP Above Average",
+            "zero": "0",
+            "ten": "6",
+            "twenty": "6",
+            "thirty": "4",
+            "remaining": "4"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "name": "PP Below Average",
+            "zero": "0",
+            "ten": "6",
+            "twenty": "4",
+            "thirty": "3",
+            "remaining": "2"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_PP_HIGH",
+            "name": "PP High",
+            "zero": "0",
+            "ten": "7",
+            "twenty": "5",
+            "thirty": "4",
+            "remaining": "3"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_PP_LOW",
+            "name": "PP Low",
+            "zero": "0",
+            "ten": "5",
+            "twenty": "3",
+            "thirty": "2",
+            "remaining": "2"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "name": "PP Minimal",
+            "zero": "0",
+            "ten": "3",
+            "twenty": "2",
+            "thirty": "1",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_PP_MINOR",
+            "name": "PP Minor",
+            "zero": "0",
+            "ten": "4",
+            "twenty": "3",
+            "thirty": "1",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "name": "PP Standard",
+            "zero": "0",
+            "ten": "6",
+            "twenty": "5",
+            "thirty": "4",
+            "remaining": "3"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "name": "PP Stunted",
+            "zero": "0",
+            "ten": "2",
+            "twenty": "1",
+            "thirty": "1",
+            "remaining": "1"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
+            "name": "PP Very High",
+            "zero": "0",
+            "ten": "7",
+            "twenty": "6",
+            "thirty": "5",
+            "remaining": "4"
+        },
+        {
+            "id": "SKILLPROGRESSIONTYPE_PP_VERY_LOW",
+            "name": "PP Very Low",
+            "zero": "0",
+            "ten": "5",
+            "twenty": "3",
+            "thirty": "1",
+            "remaining": "1"
+        },
+        {
             "id": "SKILLPROGRESSIONTYPE_SPECIAL",
             "name": "Special",
             "zero": "0",
@@ -44,15 +215,6 @@
             "twenty": "2",
             "thirty": "1",
             "remaining": "0.5"
-        },
-        {
-            "id": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-            "name": "Category Standard",
-            "zero": "-15",
-            "ten": "2",
-            "twenty": "1",
-            "thirty": "0.5",
-            "remaining": "0"
         }
     ]
 }
