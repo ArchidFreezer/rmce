@@ -1,6 +1,15 @@
 {
     "languages": [
         {
+            "id": "LANGUAGE_BLACK_SPEACH",
+            "name": "Black-Speach",
+            "category": "LANGUAGECATEGORY_HUMAN",
+            "baseLanguage": "Common",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
             "id": "LANGUAGE_COMMON_SPEACH",
             "name": "Common-Speach",
             "category": "LANGUAGECATEGORY_HUMAN",
@@ -26,6 +35,30 @@
             "isSomantic": "false"
         },
         {
+            "id": "LANGUAGE_GNOLL",
+            "name": "Gnoll",
+            "category": "LANGUAGECATEGORY_GNOLL",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
+            "id": "LANGUAGE_GNOMISH",
+            "name": "Gnomish",
+            "category": "LANGUAGECATEGORY_GNOMISH",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
+            "id": "LANGUAGE_GOBLIN",
+            "name": "Goblin",
+            "category": "LANGUAGECATEGORY_GOBLIN",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
             "id": "LANGUAGE_GREY_ELVISH",
             "name": "Grey-Elvish",
             "category": "LANGUAGECATEGORY_ELVEN",
@@ -44,8 +77,8 @@
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_NORTHERN_SPEACH",
-            "name": "Northern-Speach",
+            "id": "LANGUAGE_HIGH_SPEACH",
+            "name": "High-Speach",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
@@ -53,8 +86,87 @@
             "isSomantic": "false"
         },
         {
+            "id": "LANGUAGE_HILL_SPEACH",
+            "name": "Hill-Speach",
+            "category": "LANGUAGECATEGORY_HUMAN",
+            "baseLanguage": "Common",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
+            "id": "LANGUAGE_HOBGOBLIN",
+            "name": "Hobgoblin",
+            "category": "LANGUAGECATEGORY_HOBGOBLIN",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
+            "id": "LANGUAGE_NORTH_SPEACH",
+            "name": "North-Speach",
+            "category": "LANGUAGECATEGORY_HUMAN",
+            "baseLanguage": "Common",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
+            "id": "LANGUAGE_ORCISH",
+            "name": "Orcich",
+            "category": "LANGUAGECATEGORY_GOBLIN",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
             "id": "LANGUAGE_PLAINS_SPEACH",
             "name": "Plains-Speach",
+            "category": "LANGUAGECATEGORY_HUMAN",
+            "baseLanguage": "Common",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
+            "id": "LANGUAGE_SEA_SPEACH",
+            "name": "Sea-Speach",
+            "category": "LANGUAGECATEGORY_HUMAN",
+            "baseLanguage": "Common",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
+            "id": "LANGUAGE_SMALL_SPEACH",
+            "name": "Small-Speach",
+            "category": "LANGUAGECATEGORY_SMALL",
+            "baseLanguage": "Common",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
+            "id": "LANGUAGE_SOUTH_SPEACH",
+            "name": "South-Speach",
+            "category": "LANGUAGECATEGORY_HUMAN",
+            "baseLanguage": "Common",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
+            "id": "LANGUAGE_TROGLODYTE",
+            "name": "Troglodyte",
+            "category": "LANGUAGECATEGORY_TROGLODYTE",
+            "baseLanguage": "Common",
+            "isSpoken": "true",
+            "isWritten": "true",
+            "isSomantic": "false"
+        },
+        {
+            "id": "LANGUAGE_WOOD_SPEACH",
+            "name": "Wood-Speach",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
