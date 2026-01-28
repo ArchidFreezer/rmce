@@ -51,24 +51,8 @@ namespace {
 			at.addRow(matchers.matcher(i, i), buildBrokenATRow("Row ", i));
 		}
 
-		try {
-			at.cell(ArmourType::kAT12, 0);
-			FAIL();
-		} catch (RowNotFoundException err) {
-			SUCCEED();
-		} catch (...) {
-			FAIL();
-		}
-		
-		try {
-			at.cell(ArmourType::kAT12, 1);
-			FAIL();
-		} catch (ColNotFoundException err) {
-			SUCCEED();
-		} catch (...) {
-			FAIL();
-		}
-		
+		EXPECT_THROW(at.cell(ArmourType::kAT12, 0), RowNotFoundException);
+		EXPECT_THROW(at.cell(ArmourType::kAT12, 1), ColNotFoundException);		
 	}
 
 

@@ -72,27 +72,11 @@ namespace {
 		// Populate a table with 6 rows, but only 10 columns
 		SpecialAttackTable at{ "TestException", 2, 3, 4, 5 };
 		for (int i{ 1 }; i < 6; i++) {
-//			auto rm = std::make_unique<NumberRange<int>>(i, i);
 			at.addRow(matchers.matcher(i, i), buildBrokenATRow("Row ", i));
 		}
 
-		try {
-			at.cell(ArmourType::kAT12, AttackSizeType::kSmall, 0);
-			FAIL();
-		} catch (RowNotFoundException err) {
-			SUCCEED();
-		} catch (...) {
-			FAIL();
-		}
-
-		try {
-			at.cell(ArmourType::kAT12, AttackSizeType::kSmall, 1);
-			FAIL();
-		} catch (ColNotFoundException err) {
-			SUCCEED();
-		} catch (...) {
-			FAIL();
-		}
+		EXPECT_THROW(at.cell(ArmourType::kAT12, AttackSizeType::kSmall, 0), RowNotFoundException);
+		EXPECT_THROW(at.cell(ArmourType::kAT12, AttackSizeType::kSmall, 1), ColNotFoundException);
 
 	}
 

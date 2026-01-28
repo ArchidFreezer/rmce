@@ -39,15 +39,7 @@ namespace {
 		EXPECT_EQ(scd.numberOfStats(), 3);
 		EXPECT_EQ(i, 3);
 
-		try {
-			scd.addStat(StatType::Type::kStrength);
-			FAIL();
-		} catch (StatType::TooManyStatsException err) {
-			// SUCCEED(); Could have used this if we don't care about the actual exception text
-			EXPECT_EQ(err.what(),std::string("You attempted to add more than 3 stat bonuses to a skill category."));
-		} catch (...) {
-			FAIL();
-		}
+		EXPECT_THROW(scd.addStat(StatType::Type::kStrength), StatType::TooManyStatsException);
 
 		EXPECT_EQ(scd.numberOfStats(), 3);
 
@@ -83,23 +75,10 @@ namespace {
 		scd.setUseRealmStats(true);
 		EXPECT_EQ(scd.numberOfStats(), 0);
 
-		try {
-			scd.addStat(StatType::Type::kStrength);
-			FAIL();
-		} catch (SkillCategoryData::UsingCharacterRealmStatsException err) {
-			SUCCEED();
-		} catch (...) {
-			FAIL();
-		}
+		EXPECT_THROW(scd.addStat(StatType::Type::kStrength), SkillCategoryData::UsingCharacterRealmStatsException);
 
 		scd.setUseRealmStats(false);
-
-		try {
-			scd.addStat(StatType::Type::kStrength);
-			SUCCEED();
-		} catch (...) {
-			FAIL();
-		}
+		EXPECT_NO_THROW(scd.addStat(StatType::Type::kStrength), SkillCategoryData::UsingCharacterRealmStatsException);
 		EXPECT_EQ(scd.numberOfStats(), 1);
 	}
 
@@ -113,64 +92,15 @@ namespace {
 		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std, false);
 
 		// Invalid category type
-		try {
-			scd.setSkillProgressions(spd_std, spd_cmb);
-			FAIL();
-		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard or None."));
-		} catch (...) {
-			FAIL();
-		}
-		try {
-			scd.setSkillProgressions(spd_std, spd_ltd);
-			FAIL();
-		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard or None."));
-		} catch (...) {
-			FAIL();
-		}
-		try {
-			scd.setSkillProgressions(spd_std, spd_spc);
-			FAIL();
-		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard or None."));
-		} catch (...) {
-			FAIL();
-		}
+		EXPECT_THROW(scd.setSkillProgressions(spd_std, spd_cmb), InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_std, spd_ltd), InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_std, spd_spc), InvalidSkillProgression);
 
 		// Invalid combinations
-		try {
-			scd.setSkillProgressions(spd_cmb, spd_cstd);
-			FAIL();
-		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
-		} catch (...) {
-			FAIL();
-		}
-		try {
-			scd.setSkillProgressions(spd_ltd, spd_cstd);
-			FAIL();
-		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
-		} catch (...) {
-			FAIL();
-		}
-		try {
-			scd.setSkillProgressions(spd_none, spd_cstd);
-			FAIL();
-		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
-		} catch (...) {
-			FAIL();
-		}
-		try {
-			scd.setSkillProgressions(spd_spc, spd_cstd);
-			FAIL();
-		} catch (InvalidSkillProgression err) {
-			EXPECT_EQ(err.what(), std::string("Category progression may only be Standard if the skill progression is also set to Standard."));
-		} catch (...) {
-			FAIL();
-		}
+		EXPECT_THROW(scd.setSkillProgressions(spd_cmb, spd_cstd), InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_ltd, spd_cstd), InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_none, spd_cstd), InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_spc, spd_cstd), InvalidSkillProgression);
 
 		scd.setSkillProgressions(spd_std, spd_cstd);
 		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), "Standard");

@@ -33,27 +33,13 @@ namespace {
 		EXPECT_EQ(laspw.spoken(), 1);
 		EXPECT_EQ(laspw.written(), 1);
 
-		try {
-			laspw.updateSomanticRanks(1);
-			FAIL();
-		} catch (InvalidLanguageRank e) {
-			SUCCEED();
-		}
+		EXPECT_THROW(laspw.updateSomanticRanks(1), InvalidLanguageRank);
+		EXPECT_EQ(laspw.somantic(), 0);
 
-		try {
-			laspw.updateSpokenRanks(1);
-			SUCCEED();
-		} catch (InvalidLanguageRank e) {
-			FAIL();
-		}
+		EXPECT_NO_THROW(laspw.updateSpokenRanks(1), InvalidLanguageRank);
 		EXPECT_EQ(laspw.spoken(), 2);
 
-		try {
-			laspw.updateWrittenRanks(1);
-			SUCCEED();
-		} catch (InvalidLanguageRank e) {
-			FAIL();
-		}
+		EXPECT_NO_THROW(laspw.updateWrittenRanks(1), InvalidLanguageRank);
 		EXPECT_EQ(laspw.written(), 2);
 	}
 
@@ -61,18 +47,10 @@ namespace {
 		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
 
 		LanguageAbility laspw(lspw);
-		try {
-			laspw.updateSomanticRanks(1);
-		} catch (InvalidLanguageRank e) {
-			FAIL();
-		}
+		EXPECT_NO_THROW(laspw.updateSomanticRanks(1), InvalidLanguageRank);
 		EXPECT_EQ(laspw.somantic(), 1);
-		try {
-			laspw.updateSomanticRanks(-2);
-			FAIL();
-		} catch (InvalidLanguageRank e) {
-			SUCCEED();
-		}
+		EXPECT_THROW(laspw.updateSomanticRanks(-2), InvalidLanguageRank);
+		EXPECT_EQ(laspw.somantic(), 1);
 	}
 
 	TEST(LanguageAbility, InvalidSpoken) {
@@ -83,27 +61,13 @@ namespace {
 		EXPECT_EQ(laspw.spoken(), 0);
 		EXPECT_EQ(laspw.written(), 1);
 
-		try {
-			laspw.updateSomanticRanks(1);
-			SUCCEED();
-		} catch (InvalidLanguageRank e) {
-			FAIL();
-		}
+		EXPECT_NO_THROW(laspw.updateSomanticRanks(1), InvalidLanguageRank);
 		EXPECT_EQ(laspw.somantic(), 2);
 
-		try {
-			laspw.updateSpokenRanks(1);
-			FAIL();
-		} catch (InvalidLanguageRank e) {
-			SUCCEED();
-		}
+		EXPECT_THROW(laspw.updateSpokenRanks(1), InvalidLanguageRank);
+		EXPECT_EQ(laspw.spoken(), 0);
 
-		try {
-			laspw.updateWrittenRanks(1);
-			SUCCEED();
-		} catch (InvalidLanguageRank e) {
-			FAIL();
-		}
+		EXPECT_NO_THROW(laspw.updateWrittenRanks(1), InvalidLanguageRank);
 		EXPECT_EQ(laspw.written(), 2);
 	}
 
@@ -111,18 +75,10 @@ namespace {
 		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
 
 		LanguageAbility laspw(lspw);
-		try {
-			laspw.updateSpokenRanks(1);
-		} catch (InvalidLanguageRank e) {
-			FAIL();
-		}
+		EXPECT_NO_THROW(laspw.updateSpokenRanks(1), InvalidLanguageRank);
 		EXPECT_EQ(laspw.spoken(), 1);
-		try {
-			laspw.updateSpokenRanks(-2);
-			FAIL();
-		} catch (InvalidLanguageRank e) {
-			SUCCEED();
-		}
+		EXPECT_THROW(laspw.updateSpokenRanks(-2), InvalidLanguageRank);
+		EXPECT_EQ(laspw.spoken(), 1);
 	}
 
 	TEST(LanguageAbility, InvalidWritten) {
@@ -133,46 +89,24 @@ namespace {
 		EXPECT_EQ(laspw.spoken(), 1);
 		EXPECT_EQ(laspw.written(), 0);
 
-		try {
-			laspw.updateSomanticRanks(1);
-			SUCCEED();
-		} catch (InvalidLanguageRank e) {
-			FAIL();
-		}
+		EXPECT_NO_THROW(laspw.updateSomanticRanks(1), InvalidLanguageRank);
 		EXPECT_EQ(laspw.somantic(), 2);
 
-		try {
-			laspw.updateSpokenRanks(1);
-			SUCCEED();
-		} catch (InvalidLanguageRank e) {
-			FAIL();
-		}
+		EXPECT_NO_THROW(laspw.updateSpokenRanks(1), InvalidLanguageRank);
 		EXPECT_EQ(laspw.spoken(), 2);
 
-		try {
-			laspw.updateWrittenRanks(1);
-			FAIL();
-		} catch (InvalidLanguageRank e) {
-			SUCCEED();
-		}
+		EXPECT_THROW(laspw.updateWrittenRanks(1), InvalidLanguageRank);
+		EXPECT_EQ(laspw.written(), 0);
 	}
 
 	TEST(LanguageAbility, NegativeWritten) {
 		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
 
 		LanguageAbility laspw(lspw);
-		try {
-			laspw.updateWrittenRanks(1);
-		} catch (InvalidLanguageRank e) {
-			FAIL();
-		}
+		EXPECT_NO_THROW(laspw.updateWrittenRanks(1), InvalidLanguageRank);
 		EXPECT_EQ(laspw.written(), 1);
-		try {
-			laspw.updateWrittenRanks(-2);
-			FAIL();
-		} catch (InvalidLanguageRank e) {
-			SUCCEED();
-		}
+		EXPECT_THROW(laspw.updateWrittenRanks(-2), InvalidLanguageRank);
+		EXPECT_EQ(laspw.written(), 1);
 	}
 
 }

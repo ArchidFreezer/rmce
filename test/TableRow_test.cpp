@@ -19,14 +19,6 @@ namespace {
 
 	TEST(TableRow, Exception) {
 		TableRow<Cell> tr = TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
-		try {
-			tr.cell(2);
-			FAIL();
-		} catch (ColNotFoundException err) {
-			SUCCEED();
-		} catch (...) {
-			FAIL();
-		}
-
+		EXPECT_THROW(tr.cell(2), ColNotFoundException);
 	}
 }
