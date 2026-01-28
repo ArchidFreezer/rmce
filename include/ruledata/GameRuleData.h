@@ -41,6 +41,17 @@ public:
 	const std::string& id() const { return id_; }
 
 	/**
+	 * @brief Override the less than operator
+	 * 
+	 * The creation of this overload allows all GameRuleData objects to be used as keys in sorted containers
+	 * 
+	 * @param other GameRuleData object to compoare against
+	 * @return `true` if this object is consdiered to be < \a other
+	 * @return `false` if this object is not consdiered to be < \a other
+	 */
+	bool operator<(const GameRuleData& other) const { return (id_ < other.id_); }
+
+	/**
 	 * @brief Creates a string that can be used as a unique identifier for an object
 	 *
 	 * Each object requires a unique identifier and this is a helper function that can create one in a standard format. The
