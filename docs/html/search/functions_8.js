@@ -1,4 +1,26 @@
 var searchData=
 [
-  ['keys_0',['keys',['../class_game_rule_data_cache.html#a5c7ae4c14205ab932b15c0637e3e1a72',1,'GameRuleDataCache']]]
+  ['id_0',['id',['../class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e',1,'GameRuleData']]],
+  ['includesgreaves_1',['includesGreaves',['../class_armour_type_data.html#abacd00d663bdcfc9ae23b55edd33019f',1,'ArmourTypeData']]],
+  ['invalidlanguagerank_2',['InvalidLanguageRank',['../class_invalid_language_rank.html#a3db99b52c0a5c0e92933c4e5eecd36a3',1,'InvalidLanguageRank']]],
+  ['invalidskillbonus_3',['InvalidSkillBonus',['../class_invalid_skill_bonus.html#a028d36b8503fb72d3144fd686fb3ac03',1,'InvalidSkillBonus']]],
+  ['invalidskilldevelopment_4',['InvalidSkillDevelopment',['../class_invalid_skill_development.html#a221f291de1d4fa69316cd568caca2ccd',1,'InvalidSkillDevelopment']]],
+  ['invalidskillprogression_5',['InvalidSkillProgression',['../class_invalid_skill_progression.html#a2452c77ea82227f7eb4296e94090f4e6',1,'InvalidSkillProgression']]],
+  ['invalidweaponrangeexception_6',['InvalidWeaponRangeException',['../class_weapon_type_data_1_1_invalid_weapon_range_exception.html#a0a15c04cd9be18116afee488a156b6ba',1,'WeaponTypeData::InvalidWeaponRangeException']]],
+  ['isbn_7',['isbn',['../class_book_data.html#a746ff8194a77123b41ad75658a93df23',1,'BookData']]],
+  ['isbonusskill_8',['isBonusSkill',['../class_race_data.html#a6feee9133888f406d54bcc91d765d7a9',1,'RaceData']]],
+  ['isdevelopment_9',['isDevelopment',['../namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e',1,'StatType']]],
+  ['isdialect_10',['isDialect',['../class_language_dialect_data.html#a32aeb22364b30f998493151a24a99851',1,'LanguageDialectData']]],
+  ['iseverymanskill_11',['isEverymanSkill',['../class_race_data.html#a6c82b7c8bcde134d594fec30f7fe7400',1,'RaceData']]],
+  ['iseverymanskillcategory_12',['isEverymanSkillCategory',['../class_race_data.html#a410867af73cdd882a41dc051f4c7e155',1,'RaceData']]],
+  ['isevil_13',['isEvil',['../class_spell_list_data.html#a72dae77ba546a4ca97d66c7c67925908',1,'SpellListData']]],
+  ['ismagical_14',['isMagical',['../namespace_realm_type.html#a925eae689753e8add14afd4f39fddb39',1,'RealmType::isMagical()'],['../namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844',1,'ResistanceType::isMagical()']]],
+  ['isoption_15',['isOption',['../class_game_rule_data_choice.html#aa3c8819169cd57186f3c3f2c08126462',1,'GameRuleDataChoice']]],
+  ['isprimary_16',['isPrimary',['../namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b',1,'StatType']]],
+  ['isrestrictedskill_17',['isRestrictedSkill',['../class_race_data.html#a6321e9db94134290d0a864e62b210862',1,'RaceData']]],
+  ['isrestrictedskillcategory_18',['isRestrictedSkillCategory',['../class_race_data.html#aa83344f6945acbc7722ee066000ead3d',1,'RaceData']]],
+  ['issomantic_19',['isSomantic',['../class_language_ability.html#aa4ec56195691818615e44b5fb673ea27',1,'LanguageAbility::isSomantic()'],['../class_language_data.html#a69e765bb580248b28f7904fa73aa18fe',1,'LanguageData::isSomantic()']]],
+  ['isspoken_20',['isSpoken',['../class_language_ability.html#ac97223eea0083108c624c2a74a2c803e',1,'LanguageAbility::isSpoken()'],['../class_language_data.html#ad6e3d452c38d41bdfde205882a1b075b',1,'LanguageData::isSpoken()']]],
+  ['issummoning_21',['isSummoning',['../class_spell_list_data.html#a0cc14d7b38cae643061dd1b7915895a5',1,'SpellListData']]],
+  ['iswritten_22',['isWritten',['../class_language_ability.html#abc220d4b62a81c3057b9388dc2194afd',1,'LanguageAbility::isWritten()'],['../class_language_data.html#af84b4226cfb0decabda010a08b3a2808',1,'LanguageData::isWritten()']]]
 ];

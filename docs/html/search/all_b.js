@@ -1,8 +1,23 @@
 var searchData=
 [
-  ['name_0',['name',['../class_armour_type_data.html#af80961e29ce839199a8646f30d4f7724',1,'ArmourTypeData::name()'],['../class_book_data.html#aa9b763083e38c4b53353e02f524f2403',1,'BookData::name()'],['../class_language_category_data.html#a8532c04ddef072a9b4b899e7f48c7835',1,'LanguageCategoryData::name()'],['../class_language_data.html#a3b143b4d6979343d8d39ed701fb38a22',1,'LanguageData::name()'],['../class_language_dialect_data.html#a07d3c1de1af8b7de27e3b4ed6aacf1b0',1,'LanguageDialectData::name()'],['../class_skill_category_data.html#a69fd0ed4a9d021cb70e91b29abd26f6a',1,'SkillCategoryData::name()'],['../class_skill_data.html#a8a7675617a3c058a7a695878fb909192',1,'SkillData::name()'],['../class_skill_progression_type_data.html#a2fb561755266f2779e5bd1e6252595c4',1,'SkillProgressionTypeData::name()'],['../class_spell_list_data.html#a93ec5624bd99a94a3c39b45e16dd24ef',1,'SpellListData::name()'],['../class_attack_table.html#a2a71a75e42b866e471c938c115376450',1,'AttackTable::name()'],['../class_special_attack_table.html#ad43308309e7c07c7a0c28d688c765f6e',1,'SpecialAttackTable::name()'],['../class_weapon_type_data.html#a8dbd4c9ed51c12000356404cd7ffd862',1,'WeaponTypeData::name()']]],
-  ['notes_1',['notes',['../class_skill_data.html#a86aa12d2e6cee44c52c6c246ab6aec56',1,'SkillData::notes()'],['../class_weapon_type_data.html#a630176698e531a091d7f6ebace07ac7f',1,'WeaponTypeData::notes()']]],
-  ['numbermatcherfactory_2',['NumberMatcherFactory',['../class_number_matcher_factory.html',1,'']]],
-  ['numberofstats_3',['numberOfStats',['../class_skill_category_data.html#aa5a850b0da838c35b587c41f01b7b1d1',1,'SkillCategoryData::numberOfStats()'],['../class_skill_data.html#ab91df05699c2cd1bda429c2d681e5675',1,'SkillData::numberOfStats()']]],
-  ['numberrange_4',['NumberRange',['../class_number_range.html',1,'NumberRange&lt; NumberType &gt;'],['../class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0',1,'NumberRange::NumberRange()']]]
+  ['maleweightmodifier_0',['maleWeightModifier',['../class_race_data.html#a4cabe06249e6917c9dd94f7e37fa4ffb',1,'RaceData']]],
+  ['mandatorysubcategory_1',['mandatorySubcategory',['../class_skill_data.html#aff733308308a6e04fef182646d2c5073',1,'SkillData']]],
+  ['matcher_2',['matcher',['../class_number_matcher_factory.html#a4224f744ca0994863d99ebec4ca481ec',1,'NumberMatcherFactory']]],
+  ['matches_3',['matches',['../class_number_range.html#acbd0f5d218335feaa537e669e5531bec',1,'NumberRange']]],
+  ['max_4',['max',['../class_number_range.html#a833414ec6a11e7ad7ec4f55ed1faa74d',1,'NumberRange']]],
+  ['maxlength_5',['maxLength',['../class_weapon_type_data.html#ab8a1eecc35a24439f32763d9ec741ec1',1,'WeaponTypeData']]],
+  ['maxmanoeuvremod_6',['maxManoeuvreMod',['../class_armour_type_data.html#adf84d414d7103c0a31a035fb18a69947',1,'ArmourTypeData']]],
+  ['maxopenlow_7',['maxOpenLow',['../class_dice.html#a0914b010f7777a2b5508b1760a52e884',1,'Dice']]],
+  ['maxstrength_8',['maxStrength',['../class_weapon_type_data.html#ae6e4cbfcca65c586a7d04cf8bfec9970',1,'WeaponTypeData']]],
+  ['maxweight_9',['maxWeight',['../class_weapon_type_data.html#abe95a15acca206b3be24693a1fd3d9be',1,'WeaponTypeData']]],
+  ['mentalismprogression_10',['mentalismProgression',['../class_race_data.html#a560e0dd4f0f7914be1fc61473e22662b',1,'RaceData']]],
+  ['min_11',['min',['../class_number_range.html#a4a697ced48fe53a453afb2f3701db99b',1,'NumberRange']]],
+  ['minlength_12',['minLength',['../class_weapon_type_data.html#ae6b8635112d3c634bac7ad5a064abf8a',1,'WeaponTypeData']]],
+  ['minmanoeuvremod_13',['minManoeuvreMod',['../class_armour_type_data.html#a8de27c49305300eb51144e5e9f2a6c2d',1,'ArmourTypeData']]],
+  ['minopenhigh_14',['minOpenHigh',['../class_dice.html#a283a1d67202dbe120f7b1f2facfdc1ac',1,'Dice']]],
+  ['minstrength_15',['minStrength',['../class_weapon_type_data.html#ae817d711c35a2dfe8e0d1af0e19b01df',1,'WeaponTypeData']]],
+  ['minweight_16',['minWeight',['../class_weapon_type_data.html#ad21c97d3be0d3675905afce2da7f5be8',1,'WeaponTypeData']]],
+  ['missileattackpenalty_17',['missileAttackPenalty',['../class_armour_type_data.html#af0ef249e52760634960a4f0c9a075f24',1,'ArmourTypeData']]],
+  ['modified_18',['modified',['../class_lookup_table.html#a3d7dcb3255fcb3fe89a39c4709a24aec',1,'LookupTable']]],
+  ['mt_19',['mt',['../namespace_random.html#aa4354db31fa7d64040939b905ab12ee1',1,'Random']]]
 ];

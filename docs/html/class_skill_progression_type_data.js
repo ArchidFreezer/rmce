@@ -2,7 +2,7 @@ var class_skill_progression_type_data =
 [
     [ "SkillProgressionTypeData", "class_skill_progression_type_data.html#a18392611b4170002265b4b048e103de3", null ],
     [ "SkillProgressionTypeData", "class_skill_progression_type_data.html#a951619d33cdf197bb58be9233d54c5a5", null ],
-    [ "getBonus", "class_skill_progression_type_data.html#acf56ca725ea11d3871bf96beec6d7588", null ],
+    [ "bonus", "class_skill_progression_type_data.html#a5b54dd876e34e50738379ebf108b0d82", null ],
     [ "name", "class_skill_progression_type_data.html#a2fb561755266f2779e5bd1e6252595c4", null ],
     [ "remaining", "class_skill_progression_type_data.html#a282160bc7d1a509b8c76261469d12c63", null ],
     [ "setName", "class_skill_progression_type_data.html#a3c5598032a678ed687da9d39d17ba256", null ],

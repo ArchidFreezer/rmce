@@ -13,7 +13,7 @@ var class_skill_data =
     [ "difficultySummary", "class_skill_data.html#aaf5e494fc1ab503887d9dd53a793c49a", null ],
     [ "distanceMultiplier", "class_skill_data.html#ad89399324be21ee23605fa113df9116a", null ],
     [ "exhaustionCost", "class_skill_data.html#a09340a1aecbe4de32239e4735f330bb8", null ],
-    [ "getSubcategories", "class_skill_data.html#ac7c6431130e5239807fa07c344ff5975", null ],
+    [ "getSubcategories", "class_skill_data.html#a5978d0236241ba9c6a2c32ac3972210e", null ],
     [ "mandatorySubcategory", "class_skill_data.html#aff733308308a6e04fef182646d2c5073", null ],
     [ "name", "class_skill_data.html#a8a7675617a3c058a7a695878fb909192", null ],
     [ "notes", "class_skill_data.html#a86aa12d2e6cee44c52c6c246ab6aec56", null ],

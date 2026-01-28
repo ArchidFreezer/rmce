@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['weapontypedata_0',['WeaponTypeData',['../class_weapon_type_data.html#ab2e4e905306d39ddad56f4e79b24ca27',1,'WeaponTypeData']]],
-  ['weapontypedatafileparserjson_1',['WeaponTypeDatafileParserJson',['../class_weapon_type_datafile_parser_json.html#a96d9e1debb4102c93c9730c3443bc353',1,'WeaponTypeDatafileParserJson::WeaponTypeDatafileParserJson(GameRuleDataCache &amp;cache, std::string_view filename)'],['../class_weapon_type_datafile_parser_json.html#a8ff31a09bebf0f52fb16b213d190dc40',1,'WeaponTypeDatafileParserJson::WeaponTypeDatafileParserJson(GameRuleDataCache &amp;cache)']]],
-  ['weapontypedatafileparserxml_2',['WeaponTypeDatafileParserXml',['../class_weapon_type_datafile_parser_xml.html#a42022e042bfd19caec6c61f922d055e7',1,'WeaponTypeDatafileParserXml::WeaponTypeDatafileParserXml(GameRuleDataCache &amp;cache, std::string_view filename)'],['../class_weapon_type_datafile_parser_xml.html#a76df687fca30712a6be7ecfb839ab8d5',1,'WeaponTypeDatafileParserXml::WeaponTypeDatafileParserXml(GameRuleDataCache &amp;cache)']]],
-  ['woodenhaft_3',['woodenHaft',['../class_weapon_type_data.html#a564ca672760708f9aefed67a0e561951',1,'WeaponTypeData']]]
+  ['unmodified_0',['unmodified',['../class_dice.html#ab4355c9c99b5d2fd82893a08cfc1e740',1,'Dice::unmodified()'],['../class_lookup_table.html#ab9defeeeef4d6fddb0d67c985927ea1b',1,'LookupTable::unmodified()']]],
+  ['updatesomanticranks_1',['updateSomanticRanks',['../class_language_ability.html#a2dfd441ded79f59bf97ba02578d53bc1',1,'LanguageAbility']]],
+  ['updatespokenranks_2',['updateSpokenRanks',['../class_language_ability.html#acb78ec658ecec2a167989edf085b8303',1,'LanguageAbility']]],
+  ['updatewrittenranks_3',['updateWrittenRanks',['../class_language_ability.html#a2355dc23891e74ce35d4824768ed37ca',1,'LanguageAbility']]],
+  ['userealmstats_4',['useRealmStats',['../class_skill_category_data.html#a442f484cf558716a4806f0259316b93d',1,'SkillCategoryData']]],
+  ['usingcharacterrealmstatsexception_5',['UsingCharacterRealmStatsException',['../class_skill_category_data_1_1_using_character_realm_stats_exception.html#a01ff2aa4b83cd2fa306595ce88f8abc6',1,'SkillCategoryData::UsingCharacterRealmStatsException::UsingCharacterRealmStatsException()'],['../class_skill_data_1_1_using_character_realm_stats_exception.html#ae7ee35c5a0f724c34aae37dfe244a2bd',1,'SkillData::UsingCharacterRealmStatsException::UsingCharacterRealmStatsException()']]]
 ];

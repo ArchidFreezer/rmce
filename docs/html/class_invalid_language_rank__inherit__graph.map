@@ -1,0 +1,5 @@
+<map id="InvalidLanguageRank" name="InvalidLanguageRank">
+<area shape="rect" id="Node000001" title="Thrown when there is an attempt to modify the number of ranks in a language and the result would be i..." alt="" coords="5,80,152,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="17,5,140,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,46,81,80,76,79,77,50"/>
+</map>

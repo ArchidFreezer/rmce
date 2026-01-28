@@ -1,12 +1,4 @@
 var searchData=
 [
-  ['languagecategorydata_0',['LanguageCategoryData',['../class_language_category_data.html#a382bd67a41e5009de0b7fe64102c1cec',1,'LanguageCategoryData::LanguageCategoryData(std::string_view id, std::string_view name)'],['../class_language_category_data.html#ad29bff6fdb27b33916e120527af639ae',1,'LanguageCategoryData::LanguageCategoryData(std::string_view id)']]],
-  ['languagecategorydatafileparserjson_1',['LanguageCategoryDatafileParserJson',['../class_language_category_datafile_parser_json.html#a737e027e4e06f8fe04cce8ec35dafe61',1,'LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleDataCache &amp;cache, std::string_view filename)'],['../class_language_category_datafile_parser_json.html#ae4161d4b29f0aebeb8bf145924ba661a',1,'LanguageCategoryDatafileParserJson::LanguageCategoryDatafileParserJson(GameRuleDataCache &amp;cache)']]],
-  ['languagedata_2',['LanguageData',['../class_language_data.html#a020e7df325efe67e0988b5730152f6da',1,'LanguageData::LanguageData(std::string_view id, std::string_view name, std::string_view category, std::string_view base_language, bool isSpoken, bool isWritten, bool isSomantic)'],['../class_language_data.html#a579a0b682ae2958a0137ba6168b95743',1,'LanguageData::LanguageData(std::string_view id)']]],
-  ['languagedatafileparserjson_3',['LanguageDatafileParserJson',['../class_language_datafile_parser_json.html#ab15b7280cb51b381ea11b4c62b042374',1,'LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache &amp;cache, std::string_view filename)'],['../class_language_datafile_parser_json.html#a7f75e960b7de5b0b1095638bcc143b99',1,'LanguageDatafileParserJson::LanguageDatafileParserJson(GameRuleDataCache &amp;cache)']]],
-  ['languagedialectdata_4',['LanguageDialectData',['../class_language_dialect_data.html#a4d3ad512c39a0693f0be3ac15af4de47',1,'LanguageDialectData::LanguageDialectData(std::string_view name)'],['../class_language_dialect_data.html#a6133ca8e98452a5eda55202493dbb00a',1,'LanguageDialectData::LanguageDialectData(std::string_view name, std::set&lt; const LanguageData * &gt; &amp;dialects)']]],
-  ['lcase_5',['lcase',['../_string_utils_8h.html#acd53b635966070e138dea419304de22f',1,'StringUtils.h']]],
-  ['lcaseconcat_6',['lcaseconcat',['../_string_utils_8h.html#a31cee08b448da5eaab597ae9aa8d9424',1,'StringUtils.h']]],
-  ['limit_7',['limit',['../class_special_attack_table.html#a628d67fd6e52224219e2a9fe6e37f036',1,'SpecialAttackTable']]],
-  ['lookuptable_8',['LookupTable',['../class_lookup_table.html#a908db0b57ea5e680deccb80d7fe6f7ab',1,'LookupTable']]]
+  ['keys_0',['keys',['../class_game_rule_data_cache.html#a5c7ae4c14205ab932b15c0637e3e1a72',1,'GameRuleDataCache']]]
 ];
