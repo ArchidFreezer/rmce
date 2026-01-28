@@ -1,10 +1,10 @@
 #include "SkillProgressionTypeData.h"
 
-int SkillProgressionTypeData::getBonus(int ranks) const {
-	return getBonus(ranks, zero_, ten_, twenty_, thirty_, remaining_);
+int SkillProgressionTypeData::bonus(int ranks) const {
+	return bonus(ranks, zero_, ten_, twenty_, thirty_, remaining_);
 }
 
-int SkillProgressionTypeData::getBonus(int ranks, float zero, float ten, float twenty, float thirty, float remaining) const {
+int SkillProgressionTypeData::bonus(int ranks, float zero, float ten, float twenty, float thirty, float remaining) const {
 	// Short circuit if we have no ranks
 	if (ranks == 0) return zero;
 

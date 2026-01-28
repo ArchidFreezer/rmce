@@ -17,10 +17,10 @@ namespace {
 
   TEST(SkillProgressionData, GetBonusCombined) {
     SkillProgressionTypeData spd("COMBINED_ID", "Combined", -30.0, 5.0, 3.0, 1.5, 0.5);
-    EXPECT_EQ(spd.getBonus(0), -30);
-    EXPECT_EQ(spd.getBonus(7), 35);
-    EXPECT_EQ(spd.getBonus(17), 71);
-    EXPECT_EQ(spd.getBonus(27), 90);
-    EXPECT_EQ(spd.getBonus(37), 98);
+    EXPECT_EQ(spd.bonus(0), -30);
+    EXPECT_EQ(spd.bonus(7), 35);
+    EXPECT_EQ(spd.bonus(17), 71);
+    EXPECT_EQ(spd.bonus(27), 90);
+    EXPECT_EQ(spd.bonus(37), 98);
   }
 }
