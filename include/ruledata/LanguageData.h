@@ -121,7 +121,7 @@ private:
 	std::string name_{}; /**< Name as used in-game */
 	std::string category_{}; /**< Language category this belongs to */
 	std::string base_language_{}; /**< Language this language is a dialect of */
-	bool is_spoken_{}; /**< Whether the language has a spoken form */
-	bool is_written_{}; /**< Whether the language has a written form */
-	bool is_somantic_{}; /**< Whether the language has a somantic form */
+	bool is_spoken_{true}; /**< Whether the language has a spoken form */
+	bool is_written_{true}; /**< Whether the language has a written form */
+	bool is_somantic_{false}; /**< Whether the language has a somantic form */
 };
