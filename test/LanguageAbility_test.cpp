@@ -28,7 +28,11 @@ namespace {
 	TEST(LanguageAbility, InvalidSomantic) {
 		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", false, true, true);
 
-		LanguageAbility laspw(lspw);
+		LanguageAbility laspw(lspw, 1, 1, 1);
+		EXPECT_EQ(laspw.somantic(), 0);
+		EXPECT_EQ(laspw.spoken(), 1);
+		EXPECT_EQ(laspw.written(), 1);
+
 		try {
 			laspw.updateSomanticRanks(1);
 			FAIL();
@@ -42,7 +46,7 @@ namespace {
 		} catch (InvalidLanguageRank e) {
 			FAIL();
 		}
-		EXPECT_EQ(laspw.spoken(), 1);
+		EXPECT_EQ(laspw.spoken(), 2);
 
 		try {
 			laspw.updateWrittenRanks(1);
@@ -50,7 +54,7 @@ namespace {
 		} catch (InvalidLanguageRank e) {
 			FAIL();
 		}
-		EXPECT_EQ(laspw.written(), 1);
+		EXPECT_EQ(laspw.written(), 2);
 	}
 
 	TEST(LanguageAbility, NegativeSomantic) {
@@ -74,14 +78,18 @@ namespace {
 	TEST(LanguageAbility, InvalidSpoken) {
 		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, false, true);
 
-		LanguageAbility laspw(lspw);
+		LanguageAbility laspw(lspw, 1, 1, 1);
+		EXPECT_EQ(laspw.somantic(), 1);
+		EXPECT_EQ(laspw.spoken(), 0);
+		EXPECT_EQ(laspw.written(), 1);
+
 		try {
 			laspw.updateSomanticRanks(1);
 			SUCCEED();
 		} catch (InvalidLanguageRank e) {
 			FAIL();
 		}
-		EXPECT_EQ(laspw.somantic(), 1);
+		EXPECT_EQ(laspw.somantic(), 2);
 
 		try {
 			laspw.updateSpokenRanks(1);
@@ -96,7 +104,7 @@ namespace {
 		} catch (InvalidLanguageRank e) {
 			FAIL();
 		}
-		EXPECT_EQ(laspw.written(), 1);
+		EXPECT_EQ(laspw.written(), 2);
 	}
 
 	TEST(LanguageAbility, NegativeSpoken) {
@@ -120,14 +128,18 @@ namespace {
 	TEST(LanguageAbility, InvalidWritten) {
 		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, false);
 
-		LanguageAbility laspw(lspw);
+		LanguageAbility laspw(lspw, 1, 1, 1);
+		EXPECT_EQ(laspw.somantic(), 1);
+		EXPECT_EQ(laspw.spoken(), 1);
+		EXPECT_EQ(laspw.written(), 0);
+
 		try {
 			laspw.updateSomanticRanks(1);
 			SUCCEED();
 		} catch (InvalidLanguageRank e) {
 			FAIL();
 		}
-		EXPECT_EQ(laspw.somantic(), 1);
+		EXPECT_EQ(laspw.somantic(), 2);
 
 		try {
 			laspw.updateSpokenRanks(1);
@@ -135,7 +147,7 @@ namespace {
 		} catch (InvalidLanguageRank e) {
 			FAIL();
 		}
-		EXPECT_EQ(laspw.spoken(), 1);
+		EXPECT_EQ(laspw.spoken(), 2);
 
 		try {
 			laspw.updateWrittenRanks(1);

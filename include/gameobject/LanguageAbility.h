@@ -47,7 +47,7 @@ public:
 	 * @param written number of written ranks the character has 
 	 * @param somantic number of somantic ranks the character has
 	 */
-	LanguageAbility(const LanguageData& language, int spoken, int written, int somantic) : language_{ &language }, spoken_{ spoken }, written_{ written }, somantic_{ somantic } {}
+	LanguageAbility(const LanguageData& language, int spoken, int written, int somantic) : language_{ &language }, spoken_{ std::max(0,spoken) }, written_{ std::max(0,written) }, somantic_{ std::max(0,somantic) } {}
 
 	/**
 	 * @brief Get the name of the language
@@ -70,7 +70,7 @@ public:
 	 * @brief Get the number of somantic ranks
 	 * @return somantic ranks
 	 */
-	int somantic() const { return somantic_; }
+	int somantic() const { return isSomantic() ? std::max(0,somantic_) : 0; }
 
 	/**
 	 * @brief Check whether the language has a somantic comnponent
@@ -94,7 +94,7 @@ public:
 	 * @brief Get the number of spoken ranks
 	 * @return spoken ranks
 	 */
-	int spoken() const { return spoken_; }
+	int spoken() const { return isSpoken() ? std::max(0, spoken_) : 0; }
 
 	/**
 	 * @brief Check whether the language has a spoken comnponent
@@ -118,7 +118,7 @@ public:
 	 * @brief Get the number of written ranks
 	 * @return written ranks
 	 */
-	int written() const { return written_; }
+	int written() const { return isWritten() ? std::max(0, written_) : 0; }
 
 	/**
 	 * @brief Check whether the language has a written comnponent
