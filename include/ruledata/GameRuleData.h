@@ -1,6 +1,23 @@
 #pragma once
 #include <string>
 
+class GameRuleData;
+
+/**
+ * @brief Concept that ensures that a templated type is derived from the GameRuleData class
+ * 
+ * It is used when templating a class or method where it may be used as follows
+ * 
+ * @code
+ * template <GameRuleDataObject T>
+ * void someFunction(T obj) {
+ *   // do something with obj
+ * }
+ * @endcode
+ */
+template<class T>
+concept GameRuleDataObject = std::is_base_of<GameRuleData, T>::value;
+
 /**
  * @class GameRuleData
  * 

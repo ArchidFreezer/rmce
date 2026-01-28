@@ -74,7 +74,7 @@ public:
 	 * @return Reference to the data object
 	 * @throws out_of_range if there is no rule data for the id with the given type
 	 */
-	template <class T>
+	template <GameRuleDataObject T>
 	T& get(std::string& id);
 
 	/**
@@ -87,7 +87,7 @@ public:
 	 * @param datum Object to move to the cache
 	 * @param id Identifier of the data object
 	 */
-	template <class T>
+	template <GameRuleDataObject T>
 	void add(std::unique_ptr <T> datum, std::string& id);
 
 	/**
@@ -97,7 +97,7 @@ public:
 	 * @param id Identifier of the data object
 	 * @return Reference to the data object
 	 */
-	template <class T>
+	template <GameRuleDataObject T>
 	bool exists(std::string& id);
 
 	/**
@@ -109,7 +109,7 @@ public:
 	 *           Must be derived from #GameRuleData
 	 * @param keys Set of strings to populate with the ids of the data objects
 	 */
-	template <class T>
+	template <GameRuleDataObject T>
 	void keys(std::set<std::string>& keys);
 	
 private:
@@ -123,11 +123,9 @@ private:
 	std::unordered_map<std::type_index, std::mutex> mutexes;
 };
 
-template<class T>
+template<GameRuleDataObject T>
 inline T& GameRuleDataCache::get(std::string& id)
 {
-	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
-
 	// Grab a mutex for thread safety
 	auto& mutex = mutexes[typeid(T)];
 	std::lock_guard<std::mutex> guard(mutex);
@@ -147,12 +145,9 @@ inline T& GameRuleDataCache::get(std::string& id)
 	}
 }
 
-template<class T>
+template<GameRuleDataObject T>
 inline void GameRuleDataCache::add(std::unique_ptr <T> datum, std::string& id)
 {
-	// Check we are requesting an appropriate class
-	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
-
 	// Grab a mutex for thread safety
 	auto& mutex = mutexes[typeid(T)];
 	std::lock_guard<std::mutex> guard(mutex);
@@ -164,12 +159,9 @@ inline void GameRuleDataCache::add(std::unique_ptr <T> datum, std::string& id)
 	ruledata_hash_map.insert_or_assign(id, std::move(datum));
 }
 
-template<class T>
+template<GameRuleDataObject T>
 inline bool GameRuleDataCache::exists(std::string& id)
 {
-	// Check we are requesting an appropriate class
-	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
-
 	// Grab a mutex for thread safety
 	auto& mutex = mutexes[typeid(T)];
 	std::lock_guard<std::mutex> guard(mutex);
@@ -184,12 +176,9 @@ inline bool GameRuleDataCache::exists(std::string& id)
 	return ruledata_it != ruledata_hash_map.end();
 }
 
-template<class T>
+template<GameRuleDataObject T>
 inline void GameRuleDataCache::keys(std::set<std::string>& keys)
 {
-	// Check we are requesting an appropriate class
-	static_assert(std::is_base_of<GameRuleData, T>::value, "T must be derived from GameRuleData");
-
 	// Grab a mutex for thread safety
 	auto& mutex = mutexes[typeid(T)];
 	std::lock_guard<std::mutex> guard(mutex);
