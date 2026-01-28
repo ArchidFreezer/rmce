@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string_view>
+#include <set>
 #include <vector>
 
 #include <BookData.h>
@@ -186,14 +187,14 @@ public:
 	 *
 	 * @param subcategory std::string type to add to the skill
 	 */
-	void addSubcategory(std::string subcategory) { subcategories_.push_back(subcategory); }
+	void addSubcategory(std::string subcategory) { subcategories_.insert(subcategory); }
 
 	/**
 	 * @brief Gets a collection of the subcategories available for a skill
 	 * 
-	 * @return std::vectore reference containing the list of available subcategory types.
+	 * @return std::set reference containing the list of available subcategory types.
 	 */
-	const std::vector<std::string>& getSubcategories() const { return subcategories_; }
+	const std::set<std::string>& getSubcategories() const { return subcategories_; }
 
 	/**
 	 * @brief Add stat that applies stat bonus to the skill
@@ -306,7 +307,7 @@ private:
 	const SkillCategoryData* category_{}; /** The skill category the skill belongs to */
 	bool can_specialise_{}; /** Whether the character can select a speciality for the skill */
 	bool mandatory_subcategory_{}; /**< Whether the character must select a specific type of the this skills focus */
-	std::vector<std::string> subcategories_{}; /**< Definition of the types of subcategories the skill has */
+	std::set<std::string> subcategories_{}; /**< Definition of the types of subcategories the skill has */
 	std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the skill */
 	float exhaustion_cost_{}; /** The number of exhaution points expended per round when using the skill at normal pace */
 	float distance_multiplier_{}; /** Multiplier for the distance moved when using this skill */
