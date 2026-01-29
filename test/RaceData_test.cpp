@@ -78,42 +78,41 @@ namespace {
 
 		SkillData sk1("SKILL1_ID");
 		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
+		std::unique_ptr<SubcategoriedSkillData> s1 = std::make_unique<SubcategoriedSkillData>(sk1, "Sub");
+		std::unique_ptr<SubcategoriedSkillData> s2 = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
+		EXPECT_STREQ(s1->id().c_str(), "SKILL1_ID_Sub");
 
-		race.addEverymanSkill(s1);
-		race.addEverymanSkill(s2);
+		race.addEverymanSkill(std::move(s1));
+		race.addEverymanSkill(std::move(s2));
 
-		std::set<const SubcategoriedSkillData*> eset(race.everymanSkills());
+		std::set<const SkillData*> eset(race.everymanSkills());
 		EXPECT_EQ(eset.size(), 2);
 		eset.clear();
 		EXPECT_EQ(eset.size(), 0);
 
-		std::set<const SubcategoriedSkillData*> eset2(race.everymanSkills());
+		std::set<const SkillData*> eset2(race.everymanSkills());
 		EXPECT_EQ(eset2.size(), 2);
-
-		EXPECT_STREQ(s1.id().c_str(), "SKILL1_ID_Sub");
 
 		int count{ 0 };
 		for (auto& skill : race.everymanSkills()) {
 			count++;
-			if (skill->id() == "SKILL1_ID_Sub" || skill->id() == "SKILL2_ID_Sub") continue;
+			if (skill->id() == "SKILL1_ID" || skill->id() == "SKILL2_ID") continue;
 			FAIL();
 		}
 		EXPECT_EQ(count, 2);
 
-		SubcategoriedSkillData s2b(sk2, "Sub");
-		EXPECT_TRUE(race.isEverymanSkill(s2b));
-		EXPECT_THROW(race.addEverymanSkill(s2b), InvalidSkillDevelopment);
+		std::unique_ptr<SubcategoriedSkillData> s2b = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
+		EXPECT_TRUE(race.isEverymanSkill(sk2));
+		EXPECT_THROW(race.addEverymanSkill(std::move(s2b)), InvalidSkillDevelopment);
 
 		SkillData sk3("SKILL3_ID");
-		SubcategoriedSkillData s3(sk3, "");
-		EXPECT_FALSE(race.isEverymanSkill(s3));
+		EXPECT_FALSE(race.isEverymanSkill(sk3));
 
 		SkillData sk4("SKILL4_ID");
-		SubcategoriedSkillData s4(sk4, "");
-		race.addRestrictedSkill(s4);
-		EXPECT_THROW(race.addEverymanSkill(s4), InvalidSkillDevelopment);
+		std::unique_ptr<SubcategoriedSkillData> s4 = std::make_unique<SubcategoriedSkillData>(sk4, "");
+		race.addRestrictedSkill(std::move(s4));
+		std::unique_ptr<SubcategoriedSkillData> s5 = std::make_unique<SubcategoriedSkillData>(sk4, "");
+		EXPECT_THROW(race.addEverymanSkill(std::move(s5)), InvalidSkillDevelopment);
 	}
 
 	TEST(RaceData, RestrictedSkills) {
@@ -121,41 +120,41 @@ namespace {
 
 		SkillData sk1("SKILL1_ID");
 		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
+		std::unique_ptr<SubcategoriedSkillData> s1 = std::make_unique<SubcategoriedSkillData>(sk1, "Sub");
+		std::unique_ptr<SubcategoriedSkillData> s2 = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
 
-		race.addRestrictedSkill(s1);
-		race.addRestrictedSkill(s2);
+		race.addRestrictedSkill(std::move(s1));
+		race.addRestrictedSkill(std::move(s2));
 
-		std::set<const SubcategoriedSkillData*> eset(race.restrictedSkills());
+		std::set<const SkillData*> eset{ race.restrictedSkills() };
 		EXPECT_EQ(eset.size(), 2);
 		eset.clear();
 		EXPECT_EQ(eset.size(), 0);
 
-		std::set<const SubcategoriedSkillData*> eset2(race.restrictedSkills());
+		std::set<const SkillData*> eset2(race.restrictedSkills());
 		EXPECT_EQ(eset2.size(), 2);
 
 		int count{ 0 };
 		for (auto& skill : race.restrictedSkills()) {
 			count++;
-			if (skill->id() == "SKILL1_ID_Sub" || skill->id() == "SKILL2_ID_Sub") continue;
+			if (skill->id() == "SKILL1_ID" || skill->id() == "SKILL2_ID") continue;
 			FAIL();
 		}
 		EXPECT_EQ(count, 2);
 
 		SkillData sk2b("SKILL2_ID");
-		SubcategoriedSkillData s2b(sk2b, "Sub");
-		EXPECT_TRUE(race.isRestrictedSkill(s2b));
-		EXPECT_THROW(race.addRestrictedSkill(s2b), InvalidSkillDevelopment);
+		std::unique_ptr<SubcategoriedSkillData> s2b = std::make_unique<SubcategoriedSkillData>(sk2b, "Sub");
+		EXPECT_TRUE(race.isRestrictedSkill(sk2b));
+		EXPECT_THROW(race.addRestrictedSkill(std::move(s2b)), InvalidSkillDevelopment);
 
 		SkillData sk3("SKILL3_ID");
-		SubcategoriedSkillData s3(sk3, "");
-		EXPECT_FALSE(race.isRestrictedSkill(s3));
+		EXPECT_FALSE(race.isRestrictedSkill(sk3));
 
 		SkillData sk4("SKILL4_ID");
-		SubcategoriedSkillData s4(sk4, "");
-		race.addEverymanSkill(s4);
-		EXPECT_THROW(race.addRestrictedSkill(s4), InvalidSkillDevelopment);
+		std::unique_ptr<SubcategoriedSkillData> s4 = std::make_unique<SubcategoriedSkillData>(sk4, "");
+		race.addEverymanSkill(std::move(s4));
+		std::unique_ptr<SubcategoriedSkillData> s5 = std::make_unique<SubcategoriedSkillData>(sk4, "");
+		EXPECT_THROW(race.addRestrictedSkill(std::move(s5)), InvalidSkillDevelopment);
 	}
 
 	TEST(RaceData, EverymanSkillCategories) {
@@ -238,25 +237,26 @@ namespace {
 		SkillData sk1("SKILL1_ID");
 		SkillData sk1a("SKILL1_ID");
 		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s1a(sk1a, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
+		std::unique_ptr<SubcategoriedSkillData> s1 = std::make_unique<SubcategoriedSkillData>(sk1, "Sub");
+		std::unique_ptr<SubcategoriedSkillData> s1a = std::make_unique<SubcategoriedSkillData>(sk1a, "Sub");
+		std::unique_ptr<SubcategoriedSkillData> s2 = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
+		std::unique_ptr<SubcategoriedSkillData> s2a = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
 
-		race.setSkillBonus(s1, 5);
-		race.setSkillBonus(s2, 10);
+		race.setSkillBonus(std::move(s1), 5);
+		race.setSkillBonus(std::move(s2), 10);
 
-		EXPECT_TRUE(race.isBonusSkill(s1));
+		EXPECT_TRUE(race.isBonusSkill(sk1a));
 
-		EXPECT_EQ(race.skillBonus(s1a), 5);
-		EXPECT_TRUE(race.isBonusSkill(s1a));
+		EXPECT_EQ(race.skillBonus(*s1a), 5);
+		EXPECT_TRUE(race.isBonusSkill(sk1));
 
-		EXPECT_THROW(race.setSkillBonus(s1a, 15), InvalidSkillBonus);
-		EXPECT_EQ(race.skillBonus(s2), 10);
+		EXPECT_THROW(race.setSkillBonus(std::move(s1a), 15), InvalidSkillBonus);
+		EXPECT_EQ(race.skillBonus(*s2a), 10);
 
 		int count{ 0 };
 		for (auto& skill : race.skillsWithBonus()) {
 			count++;
-			if (skill->id() == "SKILL1_ID_Sub" || skill->id() == "SKILL2_ID_Sub") continue;
+			if (skill->id() == "SKILL1_ID" || skill->id() == "SKILL2_ID") continue;
 			FAIL();
 		}
 		EXPECT_EQ(count, 2);
