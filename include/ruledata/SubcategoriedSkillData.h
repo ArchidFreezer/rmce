@@ -42,7 +42,7 @@ public:
 
 	/**
 	 * @brief Get the subcategory
-	 * @return string name of teh subcategory
+	 * @return string name of the subcategory
 	 */
 	const std::optional<std::string>& subcategory() const { return subcategory_; }
 
@@ -51,6 +51,18 @@ public:
 	 * @return 
 	 */
 	const std::string& id() const { return id_; }
+
+	/**
+	 * @brief Override the less than operator
+	 *
+	 * The creation of this overload allows all SubcategoriedSkillData objects to be used as keys in sorted containers
+	 *
+	 * @param other SubcategoriedSkillData object to compoare against
+	 * @return `true` if this object is consdered to be < @a other
+	 * @return `false` if this object is not consdered to be < @a other
+	 */
+	bool operator<(const SubcategoriedSkillData& other) const { return (id_ < other.id_); }
+
 private:
 	const SkillData* skill_data_{}; /**< Skill that the subcategory is for */
 	std::optional<std::string> subcategory_{}; /**< Optional subcategory name */
