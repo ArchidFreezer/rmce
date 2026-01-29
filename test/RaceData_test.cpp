@@ -253,8 +253,9 @@ namespace {
 		RaceData race("RACE_ID");
 		BookData book("TEST_BOOK");
 
+		EXPECT_FALSE(race.book());
 		race.setBook(book);
-		EXPECT_STREQ(race.book().id().c_str(), "TEST_BOOK");
-
+		EXPECT_TRUE(race.book());
+		EXPECT_STREQ(race.book().value()->id().c_str(), "TEST_BOOK");
 	}
 }

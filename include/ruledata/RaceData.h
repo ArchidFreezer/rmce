@@ -96,13 +96,26 @@ public:
 	 * @brief Set the book that the race is defined in
 	 * @param book BookData pointer to the book
 	 */
-	void setBook(const BookData& book) { book_ = &book; }
+	void setBook(const BookData& book) { book_.emplace(&book); }
 
 	/**
 	 * @brief Get the book that the race is defined in
-	 * @return Reference to the BookData containing the race definition
+	 * 
+	 * The book is stored as a pointer and may not have been initialised so it is considered optional. A check should be made
+	 * before using the value to determine if the book has been set yet:
+	 * @code
+	 * if (race.book()) {                        // Check if the book has been set
+	 *   const BookData* book = race.book().value();   // Get the book pointer
+	 *   // Use the book
+	 * }
+	 * @endcode
+	 * or
+	 * @code
+	 * std::cout << (race.book() ? race.book().value()->name() : "Book not set") << std::endl;
+	 * @endcode
+	 * @return Pointer to the BookData containing the race definition
 	 */
-	const BookData& book() const { return *book_; }
+	const std::optional<const BookData*> book() const { return book_; }
 
 	/**
 	 * @brief Set whether the race has developed artistic and intellectual pursuits
@@ -797,7 +810,7 @@ public:
 private:
 	std::string name_{}; /**< Name of the race */
 	std::string description_{}; /**< General description of the race */
-	const BookData* book_{nullptr}; /**< Book that the race is described in */
+	std::optional<const BookData*> book_{std::nullopt}; /**< Book that the race is described in */
 	bool high_culture_{true}; /**< Whether the race has developed artistic and intellectual pursuits */
 	CreatureSizeType::Type size_{ CreatureSizeType::Type::kMedium}; /**< Size of unarmed attacks made by the race */
 	CriticalTableType::Type critical_table_type_{ CriticalTableType::Type::kNormal}; /**< The type of critical table attacks on this race are rolled against */
