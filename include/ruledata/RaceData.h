@@ -723,7 +723,7 @@ public:
 	 * @see SkillDevelopmentType
 	 */
 	void addRestrictedSkillCategory(const SkillCategoryData& category) {
-		if (isEverymanSkillCategory(category)) throw InvalidSkillDevelopment("Cannot set " + category.id() + " as restricted as it is already set as restricted");
+		if (isEverymanSkillCategory(category)) throw InvalidSkillDevelopment("Cannot set " + category.id() + " as restricted as it is already set as everyman");
 		if (isRestrictedSkillCategory(category)) throw InvalidSkillDevelopment("Cannot set " + category.id() + " as restricted as it is already defined");
 		restricted_skill_categories_.insert(&category);
 	}
