@@ -2,10 +2,8 @@
 #include <RaceData.h>
 
 namespace {
-	BookData book("BOOK_ID");
-
 	TEST(RaceData, AdolescentLanguageAbility) {
-		RaceData race("RACE_ID", book);
+		RaceData race("RACE_ID");
 
 		LanguageData l1("L1_ID");
 		l1.setName("L1_NAME");
@@ -32,7 +30,7 @@ namespace {
 	}
 
 	TEST(RaceData, StartingLanguageAbility) {
-		RaceData race("RACE_ID", book);
+		RaceData race("RACE_ID");
 
 		LanguageData l1("L1_ID");
 		l1.setName("L1_NAME");
@@ -59,7 +57,7 @@ namespace {
 	}
 
 	TEST(RaceData, StatBonus) {
-		RaceData race("RACE_ID", book);
+		RaceData race("RACE_ID");
 
 		race.setStatBonus(StatType::kAgility, 5);
 		race.setStatBonus(StatType::kStrength, 10);
@@ -76,7 +74,7 @@ namespace {
 	}
 
 	TEST(RaceData, EverymanSkills) {
-		RaceData race("RACE_ID", book);
+		RaceData race("RACE_ID");
 
 		SkillData s1("SKILL1_ID");
 		SkillData s2("SKILL2_ID");
@@ -113,7 +111,7 @@ namespace {
 	}
 
 	TEST(RaceData, RestrictedSkills) {
-		RaceData race("RACE_ID", book);
+		RaceData race("RACE_ID");
 
 		SkillData s1("SKILL1_ID");
 		SkillData s2("SKILL2_ID");
@@ -150,7 +148,7 @@ namespace {
 	}
 
 	TEST(RaceData, EverymanSkillCategories) {
-		RaceData race("RACE_ID", book);
+		RaceData race("RACE_ID");
 
 		SkillCategoryData s1("SKILL1_ID");
 		SkillCategoryData s2("SKILL2_ID");
@@ -187,7 +185,7 @@ namespace {
 	}
 
 	TEST(RaceData, RestrictedSkillCategories) {
-		RaceData race("RACE_ID", book);
+		RaceData race("RACE_ID");
 
 		SkillCategoryData s1("SKILL1_ID");
 		SkillCategoryData s2("SKILL2_ID");
@@ -224,7 +222,7 @@ namespace {
 	}
 
 	TEST(RaceData, SkillBonus) {
-		RaceData race("RACE_ID", book);
+		RaceData race("RACE_ID");
 
 		SkillData s1("SKILL1_ID");
 		SkillData s1a("SKILL1_ID");
@@ -251,4 +249,12 @@ namespace {
 
 	}
 
+	TEST(RaceData, Book) {
+		RaceData race("RACE_ID");
+		BookData book("TEST_BOOK");
+
+		race.setBook(book);
+		EXPECT_STREQ(race.book().id().c_str(), "TEST_BOOK");
+
+	}
 }

@@ -65,9 +65,8 @@ public:
 	/**
 	 * @brief Basic constructor
 	 * @param id Unique identifier of the race
-	 * @param book BookData that the race is described in
 	 */
-	RaceData(std::string_view id, const BookData& book) : GameRuleData(id), book_{ &book } {}
+	RaceData(std::string_view id) : GameRuleData(id) {}
 
 	/**
  * @brief Set the name of the race
@@ -798,7 +797,7 @@ public:
 private:
 	std::string name_{}; /**< Name of the race */
 	std::string description_{}; /**< General description of the race */
-	const BookData* book_{}; /**< Book that the race is described in */
+	const BookData* book_{nullptr}; /**< Book that the race is described in */
 	bool high_culture_{true}; /**< Whether the race has developed artistic and intellectual pursuits */
 	CreatureSizeType::Type size_{ CreatureSizeType::Type::kMedium}; /**< Size of unarmed attacks made by the race */
 	CriticalTableType::Type critical_table_type_{ CriticalTableType::Type::kNormal}; /**< The type of critical table attacks on this race are rolled against */
@@ -829,5 +828,4 @@ private:
 	std::set<const SkillCategoryData*> restricted_skill_categories_{}; /**< Skill categories that are considered restricted for the race */
 	std::map<const SkillData*, int> skill_bonuses_{}; /** Racial skill bonuses */
 	std::vector<const GameRuleDataChoice<SkillCategoryData>*> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skill from to become everyman */
-
 };
