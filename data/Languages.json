@@ -1,8 +1,8 @@
 {
     "languages": [
         {
-            "id": "LANGUAGE_BLACK_SPEACH",
-            "name": "Black-Speach",
+            "id": "LANGUAGE_BLACK_SPEECH",
+            "name": "Black-Speech",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
@@ -10,8 +10,8 @@
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_COMMON_SPEACH",
-            "name": "Common-Speach",
+            "id": "LANGUAGE_COMMON_SPEECH",
+            "name": "Common-Speech",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
@@ -77,8 +77,8 @@
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_HIGH_SPEACH",
-            "name": "High-Speach",
+            "id": "LANGUAGE_HIGH_SPEECH",
+            "name": "High-Speech",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
@@ -86,8 +86,8 @@
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_HILL_SPEACH",
-            "name": "Hill-Speach",
+            "id": "LANGUAGE_HILL_SPEECH",
+            "name": "Hill-Speech",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
@@ -103,8 +103,8 @@
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_NORTH_SPEACH",
-            "name": "North-Speach",
+            "id": "LANGUAGE_NORTH_SPEECH",
+            "name": "North-Speech",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
@@ -120,8 +120,8 @@
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_PLAINS_SPEACH",
-            "name": "Plains-Speach",
+            "id": "LANGUAGE_PLAINS_SPEECH",
+            "name": "Plains-Speech",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
@@ -129,8 +129,8 @@
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_SEA_SPEACH",
-            "name": "Sea-Speach",
+            "id": "LANGUAGE_SEA_SPEECH",
+            "name": "Sea-Speech",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
@@ -138,8 +138,8 @@
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_SMALL_SPEACH",
-            "name": "Small-Speach",
+            "id": "LANGUAGE_SMALL_SPEECH",
+            "name": "Small-Speech",
             "category": "LANGUAGECATEGORY_SMALL",
             "baseLanguage": "Common",
             "isSpoken": "true",
@@ -147,8 +147,8 @@
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_SOUTH_SPEACH",
-            "name": "South-Speach",
+            "id": "LANGUAGE_SOUTH_SPEECH",
+            "name": "South-Speech",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
@@ -165,8 +165,8 @@
             "isSomantic": "false"
         },
         {
-            "id": "LANGUAGE_WOOD_SPEACH",
-            "name": "Wood-Speach",
+            "id": "LANGUAGE_WOOD_SPEECH",
+            "name": "Wood-Speech",
             "category": "LANGUAGECATEGORY_HUMAN",
             "baseLanguage": "Common",
             "isSpoken": "true",
