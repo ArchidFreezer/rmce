@@ -15,6 +15,22 @@
 namespace CriticalTableType {
 
 	/**
+	* @brief Thrown to indicate that no CriticalTableype::Type enum was found
+	*
+	*/
+	class CriticalTableTypeNotFoundException : public std::runtime_error {
+	public:
+		/**
+		 * @brief Exception constructor
+		 *
+		 * std::runtime_error will handle the string
+		 *
+		 * @param error String to display for the error
+		 */
+		CriticalTableTypeNotFoundException(const std::string& error) : std::runtime_error{ error }	{}
+	};
+
+	/**
 	 * @brief Enumeration class representing the type of critical tables
 	 */
 	enum class Type {
