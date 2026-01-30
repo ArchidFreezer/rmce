@@ -18,6 +18,34 @@ void RaceDatafileParserJson::parse(bool id_only) {
 		} else {
 			RaceData& ref = cache().get<RaceData>(id);
 			ref.setName(name);
+			ref.setDescription(v.second.get<std::string>("name"));
+			ref.setHighCulture(v.second.get<bool>("high-culture"));
+			ref.setRecoveryMultiplier(v.second.get<float>("recovery-multiplier"));
+			ref.setExhaustionBonus(v.second.get<int>("exhaustion-bonus"));
+			ref.setStatLossRacialType(v.second.get<int>("stat-loss-racial-type"));
+			ref.setRequiredSleep(v.second.get<int>("required-sleep"));
+			ref.setRequiredSleepFrequency(v.second.get<int>("required-sleep-frequenct"));
+			ref.setSoulDeparture(v.second.get<int>("soul-departure"));
+			ref.setBuildModifier(v.second.get<int>("build-modifier"));
+			ref.setAverageMaleHeight(v.second.get<int>("average-male-height"));
+			ref.setAverageFemaleHeight(v.second.get<int>("average-female-height"));
+			ref.setAverageLifespan(v.second.get<int>("average-lifespan"));
+			ref.setMaleWeightModifier(v.second.get<int>("male-weight-modifier"));
+
+
+			// Get the book from the cache
+			std::string book_id = v.second.get<std::string>("book");
+			ref.setBook(cache().get<BookData>(book_id));
+
+			std::string creature_size = v.second.get<std::string>("size");
+			if (CreatureSizeType::fromString(creature_size)) {
+				ref.setSize(CreatureSizeType::fromString(creature_size).value());
+			}
+
+			std::string critical_table = v.second.get<std::string>("size");
+			if (CriticalTableType::fromString(critical_table)) {
+				ref.setCriticalTableType(CriticalTableType::fromString(critical_table).value());
+			}
 
 			std::cout << "\tRace name: " << ref.name() << std::endl;
 		}
@@ -31,7 +59,7 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	datum.put("name", game_data.name());
 	datum.put("description", game_data.description());
 	datum.put("book", game_data.book().value()->id());
-	datum.put("hight-culture", game_data.highCulture());
+	datum.put("high-culture", game_data.highCulture());
 	datum.put("creature-size", CreatureSizeType::toString(game_data.size()));
 	datum.put("critical-table", CriticalTableType::toString(game_data.criticalTableType()));
 	datum.put("recovery-multiplier", game_data.recoveryMultipler());
@@ -45,7 +73,7 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	datum.put("average-female-height", game_data.averageFemaleHeight());
 	datum.put("average-lifespan", game_data.averageLifespan());
 	datum.put("male-weight-modifier", game_data.maleWeightModifier());
-	datum.put("male-feweight-modifier", game_data.femaleWeightModifier());
+	datum.put("female-weight-modifier", game_data.femaleWeightModifier());
 	datum.put("arcane-progression", game_data.arcaneProgression().id());
 	datum.put("arms-progression", game_data.armsProgression().id());
 	datum.put("channeling-progression", game_data.channelingProgression().id());
