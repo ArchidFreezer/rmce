@@ -15,6 +15,7 @@
 #include <WeaponTypeDatafileParserXml.h>
 #include <WeaponTypeDatafileParserJson.h>
 #include <RaceDatafileParserXml.h>
+#include <RaceDatafileParserJson.h>
 
 int main() {
 	std::cout << "Current path is " << std::filesystem::current_path() << '\n';
@@ -34,6 +35,7 @@ int main() {
 	SkillDatafileParserJson skill_parser(cache, "../../../../data/Skills.json");
 	WeaponTypeDatafileParserJson weapon_type_parser(cache, "../../../../data/WeaponTypes.json");
 	RaceDatafileParserXml race_parser_xml(cache, "../../../../data/Races.xml");
+	RaceDatafileParserJson race_parser(cache, "../../../../data/Races.json");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
@@ -72,6 +74,7 @@ int main() {
 //		armour_type_parser.save("../../../../data/ArmourTypes2.json");
 //		skill_parser.save("../../../../data/Skills2.json");
 //		weapon_type_parser.save("../../../../data/WeaponTypes2.json");
+		race_parser.save("../../../../data/Races.json");
 
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;

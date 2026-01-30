@@ -6,6 +6,7 @@ var class_language_ability =
     [ "isSpoken", "class_language_ability.html#ac97223eea0083108c624c2a74a2c803e", null ],
     [ "isWritten", "class_language_ability.html#abc220d4b62a81c3057b9388dc2194afd", null ],
     [ "language", "class_language_ability.html#a6673f4548d956c65a28823a78a910d24", null ],
+    [ "languageId", "class_language_ability.html#a178ebcf6e4768832cc60b504a57d143a", null ],
     [ "somantic", "class_language_ability.html#a0665a9075ffb13d4bc9caf62bba02f68", null ],
     [ "spoken", "class_language_ability.html#a386b19f727c44c3d7227ec545656e83a", null ],
     [ "updateSomanticRanks", "class_language_ability.html#a2dfd441ded79f59bf97ba02578d53bc1", null ],

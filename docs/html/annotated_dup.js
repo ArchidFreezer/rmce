@@ -50,6 +50,7 @@ var annotated_dup =
     [ "NumberMatcherFactory", "class_number_matcher_factory.html", "class_number_matcher_factory" ],
     [ "NumberRange", "class_number_range.html", "class_number_range" ],
     [ "RaceData", "class_race_data.html", "class_race_data" ],
+    [ "RaceDatafileParserJson", "class_race_datafile_parser_json.html", "class_race_datafile_parser_json" ],
     [ "RaceDatafileParserXml", "class_race_datafile_parser_xml.html", "class_race_datafile_parser_xml" ],
     [ "RowNotFoundException", "class_row_not_found_exception.html", "class_row_not_found_exception" ],
     [ "SkillCategoryData", "class_skill_category_data.html", "class_skill_category_data" ],

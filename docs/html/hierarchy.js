@@ -11,6 +11,7 @@ var hierarchy =
         [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", null ],
         [ "LanguageCategoryDatafileParserJson", "class_language_category_datafile_parser_json.html", null ],
         [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", null ],
+        [ "RaceDatafileParserJson", "class_race_datafile_parser_json.html", null ],
         [ "SkillCategoryDatafileParserJson", "class_skill_category_datafile_parser_json.html", null ],
         [ "SkillDatafileParserJson", "class_skill_datafile_parser_json.html", null ],
         [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", null ],
