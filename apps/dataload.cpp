@@ -7,14 +7,10 @@
 #include <AttackTableDatafileParserJson.h>
 #include <SpecialAttackTableDatafileParserJson.h>
 #include <SpellListDatafileParserJson.h>
-#include <SkillCategoryDatafileParserXml.h>
 #include <SkillCategoryDatafileParserJson.h>
 #include <ArmourTypeDatafileParserJson.h>
-#include <SkillDatafileParserXml.h>
 #include <SkillDatafileParserJson.h>
-#include <WeaponTypeDatafileParserXml.h>
 #include <WeaponTypeDatafileParserJson.h>
-#include <RaceDatafileParserXml.h>
 #include <RaceDatafileParserJson.h>
 
 int main() {
@@ -34,7 +30,6 @@ int main() {
 	ArmourTypeDatafileParserJson armour_type_parser(cache, "../../../../data/ArmourTypes.json");
 	SkillDatafileParserJson skill_parser(cache, "../../../../data/Skills.json");
 	WeaponTypeDatafileParserJson weapon_type_parser(cache, "../../../../data/WeaponTypes.json");
-	RaceDatafileParserXml race_parser_xml(cache, "../../../../data/Races.xml");
 	RaceDatafileParserJson race_parser(cache, "../../../../data/Races.json");
 
 	// Store the parsers in a vector so we can iterate through them
@@ -50,7 +45,7 @@ int main() {
 	parsers.push_back(&armour_type_parser);
 	parsers.push_back(&skill_parser);
 	parsers.push_back(&weapon_type_parser);
-	parsers.push_back(&race_parser_xml);
+	parsers.push_back(&race_parser);
 
 	try {
 		// Iterate through the parsers retrieving the ID only and populating the cache with empty game data objects
@@ -74,7 +69,7 @@ int main() {
 //		armour_type_parser.save("../../../../data/ArmourTypes2.json");
 //		skill_parser.save("../../../../data/Skills2.json");
 //		weapon_type_parser.save("../../../../data/WeaponTypes2.json");
-		race_parser.save("../../../../data/Races.json");
+//		race_parser.save("../../../../data/Races2.json");
 
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
