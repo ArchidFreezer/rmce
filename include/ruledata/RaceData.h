@@ -84,7 +84,7 @@ public:
 	 * @brief Set the description of what the race consists of
 	 * @param description std::string_view race description
 	 */
-	void setDescription(std::string_view description) { description_ = description_; }
+	void setDescription(std::string_view description) { description_ = description; }
 
 	/**
 	 * @brief Get the description of what the race consists of
