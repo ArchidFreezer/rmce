@@ -614,8 +614,8 @@ public:
 	 * @see SkillDevelopmentType
 	 */
 	void addEverymanSkill(std::unique_ptr<SubcategoriedSkillData> skill) {
-		if (isRestrictedSkill(skill->skillData())) throw InvalidSkillDevelopment("Cannot set " + skill->id() + " as everyman as it is already set as restricted");
-		if (isEverymanSkill(skill->skillData())) throw InvalidSkillDevelopment("Cannot set " + skill->id() + " as everyman as it is already defined");
+		if (isRestrictedSkill(skill->skillData(), skill->subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill->id() + " as everyman as it is already set as restricted");
+		if (isEverymanSkill(skill->skillData(), skill->subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill->id() + " as everyman as it is already defined");
 		everyman_skills_.insert(std::move(skill));
 	}
 
@@ -624,10 +624,11 @@ public:
 	 * @return std::set container of everyman skills
 	 * @see SkillDevelopmentType
 	 */
-	const std::set<const SkillData*> everymanSkills() const { 
-		std::set<const SkillData*> ret;
+	const std::set<SubcategoriedSkillData> everymanSkills() const { 
+		std::set<SubcategoriedSkillData> ret;
 		for (auto& skill : everyman_skills_) {
-			ret.insert(&skill->skillData());
+			const SubcategoriedSkillData data(skill->skillData(), skill->subcategory());
+			ret.insert(data);
 		}
 		return ret; 
 	}
@@ -635,13 +636,14 @@ public:
 	/**
 	 * @brief Check if a skill is everyman for the race
 	 * @param other Skill to check
+	 * @param subcategory optional subcategory of @a other
 	 * @return `true` if the skill is everyman
 	 * @return `false` if the skill is not everyman
 	 * @see SkillDevelopmentType
 	 */
-	bool isEverymanSkill(const SkillData& other) const {
+	bool isEverymanSkill(const SkillData& other, std::optional<std::string_view> subcategory = std::nullopt) const {
 		for (auto& skill : everyman_skills_) {
-			if (skill->skillData().id() == other.id()) return true;
+			if (skill->skillData().id() == other.id() && (subcategory ? subcategory.value() == skill->subcategory() : !skill->subcategory())) return true;
 		}
 		return false;
 	}
@@ -653,8 +655,8 @@ public:
 	 * @see SkillDevelopmentType
 	 */
 	void addRestrictedSkill(std::unique_ptr<SubcategoriedSkillData> skill) {
-		if (isEverymanSkill(skill->skillData())) throw InvalidSkillDevelopment("Cannot set " + skill->id() + " as restricted as it is already set as everyman");
-		if (isRestrictedSkill(skill->skillData())) throw InvalidSkillDevelopment("Cannot set " + skill->id() + " as restricted as it is already defined");
+		if (isEverymanSkill(skill->skillData(), skill->subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill->id() + " as restricted as it is already set as everyman");
+		if (isRestrictedSkill(skill->skillData(), skill->subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill->id() + " as restricted as it is already defined");
 		restricted_skills_.insert(std::move(skill));
 	}
 
@@ -662,10 +664,11 @@ public:
 	 * @brief Get a container of the skills that are considered restricted
 	 * @return std::set container of restricted skills
 	 */
-	const std::set<const SkillData*> restrictedSkills() const {
-		std::set<const SkillData*> ret;
+	const std::set<SubcategoriedSkillData> restrictedSkills() const {
+		std::set<SubcategoriedSkillData> ret;
 		for (auto& skill : restricted_skills_) {
-			ret.insert(&skill->skillData());
+			const SubcategoriedSkillData data(skill->skillData(), skill->subcategory());
+			ret.insert(data);
 		}
 		return ret;
 	}
@@ -673,13 +676,14 @@ public:
 	/**
 	 * @brief Check if a skill is restricted for the race
 	 * @param other Skill to check
+	 * @param subcategory optional subcategory of @a other
 	 * @return `true` if the skill is restricted
 	 * @return `false` if the skill is not restricted
 	 * @see SkillDevelopmentType
 	 */
-	bool isRestrictedSkill(const SkillData& other) const {
+	bool isRestrictedSkill(const SkillData& other, std::optional<std::string_view> subcategory = std::nullopt) const {
 		for (auto& skill : restricted_skills_) {
-			if (skill->skillData().id() == other.id()) return true;
+			if (skill->skillData().id() == other.id() && (subcategory ? subcategory.value() == skill->subcategory() : !skill->subcategory())) return true;
 		}
 		return false;
 	}
@@ -755,15 +759,15 @@ public:
 	 * @param bonus int bonus value
 	 */
 	void setSkillBonus(std::unique_ptr<SubcategoriedSkillData> skill, int bonus) {
-		if (isBonusSkill(skill->skillData())) throw InvalidSkillBonus("There is already a bonus set for skill " + skill->id());
+		if (isBonusSkill(skill->skillData(), skill->subcategory())) throw InvalidSkillBonus("There is already a bonus set for skill " + skill->id());
 		skill_bonuses_.emplace(std::move(skill), bonus); 
 	}
 
 	/**
- * @brief Get the bonus that the race provides to a skill
- * @param skill SubcategoriedSkillData to get the bonus for
- * @return bonus value
- */
+	 * @brief Get the bonus that the race provides to a skill
+	 * @param skill SubcategoriedSkillData to get the bonus for
+	 * @return bonus value
+	 */
 	int skillBonus(const SubcategoriedSkillData& skill) const {
 		for (auto& key : skill_bonuses_) {
 			if (key.first->id() == skill.id()) return key.second;
@@ -772,13 +776,24 @@ public:
 	}
 
 	/**
+	 * @brief Get the bonus that the race provides to a skill
+	 * @param skill SkillData to get the bonus for
+	 * @param subcategory optional subcategory of @a skill
+	 * @return bonus value
+	 */
+	int skillBonus(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
+		return skillBonus(SubcategoriedSkillData(skill, subcategory));
+	}
+
+	/**
 	 * @brief Gets a container with the skill that the race has a bonus for
 	 * @return std::set of SkillData with bonuses
 	 */
-	const std::set<const SkillData*> skillsWithBonus() const {
-		std::set<const SkillData*> ret{};
+	const std::set<SubcategoriedSkillData> skillsWithBonus() const {
+		std::set<SubcategoriedSkillData> ret;
 		for (auto& key : skill_bonuses_) {
-			ret.insert(&(key.first->skillData()));
+			const SubcategoriedSkillData data(key.first->skillData(), key.first->subcategory());
+			ret.insert(data);
 		}
 		return ret;
 	}
@@ -786,12 +801,13 @@ public:
 	/**
 	 * @brief Check if there is a racial bonus for a skill
 	 * @param skill SkillData to check
+	 * @param subcategory optional subcategory of @a skill
 	 * @return `true` if the skill has a bonus
 	 * @return `false` if the skill does not have a bonus
 	 */
-	bool isBonusSkill(const SkillData& skill) const {
+	bool isBonusSkill(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
 		for (auto& key : std::views::keys(skill_bonuses_)) {
-			if (key->skillData().id() == skill.id()) return true;
+			if (key->skillData().id() == skill.id() && (subcategory ? subcategory.value() == key->subcategory() : !key->subcategory())) return true;
 		}
 		return false;
 	}

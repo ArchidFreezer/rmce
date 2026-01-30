@@ -85,24 +85,23 @@ namespace {
 		race.addEverymanSkill(std::move(s1));
 		race.addEverymanSkill(std::move(s2));
 
-		std::set<const SkillData*> eset(race.everymanSkills());
+		const std::set<SubcategoriedSkillData> eset(race.everymanSkills());
 		EXPECT_EQ(eset.size(), 2);
-		eset.clear();
-		EXPECT_EQ(eset.size(), 0);
 
-		std::set<const SkillData*> eset2(race.everymanSkills());
+		const std::set<SubcategoriedSkillData> eset2(race.everymanSkills());
 		EXPECT_EQ(eset2.size(), 2);
 
 		int count{ 0 };
 		for (auto& skill : race.everymanSkills()) {
 			count++;
-			if (skill->id() == "SKILL1_ID" || skill->id() == "SKILL2_ID") continue;
+			if (skill.skillData().id() == "SKILL1_ID" || skill.skillData().id() == "SKILL2_ID") continue;
 			FAIL();
 		}
 		EXPECT_EQ(count, 2);
 
 		std::unique_ptr<SubcategoriedSkillData> s2b = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
-		EXPECT_TRUE(race.isEverymanSkill(sk2));
+		EXPECT_FALSE(race.isEverymanSkill(sk2));
+		EXPECT_TRUE(race.isEverymanSkill(sk2, "Sub"));
 		EXPECT_THROW(race.addEverymanSkill(std::move(s2b)), InvalidSkillDevelopment);
 
 		SkillData sk3("SKILL3_ID");
@@ -126,25 +125,24 @@ namespace {
 		race.addRestrictedSkill(std::move(s1));
 		race.addRestrictedSkill(std::move(s2));
 
-		std::set<const SkillData*> eset{ race.restrictedSkills() };
+		const std::set<SubcategoriedSkillData> eset(race.restrictedSkills());
 		EXPECT_EQ(eset.size(), 2);
-		eset.clear();
-		EXPECT_EQ(eset.size(), 0);
 
-		std::set<const SkillData*> eset2(race.restrictedSkills());
+		const std::set<SubcategoriedSkillData> eset2(race.restrictedSkills());
 		EXPECT_EQ(eset2.size(), 2);
 
 		int count{ 0 };
 		for (auto& skill : race.restrictedSkills()) {
 			count++;
-			if (skill->id() == "SKILL1_ID" || skill->id() == "SKILL2_ID") continue;
+			if (skill.skillData().id() == "SKILL1_ID" || skill.skillData().id() == "SKILL2_ID") continue;
 			FAIL();
 		}
 		EXPECT_EQ(count, 2);
 
 		SkillData sk2b("SKILL2_ID");
 		std::unique_ptr<SubcategoriedSkillData> s2b = std::make_unique<SubcategoriedSkillData>(sk2b, "Sub");
-		EXPECT_TRUE(race.isRestrictedSkill(sk2b));
+		EXPECT_FALSE(race.isRestrictedSkill(sk2b));
+		EXPECT_TRUE(race.isRestrictedSkill(sk2b, "Sub"));
 		EXPECT_THROW(race.addRestrictedSkill(std::move(s2b)), InvalidSkillDevelopment);
 
 		SkillData sk3("SKILL3_ID");
@@ -245,18 +243,22 @@ namespace {
 		race.setSkillBonus(std::move(s1), 5);
 		race.setSkillBonus(std::move(s2), 10);
 
-		EXPECT_TRUE(race.isBonusSkill(sk1a));
+		EXPECT_TRUE(race.isBonusSkill(sk1a, "Sub"));
 
 		EXPECT_EQ(race.skillBonus(*s1a), 5);
-		EXPECT_TRUE(race.isBonusSkill(sk1));
+		EXPECT_FALSE(race.isBonusSkill(sk1));
+		EXPECT_TRUE(race.isBonusSkill(sk1, "Sub"));
 
 		EXPECT_THROW(race.setSkillBonus(std::move(s1a), 15), InvalidSkillBonus);
 		EXPECT_EQ(race.skillBonus(*s2a), 10);
 
+		EXPECT_EQ(race.skillBonus(sk2, "Sub"), 10);
+		EXPECT_EQ(race.skillBonus(sk2), 0);
+
 		int count{ 0 };
 		for (auto& skill : race.skillsWithBonus()) {
 			count++;
-			if (skill->id() == "SKILL1_ID" || skill->id() == "SKILL2_ID") continue;
+			if (skill.skillData().id() == "SKILL1_ID" || skill.skillData().id() == "SKILL2_ID") continue;
 			FAIL();
 		}
 		EXPECT_EQ(count, 2);
