@@ -56,6 +56,12 @@ public:
 	const std::string& language() const { return language_->name(); }
 
 	/**
+	 * @brief Get the id of the language
+	 * @return string referenmce to the language id
+	 */
+	const std::string& languageId() const { return language_->id(); }
+
+	/**
 	 * @brief Modify the number of ranks in the language the character has 
 	 * 
 	 * Unless the game world has extremely complicated languages or dialects adding ranks above 10 tends to be a waste
@@ -128,7 +134,7 @@ public:
 	bool isWritten() const { return language_->isWritten(); }
 
 private:
-	const LanguageData* language_{}; /**< Language the chjaracter has any ability in */
+	const LanguageData* language_{}; /**< Language the character has any ability in */
 	int somantic_{0}; /** Ability in somantic component of the languiage */
 	int spoken_{0}; /** Ability in spoken component of the languiage */
 	int written_{0}; /** Ability in written component of the languiage */
