@@ -102,7 +102,7 @@ void RaceDatafileParserXml::parse(bool id_only) {
 				for (const auto& stat_bonus : stat_bonuses.get()) {
 					StatType::Type stat{ StatType::fromString(stat_bonus.second.get<std::string>("<xmlattr>.stat")).value() };
 					int bonus = stat_bonus.second.get_value<int>();
-					ref.setStatBonus(stat, bonus);
+					if (bonus) ref.setStatBonus(stat, bonus);
 				}
 			}
 
