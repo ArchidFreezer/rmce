@@ -132,7 +132,7 @@
          <skill-category-choices-everyman>
             <choices num="1">
               <skill-category>Weapon - 2-Handed</skill-category>
-              <skill-category>Weapon - Polearm</skill-category>
+              <skill-category>Weapon - Pole Arms</skill-category>
             </choices>
          </skill-category-choices-everyman>
          <realm-progressions>
@@ -248,7 +248,7 @@
             <female-weight-modifier>2.5</female-weight-modifier>
          </physique-constructor>
          <skill-categories-everyman>
-            <skill>Subterfuge • Stealth</skill>
+            <skill>Subterfuge | Stealth</skill>
          </skill-categories-everyman>
          <skill-categories-restricted>
             <skill>Urban</skill>
@@ -417,11 +417,11 @@
             <bonus stat="Quickness">0</bonus>
          </stat-bonuses>
          <adolescent-languages>
-            <language language="Grey-Elvish">
+            <language language="Grey-elvish">
                <form ranks="4">Spoken</form>
                <form ranks="4">Written</form>
             </language>
-            <language language="High-Elvish">
+            <language language="High-elvish">
                <form ranks="2">Spoken</form>
                <form ranks="2">Written</form>
             </language>
@@ -451,11 +451,11 @@
             </language>
          </adolescent-languages>
          <background-languages>
-            <language language="Grey-Elvish">
+            <language language="Grey-elvish">
                <form ranks="4">Spoken</form>
                <form ranks="4">Written</form>
             </language>
-            <language language="High-Elvish">
+            <language language="High-elvish">
                <form ranks="4">Spoken</form>
                <form ranks="4">Written</form>
             </language>
@@ -1234,8 +1234,8 @@
          </physique-constructor>
          <skill-category-choices-everyman>
             <choices num="1">
-              <skill-category>Weapon • 1-H Concussion</skill-category>
-              <skill-category>Weapon • 1-H Edged</skill-category>
+              <skill-category>Weapon | 1-H Concussion</skill-category>
+              <skill-category>Weapon | 1-H Edged</skill-category>
             </choices>
          </skill-category-choices-everyman>
          <realm-progressions>
@@ -1468,8 +1468,8 @@
          </physique-constructor>
          <skill-category-choices-everyman>
             <choices num="1">
-              <skill-category>Weapon • 2-Handed</skill-category>
-              <skill-category>Weapon • 1-H Edged</skill-category>
+              <skill-category>Weapon | 2-Handed</skill-category>
+              <skill-category>Weapon | 1-H Edged</skill-category>
             </choices>
          </skill-category-choices-everyman>
          <realm-progressions>
@@ -1970,7 +1970,7 @@
                <form ranks="10">Spoken</form>
                <form ranks="10">Written</form>
             </language>
-            <language language="Gnome">
+            <language language="Gnomish">
                <form ranks="15">Spoken</form>
                <form ranks="15">Written</form>
             </language>
@@ -2121,7 +2121,7 @@
       </race>
       <race id="00001000000000698">
          <name>Kobolds</name>
-         <description>Kobolds</description>
+         <description>Kobolds are the smallest of the small races. They are viewed with disdain by all races; good and evil alike. However, they have a penchant for flattery and clever speech (and knives in the shadows). Kobolds have made it their life to survive in a world that views them as useless and worthless</description>
          <book>Races &amp; Cultures: Underground Races</book>
          <racial-base>Goblinoid</racial-base>
          <high-culture>true</high-culture>
@@ -2254,10 +2254,11 @@
             <skill subcategory="underground">Survival</skill>
          </skills-everyman>
          <skill-categories-everyman>
-            <skill>Weapon • 1-H Concussion</skill>
+            <skill>Weapon | 1-H Concussion</skill>
          </skill-categories-everyman>
          <skill-categories-restricted>
-            <skill>Science/Analytic</skill>
+            <skill>Science/Analytic Basic</skill>
+            <skill>Science/Analytic Specialised</skill>
          </skill-categories-restricted>
          <realm-progressions>
             <progression realm="Arcane">SKILLPROGRESSIONTYPE_PP_MINIMAL</progression>
@@ -2368,8 +2369,8 @@
          </skills-everyman>
          <skill-category-choices-everyman>
             <choices num="1">
-              <skill-category>Weapon • 2 Handed</skill-category>
-              <skill-category>Weapon • Polearm</skill-category>
+              <skill-category>Weapon | 2 Handed</skill-category>
+              <skill-category>Weapon | Pole Arms</skill-category>
             </choices>
          </skill-category-choices-everyman>
          <skills-restricted>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['id_0',['id',['../class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e',1,'GameRuleData']]],
+  ['id_0',['id',['../class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e',1,'GameRuleData::id()'],['../class_subcategoried_skill_data.html#a23503af0c7da0ea063f44b02f76ed5ac',1,'SubcategoriedSkillData::id()']]],
   ['includesgreaves_1',['includesGreaves',['../class_armour_type_data.html#abacd00d663bdcfc9ae23b55edd33019f',1,'ArmourTypeData']]],
   ['invalidlanguagerank_2',['InvalidLanguageRank',['../class_invalid_language_rank.html#a3db99b52c0a5c0e92933c4e5eecd36a3',1,'InvalidLanguageRank']]],
   ['invalidskillbonus_3',['InvalidSkillBonus',['../class_invalid_skill_bonus.html#a028d36b8503fb72d3144fd686fb3ac03',1,'InvalidSkillBonus']]],

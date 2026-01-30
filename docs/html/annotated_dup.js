@@ -3,6 +3,12 @@ var annotated_dup =
     [ "ArmourType", "namespace_armour_type.html", [
       [ "ArmourTypeNotFoundException", "class_armour_type_1_1_armour_type_not_found_exception.html", "class_armour_type_1_1_armour_type_not_found_exception" ]
     ] ],
+    [ "CreatureSizeType", "namespace_creature_size_type.html", [
+      [ "CreatureSizeTypeNotFoundException", "class_creature_size_type_1_1_creature_size_type_not_found_exception.html", "class_creature_size_type_1_1_creature_size_type_not_found_exception" ]
+    ] ],
+    [ "CriticalTableType", "namespace_critical_table_type.html", [
+      [ "CriticalTableTypeNotFoundException", "class_critical_table_type_1_1_critical_table_type_not_found_exception.html", "class_critical_table_type_1_1_critical_table_type_not_found_exception" ]
+    ] ],
     [ "SkillActionType", "namespace_skill_action_type.html", [
       [ "SkillActionNotFoundException", "class_skill_action_type_1_1_skill_action_not_found_exception.html", "class_skill_action_type_1_1_skill_action_not_found_exception" ]
     ] ],
@@ -44,6 +50,7 @@ var annotated_dup =
     [ "NumberMatcherFactory", "class_number_matcher_factory.html", "class_number_matcher_factory" ],
     [ "NumberRange", "class_number_range.html", "class_number_range" ],
     [ "RaceData", "class_race_data.html", "class_race_data" ],
+    [ "RaceDatafileParserXml", "class_race_datafile_parser_xml.html", "class_race_datafile_parser_xml" ],
     [ "RowNotFoundException", "class_row_not_found_exception.html", "class_row_not_found_exception" ],
     [ "SkillCategoryData", "class_skill_category_data.html", "class_skill_category_data" ],
     [ "SkillCategoryDatafileParserJson", "class_skill_category_datafile_parser_json.html", "class_skill_category_datafile_parser_json" ],
@@ -59,6 +66,7 @@ var annotated_dup =
     [ "SpellListData", "class_spell_list_data.html", "class_spell_list_data" ],
     [ "SpellListDatafileParserJson", "class_spell_list_datafile_parser_json.html", "class_spell_list_datafile_parser_json" ],
     [ "SpellListDatafileParserXml", "class_spell_list_datafile_parser_xml.html", "class_spell_list_datafile_parser_xml" ],
+    [ "SubcategoriedSkillData", "class_subcategoried_skill_data.html", "class_subcategoried_skill_data" ],
     [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", "class_table_column_armour_type_matcher" ],
     [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", "class_table_column_creature_size_matcher" ],
     [ "TableRow", "class_table_row.html", "class_table_row" ],

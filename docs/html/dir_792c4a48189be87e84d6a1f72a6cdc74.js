@@ -10,6 +10,7 @@ var dir_792c4a48189be87e84d6a1f72a6cdc74 =
     [ "DatafileParserXml.h", "_datafile_parser_xml_8h_source.html", null ],
     [ "LanguageCategoryDatafileParserJson.h", "_language_category_datafile_parser_json_8h_source.html", null ],
     [ "LanguageDatafileParserJson.h", "_language_datafile_parser_json_8h_source.html", null ],
+    [ "RaceDatafileParserXml.h", "_race_datafile_parser_xml_8h_source.html", null ],
     [ "SkillCategoryDatafileParserJson.h", "_skill_category_datafile_parser_json_8h_source.html", null ],
     [ "SkillCategoryDatafileParserXml.h", "_skill_category_datafile_parser_xml_8h_source.html", null ],
     [ "SkillDatafileParserJson.h", "_skill_datafile_parser_json_8h_source.html", null ],

@@ -13,32 +13,8 @@ var namespaces_dup =
       [ "operator<<", "namespace_attack_size_type.html#a7d47fc102743a20a968047fa70c61cbb", null ],
       [ "toString", "namespace_attack_size_type.html#a4a8f34e111bf071fef6df044f1f37fbd", null ]
     ] ],
-    [ "CreatureSizeType", "namespace_creature_size_type.html", [
-      [ "Type", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471", null ],
-      [ "Type", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471", [
-        [ "kTiny", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ae1ce0ec846f3ba0c8966ef540ae472aa", null ],
-        [ "kSmall", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a03674d7b145783567b9a65ea62f974b9", null ],
-        [ "kMedium", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a3ce9d817402b59f65fb01ea044bb1ee9", null ],
-        [ "kLarge", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e", null ],
-        [ "kHuge", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ad464fb18dfeee2966a78fd644162e011", null ]
-      ] ],
-      [ "fromString", "namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa", null ],
-      [ "operator<<", "namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2", null ],
-      [ "toString", "namespace_creature_size_type.html#a243625f7ae7c758e9e3a9e4d6a256c8a", null ]
-    ] ],
-    [ "CriticalTableType", "namespace_critical_table_type.html", [
-      [ "Type", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737", null ],
-      [ "Type", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737", [
-        [ "kNormal", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a07fa7a19aa722c635a15e94cb7f50416", null ],
-        [ "kLargeCreaturePhysical", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737aea77e777f06ddc8e1b262ec7338565b7", null ],
-        [ "kHugeCreaturePhysical", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a1b1fb6c530fa716085438bd0828fda85", null ],
-        [ "kLargeCreatureSpell", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a9f6e20e82520583d8de05ee85fd65cc0", null ],
-        [ "kHugeCreatureSpell", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a414b8a61a97d278df48dbfa2a8346198", null ]
-      ] ],
-      [ "fromString", "namespace_critical_table_type.html#a313b88a386987728d8027d79f8d6037d", null ],
-      [ "operator<<", "namespace_critical_table_type.html#a439e93fa90539a088714b27a6b880702", null ],
-      [ "toString", "namespace_critical_table_type.html#a2e9522e03d12fe02878b31b00f2663bf", null ]
-    ] ],
+    [ "CreatureSizeType", "namespace_creature_size_type.html", "namespace_creature_size_type" ],
+    [ "CriticalTableType", "namespace_critical_table_type.html", "namespace_critical_table_type" ],
     [ "CriticalType", "namespace_critical_type.html", [
       [ "Type", "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1", null ],
       [ "Type", "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1", [

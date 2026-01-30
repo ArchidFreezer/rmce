@@ -57,9 +57,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"class_language_data.html#a0d05f8a39ab8c17757e72198bdc77b23",
-"class_spell_list_data.html#a0912360640749ce6d46f9c410e4bf279",
-"namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411"
+"class_language_category_data.html#a382bd67a41e5009de0b7fe64102c1cec",
+"class_special_attack_table.html#a26a3180443e63697c26aaf2a300f0e3a",
+"namespace_realm_type.html#a4b7e1e1ded953974db3b781b023918c7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
