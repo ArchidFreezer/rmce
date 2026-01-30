@@ -138,31 +138,12 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 
 	// Everyman skill category choices
 	pt::ptree everyman_category_choices_tree{};
-	for (auto& category_choices : game_data.categoryEverymanSkillChoices()) {
-
+	for (const auto& category_choices : game_data.categoryEverymanSkillChoices()) {
 		pt::ptree category_choice_tree{};
-		category_choice_tree.put("num-choices", category_choices->numChoices());
-
-		// We want the same json output each tiome so we sort the categories before we write them
-		std::set<std::string> option_set{};
-		for (auto& category : category_choices->options()) {
-			option_set.insert(category->id());
-		}
-
-		// Add the array container
-		pt::ptree options_tree{};
-		for (auto& category : option_set) {  // Loop through the sorted categories
-			// Create array elements
-			pt::ptree option_tree{};
-			option_tree.put("", category);
-			// Add the elements to the array conatiner
-			options_tree.push_back(std::make_pair("", option_tree));
-		}
-		// Add the array container to the main tree
-		category_choice_tree.push_back(std::make_pair("options", options_tree));
-
+		populateGameRuleDataChoice<SkillCategoryData>(category_choices.get(), category_choice_tree);
 		everyman_category_choices_tree.push_back(std::make_pair("", category_choice_tree));
 	}
+	
 	if (everyman_category_choices_tree.size()) datum.push_back(std::make_pair("skill-category-choices-everyman", everyman_category_choices_tree));
 
 }

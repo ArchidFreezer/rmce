@@ -181,6 +181,9 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6bf544798efb4c68857c9aaebc0ef9e4" id="r_a6bf544798efb4c68857c9aaebc0ef9e4"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6bf544798efb4c68857c9aaebc0ef9e4">parse</a> (bool id_only)=0</td></tr>
 <tr class="memdesc:a6bf544798efb4c68857c9aaebc0ef9e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a ptree into game data objects.  <br /></td></tr>
+<tr class="memitem:a3e58ba270d7a9d6522029486b0360759" id="r_a3e58ba270d7a9d6522029486b0360759"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </td></tr>
+<tr class="memitem:a3e58ba270d7a9d6522029486b0360759 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3e58ba270d7a9d6522029486b0360759">populateGameRuleDataChoice</a> (const <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; T &gt; *game_data_choice, pt::ptree &amp;tree)</td></tr>
+<tr class="memdesc:a3e58ba270d7a9d6522029486b0360759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> object into a boost pt::ptree.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract class to facilitate reading and writing of game rule data to and from files. </p>
@@ -381,6 +384,53 @@ Protected Member Functions</h2></td></tr>
 <p>Parse a boost::ptree containing the language rule data, convert to objects and store in a data cache </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id_only</td><td><span class="tt">true</span> if the game rule object should be populated with its id only; <span class="tt">false</span> otherwise </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3e58ba270d7a9d6522029486b0360759" name="a3e58ba270d7a9d6522029486b0360759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e58ba270d7a9d6522029486b0360759">&#9670;&#160;</a></span>populateGameRuleDataChoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DatafileParser::populateGameRuleDataChoice </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>game_data_choice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pt::ptree &amp;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Process a <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> object into a boost pt::ptree. </p>
+<p>Utility function to simplify the parsing code, taking a <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a>&lt;<em class="arg">T&gt;</em> object and creating its representation as a boost pt::ptree ready for writing to file.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td><a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> object type being parsed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">game_data_choice</td><td>A pointer to the choice object to process </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tree</td><td>boost pt::ptree to populate </td></tr>
   </table>
   </dd>
 </dl>

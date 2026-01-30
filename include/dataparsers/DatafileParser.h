@@ -4,6 +4,7 @@
 #include <boost/property_tree/xml_parser.hpp>
 #include <boost/property_tree/json_parser.hpp>
 #include <GameRuleDataCache.h>
+#include <GameRuleDataChoice.h>
 
 namespace pt = boost::property_tree;
 
@@ -137,6 +138,19 @@ protected:
 	 */
 	virtual void parse(bool id_only) = 0;
 
+	/**
+	 * @brief Process a GameRuleDataChoice object into a boost pt::ptree
+	 *
+	 * Utility function to simplify the parsing code, taking a GameRuleDataChoice<@a T> object and creating its
+	 * representation as a boost pt::ptree ready for writing to file.
+	 *
+	 * @tparam T GameRuleData object type being parsed
+	 * @param game_data_choice A pointer to the choice object to process
+	 * @param[in,out] tree boost pt::ptree to populate
+	 */
+	template<GameRuleDataObject T>
+	void populateGameRuleDataChoice(const GameRuleDataChoice<T>* game_data_choice, pt::ptree& tree);
+
 private:
 	GameRuleDataCache& cache_; /**< Reference to a cache object to store the data objects */
 	pt::ptree ptree_{}; /**< Boost ptree to use when reading structured data file files */
@@ -145,4 +159,25 @@ private:
 
 };
 
+template<GameRuleDataObject T>
+inline void DatafileParser::populateGameRuleDataChoice(const GameRuleDataChoice<T>* game_data_choice, pt::ptree& tree) {
+	tree.put("num-choices", game_data_choice->numChoices());
 
+	// We want the same json output each time so we sort the data before we write them
+	std::set<std::string> option_set{};
+	for (auto& data : game_data_choice->options()) {
+		option_set.insert(data->id());
+	}
+
+	// Add the array container
+	pt::ptree options_tree{};
+	for (auto& data : option_set) {  // Loop through the sorted categories
+		// Create array elements
+		pt::ptree option_tree{};
+		option_tree.put("", data);
+		// Add the elements to the array conatiner
+		options_tree.push_back(std::make_pair("", option_tree));
+	}
+	// Add the array container to the main tree
+	tree.push_back(std::make_pair("options", options_tree));
+}

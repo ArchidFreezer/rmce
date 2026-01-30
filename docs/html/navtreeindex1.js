@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"class_language_ability.html#acb78ec658ecec2a167989edf085b8303":[2,0,28,10],
 "class_language_category_data.html":[2,0,29],
 "class_language_category_data.html#a2a53d96d7dc87c130b51adef1bb9364d":[2,0,29,3],
 "class_language_category_data.html#a382bd67a41e5009de0b7fe64102c1cec":[2,0,29,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "class_skill_progression_type_data.html#a8ac138018cbcf6df8889597a0a16d824":[2,0,48,7],
 "class_skill_progression_type_data.html#a951619d33cdf197bb58be9233d54c5a5":[2,0,48,1],
 "class_skill_progression_type_data.html#aa124385e708f575188ddc4f1ab277cc9":[2,0,48,6],
-"class_skill_progression_type_data.html#aab5699ac4a157015e7cda755c726f412":[2,0,48,13],
-"class_skill_progression_type_data.html#ab2ed300888d62ecd26e6fd6c426b837f":[2,0,48,9]
+"class_skill_progression_type_data.html#aab5699ac4a157015e7cda755c726f412":[2,0,48,13]
 };

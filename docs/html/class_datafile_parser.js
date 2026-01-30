@@ -6,6 +6,7 @@ var class_datafile_parser =
     [ "cache", "class_datafile_parser.html#a49a7ad8ab8b4896d192030faf3c1c1fc", null ],
     [ "filename", "class_datafile_parser.html#a810f729c20b10e7cd71c1d902f8e336a", null ],
     [ "parse", "class_datafile_parser.html#a6bf544798efb4c68857c9aaebc0ef9e4", null ],
+    [ "populateGameRuleDataChoice", "class_datafile_parser.html#a3e58ba270d7a9d6522029486b0360759", null ],
     [ "ptree", "class_datafile_parser.html#aa6bea887dd6a58162b670a6535d33cd1", null ],
     [ "read", "class_datafile_parser.html#a470a8e8a49b9b9c9ce3d0212d8dca903", null ],
     [ "read", "class_datafile_parser.html#a05e7c3945306f581e8ffafdc0bd20639", null ],
