@@ -801,7 +801,7 @@ public:
 	 * @param choice GameRuleDataChoice choice definition
 	 * @see SkillDevelopmentType
 	 */
-	void addCategoryEverymanSkillChoice(GameRuleDataChoice<SkillCategoryData>& choice) { category_everyman_skill_choices_.push_back(&choice); }
+	void addCategoryEverymanSkillChoice(std::unique_ptr<GameRuleDataChoice<SkillCategoryData>> choice) { category_everyman_skill_choices_.push_back(std::move(choice)); }
 
 	/**
 	 * @brief Get the number of choices a character has to make regarding everyman skills in skill cetegories
@@ -820,7 +820,7 @@ public:
 	 * @return vector of GameRuleDataChoice objects with the choices to be made
 	 * @see SkillDevelopmentType
 	 */
-	const std::vector<const GameRuleDataChoice<SkillCategoryData>*>& categoryEverymanSkillChoices() const { return category_everyman_skill_choices_; }
+	const std::vector<std::unique_ptr<GameRuleDataChoice<SkillCategoryData>>>& categoryEverymanSkillChoices() const { return category_everyman_skill_choices_; }
 
 private:
 	std::string name_{}; /**< Name of the race */
@@ -829,7 +829,7 @@ private:
 	bool high_culture_{true}; /**< Whether the race has developed artistic and intellectual pursuits */
 	CreatureSizeType::Type size_{ CreatureSizeType::Type::kMedium}; /**< Size of unarmed attacks made by the race */
 	CriticalTableType::Type critical_table_type_{ CriticalTableType::Type::kNormal}; /**< The type of critical table attacks on this race are rolled against */
-	float recovery_multipler_{1.0f}; /**< Multiplier to standard healing recovery rates */
+	float recovery_multipler_{ 1.0f }; /**< Multiplier to standard healing recovery rates */
 	int num_background_options_{}; /**< Number of background options members of this race have */
 	int exhaustion_bonus_{0}; /**< Bonus exhaustion points the race has */
 	int stat_loss_racial_type_{}; /**< Racial type used on stat loss table */
@@ -855,5 +855,5 @@ private:
 	std::set<const SkillCategoryData*> everyman_skill_categories_{}; /**< Skill categories that are considered everyman for the race */
 	std::set<const SkillCategoryData*> restricted_skill_categories_{}; /**< Skill categories that are considered restricted for the race */
 	std::map<std::unique_ptr<SubcategoriedSkillData>, int> skill_bonuses_{}; /** Racial skill bonuses */
-	std::vector<const GameRuleDataChoice<SkillCategoryData>*> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skill from to become everyman */
+	std::vector<std::unique_ptr<GameRuleDataChoice<SkillCategoryData>>> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skill from to become everyman */
 };
