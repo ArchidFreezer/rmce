@@ -807,7 +807,7 @@ public:
 	 */
 	bool isBonusSkill(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
 		for (auto& key : std::views::keys(skill_bonuses_)) {
-			if (key.skillData().id() == skill.id() && (subcategory ? subcategory.value() == key.subcategory() : !key.subcategory())) return true;
+			if (key.skillData().id() == skill.id() && (subcategory ? subcategory.value() == key.subcategory().value() : !key.subcategory())) return true;
 		}
 		return false;
 	}

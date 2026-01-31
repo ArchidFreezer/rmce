@@ -247,6 +247,7 @@ namespace {
 
 		EXPECT_EQ(race.skillBonus(s1a), 5);
 		EXPECT_FALSE(race.isBonusSkill(sk1));
+		EXPECT_FALSE(race.isBonusSkill(sk1, "Invalid"));
 		EXPECT_TRUE(race.isBonusSkill(sk1, "Sub"));
 
 		EXPECT_THROW(race.setSkillBonus(std::move(s1a), 15), InvalidSkillBonus);
