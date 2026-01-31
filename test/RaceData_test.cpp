@@ -274,4 +274,53 @@ namespace {
 		EXPECT_TRUE(race.book());
 		EXPECT_STREQ(race.book().value()->id().c_str(), "TEST_BOOK");
 	}
+
+	TEST(ProfessionData, EverymanSkillCategoryChoices) {
+		RaceData race("RACE_ID");
+
+		// Putting the choice in a block means that we are testing an object has gone out of scope
+		{
+			GameRuleDataChoice<SkillCategoryData> choice1{};
+			choice1.setNumChoices(1);
+
+			SkillCategoryData s1("SKILL1_ID");
+			SkillCategoryData s2("SKILL2_ID");
+			SkillCategoryData s3("SKILL3_ID");
+			choice1.addOption(s1);
+			choice1.addOption(s2);
+			choice1.addOption(s3);
+
+			race.addCategoryEverymanSkillChoice(choice1);
+		}
+
+		// choice1 is out of scope here
+		for (auto& choice : race.categoryEverymanSkillChoices()) {
+			EXPECT_EQ(choice.numChoices(), 1);
+			EXPECT_EQ(choice.numOptions(), 3);
+		}
+
+		GameRuleDataChoice<SkillCategoryData> choice2{};
+		choice2.setNumChoices(2);
+
+		SkillCategoryData s1a("SKILL1a_ID");
+		SkillCategoryData s2a("SKILL2a_ID");
+		choice2.addOption(s1a);
+		choice2.addOption(s2a);
+		race.addCategoryEverymanSkillChoice(choice2);
+
+		EXPECT_EQ(race.categoryEverymanSkillChoices().size(), 2);
+
+		int count{ 0 };
+		for (auto& choice : race.categoryEverymanSkillChoices()) {
+			count++;
+			if (choice.numChoices() == 1) {
+				EXPECT_EQ(choice.numOptions(), 3);
+			} else if (choice.numChoices() == 2) {
+				EXPECT_EQ(choice.numOptions(), 2);
+			} else {
+				FAIL();
+			}
+		}
+		EXPECT_EQ(count, 2);
+	}
 }
