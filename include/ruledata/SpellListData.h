@@ -1,5 +1,6 @@
 #pragma once
 
+#include <set>
 #include <string>
 #include <GameRuleData.h>
 #include <RealmType.h>
@@ -15,15 +16,13 @@ public:
 	 * @brief Constructor
 	 * @param id Unique identifier for the spell list
 	 * @param name Name of the spell llist as seen in game
-	 * @param realm The realm of spells on the list
 	 * @param type The type of spell list
 	 * @param evil Whether the spell list is considered evil in nature
 	 * @param summoning Whether the spell list contains summoning spells
 	 */
-	SpellListData(std::string_view id, std::string_view name, RealmType::Type realm, SpellListType::Type type, bool evil, bool summoning) :
+	SpellListData(std::string_view id, std::string_view name, SpellListType::Type type, bool evil, bool summoning) :
 		GameRuleData(id),
 		name_{ name },
-		realm_{ realm },
 		type_{ type },
 		evil_{ evil },
 		summoning_{ summoning } {}
@@ -47,16 +46,26 @@ public:
 	const std::string& name() const { return name_; }
 
 	/**
-	 * @brief Set the realm of spells on the list
-	 * @param realm RealmType::Type to set
+	 * @brief Add a realm to those the spell draws power from
+	 * @param realm RealmType::Type spell power realm
 	 */
-	void setRealm(RealmType::Type realm) { realm_ = realm; }
+	void addRealm(RealmType::Type realm) {
+		realms_.emplace(realm);
+	}
 
 	/**
-	 * @brief Get the realm of spells on the list
-	 * @return RealmType::Type of spells
+	 * @brief Get whether the spell list draws power form a spell realm
+	 * @param realm RealmType::Type spell power realm
+	 * @return `true` if the list draws power from the realm
+	 * @return `false` if the list does not draw power from the realm
 	 */
-	const RealmType::Type realm() const { return realm_; }
+	bool isRealm(RealmType::Type realm) const { return (realms_.find(realm) != realms_.end()); }
+
+	/**
+	 * @brief Get the realms that the spell list draws power from
+	 * @return td::set<RealmType::Type> spell power realms
+	 */
+	const std::set<RealmType::Type> realms() { return realms_; }
 
 	/**
 	 * @brief Set the type of spell list
@@ -98,7 +107,7 @@ public:
 
 private:
 	std::string name_{}; /**< Name of teh spell list */
-	RealmType::Type realm_{RealmType::Type::kArms}; /**< Realm of spells on the list */
+	std::set< RealmType::Type> realms_{};/**< Realm(s) thatthe spells on the list draw power from */
 	SpellListType::Type type_{ SpellListType::Type::kOpen }; /**< Type of spell list */
 	bool evil_{}; /** Whether the list is considered evil */
 	bool summoning_{}; /** Whether spells on the list summon entities */

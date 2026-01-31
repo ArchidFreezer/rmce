@@ -6,7 +6,7 @@ var searchData=
   ['rangemodifier_3',['rangeModifier',['../class_weapon_type_data.html#ab1029384cfdfe02e29238e8b6dd98e9e',1,'WeaponTypeData']]],
   ['ranges_4',['ranges',['../class_weapon_type_data.html#ae9212870e5cb67a0c6f2cc05fee00dda',1,'WeaponTypeData']]],
   ['read_5',['read',['../class_datafile_parser.html#a05e7c3945306f581e8ffafdc0bd20639',1,'DatafileParser::read(const std::string &amp;filename, bool id_only)=0'],['../class_datafile_parser.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParser::read(bool id_only)'],['../class_datafile_parser_json.html#a18873bbb775ba6b408acea2b23711a7f',1,'DatafileParserJson::read()'],['../class_datafile_parser_xml.html#a23443f7992b6d7079c09cafa56d4f1fa',1,'DatafileParserXml::read()'],['../class_datafile_parser_json.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParserJson::read()'],['../class_datafile_parser_xml.html#a470a8e8a49b9b9c9ce3d0212d8dca903',1,'DatafileParserXml::read()']]],
-  ['realm_6',['realm',['../class_spell_list_data.html#ad21b9bcdcd4bc2a6600fe9108ffac238',1,'SpellListData']]],
+  ['realms_6',['realms',['../class_spell_list_data.html#a04233a352bdf4a6508c8ba5c84e70172',1,'SpellListData']]],
   ['recoverymultipler_7',['recoveryMultipler',['../class_race_data.html#a4469f31133917ad57288d20f88b859ca',1,'RaceData']]],
   ['remaining_8',['remaining',['../class_skill_progression_type_data.html#a282160bc7d1a509b8c76261469d12c63',1,'SkillProgressionTypeData']]],
   ['remove_9',['remove',['../class_language_dialect_data.html#ae0b417d7604423fe01389fec301474ef',1,'LanguageDialectData']]],

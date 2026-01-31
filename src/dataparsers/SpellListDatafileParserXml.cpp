@@ -22,7 +22,6 @@ void SpellListDatafileParserXml::parse(bool id_only) {
 		// ownership to the cache when we add it
 		std::unique_ptr< SpellListData> datum = std::make_unique<SpellListData>(id);
 		datum->setName(name);
-		if (realm) datum->setRealm(realm.value());
 		if (type) datum->setType(type.value());
 		datum->setIsEvil(v.second.get<bool>("evil"));
 		datum->setIsSummoning(v.second.get<bool>("summoning"));

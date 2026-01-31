@@ -17,10 +17,11 @@ var searchData=
   ['ismagical_14',['isMagical',['../namespace_realm_type.html#a925eae689753e8add14afd4f39fddb39',1,'RealmType::isMagical()'],['../namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844',1,'ResistanceType::isMagical()']]],
   ['isoption_15',['isOption',['../class_game_rule_data_choice.html#aa3c8819169cd57186f3c3f2c08126462',1,'GameRuleDataChoice']]],
   ['isprimary_16',['isPrimary',['../namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b',1,'StatType']]],
-  ['isrestrictedskill_17',['isRestrictedSkill',['../class_race_data.html#a87a6a4aa66ce93b26531c0d50baf4038',1,'RaceData']]],
-  ['isrestrictedskillcategory_18',['isRestrictedSkillCategory',['../class_race_data.html#aa83344f6945acbc7722ee066000ead3d',1,'RaceData']]],
-  ['issomantic_19',['isSomantic',['../class_language_ability.html#aa4ec56195691818615e44b5fb673ea27',1,'LanguageAbility::isSomantic()'],['../class_language_data.html#a69e765bb580248b28f7904fa73aa18fe',1,'LanguageData::isSomantic()']]],
-  ['isspoken_20',['isSpoken',['../class_language_ability.html#ac97223eea0083108c624c2a74a2c803e',1,'LanguageAbility::isSpoken()'],['../class_language_data.html#ad6e3d452c38d41bdfde205882a1b075b',1,'LanguageData::isSpoken()']]],
-  ['issummoning_21',['isSummoning',['../class_spell_list_data.html#a0cc14d7b38cae643061dd1b7915895a5',1,'SpellListData']]],
-  ['iswritten_22',['isWritten',['../class_language_ability.html#abc220d4b62a81c3057b9388dc2194afd',1,'LanguageAbility::isWritten()'],['../class_language_data.html#af84b4226cfb0decabda010a08b3a2808',1,'LanguageData::isWritten()']]]
+  ['isrealm_17',['isRealm',['../class_spell_list_data.html#ae9703a791ced5f49067099ccdf1133d1',1,'SpellListData']]],
+  ['isrestrictedskill_18',['isRestrictedSkill',['../class_race_data.html#a87a6a4aa66ce93b26531c0d50baf4038',1,'RaceData']]],
+  ['isrestrictedskillcategory_19',['isRestrictedSkillCategory',['../class_race_data.html#aa83344f6945acbc7722ee066000ead3d',1,'RaceData']]],
+  ['issomantic_20',['isSomantic',['../class_language_ability.html#aa4ec56195691818615e44b5fb673ea27',1,'LanguageAbility::isSomantic()'],['../class_language_data.html#a69e765bb580248b28f7904fa73aa18fe',1,'LanguageData::isSomantic()']]],
+  ['isspoken_21',['isSpoken',['../class_language_ability.html#ac97223eea0083108c624c2a74a2c803e',1,'LanguageAbility::isSpoken()'],['../class_language_data.html#ad6e3d452c38d41bdfde205882a1b075b',1,'LanguageData::isSpoken()']]],
+  ['issummoning_22',['isSummoning',['../class_spell_list_data.html#a0cc14d7b38cae643061dd1b7915895a5',1,'SpellListData']]],
+  ['iswritten_23',['isWritten',['../class_language_ability.html#abc220d4b62a81c3057b9388dc2194afd',1,'LanguageAbility::isWritten()'],['../class_language_data.html#af84b4226cfb0decabda010a08b3a2808',1,'LanguageData::isWritten()']]]
 ];
