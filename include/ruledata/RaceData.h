@@ -58,7 +58,7 @@ class RaceData : public GameRuleData {
 public:
 
 	/**
-	 * @brief Delete the defauilt constructor to ensure we initialise all pointer member variables
+	 * @brief Delete the defauilt constructor to ensure we initialise the base class
 	 */
 	RaceData() = delete;
 
@@ -81,13 +81,13 @@ public:
 	const std::string& name() const { return name_; }
 
 	/**
-	 * @brief Set the description of what the race consists of
+	 * @brief Set the description of the race
 	 * @param description std::string_view race description
 	 */
 	void setDescription(std::string_view description) { description_ = description; }
 
 	/**
-	 * @brief Get the description of what the race consists of
+	 * @brief Get the description of the race
 	 * @return std::string reference of the description
 	 */
 	const std::string& description() const { return description_; }
@@ -186,7 +186,7 @@ public:
 	 * @brief Sets the number of background options members of this race have
 	 * 
 	 * During the character development process each character is allowed to spend background options on additional
-	 * development activities with each race have a varying number.
+	 * development activities with the number being based on the race.
 	 * 
 	 * @param num_background_options int number of background option points
 	 */
@@ -196,8 +196,8 @@ public:
 	 * @brief Sets the number of background options members of this race have
 	 *
 	 * During the character development process each character is allowed to spend background options on additional
-	 * development activities with each race have a varying number.
-	 * 
+	 * development activities with the number being based on the race.
+	 *
 	 * @return int Number of background option points
 	 */
 	int numBackgroundOption() const { return num_background_options_; }
@@ -240,14 +240,14 @@ public:
 	int statLossRacialType() const { return stat_loss_racial_type_; }
 
 	/**
-	 * @brief Set the number of hours sleep a member of this races needs to fully rest
-	 * @param required_sleep int hours sleep required
+	 * @brief Set the number of hours sleep/meditation a member of this races needs to fully rest
+	 * @param required_sleep int hours sleep/meditation required
 	 */
 	void setRequiredSleep(int required_sleep) { required_sleep_ = required_sleep; }
 
 	/**
-	 * @brief Get the number of hours slepp a member of this races needs to fully rest
-	 * @return int number of hours sleep required
+	 * @brief Get the number of hours sleep/meditation a member of this races needs to fully rest
+	 * @return int number of hours sleep/meditation required
 	 */
 	int requiredSleep() const { return required_sleep_; }
 
@@ -276,10 +276,10 @@ public:
 	/**
 	 * @brief Sets the number of rounds after death that the soul of a member of this race departs the body.
 	 * 
-	 * Once a character dies if the physical damage hat caused the death is not healed within a certain length of time the
+	 * Once a character dies if the physical damage that caused the death is not healed within a certain length of time the
 	 * soul leaves the body. Once this happens healing the physical body may prevent things such as stat loss but the
-	 * character cannot be brought back to life without a \e Lifegiving spell. If the physical body has not been healed the
-	 * sould will not return even via spells.
+	 * character cannot be brought back to life without a @e Lifegiving spell. If the physical body has not been healed the
+	 * soul will not return even via spells.
 	 * 
 	 * @param soul_departure number of rounds before the soul departs
 	 */
@@ -288,10 +288,10 @@ public:
 	/**
 	 * @brief gets the number of rounds after death that the soul of a member of this race departs the body.
 	 *
-	 * Once a character dies if the physical damage hat caused the death is not healed within a certain length of time the
+	 * Once a character dies if the physical damage that caused the death is not healed within a certain length of time the
 	 * soul leaves the body. Once this happens healing the physical body may prevent things such as stat loss but the
-	 * character cannot be brought back to life without a \e Lifegiving spell. If the physical body has not been healed the
-	 * sould will not return even via spells.
+	 * character cannot be brought back to life without a @e Lifegiving spell. If the physical body has not been healed the
+	 * soul will not return even via spells.
 	 *
 	 * @return number of rounds before the soul departs
 	 */
@@ -305,7 +305,7 @@ public:
 	 * outside this.
 	 * 
 	 * The value is typically only has a value or between -2 (more slender) to 2 (more stout) and a number over 2 should be
-	 * an extreme case, with -1 or 1 being by far the most common values.
+	 * an extreme case, with -1 or 1 being by far the most common value outside 0.
 	 * 
 	 * @param build_modifier variance from human physical build shape
 	 */
@@ -319,7 +319,7 @@ public:
 	 * outside this.
 	 *
 	 * The value is typically only has a value or between -2 (more slender) to 2 (more stout) and a number over 2 should be
-	 * an extreme case, with -1 or 1 being by far the most common values.
+	 * an extreme case, with -1 or 1 being by far the most common value outside 0.
 	 *
 	 * @return variance from human physical build shape
 	 */
@@ -533,21 +533,21 @@ public:
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
-	 * @param language LanguageData language to get the ability with
+	 * @param language LanguageData language to get the ability for
 	 * @return LanguageAbility language ability
 	 */
 	const LanguageAbility& startingLanguageAbility(const LanguageData& language) const { return startingLanguageAbility(language.name()); }
 	
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
-	 * @param language_name name of the language to get the ability with
+	 * @param language_name name of the language to get the ability for
 	 * @return LanguageAbility language ability
 	 */
 	const LanguageAbility& startingLanguageAbility(const std::string language_name) const { return starting_languages_.at(language_name); }
 	
 	/**
 	 * @brief Get a container with the LanguageAbility objects known during childhood
-	 * @return std::vector of LanguageAbility objectr references
+	 * @return std::vector of LanguageAbility object references
 	 */
 	const std::vector<LanguageAbility> startingLanguages() const {
 		auto values = std::views::values(starting_languages_);
@@ -562,21 +562,21 @@ public:
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
-	 * @param language LanguageData language to get the ability with
+	 * @param language LanguageData language to get the ability for
 	 * @return LanguageAbility language ability
 	 */
 	const LanguageAbility& adolescentLanguageAbility(const LanguageData& language) const { return adolescentLanguageAbility(language.name()); }
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
-	 * @param language_name name of the language to get the ability with
+	 * @param language_name name of the language to get the ability for
 	 * @return LanguageAbility language ability
 	 */
 	const LanguageAbility& adolescentLanguageAbility(const std::string language_name) const { return adolescent_languages_.at(language_name); }
 
 	/**
 	 * @brief Get a container with the LanguageAbility objects known during childhood
-	 * @return std::set of LanguageAbility objectr references
+	 * @return std::set of LanguageAbility object references
 	 */
 	const std::vector<LanguageAbility> adolescentLanguages() const {
 		auto values = std::views::values(adolescent_languages_);
@@ -754,8 +754,8 @@ public:
 	}
 
 	/**
-	 * @brief Set the bonus the race has for a skill
-	 * @param skill SubcategoriedSkillData unique pointer to set the bonus for
+	 * @brief Set the bonus the race has with a skill
+	 * @param skill SubcategoriedSkillData to set the bonus for
 	 * @param bonus int bonus value
 	 */
 	void setSkillBonus(SubcategoriedSkillData skill, int bonus) {
