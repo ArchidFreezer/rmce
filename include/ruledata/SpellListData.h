@@ -54,7 +54,7 @@ public:
 	}
 
 	/**
-	 * @brief Get whether the spell list draws power form a spell realm
+	 * @brief Get whether the spell list draws power from a spell realm
 	 * @param realm RealmType::Type spell power realm
 	 * @return `true` if the list draws power from the realm
 	 * @return `false` if the list does not draw power from the realm
@@ -107,7 +107,7 @@ public:
 
 private:
 	std::string name_{}; /**< Name of teh spell list */
-	std::set< RealmType::Type> realms_{};/**< Realm(s) thatthe spells on the list draw power from */
+	std::set< RealmType::Type> realms_{};/**< Realm(s) that the spells on the list draw power from */
 	SpellListType::Type type_{ SpellListType::Type::kOpen }; /**< Type of spell list */
 	bool evil_{}; /** Whether the list is considered evil */
 	bool summoning_{}; /** Whether spells on the list summon entities */
