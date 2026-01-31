@@ -104,10 +104,7 @@ namespace {
 		EXPECT_EQ(RealmType::fromString(toString(RealmType::kArcane)), RealmType::kArcane);
 		EXPECT_EQ(RealmType::fromString(toString(RealmType::kArms)), RealmType::kArms);
 		EXPECT_EQ(RealmType::fromString(toString(RealmType::kChanneling)), RealmType::kChanneling);
-		EXPECT_EQ(RealmType::fromString(toString(RealmType::kChannelingEssence)), RealmType::kChannelingEssence);
-		EXPECT_EQ(RealmType::fromString(toString(RealmType::kChannelingMentalism)), RealmType::kChannelingMentalism);
 		EXPECT_EQ(RealmType::fromString(toString(RealmType::kEssence)), RealmType::kEssence);
-		EXPECT_EQ(RealmType::fromString(toString(RealmType::kEssenceMentalism)), RealmType::kEssenceMentalism);
 		EXPECT_EQ(RealmType::fromString(toString(RealmType::kMentalism)), RealmType::kMentalism);
 		EXPECT_EQ(RealmType::fromString(toString(RealmType::kMundane)), RealmType::kMundane);
 		EXPECT_EQ(RealmType::fromString(toString(RealmType::kNeutral)), RealmType::kNeutral);

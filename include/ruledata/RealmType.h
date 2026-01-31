@@ -24,13 +24,10 @@ namespace RealmType {
 		kArcane, /**< Arcane magic realm */
 		kArms, /**< Non-magical realm of Arms */
 		kChanneling, /**< Magical realm of Channeling */
-		kChannelingEssence, /**< Magical hybrid realm of Channeling and Essence */
-		kChannelingMentalism,  /**< Magical hybrid realm of Channeling and Mentalism */
 		kEssence, /**< Magical realm of Essence */
-		kEssenceMentalism,  /**< Magical hybrid realm of Essence and Mentalism */
 		kMentalism, /**< Magical realm of Mentalism */
 		kMundane, /**< Magical realm of Mundane - not suitable for all campaigns */
-		kNeutral, /**< Magical realm of Neutral - not suitable for all campaigns */
+		kNeutral, /**< Magical realm of Neutral which is equally accessible to any other realm */
 		kSubterfuge  /**< Non-magical realm of Subterfuge  - not suitable for all campaigns */
 	};
 	using enum Type;
