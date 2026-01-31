@@ -111,10 +111,12 @@ void RaceDatafileParserXml::parse(bool id_only) {
 				for (const auto& everyman_skill : everyman_skills.get()) {
 					std::string skill_name{ GameRuleData::generateId("Skill", everyman_skill.second.get_value<std::string>()) };
 					std::string attr = everyman_skill.second.get<std::string>("<xmlattr>.subcategory", "");
-					std::unique_ptr<SubcategoriedSkillData> everyman_data;
-					if (!attr.empty()) everyman_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name), attr);
-					else everyman_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name));
-					ref.addEverymanSkill(std::move(everyman_data));
+
+					if (!attr.empty()) {
+						ref.addEverymanSkill(std::move(SubcategoriedSkillData(cache().get<SkillData>(skill_name), attr)));
+					} else {
+						ref.addEverymanSkill(std::move(SubcategoriedSkillData(cache().get<SkillData>(skill_name))));
+					}
 				}
 			}
 
@@ -123,10 +125,11 @@ void RaceDatafileParserXml::parse(bool id_only) {
 				for (const auto& restricted_skill : restricted_skills.get()) {
 					std::string skill_name{ GameRuleData::generateId("Skill", restricted_skill.second.get_value<std::string>()) };
 					std::string attr = restricted_skill.second.get<std::string>("<xmlattr>.subcategory", "");
-					std::unique_ptr<SubcategoriedSkillData> everyman_data;
-					if (!attr.empty()) everyman_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name), attr);
-					else everyman_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name));
-					ref.addRestrictedSkill(std::move(everyman_data));
+					if (!attr.empty()) {
+						ref.addRestrictedSkill(std::move(SubcategoriedSkillData(cache().get<SkillData>(skill_name), attr)));
+					} else {
+						ref.addRestrictedSkill(std::move(SubcategoriedSkillData(cache().get<SkillData>(skill_name))));
+					}
 				}
 			}
 
@@ -152,10 +155,13 @@ void RaceDatafileParserXml::parse(bool id_only) {
 					int bonus = skill_bonus.second.get<int>("<xmlattr>.bonus");
 					std::string skill_name{ GameRuleData::generateId("Skill", skill_bonus.second.get_value<std::string>()) };
 					std::string attr = skill_bonus.second.get<std::string>("<xmlattr>.subcategory", "");
-					std::unique_ptr<SubcategoriedSkillData> skill_data;
-					if (!attr.empty()) skill_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name), attr);
-					else skill_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name));
-					ref.setSkillBonus(std::move(skill_data), bonus);
+					if (!attr.empty()) {
+						SubcategoriedSkillData skill_data(cache().get<SkillData>(skill_name), attr);
+						ref.setSkillBonus(std::move(skill_data), bonus);
+					} else {
+						SubcategoriedSkillData skill_data(cache().get<SkillData>(skill_name));
+						ref.setSkillBonus(std::move(skill_data), bonus);
+					}
 				}
 			}
 
@@ -163,17 +169,17 @@ void RaceDatafileParserXml::parse(bool id_only) {
 			if (boost::optional<const pt::ptree&> category_choices = v.second.get_child_optional("skill-category-choices-everyman")) {
 				for (const auto& choice : category_choices.get()) {
 
-					std::unique_ptr<GameRuleDataChoice<SkillCategoryData>> choice_data = std::make_unique< GameRuleDataChoice<SkillCategoryData>>();
-					choice_data->setNumChoices(choice.second.get<int>("<xmlattr>.num", 0));
+					GameRuleDataChoice<SkillCategoryData> choice_data{};
+					choice_data.setNumChoices(choice.second.get<int>("<xmlattr>.num", 0));
 
 					for (const auto& category_tree : choice.second) {
 						std::string category_name{ category_tree.second.get_value<std::string>() };
 						if (!category_name.empty()) {
 							std::string category_id{ GameRuleData::generateId("SkillCategory", category_name) };
-							choice_data->addOption(cache().get<SkillCategoryData>(category_id));
+							choice_data.addOption(cache().get<SkillCategoryData>(category_id));
 						}
 					}
-					ref.addCategoryEverymanSkillChoice(std::move(choice_data));
+					ref.addCategoryEverymanSkillChoice(choice_data);
 				}
 			}
 

@@ -78,9 +78,9 @@ namespace {
 
 		SkillData sk1("SKILL1_ID");
 		SkillData sk2("SKILL2_ID");
-		std::unique_ptr<SubcategoriedSkillData> s1 = std::make_unique<SubcategoriedSkillData>(sk1, "Sub");
-		std::unique_ptr<SubcategoriedSkillData> s2 = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
-		EXPECT_STREQ(s1->id().c_str(), "SKILL1_ID_Sub");
+		SubcategoriedSkillData s1(sk1, "Sub");
+		SubcategoriedSkillData s2(sk2, "Sub");
+		EXPECT_STREQ(s1.id().c_str(), "SKILL1_ID_Sub");
 
 		race.addEverymanSkill(std::move(s1));
 		race.addEverymanSkill(std::move(s2));
@@ -99,7 +99,7 @@ namespace {
 		}
 		EXPECT_EQ(count, 2);
 
-		std::unique_ptr<SubcategoriedSkillData> s2b = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
+		SubcategoriedSkillData s2b(sk2, "Sub");
 		EXPECT_FALSE(race.isEverymanSkill(sk2));
 		EXPECT_TRUE(race.isEverymanSkill(sk2, "Sub"));
 		EXPECT_THROW(race.addEverymanSkill(std::move(s2b)), InvalidSkillDevelopment);
@@ -108,9 +108,9 @@ namespace {
 		EXPECT_FALSE(race.isEverymanSkill(sk3));
 
 		SkillData sk4("SKILL4_ID");
-		std::unique_ptr<SubcategoriedSkillData> s4 = std::make_unique<SubcategoriedSkillData>(sk4, "");
+		SubcategoriedSkillData s4(sk4, "");
 		race.addRestrictedSkill(std::move(s4));
-		std::unique_ptr<SubcategoriedSkillData> s5 = std::make_unique<SubcategoriedSkillData>(sk4, "");
+		SubcategoriedSkillData s5(sk4, "");
 		EXPECT_THROW(race.addEverymanSkill(std::move(s5)), InvalidSkillDevelopment);
 	}
 
@@ -119,8 +119,8 @@ namespace {
 
 		SkillData sk1("SKILL1_ID");
 		SkillData sk2("SKILL2_ID");
-		std::unique_ptr<SubcategoriedSkillData> s1 = std::make_unique<SubcategoriedSkillData>(sk1, "Sub");
-		std::unique_ptr<SubcategoriedSkillData> s2 = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
+		SubcategoriedSkillData s1(sk1, "Sub");
+		SubcategoriedSkillData s2(sk2, "Sub");
 
 		race.addRestrictedSkill(std::move(s1));
 		race.addRestrictedSkill(std::move(s2));
@@ -140,7 +140,7 @@ namespace {
 		EXPECT_EQ(count, 2);
 
 		SkillData sk2b("SKILL2_ID");
-		std::unique_ptr<SubcategoriedSkillData> s2b = std::make_unique<SubcategoriedSkillData>(sk2b, "Sub");
+		SubcategoriedSkillData s2b(sk2b, "Sub");
 		EXPECT_FALSE(race.isRestrictedSkill(sk2b));
 		EXPECT_TRUE(race.isRestrictedSkill(sk2b, "Sub"));
 		EXPECT_THROW(race.addRestrictedSkill(std::move(s2b)), InvalidSkillDevelopment);
@@ -149,9 +149,9 @@ namespace {
 		EXPECT_FALSE(race.isRestrictedSkill(sk3));
 
 		SkillData sk4("SKILL4_ID");
-		std::unique_ptr<SubcategoriedSkillData> s4 = std::make_unique<SubcategoriedSkillData>(sk4, "");
+		SubcategoriedSkillData s4(sk4, "");
 		race.addEverymanSkill(std::move(s4));
-		std::unique_ptr<SubcategoriedSkillData> s5 = std::make_unique<SubcategoriedSkillData>(sk4, "");
+		SubcategoriedSkillData s5(sk4, "");
 		EXPECT_THROW(race.addRestrictedSkill(std::move(s5)), InvalidSkillDevelopment);
 	}
 
@@ -235,22 +235,22 @@ namespace {
 		SkillData sk1("SKILL1_ID");
 		SkillData sk1a("SKILL1_ID");
 		SkillData sk2("SKILL2_ID");
-		std::unique_ptr<SubcategoriedSkillData> s1 = std::make_unique<SubcategoriedSkillData>(sk1, "Sub");
-		std::unique_ptr<SubcategoriedSkillData> s1a = std::make_unique<SubcategoriedSkillData>(sk1a, "Sub");
-		std::unique_ptr<SubcategoriedSkillData> s2 = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
-		std::unique_ptr<SubcategoriedSkillData> s2a = std::make_unique<SubcategoriedSkillData>(sk2, "Sub");
+		SubcategoriedSkillData s1(sk1, "Sub");
+		SubcategoriedSkillData s1a(sk1a, "Sub");
+		SubcategoriedSkillData s2(sk2, "Sub");
+		SubcategoriedSkillData s2a(sk2, "Sub");
 
 		race.setSkillBonus(std::move(s1), 5);
 		race.setSkillBonus(std::move(s2), 10);
 
 		EXPECT_TRUE(race.isBonusSkill(sk1a, "Sub"));
 
-		EXPECT_EQ(race.skillBonus(*s1a), 5);
+		EXPECT_EQ(race.skillBonus(s1a), 5);
 		EXPECT_FALSE(race.isBonusSkill(sk1));
 		EXPECT_TRUE(race.isBonusSkill(sk1, "Sub"));
 
 		EXPECT_THROW(race.setSkillBonus(std::move(s1a), 15), InvalidSkillBonus);
-		EXPECT_EQ(race.skillBonus(*s2a), 10);
+		EXPECT_EQ(race.skillBonus(s2a), 10);
 
 		EXPECT_EQ(race.skillBonus(sk2, "Sub"), 10);
 		EXPECT_EQ(race.skillBonus(sk2), 0);

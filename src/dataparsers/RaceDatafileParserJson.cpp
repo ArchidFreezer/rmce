@@ -102,10 +102,12 @@ void RaceDatafileParserJson::parse(bool id_only) {
 				for (const auto& everyman_skill : everyman_skills.get()) {
 					std::string skill_name{ everyman_skill.second.get<std::string>("skill")};
 					boost::optional<std::string> subcategory = everyman_skill.second.get_optional<std::string>("subcategory");
-					std::unique_ptr<SubcategoriedSkillData> everyman_data;
-					if (subcategory) everyman_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name), subcategory.get());
-					else everyman_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name));
-					ref.addEverymanSkill(std::move(everyman_data));
+
+					if (subcategory) {
+						ref.addEverymanSkill(std::move(SubcategoriedSkillData(cache().get<SkillData>(skill_name), subcategory.get())));
+					} else {
+						ref.addEverymanSkill(std::move(SubcategoriedSkillData(cache().get<SkillData>(skill_name))));
+					}
 				}
 			}
 
@@ -114,10 +116,12 @@ void RaceDatafileParserJson::parse(bool id_only) {
 				for (const auto& restricted_skill : restricted_skills.get()) {
 					std::string skill_name{ restricted_skill.second.get<std::string>("skill") };
 					boost::optional<std::string> subcategory = restricted_skill.second.get_optional<std::string>("subcategory");
-					std::unique_ptr<SubcategoriedSkillData> restricted_data;
-					if (subcategory) restricted_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name), subcategory.get());
-					else restricted_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name));
-					ref.addRestrictedSkill(std::move(restricted_data));
+
+					if (subcategory) {
+						ref.addRestrictedSkill(std::move(SubcategoriedSkillData(cache().get<SkillData>(skill_name), subcategory.get())));
+					} else {
+						ref.addRestrictedSkill(std::move(SubcategoriedSkillData(cache().get<SkillData>(skill_name))));
+					}
 				}
 			}
 
@@ -137,16 +141,17 @@ void RaceDatafileParserJson::parse(bool id_only) {
 				}
 			}
 
-			// Get restricted skills
+			// Get skill bonuses
 			if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-bonuses")) {
 				for (const auto& skill_bonus_tree : skill_bonuses.get()) {
 					std::string skill_name{ skill_bonus_tree.second.get<std::string>("skill") };
 					boost::optional<std::string> subcategory = skill_bonus_tree.second.get_optional<std::string>("subcategory");
 					int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-					std::unique_ptr<SubcategoriedSkillData> restricted_data;
-					if (subcategory) restricted_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name), subcategory.get());
-					else restricted_data = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_name));
-					ref.setSkillBonus(std::move(restricted_data), bonus);
+					if (subcategory) {
+						ref.setSkillBonus(std::move(SubcategoriedSkillData(cache().get<SkillData>(skill_name), subcategory.get())), bonus);
+					} else {
+						ref.setSkillBonus(std::move(SubcategoriedSkillData(cache().get<SkillData>(skill_name))), bonus);
+					}
 				}
 			}
 
@@ -154,12 +159,12 @@ void RaceDatafileParserJson::parse(bool id_only) {
 			if (boost::optional<const pt::ptree&> category_choices = v.second.get_child_optional("skill-category-choices-everyman")) {
 				for (const auto& choice_tree : category_choices.get()) {
 
-					std::unique_ptr<GameRuleDataChoice<SkillCategoryData>> choice_data = std::make_unique< GameRuleDataChoice<SkillCategoryData>>();
-					choice_data->setNumChoices(choice_tree.second.get<int>("num-choices"));
+					GameRuleDataChoice<SkillCategoryData> choice_data{};
+					choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
 
 					for (const auto& category_tree : choice_tree.second.get_child("options")) {
 						std::string category_id{ category_tree.second.get_value<std::string>() };
-						choice_data->addOption(cache().get<SkillCategoryData>(category_id));
+						choice_data.addOption(cache().get<SkillCategoryData>(category_id));
 					}
 					ref.addCategoryEverymanSkillChoice(std::move(choice_data));
 				}
@@ -297,7 +302,7 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	pt::ptree everyman_category_choices_tree{};
 	for (const auto& category_choices : game_data.categoryEverymanSkillChoices()) {
 		pt::ptree category_choice_tree{};
-		populateGameRuleDataChoice<SkillCategoryData>(category_choices.get(), category_choice_tree);
+		populateGameRuleDataChoice<SkillCategoryData>(&category_choices, category_choice_tree);
 		everyman_category_choices_tree.push_back(std::make_pair("", category_choice_tree));
 	}
 	
