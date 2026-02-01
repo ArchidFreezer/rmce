@@ -1,0 +1,5 @@
+<map id="ProfessionData" name="ProfessionData">
+<area shape="rect" id="Node000001" title="Class representing the character modifiers that a profession defines." alt="" coords="5,80,117,107"/>
+<area shape="rect" id="Node000002" href="$class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,46,64,80,58,79,59,50"/>
+</map>

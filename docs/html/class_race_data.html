@@ -122,7 +122,7 @@ Collaboration diagram for RaceData:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa0ccacf4b9f58cfedecfcf7e68a03fac" id="r_aa0ccacf4b9f58cfedecfcf7e68a03fac"><td class="memItemLeft"><a id="aa0ccacf4b9f58cfedecfcf7e68a03fac" name="aa0ccacf4b9f58cfedecfcf7e68a03fac"></a>
 &#160;</td><td class="memItemRight"><b>RaceData</b> ()=delete</td></tr>
-<tr class="memdesc:aa0ccacf4b9f58cfedecfcf7e68a03fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the defauilt constructor to ensure we initialise all pointer member variables. <br /></td></tr>
+<tr class="memdesc:aa0ccacf4b9f58cfedecfcf7e68a03fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the defauilt constructor to ensure we initialise the base class. <br /></td></tr>
 <tr class="memitem:a5124c9f44289be786038a527bb2329eb" id="r_a5124c9f44289be786038a527bb2329eb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5124c9f44289be786038a527bb2329eb">RaceData</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>)</td></tr>
 <tr class="memdesc:a5124c9f44289be786038a527bb2329eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic constructor.  <br /></td></tr>
 <tr class="memitem:a7a5bddf3eb2fc52515c30e50737eeae4" id="r_a7a5bddf3eb2fc52515c30e50737eeae4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7a5bddf3eb2fc52515c30e50737eeae4">setName</a> (std::string_view <a class="el" href="#affd4e9aef7e2f8b596d5fd54470e25fe">name</a>)</td></tr>
@@ -130,9 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affd4e9aef7e2f8b596d5fd54470e25fe" id="r_affd4e9aef7e2f8b596d5fd54470e25fe"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#affd4e9aef7e2f8b596d5fd54470e25fe">name</a> () const</td></tr>
 <tr class="memdesc:affd4e9aef7e2f8b596d5fd54470e25fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the race.  <br /></td></tr>
 <tr class="memitem:aeb2289392171f07783a067288c877e9a" id="r_aeb2289392171f07783a067288c877e9a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeb2289392171f07783a067288c877e9a">setDescription</a> (std::string_view <a class="el" href="#a526d35bee45d62f85f138da2fbb98be2">description</a>)</td></tr>
-<tr class="memdesc:aeb2289392171f07783a067288c877e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the description of what the race consists of.  <br /></td></tr>
+<tr class="memdesc:aeb2289392171f07783a067288c877e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the description of the race.  <br /></td></tr>
 <tr class="memitem:a526d35bee45d62f85f138da2fbb98be2" id="r_a526d35bee45d62f85f138da2fbb98be2"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a526d35bee45d62f85f138da2fbb98be2">description</a> () const</td></tr>
-<tr class="memdesc:a526d35bee45d62f85f138da2fbb98be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description of what the race consists of.  <br /></td></tr>
+<tr class="memdesc:a526d35bee45d62f85f138da2fbb98be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description of the race.  <br /></td></tr>
 <tr class="memitem:a23fce6c0a13c67255efecb387bdc150e" id="r_a23fce6c0a13c67255efecb387bdc150e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a23fce6c0a13c67255efecb387bdc150e">setBook</a> (const <a class="el" href="class_book_data.html">BookData</a> &amp;<a class="el" href="#a434bbfe06c1e84328651e6ead8661c55">book</a>)</td></tr>
 <tr class="memdesc:a23fce6c0a13c67255efecb387bdc150e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the book that the race is defined in.  <br /></td></tr>
 <tr class="memitem:a434bbfe06c1e84328651e6ead8661c55" id="r_a434bbfe06c1e84328651e6ead8661c55"><td class="memItemLeft">const std::optional&lt; const <a class="el" href="class_book_data.html">BookData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a434bbfe06c1e84328651e6ead8661c55">book</a> () const</td></tr>
@@ -166,9 +166,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afa353983bbff16553d7d58ed0f10f9f9" id="r_afa353983bbff16553d7d58ed0f10f9f9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#afa353983bbff16553d7d58ed0f10f9f9">statLossRacialType</a> () const</td></tr>
 <tr class="memdesc:afa353983bbff16553d7d58ed0f10f9f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the racial type used for stat loss.  <br /></td></tr>
 <tr class="memitem:a980361910bfff4cf1fec14b992496b5b" id="r_a980361910bfff4cf1fec14b992496b5b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a980361910bfff4cf1fec14b992496b5b">setRequiredSleep</a> (int required_sleep)</td></tr>
-<tr class="memdesc:a980361910bfff4cf1fec14b992496b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of hours sleep a member of this races needs to fully rest.  <br /></td></tr>
+<tr class="memdesc:a980361910bfff4cf1fec14b992496b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of hours sleep/meditation a member of this races needs to fully rest.  <br /></td></tr>
 <tr class="memitem:a6ae6a64dfa3e3134962e93a7e194edd4" id="r_a6ae6a64dfa3e3134962e93a7e194edd4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6ae6a64dfa3e3134962e93a7e194edd4">requiredSleep</a> () const</td></tr>
-<tr class="memdesc:a6ae6a64dfa3e3134962e93a7e194edd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of hours slepp a member of this races needs to fully rest.  <br /></td></tr>
+<tr class="memdesc:a6ae6a64dfa3e3134962e93a7e194edd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of hours sleep/meditation a member of this races needs to fully rest.  <br /></td></tr>
 <tr class="memitem:ae4924b2881e8d16227c3f83b8fdeee7e" id="r_ae4924b2881e8d16227c3f83b8fdeee7e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae4924b2881e8d16227c3f83b8fdeee7e">setRequiredSleepFrequency</a> (int required_sleep_frequency)</td></tr>
 <tr class="memdesc:ae4924b2881e8d16227c3f83b8fdeee7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get how many days a member of the race can go without sleep before suffering penalties.  <br /></td></tr>
 <tr class="memitem:ab312344a3094570331c5d902b6be7785" id="r_ab312344a3094570331c5d902b6be7785"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab312344a3094570331c5d902b6be7785">requiredSleepFrequency</a> () const</td></tr>
@@ -243,14 +243,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adcd455e488f7939a847d1e740459c2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus that the race provides to a stat.  <br /></td></tr>
 <tr class="memitem:afca5016e08f40e9e62868c109f1382fa" id="r_afca5016e08f40e9e62868c109f1382fa"><td class="memItemLeft">const std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afca5016e08f40e9e62868c109f1382fa">statsWithBonus</a> () const</td></tr>
 <tr class="memdesc:afca5016e08f40e9e62868c109f1382fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a container with the stats that the race has a bonus for.  <br /></td></tr>
-<tr class="memitem:aa5398e65abd7e832d92938647773c6fb" id="r_aa5398e65abd7e832d92938647773c6fb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa5398e65abd7e832d92938647773c6fb">addEverymanSkill</a> (std::unique_ptr&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; skill)</td></tr>
-<tr class="memdesc:aa5398e65abd7e832d92938647773c6fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a skill that is considered everyman for the race.  <br /></td></tr>
+<tr class="memitem:a2bee6e327faef8218831867ee80d5de0" id="r_a2bee6e327faef8218831867ee80d5de0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2bee6e327faef8218831867ee80d5de0">addEverymanSkill</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill)</td></tr>
+<tr class="memdesc:a2bee6e327faef8218831867ee80d5de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a skill that is considered everyman for the race.  <br /></td></tr>
 <tr class="memitem:a626790ca96e6d1a9e99fcae927d857aa" id="r_a626790ca96e6d1a9e99fcae927d857aa"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a626790ca96e6d1a9e99fcae927d857aa">everymanSkills</a> () const</td></tr>
 <tr class="memdesc:a626790ca96e6d1a9e99fcae927d857aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of the skills that are considered everyman.  <br /></td></tr>
 <tr class="memitem:a13214922fe2441aa83a4634226aff7e5" id="r_a13214922fe2441aa83a4634226aff7e5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a13214922fe2441aa83a4634226aff7e5">isEverymanSkill</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;other, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
 <tr class="memdesc:a13214922fe2441aa83a4634226aff7e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a skill is everyman for the race.  <br /></td></tr>
-<tr class="memitem:a63151c7cbe3c62d72649aa703f4f499e" id="r_a63151c7cbe3c62d72649aa703f4f499e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a63151c7cbe3c62d72649aa703f4f499e">addRestrictedSkill</a> (std::unique_ptr&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; skill)</td></tr>
-<tr class="memdesc:a63151c7cbe3c62d72649aa703f4f499e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a skill that is considered restricted for the race.  <br /></td></tr>
+<tr class="memitem:ad5d316a63f569b1bff14a9f41e02a495" id="r_ad5d316a63f569b1bff14a9f41e02a495"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad5d316a63f569b1bff14a9f41e02a495">addRestrictedSkill</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill)</td></tr>
+<tr class="memdesc:ad5d316a63f569b1bff14a9f41e02a495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a skill that is considered restricted for the race.  <br /></td></tr>
 <tr class="memitem:a66f89d8d7e736dfd32aedc7125c320b4" id="r_a66f89d8d7e736dfd32aedc7125c320b4"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a66f89d8d7e736dfd32aedc7125c320b4">restrictedSkills</a> () const</td></tr>
 <tr class="memdesc:a66f89d8d7e736dfd32aedc7125c320b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of the skills that are considered restricted.  <br /></td></tr>
 <tr class="memitem:a87a6a4aa66ce93b26531c0d50baf4038" id="r_a87a6a4aa66ce93b26531c0d50baf4038"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a87a6a4aa66ce93b26531c0d50baf4038">isRestrictedSkill</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;other, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
@@ -267,8 +267,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2cab99790605ef7da4ff5c56c1fe9c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of the skill categories that are considered restricted.  <br /></td></tr>
 <tr class="memitem:aa83344f6945acbc7722ee066000ead3d" id="r_aa83344f6945acbc7722ee066000ead3d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa83344f6945acbc7722ee066000ead3d">isRestrictedSkillCategory</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;other) const</td></tr>
 <tr class="memdesc:aa83344f6945acbc7722ee066000ead3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a skill category is restricted for the race.  <br /></td></tr>
-<tr class="memitem:a5989a2db0662d54913861282692b5e2e" id="r_a5989a2db0662d54913861282692b5e2e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5989a2db0662d54913861282692b5e2e">setSkillBonus</a> (std::unique_ptr&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; skill, int bonus)</td></tr>
-<tr class="memdesc:a5989a2db0662d54913861282692b5e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the bonus the race has for a skill.  <br /></td></tr>
+<tr class="memitem:a89b7d114d91f992d1b476a8df1c8f292" id="r_a89b7d114d91f992d1b476a8df1c8f292"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a89b7d114d91f992d1b476a8df1c8f292">setSkillBonus</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill, int bonus)</td></tr>
+<tr class="memdesc:a89b7d114d91f992d1b476a8df1c8f292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the bonus the race has with a skill.  <br /></td></tr>
 <tr class="memitem:a5cd984e4dd55214b4640f5960c2f9a9f" id="r_a5cd984e4dd55214b4640f5960c2f9a9f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5cd984e4dd55214b4640f5960c2f9a9f">skillBonus</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill) const</td></tr>
 <tr class="memdesc:a5cd984e4dd55214b4640f5960c2f9a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus that the race provides to a skill.  <br /></td></tr>
 <tr class="memitem:a08fb0402c8f7c82984eaf1844f219bf3" id="r_a08fb0402c8f7c82984eaf1844f219bf3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a08fb0402c8f7c82984eaf1844f219bf3">skillBonus</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
@@ -277,12 +277,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab47dbe05e12d96830c0346f852c7cef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a container with the skill that the race has a bonus for.  <br /></td></tr>
 <tr class="memitem:a75c04d3f0f64e4fae83811c347cbca8e" id="r_a75c04d3f0f64e4fae83811c347cbca8e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a75c04d3f0f64e4fae83811c347cbca8e">isBonusSkill</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
 <tr class="memdesc:a75c04d3f0f64e4fae83811c347cbca8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if there is a racial bonus for a skill.  <br /></td></tr>
-<tr class="memitem:aacb8f852db5d638024e4aa689baf1593" id="r_aacb8f852db5d638024e4aa689baf1593"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aacb8f852db5d638024e4aa689baf1593">addCategoryEverymanSkillChoice</a> (std::unique_ptr&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; choice)</td></tr>
-<tr class="memdesc:aacb8f852db5d638024e4aa689baf1593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill categories that a character may select one or more skills from to become everyman.  <br /></td></tr>
+<tr class="memitem:a43fdce02d6e738e83e7ba183605349b1" id="r_a43fdce02d6e738e83e7ba183605349b1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a43fdce02d6e738e83e7ba183605349b1">addCategoryEverymanSkillChoice</a> (<a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; choice)</td></tr>
+<tr class="memdesc:a43fdce02d6e738e83e7ba183605349b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill categories that a character may select one or more skills from to become everyman.  <br /></td></tr>
 <tr class="memitem:a9189e06472ce6b42a04b6cedc9d33f4d" id="r_a9189e06472ce6b42a04b6cedc9d33f4d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9189e06472ce6b42a04b6cedc9d33f4d">numCategoryEverymanSkillChoices</a> () const</td></tr>
 <tr class="memdesc:a9189e06472ce6b42a04b6cedc9d33f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding everyman skills in skill cetegories.  <br /></td></tr>
-<tr class="memitem:a9a67db97dbff0505d378fcc57938fe92" id="r_a9a67db97dbff0505d378fcc57938fe92"><td class="memItemLeft">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9a67db97dbff0505d378fcc57938fe92">categoryEverymanSkillChoices</a> () const</td></tr>
-<tr class="memdesc:a9a67db97dbff0505d378fcc57938fe92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills within a skill category that may be made everyme skills.  <br /></td></tr>
+<tr class="memitem:a81e725136db3f34d6dd905bd3c6e4f49" id="r_a81e725136db3f34d6dd905bd3c6e4f49"><td class="memItemLeft">const std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a81e725136db3f34d6dd905bd3c6e4f49">categoryEverymanSkillChoices</a> () const</td></tr>
+<tr class="memdesc:a81e725136db3f34d6dd905bd3c6e4f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills within a skill category that may be made everyme skills.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
 <tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
@@ -340,8 +340,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="aacb8f852db5d638024e4aa689baf1593" name="aacb8f852db5d638024e4aa689baf1593"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacb8f852db5d638024e4aa689baf1593">&#9670;&#160;</a></span>addCategoryEverymanSkillChoice()</h2>
+<a id="a43fdce02d6e738e83e7ba183605349b1" name="a43fdce02d6e738e83e7ba183605349b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43fdce02d6e738e83e7ba183605349b1">&#9670;&#160;</a></span>addCategoryEverymanSkillChoice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void RaceData::addCategoryEverymanSkillChoice </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>choice</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>choice</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -374,8 +374,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aa5398e65abd7e832d92938647773c6fb" name="aa5398e65abd7e832d92938647773c6fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5398e65abd7e832d92938647773c6fb">&#9670;&#160;</a></span>addEverymanSkill()</h2>
+<a id="a2bee6e327faef8218831867ee80d5de0" name="a2bee6e327faef8218831867ee80d5de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bee6e327faef8218831867ee80d5de0">&#9670;&#160;</a></span>addEverymanSkill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -386,7 +386,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void RaceData::addEverymanSkill </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>skill</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a></td>          <td class="paramname"><span class="paramname"><em>skill</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -454,8 +454,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a63151c7cbe3c62d72649aa703f4f499e" name="a63151c7cbe3c62d72649aa703f4f499e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63151c7cbe3c62d72649aa703f4f499e">&#9670;&#160;</a></span>addRestrictedSkill()</h2>
+<a id="ad5d316a63f569b1bff14a9f41e02a495" name="ad5d316a63f569b1bff14a9f41e02a495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5d316a63f569b1bff14a9f41e02a495">&#9670;&#160;</a></span>addRestrictedSkill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -466,7 +466,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void RaceData::addRestrictedSkill </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>skill</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a></td>          <td class="paramname"><span class="paramname"><em>skill</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -560,7 +560,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Gets the staring ability a member of the race has in a language. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">language</td><td><a class="el" href="class_language_data.html" title="Class representing an individual language used in the campaign world.">LanguageData</a> language to get the ability with </td></tr>
+    <tr><td class="paramname">language</td><td><a class="el" href="class_language_data.html" title="Class representing an individual language used in the campaign world.">LanguageData</a> language to get the ability for </td></tr>
   </table>
   </dd>
 </dl>
@@ -594,7 +594,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Gets the staring ability a member of the race has in a language. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">language_name</td><td>name of the language to get the ability with </td></tr>
+    <tr><td class="paramname">language_name</td><td>name of the language to get the ability for </td></tr>
   </table>
   </dd>
 </dl>
@@ -626,7 +626,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get a container with the <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> objects known during childhood. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::set of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> objectr references </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::set of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> object references </dd></dl>
 
 </div>
 </div>
@@ -833,13 +833,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Gets the modifier to members of this race compared to humans. </p>
 <p>Some races are generally slender or stout in build when compared to common men. This value is used to indicate this. The value is only used during character creation when creating the characters weight. It has no bearing on gameplay outside this.</p>
-<p>The value is typically only has a value or between -2 (more slender) to 2 (more stout) and a number over 2 should be an extreme case, with -1 or 1 being by far the most common values.</p>
+<p>The value is typically only has a value or between -2 (more slender) to 2 (more stout) and a number over 2 should be an extreme case, with -1 or 1 being by far the most common value outside 0.</p>
 <dl class="section return"><dt>Returns</dt><dd>variance from human physical build shape </dd></dl>
 
 </div>
 </div>
-<a id="a9a67db97dbff0505d378fcc57938fe92" name="a9a67db97dbff0505d378fcc57938fe92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a67db97dbff0505d378fcc57938fe92">&#9670;&#160;</a></span>categoryEverymanSkillChoices()</h2>
+<a id="a81e725136db3f34d6dd905bd3c6e4f49" name="a81e725136db3f34d6dd905bd3c6e4f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e725136db3f34d6dd905bd3c6e4f49">&#9670;&#160;</a></span>categoryEverymanSkillChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -848,7 +848,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &gt; &amp; RaceData::categoryEverymanSkillChoices </td>
+          <td class="memname">const std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &amp; RaceData::categoryEverymanSkillChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -947,7 +947,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the description of what the race consists of. </p>
+<p>Get the description of the race. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string reference of the description </dd></dl>
 
 </div>
@@ -1437,7 +1437,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the number of background options members of this race have. </p>
-<p>During the character development process each character is allowed to spend background options on additional development activities with each race have a varying number.</p>
+<p>During the character development process each character is allowed to spend background options on additional development activities with the number being based on the race.</p>
 <dl class="section return"><dt>Returns</dt><dd>int Number of background option points </dd></dl>
 
 </div>
@@ -1523,8 +1523,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the number of hours slepp a member of this races needs to fully rest. </p>
-<dl class="section return"><dt>Returns</dt><dd>int number of hours sleep required </dd></dl>
+<p>Get the number of hours sleep/meditation a member of this races needs to fully rest. </p>
+<dl class="section return"><dt>Returns</dt><dd>int number of hours sleep/meditation required </dd></dl>
 
 </div>
 </div>
@@ -1873,7 +1873,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Sets the modifier to members of this race compared to humans. </p>
 <p>Some races are generally slender or stout in build when compared to common men. This value is used to indicate this. The value is only used during character creation when creating the characters weight. It has no bearing on gameplay outside this.</p>
-<p>The value is typically only has a value or between -2 (more slender) to 2 (more stout) and a number over 2 should be an extreme case, with -1 or 1 being by far the most common values.</p>
+<p>The value is typically only has a value or between -2 (more slender) to 2 (more stout) and a number over 2 should be an extreme case, with -1 or 1 being by far the most common value outside 0.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">build_modifier</td><td>variance from human physical build shape </td></tr>
@@ -1973,7 +1973,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the description of what the race consists of. </p>
+<p>Set the description of the race. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">description</td><td>std::string_view race description </td></tr>
@@ -2244,7 +2244,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the number of background options members of this race have. </p>
-<p>During the character development process each character is allowed to spend background options on additional development activities with each race have a varying number.</p>
+<p>During the character development process each character is allowed to spend background options on additional development activities with the number being based on the race.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num_background_options</td><td>int number of background option points </td></tr>
@@ -2311,10 +2311,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the number of hours sleep a member of this races needs to fully rest. </p>
+<p>Set the number of hours sleep/meditation a member of this races needs to fully rest. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">required_sleep</td><td>int hours sleep required </td></tr>
+    <tr><td class="paramname">required_sleep</td><td>int hours sleep/meditation required </td></tr>
   </table>
   </dd>
 </dl>
@@ -2389,8 +2389,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a5989a2db0662d54913861282692b5e2e" name="a5989a2db0662d54913861282692b5e2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5989a2db0662d54913861282692b5e2e">&#9670;&#160;</a></span>setSkillBonus()</h2>
+<a id="a89b7d114d91f992d1b476a8df1c8f292" name="a89b7d114d91f992d1b476a8df1c8f292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b7d114d91f992d1b476a8df1c8f292">&#9670;&#160;</a></span>setSkillBonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2401,7 +2401,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void RaceData::setSkillBonus </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>skill</em></span>, </td>
+          <td class="paramtype"><a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a></td>          <td class="paramname"><span class="paramname"><em>skill</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2416,10 +2416,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the bonus the race has for a skill. </p>
+<p>Set the bonus the race has with a skill. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">skill</td><td><a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> unique pointer to set the bonus for </td></tr>
+    <tr><td class="paramname">skill</td><td><a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> to set the bonus for </td></tr>
     <tr><td class="paramname">bonus</td><td>int bonus value </td></tr>
   </table>
   </dd>
@@ -2451,7 +2451,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the number of rounds after death that the soul of a member of this race departs the body. </p>
-<p>Once a character dies if the physical damage hat caused the death is not healed within a certain length of time the soul leaves the body. Once this happens healing the physical body may prevent things such as stat loss but the character cannot be brought back to life without a <em>Lifegiving</em> spell. If the physical body has not been healed the sould will not return even via spells.</p>
+<p>Once a character dies if the physical damage that caused the death is not healed within a certain length of time the soul leaves the body. Once this happens healing the physical body may prevent things such as stat loss but the character cannot be brought back to life without a <em>Lifegiving</em> spell. If the physical body has not been healed the soul will not return even via spells.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">soul_departure</td><td>number of rounds before the soul departs </td></tr>
@@ -2720,7 +2720,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>gets the number of rounds after death that the soul of a member of this race departs the body. </p>
-<p>Once a character dies if the physical damage hat caused the death is not healed within a certain length of time the soul leaves the body. Once this happens healing the physical body may prevent things such as stat loss but the character cannot be brought back to life without a <em>Lifegiving</em> spell. If the physical body has not been healed the sould will not return even via spells.</p>
+<p>Once a character dies if the physical damage that caused the death is not healed within a certain length of time the soul leaves the body. Once this happens healing the physical body may prevent things such as stat loss but the character cannot be brought back to life without a <em>Lifegiving</em> spell. If the physical body has not been healed the soul will not return even via spells.</p>
 <dl class="section return"><dt>Returns</dt><dd>number of rounds before the soul departs </dd></dl>
 
 </div>
@@ -2751,7 +2751,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Gets the staring ability a member of the race has in a language. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">language</td><td><a class="el" href="class_language_data.html" title="Class representing an individual language used in the campaign world.">LanguageData</a> language to get the ability with </td></tr>
+    <tr><td class="paramname">language</td><td><a class="el" href="class_language_data.html" title="Class representing an individual language used in the campaign world.">LanguageData</a> language to get the ability for </td></tr>
   </table>
   </dd>
 </dl>
@@ -2785,7 +2785,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Gets the staring ability a member of the race has in a language. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">language_name</td><td>name of the language to get the ability with </td></tr>
+    <tr><td class="paramname">language_name</td><td>name of the language to get the ability for </td></tr>
   </table>
   </dd>
 </dl>
@@ -2817,7 +2817,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get a container with the <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> objects known during childhood. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::vector of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> objectr references </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> object references </dd></dl>
 
 </div>
 </div>

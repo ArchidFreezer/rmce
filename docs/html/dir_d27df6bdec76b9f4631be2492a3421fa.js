@@ -14,6 +14,7 @@ var dir_d27df6bdec76b9f4631be2492a3421fa =
     [ "LanguageCategoryData.h", "_language_category_data_8h_source.html", null ],
     [ "LanguageData.h", "_language_data_8h_source.html", null ],
     [ "LanguageDialectData.h", "_language_dialect_data_8h_source.html", null ],
+    [ "ProfessionData.h", "_profession_data_8h_source.html", null ],
     [ "RaceData.h", "_race_data_8h_source.html", null ],
     [ "RealmType.h", "_realm_type_8h_source.html", null ],
     [ "ResistanceType.h", "_resistance_type_8h_source.html", null ],

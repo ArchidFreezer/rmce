@@ -46,6 +46,7 @@ var hierarchy =
       [ "LanguageData", "class_language_data.html", null ],
       [ "LanguageDialectData", "class_language_dialect_data.html", null ],
       [ "LookupTable< RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype >", "class_lookup_table.html", null ],
+      [ "ProfessionData", "class_profession_data.html", null ],
       [ "RaceData", "class_race_data.html", null ],
       [ "SkillCategoryData", "class_skill_category_data.html", null ],
       [ "SkillData", "class_skill_data.html", null ],
@@ -67,6 +68,9 @@ var hierarchy =
       [ "InvalidSkillBonus", "class_invalid_skill_bonus.html", null ],
       [ "InvalidSkillDevelopment", "class_invalid_skill_development.html", null ],
       [ "InvalidSkillProgression", "class_invalid_skill_progression.html", null ],
+      [ "ProfessionData::InvalidCategoryDevelopmentCost", "class_profession_data_1_1_invalid_category_development_cost.html", null ],
+      [ "ProfessionData::InvalidSkillBonus", "class_profession_data_1_1_invalid_skill_bonus.html", null ],
+      [ "ProfessionData::InvalidSkillDevelopment", "class_profession_data_1_1_invalid_skill_development.html", null ],
       [ "RowNotFoundException", "class_row_not_found_exception.html", null ],
       [ "SkillActionType::SkillActionNotFoundException", "class_skill_action_type_1_1_skill_action_not_found_exception.html", null ],
       [ "SkillCategoryData::UsingCharacterRealmStatsException", "class_skill_category_data_1_1_using_character_realm_stats_exception.html", null ],
@@ -75,6 +79,7 @@ var hierarchy =
       [ "StatType::TooManyStatsException", "class_stat_type_1_1_too_many_stats_exception.html", null ],
       [ "WeaponTypeData::InvalidWeaponRangeException", "class_weapon_type_data_1_1_invalid_weapon_range_exception.html", null ]
     ] ],
+    [ "SkillDevelopmentCost", "class_skill_development_cost.html", null ],
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],

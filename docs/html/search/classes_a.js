@@ -1,20 +1,7 @@
 var searchData=
 [
-  ['skillactionnotfoundexception_0',['SkillActionNotFoundException',['../class_skill_action_type_1_1_skill_action_not_found_exception.html',1,'SkillActionType']]],
-  ['skillcategorydata_1',['SkillCategoryData',['../class_skill_category_data.html',1,'']]],
-  ['skillcategorydatafileparserjson_2',['SkillCategoryDatafileParserJson',['../class_skill_category_datafile_parser_json.html',1,'']]],
-  ['skillcategorydatafileparserxml_3',['SkillCategoryDatafileParserXml',['../class_skill_category_datafile_parser_xml.html',1,'']]],
-  ['skilldata_4',['SkillData',['../class_skill_data.html',1,'']]],
-  ['skilldatafileparserjson_5',['SkillDatafileParserJson',['../class_skill_datafile_parser_json.html',1,'']]],
-  ['skilldatafileparserxml_6',['SkillDatafileParserXml',['../class_skill_datafile_parser_xml.html',1,'']]],
-  ['skillgroupnotfoundexception_7',['SkillGroupNotFoundException',['../class_skill_group_type_1_1_skill_group_not_found_exception.html',1,'SkillGroupType']]],
-  ['skillprogressiondata_8',['SkillProgressionData',['../class_skill_progression_data.html',1,'']]],
-  ['skillprogressiontypedata_9',['SkillProgressionTypeData',['../class_skill_progression_type_data.html',1,'']]],
-  ['skillprogressiontypedatafileparserjson_10',['SkillProgressionTypeDatafileParserJson',['../class_skill_progression_type_datafile_parser_json.html',1,'']]],
-  ['specialattacktable_11',['SpecialAttackTable',['../class_special_attack_table.html',1,'']]],
-  ['specialattacktabledatafileparserjson_12',['SpecialAttackTableDatafileParserJson',['../class_special_attack_table_datafile_parser_json.html',1,'']]],
-  ['spelllistdata_13',['SpellListData',['../class_spell_list_data.html',1,'']]],
-  ['spelllistdatafileparserjson_14',['SpellListDatafileParserJson',['../class_spell_list_datafile_parser_json.html',1,'']]],
-  ['spelllistdatafileparserxml_15',['SpellListDatafileParserXml',['../class_spell_list_datafile_parser_xml.html',1,'']]],
-  ['subcategoriedskilldata_16',['SubcategoriedSkillData',['../class_subcategoried_skill_data.html',1,'']]]
+  ['racedata_0',['RaceData',['../class_race_data.html',1,'']]],
+  ['racedatafileparserjson_1',['RaceDatafileParserJson',['../class_race_datafile_parser_json.html',1,'']]],
+  ['racedatafileparserxml_2',['RaceDatafileParserXml',['../class_race_datafile_parser_xml.html',1,'']]],
+  ['rownotfoundexception_3',['RowNotFoundException',['../class_row_not_found_exception.html',1,'']]]
 ];

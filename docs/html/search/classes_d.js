@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['weapontypedata_0',['WeaponTypeData',['../class_weapon_type_data.html',1,'']]],
-  ['weapontypedatafileparserjson_1',['WeaponTypeDatafileParserJson',['../class_weapon_type_datafile_parser_json.html',1,'']]],
-  ['weapontypedatafileparserxml_2',['WeaponTypeDatafileParserXml',['../class_weapon_type_datafile_parser_xml.html',1,'']]]
+  ['usingcharacterrealmstatsexception_0',['UsingCharacterRealmStatsException',['../class_skill_category_data_1_1_using_character_realm_stats_exception.html',1,'SkillCategoryData::UsingCharacterRealmStatsException'],['../class_skill_data_1_1_using_character_realm_stats_exception.html',1,'SkillData::UsingCharacterRealmStatsException']]]
 ];
