@@ -1,10 +1,10 @@
 #include <ProfessionData.h>
 
 int ProfessionData::addStat(StatType::Type stat) {
-	if (stats_.size() < 3) {
+	if (stats_.size() < 4) {
 		stats_.push_back(stat);
 	} else {
-		throw StatType::TooManyStatsException("You attempted to add more than 3 stat bonuses to a skill.");
+		throw StatType::TooManyStatsException("You attempted to add more than 4 stat bonuses to a skill.");
 	}
 
 	return stats_.size();
