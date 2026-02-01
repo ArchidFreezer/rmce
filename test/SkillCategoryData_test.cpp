@@ -78,7 +78,7 @@ namespace {
 		EXPECT_THROW(scd.addStat(StatType::Type::kStrength), SkillCategoryData::UsingCharacterRealmStatsException);
 
 		scd.setUseRealmStats(false);
-		EXPECT_NO_THROW(scd.addStat(StatType::Type::kStrength), SkillCategoryData::UsingCharacterRealmStatsException);
+		EXPECT_NO_THROW(scd.addStat(StatType::Type::kStrength));
 		EXPECT_EQ(scd.numberOfStats(), 1);
 	}
 
