@@ -45,26 +45,49 @@ namespace {
 	TEST(ProfessionData, BaseLists) {
 		ProfessionData prof("PROF_ID");
 
-		GameRuleDataChoice<SpellListData> base_lists{};
-		SpellListData sl1("List1");
-		SpellListData sl2("List2");
-		SpellListData sl3("List3");
-		SpellListData sl4("List4");
-		base_lists.setNumChoices(1);
-		base_lists.addOption(sl1);
-		base_lists.addOption(sl2);
-		base_lists.addOption(sl3);
-		prof.setBaseSpellListChoices(std::move(base_lists));
-
-		EXPECT_TRUE(prof.baseSpellListChoices().isOption(sl1));
-		EXPECT_FALSE(prof.baseSpellListChoices().isOption(sl4));
-
-		EXPECT_EQ(prof.baseSpellListChoices().numChoices(), 1);
-		EXPECT_EQ(prof.baseSpellListChoices().numOptions(), 3);
-
-		for (const SpellListData* list : prof.baseSpellListChoices().options()) {
-			if ((list->id() != sl1.id()) && (list->id() != sl2.id()) && (list->id() != sl3.id())) FAIL();
+		// Putting the choice in a block means that we are testing an object has gone out of scope
+		{
+			GameRuleDataChoice<SpellListData> choice1{};
+			SpellListData sl1("List1");
+			SpellListData sl2("List2");
+			SpellListData sl3("List3");
+			SpellListData sl4("List4");
+			choice1.setNumChoices(1);
+			choice1.addOption(sl1);
+			choice1.addOption(sl2);
+			choice1.addOption(sl3);
+			choice1.addOption(sl4);
+			prof.addBaseSpellListChoice(std::move(choice1));
 		}
+
+		// choice1 is out of scope here
+		for (auto& choice : prof.baseSpellListChoices()) {
+			EXPECT_EQ(choice.numChoices(), 1);
+			EXPECT_EQ(choice.numOptions(), 4);
+		}
+
+		GameRuleDataChoice<SpellListData> choice2{};
+		choice2.setNumChoices(2);
+		SpellListData sl1a("List1a");
+		SpellListData sl2a("List2a");
+		choice2.addOption(sl1a);
+		choice2.addOption(sl2a);
+		prof.addBaseSpellListChoice(std::move(choice2));
+
+		EXPECT_EQ(prof.baseSpellListChoices().size(), 2);
+
+		int count{ 0 };
+		for (auto& choice : prof.baseSpellListChoices()) {
+			count++;
+			if (choice.numChoices() == 1) {
+				EXPECT_EQ(choice.numOptions(), 4);
+			} else if (choice.numChoices() == 2) {
+				EXPECT_EQ(choice.numOptions(), 2);
+			} else {
+				FAIL();
+			}
+		}
+		EXPECT_EQ(count, 2);
 	}
 
 	TEST(ProfessionData, EverymanSkills) {
