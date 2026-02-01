@@ -2,6 +2,7 @@
 
 #include <string>
 #include <string_view>
+#include <vector>
 /**
  * @file StringUtils.h
  * 
@@ -25,3 +26,22 @@ const std::string lcase(std::string_view sv);
  * @return std::string lowercase string with all non alphanum characters removed
  */
 const std::string lcaseconcat(std::string_view sv);
+
+/**
+ * @brief Split a string into tokens on one or more delimiters 
+ * 
+ * The @a delimiters argument may consist of multiple characters each of which will be used as a delimiter, for example
+ * using the text string "Test 1,string 1,Test 2,string 2:Test 3:string 3" and delimiters ",:" would return an array of
+ * the following:
+ * + Test 1
+ * + string 1
+ * + Test 2
+ * + string 2
+ * + Test 3
+ * + string 3
+ * 
+ * @param text String to split
+ * @param delimiters String containing the character(s) to use as tokens
+ * @return vector of the tokens
+ */
+std::vector<std::string> tokenise(const std::string& text, const std::string& delimiters = " ");

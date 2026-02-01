@@ -26,3 +26,17 @@ const std::string lcaseconcat(std::string_view sv) {
 
 	return ss.str();
 }
+
+std::vector<std::string> tokenise(const std::string& text, const std::string& delimiters) {
+  std::vector<std::string> tokens;
+
+  std::size_t start_pos;
+  std::size_t end_pos = 0;
+
+  while ((start_pos = text.find_first_not_of(delimiters, end_pos)) != std::string::npos) {
+    end_pos = text.find_first_of(delimiters, start_pos);
+    tokens.emplace_back(text.substr(start_pos, end_pos - start_pos));
+  }
+
+  return tokens;
+}
