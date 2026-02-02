@@ -1,6 +1,7 @@
 #pragma once
 #include <ranges>
 #include <set>
+#include <typeinfo>
 #include <GameRuleData.h>
 
 /**
@@ -64,6 +65,29 @@ public:
 			if (key->id() == object.id()) return true;
 		}
 		return false;
+	}
+
+	/**
+	 * @brief Override the less than operator
+	 *
+	 * The creation of this overload allows all GameRuleDataChoice objects to be used as keys in sorted containers
+	 *
+	 * @param other GameRuleDataChoice object to compare against
+	 * @return `true` if this object is consdiered to be < \a other
+	 * @return `false` if this object is not consdiered to be < \a other
+	 */
+	bool operator<(const GameRuleDataChoice& other) const { 
+		int this_hash{};
+		for (const T* option : options_) {
+			this_hash += std::hash<std::string>{}(option->id());
+		}
+
+		int that_hash{};
+		for (const T* option : other.options_) {
+			that_hash += std::hash<std::string>{}(option->id());
+		}
+
+		return (this_hash < that_hash);
 	}
 
 private:
