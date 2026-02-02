@@ -5,8 +5,8 @@
             "group": "SKILLGROUP_ARMOUR",
             "name": "Heavy",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Strength",
                 "Agility",
@@ -18,8 +18,8 @@
             "group": "SKILLGROUP_ARMOUR",
             "name": "Light",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Agility",
                 "Strength",
@@ -31,8 +31,8 @@
             "group": "SKILLGROUP_ARMOUR",
             "name": "Medium",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Strength",
                 "Agility",
@@ -44,8 +44,8 @@
             "group": "SKILLGROUP_ARTISTIC",
             "name": "Active",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Presence",
                 "Empathy",
@@ -57,8 +57,8 @@
             "group": "SKILLGROUP_ARTISTIC",
             "name": "Passive",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Empathy",
                 "Intuition",
@@ -70,8 +70,8 @@
             "group": "SKILLGROUP_ATHLETIC",
             "name": "Brawn",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Strength",
                 "Constitution",
@@ -83,8 +83,8 @@
             "group": "SKILLGROUP_ATHLETIC",
             "name": "Endurance",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Constitution",
                 "Agility",
@@ -96,8 +96,8 @@
             "group": "SKILLGROUP_ATHLETIC",
             "name": "Gymnastics",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Agility",
                 "Quickness",
@@ -109,8 +109,8 @@
             "group": "SKILLGROUP_AWARENESS",
             "name": "Perceptions",
             "use-realm-stats": "false",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": [
                 "Intuition",
                 "Self Discipline",
@@ -122,8 +122,8 @@
             "group": "SKILLGROUP_AWARENESS",
             "name": "Searching",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Intuition",
                 "Reasoning",
@@ -135,8 +135,8 @@
             "group": "SKILLGROUP_AWARENESS",
             "name": "Senses",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Intuition",
                 "Self Discipline",
@@ -148,8 +148,8 @@
             "group": "SKILLGROUP_BODY_DEVELOPMENT",
             "name": "Body Development",
             "use-realm-stats": "false",
-            "skill-progression": "None",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_NONE",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": [
                 "Constitution",
                 "Self Discipline",
@@ -161,8 +161,8 @@
             "group": "SKILLGROUP_COMBAT_MANOEUVRES",
             "name": "Combat Manoeuvres",
             "use-realm-stats": "false",
-            "skill-progression": "Combined",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_COMBINED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": [
                 "Agility",
                 "Quickness",
@@ -174,8 +174,8 @@
             "group": "SKILLGROUP_COMMUNICATIONS",
             "name": "Communications",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Reasoning",
                 "Memory",
@@ -187,8 +187,8 @@
             "group": "SKILLGROUP_CRAFTS",
             "name": "Crafts",
             "use-realm-stats": "false",
-            "skill-progression": "Combined",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_COMBINED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": [
                 "Agility",
                 "Memory",
@@ -200,8 +200,8 @@
             "group": "SKILLGROUP_DIRECTED_SPELLS",
             "name": "Directed Spells",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Agility",
                 "Self Discipline",
@@ -213,8 +213,8 @@
             "group": "SKILLGROUP_INFLUENCE",
             "name": "Influence",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Presence",
                 "Empathy",
@@ -226,8 +226,8 @@
             "group": "SKILLGROUP_LORE",
             "name": "General",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Memory",
                 "Reasoning",
@@ -239,8 +239,8 @@
             "group": "SKILLGROUP_LORE",
             "name": "Magical",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Memory",
                 "Reasoning",
@@ -252,8 +252,8 @@
             "group": "SKILLGROUP_LORE",
             "name": "Obscure",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Memory",
                 "Reasoning",
@@ -265,8 +265,8 @@
             "group": "SKILLGROUP_LORE",
             "name": "Technical",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Memory",
                 "Reasoning",
@@ -278,8 +278,8 @@
             "group": "SKILLGROUP_MARTIAL_ARTS",
             "name": "Combat Manoeuvres",
             "use-realm-stats": "false",
-            "skill-progression": "Combined",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_COMBINED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": [
                 "Agility",
                 "Quickness",
@@ -291,8 +291,8 @@
             "group": "SKILLGROUP_MARTIAL_ARTS",
             "name": "Strikes",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Strength",
                 "Agility",
@@ -304,8 +304,8 @@
             "group": "SKILLGROUP_MARTIAL_ARTS",
             "name": "Sweeps",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Agility",
                 "Strength",
@@ -317,8 +317,8 @@
             "group": "SKILLGROUP_OUTDOOR",
             "name": "Animal",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Empathy",
                 "Agility",
@@ -330,8 +330,8 @@
             "group": "SKILLGROUP_OUTDOOR",
             "name": "Environmental",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Self Discipline",
                 "Intuition",
@@ -343,8 +343,8 @@
             "group": "SKILLGROUP_POWER_AWARENESS",
             "name": "Power Awareness",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Empathy",
                 "Intuition",
@@ -356,8 +356,8 @@
             "group": "SKILLGROUP_POWER_MANIPULATION",
             "name": "Power Manipulation",
             "use-realm-stats": "false",
-            "skill-progression": "Combined",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_COMBINED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": [
                 "Empathy",
                 "Intuition",
@@ -369,8 +369,8 @@
             "group": "SKILLGROUP_POWER_POINT_DEVELOPMENT",
             "name": "Power Point Development",
             "use-realm-stats": "true",
-            "skill-progression": "None",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_NONE",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -378,8 +378,8 @@
             "group": "SKILLGROUP_SCIENCE_ANALYTIC",
             "name": "Basic",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Reasoning",
                 "Memory",
@@ -391,8 +391,8 @@
             "group": "SKILLGROUP_SCIENCE_ANALYTIC",
             "name": "Specialised",
             "use-realm-stats": "false",
-            "skill-progression": "Combined",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_COMBINED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": [
                 "Reasoning",
                 "Memory",
@@ -404,8 +404,8 @@
             "group": "SKILLGROUP_SELF_CONTROL",
             "name": "Self Control",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Self Discipline",
                 "Presence",
@@ -417,8 +417,8 @@
             "group": "SKILLGROUP_SPECIAL_ATTACKS",
             "name": "Special Attacks",
             "use-realm-stats": "false",
-            "skill-progression": "Combined",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_COMBINED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": [
                 "Strength",
                 "Agility",
@@ -430,8 +430,8 @@
             "group": "SKILLGROUP_SPECIAL_DEFENCES",
             "name": "Special Defences",
             "use-realm-stats": "false",
-            "skill-progression": "Combined",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_COMBINED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -439,8 +439,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Arcane Base Lists",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -448,8 +448,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Arcane Closed Lists",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -457,8 +457,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Arcane Open Lists",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -466,8 +466,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Other Realm Base Lists",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -475,8 +475,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Other Realm Closed Lists",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -484,8 +484,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Other Realm Open Lists",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -493,8 +493,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Other Realm Training Package",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -502,8 +502,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Own Realm Closed Lists",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -511,8 +511,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Own Realm Open Lists",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -520,8 +520,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Own Realm Other Base Lists",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -529,8 +529,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Own Realm Own Base Lists",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -538,8 +538,8 @@
             "group": "SKILLGROUP_SPELLS",
             "name": "Own Realm Training Package",
             "use-realm-stats": "true",
-            "skill-progression": "Limited",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": ""
         },
         {
@@ -547,8 +547,8 @@
             "group": "SKILLGROUP_SUBTERFUGE",
             "name": "Attack",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Agility",
                 "Self Discipline",
@@ -560,8 +560,8 @@
             "group": "SKILLGROUP_SUBTERFUGE",
             "name": "Mechanics",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Intuition",
                 "Agility",
@@ -573,8 +573,8 @@
             "group": "SKILLGROUP_SUBTERFUGE",
             "name": "Stealth",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Agility",
                 "Self Discipline",
@@ -586,8 +586,8 @@
             "group": "SKILLGROUP_TECHNICAL_TRADE",
             "name": "General",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Reasoning",
                 "Memory",
@@ -599,8 +599,8 @@
             "group": "SKILLGROUP_TECHNICAL_TRADE",
             "name": "Professional",
             "use-realm-stats": "false",
-            "skill-progression": "Combined",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_COMBINED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": [
                 "Reasoning",
                 "Memory",
@@ -612,8 +612,8 @@
             "group": "SKILLGROUP_TECHNICAL_TRADE",
             "name": "Vocational",
             "use-realm-stats": "false",
-            "skill-progression": "Combined",
-            "category-progression": "None",
+            "skill-progression": "SKILLPROGRESSIONTYPE_COMBINED",
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
             "stats": [
                 "Memory",
                 "Intuition",
@@ -625,8 +625,8 @@
             "group": "SKILLGROUP_URBAN",
             "name": "Urban",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Intuition",
                 "Presence",
@@ -638,8 +638,8 @@
             "group": "SKILLGROUP_WEAPON",
             "name": "1-H Concussion",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Strength",
                 "Agility",
@@ -651,8 +651,8 @@
             "group": "SKILLGROUP_WEAPON",
             "name": "1-H Edged",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Strength",
                 "Agility",
@@ -664,8 +664,8 @@
             "group": "SKILLGROUP_WEAPON",
             "name": "2-Handed",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Strength",
                 "Agility",
@@ -677,8 +677,8 @@
             "group": "SKILLGROUP_WEAPON",
             "name": "Missile",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Agility",
                 "Strength",
@@ -690,8 +690,8 @@
             "group": "SKILLGROUP_WEAPON",
             "name": "Missile Artillery",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Intuition",
                 "Agility",
@@ -703,8 +703,8 @@
             "group": "SKILLGROUP_WEAPON",
             "name": "Pole Arms",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Strength",
                 "Agility",
@@ -716,8 +716,8 @@
             "group": "SKILLGROUP_WEAPON",
             "name": "Thrown",
             "use-realm-stats": "false",
-            "skill-progression": "Standard",
-            "category-progression": "Category Standard",
+            "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
+            "category-progression": "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
             "stats": [
                 "Agility",
                 "Strength",

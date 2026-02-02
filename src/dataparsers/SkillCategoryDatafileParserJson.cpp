@@ -9,8 +9,8 @@ void SkillCategoryDatafileParserJson::populateDatum(std::string& id, pt::ptree& 
 	datum.put("group", game_data.group().id());
 	datum.put("name", game_data.name());
 	datum.put("use-realm-stats", game_data.useRealmStats());
-	datum.put("skill-progression", game_data.defaultSkillProgression().name());
-	datum.put("category-progression", game_data.skillCategoryProgression().name());
+	datum.put("skill-progression", game_data.defaultSkillProgression().id());
+	datum.put("category-progression", game_data.skillCategoryProgression().id());
 
 	pt::ptree pstats;
 	for (auto& stat : game_data.stats()) {
@@ -48,11 +48,9 @@ void SkillCategoryDatafileParserJson::parse(bool id_only) {
 			ref.setGroup(cache().get<SkillGroupData>(group_id));
 
 			// Get the skill and category progressions
-			std::string skill_progression_json = v.second.get<std::string>("skill-progression");
-			std::string skill_progression_id = GameRuleData::generateId("SkillProgressionType", skill_progression_json);
+			std::string skill_progression_id = v.second.get<std::string>("skill-progression");
 			SkillProgressionTypeData& skill_progression{ cache().get<SkillProgressionTypeData>(skill_progression_id) };
-			std::string category_progression_json = v.second.get<std::string>("category-progression");
-			std::string category_progression_id = GameRuleData::generateId("SkillProgressionType", category_progression_json);
+			std::string category_progression_id = v.second.get<std::string>("category-progression");
 			SkillProgressionTypeData& category_progression{ cache().get<SkillProgressionTypeData>(category_progression_id) };
 			ref.setSkillProgressions(skill_progression, category_progression);
 
