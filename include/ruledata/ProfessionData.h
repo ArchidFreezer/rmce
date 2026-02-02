@@ -5,6 +5,7 @@
 #include <ranges>
 #include <set>
 #include <vector>
+
 #include <BookData.h>
 #include <GameRuleData.h>
 #include <GameRuleDataChoice.h>
