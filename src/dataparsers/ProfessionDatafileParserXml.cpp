@@ -79,7 +79,8 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 			// Skill development types
 			if (boost::optional<const pt::ptree&> skill_modifiers = v.second.get_child_optional("skill-modifiers")) {
 				for (const auto& skill_modifier : skill_modifiers.get()) {
-					// Get development type to set the skill as and then add the skills to the appropriate container
+					// The tag hold multiple types of modifiers so ignore any we are not interested in
+					if( skill_modifier.second.get <int> ("num-choices") != -1) continue;
 					std::string skill_type_id = skill_modifier.second.get<std::string>("skill-type");
 					if (SkillDevelopmentType::fromString(skill_type_id)) {
 						for (const auto& skill_tree : skill_modifier.second.get_child("skills")) {
