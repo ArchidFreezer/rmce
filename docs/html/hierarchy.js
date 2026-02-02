@@ -11,6 +11,7 @@ var hierarchy =
         [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", null ],
         [ "LanguageCategoryDatafileParserJson", "class_language_category_datafile_parser_json.html", null ],
         [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", null ],
+        [ "ProfessionDatafileParserJson", "class_profession_datafile_parser_json.html", null ],
         [ "RaceDatafileParserJson", "class_race_datafile_parser_json.html", null ],
         [ "SkillCategoryDatafileParserJson", "class_skill_category_datafile_parser_json.html", null ],
         [ "SkillDatafileParserJson", "class_skill_datafile_parser_json.html", null ],
@@ -22,6 +23,7 @@ var hierarchy =
       [ "DatafileParserXml", "class_datafile_parser_xml.html", [
         [ "ArmourTypeDatafileParserXml", "class_armour_type_datafile_parser_xml.html", null ],
         [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", null ],
+        [ "ProfessionDatafileParserXml", "class_profession_datafile_parser_xml.html", null ],
         [ "RaceDatafileParserXml", "class_race_datafile_parser_xml.html", null ],
         [ "SkillCategoryDatafileParserXml", "class_skill_category_datafile_parser_xml.html", null ],
         [ "SkillDatafileParserXml", "class_skill_datafile_parser_xml.html", null ],

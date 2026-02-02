@@ -2210,6 +2210,16 @@
             ]
         },
         {
+            "id": "SPELLLIST_MIND_OVER_MATTER",
+            "name": "Mind Over Matter",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false",
+            "realms": [
+                "Essence"
+            ]
+        },
+        {
             "id": "SPELLLIST_MIND_SENSE_MOLDING",
             "name": "Mind Sense Molding",
             "type": "Base",
@@ -3724,6 +3734,26 @@
             "summoning": "false",
             "realms": [
                 "Channeling"
+            ]
+        },
+        {
+            "id": "SPELLLIST_VISION_BORROWING",
+            "name": "Vision Borrowing",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false",
+            "realms": [
+                "Mentalism"
+            ]
+        },
+        {
+            "id": "SPELLLIST_VISION_GUARD",
+            "name": "Vision Guard",
+            "type": "Base",
+            "evil": "false",
+            "summoning": "false",
+            "realms": [
+                "Mentalism"
             ]
         },
         {

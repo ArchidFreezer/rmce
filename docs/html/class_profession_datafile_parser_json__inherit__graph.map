@@ -1,0 +1,7 @@
+<map id="ProfessionDatafileParserJson" name="ProfessionDatafileParserJson">
+<area shape="rect" id="Node000001" title="Process ProfessionData objects for json files." alt="" coords="5,155,200,181"/>
+<area shape="rect" id="Node000002" href="$class_datafile_parser_json.html" title="Abstract class to parse json files containing game rule data." alt="" coords="36,80,169,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,121,105,155,100,153,101,124"/>
+<area shape="rect" id="Node000003" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="50,5,155,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,45,105,80,100,79,101,50"/>
+</map>
