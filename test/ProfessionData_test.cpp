@@ -150,7 +150,7 @@ namespace {
 		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s2), SkillDevelopmentType::kOccupational);
 	}
 
-	TEST(ProfessionData, EverymanSkillChoices) {
+	TEST(ProfessionData, SkillDevelopmentTypeChoices) {
 		ProfessionData prof("PROF_ID");
 
 		// Putting the choice in a block means that we are testing an object has gone out of scope
@@ -165,13 +165,14 @@ namespace {
 			choice1.addOption(s2);
 			choice1.addOption(s3);
 
-			prof.addEverymanSkillChoice(choice1);
+			prof.addSkillDevelopmentTypeChoice(choice1, SkillDevelopmentType::kEveryman);
 		}
 
 		// choice1 is out of scope here
-		for (auto& choice : prof.everymanSkillChoices()) {
-			EXPECT_EQ(choice.numChoices(), 1);
-			EXPECT_EQ(choice.numOptions(), 3);
+		for (auto& choice : prof.skillDevelopmentTypeChoices()) {
+			EXPECT_EQ(choice.first.numChoices(), 1);
+			EXPECT_EQ(choice.first.numOptions(), 3);
+			EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
 		}
 
 		GameRuleDataChoice<SkillData> choice2{};
@@ -181,17 +182,20 @@ namespace {
 		SkillData s2a("SKILL2a_ID");
 		choice2.addOption(s1a);
 		choice2.addOption(s2a);
-		prof.addEverymanSkillChoice(choice2);
+		prof.addSkillDevelopmentTypeChoice(choice2, SkillDevelopmentType::kOccupational);
 
-		EXPECT_EQ(prof.everymanSkillChoices().size(), 2);
+		EXPECT_EQ(prof.numSkillDevelopmentTypeChoices(), 2);
+		EXPECT_EQ(prof.skillDevelopmentTypeChoices().size(), 2);
 
 		int count{ 0 };
-		for (auto& choice : prof.everymanSkillChoices()) {
+		for (auto& choice : prof.skillDevelopmentTypeChoices()) {
 			count++;
-			if (choice.numChoices() == 1) {
-				EXPECT_EQ(choice.numOptions(), 3);
-			} else if (choice.numChoices() == 2) {
-				EXPECT_EQ(choice.numOptions(), 2);
+			if (choice.first.numChoices() == 1) {
+				EXPECT_EQ(choice.first.numOptions(), 3);
+				EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
+			} else if (choice.first.numChoices() == 2) {
+				EXPECT_EQ(choice.first.numOptions(), 2);
+				EXPECT_EQ(choice.second, SkillDevelopmentType::kOccupational);
 			} else {
 				FAIL();
 			}
@@ -199,7 +203,7 @@ namespace {
 		EXPECT_EQ(count, 2);
 	}
 
-	TEST(ProfessionData, EverymanSkillCategoryChoices) {
+	TEST(ProfessionData, SkillCategoryDevelopmentTypeChoices) {
 		ProfessionData prof("PROF_ID");
 
 		// Putting the choice in a block means that we are testing an object has gone out of scope
@@ -214,13 +218,14 @@ namespace {
 			choice1.addOption(s2);
 			choice1.addOption(s3);
 
-			prof.addCategoryEverymanSkillChoice(choice1);
+			prof.addSkillCategorySkillDevelopmentTypeChoice(choice1, SkillDevelopmentType::kEveryman);
 		}
 
 		// choice1 is out of scope here
-		for (auto& choice : prof.categoryEverymanSkillChoices()) {
-			EXPECT_EQ(choice.numChoices(), 1);
-			EXPECT_EQ(choice.numOptions(), 3);
+		for (auto& choice : prof.skillCategorySkillDevelopmentTypeChoices()) {
+			EXPECT_EQ(choice.first.numChoices(), 1);
+			EXPECT_EQ(choice.first.numOptions(), 3);
+			EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
 		}
 
 		GameRuleDataChoice<SkillCategoryData> choice2{};
@@ -230,17 +235,73 @@ namespace {
 		SkillCategoryData s2a("SKILL2a_ID");
 		choice2.addOption(s1a);
 		choice2.addOption(s2a);
-		prof.addCategoryEverymanSkillChoice(choice2);
+		prof.addSkillCategorySkillDevelopmentTypeChoice(choice2, SkillDevelopmentType::kOccupational);
 
-		EXPECT_EQ(prof.categoryEverymanSkillChoices().size(), 2);
+		EXPECT_EQ(prof.numSkillCategorySkillDevelopmentTypeChoices(), 2);
+		EXPECT_EQ(prof.skillCategorySkillDevelopmentTypeChoices().size(), 2);
 
 		int count{ 0 };
-		for (auto& choice : prof.categoryEverymanSkillChoices()) {
+		for (auto& choice : prof.skillCategorySkillDevelopmentTypeChoices()) {
 			count++;
-			if (choice.numChoices() == 1) {
-				EXPECT_EQ(choice.numOptions(), 3);
-			} else if (choice.numChoices() == 2) {
-				EXPECT_EQ(choice.numOptions(), 2);
+			if (choice.first.numChoices() == 1) {
+				EXPECT_EQ(choice.first.numOptions(), 3);
+				EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
+			} else if (choice.first.numChoices() == 2) {
+				EXPECT_EQ(choice.first.numOptions(), 2);
+				EXPECT_EQ(choice.second, SkillDevelopmentType::kOccupational);
+			} else {
+				FAIL();
+			}
+		}
+		EXPECT_EQ(count, 2);
+	}
+
+	TEST(ProfessionData, SkillGroupDevelopmentTypeChoices) {
+		ProfessionData prof("PROF_ID");
+
+		// Putting the choice in a block means that we are testing an object has gone out of scope
+		{
+			GameRuleDataChoice<SkillGroupData> choice1{};
+			choice1.setNumChoices(1);
+
+			SkillGroupData s1("SKILL1_ID");
+			SkillGroupData s2("SKILL2_ID");
+			SkillGroupData s3("SKILL3_ID");
+			choice1.addOption(s1);
+			choice1.addOption(s2);
+			choice1.addOption(s3);
+
+			prof.addSkillGroupSkillDevelopmentTypeChoice(choice1, SkillDevelopmentType::kEveryman);
+		}
+
+		// choice1 is out of scope here
+		for (auto& choice : prof.skillGroupSkillDevelopmentTypeChoices()) {
+			EXPECT_EQ(choice.first.numChoices(), 1);
+			EXPECT_EQ(choice.first.numOptions(), 3);
+			EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
+		}
+
+		GameRuleDataChoice<SkillGroupData> choice2{};
+		choice2.setNumChoices(2);
+
+		SkillGroupData s1a("SKILL1a_ID");
+		SkillGroupData s2a("SKILL2a_ID");
+		choice2.addOption(s1a);
+		choice2.addOption(s2a);
+		prof.addSkillGroupSkillDevelopmentTypeChoice(choice2, SkillDevelopmentType::kOccupational);
+
+		EXPECT_EQ(prof.numSkillGroupSkillDevelopmentTypeChoices(), 2);
+		EXPECT_EQ(prof.skillGroupSkillDevelopmentTypeChoices().size(), 2);
+
+		int count{ 0 };
+		for (auto& choice : prof.skillGroupSkillDevelopmentTypeChoices()) {
+			count++;
+			if (choice.first.numChoices() == 1) {
+				EXPECT_EQ(choice.first.numOptions(), 3);
+				EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
+			} else if (choice.first.numChoices() == 2) {
+				EXPECT_EQ(choice.first.numOptions(), 2);
+				EXPECT_EQ(choice.second, SkillDevelopmentType::kOccupational);
 			} else {
 				FAIL();
 			}

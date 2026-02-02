@@ -224,53 +224,76 @@ public:
 	/**
 	 * @brief Add a choice that defines the skill that a character may select one or more from to become everyman
 	 * @param choice GameRuleDataChoice choice definition
-	 * @see SkillDevelopmentType
+	 * @param type SkillDevelopmentType::Type type choices will have
 	 */
-	void addEverymanSkillChoice(GameRuleDataChoice<SkillData> choice) { everyman_skill_choices_.push_back(std::move(choice)); }
+	void addSkillDevelopmentTypeChoice(GameRuleDataChoice<SkillData> choice, SkillDevelopmentType::Type type) { skill_development_type_choices_.emplace(std::move(choice), type); }
 
 	/**
 	 * @brief Get the number of choices a character has to make regarding everyman skills
 	 *
-	 * During character development it is sometimes necessary to choose one or more skills to have
-	 * everyman development. This returns how many choices need to be made. This is not the number of options to be selected
+	 * During character development the player may have the option change the development type of one of more skills.
+	 * This returns how many choices need to be made. This is not the number of options to be selected
 	 * in a single choice.
 	 * @return Number of choices to be make
 	 * @see SkillDevelopmentType
 	 */
-	int numEverymanSkillChoices() const { return everyman_skill_choices_.size(); }
+	int numSkillDevelopmentTypeChoices() const { return skill_development_type_choices_.size(); }
 
 	/**
-	 * @brief Get a container with the choices the character needs to make to select one or more skills that may be made everyman
-	 * @return vector of GameRuleDataChoice objects with the choices to be made
-	 * @see SkillDevelopmentType
+	 * @brief Get a container with the choices the character needs to make to select one or more skills that may have their development type changed
+	 * @return map of GameRuleDataChoice objects with the choices to be made
 	 */
-	const std::vector<GameRuleDataChoice<SkillData>>& everymanSkillChoices() const { return everyman_skill_choices_; }
+	const std::map<GameRuleDataChoice<SkillData>, SkillDevelopmentType::Type>& skillDevelopmentTypeChoices() const { return skill_development_type_choices_; }
 
 	/**
-	 * @brief Add a choice that defines the skill categories that a character may select one or more skills from to become everyman
+	 * @brief Add a choice that defines the skill categories that a character may select one or more skills from to change their development type
 	 * @param choice GameRuleDataChoice choice definition
-	 * @see SkillDevelopmentType
+	 * @param type SkillDevelopmentType::Type type choices will have
 	 */
-	void addCategoryEverymanSkillChoice(GameRuleDataChoice<SkillCategoryData> choice) { category_everyman_skill_choices_.push_back(std::move(choice)); }
+	void addSkillCategorySkillDevelopmentTypeChoice(GameRuleDataChoice<SkillCategoryData> choice, SkillDevelopmentType::Type type) { skill_category_skill_development_type_choices_.emplace(std::move(choice), type); }
 
 	/**
-	 * @brief Get the number of choices a character has to make regarding everyman skills in skill cetegories
+	 * @brief Get the number of choices a character has to make regarding development types skills in skill categories
 	 *
-	 * During character development it is sometimes necessary to choose one or more skills from a skill category to have
-	 * everyman development. This returns how many choices need to be made. This is not the number of options to be selected
-	 * in a single choice.
+	 * During character development the player may have the option change the development type of one of more skills.
+	 * This returns how many choices need to be made from skill categories. This is not the number of options to be selected
 	 * @return Number of choices to be make
 	 * @see SkillDevelopmentType
 	 */
-	int numCategoryEverymanSkillChoices() const { return category_everyman_skill_choices_.size(); }
+	int numSkillCategorySkillDevelopmentTypeChoices() const { return skill_category_skill_development_type_choices_.size(); }
 
 	/**
 	 * @brief Get a container with the choices the character needs to make to select one or more skills within a skill
-	 * category that may be made everyme skills
+	 * category that may have their development type changed
 	 * @return vector of GameRuleDataChoice objects with the choices to be made
 	 * @see SkillDevelopmentType
 	 */
-	const std::vector<GameRuleDataChoice<SkillCategoryData>>& categoryEverymanSkillChoices() const { return category_everyman_skill_choices_; }
+	const std::map<GameRuleDataChoice<SkillCategoryData>, SkillDevelopmentType::Type>& skillCategorySkillDevelopmentTypeChoices() const { return skill_category_skill_development_type_choices_; }
+
+	/**
+	 * @brief Add a choice that defines the skill groups that a character may select one or more skills from to change their development type
+	 * @param choice GameRuleDataChoice choice definition
+	 * @param type SkillDevelopmentType::Type type choices will have
+	 */
+	void addSkillGroupSkillDevelopmentTypeChoice(GameRuleDataChoice<SkillGroupData> choice, SkillDevelopmentType::Type type) { skill_group_skill_development_type_choices_.emplace(std::move(choice), type); }
+
+	/**
+	 * @brief Get the number of choices a character has to make regarding development types skills in skill groups
+	 *
+	 * During character development the player may have the option change the development type of one of more skills.
+	 * This returns how many choices need to be made from skill groups. This is not the number of options to be selected
+	 * @return Number of choices to be make
+	 * @see SkillDevelopmentType
+	 */
+	int numSkillGroupSkillDevelopmentTypeChoices() const { return skill_group_skill_development_type_choices_.size(); }
+
+	/**
+	 * @brief Get a container with the choices the character needs to make to select one or more skills within a skill
+	 * group that may have their development type changed
+	 * @return vector of GameRuleDataChoice objects with the choices to be made
+	 * @see SkillDevelopmentType
+	 */
+	const std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type>& skillGroupSkillDevelopmentTypeChoices() const { return skill_group_skill_development_type_choices_; }
 
 	/**
 	 * @brief Add a bonus to all skills in a group
@@ -578,8 +601,9 @@ private:
 	std::map<std::string, SkillDevelopmentType::Type> skill_group_skill_development_types_{}; /** Skill groups that all skills within have their development type changed */
 
 	// Skill development type choices
-	std::vector<GameRuleDataChoice<SkillData>> everyman_skill_choices_{}; /** Set of skills that the character may select one or more from to become everyman */
-	std::vector<GameRuleDataChoice<SkillCategoryData>> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skills from to become everyman */
+	std::map<GameRuleDataChoice<SkillData>, SkillDevelopmentType::Type> skill_development_type_choices_{}; /** Set of skills that the character may select one or more from to change their development type */
+	std::map<GameRuleDataChoice<SkillCategoryData>, SkillDevelopmentType::Type> skill_category_skill_development_type_choices_{}; /** Set of skill categories the character may select one or more skills from to change their development type */
+	std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type> skill_group_skill_development_type_choices_{}; /** Set of skill groups the character may select one or more skills from to change their development type */
 
 	std::map<const SkillCategoryData*, SkillDevelopmentCost> skill_category_development_costs_{}; /** Cost to purchase ranks for a skill category */
 };
