@@ -66,6 +66,17 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	}
 	if (base_spell_list_choices_tree.size()) datum.push_back(std::make_pair("base-spell-list-choices", base_spell_list_choices_tree));
 
+	// Skill bonuses
+	pt::ptree skill_bonuses_tree{};
+	for (auto& skill : game_data.skillsWithBonus()) {
+		pt::ptree skill_bonus_tree{};
+		skill_bonus_tree.put("skill", skill.skillData().id());
+		if (skill.subcategory()) skill_bonus_tree.put("subcategory", skill.subcategory().value());
+		skill_bonus_tree.put("bonus", game_data.skillBonus(skill));
+		skill_bonuses_tree.push_back(std::make_pair("", skill_bonus_tree));
+	}
+	if (skill_bonuses_tree.size()) datum.push_back(std::make_pair("skill-bonus", skill_bonuses_tree));
+
 	// Skill development types
 	pt::ptree skill_development_types_tree{};
 	for (auto& skill : game_data.skillsWithSkillDevelopmentType()) {

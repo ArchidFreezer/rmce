@@ -40,6 +40,21 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				ref.addStat(StatType::fromString(stat_name).value());
 			}
 
+			// Skill Bonuses
+			if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-bonuses")) {
+				for (const auto& skill_bonus : skill_bonuses.get()) {
+					// Get development type to set the skill as and then add the skills to the appropriate container
+					int bonus = skill_bonus.second.get_value<int>();
+					std::string skill_id = GameRuleData::generateId("Skill", skill_bonus.second.get<std::string>("<xmlattr>.skill"));
+					boost::optional<std::string> subcategory = skill_bonus.second.get_optional<std::string>("<xmlattr>.subcategory");
+					if (subcategory) {
+						ref.setSkillBonus(SubcategoriedSkillData(cache().get<SkillData>(skill_id), subcategory.value()), bonus);
+					} else {
+						ref.setSkillBonus(SubcategoriedSkillData(cache().get<SkillData>(skill_id)), bonus);
+					}
+				}
+			}
+
 
 			// Get base spell lists if any exist
 			if (boost::optional<const pt::ptree&> base_spell_lists = v.second.get_child_optional("base-spell-lists")) {
