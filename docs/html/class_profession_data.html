@@ -169,18 +169,24 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:aaa4d933494e14b8131611af8e0ade94d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding base spell lists.  <br /></td></tr>
 <tr class="memitem:aa6e1488fe4562544f2868dcae5404d3c" id="r_aa6e1488fe4562544f2868dcae5404d3c"><td class="memItemLeft">const std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_spell_list_data.html">SpellListData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa6e1488fe4562544f2868dcae5404d3c">baseSpellListChoices</a> () const</td></tr>
 <tr class="memdesc:aa6e1488fe4562544f2868dcae5404d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more base spell lists.  <br /></td></tr>
-<tr class="memitem:a0ba1bd92a786ac0c34263d7eec7b3329" id="r_a0ba1bd92a786ac0c34263d7eec7b3329"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0ba1bd92a786ac0c34263d7eec7b3329">addEverymanSkillChoice</a> (<a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt; choice)</td></tr>
-<tr class="memdesc:a0ba1bd92a786ac0c34263d7eec7b3329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill that a character may select one or more from to become everyman.  <br /></td></tr>
-<tr class="memitem:a82ecf9f1e813bac0d2fb2c85adebb702" id="r_a82ecf9f1e813bac0d2fb2c85adebb702"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a82ecf9f1e813bac0d2fb2c85adebb702">numEverymanSkillChoices</a> () const</td></tr>
-<tr class="memdesc:a82ecf9f1e813bac0d2fb2c85adebb702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding everyman skills.  <br /></td></tr>
-<tr class="memitem:a7e560f115530c28e12aa949ddc0ef3a6" id="r_a7e560f115530c28e12aa949ddc0ef3a6"><td class="memItemLeft">const std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7e560f115530c28e12aa949ddc0ef3a6">everymanSkillChoices</a> () const</td></tr>
-<tr class="memdesc:a7e560f115530c28e12aa949ddc0ef3a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills that may be made everyman.  <br /></td></tr>
-<tr class="memitem:a44da9ceca34acdec2a954da99320c3e5" id="r_a44da9ceca34acdec2a954da99320c3e5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44da9ceca34acdec2a954da99320c3e5">addCategoryEverymanSkillChoice</a> (<a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; choice)</td></tr>
-<tr class="memdesc:a44da9ceca34acdec2a954da99320c3e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill categories that a character may select one or more skills from to become everyman.  <br /></td></tr>
-<tr class="memitem:a649d086f5d64c9ad19f23fb1d86c9d09" id="r_a649d086f5d64c9ad19f23fb1d86c9d09"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a649d086f5d64c9ad19f23fb1d86c9d09">numCategoryEverymanSkillChoices</a> () const</td></tr>
-<tr class="memdesc:a649d086f5d64c9ad19f23fb1d86c9d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding everyman skills in skill cetegories.  <br /></td></tr>
-<tr class="memitem:a6a0421d971bf32e6db1e57882b72b4b8" id="r_a6a0421d971bf32e6db1e57882b72b4b8"><td class="memItemLeft">const std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6a0421d971bf32e6db1e57882b72b4b8">categoryEverymanSkillChoices</a> () const</td></tr>
-<tr class="memdesc:a6a0421d971bf32e6db1e57882b72b4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills within a skill category that may be made everyme skills.  <br /></td></tr>
+<tr class="memitem:adf46fe3059e0a0e27f552a4cb0c4dc9e" id="r_adf46fe3059e0a0e27f552a4cb0c4dc9e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf46fe3059e0a0e27f552a4cb0c4dc9e">addSkillDevelopmentTypeChoice</a> (<a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt; choice, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> type)</td></tr>
+<tr class="memdesc:adf46fe3059e0a0e27f552a4cb0c4dc9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill that a character may select one or more from to become everyman.  <br /></td></tr>
+<tr class="memitem:ab57b394b3c486821e605229a7a391109" id="r_ab57b394b3c486821e605229a7a391109"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab57b394b3c486821e605229a7a391109">numSkillDevelopmentTypeChoices</a> () const</td></tr>
+<tr class="memdesc:ab57b394b3c486821e605229a7a391109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding everyman skills.  <br /></td></tr>
+<tr class="memitem:addc1eab5a95e70309dee1530453f54d1" id="r_addc1eab5a95e70309dee1530453f54d1"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#addc1eab5a95e70309dee1530453f54d1">skillDevelopmentTypeChoices</a> () const</td></tr>
+<tr class="memdesc:addc1eab5a95e70309dee1530453f54d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills that may have their development type changed.  <br /></td></tr>
+<tr class="memitem:afa2214fde305496bb889335ad0492d69" id="r_afa2214fde305496bb889335ad0492d69"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afa2214fde305496bb889335ad0492d69">addSkillCategorySkillDevelopmentTypeChoice</a> (<a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; choice, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> type)</td></tr>
+<tr class="memdesc:afa2214fde305496bb889335ad0492d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill categories that a character may select one or more skills from to change their development type.  <br /></td></tr>
+<tr class="memitem:a35cc63af292333afb632e6b199af7e9e" id="r_a35cc63af292333afb632e6b199af7e9e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a35cc63af292333afb632e6b199af7e9e">numSkillCategorySkillDevelopmentTypeChoices</a> () const</td></tr>
+<tr class="memdesc:a35cc63af292333afb632e6b199af7e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding development types skills in skill categories.  <br /></td></tr>
+<tr class="memitem:a1c338b53d32da0336f671f2396d30766" id="r_a1c338b53d32da0336f671f2396d30766"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1c338b53d32da0336f671f2396d30766">skillCategorySkillDevelopmentTypeChoices</a> () const</td></tr>
+<tr class="memdesc:a1c338b53d32da0336f671f2396d30766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills within a skill category that may have their development type changed.  <br /></td></tr>
+<tr class="memitem:a756926a0917e7b834e676850b58a04cc" id="r_a756926a0917e7b834e676850b58a04cc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a756926a0917e7b834e676850b58a04cc">addSkillGroupSkillDevelopmentTypeChoice</a> (<a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &gt; choice, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> type)</td></tr>
+<tr class="memdesc:a756926a0917e7b834e676850b58a04cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill groups that a character may select one or more skills from to change their development type.  <br /></td></tr>
+<tr class="memitem:a0f4b89f60a91cda92058e87aafc46926" id="r_a0f4b89f60a91cda92058e87aafc46926"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0f4b89f60a91cda92058e87aafc46926">numSkillGroupSkillDevelopmentTypeChoices</a> () const</td></tr>
+<tr class="memdesc:a0f4b89f60a91cda92058e87aafc46926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding development types skills in skill groups.  <br /></td></tr>
+<tr class="memitem:a988f5d0eee42263e720c21244eef539c" id="r_a988f5d0eee42263e720c21244eef539c"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a988f5d0eee42263e720c21244eef539c">skillGroupSkillDevelopmentTypeChoices</a> () const</td></tr>
+<tr class="memdesc:a988f5d0eee42263e720c21244eef539c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills within a skill group that may have their development type changed.  <br /></td></tr>
 <tr class="memitem:aa7d04f6a4c22201ae3dff4e27886dea2" id="r_aa7d04f6a4c22201ae3dff4e27886dea2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa7d04f6a4c22201ae3dff4e27886dea2">addSkillGroupBonus</a> (std::string_view group, int bonus)</td></tr>
 <tr class="memdesc:aa7d04f6a4c22201ae3dff4e27886dea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a bonus to all skills in a group.  <br /></td></tr>
 <tr class="memitem:ae2b34230fbc1d571d0fee4edfb270b52" id="r_ae2b34230fbc1d571d0fee4edfb270b52"><td class="memItemLeft">const std::set&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae2b34230fbc1d571d0fee4edfb270b52">skillGroupsWithBonus</a> () const</td></tr>
@@ -365,74 +371,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a44da9ceca34acdec2a954da99320c3e5" name="a44da9ceca34acdec2a954da99320c3e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44da9ceca34acdec2a954da99320c3e5">&#9670;&#160;</a></span>addCategoryEverymanSkillChoice()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ProfessionData::addCategoryEverymanSkillChoice </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>choice</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add a choice that defines the skill categories that a character may select one or more skills from to become everyman. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">choice</td><td><a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> choice definition </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
-
-</div>
-</div>
-<a id="a0ba1bd92a786ac0c34263d7eec7b3329" name="a0ba1bd92a786ac0c34263d7eec7b3329"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ba1bd92a786ac0c34263d7eec7b3329">&#9670;&#160;</a></span>addEverymanSkillChoice()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ProfessionData::addEverymanSkillChoice </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>choice</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add a choice that defines the skill that a character may select one or more from to become everyman. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">choice</td><td><a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> choice definition </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
-
-</div>
-</div>
 <a id="a52ca563a1135dc2f668edce4f863460d" name="a52ca563a1135dc2f668edce4f863460d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a52ca563a1135dc2f668edce4f863460d">&#9670;&#160;</a></span>addRealm()</h2>
 
@@ -542,6 +480,82 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="afa2214fde305496bb889335ad0492d69" name="afa2214fde305496bb889335ad0492d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa2214fde305496bb889335ad0492d69">&#9670;&#160;</a></span>addSkillCategorySkillDevelopmentTypeChoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::addSkillCategorySkillDevelopmentTypeChoice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>choice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a choice that defines the skill categories that a character may select one or more skills from to change their development type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">choice</td><td><a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> choice definition </td></tr>
+    <tr><td class="paramname">type</td><td><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType::Type</a> type choices will have </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adf46fe3059e0a0e27f552a4cb0c4dc9e" name="adf46fe3059e0a0e27f552a4cb0c4dc9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf46fe3059e0a0e27f552a4cb0c4dc9e">&#9670;&#160;</a></span>addSkillDevelopmentTypeChoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::addSkillDevelopmentTypeChoice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>choice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a choice that defines the skill that a character may select one or more from to become everyman. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">choice</td><td><a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> choice definition </td></tr>
+    <tr><td class="paramname">type</td><td><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType::Type</a> type choices will have </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa7d04f6a4c22201ae3dff4e27886dea2" name="aa7d04f6a4c22201ae3dff4e27886dea2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7d04f6a4c22201ae3dff4e27886dea2">&#9670;&#160;</a></span>addSkillGroupBonus()</h2>
 
@@ -612,6 +626,44 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">group</td><td>Name of the group </td></tr>
     <tr><td class="paramname">type</td><td><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType::Type</a> to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a756926a0917e7b834e676850b58a04cc" name="a756926a0917e7b834e676850b58a04cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a756926a0917e7b834e676850b58a04cc">&#9670;&#160;</a></span>addSkillGroupSkillDevelopmentTypeChoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::addSkillGroupSkillDevelopmentTypeChoice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>choice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a choice that defines the skill groups that a character may select one or more skills from to change their development type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">choice</td><td><a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> choice definition </td></tr>
+    <tr><td class="paramname">type</td><td><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType::Type</a> type choices will have </td></tr>
   </table>
   </dd>
 </dl>
@@ -709,7 +761,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">  <span class="comment">// Use the book</span></div>
 <div class="line">}</div>
 <div class="ttc" id="aclass_book_data_html"><div class="ttname"><a href="class_book_data.html">BookData</a></div><div class="ttdoc">Class representing a Rolemaster rule book used in the campaign world.</div><div class="ttdef"><b>Definition</b> BookData.h:17</div></div>
-<div class="ttc" id="aclass_profession_data_html_a2cac7fdd94cefa70fe7061806f434c7c"><div class="ttname"><a href="#a2cac7fdd94cefa70fe7061806f434c7c">ProfessionData::book</a></div><div class="ttdeci">const std::optional&lt; const BookData * &gt; book() const</div><div class="ttdoc">Get the book that the profession is defined in.</div><div class="ttdef"><b>Definition</b> ProfessionData.h:132</div></div>
+<div class="ttc" id="aclass_profession_data_html_a2cac7fdd94cefa70fe7061806f434c7c"><div class="ttname"><a href="#a2cac7fdd94cefa70fe7061806f434c7c">ProfessionData::book</a></div><div class="ttdeci">const std::optional&lt; const BookData * &gt; book() const</div><div class="ttdoc">Get the book that the profession is defined in.</div><div class="ttdef"><b>Definition</b> ProfessionData.h:133</div></div>
 </div><!-- fragment --><p> or </p><div class="fragment"><div class="line">std::cout &lt;&lt; (profession.book() ? profession.book().value()-&gt;name() : <span class="stringliteral">&quot;Book not set&quot;</span>) &lt;&lt; std::endl;</div>
 </div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>Pointer to the <a class="el" href="class_book_data.html" title="Class representing a Rolemaster rule book used in the campaign world.">BookData</a> containing the profession definition </dd></dl>
 
@@ -755,35 +807,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a6a0421d971bf32e6db1e57882b72b4b8" name="a6a0421d971bf32e6db1e57882b72b4b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a0421d971bf32e6db1e57882b72b4b8">&#9670;&#160;</a></span>categoryEverymanSkillChoices()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &amp; ProfessionData::categoryEverymanSkillChoices </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a container with the choices the character needs to make to select one or more skills within a skill category that may be made everyme skills. </p>
-<dl class="section return"><dt>Returns</dt><dd>vector of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
-
-</div>
-</div>
 <a id="a24796f500e7aeede53c8bf7ddf0e16ec" name="a24796f500e7aeede53c8bf7ddf0e16ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24796f500e7aeede53c8bf7ddf0e16ec">&#9670;&#160;</a></span>description()</h2>
 
@@ -809,35 +832,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the description of what the defines profession. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string reference of the description </dd></dl>
-
-</div>
-</div>
-<a id="a7e560f115530c28e12aa949ddc0ef3a6" name="a7e560f115530c28e12aa949ddc0ef3a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e560f115530c28e12aa949ddc0ef3a6">&#9670;&#160;</a></span>everymanSkillChoices()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt; &gt; &amp; ProfessionData::everymanSkillChoices </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a container with the choices the character needs to make to select one or more skills that may be made everyman. </p>
-<dl class="section return"><dt>Returns</dt><dd>vector of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
 
 </div>
 </div>
@@ -1187,8 +1181,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a649d086f5d64c9ad19f23fb1d86c9d09" name="a649d086f5d64c9ad19f23fb1d86c9d09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a649d086f5d64c9ad19f23fb1d86c9d09">&#9670;&#160;</a></span>numCategoryEverymanSkillChoices()</h2>
+<a id="a35cc63af292333afb632e6b199af7e9e" name="a35cc63af292333afb632e6b199af7e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35cc63af292333afb632e6b199af7e9e">&#9670;&#160;</a></span>numSkillCategorySkillDevelopmentTypeChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1197,7 +1191,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ProfessionData::numCategoryEverymanSkillChoices </td>
+          <td class="memname">int ProfessionData::numSkillCategorySkillDevelopmentTypeChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1210,14 +1204,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the number of choices a character has to make regarding everyman skills in skill cetegories. </p>
-<p>During character development it is sometimes necessary to choose one or more skills from a skill category to have everyman development. This returns how many choices need to be made. This is not the number of options to be selected in a single choice. </p><dl class="section return"><dt>Returns</dt><dd>Number of choices to be make </dd></dl>
+<p>Get the number of choices a character has to make regarding development types skills in skill categories. </p>
+<p>During character development the player may have the option change the development type of one of more skills. This returns how many choices need to be made from skill categories. This is not the number of options to be selected </p><dl class="section return"><dt>Returns</dt><dd>Number of choices to be make </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
 
 </div>
 </div>
-<a id="a82ecf9f1e813bac0d2fb2c85adebb702" name="a82ecf9f1e813bac0d2fb2c85adebb702"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82ecf9f1e813bac0d2fb2c85adebb702">&#9670;&#160;</a></span>numEverymanSkillChoices()</h2>
+<a id="ab57b394b3c486821e605229a7a391109" name="ab57b394b3c486821e605229a7a391109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57b394b3c486821e605229a7a391109">&#9670;&#160;</a></span>numSkillDevelopmentTypeChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1226,7 +1220,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ProfessionData::numEverymanSkillChoices </td>
+          <td class="memname">int ProfessionData::numSkillDevelopmentTypeChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1240,7 +1234,36 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the number of choices a character has to make regarding everyman skills. </p>
-<p>During character development it is sometimes necessary to choose one or more skills to have everyman development. This returns how many choices need to be made. This is not the number of options to be selected in a single choice. </p><dl class="section return"><dt>Returns</dt><dd>Number of choices to be make </dd></dl>
+<p>During character development the player may have the option change the development type of one of more skills. This returns how many choices need to be made. This is not the number of options to be selected in a single choice. </p><dl class="section return"><dt>Returns</dt><dd>Number of choices to be make </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
+
+</div>
+</div>
+<a id="a0f4b89f60a91cda92058e87aafc46926" name="a0f4b89f60a91cda92058e87aafc46926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f4b89f60a91cda92058e87aafc46926">&#9670;&#160;</a></span>numSkillGroupSkillDevelopmentTypeChoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProfessionData::numSkillGroupSkillDevelopmentTypeChoices </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of choices a character has to make regarding development types skills in skill groups. </p>
+<p>During character development the player may have the option change the development type of one of more skills. This returns how many choices need to be made from skill groups. This is not the number of options to be selected </p><dl class="section return"><dt>Returns</dt><dd>Number of choices to be make </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
 
 </div>
@@ -1674,6 +1697,35 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a1c338b53d32da0336f671f2396d30766" name="a1c338b53d32da0336f671f2396d30766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c338b53d32da0336f671f2396d30766">&#9670;&#160;</a></span>skillCategorySkillDevelopmentTypeChoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp; ProfessionData::skillCategorySkillDevelopmentTypeChoices </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with the choices the character needs to make to select one or more skills within a skill category that may have their development type changed. </p>
+<dl class="section return"><dt>Returns</dt><dd>vector of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
+
+</div>
+</div>
 <a id="a1fced89c45563ec2775dd2c84bde14fe" name="a1fced89c45563ec2775dd2c84bde14fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1fced89c45563ec2775dd2c84bde14fe">&#9670;&#160;</a></span>skillDevelopmentType() <span class="overload">[1/2]</span></h2>
 
@@ -1747,6 +1799,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="addc1eab5a95e70309dee1530453f54d1" name="addc1eab5a95e70309dee1530453f54d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc1eab5a95e70309dee1530453f54d1">&#9670;&#160;</a></span>skillDevelopmentTypeChoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp; ProfessionData::skillDevelopmentTypeChoices </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with the choices the character needs to make to select one or more skills that may have their development type changed. </p>
+<dl class="section return"><dt>Returns</dt><dd>map of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
+
+</div>
+</div>
 <a id="a5e80544af6bb041741a9e5b8948a30a1" name="a5e80544af6bb041741a9e5b8948a30a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e80544af6bb041741a9e5b8948a30a1">&#9670;&#160;</a></span>skillGroupBonus()</h2>
 
@@ -1812,6 +1892,35 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType::Type</a> for skill in the group </dd></dl>
+
+</div>
+</div>
+<a id="a988f5d0eee42263e720c21244eef539c" name="a988f5d0eee42263e720c21244eef539c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a988f5d0eee42263e720c21244eef539c">&#9670;&#160;</a></span>skillGroupSkillDevelopmentTypeChoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp; ProfessionData::skillGroupSkillDevelopmentTypeChoices </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with the choices the character needs to make to select one or more skills within a skill group that may have their development type changed. </p>
+<dl class="section return"><dt>Returns</dt><dd>vector of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
 
 </div>
 </div>

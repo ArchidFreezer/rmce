@@ -232,9 +232,10 @@ var NAVTREEINDEX0 =
 "class_game_rule_data_choice.html#a026f3416f2deba94f33690040087835a":[2,0,22,0],
 "class_game_rule_data_choice.html#a5f2f6a26b520cf6906791dd243f9d8f0":[2,0,22,3],
 "class_game_rule_data_choice.html#a6e9f250671dfa7885a8546a6477d2079":[2,0,22,2],
-"class_game_rule_data_choice.html#a7b91ef65f61d712a45cd862e4f43fe61":[2,0,22,4],
+"class_game_rule_data_choice.html#a7b91ef65f61d712a45cd862e4f43fe61":[2,0,22,5],
 "class_game_rule_data_choice.html#aa3c8819169cd57186f3c3f2c08126462":[2,0,22,1],
-"class_game_rule_data_choice.html#ac859355f84a07599254d58bfb47b9621":[2,0,22,5],
+"class_game_rule_data_choice.html#ac2e195366fcb6b9c5ef75afc40830cb2":[2,0,22,4],
+"class_game_rule_data_choice.html#ac859355f84a07599254d58bfb47b9621":[2,0,22,6],
 "class_invalid_language_rank.html":[2,0,23],
 "class_invalid_language_rank.html#a3db99b52c0a5c0e92933c4e5eecd36a3":[2,0,23,0],
 "class_invalid_skill_bonus.html":[2,0,24],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "class_language_ability.html#a178ebcf6e4768832cc60b504a57d143a":[2,0,27,6],
 "class_language_ability.html#a2355dc23891e74ce35d4824768ed37ca":[2,0,27,11],
 "class_language_ability.html#a2dfd441ded79f59bf97ba02578d53bc1":[2,0,27,9],
-"class_language_ability.html#a386b19f727c44c3d7227ec545656e83a":[2,0,27,8],
-"class_language_ability.html#a3c4fcf194a162802318378936b97ca0a":[2,0,27,0]
+"class_language_ability.html#a386b19f727c44c3d7227ec545656e83a":[2,0,27,8]
 };

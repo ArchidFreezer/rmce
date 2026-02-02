@@ -111,6 +111,26 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				}
 			}
 
+			// Skill category skill development choices
+			if (boost::optional<const pt::ptree&> skill_category_development_type_choices = v.second.get_child_optional("skill-category-skill-modifier-choices")) {
+				for (const auto& skill_category_development_type_choice : skill_category_development_type_choices.get()) {
+					GameRuleDataChoice<SkillCategoryData> choice{};
+
+					// make sure we have a valid development type first
+					std::string skill_type_id = skill_category_development_type_choice.second.get<std::string>("skill-type");
+					if (SkillDevelopmentType::fromString(skill_type_id)) {
+						choice.setNumChoices(skill_category_development_type_choice.second.get<int>("num-choices"));
+						for (const auto& category_name_tree : skill_category_development_type_choice.second.get_child("categories")) {
+							std::string category_name = category_name_tree.second.get_value<std::string>();
+							std::string category_id = GameRuleData::generateId("SkillCategory", category_name);
+							choice.addOption(cache().get<SkillCategoryData>(category_id));
+						}
+						ref.addSkillCategorySkillDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
+					}
+				}
+			}
+
+
 			// Get skill group bonuses
 			if (boost::optional<const pt::ptree&> skill_group_bonuses = v.second.get_child_optional("skill-group-bonuses")) {
 				for (const auto& skill_group_bonus : skill_group_bonuses.get()) {

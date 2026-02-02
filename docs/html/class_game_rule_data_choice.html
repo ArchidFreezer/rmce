@@ -112,6 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7b91ef65f61d712a45cd862e4f43fe61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a container with the options that may be selected from.  <br /></td></tr>
 <tr class="memitem:aa3c8819169cd57186f3c3f2c08126462" id="r_aa3c8819169cd57186f3c3f2c08126462"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa3c8819169cd57186f3c3f2c08126462">isOption</a> (const T &amp;object) const</td></tr>
 <tr class="memdesc:aa3c8819169cd57186f3c3f2c08126462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> object is one of the options.  <br /></td></tr>
+<tr class="memitem:ac2e195366fcb6b9c5ef75afc40830cb2" id="r_ac2e195366fcb6b9c5ef75afc40830cb2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac2e195366fcb6b9c5ef75afc40830cb2">operator&lt;</a> (const <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a> &amp;other) const</td></tr>
+<tr class="memdesc:ac2e195366fcb6b9c5ef75afc40830cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override the less than operator.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt;<br />
@@ -255,6 +257,45 @@ template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleData
 
 <p>Get the number of options there are to be selected from. </p>
 <dl class="section return"><dt>Returns</dt><dd>int number of optopns </dd></dl>
+
+</div>
+</div>
+<a id="ac2e195366fcb6b9c5ef75afc40830cb2" name="ac2e195366fcb6b9c5ef75afc40830cb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2e195366fcb6b9c5ef75afc40830cb2">&#9670;&#160;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; T &gt;::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Override the less than operator. </p>
+<p>The creation of this overload allows all <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects to be used as keys in sorted containers</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> object to compare against </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if this object is consdiered to be &lt; <em class="arg">other</em> </dd>
+<dd>
+<span class="tt">false</span> if this object is not consdiered to be &lt; <em class="arg">other</em> </dd></dl>
 
 </div>
 </div>

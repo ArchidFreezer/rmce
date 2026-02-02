@@ -7,8 +7,10 @@ var searchData=
   ['numbermatcherfactory_4',['NumberMatcherFactory',['../class_number_matcher_factory.html',1,'']]],
   ['numberofstats_5',['numberOfStats',['../class_profession_data.html#af0971669460ec8a13ecc677c4e609dd7',1,'ProfessionData::numberOfStats()'],['../class_skill_category_data.html#aa5a850b0da838c35b587c41f01b7b1d1',1,'SkillCategoryData::numberOfStats()'],['../class_skill_data.html#ab91df05699c2cd1bda429c2d681e5675',1,'SkillData::numberOfStats()']]],
   ['numberrange_6',['NumberRange',['../class_number_range.html',1,'NumberRange&lt; NumberType &gt;'],['../class_number_range.html#a7a8997531308d3318b6b8e4e3beb66e0',1,'NumberRange::NumberRange()']]],
-  ['numcategoryeverymanskillchoices_7',['numCategoryEverymanSkillChoices',['../class_profession_data.html#a649d086f5d64c9ad19f23fb1d86c9d09',1,'ProfessionData::numCategoryEverymanSkillChoices()'],['../class_race_data.html#a9189e06472ce6b42a04b6cedc9d33f4d',1,'RaceData::numCategoryEverymanSkillChoices()']]],
+  ['numcategoryeverymanskillchoices_7',['numCategoryEverymanSkillChoices',['../class_race_data.html#a9189e06472ce6b42a04b6cedc9d33f4d',1,'RaceData']]],
   ['numchoices_8',['numChoices',['../class_game_rule_data_choice.html#a6e9f250671dfa7885a8546a6477d2079',1,'GameRuleDataChoice']]],
-  ['numeverymanskillchoices_9',['numEverymanSkillChoices',['../class_profession_data.html#a82ecf9f1e813bac0d2fb2c85adebb702',1,'ProfessionData']]],
-  ['numoptions_10',['numOptions',['../class_game_rule_data_choice.html#a5f2f6a26b520cf6906791dd243f9d8f0',1,'GameRuleDataChoice']]]
+  ['numoptions_9',['numOptions',['../class_game_rule_data_choice.html#a5f2f6a26b520cf6906791dd243f9d8f0',1,'GameRuleDataChoice']]],
+  ['numskillcategoryskilldevelopmenttypechoices_10',['numSkillCategorySkillDevelopmentTypeChoices',['../class_profession_data.html#a35cc63af292333afb632e6b199af7e9e',1,'ProfessionData']]],
+  ['numskilldevelopmenttypechoices_11',['numSkillDevelopmentTypeChoices',['../class_profession_data.html#ab57b394b3c486821e605229a7a391109',1,'ProfessionData']]],
+  ['numskillgroupskilldevelopmenttypechoices_12',['numSkillGroupSkillDevelopmentTypeChoices',['../class_profession_data.html#a0f4b89f60a91cda92058e87aafc46926',1,'ProfessionData']]]
 ];

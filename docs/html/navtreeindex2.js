@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"class_skill_category_data.html#ae121918766e68affb742efbf5fbfd4b3":[2,0,43,7],
+"class_skill_category_data.html#ae92350c9d91937939523110732fae66a":[2,0,43,3],
+"class_skill_category_data.html#aebd62a7951f85ada98ea67d7291d5d3b":[2,0,43,4],
+"class_skill_category_data.html#aee354c5df79300626b481c1b0893dcdf":[2,0,43,11],
 "class_skill_category_data_1_1_using_character_realm_stats_exception.html":[2,0,43,0],
 "class_skill_category_data_1_1_using_character_realm_stats_exception.html#a01ff2aa4b83cd2fa306595ce88f8abc6":[2,0,43,0,0],
 "class_skill_category_datafile_parser_json.html":[2,0,44],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "functions_func_t.html":[2,3,1,18],
 "functions_func_u.html":[2,3,1,19],
 "functions_func_w.html":[2,3,1,20],
-"functions_func_z.html":[2,3,1,21],
-"functions_func_~.html":[2,3,1,22],
-"functions_g.html":[2,3,0,6],
-"functions_h.html":[2,3,0,7],
-"functions_i.html":[2,3,0,8]
+"functions_func_z.html":[2,3,1,21]
 };
