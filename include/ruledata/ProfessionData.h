@@ -364,6 +364,47 @@ public:
 	}
 
 	/**
+	 * @brief Add skill development type for all skills in a category
+	 * @param category SkillCategoryData to add a skill development type for
+	 * @param type SkillDevelopmentType::Type value to set
+	 */
+	void addSkillCategorySkillDevelopmentType(const SkillCategoryData& category, SkillDevelopmentType::Type type) { skill_category_skill_development_types_.emplace(&category, type); }
+
+	/**
+	 * @brief Get a container of all the skill categories with a SkillDevelopmentType
+	 * @return std::set of categories with a SkillDevelopmentType
+	 */
+	const std::set<const SkillCategoryData*> skillCategoriesWithSkillDevelopmentType() const {
+		auto keys = std::views::keys(skill_category_skill_development_types_);
+		return { keys.begin(), keys.end() };
+	}
+
+	/**
+	 * @brief Get whether a skill category has a SkillDevelopmentType
+	 * @param category SkillCategoryData to check
+	 * @return `true` if the category has a SkillDevelopmentType
+	 * @return `false` if the category does not have a SkillDevelopmentType
+	 */
+	bool isSkillDevelopmentTypeSkillCategory(const SkillCategoryData& category) const {
+		for (auto& cat : std::views::keys(skill_category_skill_development_types_)) {
+			if (cat->id() == category.id()) return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @brief Get the SkillDevelopmentType a category has
+	 * @param category SkillCategoryData to check
+	 * @return SkillDevelopmentType type @a category has
+	 */
+	SkillDevelopmentType::Type skillCategorySkillDevelopmentType(const SkillCategoryData& category) {
+		for (auto& cat : std::views::keys(skill_category_skill_development_types_)) {
+			if (cat->id() == category.id()) return skill_category_skill_development_types_.at(cat);
+		}
+		return SkillDevelopmentType::kStandard;
+	}
+
+	/**
 	 * @brief Add a development type to all skills in a group
 	 * @param group Name of the group
 	 * @param type SkillDevelopmentType::Type to set
@@ -532,7 +573,8 @@ private:
 
 	// Skill development types
 	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */
-	std::map<std::string, SkillDevelopmentType::Type> skill_group_skill_development_types_{}; /** Skill group that all skills within have their development type changed */
+	std::map<const SkillCategoryData*, SkillDevelopmentType::Type> skill_category_skill_development_types_{}; /** Skill categories that all skills within have their development type changed */
+	std::map<std::string, SkillDevelopmentType::Type> skill_group_skill_development_types_{}; /** Skill groups that all skills within have their development type changed */
 
 	// Skill development type choices
 	std::vector<GameRuleDataChoice<SkillData>> everyman_skill_choices_{}; /** Set of skills that the character may select one or more from to become everyman */

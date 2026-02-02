@@ -126,6 +126,30 @@ namespace {
 
 	}
 
+	TEST(ProfessionData, SkillcategorySkillDevelopmentType) {
+		ProfessionData prof("PROF_ID");
+
+		SkillCategoryData s1("SKILL1_ID");
+		SkillCategoryData s2("SKILL2_ID");
+
+		EXPECT_EQ(prof.skillCategoriesWithSkillDevelopmentType().size(), 0);
+		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillCategory(s1));
+		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s1), SkillDevelopmentType::kStandard);
+
+		prof.addSkillCategorySkillDevelopmentType(s1, SkillDevelopmentType::kEveryman);
+		EXPECT_EQ(prof.skillCategoriesWithSkillDevelopmentType().size(), 1);
+		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillCategory(s2));
+		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillCategory(s1));
+		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s1), SkillDevelopmentType::kEveryman);
+
+		prof.addSkillCategorySkillDevelopmentType(s2, SkillDevelopmentType::kOccupational);
+		EXPECT_EQ(prof.skillCategoriesWithSkillDevelopmentType().size(), 2);
+		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillCategory(s1));
+		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s1), SkillDevelopmentType::kEveryman);
+		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillCategory(s2));
+		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s2), SkillDevelopmentType::kOccupational);
+	}
+
 	TEST(ProfessionData, EverymanSkillChoices) {
 		ProfessionData prof("PROF_ID");
 

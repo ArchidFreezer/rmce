@@ -85,7 +85,17 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 		skill_category_bonus_tree.put("bonus", game_data.skillCategoryBonus(*skill_category));
 		skill_category_bonuses_tree.push_back(std::make_pair("", skill_category_bonus_tree));
 	}
-	if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill_category-bonuses", skill_category_bonuses_tree));
+	if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill-category-bonus", skill_category_bonuses_tree));
+
+	// Skill category development types
+	pt::ptree skill_category_skill_development_types_tree{};
+	for (auto& skill_category : game_data.skillCategoriesWithSkillDevelopmentType()) {
+		pt::ptree skill_category_skill_development_type_tree{};
+		skill_category_skill_development_type_tree.put("category", skill_category->id());
+		skill_category_skill_development_type_tree.put("development-type", SkillDevelopmentType::toString(game_data.skillCategorySkillDevelopmentType(*skill_category)));
+		skill_category_skill_development_types_tree.push_back(std::make_pair("", skill_category_skill_development_type_tree));
+	}
+	if (skill_category_skill_development_types_tree.size()) datum.push_back(std::make_pair("skill-category-skill-development-types", skill_category_skill_development_types_tree));
 
 	// Skill group bonus
 	pt::ptree skill_group_bonuses_tree{};
@@ -95,7 +105,7 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 		skill_group_bonus_tree.put("bonus", game_data.skillGroupBonus(skill_group));
 		skill_group_bonuses_tree.push_back(std::make_pair("", skill_group_bonus_tree));
 	}
-	if (skill_group_bonuses_tree.size()) datum.push_back(std::make_pair("skill_group-bonuses", skill_group_bonuses_tree));
+	if (skill_group_bonuses_tree.size()) datum.push_back(std::make_pair("skill-group-bonuses", skill_group_bonuses_tree));
 
 	// Skill group skill development types
 	pt::ptree skill_group_skill_developments_tree{};

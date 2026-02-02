@@ -76,6 +76,17 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				}
 			}
 
+			// Get skill category development types
+			if (boost::optional<const pt::ptree&> skill_category_development_types = v.second.get_child_optional("skill-category-skill-modifiers")) {
+				for (const auto& skill_category_development_type : skill_category_development_types.get()) {
+					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_development_type.second.get<std::string>("<xmlattr>.category")) };
+					std::string skill_type_id = skill_category_development_type.second.get_value<std::string>();
+					if (SkillDevelopmentType::fromString(skill_type_id)) {
+						ref.addSkillCategorySkillDevelopmentType(cache().get<SkillCategoryData>(skill_category_id), SkillDevelopmentType::fromString(skill_type_id).value());
+					}
+				}
+			}
+
 			// Skill group skill development types
 			if (boost::optional<const pt::ptree&> skill_group_skill_modifiers = v.second.get_child_optional("skill-group-skill-modifiers")) {
 				for (const auto& skill_group_skill_modifier : skill_group_skill_modifiers.get()) {
