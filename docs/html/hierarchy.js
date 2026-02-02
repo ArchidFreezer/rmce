@@ -11,9 +11,11 @@ var hierarchy =
         [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", null ],
         [ "LanguageCategoryDatafileParserJson", "class_language_category_datafile_parser_json.html", null ],
         [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", null ],
+        [ "ProfessionDatafileParserJson", "class_profession_datafile_parser_json.html", null ],
         [ "RaceDatafileParserJson", "class_race_datafile_parser_json.html", null ],
         [ "SkillCategoryDatafileParserJson", "class_skill_category_datafile_parser_json.html", null ],
         [ "SkillDatafileParserJson", "class_skill_datafile_parser_json.html", null ],
+        [ "SkillGroupDatafileParserJson", "class_skill_group_datafile_parser_json.html", null ],
         [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", null ],
         [ "SpecialAttackTableDatafileParserJson", "class_special_attack_table_datafile_parser_json.html", null ],
         [ "SpellListDatafileParserJson", "class_spell_list_datafile_parser_json.html", null ],
@@ -22,6 +24,7 @@ var hierarchy =
       [ "DatafileParserXml", "class_datafile_parser_xml.html", [
         [ "ArmourTypeDatafileParserXml", "class_armour_type_datafile_parser_xml.html", null ],
         [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", null ],
+        [ "ProfessionDatafileParserXml", "class_profession_datafile_parser_xml.html", null ],
         [ "RaceDatafileParserXml", "class_race_datafile_parser_xml.html", null ],
         [ "SkillCategoryDatafileParserXml", "class_skill_category_datafile_parser_xml.html", null ],
         [ "SkillDatafileParserXml", "class_skill_datafile_parser_xml.html", null ],
@@ -50,6 +53,7 @@ var hierarchy =
       [ "RaceData", "class_race_data.html", null ],
       [ "SkillCategoryData", "class_skill_category_data.html", null ],
       [ "SkillData", "class_skill_data.html", null ],
+      [ "SkillGroupData", "class_skill_group_data.html", null ],
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ],
       [ "SpellListData", "class_spell_list_data.html", null ],
       [ "WeaponTypeData", "class_weapon_type_data.html", null ]
@@ -75,7 +79,6 @@ var hierarchy =
       [ "SkillActionType::SkillActionNotFoundException", "class_skill_action_type_1_1_skill_action_not_found_exception.html", null ],
       [ "SkillCategoryData::UsingCharacterRealmStatsException", "class_skill_category_data_1_1_using_character_realm_stats_exception.html", null ],
       [ "SkillData::UsingCharacterRealmStatsException", "class_skill_data_1_1_using_character_realm_stats_exception.html", null ],
-      [ "SkillGroupType::SkillGroupNotFoundException", "class_skill_group_type_1_1_skill_group_not_found_exception.html", null ],
       [ "StatType::TooManyStatsException", "class_stat_type_1_1_too_many_stats_exception.html", null ],
       [ "WeaponTypeData::InvalidWeaponRangeException", "class_weapon_type_data_1_1_invalid_weapon_range_exception.html", null ]
     ] ],

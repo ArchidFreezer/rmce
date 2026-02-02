@@ -1,10 +1,11 @@
 #pragma once
 
+#include <stdexcept>
 #include <string_view>
 #include <vector>
 
 #include <GameRuleData.h>
-#include <SkillGroupType.h>
+#include <SkillGroupData.h>
 #include <StatType.h>
 #include <SkillProgressionTypeData.h>
 
@@ -51,9 +52,9 @@ public:
 	 * @param category_progression Progression type for the skill category
 	 * @param use_realm_stats Whether to use characters realm stats for bonus rather than category stats
 	 */
-	SkillCategoryData(std::string_view id, std::string_view name, SkillGroupType::Type group, SkillProgressionTypeData& skill_progression, SkillProgressionTypeData& category_progression, bool use_realm_stats) :
+	SkillCategoryData(std::string_view id, std::string_view name, const SkillGroupData& group, const SkillProgressionTypeData& skill_progression, const SkillProgressionTypeData& category_progression, bool use_realm_stats) :
 		GameRuleData(id),
-		group_{ group },
+		group_{ &group },
 		name_{ name },
 		skill_progression_{ &skill_progression },
 		skill_category_progression_{ &category_progression },
@@ -75,19 +76,19 @@ public:
 	 * @brief Gets the full name of the skill category which includes the skill group
 	 * @return Name including the skill group
 	 */
-	const std::string fullName() const { return toString(group_) + " - " + name_; }
+	const std::string fullName() const { return group_->name() + " - " + name_; }
 
 	/**
 	 * @brief Set the skill group of the category
 	 * @param group SkillGroupType::Type category group
 	 */
-	void setGroup(SkillGroupType::Type group) { group_ = group; }
+	void setGroup(const SkillGroupData& group) { group_ = &group; }
 
 	/**
 	 * @brief Get the group the category belongs to
 	 * @return SkillGroupType::Type categories skill group
 	 */
-	const SkillGroupType::Type group() const { return group_; }
+	const SkillGroupData& group() const { return *group_; }
 
 	/**
 	 * @brief Add stat that applies stat boinus to skills in the category
@@ -222,7 +223,7 @@ public:
 	};
 
 private:
-	SkillGroupType::Type group_{}; /**< Name of the skill group; the category belongs to */
+	const SkillGroupData* group_{}; /**< Skill group the category belongs to */
 	const SkillProgressionTypeData* skill_progression_{}; /**< How many bonus points each skill rank provides by default in skills in the category */
 	const SkillProgressionTypeData* skill_category_progression_{}; /**< How many bonus points each skill rank provides to the category */
 	std::string name_{}; /**< Name of the category as seen in-game */

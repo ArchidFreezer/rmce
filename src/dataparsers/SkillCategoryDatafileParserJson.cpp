@@ -6,8 +6,8 @@ void SkillCategoryDatafileParserJson::populateDatum(std::string& id, pt::ptree& 
 	SkillCategoryData& game_data = cache().get<SkillCategoryData>(id);
 
 	datum.put("id", game_data.id());
+	datum.put("group", game_data.group().id());
 	datum.put("name", game_data.name());
-	datum.put("group", toString(game_data.group()));
 	datum.put("use-realm-stats", game_data.useRealmStats());
 	datum.put("skill-progression", game_data.defaultSkillProgression().name());
 	datum.put("category-progression", game_data.skillCategoryProgression().name());
@@ -43,13 +43,9 @@ void SkillCategoryDatafileParserJson::parse(bool id_only) {
 			SkillCategoryData& ref = cache().get<SkillCategoryData>(id);
 			ref.setName(category_name);
 
-			// Attempt to find the SkillGroupType
-			SkillGroupType::Type group;
-			if (SkillGroupType::fromString(group_name)) {
-				ref.setGroup(SkillGroupType::fromString(group_name).value());
-			} else {
-				throw SkillGroupType::SkillGroupNotFoundException("Could not find a skill group for: " + group_name);
-			}
+			// Attempt to find the SkillGroup
+			std::string group_id = v.second.get<std::string>("group");
+			ref.setGroup(cache().get<SkillGroupData>(group_id));
 
 			// Get the skill and category progressions
 			std::string skill_progression_json = v.second.get<std::string>("skill-progression");

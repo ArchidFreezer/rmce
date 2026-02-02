@@ -1,7 +1,6 @@
 #include <RealmType.h>
 #include <SkillCategoryData.h>
 #include <SkillCategoryDatafileParserXml.h>
-#include <SkillGroupType.h>
 #include <SkillProgressionTypeData.h>
 
 void SkillCategoryDatafileParserXml::parse(bool id_only) {
@@ -26,11 +25,11 @@ void SkillCategoryDatafileParserXml::parse(bool id_only) {
 			ref.setName(category_name);
 
 			// Attempt to find the SkillGroupType
-			if (SkillGroupType::fromString(group_name)) {
-				ref.setGroup(SkillGroupType::fromString(group_name).value());
-			} else {
-				throw SkillGroupType::SkillGroupNotFoundException("Could not find a skill group for: " + group_name);
-			}
+//			if (SkillGroupType::fromString(group_name)) {
+//				ref.setGroup(SkillGroupType::fromString(group_name).value());
+//			} else {
+//				throw SkillGroupType::SkillGroupNotFoundException("Could not find a skill group for: " + group_name);
+//			}
 
 			bool use_realm_stats = v.second.get<bool>("use-realm-stat");
 			ref.setUseRealmStats(use_realm_stats);

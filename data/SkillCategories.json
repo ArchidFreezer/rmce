@@ -2,8 +2,8 @@
     "skill-categories": [
         {
             "id": "SKILLCATEGORY_ARMOUR_HEAVY",
+            "group": "SKILLGROUP_ARMOUR",
             "name": "Heavy",
-            "group": "Armour",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -15,8 +15,8 @@
         },
         {
             "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+            "group": "SKILLGROUP_ARMOUR",
             "name": "Light",
-            "group": "Armour",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -28,8 +28,8 @@
         },
         {
             "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+            "group": "SKILLGROUP_ARMOUR",
             "name": "Medium",
-            "group": "Armour",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -41,8 +41,8 @@
         },
         {
             "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+            "group": "SKILLGROUP_ARTISTIC",
             "name": "Active",
-            "group": "Artistic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -54,8 +54,8 @@
         },
         {
             "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+            "group": "SKILLGROUP_ARTISTIC",
             "name": "Passive",
-            "group": "Artistic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -67,8 +67,8 @@
         },
         {
             "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+            "group": "SKILLGROUP_ATHLETIC",
             "name": "Brawn",
-            "group": "Athletic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -80,8 +80,8 @@
         },
         {
             "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+            "group": "SKILLGROUP_ATHLETIC",
             "name": "Endurance",
-            "group": "Athletic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -93,8 +93,8 @@
         },
         {
             "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+            "group": "SKILLGROUP_ATHLETIC",
             "name": "Gymnastics",
-            "group": "Athletic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -106,8 +106,8 @@
         },
         {
             "id": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+            "group": "SKILLGROUP_AWARENESS",
             "name": "Perceptions",
-            "group": "Awareness",
             "use-realm-stats": "false",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -119,8 +119,8 @@
         },
         {
             "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+            "group": "SKILLGROUP_AWARENESS",
             "name": "Searching",
-            "group": "Awareness",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -132,8 +132,8 @@
         },
         {
             "id": "SKILLCATEGORY_AWARENESS_SENSES",
+            "group": "SKILLGROUP_AWARENESS",
             "name": "Senses",
-            "group": "Awareness",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -145,8 +145,8 @@
         },
         {
             "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+            "group": "SKILLGROUP_BODY_DEVELOPMENT",
             "name": "Body Development",
-            "group": "Body Development",
             "use-realm-stats": "false",
             "skill-progression": "None",
             "category-progression": "None",
@@ -158,8 +158,8 @@
         },
         {
             "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+            "group": "SKILLGROUP_COMBAT_MANOEUVRES",
             "name": "Combat Manoeuvres",
-            "group": "Combat Manoeuvres",
             "use-realm-stats": "false",
             "skill-progression": "Combined",
             "category-progression": "None",
@@ -171,8 +171,8 @@
         },
         {
             "id": "SKILLCATEGORY_COMMUNICATIONS",
+            "group": "SKILLGROUP_COMMUNICATIONS",
             "name": "Communications",
-            "group": "Communications",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -184,8 +184,8 @@
         },
         {
             "id": "SKILLCATEGORY_CRAFTS",
+            "group": "SKILLGROUP_CRAFTS",
             "name": "Crafts",
-            "group": "Crafts",
             "use-realm-stats": "false",
             "skill-progression": "Combined",
             "category-progression": "None",
@@ -197,8 +197,8 @@
         },
         {
             "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+            "group": "SKILLGROUP_DIRECTED_SPELLS",
             "name": "Directed Spells",
-            "group": "Directed Spells",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -210,8 +210,8 @@
         },
         {
             "id": "SKILLCATEGORY_INFLUENCE",
+            "group": "SKILLGROUP_INFLUENCE",
             "name": "Influence",
-            "group": "Influence",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -223,8 +223,8 @@
         },
         {
             "id": "SKILLCATEGORY_LORE_GENERAL",
+            "group": "SKILLGROUP_LORE",
             "name": "General",
-            "group": "Lore",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -236,8 +236,8 @@
         },
         {
             "id": "SKILLCATEGORY_LORE_MAGICAL",
+            "group": "SKILLGROUP_LORE",
             "name": "Magical",
-            "group": "Lore",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -249,8 +249,8 @@
         },
         {
             "id": "SKILLCATEGORY_LORE_OBSCURE",
+            "group": "SKILLGROUP_LORE",
             "name": "Obscure",
-            "group": "Lore",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -262,8 +262,8 @@
         },
         {
             "id": "SKILLCATEGORY_LORE_TECHNICAL",
+            "group": "SKILLGROUP_LORE",
             "name": "Technical",
-            "group": "Lore",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -275,8 +275,8 @@
         },
         {
             "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+            "group": "SKILLGROUP_MARTIAL_ARTS",
             "name": "Combat Manoeuvres",
-            "group": "Martial Arts",
             "use-realm-stats": "false",
             "skill-progression": "Combined",
             "category-progression": "None",
@@ -288,8 +288,8 @@
         },
         {
             "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+            "group": "SKILLGROUP_MARTIAL_ARTS",
             "name": "Strikes",
-            "group": "Martial Arts",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -301,8 +301,8 @@
         },
         {
             "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+            "group": "SKILLGROUP_MARTIAL_ARTS",
             "name": "Sweeps",
-            "group": "Martial Arts",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -314,8 +314,8 @@
         },
         {
             "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+            "group": "SKILLGROUP_OUTDOOR",
             "name": "Animal",
-            "group": "Outdoor",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -327,8 +327,8 @@
         },
         {
             "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+            "group": "SKILLGROUP_OUTDOOR",
             "name": "Environmental",
-            "group": "Outdoor",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -340,8 +340,8 @@
         },
         {
             "id": "SKILLCATEGORY_POWER_AWARENESS",
+            "group": "SKILLGROUP_POWER_AWARENESS",
             "name": "Power Awareness",
-            "group": "Power Awareness",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -353,8 +353,8 @@
         },
         {
             "id": "SKILLCATEGORY_POWER_MANIPULATION",
+            "group": "SKILLGROUP_POWER_MANIPULATION",
             "name": "Power Manipulation",
-            "group": "Power Manipulation",
             "use-realm-stats": "false",
             "skill-progression": "Combined",
             "category-progression": "None",
@@ -366,8 +366,8 @@
         },
         {
             "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+            "group": "SKILLGROUP_POWER_POINT_DEVELOPMENT",
             "name": "Power Point Development",
-            "group": "Power Point Development",
             "use-realm-stats": "true",
             "skill-progression": "None",
             "category-progression": "None",
@@ -375,8 +375,8 @@
         },
         {
             "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+            "group": "SKILLGROUP_SCIENCE_ANALYTIC",
             "name": "Basic",
-            "group": "Science\/Analytic",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -388,8 +388,8 @@
         },
         {
             "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_SPECIALISED",
+            "group": "SKILLGROUP_SCIENCE_ANALYTIC",
             "name": "Specialised",
-            "group": "Science\/Analytic",
             "use-realm-stats": "false",
             "skill-progression": "Combined",
             "category-progression": "None",
@@ -401,8 +401,8 @@
         },
         {
             "id": "SKILLCATEGORY_SELF_CONTROL",
+            "group": "SKILLGROUP_SELF_CONTROL",
             "name": "Self Control",
-            "group": "Self Control",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -414,8 +414,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+            "group": "SKILLGROUP_SPECIAL_ATTACKS",
             "name": "Special Attacks",
-            "group": "Special Attacks",
             "use-realm-stats": "false",
             "skill-progression": "Combined",
             "category-progression": "None",
@@ -427,8 +427,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPECIAL_DEFENCES",
+            "group": "SKILLGROUP_SPECIAL_DEFENCES",
             "name": "Special Defences",
-            "group": "Special Defences",
             "use-realm-stats": "false",
             "skill-progression": "Combined",
             "category-progression": "None",
@@ -436,8 +436,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Arcane Base Lists",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -445,8 +445,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Arcane Closed Lists",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -454,8 +454,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Arcane Open Lists",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -463,8 +463,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Other Realm Base Lists",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -472,8 +472,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Other Realm Closed Lists",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -481,8 +481,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Other Realm Open Lists",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -490,8 +490,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Other Realm Training Package",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -499,8 +499,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Own Realm Closed Lists",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -508,8 +508,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Own Realm Open Lists",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -517,8 +517,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Own Realm Other Base Lists",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -526,8 +526,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Own Realm Own Base Lists",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -535,8 +535,8 @@
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+            "group": "SKILLGROUP_SPELLS",
             "name": "Own Realm Training Package",
-            "group": "Spells",
             "use-realm-stats": "true",
             "skill-progression": "Limited",
             "category-progression": "None",
@@ -544,8 +544,8 @@
         },
         {
             "id": "SKILLCATEGORY_SUBTERFUGE_ATTACK",
+            "group": "SKILLGROUP_SUBTERFUGE",
             "name": "Attack",
-            "group": "Subterfuge",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -557,8 +557,8 @@
         },
         {
             "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+            "group": "SKILLGROUP_SUBTERFUGE",
             "name": "Mechanics",
-            "group": "Subterfuge",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -570,8 +570,8 @@
         },
         {
             "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+            "group": "SKILLGROUP_SUBTERFUGE",
             "name": "Stealth",
-            "group": "Subterfuge",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -583,8 +583,8 @@
         },
         {
             "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+            "group": "SKILLGROUP_TECHNICAL_TRADE",
             "name": "General",
-            "group": "Technical\/Trade",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -596,8 +596,8 @@
         },
         {
             "id": "SKILLCATEGORY_TECHNICAL_TRADE_PROFESSIONAL",
+            "group": "SKILLGROUP_TECHNICAL_TRADE",
             "name": "Professional",
-            "group": "Technical\/Trade",
             "use-realm-stats": "false",
             "skill-progression": "Combined",
             "category-progression": "None",
@@ -609,8 +609,8 @@
         },
         {
             "id": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+            "group": "SKILLGROUP_TECHNICAL_TRADE",
             "name": "Vocational",
-            "group": "Technical\/Trade",
             "use-realm-stats": "false",
             "skill-progression": "Combined",
             "category-progression": "None",
@@ -622,8 +622,8 @@
         },
         {
             "id": "SKILLCATEGORY_URBAN",
+            "group": "SKILLGROUP_URBAN",
             "name": "Urban",
-            "group": "Urban",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -635,8 +635,8 @@
         },
         {
             "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+            "group": "SKILLGROUP_WEAPON",
             "name": "1-H Concussion",
-            "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -648,8 +648,8 @@
         },
         {
             "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+            "group": "SKILLGROUP_WEAPON",
             "name": "1-H Edged",
-            "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -661,8 +661,8 @@
         },
         {
             "id": "SKILLCATEGORY_WEAPON_2_HANDED",
+            "group": "SKILLGROUP_WEAPON",
             "name": "2-Handed",
-            "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -674,8 +674,8 @@
         },
         {
             "id": "SKILLCATEGORY_WEAPON_MISSILE",
+            "group": "SKILLGROUP_WEAPON",
             "name": "Missile",
-            "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -687,8 +687,8 @@
         },
         {
             "id": "SKILLCATEGORY_WEAPON_MISSILE_ARTILLERY",
+            "group": "SKILLGROUP_WEAPON",
             "name": "Missile Artillery",
-            "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -700,8 +700,8 @@
         },
         {
             "id": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+            "group": "SKILLGROUP_WEAPON",
             "name": "Pole Arms",
-            "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",
@@ -713,8 +713,8 @@
         },
         {
             "id": "SKILLCATEGORY_WEAPON_THROWN",
+            "group": "SKILLGROUP_WEAPON",
             "name": "Thrown",
-            "group": "Weapon",
             "use-realm-stats": "false",
             "skill-progression": "Standard",
             "category-progression": "Category Standard",

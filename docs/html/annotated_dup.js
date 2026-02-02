@@ -12,9 +12,6 @@ var annotated_dup =
     [ "SkillActionType", "namespace_skill_action_type.html", [
       [ "SkillActionNotFoundException", "class_skill_action_type_1_1_skill_action_not_found_exception.html", "class_skill_action_type_1_1_skill_action_not_found_exception" ]
     ] ],
-    [ "SkillGroupType", "namespace_skill_group_type.html", [
-      [ "SkillGroupNotFoundException", "class_skill_group_type_1_1_skill_group_not_found_exception.html", "class_skill_group_type_1_1_skill_group_not_found_exception" ]
-    ] ],
     [ "StatType", "namespace_stat_type.html", [
       [ "TooManyStatsException", "class_stat_type_1_1_too_many_stats_exception.html", "class_stat_type_1_1_too_many_stats_exception" ]
     ] ],
@@ -50,6 +47,8 @@ var annotated_dup =
     [ "NumberMatcherFactory", "class_number_matcher_factory.html", "class_number_matcher_factory" ],
     [ "NumberRange", "class_number_range.html", "class_number_range" ],
     [ "ProfessionData", "class_profession_data.html", "class_profession_data" ],
+    [ "ProfessionDatafileParserJson", "class_profession_datafile_parser_json.html", "class_profession_datafile_parser_json" ],
+    [ "ProfessionDatafileParserXml", "class_profession_datafile_parser_xml.html", "class_profession_datafile_parser_xml" ],
     [ "RaceData", "class_race_data.html", "class_race_data" ],
     [ "RaceDatafileParserJson", "class_race_datafile_parser_json.html", "class_race_datafile_parser_json" ],
     [ "RaceDatafileParserXml", "class_race_datafile_parser_xml.html", "class_race_datafile_parser_xml" ],
@@ -61,6 +60,8 @@ var annotated_dup =
     [ "SkillDatafileParserJson", "class_skill_datafile_parser_json.html", "class_skill_datafile_parser_json" ],
     [ "SkillDatafileParserXml", "class_skill_datafile_parser_xml.html", "class_skill_datafile_parser_xml" ],
     [ "SkillDevelopmentCost", "class_skill_development_cost.html", "class_skill_development_cost" ],
+    [ "SkillGroupData", "class_skill_group_data.html", "class_skill_group_data" ],
+    [ "SkillGroupDatafileParserJson", "class_skill_group_datafile_parser_json.html", "class_skill_group_datafile_parser_json" ],
     [ "SkillProgressionData", "class_skill_progression_data.html", "class_skill_progression_data" ],
     [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", "class_skill_progression_type_data" ],
     [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", "class_skill_progression_type_datafile_parser_json" ],

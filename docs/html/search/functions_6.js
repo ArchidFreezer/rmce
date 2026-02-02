@@ -6,7 +6,5 @@ var searchData=
   ['generateid_3',['generateId',['../class_game_rule_data.html#ad51f77b8a4054fca57268e29e0da5718',1,'GameRuleData']]],
   ['get_4',['get',['../class_game_rule_data_cache.html#a221a95c7323d89322519d7b8d2711277',1,'GameRuleDataCache::get()'],['../namespace_random.html#a47378d26d412b6b6238c03a27f33a04f',1,'Random::get(int min, int max)'],['../namespace_random.html#a23e711619804cd68f6732e0b3dd8059e',1,'Random::get(T min, T max)'],['../namespace_random.html#ac0711bde793b216f2b241d2587db2b1d',1,'Random::get(S min, T max)']]],
   ['getsubcategories_5',['getSubcategories',['../class_skill_data.html#a5978d0236241ba9c6a2c32ac3972210e',1,'SkillData']]],
-  ['group_6',['group',['../class_skill_category_data.html#a72149c897d197a3f5051bc0d40003e24',1,'SkillCategoryData']]],
-  ['groupbonus_7',['groupBonus',['../class_profession_data.html#ae7081cfa8fce1943d06e18dc6cf8b739',1,'ProfessionData']]],
-  ['groupswithbonus_8',['groupsWithBonus',['../class_profession_data.html#a613bcc86f4da9ff18ea1b5dedfdcb60a',1,'ProfessionData']]]
+  ['group_6',['group',['../class_skill_category_data.html#ae121918766e68affb742efbf5fbfd4b3',1,'SkillCategoryData']]]
 ];

@@ -16,7 +16,7 @@ var searchData=
   ['resetptree_13',['resetPtree',['../class_datafile_parser.html#a0b85b756d72b4b8835a34198fd769522',1,'DatafileParser']]],
   ['restricted_14',['restricted',['../class_skill_data.html#ac018e510122363f6206fb6b840f92235',1,'SkillData']]],
   ['restrictedskillcategories_15',['restrictedSkillCategories',['../class_race_data.html#a2cab99790605ef7da4ff5c56c1fe9c2d',1,'RaceData']]],
-  ['restrictedskills_16',['restrictedSkills',['../class_profession_data.html#a2970ddd466e6c0c67607ad8c03411ae3',1,'ProfessionData::restrictedSkills()'],['../class_race_data.html#a66f89d8d7e736dfd32aedc7125c320b4',1,'RaceData::restrictedSkills()']]],
+  ['restrictedskills_16',['restrictedSkills',['../class_race_data.html#a66f89d8d7e736dfd32aedc7125c320b4',1,'RaceData']]],
   ['result_17',['result',['../class_dice.html#a3720f49eb14428369bc6289cdae2c404',1,'Dice']]],
   ['roll_18',['roll',['../class_dice.html#aefa156949b8d3f9b2a4bbced23311a0a',1,'Dice::roll(bool open_ended=true)'],['../class_dice.html#a7752a14ec4f8c3fd81eef71c467b6905',1,'Dice::roll(int num_dice)']]],
   ['rollopenended_19',['rollOpenEnded',['../class_dice.html#a9100da1340be0f754e7a907f18dd7ed1',1,'Dice']]],

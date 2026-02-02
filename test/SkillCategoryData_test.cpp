@@ -1,16 +1,17 @@
 #include <gtest/gtest.h>
 
 #include <SkillCategoryData.h>
-#include <SkillGroupType.h>
+#include <SkillGroupData.h>
 #include <StatType.h>
 
 namespace {
 	TEST(SkillCategoryData, Constructor) {
 		SkillProgressionTypeData spd_std("STANDARD_ID", "Standard", -15.0, 3.0, 2.0, 1.0, 0.5);
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std, false);
+		SkillGroupData sg("GROUP1_ID", "Artistic");
+		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", sg, spd_std, spd_std, false);
 		EXPECT_STREQ(scd.id().c_str(), "SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		EXPECT_STREQ(scd.name().c_str(), "TestCategory");
-		EXPECT_EQ(scd.group(), SkillGroupType::Type::kArtistic);
+		EXPECT_EQ(scd.group().name(), "Artistic");
 		EXPECT_STREQ(scd.fullName().c_str(), "Artistic - TestCategory");
 		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), spd_std.name().c_str());
 		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), spd_std.name().c_str());
@@ -18,14 +19,15 @@ namespace {
 
 		SkillProgressionTypeData spd_ltd("LIMITED_ID", "Limited", 0.0, 1.0, 1.0, 0.5, 0.0);
 		SkillProgressionTypeData spd_none("NONE_ID", "None", 0.0, 0.0, 0.0, 0.0, 0.0);
-		SkillCategoryData scd2("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_ltd, spd_none, false);
+		SkillCategoryData scd2("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", sg, spd_ltd, spd_none, false);
 		EXPECT_STREQ(scd2.defaultSkillProgression().name().c_str(), spd_ltd.name().c_str());
 		EXPECT_STREQ(scd2.skillCategoryProgression().name().c_str(), spd_none.name().c_str());
 	}
 
 	TEST(SkillCategoryData, Stats) {
 		SkillProgressionTypeData spd_std("STANDARD_ID", "Standard", -15.0, 3.0, 2.0, 1.0, 0.5);
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std, false);
+		SkillGroupData sg("Artistic");
+		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", sg, spd_std, spd_std, false);
 		int i{};
 		i = scd.addStat(StatType::Type::kAgility);
 		EXPECT_EQ(scd.numberOfStats(), 1);
@@ -58,7 +60,8 @@ namespace {
 	
 	TEST(SkillCategoryData, CharStats) {
 		SkillProgressionTypeData spd_std("STANDARD_ID", "Standard", -15.0, 3.0, 2.0, 1.0, 0.5);
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std, false);
+		SkillGroupData sg("Artistic");
+		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", sg, spd_std, spd_std, false);
 		int i{};
 		i = scd.addStat(StatType::Type::kAgility);
 		EXPECT_EQ(scd.numberOfStats(), 1);
@@ -89,7 +92,8 @@ namespace {
 		SkillProgressionTypeData spd_spc("SPECIAL_ID", "Special", 0.0, 6.0, 5.0, 4.0, 3.0);
 		SkillProgressionTypeData spd_std("STANDARD_ID", "Standard", -15.0, 3.0, 2.0, 1.0, 0.5);
 		SkillProgressionTypeData spd_cstd("CATEGORY_STANDARD_ID", "Category Standard", -15.0, 2.0, 1.0, 0.5, 0.0);
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", SkillGroupType::Type::kArtistic, spd_std, spd_std, false);
+		SkillGroupData sg("Artistic");
+		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY", "TestCategory", sg, spd_std, spd_std, false);
 
 		// Invalid category type
 		EXPECT_THROW(scd.setSkillProgressions(spd_std, spd_cmb), InvalidSkillProgression);

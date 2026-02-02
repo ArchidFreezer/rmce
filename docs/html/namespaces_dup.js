@@ -97,7 +97,6 @@ var namespaces_dup =
       [ "operator<<", "namespace_skill_development_type.html#a0c8feea403ee3e058364f7fcd135f976", null ],
       [ "toString", "namespace_skill_development_type.html#a6d7ff6ceb406f3f60ee4d3f6a23d53f5", null ]
     ] ],
-    [ "SkillGroupType", "namespace_skill_group_type.html", "namespace_skill_group_type" ],
     [ "SpellListType", "namespace_spell_list_type.html", [
       [ "Type", "namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3", null ],
       [ "Type", "namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3", [

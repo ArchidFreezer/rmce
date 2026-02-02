@@ -22,7 +22,7 @@ var dir_d27df6bdec76b9f4631be2492a3421fa =
     [ "SkillCategoryData.h", "_skill_category_data_8h_source.html", null ],
     [ "SkillData.h", "_skill_data_8h_source.html", null ],
     [ "SkillDevelopmentType.h", "_skill_development_type_8h_source.html", null ],
-    [ "SkillGroupType.h", "_skill_group_type_8h_source.html", null ],
+    [ "SkillGroupData.h", "_skill_group_data_8h_source.html", null ],
     [ "SkillProgressionData.h", "_skill_progression_data_8h_source.html", null ],
     [ "SkillProgressionTypeData.h", "_skill_progression_type_data_8h_source.html", null ],
     [ "SpellListData.h", "_spell_list_data_8h_source.html", null ],
