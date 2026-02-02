@@ -1,7 +1,7 @@
 var searchData=
 [
   ['baselanguage_0',['baseLanguage',['../class_language_data.html#a9030dff1871da9e870d86df6339e627b',1,'LanguageData']]],
-  ['basespelllistchoices_1',['baseSpellListChoices',['../class_profession_data.html#aa6e1488fe4562544f2868dcae5404d3c',1,'ProfessionData']]],
+  ['basespelllistchoices_1',['baseSpellListChoices',['../class_profession_data.html#a231127199a5182fc7ed47bd0cfcd341d',1,'ProfessionData']]],
   ['bonus_2',['bonus',['../class_skill_progression_data.html#aa25e232c3e4eee2cf2012af9a6cba560',1,'SkillProgressionData::bonus()'],['../class_skill_progression_type_data.html#a5b54dd876e34e50738379ebf108b0d82',1,'SkillProgressionTypeData::bonus()']]],
   ['book_3',['book',['../class_profession_data.html#a2cac7fdd94cefa70fe7061806f434c7c',1,'ProfessionData::book()'],['../class_race_data.html#a434bbfe06c1e84328651e6ead8661c55',1,'RaceData::book()'],['../class_skill_data.html#af1b404d8ff11d7a8cb791858d9d81e8e',1,'SkillData::book()'],['../class_weapon_type_data.html#a97311fe076de813b446cd163628c7d56',1,'WeaponTypeData::book()']]],
   ['bookdata_4',['BookData',['../class_book_data.html',1,'BookData'],['../class_book_data.html#aae42fe8ae20b62075f2c6977eb834778',1,'BookData::BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn)'],['../class_book_data.html#a9c7ea5df6c88eda5d22db4590ec42e63',1,'BookData::BookData(std::string_view id)']]],

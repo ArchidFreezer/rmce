@@ -50,8 +50,6 @@ var annotated_dup =
     [ "NumberMatcherFactory", "class_number_matcher_factory.html", "class_number_matcher_factory" ],
     [ "NumberRange", "class_number_range.html", "class_number_range" ],
     [ "ProfessionData", "class_profession_data.html", "class_profession_data" ],
-    [ "ProfessionDatafileParserJson", "class_profession_datafile_parser_json.html", "class_profession_datafile_parser_json" ],
-    [ "ProfessionDatafileParserXml", "class_profession_datafile_parser_xml.html", "class_profession_datafile_parser_xml" ],
     [ "RaceData", "class_race_data.html", "class_race_data" ],
     [ "RaceDatafileParserJson", "class_race_datafile_parser_json.html", "class_race_datafile_parser_json" ],
     [ "RaceDatafileParserXml", "class_race_datafile_parser_xml.html", "class_race_datafile_parser_xml" ],

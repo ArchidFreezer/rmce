@@ -161,17 +161,13 @@ private:
 
 template<GameRuleDataObject T>
 inline void DatafileParser::populateGameRuleDataChoice(const GameRuleDataChoice<T>* game_data_choice, pt::ptree& tree) {
+	tree.put("num-choices", game_data_choice->numChoices());
 
 	// We want the same json output each time so we sort the data before we write them
 	std::set<std::string> option_set{};
 	for (auto& data : game_data_choice->options()) {
 		option_set.insert(data->id());
 	}
-
-	// Short circuit if we have no options
-	if (option_set.empty()) return;
-
-	tree.put("num-choices", game_data_choice->numChoices());
 
 	// Add the array container
 	pt::ptree options_tree{};

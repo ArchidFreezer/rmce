@@ -1,18 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"functions_t.html":[2,3,0,18],
-"functions_u.html":[2,3,0,19],
-"functions_w.html":[2,3,0,20],
-"functions_z.html":[2,3,0,21],
-"functions_~.html":[2,3,0,22],
-"globals.html":[3,1,0],
-"globals_func.html":[3,1,1],
-"hierarchy.html":[2,2],
-"index.html":[],
-"namespace_armour_type.html":[0,0,0],
-"namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be":[0,0,0,1],
-"namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be":[0,0,0,2],
-"namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453bea01d1c16ca31bef9f90c17d037ed8ed06":[0,0,0,2,9],
 "namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453bea0ff2e76d9c777d1b7a76d792f175a7bb":[0,0,0,2,4],
 "namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453bea1e9bfdcbe87e8dcd8e49c20cb9abdd1b":[0,0,0,2,5],
 "namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453bea346277f1463c82989dde42ce6cc98d1a":[0,0,0,2,7],
