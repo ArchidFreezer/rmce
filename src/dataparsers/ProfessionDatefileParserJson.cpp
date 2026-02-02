@@ -66,47 +66,18 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	}
 	if (base_spell_list_choices_tree.size()) datum.push_back(std::make_pair("base-spell-list-choices", base_spell_list_choices_tree));
 
-	// Occupational skills
-	pt::ptree occupational_skills_tree{};
-	for (auto& skill : game_data.occupationalSkills()) {
-		pt::ptree skill_tree{};
-		skill_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_tree.put("subcategory", skill.subcategory().value());
-		occupational_skills_tree.push_back(std::make_pair("", skill_tree));
+	// Skill development types
+	pt::ptree skill_development_types_tree{};
+	for (auto& skill : game_data.skillsWithSkillDevelopmentType()) {
+		pt::ptree skill_development_type_tree{};
+		skill_development_type_tree.put("skill", skill.skillData().id());
+		if (skill.subcategory()) skill_development_type_tree.put("subcategory", skill.subcategory().value());
+		skill_development_type_tree.put("development-type", SkillDevelopmentType::toString(game_data.skillDevelopmentType(skill)));
+		skill_development_types_tree.push_back(std::make_pair("", skill_development_type_tree));
 	}
-	if (occupational_skills_tree.size()) datum.push_back(std::make_pair("occupational-skills", occupational_skills_tree));
+	if (skill_development_types_tree.size()) datum.push_back(std::make_pair("skill-development-types", skill_development_types_tree));
 
-	// Everyman skills
-	pt::ptree everyman_skills_tree{};
-	for (auto& skill : game_data.everymanSkills()) {
-		pt::ptree skill_tree{};
-		skill_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_tree.put("subcategory", skill.subcategory().value());
-		everyman_skills_tree.push_back(std::make_pair("", skill_tree));
-	}
-	if (everyman_skills_tree.size()) datum.push_back(std::make_pair("everyman-skills", everyman_skills_tree));
-
-	// Standard skills
-	pt::ptree standard_skills_tree{};
-	for (auto& skill : game_data.standardSkills()) {
-		pt::ptree skill_tree{};
-		skill_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_tree.put("subcategory", skill.subcategory().value());
-		standard_skills_tree.push_back(std::make_pair("", skill_tree));
-	}
-	if (standard_skills_tree.size()) datum.push_back(std::make_pair("standard-skills", standard_skills_tree));
-
-	// Restricted skills
-	pt::ptree restricted_skills_tree{};
-	for (auto& skill : game_data.restrictedSkills()) {
-		pt::ptree skill_tree{};
-		skill_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_tree.put("subcategory", skill.subcategory().value());
-		restricted_skills_tree.push_back(std::make_pair("", skill_tree));
-	}
-	if (restricted_skills_tree.size()) datum.push_back(std::make_pair("restricted-skills", restricted_skills_tree));
-
-	// Skill group skill modifiers
+	// Skill group skill development types
 	pt::ptree skill_group_skill_developments_tree{};
 	for (auto& skill_group : game_data.skillGroupsWithSkillDevelopmentType()) {
 		pt::ptree skill_group_skill_development_tree{};

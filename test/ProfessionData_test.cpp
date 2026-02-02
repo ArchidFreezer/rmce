@@ -90,7 +90,7 @@ namespace {
 		EXPECT_EQ(count, 2);
 	}
 
-	TEST(ProfessionData, EverymanSkills) {
+	TEST(ProfessionData, SkillDevelopmentTypes) {
 		ProfessionData prof("PROF_ID");
 
 		SkillData sk1("SKILL1_ID");
@@ -99,208 +99,31 @@ namespace {
 		SubcategoriedSkillData s2(sk2, "Sub");
 		EXPECT_STREQ(s1.id().c_str(), "SKILL1_ID_Sub");
 
-		prof.addEverymanSkill(std::move(s1));
-		prof.addEverymanSkill(std::move(s2));
+		prof.setSkillDevelopmentType(std::move(s1), SkillDevelopmentType::kEveryman);
+		prof.setSkillDevelopmentType(std::move(s2), SkillDevelopmentType::kEveryman);
 
-		const std::set<SubcategoriedSkillData> eset(prof.everymanSkills());
+		const std::set<SubcategoriedSkillData> eset(prof.skillsWithSkillDevelopmentType());
 		EXPECT_EQ(eset.size(), 2);
 
-		const std::set<SubcategoriedSkillData> eset2(prof.everymanSkills());
+		const std::set<SubcategoriedSkillData> eset2(prof.skillsWithSkillDevelopmentType());
 		EXPECT_EQ(eset2.size(), 2);
 
 		int count{ 0 };
-		for (auto& skill : prof.everymanSkills()) {
+		for (auto& skill : prof.skillsWithSkillDevelopmentType()) {
 			count++;
 			if (skill.skillData().id() == "SKILL1_ID" || skill.skillData().id() == "SKILL2_ID") continue;
 			FAIL();
 		}
 		EXPECT_EQ(count, 2);
 
-		SubcategoriedSkillData s2b(sk2, "Sub");
-		EXPECT_FALSE(prof.isEverymanSkill(sk2));
-		EXPECT_TRUE(prof.isEverymanSkill(sk2, "Sub"));
-		EXPECT_THROW(prof.addEverymanSkill(std::move(s2b)), ProfessionData::InvalidSkillDevelopment);
+		SubcategoriedSkillData s2b(sk2, "Sub"); // Duplicate of above
+		EXPECT_FALSE(prof.isSkillDevelopmentTypeSet(sk2));
+		EXPECT_TRUE(prof.isSkillDevelopmentTypeSet(sk2, "Sub"));
+		EXPECT_THROW(prof.setSkillDevelopmentType(std::move(s2b), SkillDevelopmentType::kOccupational), ProfessionData::InvalidSkillDevelopment);
 
 		SkillData sk3("SKILL3_ID");
-		EXPECT_FALSE(prof.isEverymanSkill(sk3));
+		EXPECT_FALSE(prof.isSkillDevelopmentTypeSet(sk3));
 
-		SkillData sk4("SKILL4_ID");
-		SubcategoriedSkillData s4(sk4, "");
-		prof.addOccupationalSkill(std::move(s4));
-		SubcategoriedSkillData s5(sk4, "");
-		EXPECT_THROW(prof.addEverymanSkill(std::move(s5)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk5("SKILL5_ID");
-		SubcategoriedSkillData s6(sk5, "");
-		prof.addRestrictedSkill(std::move(s6));
-		SubcategoriedSkillData s7(sk5, "");
-		EXPECT_THROW(prof.addEverymanSkill(std::move(s7)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk6("SKILL6_ID");
-		SubcategoriedSkillData s8(sk6, "");
-		prof.addStandardSkill(std::move(s8));
-		SubcategoriedSkillData s9(sk6, "");
-		EXPECT_THROW(prof.addEverymanSkill(std::move(s9)), ProfessionData::InvalidSkillDevelopment);
-	}
-
-	TEST(ProfessionData, OccupationalSkills) {
-		ProfessionData prof("PROF_ID");
-
-		SkillData sk1("SKILL1_ID");
-		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
-		EXPECT_STREQ(s1.id().c_str(), "SKILL1_ID_Sub");
-
-		prof.addOccupationalSkill(std::move(s1));
-		prof.addOccupationalSkill(std::move(s2));
-
-		const std::set<SubcategoriedSkillData> eset(prof.occupationalSkills());
-		EXPECT_EQ(eset.size(), 2);
-
-		const std::set<SubcategoriedSkillData> eset2(prof.occupationalSkills());
-		EXPECT_EQ(eset2.size(), 2);
-
-		int count{ 0 };
-		for (auto& skill : prof.occupationalSkills()) {
-			count++;
-			if (skill.skillData().id() == "SKILL1_ID" || skill.skillData().id() == "SKILL2_ID") continue;
-			FAIL();
-		}
-		EXPECT_EQ(count, 2);
-
-		SubcategoriedSkillData s2b(sk2, "Sub");
-		EXPECT_FALSE(prof.isOccupationalSkill(sk2));
-		EXPECT_TRUE(prof.isOccupationalSkill(sk2, "Sub"));
-		EXPECT_THROW(prof.addOccupationalSkill(std::move(s2b)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk3("SKILL3_ID");
-		EXPECT_FALSE(prof.isOccupationalSkill(sk3));
-
-		SkillData sk4("SKILL4_ID");
-		SubcategoriedSkillData s4(sk4, "");
-		prof.addRestrictedSkill(std::move(s4));
-		SubcategoriedSkillData s5(sk4, "");
-		EXPECT_THROW(prof.addOccupationalSkill(std::move(s5)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk5("SKILL5_ID");
-		SubcategoriedSkillData s6(sk5, "");
-		prof.addEverymanSkill(std::move(s6));
-		SubcategoriedSkillData s7(sk5, "");
-		EXPECT_THROW(prof.addOccupationalSkill(std::move(s7)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk6("SKILL6_ID");
-		SubcategoriedSkillData s8(sk6, "");
-		prof.addStandardSkill(std::move(s8));
-		SubcategoriedSkillData s9(sk6, "");
-		EXPECT_THROW(prof.addOccupationalSkill(std::move(s9)), ProfessionData::InvalidSkillDevelopment);
-	}
-
-	TEST(ProfessionData, RestrictedSkills) {
-		ProfessionData prof("PROF_ID");
-
-		SkillData sk1("SKILL1_ID");
-		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
-
-		prof.addRestrictedSkill(std::move(s1));
-		prof.addRestrictedSkill(std::move(s2));
-
-		const std::set<SubcategoriedSkillData> eset(prof.restrictedSkills());
-		EXPECT_EQ(eset.size(), 2);
-
-		const std::set<SubcategoriedSkillData> eset2(prof.restrictedSkills());
-		EXPECT_EQ(eset2.size(), 2);
-
-		int count{ 0 };
-		for (auto& skill : prof.restrictedSkills()) {
-			count++;
-			if (skill.skillData().id() == "SKILL1_ID" || skill.skillData().id() == "SKILL2_ID") continue;
-			FAIL();
-		}
-		EXPECT_EQ(count, 2);
-
-		SkillData sk2b("SKILL2_ID");
-		SubcategoriedSkillData s2b(sk2b, "Sub");
-		EXPECT_FALSE(prof.isRestrictedSkill(sk2b));
-		EXPECT_TRUE(prof.isRestrictedSkill(sk2b, "Sub"));
-		EXPECT_THROW(prof.addRestrictedSkill(std::move(s2b)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk3("SKILL3_ID");
-		EXPECT_FALSE(prof.isRestrictedSkill(sk3));
-
-		SkillData sk4("SKILL4_ID");
-		SubcategoriedSkillData s4(sk4, "");
-		prof.addEverymanSkill(std::move(s4));
-		SubcategoriedSkillData s5(sk4, "");
-		EXPECT_THROW(prof.addRestrictedSkill(std::move(s5)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk5("SKILL5_ID");
-		SubcategoriedSkillData s6(sk5, "");
-		prof.addOccupationalSkill(std::move(s6));
-		SubcategoriedSkillData s7(sk5, "");
-		EXPECT_THROW(prof.addRestrictedSkill(std::move(s7)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk6("SKILL6_ID");
-		SubcategoriedSkillData s8(sk6, "");
-		prof.addStandardSkill(std::move(s8));
-		SubcategoriedSkillData s9(sk6, "");
-		EXPECT_THROW(prof.addRestrictedSkill(std::move(s9)), ProfessionData::InvalidSkillDevelopment);
-	}
-
-
-	TEST(ProfessionData, StandardSkills) {
-		ProfessionData prof("PROF_ID");
-
-		SkillData sk1("SKILL1_ID");
-		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
-
-		prof.addStandardSkill(std::move(s1));
-		prof.addStandardSkill(std::move(s2));
-
-		const std::set<SubcategoriedSkillData> eset(prof.standardSkills());
-		EXPECT_EQ(eset.size(), 2);
-
-		const std::set<SubcategoriedSkillData> eset2(prof.standardSkills());
-		EXPECT_EQ(eset2.size(), 2);
-
-		int count{ 0 };
-		for (auto& skill : prof.standardSkills()) {
-			count++;
-			if (skill.skillData().id() == "SKILL1_ID" || skill.skillData().id() == "SKILL2_ID") continue;
-			FAIL();
-		}
-		EXPECT_EQ(count, 2);
-
-		SkillData sk2b("SKILL2_ID");
-		SubcategoriedSkillData s2b(sk2b, "Sub");
-		EXPECT_FALSE(prof.isStandardSkill(sk2b));
-		EXPECT_TRUE(prof.isStandardSkill(sk2b, "Sub"));
-		EXPECT_THROW(prof.addStandardSkill(std::move(s2b)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk3("SKILL3_ID");
-		EXPECT_FALSE(prof.isStandardSkill(sk3));
-
-		SkillData sk4("SKILL4_ID");
-		SubcategoriedSkillData s4(sk4, "");
-		prof.addEverymanSkill(std::move(s4));
-		SubcategoriedSkillData s5(sk4, "");
-		EXPECT_THROW(prof.addStandardSkill(std::move(s5)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk5("SKILL5_ID");
-		SubcategoriedSkillData s6(sk5, "");
-		prof.addOccupationalSkill(std::move(s6));
-		SubcategoriedSkillData s7(sk5, "");
-		EXPECT_THROW(prof.addStandardSkill(std::move(s7)), ProfessionData::InvalidSkillDevelopment);
-
-		SkillData sk6("SKILL6_ID");
-		SubcategoriedSkillData s8(sk6, "");
-		prof.addRestrictedSkill(std::move(s8));
-		SubcategoriedSkillData s9(sk6, "");
-		EXPECT_THROW(prof.addStandardSkill(std::move(s9)), ProfessionData::InvalidSkillDevelopment);
 	}
 
 	TEST(ProfessionData, EverymanSkillChoices) {

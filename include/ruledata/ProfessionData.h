@@ -221,180 +221,6 @@ public:
 	const std::vector<GameRuleDataChoice<SpellListData>>& baseSpellListChoices() const { return base_spell_list_choices_; }
 
 	/**
-	 * @brief Add a skill that is considered everyman for the profession
-	 * @param skill SubcategoriedSkillData unique pointer to the everyman skill
-	 * @throw InvalidSkillDevelopment If the skill is set as restricted
-	 * @see SkillDevelopmentType
-	 */
-	void addEverymanSkill(SubcategoriedSkillData skill) {
-		if (isOccupationalSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as everyman as it is already set as occupational");
-		if (isRestrictedSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as everyman as it is already set as restricted");
-		if (isStandardSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as everyman as it is already set as standard");
-		if (isEverymanSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as everyman as it is already defined");
-		everyman_skills_.insert(std::move(skill));
-	}
-
-	/**
-	 * @brief Get a container of the skills that are considered everyman
-	 * @return std::set container of everyman skills
-	 * @see SkillDevelopmentType
-	 */
-	const std::set<SubcategoriedSkillData> everymanSkills() const {
-		std::set<SubcategoriedSkillData> ret;
-		for (auto& skill : everyman_skills_) {
-			const SubcategoriedSkillData data(skill.skillData(), skill.subcategory());
-			ret.insert(data);
-		}
-		return ret;
-	}
-
-	/**
-	 * @brief Check if a skill is everyman for the profession
-	 * @param other Skill to check
-	 * @param subcategory optional subcategory of @a other
-	 * @return `true` if the skill is everyman
-	 * @return `false` if the skill is not everyman
-	 * @see SkillDevelopmentType
-	 */
-	bool isEverymanSkill(const SkillData& other, std::optional<std::string_view> subcategory = std::nullopt) const {
-		for (auto& skill : everyman_skills_) {
-			if (skill.skillData().id() == other.id() && (subcategory ? subcategory.value() == skill.subcategory() : !skill.subcategory())) return true;
-		}
-		return false;
-	}
-
-	/**
-	 * @brief Add a skill that is considered occupational for the profession
-	 * @param skill SubcategoriedSkillData unique pointer to the occupational skill
-	 * @throw InvalidSkillDevelopment If the skill is set as restricted
-	 * @see SkillDevelopmentType
-	 */
-	void addOccupationalSkill(SubcategoriedSkillData skill) {
-		if (isEverymanSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as occupational as it is already set as everyman");
-		if (isRestrictedSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as occupational as it is already set as restricted");
-		if (isStandardSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as occupational as it is already set as standard");
-		if (isOccupationalSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as occupational as it is already defined");
-		occupational_skills_.insert(std::move(skill));
-	}
-
-	/**
-	 * @brief Get a container of the skills that are considered occupational
-	 * @return std::set container of occupational skills
-	 * @see SkillDevelopmentType
-	 */
-	const std::set<SubcategoriedSkillData> occupationalSkills() const {
-		std::set<SubcategoriedSkillData> ret;
-		for (auto& skill : occupational_skills_) {
-			const SubcategoriedSkillData data(skill.skillData(), skill.subcategory());
-			ret.insert(data);
-		}
-		return ret;
-	}
-
-	/**
-	 * @brief Check if a skill is occupational for the profession
-	 * @param other Skill to check
-	 * @param subcategory optional subcategory of @a other
-	 * @return `true` if the skill is occupational
-	 * @return `false` if the skill is not occupational
-	 * @see SkillDevelopmentType
-	 */
-	bool isOccupationalSkill(const SkillData& other, std::optional<std::string_view> subcategory = std::nullopt) const {
-		for (auto& skill : occupational_skills_) {
-			if (skill.skillData().id() == other.id() && (subcategory ? subcategory.value() == skill.subcategory() : !skill.subcategory())) return true;
-		}
-		return false;
-	}
-
-	/**
-	 * @brief Add a skill that is considered restricted for the profession
-	 * @param skill SubcategoriedSkillData unique pointer to the restricted skill
-	 * @throw InvalidSkillDevelopment If the skill is set as restricted
-	 * @see SkillDevelopmentType
-	 */
-	void addRestrictedSkill(SubcategoriedSkillData skill) {
-		if (isEverymanSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as restricted as it is already set as everyman");
-		if (isOccupationalSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as restricted as it is already set as occupational");
-		if (isStandardSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as restricted as it is already set as standard");
-		if (isRestrictedSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as restricted as it is already defined");
-		restricted_skills_.insert(std::move(skill));
-	}
-
-	/**
-	 * @brief Get a container of the skills that are considered restricted
-	 * @return std::set container of restricted skills
-	 */
-	const std::set<SubcategoriedSkillData> restrictedSkills() const {
-		std::set<SubcategoriedSkillData> ret;
-		for (auto& skill : restricted_skills_) {
-			const SubcategoriedSkillData data(skill.skillData(), skill.subcategory());
-			ret.insert(data);
-		}
-		return ret;
-	}
-
-	/**
-	 * @brief Check if a skill is restricted for the profession
-	 * @param other Skill to check
-	 * @param subcategory optional subcategory of @a other
-	 * @return `true` if the skill is restricted
-	 * @return `false` if the skill is not restricted
-	 * @see SkillDevelopmentType
-	 */
-	bool isRestrictedSkill(const SkillData& other, std::optional<std::string_view> subcategory = std::nullopt) const {
-		for (auto& skill : restricted_skills_) {
-			if (skill.skillData().id() == other.id() && (subcategory ? subcategory.value() == skill.subcategory() : !skill.subcategory())) return true;
-		}
-		return false;
-	}
-
-	/**
-	 * @brief Add a skill that is considered standard for the profession
-	 * 
-	 * Some skills by default are restricted so this is used if a profession removes the restricted status and allows the
-	 * skill to be developed as normal.
-	 * 
-	 * @param skill SubcategoriedSkillData unique pointer to the standard skill
-	 * @throw InvalidSkillDevelopment If the skill is set as standard
-	 * @see SkillDevelopmentType
-	 */
-	void addStandardSkill(SubcategoriedSkillData skill) {
-		if (isEverymanSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as standard as it is already set as everyman");
-		if (isOccupationalSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as standard as it is already set as occupational");
-		if (isRestrictedSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as standard as it is already set as restricted");
-		if (isStandardSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as standard as it is already defined");
-		standard_skills_.insert(std::move(skill));
-	}
-
-	/**
-	 * @brief Get a container of the skills that are considered standard
-	 * @return std::set container of standard skills
-	 */
-	const std::set<SubcategoriedSkillData> standardSkills() const {
-		std::set<SubcategoriedSkillData> ret;
-		for (auto& skill : standard_skills_) {
-			const SubcategoriedSkillData data(skill.skillData(), skill.subcategory());
-			ret.insert(data);
-		}
-		return ret;
-	}
-
-	/**
-	 * @brief Check if a skill is standard for the profession
-	 * @param other Skill to check
-	 * @param subcategory optional subcategory of @a other
-	 * @return `true` if the skill is standard
-	 * @return `false` if the skill is not standard
-	 * @see SkillDevelopmentType
-	 */
-	bool isStandardSkill(const SkillData& other, std::optional<std::string_view> subcategory = std::nullopt) const {
-		for (auto& skill : standard_skills_) {
-			if (skill.skillData().id() == other.id() && (subcategory ? subcategory.value() == skill.subcategory() : !skill.subcategory())) return true;
-		}
-		return false;
-	}
-
-	/**
 	 * @brief Add a choice that defines the skill that a character may select one or more from to become everyman
 	 * @param choice GameRuleDataChoice choice definition
 	 * @see SkillDevelopmentType
@@ -475,6 +301,67 @@ public:
 	 * @return bonus for the group
 	 */
 	int skillGroupBonus(const std::string& group_name) const { return (isBonusSkillGroup(group_name) ? group_bonuses_.at(group_name) : 0); }
+
+	/**
+	 * @brief Set the development type for a skill
+	 * @param skill SubcategoriedSkillData to set the development type for
+	 * @param type SkillDevelopmentType::Type value to set
+	 */
+	void setSkillDevelopmentType(SubcategoriedSkillData skill, SkillDevelopmentType::Type type) {
+		if (isSkillDevelopmentTypeSet(skill.skillData(), skill.subcategory())) {
+			throw InvalidSkillDevelopment("There is already a development set for skill " + skill.id());
+		}
+		skill_development_types_.emplace(std::move(skill), type); 
+	}
+
+	/**
+	 * @brief Get the development type for a skill
+	 * @param skill SubcategoriedSkillData to get the development type for
+	 * @return SkillDevelopmentType::Type value
+	 */
+	SkillDevelopmentType::Type skillDevelopmentType(const SubcategoriedSkillData& skill) const { 
+		for (auto& key : skill_development_types_) {
+			if (key.first.id() == skill.id()) return key.second;
+		}
+		return SkillDevelopmentType::kStandard;
+	}
+
+	/**
+	 * @brief Get the development type for a skill
+	 * @param skill SubcategoriedSkillData to get the development type for
+	 * @param subcategory optional subcategory of @a skill
+	 * @return SkillDevelopmentType::Type value
+	 */
+	SkillDevelopmentType::Type skillDevelopmentType(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
+		return skillDevelopmentType(SubcategoriedSkillData(skill, subcategory));
+	}
+
+	/**
+	 * @brief Gets a container with the skill that the profession has a development type set for
+	 * @return std::set of SubcategoriedSkillData with the development type set
+	 */
+	const std::set<SubcategoriedSkillData> skillsWithSkillDevelopmentType() const {
+		std::set<SubcategoriedSkillData> ret;
+		for (auto& key : skill_development_types_) {
+			const SubcategoriedSkillData data(key.first.skillData(), key.first.subcategory());
+			ret.insert(data);
+		}
+		return ret;
+	}
+
+	/**
+	 * @brief Check if there is a development type set for a skill
+	 * @param skill SkillData to check
+	 * @param subcategory optional subcategory of @a skill
+	 * @return `true` if the skill has a development type set
+	 * @return `false` if the skill does not have a development type set
+	 */
+	bool isSkillDevelopmentTypeSet(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
+		for (auto& key : std::views::keys(skill_development_types_)) {
+			if (key.skillData().id() == skill.id() && (subcategory ? subcategory.value() == key.subcategory().value() : !key.subcategory())) return true;
+		}
+		return false;
+	}
 
 	/**
 	 * @brief Add a development type to all skills in a group
@@ -637,14 +524,11 @@ private:
 	std::set< RealmType::Type> realms_{};/**< Realm(s) that the profession draws power from */
 	std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the profession */
 	std::vector<GameRuleDataChoice<SpellListData>> base_spell_list_choices_{}; /**< Set of spell lists that the profession base lists should be chosen from */
-	std::set<SubcategoriedSkillData> everyman_skills_{}; /**< Skills that are considered everyman for the profession */
-	std::set<SubcategoriedSkillData> occupational_skills_{}; /**< Skills that are considered occupational for the profession */
-	std::set<SubcategoriedSkillData> restricted_skills_{}; /**< Skills that are considered restricted for the profession */
-	std::set<SubcategoriedSkillData> standard_skills_{}; /**< Skills that are considered standard for the profession */
 	std::vector<GameRuleDataChoice<SkillData>> everyman_skill_choices_{}; /** Set of skills that the character may select one or more from to become everyman */
 	std::vector<GameRuleDataChoice<SkillCategoryData>> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skills from to become everyman */
 	std::map<std::string, int> group_bonuses_{}; /** bonus to skill categories in a group */
-	std::map<std::string, SkillDevelopmentType::Type> group_skill_development_types_{}; /** Skill group that all skills within have their develompent type changed */
+	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */
+	std::map<std::string, SkillDevelopmentType::Type> group_skill_development_types_{}; /** Skill group that all skills within have their development type changed */
 	std::map<const SkillCategoryData*, int> skill_category_bonuses_{}; /** bonus to skill categories */
 	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */
 	std::map<const SkillCategoryData*, SkillDevelopmentCost> skill_category_development_costs_{}; /** Cost to purchase ranks for a skill category */

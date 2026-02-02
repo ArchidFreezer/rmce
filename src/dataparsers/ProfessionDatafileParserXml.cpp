@@ -62,45 +62,21 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				}
 			}
 
-			// Skill modifiers
+			// Skill development types
 			if (boost::optional<const pt::ptree&> skill_modifiers = v.second.get_child_optional("skill-modifiers")) {
 				for (const auto& skill_modifier : skill_modifiers.get()) {
-					// Get the skills to modiy
-
 					// Get development type to set the skill as and then add the skills to the appropriate container
 					std::string skill_type_id = skill_modifier.second.get<std::string>("skill-type");
 					if (SkillDevelopmentType::fromString(skill_type_id)) {
-						switch (SkillDevelopmentType::fromString(skill_type_id).value()) {
-						case SkillDevelopmentType::kEveryman:
-							for (const auto& skill_tree : skill_modifier.second.get_child("skills")) {
-								std::string skill_id = GameRuleData::generateId("Skill", skill_tree.second.get_value<std::string>());
-								ref.addEverymanSkill(SubcategoriedSkillData(cache().get<SkillData>(skill_id)));
-							}
-							break;
-						case SkillDevelopmentType::kOccupational:
-							for (const auto& skill_tree : skill_modifier.second.get_child("skills")) {
-								std::string skill_id = GameRuleData::generateId("Skill", skill_tree.second.get_value<std::string>());
-								ref.addOccupationalSkill(SubcategoriedSkillData(cache().get<SkillData>(skill_id)));
-							}
-							break;
-						case SkillDevelopmentType::kStandard:
-							for (const auto& skill_tree : skill_modifier.second.get_child("skills")) {
-								std::string skill_id = GameRuleData::generateId("Skill", skill_tree.second.get_value<std::string>());
-								ref.addStandardSkill(SubcategoriedSkillData(cache().get<SkillData>(skill_id)));
-							}
-							break;
-						case SkillDevelopmentType::kRestricted:
-							for (const auto& skill_tree : skill_modifier.second.get_child("skills")) {
-								std::string skill_id = GameRuleData::generateId("Skill", skill_tree.second.get_value<std::string>());
-								ref.addRestrictedSkill(SubcategoriedSkillData(cache().get<SkillData>(skill_id)));
-							}
-							break;
+						for (const auto& skill_tree : skill_modifier.second.get_child("skills")) {
+							std::string skill_id = GameRuleData::generateId("Skill", skill_tree.second.get_value<std::string>());
+							ref.setSkillDevelopmentType(SubcategoriedSkillData(cache().get<SkillData>(skill_id)), SkillDevelopmentType::fromString(skill_type_id).value());
 						}
 					}
 				}
 			}
 
-			// Skill group skill modifiers
+			// Skill group skill development types
 			if (boost::optional<const pt::ptree&> skill_group_skill_modifiers = v.second.get_child_optional("skill-group-skill-modifiers")) {
 				for (const auto& skill_group_skill_modifier : skill_group_skill_modifiers.get()) {
 					std::string skill_type_id = skill_group_skill_modifier.second.get_value<std::string>();
