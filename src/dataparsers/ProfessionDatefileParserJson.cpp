@@ -106,6 +106,17 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	}
 	if (restricted_skills_tree.size()) datum.push_back(std::make_pair("restricted-skills", restricted_skills_tree));
 
+	// Skill group skill modifiers
+	pt::ptree skill_group_skill_developments_tree{};
+	for (auto& skill_group : game_data.skillGroupsWithSkillDevelopmentType()) {
+		pt::ptree skill_group_skill_development_tree{};
+		skill_group_skill_development_tree.put("skill_group", skill_group);
+		skill_group_skill_development_tree.put("skill_development", SkillDevelopmentType::toString(game_data.skillGroupSkillDevelopmentType(skill_group)));
+		skill_group_skill_developments_tree.push_back(std::make_pair("", skill_group_skill_development_tree));
+	}
+	if (skill_group_skill_developments_tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-types", skill_group_skill_developments_tree));
+
+
 	// Skill group bonus
 	pt::ptree skill_group_bonuses_tree{};
 	for (auto& skill_group : game_data.skillGroupsWithBonus()) {

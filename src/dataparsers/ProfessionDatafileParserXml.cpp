@@ -100,6 +100,16 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				}
 			}
 
+			// Skill group skill modifiers
+			if (boost::optional<const pt::ptree&> skill_group_skill_modifiers = v.second.get_child_optional("skill-group-skill-modifiers")) {
+				for (const auto& skill_group_skill_modifier : skill_group_skill_modifiers.get()) {
+					std::string skill_type_id = skill_group_skill_modifier.second.get_value<std::string>();
+					if (SkillDevelopmentType::fromString(skill_type_id)) {
+						ref.addSkillGroupSkillDevelopmentType(skill_group_skill_modifier.second.get<std::string>("<xmlattr>.group"), SkillDevelopmentType::fromString(skill_type_id).value());
+					}
+				}
+			}
+
 			// Get skill group bonuses
 			if (boost::optional<const pt::ptree&> skill_group_bonuses = v.second.get_child_optional("skill-group-bonuses")) {
 				for (const auto& skill_group_bonus : skill_group_bonuses.get()) {

@@ -12,6 +12,7 @@
 #include <SkillCategoryData.h>
 #include <SkillData.h>
 #include <SkillDevelopmentCost.h>
+#include <SkillDevelopmentType.h>
 #include <SpellListData.h>
 #include <StatType.h>
 #include <SubcategoriedSkillData.h>
@@ -476,6 +477,37 @@ public:
 	int skillGroupBonus(const std::string& group_name) const { return (isBonusSkillGroup(group_name) ? group_bonuses_.at(group_name) : 0); }
 
 	/**
+	 * @brief Add a development type to all skills in a group
+	 * @param group Name of the group
+	 * @param type SkillDevelopmentType::Type to set
+	 */
+	void addSkillGroupSkillDevelopmentType(std::string_view group, SkillDevelopmentType::Type type) { group_skill_development_types_.emplace(group, type); }
+
+	/**
+	 * @brief Get a container with the names of groups that have skill development type changes
+	 * @return std::set of group names
+	 */
+	const std::set<std::string> skillGroupsWithSkillDevelopmentType() const {
+		auto keys = std::views::keys(group_skill_development_types_);
+		return { keys.begin(), keys.end() };
+	}
+
+	/**
+	 * @brief Check if a skills in a group have a development type set
+	 * @param group_name name of the group
+	 * @return `true` if the skills in the group are modified
+	 * @return `false` if the skills in the group are not modified
+	 */
+	bool isSkillDevelopmentTypeSkillGroup(const std::string& group_name) const { return (group_skill_development_types_.find(group_name) != group_skill_development_types_.end()); }
+
+	/**
+	 * @brief Get the development type to set for all skills in a group
+	 * @param group_name name of the group to get the skill development type for
+	 * @return SkillDevelopmentType::Type for skill in the group
+	 */
+	SkillDevelopmentType::Type skillGroupSkillDevelopmentType(const std::string& group_name) const { return (isSkillDevelopmentTypeSkillGroup(group_name) ? group_skill_development_types_.at(group_name) : SkillDevelopmentType::kStandard); }
+
+	/**
 	 * @brief Add bonus for all skills in a category
 	 * @param category SkillCategoryData to add a bonus for
 	 * @param bonus int bonus value
@@ -612,6 +644,7 @@ private:
 	std::vector<GameRuleDataChoice<SkillData>> everyman_skill_choices_{}; /** Set of skills that the character may select one or more from to become everyman */
 	std::vector<GameRuleDataChoice<SkillCategoryData>> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skills from to become everyman */
 	std::map<std::string, int> group_bonuses_{}; /** bonus to skill categories in a group */
+	std::map<std::string, SkillDevelopmentType::Type> group_skill_development_types_{}; /** Skill group that all skills within have their develompent type changed */
 	std::map<const SkillCategoryData*, int> skill_category_bonuses_{}; /** bonus to skill categories */
 	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */
 	std::map<const SkillCategoryData*, SkillDevelopmentCost> skill_category_development_costs_{}; /** Cost to purchase ranks for a skill category */
