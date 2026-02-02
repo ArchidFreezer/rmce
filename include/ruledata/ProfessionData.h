@@ -449,13 +449,13 @@ public:
 	 * @param group Name of the group
 	 * @param bonus bonus value
 	 */
-	void addGroupBonus(std::string_view group, int bonus) { group_bonuses_.emplace(group, bonus); }
+	void addSkillGroupBonus(std::string_view group, int bonus) { group_bonuses_.emplace(group, bonus); }
 
 	/**
 	 * @brief Get a container with the names of groups that have bonuses
 	 * @return std::set of group names
 	 */
-	const std::set<std::string> groupsWithBonus() const {
+	const std::set<std::string> skillGroupsWithBonus() const {
 		auto keys = std::views::keys(group_bonuses_);
 		return { keys.begin(), keys.end() };
 	}
@@ -466,14 +466,14 @@ public:
 	 * @return `true` if the group has a bonus
 	 * @return `false` if the group does not has a bonus
 	 */
-	bool isBonusGroup(const std::string& group_name) const { return (group_bonuses_.find(group_name) != group_bonuses_.end()); }
+	bool isBonusSkillGroup(const std::string& group_name) const { return (group_bonuses_.find(group_name) != group_bonuses_.end()); }
 
 	/**
 	 * @brief Get the bonus for a group
 	 * @param group_name name of the group to get the bonus for
 	 * @return bonus for the group
 	 */
-	int groupBonus(const std::string& group_name) const { return (isBonusGroup(group_name) ? group_bonuses_.at(group_name) : 0); }
+	int skillGroupBonus(const std::string& group_name) const { return (isBonusSkillGroup(group_name) ? group_bonuses_.at(group_name) : 0); }
 
 	/**
 	 * @brief Add bonus for all skills in a category
