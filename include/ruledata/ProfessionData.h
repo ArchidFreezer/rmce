@@ -276,14 +276,14 @@ public:
 	 * @param group Name of the group
 	 * @param bonus bonus value
 	 */
-	void addSkillGroupBonus(std::string_view group, int bonus) { group_bonuses_.emplace(group, bonus); }
+	void addSkillGroupBonus(std::string_view group, int bonus) { skill_group_bonuses_.emplace(group, bonus); }
 
 	/**
 	 * @brief Get a container with the names of groups that have bonuses
 	 * @return std::set of group names
 	 */
 	const std::set<std::string> skillGroupsWithBonus() const {
-		auto keys = std::views::keys(group_bonuses_);
+		auto keys = std::views::keys(skill_group_bonuses_);
 		return { keys.begin(), keys.end() };
 	}
 
@@ -293,14 +293,14 @@ public:
 	 * @return `true` if the group has a bonus
 	 * @return `false` if the group does not has a bonus
 	 */
-	bool isBonusSkillGroup(const std::string& group_name) const { return (group_bonuses_.find(group_name) != group_bonuses_.end()); }
+	bool isBonusSkillGroup(const std::string& group_name) const { return (skill_group_bonuses_.find(group_name) != skill_group_bonuses_.end()); }
 
 	/**
 	 * @brief Get the bonus for a group
 	 * @param group_name name of the group to get the bonus for
 	 * @return bonus for the group
 	 */
-	int skillGroupBonus(const std::string& group_name) const { return (isBonusSkillGroup(group_name) ? group_bonuses_.at(group_name) : 0); }
+	int skillGroupBonus(const std::string& group_name) const { return (isBonusSkillGroup(group_name) ? skill_group_bonuses_.at(group_name) : 0); }
 
 	/**
 	 * @brief Set the development type for a skill
@@ -368,14 +368,14 @@ public:
 	 * @param group Name of the group
 	 * @param type SkillDevelopmentType::Type to set
 	 */
-	void addSkillGroupSkillDevelopmentType(std::string_view group, SkillDevelopmentType::Type type) { group_skill_development_types_.emplace(group, type); }
+	void addSkillGroupSkillDevelopmentType(std::string_view group, SkillDevelopmentType::Type type) { skill_group_skill_development_types_.emplace(group, type); }
 
 	/**
 	 * @brief Get a container with the names of groups that have skill development type changes
 	 * @return std::set of group names
 	 */
 	const std::set<std::string> skillGroupsWithSkillDevelopmentType() const {
-		auto keys = std::views::keys(group_skill_development_types_);
+		auto keys = std::views::keys(skill_group_skill_development_types_);
 		return { keys.begin(), keys.end() };
 	}
 
@@ -385,14 +385,14 @@ public:
 	 * @return `true` if the skills in the group are modified
 	 * @return `false` if the skills in the group are not modified
 	 */
-	bool isSkillDevelopmentTypeSkillGroup(const std::string& group_name) const { return (group_skill_development_types_.find(group_name) != group_skill_development_types_.end()); }
+	bool isSkillDevelopmentTypeSkillGroup(const std::string& group_name) const { return (skill_group_skill_development_types_.find(group_name) != skill_group_skill_development_types_.end()); }
 
 	/**
 	 * @brief Get the development type to set for all skills in a group
 	 * @param group_name name of the group to get the skill development type for
 	 * @return SkillDevelopmentType::Type for skill in the group
 	 */
-	SkillDevelopmentType::Type skillGroupSkillDevelopmentType(const std::string& group_name) const { return (isSkillDevelopmentTypeSkillGroup(group_name) ? group_skill_development_types_.at(group_name) : SkillDevelopmentType::kStandard); }
+	SkillDevelopmentType::Type skillGroupSkillDevelopmentType(const std::string& group_name) const { return (isSkillDevelopmentTypeSkillGroup(group_name) ? skill_group_skill_development_types_.at(group_name) : SkillDevelopmentType::kStandard); }
 
 	/**
 	 * @brief Add bonus for all skills in a category
@@ -524,12 +524,19 @@ private:
 	std::set< RealmType::Type> realms_{};/**< Realm(s) that the profession draws power from */
 	std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the profession */
 	std::vector<GameRuleDataChoice<SpellListData>> base_spell_list_choices_{}; /**< Set of spell lists that the profession base lists should be chosen from */
+
+	// Skill bonuses
+	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */
+	std::map<const SkillCategoryData*, int> skill_category_bonuses_{}; /** bonus to skill categories */
+	std::map<std::string, int> skill_group_bonuses_{}; /** bonus to skill categories in a group */
+
+	// Skill development types
+	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */
+	std::map<std::string, SkillDevelopmentType::Type> skill_group_skill_development_types_{}; /** Skill group that all skills within have their development type changed */
+
+	// Skill development type choices
 	std::vector<GameRuleDataChoice<SkillData>> everyman_skill_choices_{}; /** Set of skills that the character may select one or more from to become everyman */
 	std::vector<GameRuleDataChoice<SkillCategoryData>> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skills from to become everyman */
-	std::map<std::string, int> group_bonuses_{}; /** bonus to skill categories in a group */
-	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */
-	std::map<std::string, SkillDevelopmentType::Type> group_skill_development_types_{}; /** Skill group that all skills within have their development type changed */
-	std::map<const SkillCategoryData*, int> skill_category_bonuses_{}; /** bonus to skill categories */
-	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */
+
 	std::map<const SkillCategoryData*, SkillDevelopmentCost> skill_category_development_costs_{}; /** Cost to purchase ranks for a skill category */
 };
