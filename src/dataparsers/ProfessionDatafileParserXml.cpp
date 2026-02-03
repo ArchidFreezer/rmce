@@ -96,7 +96,7 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				for (const auto& skill_category_bonus : skill_category_bonuses.get()) {
 					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_bonus.second.get<std::string>("<xmlattr>.category")) };
 					int bonus = skill_category_bonus.second.get_value<int>();
-					if (bonus) ref.addSkillCategoryBonus(cache().get<SkillCategoryData>(skill_category_id), bonus);
+					if (bonus) ref.addSkillCategoryProfessionBonus(cache().get<SkillCategoryData>(skill_category_id), bonus);
 				}
 			}
 
@@ -154,7 +154,7 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				for (const auto& skill_group_bonus : skill_group_bonuses.get()) {
 					int bonus = skill_group_bonus.second.get_value<int>();
 					std::string group_id{ GameRuleData::generateId("SkillGroup", skill_group_bonus.second.get<std::string>("<xmlattr>.group"))};
-					if (bonus) ref.addSkillGroupBonus(cache().get<SkillGroupData>(group_id), bonus);
+					if (bonus) ref.addSkillGroupProfessionBonus(cache().get<SkillGroupData>(group_id), bonus);
 				}
 			}
 

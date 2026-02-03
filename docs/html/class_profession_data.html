@@ -187,14 +187,14 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:a0f4b89f60a91cda92058e87aafc46926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding development types skills in skill groups.  <br /></td></tr>
 <tr class="memitem:a988f5d0eee42263e720c21244eef539c" id="r_a988f5d0eee42263e720c21244eef539c"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a988f5d0eee42263e720c21244eef539c">skillGroupSkillDevelopmentTypeChoices</a> () const</td></tr>
 <tr class="memdesc:a988f5d0eee42263e720c21244eef539c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills within a skill group that may have their development type changed.  <br /></td></tr>
-<tr class="memitem:aa5fc877f8891241b3ba42bb148738817" id="r_aa5fc877f8891241b3ba42bb148738817"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa5fc877f8891241b3ba42bb148738817">addSkillGroupBonus</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group, int bonus)</td></tr>
-<tr class="memdesc:aa5fc877f8891241b3ba42bb148738817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a bonus to all skills in a group.  <br /></td></tr>
-<tr class="memitem:a0dc49e3d913e32f437ccc3b5dba4ed8a" id="r_a0dc49e3d913e32f437ccc3b5dba4ed8a"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0dc49e3d913e32f437ccc3b5dba4ed8a">skillGroupsWithBonus</a> () const</td></tr>
-<tr class="memdesc:a0dc49e3d913e32f437ccc3b5dba4ed8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the names of groups that have bonuses.  <br /></td></tr>
-<tr class="memitem:ad1daf0668136508c6481845c99d9216c" id="r_ad1daf0668136508c6481845c99d9216c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad1daf0668136508c6481845c99d9216c">isBonusSkillGroup</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group) const</td></tr>
-<tr class="memdesc:ad1daf0668136508c6481845c99d9216c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a group has a bonus.  <br /></td></tr>
-<tr class="memitem:ae25f11598f3a8e1f2cae6c3c95b503f9" id="r_ae25f11598f3a8e1f2cae6c3c95b503f9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae25f11598f3a8e1f2cae6c3c95b503f9">skillGroupBonus</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group) const</td></tr>
-<tr class="memdesc:ae25f11598f3a8e1f2cae6c3c95b503f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus for a group.  <br /></td></tr>
+<tr class="memitem:ab3f9cf9ab14e5df529ba37f1b82c011a" id="r_ab3f9cf9ab14e5df529ba37f1b82c011a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab3f9cf9ab14e5df529ba37f1b82c011a">addSkillGroupProfessionBonus</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group, int bonus)</td></tr>
+<tr class="memdesc:ab3f9cf9ab14e5df529ba37f1b82c011a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a bonus to all skills in a group.  <br /></td></tr>
+<tr class="memitem:a9badc3b2f03a68b1d4cd99968dae7f9f" id="r_a9badc3b2f03a68b1d4cd99968dae7f9f"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9badc3b2f03a68b1d4cd99968dae7f9f">skillGroupsWithProfessionBonus</a> () const</td></tr>
+<tr class="memdesc:a9badc3b2f03a68b1d4cd99968dae7f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the names of groups that have bonuses.  <br /></td></tr>
+<tr class="memitem:af7ae5b1efcadcb40cfa16fb0ca1fd9ee" id="r_af7ae5b1efcadcb40cfa16fb0ca1fd9ee"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af7ae5b1efcadcb40cfa16fb0ca1fd9ee">isProfessionBonusSkillGroup</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group) const</td></tr>
+<tr class="memdesc:af7ae5b1efcadcb40cfa16fb0ca1fd9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a group has a bonus.  <br /></td></tr>
+<tr class="memitem:aee3298c80b30fec7387fd709efcc764e" id="r_aee3298c80b30fec7387fd709efcc764e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aee3298c80b30fec7387fd709efcc764e">skillGroupProfessionBonus</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group) const</td></tr>
+<tr class="memdesc:aee3298c80b30fec7387fd709efcc764e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus for a group.  <br /></td></tr>
 <tr class="memitem:a267bb69e897f4c1fcd441b7ec8d85f19" id="r_a267bb69e897f4c1fcd441b7ec8d85f19"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a267bb69e897f4c1fcd441b7ec8d85f19">setSkillDevelopmentType</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> type)</td></tr>
 <tr class="memdesc:a267bb69e897f4c1fcd441b7ec8d85f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the development type for a skill.  <br /></td></tr>
 <tr class="memitem:a839ac6a9fb0346a489118279c2f3ff57" id="r_a839ac6a9fb0346a489118279c2f3ff57"><td class="memItemLeft"><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a839ac6a9fb0346a489118279c2f3ff57">skillDevelopmentType</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill) const</td></tr>
@@ -221,14 +221,14 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:abde47a2fb7f671007efa9678c0ed3f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a skills in a group have a development type set.  <br /></td></tr>
 <tr class="memitem:a9ff1f1396e0c86202ab56b359f0c8a9c" id="r_a9ff1f1396e0c86202ab56b359f0c8a9c"><td class="memItemLeft"><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9ff1f1396e0c86202ab56b359f0c8a9c">skillGroupSkillDevelopmentType</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group) const</td></tr>
 <tr class="memdesc:a9ff1f1396e0c86202ab56b359f0c8a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the development type to set for all skills in a group.  <br /></td></tr>
-<tr class="memitem:a89e6f5f37182aadca5aa8a5541d9d9b4" id="r_a89e6f5f37182aadca5aa8a5541d9d9b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a89e6f5f37182aadca5aa8a5541d9d9b4">addSkillCategoryBonus</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category, int bonus)</td></tr>
-<tr class="memdesc:a89e6f5f37182aadca5aa8a5541d9d9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add bonus for all skills in a category.  <br /></td></tr>
-<tr class="memitem:abb1f0301d8ec61929a312844aea9f059" id="r_abb1f0301d8ec61929a312844aea9f059"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abb1f0301d8ec61929a312844aea9f059">skillCategoriesWithBonus</a> () const</td></tr>
-<tr class="memdesc:abb1f0301d8ec61929a312844aea9f059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of all the skill categories with a bonus.  <br /></td></tr>
-<tr class="memitem:a874216791330503f834cb6ed78c72e29" id="r_a874216791330503f834cb6ed78c72e29"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a874216791330503f834cb6ed78c72e29">isBonusSkillCategory</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category) const</td></tr>
-<tr class="memdesc:a874216791330503f834cb6ed78c72e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a skill category has a bonus.  <br /></td></tr>
-<tr class="memitem:a92b1288ece3d4f5b6a972fa466b9c027" id="r_a92b1288ece3d4f5b6a972fa466b9c027"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a92b1288ece3d4f5b6a972fa466b9c027">skillCategoryBonus</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category)</td></tr>
-<tr class="memdesc:a92b1288ece3d4f5b6a972fa466b9c027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus a category has.  <br /></td></tr>
+<tr class="memitem:a4908c70377d1b598be0c56d0cdf3588a" id="r_a4908c70377d1b598be0c56d0cdf3588a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4908c70377d1b598be0c56d0cdf3588a">addSkillCategoryProfessionBonus</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category, int bonus)</td></tr>
+<tr class="memdesc:a4908c70377d1b598be0c56d0cdf3588a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add bonus for all skills in a category.  <br /></td></tr>
+<tr class="memitem:ad9faa42815c59326fd0740cc63624dd1" id="r_ad9faa42815c59326fd0740cc63624dd1"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad9faa42815c59326fd0740cc63624dd1">skillCategoriesWithProfessionBonus</a> () const</td></tr>
+<tr class="memdesc:ad9faa42815c59326fd0740cc63624dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of all the skill categories with a bonus.  <br /></td></tr>
+<tr class="memitem:a4c7910550983a6bc0dce6ec205db1b69" id="r_a4c7910550983a6bc0dce6ec205db1b69"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4c7910550983a6bc0dce6ec205db1b69">isProfessionBonusSkillCategory</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category) const</td></tr>
+<tr class="memdesc:a4c7910550983a6bc0dce6ec205db1b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a skill category has a bonus.  <br /></td></tr>
+<tr class="memitem:ad6f867b7f3d3d48d6a357d84174f2e57" id="r_ad6f867b7f3d3d48d6a357d84174f2e57"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad6f867b7f3d3d48d6a357d84174f2e57">skillCategoryProfessionBonus</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category)</td></tr>
+<tr class="memdesc:ad6f867b7f3d3d48d6a357d84174f2e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus a category has.  <br /></td></tr>
 <tr class="memitem:a4c3f01b3ce42e8b1e289c4d4d242206a" id="r_a4c3f01b3ce42e8b1e289c4d4d242206a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4c3f01b3ce42e8b1e289c4d4d242206a">setSkillBonus</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill, int bonus)</td></tr>
 <tr class="memdesc:a4c3f01b3ce42e8b1e289c4d4d242206a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the bonus the profession has with a skill.  <br /></td></tr>
 <tr class="memitem:aecb5417f5cff3520e4d559bbd4eaadc8" id="r_aecb5417f5cff3520e4d559bbd4eaadc8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aecb5417f5cff3520e4d559bbd4eaadc8">skillBonus</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill) const</td></tr>
@@ -404,8 +404,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a89e6f5f37182aadca5aa8a5541d9d9b4" name="a89e6f5f37182aadca5aa8a5541d9d9b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89e6f5f37182aadca5aa8a5541d9d9b4">&#9670;&#160;</a></span>addSkillCategoryBonus()</h2>
+<a id="a4908c70377d1b598be0c56d0cdf3588a" name="a4908c70377d1b598be0c56d0cdf3588a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4908c70377d1b598be0c56d0cdf3588a">&#9670;&#160;</a></span>addSkillCategoryProfessionBonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -414,7 +414,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ProfessionData::addSkillCategoryBonus </td>
+          <td class="memname">void ProfessionData::addSkillCategoryProfessionBonus </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category</em></span>, </td>
         </tr>
@@ -556,8 +556,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aa5fc877f8891241b3ba42bb148738817" name="aa5fc877f8891241b3ba42bb148738817"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5fc877f8891241b3ba42bb148738817">&#9670;&#160;</a></span>addSkillGroupBonus()</h2>
+<a id="ab3f9cf9ab14e5df529ba37f1b82c011a" name="ab3f9cf9ab14e5df529ba37f1b82c011a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f9cf9ab14e5df529ba37f1b82c011a">&#9670;&#160;</a></span>addSkillGroupProfessionBonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -566,7 +566,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ProfessionData::addSkillGroupBonus </td>
+          <td class="memname">void ProfessionData::addSkillGroupProfessionBonus </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>group</em></span>, </td>
         </tr>
@@ -876,8 +876,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a874216791330503f834cb6ed78c72e29" name="a874216791330503f834cb6ed78c72e29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a874216791330503f834cb6ed78c72e29">&#9670;&#160;</a></span>isBonusSkillCategory()</h2>
+<a id="a4c7910550983a6bc0dce6ec205db1b69" name="a4c7910550983a6bc0dce6ec205db1b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7910550983a6bc0dce6ec205db1b69">&#9670;&#160;</a></span>isProfessionBonusSkillCategory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -886,7 +886,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ProfessionData::isBonusSkillCategory </td>
+          <td class="memname">bool ProfessionData::isProfessionBonusSkillCategory </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category</em></span></td><td>)</td>
           <td> const</td>
@@ -912,8 +912,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ad1daf0668136508c6481845c99d9216c" name="ad1daf0668136508c6481845c99d9216c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1daf0668136508c6481845c99d9216c">&#9670;&#160;</a></span>isBonusSkillGroup()</h2>
+<a id="af7ae5b1efcadcb40cfa16fb0ca1fd9ee" name="af7ae5b1efcadcb40cfa16fb0ca1fd9ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7ae5b1efcadcb40cfa16fb0ca1fd9ee">&#9670;&#160;</a></span>isProfessionBonusSkillGroup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -922,7 +922,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ProfessionData::isBonusSkillGroup </td>
+          <td class="memname">bool ProfessionData::isProfessionBonusSkillGroup </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>group</em></span></td><td>)</td>
           <td> const</td>
@@ -1573,8 +1573,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="abb1f0301d8ec61929a312844aea9f059" name="abb1f0301d8ec61929a312844aea9f059"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb1f0301d8ec61929a312844aea9f059">&#9670;&#160;</a></span>skillCategoriesWithBonus()</h2>
+<a id="ad9faa42815c59326fd0740cc63624dd1" name="ad9faa42815c59326fd0740cc63624dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9faa42815c59326fd0740cc63624dd1">&#9670;&#160;</a></span>skillCategoriesWithProfessionBonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1583,7 +1583,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; ProfessionData::skillCategoriesWithBonus </td>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; ProfessionData::skillCategoriesWithProfessionBonus </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1629,8 +1629,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a92b1288ece3d4f5b6a972fa466b9c027" name="a92b1288ece3d4f5b6a972fa466b9c027"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92b1288ece3d4f5b6a972fa466b9c027">&#9670;&#160;</a></span>skillCategoryBonus()</h2>
+<a id="ad6f867b7f3d3d48d6a357d84174f2e57" name="ad6f867b7f3d3d48d6a357d84174f2e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f867b7f3d3d48d6a357d84174f2e57">&#9670;&#160;</a></span>skillCategoryProfessionBonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1639,7 +1639,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ProfessionData::skillCategoryBonus </td>
+          <td class="memname">int ProfessionData::skillCategoryProfessionBonus </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category</em></span></td><td>)</td>
           <td></td>
@@ -1827,8 +1827,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae25f11598f3a8e1f2cae6c3c95b503f9" name="ae25f11598f3a8e1f2cae6c3c95b503f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae25f11598f3a8e1f2cae6c3c95b503f9">&#9670;&#160;</a></span>skillGroupBonus()</h2>
+<a id="aee3298c80b30fec7387fd709efcc764e" name="aee3298c80b30fec7387fd709efcc764e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3298c80b30fec7387fd709efcc764e">&#9670;&#160;</a></span>skillGroupProfessionBonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1837,7 +1837,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ProfessionData::skillGroupBonus </td>
+          <td class="memname">int ProfessionData::skillGroupProfessionBonus </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>group</em></span></td><td>)</td>
           <td> const</td>
@@ -1924,8 +1924,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0dc49e3d913e32f437ccc3b5dba4ed8a" name="a0dc49e3d913e32f437ccc3b5dba4ed8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0dc49e3d913e32f437ccc3b5dba4ed8a">&#9670;&#160;</a></span>skillGroupsWithBonus()</h2>
+<a id="a9badc3b2f03a68b1d4cd99968dae7f9f" name="a9badc3b2f03a68b1d4cd99968dae7f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9badc3b2f03a68b1d4cd99968dae7f9f">&#9670;&#160;</a></span>skillGroupsWithProfessionBonus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1934,7 +1934,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt; ProfessionData::skillGroupsWithBonus </td>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt; ProfessionData::skillGroupsWithProfessionBonus </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

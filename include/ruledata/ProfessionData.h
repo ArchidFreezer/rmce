@@ -300,14 +300,14 @@ public:
 	 * @param group Name of the group
 	 * @param bonus bonus value
 	 */
-	void addSkillGroupBonus(const SkillGroupData& group, int bonus) { skill_group_bonuses_.emplace(&group, bonus); }
+	void addSkillGroupProfessionBonus(const SkillGroupData& group, int bonus) { skill_group_profession_bonuses_.emplace(&group, bonus); }
 
 	/**
 	 * @brief Get a container with the names of groups that have bonuses
 	 * @return std::set of group names
 	 */
-	const std::set<const SkillGroupData*> skillGroupsWithBonus() const {
-		auto keys = std::views::keys(skill_group_bonuses_);
+	const std::set<const SkillGroupData*> skillGroupsWithProfessionBonus() const {
+		auto keys = std::views::keys(skill_group_profession_bonuses_);
 		return { keys.begin(), keys.end() };
 	}
 
@@ -317,8 +317,8 @@ public:
 	 * @return `true` if the group has a bonus
 	 * @return `false` if the group does not has a bonus
 	 */
-	bool isBonusSkillGroup(const SkillGroupData& group) const { 
-		for (auto& key : std::views::keys(skill_group_bonuses_)) { 
+	bool isProfessionBonusSkillGroup(const SkillGroupData& group) const { 
+		for (auto& key : std::views::keys(skill_group_profession_bonuses_)) { 
 			if (key->id() == group.id()) return true;
 		}
 		return false;
@@ -329,8 +329,8 @@ public:
 	 * @param group SkillGroupData group to get the bonus for
 	 * @return bonus for the group
 	 */
-	int skillGroupBonus(const SkillGroupData& group) const {
-		return (isBonusSkillGroup(group) ? skill_group_bonuses_.at(&group) : 0);
+	int skillGroupProfessionBonus(const SkillGroupData& group) const {
+		return (isProfessionBonusSkillGroup(group) ? skill_group_profession_bonuses_.at(&group) : 0);
 	}
 
 	/**
@@ -481,14 +481,14 @@ public:
 	 * @param category SkillCategoryData to add a bonus for
 	 * @param bonus int bonus value
 	 */
-	void addSkillCategoryBonus(const SkillCategoryData& category, int bonus) { skill_category_bonuses_.emplace(&category, bonus); }
+	void addSkillCategoryProfessionBonus(const SkillCategoryData& category, int bonus) { skill_category_profession_bonuses_.emplace(&category, bonus); }
 
 	/**
 	 * @brief Get a container of all the skill categories with a bonus
 	 * @return std::set of categories with a bonus
 	 */
-	const std::set<const SkillCategoryData*> skillCategoriesWithBonus() const {
-		auto keys = std::views::keys(skill_category_bonuses_);
+	const std::set<const SkillCategoryData*> skillCategoriesWithProfessionBonus() const {
+		auto keys = std::views::keys(skill_category_profession_bonuses_);
 		return { keys.begin(), keys.end() };
 	}
 
@@ -498,8 +498,8 @@ public:
 	 * @return `true` if the category has a bonus
 	 * @return `false` if the category does not have a bonus
 	 */
-	bool isBonusSkillCategory(const SkillCategoryData& category) const {
-		for (auto& cat : std::views::keys(skill_category_bonuses_)) {
+	bool isProfessionBonusSkillCategory(const SkillCategoryData& category) const {
+		for (auto& cat : std::views::keys(skill_category_profession_bonuses_)) {
 			if (cat->id() == category.id()) return true;
 		}
 		return false;
@@ -510,9 +510,9 @@ public:
 	 * @param category SkillCategoryData to check
 	 * @return int bonus @a category has
 	 */
-	int skillCategoryBonus(const SkillCategoryData& category) {
-		for (auto& cat : std::views::keys(skill_category_bonuses_)) {
-			if (cat->id() == category.id()) return skill_category_bonuses_.at(cat);
+	int skillCategoryProfessionBonus(const SkillCategoryData& category) {
+		for (auto& cat : std::views::keys(skill_category_profession_bonuses_)) {
+			if (cat->id() == category.id()) return skill_category_profession_bonuses_.at(cat);
 		}
 		return 0;
 	}
@@ -609,8 +609,8 @@ private:
 
 	// Skill bonuses
 	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */
-	std::map<const SkillCategoryData*, int> skill_category_bonuses_{}; /** bonus to skill categories */
-	std::map<const SkillGroupData*, int> skill_group_bonuses_{}; /** bonus to skill categories in a group */
+	std::map<const SkillCategoryData*, int> skill_category_profession_bonuses_{}; /** bonus to skill categories */
+	std::map<const SkillGroupData*, int> skill_group_profession_bonuses_{}; /** bonus to skill categories in a group */
 
 	// Skill development types
 	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */
