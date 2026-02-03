@@ -5926,8 +5926,7 @@
                             "skill": "SKILL_BOXING"
                         },
                         {
-                            "skill": "SKILL_TACKLING",
-                            "subcategory": "Rugby"
+                            "skill": "SKILL_TACKLING"
                         }
                     ]
                 }
