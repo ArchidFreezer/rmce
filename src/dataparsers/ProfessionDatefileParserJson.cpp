@@ -122,10 +122,7 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 		}
 		skill_category_skill_development_type_choices_tree.push_back(std::make_pair("", skill_category_skill_development_type_choice_tree));
 	}
-	if (skill_category_skill_development_type_choices_tree.size()) {
-		datum.push_back(std::make_pair("skill-category-skill-development-type-choices", skill_category_skill_development_type_choices_tree));
-	}
-
+	if (skill_category_skill_development_type_choices_tree.size()) { datum.push_back(std::make_pair("skill-category-skill-development-type-choices", skill_category_skill_development_type_choices_tree)); }
 
 	// Skill group bonus
 	pt::ptree skill_group_bonuses_tree{};
@@ -146,5 +143,22 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 		skill_group_skill_developments_tree.push_back(std::make_pair("", skill_group_skill_development_tree));
 	}
 	if (skill_group_skill_developments_tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-types", skill_group_skill_developments_tree));
+
+	// Skill group development type choices
+	pt::ptree skill_group_skill_development_type_choices_tree{};
+	for (auto& skill_group_choice : game_data.skillGroupSkillDevelopmentTypeChoices()) {
+		pt::ptree skill_group_skill_development_type_choice_tree{};
+		skill_group_skill_development_type_choice_tree.put("num-choices", skill_group_choice.first.numChoices());
+		skill_group_skill_development_type_choice_tree.put("skill-type", SkillDevelopmentType::toString(skill_group_choice.second));
+
+		for (auto& group : skill_group_choice.first.options()) {
+			pt::ptree group_tree{};
+			group_tree.put("", group->id());
+			skill_group_skill_development_type_choice_tree.push_back(std::make_pair("groups", group_tree));
+		}
+		skill_group_skill_development_type_choices_tree.push_back(std::make_pair("", skill_group_skill_development_type_choice_tree));
+	}
+	if (skill_group_skill_development_type_choices_tree.size()) { datum.push_back(std::make_pair("skill-group-skill-development-type-choices", skill_group_skill_development_type_choices_tree)); }
+
 }
 

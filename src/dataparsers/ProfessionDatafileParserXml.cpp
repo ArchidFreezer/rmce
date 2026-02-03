@@ -130,6 +130,24 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				}
 			}
 
+			// Skill group skill development choices
+			if (boost::optional<const pt::ptree&> skill_group_development_type_choices = v.second.get_child_optional("skill-group-skill-modifier-choices")) {
+				for (const auto& skill_group_development_type_choice : skill_group_development_type_choices.get()) {
+					GameRuleDataChoice<SkillGroupData> choice{};
+
+					// make sure we have a valid development type first
+					std::string skill_type_id = skill_group_development_type_choice.second.get<std::string>("skill-type");
+					if (SkillDevelopmentType::fromString(skill_type_id)) {
+						choice.setNumChoices(skill_group_development_type_choice.second.get<int>("num-choices"));
+						for (const auto& group_name_tree : skill_group_development_type_choice.second.get_child("groups")) {
+							std::string group_name = group_name_tree.second.get_value<std::string>();
+							std::string group_id = GameRuleData::generateId("SkillGroup", group_name);
+							choice.addOption(cache().get<SkillGroupData>(group_id));
+						}
+						ref.addSkillGroupSkillDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
+					}
+				}
+			}
 
 			// Get skill group bonuses
 			if (boost::optional<const pt::ptree&> skill_group_bonuses = v.second.get_child_optional("skill-group-bonuses")) {
