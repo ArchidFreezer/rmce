@@ -3,6 +3,7 @@
 #include <optional>
 #include <string_view>
 
+#include <GameRuleData.h>
 #include <SkillData.h>
 
 /**
@@ -16,7 +17,7 @@
  * The subcategory is optional to allow this wrapper to be used for skills that do not have subcategories or the modifier
  * is for all subcategories of the skill.
  */
-class SubcategoriedSkillData {
+class SubcategoriedSkillData : public GameRuleData {
 public:
 
 	/**
@@ -30,9 +31,9 @@ public:
 	 * @param subcategory Optional subcategory
 	 */
 	SubcategoriedSkillData(const SkillData& skill_data, std::optional<std::string_view> subcategory=std::nullopt) : 
+		GameRuleData(skill_data_->id() + (subcategory_ ? "_" + subcategory_.value() : "")),
 		skill_data_{ &skill_data }, 
-		subcategory_{ subcategory }, 
-		id_{ skill_data_->id() + (subcategory_ ? "_" + subcategory_.value() : "") } {}
+		subcategory_{ subcategory } {}
 
 	/**
 	 * @brief Get the skill data that the subcategory is for
@@ -46,25 +47,7 @@ public:
 	 */
 	const std::optional<std::string>& subcategory() const { return subcategory_; }
 
-	/**
-	 * @brief Get a unique identifier for the object
-	 * @return 
-	 */
-	const std::string& id() const { return id_; }
-
-	/**
-	 * @brief Override the less than operator
-	 *
-	 * The creation of this overload allows all SubcategoriedSkillData objects to be used as keys in sorted containers
-	 *
-	 * @param other SubcategoriedSkillData object to compoare against
-	 * @return `true` if this object is consdered to be < @a other
-	 * @return `false` if this object is not consdered to be < @a other
-	 */
-	bool operator<(const SubcategoriedSkillData& other) const { return (id_ < other.id_); }
-
 private:
 	const SkillData* skill_data_{}; /**< Skill that the subcategory is for */
 	std::optional<std::string> subcategory_{}; /**< Optional subcategory name */
-	const std::string id_{}; /**< Unique identifier */
 };
