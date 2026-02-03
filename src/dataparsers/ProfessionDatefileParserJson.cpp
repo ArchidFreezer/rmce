@@ -98,21 +98,27 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 		for (const auto& skill_category : categories) {
 			pt::ptree skill_category_bonus_tree{};
 			skill_category_bonus_tree.put("skill_category", skill_category.first);
-			skill_category_bonus_tree.put("bonus", game_data.skillCategoryBonus(*categories.at(skill_category.first)));
+			skill_category_bonus_tree.put("bonus", game_data.skillCategoryBonus(*skill_category.second));
 			skill_category_bonuses_tree.push_back(std::make_pair("", skill_category_bonus_tree));
 		}
 		if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill-category-bonus", skill_category_bonuses_tree));
 	}
 
 	// Skill category development types
-	pt::ptree skill_category_skill_development_types_tree{};
-	for (auto& skill_category : game_data.skillCategoriesWithSkillDevelopmentType()) {
-		pt::ptree skill_category_skill_development_type_tree{};
-		skill_category_skill_development_type_tree.put("category", skill_category->id());
-		skill_category_skill_development_type_tree.put("development-type", SkillDevelopmentType::toString(game_data.skillCategorySkillDevelopmentType(*skill_category)));
-		skill_category_skill_development_types_tree.push_back(std::make_pair("", skill_category_skill_development_type_tree));
+	{
+		pt::ptree skill_category_skill_development_types_tree{};
+		std::map<std::string, const SkillCategoryData*> categories{};
+		for (auto& skill_category : game_data.skillCategoriesWithSkillDevelopmentType()) {
+			categories.emplace(skill_category->id(), skill_category);
+		}
+		for (const auto& skill_category : categories) {
+			pt::ptree skill_category_skill_development_type_tree{};
+			skill_category_skill_development_type_tree.put("category", skill_category.first);
+			skill_category_skill_development_type_tree.put("development-type", SkillDevelopmentType::toString(game_data.skillCategorySkillDevelopmentType(*skill_category.second)));
+			skill_category_skill_development_types_tree.push_back(std::make_pair("", skill_category_skill_development_type_tree));
+		}
+		if (skill_category_skill_development_types_tree.size()) datum.push_back(std::make_pair("skill-category-skill-development-types", skill_category_skill_development_types_tree));
 	}
-	if (skill_category_skill_development_types_tree.size()) datum.push_back(std::make_pair("skill-category-skill-development-types", skill_category_skill_development_types_tree));
 
 	// Skill category development type choices
 	pt::ptree skill_category_skill_development_type_choices_tree{};
