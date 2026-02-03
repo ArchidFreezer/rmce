@@ -11,7 +11,7 @@ var searchData=
   ['isbn_8',['isbn',['../class_book_data.html#a746ff8194a77123b41ad75658a93df23',1,'BookData']]],
   ['isbonusskill_9',['isBonusSkill',['../class_profession_data.html#a3ca78a1f297a2b11beafd3e70efbb2cd',1,'ProfessionData::isBonusSkill()'],['../class_race_data.html#a75c04d3f0f64e4fae83811c347cbca8e',1,'RaceData::isBonusSkill()']]],
   ['isbonusskillcategory_10',['isBonusSkillCategory',['../class_profession_data.html#a874216791330503f834cb6ed78c72e29',1,'ProfessionData']]],
-  ['isbonusskillgroup_11',['isBonusSkillGroup',['../class_profession_data.html#a291ab594f4bfc8bc9726bf5a1c1e0d16',1,'ProfessionData']]],
+  ['isbonusskillgroup_11',['isBonusSkillGroup',['../class_profession_data.html#ad1daf0668136508c6481845c99d9216c',1,'ProfessionData']]],
   ['isdevelopment_12',['isDevelopment',['../namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e',1,'StatType']]],
   ['isdialect_13',['isDialect',['../class_language_dialect_data.html#a32aeb22364b30f998493151a24a99851',1,'LanguageDialectData']]],
   ['iseverymanskill_14',['isEverymanSkill',['../class_race_data.html#a13214922fe2441aa83a4634226aff7e5',1,'RaceData']]],

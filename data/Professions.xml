@@ -1504,18 +1504,7 @@
             </modifier>
          </skill-modifiers>
          <skill-group-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
-            </modifier>
+            <modifier group="Outdoor">Everyman</modifier>
          </skill-group-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -1774,17 +1763,6 @@
             <stat>Strength</stat>
          </stats>
          <skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Channeling</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>true</non-channeling-only>
-               <skill-type>Restricted</skill-type>
-               <can-restrict>false</can-restrict>
-            </modifier>
             <modifier>
                <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -2680,7 +2658,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -2694,33 +2672,19 @@
                   <category>Crafts</category>
                </categories>
             </modifier>
-         </skill-category-skill-modifiers>
+         </skill-category-skill-modifier-choices>
          <skill-group-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
-            </modifier>
+            <modifier group="Artistic">Everyman</modifier>
+         </skill-group-skill-modifiers>
+         <skill-group-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
                <skill-type>Occupational</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
+               <groups>
+                <group>Artistic</group>
+               </groups>
             </modifier>
-         </skill-group-skill-modifiers>
+         </skill-group-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">97</cost>
             <cost package="Pilgrim">43</cost>
@@ -3660,19 +3624,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Influence</category>
-               </categories>
-            </modifier>
+            <modifier category="Influence">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -4007,19 +3959,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Outdoor | Environmental</category>
-               </categories>
-            </modifier>
+            <modifier category="Outdoor | Environmental">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -6256,32 +6196,8 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Subterfuge | Stealth</category>
-               </categories>
-            </modifier>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Influence</category>
-               </categories>
-            </modifier>
+            <modifier category="Influence">Everyman</modifier>
+            <modifier category="Subterfuge | Stealth">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -6838,32 +6754,10 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Artistic | Passive</category>
-               </categories>
-            </modifier>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Crafts</category>
-               </categories>
-            </modifier>
+            <modifier category="Crafts">Everyman</modifier>
+            <modifier category="Artistic | Passive">Everyman</modifier>
+         </skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -6877,7 +6771,7 @@
                   <category>Crafts</category>
                </categories>
             </modifier>
-         </skill-category-skill-modifiers>
+         </skill-category-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">97</cost>
             <cost package="Pilgrim">43</cost>
@@ -7485,19 +7379,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Subterfuge | Stealth</category>
-               </categories>
-            </modifier>
+            <modifier category="Subterfuge | Stealth">Everyman</modifier>
          </skill-category-skill-modifiers>
          <resistance-bonuses>
             <bonus resistance="Disease">50</bonus>
@@ -7813,7 +7695,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -7827,21 +7709,16 @@
                   <category>Athletic | Endurance</category>
                </categories>
             </modifier>
-         </skill-category-skill-modifiers>
-         <skill-group-skill-modifiers>
+         </skill-category-skill-modifier-choices>
+         <skill-group-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
                <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
+               <groups>
+                  <group>Weapon</group>
+               </groups>
             </modifier>
-         </skill-group-skill-modifiers>
+         </skill-group-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">97</cost>
             <cost package="Pilgrim">43</cost>
@@ -8129,34 +8006,17 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-            </modifier>
+            <modifier category="Communications">Everyman</modifier>
          </skill-category-skill-modifiers>
-         <skill-group-skill-modifiers>
+         <skill-group-skill-modifier-choices>
             <modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
+               <num-choices>2</num-choices>
                <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
+               <groups>
+                  <group>Science/Analytic</group>
+               </groups>
             </modifier>
-         </skill-group-skill-modifiers>
+         </skill-group-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">97</cost>
             <cost package="Pilgrim">43</cost>
@@ -9771,19 +9631,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Outdoor | Environmental</category>
-               </categories>
-            </modifier>
+            <modifier category="Outdoor | Environmental">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -10471,7 +10319,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choises>
             <modifier>
                <num-choices>6</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -10485,7 +10333,7 @@
                   <category>Crafts</category>
                </categories>
             </modifier>
-         </skill-category-skill-modifiers>
+         </skill-category-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">69</cost>
             <cost package="Pilgrim">40</cost>
@@ -13009,19 +12857,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Outdoor | Animal</category>
-               </categories>
-            </modifier>
+            <modifier category="Outdoor | Animal">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -13317,19 +13153,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-            </modifier>
+            <modifier category="Communications">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -13698,18 +13522,7 @@
             </modifier>
          </skill-modifiers>
          <skill-group-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
-            </modifier>
+            <modifier group="Outdoor">Everyman</modifier>
          </skill-group-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -14343,19 +14156,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Subterfuge | Stealth</category>
-               </categories>
-            </modifier>
+            <modifier category="Subterfuge | Stealth">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -15005,19 +14806,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Outdoor | Environmental</category>
-               </categories>
-            </modifier>
+            <modifier category="Outdoor | Environmental">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -15876,19 +15665,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Influence</category>
-               </categories>
-            </modifier>
+            <modifier category="Influence">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -16255,7 +16032,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -16269,33 +16046,23 @@
                   <category>Combat Manoeuvres</category>
                </categories>
             </modifier>
-         </skill-category-skill-modifiers>
-         <skill-group-skill-modifiers>
+         </skill-category-skill-modifier-choices>
+         <skill-group-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
                <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
+               <groups>
+                  <group>Armour</group>
+               </groups>
             </modifier>
             <modifier>
                <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
                <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
+               <groups>
+                  <group>Weapon</group>
+               </groups>
             </modifier>
-         </skill-group-skill-modifiers>
+         </skill-group-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">97</cost>
             <cost package="Pilgrim">43</cost>
@@ -16955,21 +16722,6 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Martial Arts | Combat Manoeuvres</category>
-               </categories>
-            </modifier>
-         </skill-category-skill-modifiers>
          <resistance-bonuses>
             <bonus resistance="Channeling">50</bonus>
             <bonus resistance="Mentalism">40</bonus>
@@ -17949,7 +17701,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>6</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -17963,7 +17715,7 @@
                   <category>Crafts</category>
                </categories>
             </modifier>
-         </skill-category-skill-modifiers>
+         </skill-category-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">64</cost>
             <cost package="Pilgrim">42</cost>
@@ -18285,7 +18037,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -18299,20 +18051,7 @@
                   <category>Combat Manoeuvres</category>
                </categories>
             </modifier>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Restricted</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Martial Arts | Combat Manoeuvres</category>
-               </categories>
-            </modifier>
-         </skill-category-skill-modifiers>
+         </skill-category-skill-modifier-choices>
          <resistance-bonuses>
             <bonus resistance="Channeling">40</bonus>
             <bonus resistance="Mentalism">40</bonus>
@@ -18591,32 +18330,8 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Influence</category>
-               </categories>
-            </modifier>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-            </modifier>
+            <modifier category="Communications">Everyman</modifier>
+            <modifier category="Influence">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -18917,19 +18632,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Outdoor | Environmental</category>
-               </categories>
-            </modifier>
+            <modifier category="Outdoor | Environmental">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -20140,73 +19843,37 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Athletic | Brawn</category>
-               </categories>
-            </modifier>
-            <modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Occupational</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Athletic | Endurance</category>
-               </categories>
-            </modifier>
-            <modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Occupational</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Athletic | Brawn</category>
-               </categories>
-            </modifier>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Athletic | Endurance</category>
-               </categories>
-            </modifier>
+            <modifier category="Athletic | Brawn">Occupational</modifier>
+            <modifier category="Athletic | Endurance">Occupational</modifier>
          </skill-category-skill-modifiers>
-         <skill-group-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
-               <num-choices>-1</num-choices>
+               <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
+               <allow-restriced>false</allow-restriced>
                <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
+               <skill-type>Occupational</skill-type>
                <can-restrict>false</can-restrict>
                <num-categories>1</num-categories>
                <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
+               <categories>
+                  <category>Athletic | Endurance</category>
+               </categories>
             </modifier>
-         </skill-group-skill-modifiers>
+            <modifier>
+               <num-choices>1</num-choices>
+               <fixed-num-choices>true</fixed-num-choices>
+               <allow-restriced>false</allow-restriced>
+               <non-channeling-only>false</non-channeling-only>
+               <skill-type>Occupational</skill-type>
+               <can-restrict>false</can-restrict>
+               <num-categories>1</num-categories>
+               <fixed-num-categories>false</fixed-num-categories>
+               <categories>
+                  <category>Athletic | Brawn</category>
+               </categories>
+            </modifier>
+         </skill-category-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">97</cost>
             <cost package="Pilgrim">43</cost>
@@ -21079,19 +20746,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Outdoor | Environmental</category>
-               </categories>
-            </modifier>
+            <modifier category="Outdoor | Environmental">Everyman</modifier>
          </skill-category-skill-modifiers>
          <resistance-bonuses>
             <bonus resistance="Poison">15</bonus>
@@ -21737,7 +21392,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>6</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -21751,7 +21406,7 @@
                   <category>Crafts</category>
                </categories>
             </modifier>
-         </skill-category-skill-modifiers>
+         </skill-category-skill-modifier-choices>
          <resistance-bonuses>
             <bonus resistance="Essence">10</bonus>
          </resistance-bonuses>
@@ -22022,7 +21677,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -22036,7 +21691,7 @@
                   <category>Crafts</category>
                </categories>
             </modifier>
-         </skill-category-skill-modifiers>
+         </skill-category-skill-modifier-choices>
          <resistance-bonuses>
             <bonus resistance="Channeling">-5</bonus>
             <bonus resistance="Essence">-5</bonus>
@@ -22343,7 +21998,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -22357,21 +22012,7 @@
                   <category>Combat Manoeuvres</category>
                </categories>
             </modifier>
-            <modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Combat Manoeuvres</category>
-                  <category>Martial Arts | Combat Manoeuvres</category>
-               </categories>
-            </modifier>
-         </skill-category-skill-modifiers>
+         </skill-category-skill-modifier-choices>
          <resistance-bonuses>
             <bonus resistance="Channeling">-5</bonus>
             <bonus resistance="Essence">-5</bonus>
@@ -22648,6 +22289,17 @@
                <allow-restriced>false</allow-restriced>
                <non-channeling-only>false</non-channeling-only>
                <skill-type>Everyman</skill-type>
+               <can-restrict>false</can-restrict>
+            </modifier>
+            <modifier>
+               <num-choices>-1</num-choices>
+               <fixed-num-choices>true</fixed-num-choices>
+               <skills>
+                  <skill>Animal Mastery</skill>
+               </skills>
+               <allow-restriced>false</allow-restriced>
+               <non-channeling-only>false</non-channeling-only>
+               <skill-type>Standard</skill-type>
                <can-restrict>false</can-restrict>
             </modifier>
             <modifier>
@@ -23054,7 +22706,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -23068,7 +22720,7 @@
                   <category>Combat Manoeuvres</category>
                </categories>
             </modifier>
-         </skill-category-skill-modifiers>
+         </skill-category-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">97</cost>
             <cost package="Pilgrim">43</cost>
@@ -23333,6 +22985,9 @@
                <spell-list>Ceremonies</spell-list>
             </spell-list>
          </base-spell-lists>
+         <skill-bonuses>
+            <bonus skill="Weapon - 1-H Concussion" subcategory="War Hammer">10</bonus>
+         </skill-bonuses>
          <skill-modifiers>
             <modifier>
                <num-choices>-1</num-choices>
@@ -23678,31 +23333,17 @@
             </modifier>
          </skill-modifiers>
          <skill-group-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
-            </modifier>
+            <modifier group="Artistic">Everyman</modifier>
+         </skill-group-skill-modifiers>
+         <skill-group-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
                <skill-type>Occupational</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
+               <groups>
+                 <group>Artistic</group>
+               </groups>
             </modifier>
-         </skill-group-skill-modifiers>
+         </skill-group-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">97</cost>
             <cost package="Pilgrim">43</cost>
@@ -23991,19 +23632,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Lore | Magical</category>
-               </categories>
-            </modifier>
+            <modifier category="Lore | Magical">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -24293,19 +23922,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Outdoor | Environmental</category>
-               </categories>
-            </modifier>
+            <modifier category="Outdoor | Environmental">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>
@@ -25178,7 +24795,7 @@
                <can-restrict>false</can-restrict>
             </modifier>
          </skill-modifiers>
-         <skill-category-skill-modifiers>
+         <skill-category-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -25205,33 +24822,19 @@
                   <category>Power Manipulation</category>
                </categories>
             </modifier>
-         </skill-category-skill-modifiers>
+         </skill-category-skill-modifier-choices>
          <skill-group-skill-modifiers>
+            <modifier group="Armour">Restricted</modifier>
+         </skill-group-skill-modifiers>
+         <skill-group-skill-modifier-choices>
             <modifier>
                <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
                <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
+               <groups>
+                  <group>Spells</group>
+               </groups>
             </modifier>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>true</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Restricted</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <num-groups>1</num-groups>
-               <groups/>
-            </modifier>
-         </skill-group-skill-modifiers>
+         </skill-group-skill-modifier-choices>
          <training-package-costs>
             <cost package="Hewer">97</cost>
             <cost package="Pilgrim">43</cost>
@@ -26179,19 +25782,7 @@
             </modifier>
          </skill-modifiers>
          <skill-category-skill-modifiers>
-            <modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-               <num-categories>1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Outdoor | Environmental</category>
-               </categories>
-            </modifier>
+            <modifier category="Outdoor | Environmental">Everyman</modifier>
          </skill-category-skill-modifiers>
          <training-package-costs>
             <cost package="Hewer">97</cost>

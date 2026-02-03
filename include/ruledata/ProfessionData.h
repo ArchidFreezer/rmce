@@ -300,31 +300,38 @@ public:
 	 * @param group Name of the group
 	 * @param bonus bonus value
 	 */
-	void addSkillGroupBonus(std::string_view group, int bonus) { skill_group_bonuses_.emplace(group, bonus); }
+	void addSkillGroupBonus(const SkillGroupData& group, int bonus) { skill_group_bonuses_.emplace(&group, bonus); }
 
 	/**
 	 * @brief Get a container with the names of groups that have bonuses
 	 * @return std::set of group names
 	 */
-	const std::set<std::string> skillGroupsWithBonus() const {
+	const std::set<const SkillGroupData*> skillGroupsWithBonus() const {
 		auto keys = std::views::keys(skill_group_bonuses_);
 		return { keys.begin(), keys.end() };
 	}
 
 	/**
 	 * @brief Check if a group has a bonus
-	 * @param group_name name of the group
+	 * @param group SkillGroupData group to check
 	 * @return `true` if the group has a bonus
 	 * @return `false` if the group does not has a bonus
 	 */
-	bool isBonusSkillGroup(const std::string& group_name) const { return (skill_group_bonuses_.find(group_name) != skill_group_bonuses_.end()); }
+	bool isBonusSkillGroup(const SkillGroupData& group) const { 
+		for (auto& key : std::views::keys(skill_group_bonuses_)) { 
+			if (key->id() == group.id()) return true;
+		}
+		return false;
+	}
 
 	/**
 	 * @brief Get the bonus for a group
-	 * @param group_name name of the group to get the bonus for
+	 * @param group SkillGroupData group to get the bonus for
 	 * @return bonus for the group
 	 */
-	int skillGroupBonus(const std::string& group_name) const { return (isBonusSkillGroup(group_name) ? skill_group_bonuses_.at(group_name) : 0); }
+	int skillGroupBonus(const SkillGroupData& group) const {
+		return (isBonusSkillGroup(group) ? skill_group_bonuses_.at(&group) : 0);
+	}
 
 	/**
 	 * @brief Set the development type for a skill
@@ -365,7 +372,7 @@ public:
 	 * @return std::set of SubcategoriedSkillData with the development type set
 	 */
 	const std::set<SubcategoriedSkillData> skillsWithSkillDevelopmentType() const {
-		std::set<SubcategoriedSkillData> ret;
+		std::set<SubcategoriedSkillData> ret{};
 		for (auto& key : skill_development_types_) {
 			const SubcategoriedSkillData data(key.first.skillData(), key.first.subcategory());
 			ret.insert(data);
@@ -593,7 +600,7 @@ private:
 	// Skill bonuses
 	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */
 	std::map<const SkillCategoryData*, int> skill_category_bonuses_{}; /** bonus to skill categories */
-	std::map<std::string, int> skill_group_bonuses_{}; /** bonus to skill categories in a group */
+	std::map<const SkillGroupData*, int> skill_group_bonuses_{}; /** bonus to skill categories in a group */
 
 	// Skill development types
 	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */

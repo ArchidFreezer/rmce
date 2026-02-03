@@ -312,22 +312,25 @@ namespace {
 	TEST(ProfessionData, GroupBonus) {
 		ProfessionData prof("PROF_ID");
 
+		SkillGroupData g1("GROUP1_ID", "Group1");
+		SkillGroupData g2("GROUP2_ID", "Group2");
+
 		EXPECT_EQ(prof.skillGroupsWithBonus().size(), 0);
-		EXPECT_FALSE(prof.isBonusSkillGroup("Group"));
-		EXPECT_EQ(prof.skillGroupBonus("Group"), 0);
+		EXPECT_FALSE(prof.isBonusSkillGroup(g2));
+		EXPECT_EQ(prof.skillGroupBonus(g2), 0);
 
-		prof.addSkillGroupBonus("Group1", 10);
+		prof.addSkillGroupBonus(g1, 10);
 		EXPECT_EQ(prof.skillGroupsWithBonus().size(), 1);
-		EXPECT_FALSE(prof.isBonusSkillGroup("Group"));
-		EXPECT_TRUE(prof.isBonusSkillGroup("Group1"));
-		EXPECT_EQ(prof.skillGroupBonus("Group1"), 10);
+		EXPECT_FALSE(prof.isBonusSkillGroup(g2));
+		EXPECT_TRUE(prof.isBonusSkillGroup(g1));
+		EXPECT_EQ(prof.skillGroupBonus(g1), 10);
 
-		prof.addSkillGroupBonus("Group2", 5);
+		prof.addSkillGroupBonus(g2, 5);
 		EXPECT_EQ(prof.skillGroupsWithBonus().size(), 2);
-		EXPECT_TRUE(prof.isBonusSkillGroup("Group1"));
-		EXPECT_EQ(prof.skillGroupBonus("Group1"), 10);
-		EXPECT_TRUE(prof.isBonusSkillGroup("Group2"));
-		EXPECT_EQ(prof.skillGroupBonus("Group2"), 5);
+		EXPECT_TRUE(prof.isBonusSkillGroup(g1));
+		EXPECT_EQ(prof.skillGroupBonus(g1), 10);
+		EXPECT_TRUE(prof.isBonusSkillGroup(g2));
+		EXPECT_EQ(prof.skillGroupBonus(g2), 5);
 	}
 
 	TEST(ProfessionData, GroupSkillDevelopmentType) {

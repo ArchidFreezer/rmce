@@ -20,7 +20,7 @@ var searchData=
   ['addskillcategoryskilldevelopmenttype_17',['addSkillCategorySkillDevelopmentType',['../class_profession_data.html#abbec8ef3752671f1496aea7d14dbbac7',1,'ProfessionData']]],
   ['addskillcategoryskilldevelopmenttypechoice_18',['addSkillCategorySkillDevelopmentTypeChoice',['../class_profession_data.html#afa2214fde305496bb889335ad0492d69',1,'ProfessionData']]],
   ['addskilldevelopmenttypechoice_19',['addSkillDevelopmentTypeChoice',['../class_profession_data.html#adf46fe3059e0a0e27f552a4cb0c4dc9e',1,'ProfessionData']]],
-  ['addskillgroupbonus_20',['addSkillGroupBonus',['../class_profession_data.html#aa7d04f6a4c22201ae3dff4e27886dea2',1,'ProfessionData']]],
+  ['addskillgroupbonus_20',['addSkillGroupBonus',['../class_profession_data.html#aa5fc877f8891241b3ba42bb148738817',1,'ProfessionData']]],
   ['addskillgroupskilldevelopmenttype_21',['addSkillGroupSkillDevelopmentType',['../class_profession_data.html#a6cc4c60b8fbe8267b91191e53c8a3e12',1,'ProfessionData']]],
   ['addskillgroupskilldevelopmenttypechoice_22',['addSkillGroupSkillDevelopmentTypeChoice',['../class_profession_data.html#a756926a0917e7b834e676850b58a04cc',1,'ProfessionData']]],
   ['addstat_23',['addStat',['../class_profession_data.html#ad3f4fa3dfc78bfd7aa8c01f37e096899',1,'ProfessionData::addStat()'],['../class_skill_category_data.html#ae92350c9d91937939523110732fae66a',1,'SkillCategoryData::addStat()'],['../class_skill_data.html#abf10402cb53bce7b58e876d26cf8f927',1,'SkillData::addStat(StatType::Type stat)']]],

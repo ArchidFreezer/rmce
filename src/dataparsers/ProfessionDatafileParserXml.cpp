@@ -153,7 +153,8 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 			if (boost::optional<const pt::ptree&> skill_group_bonuses = v.second.get_child_optional("skill-group-bonuses")) {
 				for (const auto& skill_group_bonus : skill_group_bonuses.get()) {
 					int bonus = skill_group_bonus.second.get_value<int>();
-					if (bonus) ref.addSkillGroupBonus(skill_group_bonus.second.get<std::string>("<xmlattr>.group"), bonus);
+					std::string group_id{ GameRuleData::generateId("SkillGroup", skill_group_bonus.second.get<std::string>("<xmlattr>.group"))};
+					if (bonus) ref.addSkillGroupBonus(cache().get<SkillGroupData>(group_id), bonus);
 				}
 			}
 
