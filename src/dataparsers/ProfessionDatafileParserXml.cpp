@@ -103,17 +103,16 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 						for (const auto& skill_name_tree : skill_development_type_choice.second.get_child("skills")) {
 							std::string skill_id = GameRuleData::generateId("Skill", skill_name_tree.second.get_value<std::string>());
 							boost::optional<std::string> subcategory = skill_name_tree.second.get_optional<std::string>("<xmlattr>.subcategory");
+
+							std::unique_ptr <SubcategoriedSkillData> skill;
 							if (subcategory) {
-								std::unique_ptr <SubcategoriedSkillData> skill = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_id), subcategory.value());
-								std::string sub_skill_id = skill->id();
-								if (!cache().exists<SubcategoriedSkillData>(sub_skill_id)) cache().add<SubcategoriedSkillData>(std::move(skill), sub_skill_id);
-								choice.addOption(cache().get<SubcategoriedSkillData>(sub_skill_id));
+								skill = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_id), subcategory.value());
 							} else {
-								std::unique_ptr <SubcategoriedSkillData> skill = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_id));
-								std::string sub_skill_id = skill->id();
-								if (!cache().exists<SubcategoriedSkillData>(sub_skill_id)) cache().add<SubcategoriedSkillData>(std::move(skill), sub_skill_id);
-								choice.addOption(cache().get<SubcategoriedSkillData>(sub_skill_id));
+								skill = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_id));
 							}
+							std::string sub_skill_id = skill->id();
+							if (!cache().exists<SubcategoriedSkillData>(sub_skill_id)) cache().add<SubcategoriedSkillData>(std::move(skill), sub_skill_id);
+							choice.addOption(cache().get<SubcategoriedSkillData>(sub_skill_id));
 						}
 						ref.addSkillDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
 					}
