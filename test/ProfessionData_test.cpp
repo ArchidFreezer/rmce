@@ -338,6 +338,31 @@ namespace {
 		EXPECT_EQ(prof.skillGroupProfessionBonus(g2), 5);
 	}
 
+
+	TEST(ProfessionData, GroupSpecialBonus) {
+		ProfessionData prof("PROF_ID");
+
+		SkillGroupData g1("GROUP1_ID", "Group1");
+		SkillGroupData g2("GROUP2_ID", "Group2");
+
+		EXPECT_EQ(prof.skillGroupsWithSpecialBonus().size(), 0);
+		EXPECT_FALSE(prof.isSpecialBonusSkillGroup(g2));
+		EXPECT_EQ(prof.skillGroupSpecialBonus(g2), 0);
+
+		prof.addSkillGroupSpecialBonus(g1, 10);
+		EXPECT_EQ(prof.skillGroupsWithSpecialBonus().size(), 1);
+		EXPECT_FALSE(prof.isSpecialBonusSkillGroup(g2));
+		EXPECT_TRUE(prof.isSpecialBonusSkillGroup(g1));
+		EXPECT_EQ(prof.skillGroupSpecialBonus(g1), 10);
+
+		prof.addSkillGroupSpecialBonus(g2, 5);
+		EXPECT_EQ(prof.skillGroupsWithSpecialBonus().size(), 2);
+		EXPECT_TRUE(prof.isSpecialBonusSkillGroup(g1));
+		EXPECT_EQ(prof.skillGroupSpecialBonus(g1), 10);
+		EXPECT_TRUE(prof.isSpecialBonusSkillGroup(g2));
+		EXPECT_EQ(prof.skillGroupSpecialBonus(g2), 5);
+	}
+
 	TEST(ProfessionData, GroupSkillDevelopmentType) {
 		ProfessionData prof("PROF_ID");
 

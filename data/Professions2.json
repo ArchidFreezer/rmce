@@ -2952,7 +2952,7 @@
                     "bonus": "10"
                 }
             ],
-            "skill-category-special-bonus": [
+            "skill-category-special-bonuses": [
                 {
                     "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "15"
@@ -2979,6 +2979,12 @@
                 },
                 {
                     "skill_group": "SKILLGROUP_WEAPON",
+                    "bonus": "5"
+                }
+            ],
+            "skill-group-special-bonuses": [
+                {
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 }
             ]
@@ -3109,7 +3115,7 @@
                     "bonus": "10"
                 }
             ],
-            "skill-category-special-bonus": [
+            "skill-category-special-bonuses": [
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
@@ -3355,7 +3361,7 @@
                     "bonus": "5"
                 }
             ],
-            "skill-category-special-bonus": [
+            "skill-category-special-bonuses": [
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
@@ -3461,7 +3467,7 @@
                     "bonus": "5"
                 }
             ],
-            "skill-category-special-bonus": [
+            "skill-category-special-bonuses": [
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
@@ -3964,7 +3970,7 @@
                     "bonus": "5"
                 }
             ],
-            "skill-category-special-bonus": [
+            "skill-category-special-bonuses": [
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
@@ -4122,7 +4128,7 @@
                     "bonus": "5"
                 }
             ],
-            "skill-category-special-bonus": [
+            "skill-category-special-bonuses": [
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
@@ -4196,7 +4202,7 @@
                     "bonus": "5"
                 }
             ],
-            "skill-category-special-bonus": [
+            "skill-category-special-bonuses": [
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
@@ -4284,7 +4290,7 @@
                     "bonus": "5"
                 }
             ],
-            "skill-category-special-bonus": [
+            "skill-category-special-bonuses": [
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
@@ -4372,7 +4378,7 @@
                     "bonus": "10"
                 }
             ],
-            "skill-category-special-bonus": [
+            "skill-category-special-bonuses": [
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
@@ -5371,7 +5377,7 @@
                     "bonus": "5"
                 }
             ],
-            "skill-category-special-bonus": [
+            "skill-category-special-bonuses": [
                 {
                     "skill_category": "SKILLCATEGORY_AWARENESS_SEARCHING",
                     "bonus": "15"

@@ -296,6 +296,44 @@ public:
 	const std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type>& skillGroupSkillDevelopmentTypeChoices() const { return skill_group_skill_development_type_choices_; }
 
 	/**
+	 * @brief Add a special bonus to all skills in a group
+	 * @param group Name of the group
+	 * @param bonus bonus value
+	 */
+	void addSkillGroupSpecialBonus(const SkillGroupData& group, int bonus) { skill_group_special_bonuses_.emplace(&group, bonus); }
+
+	/**
+	 * @brief Get a container with groups that add a special bonus to skills
+	 * @return std::set of group names
+	 */
+	const std::set<const SkillGroupData*> skillGroupsWithSpecialBonus() const {
+		auto keys = std::views::keys(skill_group_special_bonuses_);
+		return { keys.begin(), keys.end() };
+	}
+
+	/**
+	 * @brief Check if a group adds a special bonus to skills
+	 * @param group SkillGroupData group to check
+	 * @return `true` if the group has a bonus
+	 * @return `false` if the group does not has a bonus
+	 */
+	bool isSpecialBonusSkillGroup(const SkillGroupData& group) const {
+		for (auto& key : std::views::keys(skill_group_special_bonuses_)) {
+			if (key->id() == group.id()) return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @brief Get the special bonus for a group
+	 * @param group SkillGroupData group to get the bonus for
+	 * @return bonus for the group
+	 */
+	int skillGroupSpecialBonus(const SkillGroupData& group) const {
+		return (isSpecialBonusSkillGroup(group) ? skill_group_special_bonuses_.at(&group) : 0);
+	}
+
+	/**
 	 * @brief Add a bonus to all skills in a group
 	 * @param group Name of the group
 	 * @param bonus bonus value
@@ -651,8 +689,9 @@ private:
 	// Skill bonuses
 	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */
 	std::map<const SkillCategoryData*, int> skill_category_profession_bonuses_{}; /** profession bonus to skill categories */
-	std::map<const SkillCategoryData*, int> skill_category_special_bonuses_{}; /** special bonus to skill categories */
-	std::map<const SkillGroupData*, int> skill_group_profession_bonuses_{}; /** profession bonus to skill categories in a group */
+	std::map<const SkillCategoryData*, int> skill_category_special_bonuses_{}; /** special bonus to skills in a category */
+	std::map<const SkillGroupData*, int> skill_group_profession_bonuses_{}; /** profession bonus to skills in a group */
+	std::map<const SkillGroupData*, int> skill_group_special_bonuses_{}; /** special bonus to skills in a group */
 
 	// Skill development types
 	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */

@@ -187,6 +187,14 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:a0f4b89f60a91cda92058e87aafc46926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding development types skills in skill groups.  <br /></td></tr>
 <tr class="memitem:a988f5d0eee42263e720c21244eef539c" id="r_a988f5d0eee42263e720c21244eef539c"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a988f5d0eee42263e720c21244eef539c">skillGroupSkillDevelopmentTypeChoices</a> () const</td></tr>
 <tr class="memdesc:a988f5d0eee42263e720c21244eef539c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills within a skill group that may have their development type changed.  <br /></td></tr>
+<tr class="memitem:a515c36faee3b83f7d6223c46a4eb31e9" id="r_a515c36faee3b83f7d6223c46a4eb31e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a515c36faee3b83f7d6223c46a4eb31e9">addSkillGroupSpecialBonus</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group, int bonus)</td></tr>
+<tr class="memdesc:a515c36faee3b83f7d6223c46a4eb31e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a special bonus to all skills in a group.  <br /></td></tr>
+<tr class="memitem:a195dbd374fb34cb078bb33a4f0c5671f" id="r_a195dbd374fb34cb078bb33a4f0c5671f"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a195dbd374fb34cb078bb33a4f0c5671f">skillGroupsWithSpecialBonus</a> () const</td></tr>
+<tr class="memdesc:a195dbd374fb34cb078bb33a4f0c5671f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with groups that add a special bonus to skills.  <br /></td></tr>
+<tr class="memitem:ae8bb536bbcc5357503a28430a802ff5d" id="r_ae8bb536bbcc5357503a28430a802ff5d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae8bb536bbcc5357503a28430a802ff5d">isSpecialBonusSkillGroup</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group) const</td></tr>
+<tr class="memdesc:ae8bb536bbcc5357503a28430a802ff5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a group adds a special bonus to skills.  <br /></td></tr>
+<tr class="memitem:ab562e6b38a2180a9dddcec2de77e5c1d" id="r_ab562e6b38a2180a9dddcec2de77e5c1d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab562e6b38a2180a9dddcec2de77e5c1d">skillGroupSpecialBonus</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group) const</td></tr>
+<tr class="memdesc:ab562e6b38a2180a9dddcec2de77e5c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the special bonus for a group.  <br /></td></tr>
 <tr class="memitem:ab3f9cf9ab14e5df529ba37f1b82c011a" id="r_ab3f9cf9ab14e5df529ba37f1b82c011a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab3f9cf9ab14e5df529ba37f1b82c011a">addSkillGroupProfessionBonus</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group, int bonus)</td></tr>
 <tr class="memdesc:ab3f9cf9ab14e5df529ba37f1b82c011a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a bonus to all skills in a group.  <br /></td></tr>
 <tr class="memitem:a9badc3b2f03a68b1d4cd99968dae7f9f" id="r_a9badc3b2f03a68b1d4cd99968dae7f9f"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9badc3b2f03a68b1d4cd99968dae7f9f">skillGroupsWithProfessionBonus</a> () const</td></tr>
@@ -716,6 +724,44 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a515c36faee3b83f7d6223c46a4eb31e9" name="a515c36faee3b83f7d6223c46a4eb31e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a515c36faee3b83f7d6223c46a4eb31e9">&#9670;&#160;</a></span>addSkillGroupSpecialBonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::addSkillGroupSpecialBonus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>group</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>bonus</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a special bonus to all skills in a group. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>Name of the group </td></tr>
+    <tr><td class="paramname">bonus</td><td>bonus value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad3f4fa3dfc78bfd7aa8c01f37e096899" name="ad3f4fa3dfc78bfd7aa8c01f37e096899"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3f4fa3dfc78bfd7aa8c01f37e096899">&#9670;&#160;</a></span>addStat()</h2>
 
@@ -1176,6 +1222,42 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the category has a bonus </dd>
 <dd>
 <span class="tt">false</span> if the category does not have a bonus </dd></dl>
+
+</div>
+</div>
+<a id="ae8bb536bbcc5357503a28430a802ff5d" name="ae8bb536bbcc5357503a28430a802ff5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8bb536bbcc5357503a28430a802ff5d">&#9670;&#160;</a></span>isSpecialBonusSkillGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ProfessionData::isSpecialBonusSkillGroup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>group</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if a group adds a special bonus to skills. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td><a class="el" href="class_skill_group_data.html" title="Skill group.">SkillGroupData</a> group to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the group has a bonus </dd>
+<dd>
+<span class="tt">false</span> if the group does not has a bonus </dd></dl>
 
 </div>
 </div>
@@ -2068,6 +2150,40 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab562e6b38a2180a9dddcec2de77e5c1d" name="ab562e6b38a2180a9dddcec2de77e5c1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab562e6b38a2180a9dddcec2de77e5c1d">&#9670;&#160;</a></span>skillGroupSpecialBonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProfessionData::skillGroupSpecialBonus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>group</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the special bonus for a group. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td><a class="el" href="class_skill_group_data.html" title="Skill group.">SkillGroupData</a> group to get the bonus for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bonus for the group </dd></dl>
+
+</div>
+</div>
 <a id="a9badc3b2f03a68b1d4cd99968dae7f9f" name="a9badc3b2f03a68b1d4cd99968dae7f9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9badc3b2f03a68b1d4cd99968dae7f9f">&#9670;&#160;</a></span>skillGroupsWithProfessionBonus()</h2>
 
@@ -2121,6 +2237,34 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get a container with the names of groups that have skill development type changes. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::set of groups </dd></dl>
+
+</div>
+</div>
+<a id="a195dbd374fb34cb078bb33a4f0c5671f" name="a195dbd374fb34cb078bb33a4f0c5671f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195dbd374fb34cb078bb33a4f0c5671f">&#9670;&#160;</a></span>skillGroupsWithSpecialBonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt; ProfessionData::skillGroupsWithSpecialBonus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with groups that add a special bonus to skills. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::set of group names </dd></dl>
 
 </div>
 </div>

@@ -28,7 +28,8 @@ var searchData=
   ['isskilldevelopmenttypeskillgroup_25',['isSkillDevelopmentTypeSkillGroup',['../class_profession_data.html#abde47a2fb7f671007efa9678c0ed3f03',1,'ProfessionData']]],
   ['issomantic_26',['isSomantic',['../class_language_ability.html#aa4ec56195691818615e44b5fb673ea27',1,'LanguageAbility::isSomantic()'],['../class_language_data.html#a69e765bb580248b28f7904fa73aa18fe',1,'LanguageData::isSomantic()']]],
   ['isspecialbonusskillcategory_27',['isSpecialBonusSkillCategory',['../class_profession_data.html#acadb08aa2f517a8cf34702e796f8cd1b',1,'ProfessionData']]],
-  ['isspoken_28',['isSpoken',['../class_language_ability.html#ac97223eea0083108c624c2a74a2c803e',1,'LanguageAbility::isSpoken()'],['../class_language_data.html#ad6e3d452c38d41bdfde205882a1b075b',1,'LanguageData::isSpoken()']]],
-  ['issummoning_29',['isSummoning',['../class_spell_list_data.html#a0cc14d7b38cae643061dd1b7915895a5',1,'SpellListData']]],
-  ['iswritten_30',['isWritten',['../class_language_ability.html#abc220d4b62a81c3057b9388dc2194afd',1,'LanguageAbility::isWritten()'],['../class_language_data.html#af84b4226cfb0decabda010a08b3a2808',1,'LanguageData::isWritten()']]]
+  ['isspecialbonusskillgroup_28',['isSpecialBonusSkillGroup',['../class_profession_data.html#ae8bb536bbcc5357503a28430a802ff5d',1,'ProfessionData']]],
+  ['isspoken_29',['isSpoken',['../class_language_ability.html#ac97223eea0083108c624c2a74a2c803e',1,'LanguageAbility::isSpoken()'],['../class_language_data.html#ad6e3d452c38d41bdfde205882a1b075b',1,'LanguageData::isSpoken()']]],
+  ['issummoning_30',['isSummoning',['../class_spell_list_data.html#a0cc14d7b38cae643061dd1b7915895a5',1,'SpellListData']]],
+  ['iswritten_31',['isWritten',['../class_language_ability.html#abc220d4b62a81c3057b9388dc2194afd',1,'LanguageAbility::isWritten()'],['../class_language_data.html#af84b4226cfb0decabda010a08b3a2808',1,'LanguageData::isWritten()']]]
 ];

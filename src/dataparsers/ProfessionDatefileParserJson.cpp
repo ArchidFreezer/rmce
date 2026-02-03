@@ -117,7 +117,7 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 			skill_category_bonus_tree.put("bonus", game_data.skillCategorySpecialBonus(*skill_category.second));
 			skill_category_bonuses_tree.push_back(std::make_pair("", skill_category_bonus_tree));
 		}
-		if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill-category-special-bonus", skill_category_bonuses_tree));
+		if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill-category-special-bonuses", skill_category_bonuses_tree));
 	}
 
 	// Skill category development types
@@ -166,6 +166,22 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 			skill_group_bonuses_tree.push_back(std::make_pair("", skill_group_bonus_tree));
 		}
 		if (skill_group_bonuses_tree.size()) datum.push_back(std::make_pair("skill-group-profession-bonuses", skill_group_bonuses_tree));
+	}
+
+	// Skill group special bonus
+	{
+		pt::ptree skill_group_bonuses_tree{};
+		std::map<std::string, const SkillGroupData*> groups{};
+		for (auto& skill_group : game_data.skillGroupsWithSpecialBonus()) {
+			groups.emplace(skill_group->id(), skill_group);
+		}
+		for (const auto& skill_group : groups) {
+			pt::ptree skill_group_bonus_tree{};
+			skill_group_bonus_tree.put("skill_group", skill_group.first);
+			skill_group_bonus_tree.put("bonus", game_data.skillGroupSpecialBonus(*skill_group.second));
+			skill_group_bonuses_tree.push_back(std::make_pair("", skill_group_bonus_tree));
+		}
+		if (skill_group_bonuses_tree.size()) datum.push_back(std::make_pair("skill-group-special-bonuses", skill_group_bonuses_tree));
 	}
 
 	// Skill group skill development types
