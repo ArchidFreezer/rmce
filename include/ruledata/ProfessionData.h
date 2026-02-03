@@ -453,7 +453,7 @@ public:
 
 	/**
 	 * @brief Check if a skills in a group have a development type set
-	 * @param group_name name of the group
+	 * @param group SkillGroupData to check
 	 * @return `true` if the skills in the group are modified
 	 * @return `false` if the skills in the group are not modified
 	 */
