@@ -5917,6 +5917,21 @@
                     "development-type": "Everyman"
                 }
             ],
+            "skill-development-type-choices": [
+                {
+                    "num-choices": "1",
+                    "skill-type": "Everyman",
+                    "skills": [
+                        {
+                            "skill": "SKILL_BOXING"
+                        },
+                        {
+                            "skill": "SKILL_TACKLING",
+                            "subcategory": "Rugby"
+                        }
+                    ]
+                }
+            ],
             "skill-category-profession-bonus": [
                 {
                     "skill_category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",

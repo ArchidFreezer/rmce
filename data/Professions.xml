@@ -1762,18 +1762,26 @@
             <stat>Agility</stat>
             <stat>Strength</stat>
          </stats>
-         <skill-modifiers>
-            <modifier>
+         <skill-type-choices>
+            <choice>
                <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
+               <skills>
+                  <skill>Tackling</skill>
+                  <skill>Boxing</skill>
+               </skills>
+               <skill-type>Everyman</skill-type>
+            </choice>
+         </skill-type-choices>
+         <skill-subcategory-type-choice>
+            <choice>
+               <num-choices>1</num-choices>
                <skills>
                   <skill>Situational Awareness</skill>
                </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
                <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-            </modifier>
+            </choice>
+         </skill-subcategory-type-choice>
+         <skill-modifiers>
             <modifier>
                <num-choices>-1</num-choices>
                <fixed-num-choices>true</fixed-num-choices>
@@ -1790,18 +1798,6 @@
                <fixed-num-choices>true</fixed-num-choices>
                <skills>
                   <skill>Duping</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-            </modifier>
-            <modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Tackling</skill>
-                  <skill>Boxing</skill>
                </skills>
                <allow-restriced>false</allow-restriced>
                <non-channeling-only>false</non-channeling-only>
@@ -8636,6 +8632,15 @@
                <spell-list>Nature Domination</spell-list>
             </spell-list>
          </base-spell-lists>
+         <skill-subcategory-type-choice>
+            <choice>
+               <num-choices>1</num-choices>
+               <skills>
+                  <skill>Languages</skill>
+               </skills>
+               <skill-type>Everyman</skill-type>
+            </choice>
+         </skill-subcategory-type-choice>
          <skill-modifiers>
             <modifier>
                <num-choices>-1</num-choices>
@@ -8656,17 +8661,6 @@
                <fixed-num-choices>true</fixed-num-choices>
                <skills>
                   <skill>Religion</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-            </modifier>
-            <modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
                </skills>
                <allow-restriced>false</allow-restriced>
                <non-channeling-only>false</non-channeling-only>
@@ -18886,6 +18880,15 @@
             <stat>Agility</stat>
             <stat>Quickness</stat>
          </stats>
+         <skill-subcategory-type-choice>
+            <choice>
+               <num-choices>1</num-choices>
+               <skills>
+                  <skill>Situational Awareness</skill>
+               </skills>
+               <skill-type>Everyman</skill-type>
+            </choice>
+         </skill-subcategory-type-choice>
          <skill-modifiers>
             <modifier>
                <num-choices>-1</num-choices>
@@ -18936,17 +18939,6 @@
                <fixed-num-choices>true</fixed-num-choices>
                <skills>
                   <skill>Subdual</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-            </modifier>
-            <modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Situational Awareness</skill>
                </skills>
                <allow-restriced>false</allow-restriced>
                <non-channeling-only>false</non-channeling-only>
@@ -22988,6 +22980,15 @@
          <skill-bonuses>
             <bonus skill="Weapon - 1-H Concussion" subcategory="War Hammer">10</bonus>
          </skill-bonuses>
+         <skill-subcategory-type-choice>
+            <choice>
+               <num-choices>1</num-choices>
+               <skills>
+                  <skill>Metal-crafts</skill>
+               </skills>
+               <skill-type>Everyman</skill-type>
+            </choice>
+         </skill-subcategory-type-choice>
          <skill-modifiers>
             <modifier>
                <num-choices>-1</num-choices>
@@ -24186,6 +24187,15 @@
                <spell-list>Ceremonies</spell-list>
             </spell-list>
          </base-spell-lists>
+         <skill-subcategory-type-choice>
+            <choice>
+               <num-choices>1</num-choices>
+               <skills>
+                  <skill>Languages</skill>
+               </skills>
+               <skill-type>Everyman</skill-type>
+            </choice>
+         </skill-subcategory-type-choice>
          <skill-modifiers>
             <modifier>
                <num-choices>-1</num-choices>
@@ -24203,17 +24213,6 @@
                <fixed-num-choices>true</fixed-num-choices>
                <skills>
                   <skill>Religion</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <skill-type>Everyman</skill-type>
-               <can-restrict>false</can-restrict>
-            </modifier>
-            <modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
                </skills>
                <allow-restriced>false</allow-restriced>
                <non-channeling-only>false</non-channeling-only>

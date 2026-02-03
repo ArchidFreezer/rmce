@@ -2952,6 +2952,12 @@
                     "bonus": "10"
                 }
             ],
+            "skill-category-special-bonuses": [
+                {
+                    "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "bonus": "15"
+                }
+            ],
             "skill-category-skill-development-types": [
                 {
                     "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
@@ -2973,6 +2979,12 @@
                 },
                 {
                     "skill_group": "SKILLGROUP_WEAPON",
+                    "bonus": "5"
+                }
+            ],
+            "skill-group-special-bonuses": [
+                {
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 }
             ]
@@ -3101,6 +3113,12 @@
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "10"
+                }
+            ],
+            "skill-category-special-bonuses": [
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "15"
                 }
             ],
             "skill-group-profession-bonuses": [
@@ -3343,6 +3361,12 @@
                     "bonus": "5"
                 }
             ],
+            "skill-category-special-bonuses": [
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "15"
+                }
+            ],
             "skill-group-profession-bonuses": [
                 {
                     "skill_group": "SKILLGROUP_ARMOUR",
@@ -3441,6 +3465,12 @@
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
+                }
+            ],
+            "skill-category-special-bonuses": [
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "15"
                 }
             ],
             "skill-group-profession-bonuses": [
@@ -3940,6 +3970,12 @@
                     "bonus": "5"
                 }
             ],
+            "skill-category-special-bonuses": [
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "15"
+                }
+            ],
             "skill-group-profession-bonuses": [
                 {
                     "skill_group": "SKILLGROUP_ARMOUR",
@@ -4092,6 +4128,12 @@
                     "bonus": "5"
                 }
             ],
+            "skill-category-special-bonuses": [
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "15"
+                }
+            ],
             "skill-group-profession-bonuses": [
                 {
                     "skill_group": "SKILLGROUP_ARMOUR",
@@ -4158,6 +4200,12 @@
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
+                }
+            ],
+            "skill-category-special-bonuses": [
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "15"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -4242,6 +4290,12 @@
                     "bonus": "5"
                 }
             ],
+            "skill-category-special-bonuses": [
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "15"
+                }
+            ],
             "skill-category-skill-development-types": [
                 {
                     "category": "SKILLCATEGORY_INFLUENCE",
@@ -4322,6 +4376,12 @@
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "10"
+                }
+            ],
+            "skill-category-special-bonuses": [
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "15"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -5315,6 +5375,12 @@
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
+                }
+            ],
+            "skill-category-special-bonuses": [
+                {
+                    "skill_category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "bonus": "15"
                 }
             ],
             "skill-category-skill-development-types": [

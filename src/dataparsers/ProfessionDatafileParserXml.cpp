@@ -91,6 +91,35 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				}
 			}
 
+			// Skill development type choices
+			if (boost::optional<const pt::ptree&> skill_development_type_choices = v.second.get_child_optional("skill-type-choices")) {
+				for (const auto& skill_development_type_choice : skill_development_type_choices.get()) {
+					GameRuleDataChoice<SubcategoriedSkillData> choice{};
+
+					// make sure we have a valid development type first
+					std::string skill_type_id = skill_development_type_choice.second.get<std::string>("skill-type");
+					if (SkillDevelopmentType::fromString(skill_type_id)) {
+						choice.setNumChoices(skill_development_type_choice.second.get<int>("num-choices"));
+						for (const auto& skill_name_tree : skill_development_type_choice.second.get_child("skills")) {
+							std::string skill_id = GameRuleData::generateId("Skill", skill_name_tree.second.get_value<std::string>());
+							boost::optional<std::string> subcategory = skill_name_tree.second.get_optional<std::string>("<xmlattr>.subcategory");
+							if (subcategory) {
+								std::unique_ptr <SubcategoriedSkillData> skill = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_id), subcategory.value());
+								std::string sub_skill_id = skill->id();
+								if (!cache().exists<SubcategoriedSkillData>(sub_skill_id)) cache().add<SubcategoriedSkillData>(std::move(skill), sub_skill_id);
+								choice.addOption(cache().get<SubcategoriedSkillData>(sub_skill_id));
+							} else {
+								std::unique_ptr <SubcategoriedSkillData> skill = std::make_unique<SubcategoriedSkillData>(cache().get<SkillData>(skill_id));
+								std::string sub_skill_id = skill->id();
+								if (!cache().exists<SubcategoriedSkillData>(sub_skill_id)) cache().add<SubcategoriedSkillData>(std::move(skill), sub_skill_id);
+								choice.addOption(cache().get<SubcategoriedSkillData>(sub_skill_id));
+							}
+						}
+						ref.addSkillDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
+					}
+				}
+			}
+
 			// Get skill category profession bonuses
 			if (boost::optional<const pt::ptree&> skill_category_bonuses = v.second.get_child_optional("skill-category-bonuses")) {
 				for (const auto& skill_category_bonus : skill_category_bonuses.get()) {
