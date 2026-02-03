@@ -437,16 +437,16 @@ public:
 
 	/**
 	 * @brief Add a development type to all skills in a group
-	 * @param group Name of the group
+	 * @param group SkillGroupData group to add
 	 * @param type SkillDevelopmentType::Type to set
 	 */
-	void addSkillGroupSkillDevelopmentType(std::string_view group, SkillDevelopmentType::Type type) { skill_group_skill_development_types_.emplace(group, type); }
+	void addSkillGroupSkillDevelopmentType(const SkillGroupData& group, SkillDevelopmentType::Type type) { skill_group_skill_development_types_.emplace(&group, type); }
 
 	/**
 	 * @brief Get a container with the names of groups that have skill development type changes
-	 * @return std::set of group names
+	 * @return std::set of groups
 	 */
-	const std::set<std::string> skillGroupsWithSkillDevelopmentType() const {
+	const std::set<const SkillGroupData*> skillGroupsWithSkillDevelopmentType() const {
 		auto keys = std::views::keys(skill_group_skill_development_types_);
 		return { keys.begin(), keys.end() };
 	}
@@ -457,14 +457,24 @@ public:
 	 * @return `true` if the skills in the group are modified
 	 * @return `false` if the skills in the group are not modified
 	 */
-	bool isSkillDevelopmentTypeSkillGroup(const std::string& group_name) const { return (skill_group_skill_development_types_.find(group_name) != skill_group_skill_development_types_.end()); }
+	bool isSkillDevelopmentTypeSkillGroup(const SkillGroupData& group) const {
+		for (auto& key : std::views::keys(skill_group_skill_development_types_)) {
+			if (key->id() == group.id()) return true;
+		}
+		return false;
+	}
 
 	/**
 	 * @brief Get the development type to set for all skills in a group
-	 * @param group_name name of the group to get the skill development type for
+	 * @param group SkillGroupData group to get the skill development type for
 	 * @return SkillDevelopmentType::Type for skill in the group
 	 */
-	SkillDevelopmentType::Type skillGroupSkillDevelopmentType(const std::string& group_name) const { return (isSkillDevelopmentTypeSkillGroup(group_name) ? skill_group_skill_development_types_.at(group_name) : SkillDevelopmentType::kStandard); }
+	SkillDevelopmentType::Type skillGroupSkillDevelopmentType(const SkillGroupData& group) const {
+		for (auto& key : std::views::keys(skill_group_skill_development_types_)) {
+			if (key->id() == group.id()) return skill_group_skill_development_types_.at(key);
+		}
+		return SkillDevelopmentType::kStandard;
+	}
 
 	/**
 	 * @brief Add bonus for all skills in a category
@@ -605,7 +615,7 @@ private:
 	// Skill development types
 	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */
 	std::map<const SkillCategoryData*, SkillDevelopmentType::Type> skill_category_skill_development_types_{}; /** Skill categories that all skills within have their development type changed */
-	std::map<std::string, SkillDevelopmentType::Type> skill_group_skill_development_types_{}; /** Skill groups that all skills within have their development type changed */
+	std::map<const SkillGroupData*, SkillDevelopmentType::Type> skill_group_skill_development_types_{}; /** Skill groups that all skills within have their development type changed */
 
 	// Skill development type choices
 	std::map<GameRuleDataChoice<SkillData>, SkillDevelopmentType::Type> skill_development_type_choices_{}; /** Set of skills that the character may select one or more from to change their development type */

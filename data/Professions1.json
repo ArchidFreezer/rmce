@@ -53,11 +53,7 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
@@ -65,21 +61,25 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Outdoor",
+                    "skill_group": "SKILLGROUP_OUTDOOR",
                     "bonus": "20"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -119,29 +119,29 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Science\/Analytic",
+                    "skill_group": "SKILLGROUP_SCIENCE_ANALYTIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -192,11 +192,11 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "bonus": "10"
                 },
                 {
@@ -206,15 +206,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Athletic",
+                    "skill_group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -294,7 +294,15 @@
                     "bonus": "5"
                 },
                 {
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
@@ -308,23 +316,15 @@
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -367,15 +367,7 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_ARTISTIC_ACTIVE",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
@@ -389,19 +381,27 @@
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -462,15 +462,7 @@
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_LORE_OBSCURE",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
@@ -478,17 +470,25 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_LORE_OBSCURE",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -527,6 +527,22 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_LORE_OBSCURE",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "10"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
                 },
@@ -537,27 +553,11 @@
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_LORE_OBSCURE",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -611,11 +611,11 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
@@ -623,29 +623,29 @@
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Outdoor",
+                    "skill_group": "SKILLGROUP_OUTDOOR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -704,15 +704,11 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
@@ -720,7 +716,11 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
@@ -730,15 +730,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Subterfuge",
+                    "skill_group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -770,11 +770,11 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
@@ -782,25 +782,25 @@
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -832,7 +832,7 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
@@ -844,25 +844,25 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -918,6 +918,18 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
@@ -930,29 +942,17 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -1013,15 +1013,7 @@
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_TECHNICAL",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
@@ -1029,7 +1021,15 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "skill_category": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
@@ -1046,7 +1046,7 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -1091,11 +1091,11 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "bonus": "10"
                 }
             ],
@@ -1108,11 +1108,11 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "20"
                 }
             ]
@@ -1188,6 +1188,18 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
@@ -1198,27 +1210,15 @@
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -1272,29 +1272,29 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -1320,7 +1320,15 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
@@ -1329,14 +1337,6 @@
                 },
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -1349,23 +1349,23 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Athletic",
+                    "skill_group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Outdoor",
+                    "skill_group": "SKILLGROUP_OUTDOOR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Technical\/Trade",
+                    "skill_group": "SKILLGROUP_TECHNICAL_TRADE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -1439,6 +1439,18 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
@@ -1449,27 +1461,15 @@
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -1510,15 +1510,15 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
@@ -1528,23 +1528,23 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Subterfuge",
+                    "skill_group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -1583,14 +1583,6 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
@@ -1601,19 +1593,27 @@
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "bonus": "10"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Subterfuge",
+                    "skill_group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -1671,25 +1671,25 @@
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -1739,29 +1739,29 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "15"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "15"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Technical\/Trade",
+                    "skill_group": "SKILLGROUP_TECHNICAL_TRADE",
                     "bonus": "5"
                 }
             ]
@@ -1818,23 +1818,15 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
@@ -1842,7 +1834,15 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
@@ -1855,7 +1855,7 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -1905,6 +1905,22 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
@@ -1915,31 +1931,15 @@
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -1990,16 +1990,16 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
@@ -2008,15 +2008,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Martial Arts",
+                    "skill_group": "SKILLGROUP_MARTIAL_ARTS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -2076,6 +2076,18 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "10"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
@@ -2088,29 +2100,17 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -2149,10 +2149,6 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
@@ -2161,25 +2157,29 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_URBAN",
+                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_URBAN",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Athletic",
+                    "skill_group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -2228,33 +2228,33 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Athletic",
+                    "skill_group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -2296,7 +2296,15 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "bonus": "5"
                 },
                 {
@@ -2305,14 +2313,6 @@
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -2324,11 +2324,11 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -2373,11 +2373,11 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
@@ -2385,21 +2385,21 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -2472,16 +2472,16 @@
                     "bonus": "5"
                 },
                 {
+                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "bonus": "15"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "bonus": "15"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
@@ -2496,11 +2496,11 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -2542,15 +2542,15 @@
                     "bonus": "5"
                 },
                 {
+                    "skill_category": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "15"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_AWARENESS_SENSES",
                     "bonus": "5"
                 }
             ],
@@ -2563,17 +2563,17 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Artistic",
+                    "skill_group": "SKILLGROUP_ARTISTIC",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "Artistic",
+                    "skill_group": "SKILLGROUP_ARTISTIC",
                     "skill_development": "Everyman"
                 }
             ],
@@ -2633,11 +2633,11 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
@@ -2647,15 +2647,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Science\/Analytic",
+                    "skill_group": "SKILLGROUP_SCIENCE_ANALYTIC",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -2705,12 +2705,12 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_URBAN",
@@ -2719,19 +2719,19 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -2781,16 +2781,16 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "10"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -2802,19 +2802,19 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Athletic",
+                    "skill_group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ],
@@ -2869,11 +2869,11 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "development-type": "Everyman"
                 },
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_ARTISTIC_PASSIVE",
                     "development-type": "Everyman"
                 }
             ],
@@ -2886,19 +2886,19 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Technical\/Trade",
+                    "skill_group": "SKILLGROUP_TECHNICAL_TRADE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -2960,19 +2960,19 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Subterfuge",
+                    "skill_group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -3014,16 +3014,16 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
@@ -3038,15 +3038,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 }
             ]
@@ -3083,15 +3083,7 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
@@ -3099,17 +3091,25 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "10"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -3155,16 +3155,16 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
@@ -3179,19 +3179,19 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Subterfuge",
+                    "skill_group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 }
             ]
@@ -3248,7 +3248,7 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
@@ -3256,29 +3256,29 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -3331,29 +3331,29 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 }
             ]
@@ -3423,14 +3423,6 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_ARMOUR_LIGHT",
                     "bonus": "10"
                 },
@@ -3441,15 +3433,23 @@
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -3495,11 +3495,7 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
@@ -3507,25 +3503,29 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -3575,37 +3575,37 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Subterfuge",
+                    "skill_group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 }
             ]
@@ -3659,20 +3659,20 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -3684,19 +3684,19 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -3750,33 +3750,33 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "10"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Technical\/Trade",
+                    "skill_group": "SKILLGROUP_TECHNICAL_TRADE",
                     "bonus": "10"
                 }
             ]
@@ -3850,7 +3850,7 @@
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
@@ -3858,31 +3858,31 @@
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
                     "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "Outdoor",
+                    "skill_group": "SKILLGROUP_OUTDOOR",
                     "skill_development": "Everyman"
                 }
             ]
@@ -3932,33 +3932,33 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -4012,33 +4012,33 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -4084,29 +4084,29 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -4148,16 +4148,16 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -4168,15 +4168,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Artistic",
+                    "skill_group": "SKILLGROUP_ARTISTIC",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -4230,16 +4230,16 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "20"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "20"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -4250,15 +4250,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 }
             ]
@@ -4304,15 +4304,7 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
@@ -4320,8 +4312,16 @@
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "10"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -4338,13 +4338,13 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 }
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "skill_development": "Restricted"
                 }
             ],
@@ -4392,20 +4392,20 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -4416,19 +4416,19 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -4466,10 +4466,6 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_ARMOUR_LIGHT",
                     "bonus": "10"
                 },
@@ -4480,6 +4476,10 @@
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -4494,15 +4494,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -4555,29 +4555,29 @@
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -4619,12 +4619,12 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -4639,23 +4639,23 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Subterfuge",
+                    "skill_group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -4708,6 +4708,10 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "10"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "5"
                 },
@@ -4716,25 +4720,21 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
                     "bonus": "10"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -4784,39 +4784,39 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Artistic",
+                    "skill_group": "SKILLGROUP_ARTISTIC",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "Artistic",
+                    "skill_group": "SKILLGROUP_ARTISTIC",
                     "skill_development": "Everyman"
                 }
             ],
@@ -4886,39 +4886,39 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Outdoor",
+                    "skill_group": "SKILLGROUP_OUTDOOR",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "Outdoor",
+                    "skill_group": "SKILLGROUP_OUTDOOR",
                     "skill_development": "Everyman"
                 }
             ]
@@ -4971,15 +4971,15 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "15"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 }
             ],
@@ -4991,23 +4991,23 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -5065,11 +5065,11 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
@@ -5077,21 +5077,21 @@
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -5133,16 +5133,16 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "10"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "15"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -5153,15 +5153,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -5199,19 +5199,19 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_ATHLETIC_BRAWN",
                     "bonus": "10"
                 },
                 {
+                    "skill_category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -5239,15 +5239,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -5305,7 +5305,7 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
@@ -5313,7 +5313,7 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -5325,23 +5325,23 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -5383,20 +5383,20 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_ATHLETIC_BRAWN",
                     "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -5407,15 +5407,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -5472,8 +5472,16 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_LORE_GENERAL",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
@@ -5481,14 +5489,6 @@
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 }
             ],
@@ -5500,11 +5500,11 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -5574,12 +5574,12 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -5591,19 +5591,19 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Athletic",
+                    "skill_group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "15"
                 }
             ],
@@ -5661,6 +5661,10 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "10"
                 },
@@ -5669,15 +5673,11 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "skill_category": "SKILLCATEGORY_WEAPON_THROWN",
                     "bonus": "10"
                 }
             ],
@@ -5689,11 +5689,11 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -5734,12 +5734,12 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -5750,19 +5750,19 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ],
@@ -5812,19 +5812,19 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Athletic",
+                    "skill_group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Outdoor",
+                    "skill_group": "SKILLGROUP_OUTDOOR",
                     "bonus": "20"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -5857,29 +5857,29 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Subterfuge",
+                    "skill_group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "15"
                 }
             ]
@@ -5938,29 +5938,29 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -6030,6 +6030,10 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "5"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
@@ -6040,23 +6044,19 @@
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "Lore",
+                    "skill_group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -6120,25 +6120,25 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "15"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "15"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -6198,15 +6198,7 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
                 },
                 {
@@ -6214,13 +6206,21 @@
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -6257,33 +6257,33 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "bonus": "10"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Martial Arts",
+                    "skill_group": "SKILLGROUP_MARTIAL_ARTS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Outdoor",
+                    "skill_group": "SKILLGROUP_OUTDOOR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -6328,25 +6328,25 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Subterfuge",
+                    "skill_group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -6402,6 +6402,18 @@
             ],
             "skill-category-bonus": [
                 {
+                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "bonus": "5"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "bonus": "10"
+                },
+                {
                     "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
                 },
@@ -6412,27 +6424,15 @@
                 {
                     "skill_category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -6471,8 +6471,8 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
@@ -6483,21 +6483,21 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Athletic",
+                    "skill_group": "SKILLGROUP_ATHLETIC",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -6538,12 +6538,12 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "15"
-                },
-                {
                     "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "10"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "bonus": "15"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -6555,11 +6555,11 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Martial Arts",
+                    "skill_group": "SKILLGROUP_MARTIAL_ARTS",
                     "bonus": "15"
                 }
             ]
@@ -6599,29 +6599,29 @@
             ],
             "skill-category-bonus": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "15"
-                },
-                {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "bonus": "15"
+                },
+                {
+                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "bonus": "5"
                 }
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Science\/Analytic",
+                    "skill_group": "SKILLGROUP_SCIENCE_ANALYTIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Spells",
+                    "skill_group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -6658,16 +6658,16 @@
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "10"
+                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "bonus": "5"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "bonus": "10"
                 },
                 {
                     "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
@@ -6676,15 +6676,15 @@
             ],
             "skill-group-bonuses": [
                 {
-                    "skill_group": "Awareness",
+                    "skill_group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "Martial Arts",
+                    "skill_group": "SKILLGROUP_MARTIAL_ARTS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "Weapon",
+                    "skill_group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]

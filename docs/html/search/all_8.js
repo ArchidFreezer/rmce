@@ -25,7 +25,7 @@ var searchData=
   ['isrestrictedskillcategory_22',['isRestrictedSkillCategory',['../class_race_data.html#aa83344f6945acbc7722ee066000ead3d',1,'RaceData']]],
   ['isskilldevelopmenttypeset_23',['isSkillDevelopmentTypeSet',['../class_profession_data.html#afa775b7aead2b6dafb95e58c8f6eaf29',1,'ProfessionData']]],
   ['isskilldevelopmenttypeskillcategory_24',['isSkillDevelopmentTypeSkillCategory',['../class_profession_data.html#a46b356b89ccbf287a8952cbf7e163084',1,'ProfessionData']]],
-  ['isskilldevelopmenttypeskillgroup_25',['isSkillDevelopmentTypeSkillGroup',['../class_profession_data.html#ab1191d8b2b18d0dff76891fd2ea19f89',1,'ProfessionData']]],
+  ['isskilldevelopmenttypeskillgroup_25',['isSkillDevelopmentTypeSkillGroup',['../class_profession_data.html#abde47a2fb7f671007efa9678c0ed3f03',1,'ProfessionData']]],
   ['issomantic_26',['isSomantic',['../class_language_ability.html#aa4ec56195691818615e44b5fb673ea27',1,'LanguageAbility::isSomantic()'],['../class_language_data.html#a69e765bb580248b28f7904fa73aa18fe',1,'LanguageData::isSomantic()']]],
   ['isspoken_27',['isSpoken',['../class_language_ability.html#ac97223eea0083108c624c2a74a2c803e',1,'LanguageAbility::isSpoken()'],['../class_language_data.html#ad6e3d452c38d41bdfde205882a1b075b',1,'LanguageData::isSpoken()']]],
   ['issummoning_28',['isSummoning',['../class_spell_list_data.html#a0cc14d7b38cae643061dd1b7915895a5',1,'SpellListData']]],

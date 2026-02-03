@@ -163,7 +163,8 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				for (const auto& skill_group_skill_modifier : skill_group_skill_modifiers.get()) {
 					std::string skill_type_id = skill_group_skill_modifier.second.get_value<std::string>();
 					if (SkillDevelopmentType::fromString(skill_type_id)) {
-						ref.addSkillGroupSkillDevelopmentType(skill_group_skill_modifier.second.get<std::string>("<xmlattr>.group"), SkillDevelopmentType::fromString(skill_type_id).value());
+						std::string group_id{ GameRuleData::generateId("SkillGroup", skill_group_skill_modifier.second.get<std::string>("<xmlattr>.group")) };
+						ref.addSkillGroupSkillDevelopmentType(cache().get<SkillGroupData>(group_id), SkillDevelopmentType::fromString(skill_type_id).value());
 					}
 				}
 			}

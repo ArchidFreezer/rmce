@@ -2573,7 +2573,7 @@
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "Artistic",
+                    "skill_group": "SKILLGROUP_ARTISTIC",
                     "skill_development": "Everyman"
                 }
             ],
@@ -3882,7 +3882,7 @@
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "Outdoor",
+                    "skill_group": "SKILLGROUP_OUTDOOR",
                     "skill_development": "Everyman"
                 }
             ]
@@ -4344,7 +4344,7 @@
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "Armour",
+                    "skill_group": "SKILLGROUP_ARMOUR",
                     "skill_development": "Restricted"
                 }
             ],
@@ -4816,7 +4816,7 @@
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "Artistic",
+                    "skill_group": "SKILLGROUP_ARTISTIC",
                     "skill_development": "Everyman"
                 }
             ],
@@ -4918,7 +4918,7 @@
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "Outdoor",
+                    "skill_group": "SKILLGROUP_OUTDOOR",
                     "skill_development": "Everyman"
                 }
             ]

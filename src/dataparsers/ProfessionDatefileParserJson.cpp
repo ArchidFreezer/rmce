@@ -140,21 +140,27 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 		for (const auto& skill_group : groups) {
 			pt::ptree skill_group_bonus_tree{};
 			skill_group_bonus_tree.put("skill_group", skill_group.first);
-			skill_group_bonus_tree.put("bonus", game_data.skillGroupBonus(*groups.at(skill_group.first)));
+			skill_group_bonus_tree.put("bonus", game_data.skillGroupBonus(*skill_group.second));
 			skill_group_bonuses_tree.push_back(std::make_pair("", skill_group_bonus_tree));
 		}
 		if (skill_group_bonuses_tree.size()) datum.push_back(std::make_pair("skill-group-bonuses", skill_group_bonuses_tree));
 	}
 
 	// Skill group skill development types
-	pt::ptree skill_group_skill_developments_tree{};
-	for (auto& skill_group : game_data.skillGroupsWithSkillDevelopmentType()) {
-		pt::ptree skill_group_skill_development_tree{};
-		skill_group_skill_development_tree.put("skill_group", skill_group);
-		skill_group_skill_development_tree.put("skill_development", SkillDevelopmentType::toString(game_data.skillGroupSkillDevelopmentType(skill_group)));
-		skill_group_skill_developments_tree.push_back(std::make_pair("", skill_group_skill_development_tree));
+	{
+		pt::ptree skill_group_skill_developments_tree{};
+		std::map<std::string, const SkillGroupData*> groups{};
+		for (auto& skill_group : game_data.skillGroupsWithSkillDevelopmentType()) {
+			groups.emplace(skill_group->id(), skill_group);
+		}
+		for (const auto& skill_group : groups) {
+			pt::ptree skill_group_skill_development_tree{};
+			skill_group_skill_development_tree.put("skill_group", skill_group.first);
+			skill_group_skill_development_tree.put("skill_development", SkillDevelopmentType::toString(game_data.skillGroupSkillDevelopmentType(*skill_group.second)));
+			skill_group_skill_developments_tree.push_back(std::make_pair("", skill_group_skill_development_tree));
+		}
+		if (skill_group_skill_developments_tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-types", skill_group_skill_developments_tree));
 	}
-	if (skill_group_skill_developments_tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-types", skill_group_skill_developments_tree));
 
 	// Skill group development type choices
 	pt::ptree skill_group_skill_development_type_choices_tree{};

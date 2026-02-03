@@ -336,22 +336,25 @@ namespace {
 	TEST(ProfessionData, GroupSkillDevelopmentType) {
 		ProfessionData prof("PROF_ID");
 
+		SkillGroupData g1("GROUP1_ID", "Group1");
+		SkillGroupData g2("GROUP2_ID", "Group2");
+
 		EXPECT_EQ(prof.skillGroupsWithSkillDevelopmentType().size(), 0);
-		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillGroup("Group"));
-		EXPECT_EQ(prof.skillGroupSkillDevelopmentType("Group"), SkillDevelopmentType::kStandard);
+		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillGroup(g2));
+		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g2), SkillDevelopmentType::kStandard);
 
-		prof.addSkillGroupSkillDevelopmentType("Group1", SkillDevelopmentType::kEveryman);
+		prof.addSkillGroupSkillDevelopmentType(g1, SkillDevelopmentType::kEveryman);
 		EXPECT_EQ(prof.skillGroupsWithSkillDevelopmentType().size(), 1);
-		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillGroup("Group"));
-		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillGroup("Group1"));
-		EXPECT_EQ(prof.skillGroupSkillDevelopmentType("Group1"), SkillDevelopmentType::kEveryman);
+		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillGroup(g2));
+		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillGroup(g1));
+		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g1), SkillDevelopmentType::kEveryman);
 
-		prof.addSkillGroupSkillDevelopmentType("Group2", SkillDevelopmentType::kOccupational);
+		prof.addSkillGroupSkillDevelopmentType(g2, SkillDevelopmentType::kOccupational);
 		EXPECT_EQ(prof.skillGroupsWithSkillDevelopmentType().size(), 2);
-		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillGroup("Group1"));
-		EXPECT_EQ(prof.skillGroupSkillDevelopmentType("Group1"), SkillDevelopmentType::kEveryman);
-		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillGroup("Group2"));
-		EXPECT_EQ(prof.skillGroupSkillDevelopmentType("Group2"), SkillDevelopmentType::kOccupational);
+		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillGroup(g1));
+		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g1), SkillDevelopmentType::kEveryman);
+		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillGroup(g2));
+		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g2), SkillDevelopmentType::kOccupational);
 	}
 
 	TEST(ProfessionData, CategoryBonus) {
