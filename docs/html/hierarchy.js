@@ -61,6 +61,7 @@ var hierarchy =
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
     [ "GameRuleDataChoice&lt; T &gt;", "class_game_rule_data_choice.html", null ],
+    [ "GameRuleDataFactory", "class_game_rule_data_factory.html", null ],
     [ "LanguageAbility", "class_language_ability.html", null ],
     [ "NumberMatcherFactory", "class_number_matcher_factory.html", null ],
     [ "std::runtime_error", null, [

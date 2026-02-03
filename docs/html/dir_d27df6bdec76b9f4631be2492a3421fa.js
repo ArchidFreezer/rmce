@@ -11,6 +11,7 @@ var dir_d27df6bdec76b9f4631be2492a3421fa =
     [ "GameRuleData.h", "_game_rule_data_8h_source.html", null ],
     [ "GameRuleDataCache.h", "_game_rule_data_cache_8h_source.html", null ],
     [ "GameRuleDataChoice.h", "_game_rule_data_choice_8h_source.html", null ],
+    [ "GameRuleDataFactory.h", "_game_rule_data_factory_8h_source.html", null ],
     [ "LanguageCategoryData.h", "_language_category_data_8h_source.html", null ],
     [ "LanguageData.h", "_language_data_8h_source.html", null ],
     [ "LanguageDialectData.h", "_language_dialect_data_8h_source.html", null ],

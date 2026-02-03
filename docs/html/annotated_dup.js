@@ -33,6 +33,7 @@ var annotated_dup =
     [ "GameRuleData", "class_game_rule_data.html", "class_game_rule_data" ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", "class_game_rule_data_cache" ],
     [ "GameRuleDataChoice", "class_game_rule_data_choice.html", "class_game_rule_data_choice" ],
+    [ "GameRuleDataFactory", "class_game_rule_data_factory.html", "class_game_rule_data_factory" ],
     [ "InvalidLanguageRank", "class_invalid_language_rank.html", "class_invalid_language_rank" ],
     [ "InvalidSkillBonus", "class_invalid_skill_bonus.html", "class_invalid_skill_bonus" ],
     [ "InvalidSkillDevelopment", "class_invalid_skill_development.html", "class_invalid_skill_development" ],
