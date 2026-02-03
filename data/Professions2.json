@@ -2869,11 +2869,11 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_ARTISTIC_PASSIVE",
                     "development-type": "Everyman"
                 },
                 {
-                    "category": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "development-type": "Everyman"
                 }
             ],
@@ -5217,11 +5217,11 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
                     "development-type": "Occupational"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
                     "development-type": "Occupational"
                 }
             ],

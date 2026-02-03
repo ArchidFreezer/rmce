@@ -148,12 +148,10 @@ var NAVTREEINDEX2 =
 "class_stat_type_1_1_too_many_stats_exception.html#af36dfe196f6a1be9e2a21e6315d8514e":[0,0,12,0,0],
 "class_stat_type_1_1_too_many_stats_exception.html#af36dfe196f6a1be9e2a21e6315d8514e":[2,0,4,0,0],
 "class_subcategoried_skill_data.html":[2,0,60],
-"class_subcategoried_skill_data.html#a23503af0c7da0ea063f44b02f76ed5ac":[2,0,60,2],
-"class_subcategoried_skill_data.html#a629e5e9c90245bd10f24ef5af1e2f600":[2,0,60,5],
+"class_subcategoried_skill_data.html#a629e5e9c90245bd10f24ef5af1e2f600":[2,0,60,3],
 "class_subcategoried_skill_data.html#a6e8d26835dc5c26793a15cfd04061519":[2,0,60,0],
-"class_subcategoried_skill_data.html#a9957b8411c76c6998338c6fc60802e88":[2,0,60,4],
+"class_subcategoried_skill_data.html#a9957b8411c76c6998338c6fc60802e88":[2,0,60,2],
 "class_subcategoried_skill_data.html#ad5c78085648bfe1a577e43cfc9c9fb7b":[2,0,60,1],
-"class_subcategoried_skill_data.html#ade60c6ca8b9fa92b4db6f76a1ef85067":[2,0,60,3],
 "class_table_column_armour_type_matcher.html":[2,0,61],
 "class_table_column_armour_type_matcher.html#a51317a962f264a604bcac140018fb749":[2,0,61,0],
 "class_table_column_creature_size_matcher.html":[2,0,62],
@@ -249,5 +247,7 @@ var NAVTREEINDEX2 =
 "functions_func_t.html":[2,3,1,18],
 "functions_func_u.html":[2,3,1,19],
 "functions_func_w.html":[2,3,1,20],
-"functions_func_z.html":[2,3,1,21]
+"functions_func_z.html":[2,3,1,21],
+"functions_func_~.html":[2,3,1,22],
+"functions_g.html":[2,3,0,6]
 };

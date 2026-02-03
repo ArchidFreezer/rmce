@@ -155,15 +155,18 @@ namespace {
 
 		// Putting the choice in a block means that we are testing an object has gone out of scope
 		{
-			GameRuleDataChoice<SkillData> choice1{};
+			GameRuleDataChoice<SubcategoriedSkillData> choice1{};
 			choice1.setNumChoices(1);
 
 			SkillData s1("SKILL1_ID");
 			SkillData s2("SKILL2_ID");
 			SkillData s3("SKILL3_ID");
-			choice1.addOption(s1);
-			choice1.addOption(s2);
-			choice1.addOption(s3);
+			SubcategoriedSkillData sc1(s1);
+			SubcategoriedSkillData sc2(s2);
+			SubcategoriedSkillData sc3(s3);
+			choice1.addOption(sc1);
+			choice1.addOption(sc2);
+			choice1.addOption(sc3);
 
 			prof.addSkillDevelopmentTypeChoice(choice1, SkillDevelopmentType::kEveryman);
 		}
@@ -175,13 +178,15 @@ namespace {
 			EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
 		}
 
-		GameRuleDataChoice<SkillData> choice2{};
+		GameRuleDataChoice<SubcategoriedSkillData> choice2{};
 		choice2.setNumChoices(2);
 
 		SkillData s1a("SKILL1a_ID");
 		SkillData s2a("SKILL2a_ID");
-		choice2.addOption(s1a);
-		choice2.addOption(s2a);
+		SubcategoriedSkillData sc1a(s1a);
+		SubcategoriedSkillData sc2a(s2a);
+		choice2.addOption(sc1a);
+		choice2.addOption(sc2a);
 		prof.addSkillDevelopmentTypeChoice(choice2, SkillDevelopmentType::kOccupational);
 
 		EXPECT_EQ(prof.numSkillDevelopmentTypeChoices(), 2);

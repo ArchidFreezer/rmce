@@ -56,6 +56,7 @@ var hierarchy =
       [ "SkillGroupData", "class_skill_group_data.html", null ],
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ],
       [ "SpellListData", "class_spell_list_data.html", null ],
+      [ "SubcategoriedSkillData", "class_subcategoried_skill_data.html", null ],
       [ "WeaponTypeData", "class_weapon_type_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
@@ -86,7 +87,6 @@ var hierarchy =
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
-    [ "SubcategoriedSkillData", "class_subcategoried_skill_data.html", null ],
     [ "table_row_matcher", null, [
       [ "NumberRange< NumberType >", "class_number_range.html", null ]
     ] ],
