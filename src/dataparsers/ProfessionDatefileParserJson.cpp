@@ -104,6 +104,22 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 		if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill-category-profession-bonus", skill_category_bonuses_tree));
 	}
 
+	// Skill category special bonus
+	{
+		pt::ptree skill_category_bonuses_tree{};
+		std::map<std::string, const SkillCategoryData*> categories{};
+		for (auto& skill_category : game_data.skillCategoriesWithSpecialBonus()) {
+			categories.emplace(skill_category->id(), skill_category);
+		}
+		for (const auto& skill_category : categories) {
+			pt::ptree skill_category_bonus_tree{};
+			skill_category_bonus_tree.put("skill_category", skill_category.first);
+			skill_category_bonus_tree.put("bonus", game_data.skillCategorySpecialBonus(*skill_category.second));
+			skill_category_bonuses_tree.push_back(std::make_pair("", skill_category_bonus_tree));
+		}
+		if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill-category-special-bonus", skill_category_bonuses_tree));
+	}
+
 	// Skill category development types
 	{
 		pt::ptree skill_category_skill_development_types_tree{};

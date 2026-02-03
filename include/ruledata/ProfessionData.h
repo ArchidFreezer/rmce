@@ -477,14 +477,55 @@ public:
 	}
 
 	/**
-	 * @brief Add bonus for all skills in a category
+	 * @brief Add special bonus for all skills in a category
+	 * @param category SkillCategoryData to add a bonus for
+	 * @param bonus int bonus value
+	 */
+	void addSkillCategorySpecialBonus(const SkillCategoryData& category, int bonus) { skill_category_special_bonuses_.emplace(&category, bonus); }
+
+	/**
+	 * @brief Get a container of all the skill categories with a special bonus
+	 * @return std::set of categories with a bonus
+	 */
+	const std::set<const SkillCategoryData*> skillCategoriesWithSpecialBonus() const {
+		auto keys = std::views::keys(skill_category_special_bonuses_);
+		return { keys.begin(), keys.end() };
+	}
+
+	/**
+	 * @brief Get whether a skill category has a special bonus
+	 * @param category SkillCategoryData to check
+	 * @return `true` if the category has a bonus
+	 * @return `false` if the category does not have a bonus
+	 */
+	bool isSpecialBonusSkillCategory(const SkillCategoryData& category) const {
+		for (auto& cat : std::views::keys(skill_category_special_bonuses_)) {
+			if (cat->id() == category.id()) return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @brief Get the special bonus a category has
+	 * @param category SkillCategoryData to check
+	 * @return int bonus @a category has
+	 */
+	int skillCategorySpecialBonus(const SkillCategoryData& category) {
+		for (auto& cat : std::views::keys(skill_category_special_bonuses_)) {
+			if (cat->id() == category.id()) return skill_category_special_bonuses_.at(cat);
+		}
+		return 0;
+	}
+
+	/**
+	 * @brief Add profession bonus for all skills in a category
 	 * @param category SkillCategoryData to add a bonus for
 	 * @param bonus int bonus value
 	 */
 	void addSkillCategoryProfessionBonus(const SkillCategoryData& category, int bonus) { skill_category_profession_bonuses_.emplace(&category, bonus); }
 
 	/**
-	 * @brief Get a container of all the skill categories with a bonus
+	 * @brief Get a container of all the skill categories with a profession bonus
 	 * @return std::set of categories with a bonus
 	 */
 	const std::set<const SkillCategoryData*> skillCategoriesWithProfessionBonus() const {
@@ -493,7 +534,7 @@ public:
 	}
 
 	/**
-	 * @brief Get whether a skill category has a bonus
+	 * @brief Get whether a skill category has a profession bonus
 	 * @param category SkillCategoryData to check
 	 * @return `true` if the category has a bonus
 	 * @return `false` if the category does not have a bonus
@@ -506,7 +547,7 @@ public:
 	}
 
 	/**
-	 * @brief Get the bonus a category has
+	 * @brief Get the profession bonus a category has
 	 * @param category SkillCategoryData to check
 	 * @return int bonus @a category has
 	 */
@@ -609,8 +650,9 @@ private:
 
 	// Skill bonuses
 	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */
-	std::map<const SkillCategoryData*, int> skill_category_profession_bonuses_{}; /** bonus to skill categories */
-	std::map<const SkillGroupData*, int> skill_group_profession_bonuses_{}; /** bonus to skill categories in a group */
+	std::map<const SkillCategoryData*, int> skill_category_profession_bonuses_{}; /** profession bonus to skill categories */
+	std::map<const SkillCategoryData*, int> skill_category_special_bonuses_{}; /** special bonus to skill categories */
+	std::map<const SkillGroupData*, int> skill_group_profession_bonuses_{}; /** profession bonus to skill categories in a group */
 
 	// Skill development types
 	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */

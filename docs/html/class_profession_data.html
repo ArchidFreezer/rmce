@@ -221,14 +221,22 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:abde47a2fb7f671007efa9678c0ed3f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a skills in a group have a development type set.  <br /></td></tr>
 <tr class="memitem:a9ff1f1396e0c86202ab56b359f0c8a9c" id="r_a9ff1f1396e0c86202ab56b359f0c8a9c"><td class="memItemLeft"><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9ff1f1396e0c86202ab56b359f0c8a9c">skillGroupSkillDevelopmentType</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group) const</td></tr>
 <tr class="memdesc:a9ff1f1396e0c86202ab56b359f0c8a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the development type to set for all skills in a group.  <br /></td></tr>
+<tr class="memitem:a73faa993a3f72b09a8e07764fcf05f0a" id="r_a73faa993a3f72b09a8e07764fcf05f0a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a73faa993a3f72b09a8e07764fcf05f0a">addSkillCategorySpecialBonus</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category, int bonus)</td></tr>
+<tr class="memdesc:a73faa993a3f72b09a8e07764fcf05f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add special bonus for all skills in a category.  <br /></td></tr>
+<tr class="memitem:aab77adf5a98bd2da679b8b9339487137" id="r_aab77adf5a98bd2da679b8b9339487137"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aab77adf5a98bd2da679b8b9339487137">skillCategoriesWithSpecialBonus</a> () const</td></tr>
+<tr class="memdesc:aab77adf5a98bd2da679b8b9339487137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of all the skill categories with a special bonus.  <br /></td></tr>
+<tr class="memitem:acadb08aa2f517a8cf34702e796f8cd1b" id="r_acadb08aa2f517a8cf34702e796f8cd1b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#acadb08aa2f517a8cf34702e796f8cd1b">isSpecialBonusSkillCategory</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category) const</td></tr>
+<tr class="memdesc:acadb08aa2f517a8cf34702e796f8cd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a skill category has a special bonus.  <br /></td></tr>
+<tr class="memitem:a59236fdce5cbf763d37df849d3a6e4e3" id="r_a59236fdce5cbf763d37df849d3a6e4e3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a59236fdce5cbf763d37df849d3a6e4e3">skillCategorySpecialBonus</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category)</td></tr>
+<tr class="memdesc:a59236fdce5cbf763d37df849d3a6e4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the special bonus a category has.  <br /></td></tr>
 <tr class="memitem:a4908c70377d1b598be0c56d0cdf3588a" id="r_a4908c70377d1b598be0c56d0cdf3588a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4908c70377d1b598be0c56d0cdf3588a">addSkillCategoryProfessionBonus</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category, int bonus)</td></tr>
-<tr class="memdesc:a4908c70377d1b598be0c56d0cdf3588a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add bonus for all skills in a category.  <br /></td></tr>
+<tr class="memdesc:a4908c70377d1b598be0c56d0cdf3588a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add profession bonus for all skills in a category.  <br /></td></tr>
 <tr class="memitem:ad9faa42815c59326fd0740cc63624dd1" id="r_ad9faa42815c59326fd0740cc63624dd1"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad9faa42815c59326fd0740cc63624dd1">skillCategoriesWithProfessionBonus</a> () const</td></tr>
-<tr class="memdesc:ad9faa42815c59326fd0740cc63624dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of all the skill categories with a bonus.  <br /></td></tr>
+<tr class="memdesc:ad9faa42815c59326fd0740cc63624dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of all the skill categories with a profession bonus.  <br /></td></tr>
 <tr class="memitem:a4c7910550983a6bc0dce6ec205db1b69" id="r_a4c7910550983a6bc0dce6ec205db1b69"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4c7910550983a6bc0dce6ec205db1b69">isProfessionBonusSkillCategory</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category) const</td></tr>
-<tr class="memdesc:a4c7910550983a6bc0dce6ec205db1b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a skill category has a bonus.  <br /></td></tr>
+<tr class="memdesc:a4c7910550983a6bc0dce6ec205db1b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a skill category has a profession bonus.  <br /></td></tr>
 <tr class="memitem:ad6f867b7f3d3d48d6a357d84174f2e57" id="r_ad6f867b7f3d3d48d6a357d84174f2e57"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad6f867b7f3d3d48d6a357d84174f2e57">skillCategoryProfessionBonus</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category)</td></tr>
-<tr class="memdesc:ad6f867b7f3d3d48d6a357d84174f2e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus a category has.  <br /></td></tr>
+<tr class="memdesc:ad6f867b7f3d3d48d6a357d84174f2e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the profession bonus a category has.  <br /></td></tr>
 <tr class="memitem:a4c3f01b3ce42e8b1e289c4d4d242206a" id="r_a4c3f01b3ce42e8b1e289c4d4d242206a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4c3f01b3ce42e8b1e289c4d4d242206a">setSkillBonus</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill, int bonus)</td></tr>
 <tr class="memdesc:a4c3f01b3ce42e8b1e289c4d4d242206a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the bonus the profession has with a skill.  <br /></td></tr>
 <tr class="memitem:aecb5417f5cff3520e4d559bbd4eaadc8" id="r_aecb5417f5cff3520e4d559bbd4eaadc8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aecb5417f5cff3520e4d559bbd4eaadc8">skillBonus</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill) const</td></tr>
@@ -431,7 +439,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Add bonus for all skills in a category. </p>
+<p>Add profession bonus for all skills in a category. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">category</td><td><a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> to add a bonus for </td></tr>
@@ -512,6 +520,44 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">choice</td><td><a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> choice definition </td></tr>
     <tr><td class="paramname">type</td><td><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType::Type</a> type choices will have </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73faa993a3f72b09a8e07764fcf05f0a" name="a73faa993a3f72b09a8e07764fcf05f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73faa993a3f72b09a8e07764fcf05f0a">&#9670;&#160;</a></span>addSkillCategorySpecialBonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::addSkillCategorySpecialBonus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>bonus</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add special bonus for all skills in a category. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td><a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> to add a bonus for </td></tr>
+    <tr><td class="paramname">bonus</td><td>int bonus value </td></tr>
   </table>
   </dd>
 </dl>
@@ -899,7 +945,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get whether a skill category has a bonus. </p>
+<p>Get whether a skill category has a profession bonus. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">category</td><td><a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> to check </td></tr>
@@ -1094,6 +1140,42 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the skills in the group are modified </dd>
 <dd>
 <span class="tt">false</span> if the skills in the group are not modified </dd></dl>
+
+</div>
+</div>
+<a id="acadb08aa2f517a8cf34702e796f8cd1b" name="acadb08aa2f517a8cf34702e796f8cd1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acadb08aa2f517a8cf34702e796f8cd1b">&#9670;&#160;</a></span>isSpecialBonusSkillCategory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ProfessionData::isSpecialBonusSkillCategory </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get whether a skill category has a special bonus. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td><a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the category has a bonus </dd>
+<dd>
+<span class="tt">false</span> if the category does not have a bonus </dd></dl>
 
 </div>
 </div>
@@ -1596,7 +1678,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get a container of all the skill categories with a bonus. </p>
+<p>Get a container of all the skill categories with a profession bonus. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::set of categories with a bonus </dd></dl>
 
 </div>
@@ -1629,6 +1711,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="aab77adf5a98bd2da679b8b9339487137" name="aab77adf5a98bd2da679b8b9339487137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab77adf5a98bd2da679b8b9339487137">&#9670;&#160;</a></span>skillCategoriesWithSpecialBonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; ProfessionData::skillCategoriesWithSpecialBonus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container of all the skill categories with a special bonus. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::set of categories with a bonus </dd></dl>
+
+</div>
+</div>
 <a id="ad6f867b7f3d3d48d6a357d84174f2e57" name="ad6f867b7f3d3d48d6a357d84174f2e57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6f867b7f3d3d48d6a357d84174f2e57">&#9670;&#160;</a></span>skillCategoryProfessionBonus()</h2>
 
@@ -1652,7 +1762,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the bonus a category has. </p>
+<p>Get the profession bonus a category has. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">category</td><td><a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> to check </td></tr>
@@ -1723,6 +1833,40 @@ Additional Inherited Members</h2></td></tr>
 <p>Get a container with the choices the character needs to make to select one or more skills within a skill category that may have their development type changed. </p>
 <dl class="section return"><dt>Returns</dt><dd>vector of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
+
+</div>
+</div>
+<a id="a59236fdce5cbf763d37df849d3a6e4e3" name="a59236fdce5cbf763d37df849d3a6e4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59236fdce5cbf763d37df849d3a6e4e3">&#9670;&#160;</a></span>skillCategorySpecialBonus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProfessionData::skillCategorySpecialBonus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the special bonus a category has. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td><a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int bonus <em class="arg">category</em> has </dd></dl>
 
 </div>
 </div>

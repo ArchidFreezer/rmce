@@ -314,7 +314,7 @@ namespace {
 		EXPECT_EQ(count, 2);
 	}
 
-	TEST(ProfessionData, GroupBonus) {
+	TEST(ProfessionData, GroupProfessionBonus) {
 		ProfessionData prof("PROF_ID");
 
 		SkillGroupData g1("GROUP1_ID", "Group1");
@@ -362,7 +362,7 @@ namespace {
 		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g2), SkillDevelopmentType::kOccupational);
 	}
 
-	TEST(ProfessionData, CategoryBonus) {
+	TEST(ProfessionData, CategoryProfessionBonus) {
 		ProfessionData prof("PROF_ID");
 
 		SkillCategoryData c1("CAT1_ID");
@@ -375,6 +375,22 @@ namespace {
 		
 		SkillCategoryData c1a("CAT1_ID");
 		EXPECT_TRUE(prof.isProfessionBonusSkillCategory(c1a));
+
+	}
+
+	TEST(ProfessionData, CategorySpecialBonus) {
+		ProfessionData prof("PROF_ID");
+
+		SkillCategoryData c1("CAT1_ID");
+		EXPECT_EQ(prof.skillCategoriesWithSpecialBonus().size(), 0);
+		EXPECT_FALSE(prof.isSpecialBonusSkillCategory(c1));
+		EXPECT_EQ(prof.skillCategorySpecialBonus(c1), 0);
+
+		prof.addSkillCategorySpecialBonus(c1, 10);
+		EXPECT_TRUE(prof.isSpecialBonusSkillCategory(c1));
+
+		SkillCategoryData c1a("CAT1_ID");
+		EXPECT_TRUE(prof.isSpecialBonusSkillCategory(c1a));
 
 	}
 

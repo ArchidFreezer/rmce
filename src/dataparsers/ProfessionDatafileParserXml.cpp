@@ -91,12 +91,21 @@ void ProfessionDatafileParserXml::parse(bool id_only) {
 				}
 			}
 
-			// Get skill category bonuses
+			// Get skill category profession bonuses
 			if (boost::optional<const pt::ptree&> skill_category_bonuses = v.second.get_child_optional("skill-category-bonuses")) {
 				for (const auto& skill_category_bonus : skill_category_bonuses.get()) {
 					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_bonus.second.get<std::string>("<xmlattr>.category")) };
 					int bonus = skill_category_bonus.second.get_value<int>();
 					if (bonus) ref.addSkillCategoryProfessionBonus(cache().get<SkillCategoryData>(skill_category_id), bonus);
+				}
+			}
+
+			// Get skill category special bonuses
+			if (boost::optional<const pt::ptree&> skill_category_bonuses = v.second.get_child_optional("skill-category-skill-bonuses")) {
+				for (const auto& skill_category_bonus : skill_category_bonuses.get()) {
+					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_bonus.second.get<std::string>("<xmlattr>.category")) };
+					int bonus = skill_category_bonus.second.get_value<int>();
+					if (bonus) ref.addSkillCategorySpecialBonus(cache().get<SkillCategoryData>(skill_category_id), bonus);
 				}
 			}
 
