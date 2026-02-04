@@ -36,7 +36,7 @@ void SkillDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	datum.put("distance-multiplier", game_data.distanceMultiplier());
 }
 
-void SkillDatafileParserJson::parse(bool id_only) {
+void SkillDatafileParserJson::parse() {
 	std::cout << "Loading Skill data ... ";
 
 	// Get the lists to parse and loop through them

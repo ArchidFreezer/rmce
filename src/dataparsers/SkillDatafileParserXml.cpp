@@ -4,7 +4,7 @@
 #include <SkillData.h>
 #include <SkillDatafileParserXml.h>
 
-void SkillDatafileParserXml::parse(bool id_only) {
+void SkillDatafileParserXml::parse() {
 	std::cout << "Loading Skill data ... ";
 
 	// Get the lists to parse and loop through them

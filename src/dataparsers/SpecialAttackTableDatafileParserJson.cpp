@@ -95,11 +95,8 @@ void SpecialAttackTableDatafileParserJson::populateDatum(std::string& id, pt::pt
 	if (!umrows.empty()) datum.push_back(std::make_pair("unmodified-rows", umrows));
 }
 
-void SpecialAttackTableDatafileParserJson::parse(bool id_only) {
-	// We know there are no references in attack tables so we create the complete object in the cache on the first pass
-	if (!id_only) return;
-
-	std::cout << "Loading Attack Table data ..." << std::endl;
+void SpecialAttackTableDatafileParserJson::parse() {
+	std::cout << "Loading Special Attack Table data ..." << std::endl;
 
 	// Get the tables to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());

@@ -2,7 +2,7 @@
 #include <ProfessionDatafileParserXml.h>
 #include <SkillDevelopmentType.h>
 
-void ProfessionDatafileParserXml::parse(bool id_only) {
+void ProfessionDatafileParserXml::parse() {
 	std::cout << "Loading Profession data ... ";
 
 	// Get the lists to parse and loop through them

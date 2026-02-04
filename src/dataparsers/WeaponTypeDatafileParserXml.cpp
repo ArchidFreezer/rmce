@@ -1,7 +1,7 @@
 #include <WeaponTypeData.h>
 #include <WeaponTypeDatafileParserXml.h>
 
-void WeaponTypeDatafileParserXml::parse(bool id_only) {
+void WeaponTypeDatafileParserXml::parse() {
 	std::cout << "Loading WeaponType data ... ";
 
 	// Get the lists to parse and loop through them

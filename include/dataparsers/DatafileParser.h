@@ -73,18 +73,16 @@ public:
 	/**
 	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache
 	 * @param filename Path to the file to read the output from
-	 * @param id_only `true` if the game rule object should be populated with its id only; `false` otherwise
 	 */
-	virtual void read(const std::string& filename, bool id_only) = 0;
+	virtual void read(const std::string& filename) = 0;
 
 	/**
 	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache
 	 * 
 	 * The file to be read from may be set in either the constructor or via methods
-	 * @param id_only `true` if the game rule object should be populated with its id only; `false` otherwise
 	 * @see setFilename
 	 */
-	void read(bool id_only) { read(filename(), id_only); }
+	void read() { read(filename()); }
 
 	/**
 	 * @brief Write game rule data from the cache to a file
@@ -135,9 +133,8 @@ protected:
 	 * @brief Parse a ptree into game data objects
 	 *
 	 * Parse a boost::ptree containing the language rule data, convert to objects and store in a data cache
-	 * @param id_only `true` if the game rule object should be populated with its id only; `false` otherwise
 	 */
-	virtual void parse(bool id_only) = 0;
+	virtual void parse() = 0;
 
 	/**
 	 * @brief Process a GameRuleDataChoice object into a boost pt::ptree

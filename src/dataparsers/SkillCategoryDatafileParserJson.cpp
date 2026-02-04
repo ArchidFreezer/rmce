@@ -21,7 +21,7 @@ void SkillCategoryDatafileParserJson::populateDatum(std::string& id, pt::ptree& 
 	datum.push_back(std::make_pair("stats", pstats));
 }
 
-void SkillCategoryDatafileParserJson::parse(bool id_only) {
+void SkillCategoryDatafileParserJson::parse() {
 	std::cout << "Loading SkillCategory data ... ";
 
 	// Get the lists to parse and loop through them

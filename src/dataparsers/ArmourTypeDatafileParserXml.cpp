@@ -2,7 +2,7 @@
 #include <ArmourTypeData.h>
 #include <ArmourTypeDatafileParserXml.h>
 
-void ArmourTypeDatafileParserXml::parse(bool id_only) {
+void ArmourTypeDatafileParserXml::parse() {
 
 	std::cout << "Loading ArmourType data ..." << std::endl;
 

@@ -58,7 +58,7 @@ int main() {
 	try {
 		// Iterate through the parsers retrieving the ID only and populating the cache with empty game data objects
 		for (auto& parser : parsers) {
-			parser->read(true);
+			parser->read();
 		}
 
 

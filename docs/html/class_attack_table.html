@@ -132,6 +132,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adec8ed3fb25f5757d2774357ab47f52a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor defining the name of the table.  <br /></td></tr>
 <tr class="memitem:ac7f0acc10b0991ff9433ca21d6fb10c9" id="r_ac7f0acc10b0991ff9433ca21d6fb10c9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac7f0acc10b0991ff9433ca21d6fb10c9">AttackTable</a> (std::string <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>, int max_rows)</td></tr>
 <tr class="memdesc:ac7f0acc10b0991ff9433ca21d6fb10c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor defining the name of the table.  <br /></td></tr>
+<tr class="memitem:a44f2da5a21f7a224e42f6121e3f7fdc7" id="r_a44f2da5a21f7a224e42f6121e3f7fdc7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44f2da5a21f7a224e42f6121e3f7fdc7">setName</a> (std::string_view <a class="el" href="#a2a71a75e42b866e471c938c115376450">name</a>)</td></tr>
+<tr class="memdesc:a44f2da5a21f7a224e42f6121e3f7fdc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name of the table.  <br /></td></tr>
+<tr class="memitem:a2a71a75e42b866e471c938c115376450" id="r_a2a71a75e42b866e471c938c115376450"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2a71a75e42b866e471c938c115376450">name</a> () const</td></tr>
+<tr class="memdesc:a2a71a75e42b866e471c938c115376450"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-game name of the table as used by players and NPCs.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_bound_int_row_lookup_table"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_bound_int_row_lookup_table')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_bound_int_row_lookup_table.html">BoundIntRowLookupTable&lt; TableColumnArmourTypeMatcher, ArmourType::Type, std::string &gt;</a></td></tr>
 <tr class="memitem:a75cb6e6b9902dd3fca2e0d2292b6e025 inherit pub_methods_class_bound_int_row_lookup_table" id="r_a75cb6e6b9902dd3fca2e0d2292b6e025"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>BoundIntRowLookupTable</b> ()=delete</td></tr>
@@ -247,6 +251,68 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">id</td><td>std::string Unique identifier of the table, typically the table name </td></tr>
     <tr><td class="paramname">max_rows</td><td>The maximum roll that the table has a row matcher for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a2a71a75e42b866e471c938c115376450" name="a2a71a75e42b866e471c938c115376450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a71a75e42b866e471c938c115376450">&#9670;&#160;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; AttackTable::name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>In-game name of the table as used by players and NPCs. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of the table </dd></dl>
+
+</div>
+</div>
+<a id="a44f2da5a21f7a224e42f6121e3f7fdc7" name="a44f2da5a21f7a224e42f6121e3f7fdc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44f2da5a21f7a224e42f6121e3f7fdc7">&#9670;&#160;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AttackTable::setName </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the name of the table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>table name </td></tr>
   </table>
   </dd>
 </dl>

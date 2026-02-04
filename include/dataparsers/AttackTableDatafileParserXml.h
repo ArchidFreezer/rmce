@@ -39,9 +39,7 @@ private:
 	 *
 	 * Parse a boost::ptree containing the book rule datas, convert to AttackTable and SpecialAttackTable objects and store
 	 * in a data cache.
-	 * 
-	 * @param id_only `true` if the game rule object should be populated with its id only; `false` otherwise
 	 */
-	void parse(bool id_only) override;
+	void parse() override;
 
 };

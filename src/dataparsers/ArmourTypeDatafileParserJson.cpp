@@ -18,7 +18,7 @@ void ArmourTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 
 }
 
-void ArmourTypeDatafileParserJson::parse(bool id_only) {
+void ArmourTypeDatafileParserJson::parse() {
 	std::cout << "Loading ArmourType data ... " << std::endl;
 
 	// Get the data objects to parse and loop through them

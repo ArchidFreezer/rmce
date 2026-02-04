@@ -2,7 +2,7 @@
 #include <LanguageDatafileParserJson.h>
 #include <LanguageDialectData.h>
 
-void LanguageDatafileParserJson::parse(bool id_only) {
+void LanguageDatafileParserJson::parse() {
 	std::cout << "Loading Language data ..." << std::endl;
 
 	// Get the languages to parse and loop through them

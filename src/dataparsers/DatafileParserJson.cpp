@@ -1,6 +1,6 @@
 #include <DatafileParserJson.h>
 
-void DatafileParserJson::read(const std::string& filename, bool id_only) {
+void DatafileParserJson::read(const std::string& filename) {
 
 	if (filename.empty()) throw FilenameNotSetException("You are attempting to read file a file without setting the filename first.");
 
@@ -9,7 +9,7 @@ void DatafileParserJson::read(const std::string& filename, bool id_only) {
 		if (ptree().size() < 1)	pt::read_json(filename, ptree());
 		
 		// Call the virtual method to parse the ptree into data objects
-		parse(id_only);
+		parse();
 	} catch (const pt::json_parser::json_parser_error& err) {
 		std::cerr << err.what();
 	}

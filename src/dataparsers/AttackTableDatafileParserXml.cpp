@@ -4,7 +4,7 @@
 #include <table/SpecialAttackTable.h>
 #include <NumberMatcherFactory.h>
 
-void AttackTableDatafileParserXml::parse(bool id_only) {
+void AttackTableDatafileParserXml::parse() {
 	std::cout << "Loading AttackTable data ..." << std::endl;
 
 	const pt::ptree& tree = ptree().get_child(rootNode());

@@ -3,9 +3,8 @@
 #include <SkillCategoryDatafileParserXml.h>
 #include <SkillProgressionTypeData.h>
 
-void SkillCategoryDatafileParserXml::parse(bool id_only) {
+void SkillCategoryDatafileParserXml::parse() {
 	std::cout << "Loading SkillCategory data ... ";
-	std::cout << (id_only ? "[Pass 1]" : "[Pass 2]") << std::endl;
 
 	// Get the lists to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());

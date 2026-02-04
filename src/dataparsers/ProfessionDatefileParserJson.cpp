@@ -1,7 +1,7 @@
 #include <ProfessionDatefileParserJson.h>
 
 
-void ProfessionDatafileParserJson::parse(bool id_only) {
+void ProfessionDatafileParserJson::parse() {
 	std::cout << "Loading Profession data ... ";
 
 	// Get the lists to parse and loop through them

@@ -2,7 +2,7 @@
 #include <RaceDatafileParserXml.h>
 #include <RealmType.h>
 
-void RaceDatafileParserXml::parse(bool id_only) {
+void RaceDatafileParserXml::parse() {
 	std::cout << "Loading Race data ... ";
 
 	// Get the lists to parse and loop through them

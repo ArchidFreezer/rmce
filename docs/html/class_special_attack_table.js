@@ -7,5 +7,7 @@ var class_special_attack_table =
     [ "cell", "class_special_attack_table.html#ac9eed1be5a4d1b07fcc5fc6bd9cf4275", null ],
     [ "cell", "class_special_attack_table.html#a26a3180443e63697c26aaf2a300f0e3a", null ],
     [ "limit", "class_special_attack_table.html#a0425ce61e76bb3d55231c02d703ef33b", null ],
-    [ "setLimit", "class_special_attack_table.html#ae68b213dcbed0ee0142de15b6d6d9155", null ]
+    [ "name", "class_special_attack_table.html#ad43308309e7c07c7a0c28d688c765f6e", null ],
+    [ "setLimit", "class_special_attack_table.html#ae68b213dcbed0ee0142de15b6d6d9155", null ],
+    [ "setName", "class_special_attack_table.html#ac659fe76c9313ad41d40e0fb40674bc9", null ]
 ];

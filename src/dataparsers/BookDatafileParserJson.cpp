@@ -1,7 +1,7 @@
 #include <BookData.h>
 #include <BookDatafileParserJson.h>
 
-void BookDatafileParserJson::parse(bool id_only) {
+void BookDatafileParserJson::parse() {
 	std::cout << "Loading Book data ..." << std::endl;
 
 	// Get the books to parse and loop through them

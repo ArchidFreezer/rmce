@@ -4,7 +4,7 @@
 #include <SpellListType.h>
 
 
-void SpellListDatafileParserXml::parse(bool id_only) {
+void SpellListDatafileParserXml::parse() {
 	std::cout << "Loading SpellListData data ..." << std::endl;
 
 	// Get the lists to parse and loop through them

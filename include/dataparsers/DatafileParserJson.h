@@ -41,9 +41,8 @@ public:
 	/**
 	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache
 	 * @param filename Path to the file to read the output from
-	 * @param id_only `true` if the game rule object should be populated with its id only; `false` otherwise
 	 */
-	void read(const std::string& filename, bool id_only) override;
+	void read(const std::string& filename) override;
 
 
 	/**

@@ -46,7 +46,7 @@ void WeaponTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	
 }
 
-void WeaponTypeDatafileParserJson::parse(bool id_only) {
+void WeaponTypeDatafileParserJson::parse() {
 	std::cout << "Loading WeaponType data ... ";
 
 	// Get a factory for the matchers

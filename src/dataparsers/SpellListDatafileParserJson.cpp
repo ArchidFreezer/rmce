@@ -3,7 +3,7 @@
 #include <SpellListDatafileParserJson.h>
 #include <SpellListType.h>
 
-void SpellListDatafileParserJson::parse(bool id_only) {
+void SpellListDatafileParserJson::parse() {
 	std::cout << "Loading Spell List data ..." << std::endl;
 
 	// Get the books to parse and loop through them

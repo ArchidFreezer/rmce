@@ -1,6 +1,6 @@
 #include <RaceDatafileParserJson.h>
 
-void RaceDatafileParserJson::parse(bool id_only) {
+void RaceDatafileParserJson::parse() {
 	std::cout << "Loading Race data ... ";
 
 	// Get the lists to parse and loop through them

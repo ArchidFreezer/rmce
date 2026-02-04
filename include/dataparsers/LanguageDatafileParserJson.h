@@ -6,14 +6,14 @@
 
 /**
  * @class LanguageDatafileParserJson
- * @brief Process #LanguageData objects for json files
+ * @brief Process LanguageData objects for json files
  *
- * This class can read a well-formed json file creating #LanguageData objects from the contents, adding them to a
+ * This class can read a well-formed json file creating LanguageData objects from the contents, adding them to a
  * #GameRuleDataCache cache.
  *
  * The reverse operation is also available where the objects from the cache may be written out to a json file.
  *
- * @see #LanguageData
+ * @see LanguageData
  * @see #GameRuleDataCache
  */
 class LanguageDatafileParserJson : public DatafileParserJson {
@@ -51,10 +51,9 @@ public:
 
 private:
 	/**
-	 * @brief Parse a ptree into #LanguageData objects
+	 * @brief Parse a ptree into LanguageData objects
 	 *
-	 * Parse a boost::ptree containing the language rule datas, convert to #LanguageData objects and store in a data cache
-	 * @param id_only `true` if the game rule object should be populated with its id only; `false` otherwise
+	 * Parse a boost::ptree containing the language rule datas, convert to LanguageData objects and store in a data cache
 	 */
-	void parse(bool id_only) override;
+	void parse() override;
 };

@@ -9,7 +9,7 @@ void SkillGroupDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	datum.put("name", game_data.name());
 }
 
-void SkillGroupDatafileParserJson::parse(bool id_only) {
+void SkillGroupDatafileParserJson::parse() {
 	std::cout << "Loading SkillGroup data ... " << std::endl;
 
 	// Loop through the groups

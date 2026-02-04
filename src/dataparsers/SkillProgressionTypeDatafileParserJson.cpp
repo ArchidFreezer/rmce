@@ -1,7 +1,7 @@
 #include <SkillProgressionTypeData.h>
 #include <SkillProgressionTypeDatafileParserJson.h>
 
-void SkillProgressionTypeDatafileParserJson::parse(bool id_only) {
+void SkillProgressionTypeDatafileParserJson::parse() {
 	std::cout << "Loading SkillProgressionTypeData data ..." << std::endl;
 
 	// Get the books to parse and loop through them

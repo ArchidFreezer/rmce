@@ -1,7 +1,7 @@
 #include <LanguageCategoryData.h>
 #include <LanguageCategoryDatafileParserJson.h>
 
-void LanguageCategoryDatafileParserJson::parse(bool id_only) {
+void LanguageCategoryDatafileParserJson::parse() {
 	std::cout << "Loading Language category data ..." << std::endl;
 
 	// Get the language categories to parse and loop through them

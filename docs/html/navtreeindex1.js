@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"class_invalid_skill_progression.html":[2,0,27],
+"class_invalid_skill_progression.html#a2452c77ea82227f7eb4296e94090f4e6":[2,0,27,0],
 "class_language_ability.html":[2,0,28],
 "class_language_ability.html#a0665a9075ffb13d4bc9caf62bba02f68":[2,0,28,7],
 "class_language_ability.html#a178ebcf6e4768832cc60b504a57d143a":[2,0,28,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "class_row_not_found_exception.html":[2,0,43],
 "class_row_not_found_exception.html#aa85b0412c85ad14a6011ce15e196d80d":[2,0,43,0],
 "class_skill_action_type_1_1_skill_action_not_found_exception.html":[0,0,8,0],
-"class_skill_action_type_1_1_skill_action_not_found_exception.html":[2,0,3,0],
-"class_skill_action_type_1_1_skill_action_not_found_exception.html#ac31135dd00e57651efa22f160d68b54f":[0,0,8,0,0],
-"class_skill_action_type_1_1_skill_action_not_found_exception.html#ac31135dd00e57651efa22f160d68b54f":[2,0,3,0,0]
+"class_skill_action_type_1_1_skill_action_not_found_exception.html":[2,0,3,0]
 };

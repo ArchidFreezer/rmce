@@ -91,7 +91,7 @@ void AttackTableDatafileParserJson::populateDatum(std::string& id, pt::ptree& da
 	if (!umrows.empty()) datum.push_back(std::make_pair("unmodified-rows", umrows));
 }
 
-void AttackTableDatafileParserJson::parse(bool id_only) {
+void AttackTableDatafileParserJson::parse() {
 	std::cout << "Loading Attack Table data ..." << std::endl;
 
 	// Get the tables to parse and loop through them
