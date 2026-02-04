@@ -22,14 +22,7 @@ var hierarchy =
         [ "WeaponTypeDatafileParserJson", "class_weapon_type_datafile_parser_json.html", null ]
       ] ],
       [ "DatafileParserXml", "class_datafile_parser_xml.html", [
-        [ "ArmourTypeDatafileParserXml", "class_armour_type_datafile_parser_xml.html", null ],
-        [ "AttackTableDatafileParserXml", "class_attack_table_datafile_parser_xml.html", null ],
-        [ "ProfessionDatafileParserXml", "class_profession_datafile_parser_xml.html", null ],
-        [ "RaceDatafileParserXml", "class_race_datafile_parser_xml.html", null ],
-        [ "SkillCategoryDatafileParserXml", "class_skill_category_datafile_parser_xml.html", null ],
-        [ "SkillDatafileParserXml", "class_skill_datafile_parser_xml.html", null ],
-        [ "SpellListDatafileParserXml", "class_spell_list_datafile_parser_xml.html", null ],
-        [ "WeaponTypeDatafileParserXml", "class_weapon_type_datafile_parser_xml.html", null ]
+        [ "ProfessionDatafileParserXml", "class_profession_datafile_parser_xml.html", null ]
       ] ]
     ] ],
     [ "Dice", "class_dice.html", null ],

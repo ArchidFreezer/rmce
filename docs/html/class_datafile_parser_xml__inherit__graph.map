@@ -1,21 +1,7 @@
 <map id="DatafileParserXml" name="DatafileParserXml">
-<area shape="rect" id="Node000001" title="Abstract class to parse xml files containing game rule data." alt="" coords="158,183,285,209"/>
-<area shape="rect" id="Node000003" href="$class_armour_type_datafile_parser_xml.html" title="Process ArmourTypeData objects for xml files." alt="" coords="337,5,534,32"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,167,271,104,298,70,332,42,357,31,353,34,334,46,302,74,275,107,237,170"/>
-<area shape="rect" id="Node000004" href="$class_attack_table_datafile_parser_xml.html" title="Process AttackTable and SpecialAttackTable objects for xml files." alt="" coords="338,56,534,83"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="241,169,280,130,305,109,332,92,362,82,358,85,334,97,308,114,284,133,245,173"/>
-<area shape="rect" id="Node000005" href="$class_profession_datafile_parser_xml.html" title="Process ProfessionData objects for xml files." alt="" coords="341,107,530,133"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="261,173,332,143,373,133,369,135,334,148,264,178"/>
-<area shape="rect" id="Node000006" href="$class_race_datafile_parser_xml.html" title="Process RaceData objects for xml files." alt="" coords="356,157,515,184"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="300,184,358,179,353,181,301,189"/>
-<area shape="rect" id="Node000007" href="$class_skill_category_datafile_parser_xml.html" title="Process SkillCategory and SpecialSkillCategory objects for xml files." alt="" coords="333,208,538,235"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="300,203,335,208,330,210,301,208"/>
-<area shape="rect" id="Node000008" href="$class_skill_datafile_parser_xml.html" title="Process SkillData objects from xml files." alt="" coords="360,259,512,285"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="263,214,334,244,374,258,368,258,332,249,262,219"/>
-<area shape="rect" id="Node000009" href="$class_spell_list_datafile_parser_xml.html" title="Process SpellListData objects from xml files." alt="" coords="347,309,524,336"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="244,218,284,259,308,278,334,295,363,309,358,309,332,300,305,283,280,262,242,223"/>
-<area shape="rect" id="Node000010" href="$class_weapon_type_datafile_parser_xml.html" title="Process WeaponTypeData objects from xml files." alt="" coords="334,360,537,387"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="236,221,275,285,302,318,334,346,358,360,352,359,332,350,298,322,271,288,234,226"/>
-<area shape="rect" id="Node000002" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="5,183,110,209"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,194,159,195,155,197,126,198"/>
+<area shape="rect" id="Node000001" title="Abstract class to parse xml files containing game rule data." alt="" coords="36,80,164,107"/>
+<area shape="rect" id="Node000003" href="$class_profession_datafile_parser_xml.html" title="Process ProfessionData objects for xml files." alt="" coords="5,155,195,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="102,121,102,155,98,153,98,124"/>
+<area shape="rect" id="Node000002" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="48,5,152,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,45,103,80,97,79,99,50"/>
 </map>

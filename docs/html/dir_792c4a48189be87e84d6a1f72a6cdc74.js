@@ -1,9 +1,7 @@
 var dir_792c4a48189be87e84d6a1f72a6cdc74 =
 [
     [ "ArmourTypeDatafileParserJson.h", "_armour_type_datafile_parser_json_8h_source.html", null ],
-    [ "ArmourTypeDatafileParserXml.h", "_armour_type_datafile_parser_xml_8h_source.html", null ],
     [ "AttackTableDatafileParserJson.h", "_attack_table_datafile_parser_json_8h_source.html", null ],
-    [ "AttackTableDatafileParserXml.h", "_attack_table_datafile_parser_xml_8h_source.html", null ],
     [ "BookDatafileParserJson.h", "_book_datafile_parser_json_8h_source.html", null ],
     [ "DatafileParser.h", "_datafile_parser_8h_source.html", null ],
     [ "DatafileParserJson.h", "_datafile_parser_json_8h_source.html", null ],
@@ -13,16 +11,11 @@ var dir_792c4a48189be87e84d6a1f72a6cdc74 =
     [ "ProfessionDatafileParserXml.h", "_profession_datafile_parser_xml_8h_source.html", null ],
     [ "ProfessionDatefileParserJson.h", "_profession_datefile_parser_json_8h_source.html", null ],
     [ "RaceDatafileParserJson.h", "_race_datafile_parser_json_8h_source.html", null ],
-    [ "RaceDatafileParserXml.h", "_race_datafile_parser_xml_8h_source.html", null ],
     [ "SkillCategoryDatafileParserJson.h", "_skill_category_datafile_parser_json_8h_source.html", null ],
-    [ "SkillCategoryDatafileParserXml.h", "_skill_category_datafile_parser_xml_8h_source.html", null ],
     [ "SkillDatafileParserJson.h", "_skill_datafile_parser_json_8h_source.html", null ],
-    [ "SkillDatafileParserXml.h", "_skill_datafile_parser_xml_8h_source.html", null ],
     [ "SkillGroupDatafileParserJson.h", "_skill_group_datafile_parser_json_8h_source.html", null ],
     [ "SkillProgressionTypeDatafileParserJson.h", "_skill_progression_type_datafile_parser_json_8h_source.html", null ],
     [ "SpecialAttackTableDatafileParserJson.h", "_special_attack_table_datafile_parser_json_8h_source.html", null ],
     [ "SpellListDatafileParserJson.h", "_spell_list_datafile_parser_json_8h_source.html", null ],
-    [ "SpellListDatafileParserXml.h", "_spell_list_datafile_parser_xml_8h_source.html", null ],
-    [ "WeaponTypeDatafileParserJson.h", "_weapon_type_datafile_parser_json_8h_source.html", null ],
-    [ "WeaponTypeDatafileParserXml.h", "_weapon_type_datafile_parser_xml_8h_source.html", null ]
+    [ "WeaponTypeDatafileParserJson.h", "_weapon_type_datafile_parser_json_8h_source.html", null ]
 ];
