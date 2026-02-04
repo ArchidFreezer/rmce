@@ -1,7 +1,7 @@
 {
     "attack-tables": [
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_BEAK",
+            "id": "SPECIALATTACKTABLE_BEAK",
             "name": "Beak",
             "small": "105",
             "medium": "120",
@@ -854,7 +854,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_BITE",
+            "id": "SPECIALATTACKTABLE_BITE",
             "name": "Bite",
             "small": "105",
             "medium": "120",
@@ -1731,7 +1731,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_BRAWLING",
+            "id": "SPECIALATTACKTABLE_BRAWLING",
             "name": "Brawling",
             "small": "105",
             "medium": "120",
@@ -2752,7 +2752,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_CLAW",
+            "id": "SPECIALATTACKTABLE_CLAW",
             "name": "Claw",
             "small": "105",
             "medium": "120",
@@ -3725,7 +3725,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_FALL",
+            "id": "SPECIALATTACKTABLE_FALL",
             "name": "Fall",
             "small": "105",
             "medium": "120",
@@ -4746,7 +4746,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_GRAPPLE",
+            "id": "SPECIALATTACKTABLE_GRAPPLE",
             "name": "Grapple",
             "small": "105",
             "medium": "120",
@@ -5527,7 +5527,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_HORN",
+            "id": "SPECIALATTACKTABLE_HORN",
             "name": "Horn",
             "small": "105",
             "medium": "120",
@@ -6404,7 +6404,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_MA_STRIKES",
+            "id": "SPECIALATTACKTABLE_MA_STRIKES",
             "name": "MA_Strikes",
             "small": "105",
             "medium": "120",
@@ -7353,7 +7353,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_MA_SWEEPS",
+            "id": "SPECIALATTACKTABLE_MA_SWEEPS",
             "name": "MA_Sweeps",
             "small": "105",
             "medium": "120",
@@ -8230,7 +8230,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_RAM",
+            "id": "SPECIALATTACKTABLE_RAM",
             "name": "Ram",
             "small": "105",
             "medium": "120",
@@ -9131,7 +9131,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_STINGER",
+            "id": "SPECIALATTACKTABLE_STINGER",
             "name": "Stinger",
             "small": "105",
             "medium": "120",
@@ -10080,7 +10080,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_TINY",
+            "id": "SPECIALATTACKTABLE_TINY",
             "name": "Tiny",
             "small": "105",
             "medium": "120",
@@ -11077,7 +11077,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_SPECIALATTACKTABLE_TRAMPLE",
+            "id": "SPECIALATTACKTABLE_TRAMPLE",
             "name": "Trample",
             "small": "105",
             "medium": "120",

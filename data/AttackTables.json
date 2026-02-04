@@ -1,7 +1,7 @@
 {
     "attack-tables": [
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_AKLYS",
+            "id": "ATTACKTABLE_AKLYS",
             "name": "Aklys",
             "max_row": "150",
             "modified-rows": [
@@ -1088,7 +1088,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_ATLATL",
+            "id": "ATTACKTABLE_ATLATL",
             "name": "Atlatl",
             "max_row": "150",
             "modified-rows": [
@@ -2175,7 +2175,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_BARDICHE",
+            "id": "ATTACKTABLE_BARDICHE",
             "name": "Bardiche",
             "max_row": "150",
             "modified-rows": [
@@ -3262,7 +3262,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_BASTARDAXE",
+            "id": "ATTACKTABLE_BASTARDAXE",
             "name": "BastardAxe",
             "max_row": "150",
             "modified-rows": [
@@ -4349,7 +4349,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_BASTARDSWORD",
+            "id": "ATTACKTABLE_BASTARDSWORD",
             "name": "BastardSword",
             "max_row": "150",
             "modified-rows": [
@@ -5436,7 +5436,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_BATTLEAXE",
+            "id": "ATTACKTABLE_BATTLEAXE",
             "name": "BattleAxe",
             "max_row": "150",
             "modified-rows": [
@@ -6523,7 +6523,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_BEAKEDAXE",
+            "id": "ATTACKTABLE_BEAKEDAXE",
             "name": "BeakedAxe",
             "max_row": "150",
             "modified-rows": [
@@ -7610,7 +7610,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_BECDECORBIN",
+            "id": "ATTACKTABLE_BECDECORBIN",
             "name": "BecDeCorbin",
             "max_row": "150",
             "modified-rows": [
@@ -8697,7 +8697,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_BLOWPIPE",
+            "id": "ATTACKTABLE_BLOWPIPE",
             "name": "Blowpipe",
             "max_row": "150",
             "modified-rows": [
@@ -9784,7 +9784,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_BOLA",
+            "id": "ATTACKTABLE_BOLA",
             "name": "Bola",
             "max_row": "150",
             "modified-rows": [
@@ -10871,7 +10871,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_BOOMERANG",
+            "id": "ATTACKTABLE_BOOMERANG",
             "name": "Boomerang",
             "max_row": "150",
             "modified-rows": [
@@ -11958,7 +11958,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_BROADSWORD",
+            "id": "ATTACKTABLE_BROADSWORD",
             "name": "Broadsword",
             "max_row": "150",
             "modified-rows": [
@@ -13045,7 +13045,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_CATONINETAILS",
+            "id": "ATTACKTABLE_CATONINETAILS",
             "name": "CatONineTails",
             "max_row": "150",
             "modified-rows": [
@@ -14132,7 +14132,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_CATONINETAILSPENAL",
+            "id": "ATTACKTABLE_CATONINETAILSPENAL",
             "name": "CatONineTailsPenal",
             "max_row": "150",
             "modified-rows": [
@@ -15219,7 +15219,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_CLUB",
+            "id": "ATTACKTABLE_CLUB",
             "name": "Club",
             "max_row": "150",
             "modified-rows": [
@@ -16306,7 +16306,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_COLD_BALL",
+            "id": "ATTACKTABLE_COLD_BALL",
             "name": "Cold_Ball",
             "max_row": "100",
             "modified-rows": [
@@ -16939,7 +16939,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_COMETHAMMER",
+            "id": "ATTACKTABLE_COMETHAMMER",
             "name": "CometHammer",
             "max_row": "150",
             "modified-rows": [
@@ -18026,7 +18026,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_COMPOSITEBOW",
+            "id": "ATTACKTABLE_COMPOSITEBOW",
             "name": "CompositeBow",
             "max_row": "150",
             "modified-rows": [
@@ -19113,7 +19113,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_CUTLASS",
+            "id": "ATTACKTABLE_CUTLASS",
             "name": "Cutlass",
             "max_row": "150",
             "modified-rows": [
@@ -20200,7 +20200,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_DAGGER",
+            "id": "ATTACKTABLE_DAGGER",
             "name": "Dagger",
             "max_row": "150",
             "modified-rows": [
@@ -21287,7 +21287,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_DART",
+            "id": "ATTACKTABLE_DART",
             "name": "Dart",
             "max_row": "150",
             "modified-rows": [
@@ -22374,7 +22374,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_FALCHION",
+            "id": "ATTACKTABLE_FALCHION",
             "name": "Falchion",
             "max_row": "150",
             "modified-rows": [
@@ -23461,7 +23461,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_FAUCHARD",
+            "id": "ATTACKTABLE_FAUCHARD",
             "name": "Fauchard",
             "max_row": "150",
             "modified-rows": [
@@ -24548,7 +24548,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_FIRE_BALL",
+            "id": "ATTACKTABLE_FIRE_BALL",
             "name": "Fire_Ball",
             "max_row": "100",
             "modified-rows": [
@@ -25205,7 +25205,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_FIRE_BOLT",
+            "id": "ATTACKTABLE_FIRE_BOLT",
             "name": "Fire_Bolt",
             "max_row": "150",
             "modified-rows": [
@@ -25910,7 +25910,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_FLAIL",
+            "id": "ATTACKTABLE_FLAIL",
             "name": "Flail",
             "max_row": "150",
             "modified-rows": [
@@ -26997,7 +26997,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_FOIL",
+            "id": "ATTACKTABLE_FOIL",
             "name": "Foil",
             "max_row": "150",
             "modified-rows": [
@@ -28084,7 +28084,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_GLADIATORSNET",
+            "id": "ATTACKTABLE_GLADIATORSNET",
             "name": "GladiatorsNet",
             "max_row": "150",
             "modified-rows": [
@@ -29171,7 +29171,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_GLAIVE",
+            "id": "ATTACKTABLE_GLAIVE",
             "name": "Glaive",
             "max_row": "150",
             "modified-rows": [
@@ -30258,7 +30258,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_GREATSWORD",
+            "id": "ATTACKTABLE_GREATSWORD",
             "name": "GreatSword",
             "max_row": "150",
             "modified-rows": [
@@ -31345,7 +31345,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_GUISARME",
+            "id": "ATTACKTABLE_GUISARME",
             "name": "Guisarme",
             "max_row": "150",
             "modified-rows": [
@@ -32432,7 +32432,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_HANDAXE",
+            "id": "ATTACKTABLE_HANDAXE",
             "name": "Handaxe",
             "max_row": "150",
             "modified-rows": [
@@ -33519,7 +33519,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_HANDCROSSBOW",
+            "id": "ATTACKTABLE_HANDCROSSBOW",
             "name": "HandCrossbow",
             "max_row": "150",
             "modified-rows": [
@@ -34606,7 +34606,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_HARPOON",
+            "id": "ATTACKTABLE_HARPOON",
             "name": "Harpoon",
             "max_row": "150",
             "modified-rows": [
@@ -35693,7 +35693,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_HEAVYCROSSBOW",
+            "id": "ATTACKTABLE_HEAVYCROSSBOW",
             "name": "HeavyCrossbow",
             "max_row": "150",
             "modified-rows": [
@@ -36780,7 +36780,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_HEAVYSPEAR",
+            "id": "ATTACKTABLE_HEAVYSPEAR",
             "name": "HeavySpear",
             "max_row": "150",
             "modified-rows": [
@@ -37867,7 +37867,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_ICE_BOLT",
+            "id": "ATTACKTABLE_ICE_BOLT",
             "name": "Ice_Bolt",
             "max_row": "150",
             "modified-rows": [
@@ -38572,7 +38572,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_JAVELIN",
+            "id": "ATTACKTABLE_JAVELIN",
             "name": "Javelin",
             "max_row": "150",
             "modified-rows": [
@@ -39659,7 +39659,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_JITTE",
+            "id": "ATTACKTABLE_JITTE",
             "name": "Jitte",
             "max_row": "150",
             "modified-rows": [
@@ -40746,7 +40746,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_KATANA",
+            "id": "ATTACKTABLE_KATANA",
             "name": "Katana",
             "max_row": "150",
             "modified-rows": [
@@ -41833,7 +41833,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_KNIFE",
+            "id": "ATTACKTABLE_KNIFE",
             "name": "Knife",
             "max_row": "150",
             "modified-rows": [
@@ -42920,7 +42920,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_KYOTETSUSHOGE",
+            "id": "ATTACKTABLE_KYOTETSUSHOGE",
             "name": "KyotetsuShoge",
             "max_row": "150",
             "modified-rows": [
@@ -44007,7 +44007,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_LANCE",
+            "id": "ATTACKTABLE_LANCE",
             "name": "Lance",
             "max_row": "150",
             "modified-rows": [
@@ -45094,7 +45094,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_LASSO",
+            "id": "ATTACKTABLE_LASSO",
             "name": "Lasso",
             "max_row": "150",
             "modified-rows": [
@@ -46181,7 +46181,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_LIGHTCROSSBOW",
+            "id": "ATTACKTABLE_LIGHTCROSSBOW",
             "name": "LightCrossbow",
             "max_row": "150",
             "modified-rows": [
@@ -47268,7 +47268,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_LIGHTNING_BOLT",
+            "id": "ATTACKTABLE_LIGHTNING_BOLT",
             "name": "Lightning_Bolt",
             "max_row": "150",
             "modified-rows": [
@@ -47973,7 +47973,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_LONGBOW",
+            "id": "ATTACKTABLE_LONGBOW",
             "name": "LongBow",
             "max_row": "150",
             "modified-rows": [
@@ -49060,7 +49060,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_LONGSCIMITAR",
+            "id": "ATTACKTABLE_LONGSCIMITAR",
             "name": "LongScimitar",
             "max_row": "150",
             "modified-rows": [
@@ -50147,7 +50147,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_LONGSWORD",
+            "id": "ATTACKTABLE_LONGSWORD",
             "name": "LongSword",
             "max_row": "150",
             "modified-rows": [
@@ -51234,7 +51234,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_LUCERNEHAMMER",
+            "id": "ATTACKTABLE_LUCERNEHAMMER",
             "name": "LucerneHammer",
             "max_row": "150",
             "modified-rows": [
@@ -52321,7 +52321,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_MACE",
+            "id": "ATTACKTABLE_MACE",
             "name": "Mace",
             "max_row": "150",
             "modified-rows": [
@@ -53408,7 +53408,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_MAINGAUCHE",
+            "id": "ATTACKTABLE_MAINGAUCHE",
             "name": "MainGauche",
             "max_row": "150",
             "modified-rows": [
@@ -54495,7 +54495,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_MANCATCHER",
+            "id": "ATTACKTABLE_MANCATCHER",
             "name": "ManCatcher",
             "max_row": "150",
             "modified-rows": [
@@ -55582,7 +55582,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_MILITARYFORK",
+            "id": "ATTACKTABLE_MILITARYFORK",
             "name": "MilitaryFork",
             "max_row": "150",
             "modified-rows": [
@@ -56669,7 +56669,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_MORNINGSTAR",
+            "id": "ATTACKTABLE_MORNINGSTAR",
             "name": "MorningStar",
             "max_row": "150",
             "modified-rows": [
@@ -57756,7 +57756,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_MULLET",
+            "id": "ATTACKTABLE_MULLET",
             "name": "Mullet",
             "max_row": "150",
             "modified-rows": [
@@ -58843,7 +58843,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_NAGAMAKI",
+            "id": "ATTACKTABLE_NAGAMAKI",
             "name": "Nagamaki",
             "max_row": "150",
             "modified-rows": [
@@ -59930,7 +59930,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_NAGINATA",
+            "id": "ATTACKTABLE_NAGINATA",
             "name": "Naginata",
             "max_row": "150",
             "modified-rows": [
@@ -61017,7 +61017,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_NINJATO",
+            "id": "ATTACKTABLE_NINJATO",
             "name": "Ninjato",
             "max_row": "150",
             "modified-rows": [
@@ -62104,7 +62104,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_NODACHI",
+            "id": "ATTACKTABLE_NODACHI",
             "name": "NoDachi",
             "max_row": "150",
             "modified-rows": [
@@ -63191,7 +63191,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_NODWICK",
+            "id": "ATTACKTABLE_NODWICK",
             "name": "Nodwick",
             "max_row": "150",
             "modified-rows": [
@@ -64278,7 +64278,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_NUNCHAKU",
+            "id": "ATTACKTABLE_NUNCHAKU",
             "name": "Nunchaku",
             "max_row": "150",
             "modified-rows": [
@@ -65365,7 +65365,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_PARTISAN",
+            "id": "ATTACKTABLE_PARTISAN",
             "name": "Partisan",
             "max_row": "150",
             "modified-rows": [
@@ -66452,7 +66452,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_PIKE",
+            "id": "ATTACKTABLE_PIKE",
             "name": "Pike",
             "max_row": "150",
             "modified-rows": [
@@ -67539,7 +67539,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_POLEARM",
+            "id": "ATTACKTABLE_POLEARM",
             "name": "Polearm",
             "max_row": "150",
             "modified-rows": [
@@ -68626,7 +68626,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_POLEAXE",
+            "id": "ATTACKTABLE_POLEAXE",
             "name": "PoleAxe",
             "max_row": "150",
             "modified-rows": [
@@ -69713,7 +69713,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_QUARTERSTAFF",
+            "id": "ATTACKTABLE_QUARTERSTAFF",
             "name": "Quarterstaff",
             "max_row": "150",
             "modified-rows": [
@@ -70800,7 +70800,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_RANSEUR",
+            "id": "ATTACKTABLE_RANSEUR",
             "name": "Ranseur",
             "max_row": "150",
             "modified-rows": [
@@ -71887,7 +71887,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_RAPIER",
+            "id": "ATTACKTABLE_RAPIER",
             "name": "Rapier",
             "max_row": "150",
             "modified-rows": [
@@ -72974,7 +72974,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_ROPEDART",
+            "id": "ATTACKTABLE_ROPEDART",
             "name": "RopeDart",
             "max_row": "150",
             "modified-rows": [
@@ -74061,7 +74061,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_SAI",
+            "id": "ATTACKTABLE_SAI",
             "name": "Sai",
             "max_row": "150",
             "modified-rows": [
@@ -75148,7 +75148,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_SCIMITAR",
+            "id": "ATTACKTABLE_SCIMITAR",
             "name": "Scimitar",
             "max_row": "150",
             "modified-rows": [
@@ -76235,7 +76235,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_SHOCK_BOLT",
+            "id": "ATTACKTABLE_SHOCK_BOLT",
             "name": "Shock_Bolt",
             "max_row": "150",
             "modified-rows": [
@@ -76940,7 +76940,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_SHORTBOW",
+            "id": "ATTACKTABLE_SHORTBOW",
             "name": "ShortBow",
             "max_row": "150",
             "modified-rows": [
@@ -78027,7 +78027,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_SHORTSWORD",
+            "id": "ATTACKTABLE_SHORTSWORD",
             "name": "ShortSword",
             "max_row": "150",
             "modified-rows": [
@@ -79114,7 +79114,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_SHURIKEN",
+            "id": "ATTACKTABLE_SHURIKEN",
             "name": "Shuriken",
             "max_row": "150",
             "modified-rows": [
@@ -80201,7 +80201,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_SLING",
+            "id": "ATTACKTABLE_SLING",
             "name": "Sling",
             "max_row": "150",
             "modified-rows": [
@@ -81288,7 +81288,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_SPEAR",
+            "id": "ATTACKTABLE_SPEAR",
             "name": "Spear",
             "max_row": "150",
             "modified-rows": [
@@ -82375,7 +82375,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_STAFFSLING",
+            "id": "ATTACKTABLE_STAFFSLING",
             "name": "StaffSling",
             "max_row": "150",
             "modified-rows": [
@@ -83462,7 +83462,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_STEELWHIP",
+            "id": "ATTACKTABLE_STEELWHIP",
             "name": "SteelWhip",
             "max_row": "150",
             "modified-rows": [
@@ -84549,7 +84549,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_THREESECTIONSTAFF",
+            "id": "ATTACKTABLE_THREESECTIONSTAFF",
             "name": "ThreeSectionStaff",
             "max_row": "150",
             "modified-rows": [
@@ -85636,7 +85636,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_TIGERCLAW",
+            "id": "ATTACKTABLE_TIGERCLAW",
             "name": "TigerClaw",
             "max_row": "150",
             "modified-rows": [
@@ -86723,7 +86723,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_TIGERHOOK",
+            "id": "ATTACKTABLE_TIGERHOOK",
             "name": "TigerHook",
             "max_row": "150",
             "modified-rows": [
@@ -87810,7 +87810,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_TRIDENT",
+            "id": "ATTACKTABLE_TRIDENT",
             "name": "Trident",
             "max_row": "150",
             "modified-rows": [
@@ -88897,7 +88897,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_TWOHANDEDSWORD",
+            "id": "ATTACKTABLE_TWOHANDEDSWORD",
             "name": "TwoHandedSword",
             "max_row": "150",
             "modified-rows": [
@@ -89984,7 +89984,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_WAKAZASHI",
+            "id": "ATTACKTABLE_WAKAZASHI",
             "name": "Wakazashi",
             "max_row": "150",
             "modified-rows": [
@@ -91071,7 +91071,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_WARFAN",
+            "id": "ATTACKTABLE_WARFAN",
             "name": "WarFan",
             "max_row": "150",
             "modified-rows": [
@@ -92158,7 +92158,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_WARHAMMER",
+            "id": "ATTACKTABLE_WARHAMMER",
             "name": "WarHammer",
             "max_row": "150",
             "modified-rows": [
@@ -93245,7 +93245,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_WARMATTOCK",
+            "id": "ATTACKTABLE_WARMATTOCK",
             "name": "WarMattock",
             "max_row": "150",
             "modified-rows": [
@@ -94332,7 +94332,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_WATER_BOLT",
+            "id": "ATTACKTABLE_WATER_BOLT",
             "name": "Water_Bolt",
             "max_row": "150",
             "modified-rows": [
@@ -95037,7 +95037,7 @@
             ]
         },
         {
-            "id": "LOOKUPTABLE_ATTACKTABLE_WHIP",
+            "id": "ATTACKTABLE_WHIP",
             "name": "Whip",
             "max_row": "150",
             "modified-rows": [
