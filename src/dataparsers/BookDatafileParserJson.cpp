@@ -2,9 +2,6 @@
 #include <BookDatafileParserJson.h>
 
 void BookDatafileParserJson::parse(bool id_only) {
-	// We know there are no references in books so we create the complete object in the cache on the first pass
-	if (!id_only) return;
-
 	std::cout << "Loading Book data ..." << std::endl;
 
 	// Get the books to parse and loop through them
@@ -18,20 +15,19 @@ void BookDatafileParserJson::parse(bool id_only) {
 
 		// We create a BookData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
 		// to the cache when we add it
-		std::unique_ptr<BookData> datum = std::make_unique<BookData>(id);
-		datum->setAbbreviation(abbreviation);
-		datum->setCode(code);
-		datum->setIsbn(isbn);
-		datum->setName(name);
-		std::cout << "\tBook name: " << datum->name() << std::endl;
-		cache().add<BookData>(std::move(datum), id);
+		BookData& datum = factory().get<BookData>(id);
+		datum.setAbbreviation(abbreviation);
+		datum.setCode(code);
+		datum.setIsbn(isbn);
+		datum.setName(name);
+		std::cout << "\tBook name: " << datum.name() << std::endl;
 
 	}
 	std::cout << " done" << std::endl;
 }
 
 void BookDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
-	BookData& game_data = cache().get<BookData>(id);
+	BookData& game_data = factory().get<BookData>(id);
 	datum.put("id", game_data.id());
 	datum.put("code", game_data.code());
 	datum.put("name", game_data.name());

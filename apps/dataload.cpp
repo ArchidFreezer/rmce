@@ -60,25 +60,21 @@ int main() {
 		for (auto& parser : parsers) {
 			parser->read(true);
 		}
-		// Now the cache is fully populated we can complete poarsing the game data properties knowing cross-references should work.
-		for (auto& parser : parsers) {
-			parser->read(false);
-		}
 
 
-//		book_parser.save("../../../../data/Books2.json");
-//		language_category_parser.save("../../../../data/LanguageCategories2.json");
-//		language_parser.save("../../../../data/Languages2.json");
-//		skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
-//		attack_table_parser.save("../../../../data/AttackTables2.json");
-//		special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
-//		spell_list_parser.save("../../../../data/SpellLists2.json");
-//		skill_category_parser.save("../../../../data/SkillCategories2.json");
-//		armour_type_parser.save("../../../../data/ArmourTypes2.json");
-//		skill_parser.save("../../../../data/Skills2.json");
-//		weapon_type_parser.save("../../../../data/WeaponTypes2.json");
-//		race_parser.save("../../../../data/Races2.json");
-//		skill_group_parser.save("../../../../data/SkillGroups2.json");
+		book_parser.save("../../../../data/Books2.json");
+		language_category_parser.save("../../../../data/LanguageCategories2.json");
+		language_parser.save("../../../../data/Languages2.json");
+		skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
+		attack_table_parser.save("../../../../data/AttackTables2.json");
+		special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
+		spell_list_parser.save("../../../../data/SpellLists2.json");
+		skill_category_parser.save("../../../../data/SkillCategories2.json");
+		armour_type_parser.save("../../../../data/ArmourTypes2.json");
+		skill_parser.save("../../../../data/Skills2.json");
+		weapon_type_parser.save("../../../../data/WeaponTypes2.json");
+		race_parser.save("../../../../data/Races2.json");
+		skill_group_parser.save("../../../../data/SkillGroups2.json");
 		profession_parser.save("../../../../data/Professions2.json");
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;

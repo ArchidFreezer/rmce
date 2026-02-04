@@ -39,7 +39,7 @@ var searchData=
   ['kessencementalism_36',['kEssenceMentalism',['../namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a6a145ec4cad224a6ab6c01e208b46eab',1,'ResistanceType']]],
   ['keveryman_37',['kEveryman',['../namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba272488319413a0318c1de9e9fa61b7e5',1,'SkillDevelopmentType']]],
   ['kextreme_38',['kExtreme',['../namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337a83f6a4a8e8ba6e526ce7b08458853b75',1,'StatLossType']]],
-  ['keys_39',['keys',['../class_game_rule_data_cache.html#a5c7ae4c14205ab932b15c0637e3e1a72',1,'GameRuleDataCache']]],
+  ['keys_39',['keys',['../class_game_rule_data_cache.html#a5c7ae4c14205ab932b15c0637e3e1a72',1,'GameRuleDataCache::keys()'],['../class_game_rule_data_factory.html#a5d78e63fd6ba4aff5ad3e4fa30b7727b',1,'GameRuleDataFactory::keys()']]],
   ['kfast_40',['kFast',['../namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337ae250345d92c29e0a7d8d215ac3b67997',1,'StatLossType']]],
   ['kfear_41',['kFear',['../namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411a786c504e2a003944ba896a962fa9f57f',1,'ResistanceType']]],
   ['kgrapple_42',['kGrapple',['../namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1a25a6647039e20e14dbbd74ec98cb63cd',1,'CriticalType']]],

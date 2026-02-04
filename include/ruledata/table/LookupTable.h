@@ -47,7 +47,7 @@ public:
 	 * @brief Constructor with id
 	 * @param id Unique identifier for the table
 	 */
-	LookupTable(std::string_view id) : GameRuleData(GameRuleData::generateId("LOOKUPTABLE", id)) {}
+	LookupTable(std::string_view id) : GameRuleData(id) {}
 
 	/**
 	 * @brief Default destructor to allow polymorphism

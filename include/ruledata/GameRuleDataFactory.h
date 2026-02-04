@@ -3,6 +3,8 @@
 #include <GameRuleData.h>
 #include <GameRuleDataCache.h>
 #include <SubcategoriedSkillData.h>
+#include <table/AttackTable.h>
+#include <table/SpecialAttackTable.h>
 
 /**
  * @class GameRuleDataFactory 
@@ -27,6 +29,21 @@ public:
 	GameRuleDataFactory(GameRuleDataCache& cache) : cache_{ cache } {}
 
 	/**
+ * @brief Populates a set with all the rule data ids for a specific rule type
+ *
+ * The parameter is first erased and then populated with the key data so following the call it will only contain the ids
+ *
+ * @tparam T Class of the data object to be retrieved
+ *           Must be derived from #GameRuleData
+ * @param keys Set of strings to populate with the ids of the data objects
+ */
+	template <GameRuleDataObject T>
+	void keys(std::set<std::string>& keys) {
+		return cache_.keys<T>(keys);
+	}
+
+
+	/**
 	 * @brief Get standard GameRuleData objects that may be created with an ID only
 	 * @tparam T type of GameRuleData object to create
 	 * @param id Unique ID of the object
@@ -48,12 +65,38 @@ public:
 	 * @param subcategory optional subcategory of @a skill_data
 	 * @return 
 	 */
-	SubcategoriedSkillData& get(const SkillData& skill_data, std::optional<std::string_view> subcategory = std::nullopt) {
+	SubcategoriedSkillData& subcategoriedSkillData(const SkillData& skill_data, std::optional<std::string_view> subcategory = std::nullopt) {
 		std::string id{ skill_data.id() + (subcategory ? "_" + std::string(subcategory.value()) : "") };
 		if (cache_.exists< SubcategoriedSkillData>(id)) return cache_.get<SubcategoriedSkillData>(id);
 		if (subcategory) cache_.add<SubcategoriedSkillData>(std::move(std::make_unique<SubcategoriedSkillData>(skill_data, subcategory)), id);
 		else cache_.add<SubcategoriedSkillData>(std::move(std::make_unique<SubcategoriedSkillData>(skill_data)), id);
 		return cache_.get<SubcategoriedSkillData>(id);
+	}
+
+	/**
+	 * @brief Get SubcategoriedSkillData objects
+	 *
+	 * SubcategoriedSkillData cannot be created with ID only as the ID is derived from optional arguments. In order to
+	 * allow these to be safely created and cached a custom factory method has been created
+	 * @param skill_id Unique identifier of the skill that is being wrapped
+	 * @param subcategory optional subcategory of @a skill_data
+	 * @return
+	 */
+	SubcategoriedSkillData& subcategoriedSkillData(std::string& skill_id, std::optional<std::string_view> subcategory = std::nullopt) {
+		SkillData& skill = get<SkillData>(skill_id);
+		return (subcategory ? subcategoriedSkillData(skill, subcategory) : subcategoriedSkillData(skill));
+	}
+
+	AttackTable& attackTable(std::string& id, int max_rows) {
+		if (cache_.exists<AttackTable>(id)) return cache_.get<AttackTable>(id);
+		cache_.add<AttackTable>(std::move(std::make_unique<AttackTable>(id, max_rows)), id);
+		return cache_.get<AttackTable>(id);
+	}
+
+	SpecialAttackTable& specialAttackTable(std::string& id, std::map<AttackSizeType::Type, int> limits) {
+		if (cache_.exists<SpecialAttackTable>(id)) return cache_.get<SpecialAttackTable>(id);
+		cache_.add<SpecialAttackTable>(std::move(std::make_unique<SpecialAttackTable>(id, limits)), id);
+		return cache_.get<SpecialAttackTable>(id);
 	}
 
 private:

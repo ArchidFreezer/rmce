@@ -4,7 +4,7 @@
 #include <NumberMatcherFactory.h>
 
 void AttackTableDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
-	AttackTable& game_data = cache().get<AttackTable>(id);
+	AttackTable& game_data = factory().get<AttackTable>(id);
 
 	datum.put("id", game_data.id());
 	datum.put("name", game_data.name());
@@ -92,20 +92,16 @@ void AttackTableDatafileParserJson::populateDatum(std::string& id, pt::ptree& da
 }
 
 void AttackTableDatafileParserJson::parse(bool id_only) {
-	// We know there are no references in attack tables so we create the complete object in the cache on the first pass
-	if (!id_only) return;
-
 	std::cout << "Loading Attack Table data ..." << std::endl;
 
 	// Get the tables to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& ptable : tree) {
-		std::string name = ptable.second.get<std::string>("name");
-		std::string id = ptable.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
+		std::string id = ptable.second.get<std::string>("id");
 		int max_rows = ptable.second.get<int>("max_row");
 
-		std::unique_ptr<AttackTable>table = std::make_unique <AttackTable>(name, max_rows);
-		table->setName(name);
+		AttackTable& table = factory().attackTable(id, max_rows);
+		table.setName(ptable.second.get<std::string>("name"));
 
 		// Get a factory for the matchers
 		NumberMatcherFactory matchers;
@@ -118,7 +114,7 @@ void AttackTableDatafileParserJson::parse(bool id_only) {
 				for (int i{ 1 }; i < 21; i++) {
 					row.addCell(pmod.second.get<std::string>("at" + std::to_string(i)));
 				}
-				table->addRow(matchers.matcher(min, max), row);
+				table.addRow(matchers.matcher(min, max), row);
 			}
 		}
 
@@ -130,10 +126,8 @@ void AttackTableDatafileParserJson::parse(bool id_only) {
 				for (int i{ 1 }; i < 21; i++) {
 					row.addCell(pumod.second.get<std::string>("at" + std::to_string(i)));
 				}
-				table->addUnmodifiedRow(matchers.matcher(min, max), row);
+				table.addUnmodifiedRow(matchers.matcher(min, max), row);
 			}
 		}
-
-		cache().add<AttackTable>(std::move(table), id);
 	}
 }

@@ -4,7 +4,7 @@
 #include <NumberMatcherFactory.h>
 
 void SpecialAttackTableDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
-	SpecialAttackTable& game_data = cache().get<SpecialAttackTable>(id);
+	SpecialAttackTable& game_data = factory().get<SpecialAttackTable>(id);
 
 	datum.put("id", game_data.id());
 	datum.put("name", game_data.name());
@@ -106,14 +106,16 @@ void SpecialAttackTableDatafileParserJson::parse(bool id_only) {
 	for (const auto& ptable : tree) {
 		std::string name = ptable.second.get<std::string>("name");
 		std::string id = ptable.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
-		int max_rows = ptable.second.get<int>("max_row");
-		int small = ptable.second.get<int>("small");
-		int medium = ptable.second.get<int>("medium");
-		int large = ptable.second.get<int>("large");
-		int huge = ptable.second.get<int>("huge");
 
-		std::unique_ptr<SpecialAttackTable>table = std::make_unique <SpecialAttackTable>(name, small, medium, large, huge);
-		table->setName(name);
+
+		std::map<AttackSizeType::Type, int> limits{}; /**< The maximum row index that each attack size may use */
+		limits.emplace(AttackSizeType::kSmall, ptable.second.get<int>("small"));
+		limits.emplace(AttackSizeType::kMedium, ptable.second.get<int>("medium"));
+		limits.emplace(AttackSizeType::kLarge, ptable.second.get<int>("large"));
+		limits.emplace(AttackSizeType::kHuge, ptable.second.get<int>("huge"));
+
+		SpecialAttackTable& table = factory().specialAttackTable(name, limits);
+		table.setName(name);
 
 		NumberMatcherFactory matchers;
 
@@ -125,7 +127,7 @@ void SpecialAttackTableDatafileParserJson::parse(bool id_only) {
 				for (int i{ 1 }; i < 21; i++) {
 					row.addCell(pmod.second.get<std::string>("at" + std::to_string(i)));
 				}
-				table->addRow(matchers.matcher(min, max), row);
+				table.addRow(matchers.matcher(min, max), row);
 			}
 		}
 
@@ -137,10 +139,8 @@ void SpecialAttackTableDatafileParserJson::parse(bool id_only) {
 				for (int i{ 1 }; i < 21; i++) {
 					row.addCell(pumod.second.get<std::string>("at" + std::to_string(i)));
 				}
-				table->addUnmodifiedRow(matchers.matcher(min, max), row);
+				table.addUnmodifiedRow(matchers.matcher(min, max), row);
 			}
 		}
-
-		cache().add<SpecialAttackTable>(std::move(table), id);
 	}
 }

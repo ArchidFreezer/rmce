@@ -60,6 +60,13 @@ public:
 	}
 		
 	/**
+	 * @brief Constructor defining the name of the table
+	 *
+	 * @param id std::string Unique identifier of the table, typically the table name
+	 */
+	SpecialAttackTable(std::string_view id) : BoundIntRowLookupTable(generateId("SpecialAttackTable", id), 0, 150) {}
+
+	/**
 	 * @brief Gets the value of a cell in the table
 	 *
 	 * Constrains the value of the \a row_index parameter to be within the bounds set on the table so that it will never be larger
@@ -114,21 +121,22 @@ public:
 
 	/**
 	 * @brief Get the maximum roll allowed for an attack size
-	 * @param type AttakcSizeType to get the limit for
+	 * @param type AttackSizeType to get the limit for
 	 * @return int Maximum roll allowed
 	 */
-	const int limit(AttackSizeType::Type type) { return limits_.at(type); }
+	const int limit(AttackSizeType::Type type) const { return limits_.at(type); }
+
+	/**
+	 * @brief Set the maximum roll allowed for an attack size
+	 * @param type AttackSizeType to set the limit for
+	 * @param limit Maximum roll allowed
+	 */
+	void setLimit(AttackSizeType::Type type, int limit) {
+		limits_.emplace(AttackSizeType::kSmall, limit);
+	}
 
 private:
 	std::string name_{}; /**< Name of the attack table */
 
 	std::map<AttackSizeType::Type, int> limits_{}; /**< The maximum row index that each attack size may use */
-
-	/**
-	 * @brief Constructor defining the name of the table
-	 *
-	 * This is private to enforce the use of a constructor that sets the attack size limits
-	 * @param id std::string Unique identifier of the table, typically the table name
-	 */
-	SpecialAttackTable(std::string_view id) : BoundIntRowLookupTable(generateId("SpecialAttackTable", id), 0, 150) {}
 };

@@ -3,7 +3,7 @@
 #include <StatType.h>
 
 void SkillCategoryDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
-	SkillCategoryData& game_data = cache().get<SkillCategoryData>(id);
+	SkillCategoryData& game_data = factory().get<SkillCategoryData>(id);
 
 	datum.put("id", game_data.id());
 	datum.put("group", game_data.group().id());
@@ -23,7 +23,6 @@ void SkillCategoryDatafileParserJson::populateDatum(std::string& id, pt::ptree& 
 
 void SkillCategoryDatafileParserJson::parse(bool id_only) {
 	std::cout << "Loading SkillCategory data ... ";
-	std::cout << (id_only ? "[Pass 1]" : "[Pass 2]") << std::endl;
 
 	// Get the lists to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
@@ -34,42 +33,35 @@ void SkillCategoryDatafileParserJson::parse(bool id_only) {
 		std::string id_name{ (category_name == group_name ? category_name : group_name + "_" + category_name) };
 		std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), id_name));
 
-		if (id_only) {
-			// We create a LanguageData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
-			// to the cache when we add it
-			std::unique_ptr<SkillCategoryData> datum = std::make_unique<SkillCategoryData>(id);
-			cache().add<SkillCategoryData>(std::move(datum), id);
-		} else {
-			SkillCategoryData& ref = cache().get<SkillCategoryData>(id);
-			ref.setName(category_name);
+		SkillCategoryData& ref = factory().get<SkillCategoryData>(id);
+		ref.setName(category_name);
 
-			// Attempt to find the SkillGroup
-			std::string group_id = v.second.get<std::string>("group");
-			ref.setGroup(cache().get<SkillGroupData>(group_id));
+		// Attempt to find the SkillGroup
+		std::string group_id = v.second.get<std::string>("group");
+		ref.setGroup(factory().get<SkillGroupData>(group_id));
 
-			// Get the skill and category progressions
-			std::string skill_progression_id = v.second.get<std::string>("skill-progression");
-			SkillProgressionTypeData& skill_progression{ cache().get<SkillProgressionTypeData>(skill_progression_id) };
-			std::string category_progression_id = v.second.get<std::string>("category-progression");
-			SkillProgressionTypeData& category_progression{ cache().get<SkillProgressionTypeData>(category_progression_id) };
-			ref.setSkillProgressions(skill_progression, category_progression);
+		// Get the skill and category progressions
+		std::string skill_progression_id = v.second.get<std::string>("skill-progression");
+		SkillProgressionTypeData& skill_progression{ factory().get<SkillProgressionTypeData>(skill_progression_id) };
+		std::string category_progression_id = v.second.get<std::string>("category-progression");
+		SkillProgressionTypeData& category_progression{ factory().get<SkillProgressionTypeData>(category_progression_id) };
+		ref.setSkillProgressions(skill_progression, category_progression);
 
-			bool use_realm_stats{ v.second.get<bool>("use-realm-stats") };
-			ref.setUseRealmStats(use_realm_stats);
+		bool use_realm_stats{ v.second.get<bool>("use-realm-stats") };
+		ref.setUseRealmStats(use_realm_stats);
 
-			// Check for any stats
-			if (!use_realm_stats) {
-				if (boost::optional<const pt::ptree&> stat_tree = v.second.get_child_optional("stats")) {
-					for (const auto& stat : stat_tree.get()) {
-						if (StatType::fromString(stat.second.data())) {
-							ref.addStat(StatType::fromString(stat.second.data()).value());
-						}
+		// Check for any stats
+		if (!use_realm_stats) {
+			if (boost::optional<const pt::ptree&> stat_tree = v.second.get_child_optional("stats")) {
+				for (const auto& stat : stat_tree.get()) {
+					if (StatType::fromString(stat.second.data())) {
+						ref.addStat(StatType::fromString(stat.second.data()).value());
 					}
 				}
 			}
-
-			std::cout << "\tSkillCategory name: " << ref.name() << std::endl;
-
 		}
+
+		std::cout << "\tSkillCategory name: " << ref.name() << std::endl;
+
 	}
 }

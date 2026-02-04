@@ -1,15 +1,10 @@
 #include <ArmourType.h>
 #include <ArmourTypeData.h>
 #include <ArmourTypeDatafileParserXml.h>
-#include <GameRuleDataFactory.h>
 
 void ArmourTypeDatafileParserXml::parse(bool id_only) {
-	// We know there are no references in armour types so we create the complete object in the cache on the first pass
-	if (!id_only) return;
 
 	std::cout << "Loading ArmourType data ..." << std::endl;
-
-	GameRuleDataFactory factory(cache());
 
 	// Get the armour types to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
@@ -17,7 +12,7 @@ void ArmourTypeDatafileParserXml::parse(bool id_only) {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
 
-		ArmourTypeData& datum = factory.get<ArmourTypeData>(id);
+		ArmourTypeData& datum = factory().get<ArmourTypeData>(id);
 
 		datum.setName(name);
 		datum.setDescription(v.second.get<std::string>("description"));

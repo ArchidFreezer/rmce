@@ -36,7 +36,7 @@ public:
  * @param id std::string Unique identifier of the table, typically the table name
  * @param max_rows The maximum roll that the table has a row matcher for
  */
-	AttackTable(std::string id, int max_rows) : BoundIntRowLookupTable(generateId("AttackTable", id), 0, max_rows) {}
+	AttackTable(std::string id, int max_rows) : BoundIntRowLookupTable(id, 0, max_rows) {}
 
 	/**
 	 * @brief Set the name of the table

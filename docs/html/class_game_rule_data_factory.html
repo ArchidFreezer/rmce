@@ -105,11 +105,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ace4a9501d4bd4785ab7031041facde00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delketed default constructor to ensure the cache is initiated. <br /></td></tr>
 <tr class="memitem:a28ba19bdfd1ad2c822cf4146117f8b93" id="r_a28ba19bdfd1ad2c822cf4146117f8b93"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a28ba19bdfd1ad2c822cf4146117f8b93">GameRuleDataFactory</a> (<a class="el" href="class_game_rule_data_cache.html">GameRuleDataCache</a> &amp;cache)</td></tr>
 <tr class="memdesc:a28ba19bdfd1ad2c822cf4146117f8b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to initiate the cache.  <br /></td></tr>
+<tr class="memitem:a5d78e63fd6ba4aff5ad3e4fa30b7727b" id="r_a5d78e63fd6ba4aff5ad3e4fa30b7727b"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </td></tr>
+<tr class="memitem:a5d78e63fd6ba4aff5ad3e4fa30b7727b template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5d78e63fd6ba4aff5ad3e4fa30b7727b">keys</a> (std::set&lt; std::string &gt; &amp;keys)</td></tr>
+<tr class="memdesc:a5d78e63fd6ba4aff5ad3e4fa30b7727b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates a set with all the rule data ids for a specific rule type.  <br /></td></tr>
 <tr class="memitem:a34895cb16ea9b6ac9eb5b0929259c21e" id="r_a34895cb16ea9b6ac9eb5b0929259c21e"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </td></tr>
 <tr class="memitem:a34895cb16ea9b6ac9eb5b0929259c21e template"><td class="memItemLeft">T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a34895cb16ea9b6ac9eb5b0929259c21e">get</a> (std::string &amp;id)</td></tr>
 <tr class="memdesc:a34895cb16ea9b6ac9eb5b0929259c21e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get standard <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> objects that may be created with an ID only.  <br /></td></tr>
-<tr class="memitem:ab0b1c25fa7b363cbd881c30969c14c32" id="r_ab0b1c25fa7b363cbd881c30969c14c32"><td class="memItemLeft"><a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab0b1c25fa7b363cbd881c30969c14c32">get</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill_data, std::optional&lt; std::string_view &gt; subcategory=std::nullopt)</td></tr>
-<tr class="memdesc:ab0b1c25fa7b363cbd881c30969c14c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> objects.  <br /></td></tr>
+<tr class="memitem:a56af4d6a1829c08e9c77812bf727c3f4" id="r_a56af4d6a1829c08e9c77812bf727c3f4"><td class="memItemLeft"><a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a56af4d6a1829c08e9c77812bf727c3f4">subcategoriedSkillData</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill_data, std::optional&lt; std::string_view &gt; subcategory=std::nullopt)</td></tr>
+<tr class="memdesc:a56af4d6a1829c08e9c77812bf727c3f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> objects.  <br /></td></tr>
+<tr class="memitem:a76f9fa58a34cd1d26f10b5ca8a36bbbe" id="r_a76f9fa58a34cd1d26f10b5ca8a36bbbe"><td class="memItemLeft"><a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a76f9fa58a34cd1d26f10b5ca8a36bbbe">subcategoriedSkillData</a> (std::string &amp;skill_id, std::optional&lt; std::string_view &gt; subcategory=std::nullopt)</td></tr>
+<tr class="memdesc:a76f9fa58a34cd1d26f10b5ca8a36bbbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> objects.  <br /></td></tr>
+<tr class="memitem:ab8bcc757e4a0c8243eebc998c141fa9c" id="r_ab8bcc757e4a0c8243eebc998c141fa9c"><td class="memItemLeft"><a id="ab8bcc757e4a0c8243eebc998c141fa9c" name="ab8bcc757e4a0c8243eebc998c141fa9c"></a>
+<a class="el" href="class_attack_table.html">AttackTable</a> &amp;&#160;</td><td class="memItemRight"><b>attackTable</b> (std::string &amp;id, int max_rows)</td></tr>
+<tr class="memitem:ad751756b9e51184201a20128dc57f298" id="r_ad751756b9e51184201a20128dc57f298"><td class="memItemLeft"><a id="ad751756b9e51184201a20128dc57f298" name="ad751756b9e51184201a20128dc57f298"></a>
+<a class="el" href="class_special_attack_table.html">SpecialAttackTable</a> &amp;&#160;</td><td class="memItemRight"><b>specialAttackTable</b> (std::string &amp;id, std::map&lt; <a class="el" href="namespace_attack_size_type.html#a4fd4bb84b9ce7cf340a7148f8f40459b">AttackSizeType::Type</a>, int &gt; limits)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Factory class to get <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> objects from their ID. </p>
@@ -149,47 +158,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ab0b1c25fa7b363cbd881c30969c14c32" name="ab0b1c25fa7b363cbd881c30969c14c32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0b1c25fa7b363cbd881c30969c14c32">&#9670;&#160;</a></span>get() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp; GameRuleDataFactory::get </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_skill_data.html">SkillData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>skill_data</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::optional&lt; std::string_view &gt;</td>          <td class="paramname"><span class="paramname"><em>subcategory</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> objects. </p>
-<p><a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> cannot be created with ID only as the ID is derived from optional arguments. In order to allow these to be safely created and cached a custom factory method has been created </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">skill_data</td><td><a class="el" href="class_skill_data.html" title="Class representing the definition of a skill that a character may develop.">SkillData</a> that is being wrapped </td></tr>
-    <tr><td class="paramname">subcategory</td><td>optional subcategory of <em class="arg">skill_data</em> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
 <a id="a34895cb16ea9b6ac9eb5b0929259c21e" name="a34895cb16ea9b6ac9eb5b0929259c21e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34895cb16ea9b6ac9eb5b0929259c21e">&#9670;&#160;</a></span>get() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a34895cb16ea9b6ac9eb5b0929259c21e">&#9670;&#160;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,6 +197,126 @@ template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleData
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> object from the cache of type <em class="arg">T</em> </dd></dl>
+
+</div>
+</div>
+<a id="a5d78e63fd6ba4aff5ad3e4fa30b7727b" name="a5d78e63fd6ba4aff5ad3e4fa30b7727b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d78e63fd6ba4aff5ad3e4fa30b7727b">&#9670;&#160;</a></span>keys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameRuleDataFactory::keys </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>keys</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Populates a set with all the rule data ids for a specific rule type. </p>
+<p>The parameter is first erased and then populated with the key data so following the call it will only contain the ids</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Class of the data object to be retrieved Must be derived from <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>Set of strings to populate with the ids of the data objects </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a56af4d6a1829c08e9c77812bf727c3f4" name="a56af4d6a1829c08e9c77812bf727c3f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56af4d6a1829c08e9c77812bf727c3f4">&#9670;&#160;</a></span>subcategoriedSkillData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp; GameRuleDataFactory::subcategoriedSkillData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_data.html">SkillData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>skill_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::string_view &gt;</td>          <td class="paramname"><span class="paramname"><em>subcategory</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> objects. </p>
+<p><a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> cannot be created with ID only as the ID is derived from optional arguments. In order to allow these to be safely created and cached a custom factory method has been created </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skill_data</td><td><a class="el" href="class_skill_data.html" title="Class representing the definition of a skill that a character may develop.">SkillData</a> that is being wrapped </td></tr>
+    <tr><td class="paramname">subcategory</td><td>optional subcategory of <em class="arg">skill_data</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a76f9fa58a34cd1d26f10b5ca8a36bbbe" name="a76f9fa58a34cd1d26f10b5ca8a36bbbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f9fa58a34cd1d26f10b5ca8a36bbbe">&#9670;&#160;</a></span>subcategoriedSkillData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp; GameRuleDataFactory::subcategoriedSkillData </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>skill_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::string_view &gt;</td>          <td class="paramname"><span class="paramname"><em>subcategory</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> objects. </p>
+<p><a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> cannot be created with ID only as the ID is derived from optional arguments. In order to allow these to be safely created and cached a custom factory method has been created </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skill_id</td><td>Unique identifier of the skill that is being wrapped </td></tr>
+    <tr><td class="paramname">subcategory</td><td>optional subcategory of <em class="arg">skill_data</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>

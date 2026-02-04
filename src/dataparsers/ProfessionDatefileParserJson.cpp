@@ -1,8 +1,8 @@
 #include <ProfessionDatefileParserJson.h>
 
+
 void ProfessionDatafileParserJson::parse(bool id_only) {
 	std::cout << "Loading Profession data ... ";
-	std::cout << (id_only ? "[Pass 1]" : "[Pass 2]") << std::endl;
 
 	// Get the lists to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
@@ -10,28 +10,21 @@ void ProfessionDatafileParserJson::parse(bool id_only) {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
 
-		if (id_only) {
-			// We create a Data object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
-			// to the cache when we add it
-			std::unique_ptr<ProfessionData> datum = std::make_unique<ProfessionData>(id);
-			cache().add<ProfessionData>(std::move(datum), id);
-		} else {
-			ProfessionData& ref = cache().get<ProfessionData>(id);
-			ref.setName(name);
-			ref.setDescription(v.second.get<std::string>("description"));
+		ProfessionData& ref = factory().get<ProfessionData>(id);
+		ref.setName(name);
+		ref.setDescription(v.second.get<std::string>("description"));
 
-			// Get the book from the cache
-			std::string book_id = v.second.get<std::string>("book");
-			ref.setBook(cache().get<BookData>(book_id));
+		// Get the book from the cache
+		std::string book_id = v.second.get<std::string>("book");
+		ref.setBook(factory().get<BookData>(book_id));
 
-			std::cout << "\tProfession name: " << ref.name() << std::endl;
-		}
+		std::cout << "\tProfession name: " << ref.name() << std::endl;
 	}
 
 }
 
 void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
-	ProfessionData& game_data = cache().get<ProfessionData>(id);
+	ProfessionData& game_data = factory().get<ProfessionData>(id);
 	datum.put("id", game_data.id());
 	datum.put("name", game_data.name());
 	datum.put("description", game_data.description());

@@ -5,9 +5,6 @@
 #include <NumberMatcherFactory.h>
 
 void AttackTableDatafileParserXml::parse(bool id_only) {
-	// We know there are no references in attack tables so we create the complete object in the cache on the first pass
-	if (!id_only) return;
-
 	std::cout << "Loading AttackTable data ..." << std::endl;
 
 	const pt::ptree& tree = ptree().get_child(rootNode());
@@ -36,10 +33,14 @@ void AttackTableDatafileParserXml::parse(bool id_only) {
 		}
 
 		// Now we can create the specific type of table
-		std::unique_ptr<SpecialAttackTable>special_table = std::make_unique <SpecialAttackTable>(name, limits);
-		special_table->setName(name);
-		std::unique_ptr<AttackTable>attack_table = std::make_unique <AttackTable>(name, max_row_val);
-		attack_table->setName(name);
+		
+		std::string id = GameRuleData::generateId(ruleDatatype(), name);
+		SpecialAttackTable* special_table;
+		AttackTable* attack_table;
+		if (special)
+			special_table = &factory().specialAttackTable(id, limits);
+		else
+			attack_table = &factory().attackTable(id, max_row_val);
 
 		NumberMatcherFactory matchers;
 
@@ -99,13 +100,6 @@ void AttackTableDatafileParserXml::parse(bool id_only) {
 
 		// We should now have the table parsed so add it to the cache
 		std::cout << "\nTable name: " << name << std::endl;
-
-
-		std::string id = GameRuleData::generateId(ruleDatatype(), name);;
-		if (special)
-			cache().add<SpecialAttackTable>(std::move(special_table), id);
-		else
-			cache().add<AttackTable>(std::move(attack_table), id);
 	}
 
 }

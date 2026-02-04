@@ -5,6 +5,7 @@
 #include <boost/property_tree/json_parser.hpp>
 #include <GameRuleDataCache.h>
 #include <GameRuleDataChoice.h>
+#include <GameRuleDataFactory.h>
 
 namespace pt = boost::property_tree;
 
@@ -46,7 +47,8 @@ public:
 	DatafileParser(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) :
 		cache_{ cache },
 		rule_datatype_{ datatype },
-		filename_{ filename } {}
+		filename_{ filename },
+		factory_{ GameRuleDataFactory(cache) } {}
 
 	/**
 	 * @brief Consructor
@@ -112,10 +114,9 @@ public:
 	pt::ptree& ptree() { return ptree_; };
 
 	/**
-	 * @brief Get the game rule data cache
-	 * @return Reference to the game rule data cache
+	 * @brief Get the game rule factoryfactorydata cache
 	 */
-	GameRuleDataCache& cache() { return cache_; };
+	GameRuleDataFactory& factory() { return factory_; };
 
 	/**
 	 * @brief Get the file to parse
@@ -153,6 +154,7 @@ protected:
 
 private:
 	GameRuleDataCache& cache_; /**< Reference to a cache object to store the data objects */
+	GameRuleDataFactory factory_; /**< Factory to act as wrapper to cache, creating objects if required */
 	pt::ptree ptree_{}; /**< Boost ptree to use when reading structured data file files */
 	std::string rule_datatype_{}; /**< Name of the type of data being processed */
 	std::string filename_{}; /**< Path to the file to parse */

@@ -67,7 +67,7 @@ public:
 		pt::ptree data;
 
 		std::set<std::string> keys{};
-		cache().keys<T>(keys);
+		factory().keys<T>(keys);
 
 		for (std::string key : keys) {
 			try {
