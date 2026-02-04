@@ -17,6 +17,7 @@
 #include <SpellListData.h>
 #include <StatType.h>
 #include <SubcategoriedSkillData.h>
+#include <SpellUserType.h>
 
 /**
  * @class ProfessionData 
@@ -131,6 +132,18 @@ public:
 	 * @return Pointer to the BookData containing the profession definition
 	 */
 	const std::optional<const BookData*> book() const { return book_; }
+
+	/**
+	 * @brief Set the type of spell user the profession is
+	 * @param spell_user_type SpellUserType::Type spell user type
+	 */
+	void setSpellUserType(SpellUserType::Type spell_user_type) { spell_user_type_ = spell_user_type; }
+
+	/**
+	 * @brief Get the type of spell user the profession is
+	 * @return SpellUserType::Type spell user type
+	 */
+	SpellUserType::Type spellUserType() const { return spell_user_type_; }
 
 	/**
 	 * @brief Add a realm to those the profession draws power from
@@ -715,6 +728,7 @@ private:
 	std::string name_{}; /**< Name of the profession */
 	std::string description_{}; /**< General description of the profession */
 	std::optional<const BookData*> book_{ std::nullopt }; /**< Book that the profession is described in */
+	SpellUserType::Type spell_user_type_{ SpellUserType::kNone }; /**< Spell user type */
 	std::set< RealmType::Type> realms_{};/**< Realm(s) that the profession draws power from */
 	std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the profession */
 	std::vector<GameRuleDataChoice<SpellListData>> base_spell_list_choices_{}; /**< Set of spell lists that the profession base lists should be chosen from */

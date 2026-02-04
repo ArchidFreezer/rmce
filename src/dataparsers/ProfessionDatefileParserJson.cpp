@@ -29,6 +29,7 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	datum.put("name", game_data.name());
 	datum.put("description", game_data.description());
 	datum.put("book", game_data.book().value()->id());
+	datum.put("spell-user-type", SpellUserType::toString(game_data.spellUserType()));
 
 	// Get the container tree for the realms
 	pt::ptree realms_tree{};

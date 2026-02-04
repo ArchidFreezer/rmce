@@ -5,6 +5,7 @@
          <name>Summoner</name>
          <description>Hybrid spell users who combine the realms of Channeling and Essence. their base spells deal with the communication with and summoning of various creatures ranging from animals to extra-planar beings to their friends. He can also enhance the creatures he has summoned.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Hybrid</spell-user-type>
          <realms>
             <realm>Essence</realm>
             <realm>Channeling</realm>
@@ -337,6 +338,7 @@
          <name>Ranger</name>
          <description>Rangers are Semi spell users who combine the realm of Channeling with the realm of Arms. Their base spells deal with operating in the outdoors and manipulating the weather.</description>
          <book>Fantasy Role Playing</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Arms</realm>
             <realm>Channeling</realm>
@@ -600,6 +602,7 @@
          <name>Magehunter</name>
          <description>The Magehunter is a semi spell user who incorporates the realm of Arms with Arcane magic. He has dedicated himself to hunting down rogue mages and those who must be brought to some kind of justice.</description>
          <book>Arcane Companion</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Arcane</realm>
             <realm>Arms</realm>
@@ -885,6 +888,7 @@
          <name>Warrior Mage</name>
          <description>Warrior Mages are Semi spell users who combine the realm of Arms with the realm of Essence. Their base spells primarily deal with the adaptation of Essence spell casting to combat and survival in hostile environments. The Warrior Mage is viewed by many as an elite type of fighter, specialized in attacking enemy spell casters on their own terms </description>
          <book>Essence Companion</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Essence</realm>
             <realm>Arms</realm>
@@ -1162,6 +1166,7 @@
          <name>Dërnakwmün-Pør</name>
          <description>The more martial of the dwarven cleric orders, accompanying Dwarven hosts to war, and found always in the company of soldiery.</description>
          <book>Races &amp; Cultures: Underground Races</book>
+         <spell-user-type>Pure</spell-user-type>
          <races>
             <race>Dwarves</race>
          </races>
@@ -1429,6 +1434,7 @@
          <name>Priest of Nature</name>
          <description>Priests of Nature are to be found outdoors and are often stewards of the wilderness, opposing those who destroy the balance of nature. They may be outcasts or the protector of a sacred grove.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -1755,6 +1761,7 @@
          <name>Rogue</name>
          <description>Rogues are non spell users with some expertise in thiefly abilities and a more specialized knowledge of arms than that possessed by Fighters. Normally, a Rogue will be almost as good as a Fighter with one weapon of his choice. The cost, in development points, of developing his thiefly skills will generally not allow him to be as good in these areas as a Thief, but his flexibility is unmatched by either profession. Some literary examples of Rogues might include Fahfard and the Grey Mouser, Robin Hood.</description>
          <book>Fantasy Role Playing</book>
+         <spell-user-type>None</spell-user-type>
          <realms>
             <realm>Arms</realm>
          </realms>
@@ -2055,6 +2062,7 @@
          <name>Priest of Death</name>
          <description>Priests of Death are often feareded characters though they are not necessarily evil. Their reputation comes form their ability to age and debilitate others in the name of their god.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -2333,6 +2341,7 @@
          <name>Priest of Lightning</name>
          <description>Priests of Lightning harness the power of weather and storms to smite the enemies of thier faith, often enhancing their weapons.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -2623,6 +2632,7 @@
          <name>Priest of Arts</name>
          <description>Priests of Arts value aesthetics and focus on both artistic and crafting.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -2925,6 +2935,7 @@
          <name>Mana Molder</name>
          <description>Mana Molders are Pure Spells users of Essence who concentrate on Mana Forms. mana forms are solid manifestations of the Essence. Mana molders employe their spells to create temporary items, force fields, and even mana creatures. Mana creatures can either be servants capable of simple tasks or warriors capable of following simple orders. </description>
          <book>Essence Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Essence</realm>
          </realms>
@@ -3233,6 +3244,7 @@
          <name>Mentalist</name>
          <description>Mentalists are the basic spell users of Mentalism who have concentrated on spells that deal with the interaction of minds. Their base spells deal with the detection of mental Presence, mental communication, mind control, mind attack, mind merging, and sense control.</description>
          <book>Fantasy Role Playing</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Mentalism</realm>
          </realms>
@@ -3544,6 +3556,7 @@
          <name>Priest of Love</name>
          <description>Priests of Love are masters of influencing the emotions of others through activities such as dancing, having a good knowledge of herbs.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -3869,6 +3882,7 @@
          <name>Priest of Vegetation</name>
          <description>Priests of Vegetation are often found outdoors, though not exclusively, wworking with plants of all kinds and are experts at identifying any plants or herbs found. They are can move through heavy vegetaion better than any other class.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -4202,6 +4216,7 @@
          <name>Enchanter</name>
          <description>Enchanters are hybrid spell users of the realms of Essence and Mentalism. They have concentrated on spells of misdirection and manipulation which directly affect the minds of humanoids, beasts, animals and other sentients. Their base spells deal with inducing hallucinations (mental illusions), mind control, and memory manipulation.</description>
          <book>Mentalism Companion</book>
+         <spell-user-type>Hybrid</spell-user-type>
          <realms>
             <realm>Essence</realm>
             <realm>Mentalism</realm>
@@ -4526,6 +4541,7 @@
          <name>Magician</name>
          <description>Magicians are Pure spell users of Essence who have concentrated on elemental spells. Their base spells deal with the elements of earth, water, air, heat, cold, and light.</description>
          <book>Fantasy Role Playing</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Essence</realm>
          </realms>
@@ -4849,6 +4865,7 @@
          <name>Paladin</name>
          <description>Paladins are Semi spell users who combine the realm of Arms with the realm of Channeling. Their base spells primarily deal with combat and protection. An example of a Paladin (from literature) might be Lancelot or Percival (from King Arthur's knights).</description>
          <book>Character Law</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Arms</realm>
             <realm>Channeling</realm>
@@ -5144,6 +5161,7 @@
          <name>Dabbler</name>
          <description>Dabblers are Semi spell users who combine the realm of Essence with the realm of Arms. Their base spells deal with stealth, detection, perception, movement and manipulating locks and traps.</description>
          <book>Fantasy Role Playing</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Essence</realm>
             <realm>Arms</realm>
@@ -5482,6 +5500,7 @@
          <name>Runemage</name>
          <description>Runemages are Hybrid spell users of Essence and Channelling who concentrate on the power written and spoken language have over the reality. Runemages use their power of language to create variable enchantments such as wards, symbols and runes, while using their knowledge of the Primal Tongue to manipulate the physical world and the creatures within it.</description>
          <book>Essence Companion</book>
+         <spell-user-type>Hybrid</spell-user-type>
          <realms>
             <realm>Essence</realm>
             <realm>Channeling</realm>
@@ -5813,6 +5832,7 @@
          <name>Animist</name>
          <description>Animists are Pure spell users of Channeling specializing in studies and powers concerning living things (e.g., druids, Shinto priests, etc.). Their base spells deal with plants, animals, weather, and nature in general.</description>
          <book>Character Law</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -6149,6 +6169,7 @@
          <name>Priest of Mischief, Trickery</name>
          <description>Priests of Trickery are masters of subterfuge and disguise using their skills to dupe enemies of their faith.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -6440,6 +6461,7 @@
          <name>Mythic</name>
          <description>Mythics are semi spell users who combine the realm of Subterfuge with the realm of Channeling. Their base spells deal with detection, stealth, protection and impersonating members or other faiths. Often standing outside normal church hierarchy they perfrom secret missions for their religion and their deity.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Arms</realm>
             <realm>Channeling</realm>
@@ -6718,6 +6740,7 @@
          <name>Priest of Crafts</name>
          <description>Priests of Crafts focus on both crafting items and also identifying or evaluating them. A priest often has a craft at which they are especially gifted. They also have a bonus to locating hidden objects that are crafted such as secret doors.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -7012,6 +7035,7 @@
          <name>Armsmaster</name>
          <description>Armsmasters are semi spell users of the realm of Mentalism. They will be found in many milieux, serving as household knights, mercenary commanders, army or naval officers, or in elite special forces. They will rarely, if ever, be common soldiers or sailors. Their base spells deal with all aspects of military life, improving their personal skill at arms and survival capabilities, and assisting with military organization, on and off the battlefield.</description>
          <book>Mentalism Companion</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Arms</realm>
             <realm>Mentalism</realm>
@@ -7321,6 +7345,7 @@
          <name>Priest of Disease</name>
          <description>Priests of Disease specialise in both the spreading and production of diseases, having knowledge of disease bearing insects and an innate resistance to the dieases they carry.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -7627,6 +7652,7 @@
          <name>Priest of Competition</name>
          <description>Priests of Competition spent their time not only training for physical competive activities, but also discerning if anyone is cheating during a competition.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -7960,6 +7986,7 @@
          <name>Priest of Wisdom</name>
          <description>Priests of Wisdom spend their time in the study of scientific and other academic subjects. They are expect communicators and are especially adept at resisting mental spells.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -8257,6 +8284,7 @@
          <name>Healer</name>
          <description>Healers are Hybrid spell users who combine the realms of Channeling and Mentalism; they channel power to take wounds from others and use the enormous recuperative power of their bodies to heal the wounds once taken. Thus, a Healer could heal a person by taking his patient's injury upon himself and then healing this injury gradually.</description>
          <book>Character Law</book>
+         <spell-user-type>Hybrid</spell-user-type>
          <realms>
             <realm>Mentalism</realm>
             <realm>Channeling</realm>
@@ -8615,6 +8643,7 @@
          <name>Priest of Earth</name>
          <description>Priests of Earth focus on both earth as a substance and stone and have a bonus to any Awareness manoeuvre that involves earth or stone, such as detecting sloping passages or secret doors, identifying underground depth, etc. </description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -8925,6 +8954,7 @@
          <name>Astrologer</name>
          <description>Astrologers are Hybrid spell users who combine the realms of Channeling and Mentalism. They have concentrated on spells which pertain to gathering information, and concentrate on observing the movements of the celestial bodies. Their spells deal with detection, communing, precognition, and communication, and many are only (fully) usable under the light of the stars.</description>
          <book>Mentalism Companion</book>
+         <spell-user-type>Hybrid</spell-user-type>
          <realms>
             <realm>Mentalism</realm>
             <realm>Channeling</realm>
@@ -9304,6 +9334,7 @@
          <name>Magent</name>
          <description>Magents are Semi spell users who combine the realm of Mentalism with the realm of Arms. Their base spells deal with information gathering, subterfuge, and performing stealthy missions.</description>
          <book>Character Law</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Arms</realm>
             <realm>Mentalism</realm>
@@ -9582,6 +9613,7 @@
          <name>Priest of Sky, Weather</name>
          <description>Priests of Sky and Weather are often much in demand in coastal areas and on ships where knowledge of the weather is at a premium.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -9871,6 +9903,7 @@
          <name>Seer</name>
          <description>Seers are the information gathering specialists. Seers are Pure spell users of Mentalism who have concentrated on spells which gain information through the use of mental spells. Their spells deal with evoking the past, scrying the present and divining the future, and the control and modification of the senses of themselves and others.</description>
          <book>Mentalism Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Mentalism</realm>
          </realms>
@@ -10235,6 +10268,7 @@
          <name>Channeling Alchemist</name>
          <description>Channeling-based Alchemists are pure spell users of Channeling, who have concentrated on the creation of items. Their base spells deal with the creation of magical items, holy vestments, holy water, and wards.</description>
          <book>Treasure Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -10574,6 +10608,7 @@
          <name>Priest of Justice, Revenge</name>
          <description>Priests of Justice and Revenge are petitioned by people who believe that they have suffered injustice and have the ability to identify lies and track perpetrators.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -10886,6 +10921,7 @@
          <name>Mystic</name>
          <description>Mystics are Hybrid spell users who combine the realms of Essence and Mentalism; they have concentrated on subtle spells of misdirection and modification. Their base spells deal with personal illusion as well as the modification of matter.</description>
          <book>Character Law</book>
+         <spell-user-type>Hybrid</spell-user-type>
          <realms>
             <realm>Essence</realm>
             <realm>Mentalism</realm>
@@ -11224,6 +11260,7 @@
          <name>Priest of Fortune, Luck</name>
          <description>Priests of Luck place themselves in the hands of their gods as well as havign teh ability to read portends in the stars.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -11534,6 +11571,7 @@
          <name>Priest of Community</name>
          <description>Priests of Community understand both the history and trappings of a community and are typically great orators when talking to members of it.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -11843,6 +11881,7 @@
          <name>Illusionist</name>
          <description>Illusionists are Pure spell users who have concentrated in spells of misdirection and illusion. Their base spells deal mainly with the manipulation of elements that affect the human senses. Illusionists have advantages in specific skills (senses, Stalking, Hiding, etc.) over other spell users.</description>
          <book>Character Law</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Essence</realm>
          </realms>
@@ -12152,6 +12191,7 @@
          <name>Bard</name>
          <description>Bards are Semi spell users who combine the realm of Mentalism with the realm of Arms. Their base spells deal with sound, lore, entertaining, and item use.</description>
          <book>Fantasy Role Playing</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Arms</realm>
             <realm>Mentalism</realm>
@@ -12445,6 +12485,7 @@
          <name>Warlock</name>
          <description>The Warlock is a hybrid spell user who combines the realms of Channeling and Mentalism. The Warlock is a manipulator of people and of their fates. His base spell deal with inflicting harm on others, toying with their fate, ruining their faith, instilling fear and doubt and transforming himself.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Hybrid</spell-user-type>
          <realms>
             <realm>Mentalism</realm>
             <realm>Channeling</realm>
@@ -12768,6 +12809,7 @@
          <name>Priest of Animals</name>
          <description>Priests of Animals specialise in both the care and treatment of animals, with their faith often focussing on a specifc kind of animal.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -13104,6 +13146,7 @@
          <name>Priest of Literature, Poetry</name>
          <description>Priests of Literature and Poetry are most often found with their noses in a book spending time both reading and discussing the merits of literary style.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -13396,6 +13439,7 @@
          <name>Priest of Hunting</name>
          <description>Priests of Hunting are found wherever their is game or other quarry tp be found and excel in tracking and trapping game.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -13764,6 +13808,7 @@
          <name>Priest of Fate, Destiny</name>
          <description>Priests of Fate, destiny look to the future to see what is holds.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -14085,6 +14130,7 @@
          <name>Priest of Darkness, Night</name>
          <description>Priests of Darkness, Night are masters of subterfuge and stealth being able to both perform and detect activities that occur in the dark.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -14401,6 +14447,7 @@
          <name>Priest of Healing</name>
          <description>Priests of Healing follow gogs that tend to the health of their flock.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -14725,6 +14772,7 @@
          <name>Priest of Oceans, Rivers</name>
          <description>Priests of Oceans, Rivers are found next to bodies of water in any of its forms.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -15048,6 +15096,7 @@
          <name>Dërnakwmün-Khad</name>
          <description>This Dwarven order is a martial order that looks to the protection and warding of Dwarves and their homes.</description>
          <book>Races &amp; Cultures: Underground Races</book>
+         <spell-user-type>Pure</spell-user-type>
          <races>
             <race>Dwarves</race>
          </races>
@@ -15315,6 +15364,7 @@
          <name>Priest of Fire</name>
          <description>Priests of Fire worship the base element and the forms it takes.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -15617,6 +15667,7 @@
          <name>Priest of Marriage</name>
          <description>Priests of Marriage look to encourage the permanent joining of couples and take a dim view of those who break their vows.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -15907,6 +15958,7 @@
          <name>Priest of War</name>
          <description>Priests of War can be found at the forefront of any military campaign, smiting enemies of their faith.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -16301,6 +16353,7 @@
          <name>Lay Healer</name>
          <description>Lay Healers can aid the recuperative powers of others. Lay Healers are Pure spell users of Mentalism who have concentrated on spells that heal people and animals. Their base spells deal with the specific healing of certain diseases and injuries: organs, blood, muscles, bones, and concussion hits.</description>
          <book>Character Law</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Mentalism</realm>
          </realms>
@@ -16657,6 +16710,7 @@
          <name>Monk</name>
          <description>Monks are Semi spell users who combine the realm of Essence with the realm of Arms. Their base spells deal with personal movement and the control of their own body and mind, while their arms capabilities are concentrated in unarmored, unarmed combat.</description>
          <book>Character Law</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Essence</realm>
             <realm>Arms</realm>
@@ -16966,6 +17020,7 @@
          <name>Priest of Oracles, Prophecy</name>
          <description>Priests of Oracles, Prophecy spend their time both communing with their source of prohecy, but also tending to the rituals that surround it.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -17297,6 +17352,7 @@
          <name>Priest of Light</name>
          <description>Priests of Light fight at the forefront against enemies of their faith and are granted nightvision to seek them out even in the dark.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -17617,6 +17673,7 @@
          <name>Mentalism Alchemist</name>
          <description>Mentalism-based Alchemists are pure spell users of Mentalism, who have concentrated on the creation of items. Their base spells deal with the creation of magical items through concentration of magical energies through the power of their minds. As a byproduct, many of their lists give them great control over their own bodies.</description>
          <book>Treasure Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Mentalism</realm>
          </realms>
@@ -17956,6 +18013,7 @@
          <name>Fighter</name>
          <description>Fighters are non spell users who will find it relatively easy to develop a variety of different weapons and to wear heavier types of armor. They are less skilled in manuevering and manipulating mechanical devices such as locks and traps (though they are still superior to most spell users in these areas). They have the greatest difficulty learning anything connected with spells. Some literary examples of a Fighter might include Conan the Barbarian, Little John, and Gimli the Dwarf.</description>
          <book>Fantasy Role Playing</book>
+         <spell-user-type>None</spell-user-type>
          <realms>
             <realm>Arms</realm>
          </realms>
@@ -18292,6 +18350,7 @@
          <name>Priest of Messengers</name>
          <description>Priests of Messengers look after those who use communication to convey information.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -18572,6 +18631,7 @@
          <name>Priest of Wind</name>
          <description>Priests of Wind are in demand in may locations as a breath of wind in te desert can be as welcome as a steady wind on the oceans.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -18873,6 +18933,7 @@
          <name>Thief</name>
          <description>Thieves are non spell users who are specialists at maneuvering and manipulating. They have the easiest time learning mechanical skills (such as picking locks and disarming traps) and are fairly good at picking up weapon skills. Thieves are also unusually adept at subterfuge skills (Stalking, Hiding, etc.). They rarely wear heavy armor, although armor does not especially hinder the exercising of their professional abilities (other than limiting their superb maneuvering abilities). Some literary examples of Thieves might include Will Scarlet and Bilbo Baggins.</description>
          <book>Fantasy Role Playing</book>
+         <spell-user-type>None</spell-user-type>
          <realms>
             <realm>Arms</realm>
          </realms>
@@ -19195,6 +19256,7 @@
          <name>Cleric</name>
          <description>Clerics are pure spell users of Channeling who have concentrated in spells that require direct power from their deities. These spell users are the most powerful of the spell users of Channeling, but they are also the most restricted because of the requirements of their deity.</description>
          <book>Fantasy Role Playing</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -19521,6 +19583,7 @@
          <name>Arcanist</name>
          <description>The Arcanist is a pure Arcane spell user who deals in the manipulation of raw power. Acanist are generally found near Earthnodes, as they have spells that allow then to directly tap into the great power found there.</description>
          <book>Arcane Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Arcane</realm>
          </realms>
@@ -19803,6 +19866,7 @@
          <name>Priest of Strength</name>
          <description>Priests of Strength focus on physical development and athleticism, bt are also very effective against forms of undead.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -20111,6 +20175,7 @@
          <name>Zen Monk</name>
          <description>Zen Monk</description>
          <book>Martial Arts Companion</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Arms</realm>
             <realm>Mentalism</realm>
@@ -20376,6 +20441,7 @@
          <name>Priest of Moon</name>
          <description>Priests of Moon work at night be specialists in nocturnal navigation and star gazing.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -20695,6 +20761,7 @@
          <name>Priest of Agriculture</name>
          <description>Priests of Agriculture help those who wortk the land cultivating food.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -20988,6 +21055,7 @@
          <name>Priest of Birth, Children</name>
          <description>Priests of Birth, Children are natural midwives and nursery attendants revelling in the joy and innocence of early life.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -21306,6 +21374,7 @@
          <name>Essence Alchemist</name>
          <description>Essence-based Alchemists are pure spell users of Essence, who have concentrated on the creation of items. Their base spells deal with the creation of magical items, potions, runes, staves, and wands.</description>
          <book>Treasure Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Essence</realm>
          </realms>
@@ -21648,6 +21717,7 @@
          <name>Layman</name>
          <description>Normally each character has an 'adventuring' profession, reflecting how his early training and life have moulded his thought patterns. However, the Layman profession represents characters who do not have a standard adventuring profession. Most non-adventuring NPCs will have the Layman profession.</description>
          <book>Character Law</book>
+         <spell-user-type>None</spell-user-type>
          <realms>
             <realm>Arms</realm>
          </realms>
@@ -21937,6 +22007,7 @@
          <name>Warrior Monk</name>
          <description>Warrior Monks are non spell users who are experts at maneuvering and martial arts. Warrior Monks may learn to use normal weapons, although not as easily as others in the realm of Arms. They prefer to utilize unarmed combat. Some literary examples of a Warrior Monk might include Kwi Chang Kane.</description>
          <book>Character Law</book>
+         <spell-user-type>None</spell-user-type>
          <realms>
             <realm>Arms</realm>
          </realms>
@@ -22253,6 +22324,7 @@
          <name>Priest of Fertility</name>
          <description>Priests of Fertility focus on the growth of both fauna and flora and are especially good at handling animals.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -22623,6 +22695,7 @@
          <name>Priest of Guardianship</name>
          <description>Priests of Guardianship devote their energies to learning how to protect and guard others.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -22959,6 +23032,7 @@
          <name>Priest of Metalwork</name>
          <description>Priests of Metalwork are expect craftsmen when working metal and have the ability to assess ores and worked metal.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -23269,6 +23343,7 @@
          <name>Priest of Music, Dance</name>
          <description>Priests of Music, Dance are experts at both perfoming and influencing other through the ir performances.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -23590,6 +23665,7 @@
          <name>Priest of Dawn</name>
          <description>Priests of Dawn work against the undead, having enhanced resistances to the effects of the undead.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -23880,6 +23956,7 @@
          <name>Priest of Thunder</name>
          <description>Priests of Thunder look to the skies for their gods and tend to be wrathful when crossed.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -24170,6 +24247,7 @@
          <name>Priest of Ancestors</name>
          <description>Priests of Ancestors believe that a persons ancestors can influence the current world and should be revered.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -24476,6 +24554,7 @@
          <name>Taoist Monk</name>
          <description>Taoist Monk</description>
          <book>Martial Arts Companion</book>
+         <spell-user-type>Semi</spell-user-type>
          <realms>
             <realm>Essence</realm>
             <realm>Arms</realm>
@@ -24741,6 +24820,7 @@
          <name>Priest of Magic</name>
          <description>Priests of Magic study all forms of magic and its sources.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -25081,6 +25161,7 @@
          <name>Sorceror</name>
          <description>Sorcerors are Hybrid spell users who combine the realms of Essence and Channeling, concentrating on spells of destruction. Their base spells deal with the specific destruction of animate and inanimate material.</description>
          <book>Character Law</book>
+         <spell-user-type>Hybrid</spell-user-type>
          <realms>
             <realm>Essence</realm>
             <realm>Channeling</realm>
@@ -25417,6 +25498,7 @@
          <name>Wizard</name>
          <description>The Wizard is a pure Arcane spell user who has a much more practical approach to his use of power. His spells deal with affecting other people's spells. Thus, he is a formidable foe against spell users, but does not have much of a defense against non-spell using foes.</description>
          <book>Arcane Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Arcane</realm>
          </realms>
@@ -25694,6 +25776,7 @@
          <name>Priest of Sun</name>
          <description>Priests of Sun devote their energies to life and exposing things in dark places.</description>
          <book>Channeling Companion</book>
+         <spell-user-type>Pure</spell-user-type>
          <realms>
             <realm>Channeling</realm>
          </realms>
@@ -26032,6 +26115,7 @@
          <name>Chaotic</name>
          <description>The Choatic, also referred to as the Wild Mage, is that mage who has learned his craft without the benefit of schooling or guidance (i.e., he is self-taught). The Chaotic wields an ecletic variety of odd powers, which sometime work and sometimes do not!</description>
          <book>Arcane Companion</book>
+         <spell-user-type>Chaotic</spell-user-type>
          <realms>
             <realm>Arcane</realm>
             <realm>Arms</realm>

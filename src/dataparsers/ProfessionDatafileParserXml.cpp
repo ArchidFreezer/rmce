@@ -19,6 +19,10 @@ void ProfessionDatafileParserXml::parse() {
 			std::string book_id = GameRuleData::generateId("Book", v.second.get<std::string>("book"));
 			ref.setBook(factory().get<BookData>(book_id));
 
+			// Spell user type
+			std::string spell_user_type = v.second.get<std::string>("spell-user-type");
+			ref.setSpellUserType(SpellUserType::fromString(spell_user_type).value());
+			
 			// Get the power realms
 			for (const auto& realms_tree : v.second.get_child("realms")) {
 				std::string realm_name = realms_tree.second.get_value<std::string>();
