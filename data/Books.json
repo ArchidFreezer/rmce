@@ -106,6 +106,13 @@
             "isbn": "1-55806-200-9"
         },
         {
+            "id": "BOOK_CUSTOM_UNKNOWN",
+            "code": "1111",
+            "name": "Custom\/Unknown",
+            "abbreviation": "None",
+            "isbn": "1-11111-111-x"
+        },
+        {
             "id": "BOOK_ESSENCE_COMPANION",
             "code": "5603",
             "name": "Essence Companion",
@@ -363,13 +370,6 @@
             "name": "Treasure Companion -> 5811",
             "abbreviation": "TrCo*",
             "isbn": "1-55806-254-8"
-        },
-        {
-            "id": "BOOK_CUSTOM_UNKNOWN",
-            "code": "1111",
-            "name": "Custom/Unknown",
-            "abbreviation": "None",
-            "isbn": "1-11111-111-x"
         }
     ]
 }

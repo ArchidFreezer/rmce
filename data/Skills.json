@@ -2973,8 +2973,8 @@
             "can-specialise": "true",
             "mandatory-subcategory": "true",
             "subcategories": [
-                "{Language}",
-                "{Ancient Language}"
+                "{Ancient Language}",
+                "{Language}"
             ],
             "stats": [
                 "Reasoning",

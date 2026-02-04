@@ -5923,10 +5923,10 @@
                     "skill-type": "Everyman",
                     "skills": [
                         {
-                            "skill": "SKILL_BOXING"
+                            "skill": "SKILL_TACKLING"
                         },
                         {
-                            "skill": "SKILL_TACKLING"
+                            "skill": "SKILL_BOXING"
                         }
                     ]
                 }
