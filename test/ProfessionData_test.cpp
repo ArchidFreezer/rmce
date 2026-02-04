@@ -458,21 +458,21 @@ namespace {
 	TEST(ProfessionData, CategoryCosts) {
 		ProfessionData prof("PROF_ID");
 		SkillCategoryData c1("CAT1_ID");
-		EXPECT_THROW(prof.categoryDevelopmentCost(c1), ProfessionData::InvalidCategoryDevelopmentCost);
+		EXPECT_THROW(prof.skillCategoryDevelopmentCost(c1), ProfessionData::InvalidCategoryDevelopmentCost);
 
-		prof.addCategoryDevelopmentCost(c1, SkillDevelopmentCost("3:4"));
-		EXPECT_EQ(prof.categoryDevelopmentCost(c1).first(), 3);
-		EXPECT_EQ(prof.categoryDevelopmentCost(c1).second(), 4);
-		EXPECT_EQ(prof.categoryDevelopmentCost(c1).third(), std::nullopt);
+		prof.addSkillCategoryDevelopmentCost(c1, SkillDevelopmentCost("3:4"));
+		EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).first(), 3);
+		EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).second(), 4);
+		EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).third(), std::nullopt);
 
 		SkillCategoryData c2("CAT2_ID");
 		{
 			SkillDevelopmentCost dc1("12");
-			prof.addCategoryDevelopmentCost(c2, dc1);
-			EXPECT_EQ(prof.categoryDevelopmentCost(c1).first(), 3);
-			EXPECT_EQ(prof.categoryDevelopmentCost(c2).first(), 12);
-			EXPECT_EQ(prof.categoryDevelopmentCost(c2).second(), std::nullopt);
+			prof.addSkillCategoryDevelopmentCost(c2, dc1);
+			EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).first(), 3);
+			EXPECT_EQ(prof.skillCategoryDevelopmentCost(c2).first(), 12);
+			EXPECT_EQ(prof.skillCategoryDevelopmentCost(c2).second(), std::nullopt);
 		}
-		EXPECT_EQ(prof.categoryDevelopmentCost(c2).first(), 12);
+		EXPECT_EQ(prof.skillCategoryDevelopmentCost(c2).first(), 12);
 	}
 }
