@@ -104,15 +104,12 @@ void SpecialAttackTableDatafileParserJson::parse() {
 		std::string name = ptable.second.get<std::string>("name");
 		std::string id = ptable.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
 
-
-		std::map<AttackSizeType::Type, int> limits{}; /**< The maximum row index that each attack size may use */
-		limits.emplace(AttackSizeType::kSmall, ptable.second.get<int>("small"));
-		limits.emplace(AttackSizeType::kMedium, ptable.second.get<int>("medium"));
-		limits.emplace(AttackSizeType::kLarge, ptable.second.get<int>("large"));
-		limits.emplace(AttackSizeType::kHuge, ptable.second.get<int>("huge"));
-
-		SpecialAttackTable& table = factory().specialAttackTable(name, limits);
+		SpecialAttackTable& table = factory().get<SpecialAttackTable>(name);
 		table.setName(name);
+		table.setLimit(AttackSizeType::kSmall, ptable.second.get<int>("small"));
+		table.setLimit(AttackSizeType::kMedium, ptable.second.get<int>("medium"));
+		table.setLimit(AttackSizeType::kLarge, ptable.second.get<int>("large"));
+		table.setLimit(AttackSizeType::kHuge, ptable.second.get<int>("huge"));
 
 		NumberMatcherFactory matchers;
 

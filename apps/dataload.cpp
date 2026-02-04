@@ -66,8 +66,8 @@ int main() {
 //		language_category_parser.save("../../../../data/LanguageCategories2.json");
 //		language_parser.save("../../../../data/Languages2.json");
 //		skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
-		attack_table_parser.save("../../../../data/AttackTables2.json");
-//		special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
+//		attack_table_parser.save("../../../../data/AttackTables2.json");
+		special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
 //		spell_list_parser.save("../../../../data/SpellLists2.json");
 //		skill_category_parser.save("../../../../data/SkillCategories2.json");
 //		armour_type_parser.save("../../../../data/ArmourTypes2.json");

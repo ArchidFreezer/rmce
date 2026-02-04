@@ -132,7 +132,7 @@ public:
 	 * @param limit Maximum roll allowed
 	 */
 	void setLimit(AttackSizeType::Type type, int limit) {
-		limits_.emplace(AttackSizeType::kSmall, limit);
+		limits_.emplace(type, limit);
 	}
 
 private:

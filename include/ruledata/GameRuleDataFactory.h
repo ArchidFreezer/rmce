@@ -87,12 +87,6 @@ public:
 		return (subcategory ? subcategoriedSkillData(skill, subcategory) : subcategoriedSkillData(skill));
 	}
 
-	SpecialAttackTable& specialAttackTable(std::string& id, std::map<AttackSizeType::Type, int> limits) {
-		if (cache_.exists<SpecialAttackTable>(id)) return cache_.get<SpecialAttackTable>(id);
-		cache_.add<SpecialAttackTable>(std::move(std::make_unique<SpecialAttackTable>(id, limits)), id);
-		return cache_.get<SpecialAttackTable>(id);
-	}
-
 private:
 	GameRuleDataCache& cache_; /**< Reference to a cache object to store the data objects */
 
