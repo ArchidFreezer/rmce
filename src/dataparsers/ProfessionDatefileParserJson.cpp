@@ -101,6 +101,25 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	}
 	if (skill_development_type_choices_tree.size()) { datum.push_back(std::make_pair("skill-development-type-choices", skill_development_type_choices_tree)); }
 
+	// Skill subcategory development type choices
+	{
+		pt::ptree skill_subcategory_development_type_choices_tree{};
+		for (auto& skill_choice : game_data.skillSubcategoryDevelopmentTypeChoices()) {
+			pt::ptree skill_subcategory_development_type_choice_tree{};
+			skill_subcategory_development_type_choice_tree.put("num-choices", skill_choice.first.numChoices());
+			skill_subcategory_development_type_choice_tree.put("skill-type", SkillDevelopmentType::toString(skill_choice.second));
+
+			for (auto& skill : skill_choice.first.options()) {
+				pt::ptree skill_tree{};
+				skill_tree.put("skill", skill->id());
+				skill_subcategory_development_type_choice_tree.push_back(std::make_pair("skills", skill_tree));
+			}
+
+			skill_subcategory_development_type_choices_tree.push_back(std::make_pair("", skill_subcategory_development_type_choice_tree));
+		}
+		if (skill_subcategory_development_type_choices_tree.size()) { datum.push_back(std::make_pair("skill-subcategory-development-type-choices", skill_subcategory_development_type_choices_tree)); }
+	}
+
 	// Skill category profession bonus
 	{
 		pt::ptree skill_category_bonuses_tree{};
@@ -164,6 +183,22 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 		skill_category_skill_development_type_choices_tree.push_back(std::make_pair("", skill_category_skill_development_type_choice_tree));
 	}
 	if (skill_category_skill_development_type_choices_tree.size()) { datum.push_back(std::make_pair("skill-category-skill-development-type-choices", skill_category_skill_development_type_choices_tree)); }
+
+	// Skill category costs
+	{
+		pt::ptree skill_category_costs_tree{};
+		std::map<std::string, const SkillCategoryData*> categories{};
+		for (auto& skill_category : game_data.skillCategoriesWithCost()) {
+			categories.emplace(skill_category->id(), skill_category);
+		}
+		for (const auto& skill_category : categories) {
+			pt::ptree skill_category_cost_tree{};
+			skill_category_cost_tree.put("category", skill_category.first);
+			skill_category_cost_tree.put("cost", game_data.skillCategoryDevelopmentCost(*skill_category.second).toString());
+			skill_category_costs_tree.push_back(std::make_pair("", skill_category_cost_tree));
+		}
+		if (skill_category_costs_tree.size()) datum.push_back(std::make_pair("skill-category-costs", skill_category_costs_tree));
+	}
 
 	// Skill group profession bonus
 	{

@@ -103,6 +103,24 @@ void ProfessionDatafileParserXml::parse() {
 				}
 			}
 
+			// Skill subcategory development type choices
+			if (boost::optional<const pt::ptree&> skill_subcategory_development_type_choices = v.second.get_child_optional("skill-subcategory-type-choice")) {
+				for (const auto& skill_subcategory_development_type_choice : skill_subcategory_development_type_choices.get()) {
+					GameRuleDataChoice<SkillData> choice{};
+
+					// make sure we have a valid development type first
+					std::string skill_type_id = skill_subcategory_development_type_choice.second.get<std::string>("skill-type");
+					if (SkillDevelopmentType::fromString(skill_type_id)) {
+						choice.setNumChoices(skill_subcategory_development_type_choice.second.get<int>("num-choices"));
+						for (const auto& skill_name_tree : skill_subcategory_development_type_choice.second.get_child("skills")) {
+							std::string skill_id = GameRuleData::generateId("Skill", skill_name_tree.second.get_value<std::string>());
+							choice.addOption(factory().get<SkillData>(skill_id));
+						}
+						ref.addSkillSubcategoryDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
+					}
+				}
+			}
+
 			// Get skill category profession bonuses
 			if (boost::optional<const pt::ptree&> skill_category_bonuses = v.second.get_child_optional("skill-category-bonuses")) {
 				for (const auto& skill_category_bonus : skill_category_bonuses.get()) {
@@ -129,6 +147,15 @@ void ProfessionDatafileParserXml::parse() {
 					if (SkillDevelopmentType::fromString(skill_type_id)) {
 						ref.addSkillCategorySkillDevelopmentType(factory().get<SkillCategoryData>(skill_category_id), SkillDevelopmentType::fromString(skill_type_id).value());
 					}
+				}
+			}
+
+			// Get skill category development costs
+			if (boost::optional<const pt::ptree&> skill_category_development_costs = v.second.get_child_optional("skill-category-costs")) {
+				for (const auto& skill_category_development_cost : skill_category_development_costs.get()) {
+					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_development_cost.second.get<std::string>("<xmlattr>.category")) };
+					std::string cost = skill_category_development_cost.second.get_value<std::string>();
+					ref.addSkillCategoryDevelopmentCost(factory().get<SkillCategoryData>(skill_category_id), SkillDevelopmentCost(cost));
 				}
 			}
 

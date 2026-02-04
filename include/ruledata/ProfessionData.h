@@ -246,6 +246,30 @@ public:
 	const std::map<GameRuleDataChoice<SubcategoriedSkillData>, SkillDevelopmentType::Type>& skillDevelopmentTypeChoices() const { return skill_development_type_choices_; }
 
 	/**
+	 * @brief Add a choice that defines the skill that a character may select one or more subcategories from to become everyman
+	 * @param choice GameRuleDataChoice choice definition
+	 * @param type SkillDevelopmentType::Type type choices will have
+	 */
+	void addSkillSubcategoryDevelopmentTypeChoice(GameRuleDataChoice<SkillData> choice, SkillDevelopmentType::Type type) { skill_subcategory_skill_development_type_choices_.emplace(std::move(choice), type); }
+
+	/**
+	 * @brief Get the number of choices a character has to make regarding skill subcategoryeveryman skills
+	 *
+	 * During character development the player may have the option change the development type of one of more skills.
+	 * This returns how many choices need to be made. This is not the number of options to be selected
+	 * in a single choice.
+	 * @return Number of choices to be make
+	 * @see SkillDevelopmentType
+	 */
+	int numSkillSubcategoryDevelopmentTypeChoices() const { return skill_subcategory_skill_development_type_choices_.size(); }
+
+	/**
+	 * @brief Get a container with the choices the character needs to make to select one or more skill subcategories that may have their development type changed
+	 * @return map of GameRuleDataChoice objects with the choices to be made
+	 */
+	const std::map<GameRuleDataChoice<SkillData>, SkillDevelopmentType::Type>& skillSubcategoryDevelopmentTypeChoices() const { return skill_subcategory_skill_development_type_choices_; }
+
+	/**
 	 * @brief Add a choice that defines the skill categories that a character may select one or more skills from to change their development type
 	 * @param choice GameRuleDataChoice choice definition
 	 * @param type SkillDevelopmentType::Type type choices will have
@@ -663,7 +687,16 @@ public:
 	 * @param category SkillCategoryData category to add the costs for
 	 * @param cost SkillDevelopmentCost cost to develop ranks
 	 */
-	void addCategoryDevelopmentCost(const SkillCategoryData& category, SkillDevelopmentCost cost) { skill_category_development_costs_.emplace(&category, std::move(cost)); }
+	void addSkillCategoryDevelopmentCost(const SkillCategoryData& category, SkillDevelopmentCost cost) { skill_category_development_costs_.emplace(&category, std::move(cost)); }
+
+	/**
+	 * @brief Get a container of all the skill categories with a development cost
+	 * @return std::set of categories with a development cost
+	 */
+	const std::set<const SkillCategoryData*> skillCategoriesWithCost() const {
+		auto keys = std::views::keys(skill_category_development_costs_);
+		return { keys.begin(), keys.end() };
+	}
 
 	/**
 	 * @brief Get the cost to develop ranks in a skill category
@@ -671,7 +704,7 @@ public:
 	 * @return SkillDevelopmentCost costs to develop ranks
 	 * @throws InvalidCategoryDevelopmentCost if there are no costs for the category
 	 */
-	const SkillDevelopmentCost& categoryDevelopmentCost(const SkillCategoryData& category) {
+	const SkillDevelopmentCost& skillCategoryDevelopmentCost(const SkillCategoryData& category) {
 		for (auto& cat : std::views::keys(skill_category_development_costs_)) {
 			if (cat->id() == category.id()) return skill_category_development_costs_.at(cat);
 		}
@@ -699,6 +732,7 @@ private:
 	std::map<const SkillGroupData*, SkillDevelopmentType::Type> skill_group_skill_development_types_{}; /** Skill groups that all skills within have their development type changed */
 
 	// Skill development type choices
+	std::map<GameRuleDataChoice<SkillData>, SkillDevelopmentType::Type> skill_subcategory_skill_development_type_choices_{}; /** Set of skills the character may select one or more subategories from to change their development type */
 	std::map<GameRuleDataChoice<SubcategoriedSkillData>, SkillDevelopmentType::Type> skill_development_type_choices_{}; /** Set of skills that the character may select one or more from to change their development type */
 	std::map<GameRuleDataChoice<SkillCategoryData>, SkillDevelopmentType::Type> skill_category_skill_development_type_choices_{}; /** Set of skill categories the character may select one or more skills from to change their development type */
 	std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type> skill_group_skill_development_type_choices_{}; /** Set of skill groups the character may select one or more skills from to change their development type */
