@@ -110,6 +110,7 @@ var namespaces_dup =
       [ "operator<<", "namespace_spell_list_type.html#ab85d398ecaa1c893cee156c90bb5034d", null ],
       [ "toString", "namespace_spell_list_type.html#a370cb5d3754c853872d74c8e2f244196", null ]
     ] ],
+    [ "SpellUserType", "namespace_spell_user_type.html", "namespace_spell_user_type" ],
     [ "StatLossType", "namespace_stat_loss_type.html", [
       [ "Type", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337", null ],
       [ "Type", "namespace_stat_loss_type.html#adf9c1985aaa68ff99becef64bd4bd337", [

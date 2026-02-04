@@ -6185,7 +6185,7 @@
                     "num-choices": "6",
                     "options": [
                         "SPELLLIST_ASSASSINATION_MASTERY",
-                        "SPELLLIST_DISGUISES",
+                        "SPELLLIST_DISGUISE_MASTERY",
                         "SPELLLIST_ESCAPES",
                         "SPELLLIST_GATHERING_SECRETS",
                         "SPELLLIST_MISDIRECTIONS",
@@ -8764,7 +8764,7 @@
                     "num-choices": "6",
                     "options": [
                         "SPELLLIST_COMMUNION",
-                        "SPELLLIST_EXORCISM",
+                        "SPELLLIST_EXORCISMS",
                         "SPELLLIST_HOLY_ARMS",
                         "SPELLLIST_HOLY_HEALING",
                         "SPELLLIST_HOLY_SHIELDS",
@@ -23760,7 +23760,7 @@
                         "SPELLLIST_COMMANDING_WILL",
                         "SPELLLIST_INSCRIPTIONS",
                         "SPELLLIST_NOMENCLATURE_MASTERY",
-                        "SPELLLIST_PHYSICAL_MANIPULATION",
+                        "SPELLLIST_PHYSICAL_MANIPULATIONS",
                         "SPELLLIST_SYMBOLISM",
                         "SPELLLIST_WARDING_WAYS"
                     ]

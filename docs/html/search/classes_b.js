@@ -15,5 +15,6 @@ var searchData=
   ['specialattacktabledatafileparserjson_12',['SpecialAttackTableDatafileParserJson',['../class_special_attack_table_datafile_parser_json.html',1,'']]],
   ['spelllistdata_13',['SpellListData',['../class_spell_list_data.html',1,'']]],
   ['spelllistdatafileparserjson_14',['SpellListDatafileParserJson',['../class_spell_list_datafile_parser_json.html',1,'']]],
-  ['subcategoriedskilldata_15',['SubcategoriedSkillData',['../class_subcategoried_skill_data.html',1,'']]]
+  ['spellusertypenotfoundexception_15',['SpellUserTypeNotFoundException',['../class_spell_user_type_1_1_spell_user_type_not_found_exception.html',1,'SpellUserType']]],
+  ['subcategoriedskilldata_16',['SubcategoriedSkillData',['../class_subcategoried_skill_data.html',1,'']]]
 ];

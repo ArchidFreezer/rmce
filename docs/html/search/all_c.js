@@ -12,5 +12,6 @@ var searchData=
   ['numoptions_9',['numOptions',['../class_game_rule_data_choice.html#a5f2f6a26b520cf6906791dd243f9d8f0',1,'GameRuleDataChoice']]],
   ['numskillcategoryskilldevelopmenttypechoices_10',['numSkillCategorySkillDevelopmentTypeChoices',['../class_profession_data.html#a35cc63af292333afb632e6b199af7e9e',1,'ProfessionData']]],
   ['numskilldevelopmenttypechoices_11',['numSkillDevelopmentTypeChoices',['../class_profession_data.html#ab57b394b3c486821e605229a7a391109',1,'ProfessionData']]],
-  ['numskillgroupskilldevelopmenttypechoices_12',['numSkillGroupSkillDevelopmentTypeChoices',['../class_profession_data.html#a0f4b89f60a91cda92058e87aafc46926',1,'ProfessionData']]]
+  ['numskillgroupskilldevelopmenttypechoices_12',['numSkillGroupSkillDevelopmentTypeChoices',['../class_profession_data.html#a0f4b89f60a91cda92058e87aafc46926',1,'ProfessionData']]],
+  ['numskillsubcategorydevelopmenttypechoices_13',['numSkillSubcategoryDevelopmentTypeChoices',['../class_profession_data.html#afc26d174925c9d4056bb8edbb6b06103',1,'ProfessionData']]]
 ];

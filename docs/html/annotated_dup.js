@@ -12,6 +12,9 @@ var annotated_dup =
     [ "SkillActionType", "namespace_skill_action_type.html", [
       [ "SkillActionNotFoundException", "class_skill_action_type_1_1_skill_action_not_found_exception.html", "class_skill_action_type_1_1_skill_action_not_found_exception" ]
     ] ],
+    [ "SpellUserType", "namespace_spell_user_type.html", [
+      [ "SpellUserTypeNotFoundException", "class_spell_user_type_1_1_spell_user_type_not_found_exception.html", "class_spell_user_type_1_1_spell_user_type_not_found_exception" ]
+    ] ],
     [ "StatType", "namespace_stat_type.html", [
       [ "TooManyStatsException", "class_stat_type_1_1_too_many_stats_exception.html", "class_stat_type_1_1_too_many_stats_exception" ]
     ] ],

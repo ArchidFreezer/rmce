@@ -2,6 +2,7 @@
 
 #include <set>
 #include <string>
+#include <BookData.h>
 #include <GameRuleData.h>
 #include <RealmType.h>
 #include <SpellListType.h>
@@ -44,6 +45,31 @@ public:
 	 * @return Spell list name as a string reference
 	 */
 	const std::string& name() const { return name_; }
+
+	/**
+	 * @brief Set the book that the profession is defined in
+	 * @param book BookData pointer to the book
+	 */
+	void setBook(const BookData& book) { book_.emplace(&book); }
+
+	/**
+	 * @brief Get the book that the profession is defined in
+	 *
+	 * The book is stored as a pointer and may not have been initialised so it is considered optional. A check should be made
+	 * before using the value to determine if the book has been set yet:
+	 * @code
+	 * if (profession.book()) {                              // Check if the book has been set
+	 *   const BookData* book = profession.book().value();   // Get the book pointer
+	 *   // Use the book
+	 * }
+	 * @endcode
+	 * or
+	 * @code
+	 * std::cout << (profession.book() ? profession.book().value()->name() : "Book not set") << std::endl;
+	 * @endcode
+	 * @return Pointer to the BookData containing the profession definition
+	 */
+	const std::optional<const BookData*> book() const { return book_; }
 
 	/**
 	 * @brief Add a realm to those the spell draws power from
@@ -108,6 +134,7 @@ public:
 private:
 	std::string name_{}; /**< Name of teh spell list */
 	std::set< RealmType::Type> realms_{};/**< Realm(s) that the spells on the list draw power from */
+	std::optional<const BookData*> book_{ std::nullopt }; /**< Book that the spell list is described in */
 	SpellListType::Type type_{ SpellListType::Type::kOpen }; /**< Type of spell list */
 	bool evil_{}; /** Whether the list is considered evil */
 	bool summoning_{}; /** Whether spells on the list summon entities */

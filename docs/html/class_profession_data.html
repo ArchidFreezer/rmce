@@ -146,6 +146,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af6b92b9a2ad75fdb0fca1116c6470447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the book that the profession is defined in.  <br /></td></tr>
 <tr class="memitem:a2cac7fdd94cefa70fe7061806f434c7c" id="r_a2cac7fdd94cefa70fe7061806f434c7c"><td class="memItemLeft">const std::optional&lt; const <a class="el" href="class_book_data.html">BookData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2cac7fdd94cefa70fe7061806f434c7c">book</a> () const</td></tr>
 <tr class="memdesc:a2cac7fdd94cefa70fe7061806f434c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the book that the profession is defined in.  <br /></td></tr>
+<tr class="memitem:ab965ce5c35a6f9e2e5ecc707e86cf92e" id="r_ab965ce5c35a6f9e2e5ecc707e86cf92e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab965ce5c35a6f9e2e5ecc707e86cf92e">setSpellUserType</a> (<a class="el" href="namespace_spell_user_type.html#a5ec120eecc0cf4c66aaceb88a40b6211">SpellUserType::Type</a> spell_user_type)</td></tr>
+<tr class="memdesc:ab965ce5c35a6f9e2e5ecc707e86cf92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the type of spell user the profession is.  <br /></td></tr>
+<tr class="memitem:a0e3e79f8032373e8f15c8e9c05be0a5b" id="r_a0e3e79f8032373e8f15c8e9c05be0a5b"><td class="memItemLeft"><a class="el" href="namespace_spell_user_type.html#a5ec120eecc0cf4c66aaceb88a40b6211">SpellUserType::Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0e3e79f8032373e8f15c8e9c05be0a5b">spellUserType</a> () const</td></tr>
+<tr class="memdesc:a0e3e79f8032373e8f15c8e9c05be0a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of spell user the profession is.  <br /></td></tr>
 <tr class="memitem:a52ca563a1135dc2f668edce4f863460d" id="r_a52ca563a1135dc2f668edce4f863460d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a52ca563a1135dc2f668edce4f863460d">addRealm</a> (<a class="el" href="namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8">RealmType::Type</a> realm)</td></tr>
 <tr class="memdesc:a52ca563a1135dc2f668edce4f863460d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a realm to those the profession draws power from.  <br /></td></tr>
 <tr class="memitem:afd7ee141747ea4fa0dff4b2810915ee1" id="r_afd7ee141747ea4fa0dff4b2810915ee1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afd7ee141747ea4fa0dff4b2810915ee1">isRealm</a> (<a class="el" href="namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8">RealmType::Type</a> realm) const</td></tr>
@@ -175,6 +179,12 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:ab57b394b3c486821e605229a7a391109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding everyman skills.  <br /></td></tr>
 <tr class="memitem:aa8c85a4beed832f547586188e4f47596" id="r_aa8c85a4beed832f547586188e4f47596"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa8c85a4beed832f547586188e4f47596">skillDevelopmentTypeChoices</a> () const</td></tr>
 <tr class="memdesc:aa8c85a4beed832f547586188e4f47596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills that may have their development type changed.  <br /></td></tr>
+<tr class="memitem:af8717a166374c822ab8a89a16101f3cd" id="r_af8717a166374c822ab8a89a16101f3cd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af8717a166374c822ab8a89a16101f3cd">addSkillSubcategoryDevelopmentTypeChoice</a> (<a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt; choice, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> type)</td></tr>
+<tr class="memdesc:af8717a166374c822ab8a89a16101f3cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill that a character may select one or more subcategories from to become everyman.  <br /></td></tr>
+<tr class="memitem:afc26d174925c9d4056bb8edbb6b06103" id="r_afc26d174925c9d4056bb8edbb6b06103"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#afc26d174925c9d4056bb8edbb6b06103">numSkillSubcategoryDevelopmentTypeChoices</a> () const</td></tr>
+<tr class="memdesc:afc26d174925c9d4056bb8edbb6b06103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding skill subcategoryeveryman skills.  <br /></td></tr>
+<tr class="memitem:a000f081ea4897fe4b1be7fab1090ac79" id="r_a000f081ea4897fe4b1be7fab1090ac79"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a000f081ea4897fe4b1be7fab1090ac79">skillSubcategoryDevelopmentTypeChoices</a> () const</td></tr>
+<tr class="memdesc:a000f081ea4897fe4b1be7fab1090ac79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skill subcategories that may have their development type changed.  <br /></td></tr>
 <tr class="memitem:afa2214fde305496bb889335ad0492d69" id="r_afa2214fde305496bb889335ad0492d69"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afa2214fde305496bb889335ad0492d69">addSkillCategorySkillDevelopmentTypeChoice</a> (<a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; choice, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> type)</td></tr>
 <tr class="memdesc:afa2214fde305496bb889335ad0492d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill categories that a character may select one or more skills from to change their development type.  <br /></td></tr>
 <tr class="memitem:a35cc63af292333afb632e6b199af7e9e" id="r_a35cc63af292333afb632e6b199af7e9e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a35cc63af292333afb632e6b199af7e9e">numSkillCategorySkillDevelopmentTypeChoices</a> () const</td></tr>
@@ -255,10 +265,12 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:a9b5657d42ff468a15f77f2f687f7f247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a container with the skill that the profession has a bonus for.  <br /></td></tr>
 <tr class="memitem:a3ca78a1f297a2b11beafd3e70efbb2cd" id="r_a3ca78a1f297a2b11beafd3e70efbb2cd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3ca78a1f297a2b11beafd3e70efbb2cd">isBonusSkill</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
 <tr class="memdesc:a3ca78a1f297a2b11beafd3e70efbb2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if there is a professional bonus for a skill.  <br /></td></tr>
-<tr class="memitem:a7439f618840a9f488be3b0449e0debc5" id="r_a7439f618840a9f488be3b0449e0debc5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7439f618840a9f488be3b0449e0debc5">addCategoryDevelopmentCost</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category, <a class="el" href="class_skill_development_cost.html">SkillDevelopmentCost</a> cost)</td></tr>
-<tr class="memdesc:a7439f618840a9f488be3b0449e0debc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the cost in development points to develop one or more ranks in a skill category.  <br /></td></tr>
-<tr class="memitem:a1fd115ff4896207264350b696854da66" id="r_a1fd115ff4896207264350b696854da66"><td class="memItemLeft">const <a class="el" href="class_skill_development_cost.html">SkillDevelopmentCost</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1fd115ff4896207264350b696854da66">categoryDevelopmentCost</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category)</td></tr>
-<tr class="memdesc:a1fd115ff4896207264350b696854da66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cost to develop ranks in a skill category.  <br /></td></tr>
+<tr class="memitem:adfb8f2c4d8d98e57347b70ce5b9eee3e" id="r_adfb8f2c4d8d98e57347b70ce5b9eee3e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adfb8f2c4d8d98e57347b70ce5b9eee3e">addSkillCategoryDevelopmentCost</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category, <a class="el" href="class_skill_development_cost.html">SkillDevelopmentCost</a> cost)</td></tr>
+<tr class="memdesc:adfb8f2c4d8d98e57347b70ce5b9eee3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the cost in development points to develop one or more ranks in a skill category.  <br /></td></tr>
+<tr class="memitem:a267d3ba589e28caf177078f3b7ff48f4" id="r_a267d3ba589e28caf177078f3b7ff48f4"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a267d3ba589e28caf177078f3b7ff48f4">skillCategoriesWithCost</a> () const</td></tr>
+<tr class="memdesc:a267d3ba589e28caf177078f3b7ff48f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of all the skill categories with a development cost.  <br /></td></tr>
+<tr class="memitem:a51fb47fbfeff5fd8f874982a76183dd8" id="r_a51fb47fbfeff5fd8f874982a76183dd8"><td class="memItemLeft">const <a class="el" href="class_skill_development_cost.html">SkillDevelopmentCost</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a51fb47fbfeff5fd8f874982a76183dd8">skillCategoryDevelopmentCost</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category)</td></tr>
+<tr class="memdesc:a51fb47fbfeff5fd8f874982a76183dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cost to develop ranks in a skill category.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
 <tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
@@ -348,45 +360,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a7439f618840a9f488be3b0449e0debc5" name="a7439f618840a9f488be3b0449e0debc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7439f618840a9f488be3b0449e0debc5">&#9670;&#160;</a></span>addCategoryDevelopmentCost()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ProfessionData::addCategoryDevelopmentCost </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_skill_development_cost.html">SkillDevelopmentCost</a></td>          <td class="paramname"><span class="paramname"><em>cost</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add the cost in development points to develop one or more ranks in a skill category. </p>
-<dl class="section attention"><dt>Attention</dt><dd><em class="arg">cost</em> is moved during this operation so its content is undefined afterwards.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">category</td><td><a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> category to add the costs for </td></tr>
-    <tr><td class="paramname">cost</td><td><a class="el" href="class_skill_development_cost.html" title="Represents the number of development points a character has to spend to gain a rank in a skill.">SkillDevelopmentCost</a> cost to develop ranks </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a52ca563a1135dc2f668edce4f863460d" name="a52ca563a1135dc2f668edce4f863460d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a52ca563a1135dc2f668edce4f863460d">&#9670;&#160;</a></span>addRealm()</h2>
 
@@ -414,6 +387,45 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">realm</td><td><a class="el" href="namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8" title="Enumeration class representing the realms in a campaign.">RealmType::Type</a> profession power realm </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adfb8f2c4d8d98e57347b70ce5b9eee3e" name="adfb8f2c4d8d98e57347b70ce5b9eee3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb8f2c4d8d98e57347b70ce5b9eee3e">&#9670;&#160;</a></span>addSkillCategoryDevelopmentCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::addSkillCategoryDevelopmentCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_skill_development_cost.html">SkillDevelopmentCost</a></td>          <td class="paramname"><span class="paramname"><em>cost</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add the cost in development points to develop one or more ranks in a skill category. </p>
+<dl class="section attention"><dt>Attention</dt><dd><em class="arg">cost</em> is moved during this operation so its content is undefined afterwards.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td><a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> category to add the costs for </td></tr>
+    <tr><td class="paramname">cost</td><td><a class="el" href="class_skill_development_cost.html" title="Represents the number of development points a character has to spend to gain a rank in a skill.">SkillDevelopmentCost</a> cost to develop ranks </td></tr>
   </table>
   </dd>
 </dl>
@@ -762,6 +774,44 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="af8717a166374c822ab8a89a16101f3cd" name="af8717a166374c822ab8a89a16101f3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8717a166374c822ab8a89a16101f3cd">&#9670;&#160;</a></span>addSkillSubcategoryDevelopmentTypeChoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::addSkillSubcategoryDevelopmentTypeChoice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>choice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a choice that defines the skill that a character may select one or more subcategories from to become everyman. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">choice</td><td><a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> choice definition </td></tr>
+    <tr><td class="paramname">type</td><td><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType::Type</a> type choices will have </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad3f4fa3dfc78bfd7aa8c01f37e096899" name="ad3f4fa3dfc78bfd7aa8c01f37e096899"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3f4fa3dfc78bfd7aa8c01f37e096899">&#9670;&#160;</a></span>addStat()</h2>
 
@@ -853,49 +903,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">  <span class="comment">// Use the book</span></div>
 <div class="line">}</div>
 <div class="ttc" id="aclass_book_data_html"><div class="ttname"><a href="class_book_data.html">BookData</a></div><div class="ttdoc">Class representing a Rolemaster rule book used in the campaign world.</div><div class="ttdef"><b>Definition</b> BookData.h:17</div></div>
-<div class="ttc" id="aclass_profession_data_html_a2cac7fdd94cefa70fe7061806f434c7c"><div class="ttname"><a href="#a2cac7fdd94cefa70fe7061806f434c7c">ProfessionData::book</a></div><div class="ttdeci">const std::optional&lt; const BookData * &gt; book() const</div><div class="ttdoc">Get the book that the profession is defined in.</div><div class="ttdef"><b>Definition</b> ProfessionData.h:133</div></div>
+<div class="ttc" id="aclass_profession_data_html_a2cac7fdd94cefa70fe7061806f434c7c"><div class="ttname"><a href="#a2cac7fdd94cefa70fe7061806f434c7c">ProfessionData::book</a></div><div class="ttdeci">const std::optional&lt; const BookData * &gt; book() const</div><div class="ttdoc">Get the book that the profession is defined in.</div><div class="ttdef"><b>Definition</b> ProfessionData.h:134</div></div>
 </div><!-- fragment --><p> or </p><div class="fragment"><div class="line">std::cout &lt;&lt; (profession.book() ? profession.book().value()-&gt;name() : <span class="stringliteral">&quot;Book not set&quot;</span>) &lt;&lt; std::endl;</div>
 </div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>Pointer to the <a class="el" href="class_book_data.html" title="Class representing a Rolemaster rule book used in the campaign world.">BookData</a> containing the profession definition </dd></dl>
-
-</div>
-</div>
-<a id="a1fd115ff4896207264350b696854da66" name="a1fd115ff4896207264350b696854da66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fd115ff4896207264350b696854da66">&#9670;&#160;</a></span>categoryDevelopmentCost()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="class_skill_development_cost.html">SkillDevelopmentCost</a> &amp; ProfessionData::categoryDevelopmentCost </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the cost to develop ranks in a skill category. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">category</td><td><a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> to get the costs for </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_skill_development_cost.html" title="Represents the number of development points a character has to spend to gain a rank in a skill.">SkillDevelopmentCost</a> costs to develop ranks </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="class_profession_data_1_1_invalid_category_development_cost.html" title="Thrown when there is an attempt to retrieve a skill category development cost for a categopry that do...">InvalidCategoryDevelopmentCost</a></td><td>if there are no costs for the category </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -1432,6 +1442,35 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="afc26d174925c9d4056bb8edbb6b06103" name="afc26d174925c9d4056bb8edbb6b06103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc26d174925c9d4056bb8edbb6b06103">&#9670;&#160;</a></span>numSkillSubcategoryDevelopmentTypeChoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProfessionData::numSkillSubcategoryDevelopmentTypeChoices </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of choices a character has to make regarding skill subcategoryeveryman skills. </p>
+<p>During character development the player may have the option change the development type of one of more skills. This returns how many choices need to be made. This is not the number of options to be selected in a single choice. </p><dl class="section return"><dt>Returns</dt><dd>Number of choices to be make </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
+
+</div>
+</div>
 <a id="aa8297f08ca9c51d1c66839338b3f8601" name="aa8297f08ca9c51d1c66839338b3f8601"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8297f08ca9c51d1c66839338b3f8601">&#9670;&#160;</a></span>realms()</h2>
 
@@ -1664,6 +1703,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab965ce5c35a6f9e2e5ecc707e86cf92e" name="ab965ce5c35a6f9e2e5ecc707e86cf92e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab965ce5c35a6f9e2e5ecc707e86cf92e">&#9670;&#160;</a></span>setSpellUserType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::setSpellUserType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_spell_user_type.html#a5ec120eecc0cf4c66aaceb88a40b6211">SpellUserType::Type</a></td>          <td class="paramname"><span class="paramname"><em>spell_user_type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the type of spell user the profession is. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell_user_type</td><td><a class="el" href="namespace_spell_user_type.html#a5ec120eecc0cf4c66aaceb88a40b6211" title="Enumeration class representing the spell user type of characters.">SpellUserType::Type</a> spell user type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2b42cd1d2277bf5e5ffd29cd33435524" name="a2b42cd1d2277bf5e5ffd29cd33435524"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b42cd1d2277bf5e5ffd29cd33435524">&#9670;&#160;</a></span>skillBonus() <span class="overload">[1/2]</span></h2>
 
@@ -1734,6 +1806,34 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bonus value </dd></dl>
+
+</div>
+</div>
+<a id="a267d3ba589e28caf177078f3b7ff48f4" name="a267d3ba589e28caf177078f3b7ff48f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a267d3ba589e28caf177078f3b7ff48f4">&#9670;&#160;</a></span>skillCategoriesWithCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; ProfessionData::skillCategoriesWithCost </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container of all the skill categories with a development cost. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::set of categories with a development cost </dd></dl>
 
 </div>
 </div>
@@ -1818,6 +1918,46 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get a container of all the skill categories with a special bonus. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::set of categories with a bonus </dd></dl>
+
+</div>
+</div>
+<a id="a51fb47fbfeff5fd8f874982a76183dd8" name="a51fb47fbfeff5fd8f874982a76183dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51fb47fbfeff5fd8f874982a76183dd8">&#9670;&#160;</a></span>skillCategoryDevelopmentCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_skill_development_cost.html">SkillDevelopmentCost</a> &amp; ProfessionData::skillCategoryDevelopmentCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>category</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the cost to develop ranks in a skill category. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td><a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> to get the costs for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_skill_development_cost.html" title="Represents the number of development points a character has to spend to gain a rank in a skill.">SkillDevelopmentCost</a> costs to develop ranks </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_profession_data_1_1_invalid_category_development_cost.html" title="Thrown when there is an attempt to retrieve a skill category development cost for a categopry that do...">InvalidCategoryDevelopmentCost</a></td><td>if there are no costs for the category </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2268,6 +2408,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a000f081ea4897fe4b1be7fab1090ac79" name="a000f081ea4897fe4b1be7fab1090ac79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000f081ea4897fe4b1be7fab1090ac79">&#9670;&#160;</a></span>skillSubcategoryDevelopmentTypeChoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_data.html">SkillData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp; ProfessionData::skillSubcategoryDevelopmentTypeChoices </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with the choices the character needs to make to select one or more skill subcategories that may have their development type changed. </p>
+<dl class="section return"><dt>Returns</dt><dd>map of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
+
+</div>
+</div>
 <a id="a9b5657d42ff468a15f77f2f687f7f247" name="a9b5657d42ff468a15f77f2f687f7f247"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b5657d42ff468a15f77f2f687f7f247">&#9670;&#160;</a></span>skillsWithBonus()</h2>
 
@@ -2321,6 +2489,34 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Gets a container with the skill that the profession has a development type set for. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> with the development type set </dd></dl>
+
+</div>
+</div>
+<a id="a0e3e79f8032373e8f15c8e9c05be0a5b" name="a0e3e79f8032373e8f15c8e9c05be0a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3e79f8032373e8f15c8e9c05be0a5b">&#9670;&#160;</a></span>spellUserType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_spell_user_type.html#a5ec120eecc0cf4c66aaceb88a40b6211">SpellUserType::Type</a> ProfessionData::spellUserType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the type of spell user the profession is. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespace_spell_user_type.html#a5ec120eecc0cf4c66aaceb88a40b6211" title="Enumeration class representing the spell user type of characters.">SpellUserType::Type</a> spell user type </dd></dl>
 
 </div>
 </div>

@@ -14,6 +14,9 @@ void SpellListDatafileParserJson::parse() {
 
 		SpellListData& datum = factory().get<SpellListData>(id);
 		datum.setName(name);
+		std::string book_id = v.second.get<std::string>("book");
+		datum.setBook(factory().get<BookData>(book_id));
+
 		datum.setIsEvil(v.second.get<bool>("evil"));
 		datum.setIsSummoning(v.second.get<bool>("summoning"));
 
@@ -38,6 +41,7 @@ void SpellListDatafileParserJson::populateDatum(std::string& id, pt::ptree& datu
 	SpellListData& game_data = factory().get<SpellListData>(id);
 	datum.put("id", game_data.id());
 	datum.put("name", game_data.name());
+	datum.put("book", game_data.book().value()->id());
 	datum.put("type", SpellListType::toString(game_data.type()));
 	datum.put("evil", game_data.isEvil());
 	datum.put("summoning", game_data.isSummoning());

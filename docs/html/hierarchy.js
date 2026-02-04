@@ -74,6 +74,7 @@ var hierarchy =
       [ "SkillActionType::SkillActionNotFoundException", "class_skill_action_type_1_1_skill_action_not_found_exception.html", null ],
       [ "SkillCategoryData::UsingCharacterRealmStatsException", "class_skill_category_data_1_1_using_character_realm_stats_exception.html", null ],
       [ "SkillData::UsingCharacterRealmStatsException", "class_skill_data_1_1_using_character_realm_stats_exception.html", null ],
+      [ "SpellUserType::SpellUserTypeNotFoundException", "class_spell_user_type_1_1_spell_user_type_not_found_exception.html", null ],
       [ "StatType::TooManyStatsException", "class_stat_type_1_1_too_many_stats_exception.html", null ],
       [ "WeaponTypeData::InvalidWeaponRangeException", "class_weapon_type_data_1_1_invalid_weapon_range_exception.html", null ]
     ] ],

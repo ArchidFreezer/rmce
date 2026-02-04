@@ -3,6 +3,7 @@
         {
             "id": "SPELLLIST_AIR_MASTERY",
             "name": "Air Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -13,6 +14,7 @@
         {
             "id": "SPELLLIST_ALLUREMENT",
             "name": "Allurement",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -23,6 +25,7 @@
         {
             "id": "SPELLLIST_AMPLIFICATIONS",
             "name": "Amplifications",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -33,6 +36,7 @@
         {
             "id": "SPELLLIST_ANIMAL_BONDING",
             "name": "Animal Bonding",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -43,6 +47,7 @@
         {
             "id": "SPELLLIST_ANIMAL_MASTERY",
             "name": "Animal Mastery",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -53,6 +58,7 @@
         {
             "id": "SPELLLIST_ANIMAL_SUMMONS",
             "name": "Animal Summons",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "true",
@@ -64,6 +70,7 @@
         {
             "id": "SPELLLIST_ANTICIPATIONS",
             "name": "Anticipations",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -74,6 +81,7 @@
         {
             "id": "SPELLLIST_AQUATIC_FORMS",
             "name": "Aquatic Forms",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -84,6 +92,7 @@
         {
             "id": "SPELLLIST_ARACHNEMANCY",
             "name": "Arachnemancy",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -94,6 +103,7 @@
         {
             "id": "SPELLLIST_ARCANE_BARRIERS",
             "name": "Arcane Barriers",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -104,6 +114,7 @@
         {
             "id": "SPELLLIST_ARCANE_FORCES",
             "name": "Arcane Forces",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -114,6 +125,7 @@
         {
             "id": "SPELLLIST_ARCANE_HEALING",
             "name": "Arcane Healing",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -124,6 +136,7 @@
         {
             "id": "SPELLLIST_ARCANE_MOTIONS",
             "name": "Arcane Motions",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -134,6 +147,7 @@
         {
             "id": "SPELLLIST_ARCANE_SENSES",
             "name": "Arcane Senses",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -144,6 +158,7 @@
         {
             "id": "SPELLLIST_ARCANE_SHIELD",
             "name": "Arcane Shield",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -154,6 +169,7 @@
         {
             "id": "SPELLLIST_ARCANE_SIGNS",
             "name": "Arcane Signs",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -164,6 +180,7 @@
         {
             "id": "SPELLLIST_ARCANE_SUMMONS",
             "name": "Arcane Summons",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -174,6 +191,7 @@
         {
             "id": "SPELLLIST_ARCANE_VISIONS",
             "name": "Arcane Visions",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -184,6 +202,7 @@
         {
             "id": "SPELLLIST_ARMOR_ENHANCEMENTS",
             "name": "Armor Enhancements",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -194,6 +213,7 @@
         {
             "id": "SPELLLIST_ARMOR_MASTERY",
             "name": "Armor Mastery",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -204,6 +224,7 @@
         {
             "id": "SPELLLIST_ASSASSINATION_MASTERY",
             "name": "Assassination Mastery",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -214,6 +235,7 @@
         {
             "id": "SPELLLIST_ATTACK_AVOIDANCE",
             "name": "Attack Avoidance",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -224,6 +246,7 @@
         {
             "id": "SPELLLIST_ATTACK_MASTERY",
             "name": "Attack Mastery",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -234,6 +257,7 @@
         {
             "id": "SPELLLIST_AURA_LORE",
             "name": "Aura Lore",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -244,6 +268,7 @@
         {
             "id": "SPELLLIST_BANISHMENTS",
             "name": "Banishments",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -254,6 +279,7 @@
         {
             "id": "SPELLLIST_BARRIER_LAW",
             "name": "Barrier Law",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -264,6 +290,7 @@
         {
             "id": "SPELLLIST_BATTLEFIELD_HEALING",
             "name": "Battlefield Healing",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -274,6 +301,7 @@
         {
             "id": "SPELLLIST_BATTLE_LAW",
             "name": "Battle Law",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -284,6 +312,7 @@
         {
             "id": "SPELLLIST_BLADERUNES",
             "name": "Bladerunes",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -294,6 +323,7 @@
         {
             "id": "SPELLLIST_BLOOD_LAW",
             "name": "Blood Law",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -304,6 +334,7 @@
         {
             "id": "SPELLLIST_BLOOD_MASTERY",
             "name": "Blood Mastery",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -314,6 +345,7 @@
         {
             "id": "SPELLLIST_BLOOD_WAYS",
             "name": "Blood Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -325,6 +357,7 @@
         {
             "id": "SPELLLIST_BODY_CONTROL",
             "name": "Body Control",
+            "book": "BOOK_MARTIAL_ARTS_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -335,6 +368,7 @@
         {
             "id": "SPELLLIST_BODY_REINS",
             "name": "Body Reins",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -345,6 +379,7 @@
         {
             "id": "SPELLLIST_BODY_RENEWAL",
             "name": "Body Renewal",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -355,6 +390,7 @@
         {
             "id": "SPELLLIST_BODY_SHIFTING",
             "name": "Body Shifting",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -365,6 +401,7 @@
         {
             "id": "SPELLLIST_BONE_LAW",
             "name": "Bone Law",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -375,6 +412,7 @@
         {
             "id": "SPELLLIST_BONE_MASTERY",
             "name": "Bone Mastery",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -385,6 +423,7 @@
         {
             "id": "SPELLLIST_BONE_WAYS",
             "name": "Bone Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -396,6 +435,7 @@
         {
             "id": "SPELLLIST_BREWING_LORE",
             "name": "Brewing Lore",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -406,6 +446,7 @@
         {
             "id": "SPELLLIST_BRILLIANCE",
             "name": "Brilliance",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -416,6 +457,7 @@
         {
             "id": "SPELLLIST_CALM_SPIRITS",
             "name": "Calm Spirits",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -426,6 +468,7 @@
         {
             "id": "SPELLLIST_CEREMONIES",
             "name": "Ceremonies",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -436,6 +479,7 @@
         {
             "id": "SPELLLIST_CHANGES",
             "name": "Changes",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -446,6 +490,7 @@
         {
             "id": "SPELLLIST_CHANNELS",
             "name": "Channels",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -456,6 +501,7 @@
         {
             "id": "SPELLLIST_CHANTS",
             "name": "Chants",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -466,6 +512,7 @@
         {
             "id": "SPELLLIST_CHAOTIC_SENSES",
             "name": "Chaotic Senses",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -476,6 +523,7 @@
         {
             "id": "SPELLLIST_CHARADES",
             "name": "Charades",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -486,6 +534,7 @@
         {
             "id": "SPELLLIST_CIRCLE_MASTERY",
             "name": "Circle Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -496,6 +545,7 @@
         {
             "id": "SPELLLIST_CLEANSING",
             "name": "Cleansing",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -507,6 +557,7 @@
         {
             "id": "SPELLLIST_CLOAKING",
             "name": "Cloaking",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -517,6 +568,7 @@
         {
             "id": "SPELLLIST_COMBAT_ILLUSIONS",
             "name": "Combat Illusions",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -527,6 +579,7 @@
         {
             "id": "SPELLLIST_COMBAT_WAYS",
             "name": "Combat Ways",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -537,6 +590,7 @@
         {
             "id": "SPELLLIST_COMMANDING_WILL",
             "name": "Commanding Will",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -548,6 +602,7 @@
         {
             "id": "SPELLLIST_COMMUNAL_WAYS",
             "name": "Communal Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -558,6 +613,7 @@
         {
             "id": "SPELLLIST_COMMUNION",
             "name": "Communion",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -568,6 +624,7 @@
         {
             "id": "SPELLLIST_CONCEALMENT_MASTERY",
             "name": "Concealment Mastery",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -578,6 +635,7 @@
         {
             "id": "SPELLLIST_CONCUSSION_MASTERY",
             "name": "Concussion Mastery",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -586,8 +644,9 @@
             ]
         },
         {
-            "id": "SPELLLIST_CONCUSSION_S_WAY",
-            "name": "Concussion's Way",
+            "id": "SPELLLIST_CONCUSSION_S_WAYS",
+            "name": "Concussion's Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -598,6 +657,7 @@
         {
             "id": "SPELLLIST_CONFUSING_WAYS",
             "name": "Confusing Ways",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -609,6 +669,7 @@
         {
             "id": "SPELLLIST_CONTAINING_WAYS",
             "name": "Containing Ways",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -619,6 +680,7 @@
         {
             "id": "SPELLLIST_CONTROLLING_SONGS",
             "name": "Controlling Songs",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -629,6 +691,7 @@
         {
             "id": "SPELLLIST_CORPIST_CASTING",
             "name": "Corpist Casting",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -639,6 +702,7 @@
         {
             "id": "SPELLLIST_COUNTERSPELLS",
             "name": "Counterspells",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -649,6 +713,7 @@
         {
             "id": "SPELLLIST_CREATIONS",
             "name": "Creations",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -659,6 +724,7 @@
         {
             "id": "SPELLLIST_CRUSADE",
             "name": "Crusade",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -669,6 +735,7 @@
         {
             "id": "SPELLLIST_CRYSTALIST_CASTING",
             "name": "Crystalist Casting",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -679,6 +746,7 @@
         {
             "id": "SPELLLIST_CURSES",
             "name": "Curses",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -689,6 +757,7 @@
         {
             "id": "SPELLLIST_DAMAGE_RESISTANCE",
             "name": "Damage Resistance",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -699,6 +768,7 @@
         {
             "id": "SPELLLIST_DARKNESS",
             "name": "Darkness",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -709,6 +779,7 @@
         {
             "id": "SPELLLIST_DARK_CHANNELS",
             "name": "Dark Channels",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -719,6 +790,7 @@
         {
             "id": "SPELLLIST_DARK_CONTACTS",
             "name": "Dark Contacts",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -729,6 +801,7 @@
         {
             "id": "SPELLLIST_DARK_ENTITIES",
             "name": "Dark Entities",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -739,6 +812,7 @@
         {
             "id": "SPELLLIST_DARK_LORE",
             "name": "Dark Lore",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -749,6 +823,7 @@
         {
             "id": "SPELLLIST_DARK_SUMMONS",
             "name": "Dark Summons",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "true",
             "summoning": "true",
@@ -759,6 +834,7 @@
         {
             "id": "SPELLLIST_DEATH_MASTERY",
             "name": "Death Mastery",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -769,6 +845,7 @@
         {
             "id": "SPELLLIST_DEFENSE_MASTERY",
             "name": "Defense Mastery",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -779,6 +856,7 @@
         {
             "id": "SPELLLIST_DELVING",
             "name": "Delving",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -789,6 +867,7 @@
         {
             "id": "SPELLLIST_DELVING_WAYS",
             "name": "Delving Ways",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -799,6 +878,7 @@
         {
             "id": "SPELLLIST_DETECTING_WAYS",
             "name": "Detecting Ways",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -809,6 +889,7 @@
         {
             "id": "SPELLLIST_DETECTIONS",
             "name": "Detections",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -819,6 +900,7 @@
         {
             "id": "SPELLLIST_DETECTION_LAW",
             "name": "Detection Law",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -829,6 +911,7 @@
         {
             "id": "SPELLLIST_DETECTION_MASTERY",
             "name": "Detection Mastery",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -839,6 +922,7 @@
         {
             "id": "SPELLLIST_DISEASE",
             "name": "Disease",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -847,8 +931,9 @@
             ]
         },
         {
-            "id": "SPELLLIST_DISGUISES",
-            "name": "Disguises",
+            "id": "SPELLLIST_DISGUISE_MASTERY",
+            "name": "Disguise Mastery",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -859,6 +944,7 @@
         {
             "id": "SPELLLIST_DISPELLING_WAYS",
             "name": "Dispelling Ways",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -869,6 +955,7 @@
         {
             "id": "SPELLLIST_DIVINE_AURA",
             "name": "Divine Aura",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -879,6 +966,7 @@
         {
             "id": "SPELLLIST_DIVINE_MAGIC",
             "name": "Divine Magic",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -889,6 +977,7 @@
         {
             "id": "SPELLLIST_DOOM_S_LAW",
             "name": "Doom's Law",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -900,6 +989,7 @@
         {
             "id": "SPELLLIST_DREAM_LAW",
             "name": "Dream Law",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -910,6 +1000,7 @@
         {
             "id": "SPELLLIST_DREAM_LORE",
             "name": "Dream Lore",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -920,6 +1011,7 @@
         {
             "id": "SPELLLIST_DREAM_TRAVEL",
             "name": "Dream Travel",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -930,6 +1022,7 @@
         {
             "id": "SPELLLIST_EARTH_LAW",
             "name": "Earth Law",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -940,6 +1033,7 @@
         {
             "id": "SPELLLIST_EARTH_MASTERY",
             "name": "Earth Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -950,6 +1044,7 @@
         {
             "id": "SPELLLIST_ELEMENTAL_SHIELDS",
             "name": "Elemental Shields",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -960,6 +1055,7 @@
         {
             "id": "SPELLLIST_ELEMENTAL_SUMMONS",
             "name": "Elemental Summons",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "true",
@@ -970,6 +1066,7 @@
         {
             "id": "SPELLLIST_ENTERTAINING_WAYS",
             "name": "Entertaining Ways",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -980,6 +1077,7 @@
         {
             "id": "SPELLLIST_ENTITY_SUMMONS",
             "name": "Entity Summons",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "true",
             "summoning": "true",
@@ -990,6 +1088,7 @@
         {
             "id": "SPELLLIST_ESCAPES",
             "name": "Escapes",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1000,6 +1099,7 @@
         {
             "id": "SPELLLIST_ESSENCE_HAND",
             "name": "Essence Hand",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -1008,8 +1108,9 @@
             ]
         },
         {
-            "id": "SPELLLIST_ESSENCE_PERCEPTIONS",
-            "name": "Essence Perceptions",
+            "id": "SPELLLIST_ESSENCE_S_PERCEPTIONS",
+            "name": "Essence's Perceptions",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -1020,6 +1121,7 @@
         {
             "id": "SPELLLIST_EVASIONS",
             "name": "Evasions",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1028,8 +1130,9 @@
             ]
         },
         {
-            "id": "SPELLLIST_EXORCISM",
-            "name": "Exorcism",
+            "id": "SPELLLIST_EXORCISMS",
+            "name": "Exorcisms",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1040,6 +1143,7 @@
         {
             "id": "SPELLLIST_EXTERNAL_CONCENTRATION",
             "name": "External Concentration",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1050,6 +1154,7 @@
         {
             "id": "SPELLLIST_FAITH_BREAKER",
             "name": "Faith Breaker",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1060,6 +1165,7 @@
         {
             "id": "SPELLLIST_FAITH_DESTRUCTION",
             "name": "Faith Destruction",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1071,6 +1177,7 @@
         {
             "id": "SPELLLIST_FAITH_S_SHIELD",
             "name": "Faith's Shield",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1081,6 +1188,7 @@
         {
             "id": "SPELLLIST_FAMILIAR_MASTERY",
             "name": "Familiar Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1091,6 +1199,7 @@
         {
             "id": "SPELLLIST_FAR_VISIONS",
             "name": "Far Visions",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1101,6 +1210,7 @@
         {
             "id": "SPELLLIST_FAR_VOICE",
             "name": "Far Voice",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1112,6 +1222,7 @@
         {
             "id": "SPELLLIST_FEEL_TASTE_SMELL",
             "name": "Feel - Taste - Smell",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1122,6 +1233,7 @@
         {
             "id": "SPELLLIST_FEY_CONJURY",
             "name": "Fey Conjury",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "true",
@@ -1132,6 +1244,7 @@
         {
             "id": "SPELLLIST_FIRE_LAW",
             "name": "Fire Law",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1142,6 +1255,7 @@
         {
             "id": "SPELLLIST_FIRE_MANIPULATION",
             "name": "Fire Manipulation",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1152,6 +1266,7 @@
         {
             "id": "SPELLLIST_FIRE_MASTERY",
             "name": "Fire Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1162,6 +1277,7 @@
         {
             "id": "SPELLLIST_FLESH_DESTRUCTION",
             "name": "Flesh Destruction",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1173,6 +1289,7 @@
         {
             "id": "SPELLLIST_FLUID_DESTRUCTION",
             "name": "Fluid Destruction",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1184,6 +1301,7 @@
         {
             "id": "SPELLLIST_FORTRESS_LAW",
             "name": "Fortress Law",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1194,6 +1312,7 @@
         {
             "id": "SPELLLIST_FUTURE_VISIONS",
             "name": "Future Visions",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1204,16 +1323,18 @@
         {
             "id": "SPELLLIST_GARGOYLE_MASTERY",
             "name": "Gargoyle Mastery",
-            "type": "Closed",
+            "book": "BOOK_CASTLES_RUINS",
+            "type": "Training Package",
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Arcane"
+                "Neutral"
             ]
         },
         {
             "id": "SPELLLIST_GAS_ALTERATION",
             "name": "Gas Alteration",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1225,6 +1346,7 @@
         {
             "id": "SPELLLIST_GAS_DESTRUCTION",
             "name": "Gas Destruction",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1236,6 +1358,7 @@
         {
             "id": "SPELLLIST_GAS_MANIPULATION",
             "name": "Gas Manipulation",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1246,6 +1369,7 @@
         {
             "id": "SPELLLIST_GATE_MASTERY",
             "name": "Gate Mastery",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Closed",
             "evil": "false",
             "summoning": "true",
@@ -1256,6 +1380,7 @@
         {
             "id": "SPELLLIST_GATHERING_SECRETS",
             "name": "Gathering Secrets",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1266,6 +1391,7 @@
         {
             "id": "SPELLLIST_GENERAL_ENHANCEMENTS",
             "name": "General Enhancements",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1276,6 +1402,7 @@
         {
             "id": "SPELLLIST_GLASS_CERAMIC_CRAFTING",
             "name": "Glass\/Ceramic Crafting",
+            "book": "BOOK_CASTLES_RUINS",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -1286,6 +1413,7 @@
         {
             "id": "SPELLLIST_GLYPHS",
             "name": "Glyphs",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1296,6 +1424,7 @@
         {
             "id": "SPELLLIST_GUILDCRAFT_MASTERY",
             "name": "Guildcraft Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -1306,6 +1435,7 @@
         {
             "id": "SPELLLIST_GUISES",
             "name": "Guises",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1316,6 +1446,7 @@
         {
             "id": "SPELLLIST_HAND_OF_CHAOS",
             "name": "Hand of Chaos",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1326,6 +1457,7 @@
         {
             "id": "SPELLLIST_HEARTH_MAGIC",
             "name": "Hearth Magic",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -1336,6 +1468,7 @@
         {
             "id": "SPELLLIST_HERBALIST_CASTING",
             "name": "Herbalist Casting",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -1346,6 +1479,7 @@
         {
             "id": "SPELLLIST_HERB_MASTERY",
             "name": "Herb Mastery",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1356,6 +1490,7 @@
         {
             "id": "SPELLLIST_HIDING",
             "name": "Hiding",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1367,6 +1502,7 @@
         {
             "id": "SPELLLIST_HOLY_ARMORING",
             "name": "Holy Armoring",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1377,6 +1513,7 @@
         {
             "id": "SPELLLIST_HOLY_ARMS",
             "name": "Holy Arms",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1387,6 +1524,7 @@
         {
             "id": "SPELLLIST_HOLY_DEFENSES",
             "name": "Holy Defenses",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1397,6 +1535,7 @@
         {
             "id": "SPELLLIST_HOLY_DISCIPLE",
             "name": "Holy Disciple",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1407,6 +1546,7 @@
         {
             "id": "SPELLLIST_HOLY_ELEMENT",
             "name": "Holy Element",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1417,6 +1557,7 @@
         {
             "id": "SPELLLIST_HOLY_HEALING",
             "name": "Holy Healing",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1427,6 +1568,7 @@
         {
             "id": "SPELLLIST_HOLY_MISSION",
             "name": "Holy Mission",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1437,6 +1579,7 @@
         {
             "id": "SPELLLIST_HOLY_OFFICE",
             "name": "Holy Office",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1447,6 +1590,7 @@
         {
             "id": "SPELLLIST_HOLY_SHIELDS",
             "name": "Holy Shields",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1457,6 +1601,7 @@
         {
             "id": "SPELLLIST_HOLY_SYMBOL",
             "name": "Holy Symbol",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1467,6 +1612,7 @@
         {
             "id": "SPELLLIST_HOLY_TRANCES",
             "name": "Holy Trances",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1477,6 +1623,7 @@
         {
             "id": "SPELLLIST_HOLY_VISION",
             "name": "Holy Vision",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1488,6 +1635,7 @@
         {
             "id": "SPELLLIST_HOLY_WARDS",
             "name": "Holy Wards",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1498,6 +1646,7 @@
         {
             "id": "SPELLLIST_HOLY_WEAPON",
             "name": "Holy Weapon",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1508,6 +1657,7 @@
         {
             "id": "SPELLLIST_HOLY_WEAPONS",
             "name": "Holy Weapons",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1518,6 +1668,7 @@
         {
             "id": "SPELLLIST_HOLY_WIND",
             "name": "Holy Wind",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1528,6 +1679,7 @@
         {
             "id": "SPELLLIST_HOLY_WORKS",
             "name": "Holy Works",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1538,6 +1690,7 @@
         {
             "id": "SPELLLIST_HOLY_WRATH",
             "name": "Holy Wrath",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1548,6 +1701,7 @@
         {
             "id": "SPELLLIST_HORSE_MASTERY",
             "name": "Horse Mastery",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1558,6 +1712,7 @@
         {
             "id": "SPELLLIST_HOURI_S_BEGUILEMENT",
             "name": "Houri's Beguilement",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -1568,6 +1723,7 @@
         {
             "id": "SPELLLIST_HOURI_S_KISSES",
             "name": "Houri's Kisses",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -1578,6 +1734,7 @@
         {
             "id": "SPELLLIST_HUNTER_S_CALL",
             "name": "Hunter's Call",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1588,6 +1745,7 @@
         {
             "id": "SPELLLIST_HUNTING_MASTERY",
             "name": "Hunting Mastery",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1598,6 +1756,7 @@
         {
             "id": "SPELLLIST_ICE_LAW",
             "name": "Ice Law",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1608,6 +1767,7 @@
         {
             "id": "SPELLLIST_ILLUSIONS",
             "name": "Illusions",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -1618,6 +1778,7 @@
         {
             "id": "SPELLLIST_ILLUSION_MASTERY",
             "name": "Illusion Mastery",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1628,6 +1789,7 @@
         {
             "id": "SPELLLIST_INFLUENCES",
             "name": "Influences",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1638,6 +1800,7 @@
         {
             "id": "SPELLLIST_INNER_EYE",
             "name": "Inner Eye",
+            "book": "BOOK_MARTIAL_ARTS_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1648,6 +1811,7 @@
         {
             "id": "SPELLLIST_INNER_WALLS",
             "name": "Inner Walls",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1658,6 +1822,7 @@
         {
             "id": "SPELLLIST_INORGANIC_SKILLS",
             "name": "Inorganic Skills",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1668,6 +1833,7 @@
         {
             "id": "SPELLLIST_INSCRIPTIONS",
             "name": "Inscriptions",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1679,6 +1845,7 @@
         {
             "id": "SPELLLIST_INSECT_MASTERY",
             "name": "Insect Mastery",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1689,6 +1856,7 @@
         {
             "id": "SPELLLIST_INSPIRING_WAYS",
             "name": "Inspiring Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1699,6 +1867,7 @@
         {
             "id": "SPELLLIST_INVISIBLE_WAYS",
             "name": "Invisible Ways",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1709,6 +1878,7 @@
         {
             "id": "SPELLLIST_ITEM_ANALYSIS",
             "name": "Item Analysis",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1719,6 +1889,7 @@
         {
             "id": "SPELLLIST_ITEM_ENHANCEMENT",
             "name": "Item Enhancement",
+            "book": "BOOK_CASTLES_RUINS",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -1729,6 +1900,7 @@
         {
             "id": "SPELLLIST_ITEM_LORE",
             "name": "Item Lore",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1739,6 +1911,7 @@
         {
             "id": "SPELLLIST_KNOWLEDGE_MASTERY",
             "name": "Knowledge Mastery",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -1749,6 +1922,7 @@
         {
             "id": "SPELLLIST_LAND_FORMS",
             "name": "Land Forms",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1759,6 +1933,7 @@
         {
             "id": "SPELLLIST_LESSER_ILLUSIONS",
             "name": "Lesser Illusions",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -1769,6 +1944,7 @@
         {
             "id": "SPELLLIST_LIFE_MASTERY",
             "name": "Life Mastery",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1779,6 +1955,7 @@
         {
             "id": "SPELLLIST_LIGHT_LAW",
             "name": "Light Law",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1789,6 +1966,7 @@
         {
             "id": "SPELLLIST_LIGHT_MANIPULATION",
             "name": "Light Manipulation",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1799,6 +1977,7 @@
         {
             "id": "SPELLLIST_LIGHT_MASTERY",
             "name": "Light Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1809,6 +1988,7 @@
         {
             "id": "SPELLLIST_LIGHT_MOLDING",
             "name": "Light Molding",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1819,6 +1999,7 @@
         {
             "id": "SPELLLIST_LIGHT_S_WAY",
             "name": "Light's Way",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -1829,6 +2010,7 @@
         {
             "id": "SPELLLIST_LIQUID_ALTERATION",
             "name": "Liquid Alteration",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1840,6 +2022,7 @@
         {
             "id": "SPELLLIST_LIQUID_GAS_SKILLS",
             "name": "Liquid \/ Gas Skills",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1850,6 +2033,7 @@
         {
             "id": "SPELLLIST_LIQUID_MANIPULATION",
             "name": "Liquid Manipulation",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1860,6 +2044,7 @@
         {
             "id": "SPELLLIST_LIVING_CHANGE",
             "name": "Living Change",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1870,6 +2055,7 @@
         {
             "id": "SPELLLIST_LOCATING_WAYS",
             "name": "Locating Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1880,6 +2066,7 @@
         {
             "id": "SPELLLIST_LOFTY_BRIDGE",
             "name": "Lofty Bridge",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1888,8 +2075,9 @@
             ]
         },
         {
-            "id": "SPELLLIST_LOFTY_MOVEMENT",
-            "name": "Lofty Movement",
+            "id": "SPELLLIST_LOFTY_MOVEMENTS",
+            "name": "Lofty Movements",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -1900,6 +2088,7 @@
         {
             "id": "SPELLLIST_LOOK_OF_TERROR",
             "name": "Look of Terror",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1911,6 +2100,7 @@
         {
             "id": "SPELLLIST_LORE",
             "name": "Lore",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1921,6 +2111,7 @@
         {
             "id": "SPELLLIST_LORES",
             "name": "Lores",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1931,6 +2122,7 @@
         {
             "id": "SPELLLIST_MAGICAL_ROPES",
             "name": "Magical Ropes",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -1941,6 +2133,7 @@
         {
             "id": "SPELLLIST_MAGIC_STAFF",
             "name": "Magic Staff",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -1951,6 +2144,7 @@
         {
             "id": "SPELLLIST_MANA_BARRIERS",
             "name": "Mana Barriers",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1961,6 +2155,7 @@
         {
             "id": "SPELLLIST_MANA_ITEMS",
             "name": "Mana Items",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1971,6 +2166,7 @@
         {
             "id": "SPELLLIST_MANA_LAW",
             "name": "Mana Law",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1981,6 +2177,7 @@
         {
             "id": "SPELLLIST_MANA_MOLDING",
             "name": "Mana Molding",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -1991,6 +2188,7 @@
         {
             "id": "SPELLLIST_MANA_SERVANTS",
             "name": "Mana Servants",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2001,6 +2199,7 @@
         {
             "id": "SPELLLIST_MANA_WARRIORS",
             "name": "Mana Warriors",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2011,6 +2210,7 @@
         {
             "id": "SPELLLIST_MARTIAL_LAW",
             "name": "Martial Law",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2021,6 +2221,7 @@
         {
             "id": "SPELLLIST_MATTER_DISRUPTION",
             "name": "Matter Disruption",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -2031,6 +2232,7 @@
         {
             "id": "SPELLLIST_MATTER_SHAPING",
             "name": "Matter Shaping",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2041,6 +2243,7 @@
         {
             "id": "SPELLLIST_MECHANISMS",
             "name": "Mechanisms",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2051,6 +2254,7 @@
         {
             "id": "SPELLLIST_MECHANISM_S_WAY",
             "name": "Mechanism's Way",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2061,6 +2265,7 @@
         {
             "id": "SPELLLIST_MEDICAL_LAW",
             "name": "Medical Law",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2071,6 +2276,7 @@
         {
             "id": "SPELLLIST_MEDITATIVE_HEALING",
             "name": "Meditative Healing",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2081,6 +2287,7 @@
         {
             "id": "SPELLLIST_MENDING_WAYS",
             "name": "Mending Ways",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2091,6 +2298,7 @@
         {
             "id": "SPELLLIST_METAL_CRAFTING",
             "name": "Metal Crafting",
+            "book": "BOOK_CASTLES_RUINS",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2101,6 +2309,7 @@
         {
             "id": "SPELLLIST_MIND_ATTACK",
             "name": "Mind Attack",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2111,6 +2320,7 @@
         {
             "id": "SPELLLIST_MIND_BREAKER",
             "name": "Mind Breaker",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2121,6 +2331,7 @@
         {
             "id": "SPELLLIST_MIND_CONTROL",
             "name": "Mind Control",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2131,6 +2342,7 @@
         {
             "id": "SPELLLIST_MIND_DEATH",
             "name": "Mind Death",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -2141,6 +2353,7 @@
         {
             "id": "SPELLLIST_MIND_DESTRUCTION",
             "name": "Mind Destruction",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2152,6 +2365,7 @@
         {
             "id": "SPELLLIST_MIND_DISEASE",
             "name": "Mind Disease",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -2162,6 +2376,7 @@
         {
             "id": "SPELLLIST_MIND_DOMINATION",
             "name": "Mind Domination",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -2172,6 +2387,7 @@
         {
             "id": "SPELLLIST_MIND_EROSION",
             "name": "Mind Erosion",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -2182,6 +2398,7 @@
         {
             "id": "SPELLLIST_MIND_ILLUSIONS",
             "name": "Mind Illusions",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -2192,6 +2409,7 @@
         {
             "id": "SPELLLIST_MIND_MASTERY",
             "name": "Mind Mastery",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2202,6 +2420,7 @@
         {
             "id": "SPELLLIST_MIND_MERGE",
             "name": "Mind Merge",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2212,6 +2431,7 @@
         {
             "id": "SPELLLIST_MIND_OVER_MATTER",
             "name": "Mind Over Matter",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2222,6 +2442,7 @@
         {
             "id": "SPELLLIST_MIND_SENSE_MOLDING",
             "name": "Mind Sense Molding",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2232,6 +2453,7 @@
         {
             "id": "SPELLLIST_MIND_SHIFTING",
             "name": "Mind Shifting",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2242,6 +2464,7 @@
         {
             "id": "SPELLLIST_MIND_SPEECH",
             "name": "Mind Speech",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2252,6 +2475,7 @@
         {
             "id": "SPELLLIST_MIND_SUBVERSION",
             "name": "Mind Subversion",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -2262,6 +2486,7 @@
         {
             "id": "SPELLLIST_MIND_S_DOOR",
             "name": "Mind's Door",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2272,6 +2497,7 @@
         {
             "id": "SPELLLIST_MIND_S_SHADOW",
             "name": "Mind's Shadow",
+            "book": "BOOK_MARTIAL_ARTS_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2282,6 +2508,7 @@
         {
             "id": "SPELLLIST_MIND_VISIONS",
             "name": "Mind Visions",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2292,6 +2519,7 @@
         {
             "id": "SPELLLIST_MIRROR_MAGIC",
             "name": "Mirror Magic",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2302,6 +2530,7 @@
         {
             "id": "SPELLLIST_MISDIRECTIONS",
             "name": "Misdirections",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2312,6 +2541,7 @@
         {
             "id": "SPELLLIST_MONK_S_BRIDGE",
             "name": "Monk's Bridge",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2322,6 +2552,7 @@
         {
             "id": "SPELLLIST_MONK_S_SENSE",
             "name": "Monk's Sense",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2332,6 +2563,7 @@
         {
             "id": "SPELLLIST_MOVEMENT",
             "name": "Movement",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2342,6 +2574,7 @@
         {
             "id": "SPELLLIST_MOVEMENT_MASTERY",
             "name": "Movement Mastery",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2352,6 +2585,7 @@
         {
             "id": "SPELLLIST_MOVING_WAYS",
             "name": "Moving Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2362,6 +2596,7 @@
         {
             "id": "SPELLLIST_MUSCLE_LAW",
             "name": "Muscle Law",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2372,6 +2607,7 @@
         {
             "id": "SPELLLIST_MUSCLE_MASTERY",
             "name": "Muscle Mastery",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2382,6 +2618,7 @@
         {
             "id": "SPELLLIST_MUSCLE_WAYS",
             "name": "Muscle Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2393,6 +2630,7 @@
         {
             "id": "SPELLLIST_MYSTICAL_CHANGE",
             "name": "Mystical Change",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2404,6 +2642,7 @@
         {
             "id": "SPELLLIST_NATURE_DOMINATION",
             "name": "Nature Domination",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2414,6 +2653,7 @@
         {
             "id": "SPELLLIST_NATURE_MANIPULATION",
             "name": "Nature Manipulation",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2424,6 +2664,7 @@
         {
             "id": "SPELLLIST_NATURE_S_FORMS",
             "name": "Nature's Forms",
+            "book": "BOOK_MARTIAL_ARTS_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2434,6 +2675,7 @@
         {
             "id": "SPELLLIST_NATURE_S_GUISES",
             "name": "Nature's Guises",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2444,6 +2686,7 @@
         {
             "id": "SPELLLIST_NATURE_S_HARMONY",
             "name": "Nature's Harmony",
+            "book": "BOOK_MARTIAL_ARTS_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2454,6 +2697,7 @@
         {
             "id": "SPELLLIST_NATURE_S_LAW",
             "name": "Nature's Law",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -2464,6 +2708,7 @@
         {
             "id": "SPELLLIST_NATURE_S_LORE",
             "name": "Nature's Lore",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2474,6 +2719,7 @@
         {
             "id": "SPELLLIST_NATURE_S_MOVEMENT_SENSES",
             "name": "Nature's Movement \/ Senses",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2484,6 +2730,7 @@
         {
             "id": "SPELLLIST_NATURE_S_PROTECTION",
             "name": "Nature's Protection",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2494,6 +2741,7 @@
         {
             "id": "SPELLLIST_NATURE_S_SUMMONS",
             "name": "Nature's Summons",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2504,6 +2752,7 @@
         {
             "id": "SPELLLIST_NATURE_S_WAY",
             "name": "Nature's Way",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2514,6 +2763,7 @@
         {
             "id": "SPELLLIST_NECROMANCY",
             "name": "Necromancy",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -2524,6 +2774,7 @@
         {
             "id": "SPELLLIST_NERVE_AND_ORGAN_MASTERY",
             "name": "Nerve and Organ Mastery",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2534,6 +2785,7 @@
         {
             "id": "SPELLLIST_NERVE_LAW",
             "name": "Nerve Law",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2544,6 +2796,7 @@
         {
             "id": "SPELLLIST_NOMENCLATURE_MASTERY",
             "name": "Nomenclature Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2555,6 +2808,7 @@
         {
             "id": "SPELLLIST_NOMENIST_CASTING",
             "name": "Nomenist Casting",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2565,6 +2819,7 @@
         {
             "id": "SPELLLIST_OCEAN_LAW",
             "name": "Ocean Law",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2575,6 +2830,7 @@
         {
             "id": "SPELLLIST_ORGANIC_SKILLS",
             "name": "Organic Skills",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2585,6 +2841,7 @@
         {
             "id": "SPELLLIST_ORGAN_LAW",
             "name": "Organ Law",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2595,6 +2852,7 @@
         {
             "id": "SPELLLIST_ORGAN_WAYS",
             "name": "Organ Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2606,6 +2864,7 @@
         {
             "id": "SPELLLIST_OTHER_REALM_IMBEDDING",
             "name": "Other Realm Imbedding",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2616,6 +2875,7 @@
         {
             "id": "SPELLLIST_OWN_REALM_IMBEDDING",
             "name": "Own Realm Imbedding",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2626,6 +2886,7 @@
         {
             "id": "SPELLLIST_PAST_VISIONS",
             "name": "Past Visions",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2636,6 +2897,7 @@
         {
             "id": "SPELLLIST_PATH_MASTERY",
             "name": "Path Mastery",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2646,6 +2908,7 @@
         {
             "id": "SPELLLIST_PERIMETER_WARDINGS",
             "name": "Perimeter Wardings",
+            "book": "BOOK_CASTLES_RUINS",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2656,6 +2919,7 @@
         {
             "id": "SPELLLIST_PHYSICAL_ENHANCEMENT",
             "name": "Physical Enhancement",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -2666,6 +2930,7 @@
         {
             "id": "SPELLLIST_PHYSICAL_EROSION",
             "name": "Physical Erosion",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -2674,8 +2939,9 @@
             ]
         },
         {
-            "id": "SPELLLIST_PHYSICAL_MANIPULATION",
-            "name": "Physical Manipulation",
+            "id": "SPELLLIST_PHYSICAL_MANIPULATIONS",
+            "name": "Physical Manipulations",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2687,6 +2953,7 @@
         {
             "id": "SPELLLIST_PHYSICKS",
             "name": "Physicks",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2697,6 +2964,7 @@
         {
             "id": "SPELLLIST_PLANAR_SUMMONS",
             "name": "Planar Summons",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "true",
@@ -2708,6 +2976,7 @@
         {
             "id": "SPELLLIST_PLANT_MASTERY",
             "name": "Plant Mastery",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2718,6 +2987,7 @@
         {
             "id": "SPELLLIST_POISON_MASTERY",
             "name": "Poison Mastery",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2728,6 +2998,7 @@
         {
             "id": "SPELLLIST_POWER_FOCUS",
             "name": "Power Focus",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2738,6 +3009,7 @@
         {
             "id": "SPELLLIST_POWER_LEECH",
             "name": "Power Leech",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2748,6 +3020,7 @@
         {
             "id": "SPELLLIST_POWER_LORE",
             "name": "Power Lore",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2758,6 +3031,7 @@
         {
             "id": "SPELLLIST_POWER_MANIPULATION",
             "name": "Power Manipulation",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -2768,6 +3042,7 @@
         {
             "id": "SPELLLIST_POWER_MASTERY",
             "name": "Power Mastery",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2778,6 +3053,7 @@
         {
             "id": "SPELLLIST_POWER_SUBVERSION",
             "name": "Power Subversion",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2788,6 +3064,7 @@
         {
             "id": "SPELLLIST_POWER_S_MASTER",
             "name": "Power's Master",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2798,6 +3075,7 @@
         {
             "id": "SPELLLIST_PREDICTIONS",
             "name": "Predictions",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2808,6 +3086,7 @@
         {
             "id": "SPELLLIST_PRESENCE",
             "name": "Presence",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2818,6 +3097,7 @@
         {
             "id": "SPELLLIST_PROSELYTIZING",
             "name": "Proselytizing",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2828,6 +3108,7 @@
         {
             "id": "SPELLLIST_PROSTHETICS",
             "name": "Prosthetics",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2838,6 +3119,7 @@
         {
             "id": "SPELLLIST_PROTECTIONS",
             "name": "Protections",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2848,6 +3130,7 @@
         {
             "id": "SPELLLIST_PURIFICATIONS",
             "name": "Purifications",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -2858,6 +3141,7 @@
         {
             "id": "SPELLLIST_RAPID_WAYS",
             "name": "Rapid Ways",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -2868,6 +3152,7 @@
         {
             "id": "SPELLLIST_REALM_LAW",
             "name": "Realm Law",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -2878,6 +3163,7 @@
         {
             "id": "SPELLLIST_REPULSIONS",
             "name": "Repulsions",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2888,6 +3174,7 @@
         {
             "id": "SPELLLIST_REVENGING_LAW",
             "name": "Revenging Law",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2899,6 +3186,7 @@
         {
             "id": "SPELLLIST_RUNE_MASTERY",
             "name": "Rune Mastery",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -2909,16 +3197,18 @@
         {
             "id": "SPELLLIST_SACRED_GROUNDS",
             "name": "Sacred Grounds",
-            "type": "Closed",
+            "book": "BOOK_CASTLES_RUINS",
+            "type": "Training Package",
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Channeling"
+                "Neutral"
             ]
         },
         {
             "id": "SPELLLIST_SAILING_MASTERY",
             "name": "Sailing Mastery",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2929,6 +3219,7 @@
         {
             "id": "SPELLLIST_SEA_MASTERY",
             "name": "Sea Mastery",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -2939,6 +3230,7 @@
         {
             "id": "SPELLLIST_SEEMING_DEFENSES",
             "name": "Seeming Defenses",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2950,6 +3242,7 @@
         {
             "id": "SPELLLIST_SEEMING_ENCHANTMENT",
             "name": "Seeming Enchantment",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2961,6 +3254,7 @@
         {
             "id": "SPELLLIST_SEEMING_LAW",
             "name": "Seeming Law",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2972,6 +3266,7 @@
         {
             "id": "SPELLLIST_SEEMING_MASTERY",
             "name": "Seeming Mastery",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2983,6 +3278,7 @@
         {
             "id": "SPELLLIST_SEEMING_MEMORIES",
             "name": "Seeming Memories",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -2994,6 +3290,7 @@
         {
             "id": "SPELLLIST_SEEMING_PROJECTION",
             "name": "Seeming Projection",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3005,6 +3302,7 @@
         {
             "id": "SPELLLIST_SELF_HEALING",
             "name": "Self Healing",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3015,6 +3313,7 @@
         {
             "id": "SPELLLIST_SENSES",
             "name": "Senses",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3025,6 +3324,7 @@
         {
             "id": "SPELLLIST_SENSE_CONTROL",
             "name": "Sense Control",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3035,17 +3335,8 @@
         {
             "id": "SPELLLIST_SENSE_MASTERY",
             "name": "Sense Mastery",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Closed",
-            "evil": "false",
-            "summoning": "false",
-            "realms": [
-                "Mentalism"
-            ]
-        },
-        {
-            "id": "SPELLLIST_SENSE_THROUGH_OTHERS",
-            "name": "Sense Through Others",
-            "type": "Base",
             "evil": "false",
             "summoning": "false",
             "realms": [
@@ -3055,6 +3346,7 @@
         {
             "id": "SPELLLIST_SERPENT_LAW",
             "name": "Serpent Law",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3065,6 +3357,7 @@
         {
             "id": "SPELLLIST_SHADOW_MASTERY",
             "name": "Shadow Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3075,6 +3368,7 @@
         {
             "id": "SPELLLIST_SHIELD_MASTERY",
             "name": "Shield Mastery",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3085,6 +3379,7 @@
         {
             "id": "SPELLLIST_SHIFTING",
             "name": "Shifting",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3095,6 +3390,7 @@
         {
             "id": "SPELLLIST_SHIFTING_LAW",
             "name": "Shifting Law",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3105,6 +3401,7 @@
         {
             "id": "SPELLLIST_SOLID_ALTERATION",
             "name": "Solid Alteration",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3116,6 +3413,7 @@
         {
             "id": "SPELLLIST_SOLID_DESTRUCTION",
             "name": "Solid Destruction",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3127,6 +3425,7 @@
         {
             "id": "SPELLLIST_SOLID_MANIPULATION",
             "name": "Solid Manipulation",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3137,6 +3436,7 @@
         {
             "id": "SPELLLIST_SOUL_DESTRUCTION",
             "name": "Soul Destruction",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3148,6 +3448,7 @@
         {
             "id": "SPELLLIST_SOUND_CONTROL",
             "name": "Sound Control",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3158,6 +3459,7 @@
         {
             "id": "SPELLLIST_SOUND_MASTERY",
             "name": "Sound Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3168,6 +3470,7 @@
         {
             "id": "SPELLLIST_SOUND_MOLDING",
             "name": "Sound Molding",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3178,6 +3481,7 @@
         {
             "id": "SPELLLIST_SOUND_PROJECTION",
             "name": "Sound Projection",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3188,6 +3492,7 @@
         {
             "id": "SPELLLIST_SOUND_S_WAY",
             "name": "Sound's Way",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3198,6 +3503,7 @@
         {
             "id": "SPELLLIST_SPEED",
             "name": "Speed",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3208,6 +3514,7 @@
         {
             "id": "SPELLLIST_SPELL_BANE",
             "name": "Spell Bane",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3218,6 +3525,7 @@
         {
             "id": "SPELLLIST_SPELL_COORDINATION",
             "name": "Spell Coordination",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3228,6 +3536,7 @@
         {
             "id": "SPELLLIST_SPELL_DEFENSE",
             "name": "Spell Defense",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3238,6 +3547,7 @@
         {
             "id": "SPELLLIST_SPELL_DEFENSES",
             "name": "Spell Defenses",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3248,6 +3558,7 @@
         {
             "id": "SPELLLIST_SPELL_ENHANCEMENT",
             "name": "Spell Enhancement",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3258,6 +3569,7 @@
         {
             "id": "SPELLLIST_SPELL_HAND",
             "name": "Spell Hand",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3268,6 +3580,7 @@
         {
             "id": "SPELLLIST_SPELL_INHIBITORS",
             "name": "Spell Inhibitors",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3278,6 +3591,7 @@
         {
             "id": "SPELLLIST_SPELL_PROTECTION",
             "name": "Spell Protection",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3288,6 +3602,7 @@
         {
             "id": "SPELLLIST_SPELL_REINS",
             "name": "Spell Reins",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3298,6 +3613,7 @@
         {
             "id": "SPELLLIST_SPELL_RESISTANCE",
             "name": "Spell Resistance",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3308,6 +3624,7 @@
         {
             "id": "SPELLLIST_SPELL_SHAPING",
             "name": "Spell Shaping",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3318,6 +3635,7 @@
         {
             "id": "SPELLLIST_SPELL_SHIELD",
             "name": "Spell Shield",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3328,6 +3646,7 @@
         {
             "id": "SPELLLIST_SPELL_TRACKER",
             "name": "Spell Tracker",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3338,6 +3657,7 @@
         {
             "id": "SPELLLIST_SPELL_TRIGGERS",
             "name": "Spell Triggers",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3348,6 +3668,7 @@
         {
             "id": "SPELLLIST_SPELL_WALL",
             "name": "Spell Wall",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3358,6 +3679,7 @@
         {
             "id": "SPELLLIST_SPIRITUAL_VISION",
             "name": "Spiritual Vision",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3368,6 +3690,7 @@
         {
             "id": "SPELLLIST_SPIRIT_DOMINATION",
             "name": "Spirit Domination",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3378,6 +3701,7 @@
         {
             "id": "SPELLLIST_SPIRIT_LAW",
             "name": "Spirit Law",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3388,6 +3712,7 @@
         {
             "id": "SPELLLIST_SPIRIT_MASTERY",
             "name": "Spirit Mastery",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3398,6 +3723,7 @@
         {
             "id": "SPELLLIST_STARLIGHTS",
             "name": "Starlights",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3409,6 +3735,7 @@
         {
             "id": "SPELLLIST_STARLORE",
             "name": "Starlore",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3420,6 +3747,7 @@
         {
             "id": "SPELLLIST_STARSENSE",
             "name": "Starsense",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3431,6 +3759,7 @@
         {
             "id": "SPELLLIST_STONE_CRAFTING",
             "name": "Stone Crafting",
+            "book": "BOOK_CASTLES_RUINS",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -3441,6 +3770,7 @@
         {
             "id": "SPELLLIST_STONE_MASTERY",
             "name": "Stone Mastery",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3451,6 +3781,7 @@
         {
             "id": "SPELLLIST_STRUCTURE_WARDINGS",
             "name": "Structure Wardings",
+            "book": "BOOK_CASTLES_RUINS",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -3461,6 +3792,7 @@
         {
             "id": "SPELLLIST_SUMMONING_BOND",
             "name": "Summoning Bond",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "true",
@@ -3472,6 +3804,7 @@
         {
             "id": "SPELLLIST_SUMMONING_CIRCLES",
             "name": "Summoning Circles",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "true",
@@ -3483,6 +3816,7 @@
         {
             "id": "SPELLLIST_SUMMONING_MASTERY",
             "name": "Summoning Mastery",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "true",
@@ -3494,6 +3828,7 @@
         {
             "id": "SPELLLIST_SUMMONS",
             "name": "Summons",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "true",
@@ -3504,6 +3839,7 @@
         {
             "id": "SPELLLIST_SURFACE_WAYS",
             "name": "Surface Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3515,6 +3851,7 @@
         {
             "id": "SPELLLIST_SUSTAIN_BODY",
             "name": "Sustain Body",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3525,6 +3862,7 @@
         {
             "id": "SPELLLIST_SYMBOLIC_WAYS",
             "name": "Symbolic Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3535,6 +3873,7 @@
         {
             "id": "SPELLLIST_SYMBOLISM",
             "name": "Symbolism",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3546,6 +3885,7 @@
         {
             "id": "SPELLLIST_TELEKINESIS",
             "name": "Telekinesis",
+            "book": "BOOK_SPELL_LAW_OF_MENTALISM",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3556,6 +3896,7 @@
         {
             "id": "SPELLLIST_TELEPORTALS",
             "name": "Teleportals",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3567,6 +3908,7 @@
         {
             "id": "SPELLLIST_TERROR",
             "name": "Terror",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3577,6 +3919,7 @@
         {
             "id": "SPELLLIST_THE_DEFENDER",
             "name": "The Defender",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3587,6 +3930,7 @@
         {
             "id": "SPELLLIST_THE_EYE",
             "name": "The Eye",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3597,6 +3941,7 @@
         {
             "id": "SPELLLIST_THE_HUNTER",
             "name": "The Hunter",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3607,6 +3952,7 @@
         {
             "id": "SPELLLIST_THE_MASK",
             "name": "The Mask",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3617,6 +3963,7 @@
         {
             "id": "SPELLLIST_THE_WILL",
             "name": "The Will",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3627,6 +3974,7 @@
         {
             "id": "SPELLLIST_THIEVING_LAW",
             "name": "Thieving Law",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3637,6 +3985,7 @@
         {
             "id": "SPELLLIST_TIME_LORE",
             "name": "Time Lore",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3645,19 +3994,9 @@
             ]
         },
         {
-            "id": "SPELLLIST_TIME_S_BRIDGE",
-            "name": "Time's Bridge",
-            "type": "Base",
-            "evil": "false",
-            "summoning": "false",
-            "realms": [
-                "Channeling",
-                "Mentalism"
-            ]
-        },
-        {
             "id": "SPELLLIST_TRANSFORMATIONS",
             "name": "Transformations",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3669,6 +4008,7 @@
         {
             "id": "SPELLLIST_TRAVELER_S_WAYS",
             "name": "Traveler's Ways",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -3679,6 +4019,7 @@
         {
             "id": "SPELLLIST_TREE_MASTERY",
             "name": "Tree Mastery",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3687,28 +4028,9 @@
             ]
         },
         {
-            "id": "SPELLLIST_TRUE_PERCEPTION",
-            "name": "True Perception",
-            "type": "Base",
-            "evil": "false",
-            "summoning": "false",
-            "realms": [
-                "Mentalism"
-            ]
-        },
-        {
-            "id": "SPELLLIST_TRUE_SIGHT",
-            "name": "True Sight",
-            "type": "Base",
-            "evil": "false",
-            "summoning": "false",
-            "realms": [
-                "Mentalism"
-            ]
-        },
-        {
             "id": "SPELLLIST_UNBARRING_WAYS",
             "name": "Unbarring Ways",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3719,6 +4041,7 @@
         {
             "id": "SPELLLIST_UNDERSTANDING_MASTERY",
             "name": "Understanding Mastery",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3729,6 +4052,7 @@
         {
             "id": "SPELLLIST_VENGEANCE",
             "name": "Vengeance",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3739,6 +4063,7 @@
         {
             "id": "SPELLLIST_VISION_BORROWING",
             "name": "Vision Borrowing",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3749,6 +4074,7 @@
         {
             "id": "SPELLLIST_VISION_GUARD",
             "name": "Vision Guard",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3759,6 +4085,7 @@
         {
             "id": "SPELLLIST_VOID_LAW",
             "name": "Void Law",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3769,6 +4096,7 @@
         {
             "id": "SPELLLIST_VOODOO_MAGIC",
             "name": "Voodoo Magic",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3779,6 +4107,7 @@
         {
             "id": "SPELLLIST_WARDING_WAYS",
             "name": "Warding Ways",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3790,6 +4119,7 @@
         {
             "id": "SPELLLIST_WARDS",
             "name": "Wards",
+            "book": "BOOK_ARCANE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3800,6 +4130,7 @@
         {
             "id": "SPELLLIST_WARRIOR_LAW",
             "name": "Warrior Law",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3810,6 +4141,7 @@
         {
             "id": "SPELLLIST_WARRIOR_S_ENHANCEMENTS",
             "name": "Warrior's Enhancements",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3820,6 +4152,7 @@
         {
             "id": "SPELLLIST_WARRIOR_S_WEAPON",
             "name": "Warrior's Weapon",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3830,6 +4163,7 @@
         {
             "id": "SPELLLIST_WATER_LAW",
             "name": "Water Law",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3840,6 +4174,7 @@
         {
             "id": "SPELLLIST_WATER_MASTERY",
             "name": "Water Mastery",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Closed",
             "evil": "false",
             "summoning": "false",
@@ -3850,6 +4185,7 @@
         {
             "id": "SPELLLIST_WAY_OF_THE_VOICE",
             "name": "Way of the Voice",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3861,6 +4197,7 @@
         {
             "id": "SPELLLIST_WEAPON_ENHANCEMENTS",
             "name": "Weapon Enhancements",
+            "book": "BOOK_TREASURE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3871,6 +4208,7 @@
         {
             "id": "SPELLLIST_WEAPON_MASTERY",
             "name": "Weapon Mastery",
+            "book": "BOOK_MENTALISM_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3881,6 +4219,7 @@
         {
             "id": "SPELLLIST_WEATHER_WAYS",
             "name": "Weather Ways",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Open",
             "evil": "false",
             "summoning": "false",
@@ -3891,6 +4230,7 @@
         {
             "id": "SPELLLIST_WILL_OF_THE_WARRIOR",
             "name": "Will of the Warrior",
+            "book": "BOOK_ESSENCE_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3901,6 +4241,7 @@
         {
             "id": "SPELLLIST_WIND_LAW",
             "name": "Wind Law",
+            "book": "BOOK_SPELL_LAW_OF_ESSENCE",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3911,6 +4252,7 @@
         {
             "id": "SPELLLIST_WOOD_CRAFTING",
             "name": "Wood Crafting",
+            "book": "BOOK_CASTLES_RUINS",
             "type": "Training Package",
             "evil": "false",
             "summoning": "false",
@@ -3921,6 +4263,7 @@
         {
             "id": "SPELLLIST_WOUNDING",
             "name": "Wounding",
+            "book": "BOOK_SPELL_LAW_OF_CHANNELING",
             "type": "Base",
             "evil": "true",
             "summoning": "false",
@@ -3931,6 +4274,7 @@
         {
             "id": "SPELLLIST_WYRD_MASTERY",
             "name": "Wyrd Mastery",
+            "book": "BOOK_CHANNELING_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3942,6 +4286,7 @@
         {
             "id": "SPELLLIST_ZEN_AWARENESS",
             "name": "Zen Awareness",
+            "book": "BOOK_MARTIAL_ARTS_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
@@ -3952,6 +4297,7 @@
         {
             "id": "SPELLLIST_ZEN_FOCUS",
             "name": "Zen Focus",
+            "book": "BOOK_MARTIAL_ARTS_COMPANION",
             "type": "Base",
             "evil": "false",
             "summoning": "false",
