@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"class_language_ability.html#aa4ec56195691818615e44b5fb673ea27":[2,0,26,2],
+"class_language_ability.html#abc220d4b62a81c3057b9388dc2194afd":[2,0,26,4],
+"class_language_ability.html#ac97223eea0083108c624c2a74a2c803e":[2,0,26,3],
 "class_language_ability.html#acb78ec658ecec2a167989edf085b8303":[2,0,26,10],
 "class_language_category_data.html":[2,0,27],
 "class_language_category_data.html#a2a53d96d7dc87c130b51adef1bb9364d":[2,0,27,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX1 =
 "class_skill_category_data.html#ab53d50d8705559ff6386fd8471211c6e":[2,0,41,5],
 "class_skill_category_data.html#acff494c7de611d5090f816063b386703":[2,0,41,6],
 "class_skill_category_data.html#ade97a1f08e8e0e6683bdf82fad30b88b":[2,0,41,2],
-"class_skill_category_data.html#ae121918766e68affb742efbf5fbfd4b3":[2,0,41,7],
-"class_skill_category_data.html#ae92350c9d91937939523110732fae66a":[2,0,41,3],
-"class_skill_category_data.html#aebd62a7951f85ada98ea67d7291d5d3b":[2,0,41,4],
-"class_skill_category_data.html#aee354c5df79300626b481c1b0893dcdf":[2,0,41,11]
+"class_skill_category_data.html#ae121918766e68affb742efbf5fbfd4b3":[2,0,41,7]
 };

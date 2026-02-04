@@ -130,10 +130,13 @@ var NAVTREEINDEX0 =
 "class_book_datafile_parser_json.html#a74a803654bf17554d313a3ec9dc458c5":[2,0,10,4],
 "class_book_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,10,3],
 "class_bound_int_row_lookup_table.html":[2,0,11],
-"class_bound_int_row_lookup_table.html#a01c53643e6a7e7e52e3966348f8b453b":[2,0,11,2],
-"class_bound_int_row_lookup_table.html#a1ff418e568ba939337e8ccb56572802e":[2,0,11,3],
+"class_bound_int_row_lookup_table.html#a01c53643e6a7e7e52e3966348f8b453b":[2,0,11,3],
+"class_bound_int_row_lookup_table.html#a1ff418e568ba939337e8ccb56572802e":[2,0,11,4],
+"class_bound_int_row_lookup_table.html#a38f943b92043e59d073ec37b8cf53898":[2,0,11,2],
+"class_bound_int_row_lookup_table.html#a4442745fbda41a14144dd3cbf844a3ad":[2,0,11,5],
 "class_bound_int_row_lookup_table.html#a4b7079e56884cfe4bf75eb5152ca0932":[2,0,11,1],
 "class_bound_int_row_lookup_table.html#a75cb6e6b9902dd3fca2e0d2292b6e025":[2,0,11,0],
+"class_bound_int_row_lookup_table.html#adaa31a0b4c0b8f33b05769906689d064":[2,0,11,6],
 "class_col_not_found_exception.html":[2,0,12],
 "class_col_not_found_exception.html#ae0485c1006d6d7939f4671c15bc21a01":[2,0,12,0],
 "class_creature_size_type_1_1_creature_size_type_not_found_exception.html":[0,0,2,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "class_language_ability.html#a3c4fcf194a162802318378936b97ca0a":[2,0,26,0],
 "class_language_ability.html#a424fa2f7d1a2ad7c245dc2042999289a":[2,0,26,1],
 "class_language_ability.html#a5076de1084aa7292e5c8b04550eacf12":[2,0,26,12],
-"class_language_ability.html#a6673f4548d956c65a28823a78a910d24":[2,0,26,5],
-"class_language_ability.html#aa4ec56195691818615e44b5fb673ea27":[2,0,26,2],
-"class_language_ability.html#abc220d4b62a81c3057b9388dc2194afd":[2,0,26,4],
-"class_language_ability.html#ac97223eea0083108c624c2a74a2c803e":[2,0,26,3]
+"class_language_ability.html#a6673f4548d956c65a28823a78a910d24":[2,0,26,5]
 };

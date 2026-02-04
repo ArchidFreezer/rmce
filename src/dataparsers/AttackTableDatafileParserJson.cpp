@@ -98,10 +98,10 @@ void AttackTableDatafileParserJson::parse() {
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& ptable : tree) {
 		std::string id = ptable.second.get<std::string>("id");
-		int max_rows = ptable.second.get<int>("max_row");
 
-		AttackTable& table = factory().attackTable(id, max_rows);
+		AttackTable& table = factory().get<AttackTable>(id);
 		table.setName(ptable.second.get<std::string>("name"));
+		table.setMaxRow(ptable.second.get<int>("max_row"));
 
 		// Get a factory for the matchers
 		NumberMatcherFactory matchers;

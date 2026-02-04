@@ -37,6 +37,24 @@ public:
 		min_row_{ min_row } {}
 
 	/**
+	 * @brief Constructor defining bounds
+	 * @param id Unique identifier for the table
+	 */
+	BoundIntRowLookupTable(std::string_view id) :
+		BoundIntRowLookupTable(id, INTMAX_MIN, INTMAX_MAX) {}
+
+	/**
+	 * @brief Set the maximum number for which a modified row value is defined
+	 * @param max_row maximum row value
+	 */
+	void setMaxRow(int max_row) { max_row_ = max_row; }
+
+	/**
+	 * @brief Set the minimum number for which a modified row value is defined
+	 * @param min_row minimum row value
+	 */
+	void setMinRow(int min_row) { min_row_ = min_row; }
+	/**
 	 * @brief Gets the value of a cell in the table
 	 * 
 	 * Constrains the value of the \a row_index parameter to be within the bounds set on the table so that it will never be larger

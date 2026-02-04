@@ -87,12 +87,6 @@ public:
 		return (subcategory ? subcategoriedSkillData(skill, subcategory) : subcategoriedSkillData(skill));
 	}
 
-	AttackTable& attackTable(std::string& id, int max_rows) {
-		if (cache_.exists<AttackTable>(id)) return cache_.get<AttackTable>(id);
-		cache_.add<AttackTable>(std::move(std::make_unique<AttackTable>(id, max_rows)), id);
-		return cache_.get<AttackTable>(id);
-	}
-
 	SpecialAttackTable& specialAttackTable(std::string& id, std::map<AttackSizeType::Type, int> limits) {
 		if (cache_.exists<SpecialAttackTable>(id)) return cache_.get<SpecialAttackTable>(id);
 		cache_.add<SpecialAttackTable>(std::move(std::make_unique<SpecialAttackTable>(id, limits)), id);
