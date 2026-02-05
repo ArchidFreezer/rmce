@@ -8,7 +8,10 @@
 #include "StringUtils.h"
 
 /**
- * @brief Contains enumerations to describe the temperature and precipitation in a habitat
+ * @brief The habitats that fauna and flora may be found in the world.
+ * 
+ * These will give an indication of the weather that may found in each habitat, though there will often be seasonal
+ * variations.
  * 
  */
 namespace HabitatType {

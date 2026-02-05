@@ -1,20 +1,23 @@
-﻿#include <iostream>
-#include <filesystem>
-#include <BookDatafileParserJson.h>
-#include <LanguageDatafileParserJson.h>
-#include <LanguageCategoryDatafileParserJson.h>
-#include <SkillProgressionTypeDatafileParserJson.h>
-#include <AttackTableDatafileParserJson.h>
-#include <SpecialAttackTableDatafileParserJson.h>
-#include <SpellListDatafileParserJson.h>
-#include <SkillCategoryDatafileParserJson.h>
+﻿#include <filesystem>
+#include <iostream>
+
+
 #include <ArmourTypeDatafileParserJson.h>
-#include <SkillDatafileParserJson.h>
-#include <WeaponTypeDatafileParserJson.h>
-#include <RaceDatafileParserJson.h>
+#include <AttackTableDatafileParserJson.h>
+#include <BookDatafileParserJson.h>
+#include <ClimateDatafileParserJson.h>
+#include <LanguageCategoryDatafileParserJson.h>
+#include <LanguageDatafileParserJson.h>
 #include <ProfessionDatafileParserXml.h>
 #include <ProfessionDatefileParserJson.h>
+#include <RaceDatafileParserJson.h>
+#include <SkillCategoryDatafileParserJson.h>
+#include <SkillDatafileParserJson.h>
 #include <SkillGroupDatafileParserJson.h>
+#include <SkillProgressionTypeDatafileParserJson.h>
+#include <SpecialAttackTableDatafileParserJson.h>
+#include <SpellListDatafileParserJson.h>
+#include <WeaponTypeDatafileParserJson.h>
 
 int main() {
 	std::cout << "Current path is " << std::filesystem::current_path() << '\n';
@@ -36,6 +39,7 @@ int main() {
 	RaceDatafileParserJson race_parser(cache, "../../../../data/Races.json");
 	SkillGroupDatafileParserJson skill_group_parser(cache, "../../../../data/SkillGroups.json");
 	ProfessionDatafileParserJson profession_parser(cache, "../../../../data/Professions.json");
+	ClimateDatafileParserJson climate_parser(cache, "../../../../data/Climates.json");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
@@ -53,6 +57,7 @@ int main() {
 	parsers.push_back(&race_parser);
 	parsers.push_back(&skill_group_parser);
 	parsers.push_back(&profession_parser);
+	parsers.push_back(&climate_parser);
 
 	try {
 		// Iterate through the parsers retrieving the ID only and populating the cache with empty game data objects
@@ -75,6 +80,7 @@ int main() {
 //		race_parser.save("../../../../data/Races2.json");
 //		skill_group_parser.save("../../../../data/SkillGroups2.json");
 //		profession_parser.save("../../../../data/Professions2.json");
+		climate_parser.save("../../../../data/Climates2.json");
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
 	}

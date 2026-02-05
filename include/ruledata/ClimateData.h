@@ -51,7 +51,7 @@ public:
 	 * @brief Add a precipitation to those that the climate may have
 	 * @param precipitation HabitatType::Precipitation to add
 	 */
-	void addPrecipitation(HabitatType::Precipitation precipitation) { if (!hasPrecipitaton(precipitation)) precipitations_.insert(precipitation); }
+	void addPrecipitation(HabitatType::Precipitation precipitation) { if (!hasPrecipitaton(precipitation)) precipitations_.emplace(precipitation); }
 
 	/**
 	 * @brief Check if a precipitation may be found in the cliamte
@@ -62,6 +62,12 @@ public:
 	bool hasPrecipitaton(HabitatType::Precipitation precipitation) const {
 		return (precipitations_.find(precipitation) != precipitations_.end());
 	}
+
+	/**
+	 * @brief Get the precipitations that may be found in the climate
+	 * @return std::set<HabitatType::Precipitation> precipitations
+	 */
+	const std::set<HabitatType::Precipitation> precipitations() const { return precipitations_; }
 
 	/**
 	 * @brief Checks if a tempretaure and precipitation cobination may be found in the climate
