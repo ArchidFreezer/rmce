@@ -149,16 +149,28 @@ public:
 	const std::string& religiousBeliefs() const { return religion_; }
 
 	/**
-	 * @brief Set the number of skill ranks that the character has to spends on hobbies during their adolescence
+	 * @brief Set the number of skill ranks that the character has to spend on hobbies during their adolescence
 	 * @param hobby_skill_ranks number of skill ranks
 	 */
 	void setHobbySkillRanks(int hobby_skill_ranks) { hobby_skill_ranks_ = hobby_skill_ranks; }
 
 	/**
-	 * @brief Get the number of skill ranks that the character has to spends on hobbies during their adolescence
+	 * @brief Get the number of skill ranks that the character has to spend on hobbies during their adolescence
 	 * @return number of skill ranks
 	 */
 	int hobbySkillRanks() const { return hobby_skill_ranks_; }
+
+	/**
+	 * @brief Set the number of ranks that the character receives on one open spell list of their realm
+	 * @param spell_list_ranks number of spell list ranks
+	 */
+	void setSpellListRanks(int spell_list_ranks) { spell_list_ranks_ = spell_list_ranks; }
+
+	/**
+	 * @brief Get the number of skill ranks that the character receives on one open spell list of their realm
+	 * @return number of spell list ranks
+	 */
+	int spellListRanks() const { return spell_list_ranks_; }
 
 	/**
 	 * @brief Add an armour type to the set of those preferred by the culture
@@ -357,6 +369,7 @@ private:
 	std::string prejudices_{}; /** Any prejudices that are typical to members of the culture */
 	std::string religion_{}; /** Typical religious beliefs practiced by members of the culture */
 	int hobby_skill_ranks_{}; /**< Number of hobby skill ranks available during adolescence */
+	int spell_list_ranks_{}; /**< Number of ranks in an open spell list members of the culture receive */
 	std::set<ArmourType::Type> preferred_armour_{}; /**< Armour type typically preferred by members of the culture */
 	std::set<const WeaponTypeData*> preferred_weapons_{}; /**< Weapon type typically preferred by members of the culture */
 	std::map<SubcategoriedSkillData, int> skill_ranks_{}; /** Number of skill ranks gained during adolescence */
