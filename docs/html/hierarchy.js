@@ -38,6 +38,7 @@ var hierarchy =
       ] ],
       [ "ArmourTypeData", "class_armour_type_data.html", null ],
       [ "BookData", "class_book_data.html", null ],
+      [ "ClimateData", "class_climate_data.html", null ],
       [ "LanguageCategoryData", "class_language_category_data.html", null ],
       [ "LanguageData", "class_language_data.html", null ],
       [ "LanguageDialectData", "class_language_dialect_data.html", null ],

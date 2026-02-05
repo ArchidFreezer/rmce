@@ -31,5 +31,6 @@ var searchData=
   ['isspecialbonusskillgroup_28',['isSpecialBonusSkillGroup',['../class_profession_data.html#ae8bb536bbcc5357503a28430a802ff5d',1,'ProfessionData']]],
   ['isspoken_29',['isSpoken',['../class_language_ability.html#ac97223eea0083108c624c2a74a2c803e',1,'LanguageAbility::isSpoken()'],['../class_language_data.html#ad6e3d452c38d41bdfde205882a1b075b',1,'LanguageData::isSpoken()']]],
   ['issummoning_30',['isSummoning',['../class_spell_list_data.html#a0cc14d7b38cae643061dd1b7915895a5',1,'SpellListData']]],
-  ['iswritten_31',['isWritten',['../class_language_ability.html#abc220d4b62a81c3057b9388dc2194afd',1,'LanguageAbility::isWritten()'],['../class_language_data.html#af84b4226cfb0decabda010a08b3a2808',1,'LanguageData::isWritten()']]]
+  ['isvalid_31',['isValid',['../class_climate_data.html#a9ce2eee66767acf8869eb156dbf88215',1,'ClimateData']]],
+  ['iswritten_32',['isWritten',['../class_language_ability.html#abc220d4b62a81c3057b9388dc2194afd',1,'LanguageAbility::isWritten()'],['../class_language_data.html#af84b4226cfb0decabda010a08b3a2808',1,'LanguageData::isWritten()']]]
 ];
