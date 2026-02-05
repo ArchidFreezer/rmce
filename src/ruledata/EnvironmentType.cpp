@@ -54,3 +54,39 @@ const std::optional<EnvironmentType::Feature> EnvironmentType::feature(std::stri
 	return {};
 }
 
+const std::string EnvironmentType::toString(EnvironmentType::Terrain terrain) {
+	using enum EnvironmentType::Terrain;
+
+	switch (terrain) {
+	case kAlpine: return "Alpine";
+	case kRough: return "Rough";
+	case kUnderground: return "Underground";
+	case kWaste: return "Waste";
+	default: return "";
+	}
+}
+
+const std::string EnvironmentType::description(EnvironmentType::Terrain terrain) {
+	using enum EnvironmentType::Terrain;
+
+	switch (terrain) {
+	case kAlpine: return "Alpine, high altitude or mountainous";
+	case kRough: return "Rough, rugged or rocky hills";
+	case kUnderground: return "Underground";
+	case kWaste: return "Waste, barren";
+	default: return "";
+	}
+}
+
+const std::optional<EnvironmentType::Terrain> EnvironmentType::terrain(std::string_view sv) {
+	using enum EnvironmentType::Terrain;
+
+	const std::string val = lcaseconcat(sv);
+	if (val == "alpine") return kAlpine;
+	if (val == "rough") return kRough;
+	if (val == "underground") return kUnderground;
+	if (val == "waste") return kWaste;
+	
+	return {};
+}
+

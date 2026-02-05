@@ -148,6 +148,7 @@ namespace {
 		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kTemperate)), HabitatType::Temperature::kTemperate);
 		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kCool)), HabitatType::Temperature::kCool);
 		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kCold)), HabitatType::Temperature::kCold);
+
 		EXPECT_NE(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kHot)), HabitatType::Temperature::kWarm);
 	}
 
@@ -157,6 +158,7 @@ namespace {
 		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kTemperate)), HabitatType::Precipitation::kTemperate);
 		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kDry)), HabitatType::Precipitation::kDry);
 		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kArid)), HabitatType::Precipitation::kArid);
+
 		EXPECT_NE(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kRainy)), HabitatType::Precipitation::kDry);
 	}
 
@@ -173,6 +175,15 @@ namespace {
 		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kVolcanic)), EnvironmentType::Feature::kVolcanic);
 
 		EXPECT_NE(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kVolcanic)), EnvironmentType::Feature::kEnchanted);
+	}
+
+	TEST(RuleDataEnums, EnvironmentTerrain) {
+		EXPECT_EQ(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kAlpine)), EnvironmentType::Terrain::kAlpine);
+		EXPECT_EQ(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kRough)), EnvironmentType::Terrain::kRough);
+		EXPECT_EQ(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kUnderground)), EnvironmentType::Terrain::kUnderground);
+		EXPECT_EQ(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kWaste)), EnvironmentType::Terrain::kWaste);
+
+		EXPECT_NE(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kAlpine)), EnvironmentType::Terrain::kUnderground);
 	}
 
 }

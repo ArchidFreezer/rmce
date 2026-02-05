@@ -90,4 +90,56 @@ namespace EnvironmentType {
 		return out << toString(feature);
 	}
 
+	/**
+	 * @brief The general terrain of an environment, if unusual.
+	 *
+	 * These are typically mutually exclusive, though there can be small areas within a region that may contain more than one
+	 * such as pockets of waste land in a rough region.
+	 */
+	enum class Terrain {
+		kAlpine, /**< Alpine, high altitude or mountainous */
+		kRough, /**< Rough, rugged or rocky hills */
+		kUnderground, /**< Underground */
+		kWaste, /**< Waste, barren */
+	};
+
+	/**
+	 * @brief Get the enumeration value based on a string
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @return EnvironmentType::Terrain represented by the string
+	 *
+	 * @see toString()
+	 */
+	const std::optional<Terrain> terrain(std::string_view sv);
+
+	/**
+	 * @brief Get the string representation of the given enum
+	 * @param terrain The EnvironmentType::Terrain to get the string of
+	 * @return Game display form of the enum value as a string
+	 */
+	const std::string toString(Terrain terrain);
+
+	/**
+	 * @brief Get the description of the given enum
+	 *
+	 * This gives more detail on the enum value for use in-game
+	 *
+	 * @param terrain The EnvironmentType::Terrain to get the string of
+	 * @return Game display form of the enum value as a string
+	 */
+	const std::string description(Terrain terrain);
+
+	/**
+	 * @brief Teach operator<< how to print a EnvironmentType::Terrain
+	 * @param out Output stream that the enum should be printed to
+	 * @param terrain Enum value to output
+	 * @return Output stream reference containing the output enum value
+	 */
+	inline std::ostream& operator<<(std::ostream& out, Terrain terrain) {
+		return out << toString(terrain);
+	}
+
 }
