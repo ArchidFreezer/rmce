@@ -49,239 +49,51 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Science/Analytic - Basic</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Medium</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Gymnastics</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Light</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Searching</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Brawn</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Environmental</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Body Development</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Concussion</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">2</ranks>
+            <ranks category="Armour - Medium">2</ranks>
+            <ranks category="Athletic - Brawn">1</ranks>
+            <ranks category="Athletic - Endurance">1</ranks>
+            <ranks category="Athletic - Gymnastics">1</ranks>
+            <ranks category="Awareness - Perceptions">0</ranks>
+            <ranks category="Awareness - Searching">1</ranks>
+            <ranks category="Body Development">3</ranks>
+            <ranks category="Communication">1</ranks>
+            <ranks category="Lore - General">3</ranks>
+            <ranks category="Outdoor - Animal">0</ranks>
+            <ranks category="Outdoor - Environmental">2</ranks>
+            <ranks category="Power Awareness">0</ranks>
+            <ranks category="Science/Analytic - Basic">1</ranks>
+            <ranks category="Subterfuge - Stealth">0</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 1-H Concussion">4</ranks>
+            <ranks category="Weapon - 1-H Edged">0</ranks>
+            <ranks category="Weapon - 2-Handed">0</ranks>
+            <ranks category="Weapon - Missile">0</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>8</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Rigid Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>4</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Chain</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Climbing</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">0</ranks>
+            <ranks skill="Rigid Leather">2</ranks>
+            <ranks skill="Chain">2</ranks>
+            <ranks skill="Swimming">0</ranks>
+            <ranks skill="Climbing">1</ranks>
+            <ranks skill="Alertness">4</ranks>
+            <ranks skill="Languages">8</ranks>
+            <ranks skill="Region Lore" subcategory="Own">3</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">3</ranks>
+            <ranks skill="Riding" subcategory="Horses">0</ranks>
+            <ranks skill="Hiding">0</ranks>
+            <ranks skill="Stalking">0</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>4</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Concussion</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 1-H Concussion">4</ranks>
+            <ranks category="Weapon - 1-H Edged">0</ranks>
+            <ranks category="Weapon - 2-Handed">0</ranks>
+            <ranks category="Weapon - Missile">0</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-skill-rank-modifiers>
       </culture-type>
       <culture-type id="00001000000000996">
@@ -322,316 +134,51 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Animal</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Gymnastics</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Brawn</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Body Development</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Environmental</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Searching</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Light</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Pole Arms</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Subterfuge - Stealth</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">1</ranks>
+            <ranks category="Armour - Medium">0</ranks>
+            <ranks category="Athletic - Brawn">1</ranks>
+            <ranks category="Athletic - Endurance">1</ranks>
+            <ranks category="Athletic - Gymnastics">1</ranks>
+            <ranks category="Awareness - Perceptions">0</ranks>
+            <ranks category="Awareness - Searching">1</ranks>
+            <ranks category="Body Development">2</ranks>
+            <ranks category="Communication">1</ranks>
+            <ranks category="Lore - General">3</ranks>
+            <ranks category="Outdoor - Animal">1</ranks>
+            <ranks category="Outdoor - Environmental">2</ranks>
+            <ranks category="Power Awareness">0</ranks>
+            <ranks category="Science/Analytic - Basic">0</ranks>
+            <ranks category="Subterfuge - Stealth">1</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 1-H Concussion">0</ranks>
+            <ranks category="Weapon - 1-H Edged">1</ranks>
+            <ranks category="Weapon - 2-Handed">0</ranks>
+            <ranks category="Weapon - Missile">1</ranks>
+            <ranks category="Weapon - Pole Arms">1</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>8</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Soft Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Riding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Climbing</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Stalking</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Rigid Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Hiding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">1</ranks>
+            <ranks skill="Rigid Leather">1</ranks>
+            <ranks skill="Chain">0</ranks>
+            <ranks skill="Swimming">1</ranks>
+            <ranks skill="Climbing">0</ranks>
+            <ranks skill="Alertness">2</ranks>
+            <ranks skill="Languages">8</ranks>
+            <ranks skill="Region Lore" subcategory="Own">3</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">3</ranks>
+            <ranks skill="Riding" subcategory="Horses">1</ranks>
+            <ranks skill="Hiding">1</ranks>
+            <ranks skill="Stalking">1</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Pole Arms</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 1-H Concussion">0</ranks>
+            <ranks category="Weapon - 1-H Edged">1</ranks>
+            <ranks category="Weapon - 2-Handed">0</ranks>
+            <ranks category="Weapon - Missile">1</ranks>
+            <ranks category="Weapon - Pole Arms">1</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-skill-rank-modifiers>
       </culture-type>
       <culture-type id="00001000000000984">
@@ -679,288 +226,53 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Science/Analytic - Basic</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Body Development</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Gymnastics</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Power Awareness</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Subterfuge - Stealth</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Animal</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Environmental</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Searching</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Brawn</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">0</ranks>
+            <ranks category="Armour - Medium">0</ranks>
+            <ranks category="Athletic - Brawn">1</ranks>
+            <ranks category="Athletic - Endurance">1</ranks>
+            <ranks category="Athletic - Gymnastics">1</ranks>
+            <ranks category="Awareness - Perceptions">0</ranks>
+            <ranks category="Awareness - Searching">1</ranks>
+            <ranks category="Body Development">1</ranks>
+            <ranks category="Communication">2</ranks>
+            <ranks category="Lore - General">3</ranks>
+            <ranks category="Outdoor - Animal">1</ranks>
+            <ranks category="Outdoor - Environmental">5</ranks>
+            <ranks category="Power Awareness">1</ranks>
+            <ranks category="Science/Analytic - Basic">1</ranks>
+            <ranks category="Subterfuge - Stealth">4</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 0-H Concussion">0</ranks>
+            <ranks category="Weapon - 0-H Edged">1</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">3</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">0</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Stalking</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>4</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Climbing</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Swimming</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Riding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Hiding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>4</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>10</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>6</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">0</ranks>
+            <ranks skill="Rigid Leather">0</ranks>
+            <ranks skill="Chain">0</ranks>
+            <ranks skill="Swimming">3</ranks>
+            <ranks skill="Climbing">2</ranks>
+            <ranks skill="Alertness">6</ranks>
+            <ranks skill="Languages">10</ranks>
+            <ranks skill="Region Lore" subcategory="Own">3</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">3</ranks>
+            <ranks skill="Riding" subcategory="Horses">1</ranks>
+            <ranks skill="Hiding">4</ranks>
+            <ranks skill="Stalking">4</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 0-H Concussion">0</ranks>
+            <ranks category="Weapon - 0-H Edged">1</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">3</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">0</ranks>
          </adolescent-category-skill-rank-modifiers>
-         <spell-list-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <spell-lists/>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <list-type>Open</list-type>
-               <own-realm-set-type>false</own-realm-set-type>
-               <evil>false</evil>
-               <summoning>false</summoning>
-               <own-realm-choice>true</own-realm-choice>
-               <choice-types>
-                  <choiceTypes>Open</choiceTypes>
-               </choice-types>
-            </rank-modifier>
-         </spell-list-rank-modifiers>
+         <spell-list-rank-modifiers>2</spell-list-rank-modifiers>
       </culture-type>
       <culture-type id="00001000000000988">
          <name>Aquatic</name>
@@ -1028,201 +340,51 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Pole Arms</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Gymnastics</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Environmental</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Animal</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Brawn</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Body Development</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">0</ranks>
+            <ranks category="Armour - Medium">0</ranks>
+            <ranks category="Athletic - Brawn">1</ranks>
+            <ranks category="Athletic - Endurance">1</ranks>
+            <ranks category="Athletic - Gymnastics">1</ranks>
+            <ranks category="Awareness - Perceptions">0</ranks>
+            <ranks category="Awareness - Searching">1</ranks>
+            <ranks category="Body Development">3</ranks>
+            <ranks category="Communication">1</ranks>
+            <ranks category="Lore - General">3</ranks>
+            <ranks category="Outdoor - Animal">1</ranks>
+            <ranks category="Outdoor - Environmental">4</ranks>
+            <ranks category="Power Awareness">0</ranks>
+            <ranks category="Science/Analytic - Basic">0</ranks>
+            <ranks category="Subterfuge - Stealth">0</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 0-H Concussion">0</ranks>
+            <ranks category="Weapon - 0-H Edged">0</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">0</ranks>
+            <ranks category="Weapon - Pole Arms">2</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Swimming</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>5</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Riding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>8</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">0</ranks>
+            <ranks skill="Rigid Leather">0</ranks>
+            <ranks skill="Chain">0</ranks>
+            <ranks skill="Swimming">5</ranks>
+            <ranks skill="Climbing">0</ranks>
+            <ranks skill="Alertness">2</ranks>
+            <ranks skill="Languages">8</ranks>
+            <ranks skill="Region Lore" subcategory="Own">3</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">3</ranks>
+            <ranks skill="Riding" subcategory="Sea-horses">1</ranks>
+            <ranks skill="Hiding">0</ranks>
+            <ranks skill="Stalking">0</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Pole Arms</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 0-H Concussion">0</ranks>
+            <ranks category="Weapon - 0-H Edged">0</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">0</ranks>
+            <ranks category="Weapon - Pole Arms">2</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-skill-rank-modifiers>
       </culture-type>
       <culture-type id="00001000000000986">
@@ -1274,296 +436,51 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Searching</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Environmental</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Concussion</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Subterfuge - Stealth</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Gymnastics</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Perceptions</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Light</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Animal</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">1</ranks>
+            <ranks category="Armour - Medium">0</ranks>
+            <ranks category="Athletic - Brawn">0</ranks>
+            <ranks category="Athletic - Endurance">2</ranks>
+            <ranks category="Athletic - Gymnastics">2</ranks>
+            <ranks category="Awareness - Perceptions">2</ranks>
+            <ranks category="Awareness - Searching">1</ranks>
+            <ranks category="Body Development">0</ranks>
+            <ranks category="Communication">3</ranks>
+            <ranks category="Lore - General">3</ranks>
+            <ranks category="Outdoor - Animal">1</ranks>
+            <ranks category="Outdoor - Environmental">2</ranks>
+            <ranks category="Power Awareness">0</ranks>
+            <ranks category="Science/Analytic - Basic">0</ranks>
+            <ranks category="Subterfuge - Stealth">1</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 0-H Concussion">1</ranks>
+            <ranks category="Weapon - 0-H Edged">1</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">1</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Soft Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Swimming</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Stalking</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Hiding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Climbing</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>5</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>8</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">1</ranks>
+            <ranks skill="Rigid Leather">0</ranks>
+            <ranks skill="Chain">0</ranks>
+            <ranks skill="Swimming">1</ranks>
+            <ranks skill="Climbing">5</ranks>
+            <ranks skill="Alertness">2</ranks>
+            <ranks skill="Languages">8</ranks>
+            <ranks skill="Region Lore" subcategory="Own">3</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">3</ranks>
+            <ranks skill="Riding" subcategory="Horses">0</ranks>
+            <ranks skill="Hiding">1</ranks>
+            <ranks skill="Stalking">1</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Concussion</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 0-H Concussion">1</ranks>
+            <ranks category="Weapon - 0-H Edged">1</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">1</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-skill-rank-modifiers>
       </culture-type>
       <culture-type id="00001000000000998">
@@ -1611,294 +528,51 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Medium</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Gymnastics</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Body Development</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Subterfuge - Stealth</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Brawn</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Searching</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Environmental</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Concussion</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Light</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">2</ranks>
+            <ranks category="Armour - Medium">1</ranks>
+            <ranks category="Athletic - Brawn">1</ranks>
+            <ranks category="Athletic - Endurance">1</ranks>
+            <ranks category="Athletic - Gymnastics">1</ranks>
+            <ranks category="Awareness - Perceptions">0</ranks>
+            <ranks category="Awareness - Searching">2</ranks>
+            <ranks category="Body Development">1</ranks>
+            <ranks category="Communication">1</ranks>
+            <ranks category="Lore - General">2</ranks>
+            <ranks category="Outdoor - Animal">0</ranks>
+            <ranks category="Outdoor - Environmental">2</ranks>
+            <ranks category="Power Awareness">0</ranks>
+            <ranks category="Science/Analytic - Basic">0</ranks>
+            <ranks category="Subterfuge - Stealth">1</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 0-H Concussion">2</ranks>
+            <ranks category="Weapon - 0-H Edged">0</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">1</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Hiding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Rigid Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Climbing</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>4</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Soft Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Stalking</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Chain</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">0</ranks>
+            <ranks skill="Rigid Leather">0</ranks>
+            <ranks skill="Chain">0</ranks>
+            <ranks skill="Swimming">0</ranks>
+            <ranks skill="Climbing">0</ranks>
+            <ranks skill="Alertness">0</ranks>
+            <ranks skill="Languages">0</ranks>
+            <ranks skill="Region Lore" subcategory="Own">0</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">0</ranks>
+            <ranks skill="Riding" subcategory="Horses">0</ranks>
+            <ranks skill="Hiding">0</ranks>
+            <ranks skill="Stalking">0</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Concussion</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 0-H Concussion">2</ranks>
+            <ranks category="Weapon - 0-H Edged">0</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">1</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-skill-rank-modifiers>
       </culture-type>
       <culture-type id="00001000000000994">
@@ -1946,252 +620,51 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Searching</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Environmental</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Brawn</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Gymnastics</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Animal</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Pole Arms</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Light</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Body Development</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">1</ranks>
+            <ranks category="Armour - Medium">0</ranks>
+            <ranks category="Athletic - Brawn">1</ranks>
+            <ranks category="Athletic - Endurance">1</ranks>
+            <ranks category="Athletic - Gymnastics">1</ranks>
+            <ranks category="Awareness - Perceptions">0</ranks>
+            <ranks category="Awareness - Searching">1</ranks>
+            <ranks category="Body Development">2</ranks>
+            <ranks category="Communication">1</ranks>
+            <ranks category="Lore - General">3</ranks>
+            <ranks category="Outdoor - Animal">1</ranks>
+            <ranks category="Outdoor - Environmental">2</ranks>
+            <ranks category="Power Awareness">0</ranks>
+            <ranks category="Science/Analytic - Basic">0</ranks>
+            <ranks category="Subterfuge - Stealth">0</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 0-H Concussion">0</ranks>
+            <ranks category="Weapon - 0-H Edged">1</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">2</ranks>
+            <ranks category="Weapon - Pole Arms">2</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>6</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Riding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">0</ranks>
+            <ranks skill="Rigid Leather">0</ranks>
+            <ranks skill="Chain">0</ranks>
+            <ranks skill="Swimming">0</ranks>
+            <ranks skill="Climbing">0</ranks>
+            <ranks skill="Alertness">2</ranks>
+            <ranks skill="Languages">6</ranks>
+            <ranks skill="Region Lore" subcategory="Own">3</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">3</ranks>
+            <ranks skill="Riding" subcategory="Horses">3</ranks>
+            <ranks skill="Hiding">0</ranks>
+            <ranks skill="Stalking">0</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Pole Arms</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 0-H Concussion">0</ranks>
+            <ranks category="Weapon - 0-H Edged">1</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">2</ranks>
+            <ranks category="Weapon - Pole Arms">2</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-skill-rank-modifiers>
       </culture-type>
       <culture-type id="0000100000000098c">
@@ -2242,221 +715,51 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Gymnastics</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Brawn</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Body Development</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Animal</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Perceptions</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Light</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">1</ranks>
+            <ranks category="Armour - Medium">0</ranks>
+            <ranks category="Athletic - Brawn">1</ranks>
+            <ranks category="Athletic - Endurance">3</ranks>
+            <ranks category="Athletic - Gymnastics">1</ranks>
+            <ranks category="Awareness - Perceptions">1</ranks>
+            <ranks category="Awareness - Searching">0</ranks>
+            <ranks category="Body Development">2</ranks>
+            <ranks category="Communication">1</ranks>
+            <ranks category="Lore - General">3</ranks>
+            <ranks category="Outdoor - Animal">5</ranks>
+            <ranks category="Outdoor - Environmental">3</ranks>
+            <ranks category="Power Awareness">0</ranks>
+            <ranks category="Science/Analytic - Basic">0</ranks>
+            <ranks category="Subterfuge - Stealth">0</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 0-H Concussion">0</ranks>
+            <ranks category="Weapon - 0-H Edged">1</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">2</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Riding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>5</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>4</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">0</ranks>
+            <ranks skill="Rigid Leather">0</ranks>
+            <ranks skill="Chain">0</ranks>
+            <ranks skill="Swimming">0</ranks>
+            <ranks skill="Climbing">0</ranks>
+            <ranks skill="Alertness">1</ranks>
+            <ranks skill="Languages">4</ranks>
+            <ranks skill="Region Lore" subcategory="Own">3</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">3</ranks>
+            <ranks skill="Riding" subcategory="Horses">5</ranks>
+            <ranks skill="Hiding">0</ranks>
+            <ranks skill="Stalking">0</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 0-H Concussion">0</ranks>
+            <ranks category="Weapon - 0-H Edged">1</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">2</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-skill-rank-modifiers>
       </culture-type>
       <culture-type id="00001000000000990">
@@ -2509,279 +812,53 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Environmental</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Brawn</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Science/Analytic - Basic</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Gymnastics</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Light</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Body Development</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Searching</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Urban</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">1</ranks>
+            <ranks category="Armour - Medium">0</ranks>
+            <ranks category="Athletic - Brawn">1</ranks>
+            <ranks category="Athletic - Endurance">1</ranks>
+            <ranks category="Athletic - Gymnastics">1</ranks>
+            <ranks category="Awareness - Perceptions">0</ranks>
+            <ranks category="Awareness - Searching">1</ranks>
+            <ranks category="Body Development">2</ranks>
+            <ranks category="Communication">1</ranks>
+            <ranks category="Lore - General">2</ranks>
+            <ranks category="Outdoor - Animal">0</ranks>
+            <ranks category="Outdoor - Environmental">1</ranks>
+            <ranks category="Power Awareness">0</ranks>
+            <ranks category="Science/Analytic - Basic">1</ranks>
+            <ranks category="Subterfuge - Stealth">0</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 0-H Concussion">0</ranks>
+            <ranks category="Weapon - 0-H Edged">2</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">1</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Swimming</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>5</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Climbing</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Rigid Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">0</ranks>
+            <ranks skill="Rigid Leather">1</ranks>
+            <ranks skill="Chain">0</ranks>
+            <ranks skill="Swimming">5</ranks>
+            <ranks skill="Climbing">1</ranks>
+            <ranks skill="Alertness">2</ranks>
+            <ranks skill="Languages">2</ranks>
+            <ranks skill="Region Lore" subcategory="Own">3</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">3</ranks>
+            <ranks skill="Riding" subcategory="Horses">0</ranks>
+            <ranks skill="Hiding">0</ranks>
+            <ranks skill="Stalking">0</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Edged</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 0-H Concussion">0</ranks>
+            <ranks category="Weapon - 0-H Edged">2</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">1</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">1</ranks>
          </adolescent-category-skill-rank-modifiers>
-         <spell-list-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <spell-lists/>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <list-type>Open</list-type>
-               <own-realm-set-type>false</own-realm-set-type>
-               <evil>false</evil>
-               <summoning>false</summoning>
-               <own-realm-choice>true</own-realm-choice>
-               <choice-types>
-                  <choiceTypes>Open</choiceTypes>
-               </choice-types>
-            </rank-modifier>
-         </spell-list-rank-modifiers>
+         <spell-list-rank-modifiers>1</spell-list-rank-modifiers>
       </culture-type>
       <culture-type id="0000100000000098a">
          <name>Arctic</name>
@@ -2826,265 +903,51 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Concussion</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Light</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Perceptions</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Power Awareness</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Environmental</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Outdoor - Animal</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Body Development</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">2</ranks>
+            <ranks category="Armour - Medium">0</ranks>
+            <ranks category="Athletic - Brawn">0</ranks>
+            <ranks category="Athletic - Endurance">2</ranks>
+            <ranks category="Athletic - Gymnastics">0</ranks>
+            <ranks category="Awareness - Perceptions">1</ranks>
+            <ranks category="Awareness - Searching">0</ranks>
+            <ranks category="Body Development">1</ranks>
+            <ranks category="Communication">1</ranks>
+            <ranks category="Lore - General">3</ranks>
+            <ranks category="Outdoor - Animal">2</ranks>
+            <ranks category="Outdoor - Environmental">3</ranks>
+            <ranks category="Power Awareness">1</ranks>
+            <ranks category="Science/Analytic - Basic">0</ranks>
+            <ranks category="Subterfuge - Stealth">0</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 0-H Concussion">1</ranks>
+            <ranks category="Weapon - 0-H Edged">0</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">2</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">2</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>4</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Rigid Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Hiding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Stalking</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Soft Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Swimming</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">2</ranks>
+            <ranks skill="Rigid Leather">0</ranks>
+            <ranks skill="Chain">0</ranks>
+            <ranks skill="Swimming">1</ranks>
+            <ranks skill="Climbing">0</ranks>
+            <ranks skill="Alertness">1</ranks>
+            <ranks skill="Languages">4</ranks>
+            <ranks skill="Region Lore" subcategory="Own">3</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">3</ranks>
+            <ranks skill="Riding" subcategory="Horses">0</ranks>
+            <ranks skill="Hiding">1</ranks>
+            <ranks skill="Stalking">1</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Concussion</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Missile</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 0-H Concussion">1</ranks>
+            <ranks category="Weapon - 0-H Edged">0</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">2</ranks>
+            <ranks category="Weapon - Pole Arms">0</ranks>
+            <ranks category="Weapon - Thrown">2</ranks>
          </adolescent-category-skill-rank-modifiers>
       </culture-type>
       <culture-type id="0000100000000098e">
@@ -3128,298 +991,51 @@
             </location-type>
          </location-types>
          <adolescent-category-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Technical/Trade - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Body Development</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Awareness - Searching</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Lore - General</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - 1-H Concussion</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Endurance</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Pole Arms</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Communications</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Brawn</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Subterfuge - Stealth</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Armour - Light</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Athletic - Gymnastics</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-               <ranks>0</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks category="Armour - Light">1</ranks>
+            <ranks category="Armour - Medium">0</ranks>
+            <ranks category="Athletic - Brawn">2</ranks>
+            <ranks category="Athletic - Endurance">1</ranks>
+            <ranks category="Athletic - Gymnastics">1</ranks>
+            <ranks category="Awareness - Perceptions">0</ranks>
+            <ranks category="Awareness - Searching">1</ranks>
+            <ranks category="Body Development">2</ranks>
+            <ranks category="Communication">1</ranks>
+            <ranks category="Lore - General">3</ranks>
+            <ranks category="Outdoor - Animal">0</ranks>
+            <ranks category="Outdoor - Environmental">4</ranks>
+            <ranks category="Power Awareness">0</ranks>
+            <ranks category="Science/Analytic - Basic">0</ranks>
+            <ranks category="Subterfuge - Stealth">2</ranks>
+            <ranks category="Technical/Trade - General">1</ranks>
+            <ranks category="Urban">0</ranks>
+            <ranks category="Weapon - 0-H Concussion">1</ranks>
+            <ranks category="Weapon - 0-H Edged">0</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">1</ranks>
+            <ranks category="Weapon - Pole Arms">2</ranks>
+            <ranks category="Weapon - Thrown">2</ranks>
          </adolescent-category-rank-modifiers>
          <adolescent-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Alertness</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Climbing</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>4</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Culture Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Rigid Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Languages</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>4</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Region Lore</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>3</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Swimming</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Soft Leather</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Hiding</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>-1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <skills>
-                  <skill>Stalking</skill>
-               </skills>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-            </rank-modifier>
+            <ranks skill="Soft Leather">0</ranks>
+            <ranks skill="Rigid Leather">0</ranks>
+            <ranks skill="Chain">0</ranks>
+            <ranks skill="Swimming">0</ranks>
+            <ranks skill="Climbing">0</ranks>
+            <ranks skill="Alertness">0</ranks>
+            <ranks skill="Languages">0</ranks>
+            <ranks skill="Region Lore" subcategory="Own">0</ranks>
+            <ranks skill="Culture Lore" subcategory="Own">0</ranks>
+            <ranks skill="Riding" subcategory="Horses">0</ranks>
+            <ranks skill="Hiding">0</ranks>
+            <ranks skill="Stalking">0</ranks>
          </adolescent-skill-rank-modifiers>
          <adolescent-category-skill-rank-modifiers>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Pole Arms</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>1</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - 1-H Concussion</category>
-               </categories>
-            </rank-modifier>
-            <rank-modifier>
-               <num-choices>1</num-choices>
-               <fixed-num-choices>true</fixed-num-choices>
-               <allow-restriced>false</allow-restriced>
-               <non-channeling-only>false</non-channeling-only>
-               <ranks>2</ranks>
-               <lifestyle>false</lifestyle>
-               <num-categories>-1</num-categories>
-               <fixed-num-categories>false</fixed-num-categories>
-               <categories>
-                  <category>Weapon - Thrown</category>
-               </categories>
-            </rank-modifier>
+            <ranks category="Weapon - 0-H Concussion">1</ranks>
+            <ranks category="Weapon - 0-H Edged">0</ranks>
+            <ranks category="Weapon - 0-Handed">0</ranks>
+            <ranks category="Weapon - Missile">1</ranks>
+            <ranks category="Weapon - Pole Arms">2</ranks>
+            <ranks category="Weapon - Thrown">2</ranks>
          </adolescent-category-skill-rank-modifiers>
       </culture-type>
    </cultureTypes>
