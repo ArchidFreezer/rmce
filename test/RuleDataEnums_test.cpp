@@ -4,6 +4,7 @@
 #include <CreatureSizeType.h>
 #include <CriticalTableType.h>
 #include <CriticalType.h>
+#include <HabitatType.h>
 #include <RealmType.h>
 #include <ResistanceType.h>
 #include <SkillActionType.h>
@@ -138,6 +139,24 @@ namespace {
 		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT18)), ArmourType::kAT18);
 		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT19)), ArmourType::kAT19);
 		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT20)), ArmourType::kAT20);
+	}
+
+	TEST(RuleDataEnums, HabitatTemperature) {
+		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kHot)), HabitatType::Temperature::kHot);
+		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kWarm)), HabitatType::Temperature::kWarm);
+		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kTemperate)), HabitatType::Temperature::kTemperate);
+		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kCool)), HabitatType::Temperature::kCool);
+		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kCold)), HabitatType::Temperature::kCold);
+		EXPECT_NE(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kHot)), HabitatType::Temperature::kWarm);
+	}
+
+	TEST(RuleDataEnums, HabitatPrecipitation) {
+		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kRainy)), HabitatType::Precipitation::kRainy);
+		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kHumid)), HabitatType::Precipitation::kHumid);
+		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kTemperate)), HabitatType::Precipitation::kTemperate);
+		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kDry)), HabitatType::Precipitation::kDry);
+		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kArid)), HabitatType::Precipitation::kArid);
+		EXPECT_NE(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kRainy)), HabitatType::Precipitation::kDry);
 	}
 
 }

@@ -63,6 +63,7 @@ var hierarchy =
       [ "CreatureSizeType::CreatureSizeTypeNotFoundException", "class_creature_size_type_1_1_creature_size_type_not_found_exception.html", null ],
       [ "CriticalTableType::CriticalTableTypeNotFoundException", "class_critical_table_type_1_1_critical_table_type_not_found_exception.html", null ],
       [ "FilenameNotSetException", "class_filename_not_set_exception.html", null ],
+      [ "HabitatType::HabitatTypeNotFoundException", "class_habitat_type_1_1_habitat_type_not_found_exception.html", null ],
       [ "InvalidLanguageRank", "class_invalid_language_rank.html", null ],
       [ "InvalidSkillBonus", "class_invalid_skill_bonus.html", null ],
       [ "InvalidSkillDevelopment", "class_invalid_skill_development.html", null ],

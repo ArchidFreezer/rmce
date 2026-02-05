@@ -39,6 +39,7 @@ var namespaces_dup =
       [ "operator<<", "namespace_critical_type.html#aaf4b519542f7dab4d0719845732e3499", null ],
       [ "toString", "namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00", null ]
     ] ],
+    [ "HabitatType", "namespace_habitat_type.html", "namespace_habitat_type" ],
     [ "Random", "namespace_random.html", [
       [ "generate", "namespace_random.html#a00531c42906741611a38c489e8723280", null ],
       [ "get", "namespace_random.html#a47378d26d412b6b6238c03a27f33a04f", null ],

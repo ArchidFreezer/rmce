@@ -9,6 +9,9 @@ var annotated_dup =
     [ "CriticalTableType", "namespace_critical_table_type.html", [
       [ "CriticalTableTypeNotFoundException", "class_critical_table_type_1_1_critical_table_type_not_found_exception.html", "class_critical_table_type_1_1_critical_table_type_not_found_exception" ]
     ] ],
+    [ "HabitatType", "namespace_habitat_type.html", [
+      [ "HabitatTypeNotFoundException", "class_habitat_type_1_1_habitat_type_not_found_exception.html", "class_habitat_type_1_1_habitat_type_not_found_exception" ]
+    ] ],
     [ "SkillActionType", "namespace_skill_action_type.html", [
       [ "SkillActionNotFoundException", "class_skill_action_type_1_1_skill_action_not_found_exception.html", "class_skill_action_type_1_1_skill_action_not_found_exception" ]
     ] ],
