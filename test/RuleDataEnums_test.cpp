@@ -4,6 +4,7 @@
 #include <CreatureSizeType.h>
 #include <CriticalTableType.h>
 #include <CriticalType.h>
+#include <EnvironmentType.h>
 #include <HabitatType.h>
 #include <RealmType.h>
 #include <ResistanceType.h>
@@ -157,6 +158,21 @@ namespace {
 		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kDry)), HabitatType::Precipitation::kDry);
 		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kArid)), HabitatType::Precipitation::kArid);
 		EXPECT_NE(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kRainy)), HabitatType::Precipitation::kDry);
+	}
+
+	TEST(RuleDataEnums, EnvironmentFeature) {
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kBattlefield)), EnvironmentType::Feature::kBattlefield);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kBurial)), EnvironmentType::Feature::kBurial);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kCave)), EnvironmentType::Feature::kCave);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kCavern)), EnvironmentType::Feature::kCavern);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kDimention)), EnvironmentType::Feature::kDimention);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kEnchanted)), EnvironmentType::Feature::kEnchanted);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kHabitation)), EnvironmentType::Feature::kHabitation);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kRuins)), EnvironmentType::Feature::kRuins);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kRural)), EnvironmentType::Feature::kRural);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kVolcanic)), EnvironmentType::Feature::kVolcanic);
+
+		EXPECT_NE(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kVolcanic)), EnvironmentType::Feature::kEnchanted);
 	}
 
 }
