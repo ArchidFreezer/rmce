@@ -140,6 +140,27 @@ namespace {
 		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT18)), ArmourType::kAT18);
 		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT19)), ArmourType::kAT19);
 		EXPECT_EQ(ArmourType::fromString(toString(ArmourType::kAT20)), ArmourType::kAT20);
+
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT1)), ArmourType::kAT1);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT2)), ArmourType::kAT2);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT3)), ArmourType::kAT3);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT4)), ArmourType::kAT4);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT5)), ArmourType::kAT5);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT6)), ArmourType::kAT6);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT7)), ArmourType::kAT7);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT8)), ArmourType::kAT8);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT9)), ArmourType::kAT9);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT10)), ArmourType::kAT10);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT11)), ArmourType::kAT11);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT12)), ArmourType::kAT12);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT13)), ArmourType::kAT13);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT14)), ArmourType::kAT14);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT15)), ArmourType::kAT15);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT16)), ArmourType::kAT16);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT17)), ArmourType::kAT17);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT18)), ArmourType::kAT18);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT19)), ArmourType::kAT19);
+		EXPECT_EQ(ArmourType::fromDescription(description(ArmourType::kAT20)), ArmourType::kAT20);
 	}
 
 	TEST(RuleDataEnums, HabitatTemperature) {

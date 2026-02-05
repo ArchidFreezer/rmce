@@ -85,4 +85,23 @@ namespace ArmourType {
 	 * @see toString()
 	 */
 	const std::optional<Type> fromString(std::string_view sv);
+
+	/**
+	 * @brief Get the string representation of the given enum in a game friendly form
+	 * @param size The ArmourType::Type to get the string of
+	 * @return Game display form of the enum value as a game friendlystring
+	 */
+	const std::string description(Type size);
+
+	/**
+	 * @brief Get the enumeration value based on a string
+	 *
+	 * Accepts values that are returned by description() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @return ArmourType::Type represented by the string
+	 *
+	 * @see description()
+	 */
+	const std::optional<Type> fromDescription(std::string_view sv);
 }
