@@ -198,4 +198,63 @@ namespace EnvironmentType {
 		return out << toString(vegetation);
 	}
 
+	/**
+	 * @brief The type and availablilty of water
+	 *
+	 * With water being such a critical resource to life it is important to define what sources are
+	 * available within an area as this can have a significant impact on the varieties of fauna and
+	 * flora within a region.
+	 */
+	enum class Water {
+		kBreaks, /**< Breaks and/or wadis */
+		kDesert, /**< Deserts */
+		kFreshCoast, /**< Freshwater coasts or banks */
+		kGlacier, /**< Glaciers or snowfields */
+		kIslet, /**< Tropical islets, reefs or atolls */
+		kLake, /**< Lakes or rivers */
+		kMarsh, /**< Marshes or swamps */
+		kOasis, /**< Oasis or isolated water source */
+		kOcean, /**< Oceans */
+		kSaltShore, /**< Saltwater shores or shallows */
+	};
+
+	/**
+	 * @brief Get the enumeration value based on a string
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @return EnvironmentType::Water represented by the string
+	 *
+	 * @see toString()
+	 */
+	const std::optional<Water> water(std::string_view sv);
+
+	/**
+	 * @brief Get the string representation of the given enum
+	 * @param water The EnvironmentType::Water to get the string of
+	 * @return Game display form of the enum value as a string
+	 */
+	const std::string toString(Water water);
+
+	/**
+	 * @brief Get the description of the given enum
+	 *
+	 * This gives more detail on the enum value for use in-game
+	 *
+	 * @param water The EnvironmentType::Water to get the string of
+	 * @return Game display form of the enum value as a string
+	 */
+	const std::string description(Water water);
+
+	/**
+	 * @brief Teach operator<< how to print a EnvironmentType::Water
+	 * @param out Output stream that the enum should be printed to
+	 * @param water Enum value to output
+	 * @return Output stream reference containing the output enum value
+	 */
+	inline std::ostream& operator<<(std::ostream& out, Water water) {
+		return out << toString(water);
+	}
+
 }

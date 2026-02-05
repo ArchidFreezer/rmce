@@ -7,13 +7,14 @@ var searchData=
   ['channelingprogression_4',['channelingProgression',['../class_race_data.html#a53bdca291bc014de5e13f2b93ace04d0',1,'RaceData']]],
   ['clearstats_5',['clearStats',['../class_profession_data.html#a05b37f86c4146cb1e8174db94c8d0a7f',1,'ProfessionData::clearStats()'],['../class_skill_category_data.html#aebd62a7951f85ada98ea67d7291d5d3b',1,'SkillCategoryData::clearStats()'],['../class_skill_data.html#a09d738a4965b01afb89f7c244b4ea891',1,'SkillData::clearStats()']]],
   ['climatedata_6',['ClimateData',['../class_climate_data.html#a1ac4242f927ba9c825e6a6143eed194d',1,'ClimateData::ClimateData()=delete'],['../class_climate_data.html#a614269758e048ee82d349f4bb50dd900',1,'ClimateData::ClimateData(std::string_view id)']]],
-  ['code_7',['code',['../class_book_data.html#a0e5569ad4b94a8c924cebdfa2780be63',1,'BookData']]],
-  ['colcount_8',['colCount',['../class_table_row.html#a301723f9e0d4caab39c6acea169f8578',1,'TableRow']]],
-  ['colnotfoundexception_9',['ColNotFoundException',['../class_col_not_found_exception.html#ae0485c1006d6d7939f4671c15bc21a01',1,'ColNotFoundException']]],
-  ['column_10',['column',['../class_table_column_armour_type_matcher.html#a51317a962f264a604bcac140018fb749',1,'TableColumnArmourTypeMatcher::column()'],['../class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670',1,'TableColumnCreatureSizeMatcher::column()']]],
-  ['creaturesizetypenotfoundexception_11',['CreatureSizeTypeNotFoundException',['../class_creature_size_type_1_1_creature_size_type_not_found_exception.html#ae680caa9ad7f3e06a868543af4922ee3',1,'CreatureSizeType::CreatureSizeTypeNotFoundException']]],
-  ['criticalmodifier_12',['criticalModifier',['../class_weapon_type_data.html#a41ec7b81ea63307d8acc67700657b573',1,'WeaponTypeData']]],
-  ['criticals_13',['criticals',['../class_weapon_type_data.html#a4207a14692f13124d7bab36bdd8416d4',1,'WeaponTypeData']]],
-  ['criticaltabletype_14',['criticalTableType',['../class_race_data.html#aadc9ade30c140d37caf70d7719aee2b4',1,'RaceData']]],
-  ['criticaltabletypenotfoundexception_15',['CriticalTableTypeNotFoundException',['../class_critical_table_type_1_1_critical_table_type_not_found_exception.html#a570d502d94804cf0abdae321eedee122',1,'CriticalTableType::CriticalTableTypeNotFoundException']]]
+  ['climatedatafileparserjson_7',['ClimateDatafileParserJson',['../class_climate_datafile_parser_json.html#a10fa982f3c812d36413d4d05c1de7759',1,'ClimateDatafileParserJson::ClimateDatafileParserJson(GameRuleDataCache &amp;cache, std::string_view filename)'],['../class_climate_datafile_parser_json.html#ae4b48fbcc2ea724345b927ebd8a67245',1,'ClimateDatafileParserJson::ClimateDatafileParserJson(GameRuleDataCache &amp;cache)']]],
+  ['code_8',['code',['../class_book_data.html#a0e5569ad4b94a8c924cebdfa2780be63',1,'BookData']]],
+  ['colcount_9',['colCount',['../class_table_row.html#a301723f9e0d4caab39c6acea169f8578',1,'TableRow']]],
+  ['colnotfoundexception_10',['ColNotFoundException',['../class_col_not_found_exception.html#ae0485c1006d6d7939f4671c15bc21a01',1,'ColNotFoundException']]],
+  ['column_11',['column',['../class_table_column_armour_type_matcher.html#a51317a962f264a604bcac140018fb749',1,'TableColumnArmourTypeMatcher::column()'],['../class_table_column_creature_size_matcher.html#a5cf2a4b6b2eec449c2fe51b296e40670',1,'TableColumnCreatureSizeMatcher::column()']]],
+  ['creaturesizetypenotfoundexception_12',['CreatureSizeTypeNotFoundException',['../class_creature_size_type_1_1_creature_size_type_not_found_exception.html#ae680caa9ad7f3e06a868543af4922ee3',1,'CreatureSizeType::CreatureSizeTypeNotFoundException']]],
+  ['criticalmodifier_13',['criticalModifier',['../class_weapon_type_data.html#a41ec7b81ea63307d8acc67700657b573',1,'WeaponTypeData']]],
+  ['criticals_14',['criticals',['../class_weapon_type_data.html#a4207a14692f13124d7bab36bdd8416d4',1,'WeaponTypeData']]],
+  ['criticaltabletype_15',['criticalTableType',['../class_race_data.html#aadc9ade30c140d37caf70d7719aee2b4',1,'RaceData']]],
+  ['criticaltabletypenotfoundexception_16',['CriticalTableTypeNotFoundException',['../class_critical_table_type_1_1_critical_table_type_not_found_exception.html#a570d502d94804cf0abdae321eedee122',1,'CriticalTableType::CriticalTableTypeNotFoundException']]]
 ];

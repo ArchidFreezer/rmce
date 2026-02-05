@@ -1,33 +1,35 @@
 <map id="DatafileParserJson" name="DatafileParserJson">
-<area shape="rect" id="Node000001" title="Abstract class to parse json files containing game rule data." alt="" coords="158,351,290,377"/>
+<area shape="rect" id="Node000001" title="Abstract class to parse json files containing game rule data." alt="" coords="158,376,290,403"/>
 <area shape="rect" id="Node000003" href="$class_armour_type_datafile_parser_json.html" title="Process ArmourTypeData objects for json files." alt="" coords="342,5,544,32"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,334,231,274,249,195,263,153,282,112,306,75,336,42,357,30,353,34,340,46,311,78,287,115,268,155,254,196,236,274,229,336"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,360,229,295,245,209,260,164,279,119,304,78,336,42,356,31,353,35,340,46,309,81,284,122,265,165,251,210,234,295,228,361"/>
 <area shape="rect" id="Node000004" href="$class_attack_table_datafile_parser_json.html" title="Process AttackTable objects for json files." alt="" coords="342,56,544,83"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="226,335,236,283,256,217,288,150,310,119,336,93,358,81,354,85,340,97,314,123,293,153,261,219,241,284,231,336"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,359,234,303,252,231,267,193,285,156,308,122,336,93,357,81,353,85,340,97,312,126,290,159,272,195,258,233,239,304,230,361"/>
 <area shape="rect" id="Node000005" href="$class_book_datafile_parser_json.html" title="Process BookData objects for json files." alt="" coords="362,107,524,133"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="229,335,242,292,264,240,294,188,314,164,336,143,363,130,360,134,340,147,318,168,299,191,268,243,247,294,234,337"/>
-<area shape="rect" id="Node000006" href="$class_language_category_datafile_parser_json.html" title="Process LanguageCategoryData objects for json files." alt="" coords="356,157,531,200"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="236,336,275,273,304,239,336,210,359,199,356,203,340,214,307,243,280,276,241,338"/>
-<area shape="rect" id="Node000007" href="$class_language_datafile_parser_json.html" title="Process LanguageData objects for json files." alt="" coords="349,224,537,251"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="244,337,284,297,310,277,337,260,368,250,364,253,339,265,313,282,288,301,248,341"/>
-<area shape="rect" id="Node000008" href="$class_profession_datafile_parser_json.html" title="Process ProfessionData objects for json files." alt="" coords="346,275,540,301"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="265,341,337,311,379,300,375,303,339,316,268,346"/>
-<area shape="rect" id="Node000009" href="$class_race_datafile_parser_json.html" title="Process RaceData objects for json files." alt="" coords="362,325,525,352"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="304,352,363,347,359,350,306,357"/>
-<area shape="rect" id="Node000010" href="$class_skill_category_datafile_parser_json.html" title="Process SkillCategoryData objects for json files." alt="" coords="338,376,548,403"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="304,371,340,376,335,378,306,376"/>
-<area shape="rect" id="Node000011" href="$class_skill_datafile_parser_json.html" title="Process SkillData objects for json files." alt="" coords="364,427,522,453"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="266,382,339,412,380,425,374,427,337,417,266,387"/>
-<area shape="rect" id="Node000012" href="$class_skill_group_datafile_parser_json.html" title="Process SkillGroupData objects for json files." alt="" coords="347,477,539,504"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="246,386,288,427,313,446,339,463,369,476,363,477,337,468,310,451,284,431,246,392"/>
-<area shape="rect" id="Node000013" href="$class_skill_progression_type_datafile_parser_json.html" title="Process SkillProgressionTypeData objects from json files." alt="" coords="349,528,537,571"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="239,388,280,452,307,485,340,514,360,527,355,528,336,518,304,489,275,455,238,394"/>
-<area shape="rect" id="Node000014" href="$class_special_attack_table_datafile_parser_json.html" title="Process SpecialAttackTable objects for json files." alt="" coords="354,595,532,637"/>
-<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="233,389,248,433,269,484,300,536,318,560,340,581,358,594,352,594,336,585,314,563,295,539,265,486,243,435,231,394"/>
-<area shape="rect" id="Node000015" href="$class_spell_list_datafile_parser_json.html" title="Process SpellListData objects for json files." alt="" coords="352,661,534,688"/>
-<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="229,390,240,447,259,516,273,552,291,587,313,619,340,647,358,661,353,660,336,651,309,623,286,590,268,555,254,518,235,448,227,396"/>
-<area shape="rect" id="Node000016" href="$class_weapon_type_datafile_parser_json.html" title="Process WeaponTypeData objects for json files." alt="" coords="340,712,547,739"/>
-<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="227,390,235,456,252,539,266,582,285,625,309,664,340,698,357,712,352,711,336,702,305,667,280,627,261,584,247,540,229,457,225,395"/>
-<area shape="rect" id="Node000002" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="5,351,110,377"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,362,160,362,155,366,127,366"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="227,360,239,313,259,254,291,194,312,167,336,143,364,130,360,134,340,147,316,171,296,197,264,257,244,315,232,362"/>
+<area shape="rect" id="Node000006" href="$class_climate_datafile_parser_json.html" title="Process ClimateData objects for json files." alt="" coords="354,157,532,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="231,360,246,322,268,277,298,232,336,194,360,183,356,187,340,198,302,235,272,280,250,325,236,362"/>
+<area shape="rect" id="Node000007" href="$class_language_category_datafile_parser_json.html" title="Process LanguageCategoryData objects for json files." alt="" coords="356,208,531,251"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="240,362,280,310,307,284,337,260,361,249,358,253,339,265,310,288,284,314,244,365"/>
+<area shape="rect" id="Node000008" href="$class_language_datafile_parser_json.html" title="Process LanguageData objects for json files." alt="" coords="349,275,537,301"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="251,364,291,336,337,311,372,300,368,304,339,316,294,341,255,368"/>
+<area shape="rect" id="Node000009" href="$class_profession_datafile_parser_json.html" title="Process ProfessionData objects for json files." alt="" coords="346,325,540,352"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="298,370,384,351,380,354,301,374"/>
+<area shape="rect" id="Node000010" href="$class_race_datafile_parser_json.html" title="Process RaceData objects for json files." alt="" coords="362,376,525,403"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="304,387,363,388,359,391,306,392"/>
+<area shape="rect" id="Node000011" href="$class_skill_category_datafile_parser_json.html" title="Process SkillCategoryData objects for json files." alt="" coords="338,427,548,453"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="299,404,385,425,380,427,300,409"/>
+<area shape="rect" id="Node000012" href="$class_skill_datafile_parser_json.html" title="Process SkillData objects for json files." alt="" coords="364,477,522,504"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="253,410,294,438,339,463,373,476,368,477,337,468,291,442,254,415"/>
+<area shape="rect" id="Node000013" href="$class_skill_group_datafile_parser_json.html" title="Process SkillGroupData objects for json files." alt="" coords="347,528,539,555"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="242,413,283,466,310,492,339,514,365,527,360,528,337,518,306,496,279,469,241,419"/>
+<area shape="rect" id="Node000014" href="$class_skill_progression_type_datafile_parser_json.html" title="Process SkillProgressionTypeData objects from json files." alt="" coords="349,579,537,621"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="236,415,254,450,276,490,305,530,340,565,359,578,354,578,336,569,301,534,271,493,249,453,235,420"/>
+<area shape="rect" id="Node000015" href="$class_special_attack_table_datafile_parser_json.html" title="Process SpecialAttackTable objects for json files." alt="" coords="354,645,532,688"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="231,416,245,464,266,522,297,581,317,608,340,631,357,645,352,645,336,635,313,611,293,584,261,524,240,466,230,421"/>
+<area shape="rect" id="Node000016" href="$class_spell_list_datafile_parser_json.html" title="Process SpellListData objects for json files." alt="" coords="352,712,534,739"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="228,415,237,477,255,553,269,593,288,631,311,667,340,698,358,712,352,711,336,702,307,670,283,634,265,595,250,554,232,478,226,420"/>
+<area shape="rect" id="Node000017" href="$class_weapon_type_datafile_parser_json.html" title="Process WeaponTypeData objects for json files." alt="" coords="340,763,547,789"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="226,416,233,486,248,575,263,623,282,669,308,712,340,749,357,763,352,762,336,753,303,715,277,671,258,624,243,577,227,487,224,421"/>
+<area shape="rect" id="Node000002" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="5,376,110,403"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,387,160,388,155,391,127,392"/>
 </map>

@@ -3,6 +3,7 @@ var dir_792c4a48189be87e84d6a1f72a6cdc74 =
     [ "ArmourTypeDatafileParserJson.h", "_armour_type_datafile_parser_json_8h_source.html", null ],
     [ "AttackTableDatafileParserJson.h", "_attack_table_datafile_parser_json_8h_source.html", null ],
     [ "BookDatafileParserJson.h", "_book_datafile_parser_json_8h_source.html", null ],
+    [ "ClimateDatafileParserJson.h", "_climate_datafile_parser_json_8h_source.html", null ],
     [ "DatafileParser.h", "_datafile_parser_8h_source.html", null ],
     [ "DatafileParserJson.h", "_datafile_parser_json_8h_source.html", null ],
     [ "DatafileParserXml.h", "_datafile_parser_xml_8h_source.html", null ],

@@ -138,3 +138,57 @@ const std::optional<EnvironmentType::Vegetation> EnvironmentType::vegetation(std
 	return {};
 }
 
+const std::string EnvironmentType::toString(EnvironmentType::Water water) {
+	using enum EnvironmentType::Water;
+
+	switch (water) {
+	case kBreaks: return "Breaks";
+	case kDesert: return "Desert";
+	case kFreshCoast: return "Freshwater Coast";
+	case kGlacier: return "Glacier";
+	case kIslet: return "Islet";
+	case kLake: return "Lake";
+	case kMarsh: return "Marsh";
+	case kOasis: return "Oasis";
+	case kOcean: return "Ocean";
+	case kSaltShore: return "Saltwater Coast";
+	default: return "";
+	}
+}
+
+const std::string EnvironmentType::description(EnvironmentType::Water water) {
+	using enum EnvironmentType::Water;
+
+	switch (water) {
+	case kBreaks: return "Breaks and/or wadis";
+	case kDesert: return "Deserts";
+	case kFreshCoast: return "Freshwater coasts or banks";
+	case kGlacier: return "Glaciers or snowfields";
+	case kIslet: return "Tropical islets, reefs or atolls";
+	case kLake: return "Lakes or rivers";
+	case kMarsh: return "Marshes or swamps";
+	case kOasis: return "Oasis or isolated water source";
+	case kOcean: return "Oceans";
+	case kSaltShore: return "Saltwater shores or shallows";
+	default: return "";
+	}
+}
+
+const std::optional<EnvironmentType::Water> EnvironmentType::water(std::string_view sv) {
+	using enum EnvironmentType::Water;
+
+	const std::string val = lcaseconcat(sv);
+	if (val == "breaks") return kBreaks;
+	if (val == "desert") return kDesert;
+	if (val == "freshwatercoast") return kFreshCoast;
+	if (val == "glacier") return kGlacier;
+	if (val == "islet") return kIslet;
+	if (val == "lake") return kLake;
+	if (val == "marsh") return kMarsh;
+	if (val == "oasis") return kOasis;
+	if (val == "ocean") return kOcean;
+	if (val == "saltwatercoast") return kSaltShore;
+
+	return {};
+}
+

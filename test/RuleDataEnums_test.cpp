@@ -199,4 +199,19 @@ namespace {
 		EXPECT_NE(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kBarren)), EnvironmentType::Vegetation::kGrasslands);
 	}
 
+	TEST(RuleDataEnums, EnvironmentWater) {
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kBreaks)), EnvironmentType::Water::kBreaks);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kDesert)), EnvironmentType::Water::kDesert);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kFreshCoast)), EnvironmentType::Water::kFreshCoast);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kGlacier)), EnvironmentType::Water::kGlacier);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kIslet)), EnvironmentType::Water::kIslet);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kLake)), EnvironmentType::Water::kLake);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kMarsh)), EnvironmentType::Water::kMarsh);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kOasis)), EnvironmentType::Water::kOasis);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kOcean)), EnvironmentType::Water::kOcean);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltShore)), EnvironmentType::Water::kSaltShore);
+
+		EXPECT_NE(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltShore)), EnvironmentType::Water::kLake);
+	}
+
 }
