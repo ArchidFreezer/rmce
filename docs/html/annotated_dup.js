@@ -9,6 +9,9 @@ var annotated_dup =
     [ "CriticalTableType", "namespace_critical_table_type.html", [
       [ "CriticalTableTypeNotFoundException", "class_critical_table_type_1_1_critical_table_type_not_found_exception.html", "class_critical_table_type_1_1_critical_table_type_not_found_exception" ]
     ] ],
+    [ "HabitatType", "namespace_habitat_type.html", [
+      [ "HabitatTypeNotFoundException", "class_habitat_type_1_1_habitat_type_not_found_exception.html", "class_habitat_type_1_1_habitat_type_not_found_exception" ]
+    ] ],
     [ "SkillActionType", "namespace_skill_action_type.html", [
       [ "SkillActionNotFoundException", "class_skill_action_type_1_1_skill_action_not_found_exception.html", "class_skill_action_type_1_1_skill_action_not_found_exception" ]
     ] ],
@@ -25,6 +28,7 @@ var annotated_dup =
     [ "BookData", "class_book_data.html", "class_book_data" ],
     [ "BookDatafileParserJson", "class_book_datafile_parser_json.html", "class_book_datafile_parser_json" ],
     [ "BoundIntRowLookupTable", "class_bound_int_row_lookup_table.html", "class_bound_int_row_lookup_table" ],
+    [ "ClimateData", "class_climate_data.html", "class_climate_data" ],
     [ "ColNotFoundException", "class_col_not_found_exception.html", "class_col_not_found_exception" ],
     [ "DatafileParser", "class_datafile_parser.html", "class_datafile_parser" ],
     [ "DatafileParserJson", "class_datafile_parser_json.html", "class_datafile_parser_json" ],
