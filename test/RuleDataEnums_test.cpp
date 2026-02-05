@@ -4,6 +4,7 @@
 #include <CreatureSizeType.h>
 #include <CriticalTableType.h>
 #include <CriticalType.h>
+#include <EnvironmentType.h>
 #include <HabitatType.h>
 #include <RealmType.h>
 #include <ResistanceType.h>
@@ -147,6 +148,7 @@ namespace {
 		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kTemperate)), HabitatType::Temperature::kTemperate);
 		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kCool)), HabitatType::Temperature::kCool);
 		EXPECT_EQ(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kCold)), HabitatType::Temperature::kCold);
+
 		EXPECT_NE(HabitatType::temperature(HabitatType::toString(HabitatType::Temperature::kHot)), HabitatType::Temperature::kWarm);
 	}
 
@@ -156,7 +158,60 @@ namespace {
 		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kTemperate)), HabitatType::Precipitation::kTemperate);
 		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kDry)), HabitatType::Precipitation::kDry);
 		EXPECT_EQ(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kArid)), HabitatType::Precipitation::kArid);
+
 		EXPECT_NE(HabitatType::precipitation(HabitatType::toString(HabitatType::Precipitation::kRainy)), HabitatType::Precipitation::kDry);
+	}
+
+	TEST(RuleDataEnums, EnvironmentFeature) {
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kBattlefield)), EnvironmentType::Feature::kBattlefield);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kBurial)), EnvironmentType::Feature::kBurial);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kCave)), EnvironmentType::Feature::kCave);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kCavern)), EnvironmentType::Feature::kCavern);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kDimention)), EnvironmentType::Feature::kDimention);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kEnchanted)), EnvironmentType::Feature::kEnchanted);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kHabitation)), EnvironmentType::Feature::kHabitation);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kRuins)), EnvironmentType::Feature::kRuins);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kRural)), EnvironmentType::Feature::kRural);
+		EXPECT_EQ(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kVolcanic)), EnvironmentType::Feature::kVolcanic);
+
+		EXPECT_NE(EnvironmentType::feature(EnvironmentType::toString(EnvironmentType::Feature::kVolcanic)), EnvironmentType::Feature::kEnchanted);
+	}
+
+	TEST(RuleDataEnums, EnvironmentTerrain) {
+		EXPECT_EQ(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kAlpine)), EnvironmentType::Terrain::kAlpine);
+		EXPECT_EQ(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kRough)), EnvironmentType::Terrain::kRough);
+		EXPECT_EQ(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kUnderground)), EnvironmentType::Terrain::kUnderground);
+		EXPECT_EQ(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kWaste)), EnvironmentType::Terrain::kWaste);
+
+		EXPECT_NE(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kAlpine)), EnvironmentType::Terrain::kUnderground);
+	}
+
+	TEST(RuleDataEnums, EnvironmentVegetation) {
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kBarren)), EnvironmentType::Vegetation::kBarren);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kConiferous)), EnvironmentType::Vegetation::kConiferous);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kDeciduous)), EnvironmentType::Vegetation::kDeciduous);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kGrasslands)), EnvironmentType::Vegetation::kGrasslands);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kHeath)), EnvironmentType::Vegetation::kHeath);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kJungle)), EnvironmentType::Vegetation::kJungle);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kPlains)), EnvironmentType::Vegetation::kPlains);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kTundra)), EnvironmentType::Vegetation::kTundra);
+
+		EXPECT_NE(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kBarren)), EnvironmentType::Vegetation::kGrasslands);
+	}
+
+	TEST(RuleDataEnums, EnvironmentWater) {
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kBreaks)), EnvironmentType::Water::kBreaks);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kDesert)), EnvironmentType::Water::kDesert);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kFreshCoast)), EnvironmentType::Water::kFreshCoast);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kGlacier)), EnvironmentType::Water::kGlacier);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kIslet)), EnvironmentType::Water::kIslet);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kLake)), EnvironmentType::Water::kLake);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kMarsh)), EnvironmentType::Water::kMarsh);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kOasis)), EnvironmentType::Water::kOasis);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kOcean)), EnvironmentType::Water::kOcean);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltShore)), EnvironmentType::Water::kSaltShore);
+
+		EXPECT_NE(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltShore)), EnvironmentType::Water::kLake);
 	}
 
 }

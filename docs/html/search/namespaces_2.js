@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['habitattype_0',['HabitatType',['../namespace_habitat_type.html',1,'']]]
+  ['environmenttype_0',['EnvironmentType',['../namespace_environment_type.html',1,'']]]
 ];

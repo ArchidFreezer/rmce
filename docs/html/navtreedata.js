@@ -57,10 +57,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"class_invalid_language_rank.html#a3db99b52c0a5c0e92933c4e5eecd36a3",
-"class_race_datafile_parser_json.html#aaee961c62b432c4eaefe99e06cddb5e7",
-"functions_func_g.html",
-"namespacemembers_func.html"
+"class_game_rule_data_choice.html#ac859355f84a07599254d58bfb47b9621",
+"class_race_data.html#adcd455e488f7939a847d1e740459c2a8",
+"functions.html",
+"namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1a458fe8603674d721aac782985750730b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
