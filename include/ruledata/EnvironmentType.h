@@ -142,4 +142,60 @@ namespace EnvironmentType {
 		return out << toString(terrain);
 	}
 
+	/**
+	 * @brief The typical vegetation within a region
+	 *
+	 * These represent the general vegetation within a region and are can be used to identify the fauna and flora that may be
+	 * found there.
+	 */
+	enum class Vegetation {
+		kBarren, /**< Barren, without vegetation */
+		kConiferous, /**< Coniferous forest and/or taiga */
+		kDeciduous, /**< Deciduous and mixed forest */
+		kGrasslands, /**< Grasslands with long grass */
+		kHeath, /**< Heath, scrub or moor */
+		kJungle, /**< Jungle or rainforest */
+		kPlains, /**< Grasslands with short grass */
+		kTundra, /**< Tundra */
+	};
+
+	/**
+	 * @brief Get the enumeration value based on a string
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @return EnvironmentType::Vegetation represented by the string
+	 *
+	 * @see toString()
+	 */
+	const std::optional<Vegetation> vegetation(std::string_view sv);
+
+	/**
+	 * @brief Get the string representation of the given enum
+	 * @param vegetation The EnvironmentType::Vegetation to get the string of
+	 * @return Game display form of the enum value as a string
+	 */
+	const std::string toString(Vegetation vegetation);
+
+	/**
+	 * @brief Get the description of the given enum
+	 *
+	 * This gives more detail on the enum value for use in-game
+	 *
+	 * @param vegetation The EnvironmentType::Vegetation to get the string of
+	 * @return Game display form of the enum value as a string
+	 */
+	const std::string description(Vegetation vegetation);
+
+	/**
+	 * @brief Teach operator<< how to print a EnvironmentType::Vegetation
+	 * @param out Output stream that the enum should be printed to
+	 * @param vegetation Enum value to output
+	 * @return Output stream reference containing the output enum value
+	 */
+	inline std::ostream& operator<<(std::ostream& out, Vegetation vegetation) {
+		return out << toString(vegetation);
+	}
+
 }

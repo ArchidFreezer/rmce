@@ -186,4 +186,17 @@ namespace {
 		EXPECT_NE(EnvironmentType::terrain(EnvironmentType::toString(EnvironmentType::Terrain::kAlpine)), EnvironmentType::Terrain::kUnderground);
 	}
 
+	TEST(RuleDataEnums, EnvironmentVegetation) {
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kBarren)), EnvironmentType::Vegetation::kBarren);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kConiferous)), EnvironmentType::Vegetation::kConiferous);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kDeciduous)), EnvironmentType::Vegetation::kDeciduous);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kGrasslands)), EnvironmentType::Vegetation::kGrasslands);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kHeath)), EnvironmentType::Vegetation::kHeath);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kJungle)), EnvironmentType::Vegetation::kJungle);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kPlains)), EnvironmentType::Vegetation::kPlains);
+		EXPECT_EQ(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kTundra)), EnvironmentType::Vegetation::kTundra);
+
+		EXPECT_NE(EnvironmentType::vegetation(EnvironmentType::toString(EnvironmentType::Vegetation::kBarren)), EnvironmentType::Vegetation::kGrasslands);
+	}
+
 }

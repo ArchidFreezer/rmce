@@ -90,3 +90,51 @@ const std::optional<EnvironmentType::Terrain> EnvironmentType::terrain(std::stri
 	return {};
 }
 
+const std::string EnvironmentType::toString(EnvironmentType::Vegetation vegetation) {
+	using enum EnvironmentType::Vegetation;
+
+	switch (vegetation) {
+	case kBarren: return "Barren";
+	case kConiferous: return "Coniferous";
+	case kDeciduous: return "Deciduous";
+	case kGrasslands: return "Grasslands";
+	case kHeath: return "Heath";
+	case kJungle: return "Jungle";
+	case kPlains: return "Plains";
+	case kTundra: return "Tundra";
+	default: return "";
+	}
+}
+
+const std::string EnvironmentType::description(EnvironmentType::Vegetation vegetation) {
+	using enum EnvironmentType::Vegetation;
+
+	switch (vegetation) {
+	case kBarren: return "Barren, without vegetation";
+	case kConiferous: return "Coniferous forest and/or taiga";
+	case kDeciduous: return "Deciduous and mixed forest";
+	case kGrasslands: return "Grasslands with long grass";
+	case kHeath: return "Heath, scrub or moor";
+	case kJungle: return "Jungle or rainforest";
+	case kPlains: return "Grasslands with short grass";
+	case kTundra: return "Tundra";
+	default: return "";
+	}
+}
+
+const std::optional<EnvironmentType::Vegetation> EnvironmentType::vegetation(std::string_view sv) {
+	using enum EnvironmentType::Vegetation;
+
+	const std::string val = lcaseconcat(sv);
+	if (val == "barren") return kBarren;
+	if (val == "coniferous") return kConiferous;
+	if (val == "deciduous") return kDeciduous;
+	if (val == "grasslands") return kGrasslands;
+	if (val == "heath") return kHeath;
+	if (val == "jungle") return kJungle;
+	if (val == "plains") return kPlains;
+	if (val == "tundra") return kTundra;
+
+	return {};
+}
+
