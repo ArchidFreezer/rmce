@@ -52,21 +52,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -314,15 +314,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_OUTDOOR",
+                    "group": "SKILLGROUP_OUTDOOR",
                     "bonus": "20"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -361,21 +361,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -623,11 +623,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SCIENCE_ANALYTIC",
+                    "group": "SKILLGROUP_SCIENCE_ANALYTIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -677,17 +677,17 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 }
             ],
@@ -935,15 +935,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_ATHLETIC",
+                    "group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -1018,33 +1018,33 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_GENERAL",
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
@@ -1292,11 +1292,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -1338,29 +1338,29 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "category": "SKILLCATEGORY_ARTISTIC_ACTIVE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
@@ -1608,15 +1608,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -1672,29 +1672,29 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_OBSCURE",
+                    "category": "SKILLCATEGORY_LORE_OBSCURE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -1942,11 +1942,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -1984,33 +1984,33 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_OBSCURE",
+                    "category": "SKILLCATEGORY_LORE_OBSCURE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
@@ -2258,7 +2258,7 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -2311,25 +2311,25 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -2577,19 +2577,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_OUTDOOR",
+                    "group": "SKILLGROUP_OUTDOOR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -2647,29 +2647,29 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_URBAN",
+                    "category": "SKILLCATEGORY_URBAN",
                     "bonus": "5"
                 }
             ],
@@ -2917,15 +2917,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SUBTERFUGE",
+                    "group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -2956,25 +2956,25 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -3222,15 +3222,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -3261,21 +3261,21 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -3523,19 +3523,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -3590,33 +3590,33 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "5"
                 }
             ],
@@ -3864,11 +3864,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -3924,41 +3924,43 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_OBSCURE",
+                    "category": "SKILLCATEGORY_LORE_OBSCURE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "category": "SKILLCATEGORY_LORE_TECHNICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
                     "bonus": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "6",
-                    "skill-type": "Occupational",
-                    "categories": "SKILLCATEGORY_CRAFTS"
+                    "development-type": "Occupational",
+                    "categories": [
+                        "SKILLCATEGORY_CRAFTS"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -4205,7 +4207,7 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -4249,21 +4251,23 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "bonus": "10"
                 }
             ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "categories": "SKILLCATEGORY_COMBAT_MANOEUVRES"
+                    "development-type": "Everyman",
+                    "categories": [
+                        "SKILLCATEGORY_COMBAT_MANOEUVRES"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -4510,11 +4514,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "20"
                 }
             ]
@@ -4589,29 +4593,29 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "10"
                 }
             ],
@@ -4859,11 +4863,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -4912,25 +4916,25 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "category": "SKILLCATEGORY_DIRECTED_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -5178,11 +5182,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -5207,33 +5211,35 @@
                     "development-type": "Restricted"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Occupational",
-                    "categories": "SKILLCATEGORY_CRAFTS"
+                    "development-type": "Occupational",
+                    "categories": [
+                        "SKILLCATEGORY_CRAFTS"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -5480,23 +5486,23 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ATHLETIC",
+                    "group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_OUTDOOR",
+                    "group": "SKILLGROUP_OUTDOOR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_TECHNICAL_TRADE",
+                    "group": "SKILLGROUP_TECHNICAL_TRADE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -5569,29 +5575,29 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "10"
                 }
             ],
@@ -5839,11 +5845,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -5883,21 +5889,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_URBAN",
+                    "category": "SKILLCATEGORY_URBAN",
                     "bonus": "5"
                 }
             ],
@@ -6145,23 +6151,23 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SUBTERFUGE",
+                    "group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -6199,25 +6205,25 @@
                     "development-type": "Restricted"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "10"
                 }
             ],
@@ -6465,15 +6471,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SUBTERFUGE",
+                    "group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -6526,25 +6532,25 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "category": "SKILLCATEGORY_DIRECTED_SPELLS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -6792,7 +6798,7 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -6841,21 +6847,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -7103,11 +7109,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_TECHNICAL_TRADE",
+                    "group": "SKILLGROUP_TECHNICAL_TRADE",
                     "bonus": "5"
                 }
             ]
@@ -7163,41 +7169,43 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_OBSCURE",
+                    "category": "SKILLCATEGORY_LORE_OBSCURE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "6",
-                    "skill-type": "Occupational",
-                    "categories": "SKILLCATEGORY_CRAFTS"
+                    "development-type": "Occupational",
+                    "categories": [
+                        "SKILLCATEGORY_CRAFTS"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -7444,7 +7452,7 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -7493,33 +7501,33 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
@@ -7767,11 +7775,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -7817,25 +7825,25 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "5"
                 }
             ],
@@ -8083,15 +8091,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_MARTIAL_ARTS",
+                    "group": "SKILLGROUP_MARTIAL_ARTS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -8150,33 +8158,33 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "5"
                 }
             ],
@@ -8424,11 +8432,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -8466,25 +8474,25 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_URBAN",
+                    "category": "SKILLCATEGORY_URBAN",
                     "bonus": "5"
                 }
             ],
@@ -8732,15 +8740,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ATHLETIC",
+                    "group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -8772,7 +8780,7 @@
                     ]
                 }
             ],
-            "skill-bonus": [
+            "skill-bonuses": [
                 {
                     "skill": "SKILL_TRANSCEND_ARMOR",
                     "bonus": "20"
@@ -8788,17 +8796,17 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 }
             ],
@@ -9046,19 +9054,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_ATHLETIC",
+                    "group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -9099,25 +9107,25 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -9371,11 +9379,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -9422,31 +9430,31 @@
             "skill-subcategory-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "skills": {
-                        "skill": "SKILL_LANGUAGES"
-                    }
+                    "development-type": "Everyman",
+                    "skills": [
+                        "SKILL_LANGUAGES"
+                    ]
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
                     "bonus": "5"
                 }
             ],
@@ -9694,11 +9702,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -9738,7 +9746,7 @@
                     ]
                 }
             ],
-            "skill-bonus": [
+            "skill-bonuses": [
                 {
                     "skill": "SKILL_ANIMAL_MASTERY",
                     "bonus": "25"
@@ -9766,25 +9774,25 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "5"
                 }
             ],
@@ -10038,11 +10046,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -10079,29 +10087,31 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "category": "SKILLCATEGORY_AWARENESS_SENSES",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "categories": "SKILLCATEGORY_CRAFTS"
+                    "development-type": "Everyman",
+                    "categories": [
+                        "SKILLCATEGORY_CRAFTS"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -10348,25 +10358,27 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARTISTIC",
+                    "group": "SKILLGROUP_ARTISTIC",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "SKILLGROUP_ARTISTIC",
-                    "skill_development": "Everyman"
+                    "group": "SKILLGROUP_ARTISTIC",
+                    "development-type": "Everyman"
                 }
             ],
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Occupational",
-                    "groups": "SKILLGROUP_ARTISTIC"
+                    "development-type": "Occupational",
+                    "groups": [
+                        "SKILLGROUP_ARTISTIC"
+                    ]
                 }
             ]
         },
@@ -10417,17 +10429,17 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
                     "bonus": "10"
                 }
             ],
@@ -10675,15 +10687,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SCIENCE_ANALYTIC",
+                    "group": "SKILLGROUP_SCIENCE_ANALYTIC",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -10732,17 +10744,17 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_URBAN",
+                    "category": "SKILLCATEGORY_URBAN",
                     "bonus": "5"
                 }
             ],
@@ -10990,19 +11002,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -11051,25 +11063,27 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Occupational",
-                    "categories": "SKILLCATEGORY_ATHLETIC_ENDURANCE"
+                    "development-type": "Occupational",
+                    "categories": [
+                        "SKILLCATEGORY_ATHLETIC_ENDURANCE"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -11316,27 +11330,29 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_ATHLETIC",
+                    "group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ],
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "groups": "SKILLGROUP_WEAPON"
+                    "development-type": "Everyman",
+                    "groups": [
+                        "SKILLGROUP_WEAPON"
+                    ]
                 }
             ]
         },
@@ -11372,13 +11388,13 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "category": "SKILLCATEGORY_ARTISTIC_PASSIVE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "15"
                 }
             ],
@@ -11395,8 +11411,10 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Occupational",
-                    "categories": "SKILLCATEGORY_CRAFTS"
+                    "development-type": "Occupational",
+                    "categories": [
+                        "SKILLCATEGORY_CRAFTS"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -11643,19 +11661,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_TECHNICAL_TRADE",
+                    "group": "SKILLGROUP_TECHNICAL_TRADE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -11704,15 +11722,15 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "10"
                 }
             ],
             "skill-category-special-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "15"
                 }
             ],
@@ -11966,25 +11984,25 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SUBTERFUGE",
+                    "group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ],
             "skill-group-special-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 }
             ]
@@ -12025,21 +12043,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
                     "bonus": "5"
                 }
             ],
@@ -12293,15 +12311,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 }
             ]
@@ -12337,31 +12355,31 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "10"
                 }
             ],
             "skill-category-special-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
                 }
             ],
@@ -12609,11 +12627,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -12658,21 +12676,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
                     "bonus": "5"
                 }
             ],
@@ -12926,19 +12944,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SUBTERFUGE",
+                    "group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 }
             ]
@@ -12997,23 +13015,23 @@
             "skill-subcategory-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "skills": {
-                        "skill": "SKILL_LANGUAGES"
-                    }
+                    "development-type": "Everyman",
+                    "skills": [
+                        "SKILL_LANGUAGES"
+                    ]
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -13261,23 +13279,23 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -13329,23 +13347,23 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-category-special-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
                 }
             ],
@@ -13593,15 +13611,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 }
             ]
@@ -13670,31 +13688,31 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-category-special-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
                 }
             ],
@@ -13942,11 +13960,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -13991,21 +14009,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -14253,19 +14271,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -14314,21 +14332,21 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -14576,19 +14594,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SUBTERFUGE",
+                    "group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 }
             ]
@@ -14641,29 +14659,31 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "categories": "SKILLCATEGORY_COMBAT_MANOEUVRES"
+                    "development-type": "Everyman",
+                    "categories": [
+                        "SKILLCATEGORY_COMBAT_MANOEUVRES"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -14910,19 +14930,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -14975,17 +14995,17 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
@@ -15233,19 +15253,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_TECHNICAL_TRADE",
+                    "group": "SKILLGROUP_TECHNICAL_TRADE",
                     "bonus": "10"
                 }
             ]
@@ -15314,29 +15334,29 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
                     "bonus": "5"
                 }
             ],
@@ -15584,18 +15604,18 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "SKILLGROUP_OUTDOOR",
-                    "skill_development": "Everyman"
+                    "group": "SKILLGROUP_OUTDOOR",
+                    "development-type": "Everyman"
                 }
             ]
         },
@@ -15643,19 +15663,19 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-category-special-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
                 }
             ],
@@ -15903,23 +15923,23 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -15972,21 +15992,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
                     "bonus": "5"
                 }
             ],
@@ -16234,15 +16254,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -16283,23 +16303,23 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "category": "SKILLCATEGORY_DIRECTED_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-category-special-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
                 }
             ],
@@ -16547,19 +16567,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -16600,23 +16620,23 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-category-special-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
                 }
             ],
@@ -16870,15 +16890,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARTISTIC",
+                    "group": "SKILLGROUP_ARTISTIC",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -16931,23 +16951,23 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "20"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
             "skill-category-special-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
                 }
             ],
@@ -17201,15 +17221,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 }
             ]
@@ -17254,44 +17274,48 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "10"
                 }
             ],
             "skill-category-special-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "15"
                 }
             ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "categories": "SKILLCATEGORY_POWER_AWARENESS"
+                    "development-type": "Everyman",
+                    "categories": [
+                        "SKILLCATEGORY_POWER_AWARENESS"
+                    ]
                 },
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "categories": "SKILLCATEGORY_POWER_MANIPULATION"
+                    "development-type": "Everyman",
+                    "categories": [
+                        "SKILLCATEGORY_POWER_MANIPULATION"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -17538,21 +17562,23 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 }
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
-                    "skill_development": "Restricted"
+                    "group": "SKILLGROUP_ARMOUR",
+                    "development-type": "Restricted"
                 }
             ],
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "groups": "SKILLGROUP_SPELLS"
+                    "development-type": "Everyman",
+                    "groups": [
+                        "SKILLGROUP_SPELLS"
+                    ]
                 }
             ]
         },
@@ -17591,21 +17617,21 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -17859,19 +17885,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -17908,21 +17934,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -18180,15 +18206,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -18219,7 +18245,7 @@
                     ]
                 }
             ],
-            "skill-bonus": [
+            "skill-bonuses": [
                 {
                     "skill": "SKILL_WEAPON_1_H_CONCUSSION",
                     "subcategory": "War Hammer",
@@ -18239,23 +18265,23 @@
             "skill-subcategory-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "skills": {
-                        "skill": "SKILL_METAL_CRAFTS"
-                    }
+                    "development-type": "Everyman",
+                    "skills": [
+                        "SKILL_METAL_CRAFTS"
+                    ]
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_CRAFTS",
+                    "category": "SKILLCATEGORY_CRAFTS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -18503,19 +18529,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -18556,13 +18582,13 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -18820,23 +18846,23 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SUBTERFUGE",
+                    "group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -18888,21 +18914,21 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
                     "bonus": "10"
                 }
             ],
@@ -19150,15 +19176,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -19207,17 +19233,17 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -19465,33 +19491,35 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_ARTISTIC",
+                    "group": "SKILLGROUP_ARTISTIC",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "SKILLGROUP_ARTISTIC",
-                    "skill_development": "Everyman"
+                    "group": "SKILLGROUP_ARTISTIC",
+                    "development-type": "Everyman"
                 }
             ],
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Occupational",
-                    "groups": "SKILLGROUP_ARTISTIC"
+                    "development-type": "Occupational",
+                    "groups": [
+                        "SKILLGROUP_ARTISTIC"
+                    ]
                 }
             ]
         },
@@ -19520,7 +19548,7 @@
                     ]
                 }
             ],
-            "skill-bonus": [
+            "skill-bonuses": [
                 {
                     "skill": "SKILL_FAUNA_LORE",
                     "bonus": "25"
@@ -19552,13 +19580,13 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -19806,30 +19834,30 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_OUTDOOR",
+                    "group": "SKILLGROUP_OUTDOOR",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ],
             "skill-group-skill-development-types": [
                 {
-                    "skill_group": "SKILLGROUP_OUTDOOR",
-                    "skill_development": "Everyman"
+                    "group": "SKILLGROUP_OUTDOOR",
+                    "development-type": "Everyman"
                 }
             ]
         },
@@ -19880,17 +19908,17 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -20144,23 +20172,23 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -20217,25 +20245,25 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -20483,11 +20511,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -20528,17 +20556,17 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -20792,15 +20820,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -20837,21 +20865,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -20868,13 +20896,17 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Occupational",
-                    "categories": "SKILLCATEGORY_ATHLETIC_BRAWN"
+                    "development-type": "Occupational",
+                    "categories": [
+                        "SKILLCATEGORY_ATHLETIC_BRAWN"
+                    ]
                 },
                 {
                     "num-choices": "1",
-                    "skill-type": "Occupational",
-                    "categories": "SKILLCATEGORY_ATHLETIC_ENDURANCE"
+                    "development-type": "Occupational",
+                    "categories": [
+                        "SKILLCATEGORY_ATHLETIC_ENDURANCE"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -21121,15 +21153,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -21186,23 +21218,23 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-category-special-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
                     "bonus": "15"
                 }
             ],
@@ -21456,23 +21488,23 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -21513,21 +21545,21 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -21781,15 +21813,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -21845,25 +21877,25 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_GENERAL",
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -22117,11 +22149,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -22190,21 +22222,23 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Occupational",
-                    "categories": "SKILLCATEGORY_COMBAT_MANOEUVRES"
+                    "development-type": "Occupational",
+                    "categories": [
+                        "SKILLCATEGORY_COMBAT_MANOEUVRES"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -22451,32 +22485,36 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_ATHLETIC",
+                    "group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "15"
                 }
             ],
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "groups": "SKILLGROUP_WEAPON"
+                    "development-type": "Everyman",
+                    "groups": [
+                        "SKILLGROUP_WEAPON"
+                    ]
                 },
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "groups": "SKILLGROUP_ARMOUR"
+                    "development-type": "Everyman",
+                    "groups": [
+                        "SKILLGROUP_ARMOUR"
+                    ]
                 }
             ]
         },
@@ -22520,25 +22558,25 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
                     "bonus": "10"
                 }
             ],
@@ -22792,11 +22830,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -22836,13 +22874,13 @@
                     "development-type": "Occupational"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -23096,27 +23134,29 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ],
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "2",
-                    "skill-type": "Everyman",
-                    "groups": "SKILLGROUP_SCIENCE_ANALYTIC"
+                    "development-type": "Everyman",
+                    "groups": [
+                        "SKILLGROUP_SCIENCE_ANALYTIC"
+                    ]
                 }
             ]
         },
@@ -23147,13 +23187,13 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "5"
                 }
             ],
@@ -23401,19 +23441,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ATHLETIC",
+                    "group": "SKILLGROUP_ATHLETIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_OUTDOOR",
+                    "group": "SKILLGROUP_OUTDOOR",
                     "bonus": "20"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -23444,7 +23484,7 @@
             "skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
+                    "development-type": "Everyman",
                     "skills": [
                         {
                             "skill": "SKILL_TACKLING"
@@ -23458,23 +23498,23 @@
             "skill-subcategory-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "skills": {
-                        "skill": "SKILL_SITUATIONAL_AWARENESS"
-                    }
+                    "development-type": "Everyman",
+                    "skills": [
+                        "SKILL_SITUATIONAL_AWARENESS"
+                    ]
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "bonus": "5"
                 }
             ],
@@ -23722,19 +23762,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ARMOUR",
+                    "group": "SKILLGROUP_ARMOUR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SUBTERFUGE",
+                    "group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "15"
                 }
             ]
@@ -23792,25 +23832,25 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATIONS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -24058,7 +24098,7 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -24127,21 +24167,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
@@ -24389,15 +24429,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "SKILLGROUP_LORE",
+                    "group": "SKILLGROUP_LORE",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -24456,25 +24496,25 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "category": "SKILLCATEGORY_DIRECTED_SPELLS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -24722,7 +24762,7 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -24781,25 +24821,25 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_OBSCURE",
+                    "category": "SKILLCATEGORY_LORE_OBSCURE",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -25047,7 +25087,7 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -25079,21 +25119,21 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "10"
                 }
             ],
@@ -25341,19 +25381,19 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_MARTIAL_ARTS",
+                    "group": "SKILLGROUP_MARTIAL_ARTS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_OUTDOOR",
+                    "group": "SKILLGROUP_OUTDOOR",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -25396,23 +25436,23 @@
             "skill-subcategory-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "skills": {
-                        "skill": "SKILL_SITUATIONAL_AWARENESS"
-                    }
+                    "development-type": "Everyman",
+                    "skills": [
+                        "SKILL_SITUATIONAL_AWARENESS"
+                    ]
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
@@ -25660,15 +25700,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SUBTERFUGE",
+                    "group": "SKILLGROUP_SUBTERFUGE",
                     "bonus": "15"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "10"
                 }
             ]
@@ -25723,29 +25763,29 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_INFLUENCE",
+                    "category": "SKILLCATEGORY_INFLUENCE",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "5"
                 }
             ],
@@ -25993,11 +26033,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -26035,21 +26075,21 @@
                     "development-type": "Restricted"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "5"
                 }
             ],
@@ -26297,15 +26337,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_ATHLETIC",
+                    "group": "SKILLGROUP_ATHLETIC",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]
@@ -26341,25 +26381,27 @@
                     "development-type": "Restricted"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "15"
                 }
             ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "skill-type": "Everyman",
-                    "categories": "SKILLCATEGORY_COMBAT_MANOEUVRES"
+                    "development-type": "Everyman",
+                    "categories": [
+                        "SKILLCATEGORY_COMBAT_MANOEUVRES"
+                    ]
                 }
             ],
             "skill-category-costs": [
@@ -26606,11 +26648,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_MARTIAL_ARTS",
+                    "group": "SKILLGROUP_MARTIAL_ARTS",
                     "bonus": "15"
                 }
             ]
@@ -26649,21 +26691,21 @@
                     "development-type": "Everyman"
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
                     "bonus": "15"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "bonus": "5"
                 }
             ],
@@ -26911,11 +26953,11 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_SCIENCE_ANALYTIC",
+                    "group": "SKILLGROUP_SCIENCE_ANALYTIC",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_SPELLS",
+                    "group": "SKILLGROUP_SPELLS",
                     "bonus": "5"
                 }
             ]
@@ -26947,25 +26989,25 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonus": [
+            "skill-category-profession-bonuses": [
                 {
-                    "skill_category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SELF_CONTROL",
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
                     "bonus": "10"
                 },
                 {
-                    "skill_category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "bonus": "5"
                 }
             ],
@@ -27213,15 +27255,15 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "skill_group": "SKILLGROUP_AWARENESS",
+                    "group": "SKILLGROUP_AWARENESS",
                     "bonus": "5"
                 },
                 {
-                    "skill_group": "SKILLGROUP_MARTIAL_ARTS",
+                    "group": "SKILLGROUP_MARTIAL_ARTS",
                     "bonus": "10"
                 },
                 {
-                    "skill_group": "SKILLGROUP_WEAPON",
+                    "group": "SKILLGROUP_WEAPON",
                     "bonus": "5"
                 }
             ]

@@ -36,7 +36,6 @@ int main() {
 	RaceDatafileParserJson race_parser(cache, "../../../../data/Races.json");
 	SkillGroupDatafileParserJson skill_group_parser(cache, "../../../../data/SkillGroups.json");
 	ProfessionDatafileParserJson profession_parser(cache, "../../../../data/Professions.json");
-	ProfessionDatafileParserXml profession_parser_xml(cache, "../../../../data/Professions.xml");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
@@ -53,7 +52,7 @@ int main() {
 	parsers.push_back(&weapon_type_parser);
 	parsers.push_back(&race_parser);
 	parsers.push_back(&skill_group_parser);
-	parsers.push_back(&profession_parser_xml);
+	parsers.push_back(&profession_parser);
 
 	try {
 		// Iterate through the parsers retrieving the ID only and populating the cache with empty game data objects
@@ -75,7 +74,7 @@ int main() {
 //		weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 //		race_parser.save("../../../../data/Races2.json");
 //		skill_group_parser.save("../../../../data/SkillGroups2.json");
-		profession_parser.save("../../../../data/Professions2.json");
+//		profession_parser.save("../../../../data/Professions2.json");
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
 	}
