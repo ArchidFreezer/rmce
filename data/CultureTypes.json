@@ -1,0 +1,1498 @@
+{
+    "culture-types": [
+        {
+            "id": "CULTURETYPE_AERIAL",
+            "name": "Aerial",
+            "description": "Despite what the name might seem to indicate, the ability to fly is not a prerequisite for belonging to an Aerial society. Races that resemble a cross between birds and Men, like the Hira’razhir and the Hirazi, almost always use the Aerial template, but that is actually beside the point. Rather, the term ‘Aerial’ refers to their lofty perch, close to the ceiling of the world. Aerial folk live high up in the mountains, where the air is thin and cold but clear and bracing, and where they sometimes get the sense that they are closer to the sky than to the surface of the earth below them.<p> Of course, high up on a tall mountain is not the easiest place in which to live. You can’t grow crops in cold rock, so agriculture of any significance is impossible. Aerial folk must live by hunting and gathering, and there isn’t all that much edible vegetation to gather. In addition, most Aerial folk are reluctant for religious reasons to hunt the great birds that live in mountain eyries, which further limits their food choices. And then there is the weather, which is crisp even at its warmest, and can change from merely inhospitable to lethal in an instant when winter blizzards blow up. Aerial societies are also hidden away from the rest of the world for the most part, so that years or even decades may pass before they have contact with another civilization. Some Aerial groups are so small and so isolated that everyone has quite literally forgotten about their existence.<p> And yet, outsiders that have encountered Aerial cultures report more often than not that the folk that they met seem content with their lot—quite unwilling, in fact, to consider any other way of life. They enjoy their isolation from the rest of the world, sometimes to the point of being entirely uninterested in anyone else’s affairs. They embrace the physical challenge of living in such a forbidding environment and feel that it makes them stronger, both physically and mentally. And they feel that living so high up in the mountains actually gives them greater physically proximity to their gods.",
+            "character-concepts": "Aerial culture generally treasures its isolation from the rest of the world, so it would take very strong motivation to tug someone from an Aerial community into an adventure. This is probably the key stumbling block in creating a character concept from Aerial culture. Once you solve that, the rest of the character concept should flow more easily.<p> One possibility is that your character’s community is under threat—perhaps it is at war, or frequently menaced by marauders—and requires help from outside to defend itself. Perhaps a natural (or magically created) catastrophe looms. In any event, the community must send someone into the world below the mountain peaks to seek help. Perhaps your character is a Layman—someone without specialized skills, and whom the community could therefore spare in a time of crisis. Or perhaps your character was chosen precisely because he has certain skills—a Thief’s elusiveness, spell using ability, or a Fighter’s combat savvy—that are deemed helpful to the task.<p> Another possibility is that an Aerial society, looking down from its lofty peak, has decided to intervene in the affairs of the rest of the world—a war, perhaps. In response, it sends your character out as an emissary or a spy, counting that your charisma as a Bard or your guile as a Thief or Rogue will stand you in good stead away from home. Or perhaps, as a strapping young Fighter or Magent or Paladin, your mission is to lend your sword arm to allies who need your community’s help.<p> Yet another possibility is that your character is simply a renegade of some sort. Perhaps he is tired of living in these refined, but isolated circumstances and longs for knowledge of the world below the mountains. He leaves of his own volition (and, no doubt, against the will of his elders) to seek his fortune outside of his familiar confines.",
+            "clothing": "Clothing in Aerial cultures is simple and unostentatious, as decoration and status don’t mean much to Aerial folk. Shirts, tunic and pants of warm and rugged wool are common, and they are usually not dyed. Fur cloaks or robes keep them warm when the weather turns hostile.<p> Aerial folk wear simple decorations crafted from precious metal—charms, pendants, amulets and the like. Otherwise, they don’t go much for display, preferring a simple appearance in keeping with their relatively simple lives.",
+            "aspirations": "Aerial cultures relish their feeling of direct contact with the sublime, whether it takes the form of the open air above them or the great mountains in whose shadows they live. Some Aerial folk dream of flight, if they do not already belong to race that can fly. Others look down on the earth spread out before them and meditate on their remoteness, the sense that the rest of the world lives very far away. This sense that they are closer to the austere, elemental presence of nature than they are to other intelligent races informs the way that they look at the world and themselves. This may or may not make them more spiritual than others, but it does mean that they look inward or outward at the impersonal force of nature rather than to meddle in the affairs of others.",
+            "fears": "Aerial folk fear nothing so much as destruction of or displacement from their native environment. And while it is hard to imagine a mountain peak being destroyed, even so, stranger things have happened. And it is still more conceivable that an enemy would want to take their homes from them, or destroy them out of sheer malice. Aerial cultures are bound so closely to the particulars of their physical environment that it is impossible for them to survive either environmental or geographical displacement.",
+            "marriage-patterns": "Aerial cultures tend to be monogamous and their members mate for life. Family units are small and closely-knit, as it is difficult to sustain a large clan in such rugged conditions.",
+            "prejudices": "Aerial culture has a deep, elemental distrust of Subterranean races and groups. It is not based on reason or longstanding historical grudges, but on a simple inability to come to grips with anyone that prefers a deep, dark cave to the majesty of the open sky. For similar reasons, Aerial folk feel an affinity with Sylvan folk, whom they view as woodland cousins whether they share any racial similarity or not.<p> Aerial culture also harbors a mild suspicion of urban folk. It usually doesn’t manifest itself as outright hostility. Instead, it lingers as a feeling in the back of the mind that little good will come of dealing with them.",
+            "religious-beliefs": "Religion in Aerial cultures finds its gods in the elemental— in the towering solidity of a great mountain, in the high ceiling of the vast sky, in the terrifying power of a blizzard. Aerial civilizations entrust their priests with the task of establishing a harmonious relationship with these gods. They attempt to do so through ritual chanting, prayer and meditative trances that, in their view, allow them to communicate directly with the deities. The priests may decide to make ritual sacrifices to the god of the blizzard, but this happens only rarely, and not all groups do so.<p> Some Aerial cultures also worship great birds of prey, like great eagles, that make their nests among mountain crags as gods.",
+            "hobby-skill-ranks": "12",
+            "preferred-armours": [
+                "Skin",
+                "Leather Jerkin",
+                "Leather Coat",
+                "Leather Breastplate"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_AXE_WOODSMAN_S",
+                "WEAPONTYPE_BATTLE_AXE",
+                "WEAPONTYPE_CLUB",
+                "WEAPONTYPE_COMPOSITE_BOW",
+                "WEAPONTYPE_BROADSWORD",
+                "WEAPONTYPE_CUTLASS",
+                "WEAPONTYPE_HANDAXE",
+                "WEAPONTYPE_JAVELIN",
+                "WEAPONTYPE_SHORT_BOW",
+                "WEAPONTYPE_SLING",
+                "WEAPONTYPE_SHORT_SWORD"
+            ],
+            "skill-ranks": [
+                {
+                    "skill": "SKILL_ALERTNESS",
+                    "rank": "2"
+                },
+                {
+                    "skill": "SKILL_CLIMBING",
+                    "rank": "5"
+                },
+                {
+                    "skill": "SKILL_CULTURE_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_HIDING",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_LANGUAGES",
+                    "rank": "8"
+                },
+                {
+                    "skill": "SKILL_REGION_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_SOFT_LEATHER",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_STALKING",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_SWIMMING",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "required-terrains": [
+                "Alpine"
+            ]
+        },
+        {
+            "id": "CULTURETYPE_AQUATIC",
+            "name": "Aquatic",
+            "description": "There is intelligent life beneath the surface of the waters. Races such as Mermen and Shuikmar spend most of their time beneath the waves, as do Aquatic sub-races of Giants, Trolls and Elves (the Shuluri, of the Shadow World). They live in small communities and in great cities, close to shore and at the bottom of the ocean.<p> In some ways, life is not so different for these submarine races as it is for folk who live on dry land. Aquatic societies must harvest and gather food, breed and raise families to perpetuate themselves. In the cities folk gather to scheme over power, wealth and knowledge. Nations form and sometimes dissolve. Civilizations go to war with other over territory, wealth and, sometimes, nothing more than pure hatred.<p> But on the other hand, it simply will not do to just transplant land-based culture templates and impose them on Aquatic societies. Aquatic races are different from land-based races in terms of their physiology, which in turn affects the skills that they practice during adolescence. It affects the races with which they frequently come in contact and the neighbors with whom they must learn to get along (and therefore the languages that they know as a matter of course). And the fact that they live immersed in water affects the clothing that they wear, the gear that they carry and the weapons that they use. The Aquatic template takes these differences into account.",
+            "character-concepts": "When it comes to character concepts, characters with an Aquatic background mirror land-based cultures to some extent. The complex dynamics of city life are not so different beneath the waves from how they are on land. Similarly, Rural and Nomadic groups live similarly enough beneath the water’s surface to those who live above it so that you may borrow character concepts from those templates as well.",
+            "clothing": "Aquatic folk scarcely bother with clothes, as landbased beings know them. Most plant fibers, as well as all wool, furs and animal hides simply degrade too easily when constantly soaked in water (especially seawater). And besides, those garments become dead weight when saturated. Many Aquatic folk don’t bother with clothes at all. When they do, they dress in simple garments woven from seaweed fibers. Sometimes they are nothing more than loincloths worn out of modesty.<p> The wealthier Aquatic civilizations have just as much jeweled finery as their land-based counterparts, however, and do not hesitate to wear it as a demonstration of wealth and social status.",
+            "aspirations": "Aquatic cultures mirror their land-based counterparts in some of the ways in which they view their place in the world. Some Aquatic folk are content to live small settlements, harvesting underwater plants, hunting fish and gathering shellfish to feed themselves. Others— Mermen and Shuikmar in particular—build great cities and nations and fancy themselves conquerors as mighty as any land-based realm.",
+            "fears": "All Aquatic cultures have lurking in the back of the mind a primal fear of being stranded in the air. For most Aquatic beings—even many of those that are truly amphibious— spending too much time out of the water is unnerving, if not fatal. As sailors fear death by drowning, Aquatic folk fear death on land.",
+            "marriage-patterns": "Marriage patterns in Aquatic communities tend to mirror those of their land-based equivalents. Small communities tend to be monogamous and pair bond for life. In great underwater cities, matters tend to be more fluid (as it were), and relationships dissolve and reform with greater frequency.",
+            "prejudices": "Aquatic folk are, as a general rule, suspicious of all land-based creatures and races. They feel more comfortable around other water-based races, and they feel this elemental bond even with their underwater enemies. This doesn’t mean that Aquatic races never associate with or accept help from land-based beings, but it does reflect the fact that almost all Aquatic races have great difficulty functioning in land-based environments.",
+            "religious-beliefs": "Aquatic groups worship tribal gods who will protect them from harm, whether it is destruction of their Aquatic habitat or attack by their neighbors. This deity usually takes a physical form that resembles the race that it is supposed to protect. In some instances, however, it may take an elemental or non-corporeal form. The patron god may appear in the form of a disturbance in the water, such as a tidal wave or a whirlpool.",
+            "hobby-skill-ranks": "12",
+            "preferred-armours": [
+                "Skin"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_HARPOON_LIGHT",
+                "WEAPONTYPE_HANDAXE",
+                "WEAPONTYPE_SPEAR",
+                "WEAPONTYPE_TRIDENT",
+                "WEAPONTYPE_POLEARM",
+                "WEAPONTYPE_TOMAHAWK"
+            ],
+            "skill-ranks": [
+                {
+                    "skill": "SKILL_ALERTNESS",
+                    "rank": "2"
+                },
+                {
+                    "skill": "SKILL_CULTURE_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_LANGUAGES",
+                    "rank": "8"
+                },
+                {
+                    "skill": "SKILL_REGION_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_RIDING",
+                    "subcategory": "Sea-horse",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_SWIMMING",
+                    "rank": "5"
+                }
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "required-water-sources": [
+                "Lake",
+                "Ocean"
+            ]
+        },
+        {
+            "id": "CULTURETYPE_ARCTIC",
+            "name": "Arctic",
+            "description": "Arctic folk live quite literally at the ends of the earth, in the frozen wastes of the far North and far South of the world. They may be herders who crisscross the tundra in search of grazing for their animals. Or they may be even sturdier folk who live amidst snow and ice and sustain themselves by fishing and hunting. They may be tribesmen who supplement the marginal living that their environment affords them by raiding comfortable folk who live in more temperate areas. In any case, they share the need to adapt themselves to the harshness of living in circumstances that, by all logic, shouldn’t support them.<p> Surviving in the Arctic means developing considerable skill at hunting and fishing or herding. The terrain simply doesn’t support any kind of farming. Gathering what plants there are would usually mean competing for food with your own livestock (if you’re a herder), so there is little advantage to it. Long-term survival in the Arctic also means making good use of the animals that you hunt. The larger native animals provide plenty of meat, which will not rot in the perpetual Arctic cold. But also, all Arctic folk know how to exploit animal hides and furs to make warm clothing, how to use oil from large marine mammals for fuel, and how to use bone and sinew to make durable tools and even art objects.<p> The ingenuity of Arctic folk extends to building shelters, as well. Some Arctic areas are forested and can be exploited for lumber. But Nomadic herders who live in these lands know how to erect secure shelters from animal skins and furs and light wooden poles. Others have learned that small structures built from snow and ice are surprisingly effective at keeping out the cold.<p> For all their cleverness and physical toughness, Arctic folk benefit substantially from any trading contacts that they can make with folk from more temperate climates. In exchange for preserved fish and goods unique to their environment, such as ivory and furs, they receive food items to balance out their diet, sophisticated tools and weapons, and luxury goods. Arctic folk don’t mine very much, but they occasionally find meteorites made of iron or other industrial metals that they can dangle as trade bait.",
+            "character-concepts": "When creating an adventuring character from an Arctic culture, you might focus on two activities that can take Arctic folk away from home and bring them into contact with the outside world: hunting and trading. A hunter in this setting would most likely have the professional skills of a Fighter (of course), a Ranger or even a Rogue or a Magent. His occupation would inure him to the rigors of adventuring. As to his motivation, perhaps he needs to find a new food source for his community, or wishes to crown himself with the glory of hunting a legendary beast.<p> A trader would leave his community in search of a buyer or a seller. In either case, he would carry with him goods for sale or barter, such as bone carvings, ivory or furs. The benefits of trade are strong motivation in and of themselves, but you could also add some emphasis by factoring in the needs of the community—perhaps they have fallen on hard times and desperately need to trade what little they have for food, or some other form of aid. A trader, who by nature is used to dealing with outsiders, is also an excellent candidate to quest after a magic item that his community might need. He may be of any profession that stresses Communication Skills and related attributes, such as Bard, Magician, Illusionist or Magent. The ability to master Urban Skills (rare as they are in Arctic culture) is also helpful.<p> If your party has two characters with Arctic backgrounds, one could be a trader traveling in search of a market for his goods, and the other could be a hunter who serves as his bodyguard.<p> Alternately, trade could provide your character’s initial impulse to go adventuring by bringing the outside world into the community. Contact with outsiders could bring news of either crisis or opportunity that would motivate Arctic folk to leave the familiar confines of their lives and do something extraordinary.<p> Or, the outsiders themselves may be on a quest of some kind, and may need someone from the Arctic community to serve as a guide.",
+            "clothing": "Arctic folk dress to survive the climate in which they live. They wear heavy undergarments made of animal skins or thick cloth and wrap furs around themselves. They wear large fur hats or cloaks with hoods. To protect their feet, they wear heavy boots lined with fur and use skis or snowshoes to move about in the snow. Hard experience has taught them to cover as much of their bodies as much as they possibly can when the temperature drops below freezing, or when they expect to be out of doors for any length of time.<p> Arctic folk possess little in the way of jewelry. Precious metals are scarce in their native environment, though not entirely unknown. What they have, they acquire from traders who come from temperate regions in search of ivory and furs. Arctic folk create personal ornaments from ivory and bone, and are quite expert in carving aesthetically pleasing objects from them.",
+            "aspirations": "There is no terrain more forbidding than that in which Arctic folk live. They are tough and hardy, but their lives involve so much struggle with the elements that they focus their hopes and dreams on simple longterm (sometimes even short-term survival).<p> Some Arctic folk dream of warmer climes and the world outside the frozen North or South after they meet foreign traders and hear their tales. In rare cases, this inspires them to leave their homelands as migrants—or as conquerors.",
+            "fears": "Arctic culture fears predation (where predators large enough to threaten them exist) and starvation above all else. Some Arctic groups worship the animals they hunt for food as a good that periodically sacrifices itself to enable their survival (see Religious Beliefs).",
+            "marriage-patterns": "Arctic cultures tend to be monogamous. Family units, like the larger communities of which they are a part, are small and closely-knit. It is simply too difficult to maintain much population density in such a difficult environment.",
+            "prejudices": "Arctic folk have relatively few collective prejudices. Living in such a forbidding environment, they usually face little competition for land or resources because no one else wants to go to the bother of taking what they have. It is rare that Orcs or other marauding races will come so far north or south as to give them any trouble. The outsiders whom Arctic folk encounter are usually traders, from whom they derive considerable benefit.",
+            "religious-beliefs": "Arctic societies worship tribal gods who protect them from misfortune and the hazards of their environment. Sometimes, their deities take the form of animals that they hunt for food, and they believe that the god manifests itself through a particular creature that offers itself so that the tribe may survive. In other instances, the deity is a god of fire and warmth, the elemental embodiment of that which preserves life in a frozen climate. Arctic groups have a tribal priest, through whom all interactions with the god are channeled.<p> The vernal equinox is an especially important occasion in Arctic cultures because it marks the beginning of the brief period of the year in which they can experience the warmth of the sun with any regularity. Most Arctic groups mark it with a major religious ceremony.",
+            "hobby-skill-ranks": "10",
+            "preferred-armours": [
+                "Heavy Hide"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_CUDGEL",
+                "WEAPONTYPE_CLUB",
+                "WEAPONTYPE_COMPOSITE_BOW",
+                "WEAPONTYPE_DAGGER",
+                "WEAPONTYPE_HANDAXE",
+                "WEAPONTYPE_JAVELIN",
+                "WEAPONTYPE_MACE",
+                "WEAPONTYPE_SLING",
+                "WEAPONTYPE_SHORT_SWORD",
+                "WEAPONTYPE_SPEAR"
+            ],
+            "skill-ranks": [
+                {
+                    "skill": "SKILL_ALERTNESS",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_CULTURE_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_HIDING",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_LANGUAGES",
+                    "rank": "4"
+                },
+                {
+                    "skill": "SKILL_REGION_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_SOFT_LEATHER",
+                    "rank": "2"
+                },
+                {
+                    "skill": "SKILL_STALKING",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_SWIMMING",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "2"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "2"
+                }
+            ],
+            "required-climates": [
+                "CLIMATETYPE_FRIGID",
+                "CLIMATETYPE_COLD_DRY"
+            ],
+            "required-vegetations": [
+                "Tundra"
+            ]
+        },
+        {
+            "id": "CULTURETYPE_DESERT",
+            "name": "Desert",
+            "description": "Caught between the endless planes of sky overhead and parched earth underfoot, Desert folk somehow find a way to live in some of the most inhospitable lands anywhere in the world. The lucky ones find large oases—watering holes of a size that can sustain an entire community—around which they can settle. The really lucky ones find a major river that creates a slender, precious greenbelt cutting through otherwise barren land. For them, heat and dust are ever-present sources of discomfort and drought a perpetual threat, but the Desert itself is an entity that exists beyond the immediate circle of their daily activities. Less fortunate Desert dwellers must try their fortitude and luck out in the Desert itself. Lack of ground water and arable land keeps them moving from place to place, as the supply of water and grazing for their animals dries up. But no matter whether they can find a place in which to put down roots, or whether they must keep on the move, the harshness of the environment bonds all Desert folk together.<p> To live in or on the edge of the Desert means that you must learn to cope with the basic physical facts of your existence or perish, for the facts are invariably unpleasant. Hot, arid days alternate with nights marked by dry cold that feels like it could suck the marrow from your bones. Such remarkable absence of water in the ground or from the sky means that growing crops from year to year requires luck and skill, and even traveling a few days without taking enough to see you to your destination is to risk your life. Trading is also an important adaptation to cope with the physical environment. All Desert folk understand the importance of trade, as they are keenly aware that their environment doesn’t provide them with everything that they need. Desert folk become shrewd traders and skillful negotiators by benefit of much practice; they watch their own backs and constantly look for a way around someone else’s.<p> In war as in trade, Desert folk accustom themselves to the benefits of mobility. The terrain in which they live offers little against which to secure an army’s flanks, so it’s important to be able to maneuver quickly. Desert civilizations make good military use of chariots and emphasize the development of good cavalry. This is true of both settled and Nomadic groups. Desert nomads make excellent raiders; since they are used to living on the move in unpleasant conditions, they make excellent time on the march and can strike quickly at will.",
+            "character-concepts": "Desert culture bears some similarity to Arctic culture, and not just in the fact that they both describe intelligent beings learning how to adapt to demanding physical circumstances. When creating a character from a Desert culture, you must reckon with his motivation for leaving his community, which offers security through mutual support from the hazards of the environment.<p> As with Arctic cultures, trade offers a contact point between the Desert and the outside world. A trader would leave his community in search of a buyer or a seller. In either case, he would carry with him goods for sale or barter. The benefits of trade are strong motivation in and of themselves, but you could also add some emphasis by factoring in the needs of the community— perhaps they have fallen on hard times and desperately need to trade what little they have for food, or some other form of aid. A Nomadic Desert tribe may be running so short of water that even a scrap of knowledge about where to find a new source is worth a large quantity of money or goods to them. A trader, who by nature is used to dealing with outsiders, is also an excellent candidate to quest after a magic item that his community might need. He may be of any profession that stresses Communication Skills and related attributes, such as Bard, Magician, Illusionist or Magent. The ability to master Urban Skills is also helpful.<p> Alternately, trade could provide your character’s initial impulse to go adventuring by bringing the outside world into the community. Contact with outsiders could bring news of either crisis or opportunity that would motivate Desert folk to leave the familiar confines of their lives and do something extraordinary.<p> Also, Clerics from Desert communities may go abroad to proselytize for their god, if they belong to a tribe that worships a deity they believe to be universal (see Religious Beliefs). In such cases, they use their spells as demonstrations of their god’s power. Spell use becomes for them a form of rhetoric, of persuasive theater, as well as a way of achieving practical effects. These activities could, of course, inspire hostility from the local population, who may feel threatened by this perceived challenge to their native religion. Your character will have to find a way to cope with it.",
+            "clothing": "Desert folk favor lightweight clothes that keep them comfortable in hot, dry weather. They wear robes, togas or shirts and billowy pants made of thin cotton or loosely woven wool. When traveling, they also wear cloth wraps around the head and neck to shield them from the sun and keep out sand and debris. These clothes are usually bleached white to reflect daytime heat, although Desert folk also enjoy wearing bright colors. They keep wool cloaks to protect themselves against the cold of the Desert night.<p> Desert folk who can afford it enjoy wearing jewelry. They are skilled smiths themselves, and if they cannot find precious metals and gems in their native environments they can trade for them.",
+            "aspirations": "Desert cultures tend to possess one of two generic collective dreams. Some desire above all a more comfortable life, one that spares them the hardships of the Desert and brings them wealth and pleasure. Other cultures are more austere and desire above all union with their god (see Religious Beliefs, below), which they may achieve through practicing religious rituals, living a righteous life, and\/or evangelism. In the latter case, union with one’s deity is usually understood in terms of life after death, in which death of the physical self actually leads to close proximity to the god (or gods). It should also be noted that some Desert cultures embrace both aspirations at the same time and do not see any conflict between them. Or they embrace both aspirations and will settle for whichever form of fulfillment is closest at hand.",
+            "fears": "The one fate that every Desert folk fears is death by exposure to the elements, meeting doom alone in the depths of the pitiless wastes. It is not an irrational fear, as it can happen so easily and explains all the measures that they have developed over the generations to shield themselves from the sun and to conserve water, both in the external environment and within themselves. Also, it is not so much fear for what could happen to their tribe so much as it is an anxiety that takes hold deep in the minds of every individual about what could happen to them if they are careless, if they displease their god, or if they are just unlucky. In those Desert cultures that are particularly religious, the fear of dying by exposure is compounded by the possibility that such a death signifies abandonment by one’s god.",
+            "marriage-patterns": "Desert cultures are patriarchal and polygamous. Line of descent is traced through the father, and number of wives serves as an expression of social status.",
+            "prejudices": "Desert cultures are generally suspicious of outsiders, although trading relationships reduce the level of suspicion over time. The closest relationships that Desert folk have outside of their own tribe are inevitably trading relationships—although, shrewd as they are, Desert folk always watch their own backs in their mercantile dealings.<p> If they have any particular cultural prejudice, Desert folk take pride in their hardiness, forged by the difficult environment in which they live. They look down their noses at folk who live in opulence and comfort, and who have plenty of fresh water at their disposal.",
+            "religious-beliefs": "Desert cultures worship their own tribal god. This deity takes on the roles of the tribe’s divine protector and law-giver. In many cases, it’s a double-edged role, as far as the tribe itself is concerned. Their deity presents itself as an angry and jealous father who expects his tribe to worship him exclusively and adhere without fail to his ideas of virtue and justice. Only then will protect them from foes and harm, and if his tribe fails him or disobeys him, he may exact a terrible punishment from them.<p> Other Desert groups worship the disk of the sun as a god, and attribute to it any quality that they wish. It may serve as a figure of benevolence, a bringer of light and life, or as a harsh god that inflicts punishment, drought and death to the unwary.<p> Some Desert groups believe that their deity is a universal god, and they take upon themselves the mission of spreading their religion to other groups, whether by the sword or by peaceful evangelism.",
+            "hobby-skill-ranks": "12",
+            "preferred-armours": [
+                "Skin",
+                "Chain Shirt",
+                "Chain Shirt & Greaves"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_BATTLE_AXE",
+                "WEAPONTYPE_COMPOSITE_BOW",
+                "WEAPONTYPE_CUTLASS",
+                "WEAPONTYPE_LONG_BOW",
+                "WEAPONTYPE_SHORT_BOW",
+                "WEAPONTYPE_SLING",
+                "WEAPONTYPE_SABRE",
+                "WEAPONTYPE_TWO_HANDED_SWORD"
+            ],
+            "skill-ranks": [
+                {
+                    "skill": "SKILL_ALERTNESS",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_CULTURE_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_LANGUAGES",
+                    "rank": "4"
+                },
+                {
+                    "skill": "SKILL_REGION_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_RIDING",
+                    "subcategory": "Horse",
+                    "rank": "5"
+                }
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "5"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "required-climates": [
+                "CLIMATETYPE_HOT_DRY"
+            ],
+            "required-water-sources": [
+                "Desert"
+            ]
+        },
+        {
+            "id": "CULTURETYPE_HIGHLAND",
+            "name": "Highland",
+            "description": "Not every hillside is lush, and not every mountain vale offers richly fertile soil. And yet life takes hold in such difficult places. The folk who live there work small, subsistence-level farms known as crofts, or keep herds of sheep or goats, striving to sustain them on such modest grazing as they can find, or hunt such wild game as their environment provides. Great civilizations rarely arise out of circumstances like these, but they get by, and the Highland cultural template describes how they live.<p> In order to survive (much less thrive) in Highland societies, you have to be tough and rugged. Highland groups live in varying degrees of isolation from the rest of the world, and from each other. If they run into collective trouble, there aren’t many neighbors around to help them. But Highlanders turn necessity into a cultural trait. They value their independence and self-sufficiency. They have no patience with outsiders who try to push them around. They value the honor of their clan and tribe, and will defend it against all comers, even other Highland groups. Highlanders don’t shrink from a fight, and they are used to settling disputes by force, whether by single combat, tit-for-tat raiding, or all-out war.<p> At the same time, many Highlanders have a strong theatrical streak. This trait can make you into an effective political or military leader in Highland society. But it also means that, even though they are pugnacious and warlike, Highlanders also produce more than their share of bards, singers, musicians and poets. Oral storytelling is a highly respected skill in Highland culture, even in those groups that have a high degree of literacy and can presumably write everything down.",
+            "character-concepts": "A Fighter in Highland society is one who must stand ready to defend the honor of his clan or tribe at a moment’s notice. He owes his clan or tribal chief absolute loyalty, and will follow him through proverbial hell or high water. Rogues, Thieves and Magents can prove their worth to the tribe by stealthier means, raiding rival tribes and stealing their livestock or inflicting other sorts of damage. The general state of constant bickering between Highland tribes means that there is usually plenty of work for all who follow these professions. Spell-users usually attach themselves to a particular god in the tribe’s pantheon (rarely more than two). They devote their careers to serving that deity and advancing the agenda ascribed to it by the tribe’s mythology.<p> As to what could give a Highlander impetus to leave home and sever the ties that bind him to his community, you might consider the possibility that his tribe was badly defeated in war, and either scattered or largely eliminated. With those bonds dissolved, he would have to find his own way in the world. No doubt, being a Highlander, he would also seek vengeance against his tribe’s oppressors at whatever cost. Perhaps his clan has been enslaved by conquerors, and your character aims to free them by whatever means he can muster.<p> Also, lowland realms sometimes try to recruit Highlanders as mercenaries to make use of their notorious ferocity. They make such deals with clan chieftains, knowing full well that a chief’s followers will do his bidding without question. Your character might go abroad when his clan is hired to fight in someone else’s war. Or his chief might hire him out because of his particular professional skills (and keep a suitable cut of the fee for himself, of course).",
+            "clothing": "Highlanders wear crude garments made from hide or rough wool. Their basic dress consists of tunics and leggings. They also wear over-coats, short cloaks and fur hats to keep out the cold winds that so often blow through their native lands. Common Men Highland tribes dye their wool garments in bright plaids, with each clan having its own distinctive pattern. These plaid patterns express clan pride and also allow clan members to distinguish themselves in battle.<p> Highlanders have very little in the way of gold jewelry. Silver jewelry and ornaments made of brass and bronze are not uncommon, however. Uncut or roughly cut gemstones may serve as decoration for jewelry and weapons alike.<p> Many Highland tribes engage in ritual tattooing for a variety of purposes: to mark coming of age, celebrate family or tribal identity, or as a badge of rank.",
+            "aspirations": "Highlanders have modest material ambitions. They know they cannot expect to receive much from the marginal lands in which they live. Defending the honor and status of their clan within their tribe, and the independence of their tribe within the larger world (if indeed they have any contact with the larger world) is for them the most important purpose of their existence.",
+            "fears": "Highlanders live in isolated and forbidding places, where life maintains a tenuous foothold. They tend to be superstitious, and if they fear anything, it is darkness. They believe that at night, spirits of the earth come forth with evil intentions at heart, and these spirits will gladly kill anyone careless enough to fall into their clutches.",
+            "marriage-patterns": "Highlanders are monogamous. They trace lineage through the female, so that in marriages between clans, the husband joins the wife’s clan. Political marriages meant to cement alliances between clans are quite common.",
+            "prejudices": "All Highlanders are fiercely parochial and deeply suspicious of outsiders. Highlanders of different races compete with each other for the scarce resources that their land provides, and so the rivalries between them are particularly strong.",
+            "religious-beliefs": "Each Highland tribe has its own mythology, which generally centers around a pantheon of petty tribal gods, whose motives and behavior makes them seem more like ignoble mortals than deities. These gods generally represent forces of nature, or particular emotions or fields of endeavor, like love or war. This mythology is preserved and transmitted through oral story telling, and the older the tribe, the longer and more involved are the tales that tell their myths. Highland religious practice usually involves ritual sacrifice of animals.",
+            "hobby-skill-ranks": "12",
+            "preferred-armours": [
+                "Skin",
+                "Leather Jerkin"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_BAW",
+                "WEAPONTYPE_CABIS",
+                "WEAPONTYPE_CUDGEL",
+                "WEAPONTYPE_CLUB",
+                "WEAPONTYPE_DAGGER",
+                "WEAPONTYPE_BROADSWORD",
+                "WEAPONTYPE_HANDAXE",
+                "WEAPONTYPE_JAVELIN",
+                "WEAPONTYPE_SHORT_BOW",
+                "WEAPONTYPE_SPEAR"
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "2"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "2"
+                }
+            ],
+            "required-terrains": [
+                "Alpine",
+                "Rough"
+            ]
+        },
+        {
+            "id": "CULTURETYPE_LITTORAL",
+            "name": "Littoral",
+            "description": "Those who live on and by the seas and great rivers of the world lead truly unique lives. Whether they dwell in a bustling sea port, or a coastal fishing village, or a trading center on the banks of a major river, their access to the oceans and major waterways gives them a sense of mobility of which landlocked folk can only dream. They can sail to faraway places, even to the farthest corners of the globe, and come back with exotic goods and exciting tales to tell of the wonders they have seen.<p> Littoral folk have a taste for adventure and an easy confidence in the sailing skills they learn so early in life that they eventually become second nature. But at the same time, they recognize the hazards of their way of life. Sea monsters and the wrath of the ocean haunt the backs of their minds. They know deep in the well of their souls that not even consummate skill will save them if the gods, the dreadful elements, bad luck—call it what you will—deems that their time has come. And if these anxieties lurk in the minds of the sailors themselves, they redouble themselves among the loved ones whom the sailors leave behind when they go on an extended journey. Even coastal fishermen, who don’t go out all that far in their boats, pray to the gods of the waters to keep them safe once they have cast off from shore.<p> Littoral folk, particularly ocean-going sailors, work hard and play hard. Their jobs are physically demanding and keeping their unique skills sharp requires constant practice—and the bigger the ship, the more practice the crew needs to keep them working together efficiently. When ashore, they are notoriously high-spirited and fond of drink, and it is common wisdom in port taverns that you should never turn your back on a drunken sailor. They relish the freedom that comes with casting away from dry land, but, free-spirited as they are, they know how to work with each other as part of an efficient, welldrilled team, for it is only through such close cooperation that a ship can survive in the open water.",
+            "character-concepts": "Unlike many other cultural backgrounds, an adventurous life is practically ingrained into Littoral culture. This is especially true of seaports, since the journeys to and from them are relatively long and their destinations seem particularly exotic to those in the originating port. Littoral folk don’t need much of an excuse to go an adventure that requires traversing the waters; it’s what they do for a living. Their profession doesn’t much matter; a sea voyage requires that a ship’s crew have a variety of skills, some of which will only be needed in an emergency or on land. A Fighter may be brought on board to defend against pirate attack. A Ranger might serve as a guide or a scout after the ship makes landfall. And so on.<p> The same holds largely true for Littoral communities that rely on a river instead of an ocean. Life on the water represents for them a kind of freedom from the restrictions of life on land, and a way of living that is well worth the toil and risk involved. A city 100 miles up or down river may not seem as exotic as a kingdom thousands of miles across the sea, but the process of getting there is just as liberating in its own way. Someone from a riverside community would not hesitate to pursue adventure up or down the river, because everyone he knows is at least peripherally involved in water-based travel, and because it has always seemed to him an experience well worth the trouble.<p> Of course, if someone from a Littoral community decides to pursue his life of adventure in landlocked country, well, then you have a story that requires some explaining. Such a one might have a dark secret in his past related to a mistake made or a foul deed committed at sea. Perhaps he was exiled by his community, or fled in an attempt to put his disgrace behind him. Even so, he cannot forget the skills and influences that his upbringing bestowed upon him, so that he remains of Littoral culture even though he no longer belongs to a Littoral community. His profession does not matter; it could be one that he pursued at the time of the cause of his disgrace, or it could be one that he chose while in exile.",
+            "clothing": "Littoral folk, whether they are sailors or fishermen, favor loose, simple clothing (like shirts or tunics made from inexpensive cotton) that won’t get in their way when they’re working. Hats and bandannas serve to keep the sun and sweat out of their eyes. These clothes function well enough when they’re on land, too. Littoral folk may wear jewelry, but these, too are modest in size and value. Above all, their personal decorations shouldn’t get in the way of operating a boat or a ship. An earring or a small pendant around the neck won’t cause problems, but a ring on the finger might slip off and fall overboard.<p> On the other hand, ocean-going sailors may return from their voyages with all sorts of exotic garments and ornaments from foreign lands. When they do, they are eager to show them off. In this case, imagining what Littoral folk might wear is limited only by logical considerations of how they might have gotten it. Did they buy it? Trade for it? Plunder or steal it?",
+            "aspirations": "Littoral folk who live on riverbanks, or who rely on fishing or harvesting shellfish rather than trade for their livelihoods, resemble agricultural communities in that they are content to make a living from gathering what the land will provide them. Their ambitions are modest, their view of the world circumscribed by local geography.<p> Ocean-going sailors have a different point of view. They relish the adventure of sailing to distant places and the sense of freedom that sailing the seas gives them. This sense of freedom is something of an illusion, of course, since they can only gain it by confining themselves inside a vessel for weeks or months at a stretch. But it does release them from the rules and obligations that society places on them when they are on land.",
+            "fears": "This may seem strange for folk who rely upon the waters for their livelihoods, but death by water is far and away the greatest fear in Littoral cultures. Fear of drowning and shipwreck haunts the dark corners of their minds.",
+            "marriage-patterns": "Littoral cultures are monogamous. In fact, ocean-going Littoral cultures place unusual stress on the virtues of marital fidelity. They do so in response to the strain that sea voyages place on marriages by separating spouses for long periods of time. Some couples try to cope with the stress by serving on the same crew, but child rearing at sea is all but impossible.",
+            "prejudices": "Littoral folk, especially ocean-going Littoral folk, are adventurous and unusually open to foreign influences. However, they do have one universal prejudice—landlubbers. It may take the form of good-natured snobbery, or outright contempt. But one way or another, they take pride in their nautical skill and look down their noses at those who lack it.",
+            "religious-beliefs": "Religious practice in Littoral cultures focuses around one or another patron deity, or sometimes around both at once. The exact face of these gods may vary between individual communities, but they reflect anxieties common to all. One of these archetypal deities is a god of the waters who finds physical expression in the ocean or in a major river upon which the community relies. He is a god of power and wrath, who can whip up deadly storms if he is not kept calm. Large and dangerous sea creatures, like whales or sharks, are said to be his servants and agents of his anger. He demands sacrifice of animals or goods as his price for clear sailing.<p> The other patron deity is a goddess of mercy whose purpose is to intervene directly whenever one of the community is in distress. Sailors pray to her to keep them safe when storms or other misfortunes threaten them, as do the families whom they have left behind. She demands no sacrifice from her worshippers. Instead, those who have been helped by the goddess are expected to show their gratitude by donating money or goods to her Clerics.<p> Littoral cultures may worship both deities, viewing them as complementary expressions of the forces that shape their collective life. In these cases, it is not uncommon that they should function as parental creator gods—the god of the waters plays the stern, demanding father, while the goddess of mercy plays the forgiving, nurturing mother.",
+            "hobby-skill-ranks": "12",
+            "spell-list-ranks": "1",
+            "preferred-armours": [
+                "Skin",
+                "Leather Jerkin",
+                "Leather Breastplate"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_CAT_O_NINE_TAILS_FIGHTING",
+                "WEAPONTYPE_DAGGER",
+                "WEAPONTYPE_CUTLASS",
+                "WEAPONTYPE_HARPOON_LIGHT",
+                "WEAPONTYPE_FLAIL",
+                "WEAPONTYPE_NET_FISHING",
+                "WEAPONTYPE_MAIN_GAUCHE",
+                "WEAPONTYPE_MACE",
+                "WEAPONTYPE_SABRE",
+                "WEAPONTYPE_SHORT_SWORD",
+                "WEAPONTYPE_WHIP",
+                "WEAPONTYPE_QUARTERSTAFF"
+            ],
+            "skill-ranks": [
+                {
+                    "skill": "SKILL_ALERTNESS",
+                    "rank": "2"
+                },
+                {
+                    "skill": "SKILL_CLIMBING",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_CULTURE_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_LANGUAGES",
+                    "rank": "2"
+                },
+                {
+                    "skill": "SKILL_REGION_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_RIGID_LEATHER",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_SWIMMING",
+                    "rank": "5"
+                }
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "required-water-sources": [
+                "Freshwater Coast",
+                "Saltwater Coast"
+            ]
+        },
+        {
+            "id": "CULTURETYPE_MINING",
+            "name": "Mining",
+            "description": "Someone must wrest from the earth’s embrace the mundane metals from which tools, armor and weapons are forged, the precious metals of which coins are minted, and the precious stones that decorate the wealthy and dazzle everyone else. It is the lot of those who live in Mining communities to do this grinding, hazardous but potentially lucrative work. They toil in the shadow of mountains or burrow into hillsides— digging into the ground wherever veins of valuable metal ore have been found, or might be found.<p> It’s not an easy life. For Dwarves, many of whom are miners, it is a way of life that connects them so intimately with their forbears that it has become an integral part of their collective identity. For others, it is a way to get rich by finding gold or platinum or diamonds right at the source. For yet others, it is simply another way to earn a living, physically demanding, but no different from farming the land or herding livestock. But whatever the case, Mining culture breeds folk who are tough and tenacious, for only those traits will keep you hacking away at solid rock day after day, no matter what the reward. You learn something about the value and qualities of metals and gemstones, how to work with them and appraise them. You understand how to survive in a Subterranean environment, which is not nearly as easy as it may seem. All of these characteristics will come in handy should you choose one day to leave the mines for a live of adventure.",
+            "character-concepts": "Mining communities generally have plenty of contact points with the outside world, because their way of life involves gathering and processing a valuable commodity. Consequently, contact with outsiders should provide a rich source of impetus for sending your Mining folk character on an adventure. He may be charged with delivering a precious item, like a sword commissioned by a king, to its buyer far away. This would be a good task for a Fighter or a Paladin, who would be expected to defend the item with his life, since the honor of the community is riding on its safe delivery. If your character is a Dwarf, perhaps the item is a consignment of mithril sold (after much sober deliberation, of course) to a famous craftsman. Or perhaps your character is a trader who must go to faraway cities and sell the product of your community’s labor for the best possible price. Or perhaps your community needs you to track down bandits that have targeted its shipments (this would be a good task to assign a Ranger or a Rogue).<p> Mining communities also find themselves in turf battles against marauding Subterranean races all too often. A player character might take it upon himself to strike a blow against a tribal foe—spying on hostile Orcs or sabotaging the war machines of a Goblin horde. If the situation becomes dire, he might have to flee and find help from outside the community.",
+            "clothing": "Miners favor rugged clothes that can stand up to a lot of wear— thick cloth shirts and pants and leather jerkins and leggings. However, miners who work in shafts that run deep into the earth will strip down to the essentials (or even work naked) because of the heat.<p> Mining folk wear surprisingly little jewelry, considering how much precious metal and gems pass through their hands. But they are sober, hardworking folk who would rather have their wealth in a fungible asset like coin of the realm rather than show it off as finery. This is not to say that they would refuse to keep jewelry and gems as personal treasure, only that they don’t wear such ornaments as much as one might think.",
+            "aspirations": "Mining is demanding and hazardous work, but things of great value are its reward: gemstones and precious metals. And even if they don’t find diamonds or rubies, gold or platinum, miners know that they can still make a good living by Mining industrial metals (iron, copper, tin), because demand for them runs stronger than the supply in many parts of the world. The dream of wealth (and in some cases, an appreciation of beauty) drives them on to brave the dangers and hardships of the miner’s life.",
+            "fears": "More than anything else, Mining folk fear death in the bowels of the earth. They worry about mineshafts collapsing on them, or rock falls trapping them. They worry that digging into the guts of the earth will disturb some terrible power or beast that lurks within, waiting to slay whoever disturbs them. Perhaps there lurks in the backs of their minds the understanding that they are slicing open the earth to take the riches that lie within, and these anxieties reflect fear of what the earth will do to them in return.",
+            "marriage-patterns": "Mining cultures are monogamous. Nuclear families are usually larger than the racial average and family members work side-by-side. Inheritance may be traced through either the male or the female.",
+            "prejudices": "Mining folk fear Dragons and hate evil Subterranean beings such as Goblins, Troglodytes and Orcs, as both are constant hazards to their communities. Miners who follow a vein and break in on a Dragon’s lair count themselves lucky if they live to tell of it. Goblins, Troglodytes and Orcs prey on Mining communities for plunder, territory, or sheer amusement. But miners don’t fear them as they do Dragons, because they know that they at least have a fighting chance against them.",
+            "religious-beliefs": "Mining cultures worship tribal or elemental gods, or deities that combine aspects of both. Their tribal gods offer them collective protection from the hazards of their way of life, ensure their prosperity and\/or shield them from their enemies. Elemental gods also appeal to them, although the mysteries and perils of the Subterranean realm do not consume them as much as they do to Subterranean cultures. Even so, they have enough contact with the elemental powers that lurk deep in the earth to fear them and understand that they must be propitiated. Mining cultures may have pantheons that reflect both of these impulses, having a tribal deity who is “on their side” and intercedes for them against the dark gods who dwell beneath the surface of the earth.<p> To interact with their deities, Mining communities have warrior-priests who perform rituals and who channel their power when the need for heroic action arises. These rituals do not include blood sacrifice of intelligent beings, however. Food or valuable objects are offered instead.",
+            "hobby-skill-ranks": "12",
+            "preferred-armours": [
+                "Chain Shirt",
+                "Chain Shirt & Greaves",
+                "Full Chain",
+                "Chain Hauberk"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_BATTLE_AXE",
+                "WEAPONTYPE_CLUB",
+                "WEAPONTYPE_DAGGER",
+                "WEAPONTYPE_HEAVY_CROSSBOW",
+                "WEAPONTYPE_HANDAXE",
+                "WEAPONTYPE_MAIN_GAUCHE",
+                "WEAPONTYPE_LIGHT_CROSSBOW",
+                "WEAPONTYPE_SHORT_SWORD",
+                "WEAPONTYPE_SPEAR",
+                "WEAPONTYPE_POLEARM",
+                "WEAPONTYPE_WAR_MATTOCK",
+                "WEAPONTYPE_WAR_HAMMER"
+            ],
+            "skill-ranks": [
+                {
+                    "skill": "SKILL_ALERTNESS",
+                    "rank": "4"
+                },
+                {
+                    "skill": "SKILL_CHAIN",
+                    "rank": "2"
+                },
+                {
+                    "skill": "SKILL_CLIMBING",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_CULTURE_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_LANGUAGES",
+                    "rank": "8"
+                },
+                {
+                    "skill": "SKILL_REGION_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_RIGID_LEATHER",
+                    "rank": "2"
+                }
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "rank": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "rank": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "required-terrains": [
+                "Alpine",
+                "Rough"
+            ]
+        },
+        {
+            "id": "CULTURETYPE_PLAINS",
+            "name": "Plains",
+            "description": "The land from which Plains folk draw their livelihood is not as fertile as the lush fields of Rural folk, but neither is it as hostile as the Desert. Flat as far as the eye can see and only semi-arid, it at least supports small farms that provide enough food to feed the families that tend them, and perhaps provide a little extra to sell. Others prefer roaming to farming, and drive herds of animals from place to place, and are often warlike in their nature. Mainstream Plains culture describes a life dominated by agricultural work.<p> Plains folk are stoical by temperament, practicalminded and self-sufficient. Plains farmers generally live on plots of land isolated from one another, and their closest neighbors may live too far away for them to step next door to borrow the proverbial cup of sugar. They quickly get used to the idea that whatever happens, their best bet is to make do with who and what they have at hand.<p> Cities in this environment usually originate as waystations, places to stop on the road to somewhere else. Sometimes they prosper from overland trade or gain fame as centers of learning or professional activity, but their prosperity rests on a fragile foundation. Drought literally dries up their supply of food, and shifts in travel routes can pull the foundation of their economy out from under them.",
+            "character-concepts": "An adventuring character from mainstream Plains culture faces the same conceptual dilemma as one who comes from Rural culture: How and why does he leave a place to which his way of life ties him so firmly? How do you get him off of the farm? The answers are not so different, except that Plains farmers are, if anything, more vulnerable to natural calamity than their peers who till more fertile grasslands. They are all but helpless in the face of tornadoes and other forms of severe weather that could destroy their crops and wreck their homes. The semi-arid climate also makes them more prone to severe drought, which in turn could lead to dust storms that would literally drive them from their land. Or perhaps marauding nomads wrecked the family farm. All of these things could force a farmer of the Plains to turn to an adventurer’s life.<p> A nomad of the Plains might be an outrider for his tribe, one who was sent to search for new grazing land. Perhaps he got distracted by searching for wealth (his equivalent of the fabulous magic beans), and now he must find some way to redeem himself before he returns to his people. Or he might be a spy sent into neighboring lands by a tribe bent on plunder or conquest.",
+            "clothing": "Plains folk wear simple, practical clothes made of wool or cloth. Even the wealthy among them forego fancy dress in favor of simple garb, although they may add an item of jewelry here and there. Anyone who tries to liven up his or her appearance is generally regarded as a snob, someone who is putting on airs.",
+            "aspirations": "Those who live on the Plains are generally modest folk whose ambitions extend to caring for and preserving their modest plot of land, and not much further. Those who live in the cities may dream of getting rich off of this or that, but such is the nature of life in cities everywhere.",
+            "fears": "Plains folk fear the ravages of weather more than anything else. The climate of the Plains is semi-arid, and drought is a major concern. Not every year brings enough rain to make the crops grow as they should. On the other hand, severe thunder and windstorms can also sweep the land with very little",
+            "marriage-patterns": "The nature of life on the Plains encourages monogamy and tightly integrated families, since contact with folk from outside the household may not occur very often.",
+            "prejudices": "Plains folk tend to be suspicious of strangers of any stripe. Living on farms separated from their neighbors, they find it hard to gauge with certainty the intentions of anyone they don’t know. They find it especially difficult to trust folk of a different race without getting to know them first.",
+            "religious-beliefs": "Most commonly, Plains folk worship gods that represent the sky or the weather, or some aspect of agriculture. Animal sacrifices meant to placate their gods are common, although offerings can also take the form of material goods or a fraction of the harvest.",
+            "hobby-skill-ranks": "12",
+            "preferred-armours": [
+                "Skin",
+                "Leather Jerkin",
+                "Leather Coat",
+                "Leather Breastplate",
+                "Leather Breastplate & Greaves"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_CLUB",
+                "WEAPONTYPE_DAGGER",
+                "WEAPONTYPE_HANDAXE",
+                "WEAPONTYPE_SLING",
+                "WEAPONTYPE_TRIDENT",
+                "WEAPONTYPE_QUARTERSTAFF"
+            ],
+            "skill-ranks": [
+                {
+                    "skill": "SKILL_ALERTNESS",
+                    "rank": "2"
+                },
+                {
+                    "skill": "SKILL_CULTURE_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_LANGUAGES",
+                    "rank": "6"
+                },
+                {
+                    "skill": "SKILL_REGION_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_RIDING",
+                    "subcategory": "Horse",
+                    "rank": "3"
+                }
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "required-climates": [
+                "CLIMATETYPE_HOT_DRY",
+                "CLIMATETYPE_WARM_DRY",
+                "CLIMATETYPE_COOL_DRY",
+                "CLIMATETYPE_COLD_DRY"
+            ],
+            "required-vegetations": [
+                "Plains"
+            ]
+        },
+        {
+            "id": "CULTURETYPE_RURAL",
+            "name": "Rural",
+            "description": "The Rural template covers pretty much all aspects of agricultural life. Folk who pursue the Rural life keep farms, raise crops and raise livestock. Some of them they live on isolated homesteads far from their neighbors, others gather in villages and hamlets where they can find tradesmen and merchants to help them out as need arises. Their way of life flourishes on fertile flatlands, among verdant hills and dales, and in lush mountain valleys.<p> Rural folk are simple folk who lead simple lives. They work hard and toil close to the land, and have little leisure time. Unless plagued by natural disasters like drought or pestilence, they can sustain themselves because two of the bare necessities of existence—food and a place to live—come easily to them. But they probably won’t ever get rich, and they don’t expect it to happen. They learn to make do with modest pleasures and modest expectations.<p> Most Rural folk will never leave the place in which they are born unless they make a conscious effort to do so. Their lives of physical labor keep them closely tied to a particular plot of land, and wherever they are, it generally takes a long time to get to any place worth going to, anyway. Some farmers and herders get to visit big cities on a regular basis when they bring their goods to market, but their isolation and consequent lack of sophistication marks them as culturally inferior, even ridiculous, to city folk.<p> Even so, it is important to note that a small minority of Rural folk are harder to dismiss as mere bumpkins. Many Rural areas have a caste system headed by large land owners who rent living space to farmers. In exchange, the farmers work the lands and pay a percentage (sometimes quite substantial) of their crops and\/or livestock. These Rural landed gentry can sustain themselves in fine style based on the rent that they collect. They usually aren’t as wealthy as the nobles who live in great cities, but they do well enough and thrive on the deference of their social inferiors. In exchange for that deference, however, the gentry are expected to exercise judicious political leadership, resolving disputes between their tenants and protecting them from external threats.",
+            "character-concepts": "Rural folk lead lives that attach them closely to a particular geographical location, even a particular patch of 40 acres that they and their family farm for generations. Such folk don’t go off on adventures unless something dramatic calls them away, or severs their ties their native place. If you want to create a character from a Rural background, consider why he wants to become an adventurer instead of pursuing a relatively safe and steady living. Is he simply bored with farm life? Does he look at the horizon that has defined his world to this point and dream of what lies beyond it? Does he feel deep in his soul that he has a talent (for mastering magic, or wielding a sword) that will go unfulfilled if he continues to lead such a mundane existence?<p> Or perhaps some calamity has forced his hand. Disasters on the order of severe drought, pestilence or war can deprive farmers of their ability to make a living all together. Perhaps marauders like Orcs or Trolls destroyed his farm or herd of livestock. Forced to relocate and consider an entirely new way of living, he must look deep into himself and find a natural gift that will enable him to get by in the world. If he can sing or play or tell stories, then he could become a Bard. If he has a gift for scholarship, he can become a spell-user. And so on. Or perhaps desperation forces him to take up a practical, hard-handed profession, like Fighter or Rogue.<p> Farther up the social hierarchy, an adventurer from a Rural background might be a daughter or a younger son of the local gentry who knows that she or he will not inherit the family estate and will have to make another way in life. In many cases, the family will chart that course, through arranging a marriage with another prominent family, or sending the child into military service or a religious order. But a child of aristocracy just might take to an adventurer’s life, choosing an appropriate profession and finding his or her own path.",
+            "clothing": "In Rural cultures, common folk wear plain, practical clothes made of wool or linen. Their work tends to dirty up their clothes, so there’s no point in wearing anything too fancy. Rural folk in warm climates wear tunics, while those in sub-Arctic regions favor shirts belted over pants or skirts. In all cases, they prefer tall, heavy boots to leggings because they do a better job of keeping out muck.<p> Even Rural gentry prefer simple clothes rather than the finery that marks urban aristocrats; it’s just they can buy nicer simple clothes and replace them more frequently than the peasants. Most of their wealth is bound up in ownership of land rather than in cash and coin, and some country squires couldn’t afford fancy clothes and jewelry even if it interested them. But even so, their daily routines require them to handle animals and tend to other tasks could easily ruin clothes made from expensive fabrics.",
+            "aspirations": "Rural communities are interested in sustaining themselves through farming and raising livestock. Their wants are modest and rarely extend beyond the preservation of family and community. Even the gentry who occupy the highest possible rung on the social ladder confine their ambitions to preserving a pleasant and peaceful status quo. They see themselves as custodians of a way of life, charged with the duty of seeing to it that the eternal cycle of planting and harvesting goes on uninterrupted.",
+            "fears": "Rural culture fears famine more than anything else. This anxiety reaches beyond the absence of food to the root causes of famine: drought, plague, pestilence, fire, wars that spill over into their community, catastrophic weather—all of them disasters over which Rural folk have no direct control.",
+            "marriage-patterns": "Rural culture stresses monogamy and the importance of family integrity. Children inherit their parents’ land, so violations of the social norm like illegitimate children and broken families can the stability of the larger community if they make matters of property ownership less clear. This is true up and down the social ladder, although the gentry can (and do) get away with indiscretion more easily than common folk. Rural culture also celebrates large families. Every child who can help with chores around the farm means one less farm hand who has to be hired and paid for his work, so there is a real advantage to having a large family.",
+            "prejudices": "The Rural lifestyle insures that Rural folk don’t get to see much of the wider world, except for farmers and herders who go to the city to sell their crops and animals, and even they hardly get around. Rural folk are therefore very parochial in their outlook. They treat outsiders with suspicion or awe, depending on how said foreigners look and carry themselves.<p> They are outright hostile to anyone who might represent a threat to their lives and livelihoods. They view Orcs as marauders and hate them with a vengeance. Anyone who seems unusually comfortable with wild animals (such as an Animist or a Ranger) comes in for a fair amount of suspicion as well, especially among herders who have lost livestock to predators.",
+            "religious-beliefs": "Rural communities worship gods that represent the bounty of the harvest, or the abstract idea of plenty. They stage communal rituals that celebrate the spring and fall solstices (marking the time of sowing and harvesting, respectively), as well as religious ceremonies that ask their patron deity to bestow the blessing of a good harvest and keep them safe from catastrophe.",
+            "hobby-skill-ranks": "12",
+            "preferred-armours": [
+                "Skin",
+                "Leather Jerkin",
+                "Leather Coat"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_CLUB",
+                "WEAPONTYPE_DAGGER",
+                "WEAPONTYPE_HANDAXE",
+                "WEAPONTYPE_JAVELIN",
+                "WEAPONTYPE_SLING",
+                "WEAPONTYPE_TRIDENT",
+                "WEAPONTYPE_QUARTERSTAFF"
+            ],
+            "skill-ranks": [
+                {
+                    "skill": "SKILL_ALERTNESS",
+                    "rank": "2"
+                },
+                {
+                    "skill": "SKILL_CULTURE_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_HIDING",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_LANGUAGES",
+                    "rank": "8"
+                },
+                {
+                    "skill": "SKILL_REGION_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_RIDING",
+                    "subcategory": "Horse",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_RIGID_LEATHER",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_SOFT_LEATHER",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_STALKING",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_SWIMMING",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "required-features": [
+                "Rural"
+            ]
+        },
+        {
+            "id": "CULTURETYPE_SUBTERRANEAN",
+            "name": "Subterranean",
+            "description": "And then there are those who hide from the face of the sun and make their homes (such as they are) in caves and underground lairs. The Subterranean template describes such folk and how they live, whether they inhabit dank mountain caves or splendid underground cities, whether their grasp of technology is advanced or primitive, whether they are warlike and baleful or peaceful and reclusive. The simple fact of living out of the light, enclosed by the solidity of the earth, gives all such groups common characteristics.<p> Although advanced Subterranean civilizations may build impressive cities beneath the earth or in the heart of the mountains, this way of life is not for the faint of heart. You must accept being confined by walls of earth on all sides, and that even if you live in a fine city below the ground, you will not see the open sky when you look up. Of course, if you were born into a race for which the Subterranean life is the norm, such as Goblins or Troglodytes, this suits you just fine. Races that suffer penalties for performing actions in full daylight even find it advantageous to remain underground.",
+            "character-concepts": "The realm in which Subterranean races live is a circumscribed one. Not only are they confined by walls of earth, but by a ceiling as well. Psychologically conditioned by such circumstances, they hate and dread the surface world, a place of openness and light. Biology discourages them from leaving the underground realm, too, since many Subterranean beings have averse reactions to sunlight. A concept for a Subterranean character must therefore weigh the extent to which he will have to function in the surface world, and if so, what would motivate him to leave.<p> One possibility is that he is one of the few (if not the last) survivors of a community that was wiped out by another Subterranean society. After all, Subterranean races war against each other almost as much as they fight against above ground races, and such close quarter fights can go to the death if unchecked. With no place left to call home and no one left to whom he can attach himself, such a character might well brave the surface world (or wander beneath the earth, for that matter), looking for a way to rebuild his life.<p> Another possibility is that your character has been given a religious quest by the high priest or shaman of his tribe. It could involve appeasing the gods of the powers of the earth, or confronting the hostile deities of light and their minions in the surface world. In either case, the quest would involve leaving what is familiar to him and confronting the unknown.<p> A Subterranean character could also attach himself to a mixed party of adventurers by serving as a guide if the adventure is to take place in an underground setting. There, he is in his element, and even if others in the party have night vision, he has local knowledge that they lack. This is especially true if your character is a Ranger or an Animist.",
+            "clothing": "Subterranean folk wear garments fashioned from animal hide or fur. Clothes made of cloth or wool are relatively rare within Subterranean cultures. They cannot grow cotton plants or keep sheep in their underground homes, so they lack the raw material for weaving. If they acquire fabric through trade with or plunder from above ground cultures, they regard it as a curiosity.<p> In fact, jewelry made from precious metals and decorated with gems is just as common as cloth fabric. Metal ores and gemstones lie close at hand for cultures that are advanced enough to recognize and process them, as well as craft metal.",
+            "aspirations": "Subterranean cultures live in a circumscribed world, one closed off by cavern walls and the very depths of the earth itself. Hence, their collective aspirations rarely go beyond daily survival, preserving the integrity of their group, and appeasing their gods.<p> However, the more intelligent and capable Subterranean civilizations may possess ambitions as grand as that of any above ground culture. If they have enough space at their disposal, they may try to build great underground cities. If they possess strength of arms, they may try to conquer their neighbors and expand the territory they control. They may even make war on above ground civilizations, raiding them to gain wealth, slaves or victims for religious sacrifice, or just out of sheer malice. In the Shadow World, the Ash Lairs offer a vast parallel world for conquest by any civilization sufficiently powerful and daring to try.",
+            "fears": "Subterranean folk who seldom or never leave their secluded habitat to venture above ground fear light above all else. It is in part a primal fear of that which is alien, but light also causes them physical discomfort. They associate light with sudden pain and blindness, and that is cause enough to dread it (see also Religious Beliefs, below). Even Subterranean races that don’t suffer penalties for daylight blindness hate the light.<p> On the other hand, some Subterranean cultures fear the dark and destructive powers of the earth more than they fear light. This attitude is most prevalent among groups with a catastrophe caused by earthquake or volcanic activity in their history. They tremble at the wrath of their own gods and fear it more than they fear the enmity of alien deities.",
+            "marriage-patterns": "Marital and family arrangements are haphazard and relatively informal in most Subterranean communities. Pair bonding for life and solidly integrated families are not unknown, but they are not the norm by any means, nor are they ideals to which members of the society aspire. Courtship, likewise, is a rough-andready affair. Matters of inheritance and succession are usually settled in favor of the strongest and most aggressive party to the dispute.",
+            "prejudices": "Subterranean cultures instinctively dislike Elves, Fey and Sylvan cultures in general (Gremlins are the lone exception to this rule, as they are Subterranean Fey). It’s a deeply held, elemental prejudice that has nothing to do with reason, or even ancient grudges. Sylvan cultures live in the light, among trees and other growing things, while Subterranean folk dwell in the dark in environments where little, if anything, grows.<p> Individual groups may also harbor grudges against other Subterranean groups with which they compete for living space and resources.",
+            "religious-beliefs": "Subterranean cultures worship elemental gods associated with the earth and, sometimes, fire. Their deities represent strength that they draw from the depths of the earth, and the power of these gods sometimes expresses itself as volcanic explosions or earth tremors. Each Subterranean group has at least one spell caster whose duty it is to communicate with these gods and channel their power. Their religious rituals sometimes involve sacrificing animals or even intelligent beings to the deities. In the latter case, members of above ground races are considered the most valuable sacrificial victims, and groups will stage raids just to take prisoners.<p> The religion of some Subterranean cultures also describes light as a hostile deity who constantly threatens the existence of the group. In this formulation, above ground races are servants of that hostile god, especially Sylvan folk. Any Cleric from above ground who serves the god of the sun is also hated and feared.",
+            "hobby-skill-ranks": "10",
+            "preferred-armours": [
+                "Leather Jerkin",
+                "Leather Coat",
+                "Chain Shirt",
+                "Chain Shirt & Greaves",
+                "Full Chain",
+                "Chain Hauberk"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_BATTLE_AXE",
+                "WEAPONTYPE_CLUB",
+                "WEAPONTYPE_DAGGER",
+                "WEAPONTYPE_HEAVY_CROSSBOW",
+                "WEAPONTYPE_HANDAXE",
+                "WEAPONTYPE_LIGHT_CROSSBOW",
+                "WEAPONTYPE_SHORT_SWORD",
+                "WEAPONTYPE_SPEAR",
+                "WEAPONTYPE_POLEARM",
+                "WEAPONTYPE_WAR_MATTOCK",
+                "WEAPONTYPE_WAR_HAMMER"
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "rank": "1"
+                }
+            ],
+            "required-features": [
+                "Cavern"
+            ]
+        },
+        {
+            "id": "CULTURETYPE_SYLVAN",
+            "name": "Sylvan",
+            "description": "Deep in the woods and forests live folk who relish tranquility more than bustle, intimacy with nature to the benefits of civilization. They find their quiet corners of the world in sub-Arctic and subtropical regions wherever the trees are thick enough on the ground to filter the sunlight, and also in the jungles and rainforests of the tropics, where civilized folk rarely tread for fear that the wilderness will swallow them whole.<p> Living in a Sylvan community means leading a cloistered, isolated life, but if you are truly of Sylvan culture, that’s how you like it. The ways of the city and the affairs of its folk do not interest you; perhaps they even seem corrupt to you. You much prefer the simplicity and—dare one say it—the spirituality of life in the deep woods. You pass your time in quiet contemplation, or mastering the arts of music, dance and storytelling. Instead of cutting down the forest to clear room for houses or mansions, you are content to live in simple shelters that you build among or even in the branches of the trees. And if you never meet anyone except your own folk or someone from another Sylvan community, that’s fine by you, even if you’re of an immortal race and reasonably expect to live forever. For you, time is not a linear progression or a forward march of progress, but a series of eternal cycles marked by the passing of seasons, if not the passage day into night and night back into day.",
+            "character-concepts": "Sylvan communities cast a wary eye on outsiders who would intrude upon their domain. A Fighter from a Sylvan setting might well be employed by his community as a border guard, with standing orders to track suspicious characters and confront them with force, if necessary. Rangers, Rogues and Thieves would also be qualified for such a task.<p> Sylvan spell-users (ones who are regarded as particularly talented and promising, at any rate) might be preparing themselves for leadership positions within their community, whether secular or spiritual. Even if they are Bards and their talents have to do with entertainment, they would still grow into esteemed figures within their communities if they have enough natural talent and were sufficiently diligent about developing their abilities. Of course, some Bards might feel that remaining within the confines of the Sylvan realm would actually stunt their development as artists. In this case, they could choose to defy the norms of their society and go abroad in search of new influences that would invigorate their art (or so they hope).<p> The strained relationship between mainstream Sylvan folk and the Woodfolk with whom they sometimes have to share the forest offers further possibilities for conceptualizing characters. These neighbors are not always on the best of terms. If news came to your character’s community that a nearby community of Mannish Woodfolk was endangered, how would he react? Is he more favorably disposed toward Woodfolk than are his kin, and would he rush to their aid? If they’re under attack from a predatory race, a Fighter’s sword arm would prove helpful.<p> Conversely, if your Sylvan character’s community is in trouble, could they bring themselves to ask Woodfolk for aid, overlooking past differences? Is your character the best representative from the community to send as an ambassador? Or is it the case that your character has no great love for Woodfolk, but your community has no choice but to send you? This would be a plausible situation if your character was a Layman, and everyone with more specialized professional was needed to contain the crisis at hand until help arrived.",
+            "clothing": "Sylvan folk care little about impressing others with their clothes, yet they tend to dress themselves in a manner that most other races find aesthetically pleasing. They wear simple, yet graceful garments of fine cloth. If the fabric is dyed, the hues are muted; green (as one might expect), yellow and brown are popular colors. Many fey wear fabric garments so fine that they look like they are made of gossamer.",
+            "aspirations": "Sylvan cultures desire above all that they should be left in peace to enjoy their beloved forest. They are not terribly ambitious, and have little interest in leaving the forest for lands outside. They see themselves not as conquerors, but as conservators and defenders of an unchanging way of life. Even aggressive Sylvan races like Forest Trolls give no thought to extending their influence beyond the confines of the forest.",
+            "fears": "Sylvan folk fear destruction of their forest habitat above all, with forced removal from the forest running close behind. Such is their emotional attachment to their habitat that they cannot imagine living without it. This also means that they will fight ferociously to defend it. Even Forest Trolls and similarly aggressive races are so attached to their native woods that they would feel completely disoriented without them.",
+            "marriage-patterns": "Few, if any, Sylvan cultures stress the importance of formal marriage arrangements or proper courtship. That is not to say, however, that these relations are chaotic. Sylvan cultures tend to be monogamous, with couples pair bonding for life, even among immortal races. But these relationships don’t necessarily express themselves through legal institutions recognized by the society as a whole.",
+            "prejudices": "Sylvan folk instinctively dislike races that are Subterranean in origin or disposition. They are also suspicious of the motives of Dwarves, who take wealth from the earth. Sylvan folk feel more comfortable among other Sylvan folk than they do around outsiders, even if they are mixing with fellow forest-dwellers of a different race. Even aggressive and predatory Sylvan races offer the comfort of familiarity—better the hazards that one knows rather than the hazards one doesn’t know.",
+            "religious-beliefs": "Religion in Sylvan cultures finds expression in Sylvan folk’s elemental connection with the woods and forests in which they live. All of them view their physical environment as in some way sacred. Some Sylvan cultures view the forest as a god, while others regard wondrous creatures such as treebeards as manifestations of a deity. These communities always have at least one spell user on hand who acts as a conduit between its members and their gods. In the case of the Lennai, the so-called ‘Forest People’ of Kulthea, all of their communities of any size are headed by a divine being, a Dryad. The worship of nature deities is an almost universal feature of Sylvan cultures native to jungles and tropical forests.<p> Not all Sylvan cultures see religion as a collective experience, however. Elves are famously low-key in their relationship to the divine, favoring solitary meditation to group rituals. Fey and Rural Spirits are also irreligious in the sense that they don’t really see much point in worshipping a deity; they prefer to live their lives as a continuous celebration of the beauty of their existence. However, all of these Sylvan races still feel a profound connection to their environment that runs so much deeper than what one typically finds in other cultures that it seems very much like a spiritual relationship.",
+            "hobby-skill-ranks": "10",
+            "spell-list-ranks": "2",
+            "preferred-armours": [
+                "Skin",
+                "Leather Jerkin",
+                "Leather Coat"
+            ],
+            "preferred-weapons": [
+                "WEAPONTYPE_DAGGER",
+                "WEAPONTYPE_BLOW_GUN_SMALL",
+                "WEAPONTYPE_CUTLASS",
+                "WEAPONTYPE_JAVELIN",
+                "WEAPONTYPE_LONG_BOW",
+                "WEAPONTYPE_SHORT_BOW",
+                "WEAPONTYPE_SHORT_SWORD",
+                "WEAPONTYPE_SPEAR",
+                "WEAPONTYPE_QUARTERSTAFF"
+            ],
+            "skill-ranks": [
+                {
+                    "skill": "SKILL_ALERTNESS",
+                    "rank": "6"
+                },
+                {
+                    "skill": "SKILL_CLIMBING",
+                    "rank": "2"
+                },
+                {
+                    "skill": "SKILL_CULTURE_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_HIDING",
+                    "rank": "4"
+                },
+                {
+                    "skill": "SKILL_LANGUAGES",
+                    "rank": "10"
+                },
+                {
+                    "skill": "SKILL_REGION_LORE",
+                    "subcategory": "Own",
+                    "rank": "3"
+                },
+                {
+                    "skill": "SKILL_RIDING",
+                    "subcategory": "Horses",
+                    "rank": "1"
+                },
+                {
+                    "skill": "SKILL_STALKING",
+                    "rank": "4"
+                },
+                {
+                    "skill": "SKILL_SWIMMING",
+                    "rank": "3"
+                }
+            ],
+            "skill-category-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "5"
+                },
+                {
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "rank": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "3"
+                }
+            ],
+            "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "rank": "3"
+                }
+            ],
+            "required-vegetations": [
+                "Coniferous",
+                "Deciduous"
+            ]
+        }
+    ]
+}

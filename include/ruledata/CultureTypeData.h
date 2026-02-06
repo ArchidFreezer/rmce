@@ -5,12 +5,34 @@
 #include <set>
 #include <string_view>
 #include <ArmourType.h>
+#include <ClimateData.h>
+#include <EnvironmentType.h>
 #include <GameRuleData.h>
 #include <GameRuleDataChoice.h>
 #include <SubcategoriedSkillData.h>
 #include <SkillCategoryData.h>
 #include <WeaponTypeData.h>
 
+/**
+ * @class CultureTypeData
+ * @brief Definition of what comprises the primary adolescent influences on a character based on location and culture
+ * 
+ * Some aspects of a character, such as the physical appearance and biological traits, are tied to the characters race, but
+ * many elements are more associated with how and where they grew up. A dwarf living in a metropolitan city has as much in
+ * common with an elf brought up in the city as they do with a dwarf in an underground cavern complex.
+ * 
+ * These cultural influences manifest themselves as religious practices or instinctive biases for or against other races or
+ * cultures and what special skills they are likely to pick up during their formative years, represented in gameplay by
+ * adolescent and hobby skill ranks.
+ * 
+ * Within each culture type there are specifc sub cultures, such as lower class or militant versions that further refine
+ * these. The sub culture tends to define hobby preferences or languages and these are defined in the CultureData class
+ * which needs to be used in conjunction with this class when creating a character.
+ * 
+ * The character creation process would consist of first deciding the culture type and then the actual culture to apply.
+ * 
+ * @see CultureData
+ */
 class CultureTypeData : public GameRuleData {
 public:
 
@@ -222,7 +244,7 @@ public:
 	 * @param skill SubcategoriedSkillData to add the ranks to
 	 * @param ranks int number of ranks
 	 */
-	void setSkillRanks(SubcategoriedSkillData skill, int ranks) {
+	void addSkillRank(SubcategoriedSkillData skill, int ranks) {
 		if (isRankSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + skill.id());
 		skill_ranks_.emplace(std::move(skill), ranks);
 	}
@@ -232,7 +254,7 @@ public:
 	 * @param skill SubcategoriedSkillData to get the ranks for
 	 * @return number of ranks
 	 */
-	int skillBonus(const SubcategoriedSkillData& skill) const {
+	int skillRank(const SubcategoriedSkillData& skill) const {
 		for (auto& key : skill_ranks_) {
 			if (key.first.id() == skill.id()) return key.second;
 		}
@@ -245,8 +267,8 @@ public:
 	 * @param subcategory optional subcategory of @a skill
 	 * @return number of ranks
 	 */
-	int skillBonus(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
-		return skillBonus(SubcategoriedSkillData(skill, subcategory));
+	int skillRank(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
+		return skillRank(SubcategoriedSkillData(skill, subcategory));
 	}
 
 	/**
@@ -281,7 +303,7 @@ public:
 	 * @param category SkillCategoryData to add ranks for
 	 * @param ranks int adolescent ranks
 	 */
-	void addSkillCategoryRanks(const SkillCategoryData& category, int ranks) { skill_category_ranks_.emplace(&category, ranks); }
+	void addSkillCategoryRank(const SkillCategoryData& category, int ranks) { skill_category_ranks_.emplace(&category, ranks); }
 
 	/**
 	 * @brief Get a container of all the skill categories with a adolescent ranks
@@ -310,7 +332,7 @@ public:
 	 * @param category SkillCategoryData to check
 	 * @return int number of ranks @a category receives
 	 */
-	int skillCategoryRanks(const SkillCategoryData& category) {
+	int skillCategoryRank(const SkillCategoryData& category) {
 		for (auto& cat : std::views::keys(skill_category_ranks_)) {
 			if (cat->id() == category.id()) return skill_category_ranks_.at(cat);
 		}
@@ -322,7 +344,7 @@ public:
 	 * @param category SkillCategoryData to add a bonus for
 	 * @param ranks int number of adolescent ranks to add to a skill in the category
 	 */
-	void addSkillCategorySkillRanks(const SkillCategoryData& category, int ranks) { skill_category_skill_ranks_.emplace(&category, ranks); }
+	void addSkillCategorySkillRank(const SkillCategoryData& category, int ranks) { skill_category_skill_ranks_.emplace(&category, ranks); }
 
 	/**
 	 * @brief Get a container of all the skill categories with a adolescent ranks to add to a skill
@@ -351,12 +373,120 @@ public:
 	 * @param category SkillCategoryData to check
 	 * @return int number of ranks a skill in @a category receives
 	 */
-	int skillCategorySkillRanks(const SkillCategoryData& category) {
+	int skillCategorySkillRank(const SkillCategoryData& category) {
 		for (auto& cat : std::views::keys(skill_category_skill_ranks_)) {
 			if (cat->id() == category.id()) return skill_category_skill_ranks_.at(cat);
 		}
 		return 0;
 	}
+
+	/**
+	 * @brief Add an climate type to the set of those required by the culture
+	 * @param climate ClimateData to add
+	 */
+	void addRequiredClimate(ClimateData& climate) { required_climates_.emplace(&climate); }
+
+	/**
+	 * @brief Get a container with the climates required by the culture
+	 * @return std::set<ClimateData> climates
+	 */
+	const std::set<const ClimateData*> requiredClimates() const { return required_climates_; }
+
+	/**
+	 * @brief Get whether an climate type is amongst those required by the culture
+	 * @param climate ClimateData to check
+	 * @return `true` if the climate type is required by the culture
+	 * @return `true` if the climate type is not required by the culture
+	 */
+	bool isRequiredClimate(ClimateData& climate) const {
+		for (auto& key : required_climates_) {
+			if (climate.id() == key->id()) return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @brief Add an environment feature to the set of those required by the culture
+	 * @param feature EnvironmentType::Feature to add
+	 */
+	void addRequiredFeature(EnvironmentType::Feature feature) { required_features_.emplace(feature); }
+
+	/**
+	 * @brief Get a container with the environment features required by the culture
+	 * @return std::set<EnvironmentType::Feature> environment features
+	 */
+	const std::set<EnvironmentType::Feature> requiredFeatures() const { return required_features_; }
+
+	/**
+	 * @brief Get whether an environment feature type is amongst those required by the culture
+	 * @param feature EnvironmentType::Feature to check
+	 * @return `true` if the environment feature is required by the culture
+	 * @return `true` if the environment feature is not required by the culture
+	 */
+	bool isRequiredFeature(EnvironmentType::Feature feature) const { return (required_features_.find(feature) != required_features_.end()); }
+
+
+	/**
+	 * @brief Add an environment terrain to the set of those required by the culture
+	 * @param terrain EnvironmentType::Terrain to add
+	 */
+	void addRequiredTerrain(EnvironmentType::Terrain terrain) { required_terrains_.emplace(terrain); }
+
+	/**
+	 * @brief Get a container with the environment terrains required by the culture
+	 * @return std::set<EnvironmentType::Terrain> environment terrains
+	 */
+	const std::set<EnvironmentType::Terrain> requiredTerrains() const { return required_terrains_; }
+
+	/**
+	 * @brief Get whether an environment terrain type is amongst those required by the culture
+	 * @param terrain EnvironmentType::Terrain to check
+	 * @return `true` if the environment terrain is required by the culture
+	 * @return `true` if the environment terrain is not required by the culture
+	 */
+	bool isRequiredTerrain(EnvironmentType::Terrain terrain) const { return (required_terrains_.find(terrain) != required_terrains_.end()); }
+
+
+	/**
+	 * @brief Add an environment vegetation to the set of those required by the culture
+	 * @param vegetation EnvironmentType::Vegetation to add
+	 */
+	void addRequiredVegetation(EnvironmentType::Vegetation vegetation) { required_vegetations_.emplace(vegetation); }
+
+	/**
+	 * @brief Get a container with the environment vegetations required by the culture
+	 * @return std::set<EnvironmentType::Vegetation> environment vegetations
+	 */
+	const std::set<EnvironmentType::Vegetation> requiredVegetations() const { return required_vegetations_; }
+
+	/**
+	 * @brief Get whether an environment vegetation type is amongst those required by the culture
+	 * @param vegetation EnvironmentType::Vegetation to check
+	 * @return `true` if the environment vegetation is required by the culture
+	 * @return `true` if the environment vegetation is not required by the culture
+	 */
+	bool isRequiredVegetation(EnvironmentType::Vegetation vegetation) const { return (required_vegetations_.find(vegetation) != required_vegetations_.end()); }
+
+
+	/**
+	 * @brief Add an environment water source to the set of those required by the culture
+	 * @param water EnvironmentType::Water source to add
+	 */
+	void addRequiredWaterSource(EnvironmentType::Water water) { required_water_sources_.emplace(water); }
+
+	/**
+	 * @brief Get a container with the environment water sources required by the culture
+	 * @return std::set<EnvironmentType::Water> environment water sources
+	 */
+	const std::set<EnvironmentType::Water> requiredWaterSources() const { return required_water_sources_; }
+
+	/**
+	 * @brief Get whether an environment water source is amongst those required by the culture
+	 * @param water EnvironmentType::Water source to check
+	 * @return `true` if the environment water source is required by the culture
+	 * @return `true` if the environment water source is not required by the culture
+	 */
+	bool isRequiredWaterSource(EnvironmentType::Water water) const { return (required_water_sources_.find(water) != required_water_sources_.end()); }
 
 private:
 	std::string name_{}; /**< Name of the culture type */
@@ -375,5 +505,9 @@ private:
 	std::map<SubcategoriedSkillData, int> skill_ranks_{}; /** Number of skill ranks gained during adolescence */
 	std::map<const SkillCategoryData*, int> skill_category_ranks_{}; /** Number of skill category ranks gained during adolescence */
 	std::map<const SkillCategoryData*, int> skill_category_skill_ranks_{}; /** Number of skill ranks from a category gained during adolescence */
-
+	std::set<const ClimateData*> required_climates_{}; /**< Set of climates, one of which the culture will live in  */
+	std::set<EnvironmentType::Feature> required_features_{}; /**< Set of environment features, one of which the culture will live in  */
+	std::set<EnvironmentType::Terrain> required_terrains_{}; /**< Set of environment terrains, one of which the culture will live in  */
+	std::set<EnvironmentType::Vegetation> required_vegetations_{}; /**< Set of environment vegetations, one of which the culture will live in  */
+	std::set<EnvironmentType::Water> required_water_sources_{}; /**< Set of environment water sources, one of which the culture will live on or next to */
 };

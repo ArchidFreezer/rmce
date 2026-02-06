@@ -40,14 +40,10 @@
             <preferred-weapon>Handaxe</preferred-weapon>
             <preferred-weapon>Spear</preferred-weapon>
          </preferred-weapons>
-         <location-types>
-            <location-type>
-               <terrains>
-                  <terrain>ALPINE</terrain>
-                  <terrain>ROUGH</terrain>
-               </terrains>
-            </location-type>
-         </location-types>
+         <terrains>
+            <terrain>ALPINE</terrain>
+            <terrain>ROUGH</terrain>
+         </terrains>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">2</ranks>
             <ranks category="Armour - Medium">2</ranks>
@@ -126,13 +122,9 @@
             <preferred-weapon>Sling</preferred-weapon>
             <preferred-weapon>Quarterstaff</preferred-weapon>
          </preferred-weapons>
-         <location-types>
-            <location-type>
-               <special-features>
-                  <special-feature>RURAL</special-feature>
-               </special-features>
-            </location-type>
-         </location-types>
+         <special-features>
+            <special-feature>RURAL</special-feature>
+         </special-features>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">1</ranks>
             <ranks category="Armour - Medium">0</ranks>
@@ -168,7 +160,7 @@
             <ranks skill="Languages">8</ranks>
             <ranks skill="Region Lore" subcategory="Own">3</ranks>
             <ranks skill="Culture Lore" subcategory="Own">3</ranks>
-            <ranks skill="Riding" subcategory="Horses">1</ranks>
+            <ranks skill="Riding" subcategory="Horse">1</ranks>
             <ranks skill="Hiding">1</ranks>
             <ranks skill="Stalking">1</ranks>
          </adolescent-skill-rank-modifiers>
@@ -217,14 +209,10 @@
             <preferred-weapon>Short Bow</preferred-weapon>
             <preferred-weapon>Spear</preferred-weapon>
          </preferred-weapons>
-         <location-types>
-            <location-type>
-               <vegetations>
-                  <vegetation>CONIFEROUS</vegetation>
-                  <vegetation>DECIDUOUS</vegetation>
-               </vegetations>
-            </location-type>
-         </location-types>
+         <vegetations>
+            <vegetation>CONIFEROUS</vegetation>
+            <vegetation>DECIDUOUS</vegetation>
+         </vegetations>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">0</ranks>
             <ranks category="Armour - Medium">0</ranks>
@@ -331,14 +319,10 @@
             <restricted-weapon>Sling</restricted-weapon>
             <restricted-weapon>Short Bow</restricted-weapon>
          </restricted-weapons>
-         <location-types>
-            <location-type>
-               <water-sources>
-                  <water-source>LAKE</water-source>
-                  <water-source>OCEANS</water-source>
-               </water-sources>
-            </location-type>
-         </location-types>
+         <water-sources>
+            <water-source>LAKE</water-source>
+            <water-source>OCEAN</water-source>
+         </water-sources>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">0</ranks>
             <ranks category="Armour - Medium">0</ranks>
@@ -374,7 +358,7 @@
             <ranks skill="Languages">8</ranks>
             <ranks skill="Region Lore" subcategory="Own">3</ranks>
             <ranks skill="Culture Lore" subcategory="Own">3</ranks>
-            <ranks skill="Riding" subcategory="Sea-horses">1</ranks>
+            <ranks skill="Riding" subcategory="Sea-horse">1</ranks>
             <ranks skill="Hiding">0</ranks>
             <ranks skill="Stalking">0</ranks>
          </adolescent-skill-rank-modifiers>
@@ -428,13 +412,9 @@
             <preferred-weapon>Sling</preferred-weapon>
             <preferred-weapon>Short Bow</preferred-weapon>
          </preferred-weapons>
-         <location-types>
-            <location-type>
-               <terrains>
-                  <terrain>ALPINE</terrain>
-               </terrains>
-            </location-type>
-         </location-types>
+         <terrains>
+            <terrain>ALPINE</terrain>
+         </terrains>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">1</ranks>
             <ranks category="Armour - Medium">0</ranks>
@@ -520,13 +500,9 @@
             <preferred-weapon>Handaxe</preferred-weapon>
             <preferred-weapon>Spear</preferred-weapon>
          </preferred-weapons>
-         <location-types>
-            <location-type>
-               <special-features>
-                  <special-feature>CAVERN</special-feature>
-               </special-features>
-            </location-type>
-         </location-types>
+         <special-features>
+            <special-feature>CAVERN</special-feature>
+         </special-features>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">2</ranks>
             <ranks category="Armour - Medium">1</ranks>
@@ -606,19 +582,15 @@
             <preferred-weapon>Sling</preferred-weapon>
             <preferred-weapon>Quarterstaff</preferred-weapon>
          </preferred-weapons>
-         <location-types>
-            <location-type>
-               <climates>
-                  <climate>HOT_DRY</climate>
-                  <climate>WARM_DRY</climate>
-                  <climate>COOL_DRY</climate>
-                  <climate>COLD_DRY</climate>
-               </climates>
-               <vegetations>
-                  <vegetation>PLAINS</vegetation>
-               </vegetations>
-            </location-type>
-         </location-types>
+         <climates>
+            <climate>HOT_DRY</climate>
+            <climate>WARM_DRY</climate>
+            <climate>COOL_DRY</climate>
+            <climate>COLD_DRY</climate>
+         </climates>
+         <vegetations>
+            <vegetation>PLAINS</vegetation>
+         </vegetations>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">1</ranks>
             <ranks category="Armour - Medium">0</ranks>
@@ -654,7 +626,7 @@
             <ranks skill="Languages">6</ranks>
             <ranks skill="Region Lore" subcategory="Own">3</ranks>
             <ranks skill="Culture Lore" subcategory="Own">3</ranks>
-            <ranks skill="Riding" subcategory="Horses">3</ranks>
+            <ranks skill="Riding" subcategory="Horse">3</ranks>
             <ranks skill="Hiding">0</ranks>
             <ranks skill="Stalking">0</ranks>
          </adolescent-skill-rank-modifiers>
@@ -704,16 +676,12 @@
             <preferred-weapon>Sling</preferred-weapon>
             <preferred-weapon>Short Bow</preferred-weapon>
          </preferred-weapons>
-         <location-types>
-            <location-type>
-               <climates>
-                  <climate>HOT_DRY</climate>
-               </climates>
-               <water-sources>
-                  <water-source>DESERTS</water-source>
-               </water-sources>
-            </location-type>
-         </location-types>
+         <climates>
+            <climate>HOT_DRY</climate>
+         </climates>
+         <water-sources>
+            <water-source>DESERT</water-source>
+         </water-sources>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">1</ranks>
             <ranks category="Armour - Medium">0</ranks>
@@ -749,7 +717,7 @@
             <ranks skill="Languages">4</ranks>
             <ranks skill="Region Lore" subcategory="Own">3</ranks>
             <ranks skill="Culture Lore" subcategory="Own">3</ranks>
-            <ranks skill="Riding" subcategory="Horses">5</ranks>
+            <ranks skill="Riding" subcategory="Horse">5</ranks>
             <ranks skill="Hiding">0</ranks>
             <ranks skill="Stalking">0</ranks>
          </adolescent-skill-rank-modifiers>
@@ -803,14 +771,10 @@
             <preferred-weapon>Dagger</preferred-weapon>
             <preferred-weapon>Short Sword</preferred-weapon>
          </preferred-weapons>
-         <location-types>
-            <location-type>
-               <water-sources>
-                  <water-source>FRESH_COAST</water-source>
-                  <water-source>SALT_SHORE</water-source>
-               </water-sources>
-            </location-type>
-         </location-types>
+         <water-sources>
+            <water-source>FRESHWATER_COAST</water-source>
+            <water-source>SALTWATER_COAST</water-source>
+         </water-sources>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">1</ranks>
             <ranks category="Armour - Medium">0</ranks>
@@ -891,17 +855,13 @@
             <preferred-weapon>Sling</preferred-weapon>
             <preferred-weapon>Spear</preferred-weapon>
          </preferred-weapons>
-         <location-types>
-            <location-type>
-               <climates>
-                  <climate>COLD_DRY</climate>
-                  <climate>FRIGID</climate>
-               </climates>
-               <vegetations>
-                  <vegetation>TUNDRA</vegetation>
-               </vegetations>
-            </location-type>
-         </location-types>
+         <climates>
+            <climate>COLD_DRY</climate>
+            <climate>FRIGID</climate>
+         </climates>
+         <vegetations>
+            <vegetation>TUNDRA</vegetation>
+         </vegetations>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">2</ranks>
             <ranks category="Armour - Medium">0</ranks>
@@ -982,14 +942,10 @@
             <preferred-weapon>Short Bow</preferred-weapon>
             <preferred-weapon>Spear</preferred-weapon>
          </preferred-weapons>
-         <location-types>
-            <location-type>
-               <terrains>
-                  <terrain>ALPINE</terrain>
-                  <terrain>ROUGH</terrain>
-               </terrains>
-            </location-type>
-         </location-types>
+         <terrains>
+            <terrain>ALPINE</terrain>
+            <terrain>ROUGH</terrain>
+         </terrains>
          <adolescent-category-rank-modifiers>
             <ranks category="Armour - Light">1</ranks>
             <ranks category="Armour - Medium">0</ranks>

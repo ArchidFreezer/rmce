@@ -47,9 +47,9 @@ void CultureTypeDatafileParserXml::parse() {
 					std::string skill_id = GameRuleData::generateId("Skill", skill_rank.second.get<std::string>("<xmlattr>.skill"));
 					boost::optional<std::string> subcategory = skill_rank.second.get_optional<std::string>("<xmlattr>.subcategory");
 					if (subcategory) {
-						ref.setSkillRanks(factory().subcategoriedSkillData(skill_id, subcategory.value()), ranks);
+						ref.addSkillRank(factory().subcategoriedSkillData(skill_id, subcategory.value()), ranks);
 					} else {
-						ref.setSkillRanks(factory().subcategoriedSkillData(skill_id), ranks);
+						ref.addSkillRank(factory().subcategoriedSkillData(skill_id), ranks);
 					}
 				}
 			}
@@ -62,7 +62,7 @@ void CultureTypeDatafileParserXml::parse() {
 				int ranks = skill_rank.second.get_value<int>();
 				if (ranks) { // The XML file has some ranks set to 0 for convenience of construction so we need to handle that
 					std::string skill_id = GameRuleData::generateId("SkillCategory", skill_rank.second.get<std::string>("<xmlattr>.category"));
-					ref.addSkillCategoryRanks(factory().get<SkillCategoryData>(skill_id), ranks);
+					ref.addSkillCategoryRank(factory().get<SkillCategoryData>(skill_id), ranks);
 				}
 			}
 		}
@@ -74,8 +74,44 @@ void CultureTypeDatafileParserXml::parse() {
 				int ranks = skill_rank.second.get_value<int>();
 				if (ranks) { // The XML file has some ranks set to 0 for convenience of construction so we need to handle that
 					std::string skill_id = GameRuleData::generateId("SkillCategory", skill_rank.second.get<std::string>("<xmlattr>.category"));
-					ref.addSkillCategorySkillRanks(factory().get<SkillCategoryData>(skill_id), ranks);
+					ref.addSkillCategorySkillRank(factory().get<SkillCategoryData>(skill_id), ranks);
 				}
+			}
+		}
+
+		// Required Climates
+		if (boost::optional<const pt::ptree&> required_climates = v.second.get_child_optional("climates")) {
+			for (const auto& required_climate : required_climates.get()) {
+				std::string climate_id = GameRuleData::generateId("ClimateType", required_climate.second.get_value<std::string>());
+				ref.addRequiredClimate(factory().get<ClimateData>(climate_id));
+			}
+		}
+
+		// Required Special Features
+		if (boost::optional<const pt::ptree&> required_features = v.second.get_child_optional("special-features")) {
+			for (const auto& required_feature : required_features.get()) {
+				ref.addRequiredFeature(EnvironmentType::feature(required_feature.second.get_value<std::string>()).value());
+			}
+		}
+
+		// Required Terrains
+		if (boost::optional<const pt::ptree&> required_terrains = v.second.get_child_optional("terrains")) {
+			for (const auto& required_terrain : required_terrains.get()) {
+				ref.addRequiredTerrain(EnvironmentType::terrain(required_terrain.second.get_value<std::string>()).value());
+			}
+		}
+
+		// Required Vegetations
+		if (boost::optional<const pt::ptree&> required_vegetations = v.second.get_child_optional("vegetations")) {
+			for (const auto& required_vegetation : required_vegetations.get()) {
+				ref.addRequiredVegetation(EnvironmentType::vegetation(required_vegetation.second.get_value<std::string>()).value());
+			}
+		}
+
+		// Required Special Features
+		if (boost::optional<const pt::ptree&> required_water_sources = v.second.get_child_optional("water-sources")) {
+			for (const auto& required_water_source : required_water_sources.get()) {
+				ref.addRequiredWaterSource(EnvironmentType::water(required_water_source.second.get_value<std::string>()).value());
 			}
 		}
 

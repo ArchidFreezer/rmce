@@ -230,9 +230,9 @@ namespace {
 		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kMarsh)), EnvironmentType::Water::kMarsh);
 		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kOasis)), EnvironmentType::Water::kOasis);
 		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kOcean)), EnvironmentType::Water::kOcean);
-		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltShore)), EnvironmentType::Water::kSaltShore);
+		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltCoast)), EnvironmentType::Water::kSaltCoast);
 
-		EXPECT_NE(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltShore)), EnvironmentType::Water::kLake);
+		EXPECT_NE(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltCoast)), EnvironmentType::Water::kLake);
 	}
 
 }
