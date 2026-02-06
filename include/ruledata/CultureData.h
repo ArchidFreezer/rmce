@@ -1,0 +1,224 @@
+#pragma once
+
+#include <CultureTypeData.h>
+#include <GameRuleData.h>
+#include <LanguageAbility.h>
+#include <ProfessionData.h>
+//#include <TrainingPackageData.h>
+
+/**
+ * @class CultureData
+ * @brief A specific culture that a character may belong to.
+ * 
+ * Culture definitions are split into two classes:
+ * The first is the overall culture type that defines may of the general details such as cultural beliefs and fears,
+ * preferred weapons and armour plus the basic skills that are learned during adolescence by all members of the culture.
+ * 
+ * The second is the sub culture that the character belongs to which defines the hobby skills and languages, plus any
+ * preferred professions or typical training packages, etc. These sub cultures are there to add additional flavour
+ * and details. An example would be the Plains culture where a sub-cultures would define the difference between
+ * a nomadic culture and a settled culture.
+ * 
+ * @see CultureTypeData
+ */
+class CultureData : public GameRuleData {
+public:
+	/**
+	 * @brief Delete defaulkt constructure to ensure initialisation of base class
+	 */
+	CultureData() = delete;
+
+	/**
+	 * @brief Basic constructor
+	 * @param id Unique identifier of the culture type
+	 */
+	CultureData(std::string_view id) : GameRuleData(id) {}
+
+	/**
+	* @brief Set the name of the race
+	* @param name Race name
+	*/
+	void setName(std::string_view name) { name_ = name; }
+
+	/**
+	 * @brief Get the name of the race
+	 * @return Race name as a string reference
+	 */
+	const std::string& name() const { return name_; }
+
+	/**
+	 * @brief Set the description of the race
+	 * @param description std::string_view race description
+	 */
+	void setDescription(std::string_view description) { description_ = description; }
+
+	/**
+	 * @brief Get the description of the race
+	 * @return std::string reference of the description
+	 */
+	const std::string& description() const { return description_; }
+
+	/**
+	 * @brief Set the culture type that this culture is based on
+	 * @param culture_type CultureTypeData parent culture type
+	 */
+	void setCultureType(const CultureTypeData& culture_type) { culture_type_ = &culture_type; }
+
+	/**
+	 * @brief Get the culture type that this culture is based on
+	 * @return CultureTypeData parent culture type
+	 */
+	const CultureTypeData& cultureType() const { return *culture_type_; }
+
+	/**
+	 * @brief Set whether the culture has a low level of technical or cultural acheivements
+	 * @param high_culture bool high or barbarian level culture
+	 */
+	void setHighCulture(bool high_culture) { high_culture_ = high_culture; }
+
+	/**
+	 * @brief Get whether the culture has a low level of technical or cultural acheivements
+	 * @return `true` for a high level culture
+	 * @return `false` for a low cultural or technological level
+	 */
+	bool highCulture() const { return high_culture_; }
+
+	/**
+	 * @brief Add the number of ranks a member of the race gets in a language during adolescence
+	 * @param language LanguageAbility containing the ranks for a language
+	 */
+	void setLanguageAbility(LanguageAbility language) { languages_.emplace(language.language(), language); }
+
+	/**
+	 * @brief Gets the staring ability a member of the race has in a language
+	 * @param language LanguageData language to get the ability for
+	 * @return LanguageAbility language ability
+	 */
+	const LanguageAbility& languageAbility(const LanguageData& language) const { return startingLanguageAbility(language.name()); }
+
+	/**
+	 * @brief Gets the staring ability a member of the race has in a language
+	 * @param language_name name of the language to get the ability for
+	 * @return LanguageAbility language ability
+	 */
+	const LanguageAbility& languageAbility(const std::string language_name) const { return languages_.at(language_name); }
+
+	/**
+	 * @brief Get a container with the LanguageAbility objects known during adolescence
+	 * @return std::vector of LanguageAbility object references
+	 */
+	const std::vector<LanguageAbility> languages() const {
+		auto values = std::views::values(languages_);
+		return { values.begin(), values.end() };
+	}
+
+	/**
+	 * @brief Add a skill to those typically taken by an adolescent of the culture
+	 * @param skill SubcategoriedSkillData to add
+	 */
+	void addHobbySkill(const SubcategoriedSkillData& skill) { hobby_skills_.emplace(skill); }
+
+	/**
+	 * @brief Get a container with the skills typically taken by an adolescent of the culture
+	 * @return std::set<SubcategoriedSkillData> typical hobby skills
+	 */
+	const std::set<const SubcategoriedSkillData> hobbySkills() const { return hobby_skills_; }
+
+	/**
+	 * @brief Get whether a skill is typically taken by an adolescent of the culture
+	 * @param skill SubcategoriedSkillData to check
+	 * @return `true` if the skill is typically taken by an adolescent of the culture
+	 * @return `true` if the skill is not typically taken by an adolescent of the culture
+	 */
+	bool isHobbySkill(const SubcategoriedSkillData& skill) const {
+		for (const auto& key : hobby_skills_) {
+			if (skill.id() == key.id()) return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @brief Add a skill category to those typically taken by an adolescent of the culture
+	 * @param skill_category SkillCategoryData to add
+	 */
+	void addHobbySkillCategory(const SkillCategoryData& skill_category) { hobby_skill_categories_.emplace(&skill_category); }
+
+	/**
+	 * @brief Get a container with the skill categories typically taken by an adolescent of the culture
+	 * @return std::set<SkillCategoryData> skill categories
+	 */
+	const std::set<const SkillCategoryData*> hobbySkillCategories() const { return hobby_skill_categories_; }
+
+	/**
+	 * @brief Get whether a skill category is typically taken by an adolescent of the culture
+	 * @param skill_category SkillCategoryData to check
+	 * @return `true` if the skill category is typically taken by an adolescent of the culture
+	 * @return `false` if the skill category is not typically taken by an adolescent of the culture
+	 */
+	bool isHobbySkillCategory(const SkillCategoryData& skill_category) const {
+		for (const auto& key : hobby_skill_categories_) {
+			if (skill_category.id() == key->id()) return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @brief Add a profession that is typically preferred by a member of the culture
+	 * @param profession ProfessionData to add
+	 */
+	void addPreferredProfession(const ProfessionData& profession) { preferred_professions_.emplace(&profession); }
+
+	/**
+	 * @brief Get a container with the professions that are typically preferred by a member of the culture
+	 * 
+	 * This is not an exclusive list by any means, but rather suggestions
+	 * @return std::set<ProfessionData> professions
+	 */
+	const std::set<const ProfessionData*> preferredProfessions() const { return preferred_professions_; }
+
+	/**
+	 * @brief Get whether a profession is typically restricted to a member of the culture
+	 * @param profession ProfessionData to check
+	 * @return `true` if the profession is typically restricted by a member of the culture
+	 * @return `false` if the profession is not typically restricted by a member of the culture
+	 */
+	bool isRestrictedProfession(const ProfessionData& profession) const {
+		for (const auto& key : restricted_professions_) {
+			if (profession.id() == key->id()) return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @brief Get a container with the professions that are typically restricted to a member of the culture
+	 *
+	 * This is not an exclusive list by any means, but rather suggestions
+	 * @return std::set<ProfessionData> professions
+	 */
+	const std::set<const ProfessionData*> restrictedProfessions() const { return restricted_professions_; }
+
+	/**
+	 * @brief Get whether a profession is typically restricted to a member of the culture
+	 * @param profession ProfessionData to check
+	 * @return `true` if the profession is typically restricted to a member of the culture
+	 * @return `false` if the profession is not typically restricted to a member of the culture
+	 */
+	bool isRestrictedProfession(const ProfessionData& profession) const {
+		for (const auto& key : restricted_professions_) {
+			if (profession.id() == key->id()) return true;
+		}
+		return false;
+	}
+
+private:
+	std::string name_{}; /**< Name of the culture */
+	std::string description_{}; /**< General description of the culture */
+	const CultureTypeData* culture_type_{}; /**< Culture type this culture is based on */
+	bool high_culture_{}; /**< Whether the culture has developed */
+	std::map<std::string, const LanguageAbility> languages_{}; /**< Language ranks that members of the race learn prior during their adolescence */
+	std::set<const SubcategoriedSkillData> hobby_skills_{}; /**< Set of skills that would typically be given skill ranks by adolescents of this culture */
+	std::set<const SkillCategoryData*> hobby_skill_categories_{}; /**< Set of skill categories that would typically be given skill ranks by adolescents of this culture */
+	std::set<const ProfessionData*> preferred_professions_{}; /**< Set of preferred professions for members of the culture */
+	std::set<const ProfessionData*> restricted_professions_{}; /**< Set of restricted professions for members of the culture */
+//	std::map<const TrainingPackageData*, float> training_package_modifiers_{}; /**< Modifiers to training package development point cost that members of the culture receive */
+};
