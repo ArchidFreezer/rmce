@@ -1,5 +1,0 @@
-<map id="HabitatTemperatureType::HabitatTemperatureTypeNotFoundException" name="HabitatTemperatureType::HabitatTemperatureTypeNotFoundException">
-<area shape="rect" id="Node000001" title="Thrown to indicate that no HabitatTemperatureType::Type enum was found." alt="" coords="5,80,234,139"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="58,5,181,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,46,122,80,117,78,118,50"/>
-</map>

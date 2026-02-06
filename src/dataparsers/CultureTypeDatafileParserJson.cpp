@@ -2,7 +2,7 @@
 
 
 void CultureTypeDatafileParserJson::parse() {
-	std::cout << "Loading CultureType data ... ";
+	std::cout << "Loading CultureType data ... " << std::endl;
 
 	// Get the lists to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
@@ -13,7 +13,98 @@ void CultureTypeDatafileParserJson::parse() {
 		CultureTypeData& ref = factory().get<CultureTypeData>(id);
 		ref.setName(name);
 		ref.setDescription(v.second.get<std::string>("description"));
+		ref.setCharacterConcept(v.second.get<std::string>("character-concepts"));
+		ref.setClothing(v.second.get<std::string>("clothing"));
+		ref.setAspirations(v.second.get<std::string>("aspirations"));
+		ref.setFears(v.second.get<std::string>("fears"));
+		ref.setMarriagePatterns(v.second.get<std::string>("marriage-patterns"));
+		ref.setPrejudices(v.second.get<std::string>("prejudices"));
+		ref.setReligiousBeliefs(v.second.get<std::string>("religious-beliefs"));
+		ref.setHobbySkillRanks(v.second.get<int>("hobby-skill-ranks"));
+		boost::optional<int> spell_ranks = v.second.get_optional<int>("spell-list-ranks");
+		if (spell_ranks) ref.setSpellListRanks(spell_ranks.value());
 
+		// Get the preferred armour
+		for (const auto& armours_tree : v.second.get_child("preferred-armours")) {
+			std::optional<ArmourType::Type> armour = ArmourType::fromDescription(armours_tree.second.get_value<std::string>());
+			if (armour) ref.addPreferredArmour(armour.value());
+		}
+
+		// Get the preferred weapons
+		for (const auto& weapons_tree : v.second.get_child("preferred-weapons")) {
+			std::string weapon_id = weapons_tree.second.get_value<std::string>();
+			ref.addPreferredWeapon(factory().get<WeaponTypeData>(weapon_id));
+		}
+
+		// Get skill ranks
+		if (boost::optional<const pt::ptree&> skill_ranks = v.second.get_child_optional("skill-ranks")) {
+			for (const auto& skill_rank_tree : skill_ranks.get()) {
+				std::string skill_name{ skill_rank_tree.second.get<std::string>("skill") };
+				boost::optional<std::string> subcategory = skill_rank_tree.second.get_optional<std::string>("subcategory");
+				int rank{ skill_rank_tree.second.get<int>("rank") };
+				if (subcategory) {
+					ref.addSkillRank(factory().subcategoriedSkillData(skill_name, subcategory.get()), rank);
+				} else {
+					ref.addSkillRank(factory().subcategoriedSkillData(skill_name), rank);
+				}
+			}
+		}
+
+		// Get skill category ranks
+		if (boost::optional<const pt::ptree&> category_ranks = v.second.get_child_optional("skill-category-ranks")) {
+			for (const auto& category_rank_tree : category_ranks.get()) {
+				std::string skill_id{ category_rank_tree.second.get<std::string>("category") };
+				ref.addSkillCategoryRank(factory().get<SkillCategoryData>(skill_id), category_rank_tree.second.get<int>("rank"));
+			}
+		}
+
+		// Get skill category skill ranks
+		if (boost::optional<const pt::ptree&> category_ranks = v.second.get_child_optional("skill-category-ranks")) {
+			for (const auto& category_rank_tree : category_ranks.get()) {
+				std::string skill_id{ category_rank_tree.second.get<std::string>("category") };
+				ref.addSkillCategorySkillRank(factory().get<SkillCategoryData>(skill_id), category_rank_tree.second.get<int>("rank"));
+			}
+		}
+
+		// Get required climates
+		if (boost::optional<const pt::ptree&> required_climates = v.second.get_child_optional("required-climates")) {
+			for (const auto& required_climate : required_climates.get()) {
+				std::string climate_id = required_climate.second.get_value<std::string>();
+				ref.addRequiredClimate(factory().get<ClimateData>(climate_id));
+			}
+		}
+
+		// Get required environmental special features
+		if (boost::optional<const pt::ptree&> required_features = v.second.get_child_optional("required-features")) {
+			for (const auto& required_feature : required_features.get()) {
+				std::optional<EnvironmentType::Feature> feature = EnvironmentType::feature(required_feature.second.get_value<std::string>());
+				if (feature) ref.addRequiredFeature(feature.value());
+			}
+		}
+
+		// Get required environmental terrains
+		if (boost::optional<const pt::ptree&> required_terrains = v.second.get_child_optional("required-terrains")) {
+			for (const auto& required_terrain : required_terrains.get()) {
+				std::optional<EnvironmentType::Terrain> terrain = EnvironmentType::terrain(required_terrain.second.get_value<std::string>());
+				if (terrain) ref.addRequiredTerrain(terrain.value());
+			}
+		}
+
+		// Get required environmental vegetations
+		if (boost::optional<const pt::ptree&> required_vegetations = v.second.get_child_optional("required-vegetations")) {
+			for (const auto& required_vegetation : required_vegetations.get()) {
+				std::optional<EnvironmentType::Vegetation> vegetation = EnvironmentType::vegetation(required_vegetation.second.get_value<std::string>());
+				if (vegetation) ref.addRequiredVegetation(vegetation.value());
+			}
+		}
+
+		// Get required environmental water sources
+		if (boost::optional<const pt::ptree&> required_water_sources = v.second.get_child_optional("required-water-sources")) {
+			for (const auto& required_water_source : required_water_sources.get()) {
+				std::optional<EnvironmentType::Water> water = EnvironmentType::water(required_water_source.second.get_value<std::string>());
+				if (water) ref.addRequiredWaterSource(water.value());
+			}
+		}
 
 		std::cout << "\tCultureType name: " << ref.name() << std::endl;
 	}
@@ -46,11 +137,15 @@ void CultureTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& da
 	datum.push_back(std::make_pair("preferred-armours", armours_tree));
 
 	// Get the container tree for the preferred weapons
+	std::map<std::string, const WeaponTypeData*> weapons{};
+	for (auto& weapon : game_data.preferredWeapons()) {
+		weapons.emplace(weapon->id(), weapon);
+	}
 	pt::ptree weapons_tree{};
-	for (const WeaponTypeData* weapon : game_data.preferredWeapons()) {
+	for (const auto& weapon : weapons) {
 		// Get the weapons container
 		pt::ptree weapon_tree{};
-		weapon_tree.put("", weapon->id());
+		weapon_tree.put("", weapon.second->id());
 		weapons_tree.push_back(std::make_pair("", weapon_tree));
 	}
 	datum.push_back(std::make_pair("preferred-weapons", weapons_tree));
@@ -99,11 +194,15 @@ void CultureTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& da
 	}
 
 	// Required Climates
+	std::map<std::string, const ClimateData*> climates{};
+	for (auto& climate : game_data.requiredClimates()) {
+		climates.emplace(climate->id(), climate);
+	}
 	pt::ptree climates_tree{};
-	for (const ClimateData* climate : game_data.requiredClimates()) {
+	for (const auto& climate : climates) {
 		// Get the climates container
 		pt::ptree climate_tree{};
-		climate_tree.put("", climate->id());
+		climate_tree.put("", climate.second->id());
 		climates_tree.push_back(std::make_pair("", climate_tree));
 	}
 	if (!climates_tree.empty()) datum.push_back(std::make_pair("required-climates", climates_tree));

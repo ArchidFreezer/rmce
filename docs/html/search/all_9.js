@@ -110,7 +110,7 @@ var searchData=
   ['krough_107',['kRough',['../namespace_environment_type.html#a73843fcaa534a04d130629faece61b7aa7afa40661d1f59b43f605d283dd29036',1,'EnvironmentType']]],
   ['kruins_108',['kRuins',['../namespace_environment_type.html#a82870722f8a6254fbede22c293a6001eafe9ae5e67af8502e97fc9ba2eb7d6f3d',1,'EnvironmentType']]],
   ['krural_109',['kRural',['../namespace_environment_type.html#a82870722f8a6254fbede22c293a6001ea4180a88db793aacfd9d2eb777b5cba42',1,'EnvironmentType']]],
-  ['ksaltshore_110',['kSaltShore',['../namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83cadd0fa8fff6d84ced6113d9e54ad04ebb',1,'EnvironmentType']]],
+  ['ksaltcoast_110',['kSaltCoast',['../namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca2294a1157e756e3c4e4a9db0ac93e83f',1,'EnvironmentType']]],
   ['kselfdiscipline_111',['kSelfDiscipline',['../namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda0fae248a4ce56dc1fecb988e0fd1125b',1,'StatType']]],
   ['ksemi_112',['kSemi',['../namespace_spell_user_type.html#a5ec120eecc0cf4c66aaceb88a40b6211ac9cff42f5ee76ad56d23d3e2407072a9',1,'SpellUserType']]],
   ['kslash_113',['kSlash',['../namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1a844a7cd290335336b934f1815bed1d68',1,'CriticalType']]],

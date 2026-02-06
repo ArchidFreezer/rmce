@@ -21,15 +21,15 @@
             "preferred-weapons": [
                 "WEAPONTYPE_AXE_WOODSMAN_S",
                 "WEAPONTYPE_BATTLE_AXE",
+                "WEAPONTYPE_BROADSWORD",
                 "WEAPONTYPE_CLUB",
                 "WEAPONTYPE_COMPOSITE_BOW",
-                "WEAPONTYPE_BROADSWORD",
                 "WEAPONTYPE_CUTLASS",
                 "WEAPONTYPE_HANDAXE",
                 "WEAPONTYPE_JAVELIN",
                 "WEAPONTYPE_SHORT_BOW",
-                "WEAPONTYPE_SLING",
-                "WEAPONTYPE_SHORT_SWORD"
+                "WEAPONTYPE_SHORT_SWORD",
+                "WEAPONTYPE_SLING"
             ],
             "skill-ranks": [
                 {
@@ -135,6 +135,50 @@
             ],
             "skill-category-skill-ranks": [
                 {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
                     "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
                     "rank": "1"
                 },
@@ -171,12 +215,12 @@
                 "Skin"
             ],
             "preferred-weapons": [
-                "WEAPONTYPE_HARPOON_LIGHT",
                 "WEAPONTYPE_HANDAXE",
-                "WEAPONTYPE_SPEAR",
-                "WEAPONTYPE_TRIDENT",
+                "WEAPONTYPE_HARPOON_LIGHT",
                 "WEAPONTYPE_POLEARM",
-                "WEAPONTYPE_TOMAHAWK"
+                "WEAPONTYPE_SPEAR",
+                "WEAPONTYPE_TOMAHAWK",
+                "WEAPONTYPE_TRIDENT"
             ],
             "skill-ranks": [
                 {
@@ -259,6 +303,46 @@
             ],
             "skill-category-skill-ranks": [
                 {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
                     "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
                     "rank": "2"
                 },
@@ -288,15 +372,15 @@
                 "Heavy Hide"
             ],
             "preferred-weapons": [
-                "WEAPONTYPE_CUDGEL",
                 "WEAPONTYPE_CLUB",
                 "WEAPONTYPE_COMPOSITE_BOW",
+                "WEAPONTYPE_CUDGEL",
                 "WEAPONTYPE_DAGGER",
                 "WEAPONTYPE_HANDAXE",
                 "WEAPONTYPE_JAVELIN",
                 "WEAPONTYPE_MACE",
-                "WEAPONTYPE_SLING",
                 "WEAPONTYPE_SHORT_SWORD",
+                "WEAPONTYPE_SLING",
                 "WEAPONTYPE_SPEAR"
             ],
             "skill-ranks": [
@@ -391,6 +475,46 @@
             ],
             "skill-category-skill-ranks": [
                 {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
                     "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
                     "rank": "1"
                 },
@@ -404,8 +528,8 @@
                 }
             ],
             "required-climates": [
-                "CLIMATETYPE_FRIGID",
-                "CLIMATETYPE_COLD_DRY"
+                "CLIMATETYPE_COLD_DRY",
+                "CLIMATETYPE_FRIGID"
             ],
             "required-vegetations": [
                 "Tundra"
@@ -433,9 +557,9 @@
                 "WEAPONTYPE_COMPOSITE_BOW",
                 "WEAPONTYPE_CUTLASS",
                 "WEAPONTYPE_LONG_BOW",
+                "WEAPONTYPE_SABRE",
                 "WEAPONTYPE_SHORT_BOW",
                 "WEAPONTYPE_SLING",
-                "WEAPONTYPE_SABRE",
                 "WEAPONTYPE_TWO_HANDED_SWORD"
             ],
             "skill-ranks": [
@@ -523,6 +647,50 @@
             ],
             "skill-category-skill-ranks": [
                 {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "5"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
                     "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
                     "rank": "1"
                 },
@@ -560,11 +728,11 @@
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_BAW",
-                "WEAPONTYPE_CABIS",
-                "WEAPONTYPE_CUDGEL",
-                "WEAPONTYPE_CLUB",
-                "WEAPONTYPE_DAGGER",
                 "WEAPONTYPE_BROADSWORD",
+                "WEAPONTYPE_CABIS",
+                "WEAPONTYPE_CLUB",
+                "WEAPONTYPE_CUDGEL",
+                "WEAPONTYPE_DAGGER",
                 "WEAPONTYPE_HANDAXE",
                 "WEAPONTYPE_JAVELIN",
                 "WEAPONTYPE_SHORT_BOW",
@@ -634,6 +802,50 @@
             ],
             "skill-category-skill-ranks": [
                 {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
                     "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
                     "rank": "1"
                 },
@@ -675,17 +887,17 @@
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_CAT_O_NINE_TAILS_FIGHTING",
-                "WEAPONTYPE_DAGGER",
                 "WEAPONTYPE_CUTLASS",
-                "WEAPONTYPE_HARPOON_LIGHT",
+                "WEAPONTYPE_DAGGER",
                 "WEAPONTYPE_FLAIL",
-                "WEAPONTYPE_NET_FISHING",
-                "WEAPONTYPE_MAIN_GAUCHE",
+                "WEAPONTYPE_HARPOON_LIGHT",
                 "WEAPONTYPE_MACE",
+                "WEAPONTYPE_MAIN_GAUCHE",
+                "WEAPONTYPE_NET_FISHING",
+                "WEAPONTYPE_QUARTERSTAFF",
                 "WEAPONTYPE_SABRE",
                 "WEAPONTYPE_SHORT_SWORD",
-                "WEAPONTYPE_WHIP",
-                "WEAPONTYPE_QUARTERSTAFF"
+                "WEAPONTYPE_WHIP"
             ],
             "skill-ranks": [
                 {
@@ -779,6 +991,50 @@
             ],
             "skill-category-skill-ranks": [
                 {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
                     "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
                     "rank": "2"
                 },
@@ -818,15 +1074,15 @@
                 "WEAPONTYPE_BATTLE_AXE",
                 "WEAPONTYPE_CLUB",
                 "WEAPONTYPE_DAGGER",
-                "WEAPONTYPE_HEAVY_CROSSBOW",
                 "WEAPONTYPE_HANDAXE",
-                "WEAPONTYPE_MAIN_GAUCHE",
+                "WEAPONTYPE_HEAVY_CROSSBOW",
                 "WEAPONTYPE_LIGHT_CROSSBOW",
+                "WEAPONTYPE_MAIN_GAUCHE",
+                "WEAPONTYPE_POLEARM",
                 "WEAPONTYPE_SHORT_SWORD",
                 "WEAPONTYPE_SPEAR",
-                "WEAPONTYPE_POLEARM",
-                "WEAPONTYPE_WAR_MATTOCK",
-                "WEAPONTYPE_WAR_HAMMER"
+                "WEAPONTYPE_WAR_HAMMER",
+                "WEAPONTYPE_WAR_MATTOCK"
             ],
             "skill-ranks": [
                 {
@@ -920,6 +1176,54 @@
             ],
             "skill-category-skill-ranks": [
                 {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
                     "category": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "rank": "4"
                 },
@@ -956,9 +1260,9 @@
                 "WEAPONTYPE_CLUB",
                 "WEAPONTYPE_DAGGER",
                 "WEAPONTYPE_HANDAXE",
+                "WEAPONTYPE_QUARTERSTAFF",
                 "WEAPONTYPE_SLING",
-                "WEAPONTYPE_TRIDENT",
-                "WEAPONTYPE_QUARTERSTAFF"
+                "WEAPONTYPE_TRIDENT"
             ],
             "skill-ranks": [
                 {
@@ -1049,6 +1353,50 @@
             ],
             "skill-category-skill-ranks": [
                 {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
                     "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
                     "rank": "1"
                 },
@@ -1066,10 +1414,10 @@
                 }
             ],
             "required-climates": [
-                "CLIMATETYPE_HOT_DRY",
-                "CLIMATETYPE_WARM_DRY",
+                "CLIMATETYPE_COLD_DRY",
                 "CLIMATETYPE_COOL_DRY",
-                "CLIMATETYPE_COLD_DRY"
+                "CLIMATETYPE_HOT_DRY",
+                "CLIMATETYPE_WARM_DRY"
             ],
             "required-vegetations": [
                 "Plains"
@@ -1097,9 +1445,9 @@
                 "WEAPONTYPE_DAGGER",
                 "WEAPONTYPE_HANDAXE",
                 "WEAPONTYPE_JAVELIN",
+                "WEAPONTYPE_QUARTERSTAFF",
                 "WEAPONTYPE_SLING",
-                "WEAPONTYPE_TRIDENT",
-                "WEAPONTYPE_QUARTERSTAFF"
+                "WEAPONTYPE_TRIDENT"
             ],
             "skill-ranks": [
                 {
@@ -1214,6 +1562,54 @@
             ],
             "skill-category-skill-ranks": [
                 {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
                     "category": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "rank": "1"
                 },
@@ -1258,14 +1654,14 @@
                 "WEAPONTYPE_BATTLE_AXE",
                 "WEAPONTYPE_CLUB",
                 "WEAPONTYPE_DAGGER",
-                "WEAPONTYPE_HEAVY_CROSSBOW",
                 "WEAPONTYPE_HANDAXE",
+                "WEAPONTYPE_HEAVY_CROSSBOW",
                 "WEAPONTYPE_LIGHT_CROSSBOW",
+                "WEAPONTYPE_POLEARM",
                 "WEAPONTYPE_SHORT_SWORD",
                 "WEAPONTYPE_SPEAR",
-                "WEAPONTYPE_POLEARM",
-                "WEAPONTYPE_WAR_MATTOCK",
-                "WEAPONTYPE_WAR_HAMMER"
+                "WEAPONTYPE_WAR_HAMMER",
+                "WEAPONTYPE_WAR_MATTOCK"
             ],
             "skill-category-ranks": [
                 {
@@ -1331,6 +1727,54 @@
             ],
             "skill-category-skill-ranks": [
                 {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
+                {
                     "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
                     "rank": "2"
                 },
@@ -1366,15 +1810,15 @@
                 "Leather Coat"
             ],
             "preferred-weapons": [
-                "WEAPONTYPE_DAGGER",
                 "WEAPONTYPE_BLOW_GUN_SMALL",
                 "WEAPONTYPE_CUTLASS",
+                "WEAPONTYPE_DAGGER",
                 "WEAPONTYPE_JAVELIN",
                 "WEAPONTYPE_LONG_BOW",
+                "WEAPONTYPE_QUARTERSTAFF",
                 "WEAPONTYPE_SHORT_BOW",
                 "WEAPONTYPE_SHORT_SWORD",
-                "WEAPONTYPE_SPEAR",
-                "WEAPONTYPE_QUARTERSTAFF"
+                "WEAPONTYPE_SPEAR"
             ],
             "skill-ranks": [
                 {
@@ -1480,6 +1924,58 @@
                 }
             ],
             "skill-category-skill-ranks": [
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "rank": "2"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "rank": "3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "rank": "5"
+                },
+                {
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "rank": "1"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "rank": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "rank": "1"
+                },
                 {
                     "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
                     "rank": "1"

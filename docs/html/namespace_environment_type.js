@@ -39,7 +39,7 @@ var namespace_environment_type =
       [ "kMarsh", "namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca2ce5bb55952cd13ad36643c5cad1a2dd", null ],
       [ "kOasis", "namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca3ca31e7ed4e2b90cb62fd07b254bd656", null ],
       [ "kOcean", "namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83cabff21a5b97d121fc718f2059f13b3328", null ],
-      [ "kSaltShore", "namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83cadd0fa8fff6d84ced6113d9e54ad04ebb", null ]
+      [ "kSaltCoast", "namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca2294a1157e756e3c4e4a9db0ac93e83f", null ]
     ] ],
     [ "description", "namespace_environment_type.html#ae88c81990be4cde91225c97194f7fc7d", null ],
     [ "description", "namespace_environment_type.html#a39e8db042b0c64b6f065ff87c56027a7", null ],
