@@ -24,6 +24,8 @@ var namespace_armour_type =
       [ "kAT19", "namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453bea49cddf6ebc941da93b02eaeed3caf022", null ],
       [ "kAT20", "namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453beae0d292ee63e2e352e73b37d8163f3441", null ]
     ] ],
+    [ "description", "namespace_armour_type.html#a17b2a33e48f6bf2210d8bd1d2af50401", null ],
+    [ "fromDescription", "namespace_armour_type.html#ae3e344df16520c31d5c926383e46d085", null ],
     [ "fromString", "namespace_armour_type.html#a68c2e7dfe3dc1cc1982140a3c972790b", null ],
     [ "operator<<", "namespace_armour_type.html#a4c137afb08a8b57023c3ae619afb9f5b", null ],
     [ "toString", "namespace_armour_type.html#a404f3424a5617fa5d2c6a9f96f923dbd", null ]

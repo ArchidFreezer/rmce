@@ -151,7 +151,7 @@ const std::string EnvironmentType::toString(EnvironmentType::Water water) {
 	case kMarsh: return "Marsh";
 	case kOasis: return "Oasis";
 	case kOcean: return "Ocean";
-	case kSaltShore: return "Saltwater Coast";
+	case kSaltCoast: return "Saltwater Coast";
 	default: return "";
 	}
 }
@@ -169,7 +169,7 @@ const std::string EnvironmentType::description(EnvironmentType::Water water) {
 	case kMarsh: return "Marshes or swamps";
 	case kOasis: return "Oasis or isolated water source";
 	case kOcean: return "Oceans";
-	case kSaltShore: return "Saltwater shores or shallows";
+	case kSaltCoast: return "Saltwater shores or shallows";
 	default: return "";
 	}
 }
@@ -187,7 +187,7 @@ const std::optional<EnvironmentType::Water> EnvironmentType::water(std::string_v
 	if (val == "marsh") return kMarsh;
 	if (val == "oasis") return kOasis;
 	if (val == "ocean") return kOcean;
-	if (val == "saltwatercoast") return kSaltShore;
+	if (val == "saltwatercoast") return kSaltCoast;
 
 	return {};
 }

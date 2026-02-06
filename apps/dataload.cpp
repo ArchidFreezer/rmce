@@ -6,6 +6,8 @@
 #include <AttackTableDatafileParserJson.h>
 #include <BookDatafileParserJson.h>
 #include <ClimateDatafileParserJson.h>
+#include <CultureTypeDatafileParserXml.h>
+#include <CultureTypeDatafileParserJson.h>
 #include <LanguageCategoryDatafileParserJson.h>
 #include <LanguageDatafileParserJson.h>
 #include <ProfessionDatafileParserXml.h>
@@ -40,6 +42,7 @@ int main() {
 	SkillGroupDatafileParserJson skill_group_parser(cache, "../../../../data/SkillGroups.json");
 	ProfessionDatafileParserJson profession_parser(cache, "../../../../data/Professions.json");
 	ClimateDatafileParserJson climate_parser(cache, "../../../../data/Climates.json");
+	CultureTypeDatafileParserJson culture_type_parser(cache, "../../../../data/CultureTypes.json");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
@@ -58,6 +61,7 @@ int main() {
 	parsers.push_back(&skill_group_parser);
 	parsers.push_back(&profession_parser);
 	parsers.push_back(&climate_parser);
+	parsers.push_back(&culture_type_parser);
 
 	try {
 		// Iterate through the parsers retrieving the ID only and populating the cache with empty game data objects
@@ -80,7 +84,8 @@ int main() {
 //		race_parser.save("../../../../data/Races2.json");
 //		skill_group_parser.save("../../../../data/SkillGroups2.json");
 //		profession_parser.save("../../../../data/Professions2.json");
-		climate_parser.save("../../../../data/Climates2.json");
+//		climate_parser.save("../../../../data/Climates2.json");
+//		culture_type_parser.save("../../../../data/CultureTypes2.json");
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
 	}

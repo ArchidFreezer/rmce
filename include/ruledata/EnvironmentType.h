@@ -215,7 +215,7 @@ namespace EnvironmentType {
 		kMarsh, /**< Marshes or swamps */
 		kOasis, /**< Oasis or isolated water source */
 		kOcean, /**< Oceans */
-		kSaltShore, /**< Saltwater shores or shallows */
+		kSaltCoast, /**< Saltwater shores or shallows */
 	};
 
 	/**

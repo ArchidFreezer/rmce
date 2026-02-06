@@ -1,7 +1,0 @@
-<map id="RaceDatafileParserXml" name="RaceDatafileParserXml">
-<area shape="rect" id="Node000001" title="Process RaceData objects for xml files." alt="" coords="5,155,164,181"/>
-<area shape="rect" id="Node000002" href="$class_datafile_parser_xml.html" title="Abstract class to parse xml files containing game rule data." alt="" coords="21,80,148,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,121,87,155,82,153,83,124"/>
-<area shape="rect" id="Node000003" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="32,5,137,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,45,87,80,82,79,83,50"/>
-</map>

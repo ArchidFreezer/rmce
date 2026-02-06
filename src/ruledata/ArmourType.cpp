@@ -55,3 +55,59 @@ const std::optional<ArmourType::Type> ArmourType::fromString(std::string_view sv
 
 	return {};
 }
+
+const std::string ArmourType::description(Type size) {
+	using enum Type;
+
+	switch (size) {
+	case kAT1: return "Skin";
+	case kAT2: return "Robes";
+	case kAT3: return "Light Hide";
+	case kAT4: return "Heavy Hide";
+	case kAT5: return "Leather Jerkin";
+	case kAT6: return "Leather Coat";
+	case kAT7: return "Reinforced Leather Coat";
+	case kAT8: return "Reinforced Full-Length Leather Coat";
+	case kAT9: return "Leather Breastplate";
+	case kAT10: return "Leather Breastplate & Greaves";
+	case kAT11: return "Half-Hide Plate";
+	case kAT12: return "Full-Hide Plate";
+	case kAT13: return "Chain Shirt";
+	case kAT14: return "Chain Shirt & Greaves";
+	case kAT15: return "Full Chain";
+	case kAT16: return "Chain Hauberk";
+	case kAT17: return "Metal Breastplate";
+	case kAT18: return "Metal Breastplate & Greaves";
+	case kAT19: return "Half Plate";
+	case kAT20: return "Full Plate";
+	default: return "";
+	}
+}
+
+const std::optional<ArmourType::Type> ArmourType::fromDescription(std::string_view sv) {
+	using enum Type;
+
+	const std::string val = lcaseconcat(sv);
+	if (val == "skin") return kAT1;
+	if (val == "robes") return kAT2;
+	if (val == "lighthide") return kAT3;
+	if (val == "heavyhide") return kAT4;
+	if (val == "leatherjerkin") return kAT5;
+	if (val == "leathercoat") return kAT6;
+	if (val == "reinforcedleathercoat") return kAT7;
+	if (val == "reinforcedfulllengthleathercoat") return kAT8;
+	if (val == "leatherbreastplate") return kAT9;
+	if (val == "leatherbreastplategreaves") return kAT10;
+	if (val == "halfhideplate") return kAT11;
+	if (val == "fullhideplate") return kAT12;
+	if (val == "chainshirt") return kAT13;
+	if (val == "chainshirtgreaves") return kAT14;
+	if (val == "fullchain") return kAT15;
+	if (val == "chainhauberk") return kAT16;
+	if (val == "metalbreastplate") return kAT17;
+	if (val == "metalbreastplategreaves") return kAT18;
+	if (val == "halfplate") return kAT19;
+	if (val == "fullplate") return kAT20;
+
+	return {};
+}
