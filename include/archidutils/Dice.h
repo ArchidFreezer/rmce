@@ -70,6 +70,9 @@ public:
 	Dice(int sides);
 	/**
 	 * @brief Constructor that allows open ended rolls
+	 * 
+	 * If @a open_ended_range is >= @a sides it will be silently adjusted to be @a (sides - 1) to prevent an infinite loop
+	 *
 	 * @param sides Number of sides on the dice
 	 * @param open_ended_range The range of numbers at the top and bottom end that will trigger an open ended roll
 	 *                         Use a value of 0 to disable open ended rolls
@@ -77,6 +80,10 @@ public:
 	Dice(int sides, int open_ended_range);
 	/**
 	 * @brief Constructor that allows control of which open ended rolls may be made
+	 * 
+	 * If @a open_ended_high_range or @a open_ended_high_range is >= @a sides they will be silently adjusted to be
+	 * @a (sides - 1) to prevent an infinite loop
+	 * 
 	 * @param sides Number of sides on the dice
 	 * @param open_ended_high_range The range of numbers at the top end that will trigger an open ended high roll; 0 to disable
 	 * @param open_ended_low_range The range of numbers at the bottom end that will trigger an open ended low roll; 0 to disable
@@ -97,11 +104,11 @@ public:
 	 * If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll
 	 * which is below this is rolled.
 	 * 
-	 * If `min_open_high` < 0 then the minimum will be set to 0
+	 * If `min_open_high` < 2 then the minimum will be set to 2 to prevent an infinite loop
 	 *
 	 * @param min_open_high The minimum value to trigger another roll
 	 */
-	void setMinOpenHigh(int min_open_high) { min_open_high_ = std::min(0,min_open_high); }
+	void setMinOpenHigh(int min_open_high) { min_open_high_ = std::max(2,min_open_high); }
 
 	/**
 	 * @brief Gets the number at which an open ended low roll is triggered.
@@ -117,9 +124,11 @@ public:
 	 * If the dice roll is this value or lower then the dice are re-rolled open ended high and the new roll subtracted from
 	 * the existing value.
 	 *
+	 * If `max_open_low` >= the number of sides then the minimum will be set to (sides - 1) to prevent an infinite loop
+	 *
 	 * @param max_open_low The maximum value to trigger another roll
 	 */
-	void setMaxOpenLow(int max_open_low) { max_open_low_ = max_open_low; }
+	void setMaxOpenLow(int max_open_low) { max_open_low_ = std::min(max_open_low, sides_ - 1); }
 
 	/**
 	 * @brief Returns the number of sides currently configured on the dice.

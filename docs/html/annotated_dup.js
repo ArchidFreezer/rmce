@@ -36,7 +36,6 @@ var annotated_dup =
     [ "ColNotFoundException", "class_col_not_found_exception.html", "class_col_not_found_exception" ],
     [ "CultureTypeData", "class_culture_type_data.html", "class_culture_type_data" ],
     [ "CultureTypeDatafileParserJson", "class_culture_type_datafile_parser_json.html", "class_culture_type_datafile_parser_json" ],
-    [ "CultureTypeDatafileParserXml", "class_culture_type_datafile_parser_xml.html", "class_culture_type_datafile_parser_xml" ],
     [ "DatafileParser", "class_datafile_parser.html", "class_datafile_parser" ],
     [ "DatafileParserJson", "class_datafile_parser_json.html", "class_datafile_parser_json" ],
     [ "DatafileParserXml", "class_datafile_parser_xml.html", "class_datafile_parser_xml" ],

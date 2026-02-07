@@ -24,7 +24,6 @@ var hierarchy =
         [ "WeaponTypeDatafileParserJson", "class_weapon_type_datafile_parser_json.html", null ]
       ] ],
       [ "DatafileParserXml", "class_datafile_parser_xml.html", [
-        [ "CultureTypeDatafileParserXml", "class_culture_type_datafile_parser_xml.html", null ],
         [ "ProfessionDatafileParserXml", "class_profession_datafile_parser_xml.html", null ]
       ] ]
     ] ],
