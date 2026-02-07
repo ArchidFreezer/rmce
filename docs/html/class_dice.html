@@ -116,8 +116,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab2cfc994f6a75e2c0f8cbb8a77bb9cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number at which an open ended low roll is triggered. If the dice roll is this value or lower then the dice are re-rolled open ended high and the new roll subtracted from the existing value.  <br /></td></tr>
 <tr class="memitem:aaa356bf6d3416f4eec98207bbe7dbc48" id="r_aaa356bf6d3416f4eec98207bbe7dbc48"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aaa356bf6d3416f4eec98207bbe7dbc48">sides</a> () const</td></tr>
 <tr class="memdesc:aaa356bf6d3416f4eec98207bbe7dbc48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of sides currently configured on the dice.  <br /></td></tr>
-<tr class="memitem:a6e19f02119b4bc52f53b416fb1b49ed9" id="r_a6e19f02119b4bc52f53b416fb1b49ed9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6e19f02119b4bc52f53b416fb1b49ed9">setSides</a> (int <a class="el" href="#aaa356bf6d3416f4eec98207bbe7dbc48">sides</a>)</td></tr>
-<tr class="memdesc:a6e19f02119b4bc52f53b416fb1b49ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of sides of the dice to use.  <br /></td></tr>
 <tr class="memitem:a3720f49eb14428369bc6289cdae2c404" id="r_a3720f49eb14428369bc6289cdae2c404"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a3720f49eb14428369bc6289cdae2c404">result</a> () const</td></tr>
 <tr class="memdesc:a3720f49eb14428369bc6289cdae2c404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the total value of the last dice roll.  <br /></td></tr>
 <tr class="memitem:ab4355c9c99b5d2fd82893a08cfc1e740" id="r_ab4355c9c99b5d2fd82893a08cfc1e740"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab4355c9c99b5d2fd82893a08cfc1e740">unmodified</a> () const</td></tr>
@@ -578,46 +576,6 @@ Public Member Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">invalid_argument</td><td>if <em class="arg">min_open_high</em> &lt;= 1 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a6e19f02119b4bc52f53b416fb1b49ed9" name="a6e19f02119b4bc52f53b416fb1b49ed9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e19f02119b4bc52f53b416fb1b49ed9">&#9670;&#160;</a></span>setSides()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Dice::setSides </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sides</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the number of sides of the dice to use. </p>
-<p>When rolling the dice a number will be returned between 1 and <span class="tt"><a class="el" href="#aaa356bf6d3416f4eec98207bbe7dbc48" title="Returns the number of sides currently configured on the dice.">sides</a></span>. Setting the number of sides to 0 is a special case which will always return 0 as a roll result</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">sides</td><td>Number of sides </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">invalid_argument</td><td>if the number of <a class="el" href="#aaa356bf6d3416f4eec98207bbe7dbc48" title="Returns the number of sides currently configured on the dice.">sides</a> &lt; 0 </td></tr>
   </table>
   </dd>
 </dl>

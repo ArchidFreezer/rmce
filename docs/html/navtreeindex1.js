@@ -30,13 +30,12 @@ var NAVTREEINDEX1 =
 "class_dice.html#a2fc5e8d8534a4b20fefffad328caf1af":[2,0,23,9],
 "class_dice.html#a3720f49eb14428369bc6289cdae2c404":[2,0,23,5],
 "class_dice.html#a5cd66ae7b1346b78d293f6c2d98d18b5":[2,0,23,1],
-"class_dice.html#a6e19f02119b4bc52f53b416fb1b49ed9":[2,0,23,13],
 "class_dice.html#a7509585b71b23823f0ce2e24c94d222b":[2,0,23,0],
 "class_dice.html#a7752a14ec4f8c3fd81eef71c467b6905":[2,0,23,7],
 "class_dice.html#a9100da1340be0f754e7a907f18dd7ed1":[2,0,23,8],
-"class_dice.html#aaa356bf6d3416f4eec98207bbe7dbc48":[2,0,23,14],
+"class_dice.html#aaa356bf6d3416f4eec98207bbe7dbc48":[2,0,23,13],
 "class_dice.html#ab2cfc994f6a75e2c0f8cbb8a77bb9cc1":[2,0,23,11],
-"class_dice.html#ab4355c9c99b5d2fd82893a08cfc1e740":[2,0,23,15],
+"class_dice.html#ab4355c9c99b5d2fd82893a08cfc1e740":[2,0,23,14],
 "class_dice.html#aefa156949b8d3f9b2a4bbced23311a0a":[2,0,23,6],
 "class_environment_type_1_1_environment_type_not_found_exception.html":[0,0,5,0],
 "class_environment_type_1_1_environment_type_not_found_exception.html":[2,0,3,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "class_race_data.html":[2,0,45],
 "class_race_data.html#a08fb0402c8f7c82984eaf1844f219bf3":[2,0,45,71],
 "class_race_data.html#a0ddd1ecc3721130c9d7b68b5d628d9ec":[2,0,45,70],
-"class_race_data.html#a11766b50897c43e6c900f663986a49c2":[2,0,45,66]
+"class_race_data.html#a11766b50897c43e6c900f663986a49c2":[2,0,45,66],
+"class_race_data.html#a13214922fe2441aa83a4634226aff7e5":[2,0,45,28]
 };

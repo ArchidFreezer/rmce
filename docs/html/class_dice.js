@@ -13,7 +13,6 @@ var class_dice =
     [ "rollOpenLow", "class_dice.html#a09d3dbfc32d278e9646421ae01b60677", null ],
     [ "setMaxOpenLow", "class_dice.html#ab2cfc994f6a75e2c0f8cbb8a77bb9cc1", null ],
     [ "setMinOpenHigh", "class_dice.html#a2cc7ef17ea454a3f79c149340183d9e1", null ],
-    [ "setSides", "class_dice.html#a6e19f02119b4bc52f53b416fb1b49ed9", null ],
     [ "sides", "class_dice.html#aaa356bf6d3416f4eec98207bbe7dbc48", null ],
     [ "unmodified", "class_dice.html#ab4355c9c99b5d2fd82893a08cfc1e740", null ]
 ];
