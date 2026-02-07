@@ -65,24 +65,32 @@ class Dice {
 public:
 	/**
 	 * @brief Constructor that does not allow open ended rolls
+	 * 
+	 * @warning
+	 * If @a sides < 1 it will be silently adjusted to 1 to prevent an error condition
+	 * 
 	 * @param sides Number of sides on the dice
 	 */
 	Dice(int sides);
 	/**
 	 * @brief Constructor that allows open ended rolls
 	 * 
-	 * If @a open_ended_range is >= @a sides it will be silently adjusted to be @a (sides - 1) to prevent an infinite loop
+	 * @warning
+	 * + If @a sides < 1 it will be silently adjusted to 1 to prevent an error condition
+	 * + If @a open_ended_range is >= @a sides it will be silently adjusted to be (@a sides - 1) to prevent an infinite loop
 	 *
 	 * @param sides Number of sides on the dice
-	 * @param open_ended_range The range of numbers at the top and bottom end that will trigger an open ended roll
+	 * @param open_ended_range The range of numbers at the top and bottom end that will trigger an open ended roll<br>
 	 *                         Use a value of 0 to disable open ended rolls
 	 */
 	Dice(int sides, int open_ended_range);
 	/**
 	 * @brief Constructor that allows control of which open ended rolls may be made
 	 * 
-	 * If @a open_ended_high_range or @a open_ended_high_range is >= @a sides they will be silently adjusted to be
-	 * @a (sides - 1) to prevent an infinite loop
+	 * @warning
+	 * + If @a sides < 1 it will be silently adjusted to 1 to prevent an error condition
+	 * + If @a open_ended_high_range or @a open_ended_high_range is >= @a sides they will be silently adjusted to be
+	 * (@a sides - 1) to prevent an infinite loop
 	 * 
 	 * @param sides Number of sides on the dice
 	 * @param open_ended_high_range The range of numbers at the top end that will trigger an open ended high roll; 0 to disable

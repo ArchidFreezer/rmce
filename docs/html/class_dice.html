@@ -195,6 +195,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor that does not allow open ended rolls. </p>
+<dl class="section warning"><dt>Warning</dt><dd>If <em class="arg">sides</em> &lt; 1 it will be silently adjusted to 1 to prevent an error condition</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sides</td><td>Number of sides on the dice </td></tr>
@@ -224,11 +225,16 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor that allows open ended rolls. </p>
-<p>If <em class="arg">open_ended_range</em> is &gt;= <em class="arg">sides</em> it will be silently adjusted to be <em class="arg"></em>(sides - 1) to prevent an infinite loop</p>
+<dl class="section warning"><dt>Warning</dt><dd><ul>
+<li>If <em class="arg">sides</em> &lt; 1 it will be silently adjusted to 1 to prevent an error condition</li>
+<li>If <em class="arg">open_ended_range</em> is &gt;= <em class="arg">sides</em> it will be silently adjusted to be (<em class="arg">sides</em> - 1) to prevent an infinite loop</li>
+</ul>
+</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sides</td><td>Number of sides on the dice </td></tr>
-    <tr><td class="paramname">open_ended_range</td><td>The range of numbers at the top and bottom end that will trigger an open ended roll Use a value of 0 to disable open ended rolls </td></tr>
+    <tr><td class="paramname">open_ended_range</td><td>The range of numbers at the top and bottom end that will trigger an open ended roll<br  />
+ Use a value of 0 to disable open ended rolls </td></tr>
   </table>
   </dd>
 </dl>
@@ -260,7 +266,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor that allows control of which open ended rolls may be made. </p>
-<p>If <em class="arg">open_ended_high_range</em> or <em class="arg">open_ended_high_range</em> is &gt;= <em class="arg">sides</em> they will be silently adjusted to be <em class="arg"></em>(sides - 1) to prevent an infinite loop</p>
+<dl class="section warning"><dt>Warning</dt><dd><ul>
+<li>If <em class="arg">sides</em> &lt; 1 it will be silently adjusted to 1 to prevent an error condition</li>
+<li>If <em class="arg">open_ended_high_range</em> or <em class="arg">open_ended_high_range</em> is &gt;= <em class="arg">sides</em> they will be silently adjusted to be (<em class="arg">sides</em> - 1) to prevent an infinite loop</li>
+</ul>
+</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sides</td><td>Number of sides on the dice </td></tr>
