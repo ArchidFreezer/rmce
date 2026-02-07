@@ -224,6 +224,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor that allows open ended rolls. </p>
+<p>If <em class="arg">open_ended_range</em> is &gt;= <em class="arg">sides</em> it will be silently adjusted to be <em class="arg"></em>(sides - 1) to prevent an infinite loop</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sides</td><td>Number of sides on the dice </td></tr>
@@ -259,6 +260,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor that allows control of which open ended rolls may be made. </p>
+<p>If <em class="arg">open_ended_high_range</em> or <em class="arg">open_ended_high_range</em> is &gt;= <em class="arg">sides</em> they will be silently adjusted to be <em class="arg"></em>(sides - 1) to prevent an infinite loop</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sides</td><td>Number of sides on the dice </td></tr>
@@ -505,6 +507,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the number at which an open ended low roll is triggered. If the dice roll is this value or lower then the dice are re-rolled open ended high and the new roll subtracted from the existing value. </p>
+<p>If <span class="tt">max_open_low</span> &gt;= the number of sides then the minimum will be set to (sides - 1) to prevent an infinite loop</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">max_open_low</td><td>The maximum value to trigger another roll </td></tr>
@@ -538,7 +541,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the number at which an open ended high roll is triggered. If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll which is below this is rolled. </p>
-<p>If <span class="tt">min_open_high</span> &lt; 0 then the minimum will be set to 0</p>
+<p>If <span class="tt">min_open_high</span> &lt; 2 then the minimum will be set to 2 to prevent an infinite loop</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">min_open_high</td><td>The minimum value to trigger another roll </td></tr>
