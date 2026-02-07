@@ -117,7 +117,7 @@ public:
 	 * @throws invalid_argument if @a min_open_high <= 1
 	 */
 	void setMinOpenHigh(int min_open_high) { 
-		if (min_open_high <= 1)  throw std::invalid_argument("Open ended high minimum must be greater than 1");
+		if (min_open_high <= 1)  throw std::invalid_argument("Open ended high minimum must be greater than 1.");
 
 		min_open_high_ = min_open_high;
 	}
@@ -140,7 +140,7 @@ public:
 	 * @throws invalid_argument if @a max_open_low >= sides on the dice
 	 */
 	void setMaxOpenLow(int max_open_low) { 
-		if (max_open_low >= sides_)  throw std::invalid_argument("Open ended low maximum must be less than the number of sides");
+		if (max_open_low >= sides_)  throw std::invalid_argument("Open ended low maximum must be less than the number of sides.");
 		
 		max_open_low_ = max_open_low;
 	}
@@ -153,21 +153,6 @@ public:
 	 * @return int number of sides
 	 */
 	int sides() const { return sides_; }
-
-	/**
-	 * @brief Sets the number of sides of the dice to use.
-	 * 
-	 * When rolling the dice a number will be returned between 1 and `sides`.
-	 * Setting the number of sides to 0 is a special case which will always return 0 as a roll result
-	 *
-	 * @param sides Number of sides
-	 * @throws invalid_argument if the number of sides < 0
-	 */
-	void setSides(int sides) { 
-		if (sides_ < 0) throw std::invalid_argument("Number of sides on the dice must not be negative");
-
-		sides_ = sides;
-	}
 
 	/**
 	 * @brief Gets the total value of the last dice roll

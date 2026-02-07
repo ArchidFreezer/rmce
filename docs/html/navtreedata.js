@@ -64,9 +64,15 @@ var NAVTREEINDEX =
 "namespace_environment_type.html#a82870722f8a6254fbede22c293a6001eaf43305621b4adc7b0c7c62813360a8e0"
 =======
 "class_datafile_parser.html#ac06196a9d5d1fc94c1b34f9fa53a878f",
+<<<<<<< HEAD
 "class_race_data.html#a13214922fe2441aa83a4634226aff7e5",
 "class_subcategoried_skill_data.html#a629e5e9c90245bd10f24ef5af1e2f600",
 "namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83cabff21a5b97d121fc718f2059f13b3328"
+>>>>>>> origin/main
+=======
+"class_race_data.html#a14ad5b3858976acb832e48a0ae87ec14",
+"class_subcategoried_skill_data.html#a6e8d26835dc5c26793a15cfd04061519",
+"namespace_environment_type.html#ae88c81990be4cde91225c97194f7fc7d"
 >>>>>>> origin/main
 ];
 
