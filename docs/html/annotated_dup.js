@@ -36,7 +36,6 @@ var annotated_dup =
     [ "ColNotFoundException", "class_col_not_found_exception.html", "class_col_not_found_exception" ],
     [ "CultureTypeData", "class_culture_type_data.html", "class_culture_type_data" ],
     [ "CultureTypeDatafileParserJson", "class_culture_type_datafile_parser_json.html", "class_culture_type_datafile_parser_json" ],
-    [ "CultureTypeDatafileParserXml", "class_culture_type_datafile_parser_xml.html", "class_culture_type_datafile_parser_xml" ],
     [ "DatafileParser", "class_datafile_parser.html", "class_datafile_parser" ],
     [ "DatafileParserJson", "class_datafile_parser_json.html", "class_datafile_parser_json" ],
     [ "DatafileParserXml", "class_datafile_parser_xml.html", "class_datafile_parser_xml" ],
@@ -83,6 +82,7 @@ var annotated_dup =
     [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", "class_table_column_armour_type_matcher" ],
     [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", "class_table_column_creature_size_matcher" ],
     [ "TableRow", "class_table_row.html", "class_table_row" ],
+    [ "TrainingPackageData", "class_training_package_data.html", "class_training_package_data" ],
     [ "WeaponTypeData", "class_weapon_type_data.html", "class_weapon_type_data" ],
     [ "WeaponTypeDatafileParserJson", "class_weapon_type_datafile_parser_json.html", "class_weapon_type_datafile_parser_json" ]
 ];

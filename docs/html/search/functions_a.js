@@ -10,6 +10,7 @@ var searchData=
   ['languageid_7',['languageId',['../class_language_ability.html#a178ebcf6e4768832cc60b504a57d143a',1,'LanguageAbility']]],
   ['lcase_8',['lcase',['../_string_utils_8h.html#acd53b635966070e138dea419304de22f',1,'StringUtils.h']]],
   ['lcaseconcat_9',['lcaseconcat',['../_string_utils_8h.html#a31cee08b448da5eaab597ae9aa8d9424',1,'StringUtils.h']]],
-  ['limit_10',['limit',['../class_special_attack_table.html#a0425ce61e76bb3d55231c02d703ef33b',1,'SpecialAttackTable']]],
-  ['lookuptable_11',['LookupTable',['../class_lookup_table.html#a908db0b57ea5e680deccb80d7fe6f7ab',1,'LookupTable']]]
+  ['lifestyle_10',['lifestyle',['../class_training_package_data.html#a574ac4a6f61c278e690eb383ab03ee51',1,'TrainingPackageData']]],
+  ['limit_11',['limit',['../class_special_attack_table.html#a0425ce61e76bb3d55231c02d703ef33b',1,'SpecialAttackTable']]],
+  ['lookuptable_12',['LookupTable',['../class_lookup_table.html#a908db0b57ea5e680deccb80d7fe6f7ab',1,'LookupTable']]]
 ];

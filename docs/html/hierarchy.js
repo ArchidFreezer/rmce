@@ -24,7 +24,6 @@ var hierarchy =
         [ "WeaponTypeDatafileParserJson", "class_weapon_type_datafile_parser_json.html", null ]
       ] ],
       [ "DatafileParserXml", "class_datafile_parser_xml.html", [
-        [ "CultureTypeDatafileParserXml", "class_culture_type_datafile_parser_xml.html", null ],
         [ "ProfessionDatafileParserXml", "class_profession_datafile_parser_xml.html", null ]
       ] ]
     ] ],
@@ -55,6 +54,7 @@ var hierarchy =
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ],
       [ "SpellListData", "class_spell_list_data.html", null ],
       [ "SubcategoriedSkillData", "class_subcategoried_skill_data.html", null ],
+      [ "TrainingPackageData", "class_training_package_data.html", null ],
       [ "WeaponTypeData", "class_weapon_type_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],

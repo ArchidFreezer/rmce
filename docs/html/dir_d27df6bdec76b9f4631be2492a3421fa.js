@@ -36,5 +36,6 @@ var dir_d27df6bdec76b9f4631be2492a3421fa =
     [ "StatLossType.h", "_stat_loss_type_8h_source.html", null ],
     [ "StatType.h", "_stat_type_8h_source.html", null ],
     [ "SubcategoriedSkillData.h", "_subcategoried_skill_data_8h_source.html", null ],
+    [ "TrainingPackageData.h", "_training_package_data_8h_source.html", null ],
     [ "WeaponTypeData.h", "_weapon_type_data_8h_source.html", null ]
 ];

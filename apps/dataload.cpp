@@ -6,7 +6,6 @@
 #include <AttackTableDatafileParserJson.h>
 #include <BookDatafileParserJson.h>
 #include <ClimateDatafileParserJson.h>
-#include <CultureTypeDatafileParserXml.h>
 #include <CultureTypeDatafileParserJson.h>
 #include <LanguageCategoryDatafileParserJson.h>
 #include <LanguageDatafileParserJson.h>
