@@ -100,11 +100,11 @@ Specific skills gain a set number of skill ranks
 "skill-ranks": [
   {
     "skill": "SKILL_ACROBATICS",
-    ""ranks": "2"
+    "ranks": "2"
   },
   {
     "skill": "SKILL_CLIMBING",
-    ""ranks": "1"
+    "ranks": "1"
   }
 ]
 ```
@@ -117,7 +117,7 @@ The player can spread 6 skill ranks across up to 3 skills from the Athlectic Bra
   {
     "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
     "max-targets": "3",
-    "ranks"; "6"
+    "ranks": "6"
   }
 ]
 ```
