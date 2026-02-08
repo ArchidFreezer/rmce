@@ -90,8 +90,8 @@
             ]
         },
         {
-            "id": "SPELLLIST_ARACHNEMANCY",
-            "name": "Arachnemancy",
+            "id": "SPELLLIST_ARACHNAMANCY",
+            "name": "Arachnamancy",
             "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
