@@ -74,12 +74,8 @@ var NAVTREEINDEX0 =
 "_table_column_matcher_8h_source.html":[3,0,3,0,6],
 "_table_row_8h_source.html":[3,0,3,0,7],
 "_table_row_matcher_8h_source.html":[3,0,3,0,8],
-<<<<<<< HEAD
 "_training_package_data_8h_source.html":[3,0,3,36],
 "_weapon_type_data_8h_source.html":[3,0,3,37],
-=======
-"_weapon_type_data_8h_source.html":[3,0,3,36],
->>>>>>> origin/main
 "_weapon_type_datafile_parser_json_8h_source.html":[3,0,1,19],
 "annotated.html":[2,0],
 "class_armour_type_1_1_armour_type_not_found_exception.html":[0,0,0,0],
@@ -253,10 +249,5 @@ var NAVTREEINDEX0 =
 "class_datafile_parser.html#a810f729c20b10e7cd71c1d902f8e336a":[2,0,20,4],
 "class_datafile_parser.html#aa22e3b1d9277aa0ea0824790a3055f2f":[2,0,20,3],
 "class_datafile_parser.html#aa2f884cb38d9262080a6d2194f8adaf6":[2,0,20,1],
-<<<<<<< HEAD
 "class_datafile_parser.html#aa6bea887dd6a58162b670a6535d33cd1":[2,0,20,7]
-=======
-"class_datafile_parser.html#aa6bea887dd6a58162b670a6535d33cd1":[2,0,20,7],
-"class_datafile_parser.html#ab4bef336cadb9d056d7677cd9fa68f8f":[2,0,20,0]
->>>>>>> origin/main
 };

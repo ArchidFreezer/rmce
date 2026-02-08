@@ -1,9 +1,6 @@
 var NAVTREEINDEX1 =
 {
-<<<<<<< HEAD
 "class_datafile_parser.html#ab4bef336cadb9d056d7677cd9fa68f8f":[2,0,20,0],
-=======
->>>>>>> origin/main
 "class_datafile_parser.html#ac06196a9d5d1fc94c1b34f9fa53a878f":[2,0,20,11],
 "class_datafile_parser.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,20,12],
 "class_datafile_parser.html#ae8db0b1edfaea52469d0035081ca6eb1":[2,0,20,8],
@@ -251,15 +248,6 @@ var NAVTREEINDEX1 =
 "class_profession_datafile_parser_xml.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,44,2],
 "class_race_data.html":[2,0,45],
 "class_race_data.html#a08fb0402c8f7c82984eaf1844f219bf3":[2,0,45,71],
-<<<<<<< HEAD
-"class_race_data.html#a0ddd1ecc3721130c9d7b68b5d628d9ec":[2,0,45,70]
-=======
 "class_race_data.html#a0ddd1ecc3721130c9d7b68b5d628d9ec":[2,0,45,70],
-<<<<<<< HEAD
 "class_race_data.html#a11766b50897c43e6c900f663986a49c2":[2,0,45,66]
->>>>>>> origin/main
-=======
-"class_race_data.html#a11766b50897c43e6c900f663986a49c2":[2,0,45,66],
-"class_race_data.html#a13214922fe2441aa83a4634226aff7e5":[2,0,45,28]
->>>>>>> origin/main
 };

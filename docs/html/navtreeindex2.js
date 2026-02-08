@@ -1,13 +1,6 @@
 var NAVTREEINDEX2 =
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-"class_race_data.html#a11766b50897c43e6c900f663986a49c2":[2,0,45,66],
-=======
->>>>>>> origin/main
 "class_race_data.html#a13214922fe2441aa83a4634226aff7e5":[2,0,45,28],
-=======
->>>>>>> origin/main
 "class_race_data.html#a14ad5b3858976acb832e48a0ae87ec14":[2,0,45,53],
 "class_race_data.html#a14e1f20b27e175adabf0017c4cfc4b95":[2,0,45,45],
 "class_race_data.html#a151ba8360d8f435d111b7592b887a402":[2,0,45,21],
@@ -255,15 +248,6 @@ var NAVTREEINDEX2 =
 "class_stat_type_1_1_too_many_stats_exception.html":[0,0,15,0],
 "class_stat_type_1_1_too_many_stats_exception.html":[2,0,7,0],
 "class_stat_type_1_1_too_many_stats_exception.html#af36dfe196f6a1be9e2a21e6315d8514e":[0,0,15,0,0],
-<<<<<<< HEAD
-"class_stat_type_1_1_too_many_stats_exception.html#af36dfe196f6a1be9e2a21e6315d8514e":[2,0,7,0,0]
-=======
 "class_stat_type_1_1_too_many_stats_exception.html#af36dfe196f6a1be9e2a21e6315d8514e":[2,0,7,0,0],
-<<<<<<< HEAD
 "class_subcategoried_skill_data.html":[2,0,62]
->>>>>>> origin/main
-=======
-"class_subcategoried_skill_data.html":[2,0,62],
-"class_subcategoried_skill_data.html#a629e5e9c90245bd10f24ef5af1e2f600":[2,0,62,3]
->>>>>>> origin/main
 };

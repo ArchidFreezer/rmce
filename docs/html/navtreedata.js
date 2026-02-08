@@ -57,23 +57,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-<<<<<<< HEAD
 "class_datafile_parser.html#ab4bef336cadb9d056d7677cd9fa68f8f",
-"class_race_data.html#a11766b50897c43e6c900f663986a49c2",
-"class_subcategoried_skill_data.html",
-"namespace_environment_type.html#a82870722f8a6254fbede22c293a6001eaf43305621b4adc7b0c7c62813360a8e0"
-=======
-"class_datafile_parser.html#ac06196a9d5d1fc94c1b34f9fa53a878f",
-<<<<<<< HEAD
 "class_race_data.html#a13214922fe2441aa83a4634226aff7e5",
 "class_subcategoried_skill_data.html#a629e5e9c90245bd10f24ef5af1e2f600",
-"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83cabff21a5b97d121fc718f2059f13b3328"
->>>>>>> origin/main
-=======
-"class_race_data.html#a14ad5b3858976acb832e48a0ae87ec14",
-"class_subcategoried_skill_data.html#a6e8d26835dc5c26793a15cfd04061519",
-"namespace_environment_type.html#ae88c81990be4cde91225c97194f7fc7d"
->>>>>>> origin/main
+"namespace_environment_type.html#a73843fcaa534a04d130629faece61b7aa367a022f27fb4f74cafd9f159027ca98"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

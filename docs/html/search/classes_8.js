@@ -5,6 +5,6 @@ var searchData=
   ['invalidskillbonus_2',['InvalidSkillBonus',['../class_invalid_skill_bonus.html',1,'InvalidSkillBonus'],['../class_profession_data_1_1_invalid_skill_bonus.html',1,'ProfessionData::InvalidSkillBonus']]],
   ['invalidskilldevelopment_3',['InvalidSkillDevelopment',['../class_invalid_skill_development.html',1,'InvalidSkillDevelopment'],['../class_profession_data_1_1_invalid_skill_development.html',1,'ProfessionData::InvalidSkillDevelopment']]],
   ['invalidskillprogression_4',['InvalidSkillProgression',['../class_invalid_skill_progression.html',1,'']]],
-  ['invalidskillrank_5',['InvalidSkillRank',['../class_culture_type_data_1_1_invalid_skill_rank.html',1,'CultureTypeData']]],
+  ['invalidskillrank_5',['InvalidSkillRank',['../class_culture_type_data_1_1_invalid_skill_rank.html',1,'CultureTypeData::InvalidSkillRank'],['../class_training_package_data_1_1_invalid_skill_rank.html',1,'TrainingPackageData::InvalidSkillRank']]],
   ['invalidweaponrangeexception_6',['InvalidWeaponRangeException',['../class_weapon_type_data_1_1_invalid_weapon_range_exception.html',1,'WeaponTypeData']]]
 ];

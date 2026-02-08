@@ -118,6 +118,11 @@ Collaboration diagram for TrainingPackageData:</div>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:InvalidSkillRank" id="r_InvalidSkillRank"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_training_package_data_1_1_invalid_skill_rank.html">InvalidSkillRank</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thrown when there is an attempt to set an invalid skill rank.  <a href="class_training_package_data_1_1_invalid_skill_rank.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a49c18e5c95fb5cfa8d7167434cf2cdec" id="r_a49c18e5c95fb5cfa8d7167434cf2cdec"><td class="memItemLeft"><a id="a49c18e5c95fb5cfa8d7167434cf2cdec" name="a49c18e5c95fb5cfa8d7167434cf2cdec"></a>
@@ -137,6 +142,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4674802496bf7b1e063962735c747465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the book that the training package is defined in.  <br /></td></tr>
 <tr class="memitem:a7eead36745d53d541965cdbdecbe7e84" id="r_a7eead36745d53d541965cdbdecbe7e84"><td class="memItemLeft">const <a class="el" href="class_book_data.html">BookData</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7eead36745d53d541965cdbdecbe7e84">book</a> () const</td></tr>
 <tr class="memdesc:a7eead36745d53d541965cdbdecbe7e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the book that the training package is defined in.  <br /></td></tr>
+<tr class="memitem:acdfac246756ed1b5de938f51a4735b20" id="r_acdfac246756ed1b5de938f51a4735b20"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acdfac246756ed1b5de938f51a4735b20">addRace</a> (const <a class="el" href="class_race_data.html">RaceData</a> &amp;race)</td></tr>
+<tr class="memdesc:acdfac246756ed1b5de938f51a4735b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a race to those who can take the package if it is restricted.  <br /></td></tr>
+<tr class="memitem:a79740f166b2f9e0dfcc88b8832e829b9" id="r_a79740f166b2f9e0dfcc88b8832e829b9"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_race_data.html">RaceData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a79740f166b2f9e0dfcc88b8832e829b9">races</a> () const</td></tr>
+<tr class="memdesc:a79740f166b2f9e0dfcc88b8832e829b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of races that may take the package.  <br /></td></tr>
+<tr class="memitem:a14e4deb0bae2dd79779711e60a20f774" id="r_a14e4deb0bae2dd79779711e60a20f774"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a14e4deb0bae2dd79779711e60a20f774">available</a> (const <a class="el" href="class_race_data.html">RaceData</a> &amp;race)</td></tr>
+<tr class="memdesc:a14e4deb0bae2dd79779711e60a20f774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether a race can take the training package.  <br /></td></tr>
 <tr class="memitem:a23a8bd67d596ae20cae0445f84611fa1" id="r_a23a8bd67d596ae20cae0445f84611fa1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a23a8bd67d596ae20cae0445f84611fa1">addQualifier</a> (std::string_view qualifier, int reduction)</td></tr>
 <tr class="memdesc:a23a8bd67d596ae20cae0445f84611fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a qualifier that, if met, reduces the cost of the training package.  <br /></td></tr>
 <tr class="memitem:a78d16e0ae7a3263e2475f7181e975391" id="r_a78d16e0ae7a3263e2475f7181e975391"><td class="memItemLeft">const std::map&lt; std::string, int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a78d16e0ae7a3263e2475f7181e975391">qualifiers</a> () const</td></tr>
@@ -153,10 +164,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aae9b6d5d624d3e4c89a58713f7544d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of months to acquire the package.  <br /></td></tr>
 <tr class="memitem:a0b5e0f6685ed9a0f359c4bef5bdb40d7" id="r_a0b5e0f6685ed9a0f359c4bef5bdb40d7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0b5e0f6685ed9a0f359c4bef5bdb40d7">timeToAcquire</a> () const</td></tr>
 <tr class="memdesc:a0b5e0f6685ed9a0f359c4bef5bdb40d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of months to acquire the package.  <br /></td></tr>
-<tr class="memitem:ad9c82f5960cd5bf2f4ba3c5e4207d699" id="r_ad9c82f5960cd5bf2f4ba3c5e4207d699"><td class="memItemLeft"><a id="ad9c82f5960cd5bf2f4ba3c5e4207d699" name="ad9c82f5960cd5bf2f4ba3c5e4207d699"></a>
-void&#160;</td><td class="memItemRight"><b>setStaringMoneyChange</b> (<a class="el" href="class_dice.html">Dice</a> change)</td></tr>
-<tr class="memitem:a4a5d5237426f60940c0fa581b31bf1c3" id="r_a4a5d5237426f60940c0fa581b31bf1c3"><td class="memItemLeft"><a id="a4a5d5237426f60940c0fa581b31bf1c3" name="a4a5d5237426f60940c0fa581b31bf1c3"></a>
-<a class="el" href="class_dice.html">Dice</a>&#160;</td><td class="memItemRight"><b>startingMoneyChange</b> () const</td></tr>
+<tr class="memitem:a275874ec81caad25db2e24e77944faeb" id="r_a275874ec81caad25db2e24e77944faeb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a275874ec81caad25db2e24e77944faeb">setStaringMoneyChangeMax</a> (int max)</td></tr>
+<tr class="memdesc:a275874ec81caad25db2e24e77944faeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The change in starting money for a character.  <br /></td></tr>
+<tr class="memitem:a81a33022cded64e72cabe13258a76b19" id="r_a81a33022cded64e72cabe13258a76b19"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a81a33022cded64e72cabe13258a76b19">startingMoneyChange</a> () const</td></tr>
+<tr class="memdesc:a81a33022cded64e72cabe13258a76b19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the change in starting money if the package is taken during apprenticeship.  <br /></td></tr>
+<tr class="memitem:a49f7b570a75eb16d0399a57ba3dde6bd" id="r_a49f7b570a75eb16d0399a57ba3dde6bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a49f7b570a75eb16d0399a57ba3dde6bd">addStatGain</a> (<a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> stat)</td></tr>
+<tr class="memdesc:a49f7b570a75eb16d0399a57ba3dde6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a stat that receives a stat gain roll as part of the package.  <br /></td></tr>
+<tr class="memitem:a1275a27cbdfaf894337282d475f683c8" id="r_a1275a27cbdfaf894337282d475f683c8"><td class="memItemLeft">const std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1275a27cbdfaf894337282d475f683c8">statGains</a> () const</td></tr>
+<tr class="memdesc:a1275a27cbdfaf894337282d475f683c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of stats that receive a stat gain roll.  <br /></td></tr>
+<tr class="memitem:ab4f168e5f0c7233b451e79671368192f" id="r_ab4f168e5f0c7233b451e79671368192f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab4f168e5f0c7233b451e79671368192f">addSkillRank</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill, int ranks)</td></tr>
+<tr class="memdesc:ab4f168e5f0c7233b451e79671368192f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of ranks for a skill the package provides.  <br /></td></tr>
+<tr class="memitem:aa7bb376f8de455f0c38b19315e643d35" id="r_aa7bb376f8de455f0c38b19315e643d35"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa7bb376f8de455f0c38b19315e643d35">skillRank</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill) const</td></tr>
+<tr class="memdesc:aa7bb376f8de455f0c38b19315e643d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of ranks for a skill the package provides.  <br /></td></tr>
+<tr class="memitem:ab3c061e46b8f3e56beb9289a3872610e" id="r_ab3c061e46b8f3e56beb9289a3872610e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab3c061e46b8f3e56beb9289a3872610e">skillRank</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
+<tr class="memdesc:ab3c061e46b8f3e56beb9289a3872610e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of ranks for a skill the package provides.  <br /></td></tr>
+<tr class="memitem:a1b4adc0b791a4618ae451ad6cd5806cf" id="r_a1b4adc0b791a4618ae451ad6cd5806cf"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1b4adc0b791a4618ae451ad6cd5806cf">skillsWithRanks</a> () const</td></tr>
+<tr class="memdesc:a1b4adc0b791a4618ae451ad6cd5806cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a container with the skills that the package provides.  <br /></td></tr>
+<tr class="memitem:ad174ba7ddcc84f49f95fd73bb9af6c54" id="r_ad174ba7ddcc84f49f95fd73bb9af6c54"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad174ba7ddcc84f49f95fd73bb9af6c54">isRankSkill</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
+<tr class="memdesc:ad174ba7ddcc84f49f95fd73bb9af6c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the package provides skill ranks for the skill.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
 <tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
@@ -256,6 +281,147 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="acdfac246756ed1b5de938f51a4735b20" name="acdfac246756ed1b5de938f51a4735b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdfac246756ed1b5de938f51a4735b20">&#9670;&#160;</a></span>addRace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TrainingPackageData::addRace </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_race_data.html">RaceData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>race</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a race to those who can take the package if it is restricted. </p>
+<p>Some packages are restricted to a set of one or more races. The use of this method indicates that the package is one and that only races who have been added may take the package.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">race</td><td><a class="el" href="class_race_data.html" title="Class representing the data of a race.">RaceData</a> to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4f168e5f0c7233b451e79671368192f" name="ab4f168e5f0c7233b451e79671368192f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f168e5f0c7233b451e79671368192f">&#9670;&#160;</a></span>addSkillRank()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TrainingPackageData::addSkillRank </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a></td>          <td class="paramname"><span class="paramname"><em>skill</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ranks</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the number of ranks for a skill the package provides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skill</td><td><a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> to add the ranks to </td></tr>
+    <tr><td class="paramname">ranks</td><td>int number of ranks </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a49f7b570a75eb16d0399a57ba3dde6bd" name="a49f7b570a75eb16d0399a57ba3dde6bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49f7b570a75eb16d0399a57ba3dde6bd">&#9670;&#160;</a></span>addStatGain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TrainingPackageData::addStatGain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a></td>          <td class="paramname"><span class="paramname"><em>stat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a stat that receives a stat gain roll as part of the package. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stat</td><td><a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd" title="Enumeration class representing the type of base stats of a character.">StatType::Type</a> stat to gain roll </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a14e4deb0bae2dd79779711e60a20f774" name="a14e4deb0bae2dd79779711e60a20f774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e4deb0bae2dd79779711e60a20f774">&#9670;&#160;</a></span>available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TrainingPackageData::available </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_race_data.html">RaceData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>race</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check whether a race can take the training package. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">race</td><td><a class="el" href="class_race_data.html" title="Class representing the data of a race.">RaceData</a> to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the package is available to the race </dd>
+<dd>
+<span class="tt">false</span> if the package is not available to the race </dd></dl>
+
+</div>
+</div>
 <a id="a7eead36745d53d541965cdbdecbe7e84" name="a7eead36745d53d541965cdbdecbe7e84"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7eead36745d53d541965cdbdecbe7e84">&#9670;&#160;</a></span>book()</h2>
 
@@ -309,6 +475,47 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the description of what the defines training package. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string reference of the description </dd></dl>
+
+</div>
+</div>
+<a id="ad174ba7ddcc84f49f95fd73bb9af6c54" name="ad174ba7ddcc84f49f95fd73bb9af6c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad174ba7ddcc84f49f95fd73bb9af6c54">&#9670;&#160;</a></span>isRankSkill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TrainingPackageData::isRankSkill </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_data.html">SkillData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>skill</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::string_view &gt;</td>          <td class="paramname"><span class="paramname"><em>subcategory</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the package provides skill ranks for the skill. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skill</td><td><a class="el" href="class_skill_data.html" title="Class representing the definition of a skill that a character may develop.">SkillData</a> to check </td></tr>
+    <tr><td class="paramname">subcategory</td><td>optional subcategory of <em class="arg">skill</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the package provides ranks </dd>
+<dd>
+<span class="tt">false</span> if the package does not provide ranks </dd></dl>
 
 </div>
 </div>
@@ -396,6 +603,35 @@ Additional Inherited Members</h2></td></tr>
 <p>Get a collection of qualifiers that, if met, reduce the cost of the training package. </p>
 <p>Only a single discout can apply so if a character meets the requireemnts of more than one qualifier the one with the biggest discount should be applied.</p>
 <dl class="section return"><dt>Returns</dt><dd>Map of qualifier text and associated cost reduction </dd></dl>
+
+</div>
+</div>
+<a id="a79740f166b2f9e0dfcc88b8832e829b9" name="a79740f166b2f9e0dfcc88b8832e829b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79740f166b2f9e0dfcc88b8832e829b9">&#9670;&#160;</a></span>races()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_race_data.html">RaceData</a> * &gt; TrainingPackageData::races </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set of races that may take the package. </p>
+<p>The set will be empty for packages that have no restrictions</p>
+<dl class="section return"><dt>Returns</dt><dd>Set of races that may take the package </dd></dl>
 
 </div>
 </div>
@@ -564,6 +800,44 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a275874ec81caad25db2e24e77944faeb" name="a275874ec81caad25db2e24e77944faeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a275874ec81caad25db2e24e77944faeb">&#9670;&#160;</a></span>setStaringMoneyChangeMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TrainingPackageData::setStaringMoneyChangeMax </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The change in starting money for a character. </p>
+<p>If the character takes this package as part of their apprenticeship it may modify the ammount of starting money they receive. The actual ammount is based on a random roll with this value setting the maximum or minimum change. The value returned is based on an open-ended high dice roll with open ended rolls being generated if the roll result is the maximum/minimum value.</p>
+<p>Examples:</p><ul>
+<li>A value of 10 will return a number between 1 and 10, open-ended on 10 which may increase the number</li>
+<li>A value of -8 will return a number between -1 and -8, open-ended on 8, which may reduce the number</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max</td><td>Maximum difference in starting money </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aae9b6d5d624d3e4c89a58713f7544d60" name="aae9b6d5d624d3e4c89a58713f7544d60"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae9b6d5d624d3e4c89a58713f7544d60">&#9670;&#160;</a></span>setTimeToAcquire()</h2>
 
@@ -599,6 +873,107 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab3c061e46b8f3e56beb9289a3872610e" name="ab3c061e46b8f3e56beb9289a3872610e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c061e46b8f3e56beb9289a3872610e">&#9670;&#160;</a></span>skillRank() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TrainingPackageData::skillRank </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_skill_data.html">SkillData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>skill</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::string_view &gt;</td>          <td class="paramname"><span class="paramname"><em>subcategory</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of ranks for a skill the package provides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skill</td><td><a class="el" href="class_skill_data.html" title="Class representing the definition of a skill that a character may develop.">SkillData</a> to get the ranks for </td></tr>
+    <tr><td class="paramname">subcategory</td><td>optional subcategory of <em class="arg">skill</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of ranks </dd></dl>
+
+</div>
+</div>
+<a id="aa7bb376f8de455f0c38b19315e643d35" name="aa7bb376f8de455f0c38b19315e643d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7bb376f8de455f0c38b19315e643d35">&#9670;&#160;</a></span>skillRank() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TrainingPackageData::skillRank </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>skill</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of ranks for a skill the package provides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skill</td><td><a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> to get the ranks for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of ranks </dd></dl>
+
+</div>
+</div>
+<a id="a1b4adc0b791a4618ae451ad6cd5806cf" name="a1b4adc0b791a4618ae451ad6cd5806cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b4adc0b791a4618ae451ad6cd5806cf">&#9670;&#160;</a></span>skillsWithRanks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; TrainingPackageData::skillsWithRanks </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a container with the skills that the package provides. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::set of <a class="el" href="class_skill_data.html" title="Class representing the definition of a skill that a character may develop.">SkillData</a> with ranks </dd></dl>
+
+</div>
+</div>
 <a id="a068af4a6ccf8ab258e6096bd513e065b" name="a068af4a6ccf8ab258e6096bd513e065b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a068af4a6ccf8ab258e6096bd513e065b">&#9670;&#160;</a></span>spellUserOnly()</h2>
 
@@ -626,6 +1001,62 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if only semi, hybrid and pure spell users may take the package </dd>
 <dd>
 <span class="tt">false</span> if the package is available to any profession </dd></dl>
+
+</div>
+</div>
+<a id="a81a33022cded64e72cabe13258a76b19" name="a81a33022cded64e72cabe13258a76b19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a33022cded64e72cabe13258a76b19">&#9670;&#160;</a></span>startingMoneyChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TrainingPackageData::startingMoneyChange </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the change in starting money if the package is taken during apprenticeship. </p>
+<dl class="section return"><dt>Returns</dt><dd>value of change in money </dd></dl>
+
+</div>
+</div>
+<a id="a1275a27cbdfaf894337282d475f683c8" name="a1275a27cbdfaf894337282d475f683c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1275a27cbdfaf894337282d475f683c8">&#9670;&#160;</a></span>statGains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; TrainingPackageData::statGains </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get set of stats that receive a stat gain roll. </p>
+<dl class="section return"><dt>Returns</dt><dd>Set of <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd" title="Enumeration class representing the type of base stats of a character.">StatType::Type</a> stats that recieve a stat gain roll </dd></dl>
 
 </div>
 </div>
