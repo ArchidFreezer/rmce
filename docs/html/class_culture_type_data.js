@@ -51,6 +51,7 @@ var class_culture_type_data =
     [ "setPreferredWeapons", "class_culture_type_data.html#a730348765865578bd3745f9646f20a5d", null ],
     [ "setPrejudices", "class_culture_type_data.html#a3283af4476299be469ccde588c0f11db", null ],
     [ "setReligiousBeliefs", "class_culture_type_data.html#a6f12efc1a2f1e5e8f11cf4dfb3470387", null ],
+    [ "setRequiredClimates", "class_culture_type_data.html#ac2c58c6460f465479d4fa13235c354d8", null ],
     [ "setSkillCategoryRanks", "class_culture_type_data.html#ae412534fa49fadbbbed60afe087563c8", null ],
     [ "setSkillCategorySkillRanks", "class_culture_type_data.html#ac299bca6fd6d9fba1a8408969fb28dcc", null ],
     [ "setSkillRanks", "class_culture_type_data.html#a8077bb07d8d7ff190ffddbbdf36929d1", null ],

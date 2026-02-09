@@ -43,12 +43,7 @@ void CultureTypeDatafileParserJson::parse() {
 		ref.setSkillCategorySkillRanks(parseGameDataPairTree<SkillCategoryData, int>(v.second.get_child_optional("skill-category-skill-ranks")));
 
 		// Get required climates
-		if (boost::optional<const pt::ptree&> required_climates = v.second.get_child_optional("required-climates")) {
-			for (const auto& required_climate : required_climates.get()) {
-				std::string climate_id = required_climate.second.get_value<std::string>();
-				ref.addRequiredClimate(factory().get<ClimateData>(climate_id));
-			}
-		}
+		ref.setRequiredClimates(parseGameDataSetTree<ClimateData>(v.second.get_child_optional("required-climates")));
 
 		// Get required environmental special features
 		if (boost::optional<const pt::ptree&> required_features = v.second.get_child_optional("required-features")) {
@@ -138,18 +133,10 @@ void CultureTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& da
 	}
 
 	// Required Climates
-	std::map<std::string, const ClimateData*> climates{};
-	for (auto& climate : game_data.requiredClimates()) {
-		climates.emplace(climate->id(), climate);
+	{
+		pt::ptree tree{ getGameDataSetTree<ClimateData>(game_data.requiredClimates()) };
+		if (tree.size()) datum.push_back(std::make_pair("required-climates", tree));
 	}
-	pt::ptree climates_tree{};
-	for (const auto& climate : climates) {
-		// Get the climates container
-		pt::ptree climate_tree{};
-		climate_tree.put("", climate.second->id());
-		climates_tree.push_back(std::make_pair("", climate_tree));
-	}
-	if (!climates_tree.empty()) datum.push_back(std::make_pair("required-climates", climates_tree));
 
 	// Required environmental special features
 	pt::ptree features_tree{};

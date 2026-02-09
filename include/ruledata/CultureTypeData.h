@@ -434,6 +434,12 @@ public:
 	void addRequiredClimate(ClimateData& climate) { required_climates_.emplace(&climate); }
 
 	/**
+	 * @brief Set the set of climate types required by the culture
+	 * @param climates std::set of ClimateData pointers to set as required climates
+	 */
+	void setRequiredClimates(std::set<const ClimateData*> climates) { required_climates_ = std::move(climates); }
+
+	/**
 	 * @brief Get a container with the climates required by the culture
 	 * @return std::set<ClimateData> climates
 	 */

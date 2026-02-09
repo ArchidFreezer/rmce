@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"class_datafile_parser.html#a4b4af1c04bba4982985960e1839f7ccb":[2,0,20,2],
 "class_datafile_parser.html#a4e7a26696510228b1a25308655066ef1":[2,0,20,5],
 "class_datafile_parser.html#a68666b626124d4f7109a4373441aa3f3":[2,0,20,14],
 "class_datafile_parser.html#a810f729c20b10e7cd71c1d902f8e336a":[2,0,20,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "class_profession_data_1_1_invalid_skill_bonus.html#a53516914f9ec65033a4fafa7942d16c7":[2,0,42,1,0],
 "class_profession_data_1_1_invalid_skill_development.html":[2,0,42,2],
 "class_profession_data_1_1_invalid_skill_development.html#a62e3cd8d9e9b9ce33dac40f8d1924d12":[2,0,42,2,0],
-"class_profession_datafile_parser_json.html":[2,0,43],
-"class_profession_datafile_parser_json.html#a19cd3525ca075bde9361b070b4684944":[2,0,43,3]
+"class_profession_datafile_parser_json.html":[2,0,43]
 };

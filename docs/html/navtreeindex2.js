@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"class_profession_datafile_parser_json.html#a19cd3525ca075bde9361b070b4684944":[2,0,43,3],
 "class_profession_datafile_parser_json.html#a9e6ff54077af4e26612fa204c65c500a":[2,0,43,2],
 "class_profession_datafile_parser_json.html#aa2ba0d360c57ac8b8c0ed38eedab85e7":[2,0,43,1],
 "class_profession_datafile_parser_json.html#abd4818cf4e17d8fcaf2b02d1402ed9a2":[2,0,43,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "class_spell_list_data.html#aca65d74704d5507e3527326592094460":[2,0,60,3],
 "class_spell_list_data.html#acf740860de0b9450d1b09a4b5804780e":[2,0,60,1],
 "class_spell_list_data.html#ae9703a791ced5f49067099ccdf1133d1":[2,0,60,5],
-"class_spell_list_datafile_parser_json.html":[2,0,61],
-"class_spell_list_datafile_parser_json.html#a07d1a82b44089078b1bd626fecaad456":[2,0,61,2]
+"class_spell_list_datafile_parser_json.html":[2,0,61]
 };

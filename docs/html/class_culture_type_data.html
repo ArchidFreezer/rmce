@@ -228,6 +228,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a744e2862d7a6a58523d3db0f5135f7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of ranks a skill in the category receives during adolescence.  <br /></td></tr>
 <tr class="memitem:ab880bd7f224d66eb53e858787ba8369a" id="r_ab880bd7f224d66eb53e858787ba8369a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab880bd7f224d66eb53e858787ba8369a">addRequiredClimate</a> (<a class="el" href="class_climate_data.html">ClimateData</a> &amp;climate)</td></tr>
 <tr class="memdesc:ab880bd7f224d66eb53e858787ba8369a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an climate type to the set of those required by the culture.  <br /></td></tr>
+<tr class="memitem:ac2c58c6460f465479d4fa13235c354d8" id="r_ac2c58c6460f465479d4fa13235c354d8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac2c58c6460f465479d4fa13235c354d8">setRequiredClimates</a> (std::set&lt; const <a class="el" href="class_climate_data.html">ClimateData</a> * &gt; climates)</td></tr>
+<tr class="memdesc:ac2c58c6460f465479d4fa13235c354d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the set of climate types required by the culture.  <br /></td></tr>
 <tr class="memitem:a9748287e06b3cd3fc8eadfcec0b49c0d" id="r_a9748287e06b3cd3fc8eadfcec0b49c0d"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_climate_data.html">ClimateData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9748287e06b3cd3fc8eadfcec0b49c0d">requiredClimates</a> () const</td></tr>
 <tr class="memdesc:a9748287e06b3cd3fc8eadfcec0b49c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the climates required by the culture.  <br /></td></tr>
 <tr class="memitem:a8626fe82759af17b88149d8037e863af" id="r_a8626fe82759af17b88149d8037e863af"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8626fe82759af17b88149d8037e863af">isRequiredClimate</a> (<a class="el" href="class_climate_data.html">ClimateData</a> &amp;climate) const</td></tr>
@@ -1860,6 +1862,39 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">religious_beliefs</td><td>religious beliefs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac2c58c6460f465479d4fa13235c354d8" name="ac2c58c6460f465479d4fa13235c354d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2c58c6460f465479d4fa13235c354d8">&#9670;&#160;</a></span>setRequiredClimates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureTypeData::setRequiredClimates </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; const <a class="el" href="class_climate_data.html">ClimateData</a> * &gt;</td>          <td class="paramname"><span class="paramname"><em>climates</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the set of climate types required by the culture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">climates</td><td>std::set of <a class="el" href="class_climate_data.html" title="Definition of a specific climate, consisting of a combination of the rainfall patterns and temperatur...">ClimateData</a> pointers to set as required climates </td></tr>
   </table>
   </dd>
 </dl>
