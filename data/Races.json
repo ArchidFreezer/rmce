@@ -2335,8 +2335,8 @@
             ],
             "skill-bonuses": [
                 {
-                    "skill": "SKILL_CAVING",
-                    "bonus": "20"
+                    "id": "SKILL_CAVING",
+                    "value": "20"
                 }
             ]
         }

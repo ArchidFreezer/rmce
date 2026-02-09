@@ -764,6 +764,27 @@ public:
 	}
 
 	/**
+	 * @brief Adds multiple skill bonuses from the provided map into the object's internal skill_bonuses_.
+	 * 
+	 * If any entry conflicts with an existing bonus for the same skill and subcategory, throws InvalidSkillBonus and does not perform the insertion.
+	 * 
+	 * @param bonuses A map from SubcategoriedSkillData (identifies a skill and its subcategory) to an int bonus value.
+	 * @throws InvalidSkillBonus if any skill in the input map already has a bonus defined in the object, preventing insertion of any bonuses.
+	 */
+	void addSkillBonuses(const std::map<SubcategoriedSkillData, int>& bonuses) {
+		for (auto& key : bonuses) {
+			if (isBonusSkill(key.first.skillData(), key.first.subcategory())) throw InvalidSkillBonus("There is already a bonus set for skill " + key.first.id());
+		}
+		skill_bonuses_.insert(bonuses.begin(), bonuses.end());
+	}
+
+	/**
+	 * @brief Returns a read-only reference to the map of skill bonuses.
+	 * @return A const reference to the internal std::map<SubcategoriedSkillData, int> that maps each SubcategoriedSkillData to its integer bonus.
+	 */
+	const std::map<SubcategoriedSkillData, int>& skillBonuses() const { return skill_bonuses_; }
+
+	/**
 	 * @brief Get the bonus that the race provides to a skill
 	 * @param skill SubcategoriedSkillData to get the bonus for
 	 * @return bonus value

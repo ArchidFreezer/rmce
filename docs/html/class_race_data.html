@@ -269,6 +269,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa83344f6945acbc7722ee066000ead3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a skill category is restricted for the race.  <br /></td></tr>
 <tr class="memitem:a89b7d114d91f992d1b476a8df1c8f292" id="r_a89b7d114d91f992d1b476a8df1c8f292"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a89b7d114d91f992d1b476a8df1c8f292">setSkillBonus</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill, int bonus)</td></tr>
 <tr class="memdesc:a89b7d114d91f992d1b476a8df1c8f292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the bonus the race has with a skill.  <br /></td></tr>
+<tr class="memitem:af53a102ddc4a7f6d5c03ae2abe073726" id="r_af53a102ddc4a7f6d5c03ae2abe073726"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af53a102ddc4a7f6d5c03ae2abe073726">addSkillBonuses</a> (const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp;bonuses)</td></tr>
+<tr class="memdesc:af53a102ddc4a7f6d5c03ae2abe073726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple skill bonuses from the provided map into the object's internal skill_bonuses_.  <br /></td></tr>
+<tr class="memitem:a45fc10266f282209edd131227ecd044c" id="r_a45fc10266f282209edd131227ecd044c"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a45fc10266f282209edd131227ecd044c">skillBonuses</a> () const</td></tr>
+<tr class="memdesc:a45fc10266f282209edd131227ecd044c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a read-only reference to the map of skill bonuses.  <br /></td></tr>
 <tr class="memitem:a5cd984e4dd55214b4640f5960c2f9a9f" id="r_a5cd984e4dd55214b4640f5960c2f9a9f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5cd984e4dd55214b4640f5960c2f9a9f">skillBonus</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill) const</td></tr>
 <tr class="memdesc:a5cd984e4dd55214b4640f5960c2f9a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus that the race provides to a skill.  <br /></td></tr>
 <tr class="memitem:a08fb0402c8f7c82984eaf1844f219bf3" id="r_a08fb0402c8f7c82984eaf1844f219bf3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a08fb0402c8f7c82984eaf1844f219bf3">skillBonus</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
@@ -531,6 +535,46 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
+
+</div>
+</div>
+<a id="af53a102ddc4a7f6d5c03ae2abe073726" name="af53a102ddc4a7f6d5c03ae2abe073726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af53a102ddc4a7f6d5c03ae2abe073726">&#9670;&#160;</a></span>addSkillBonuses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RaceData::addSkillBonuses </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>bonuses</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds multiple skill bonuses from the provided map into the object's internal skill_bonuses_. </p>
+<p>If any entry conflicts with an existing bonus for the same skill and subcategory, throws <a class="el" href="class_invalid_skill_bonus.html" title="Thrown when there is an attempt to set an invalid skill bonus.">InvalidSkillBonus</a> and does not perform the insertion.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bonuses</td><td>A map from <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> (identifies a skill and its subcategory) to an int bonus value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_invalid_skill_bonus.html" title="Thrown when there is an attempt to set an invalid skill bonus.">InvalidSkillBonus</a></td><td>if any skill in the input map already has a bonus defined in the object, preventing insertion of any bonuses. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2665,6 +2709,34 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bonus value </dd></dl>
+
+</div>
+</div>
+<a id="a45fc10266f282209edd131227ecd044c" name="a45fc10266f282209edd131227ecd044c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45fc10266f282209edd131227ecd044c">&#9670;&#160;</a></span>skillBonuses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp; RaceData::skillBonuses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a read-only reference to the map of skill bonuses. </p>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to the internal std::map&lt;SubcategoriedSkillData, int&gt; that maps each <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> to its integer bonus. </dd></dl>
 
 </div>
 </div>

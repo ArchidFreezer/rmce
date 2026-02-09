@@ -135,18 +135,7 @@ void RaceDatafileParserJson::parse() {
 		}
 
 		// Get skill bonuses
-		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-bonuses")) {
-			for (const auto& skill_bonus_tree : skill_bonuses.get()) {
-				std::string skill_name{ skill_bonus_tree.second.get<std::string>("skill") };
-				boost::optional<std::string> subcategory = skill_bonus_tree.second.get_optional<std::string>("subcategory");
-				int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-				if (subcategory) {
-					ref.setSkillBonus(factory().subcategoriedSkillData(skill_name, subcategory.get()), bonus);
-				} else {
-					ref.setSkillBonus(factory().subcategoriedSkillData(skill_name), bonus);
-				}
-			}
-		}
+		ref.addSkillBonuses(parseSkillPairTree<int>(v.second.get_child_optional("skill-bonuses")));
 
 		// Get the skill category everyman choices
 		if (boost::optional<const pt::ptree&> category_choices = v.second.get_child_optional("skill-category-choices-everyman")) {
@@ -280,15 +269,10 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	if (restricted_categories_tree.size()) datum.push_back(std::make_pair("restricted-categories", restricted_categories_tree));
 
 	// Skill bonuses
-	pt::ptree skill_bonuses_tree{};
-	for (auto& skill : game_data.skillsWithBonus()) {
-		pt::ptree skill_bonus_tree{};
-		skill_bonus_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_bonus_tree.put("subcategory", skill.subcategory().value());
-		skill_bonus_tree.put("bonus", game_data.skillBonus(skill));
-		skill_bonuses_tree.push_back(std::make_pair("", skill_bonus_tree));
+	{
+		pt::ptree tree{ getSkillPairTree<int>(game_data.skillBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-bonuses", tree));
 	}
-	if (skill_bonuses_tree.size()) datum.push_back(std::make_pair("skill-bonuses", skill_bonuses_tree));
 
 	// Everyman skill category choices
 	pt::ptree everyman_category_choices_tree{};
