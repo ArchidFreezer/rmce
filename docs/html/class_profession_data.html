@@ -207,6 +207,10 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:ab562e6b38a2180a9dddcec2de77e5c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the special bonus for a group.  <br /></td></tr>
 <tr class="memitem:ab3f9cf9ab14e5df529ba37f1b82c011a" id="r_ab3f9cf9ab14e5df529ba37f1b82c011a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab3f9cf9ab14e5df529ba37f1b82c011a">addSkillGroupProfessionBonus</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group, int bonus)</td></tr>
 <tr class="memdesc:ab3f9cf9ab14e5df529ba37f1b82c011a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a bonus to all skills in a group.  <br /></td></tr>
+<tr class="memitem:a27a57435a940a0e820f950f2fdff51b1" id="r_a27a57435a940a0e820f950f2fdff51b1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a27a57435a940a0e820f950f2fdff51b1">setSkillGroupProfessionBonuses</a> (const std::map&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> *, int &gt; &amp;bonuses)</td></tr>
+<tr class="memdesc:a27a57435a940a0e820f950f2fdff51b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the object's skill group profesional bonuses from the provided map, replacing any existing bonuses.  <br /></td></tr>
+<tr class="memitem:ad7a708da85b92f3bcf7773ec7fa16644" id="r_ad7a708da85b92f3bcf7773ec7fa16644"><td class="memItemLeft">const std::map&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> *, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad7a708da85b92f3bcf7773ec7fa16644">skillGroupProfessionBonuses</a> () const</td></tr>
+<tr class="memdesc:ad7a708da85b92f3bcf7773ec7fa16644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with groups that that the profession has a bonus for.  <br /></td></tr>
 <tr class="memitem:a9badc3b2f03a68b1d4cd99968dae7f9f" id="r_a9badc3b2f03a68b1d4cd99968dae7f9f"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9badc3b2f03a68b1d4cd99968dae7f9f">skillGroupsWithProfessionBonus</a> () const</td></tr>
 <tr class="memdesc:a9badc3b2f03a68b1d4cd99968dae7f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the names of groups that have bonuses.  <br /></td></tr>
 <tr class="memitem:af7ae5b1efcadcb40cfa16fb0ca1fd9ee" id="r_af7ae5b1efcadcb40cfa16fb0ca1fd9ee"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af7ae5b1efcadcb40cfa16fb0ca1fd9ee">isProfessionBonusSkillGroup</a> (const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;group) const</td></tr>
@@ -1814,6 +1818,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a27a57435a940a0e820f950f2fdff51b1" name="a27a57435a940a0e820f950f2fdff51b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a57435a940a0e820f950f2fdff51b1">&#9670;&#160;</a></span>setSkillGroupProfessionBonuses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::setSkillGroupProfessionBonuses </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> *, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>bonuses</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the object's skill group profesional bonuses from the provided map, replacing any existing bonuses. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bonuses</td><td>A map from const SkillGroupData* to int containing skill category profesional bonuses. The map is assigned to the object's internal skill_group_profession_bonuses_ member, replacing its previous contents. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab965ce5c35a6f9e2e5ecc707e86cf92e" name="ab965ce5c35a6f9e2e5ecc707e86cf92e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab965ce5c35a6f9e2e5ecc707e86cf92e">&#9670;&#160;</a></span>setSpellUserType()</h2>
 
@@ -2419,6 +2456,34 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bonus for the group </dd></dl>
+
+</div>
+</div>
+<a id="ad7a708da85b92f3bcf7773ec7fa16644" name="ad7a708da85b92f3bcf7773ec7fa16644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7a708da85b92f3bcf7773ec7fa16644">&#9670;&#160;</a></span>skillGroupProfessionBonuses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> *, int &gt; &amp; ProfessionData::skillGroupProfessionBonuses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with groups that that the profession has a bonus for. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::map of const SkillGroupData* and bonus value </dd></dl>
 
 </div>
 </div>

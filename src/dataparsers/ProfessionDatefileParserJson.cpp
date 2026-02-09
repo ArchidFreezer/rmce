@@ -139,13 +139,7 @@ void ProfessionDatafileParserJson::parse() {
 		}
 
 		// Skill group profession bonus
-		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-group-profession-bonuses")) {
-			for (const auto& skill_bonus_tree : skill_bonuses.get()) {
-				std::string group_id{ skill_bonus_tree.second.get<std::string>("group") };
-				int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-				ref.addSkillGroupProfessionBonus(factory().get<SkillGroupData>(group_id), bonus);
-			}
-		}
+		ref.setSkillGroupProfessionBonuses(parseGameDataPairTree<SkillGroupData, int>(v.second.get_child_optional("skill-group-profession-bonuses")));
 
 		// Skill group special bonus
 		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-group-special-bonuses")) {
@@ -344,18 +338,8 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 
 	// Skill group profession bonus
 	{
-		pt::ptree skill_group_bonuses_tree{};
-		std::map<std::string, const SkillGroupData*> groups{};
-		for (auto& skill_group : game_data.skillGroupsWithProfessionBonus()) {
-			groups.emplace(skill_group->id(), skill_group);
-		}
-		for (const auto& skill_group : groups) {
-			pt::ptree skill_group_bonus_tree{};
-			skill_group_bonus_tree.put("group", skill_group.first);
-			skill_group_bonus_tree.put("bonus", game_data.skillGroupProfessionBonus(*skill_group.second));
-			skill_group_bonuses_tree.push_back(std::make_pair("", skill_group_bonus_tree));
-		}
-		if (skill_group_bonuses_tree.size()) datum.push_back(std::make_pair("skill-group-profession-bonuses", skill_group_bonuses_tree));
+		pt::ptree tree{ getGameDataPairTree<SkillGroupData, int>(game_data.skillGroupProfessionBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-group-profession-bonuses", tree));
 	}
 
 	// Skill group special bonus

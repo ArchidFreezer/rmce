@@ -314,16 +314,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_OUTDOOR",
-                    "bonus": "20"
+                    "id": "SKILLGROUP_OUTDOOR",
+                    "value": "20"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -623,12 +623,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SCIENCE_ANALYTIC",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SCIENCE_ANALYTIC",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -935,16 +935,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_ATHLETIC",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -1292,12 +1292,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -1608,16 +1608,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -1942,12 +1942,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -2258,8 +2258,8 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -2577,20 +2577,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_OUTDOOR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_OUTDOOR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -2917,16 +2917,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SUBTERFUGE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SUBTERFUGE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -3222,16 +3222,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -3523,20 +3523,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -3864,12 +3864,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -4207,8 +4207,8 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -4514,12 +4514,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "20"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "20"
                 }
             ]
         },
@@ -4863,12 +4863,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -5182,12 +5182,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -5486,24 +5486,24 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ATHLETIC",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_OUTDOOR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_OUTDOOR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_TECHNICAL_TRADE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_TECHNICAL_TRADE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -5845,12 +5845,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -6151,24 +6151,24 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SUBTERFUGE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SUBTERFUGE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -6471,16 +6471,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SUBTERFUGE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SUBTERFUGE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -6798,8 +6798,8 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -7109,12 +7109,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_TECHNICAL_TRADE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_TECHNICAL_TRADE",
+                    "value": "5"
                 }
             ]
         },
@@ -7452,8 +7452,8 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -7775,12 +7775,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -8091,16 +8091,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_MARTIAL_ARTS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_MARTIAL_ARTS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -8432,12 +8432,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -8740,16 +8740,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ATHLETIC",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -9054,20 +9054,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_ATHLETIC",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -9379,12 +9379,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -9702,12 +9702,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "15"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "15"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -10046,12 +10046,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -10358,12 +10358,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARTISTIC",
-                    "bonus": "15"
+                    "id": "SKILLGROUP_ARTISTIC",
+                    "value": "15"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ],
             "skill-group-skill-development-types": [
@@ -10687,16 +10687,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SCIENCE_ANALYTIC",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_SCIENCE_ANALYTIC",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -11002,20 +11002,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -11330,20 +11330,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_ATHLETIC",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ],
             "skill-group-skill-development-type-choices": [
@@ -11661,20 +11661,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_TECHNICAL_TRADE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_TECHNICAL_TRADE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -11984,20 +11984,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SUBTERFUGE",
-                    "bonus": "15"
+                    "id": "SKILLGROUP_SUBTERFUGE",
+                    "value": "15"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ],
             "skill-group-special-bonuses": [
@@ -12311,16 +12311,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "10"
                 }
             ]
         },
@@ -12627,12 +12627,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -12944,20 +12944,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SUBTERFUGE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SUBTERFUGE",
+                    "value": "5"
                 }
             ]
         },
@@ -13279,24 +13279,24 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -13611,16 +13611,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "10"
                 }
             ]
         },
@@ -13960,12 +13960,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -14271,20 +14271,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -14594,20 +14594,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SUBTERFUGE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SUBTERFUGE",
+                    "value": "5"
                 }
             ]
         },
@@ -14930,20 +14930,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -15253,20 +15253,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_TECHNICAL_TRADE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_TECHNICAL_TRADE",
+                    "value": "10"
                 }
             ]
         },
@@ -15604,12 +15604,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ],
             "skill-group-skill-development-types": [
@@ -15923,24 +15923,24 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -16254,16 +16254,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -16567,20 +16567,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -16890,16 +16890,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARTISTIC",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARTISTIC",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -17221,16 +17221,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "10"
                 }
             ]
         },
@@ -17562,8 +17562,8 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "10"
                 }
             ],
             "skill-group-skill-development-types": [
@@ -17885,20 +17885,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -18206,16 +18206,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -18529,20 +18529,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -18846,24 +18846,24 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SUBTERFUGE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SUBTERFUGE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -19176,16 +19176,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -19491,20 +19491,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_ARTISTIC",
-                    "bonus": "15"
+                    "id": "SKILLGROUP_ARTISTIC",
+                    "value": "15"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ],
             "skill-group-skill-development-types": [
@@ -19834,24 +19834,24 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_OUTDOOR",
-                    "bonus": "15"
+                    "id": "SKILLGROUP_OUTDOOR",
+                    "value": "15"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ],
             "skill-group-skill-development-types": [
@@ -20172,24 +20172,24 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -20511,12 +20511,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -20820,16 +20820,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -21153,16 +21153,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -21488,24 +21488,24 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -21813,16 +21813,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -22149,12 +22149,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -22485,20 +22485,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_ATHLETIC",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "15"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "15"
                 }
             ],
             "skill-group-skill-development-type-choices": [
@@ -22830,12 +22830,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -23134,20 +23134,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ],
             "skill-group-skill-development-type-choices": [
@@ -23441,20 +23441,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ATHLETIC",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_OUTDOOR",
-                    "bonus": "20"
+                    "id": "SKILLGROUP_OUTDOOR",
+                    "value": "20"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -23762,20 +23762,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SUBTERFUGE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_SUBTERFUGE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "15"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "15"
                 }
             ]
         },
@@ -24098,8 +24098,8 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -24429,16 +24429,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "15"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "15"
                 },
                 {
-                    "group": "SKILLGROUP_LORE",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_LORE",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -24762,8 +24762,8 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -25087,8 +25087,8 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -25381,20 +25381,20 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_MARTIAL_ARTS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_MARTIAL_ARTS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_OUTDOOR",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_OUTDOOR",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -25700,16 +25700,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_SUBTERFUGE",
-                    "bonus": "15"
+                    "id": "SKILLGROUP_SUBTERFUGE",
+                    "value": "15"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "10"
                 }
             ]
         },
@@ -26033,12 +26033,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -26337,16 +26337,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_ATHLETIC",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         },
@@ -26648,12 +26648,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_MARTIAL_ARTS",
-                    "bonus": "15"
+                    "id": "SKILLGROUP_MARTIAL_ARTS",
+                    "value": "15"
                 }
             ]
         },
@@ -26953,12 +26953,12 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_SCIENCE_ANALYTIC",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SCIENCE_ANALYTIC",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_SPELLS",
+                    "value": "5"
                 }
             ]
         },
@@ -27255,16 +27255,16 @@
             ],
             "skill-group-profession-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "group": "SKILLGROUP_MARTIAL_ARTS",
-                    "bonus": "10"
+                    "id": "SKILLGROUP_MARTIAL_ARTS",
+                    "value": "10"
                 },
                 {
-                    "group": "SKILLGROUP_WEAPON",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "5"
                 }
             ]
         }

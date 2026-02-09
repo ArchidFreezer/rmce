@@ -378,6 +378,18 @@ public:
 	void addSkillGroupProfessionBonus(const SkillGroupData& group, int bonus) { skill_group_profession_bonuses_.emplace(&group, bonus); }
 
 	/**
+	 * @brief Sets the object's skill group profesional bonuses from the provided map, replacing any existing bonuses.
+	 * @param bonuses A map from const SkillGroupData* to int containing skill category profesional bonuses. The map is assigned to the object's internal skill_group_profession_bonuses_ member, replacing its previous contents.
+	 */
+	void setSkillGroupProfessionBonuses(const std::map<const SkillGroupData*, int>& bonuses) { skill_group_profession_bonuses_ = bonuses; }
+
+	/**
+	 * @brief Get a container with groups that that the profession has a bonus for
+	 * @return std::map of const SkillGroupData* and bonus value
+	 */
+	const std::map<const SkillGroupData*, int>& skillGroupProfessionBonuses() const { return skill_group_profession_bonuses_; }
+
+	/**
 	 * @brief Get a container with the names of groups that have bonuses
 	 * @return std::set of group names
 	 */
