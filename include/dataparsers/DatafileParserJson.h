@@ -92,7 +92,28 @@ protected:
 	 */
 	template<GameRuleDataObject T, typename U>
 	inline std::map<const T*, U> parseGameDataPairTree(boost::optional<const pt::ptree&> tree);
-	
+
+	/**
+	 * @brief Parse a boost ptree containing a map of skills and values into a std::map of SubcategoriedSkillData and primitive type values
+
+	 * The boost ptree expected by this function should be derived from the following json format:
+	 * @code{.json}
+	 * "root_node": [
+	 *   {
+	 *     "id": "id of the game data object",
+	 *     "subcategory": "subcategory of the skill, optional",
+	 *     "value": "value associated with the game data object"
+	 *   }
+	 * ]
+	 * @endcode
+	 *
+	 * @tparam U Primitive type of the skill values
+	 * @param tree Boost ptree containing the map of skills and values, with the skills represented by their ids and optional subcategories
+	 * @return Map of SubcategoriedSkillData and the values, with the skills retrieved from the cache using their ids and optional subcategories
+	 */
+	template<typename U>
+	inline std::map<SubcategoriedSkillData, U> parseSkillPairTree(boost::optional<const pt::ptree&> tree);
+
 	/**
 	 * @brief Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and primitive type values
 	 * 
@@ -113,6 +134,27 @@ protected:
 	 */
 	template<GameRuleDataObject T, typename U>
 	inline const pt::ptree getGameDataPairTree(std::map<const T*, U> map);
+
+	/**
+	 * @brief Parse a std::map of SubcategoriedSkillData and values into a boost ptree containing a map of skills and primitive type values
+	 *
+	 * The boost ptree created by this function will generate the following json format:
+	 * @code{.json}
+	 * "root_node": [
+	 *   {
+	 *     "id": "id of the game data object",
+	 *     "subcategory": "subcategory of the skill, optional",
+	 *     "value": "value associated with the game data object"
+	 *   }
+	 * ]
+	 * @endcode
+	 *
+	 * @tparam U Primitive type of the skill values
+	 * @param map Map of SubcategoriedSkillData and values, with the skills retrieved from the cache using their ids and optional subcategories
+	 * @return Boost ptree containing the map of skills and values, with the skills represented by their ids and optional subcategories
+	 */
+	template<typename U>
+	inline const pt::ptree getSkillPairTree(std::map<SubcategoriedSkillData, U> map);
 
 private:
 	std::string root_node_{}; /**< Key of the root node of the json file */
@@ -172,6 +214,37 @@ inline const pt::ptree DatafileParserJson::getGameDataPairTree(std::map<const T*
 		pt::ptree value_tree{};
 		value_tree.put("id", pair.first);
 		value_tree.put("value", map[pair.second]);
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+template<typename U>
+inline std::map<SubcategoriedSkillData, U> DatafileParserJson::parseSkillPairTree(boost::optional<const pt::ptree&> tree) {
+	std::map<SubcategoriedSkillData, U> datum{};
+	if (tree) {
+		for (const auto& items : tree.get()) {
+			std::string id{ items.second.get<std::string>("id") };
+			boost::optional<std::string> subcategory = items.second.get_optional<std::string>("subcategory");
+			if (subcategory) {
+				datum.emplace(factory().subcategoriedSkillData(id, subcategory.get()), items.second.get<U>("value"));
+			} else {
+				datum.emplace(factory().subcategoriedSkillData(id), items.second.get<U>("value"));
+			}
+		}
+	}
+	return datum;
+}
+
+template<typename U>
+inline const pt::ptree DatafileParserJson::getSkillPairTree(std::map<SubcategoriedSkillData, U> map) {
+	pt::ptree tree{};
+
+	for (const auto& pair : map) {
+		pt::ptree value_tree{};
+		value_tree.put("id", pair.first.skillData().id());
+		if (pair.first.subcategory()) value_tree.put("subcategory", pair.first.subcategory().value());
+		value_tree.put("value", map[pair.first]);
 		tree.push_back(std::make_pair("", value_tree));
 	}
 	return tree;

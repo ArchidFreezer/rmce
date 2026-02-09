@@ -52,6 +52,7 @@ var class_culture_type_data =
     [ "setReligiousBeliefs", "class_culture_type_data.html#a6f12efc1a2f1e5e8f11cf4dfb3470387", null ],
     [ "setSkillCategoryRanks", "class_culture_type_data.html#ae412534fa49fadbbbed60afe087563c8", null ],
     [ "setSkillCategorySkillRanks", "class_culture_type_data.html#ac299bca6fd6d9fba1a8408969fb28dcc", null ],
+    [ "setSkillRanks", "class_culture_type_data.html#a8077bb07d8d7ff190ffddbbdf36929d1", null ],
     [ "setSpellListRanks", "class_culture_type_data.html#ae6c7e7b26d240065670ad5a609bec6c5", null ],
     [ "skillCategoriesWithRanks", "class_culture_type_data.html#a3d61a7ad5287ea7c4346ce90202a1e1a", null ],
     [ "skillCategoriesWithSkillRanks", "class_culture_type_data.html#a7fa80612acdfb42c6d4b938fc73f28fa", null ],
@@ -61,6 +62,7 @@ var class_culture_type_data =
     [ "skillCategorySkillRanks", "class_culture_type_data.html#a634af875e7bd6ad8bc312f1dbe34bdc6", null ],
     [ "skillRank", "class_culture_type_data.html#a0b89d298c14c79edb255786c5aaae815", null ],
     [ "skillRank", "class_culture_type_data.html#af405d3aeffaff1b4231714ff8348713d", null ],
+    [ "skillRanks", "class_culture_type_data.html#a1089c16a526c0359b40b75da88a734df", null ],
     [ "skillsWithRanks", "class_culture_type_data.html#a2b184fa0a71366ac73499fa32bb746b6", null ],
     [ "spellListRanks", "class_culture_type_data.html#a9775d5ebe681e32700f9bec74a76ac1b", null ]
 ];

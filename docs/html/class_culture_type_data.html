@@ -188,6 +188,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6767dbabf34bd590af914e9f080d8623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether an weapon type is amongst those prefereed by the culture.  <br /></td></tr>
 <tr class="memitem:a9544d69099528bdcb48fc228ae14d3bd" id="r_a9544d69099528bdcb48fc228ae14d3bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9544d69099528bdcb48fc228ae14d3bd">addSkillRank</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill, int ranks)</td></tr>
 <tr class="memdesc:a9544d69099528bdcb48fc228ae14d3bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of ranks for a skill the culture provides during adolescence.  <br /></td></tr>
+<tr class="memitem:a8077bb07d8d7ff190ffddbbdf36929d1" id="r_a8077bb07d8d7ff190ffddbbdf36929d1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8077bb07d8d7ff190ffddbbdf36929d1">setSkillRanks</a> (std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; map)</td></tr>
+<tr class="memdesc:a8077bb07d8d7ff190ffddbbdf36929d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the map of skills and ranks the culture provides during adolescence.  <br /></td></tr>
+<tr class="memitem:a1089c16a526c0359b40b75da88a734df" id="r_a1089c16a526c0359b40b75da88a734df"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1089c16a526c0359b40b75da88a734df">skillRanks</a> () const</td></tr>
+<tr class="memdesc:a1089c16a526c0359b40b75da88a734df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the map of skills and ranks the culture provides during adolescence.  <br /></td></tr>
 <tr class="memitem:af405d3aeffaff1b4231714ff8348713d" id="r_af405d3aeffaff1b4231714ff8348713d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af405d3aeffaff1b4231714ff8348713d">skillRank</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill) const</td></tr>
 <tr class="memdesc:af405d3aeffaff1b4231714ff8348713d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of ranks for a skill the culture provides during adolescence.  <br /></td></tr>
 <tr class="memitem:a0b89d298c14c79edb255786c5aaae815" id="r_a0b89d298c14c79edb255786c5aaae815"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0b89d298c14c79edb255786c5aaae815">skillRank</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
@@ -1893,6 +1897,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a8077bb07d8d7ff190ffddbbdf36929d1" name="a8077bb07d8d7ff190ffddbbdf36929d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8077bb07d8d7ff190ffddbbdf36929d1">&#9670;&#160;</a></span>setSkillRanks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureTypeData::setSkillRanks </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt;</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the map of skills and ranks the culture provides during adolescence. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>Map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and int number of ranks for each skill to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae6c7e7b26d240065670ad5a609bec6c5" name="ae6c7e7b26d240065670ad5a609bec6c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6c7e7b26d240065670ad5a609bec6c5">&#9670;&#160;</a></span>setSpellListRanks()</h2>
 
@@ -2176,6 +2213,34 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>number of ranks </dd></dl>
+
+</div>
+</div>
+<a id="a1089c16a526c0359b40b75da88a734df" name="a1089c16a526c0359b40b75da88a734df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1089c16a526c0359b40b75da88a734df">&#9670;&#160;</a></span>skillRanks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp; CultureTypeData::skillRanks </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the map of skills and ranks the culture provides during adolescence. </p>
+<dl class="section return"><dt>Returns</dt><dd>Map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and int number of ranks for each skill </dd></dl>
 
 </div>
 </div>
