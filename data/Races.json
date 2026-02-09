@@ -102,25 +102,25 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_CAVING"
+                    "id": "SKILL_CAVING"
                 },
                 {
-                    "skill": "SKILL_LEATHER_CRAFTS"
+                    "id": "SKILL_LEATHER_CRAFTS"
                 },
                 {
-                    "skill": "SKILL_METAL_CRAFTS"
+                    "id": "SKILL_METAL_CRAFTS"
                 },
                 {
-                    "skill": "SKILL_STONE_CRAFTS"
+                    "id": "SKILL_STONE_CRAFTS"
                 },
                 {
-                    "skill": "SKILL_SURVIVAL",
+                    "id": "SKILL_SURVIVAL",
                     "subcategory": "underground"
                 }
             ],
             "restricted-skills": [
                 {
-                    "skill": "SKILL_SWIMMING"
+                    "id": "SKILL_SWIMMING"
                 }
             ]
         },
@@ -232,13 +232,13 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_PUBLIC_SPEAKING"
+                    "id": "SKILL_PUBLIC_SPEAKING"
                 },
                 {
-                    "skill": "SKILL_RESEARCH"
+                    "id": "SKILL_RESEARCH"
                 },
                 {
-                    "skill": "SKILL_SAILING"
+                    "id": "SKILL_SAILING"
                 }
             ]
         },
@@ -440,16 +440,16 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_MUSIC"
+                    "id": "SKILL_MUSIC"
                 },
                 {
-                    "skill": "SKILL_PLAY_INSTRUMENT"
+                    "id": "SKILL_PLAY_INSTRUMENT"
                 },
                 {
-                    "skill": "SKILL_TRICKERY"
+                    "id": "SKILL_TRICKERY"
                 },
                 {
-                    "skill": "SKILL_WOOD_CRAFTS"
+                    "id": "SKILL_WOOD_CRAFTS"
                 }
             ]
         },
@@ -710,22 +710,22 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_BASIC_MATH"
+                    "id": "SKILL_BASIC_MATH"
                 },
                 {
-                    "skill": "SKILL_COOKING"
+                    "id": "SKILL_COOKING"
                 },
                 {
-                    "skill": "SKILL_DRAFTING"
+                    "id": "SKILL_DRAFTING"
                 },
                 {
-                    "skill": "SKILL_MNEMONICS"
+                    "id": "SKILL_MNEMONICS"
                 },
                 {
-                    "skill": "SKILL_RESEARCH"
+                    "id": "SKILL_RESEARCH"
                 },
                 {
-                    "skill": "SKILL_SCRIBING"
+                    "id": "SKILL_SCRIBING"
                 }
             ]
         },
@@ -824,10 +824,10 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_METAL_CRAFTS"
+                    "id": "SKILL_METAL_CRAFTS"
                 },
                 {
-                    "skill": "SKILL_MINING"
+                    "id": "SKILL_MINING"
                 }
             ]
         },
@@ -918,7 +918,7 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_CAVING"
+                    "id": "SKILL_CAVING"
                 }
             ],
             "skill-category-choices-everyman": [
@@ -1025,7 +1025,7 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_CAVING"
+                    "id": "SKILL_CAVING"
                 }
             ],
             "skill-category-choices-everyman": [
@@ -1124,7 +1124,7 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_CAVING"
+                    "id": "SKILL_CAVING"
                 }
             ],
             "skill-category-choices-everyman": [
@@ -1232,7 +1232,7 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_CAVING"
+                    "id": "SKILL_CAVING"
                 }
             ],
             "skill-category-choices-everyman": [
@@ -1982,27 +1982,27 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_ATHLETIC_GAMES_BRAWN"
+                    "id": "SKILL_ATHLETIC_GAMES_BRAWN"
                 },
                 {
-                    "skill": "SKILL_POWER_STRIKING"
+                    "id": "SKILL_POWER_STRIKING"
                 },
                 {
-                    "skill": "SKILL_POWER_THROWING"
+                    "id": "SKILL_POWER_THROWING"
                 },
                 {
-                    "skill": "SKILL_WEIGHT_LIFTING"
+                    "id": "SKILL_WEIGHT_LIFTING"
                 }
             ],
             "restricted-skills": [
                 {
-                    "skill": "SKILL_PUBLIC_SPEAKING"
+                    "id": "SKILL_PUBLIC_SPEAKING"
                 },
                 {
-                    "skill": "SKILL_SEDUCTION"
+                    "id": "SKILL_SEDUCTION"
                 },
                 {
-                    "skill": "SKILL_TRADING"
+                    "id": "SKILL_TRADING"
                 }
             ],
             "skill-category-choices-everyman": [
@@ -2313,16 +2313,16 @@
             ],
             "everyman-skills": [
                 {
-                    "skill": "SKILL_CAVING"
+                    "id": "SKILL_CAVING"
                 },
                 {
-                    "skill": "SKILL_DIRECTION_SENSE"
+                    "id": "SKILL_DIRECTION_SENSE"
                 },
                 {
-                    "skill": "SKILL_SCALING"
+                    "id": "SKILL_SCALING"
                 },
                 {
-                    "skill": "SKILL_SURVIVAL",
+                    "id": "SKILL_SURVIVAL",
                     "subcategory": "underground"
                 }
             ],

@@ -192,6 +192,20 @@ protected:
 	template<GameRuleDataObject T>
 	inline const pt::ptree getGameDataSetTree(std::set<const T*> set);
 
+	/**
+	 * @brief Parse a boost ptree containing a set of skills into a std::set of SubcategoriedSkillData
+	 * @param tree Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories
+	 * @return Set of SubcategoriedSkillData, with the skills retrieved from the cache using their ids and optional subcategories
+	 */
+	inline const std::set<SubcategoriedSkillData> parseSkillSetTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Parse a std::set of SubcategoriedSkillData into a boost ptree containing a set of skills
+	 * @param set Set of SubcategoriedSkillData, with the skills retrieved from the cache using their ids and optional subcategories
+	 * @return Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories
+	 */
+	inline const pt::ptree getSkillSetTree(std::set<SubcategoriedSkillData> set);
+
 private:
 	std::string root_node_{}; /**< Key of the root node of the json file */
 };
@@ -308,6 +322,33 @@ inline const pt::ptree DatafileParserJson::getGameDataSetTree(std::set<const T*>
 	for (const auto& item : sorted_set) {
 		pt::ptree value_tree{};
 		value_tree.put("", item);
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+inline const std::set<SubcategoriedSkillData> DatafileParserJson::parseSkillSetTree(boost::optional<const pt::ptree&> tree) {
+	std::set<SubcategoriedSkillData> datum{};
+	if (tree) {
+		for (const auto& items : tree.get()) {
+			std::string id{ items.second.get<std::string>("id") };
+			boost::optional<std::string> subcategory = items.second.get_optional<std::string>("subcategory");
+			if (subcategory) {
+				datum.insert(factory().subcategoriedSkillData(id, subcategory.get()));
+			} else {
+				datum.insert(factory().subcategoriedSkillData(id));
+			}
+		}
+	}
+	return datum;
+}
+
+inline const pt::ptree DatafileParserJson::getSkillSetTree(std::set<SubcategoriedSkillData> set) {
+	pt::ptree tree{};
+	for (const auto& item : set) {
+		pt::ptree value_tree{};
+		value_tree.put("id", item.skillData().id());
+		if (item.subcategory()) value_tree.put("subcategory", item.subcategory().value());
 		tree.push_back(std::make_pair("", value_tree));
 	}
 	return tree;

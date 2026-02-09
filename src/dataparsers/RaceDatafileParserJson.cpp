@@ -91,32 +91,10 @@ void RaceDatafileParserJson::parse() {
 		}
 
 		// Get everyman skills
-		if (boost::optional<const pt::ptree&> everyman_skills = v.second.get_child_optional("everyman-skills")) {
-			for (const auto& everyman_skill : everyman_skills.get()) {
-				std::string skill_name{ everyman_skill.second.get<std::string>("skill")};
-				boost::optional<std::string> subcategory = everyman_skill.second.get_optional<std::string>("subcategory");
-
-				if (subcategory) {
-					ref.addEverymanSkill(factory().subcategoriedSkillData(skill_name, subcategory.get()));
-				} else {
-					ref.addEverymanSkill(factory().subcategoriedSkillData(skill_name));
-				}
-			}
-		}
+		ref.setEverymanSkills(parseSkillSetTree(v.second.get_child_optional("everyman-skills")));
 
 		// Get restricted skills
-		if (boost::optional<const pt::ptree&> restricted_skills = v.second.get_child_optional("restricted-skills")) {
-			for (const auto& restricted_skill : restricted_skills.get()) {
-				std::string skill_name{ restricted_skill.second.get<std::string>("skill") };
-				boost::optional<std::string> subcategory = restricted_skill.second.get_optional<std::string>("subcategory");
-
-				if (subcategory) {
-					ref.addRestrictedSkill(factory().subcategoriedSkillData(skill_name, subcategory.get()));
-				} else {
-					ref.addRestrictedSkill(factory().subcategoriedSkillData(skill_name));
-				}
-			}
-		}
+		ref.setRestrictedSkills(parseSkillSetTree(v.second.get_child_optional("restricted-skills")));
 
 		// Everyman skill categories
 		ref.setEverymanSkillCategories(parseGameDataSetTree<SkillCategoryData>(v.second.get_child_optional("everyman-categories")));
@@ -211,24 +189,16 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	if (stat_bonuses_tree.size()) datum.push_back(std::make_pair("stat-bonuses", stat_bonuses_tree));
 
 	// Everyman skills
-	pt::ptree everyman_skills_tree{};
-	for (auto& skill : game_data.everymanSkills()) {
-		pt::ptree skill_tree{};
-		skill_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_tree.put("subcategory", skill.subcategory().value());
-		everyman_skills_tree.push_back(std::make_pair("", skill_tree));
+	{
+		pt::ptree tree{ getSkillSetTree(game_data.everymanSkills()) };
+		if (tree.size()) datum.push_back(std::make_pair("everyman-skills", tree));
 	}
-	if (everyman_skills_tree.size()) datum.push_back(std::make_pair("everyman-skills", everyman_skills_tree));
 
 	// Restricted skills
-	pt::ptree restricted_skills_tree{};
-	for (auto& skill : game_data.restrictedSkills()) {
-		pt::ptree skill_tree{};
-		skill_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_tree.put("subcategory", skill.subcategory().value());
-		restricted_skills_tree.push_back(std::make_pair("", skill_tree));
+	{
+		pt::ptree tree{ getSkillSetTree(game_data.restrictedSkills()) };
+		if (tree.size()) datum.push_back(std::make_pair("restricted-skills", tree));
 	}
-	if (restricted_skills_tree.size()) datum.push_back(std::make_pair("restricted-skills", restricted_skills_tree));
 
 	// Everyman categories
 	{

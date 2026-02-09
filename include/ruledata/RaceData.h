@@ -620,6 +620,14 @@ public:
 	}
 
 	/**
+	 * @brief Sets the object's collection of everyman skills to the provided set.
+	 * @param skills A set of SubcategoriedSkillData objects to assign. The set is copied into the object's everyman_skills_ member.
+	 */
+	void setEverymanSkills(const std::set<SubcategoriedSkillData>& skills) {
+		everyman_skills_ = skills;
+	}
+
+	/**
 	 * @brief Get a container of the skills that are considered everyman
 	 * @return std::set container of everyman skills
 	 * @see SkillDevelopmentType
@@ -671,6 +679,14 @@ public:
 			ret.insert(data);
 		}
 		return ret;
+	}
+
+	/**
+	 * @brief Replaces the object's restricted skills with the provided set.
+	 * @param skills A const reference to a set of SubcategoriedSkillData to assign to the object's restricted skills. The provided set is copied into the internal restricted_skills_ member.
+	 */
+	void setRestrictedSkills(const std::set<SubcategoriedSkillData>& skills) {
+		restricted_skills_ = skills;
 	}
 
 	/**
