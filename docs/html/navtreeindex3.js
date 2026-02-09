@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"class_spell_list_datafile_parser_json.html#a39e9bfa123881aece8b40cb982766297":[2,0,61,1],
+"class_spell_list_datafile_parser_json.html#a964672a48ee9e218326051efa6db5df8":[2,0,61,3],
+"class_spell_list_datafile_parser_json.html#ae911bd26c662f5c92cc7f683c44151ab":[2,0,61,0],
 "class_spell_user_type_1_1_spell_user_type_not_found_exception.html":[0,0,13,0],
 "class_spell_user_type_1_1_spell_user_type_not_found_exception.html":[2,0,6,0],
 "class_spell_user_type_1_1_spell_user_type_not_found_exception.html#a6a74e9e361302a1022747afe329b76cc":[0,0,13,0,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "namespace_environment_type.html#a9589d29719eb4e3ab39861d98f0c7d18":[0,0,5,13],
 "namespace_environment_type.html#a9e5ad55904ef42bdf0b332b889aaf12c":[0,0,5,19],
 "namespace_environment_type.html#aad6836c89433b604a0c5dc3fbe401dc6":[0,0,5,15],
-"namespace_environment_type.html#ab15919df6f2f9afc0a34a45c0c63b6e8":[0,0,5,11],
-"namespace_environment_type.html#abd2a1de92d7d068c4fd1cca194fff698":[0,0,5,18],
-"namespace_environment_type.html#ace72da91418e216b44eca640fb883e03":[0,0,5,20],
-"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83c":[0,0,5,4]
+"namespace_environment_type.html#ab15919df6f2f9afc0a34a45c0c63b6e8":[0,0,5,11]
 };

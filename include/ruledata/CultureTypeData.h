@@ -227,6 +227,12 @@ public:
 	const std::set<const WeaponTypeData*> preferredWeapons() const { return preferred_weapons_; }
 
 	/**
+	 * @brief Set the set of weapon types preferred by the culture
+	 * @param weapons std::set of WeaponTypeData pointers to set as preferred weapons
+	 */
+	void setPreferredWeapons(std::set<const WeaponTypeData*> weapons) { preferred_weapons_ = std::move(weapons); }
+
+	/**
 	 * @brief Get whether an weapon type is amongst those prefereed by the culture
 	 * @param weapon WeaponTypeData to check
 	 * @return `true` if the weapon type is preferred by the culture

@@ -94,6 +94,27 @@ protected:
 	inline std::map<const T*, U> parseGameDataPairTree(boost::optional<const pt::ptree&> tree);
 
 	/**
+	 * @brief Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and primitive type values
+	 *
+	 * The boost ptree created by this function will generate the following json format:
+	 * @code{.json}
+	 * "root_node": [
+	 *   {
+	 *     "id": "id of the game data object",
+	 *     "value": "value associated with the game data object"
+	 *   }
+	 * ]
+	 * @endcode
+	 *
+	 * @tparam U Primitive type of the game data values
+	 * @tparam T Game data object type, must be derived from GameRuleData
+	 * @param map Map of pointers to game data objects and values, with the game data objects retrieved from the cache using their ids
+	 * @return Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids
+	 */
+	template<GameRuleDataObject T, typename U>
+	inline const pt::ptree getGameDataPairTree(std::map<const T*, U> map);
+
+	/**
 	 * @brief Parse a boost ptree containing a map of skills and values into a std::map of SubcategoriedSkillData and primitive type values
 
 	 * The boost ptree expected by this function should be derived from the following json format:
@@ -115,27 +136,6 @@ protected:
 	inline std::map<SubcategoriedSkillData, U> parseSkillPairTree(boost::optional<const pt::ptree&> tree);
 
 	/**
-	 * @brief Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and primitive type values
-	 * 
-	 * The boost ptree created by this function will generate the following json format:
-	 * @code{.json}
-	 * "root_node": [
-	 *   {
-	 *     "id": "id of the game data object",
-	 *     "value": "value associated with the game data object"
-	 *   }
-	 * ]
-	 * @endcode
-	 *
-	 * @tparam U Primitive type of the game data values
-	 * @tparam T Game data object type, must be derived from GameRuleData
-	 * @param map Map of pointers to game data objects and values, with the game data objects retrieved from the cache using their ids
-	 * @return Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids
-	 */
-	template<GameRuleDataObject T, typename U>
-	inline const pt::ptree getGameDataPairTree(std::map<const T*, U> map);
-
-	/**
 	 * @brief Parse a std::map of SubcategoriedSkillData and values into a boost ptree containing a map of skills and primitive type values
 	 *
 	 * The boost ptree created by this function will generate the following json format:
@@ -155,6 +155,42 @@ protected:
 	 */
 	template<typename U>
 	inline const pt::ptree getSkillPairTree(std::map<SubcategoriedSkillData, U> map);
+
+	/**
+	 * @brief Parse a boost ptree containing a set of game data objects into a std::set of the game data objects
+	 *
+	 * The boost ptree expected by this function should be derived from the following json format:
+	 * @code{.json}
+	 * "root_node": [
+	 *     "id of game data object 1",
+	 *     "id of game data object 2"
+	 * ]
+	 * @endcode
+	 *
+	 * @tparam T Game data object type, must be derived from GameRuleData
+	 * @param tree Boost ptree containing the set of game data objects, with the game data objects represented by their ids
+	 * @return Set of the game data objects, with the game data objects retrieved from the cache using their ids
+	 */
+	template<GameRuleDataObject T>
+	inline std::set<const T*> parseGameDataSetTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Parse a std::set of game data objects into a boost ptree containing a set of game data objects
+	 *
+	 * The boost ptree created by this function will generate the following json format:
+	 * @code{.json}
+	 * "root_node": [
+	 *     "id of game data object 1",
+	 *     "id of game data object 2"
+	 * ]
+	 * @endcode
+	 *
+	 * @tparam T Game data object type, must be derived from GameRuleData
+	 * @param set Set of game data objects, with the game data objects retrieved from the cache using their ids
+	 * @return Boost ptree containing the set of game data objects, with the game data objects represented by their ids
+	 */
+	template<GameRuleDataObject T>
+	inline const pt::ptree getGameDataSetTree(std::set<const T*> set);
 
 private:
 	std::string root_node_{}; /**< Key of the root node of the json file */
@@ -245,6 +281,33 @@ inline const pt::ptree DatafileParserJson::getSkillPairTree(std::map<Subcategori
 		value_tree.put("id", pair.first.skillData().id());
 		if (pair.first.subcategory()) value_tree.put("subcategory", pair.first.subcategory().value());
 		value_tree.put("value", map[pair.first]);
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+template<GameRuleDataObject T>
+inline std::set<const T*> DatafileParserJson::parseGameDataSetTree(boost::optional<const pt::ptree&> tree) {
+	std::set<const T*> datum{};
+	if (tree) {
+		for (const auto& items : tree.get()) {
+			std::string id{ items.second.get_value<std::string>() };
+			datum.insert(&factory().get<T>(id));
+		}
+	}
+	return datum;
+}
+
+template<GameRuleDataObject T>
+inline const pt::ptree DatafileParserJson::getGameDataSetTree(std::set<const T*> set) {
+	pt::ptree tree{};
+	std::set<std::string> sorted_set{};
+	for (const auto& item : set) {
+		sorted_set.insert(item->id());
+	}
+	for (const auto& item : sorted_set) {
+		pt::ptree value_tree{};
+		value_tree.put("", item);
 		tree.push_back(std::make_pair("", value_tree));
 	}
 	return tree;

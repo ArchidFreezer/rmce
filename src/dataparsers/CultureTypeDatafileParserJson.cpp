@@ -31,10 +31,7 @@ void CultureTypeDatafileParserJson::parse() {
 		}
 
 		// Get the preferred weapons
-		for (const auto& weapons_tree : v.second.get_child("preferred-weapons")) {
-			std::string weapon_id = weapons_tree.second.get_value<std::string>();
-			ref.addPreferredWeapon(factory().get<WeaponTypeData>(weapon_id));
-		}
+		ref.setPreferredWeapons(parseGameDataSetTree<WeaponTypeData>(v.second.get_child_optional("preferred-weapons")));
 
 		// Get skill ranks
 		ref.setSkillRanks(parseSkillPairTree<int>(v.second.get_child_optional("skill-ranks")));
@@ -115,19 +112,12 @@ void CultureTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& da
 	}
 	datum.push_back(std::make_pair("preferred-armours", armours_tree));
 
-	// Get the container tree for the preferred weapons
-	std::map<std::string, const WeaponTypeData*> weapons{};
-	for (auto& weapon : game_data.preferredWeapons()) {
-		weapons.emplace(weapon->id(), weapon);
+	// Preferred weapons
+	{
+		pt::ptree tree{ getGameDataSetTree<WeaponTypeData>(game_data.preferredWeapons()) };
+		if (tree.size()) datum.push_back(std::make_pair("preferred-weapons", tree));
 	}
-	pt::ptree weapons_tree{};
-	for (const auto& weapon : weapons) {
-		// Get the weapons container
-		pt::ptree weapon_tree{};
-		weapon_tree.put("", weapon.second->id());
-		weapons_tree.push_back(std::make_pair("", weapon_tree));
-	}
-	datum.push_back(std::make_pair("preferred-weapons", weapons_tree));
+	
 
 	// Skill ranks
 	{

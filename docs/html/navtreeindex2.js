@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"class_profession_datafile_parser_json.html#a9e6ff54077af4e26612fa204c65c500a":[2,0,43,2],
+"class_profession_datafile_parser_json.html#aa2ba0d360c57ac8b8c0ed38eedab85e7":[2,0,43,1],
+"class_profession_datafile_parser_json.html#abd4818cf4e17d8fcaf2b02d1402ed9a2":[2,0,43,0],
 "class_profession_datafile_parser_xml.html":[2,0,44],
 "class_profession_datafile_parser_xml.html#a3526c473cc854a37a8c508ce5e8a3c4d":[2,0,44,3],
 "class_profession_datafile_parser_xml.html#ab388d1423ca7f3bb29c7c041bd19c9b2":[2,0,44,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "class_spell_list_data.html#acf740860de0b9450d1b09a4b5804780e":[2,0,60,1],
 "class_spell_list_data.html#ae9703a791ced5f49067099ccdf1133d1":[2,0,60,5],
 "class_spell_list_datafile_parser_json.html":[2,0,61],
-"class_spell_list_datafile_parser_json.html#a07d1a82b44089078b1bd626fecaad456":[2,0,61,2],
-"class_spell_list_datafile_parser_json.html#a39e9bfa123881aece8b40cb982766297":[2,0,61,1],
-"class_spell_list_datafile_parser_json.html#a964672a48ee9e218326051efa6db5df8":[2,0,61,3],
-"class_spell_list_datafile_parser_json.html#ae911bd26c662f5c92cc7f683c44151ab":[2,0,61,0]
+"class_spell_list_datafile_parser_json.html#a07d1a82b44089078b1bd626fecaad456":[2,0,61,2]
 };
