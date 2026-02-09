@@ -501,10 +501,10 @@ public:
 	void addSkillCategorySkillDevelopmentType(const SkillCategoryData& category, SkillDevelopmentType::Type type) { skill_category_skill_development_types_.emplace(&category, type); }
 
 	/**
-	 * @brief Sets the mapping of skill categories to their development types.
-	 * @param types A map (copied) from pointers to SkillCategoryData to SkillDevelopmentType::Type that specifies the development type for each skill category. The map is assigned to the object's skill_category_skill_development_types_ member.
+	 * @brief Sets the internal mapping from skill categories to their corresponding skill development types by assigning the provided map.
+	 * @param types A map that associates pointers to SkillCategoryData (keys) with SkillDevelopmentType::Type values. The function stores this mapping in the object's internal state (the map will be assigned from the provided argument).
 	 */
-	void setSkillCategorySkillDevelopmentTypes(const std::map<const SkillCategoryData*, SkillDevelopmentType::Type> types) { skill_category_skill_development_types_ = types; }
+	void setSkillCategorySkillDevelopmentTypes(const std::map<const SkillCategoryData*, SkillDevelopmentType::Type>& types) { skill_category_skill_development_types_ = std::move(types); }
 
 	/**
 	 * @brief Get a container with the skill categories that the profession has a skill development type for
@@ -552,6 +552,18 @@ public:
 	 * @param type SkillDevelopmentType::Type to set
 	 */
 	void addSkillGroupSkillDevelopmentType(const SkillGroupData& group, SkillDevelopmentType::Type type) { skill_group_skill_development_types_.emplace(&group, type); }
+
+	/**
+	 * @brief Sets the internal mapping from skill groups to their corresponding skill development types by assigning the provided map.
+	 * @param types A map that associates pointers to SkillGroupData (keys) with SkillDevelopmentType::Type values. The function stores this mapping in the object's internal state (the map will be assigned from the provided argument).
+	 */
+	void setSkillGroupSkillDevelopmentTypes(const std::map<const SkillGroupData*, SkillDevelopmentType::Type>& types) { skill_group_skill_development_types_ = std::move(types); }
+
+	/**
+	 * @brief Gets a reference to container with the skill group skill development types
+	 * @return A map that associates pointers to SkillGroupData (keys) with SkillDevelopmentType::Type values.
+	 */
+	const std::map<const SkillGroupData*, SkillDevelopmentType::Type>& skillGroupSkillDevelopmentTypes() { return skill_group_skill_development_types_; }
 
 	/**
 	 * @brief Get a container with the names of groups that have skill development type changes

@@ -139,13 +139,7 @@ void ProfessionDatafileParserJson::parse() {
 		ref.setSkillGroupSpecialBonuses(parseGameDataPairTree<SkillGroupData, int>(v.second.get_child_optional("skill-group-special-bonuses")));
 
 		// Skill group skill development types
-		if (boost::optional<const pt::ptree&> skill_development_types = v.second.get_child_optional("skill-group-skill-development-types")) {
-			for (const auto& skill_development_type : skill_development_types.get()) {
-				std::string group_id{ skill_development_type.second.get<std::string>("group") };
-				std::string type_id{ skill_development_type.second.get<std::string>("development-type") };
-				ref.addSkillGroupSkillDevelopmentType(factory().get<SkillGroupData>(group_id), SkillDevelopmentType::fromString(type_id).value());
-			}
-		}
+		ref.setSkillGroupSkillDevelopmentTypes(parseGameDataPairEnumTree<SkillGroupData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-group-skill-development-types")));
 
 		// Skill group development type choices
 		if (boost::optional<const pt::ptree&> skill_group_development_type_choices = v.second.get_child_optional("skill-group-skill-development-type-choices")) {
@@ -279,20 +273,6 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 		pt::ptree tree{ getGameDataPairEnumTree<SkillCategoryData,SkillDevelopmentType::Type>(game_data.skillCategorySkillDevelopmentTypes()) };
 		if (tree.size()) datum.push_back(std::make_pair("skill-category-skill-development-types", tree));
 	}
-	//{
-	//	pt::ptree skill_category_skill_development_types_tree{};
-	//	std::map<std::string, const SkillCategoryData*> categories{};
-	//	for (auto& skill_category : game_data.skillCategoriesWithSkillDevelopmentType()) {
-	//		categories.emplace(skill_category->id(), skill_category);
-	//	}
-	//	for (const auto& skill_category : categories) {
-	//		pt::ptree skill_category_skill_development_type_tree{};
-	//		skill_category_skill_development_type_tree.put("category", skill_category.first);
-	//		skill_category_skill_development_type_tree.put("development-type", SkillDevelopmentType::toString(game_data.skillCategorySkillDevelopmentType(*skill_category.second)));
-	//		skill_category_skill_development_types_tree.push_back(std::make_pair("", skill_category_skill_development_type_tree));
-	//	}
-	//	if (skill_category_skill_development_types_tree.size()) datum.push_back(std::make_pair("skill-category-skill-development-types", skill_category_skill_development_types_tree));
-	//}
 
 	// Skill category development type choices
 	pt::ptree skill_category_skill_development_type_choices_tree{};
@@ -342,18 +322,8 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 
 	// Skill group skill development types
 	{
-		pt::ptree skill_group_skill_developments_tree{};
-		std::map<std::string, const SkillGroupData*> groups{};
-		for (auto& skill_group : game_data.skillGroupsWithSkillDevelopmentType()) {
-			groups.emplace(skill_group->id(), skill_group);
-		}
-		for (const auto& skill_group : groups) {
-			pt::ptree skill_group_skill_development_tree{};
-			skill_group_skill_development_tree.put("group", skill_group.first);
-			skill_group_skill_development_tree.put("development-type", SkillDevelopmentType::toString(game_data.skillGroupSkillDevelopmentType(*skill_group.second)));
-			skill_group_skill_developments_tree.push_back(std::make_pair("", skill_group_skill_development_tree));
-		}
-		if (skill_group_skill_developments_tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-types", skill_group_skill_developments_tree));
+		pt::ptree tree{ getGameDataPairEnumTree<SkillGroupData,SkillDevelopmentType::Type>(game_data.skillGroupSkillDevelopmentTypes()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-types", tree));
 	}
 
 	// Skill group development type choices
