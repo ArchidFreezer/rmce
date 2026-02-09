@@ -241,6 +241,10 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:a9ff1f1396e0c86202ab56b359f0c8a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the development type to set for all skills in a group.  <br /></td></tr>
 <tr class="memitem:a73faa993a3f72b09a8e07764fcf05f0a" id="r_a73faa993a3f72b09a8e07764fcf05f0a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a73faa993a3f72b09a8e07764fcf05f0a">addSkillCategorySpecialBonus</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category, int bonus)</td></tr>
 <tr class="memdesc:a73faa993a3f72b09a8e07764fcf05f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add special bonus for all skills in a category.  <br /></td></tr>
+<tr class="memitem:ada54c7a6b2a32502cbb9cd09cf846e1e" id="r_ada54c7a6b2a32502cbb9cd09cf846e1e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ada54c7a6b2a32502cbb9cd09cf846e1e">setSkillCategorySpecialBonuses</a> (const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, int &gt; &amp;bonuses)</td></tr>
+<tr class="memdesc:ada54c7a6b2a32502cbb9cd09cf846e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the object's skill category special bonuses from the provided map, replacing any existing bonuses.  <br /></td></tr>
+<tr class="memitem:a43be77177dee4e2a13833c9088d17707" id="r_a43be77177dee4e2a13833c9088d17707"><td class="memItemLeft">const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a43be77177dee4e2a13833c9088d17707">skillCategorySpecialBonuses</a> () const</td></tr>
+<tr class="memdesc:a43be77177dee4e2a13833c9088d17707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the skill categories that the profession has a special bonus for.  <br /></td></tr>
 <tr class="memitem:aab77adf5a98bd2da679b8b9339487137" id="r_aab77adf5a98bd2da679b8b9339487137"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aab77adf5a98bd2da679b8b9339487137">skillCategoriesWithSpecialBonus</a> () const</td></tr>
 <tr class="memdesc:aab77adf5a98bd2da679b8b9339487137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of all the skill categories with a special bonus.  <br /></td></tr>
 <tr class="memitem:acadb08aa2f517a8cf34702e796f8cd1b" id="r_acadb08aa2f517a8cf34702e796f8cd1b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#acadb08aa2f517a8cf34702e796f8cd1b">isSpecialBonusSkillCategory</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category) const</td></tr>
@@ -1739,6 +1743,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ada54c7a6b2a32502cbb9cd09cf846e1e" name="ada54c7a6b2a32502cbb9cd09cf846e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada54c7a6b2a32502cbb9cd09cf846e1e">&#9670;&#160;</a></span>setSkillCategorySpecialBonuses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::setSkillCategorySpecialBonuses </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>bonuses</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the object's skill category special bonuses from the provided map, replacing any existing bonuses. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bonuses</td><td>A map from const SkillCategoryData* to int containing skill category special bonuses. The map is assigned to the object's internal skill_category_special_bonuses_ member, replacing its previous contents. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a267bb69e897f4c1fcd441b7ec8d85f19" name="a267bb69e897f4c1fcd441b7ec8d85f19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a267bb69e897f4c1fcd441b7ec8d85f19">&#9670;&#160;</a></span>setSkillDevelopmentType()</h2>
 
@@ -2219,6 +2256,34 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int bonus <em class="arg">category</em> has </dd></dl>
+
+</div>
+</div>
+<a id="a43be77177dee4e2a13833c9088d17707" name="a43be77177dee4e2a13833c9088d17707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43be77177dee4e2a13833c9088d17707">&#9670;&#160;</a></span>skillCategorySpecialBonuses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, int &gt; &amp; ProfessionData::skillCategorySpecialBonuses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with the skill categories that the profession has a special bonus for. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::map of const SkillCategoryData* and bonus value </dd></dl>
 
 </div>
 </div>

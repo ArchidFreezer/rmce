@@ -103,13 +103,7 @@ void ProfessionDatafileParserJson::parse() {
 		ref.setSkillCategoryProfessionBonuses(parseGameDataPairTree<SkillCategoryData, int>(v.second.get_child_optional("skill-category-profession-bonuses")));
 
 		// Skill category special bonus
-		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-category-special-bonuses")) {
-			for (const auto& skill_bonus_tree : skill_bonuses.get()) {
-				std::string category_id{ skill_bonus_tree.second.get<std::string>("category") };
-				int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-				ref.addSkillCategorySpecialBonus(factory().get<SkillCategoryData>(category_id), bonus);
-			}
-		}
+		ref.setSkillCategorySpecialBonuses(parseGameDataPairTree<SkillCategoryData, int>(v.second.get_child_optional("skill-category-special-bonuses")));
 
 		// Skill category development types
 		if (boost::optional<const pt::ptree&> skill_development_types = v.second.get_child_optional("skill-category-skill-development-types")) {
@@ -294,18 +288,8 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 
 	// Skill category special bonus
 	{
-		pt::ptree skill_category_bonuses_tree{};
-		std::map<std::string, const SkillCategoryData*> categories{};
-		for (auto& skill_category : game_data.skillCategoriesWithSpecialBonus()) {
-			categories.emplace(skill_category->id(), skill_category);
-		}
-		for (const auto& skill_category : categories) {
-			pt::ptree skill_category_bonus_tree{};
-			skill_category_bonus_tree.put("category", skill_category.first);
-			skill_category_bonus_tree.put("bonus", game_data.skillCategorySpecialBonus(*skill_category.second));
-			skill_category_bonuses_tree.push_back(std::make_pair("", skill_category_bonus_tree));
-		}
-		if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill-category-special-bonuses", skill_category_bonuses_tree));
+		pt::ptree tree{ getGameDataPairTree<SkillCategoryData, int>(game_data.skillCategorySpecialBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-category-special-bonuses", tree));
 	}
 
 	// Skill category development types

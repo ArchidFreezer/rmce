@@ -11730,8 +11730,8 @@
             ],
             "skill-category-special-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "15"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -12379,8 +12379,8 @@
             ],
             "skill-category-special-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "15"
                 }
             ],
             "skill-category-costs": [
@@ -13363,8 +13363,8 @@
             ],
             "skill-category-special-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "15"
                 }
             ],
             "skill-category-costs": [
@@ -13712,8 +13712,8 @@
             ],
             "skill-category-special-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "15"
                 }
             ],
             "skill-category-costs": [
@@ -15675,8 +15675,8 @@
             ],
             "skill-category-special-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "15"
                 }
             ],
             "skill-category-costs": [
@@ -16319,8 +16319,8 @@
             ],
             "skill-category-special-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "15"
                 }
             ],
             "skill-category-costs": [
@@ -16636,8 +16636,8 @@
             ],
             "skill-category-special-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "15"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -16967,8 +16967,8 @@
             ],
             "skill-category-special-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "15"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -17298,8 +17298,8 @@
             ],
             "skill-category-special-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "15"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -21234,8 +21234,8 @@
             ],
             "skill-category-special-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "15"
                 }
             ],
             "skill-category-skill-development-types": [
