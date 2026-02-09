@@ -100,13 +100,7 @@ void ProfessionDatafileParserJson::parse() {
 		}
 
 		// Skill category profession bonus
-		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-category-profession-bonuses")) {
-			for (const auto& skill_bonus_tree : skill_bonuses.get()) {
-				std::string category_id{ skill_bonus_tree.second.get<std::string>("category") };
-				int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-				ref.addSkillCategoryProfessionBonus(factory().get<SkillCategoryData>(category_id), bonus);
-			}
-		}
+		ref.setSkillCategoryProfessionBonuses(parseGameDataPairTree<SkillCategoryData, int>(v.second.get_child_optional("skill-category-profession-bonuses")));
 
 		// Skill category special bonus
 		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-category-special-bonuses")) {
@@ -294,18 +288,8 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 
 	// Skill category profession bonus
 	{
-		pt::ptree skill_category_bonuses_tree{};
-		std::map<std::string, const SkillCategoryData*> categories{};
-		for (auto& skill_category : game_data.skillCategoriesWithProfessionBonus()) {
-			categories.emplace(skill_category->id(), skill_category);
-		}
-		for (const auto& skill_category : categories) {
-			pt::ptree skill_category_bonus_tree{};
-			skill_category_bonus_tree.put("category", skill_category.first);
-			skill_category_bonus_tree.put("bonus", game_data.skillCategoryProfessionBonus(*skill_category.second));
-			skill_category_bonuses_tree.push_back(std::make_pair("", skill_category_bonus_tree));
-		}
-		if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill-category-profession-bonuses", skill_category_bonuses_tree));
+		pt::ptree tree{ getGameDataPairTree<SkillCategoryData, int>(game_data.skillCategoryProfessionBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-category-profession-bonuses", tree));
 	}
 
 	// Skill category special bonus

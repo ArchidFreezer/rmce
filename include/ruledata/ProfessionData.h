@@ -600,6 +600,18 @@ public:
 	void addSkillCategoryProfessionBonus(const SkillCategoryData& category, int bonus) { skill_category_profession_bonuses_.emplace(&category, bonus); }
 
 	/**
+	 * @brief Sets the object's skill category profession bonuses from the provided map, replacing any existing bonuses.
+	 * @param bonuses A map from const SkillCategoryData* to int containing skill category profession bonuses. The map is assigned to the object's internal skill_category_profession_bonuses_ member, replacing its previous contents.
+	 */
+	void setSkillCategoryProfessionBonuses(const std::map<const SkillCategoryData*, int>& bonuses) { skill_category_profession_bonuses_ = bonuses; }
+
+	/**
+	 * @brief Get a container with the skill categories that the profession has a bonus for
+	 * @return std::map of const SkillCategoryData* and bonus value
+	 */
+	const std::map<const SkillCategoryData*, int>& skillCategoryProfessionBonuses() const { return skill_category_profession_bonuses_; }
+
+	/**
 	 * @brief Get a container of all the skill categories with a profession bonus
 	 * @return std::set of categories with a bonus
 	 */

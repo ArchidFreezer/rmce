@@ -54,20 +54,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -363,20 +363,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -679,16 +679,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -1020,32 +1020,32 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -1340,28 +1340,28 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ARTISTIC_ACTIVE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -1674,28 +1674,28 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_OBSCURE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -1986,32 +1986,32 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_OBSCURE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -2313,24 +2313,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -2649,28 +2649,28 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_URBAN",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -2958,24 +2958,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -3263,20 +3263,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -3592,32 +3592,32 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -3926,32 +3926,32 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_OBSCURE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_TECHNICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -4253,12 +4253,12 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "value": "10"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -4595,28 +4595,28 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "10"
                 }
             ],
             "skill-category-costs": [
@@ -4918,24 +4918,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_DIRECTED_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -5213,24 +5213,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -5577,28 +5577,28 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "10"
                 }
             ],
             "skill-category-costs": [
@@ -5891,20 +5891,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_URBAN",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -6207,24 +6207,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "10"
                 }
             ],
             "skill-category-costs": [
@@ -6534,24 +6534,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_DIRECTED_SPELLS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -6849,20 +6849,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -7171,32 +7171,32 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_OBSCURE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -7503,32 +7503,32 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -7827,24 +7827,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -8160,32 +8160,32 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -8476,24 +8476,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_URBAN",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -8798,16 +8798,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -9109,24 +9109,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -9438,24 +9438,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -9776,24 +9776,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -10089,20 +10089,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SENSES",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -10431,16 +10431,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+                    "value": "10"
                 }
             ],
             "skill-category-costs": [
@@ -10746,16 +10746,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_URBAN",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -11065,16 +11065,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -11390,12 +11390,12 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ARTISTIC_PASSIVE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "15"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -11724,8 +11724,8 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "10"
                 }
             ],
             "skill-category-special-bonuses": [
@@ -12045,20 +12045,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -12357,24 +12357,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "10"
                 }
             ],
             "skill-category-special-bonuses": [
@@ -12678,20 +12678,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -13023,16 +13023,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -13349,16 +13349,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-special-bonuses": [
@@ -13690,24 +13690,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-special-bonuses": [
@@ -14011,20 +14011,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -14334,20 +14334,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -14661,20 +14661,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -14997,16 +14997,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -15336,28 +15336,28 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -15665,12 +15665,12 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-special-bonuses": [
@@ -15994,20 +15994,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -16305,16 +16305,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_DIRECTED_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-special-bonuses": [
@@ -16622,16 +16622,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-special-bonuses": [
@@ -16953,16 +16953,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "20"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "20"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-special-bonuses": [
@@ -17276,24 +17276,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "10"
                 }
             ],
             "skill-category-special-bonuses": [
@@ -17619,20 +17619,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -17936,20 +17936,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -18273,16 +18273,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -18584,12 +18584,12 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -18916,20 +18916,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "10"
                 }
             ],
             "skill-category-costs": [
@@ -19235,16 +19235,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -19582,12 +19582,12 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -19910,16 +19910,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -20247,24 +20247,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -20558,16 +20558,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -20867,20 +20867,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -21220,16 +21220,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-special-bonuses": [
@@ -21547,20 +21547,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -21879,24 +21879,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -22224,12 +22224,12 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -22560,24 +22560,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "10"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -22876,12 +22876,12 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-skill-development-types": [
@@ -23189,12 +23189,12 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -23506,16 +23506,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -23834,24 +23834,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -24169,20 +24169,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -24498,24 +24498,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_DIRECTED_SPELLS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -24823,24 +24823,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_OBSCURE",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -25121,20 +25121,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "10"
                 }
             ],
             "skill-category-costs": [
@@ -25444,16 +25444,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -25765,28 +25765,28 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -26077,20 +26077,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -26383,16 +26383,16 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "15"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -26693,20 +26693,20 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
-                    "bonus": "15"
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "15"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
@@ -26991,24 +26991,24 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_SELF_CONTROL",
-                    "bonus": "10"
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "bonus": "5"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "5"
                 }
             ],
             "skill-category-costs": [
