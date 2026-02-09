@@ -532,6 +532,14 @@ public:
 	void setStartingLanguageAbility(LanguageAbility language) { starting_languages_.emplace(language.language(), language); }
 
 	/**
+	 * @brief Sets the object's collection of starting language abilities to the provided map.
+	 * @param languages A map of language names to LanguageAbility objects. The map is copied into the object's starting_languages_ member.
+	 */
+	void setStartingLanguageAbilities(const std::map<std::string, const LanguageAbility>& languages) {
+		starting_languages_ = languages;
+	}
+
+	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language LanguageData language to get the ability for
 	 * @return LanguageAbility language ability
@@ -544,6 +552,12 @@ public:
 	 * @return LanguageAbility language ability
 	 */
 	const LanguageAbility& startingLanguageAbility(const std::string language_name) const { return starting_languages_.at(language_name); }
+
+	/**
+	 * @brief Returns a const reference to the map of starting language abilities.
+	 * @return A const reference to a std::map that maps language names (std::string) to const LanguageAbility values. The reference refers to the internal starting_languages_ member and remains valid as long as the containing object exists and the map is not modified.
+	 */
+	const std::map<std::string, const LanguageAbility>& startingLanguageAbilities() const { return starting_languages_; }
 	
 	/**
 	 * @brief Get a container with the LanguageAbility objects known during childhood
@@ -561,6 +575,14 @@ public:
 	void setAdolescentLanguageAbility(LanguageAbility language) { adolescent_languages_.emplace(language.language(), language); }
 
 	/**
+	 * @brief Sets the object's collection of adolescent language abilities to the provided map.
+	 * @param languages A map of language names to LanguageAbility objects. The map is copied into the object's adolescent_languages_ member.
+	 */
+	void setAdolescentLanguageAbilities(const std::map<std::string, const LanguageAbility>& languages) {
+		adolescent_languages_ = languages;
+	}
+
+	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language LanguageData language to get the ability for
 	 * @return LanguageAbility language ability
@@ -573,6 +595,12 @@ public:
 	 * @return LanguageAbility language ability
 	 */
 	const LanguageAbility& adolescentLanguageAbility(const std::string language_name) const { return adolescent_languages_.at(language_name); }
+
+	/**
+	 * @brief Returns a const reference to the internal map of adolescent language abilities.
+	 * @return A const reference to a std::map that maps language names (std::string) to const LanguageAbility objects for adolescents. The reference is to the internal member adolescent_languages_ and remains valid while the parent object exists and the map is not modified.
+	 */
+	const std::map<std::string, const LanguageAbility>& adolescentLanguageAbilities() const { return adolescent_languages_; }
 
 	/**
 	 * @brief Get a container with the LanguageAbility objects known during childhood

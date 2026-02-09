@@ -218,6 +218,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac54c52608d387ec55384ede17374dc8e" id="r_ac54c52608d387ec55384ede17374dc8e"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </td></tr>
 <tr class="memitem:ac54c52608d387ec55384ede17374dc8e template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#ac54c52608d387ec55384ede17374dc8e">getGameDataSetTree</a> (std::set&lt; const T * &gt; set)</td></tr>
 <tr class="memdesc:ac54c52608d387ec55384ede17374dc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::set of game data objects into a boost ptree containing a set of game data objects.  <br /></td></tr>
+<tr class="memitem:a2f5554440456ffbacde2e3e22376eab8" id="r_a2f5554440456ffbacde2e3e22376eab8"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2f5554440456ffbacde2e3e22376eab8">parseSkillSetTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:a2f5554440456ffbacde2e3e22376eab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a set of skills into a std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a>.  <br /></td></tr>
+<tr class="memitem:ad1f7e59a681143f3a17b9b316d54ed88" id="r_ad1f7e59a681143f3a17b9b316d54ed88"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#ad1f7e59a681143f3a17b9b316d54ed88">getSkillSetTree</a> (std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; set)</td></tr>
+<tr class="memdesc:ad1f7e59a681143f3a17b9b316d54ed88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> into a boost ptree containing a set of skills.  <br /></td></tr>
+<tr class="memitem:ad44b34a91a4826face21893b580087ef" id="r_ad44b34a91a4826face21893b580087ef"><td class="memItemLeft">const std::map&lt; std::string, const <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad44b34a91a4826face21893b580087ef">parseLanguageAbilityMapTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:ad44b34a91a4826face21893b580087ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a map of language abilities into a std::map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a>.  <br /></td></tr>
+<tr class="memitem:a7e4953d1337511471b133cdaf943ba12" id="r_a7e4953d1337511471b133cdaf943ba12"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a7e4953d1337511471b133cdaf943ba12">getLanguageAbilityMapTree</a> (std::map&lt; std::string, const <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt; map)</td></tr>
+<tr class="memdesc:a7e4953d1337511471b133cdaf943ba12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> into a boost ptree containing a map of language abilities.  <br /></td></tr>
 <tr class="inherit_header pro_methods_class_datafile_parser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_datafile_parser')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="class_datafile_parser.html">DatafileParser</a></td></tr>
 <tr class="memitem:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser" id="r_a4e7a26696510228b1a25308655066ef1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_datafile_parser.html#a4e7a26696510228b1a25308655066ef1">parse</a> ()=0</td></tr>
 <tr class="memdesc:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a ptree into game data objects.  <br /></td></tr>
@@ -436,6 +444,40 @@ template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleData
 
 </div>
 </div>
+<a id="a7e4953d1337511471b133cdaf943ba12" name="a7e4953d1337511471b133cdaf943ba12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4953d1337511471b133cdaf943ba12">&#9670;&#160;</a></span>getLanguageAbilityMapTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getLanguageAbilityMapTree </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; std::string, const <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> into a boost ptree containing a map of language abilities. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>Map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a>, with the languages retrieved from the cache using their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the map of language abilities, with the languages represented by their ids </dd></dl>
+
+</div>
+</div>
 <a id="acee48a5b42cb334753958496ed2de723" name="acee48a5b42cb334753958496ed2de723"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acee48a5b42cb334753958496ed2de723">&#9670;&#160;</a></span>getSkillPairTree()</h2>
 
@@ -482,6 +524,40 @@ template&lt;typename U&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the map of skills and values, with the skills represented by their ids and optional subcategories </dd></dl>
+
+</div>
+</div>
+<a id="ad1f7e59a681143f3a17b9b316d54ed88" name="ad1f7e59a681143f3a17b9b316d54ed88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f7e59a681143f3a17b9b316d54ed88">&#9670;&#160;</a></span>getSkillSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getSkillSetTree </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>set</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> into a boost ptree containing a set of skills. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">set</td><td>Set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a>, with the skills retrieved from the cache using their ids and optional subcategories </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories </dd></dl>
 
 </div>
 </div>
@@ -580,6 +656,40 @@ template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleData
 
 </div>
 </div>
+<a id="ad44b34a91a4826face21893b580087ef" name="ad44b34a91a4826face21893b580087ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44b34a91a4826face21893b580087ef">&#9670;&#160;</a></span>parseLanguageAbilityMapTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; std::string, const <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt; DatafileParserJson::parseLanguageAbilityMapTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a map of language abilities into a std::map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the map of language abilities, with the languages represented by their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a>, with the languages retrieved from the cache using their ids </dd></dl>
+
+</div>
+</div>
 <a id="a00d925ce7330fa5b0373ccf882e41445" name="a00d925ce7330fa5b0373ccf882e41445"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00d925ce7330fa5b0373ccf882e41445">&#9670;&#160;</a></span>parseSkillPairTree()</h2>
 
@@ -626,6 +736,40 @@ template&lt;typename U&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and the values, with the skills retrieved from the cache using their ids and optional subcategories </dd></dl>
+
+</div>
+</div>
+<a id="a2f5554440456ffbacde2e3e22376eab8" name="a2f5554440456ffbacde2e3e22376eab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5554440456ffbacde2e3e22376eab8">&#9670;&#160;</a></span>parseSkillSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; DatafileParserJson::parseSkillSetTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a set of skills into a std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a>, with the skills retrieved from the cache using their ids and optional subcategories </dd></dl>
 
 </div>
 </div>

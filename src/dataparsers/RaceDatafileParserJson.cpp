@@ -56,30 +56,10 @@ void RaceDatafileParserJson::parse() {
 		ref.setMentalismProgression(factory().get<SkillProgressionTypeData>(mentalism_progression));
 
 		// Get the starting languages
-		for (const auto& language : v.second.get_child("starting-languages")) {
-			std::string language_name{ language.second.get<std::string>("language") };
-			LanguageAbility ability(factory().get<LanguageData>(language_name));
-			boost::optional<int> somantic = language.second.get_optional<int>("somantic");
-			if (somantic) {	ability.updateSomanticRanks(somantic.get()); }
-			boost::optional<int> spoken = language.second.get_optional<int>("spoken");
-			if (spoken) { ability.updateSpokenRanks(spoken.get()); }				
-			boost::optional<int> written = language.second.get_optional<int>("written");
-			if (written) { ability.updateWrittenRanks(written.get()); }				
-			ref.setStartingLanguageAbility(ability);
-		}
+		ref.setStartingLanguageAbilities(parseLanguageAbilityMapTree(v.second.get_child_optional("starting-languages")));
 
 		// Get the adolescent languages
-		for (const auto& language : v.second.get_child("adolescent-languages")) {
-			std::string language_name{ language.second.get<std::string>("language") };
-			LanguageAbility ability(factory().get<LanguageData>(language_name));
-			boost::optional<int> somantic = language.second.get_optional<int>("somantic");
-			if (somantic) { ability.updateSomanticRanks(somantic.get()); }
-			boost::optional<int> spoken = language.second.get_optional<int>("spoken");
-			if (spoken) { ability.updateSpokenRanks(spoken.get()); }
-			boost::optional<int> written = language.second.get_optional<int>("written");
-			if (written) { ability.updateWrittenRanks(written.get()); }
-			ref.setAdolescentLanguageAbility(ability);
-		}
+		ref.setAdolescentLanguageAbilities(parseLanguageAbilityMapTree(v.second.get_child_optional("adolescent-languages")));
 
 		// Get Stat bonuses
 		if (boost::optional<const pt::ptree&> stat_bonuses = v.second.get_child_optional("stat-bonuses")) {
@@ -154,28 +134,36 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	datum.put("mentalism-progression", game_data.mentalismProgression().id());
 
 	// Starting languages
-	pt::ptree starting_languages_tree{};
-	for (auto& language_ability : game_data.startingLanguages()) {
-		pt::ptree language_ability_tree{};
-		language_ability_tree.put("language", language_ability.languageId());
-		if (language_ability.somantic()) language_ability_tree.put("somantic", language_ability.somantic());
-		if (language_ability.spoken()) language_ability_tree.put("spoken", language_ability.spoken());
-		if (language_ability.written()) language_ability_tree.put("written", language_ability.written());
-		starting_languages_tree.push_back(std::make_pair("", language_ability_tree));
+	{
+		pt::ptree tree{ getLanguageAbilityMapTree(game_data.startingLanguageAbilities()) };
+		if (tree.size()) datum.push_back(std::make_pair("starting-languages", tree));
 	}
-	datum.push_back(std::make_pair("starting-languages", starting_languages_tree));
+	//pt::ptree starting_languages_tree{};
+	//for (auto& language_ability : game_data.startingLanguages()) {
+	//	pt::ptree language_ability_tree{};
+	//	language_ability_tree.put("language", language_ability.languageId());
+	//	if (language_ability.somantic()) language_ability_tree.put("somantic", language_ability.somantic());
+	//	if (language_ability.spoken()) language_ability_tree.put("spoken", language_ability.spoken());
+	//	if (language_ability.written()) language_ability_tree.put("written", language_ability.written());
+	//	starting_languages_tree.push_back(std::make_pair("", language_ability_tree));
+	//}
+	//datum.push_back(std::make_pair("starting-languages", starting_languages_tree));
 
 	// Adolescent languages
-	pt::ptree adolescent_languages_tree{};
-	for (auto& language_ability : game_data.adolescentLanguages()) {
-		pt::ptree language_ability_tree{};
-		language_ability_tree.put("language", language_ability.languageId());
-		if (language_ability.somantic()) language_ability_tree.put("somantic", language_ability.somantic());
-		if (language_ability.spoken()) language_ability_tree.put("spoken", language_ability.spoken());
-		if (language_ability.written()) language_ability_tree.put("written", language_ability.written());
-		adolescent_languages_tree.push_back(std::make_pair("", language_ability_tree));
+	{
+		pt::ptree tree{ getLanguageAbilityMapTree(game_data.adolescentLanguageAbilities()) };
+		if (tree.size()) datum.push_back(std::make_pair("adolescent-languages", tree));
 	}
-	datum.push_back(std::make_pair("adolescent-languages", adolescent_languages_tree));
+	//pt::ptree adolescent_languages_tree{};
+	//for (auto& language_ability : game_data.adolescentLanguages()) {
+	//	pt::ptree language_ability_tree{};
+	//	language_ability_tree.put("language", language_ability.languageId());
+	//	if (language_ability.somantic()) language_ability_tree.put("somantic", language_ability.somantic());
+	//	if (language_ability.spoken()) language_ability_tree.put("spoken", language_ability.spoken());
+	//	if (language_ability.written()) language_ability_tree.put("written", language_ability.written());
+	//	adolescent_languages_tree.push_back(std::make_pair("", language_ability_tree));
+	//}
+	//datum.push_back(std::make_pair("adolescent-languages", adolescent_languages_tree));
 
 	// Stat bonus
 	pt::ptree stat_bonuses_tree{};
