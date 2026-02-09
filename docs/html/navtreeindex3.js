@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"class_spell_list_data.html#a0168e4a22e27ce5a33a52192178e3fc9":[2,0,60,10],
+"class_spell_list_data.html#a04233a352bdf4a6508c8ba5c84e70172":[2,0,60,8],
 "class_spell_list_data.html#a0cc14d7b38cae643061dd1b7915895a5":[2,0,60,6],
 "class_spell_list_data.html#a3ce092e114ff37e27319e7e8bcd27118":[2,0,60,13],
 "class_spell_list_data.html#a53345c0868a2784b34e180191d5f0311":[2,0,60,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "namespace_environment_type.html#a649ee59b0663f9ed095adb70f6148845a91b75819c09e6b914349ce568762e362":[0,0,5,3,5],
 "namespace_environment_type.html#a73843fcaa534a04d130629faece61b7a":[0,0,5,2],
 "namespace_environment_type.html#a73843fcaa534a04d130629faece61b7aa367a022f27fb4f74cafd9f159027ca98":[0,0,5,2,2],
-"namespace_environment_type.html#a73843fcaa534a04d130629faece61b7aa69db05f3d3236a8659ad3f1bf26ed12c":[0,0,5,2,0],
-"namespace_environment_type.html#a73843fcaa534a04d130629faece61b7aa7afa40661d1f59b43f605d283dd29036":[0,0,5,2,1],
-"namespace_environment_type.html#a73843fcaa534a04d130629faece61b7aad5418e567ef27c0a21b11f1f9fdf0c6a":[0,0,5,2,3]
+"namespace_environment_type.html#a73843fcaa534a04d130629faece61b7aa69db05f3d3236a8659ad3f1bf26ed12c":[0,0,5,2,0]
 };

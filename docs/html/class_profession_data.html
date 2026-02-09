@@ -257,12 +257,16 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:ad6f867b7f3d3d48d6a357d84174f2e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the profession bonus a category has.  <br /></td></tr>
 <tr class="memitem:a4c3f01b3ce42e8b1e289c4d4d242206a" id="r_a4c3f01b3ce42e8b1e289c4d4d242206a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4c3f01b3ce42e8b1e289c4d4d242206a">setSkillBonus</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill, int bonus)</td></tr>
 <tr class="memdesc:a4c3f01b3ce42e8b1e289c4d4d242206a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the bonus the profession has with a skill.  <br /></td></tr>
+<tr class="memitem:a8caa85f6b715d98801025a95859b5194" id="r_a8caa85f6b715d98801025a95859b5194"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8caa85f6b715d98801025a95859b5194">setSkillBonuses</a> (const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp;bonuses)</td></tr>
+<tr class="memdesc:a8caa85f6b715d98801025a95859b5194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the object's skill bonuses from the provided map, replacing any existing bonuses.  <br /></td></tr>
 <tr class="memitem:aecb5417f5cff3520e4d559bbd4eaadc8" id="r_aecb5417f5cff3520e4d559bbd4eaadc8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aecb5417f5cff3520e4d559bbd4eaadc8">skillBonus</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill) const</td></tr>
 <tr class="memdesc:aecb5417f5cff3520e4d559bbd4eaadc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus that the profession provides to a skill.  <br /></td></tr>
 <tr class="memitem:a2b42cd1d2277bf5e5ffd29cd33435524" id="r_a2b42cd1d2277bf5e5ffd29cd33435524"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a2b42cd1d2277bf5e5ffd29cd33435524">skillBonus</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
 <tr class="memdesc:a2b42cd1d2277bf5e5ffd29cd33435524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus that the profession provides to a skill.  <br /></td></tr>
 <tr class="memitem:a9b5657d42ff468a15f77f2f687f7f247" id="r_a9b5657d42ff468a15f77f2f687f7f247"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9b5657d42ff468a15f77f2f687f7f247">skillsWithBonus</a> () const</td></tr>
 <tr class="memdesc:a9b5657d42ff468a15f77f2f687f7f247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a container with the skill that the profession has a bonus for.  <br /></td></tr>
+<tr class="memitem:aff52628eb28eb2c83350a362095e7d20" id="r_aff52628eb28eb2c83350a362095e7d20"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aff52628eb28eb2c83350a362095e7d20">skillBonuses</a> () const</td></tr>
+<tr class="memdesc:aff52628eb28eb2c83350a362095e7d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the skills that the profession has a bonus for.  <br /></td></tr>
 <tr class="memitem:a3ca78a1f297a2b11beafd3e70efbb2cd" id="r_a3ca78a1f297a2b11beafd3e70efbb2cd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3ca78a1f297a2b11beafd3e70efbb2cd">isBonusSkill</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
 <tr class="memdesc:a3ca78a1f297a2b11beafd3e70efbb2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if there is a professional bonus for a skill.  <br /></td></tr>
 <tr class="memitem:adfb8f2c4d8d98e57347b70ce5b9eee3e" id="r_adfb8f2c4d8d98e57347b70ce5b9eee3e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adfb8f2c4d8d98e57347b70ce5b9eee3e">addSkillCategoryDevelopmentCost</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category, <a class="el" href="class_skill_development_cost.html">SkillDevelopmentCost</a> cost)</td></tr>
@@ -1665,6 +1669,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a8caa85f6b715d98801025a95859b5194" name="a8caa85f6b715d98801025a95859b5194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8caa85f6b715d98801025a95859b5194">&#9670;&#160;</a></span>setSkillBonuses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::setSkillBonuses </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>bonuses</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the object's skill bonuses from the provided map, replacing any existing bonuses. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bonuses</td><td>A map from <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> to int containing skill bonuses. The map is assigned to the object's internal skill_bonuses_ member, replacing its previous contents. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a267bb69e897f4c1fcd441b7ec8d85f19" name="a267bb69e897f4c1fcd441b7ec8d85f19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a267bb69e897f4c1fcd441b7ec8d85f19">&#9670;&#160;</a></span>setSkillDevelopmentType()</h2>
 
@@ -1806,6 +1843,34 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bonus value </dd></dl>
+
+</div>
+</div>
+<a id="aff52628eb28eb2c83350a362095e7d20" name="aff52628eb28eb2c83350a362095e7d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff52628eb28eb2c83350a362095e7d20">&#9670;&#160;</a></span>skillBonuses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp; ProfessionData::skillBonuses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with the skills that the profession has a bonus for. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and bonus value </dd></dl>
 
 </div>
 </div>

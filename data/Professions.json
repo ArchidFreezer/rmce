@@ -8782,8 +8782,8 @@
             ],
             "skill-bonuses": [
                 {
-                    "skill": "SKILL_TRANSCEND_ARMOR",
-                    "bonus": "20"
+                    "id": "SKILL_TRANSCEND_ARMOR",
+                    "value": "20"
                 }
             ],
             "skill-development-types": [
@@ -9748,8 +9748,8 @@
             ],
             "skill-bonuses": [
                 {
-                    "skill": "SKILL_ANIMAL_MASTERY",
-                    "bonus": "25"
+                    "id": "SKILL_ANIMAL_MASTERY",
+                    "value": "25"
                 }
             ],
             "skill-development-types": [
@@ -18247,9 +18247,9 @@
             ],
             "skill-bonuses": [
                 {
-                    "skill": "SKILL_WEAPON_1_H_CONCUSSION",
+                    "id": "SKILL_WEAPON_1_H_CONCUSSION",
                     "subcategory": "War Hammer",
-                    "bonus": "10"
+                    "value": "10"
                 }
             ],
             "skill-development-types": [
@@ -19550,12 +19550,12 @@
             ],
             "skill-bonuses": [
                 {
-                    "skill": "SKILL_FAUNA_LORE",
-                    "bonus": "25"
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "25"
                 },
                 {
-                    "skill": "SKILL_FLORA_LORE",
-                    "bonus": "25"
+                    "id": "SKILL_FLORA_LORE",
+                    "value": "25"
                 }
             ],
             "skill-development-types": [

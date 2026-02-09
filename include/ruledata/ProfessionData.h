@@ -644,6 +644,14 @@ public:
 	}
 
 	/**
+	 * @brief Sets the object's skill bonuses from the provided map, replacing any existing bonuses.
+	 * @param bonuses A map from SubcategoriedSkillData to int containing skill bonuses. The map is assigned to the object's internal skill_bonuses_ member, replacing its previous contents.
+	 */
+	void setSkillBonuses(const std::map<SubcategoriedSkillData, int>& bonuses) {
+		skill_bonuses_ = bonuses;
+	}
+
+	/**
 	 * @brief Get the bonus that the profession provides to a skill
 	 * @param skill SubcategoriedSkillData to get the bonus for
 	 * @return bonus value
@@ -677,6 +685,12 @@ public:
 		}
 		return ret;
 	}
+
+	/**
+	 * @brief Get a container with the skills that the profession has a bonus for
+	 * @return std::map of SubcategoriedSkillData and bonus value
+	 */
+	const std::map<SubcategoriedSkillData, int>& skillBonuses() const { return skill_bonuses_; }
 
 	/**
 	 * @brief Check if there is a professional bonus for a skill
