@@ -72,23 +72,22 @@
           "ranks": "2"
         },
       ],
-      "category-skill-rank-choices": [
+      "category-multi-skill-rank-choices": [
         {
           "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
+          "max-targets": "1",
           "ranks": "2"
         },
-      ],
-      "category-multi-skill-rank-choices": [
         {
           "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
           "max-targets": "2",
           "ranks": "2"
-        },,
+        },
         {
           "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
           "max-targets": "2",
           "ranks": "4"
-        },
+        }
       ],
       "group-category-and-skill-rank-choices": [
         {
@@ -205,15 +204,17 @@
           "ranks": "3"
         },
       ],
-      "category-skill-rank-choices": [
+      "category-multi-skill-rank-choices": [
         {
           "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-          "ranks": "1"
-        },,
-        {
-          "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "max-targets": "1",
           "ranks": "1"
         },
+        {
+          "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "max-targets": "1",
+          "ranks": "1"
+        }
       ],
       "group-category-and-skill-rank-choices": [
         {
@@ -221,7 +222,7 @@
           "ranks": "1"
         },
       ],
-      "spell-list-rank-choices": [
+      "spell-list-category-rank-choices": [
         {
           "max-lists": "1",
           "ranks": "3",
@@ -565,13 +566,12 @@
           "ranks": "3"
         }
       ],
-      "category-skill-rank-choices": [
+      "category-multi-skill-rank-choices": [
         {
           "category": "SKILLCATEGORY_LORE_MAGICAL",
+          "max-targets": "1",
           "ranks": "1"
-        }
-      ],
-      "category-multi-skill-rank-choices": [
+        },
         {
           "category": "SKILLCATEGORY_LORE_OBSCURE",
           "max-targets": "3",
@@ -583,7 +583,7 @@
           "ranks": "2"
         }
       ],
-      "spell-list-rank-choices": [
+      "spell-list-category-rank-choices": [
         {
           "max-lists": "1",
           "ranks": "3",
@@ -803,7 +803,7 @@
       ],
       "lifestyle-skills": [
         {
-          "skill": "SKILL_ANIMAL_HANDLING",
+          "skill": "SKILL_ANIMAL_HANDLING"
         }
       ]
     },
@@ -1237,7 +1237,7 @@
       ],
       "lifestyle-skills": [
         {
-          "skill": "SKILL_STONE_LORE",
+          "skill": "SKILL_STONE_LORE"
         }
       ]
     },
@@ -1268,6 +1268,142 @@
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "132",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Lore Book (+15 to demon lore)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Lore Book (+10 to circle lore)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Double sided circle cloth"
+        },
+        {
+          "order": "4",
+          "chance": "60",
+          "value": "Unusual scar (left from a demon encounter)"
+        },
+        {
+          "order": "5",
+          "chance": "50",
+          "value": "Unusual scar (left from a demon encounter)"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Favour from a lesser demon"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Circle Powder (1 vial)"
+        },
+        {
+          "order": "8",
+          "chance": "30",
+          "value": "Demon blood - Pale I (16 oz.)"
+        },
+        {
+          "order": "9",
+          "chance": "30",
+          "value": "Owe a favor to a lesser demon"
+        },
+        {
+          "order": "10",
+          "chance": "30",
+          "value": "Corruption Points (2d10)"
+        },
+        {
+          "order": "11",
+          "chance": "20",
+          "value": "Favour from a minor demon"
+        },
+        {
+          "order": "12",
+          "chance": "0",
+          "value": "Knowledge of one trade good for a specific demonic type"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "skill": "SKILL_REALITY_AWARENESS",
+          "ranks": "3"
+        },
+        {
+          "skill": "SKILL_PLANAR_LORE",
+          "ranks": "2"
+        },
+        {
+          "skill": "SKILL_DEMON_DEVIL_LORE",
+          "ranks": "3"
+        },
+        {
+          "skill": "SKILL_XENO_LORE",
+          "ranks": "3"
+        },
+        {
+          "skill": "SKILL_SUMMONING",
+          "ranks": "3"
+        }
+      ],
+      "category-ranks": [
+        {
+          "category": "SKILLCATEGORY_AWARENESS_SENSES",
+          "ranks": "2"
+        },
+        {
+          "category": "SKILLCATEGORY_COMMUNICATIONS",
+          "ranks": "2"
+        },
+        {
+          "category": "SKILLCATEGORY_INFLUENCE",
+          "ranks": "2"
+        },
+        {
+          "category": "SKILLCATEGORY_LORE_MAGICAL",
+          "ranks": "1"
+        },
+        {
+          "category": "SKILLCATEGORY_LORE_OBSCURE",
+          "ranks": "1"
+        },
+        {
+          "category": "SKILLCATEGORY_POWER_MANIPULATION",
+          "ranks": "1"
+        }
+      ],
+      "language-choices": [
+        {
+          "max-langauges": "xxx",
+          "ranks": "2",
+          "languages": [
+            "Demonic I",
+            "Demonic II"
+          ]
+        }
+      ],
+      "spell-list-rank-choices": [
+        {
+          "max-lists": "1",
+          "ranks": "3",
+          "spell-lists": [
+            "SPELLLIST_ENTITY_SUMMONS",
+            "SPELLLIST_PLANAR_SUMMONS"
+          ]
+        }
+      ],
+      "lifestyle-skills": [
+        {
+          "skill": "SKILL_DEMON_DEVIL_LORE",
+          "skill": "SKILL_XENO_LORE"
+        }
+      ]
     },
     {
       "name": "Missionary",
@@ -1600,7 +1736,7 @@
       ],
       "lifestyle-skills": [
         {
-          "skill": "SKILL_FAUNA_LORE",
+          "skill": "SKILL_FAUNA_LORE"
         }
       ]
     },
@@ -1737,11 +1873,11 @@
       "lifestyle-skills": [
         {
           "skill": "SKILL_FAUNA_LORE",
-          "subcategory": "Spiders",
+          "subcategory": "Spiders"
         },
         {
           "skill": "SKILL_ANIMAL_HANDLING",
-          "subcategory": "Spiders",
+          "subcategory": "Spiders"
         }
       ]
     }
@@ -1967,21 +2103,24 @@
           "ranks": "2"
         }
       ],
-      "category-skill-rank-choices": [
+      "category-multi-skill-rank-choices": [
         {
           "category": "SKILLCATEGORY_LORE_MAGICAL",
+          "max-targets": "1",
           "ranks": "2"
         },
         {
           "category": "SKILLCATEGORY_LORE_TECHNICAL",
+          "max-targets": "1",
           "ranks": "1"
         },
         {
           "category": "SKILLCATEGORY_POWER_MANIPULATION",
+          "max-targets": "1",
           "ranks": "1"
         }
       ],
-      "spell-list-rank-choices": [
+      "spell-list-category-rank-choices": [
         {
           "max-lists": "2",
           "ranks": "6",
@@ -2218,6 +2357,116 @@
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "86",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Favour from a guildmaster"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Lore Book (+10 non-magic to one specific lore)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Rival apprentice"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Lore Book (+10 non-magic to one specific lore)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Spell Adder (+1)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Daily II item (1st level spell)"
+        },
+        {
+          "order": "7",
+          "chance": "60",
+          "value": "Friendly contact at local library"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Friendly contact at local pub"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "skill": "SKILL_RESEARCH",
+          "ranks": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "category": "SKILLCATEGORY_LORE_MAGICAL",
+          "ranks": "2"
+        },
+        {
+          "category": "SKILLCATEGORY_POWER_AWARENESS",
+          "ranks": "2"
+        },
+        {
+          "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "ranks": "1"
+        },
+        {
+          "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "ranks": "2"
+        },
+        {
+          "category": "SKILLCATEGORY_URBAN",
+          "ranks": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "category": "SKILLCATEGORY_LORE_MAGICAL",
+          "max-targets": "2",
+          "ranks": "2"
+        },
+        {
+          "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "max-targets": "2",
+          "ranks": "2"
+        },
+        {
+          "category": "SKILLCATEGORY_URBAN",
+          "max-targets": "1",
+          "ranks": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "ranks": "3",
+          "skills": [
+            {
+              "skill": "SKILL_ATTUNEMENT",
+            },
+            {
+              "skill": "SKILL_READ_RUNES",
+            }
+          ]
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "spell-list": "SPELLLIST_GUILDCRAFT_MASTERY",
+          "ranks": "3",
+        }
+      ],
+      "stat-gains": [
+        "Memory",
+        "Realm"
+      ]
     },
     {
       "name": "Martial Arts Weapon Master",
