@@ -1,5 +1,11 @@
 var NAVTREEINDEX3 =
 {
+"class_stat_type_1_1_too_many_stats_exception.html":[0,0,15,0],
+"class_stat_type_1_1_too_many_stats_exception.html":[2,0,7,0],
+"class_stat_type_1_1_too_many_stats_exception.html#af36dfe196f6a1be9e2a21e6315d8514e":[0,0,15,0,0],
+"class_stat_type_1_1_too_many_stats_exception.html#af36dfe196f6a1be9e2a21e6315d8514e":[2,0,7,0,0],
+"class_subcategoried_skill_data.html":[2,0,62],
+"class_subcategoried_skill_data.html#a629e5e9c90245bd10f24ef5af1e2f600":[2,0,62,3],
 "class_subcategoried_skill_data.html#a6e8d26835dc5c26793a15cfd04061519":[2,0,62,0],
 "class_subcategoried_skill_data.html#a9957b8411c76c6998338c6fc60802e88":[2,0,62,2],
 "class_subcategoried_skill_data.html#ad5c78085648bfe1a577e43cfc9c9fb7b":[2,0,62,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX3 =
 "namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca2294a1157e756e3c4e4a9db0ac93e83f":[0,0,5,4,9],
 "namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca2ce5bb55952cd13ad36643c5cad1a2dd":[0,0,5,4,6],
 "namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca365311d5c63645c53ed8e123af3d113f":[0,0,5,4,0],
-"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca3ca31e7ed4e2b90cb62fd07b254bd656":[0,0,5,4,7],
-"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca44edd4ed9bc15f10fb39c5a4f8061352":[0,0,5,4,4],
-"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca6fc103fc7e6d1f4d0745b3e07d655e8a":[0,0,5,4,1],
-"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca90d21810d611e330b0591234107707f2":[0,0,5,4,3],
-"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca9cb15238c18ad71c4f9d75e543816008":[0,0,5,4,2],
-"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83cabe0c4dc259d5a3e2fe1ceb3c0cd0c0ee":[0,0,5,4,5],
-"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83cabff21a5b97d121fc718f2059f13b3328":[0,0,5,4,8]
+"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca3ca31e7ed4e2b90cb62fd07b254bd656":[0,0,5,4,7]
 };

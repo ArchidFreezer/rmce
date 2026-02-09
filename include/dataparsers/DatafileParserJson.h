@@ -73,7 +73,7 @@ protected:
 	void setRootNode(std::string root_node) { root_node_ = root_node; };
 
 	/**
-	 * @brief Parse a boost ptree containing a map of game data objects and values into a std::map of pointers to the game data objects and associated values
+	 * @brief Parse a boost ptree containing a map of game data objects and values into a std::map of pointers to the game data objects and primitive type values
 	 * 
 	 * The boost ptree expected by this function should be derived from the following json format:
 	 * @code{.json}
@@ -85,7 +85,7 @@ protected:
 	 * ]
 	 * @endcode
 	 * 
-	 * @tparam U Game data value type
+	 * @tparam U Primitive type of the game data values
 	 * @tparam T Type of the game data objects being parsed, must be derived from GameRuleData
 	 * @param tree Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids
 	 * @return Map of pointers to the game data objects and the values, with the game data objects retrieved from the cache using their ids
@@ -94,7 +94,7 @@ protected:
 	inline std::map<const T*, U> parseGameDataPairTree(boost::optional<const pt::ptree&> tree);
 	
 	/**
-	 * @brief Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and values
+	 * @brief Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and primitive type values
 	 * 
 	 * The boost ptree created by this function will generate the following json format:
 	 * @code{.json}
@@ -106,7 +106,7 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam U Game data value type
+	 * @tparam U Primitive type of the game data values
 	 * @tparam T Game data object type, must be derived from GameRuleData
 	 * @param map Map of pointers to game data objects and values, with the game data objects retrieved from the cache using their ids
 	 * @return Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids

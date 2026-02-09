@@ -1,5 +1,11 @@
 var NAVTREEINDEX2 =
 {
+"class_profession_datafile_parser_xml.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,44,2],
+"class_race_data.html":[2,0,45],
+"class_race_data.html#a08fb0402c8f7c82984eaf1844f219bf3":[2,0,45,71],
+"class_race_data.html#a0ddd1ecc3721130c9d7b68b5d628d9ec":[2,0,45,70],
+"class_race_data.html#a11766b50897c43e6c900f663986a49c2":[2,0,45,66],
+"class_race_data.html#a13214922fe2441aa83a4634226aff7e5":[2,0,45,28],
 "class_race_data.html#a14ad5b3858976acb832e48a0ae87ec14":[2,0,45,53],
 "class_race_data.html#a14e1f20b27e175adabf0017c4cfc4b95":[2,0,45,45],
 "class_race_data.html#a151ba8360d8f435d111b7592b887a402":[2,0,45,21],
@@ -243,11 +249,5 @@ var NAVTREEINDEX2 =
 "class_spell_user_type_1_1_spell_user_type_not_found_exception.html":[0,0,13,0],
 "class_spell_user_type_1_1_spell_user_type_not_found_exception.html":[2,0,6,0],
 "class_spell_user_type_1_1_spell_user_type_not_found_exception.html#a6a74e9e361302a1022747afe329b76cc":[0,0,13,0,0],
-"class_spell_user_type_1_1_spell_user_type_not_found_exception.html#a6a74e9e361302a1022747afe329b76cc":[2,0,6,0,0],
-"class_stat_type_1_1_too_many_stats_exception.html":[0,0,15,0],
-"class_stat_type_1_1_too_many_stats_exception.html":[2,0,7,0],
-"class_stat_type_1_1_too_many_stats_exception.html#af36dfe196f6a1be9e2a21e6315d8514e":[0,0,15,0,0],
-"class_stat_type_1_1_too_many_stats_exception.html#af36dfe196f6a1be9e2a21e6315d8514e":[2,0,7,0,0],
-"class_subcategoried_skill_data.html":[2,0,62],
-"class_subcategoried_skill_data.html#a629e5e9c90245bd10f24ef5af1e2f600":[2,0,62,3]
+"class_spell_user_type_1_1_spell_user_type_not_found_exception.html#a6a74e9e361302a1022747afe329b76cc":[2,0,6,0,0]
 };

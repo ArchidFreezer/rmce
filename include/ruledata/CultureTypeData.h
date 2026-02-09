@@ -306,6 +306,18 @@ public:
 	void addSkillCategoryRank(const SkillCategoryData& category, int ranks) { skill_category_ranks_.emplace(&category, ranks); }
 
 	/**
+	 * @brief Set the number of skill ranks a category receives during adolescence
+	 * @param map Map of SkillCategoryData and int number of adolescent ranks to set for each category
+	 */
+	void setSkillCategoryRanks(std::map<const SkillCategoryData*, int> map) { skill_category_ranks_ = std::move(map); }
+
+	/**
+	 * @brief Get the number of skill ranks a category receives during adolescence
+	 * @return Map of SkillCategoryData and int number of adolescent ranks for each category
+	 */
+	const std::map<const SkillCategoryData*, int>& skillCategoryRanks() const { return skill_category_ranks_; }
+
+	/**
 	 * @brief Get a container of all the skill categories with a adolescent ranks
 	 * @return std::set of categories with adolescent ranks
 	 */
@@ -345,6 +357,18 @@ public:
 	 * @param ranks int number of adolescent ranks to add to a skill in the category
 	 */
 	void addSkillCategorySkillRank(const SkillCategoryData& category, int ranks) { skill_category_skill_ranks_.emplace(&category, ranks); }
+
+	/**
+	 * @brief Set the number of skill ranks a skill in the category receives during adolescence
+	 * @param map Map of SkillCategoryData and int number of adolescent ranks to add to a skill in the category to set for each category
+	 */
+	void setSkillCategorySkillRanks(std::map<const SkillCategoryData*, int> map) { skill_category_skill_ranks_ = std::move(map); }
+
+	/**
+	 * @brief Get the number of skill ranks a skill in the category receives during adolescence
+	 * @return Map of SkillCategoryData and int number of adolescent ranks to add to a skill in the category for each category
+	 */
+	const std::map<const SkillCategoryData*, int>& skillCategorySkillRanks() const { return skill_category_skill_ranks_; }
 
 	/**
 	 * @brief Get a container of all the skill categories with a adolescent ranks to add to a skill

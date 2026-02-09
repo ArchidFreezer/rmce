@@ -200,6 +200,12 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae063087e2bf89348b1fda607a8f50f5a" id="r_ae063087e2bf89348b1fda607a8f50f5a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae063087e2bf89348b1fda607a8f50f5a">setRootNode</a> (std::string root_node)</td></tr>
 <tr class="memdesc:ae063087e2bf89348b1fda607a8f50f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of the root node key in the json file.  <br /></td></tr>
+<tr class="memitem:afed004d75ff39f69ebbf14c1ea75162d" id="r_afed004d75ff39f69ebbf14c1ea75162d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </td></tr>
+<tr class="memitem:afed004d75ff39f69ebbf14c1ea75162d template"><td class="memItemLeft">std::map&lt; const T *, U &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afed004d75ff39f69ebbf14c1ea75162d">parseGameDataPairTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:afed004d75ff39f69ebbf14c1ea75162d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a map of game data objects and values into a std::map of pointers to the game data objects and primitive type values.  <br /></td></tr>
+<tr class="memitem:a3720e43bf11a8d1723bcd93fba06a91f" id="r_a3720e43bf11a8d1723bcd93fba06a91f"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </td></tr>
+<tr class="memitem:a3720e43bf11a8d1723bcd93fba06a91f template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a3720e43bf11a8d1723bcd93fba06a91f">getGameDataPairTree</a> (std::map&lt; const T *, U &gt; map)</td></tr>
+<tr class="memdesc:a3720e43bf11a8d1723bcd93fba06a91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and primitive type values.  <br /></td></tr>
 <tr class="inherit_header pro_methods_class_datafile_parser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_datafile_parser')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="class_datafile_parser.html">DatafileParser</a></td></tr>
 <tr class="memitem:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser" id="r_a4e7a26696510228b1a25308655066ef1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_datafile_parser.html#a4e7a26696510228b1a25308655066ef1">parse</a> ()=0</td></tr>
 <tr class="memdesc:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a ptree into game data objects.  <br /></td></tr>
@@ -323,6 +329,104 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a3720e43bf11a8d1723bcd93fba06a91f" name="a3720e43bf11a8d1723bcd93fba06a91f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3720e43bf11a8d1723bcd93fba06a91f">&#9670;&#160;</a></span>getGameDataPairTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getGameDataPairTree </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; const T *, U &gt;</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and primitive type values. </p>
+<p>The boost ptree created by this function will generate the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;id of the game data object&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;value associated with the game data object&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Primitive type of the game data values </td></tr>
+    <tr><td class="paramname">T</td><td>Game data object type, must be derived from <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>Map of pointers to game data objects and values, with the game data objects retrieved from the cache using their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids </dd></dl>
+
+</div>
+</div>
+<a id="afed004d75ff39f69ebbf14c1ea75162d" name="afed004d75ff39f69ebbf14c1ea75162d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afed004d75ff39f69ebbf14c1ea75162d">&#9670;&#160;</a></span>parseGameDataPairTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; const T *, U &gt; DatafileParserJson::parseGameDataPairTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a map of game data objects and values into a std::map of pointers to the game data objects and primitive type values. </p>
+<p>The boost ptree expected by this function should be derived from the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;id of the game data object&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;value associated with the game data object&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Primitive type of the game data values </td></tr>
+    <tr><td class="paramname">T</td><td>Type of the game data objects being parsed, must be derived from <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Map of pointers to the game data objects and the values, with the game data objects retrieved from the cache using their ids </dd></dl>
+
+</div>
+</div>
 <a id="a4d43f820461e9883fc6003eb928bb980" name="a4d43f820461e9883fc6003eb928bb980"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d43f820461e9883fc6003eb928bb980">&#9670;&#160;</a></span>populateDatum()</h2>
 
