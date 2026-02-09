@@ -1,10 +1,12 @@
 var NAVTREEINDEX2 =
 {
+"class_profession_data.html#af7ae5b1efcadcb40cfa16fb0ca1fd9ee":[2,0,42,25],
+"class_profession_data.html#af8717a166374c822ab8a89a16101f3cd":[2,0,42,17],
 "class_profession_data.html#afa2214fde305496bb889335ad0492d69":[2,0,42,10],
 "class_profession_data.html#afa775b7aead2b6dafb95e58c8f6eaf29":[2,0,42,27],
 "class_profession_data.html#afc26d174925c9d4056bb8edbb6b06103":[2,0,42,38],
 "class_profession_data.html#afd7ee141747ea4fa0dff4b2810915ee1":[2,0,42,26],
-"class_profession_data.html#aff52628eb28eb2c83350a362095e7d20":[2,0,42,53],
+"class_profession_data.html#aff52628eb28eb2c83350a362095e7d20":[2,0,42,54],
 "class_profession_data_1_1_invalid_category_development_cost.html":[2,0,42,0],
 "class_profession_data_1_1_invalid_category_development_cost.html#a384a8f466d0019e0767e33177ef8d24e":[2,0,42,0,0],
 "class_profession_data_1_1_invalid_skill_bonus.html":[2,0,42,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "class_special_attack_table.html#ac659fe76c9313ad41d40e0fb40674bc9":[2,0,58,9],
 "class_special_attack_table.html#ac9eed1be5a4d1b07fcc5fc6bd9cf4275":[2,0,58,4],
 "class_special_attack_table.html#ad43308309e7c07c7a0c28d688c765f6e":[2,0,58,7],
-"class_special_attack_table.html#adfa1dc23f6ab9090ac8b3e512b55a24f":[2,0,58,3],
-"class_special_attack_table.html#ae68b213dcbed0ee0142de15b6d6d9155":[2,0,58,8],
-"class_special_attack_table_datafile_parser_json.html":[2,0,59]
+"class_special_attack_table.html#adfa1dc23f6ab9090ac8b3e512b55a24f":[2,0,58,3]
 };

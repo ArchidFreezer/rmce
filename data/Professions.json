@@ -12002,8 +12002,8 @@
             ],
             "skill-group-special-bonuses": [
                 {
-                    "group": "SKILLGROUP_AWARENESS",
-                    "bonus": "5"
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
                 }
             ]
         },

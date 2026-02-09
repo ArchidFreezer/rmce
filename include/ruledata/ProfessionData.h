@@ -340,6 +340,18 @@ public:
 	void addSkillGroupSpecialBonus(const SkillGroupData& group, int bonus) { skill_group_special_bonuses_.emplace(&group, bonus); }
 
 	/**
+	 * @brief Sets the object's skill group special bonuses from the provided map, replacing any existing bonuses.
+	 * @param bonuses A map from const SkillGroupData* to int containing skill category special bonuses. The map is assigned to the object's internal skill_group_special_bonuses_ member, replacing its previous contents.
+	 */
+	void setSkillGroupSpecialBonuses(const std::map<const SkillGroupData*, int>& bonuses) { skill_group_special_bonuses_ = bonuses; }
+
+	/**
+	 * @brief Get a container with groups that the profession has a special bonus for
+	 * @return std::map of const SkillGroupData* and bonus value
+	 */
+	const std::map<const SkillGroupData*, int>& skillGroupSpecialBonuses() const { return skill_group_special_bonuses_; }
+
+	/**
 	 * @brief Get a container with groups that add a special bonus to skills
 	 * @return std::set of group names
 	 */
