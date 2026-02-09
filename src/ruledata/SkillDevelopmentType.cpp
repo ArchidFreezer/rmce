@@ -23,3 +23,9 @@ const std::optional<SkillDevelopmentType::Type> SkillDevelopmentType::fromString
 
 	return {};
 }
+
+void SkillDevelopmentType::fromString(std::string_view sv, Type& type) {
+	std::optional<Type> opt_type = fromString(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for SkillDevelopmentType::Type: " + std::string(sv));
+}
