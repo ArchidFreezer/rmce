@@ -3,6 +3,7 @@
 #include <iostream>
 #include <DatafileParser.h>
 #include <LanguageAbility.h>
+#include <SkillDevelopmentType.h>
 
 /**
  * @class DatafileParserJson
@@ -114,6 +115,13 @@ protected:
 	 */
 	template<GameRuleDataObject T, typename U>
 	inline const pt::ptree getGameDataPairTree(std::map<const T*, U> map);
+
+	template<GameRuleDataObject T, typename U>
+	inline std::map<const T*, U> parseGameDataPairEnumTree(boost::optional<const pt::ptree&> tree);
+
+
+	template<GameRuleDataObject T, typename U>
+	inline const pt::ptree getGameDataPairEnumTree(std::map<const T*, U> map);
 
 	/**
 	 * @brief Parse a boost ptree containing a map of skills and values into a std::map of SubcategoriedSkillData and primitive type values
@@ -279,6 +287,39 @@ inline const pt::ptree DatafileParserJson::getGameDataPairTree(std::map<const T*
 		pt::ptree value_tree{};
 		value_tree.put("id", pair.first);
 		value_tree.put("value", map[pair.second]);
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+template<GameRuleDataObject T, typename U>
+inline std::map<const T*, U> DatafileParserJson::parseGameDataPairEnumTree(boost::optional<const pt::ptree&> tree) {
+	std::map<const T*, U> datum{};
+
+	if (tree) {
+		for (const auto& items : tree.get()) {
+			std::string id{ items.second.get<std::string>("id") };
+			U enum_val {};
+			fromString(items.second.get<std::string>("value"), enum_val);
+			datum.emplace(&factory().get<T>(id), enum_val);
+		}
+	}
+	return datum;
+}
+
+template<GameRuleDataObject T, typename U>
+inline const pt::ptree DatafileParserJson::getGameDataPairEnumTree(std::map<const T*, U> map) {
+	pt::ptree tree{};
+
+	std::map<std::string, const T*> sorted_map{};
+	for (const auto& pair : map) {
+		sorted_map.emplace(pair.first->id(), pair.first);
+	}
+
+	for (const auto& pair : sorted_map) {
+		pt::ptree value_tree{};
+		value_tree.put("id", pair.first);
+		value_tree.put("value", toString(map[pair.second]));
 		tree.push_back(std::make_pair("", value_tree));
 	}
 	return tree;
