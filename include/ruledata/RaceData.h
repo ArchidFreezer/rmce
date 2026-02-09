@@ -701,6 +701,14 @@ public:
 	}
 
 	/**
+	 * @brief Sets the everyman skill categories
+	 * @param categories A set of pointers to SkillCategoryData to mark as everyman.
+	 */
+	void setEverymanSkillCategories(const std::set<const SkillCategoryData*>& categories) {
+		everyman_skill_categories_ = categories;
+	}
+
+	/**
 	 * @brief Get a container of the skill categories that are considered everyman
 	 * @return std::set container of everyman skill categories
 	 */
@@ -730,6 +738,14 @@ public:
 		if (isEverymanSkillCategory(category)) throw InvalidSkillDevelopment("Cannot set " + category.id() + " as restricted as it is already set as everyman");
 		if (isRestrictedSkillCategory(category)) throw InvalidSkillDevelopment("Cannot set " + category.id() + " as restricted as it is already defined");
 		restricted_skill_categories_.insert(&category);
+	}
+
+	/**
+	 * @brief Sets the restricted skill categories
+	 * @param categories A set of pointers to SkillCategoryData to mark as restricted.
+	 */
+	void setRestrictedSkillCategories(const std::set<const SkillCategoryData*>& categories) {
+		restricted_skill_categories_ = categories;
 	}
 
 	/**
@@ -764,18 +780,10 @@ public:
 	}
 
 	/**
-	 * @brief Adds multiple skill bonuses from the provided map into the object's internal skill_bonuses_.
-	 * 
-	 * If any entry conflicts with an existing bonus for the same skill and subcategory, throws InvalidSkillBonus and does not perform the insertion.
-	 * 
-	 * @param bonuses A map from SubcategoriedSkillData (identifies a skill and its subcategory) to an int bonus value.
-	 * @throws InvalidSkillBonus if any skill in the input map already has a bonus defined in the object, preventing insertion of any bonuses.
+	 * @brief Sets the skill bonuses the race provides
 	 */
-	void addSkillBonuses(const std::map<SubcategoriedSkillData, int>& bonuses) {
-		for (auto& key : bonuses) {
-			if (isBonusSkill(key.first.skillData(), key.first.subcategory())) throw InvalidSkillBonus("There is already a bonus set for skill " + key.first.id());
-		}
-		skill_bonuses_.insert(bonuses.begin(), bonuses.end());
+	void setSkillBonuses(const std::map<SubcategoriedSkillData, int>& bonuses) {
+		skill_bonuses_ = bonuses;
 	}
 
 	/**

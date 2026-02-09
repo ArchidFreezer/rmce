@@ -119,23 +119,13 @@ void RaceDatafileParserJson::parse() {
 		}
 
 		// Everyman skill categories
-		if (boost::optional<const pt::ptree&> everyman_categories = v.second.get_child_optional("everyman-categories")) {
-			for (const auto& everyman_category : everyman_categories.get()) {
-				std::string category_name{ everyman_category.second.get_value<std::string>()};
-				ref.addEverymanSkillCategory(factory().get<SkillCategoryData>(category_name));
-			}
-		}
+		ref.setEverymanSkillCategories(parseGameDataSetTree<SkillCategoryData>(v.second.get_child_optional("everyman-categories")));
 
 		// Restricted skill categories
-		if (boost::optional<const pt::ptree&> restricted_categories = v.second.get_child_optional("restricted-categories")) {
-			for (const auto& restricted_category : restricted_categories.get()) {
-				std::string category_name{ restricted_category.second.get_value<std::string>() };
-				ref.addRestrictedSkillCategory(factory().get<SkillCategoryData>(category_name));
-			}
-		}
+		ref.setRestrictedSkillCategories(parseGameDataSetTree<SkillCategoryData>(v.second.get_child_optional("restricted-categories")));
 
 		// Get skill bonuses
-		ref.addSkillBonuses(parseSkillPairTree<int>(v.second.get_child_optional("skill-bonuses")));
+		ref.setSkillBonuses(parseSkillPairTree<int>(v.second.get_child_optional("skill-bonuses")));
 
 		// Get the skill category everyman choices
 		if (boost::optional<const pt::ptree&> category_choices = v.second.get_child_optional("skill-category-choices-everyman")) {
@@ -241,32 +231,16 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	if (restricted_skills_tree.size()) datum.push_back(std::make_pair("restricted-skills", restricted_skills_tree));
 
 	// Everyman categories
-	pt::ptree everyman_categories_tree{};
-	// The categories are stored as a pointer so are not alpha sorted by name so we do that first to ensure consistent data file order
-	std::set<std::string> everyman_category_set{};
-	for (auto& category : game_data.everymanSkillCategories()) {
-		everyman_category_set.insert(category->id());
+	{
+		pt::ptree tree{ getGameDataSetTree<SkillCategoryData>(game_data.everymanSkillCategories()) };
+		if (tree.size()) datum.push_back(std::make_pair("everyman-categories", tree));
 	}
-	for (auto& category : everyman_category_set) {
-		pt::ptree everyman_category_tree{};
-		everyman_category_tree.put("", category);
-		everyman_categories_tree.push_back(std::make_pair("", everyman_category_tree));
-	}
-	if (everyman_categories_tree.size()) datum.push_back(std::make_pair("everyman-categories", everyman_categories_tree));
 
 	// Restricted categories
-	pt::ptree restricted_categories_tree{};
-	// The categories are stored as a pointer so are not alpha sorted by name so we do that first to ensure consistent data file order
-	std::set<std::string> restricted_category_set{};
-	for (auto& category : game_data.restrictedSkillCategories()) {
-		restricted_category_set.insert(category->id());
+	{
+		pt::ptree tree{ getGameDataSetTree<SkillCategoryData>(game_data.restrictedSkillCategories())};
+		if (tree.size()) datum.push_back(std::make_pair("restricted-categories", tree));
 	}
-	for (auto& category : restricted_category_set) {
-		pt::ptree restricted_category_tree{};
-		restricted_category_tree.put("", category);
-		restricted_categories_tree.push_back(std::make_pair("", restricted_category_tree));
-	}
-	if (restricted_categories_tree.size()) datum.push_back(std::make_pair("restricted-categories", restricted_categories_tree));
 
 	// Skill bonuses
 	{
