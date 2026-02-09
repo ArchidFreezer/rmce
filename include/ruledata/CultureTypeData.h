@@ -250,6 +250,23 @@ public:
 	}
 
 	/**
+	 * @brief Set the map of skills and ranks the culture provides during adolescence
+	 * @param map Map of SubcategoriedSkillData and int number of ranks for each skill to set
+	 */
+	void setSkillRanks(std::map<SubcategoriedSkillData, int> map) {
+		for (auto& key : std::views::keys(map)) {
+			if (isRankSkill(key.skillData(), key.subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + key.id());
+		}
+		skill_ranks_ = std::move(map);
+	}
+
+	/**
+	 * @brief Get the map of skills and ranks the culture provides during adolescence
+	 * @return Map of SubcategoriedSkillData and int number of ranks for each skill
+	 */
+	const std::map<SubcategoriedSkillData, int>& skillRanks() const { return skill_ranks_; }
+
+	/**
 	 * @brief Get the number of ranks for a skill the culture provides during adolescence
 	 * @param skill SubcategoriedSkillData to get the ranks for
 	 * @return number of ranks

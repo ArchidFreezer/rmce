@@ -37,18 +37,7 @@ void CultureTypeDatafileParserJson::parse() {
 		}
 
 		// Get skill ranks
-		if (boost::optional<const pt::ptree&> skill_ranks = v.second.get_child_optional("skill-ranks")) {
-			for (const auto& skill_rank_tree : skill_ranks.get()) {
-				std::string skill_name{ skill_rank_tree.second.get<std::string>("skill") };
-				boost::optional<std::string> subcategory = skill_rank_tree.second.get_optional<std::string>("subcategory");
-				int rank{ skill_rank_tree.second.get<int>("rank") };
-				if (subcategory) {
-					ref.addSkillRank(factory().subcategoriedSkillData(skill_name, subcategory.get()), rank);
-				} else {
-					ref.addSkillRank(factory().subcategoriedSkillData(skill_name), rank);
-				}
-			}
-		}
+		ref.setSkillRanks(parseSkillPairTree<int>(v.second.get_child_optional("skill-ranks")));
 
 		// Get skill category ranks
 		ref.setSkillCategoryRanks(parseGameDataPairTree<SkillCategoryData, int>(v.second.get_child_optional("skill-category-ranks")));
@@ -141,15 +130,10 @@ void CultureTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& da
 	datum.push_back(std::make_pair("preferred-weapons", weapons_tree));
 
 	// Skill ranks
-	pt::ptree skill_ranks_tree{};
-	for (auto& skill : game_data.skillsWithRanks()) {
-		pt::ptree skill_rank_tree{};
-		skill_rank_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_rank_tree.put("subcategory", skill.subcategory().value());
-		skill_rank_tree.put("rank", game_data.skillRank(skill));
-		skill_ranks_tree.push_back(std::make_pair("", skill_rank_tree));
+	{
+		pt::ptree tree{ getSkillPairTree<int>(game_data.skillRanks()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-ranks", tree));
 	}
-	if (!skill_ranks_tree.empty()) datum.push_back(std::make_pair("skill-ranks", skill_ranks_tree));
 
 	// Skill category ranks
 	{

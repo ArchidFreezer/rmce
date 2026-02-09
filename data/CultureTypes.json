@@ -33,42 +33,42 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "2"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CLIMBING",
-                    "rank": "5"
+                    "id": "SKILL_CLIMBING",
+                    "value": "5"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_HIDING",
-                    "rank": "1"
+                    "id": "SKILL_HIDING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "8"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "8"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_SOFT_LEATHER",
-                    "rank": "1"
+                    "id": "SKILL_SOFT_LEATHER",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_STALKING",
-                    "rank": "1"
+                    "id": "SKILL_STALKING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "1"
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
                 }
             ],
             "skill-category-ranks": [
@@ -180,31 +180,31 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "2"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "8"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "8"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIDING",
+                    "id": "SKILL_RIDING",
                     "subcategory": "Sea-horse",
-                    "rank": "1"
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "5"
+                    "id": "SKILL_SWIMMING",
+                    "value": "5"
                 }
             ],
             "skill-category-ranks": [
@@ -301,38 +301,38 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "1"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_HIDING",
-                    "rank": "1"
+                    "id": "SKILL_HIDING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "4"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "4"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_SOFT_LEATHER",
-                    "rank": "2"
+                    "id": "SKILL_SOFT_LEATHER",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_STALKING",
-                    "rank": "1"
+                    "id": "SKILL_STALKING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "1"
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
                 }
             ],
             "skill-category-ranks": [
@@ -440,27 +440,27 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "1"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "4"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "4"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIDING",
+                    "id": "SKILL_RIDING",
                     "subcategory": "Horse",
-                    "rank": "5"
+                    "value": "5"
                 }
             ],
             "skill-category-ranks": [
@@ -689,34 +689,34 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "2"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CLIMBING",
-                    "rank": "1"
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "2"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIGID_LEATHER",
-                    "rank": "1"
+                    "id": "SKILL_RIGID_LEATHER",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "5"
+                    "id": "SKILL_SWIMMING",
+                    "value": "5"
                 }
             ],
             "skill-category-ranks": [
@@ -830,34 +830,34 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "4"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "4"
                 },
                 {
-                    "skill": "SKILL_CHAIN",
-                    "rank": "2"
+                    "id": "SKILL_CHAIN",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CLIMBING",
-                    "rank": "1"
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "8"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "8"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIGID_LEATHER",
-                    "rank": "2"
+                    "id": "SKILL_RIGID_LEATHER",
+                    "value": "2"
                 }
             ],
             "skill-category-ranks": [
@@ -962,27 +962,27 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "2"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "6"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "6"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIDING",
+                    "id": "SKILL_RIDING",
                     "subcategory": "Horse",
-                    "rank": "3"
+                    "value": "3"
                 }
             ],
             "skill-category-ranks": [
@@ -1103,47 +1103,47 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "2"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_HIDING",
-                    "rank": "1"
+                    "id": "SKILL_HIDING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "8"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "8"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIDING",
+                    "id": "SKILL_RIDING",
                     "subcategory": "Horse",
-                    "rank": "1"
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_RIGID_LEATHER",
-                    "rank": "1"
+                    "id": "SKILL_RIGID_LEATHER",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SOFT_LEATHER",
-                    "rank": "1"
+                    "id": "SKILL_SOFT_LEATHER",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_STALKING",
-                    "rank": "1"
+                    "id": "SKILL_STALKING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "1"
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
                 }
             ],
             "skill-category-ranks": [
@@ -1378,43 +1378,43 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "6"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "6"
                 },
                 {
-                    "skill": "SKILL_CLIMBING",
-                    "rank": "2"
+                    "id": "SKILL_CLIMBING",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_HIDING",
-                    "rank": "4"
+                    "id": "SKILL_HIDING",
+                    "value": "4"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "10"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "10"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIDING",
+                    "id": "SKILL_RIDING",
                     "subcategory": "Horses",
-                    "rank": "1"
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_STALKING",
-                    "rank": "4"
+                    "id": "SKILL_STALKING",
+                    "value": "4"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "3"
+                    "id": "SKILL_SWIMMING",
+                    "value": "3"
                 }
             ],
             "skill-category-ranks": [
