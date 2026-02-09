@@ -96,6 +96,7 @@ var namespaces_dup =
         [ "kStandard", "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba821da62632c491ea619ead7b31c094bf", null ]
       ] ],
       [ "fromString", "namespace_skill_development_type.html#af6cc51b583e4c9f762214a2d0e2b76e7", null ],
+      [ "fromString", "namespace_skill_development_type.html#a62b9163f65a5855bbc977252fe75f568", null ],
       [ "operator<<", "namespace_skill_development_type.html#a0c8feea403ee3e058364f7fcd135f976", null ],
       [ "toString", "namespace_skill_development_type.html#a6d7ff6ceb406f3f60ee4d3f6a23d53f5", null ]
     ] ],

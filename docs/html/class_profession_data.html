@@ -233,6 +233,10 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:afa775b7aead2b6dafb95e58c8f6eaf29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if there is a development type set for a skill.  <br /></td></tr>
 <tr class="memitem:abbec8ef3752671f1496aea7d14dbbac7" id="r_abbec8ef3752671f1496aea7d14dbbac7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abbec8ef3752671f1496aea7d14dbbac7">addSkillCategorySkillDevelopmentType</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> type)</td></tr>
 <tr class="memdesc:abbec8ef3752671f1496aea7d14dbbac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add skill development type for all skills in a category.  <br /></td></tr>
+<tr class="memitem:a8fca09749a5bcd3422cb7e30d05b1a92" id="r_a8fca09749a5bcd3422cb7e30d05b1a92"><td class="memItemLeft"><a id="a8fca09749a5bcd3422cb7e30d05b1a92" name="a8fca09749a5bcd3422cb7e30d05b1a92"></a>
+void&#160;</td><td class="memItemRight"><b>setSkillCategorySkillDevelopmentTypes</b> (const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; types)</td></tr>
+<tr class="memitem:aea4fb341f1f22cb2b2792bf74ac5d8b8" id="r_aea4fb341f1f22cb2b2792bf74ac5d8b8"><td class="memItemLeft">const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aea4fb341f1f22cb2b2792bf74ac5d8b8">skillCategorySkillDevelopmentTypes</a> () const</td></tr>
+<tr class="memdesc:aea4fb341f1f22cb2b2792bf74ac5d8b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the skill categories that the profession has a skill development type for.  <br /></td></tr>
 <tr class="memitem:ad24eae9375e680d892f96ccf0d31b421" id="r_ad24eae9375e680d892f96ccf0d31b421"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad24eae9375e680d892f96ccf0d31b421">skillCategoriesWithSkillDevelopmentType</a> () const</td></tr>
 <tr class="memdesc:ad24eae9375e680d892f96ccf0d31b421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container of all the skill categories with a <a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a>.  <br /></td></tr>
 <tr class="memitem:a46b356b89ccbf287a8952cbf7e163084" id="r_a46b356b89ccbf287a8952cbf7e163084"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a46b356b89ccbf287a8952cbf7e163084">isSkillDevelopmentTypeSkillCategory</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;category) const</td></tr>
@@ -2296,6 +2300,34 @@ Additional Inherited Members</h2></td></tr>
 <p>Get a container with the choices the character needs to make to select one or more skills within a skill category that may have their development type changed. </p>
 <dl class="section return"><dt>Returns</dt><dd>vector of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
+
+</div>
+</div>
+<a id="aea4fb341f1f22cb2b2792bf74ac5d8b8" name="aea4fb341f1f22cb2b2792bf74ac5d8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea4fb341f1f22cb2b2792bf74ac5d8b8">&#9670;&#160;</a></span>skillCategorySkillDevelopmentTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp; ProfessionData::skillCategorySkillDevelopmentTypes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a container with the skill categories that the profession has a skill development type for. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::map of const SkillCategoryData* and <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b" title="Enumeration class representing number of skill ranks gained for each rank purchased.">SkillDevelopmentType::Type</a> </dd></dl>
 
 </div>
 </div>

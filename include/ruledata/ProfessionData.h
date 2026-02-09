@@ -501,6 +501,18 @@ public:
 	void addSkillCategorySkillDevelopmentType(const SkillCategoryData& category, SkillDevelopmentType::Type type) { skill_category_skill_development_types_.emplace(&category, type); }
 
 	/**
+	 * @brief Sets the mapping of skill categories to their development types.
+	 * @param types A map (copied) from pointers to SkillCategoryData to SkillDevelopmentType::Type that specifies the development type for each skill category. The map is assigned to the object's skill_category_skill_development_types_ member.
+	 */
+	void setSkillCategorySkillDevelopmentTypes(const std::map<const SkillCategoryData*, SkillDevelopmentType::Type> types) { skill_category_skill_development_types_ = types; }
+
+	/**
+	 * @brief Get a container with the skill categories that the profession has a skill development type for
+	 * @return std::map of const SkillCategoryData* and SkillDevelopmentType::Type
+	 */
+	const std::map<const SkillCategoryData*, SkillDevelopmentType::Type>& skillCategorySkillDevelopmentTypes() const { return skill_category_skill_development_types_; }
+
+	/**
 	 * @brief Get a container of all the skill categories with a SkillDevelopmentType
 	 * @return std::set of categories with a SkillDevelopmentType
 	 */

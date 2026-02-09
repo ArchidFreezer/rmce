@@ -9131,8 +9131,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -9798,8 +9798,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -11400,12 +11400,12 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_ARTISTIC_PASSIVE",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "value": "Everyman"
                 },
                 {
-                    "category": "SKILLCATEGORY_CRAFTS",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -11736,8 +11736,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -12063,8 +12063,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_LORE_MAGICAL",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -12696,8 +12696,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -16642,8 +16642,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -16973,8 +16973,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -17637,8 +17637,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -17954,12 +17954,12 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "Everyman"
                 },
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -18594,12 +18594,12 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_INFLUENCE",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "Everyman"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -19924,8 +19924,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -20572,8 +20572,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -20885,12 +20885,12 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "development-type": "Occupational"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "Occupational"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "development-type": "Occupational"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-skill-development-type-choices": [
@@ -21240,8 +21240,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -21565,8 +21565,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -21901,8 +21901,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -22582,8 +22582,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [
@@ -22886,8 +22886,8 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "development-type": "Everyman"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-costs": [

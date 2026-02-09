@@ -64,6 +64,7 @@ var class_profession_data =
     [ "skillCategoryProfessionBonuses", "class_profession_data.html#af4e11a2912113cab90d68a59a0e6f0d2", null ],
     [ "skillCategorySkillDevelopmentType", "class_profession_data.html#aa4b75c5a60cd8ae160e1da682a964500", null ],
     [ "skillCategorySkillDevelopmentTypeChoices", "class_profession_data.html#a1c338b53d32da0336f671f2396d30766", null ],
+    [ "skillCategorySkillDevelopmentTypes", "class_profession_data.html#aea4fb341f1f22cb2b2792bf74ac5d8b8", null ],
     [ "skillCategorySpecialBonus", "class_profession_data.html#a59236fdce5cbf763d37df849d3a6e4e3", null ],
     [ "skillCategorySpecialBonuses", "class_profession_data.html#a43be77177dee4e2a13833c9088d17707", null ],
     [ "skillDevelopmentType", "class_profession_data.html#a1fced89c45563ec2775dd2c84bde14fe", null ],
