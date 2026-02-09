@@ -170,8 +170,8 @@
             ]
         },
         {
-            "id": "SKILLCATEGORY_COMMUNICATIONS",
-            "group": "SKILLGROUP_COMMUNICATIONS",
+            "id": "SKILLCATEGORY_COMMUNICATION",
+            "group": "SKILLGROUP_COMMUNICATION",
             "name": "Communications",
             "use-realm-stats": "false",
             "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",

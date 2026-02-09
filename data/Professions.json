@@ -124,7 +124,7 @@
                     "cost": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -433,7 +433,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -745,7 +745,7 @@
                     "cost": "4:10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -1102,7 +1102,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "1:1:1"
                 },
                 {
@@ -1348,7 +1348,7 @@
                     "bonus": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "bonus": "5"
                 },
                 {
@@ -1418,7 +1418,7 @@
                     "cost": "6:14"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "1:1:1"
                 },
                 {
@@ -1752,7 +1752,7 @@
                     "cost": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -2068,7 +2068,7 @@
                     "cost": "5:12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -2387,7 +2387,7 @@
                     "cost": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -2727,7 +2727,7 @@
                     "cost": "6:14"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -3032,7 +3032,7 @@
                     "cost": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -3333,7 +3333,7 @@
                     "cost": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -3592,7 +3592,7 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "bonus": "5"
                 },
                 {
@@ -3674,7 +3674,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "1:1:1"
                 },
                 {
@@ -4017,7 +4017,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -4324,7 +4324,7 @@
                     "cost": "3:9"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -4673,7 +4673,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -4992,7 +4992,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "1:1:1"
                 },
                 {
@@ -5296,7 +5296,7 @@
                     "cost": "4:12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -5655,7 +5655,7 @@
                     "cost": "14"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -5961,7 +5961,7 @@
                     "cost": "4:12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -6211,7 +6211,7 @@
                     "bonus": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "bonus": "5"
                 },
                 {
@@ -6281,7 +6281,7 @@
                     "cost": "6:14"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "1:1:1"
                 },
                 {
@@ -6608,7 +6608,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -6919,7 +6919,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -7262,7 +7262,7 @@
                     "cost": "14"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -7585,7 +7585,7 @@
                     "cost": "14"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -7901,7 +7901,7 @@
                     "cost": "5:12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -8242,7 +8242,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "1:1:1"
                 },
                 {
@@ -8550,7 +8550,7 @@
                     "cost": "5:12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -8864,7 +8864,7 @@
                     "cost": "4:10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -9189,7 +9189,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -9438,7 +9438,7 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "bonus": "10"
                 },
                 {
@@ -9512,7 +9512,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -9856,7 +9856,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -10168,7 +10168,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -10497,7 +10497,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -10812,7 +10812,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -11140,7 +11140,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -11471,7 +11471,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -11794,7 +11794,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -12121,7 +12121,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -12437,7 +12437,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -12754,7 +12754,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -13089,7 +13089,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -13421,7 +13421,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -13694,7 +13694,7 @@
                     "bonus": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "bonus": "5"
                 },
                 {
@@ -13770,7 +13770,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -14081,7 +14081,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -14404,7 +14404,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -14740,7 +14740,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -15063,7 +15063,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -15414,7 +15414,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -15733,7 +15733,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -16064,7 +16064,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -16377,7 +16377,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -16622,7 +16622,7 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "bonus": "10"
                 },
                 {
@@ -16642,7 +16642,7 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "development-type": "Everyman"
                 }
             ],
@@ -16700,7 +16700,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -17031,7 +17031,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -17372,7 +17372,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -17695,7 +17695,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -17940,7 +17940,7 @@
                     "bonus": "10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "bonus": "10"
                 },
                 {
@@ -17954,7 +17954,7 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "development-type": "Everyman"
                 },
                 {
@@ -18016,7 +18016,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -18339,7 +18339,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -18656,7 +18656,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -18986,7 +18986,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -19235,7 +19235,7 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "bonus": "10"
                 },
                 {
@@ -19301,7 +19301,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -19644,7 +19644,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -19982,7 +19982,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -20247,7 +20247,7 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "bonus": "10"
                 },
                 {
@@ -20321,7 +20321,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -20630,7 +20630,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -20963,7 +20963,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -21298,7 +21298,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -21623,7 +21623,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -21959,7 +21959,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -22295,7 +22295,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -22640,7 +22640,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -22886,7 +22886,7 @@
             ],
             "skill-category-skill-development-types": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "development-type": "Everyman"
                 }
             ],
@@ -22944,7 +22944,7 @@
                     "cost": "12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -23251,7 +23251,7 @@
                     "cost": "5:12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -23487,10 +23487,10 @@
                     "development-type": "Everyman",
                     "skills": [
                         {
-                            "skill": "SKILL_TACKLING"
+                            "skill": "SKILL_BOXING"
                         },
                         {
-                            "skill": "SKILL_BOXING"
+                            "skill": "SKILL_TACKLING"
                         }
                     ]
                 }
@@ -23572,7 +23572,7 @@
                     "cost": "4:10"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -23834,7 +23834,7 @@
             ],
             "skill-category-profession-bonuses": [
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "bonus": "5"
                 },
                 {
@@ -23908,7 +23908,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "1:1:1"
                 },
                 {
@@ -24239,7 +24239,7 @@
                     "cost": "14"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "1:1:1"
                 },
                 {
@@ -24572,7 +24572,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -24897,7 +24897,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -25191,7 +25191,7 @@
                     "cost": "5:12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -25510,7 +25510,7 @@
                     "cost": "4:12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -25843,7 +25843,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -26147,7 +26147,7 @@
                     "cost": "5:12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -26458,7 +26458,7 @@
                     "cost": "4:9"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {
@@ -26763,7 +26763,7 @@
                     "cost": "18"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "2:2:2"
                 },
                 {
@@ -27065,7 +27065,7 @@
                     "cost": "5:12"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATIONS",
+                    "category": "SKILLCATEGORY_COMMUNICATION",
                     "cost": "3:3:3"
                 },
                 {

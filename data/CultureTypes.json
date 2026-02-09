@@ -59,7 +59,7 @@
                     "value": "3"
                 },
                 {
-                    "id": "SKILL_SOFT_LEATHER",
+                    "id": "SKILL_SOFT_LEATHER_ARMOUR",
                     "value": "1"
                 },
                 {
@@ -117,11 +117,11 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "value": "1"
                 },
                 {
@@ -135,11 +135,11 @@
             ],
             "skill-category-skill-ranks": [
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "value": "1"
                 },
                 {
@@ -323,7 +323,7 @@
                     "value": "3"
                 },
                 {
-                    "id": "SKILL_SOFT_LEATHER",
+                    "id": "SKILL_SOFT_LEATHER_ARMOUR",
                     "value": "2"
                 },
                 {
@@ -377,7 +377,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "value": "1"
                 },
                 {
@@ -391,7 +391,7 @@
             ],
             "skill-category-skill-ranks": [
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "value": "1"
                 },
                 {
@@ -404,8 +404,8 @@
                 }
             ],
             "required-climates": [
-                "CLIMATETYPE_COLD_DRY",
-                "CLIMATETYPE_FRIGID"
+                "CLIMATE_COLD_DRY",
+                "CLIMATE_FRIGID"
             ],
             "required-vegetations": [
                 "Tundra"
@@ -509,7 +509,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "value": "1"
                 },
                 {
@@ -523,7 +523,7 @@
             ],
             "skill-category-skill-ranks": [
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "value": "1"
                 },
                 {
@@ -536,7 +536,7 @@
                 }
             ],
             "required-climates": [
-                "CLIMATETYPE_HOT_DRY"
+                "CLIMATE_HOT_DRY"
             ],
             "required-water-sources": [
                 "Desert"
@@ -616,7 +616,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "value": "1"
                 },
                 {
@@ -634,7 +634,7 @@
             ],
             "skill-category-skill-ranks": [
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "value": "1"
                 },
                 {
@@ -711,7 +711,7 @@
                     "value": "3"
                 },
                 {
-                    "id": "SKILL_RIGID_LEATHER",
+                    "id": "SKILL_RIGID_LEATHER_ARMOUR",
                     "value": "1"
                 },
                 {
@@ -765,7 +765,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "value": "2"
                 },
                 {
@@ -779,7 +779,7 @@
             ],
             "skill-category-skill-ranks": [
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "value": "2"
                 },
                 {
@@ -834,7 +834,7 @@
                     "value": "4"
                 },
                 {
-                    "id": "SKILL_CHAIN",
+                    "id": "SKILL_CHAIN_ARMOUR",
                     "value": "2"
                 },
                 {
@@ -856,7 +856,7 @@
                     "value": "3"
                 },
                 {
-                    "id": "SKILL_RIGID_LEATHER",
+                    "id": "SKILL_RIGID_LEATHER_ARMOUR",
                     "value": "2"
                 }
             ],
@@ -1031,7 +1031,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "value": "1"
                 },
                 {
@@ -1049,7 +1049,7 @@
             ],
             "skill-category-skill-ranks": [
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "value": "1"
                 },
                 {
@@ -1066,10 +1066,10 @@
                 }
             ],
             "required-climates": [
-                "CLIMATETYPE_COLD_DRY",
-                "CLIMATETYPE_COOL_DRY",
-                "CLIMATETYPE_HOT_DRY",
-                "CLIMATETYPE_WARM_DRY"
+                "CLIMATE_COLD_DRY",
+                "CLIMATE_COOL_DRY",
+                "CLIMATE_HOT_DRY",
+                "CLIMATE_WARM_DRY"
             ],
             "required-vegetations": [
                 "Plains"
@@ -1130,11 +1130,11 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILL_RIGID_LEATHER",
+                    "id": "SKILL_RIGID_LEATHER_ARMOUR",
                     "value": "1"
                 },
                 {
-                    "id": "SKILL_SOFT_LEATHER",
+                    "id": "SKILL_SOFT_LEATHER_ARMOUR",
                     "value": "1"
                 },
                 {
@@ -1317,7 +1317,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "value": "2"
                 },
                 {
@@ -1331,7 +1331,7 @@
             ],
             "skill-category-skill-ranks": [
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "value": "2"
                 },
                 {
@@ -1471,7 +1471,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "value": "1"
                 },
                 {
@@ -1481,7 +1481,7 @@
             ],
             "skill-category-skill-ranks": [
                 {
-                    "id": "SKILLCATEGORY_WEAPON_0_H_EDGED",
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "value": "1"
                 },
                 {
