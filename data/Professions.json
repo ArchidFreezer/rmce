@@ -10368,8 +10368,8 @@
             ],
             "skill-group-skill-development-types": [
                 {
-                    "group": "SKILLGROUP_ARTISTIC",
-                    "development-type": "Everyman"
+                    "id": "SKILLGROUP_ARTISTIC",
+                    "value": "Everyman"
                 }
             ],
             "skill-group-skill-development-type-choices": [
@@ -15614,8 +15614,8 @@
             ],
             "skill-group-skill-development-types": [
                 {
-                    "group": "SKILLGROUP_OUTDOOR",
-                    "development-type": "Everyman"
+                    "id": "SKILLGROUP_OUTDOOR",
+                    "value": "Everyman"
                 }
             ]
         },
@@ -17568,8 +17568,8 @@
             ],
             "skill-group-skill-development-types": [
                 {
-                    "group": "SKILLGROUP_ARMOUR",
-                    "development-type": "Restricted"
+                    "id": "SKILLGROUP_ARMOUR",
+                    "value": "Restricted"
                 }
             ],
             "skill-group-skill-development-type-choices": [
@@ -19509,8 +19509,8 @@
             ],
             "skill-group-skill-development-types": [
                 {
-                    "group": "SKILLGROUP_ARTISTIC",
-                    "development-type": "Everyman"
+                    "id": "SKILLGROUP_ARTISTIC",
+                    "value": "Everyman"
                 }
             ],
             "skill-group-skill-development-type-choices": [
@@ -19856,8 +19856,8 @@
             ],
             "skill-group-skill-development-types": [
                 {
-                    "group": "SKILLGROUP_OUTDOOR",
-                    "development-type": "Everyman"
+                    "id": "SKILLGROUP_OUTDOOR",
+                    "value": "Everyman"
                 }
             ]
         },
