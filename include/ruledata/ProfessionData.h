@@ -345,7 +345,7 @@ public:
 	 * The map is stored in the object's internal skill_group_special_bonuses_ (the contents are transferred into internal storage; depending on overloads/qualifiers this may be moved or copied).
 	 * @param bonuses A map whose keys are pointers to SkillGroupData and whose values are integer bonus amounts. 
 	 */
-	void setSkillGroupSpecialBonuses(const std::map<const SkillGroupData*, int> bonuses) { skill_group_special_bonuses_ = std::move(bonuses); }
+	void setSkillGroupSpecialBonuses(std::map<const SkillGroupData*, int> bonuses) { skill_group_special_bonuses_ = std::move(bonuses); }
 
 	/**
 	 * @brief Get a container with groups that the profession has a special bonus for
@@ -397,7 +397,7 @@ public:
 	 * The map is stored in the object's internal skill_group_profession_bonuses_ (the contents are transferred into internal storage; depending on overloads/qualifiers this may be moved or copied).
 	 * @param bonuses A map whose keys are pointers to SkillGroupData and whose values are integer bonus amounts. 
 	 */
-	void setSkillGroupProfessionBonuses(const std::map<const SkillGroupData*, int> bonuses) { skill_group_profession_bonuses_ = std::move(bonuses); }
+	void setSkillGroupProfessionBonuses(std::map<const SkillGroupData*, int> bonuses) { skill_group_profession_bonuses_ = std::move(bonuses); }
 
 	/**
 	 * @brief Get a container with groups that that the profession has a bonus for
@@ -519,9 +519,10 @@ public:
 	/**
 	 * @brief Sets the internal mapping from skill categories to their corresponding skill development types by assigning the provided map.
 	 * 
-	 * @param types A map that associates pointers to SkillCategoryData (keys) with SkillDevelopmentType::Type values.
+	 * The function stores this mapping in the object's internal state (the map will be assigned from the provided argument).
+	 * @param types A map that associates pointers to SkillCategoryData (keys) with SkillDevelopmentType::Type values. 
 	 */
-	void setSkillCategorySkillDevelopmentTypes(const std::map<const SkillCategoryData*, SkillDevelopmentType::Type> types) { skill_category_skill_development_types_ = std::move(types); }
+	void setSkillCategorySkillDevelopmentTypes(std::map<const SkillCategoryData*, SkillDevelopmentType::Type> types) { skill_category_skill_development_types_ = std::move(types); }
 
 	/**
 	 * @brief Get a container with the skill categories that the profession has a skill development type for
@@ -574,7 +575,7 @@ public:
 	 * @brief Sets the internal mapping from skill groups to their corresponding skill development types by assigning the provided map.
 	 * @param types A map that associates pointers to SkillGroupData (keys) with SkillDevelopmentType::Type values. The function stores this mapping in the object's internal state (the map will be assigned from the provided argument).
 	 */
-	void setSkillGroupSkillDevelopmentTypes(const std::map<const SkillGroupData*, SkillDevelopmentType::Type> types) { skill_group_skill_development_types_ = std::move(types); }
+	void setSkillGroupSkillDevelopmentTypes(std::map<const SkillGroupData*, SkillDevelopmentType::Type> types) { skill_group_skill_development_types_ = std::move(types); }
 
 	/**
 	 * @brief Gets a reference to container with the skill group skill development types
@@ -627,7 +628,7 @@ public:
 	 * @brief Sets the object's skill category special bonuses from the provided map, replacing any existing bonuses.
 	 * @param bonuses A map from const SkillCategoryData* to int containing skill category special bonuses. The map is assigned to the object's internal skill_category_special_bonuses_ member, replacing its previous contents.
 	 */
-	void setSkillCategorySpecialBonuses(const std::map<const SkillCategoryData*, int> bonuses) { skill_category_special_bonuses_ = std::move(bonuses); }
+	void setSkillCategorySpecialBonuses(std::map<const SkillCategoryData*, int> bonuses) { skill_category_special_bonuses_ = std::move(bonuses); }
 
 	/**
 	 * @brief Get a container with the skill categories that the profession has a special bonus for
@@ -680,7 +681,7 @@ public:
 	 * @brief Sets the object's skill category profession bonuses from the provided map, replacing any existing bonuses.
 	 * @param bonuses A map from const SkillCategoryData* to int containing skill category profession bonuses. The map is assigned to the object's internal skill_category_profession_bonuses_ member, replacing its previous contents.
 	 */
-	void setSkillCategoryProfessionBonuses(const std::map<const SkillCategoryData*, int> bonuses) { skill_category_profession_bonuses_ = std::move(bonuses); }
+	void setSkillCategoryProfessionBonuses(std::map<const SkillCategoryData*, int> bonuses) { skill_category_profession_bonuses_ = std::move(bonuses); }
 
 	/**
 	 * @brief Get a container with the skill categories that the profession has a bonus for
@@ -736,7 +737,7 @@ public:
 	 * @brief Sets the object's skill bonuses from the provided map, replacing any existing bonuses.
 	 * @param bonuses A map from SubcategoriedSkillData to int containing skill bonuses. The map is assigned to the object's internal skill_bonuses_ member, replacing its previous contents.
 	 */
-	void setSkillBonuses(const std::map<SubcategoriedSkillData, int> bonuses) {	skill_bonuses_ = std::move(bonuses); }
+	void setSkillBonuses(std::map<SubcategoriedSkillData, int> bonuses) {	skill_bonuses_ = std::move(bonuses); }
 
 	/**
 	 * @brief Get the bonus that the profession provides to a skill
