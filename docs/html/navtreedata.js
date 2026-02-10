@@ -57,10 +57,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"class_datafile_parser.html",
-"class_profession_data.html#ab562e6b38a2180a9dddcec2de77e5c1d",
-"class_skill_progression_type_data.html#a065ce1356c42b1169dceafa14a137cdb",
-"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1"
+"class_culture_type_datafile_parser_json.html#a9cff84d9f336650a791990cb9f988156",
+"class_profession_data.html#ab4f0b2b2a23d85b6964c2c245bd45434",
+"class_skill_progression_type_data.html",
+"namespace_critical_type.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

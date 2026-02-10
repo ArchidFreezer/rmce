@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"class_culture_type_datafile_parser_json.html#a9cff84d9f336650a791990cb9f988156":[2,0,19,2],
 "class_datafile_parser.html":[2,0,20],
 "class_datafile_parser.html#a0b85b756d72b4b8835a34198fd769522":[2,0,20,10],
 "class_datafile_parser.html#a3526c473cc854a37a8c508ce5e8a3c4d":[2,0,20,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "class_profession_data.html#aa9438d4b3cbdb607f6297dcfc156b8ac":[2,0,42,3],
 "class_profession_data.html#aaa4d933494e14b8131611af8e0ade94d":[2,0,42,33],
 "class_profession_data.html#aab77adf5a98bd2da679b8b9339487137":[2,0,42,64],
-"class_profession_data.html#ab3f9cf9ab14e5df529ba37f1b82c011a":[2,0,42,13],
-"class_profession_data.html#ab4f0b2b2a23d85b6964c2c245bd45434":[2,0,42,14]
+"class_profession_data.html#ab3f9cf9ab14e5df529ba37f1b82c011a":[2,0,42,13]
 };

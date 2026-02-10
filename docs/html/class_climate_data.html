@@ -135,6 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6dabc642b70fdba53f5f5fce9936d079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tempretaure of the climate.  <br /></td></tr>
 <tr class="memitem:ad4cac693a708a5221531298637d1c3ad" id="r_ad4cac693a708a5221531298637d1c3ad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad4cac693a708a5221531298637d1c3ad">addPrecipitation</a> (<a class="el" href="namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20">HabitatType::Precipitation</a> precipitation)</td></tr>
 <tr class="memdesc:ad4cac693a708a5221531298637d1c3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a precipitation to those that the climate may have.  <br /></td></tr>
+<tr class="memitem:a432102c643a444c3fd661e00b3145ee7" id="r_a432102c643a444c3fd661e00b3145ee7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a432102c643a444c3fd661e00b3145ee7">setPrecipitations</a> (std::set&lt; <a class="el" href="namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20">HabitatType::Precipitation</a> &gt; <a class="el" href="#abc68949e4589291dc5c4339df7c8e363">precipitations</a>)</td></tr>
+<tr class="memdesc:a432102c643a444c3fd661e00b3145ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the precipitations that may be found in the climate.  <br /></td></tr>
 <tr class="memitem:a0919632b3a6a1ca65be5c6715d02ce2d" id="r_a0919632b3a6a1ca65be5c6715d02ce2d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0919632b3a6a1ca65be5c6715d02ce2d">hasPrecipitaton</a> (<a class="el" href="namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20">HabitatType::Precipitation</a> precipitation) const</td></tr>
 <tr class="memdesc:a0919632b3a6a1ca65be5c6715d02ce2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a precipitation may be found in the cliamte.  <br /></td></tr>
 <tr class="memitem:abc68949e4589291dc5c4339df7c8e363" id="r_abc68949e4589291dc5c4339df7c8e363"><td class="memItemLeft">const std::set&lt; <a class="el" href="namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20">HabitatType::Precipitation</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abc68949e4589291dc5c4339df7c8e363">precipitations</a> () const</td></tr>
@@ -390,6 +392,39 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Climate name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a432102c643a444c3fd661e00b3145ee7" name="a432102c643a444c3fd661e00b3145ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a432102c643a444c3fd661e00b3145ee7">&#9670;&#160;</a></span>setPrecipitations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClimateData::setPrecipitations </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20">HabitatType::Precipitation</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>precipitations</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the precipitations that may be found in the climate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">precipitations</td><td>Set of <a class="el" href="namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20" title="Enumeration class representing the precipitation of habitats.">HabitatType::Precipitation</a> to set </td></tr>
   </table>
   </dd>
 </dl>
