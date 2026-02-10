@@ -25,10 +25,7 @@ void CultureTypeDatafileParserJson::parse() {
 		if (spell_ranks) ref.setSpellListRanks(spell_ranks.value());
 
 		// Get the preferred armour
-		for (const auto& armours_tree : v.second.get_child("preferred-armours")) {
-			std::optional<ArmourType::Type> armour = ArmourType::fromDescription(armours_tree.second.get_value<std::string>());
-			if (armour) ref.addPreferredArmour(armour.value());
-		}
+		ref.setPreferredArmours(parseEnumSetTree<ArmourType::Type>(v.second.get_child_optional("preferred-armours")));
 
 		// Get the preferred weapons
 		ref.setPreferredWeapons(parseGameDataSetTree<WeaponTypeData>(v.second.get_child_optional("preferred-weapons")));
@@ -78,14 +75,10 @@ void CultureTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& da
 	if (game_data.spellListRanks()) datum.put("spell-list-ranks", game_data.spellListRanks());
 
 	// Get the container tree for the preferred armour
-	pt::ptree armours_tree{};
-	for (ArmourType::Type armour : game_data.preferredArmour()) {
-		// Get the armours container
-		pt::ptree armour_tree{};
-		armour_tree.put("", ArmourType::description(armour));
-		armours_tree.push_back(std::make_pair("", armour_tree));
+	{
+		pt::ptree tree{ getEnumSetTree<ArmourType::Type>(game_data.preferredArmour()) };
+		if (tree.size()) datum.push_back(std::make_pair("preferred-armours", tree));
 	}
-	datum.push_back(std::make_pair("preferred-armours", armours_tree));
 
 	// Preferred weapons
 	{

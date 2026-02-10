@@ -48,6 +48,7 @@ var class_culture_type_data =
     [ "setHobbySkillRanks", "class_culture_type_data.html#a10199be30eeaa231c5ff34376a2cd3a8", null ],
     [ "setMarriagePatterns", "class_culture_type_data.html#a5f15478ad3a08a95e78f9ad1a1c82c25", null ],
     [ "setName", "class_culture_type_data.html#a097dd816674d60be209d0b5fdd95f44e", null ],
+    [ "setPreferredArmours", "class_culture_type_data.html#a3a3aa62185cc53ed07e15d2037a25ab2", null ],
     [ "setPreferredWeapons", "class_culture_type_data.html#a730348765865578bd3745f9646f20a5d", null ],
     [ "setPrejudices", "class_culture_type_data.html#a3283af4476299be469ccde588c0f11db", null ],
     [ "setReligiousBeliefs", "class_culture_type_data.html#a6f12efc1a2f1e5e8f11cf4dfb3470387", null ],

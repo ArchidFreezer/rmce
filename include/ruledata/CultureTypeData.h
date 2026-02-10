@@ -201,6 +201,12 @@ public:
 	void addPreferredArmour(ArmourType::Type armour_type) { preferred_armour_.emplace(armour_type); }
 
 	/**
+	 * @brief Set the set of armour types preferred by the culture
+	 * @param armours std::set of ArmourType::Type to set as preferred armours
+	 */
+	void setPreferredArmours(std::set<ArmourType::Type> armours) { preferred_armour_ = std::move(armours); }
+
+	/**
 	 * @brief Get a container with the armour types preferred by the culture
 	 * @return std::set<ArmourType::Type> armour types
 	 */

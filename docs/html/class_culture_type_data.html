@@ -176,6 +176,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9775d5ebe681e32700f9bec74a76ac1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of skill ranks that the character receives on one open spell list of their realm.  <br /></td></tr>
 <tr class="memitem:accc6f3a9a10eeaba90ead2a3241375cf" id="r_accc6f3a9a10eeaba90ead2a3241375cf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#accc6f3a9a10eeaba90ead2a3241375cf">addPreferredArmour</a> (<a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a> armour_type)</td></tr>
 <tr class="memdesc:accc6f3a9a10eeaba90ead2a3241375cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an armour type to the set of those preferred by the culture.  <br /></td></tr>
+<tr class="memitem:a3a3aa62185cc53ed07e15d2037a25ab2" id="r_a3a3aa62185cc53ed07e15d2037a25ab2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3a3aa62185cc53ed07e15d2037a25ab2">setPreferredArmours</a> (std::set&lt; <a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a> &gt; armours)</td></tr>
+<tr class="memdesc:a3a3aa62185cc53ed07e15d2037a25ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the set of armour types preferred by the culture.  <br /></td></tr>
 <tr class="memitem:ae2419b07c8bf951a5572a6bb5dd2f81b" id="r_ae2419b07c8bf951a5572a6bb5dd2f81b"><td class="memItemLeft">const std::set&lt; <a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae2419b07c8bf951a5572a6bb5dd2f81b">preferredArmour</a> () const</td></tr>
 <tr class="memdesc:ae2419b07c8bf951a5572a6bb5dd2f81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the armour types preferred by the culture.  <br /></td></tr>
 <tr class="memitem:a642485600f9cf178b513b5ac1d29b797" id="r_a642485600f9cf178b513b5ac1d29b797"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a642485600f9cf178b513b5ac1d29b797">isPreferredArmour</a> (<a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a> armour_type) const</td></tr>
@@ -1771,6 +1773,39 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Race name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a3aa62185cc53ed07e15d2037a25ab2" name="a3a3aa62185cc53ed07e15d2037a25ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a3aa62185cc53ed07e15d2037a25ab2">&#9670;&#160;</a></span>setPreferredArmours()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureTypeData::setPreferredArmours </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be">ArmourType::Type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>armours</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the set of armour types preferred by the culture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">armours</td><td>std::set of <a class="el" href="namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453be" title="Enumeration class representing the size of creatures.">ArmourType::Type</a> to set as preferred armours </td></tr>
   </table>
   </dd>
 </dl>

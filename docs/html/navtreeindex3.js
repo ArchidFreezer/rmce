@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"class_skill_progression_type_data.html#a065ce1356c42b1169dceafa14a137cdb":[2,0,56,14],
 "class_skill_progression_type_data.html#a215a3147cc5a83556e37ff0366bcfe61":[2,0,56,12],
 "class_skill_progression_type_data.html#a22eef783c787ebd6b70c856d52d0d7f9":[2,0,56,10],
 "class_skill_progression_type_data.html#a282160bc7d1a509b8c76261469d12c63":[2,0,56,4],
@@ -211,8 +212,9 @@ var NAVTREEINDEX3 =
 "namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453beaeb6eec529add7811e236c4cd082ec8b5":[0,0,0,2,3],
 "namespace_armour_type.html#a14e0f8b38810d6e1e2c2a532ed3453beaed73cb950ec5028dedf64efaf252946b":[0,0,0,2,10],
 "namespace_armour_type.html#a17b2a33e48f6bf2210d8bd1d2af50401":[0,0,0,3],
-"namespace_armour_type.html#a404f3424a5617fa5d2c6a9f96f923dbd":[0,0,0,7],
-"namespace_armour_type.html#a4c137afb08a8b57023c3ae619afb9f5b":[0,0,0,6],
+"namespace_armour_type.html#a306e2c1ae9c0477e0775e88ff1361246":[0,0,0,6],
+"namespace_armour_type.html#a404f3424a5617fa5d2c6a9f96f923dbd":[0,0,0,8],
+"namespace_armour_type.html#a4c137afb08a8b57023c3ae619afb9f5b":[0,0,0,7],
 "namespace_armour_type.html#a68c2e7dfe3dc1cc1982140a3c972790b":[0,0,0,5],
 "namespace_armour_type.html#ae3e344df16520c31d5c926383e46d085":[0,0,0,4],
 "namespace_attack_size_type.html":[0,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a414b8a61a97d278df48dbfa2a8346198":[0,0,3,2,4],
 "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a9f6e20e82520583d8de05ee85fd65cc0":[0,0,3,2,3],
 "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737aea77e777f06ddc8e1b262ec7338565b7":[0,0,3,2,1],
-"namespace_critical_type.html":[0,0,4],
-"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1":[0,0,4,0],
-"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1":[0,0,4,1]
+"namespace_critical_type.html":[0,0,4]
 };

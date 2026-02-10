@@ -27,6 +27,7 @@ var namespace_armour_type =
     [ "description", "namespace_armour_type.html#a17b2a33e48f6bf2210d8bd1d2af50401", null ],
     [ "fromDescription", "namespace_armour_type.html#ae3e344df16520c31d5c926383e46d085", null ],
     [ "fromString", "namespace_armour_type.html#a68c2e7dfe3dc1cc1982140a3c972790b", null ],
+    [ "fromString", "namespace_armour_type.html#a306e2c1ae9c0477e0775e88ff1361246", null ],
     [ "operator<<", "namespace_armour_type.html#a4c137afb08a8b57023c3ae619afb9f5b", null ],
     [ "toString", "namespace_armour_type.html#a404f3424a5617fa5d2c6a9f96f923dbd", null ]
 ];
