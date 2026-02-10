@@ -349,6 +349,24 @@ protected:
 	std::vector<EnumType> parseEnumVectorTree(boost::optional<const pt::ptree&> tree);
 
 	/**
+	 * @brief Parses a property tree into a set of primitive values.
+	 * @tparam Primitive The primitive type of the elements to be stored in the set.
+	 * @param tree An optional reference to a property tree to parse. If not present, returns an empty set.
+	 * @return A set containing the parsed primitive values from the tree.
+	 */
+	template<typename Primitive>
+	std::set<Primitive> parseSetTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Converts a set of primitive values into a property tree.
+	 * @tparam Primitive The primitive type of the elements in the set.
+	 * @param set The set of primitive values to convert.
+	 * @return A constant property tree representation of the set.
+	 */
+	template<typename Primitive>
+	const pt::ptree getSetTree(std::set<Primitive> set);
+
+	/**
 	 * @brief Converts a vector of enum values to a property tree representation.
 	 * @tparam EnumType The enum type of the elements in the vector.
 	 * @param vector The vector of enum values to convert.
@@ -654,6 +672,39 @@ inline const pt::ptree DatafileParserJson::getEnumSetTree(std::set<EnumType> set
 	for (const auto& item : set) {
 		pt::ptree value_tree{};
 		value_tree.put("", toString(item));
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+template<typename Primitive>
+inline std::set<Primitive> DatafileParserJson::parseSetTree(boost::optional<const pt::ptree&> tree) {
+	std::set<Primitive> datum{};
+	if (tree) {
+		for (const auto& items : tree.get()) {
+			datum.insert(items.second.get_value<Primitive>());
+		}
+	}
+	return datum;
+}
+
+template<typename Primitive>
+inline const pt::ptree DatafileParserJson::getSetTree(std::set<Primitive> set) {
+	pt::ptree tree{};
+	for (const auto& item : set) {
+		pt::ptree value_tree{};
+		value_tree.put("", std::to_string(item));
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+template<>
+inline const pt::ptree DatafileParserJson::getSetTree<std::string>(std::set<std::string> set) {
+	pt::ptree tree{};
+	for (const auto& item : set) {
+		pt::ptree value_tree{};
+		value_tree.put("", item);
 		tree.push_back(std::make_pair("", value_tree));
 	}
 	return tree;
