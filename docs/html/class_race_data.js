@@ -77,6 +77,7 @@ var class_race_data =
     [ "setStartingLanguageAbilities", "class_race_data.html#a5b7858497b4b41a3c550622dd9fdd6b3", null ],
     [ "setStartingLanguageAbility", "class_race_data.html#a8ef056cc57718290ebee4c0bdf83fdf4", null ],
     [ "setStatBonus", "class_race_data.html#afd55f0b21d3f62ff574bb703c01cfbed", null ],
+    [ "setStatBonuses", "class_race_data.html#ad65830933aefa726500ac9d0658f45f6", null ],
     [ "setStatLossRacialType", "class_race_data.html#a8703275d54a20b4fe273323b2bc90fa6", null ],
     [ "size", "class_race_data.html#a0ddd1ecc3721130c9d7b68b5d628d9ec", null ],
     [ "skillBonus", "class_race_data.html#a08fb0402c8f7c82984eaf1844f219bf3", null ],
@@ -89,6 +90,7 @@ var class_race_data =
     [ "startingLanguageAbility", "class_race_data.html#ab9132513f84a60fbae6a1ddf078fdc5b", null ],
     [ "startingLanguages", "class_race_data.html#a4a94bad3eb1378b6e417a90483e4ae0a", null ],
     [ "statBonus", "class_race_data.html#adcd455e488f7939a847d1e740459c2a8", null ],
+    [ "statBonuses", "class_race_data.html#acc0f69a7c991e954518dba67eef9c4d3", null ],
     [ "statLossRacialType", "class_race_data.html#afa353983bbff16553d7d58ed0f10f9f9", null ],
     [ "statsWithBonus", "class_race_data.html#afca5016e08f40e9e62868c109f1382fa", null ]
 ];

@@ -616,6 +616,18 @@ public:
 	void setStatBonus(StatType::Type stat, int bonus) { stat_bonuses_.emplace(stat, bonus); }
 
 	/**
+	 * @brief Sets the stat bonuses by replacing the current stat bonuses with the provided map.
+	 * @param stat_bonuses A map containing stat types and their corresponding bonus values to be set.
+	 */
+	void setStatBonuses(std::map<StatType::Type, int> stat_bonuses) { stat_bonuses_ = std::move(stat_bonuses); }
+
+	/**
+	 * @brief Gets a reference to the map of stat bonuses.
+	 * @return A reference to the map containing stat type keys and their corresponding integer bonus values.
+	 */
+	std::map<StatType::Type, int>& statBonuses() { return stat_bonuses_; }
+
+	/**
 	 * @brief Get the bonus that the race provides to a stat
 	 * @param stat StatType::Type to get the bonus for
 	 * @return bonus value

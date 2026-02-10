@@ -72,32 +72,32 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "-2"
+                    "id": "Agility",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Constitution",
-                    "bonus": "6"
+                    "id": "Constitution",
+                    "value": "6"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "-4"
+                    "id": "Empathy",
+                    "value": "-4"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-4"
+                    "id": "Presence",
+                    "value": "-4"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "-2"
+                    "id": "Quickness",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "2"
+                    "id": "Self Discipline",
+                    "value": "2"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "2"
+                    "id": "Strength",
+                    "value": "2"
                 }
             ],
             "everyman-skills": [
@@ -206,28 +206,28 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "2"
+                    "id": "Agility",
+                    "value": "2"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "2"
+                    "id": "Empathy",
+                    "value": "2"
                 },
                 {
-                    "stat": "Memory",
-                    "bonus": "2"
+                    "id": "Memory",
+                    "value": "2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "4"
+                    "id": "Presence",
+                    "value": "4"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "4"
+                    "id": "Quickness",
+                    "value": "4"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-5"
+                    "id": "Self Discipline",
+                    "value": "-5"
                 }
             ],
             "everyman-skills": [
@@ -309,28 +309,28 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "2"
+                    "id": "Agility",
+                    "value": "2"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "2"
+                    "id": "Empathy",
+                    "value": "2"
                 },
                 {
-                    "stat": "Memory",
-                    "bonus": "2"
+                    "id": "Memory",
+                    "value": "2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "6"
+                    "id": "Presence",
+                    "value": "6"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "6"
+                    "id": "Quickness",
+                    "value": "6"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-5"
+                    "id": "Self Discipline",
+                    "value": "-5"
                 }
             ],
             "everyman-categories": [
@@ -414,28 +414,28 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "4"
+                    "id": "Agility",
+                    "value": "4"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "2"
+                    "id": "Empathy",
+                    "value": "2"
                 },
                 {
-                    "stat": "Memory",
-                    "bonus": "2"
+                    "id": "Memory",
+                    "value": "2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "2"
+                    "id": "Presence",
+                    "value": "2"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "2"
+                    "id": "Quickness",
+                    "value": "2"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-5"
+                    "id": "Self Discipline",
+                    "value": "-5"
                 }
             ],
             "everyman-skills": [
@@ -540,32 +540,32 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "4"
+                    "id": "Agility",
+                    "value": "4"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "4"
+                    "id": "Empathy",
+                    "value": "4"
                 },
                 {
-                    "stat": "Intuition",
-                    "bonus": "2"
+                    "id": "Intuition",
+                    "value": "2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-2"
+                    "id": "Presence",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "2"
+                    "id": "Quickness",
+                    "value": "2"
                 },
                 {
-                    "stat": "Reasoning",
-                    "bonus": "1"
+                    "id": "Reasoning",
+                    "value": "1"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "2"
+                    "id": "Self Discipline",
+                    "value": "2"
                 }
             ],
             "everyman-categories": [
@@ -672,40 +672,40 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Constitution",
-                    "bonus": "1"
+                    "id": "Constitution",
+                    "value": "1"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "5"
+                    "id": "Empathy",
+                    "value": "5"
                 },
                 {
-                    "stat": "Intuition",
-                    "bonus": "-4"
+                    "id": "Intuition",
+                    "value": "-4"
                 },
                 {
-                    "stat": "Memory",
-                    "bonus": "6"
+                    "id": "Memory",
+                    "value": "6"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-2"
+                    "id": "Presence",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "-2"
+                    "id": "Quickness",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Reasoning",
-                    "bonus": "3"
+                    "id": "Reasoning",
+                    "value": "3"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "3"
+                    "id": "Self Discipline",
+                    "value": "3"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "-3"
+                    "id": "Strength",
+                    "value": "-3"
                 }
             ],
             "everyman-skills": [
@@ -790,36 +790,36 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Constitution",
-                    "bonus": "3"
+                    "id": "Constitution",
+                    "value": "3"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "-2"
+                    "id": "Empathy",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Memory",
-                    "bonus": "-2"
+                    "id": "Memory",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-2"
+                    "id": "Presence",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "1"
+                    "id": "Quickness",
+                    "value": "1"
                 },
                 {
-                    "stat": "Reasoning",
-                    "bonus": "1"
+                    "id": "Reasoning",
+                    "value": "1"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-2"
+                    "id": "Self Discipline",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "2"
+                    "id": "Strength",
+                    "value": "2"
                 }
             ],
             "everyman-skills": [
@@ -888,32 +888,32 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "6"
+                    "id": "Agility",
+                    "value": "6"
                 },
                 {
-                    "stat": "Constitution",
-                    "bonus": "6"
+                    "id": "Constitution",
+                    "value": "6"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "-2"
+                    "id": "Empathy",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-6"
+                    "id": "Presence",
+                    "value": "-6"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "4"
+                    "id": "Quickness",
+                    "value": "4"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-4"
+                    "id": "Self Discipline",
+                    "value": "-4"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "-8"
+                    "id": "Strength",
+                    "value": "-8"
                 }
             ],
             "everyman-skills": [
@@ -991,36 +991,36 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "5"
+                    "id": "Agility",
+                    "value": "5"
                 },
                 {
-                    "stat": "Constitution",
-                    "bonus": "6"
+                    "id": "Constitution",
+                    "value": "6"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "-2"
+                    "id": "Empathy",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Memory",
-                    "bonus": "1"
+                    "id": "Memory",
+                    "value": "1"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-5"
+                    "id": "Presence",
+                    "value": "-5"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "3"
+                    "id": "Quickness",
+                    "value": "3"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-3"
+                    "id": "Self Discipline",
+                    "value": "-3"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "-7"
+                    "id": "Strength",
+                    "value": "-7"
                 }
             ],
             "everyman-skills": [
@@ -1094,32 +1094,32 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "6"
+                    "id": "Agility",
+                    "value": "6"
                 },
                 {
-                    "stat": "Constitution",
-                    "bonus": "5"
+                    "id": "Constitution",
+                    "value": "5"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "1"
+                    "id": "Empathy",
+                    "value": "1"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-6"
+                    "id": "Presence",
+                    "value": "-6"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "4"
+                    "id": "Quickness",
+                    "value": "4"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-4"
+                    "id": "Self Discipline",
+                    "value": "-4"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "-8"
+                    "id": "Strength",
+                    "value": "-8"
                 }
             ],
             "everyman-skills": [
@@ -1198,36 +1198,36 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "6"
+                    "id": "Agility",
+                    "value": "6"
                 },
                 {
-                    "stat": "Constitution",
-                    "bonus": "6"
+                    "id": "Constitution",
+                    "value": "6"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "-2"
+                    "id": "Empathy",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Intuition",
-                    "bonus": "1"
+                    "id": "Intuition",
+                    "value": "1"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-6"
+                    "id": "Presence",
+                    "value": "-6"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "4"
+                    "id": "Quickness",
+                    "value": "4"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-3"
+                    "id": "Self Discipline",
+                    "value": "-3"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "-8"
+                    "id": "Strength",
+                    "value": "-8"
                 }
             ],
             "everyman-skills": [
@@ -1316,28 +1316,28 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "2"
+                    "id": "Agility",
+                    "value": "2"
                 },
                 {
-                    "stat": "Constitution",
-                    "bonus": "2"
+                    "id": "Constitution",
+                    "value": "2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "4"
+                    "id": "Presence",
+                    "value": "4"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "4"
+                    "id": "Quickness",
+                    "value": "4"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-3"
+                    "id": "Self Discipline",
+                    "value": "-3"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "2"
+                    "id": "Strength",
+                    "value": "2"
                 }
             ]
         },
@@ -1408,16 +1408,16 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Constitution",
-                    "bonus": "2"
+                    "id": "Constitution",
+                    "value": "2"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "2"
+                    "id": "Self Discipline",
+                    "value": "2"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "2"
+                    "id": "Strength",
+                    "value": "2"
                 }
             ]
         },
@@ -1478,44 +1478,44 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "-2"
+                    "id": "Agility",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Constitution",
-                    "bonus": "6"
+                    "id": "Constitution",
+                    "value": "6"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "-2"
+                    "id": "Empathy",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Intuition",
-                    "bonus": "-2"
+                    "id": "Intuition",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Memory",
-                    "bonus": "-2"
+                    "id": "Memory",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-2"
+                    "id": "Presence",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "-2"
+                    "id": "Quickness",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Reasoning",
-                    "bonus": "-2"
+                    "id": "Reasoning",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-2"
+                    "id": "Self Discipline",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "4"
+                    "id": "Strength",
+                    "value": "4"
                 }
             ],
             "skill-category-choices-everyman": [
@@ -1590,32 +1590,32 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "2"
+                    "id": "Agility",
+                    "value": "2"
                 },
                 {
-                    "stat": "Constitution",
-                    "bonus": "4"
+                    "id": "Constitution",
+                    "value": "4"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "-2"
+                    "id": "Empathy",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Intuition",
-                    "bonus": "2"
+                    "id": "Intuition",
+                    "value": "2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-4"
+                    "id": "Presence",
+                    "value": "-4"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "6"
+                    "id": "Quickness",
+                    "value": "6"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "-5"
+                    "id": "Strength",
+                    "value": "-5"
                 }
             ]
         },
@@ -1671,12 +1671,12 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "2"
+                    "id": "Self Discipline",
+                    "value": "2"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "2"
+                    "id": "Strength",
+                    "value": "2"
                 }
             ]
         },
@@ -1772,24 +1772,24 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Agility",
-                    "bonus": "-2"
+                    "id": "Agility",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Constitution",
-                    "bonus": "4"
+                    "id": "Constitution",
+                    "value": "4"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "4"
+                    "id": "Presence",
+                    "value": "4"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "-2"
+                    "id": "Quickness",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "4"
+                    "id": "Strength",
+                    "value": "4"
                 }
             ]
         },
@@ -1875,20 +1875,20 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Constitution",
-                    "bonus": "2"
+                    "id": "Constitution",
+                    "value": "2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "2"
+                    "id": "Presence",
+                    "value": "2"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "2"
+                    "id": "Self Discipline",
+                    "value": "2"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "2"
+                    "id": "Strength",
+                    "value": "2"
                 }
             ]
         },
@@ -1948,36 +1948,36 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Constitution",
-                    "bonus": "2"
+                    "id": "Constitution",
+                    "value": "2"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "-2"
+                    "id": "Empathy",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Intuition",
-                    "bonus": "-4"
+                    "id": "Intuition",
+                    "value": "-4"
                 },
                 {
-                    "stat": "Memory",
-                    "bonus": "-4"
+                    "id": "Memory",
+                    "value": "-4"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-2"
+                    "id": "Presence",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Reasoning",
-                    "bonus": "-2"
+                    "id": "Reasoning",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-4"
+                    "id": "Self Discipline",
+                    "value": "-4"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "2"
+                    "id": "Strength",
+                    "value": "2"
                 }
             ],
             "everyman-skills": [
@@ -2087,36 +2087,36 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Constitution",
-                    "bonus": "4"
+                    "id": "Constitution",
+                    "value": "4"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "-2"
+                    "id": "Empathy",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Intuition",
-                    "bonus": "-2"
+                    "id": "Intuition",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Memory",
-                    "bonus": "-2"
+                    "id": "Memory",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-2"
+                    "id": "Presence",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Reasoning",
-                    "bonus": "-2"
+                    "id": "Reasoning",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-2"
+                    "id": "Self Discipline",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "4"
+                    "id": "Strength",
+                    "value": "4"
                 }
             ],
             "skill-category-choices-everyman": [
@@ -2201,28 +2201,28 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Constitution",
-                    "bonus": "4"
+                    "id": "Constitution",
+                    "value": "4"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "2"
+                    "id": "Empathy",
+                    "value": "2"
                 },
                 {
-                    "stat": "Intuition",
-                    "bonus": "2"
+                    "id": "Intuition",
+                    "value": "2"
                 },
                 {
-                    "stat": "Memory",
-                    "bonus": "2"
+                    "id": "Memory",
+                    "value": "2"
                 },
                 {
-                    "stat": "Self Discipline",
-                    "bonus": "-1"
+                    "id": "Self Discipline",
+                    "value": "-1"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "1"
+                    "id": "Strength",
+                    "value": "1"
                 }
             ],
             "skill-category-choices-everyman": [
@@ -2287,28 +2287,28 @@
             ],
             "stat-bonuses": [
                 {
-                    "stat": "Constitution",
-                    "bonus": "4"
+                    "id": "Constitution",
+                    "value": "4"
                 },
                 {
-                    "stat": "Empathy",
-                    "bonus": "-4"
+                    "id": "Empathy",
+                    "value": "-4"
                 },
                 {
-                    "stat": "Presence",
-                    "bonus": "-2"
+                    "id": "Presence",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Quickness",
-                    "bonus": "2"
+                    "id": "Quickness",
+                    "value": "2"
                 },
                 {
-                    "stat": "Reasoning",
-                    "bonus": "-2"
+                    "id": "Reasoning",
+                    "value": "-2"
                 },
                 {
-                    "stat": "Strength",
-                    "bonus": "4"
+                    "id": "Strength",
+                    "value": "4"
                 }
             ],
             "everyman-skills": [

@@ -206,6 +206,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3720e43bf11a8d1723bcd93fba06a91f" id="r_a3720e43bf11a8d1723bcd93fba06a91f"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </td></tr>
 <tr class="memitem:a3720e43bf11a8d1723bcd93fba06a91f template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a3720e43bf11a8d1723bcd93fba06a91f">getGameDataPairTree</a> (std::map&lt; const T *, U &gt; map)</td></tr>
 <tr class="memdesc:a3720e43bf11a8d1723bcd93fba06a91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and primitive type values.  <br /></td></tr>
+<tr class="memitem:af8fd8005d2aa164321a66f7354b2c93f" id="r_af8fd8005d2aa164321a66f7354b2c93f"><td class="memTemplParams" colspan="2">template&lt;typename T, typename U&gt; </td></tr>
+<tr class="memitem:af8fd8005d2aa164321a66f7354b2c93f template"><td class="memItemLeft">std::map&lt; T, U &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af8fd8005d2aa164321a66f7354b2c93f">parseEnumPairTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:af8fd8005d2aa164321a66f7354b2c93f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a map of enums strings with associated values into a std::map of enum types and values.  <br /></td></tr>
+<tr class="memitem:ab5c4244e13e0bd41ad81c49b2a80a9f7" id="r_ab5c4244e13e0bd41ad81c49b2a80a9f7"><td class="memTemplParams" colspan="2">template&lt;typename T, typename U&gt; </td></tr>
+<tr class="memitem:ab5c4244e13e0bd41ad81c49b2a80a9f7 template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#ab5c4244e13e0bd41ad81c49b2a80a9f7">getEnumPairTree</a> (std::map&lt; T, U &gt; map)</td></tr>
+<tr class="memdesc:ab5c4244e13e0bd41ad81c49b2a80a9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a property tree from a map of enum key-value pairs.  <br /></td></tr>
 <tr class="memitem:a4d2ee0bfea50c1b9f7c4d698a3798e79" id="r_a4d2ee0bfea50c1b9f7c4d698a3798e79"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </td></tr>
 <tr class="memitem:a4d2ee0bfea50c1b9f7c4d698a3798e79 template"><td class="memItemLeft">std::map&lt; const T *, U &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4d2ee0bfea50c1b9f7c4d698a3798e79">parseGameDataPairEnumTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
 <tr class="memdesc:a4d2ee0bfea50c1b9f7c4d698a3798e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and enum type values.  <br /></td></tr>
@@ -361,6 +367,55 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab5c4244e13e0bd41ad81c49b2a80a9f7" name="ab5c4244e13e0bd41ad81c49b2a80a9f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5c4244e13e0bd41ad81c49b2a80a9f7">&#9670;&#160;</a></span>getEnumPairTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getEnumPairTree </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; T, U &gt;</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a property tree from a map of enum key-value pairs. </p>
+<p>The boost ptree created by this function will generate the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;output of {enum type}.toString()&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;value associated with the enum&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the map keys (typically an enum type). </td></tr>
+    <tr><td class="paramname">U</td><td>The type of the map values (typically an enum type). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>A map containing enum key-value pairs to convert into a property tree. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A const property tree representation of the enum pair map. </dd></dl>
+
+</div>
+</div>
 <a id="a125419632db8817a736f4ffc7b93d154" name="a125419632db8817a736f4ffc7b93d154"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a125419632db8817a736f4ffc7b93d154">&#9670;&#160;</a></span>getGameDataPairEnumTree()</h2>
 
@@ -668,6 +723,55 @@ template&lt;typename U&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories </dd></dl>
+
+</div>
+</div>
+<a id="af8fd8005d2aa164321a66f7354b2c93f" name="af8fd8005d2aa164321a66f7354b2c93f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8fd8005d2aa164321a66f7354b2c93f">&#9670;&#160;</a></span>parseEnumPairTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; T, U &gt; DatafileParserJson::parseEnumPairTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a map of enums strings with associated values into a std::map of enum types and values. </p>
+<p>The boost ptree expected by this function should be derived from the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;output of {enum type}.toString()&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;value associated with the enum&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Enum type being parsed </td></tr>
+    <tr><td class="paramname">U</td><td>Value type of the enum values </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the map of enum types and associated values, with the enum types represented by the output of their toString() function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Map of enum types and associated values </dd></dl>
 
 </div>
 </div>

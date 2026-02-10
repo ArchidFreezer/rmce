@@ -247,6 +247,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8f59472f90ef17ca478a6785d95924be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> objects known during childhood.  <br /></td></tr>
 <tr class="memitem:afd55f0b21d3f62ff574bb703c01cfbed" id="r_afd55f0b21d3f62ff574bb703c01cfbed"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afd55f0b21d3f62ff574bb703c01cfbed">setStatBonus</a> (<a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> stat, int bonus)</td></tr>
 <tr class="memdesc:afd55f0b21d3f62ff574bb703c01cfbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the racial bonus for a stat.  <br /></td></tr>
+<tr class="memitem:ad65830933aefa726500ac9d0658f45f6" id="r_ad65830933aefa726500ac9d0658f45f6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad65830933aefa726500ac9d0658f45f6">setStatBonuses</a> (std::map&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a>, int &gt; stat_bonuses)</td></tr>
+<tr class="memdesc:ad65830933aefa726500ac9d0658f45f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the stat bonuses by replacing the current stat bonuses with the provided map.  <br /></td></tr>
+<tr class="memitem:acc0f69a7c991e954518dba67eef9c4d3" id="r_acc0f69a7c991e954518dba67eef9c4d3"><td class="memItemLeft">std::map&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a>, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#acc0f69a7c991e954518dba67eef9c4d3">statBonuses</a> ()</td></tr>
+<tr class="memdesc:acc0f69a7c991e954518dba67eef9c4d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a reference to the map of stat bonuses.  <br /></td></tr>
 <tr class="memitem:adcd455e488f7939a847d1e740459c2a8" id="r_adcd455e488f7939a847d1e740459c2a8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#adcd455e488f7939a847d1e740459c2a8">statBonus</a> (<a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> stat) const</td></tr>
 <tr class="memdesc:adcd455e488f7939a847d1e740459c2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus that the race provides to a stat.  <br /></td></tr>
 <tr class="memitem:afca5016e08f40e9e62868c109f1382fa" id="r_afca5016e08f40e9e62868c109f1382fa"><td class="memItemLeft">const std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afca5016e08f40e9e62868c109f1382fa">statsWithBonus</a> () const</td></tr>
@@ -2811,6 +2815,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ad65830933aefa726500ac9d0658f45f6" name="ad65830933aefa726500ac9d0658f45f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65830933aefa726500ac9d0658f45f6">&#9670;&#160;</a></span>setStatBonuses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RaceData::setStatBonuses </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a>, int &gt;</td>          <td class="paramname"><span class="paramname"><em>stat_bonuses</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the stat bonuses by replacing the current stat bonuses with the provided map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stat_bonuses</td><td>A map containing stat types and their corresponding bonus values to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8703275d54a20b4fe273323b2bc90fa6" name="a8703275d54a20b4fe273323b2bc90fa6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8703275d54a20b4fe273323b2bc90fa6">&#9670;&#160;</a></span>setStatLossRacialType()</h2>
 
@@ -3187,6 +3224,34 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bonus value </dd></dl>
+
+</div>
+</div>
+<a id="acc0f69a7c991e954518dba67eef9c4d3" name="acc0f69a7c991e954518dba67eef9c4d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0f69a7c991e954518dba67eef9c4d3">&#9670;&#160;</a></span>statBonuses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a>, int &gt; &amp; RaceData::statBonuses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a reference to the map of stat bonuses. </p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the map containing stat type keys and their corresponding integer bonus values. </dd></dl>
 
 </div>
 </div>

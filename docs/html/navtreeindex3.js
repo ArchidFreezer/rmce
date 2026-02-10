@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"class_skill_progression_type_datafile_parser_json.html#a655c5c2153c3fbf23a87b3afea1b3355":[2,0,57,1],
+"class_skill_progression_type_datafile_parser_json.html#a7c0426639ed93b313fff375eed739e97":[2,0,57,0],
+"class_skill_progression_type_datafile_parser_json.html#a92f3cd168fef745dd9ac4d811a2bc584":[2,0,57,4],
+"class_skill_progression_type_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,57,3],
 "class_special_attack_table.html":[2,0,58],
 "class_special_attack_table.html#a0425ce61e76bb3d55231c02d703ef33b":[2,0,58,6],
 "class_special_attack_table.html#a0e96e7ab22750a497b755c149029ea3f":[2,0,58,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1ae1ce0ec846f3ba0c8966ef540ae472aa":[0,0,4,1,9],
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1ae85d4c291006e586446d5b20b231c8b4":[0,0,4,1,15],
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aece059b52386d38cd6da9729cca08b4e":[0,0,4,1,14],
-"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1af329fb93dca56544a1f81e4df7b663c7":[0,0,4,1,8],
-"namespace_critical_type.html#aaf4b519542f7dab4d0719845732e3499":[0,0,4,3],
-"namespace_critical_type.html#adc01bddbdf0713049439ccbe09c5fdc0":[0,0,4,2],
-"namespace_critical_type.html#ae8d4573dda55ce3f3ee5fcbd08078a00":[0,0,4,4],
-"namespace_environment_type.html":[0,0,5]
+"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1af329fb93dca56544a1f81e4df7b663c7":[0,0,4,1,8]
 };

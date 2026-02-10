@@ -62,13 +62,7 @@ void RaceDatafileParserJson::parse() {
 		ref.setAdolescentLanguageAbilities(parseLanguageAbilityMapTree(v.second.get_child_optional("adolescent-languages")));
 
 		// Get Stat bonuses
-		if (boost::optional<const pt::ptree&> stat_bonuses = v.second.get_child_optional("stat-bonuses")) {
-			for (const auto& stat_bonus : stat_bonuses.get()) {
-				StatType::Type stat{ StatType::fromString(stat_bonus.second.get<std::string>("stat")).value() };
-				int bonus{ stat_bonus.second.get<int>("bonus") };
-				if (bonus) ref.setStatBonus(stat, bonus);
-			}
-		}
+		ref.setStatBonuses(parseEnumPairTree<StatType::Type, int>(v.second.get_child_optional("stat-bonuses")));
 
 		// Get everyman skills
 		ref.setEverymanSkills(parseSkillSetTree(v.second.get_child_optional("everyman-skills")));
@@ -146,15 +140,10 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	}
 
 	// Stat bonus
-	pt::ptree stat_bonuses_tree{};
-	for (auto& stat_with_bonus : game_data.statsWithBonus()) {
-		pt::ptree stat_bonus_tree{};
-		StatType::Type stat{ stat_with_bonus };
-		stat_bonus_tree.put("stat", StatType::toString(stat));
-		stat_bonus_tree.put("bonus", game_data.statBonus(stat));
-		stat_bonuses_tree.push_back(std::make_pair("", stat_bonus_tree));
+	{
+		pt::ptree tree{ getEnumPairTree<StatType::Type, int>(game_data.statBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("stat-bonuses", tree));
 	}
-	if (stat_bonuses_tree.size()) datum.push_back(std::make_pair("stat-bonuses", stat_bonuses_tree));
 
 	// Everyman skills
 	{
