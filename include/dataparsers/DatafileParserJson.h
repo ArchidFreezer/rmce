@@ -362,7 +362,7 @@ protected:
 	 * @param tree Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories
 	 * @return Set of SubcategoriedSkillData, with the skills retrieved from the cache using their ids and optional subcategories
 	 */
-	const std::set<SubcategoriedSkillData> parseSkillSetTree(boost::optional<const pt::ptree&> tree);
+	std::set<SubcategoriedSkillData> parseSkillSetTree(boost::optional<const pt::ptree&> tree);
 
 	/**
 	 * @brief Parse a std::set of SubcategoriedSkillData into a boost ptree containing a set of skills
@@ -376,7 +376,7 @@ protected:
 	 * @param tree Boost ptree containing the map of language abilities, with the languages represented by their ids
 	 * @return Map of LanguageAbility, with the languages retrieved from the cache using their ids
 	 */
-	const std::map<std::string, const LanguageAbility> parseLanguageAbilityMapTree(boost::optional<const pt::ptree&> tree);
+	std::map<std::string, const LanguageAbility> parseLanguageAbilityMapTree(boost::optional<const pt::ptree&> tree);
 
 	/**
 	 * @brief Parse a std::map of LanguageAbility into a boost ptree containing a map of language abilities

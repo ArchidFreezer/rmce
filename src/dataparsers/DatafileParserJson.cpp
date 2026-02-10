@@ -16,7 +16,7 @@ void DatafileParserJson::read(const std::string& filename) {
 
 }
 
-const std::set<SubcategoriedSkillData> DatafileParserJson::parseSkillSetTree(boost::optional<const pt::ptree&> tree) {
+std::set<SubcategoriedSkillData> DatafileParserJson::parseSkillSetTree(boost::optional<const pt::ptree&> tree) {
 	std::set<SubcategoriedSkillData> datum{};
 	if (tree) {
 		for (const auto& items : tree.get()) {
@@ -43,7 +43,7 @@ const pt::ptree DatafileParserJson::getSkillSetTree(std::set<SubcategoriedSkillD
 	return tree;
 }
 
-const std::map<std::string, const LanguageAbility> DatafileParserJson::parseLanguageAbilityMapTree(boost::optional<const pt::ptree&> tree) {
+std::map<std::string, const LanguageAbility> DatafileParserJson::parseLanguageAbilityMapTree(boost::optional<const pt::ptree&> tree) {
 	std::map<std::string, const LanguageAbility> datum{};
 	if (tree) {
 		for (const auto& items : tree.get()) {
