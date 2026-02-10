@@ -80,6 +80,19 @@ namespace StatType {
 	const std::optional<Type> fromString(std::string_view sv);
 
 	/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @param type reference to set the StatType::Type represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid StatType::Type
+	 *
+	 * @see toString()
+	 */
+	void fromString(std::string_view sv, StatType::Type& type);
+
+	/**
 	 * @brief Checks if the stat is a primary stat or not
 	 * @param stat StatType::Type to test
 	 * @return `true` if the StatType::Type is a primary stat
