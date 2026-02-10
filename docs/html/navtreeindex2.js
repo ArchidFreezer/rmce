@@ -157,14 +157,15 @@ var NAVTREEINDEX2 =
 "class_skill_action_type_1_1_skill_action_not_found_exception.html#ac31135dd00e57651efa22f160d68b54f":[0,0,10,0,0],
 "class_skill_action_type_1_1_skill_action_not_found_exception.html#ac31135dd00e57651efa22f160d68b54f":[2,0,5,0,0],
 "class_skill_category_data.html":[2,0,48],
-"class_skill_category_data.html#a127f00dd012313c5bf8614002987d49a":[2,0,48,15],
-"class_skill_category_data.html#a2506401b5a99ff90c19a563e2750057d":[2,0,48,14],
+"class_skill_category_data.html#a127f00dd012313c5bf8614002987d49a":[2,0,48,16],
+"class_skill_category_data.html#a2506401b5a99ff90c19a563e2750057d":[2,0,48,15],
 "class_skill_category_data.html#a2d6385496a88d0adde854904a5f2b083":[2,0,48,10],
-"class_skill_category_data.html#a442f484cf558716a4806f0259316b93d":[2,0,48,17],
+"class_skill_category_data.html#a2e7c453fa89ab73e9ce00cb9eccb7ade":[2,0,48,14],
+"class_skill_category_data.html#a442f484cf558716a4806f0259316b93d":[2,0,48,18],
 "class_skill_category_data.html#a4a8759a6ebe1d24ac4576894198fc3fc":[2,0,48,13],
 "class_skill_category_data.html#a69fd0ed4a9d021cb70e91b29abd26f6a":[2,0,48,8],
 "class_skill_category_data.html#a856ed988c0957d0f0de41d5cf7703e0d":[2,0,48,12],
-"class_skill_category_data.html#a9fa53a40403858aedeac3f4c2e153505":[2,0,48,16],
+"class_skill_category_data.html#a9fa53a40403858aedeac3f4c2e153505":[2,0,48,17],
 "class_skill_category_data.html#aa5a850b0da838c35b587c41f01b7b1d1":[2,0,48,9],
 "class_skill_category_data.html#ab4a4332ae31c49b5d33b800767ebe3d3":[2,0,48,2],
 "class_skill_category_data.html#ab53d50d8705559ff6386fd8471211c6e":[2,0,48,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "class_skill_group_datafile_parser_json.html#a4b92ea826d8f31ed30a53741117610d2":[2,0,54,0],
 "class_skill_group_datafile_parser_json.html#a9530e4b2889aee9838d837357b3b529c":[2,0,54,4],
 "class_skill_group_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,54,3],
-"class_skill_progression_data.html":[2,0,55],
-"class_skill_progression_data.html#aa25e232c3e4eee2cf2012af9a6cba560":[2,0,55,0]
+"class_skill_progression_data.html":[2,0,55]
 };

@@ -12,13 +12,11 @@ void SkillCategoryDatafileParserJson::populateDatum(std::string& id, pt::ptree& 
 	datum.put("skill-progression", game_data.defaultSkillProgression().id());
 	datum.put("category-progression", game_data.skillCategoryProgression().id());
 
-	pt::ptree pstats;
-	for (auto& stat : game_data.stats()) {
-		pt::ptree pstat;
-		pstat.put("", toString(stat));
-		pstats.push_back(std::make_pair("", pstat));
+	// Stats
+	{
+		pt::ptree tree{ getEnumVectorTree<StatType::Type>(game_data.stats()) };
+		if (!tree.empty()) { datum.push_back(std::make_pair("stats", tree));	}
 	}
-	datum.push_back(std::make_pair("stats", pstats));
 }
 
 void SkillCategoryDatafileParserJson::parse() {
@@ -51,15 +49,7 @@ void SkillCategoryDatafileParserJson::parse() {
 		ref.setUseRealmStats(use_realm_stats);
 
 		// Check for any stats
-		if (!use_realm_stats) {
-			if (boost::optional<const pt::ptree&> stat_tree = v.second.get_child_optional("stats")) {
-				for (const auto& stat : stat_tree.get()) {
-					if (StatType::fromString(stat.second.data())) {
-						ref.addStat(StatType::fromString(stat.second.data()).value());
-					}
-				}
-			}
-		}
+		ref.setStats(parseEnumVectorTree<StatType::Type>(v.second.get_child_optional("stats")));
 
 		std::cout << "\tSkillCategory name: " << ref.name() << std::endl;
 

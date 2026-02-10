@@ -139,7 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae121918766e68affb742efbf5fbfd4b3" id="r_ae121918766e68affb742efbf5fbfd4b3"><td class="memItemLeft">const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae121918766e68affb742efbf5fbfd4b3">group</a> () const</td></tr>
 <tr class="memdesc:ae121918766e68affb742efbf5fbfd4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the group the category belongs to.  <br /></td></tr>
 <tr class="memitem:ae92350c9d91937939523110732fae66a" id="r_ae92350c9d91937939523110732fae66a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae92350c9d91937939523110732fae66a">addStat</a> (<a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> stat)</td></tr>
-<tr class="memdesc:ae92350c9d91937939523110732fae66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add stat that applies stat boinus to skills in the category.  <br /></td></tr>
+<tr class="memdesc:ae92350c9d91937939523110732fae66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add stat that applies stat bonus to skills in the category.  <br /></td></tr>
+<tr class="memitem:a2e7c453fa89ab73e9ce00cb9eccb7ade" id="r_a2e7c453fa89ab73e9ce00cb9eccb7ade"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2e7c453fa89ab73e9ce00cb9eccb7ade">setStats</a> (std::vector&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; <a class="el" href="#a9fa53a40403858aedeac3f4c2e153505">stats</a>)</td></tr>
+<tr class="memdesc:a2e7c453fa89ab73e9ce00cb9eccb7ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the stats that apply stat bonus to skills in the category.  <br /></td></tr>
 <tr class="memitem:aa5a850b0da838c35b587c41f01b7b1d1" id="r_aa5a850b0da838c35b587c41f01b7b1d1"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#aa5a850b0da838c35b587c41f01b7b1d1">numberOfStats</a> () const</td></tr>
 <tr class="memdesc:aa5a850b0da838c35b587c41f01b7b1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of stats currently associated with the category.  <br /></td></tr>
 <tr class="memitem:a2d6385496a88d0adde854904a5f2b083" id="r_a2d6385496a88d0adde854904a5f2b083"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2d6385496a88d0adde854904a5f2b083">removeStat</a> (<a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> stat)</td></tr>
@@ -257,7 +259,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Add stat that applies stat boinus to skills in the category. </p>
+<p>Add stat that applies stat bonus to skills in the category. </p>
 <p>There are 3 stats associated with each skill category and duplicates are allowed</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -555,6 +557,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a2e7c453fa89ab73e9ce00cb9eccb7ade" name="a2e7c453fa89ab73e9ce00cb9eccb7ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7c453fa89ab73e9ce00cb9eccb7ade">&#9670;&#160;</a></span>setStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkillCategoryData::setStats </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>stats</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the stats that apply stat bonus to skills in the category. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stats</td><td>vector of stats whose bonus should be applied to skills category </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2506401b5a99ff90c19a563e2750057d" name="a2506401b5a99ff90c19a563e2750057d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2506401b5a99ff90c19a563e2750057d">&#9670;&#160;</a></span>setUseRealmStats()</h2>
 
@@ -572,7 +607,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set whether to use the characters realm stats for determining the bonus. </p>
 <p>Some skill categories such as those from the Spell skill group use the characters realm stats for determining the bonus provided. If this flag is set then the <a class="el" href="#a9fa53a40403858aedeac3f4c2e153505" title="Gets the stats that that provide a bonus to the category and skills within it.">stats()</a> method should not be used.</p>
-<p>If this flag is set then any stats previously set on the category using <a class="el" href="#ae92350c9d91937939523110732fae66a" title="Add stat that applies stat boinus to skills in the category.">addStat()</a> will be removed.</p>
+<p>If this flag is set then any stats previously set on the category using <a class="el" href="#ae92350c9d91937939523110732fae66a" title="Add stat that applies stat bonus to skills in the category.">addStat()</a> will be removed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">use_realm_stats</td><td>bool Whether to use character realm stats </td></tr>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737aea77e777f06ddc8e1b262ec7338565b7":[0,0,3,2,1],
 "namespace_critical_type.html":[0,0,4],
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1":[0,0,4,0],
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1":[0,0,4,1],

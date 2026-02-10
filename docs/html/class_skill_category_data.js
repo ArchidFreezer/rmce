@@ -14,6 +14,7 @@ var class_skill_category_data =
     [ "setGroup", "class_skill_category_data.html#aee354c5df79300626b481c1b0893dcdf", null ],
     [ "setName", "class_skill_category_data.html#a856ed988c0957d0f0de41d5cf7703e0d", null ],
     [ "setSkillProgressions", "class_skill_category_data.html#a4a8759a6ebe1d24ac4576894198fc3fc", null ],
+    [ "setStats", "class_skill_category_data.html#a2e7c453fa89ab73e9ce00cb9eccb7ade", null ],
     [ "setUseRealmStats", "class_skill_category_data.html#a2506401b5a99ff90c19a563e2750057d", null ],
     [ "skillCategoryProgression", "class_skill_category_data.html#a127f00dd012313c5bf8614002987d49a", null ],
     [ "stats", "class_skill_category_data.html#a9fa53a40403858aedeac3f4c2e153505", null ],

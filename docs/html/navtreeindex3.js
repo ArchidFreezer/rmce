@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"class_skill_progression_data.html#aa25e232c3e4eee2cf2012af9a6cba560":[2,0,55,0],
 "class_skill_progression_type_data.html":[2,0,56],
 "class_skill_progression_type_data.html#a065ce1356c42b1169dceafa14a137cdb":[2,0,56,14],
 "class_skill_progression_type_data.html#a215a3147cc5a83556e37ff0366bcfe61":[2,0,56,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a07fa7a19aa722c635a15e94cb7f50416":[0,0,3,2,0],
 "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a1b1fb6c530fa716085438bd0828fda85":[0,0,3,2,2],
 "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a414b8a61a97d278df48dbfa2a8346198":[0,0,3,2,4],
-"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a9f6e20e82520583d8de05ee85fd65cc0":[0,0,3,2,3],
-"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737aea77e777f06ddc8e1b262ec7338565b7":[0,0,3,2,1]
+"namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a9f6e20e82520583d8de05ee85fd65cc0":[0,0,3,2,3]
 };

@@ -77,7 +77,7 @@ public:
 	const SkillGroupData& group() const { return *group_; }
 
 	/**
-	 * @brief Add stat that applies stat boinus to skills in the category
+	 * @brief Add stat that applies stat bonus to skills in the category
 	 * 
 	 * There are 3 stats associated with each skill category and duplicates are allowed
 	 * 
@@ -88,6 +88,12 @@ public:
 	 * @see setUseRealmStats()
 	 */
 	int addStat(StatType::Type stat);
+
+	/**
+	 * @brief Set the stats that apply stat bonus to skills in the category
+	 * @param stats vector of stats whose bonus should be applied to skills category
+	 */
+	void setStats(std::vector<StatType::Type> stats) { stats_ = std::move(stats); }
 
 	/**
 	 * @brief Gets the number of stats currently associated with the category
