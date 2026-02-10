@@ -403,6 +403,24 @@ protected:
 	template<GameRuleDataObject GameRuleData>
 	const pt::ptree getGameDataChoiceVectorTree(std::vector<GameRuleDataChoice<GameRuleData>> vector);
 
+	/**
+	 * @brief Parses a property tree into a set of game rule data choices.
+	 * @tparam GameRuleData The game rule data object type that satisfies the GameRuleDataObject concept.
+	 * @param tree An optional reference to a property tree containing the game data choice set to parse.
+	 * @return A set of GameRuleDataChoice objects templated on the specified GameRuleData type.
+	 */
+	template<GameRuleDataObject GameRuleData>
+	std::set<GameRuleDataChoice<GameRuleData>> parseGameDataChoiceSetTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Converts a set of game rule data choices into a property tree representation.
+	 * @tparam GameRuleData The type of game rule data object that satisfies the GameRuleDataObject concept.
+	 * @param set The set of game rule data choices to convert.
+	 * @return A property tree (ptree) containing the serialized game data choice set.
+	 */
+	template<GameRuleDataObject GameRuleData>
+	const pt::ptree getGameDataChoiceSetTree(std::set<GameRuleDataChoice<GameRuleData>> set);
+
 private:
 	std::string root_node_{}; /**< Key of the root node of the json file */
 };
@@ -697,6 +715,48 @@ inline const pt::ptree DatafileParserJson::getGameDataChoiceVectorTree(std::vect
 		}
 
 		for (const auto& pair: sorted_options) {
+			pt::ptree option_tree{};
+			option_tree.put("", pair.second->id());
+			options_tree.push_back(std::make_pair("", option_tree));
+		}
+		choice_tree.push_back(std::make_pair("options", options_tree));
+		tree.push_back(std::make_pair("", choice_tree));
+	}
+	return tree;
+}
+
+template<GameRuleDataObject GameRuleData>
+inline std::set<GameRuleDataChoice<GameRuleData>> DatafileParserJson::parseGameDataChoiceSetTree(boost::optional<const pt::ptree&> tree) {
+	std::set<GameRuleDataChoice<GameRuleData>> datum{};
+	if (tree) {
+		for (const auto& choice_tree : tree.get()) {
+			GameRuleDataChoice<GameRuleData> choice_data{};
+			choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
+
+			for (const auto& list_tree : choice_tree.second.get_child("options")) {
+				std::string list_id{ list_tree.second.get_value<std::string>() };
+				choice_data.addOption(factory().get<GameRuleData>(list_id));
+			}
+			datum.emplace(choice_data);
+		}
+	}
+	return datum;
+}
+
+template<GameRuleDataObject GameRuleData>
+inline const pt::ptree DatafileParserJson::getGameDataChoiceSetTree(std::set<GameRuleDataChoice<GameRuleData>> set) {
+	pt::ptree tree{};
+	for (const GameRuleDataChoice<GameRuleData>& item : set) {
+		pt::ptree choice_tree{};
+		choice_tree.put("num-choices", item.numChoices());
+		pt::ptree options_tree{};
+
+		std::map<std::string, const GameRuleData*> sorted_options{};
+		for (const GameRuleData* option : item.options()) {
+			sorted_options.emplace(option->id(), option);
+		}
+
+		for (const auto& pair : sorted_options) {
 			pt::ptree option_tree{};
 			option_tree.put("", pair.second->id());
 			options_tree.push_back(std::make_pair("", option_tree));
