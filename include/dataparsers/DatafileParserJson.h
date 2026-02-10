@@ -4,6 +4,7 @@
 #include <DatafileParser.h>
 #include <LanguageAbility.h>
 #include <SkillDevelopmentType.h>
+#include <StatType.h>
 
 /**
  * @class DatafileParserJson
@@ -115,6 +116,48 @@ protected:
 	 */
 	template<GameRuleDataObject T, typename U>
 	inline const pt::ptree getGameDataPairTree(std::map<const T*, U> map);
+
+	/**
+	 * @brief Parse a boost ptree containing a map of enums strings with associated values into a std::map of enum types and  values
+	 *
+	 * The boost ptree expected by this function should be derived from the following json format:
+	 * @code{.json}
+	 * "root_node": [
+	 *   {
+	 *     "id": "output of {enum type}.toString()",
+	 *     "value": "value associated with the enum"
+	 *   }
+	 * ]
+	 * @endcode
+	 *
+	 * @tparam T Enum type being parsed
+	 * @tparam U Value type of the enum values
+	 * @param tree Boost ptree containing the map of enum types and associated values, with the enum types represented by the output of their toString() function
+	 * @return Map of enum types and associated values
+	 */
+	template<typename T, typename U>
+	inline std::map<T, U> parseEnumPairTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Creates a property tree from a map of enum key-value pairs.
+	 *
+	 * The boost ptree created by this function will generate the following json format:
+	 * @code{.json}
+	 * "root_node": [
+	 *   {
+	 *     "id": "output of {enum type}.toString()",
+	 *     "value": "value associated with the enum"
+	 *   }
+	 * ]
+	 * @endcode
+	 *
+	 * @tparam T The type of the map keys (typically an enum type).
+	 * @tparam U The type of the map values (typically an enum type).
+	 * @param map A map containing enum key-value pairs to convert into a property tree.
+	 * @return A const property tree representation of the enum pair map.
+	 */
+	template<typename T, typename U>
+	inline const pt::ptree getEnumPairTree(std::map<T, U> map);
 
 	/**
 	 * @brief Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and enum type values
@@ -368,6 +411,46 @@ inline const pt::ptree DatafileParserJson::getGameDataPairTree(std::map<const T*
 	}
 	return tree;
 }
+
+
+
+template<typename T, typename U>
+inline std::map<T, U> DatafileParserJson::parseEnumPairTree(boost::optional<const pt::ptree&> tree) {
+	std::map<T, U> datum{};
+
+	if (tree) {
+		for (const auto& items : tree.get()) {
+			T enum_val{};
+			fromString(items.second.get<std::string>("id"), enum_val);
+			datum.emplace(enum_val, items.second.get<U>("value"));
+		}
+	}
+	return datum;
+}
+
+template<typename T, typename U>
+inline const pt::ptree DatafileParserJson::getEnumPairTree(std::map<T, U> map) {
+	pt::ptree tree{};
+
+	for (const auto& pair : map) {
+		pt::ptree value_tree{};
+		value_tree.put("id", toString(pair.first));
+		value_tree.put("value", map[pair.first]);
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 template<GameRuleDataObject T, typename U>
 inline std::map<const T*, U> DatafileParserJson::parseGameDataPairEnumTree(boost::optional<const pt::ptree&> tree) {
