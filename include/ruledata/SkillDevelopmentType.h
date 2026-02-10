@@ -67,5 +67,5 @@ namespace SkillDevelopmentType {
 	 *
 	 * @see toString()
 	 */
-	void fromString(std::string_view sv, Type& type);
+	void fromString(std::string_view sv, SkillDevelopmentType::Type& type);
 }
