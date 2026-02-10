@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"class_skill_group_datafile_parser_json.html":[2,0,54],
 "class_skill_group_datafile_parser_json.html#a02bdb1289ee513e43248b3884db4a904":[2,0,54,1],
 "class_skill_group_datafile_parser_json.html#a0be1896a322261b72948dacd49544530":[2,0,54,2],
 "class_skill_group_datafile_parser_json.html#a4b92ea826d8f31ed30a53741117610d2":[2,0,54,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2":[0,0,2,4],
 "namespace_critical_table_type.html":[0,0,3],
 "namespace_critical_table_type.html#a2e9522e03d12fe02878b31b00f2663bf":[0,0,3,5],
-"namespace_critical_table_type.html#a313b88a386987728d8027d79f8d6037d":[0,0,3,3],
-"namespace_critical_table_type.html#a439e93fa90539a088714b27a6b880702":[0,0,3,4]
+"namespace_critical_table_type.html#a313b88a386987728d8027d79f8d6037d":[0,0,3,3]
 };

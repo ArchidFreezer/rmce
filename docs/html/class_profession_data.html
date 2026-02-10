@@ -195,6 +195,8 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:a000f081ea4897fe4b1be7fab1090ac79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skill subcategories that may have their development type changed.  <br /></td></tr>
 <tr class="memitem:afa2214fde305496bb889335ad0492d69" id="r_afa2214fde305496bb889335ad0492d69"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afa2214fde305496bb889335ad0492d69">addSkillCategorySkillDevelopmentTypeChoice</a> (<a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; choice, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> type)</td></tr>
 <tr class="memdesc:afa2214fde305496bb889335ad0492d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill categories that a character may select one or more skills from to change their development type.  <br /></td></tr>
+<tr class="memitem:a10700157d0ac17174e7ff2c2a78e95a4" id="r_a10700157d0ac17174e7ff2c2a78e95a4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a10700157d0ac17174e7ff2c2a78e95a4">setSkillCategorySkillDevelopmentTypeChoices</a> (std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; choices)</td></tr>
+<tr class="memdesc:a10700157d0ac17174e7ff2c2a78e95a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the skill development type choices for skill categories.  <br /></td></tr>
 <tr class="memitem:a35cc63af292333afb632e6b199af7e9e" id="r_a35cc63af292333afb632e6b199af7e9e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a35cc63af292333afb632e6b199af7e9e">numSkillCategorySkillDevelopmentTypeChoices</a> () const</td></tr>
 <tr class="memdesc:a35cc63af292333afb632e6b199af7e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding development types skills in skill categories.  <br /></td></tr>
 <tr class="memitem:a1c338b53d32da0336f671f2396d30766" id="r_a1c338b53d32da0336f671f2396d30766"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1c338b53d32da0336f671f2396d30766">skillCategorySkillDevelopmentTypeChoices</a> () const</td></tr>
@@ -1831,6 +1833,39 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bonuses</td><td>A map from const SkillCategoryData* to int containing skill category profession bonuses. The map is assigned to the object's internal skill_category_profession_bonuses_ member, replacing its previous contents. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10700157d0ac17174e7ff2c2a78e95a4" name="a10700157d0ac17174e7ff2c2a78e95a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10700157d0ac17174e7ff2c2a78e95a4">&#9670;&#160;</a></span>setSkillCategorySkillDevelopmentTypeChoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::setSkillCategorySkillDevelopmentTypeChoices </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt;, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>choices</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the skill development type choices for skill categories. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">choices</td><td>A map associating skill category data choices with their corresponding skill development types. </td></tr>
   </table>
   </dd>
 </dl>

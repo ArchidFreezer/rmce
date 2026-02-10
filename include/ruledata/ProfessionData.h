@@ -321,6 +321,12 @@ public:
 	void addSkillCategorySkillDevelopmentTypeChoice(GameRuleDataChoice<SkillCategoryData> choice, SkillDevelopmentType::Type type) { skill_category_skill_development_type_choices_.emplace(std::move(choice), type); }
 
 	/**
+	 * @brief Sets the skill development type choices for skill categories.
+	 * @param choices A map associating skill category data choices with their corresponding skill development types.
+	 */
+	void setSkillCategorySkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillCategoryData>, SkillDevelopmentType::Type> choices) { skill_category_skill_development_type_choices_ = std::move(choices); }
+
+	/**
 	 * @brief Get the number of choices a character has to make regarding development types skills in skill categories
 	 *
 	 * During character development the player may have the option change the development type of one of more skills.

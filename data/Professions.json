@@ -3957,8 +3957,8 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "6",
-                    "development-type": "Occupational",
-                    "categories": [
+                    "type": "Occupational",
+                    "options": [
                         "SKILLCATEGORY_CRAFTS"
                     ]
                 }
@@ -4264,8 +4264,8 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "categories": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLCATEGORY_COMBAT_MANOEUVRES"
                     ]
                 }
@@ -5236,8 +5236,8 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Occupational",
-                    "categories": [
+                    "type": "Occupational",
+                    "options": [
                         "SKILLCATEGORY_CRAFTS"
                     ]
                 }
@@ -7202,8 +7202,8 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "6",
-                    "development-type": "Occupational",
-                    "categories": [
+                    "type": "Occupational",
+                    "options": [
                         "SKILLCATEGORY_CRAFTS"
                     ]
                 }
@@ -10108,8 +10108,8 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "categories": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLCATEGORY_CRAFTS"
                     ]
                 }
@@ -11080,8 +11080,8 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Occupational",
-                    "categories": [
+                    "type": "Occupational",
+                    "options": [
                         "SKILLCATEGORY_ATHLETIC_ENDURANCE"
                     ]
                 }
@@ -11411,8 +11411,8 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Occupational",
-                    "categories": [
+                    "type": "Occupational",
+                    "options": [
                         "SKILLCATEGORY_CRAFTS"
                     ]
                 }
@@ -14680,8 +14680,8 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "categories": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLCATEGORY_COMBAT_MANOEUVRES"
                     ]
                 }
@@ -17305,15 +17305,15 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "categories": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLCATEGORY_POWER_AWARENESS"
                     ]
                 },
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "categories": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLCATEGORY_POWER_MANIPULATION"
                     ]
                 }
@@ -20896,15 +20896,15 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Occupational",
-                    "categories": [
+                    "type": "Occupational",
+                    "options": [
                         "SKILLCATEGORY_ATHLETIC_BRAWN"
                     ]
                 },
                 {
                     "num-choices": "1",
-                    "development-type": "Occupational",
-                    "categories": [
+                    "type": "Occupational",
+                    "options": [
                         "SKILLCATEGORY_ATHLETIC_ENDURANCE"
                     ]
                 }
@@ -22235,8 +22235,8 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Occupational",
-                    "categories": [
+                    "type": "Occupational",
+                    "options": [
                         "SKILLCATEGORY_COMBAT_MANOEUVRES"
                     ]
                 }
@@ -26398,8 +26398,8 @@
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "categories": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLCATEGORY_COMBAT_MANOEUVRES"
                     ]
                 }
