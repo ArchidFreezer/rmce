@@ -10,6 +10,7 @@ var namespace_critical_table_type =
       [ "kHugeCreatureSpell", "namespace_critical_table_type.html#acf251bdf39da26718d9a1f7f96fcf737a414b8a61a97d278df48dbfa2a8346198", null ]
     ] ],
     [ "fromString", "namespace_critical_table_type.html#a313b88a386987728d8027d79f8d6037d", null ],
+    [ "fromString", "namespace_critical_table_type.html#aba3cd5910edd0af3cb80915c3cad1522", null ],
     [ "operator<<", "namespace_critical_table_type.html#a439e93fa90539a088714b27a6b880702", null ],
     [ "toString", "namespace_critical_table_type.html#a2e9522e03d12fe02878b31b00f2663bf", null ]
 ];
