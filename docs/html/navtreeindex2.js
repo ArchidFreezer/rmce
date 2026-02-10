@@ -1,9 +1,9 @@
 var NAVTREEINDEX2 =
 {
-"class_profession_data.html#aecb5417f5cff3520e4d559bbd4eaadc8":[2,0,42,55],
 "class_profession_data.html#aee3298c80b30fec7387fd709efcc764e":[2,0,42,72],
 "class_profession_data.html#aef95f03695275317d8f533a350418a96":[2,0,42,4],
 "class_profession_data.html#af0971669460ec8a13ecc677c4e609dd7":[2,0,42,34],
+"class_profession_data.html#af32001a2d38fa7a8b8d9c7eecb9fe4d6":[2,0,42,52],
 "class_profession_data.html#af4e11a2912113cab90d68a59a0e6f0d2":[2,0,42,63],
 "class_profession_data.html#af6b92b9a2ad75fdb0fca1116c6470447":[2,0,42,41],
 "class_profession_data.html#af7ae5b1efcadcb40cfa16fb0ca1fd9ee":[2,0,42,25],

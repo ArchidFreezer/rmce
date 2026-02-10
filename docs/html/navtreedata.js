@@ -58,7 +58,7 @@ var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
 "class_datafile_parser.html#a4b4af1c04bba4982985960e1839f7ccb",
-"class_profession_data.html#aecb5417f5cff3520e4d559bbd4eaadc8",
+"class_profession_data.html#aee3298c80b30fec7387fd709efcc764e",
 "class_special_attack_table.html#a28d9001ca4805cebbc341884cda4daaa",
 "namespace_environment_type.html#a5bfaeeea41e3378885098e60d793a5e9"
 ];
