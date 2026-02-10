@@ -57,12 +57,9 @@ void SkillDatafileParserJson::parse() {
 		ref.setBook(factory().get<BookData>(book));
 
 		// Get the skill action type
-		std::string action_type = v.second.get<std::string>("action");
-		if (SkillActionType::fromString(action_type)) {
-			ref.setActionType(SkillActionType::fromString(action_type).value());
-		} else {
-			throw SkillActionType::SkillActionNotFoundException("Could not find SkillActionType for " + action_type);
-		}
+		SkillActionType::Type action_type{};
+		fromString(v.second.get<std::string>("action"), action_type);
+		ref.setActionType(action_type);
 
 		// Get the skill category from the cache
 		std::string category = v.second.get<std::string>("category");
