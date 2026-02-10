@@ -1,5 +1,6 @@
 var class_book_data =
 [
+    [ "BookData", "class_book_data.html#abae6ea78170455109a879533938ddae9", null ],
     [ "BookData", "class_book_data.html#a9c7ea5df6c88eda5d22db4590ec42e63", null ],
     [ "abbreviation", "class_book_data.html#a0c3b48f44c6c9a44998b24cde5c7b98c", null ],
     [ "code", "class_book_data.html#a0e5569ad4b94a8c924cebdfa2780be63", null ],

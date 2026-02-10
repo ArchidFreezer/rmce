@@ -18,6 +18,9 @@
  */
 class SkillProgressionTypeData : public GameRuleData, SkillProgressionData {
 public:
+
+	SkillProgressionTypeData() = delete; /**< Default constructor is deleted to ensure the base class is initialised */
+
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier for the progression type

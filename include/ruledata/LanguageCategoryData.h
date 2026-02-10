@@ -23,6 +23,8 @@
 class LanguageCategoryData : public GameRuleData {
 public:
 
+	LanguageCategoryData() = delete; /**< Default constructor is deleted to ensure the base class is initialised */
+
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier of the language category

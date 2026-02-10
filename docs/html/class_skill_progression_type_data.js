@@ -1,5 +1,6 @@
 var class_skill_progression_type_data =
 [
+    [ "SkillProgressionTypeData", "class_skill_progression_type_data.html#a63f3f9aea8e96d38c639ab39b78043bf", null ],
     [ "SkillProgressionTypeData", "class_skill_progression_type_data.html#a951619d33cdf197bb58be9233d54c5a5", null ],
     [ "bonus", "class_skill_progression_type_data.html#a5b54dd876e34e50738379ebf108b0d82", null ],
     [ "name", "class_skill_progression_type_data.html#a2fb561755266f2779e5bd1e6252595c4", null ],

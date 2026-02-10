@@ -13,6 +13,9 @@
  */
 class SkillGroupData : public GameRuleData {
 public:
+
+	SkillGroupData() = delete; /**< Default constructor is deleted to ensure the base class is initialised */
+
 	/**
  * @brief Constructor
  * @param id Unique identifier of the skill group

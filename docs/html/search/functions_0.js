@@ -45,7 +45,7 @@ var searchData=
   ['adolescentlanguages_42',['adolescentLanguages',['../class_race_data.html#a8f59472f90ef17ca478a6785d95924be',1,'RaceData']]],
   ['animalonly_43',['animalOnly',['../class_armour_type_data.html#ab96238c3155edb9f18b760add3fecc4e',1,'ArmourTypeData']]],
   ['arcaneprogression_44',['arcaneProgression',['../class_race_data.html#ad7eaba1646ccd280777ebeedf2483165',1,'RaceData']]],
-  ['armourtypedata_45',['ArmourTypeData',['../class_armour_type_data.html#a9f01466ec106e2b766fb6d382f940305',1,'ArmourTypeData']]],
+  ['armourtypedata_45',['ArmourTypeData',['../class_armour_type_data.html#a45a0e7905e4632223d0b69f22246e36e',1,'ArmourTypeData::ArmourTypeData()=delete'],['../class_armour_type_data.html#a9f01466ec106e2b766fb6d382f940305',1,'ArmourTypeData::ArmourTypeData(std::string_view id)']]],
   ['armourtypedatafileparserjson_46',['ArmourTypeDatafileParserJson',['../class_armour_type_datafile_parser_json.html#aec39e2e62a7e7c1f0894798b504456ca',1,'ArmourTypeDatafileParserJson::ArmourTypeDatafileParserJson(GameRuleDataCache &amp;cache, std::string_view filename)'],['../class_armour_type_datafile_parser_json.html#a3eac8c7d6e66b5f5268de60d6218cf40',1,'ArmourTypeDatafileParserJson::ArmourTypeDatafileParserJson(GameRuleDataCache &amp;cache)']]],
   ['armourtypenotfoundexception_47',['ArmourTypeNotFoundException',['../class_armour_type_1_1_armour_type_not_found_exception.html#aa45d406f81941d4e5f110da76c3ce17e',1,'ArmourType::ArmourTypeNotFoundException']]],
   ['armsprogression_48',['armsProgression',['../class_race_data.html#a8a51810df4109ef7bad8aebae67190d0',1,'RaceData']]],

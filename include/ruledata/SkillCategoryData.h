@@ -37,6 +37,9 @@ public:
  */
 class SkillCategoryData : public GameRuleData {
 public:
+
+	SkillCategoryData() = delete; /**< Default constructor is deleted to ensure the base class is initialised */
+
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier of the skill category

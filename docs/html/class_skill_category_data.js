@@ -1,6 +1,7 @@
 var class_skill_category_data =
 [
     [ "UsingCharacterRealmStatsException", "class_skill_category_data_1_1_using_character_realm_stats_exception.html", "class_skill_category_data_1_1_using_character_realm_stats_exception" ],
+    [ "SkillCategoryData", "class_skill_category_data.html#add00c6912fa1fb1f278933e9a307fed5", null ],
     [ "SkillCategoryData", "class_skill_category_data.html#ab4a4332ae31c49b5d33b800767ebe3d3", null ],
     [ "addStat", "class_skill_category_data.html#ae92350c9d91937939523110732fae66a", null ],
     [ "clearStats", "class_skill_category_data.html#aebd62a7951f85ada98ea67d7291d5d3b", null ],
