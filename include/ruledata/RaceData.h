@@ -535,9 +535,7 @@ public:
 	 * @brief Sets the object's collection of starting language abilities to the provided map.
 	 * @param languages A map of language names to LanguageAbility objects. The map is copied into the object's starting_languages_ member.
 	 */
-	void setStartingLanguageAbilities(const std::map<std::string, const LanguageAbility>& languages) {
-		starting_languages_ = languages;
-	}
+	void setStartingLanguageAbilities(const std::map<std::string, const LanguageAbility> languages) {	starting_languages_ = std::move(languages); }
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
@@ -578,9 +576,7 @@ public:
 	 * @brief Sets the object's collection of adolescent language abilities to the provided map.
 	 * @param languages A map of language names to LanguageAbility objects. The map is copied into the object's adolescent_languages_ member.
 	 */
-	void setAdolescentLanguageAbilities(const std::map<std::string, const LanguageAbility>& languages) {
-		adolescent_languages_ = languages;
-	}
+	void setAdolescentLanguageAbilities(const std::map<std::string, const LanguageAbility> languages) {	adolescent_languages_ = std::move(languages); }
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
@@ -648,12 +644,10 @@ public:
 	}
 
 	/**
-	 * @brief Sets the object's collection of everyman skills to the provided set.
-	 * @param skills A set of SubcategoriedSkillData objects to assign. The set is copied into the object's everyman_skills_ member.
+	 * @brief Sets the everyman skills collection.
+	 * @param skills A set of subcategorized skill data to assign as everyman skills.
 	 */
-	void setEverymanSkills(const std::set<SubcategoriedSkillData>& skills) {
-		everyman_skills_ = skills;
-	}
+	void setEverymanSkills(const std::set<SubcategoriedSkillData> skills) {	everyman_skills_ = std::move(skills); }
 
 	/**
 	 * @brief Get a container of the skills that are considered everyman
@@ -710,12 +704,10 @@ public:
 	}
 
 	/**
-	 * @brief Replaces the object's restricted skills with the provided set.
-	 * @param skills A const reference to a set of SubcategoriedSkillData to assign to the object's restricted skills. The provided set is copied into the internal restricted_skills_ member.
+	 * @brief Sets the restricted skills to the specified set.
+	 * @param skills A set of subcategorized skill data to be set as restricted skills.
 	 */
-	void setRestrictedSkills(const std::set<SubcategoriedSkillData>& skills) {
-		restricted_skills_ = skills;
-	}
+	void setRestrictedSkills(const std::set<SubcategoriedSkillData> skills) {	restricted_skills_ = std::move(skills); }
 
 	/**
 	 * @brief Check if a skill is restricted for the race
@@ -788,9 +780,7 @@ public:
 	 * @brief Sets the restricted skill categories
 	 * @param categories A set of pointers to SkillCategoryData to mark as restricted.
 	 */
-	void setRestrictedSkillCategories(const std::set<const SkillCategoryData*>& categories) {
-		restricted_skill_categories_ = categories;
-	}
+	void setRestrictedSkillCategories(const std::set<const SkillCategoryData*> categories) { restricted_skill_categories_ = std::move(categories); }
 
 	/**
 	 * @brief Get a container of the skill categories that are considered restricted
@@ -824,11 +814,10 @@ public:
 	}
 
 	/**
-	 * @brief Sets the skill bonuses the race provides
+	 * @brief Sets the skill bonuses to the specified map.
+	 * @param bonuses A map of SubcategoriedSkillData to int representing the skill bonuses. The map is copied into the object's skill_bonuses_ member.
 	 */
-	void setSkillBonuses(const std::map<SubcategoriedSkillData, int>& bonuses) {
-		skill_bonuses_ = bonuses;
-	}
+	void setSkillBonuses(const std::map<SubcategoriedSkillData, int> bonuses) {	skill_bonuses_ = std::move(bonuses);	}
 
 	/**
 	 * @brief Returns a read-only reference to the map of skill bonuses.
