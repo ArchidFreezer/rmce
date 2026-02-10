@@ -340,6 +340,24 @@ protected:
 	inline const pt::ptree getEnumSetTree(std::set<T> set);
 
 	/**
+	 * @brief Parses a property tree into a vector of enum values.
+	 * @tparam T The enum type to parse the values into.
+	 * @param tree An optional reference to a property tree containing the enum values to parse.
+	 * @return A vector containing the parsed enum values.
+	 */
+	template<typename T>
+	inline std::vector<T> parseEnumVectorTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Converts a vector of enum values to a property tree representation.
+	 * @tparam T The enum type of the elements in the vector.
+	 * @param vector The vector of enum values to convert.
+	 * @return A property tree containing the enum vector data.
+	 */
+	template<typename T>
+	inline const pt::ptree getEnumVectorTree(std::vector<T> vector);
+
+	/**
 	 * @brief Parse a boost ptree containing a set of skills into a std::set of SubcategoriedSkillData
 	 * @param tree Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories
 	 * @return Set of SubcategoriedSkillData, with the skills retrieved from the cache using their ids and optional subcategories
@@ -429,8 +447,6 @@ inline const pt::ptree DatafileParserJson::getGameDataPairTree(std::map<const T*
 	}
 	return tree;
 }
-
-
 
 template<typename T, typename U>
 inline std::map<T, U> DatafileParserJson::parseEnumPairTree(boost::optional<const pt::ptree&> tree) {
@@ -600,6 +616,30 @@ template<typename T>
 inline const pt::ptree DatafileParserJson::getEnumSetTree(std::set<T> set) {
 	pt::ptree tree{};
 	for (const auto& item : set) {
+		pt::ptree value_tree{};
+		value_tree.put("", toString(item));
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+template<typename T>
+inline std::vector<T> DatafileParserJson::parseEnumVectorTree(boost::optional<const pt::ptree&> tree) {
+	std::vector<T> datum{};
+	if (tree) {
+		for (const auto& items : tree.get()) {
+			T enum_val{};
+			fromString(items.second.get_value<std::string>(), enum_val);
+			datum.push_back(enum_val);
+		}
+	}
+	return datum;
+}
+
+template<typename T>
+inline const pt::ptree DatafileParserJson::getEnumVectorTree(std::vector<T> vector) {
+	pt::ptree tree{};
+	for (const auto& item : vector) {
 		pt::ptree value_tree{};
 		value_tree.put("", toString(item));
 		tree.push_back(std::make_pair("", value_tree));
