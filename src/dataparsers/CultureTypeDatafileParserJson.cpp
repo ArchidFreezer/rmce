@@ -46,36 +46,16 @@ void CultureTypeDatafileParserJson::parse() {
 		ref.setRequiredClimates(parseGameDataSetTree<ClimateData>(v.second.get_child_optional("required-climates")));
 
 		// Get required environmental special features
-		if (boost::optional<const pt::ptree&> required_features = v.second.get_child_optional("required-features")) {
-			for (const auto& required_feature : required_features.get()) {
-				std::optional<EnvironmentType::Feature> feature = EnvironmentType::feature(required_feature.second.get_value<std::string>());
-				if (feature) ref.addRequiredFeature(feature.value());
-			}
-		}
+		ref.setRequiredFeatures(parseEnumSetTree<EnvironmentType::Feature>(v.second.get_child_optional("required-features")));
 
 		// Get required environmental terrains
-		if (boost::optional<const pt::ptree&> required_terrains = v.second.get_child_optional("required-terrains")) {
-			for (const auto& required_terrain : required_terrains.get()) {
-				std::optional<EnvironmentType::Terrain> terrain = EnvironmentType::terrain(required_terrain.second.get_value<std::string>());
-				if (terrain) ref.addRequiredTerrain(terrain.value());
-			}
-		}
+		ref.setRequiredTerrains(parseEnumSetTree<EnvironmentType::Terrain>(v.second.get_child_optional("required-terrains")));
 
 		// Get required environmental vegetations
-		if (boost::optional<const pt::ptree&> required_vegetations = v.second.get_child_optional("required-vegetations")) {
-			for (const auto& required_vegetation : required_vegetations.get()) {
-				std::optional<EnvironmentType::Vegetation> vegetation = EnvironmentType::vegetation(required_vegetation.second.get_value<std::string>());
-				if (vegetation) ref.addRequiredVegetation(vegetation.value());
-			}
-		}
+		ref.setRequiredVegetations(parseEnumSetTree<EnvironmentType::Vegetation>(v.second.get_child_optional("required-vegetations")));
 
 		// Get required environmental water sources
-		if (boost::optional<const pt::ptree&> required_water_sources = v.second.get_child_optional("required-water-sources")) {
-			for (const auto& required_water_source : required_water_sources.get()) {
-				std::optional<EnvironmentType::Water> water = EnvironmentType::water(required_water_source.second.get_value<std::string>());
-				if (water) ref.addRequiredWaterSource(water.value());
-			}
-		}
+		ref.setRequiredWaterSources(parseEnumSetTree<EnvironmentType::Water>(v.second.get_child_optional("required-water-sources")));
 
 		std::cout << "\tCultureType name: " << ref.name() << std::endl;
 	}
@@ -139,39 +119,27 @@ void CultureTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& da
 	}
 
 	// Required environmental special features
-	pt::ptree features_tree{};
-	for (EnvironmentType::Feature feature : game_data.requiredFeatures()) {
-		pt::ptree feature_tree{};
-		feature_tree.put("", EnvironmentType::toString(feature));
-		features_tree.push_back(std::make_pair("", feature_tree));
+	{
+		pt::ptree tree{ getEnumSetTree<EnvironmentType::Feature>(game_data.requiredFeatures()) };
+		if (tree.size()) datum.push_back(std::make_pair("required-features", tree));
 	}
-	if (!features_tree.empty()) datum.push_back(std::make_pair("required-features", features_tree));
 
 	// Required environmental terrains
-	pt::ptree terrains_tree{};
-	for (EnvironmentType::Terrain terrain : game_data.requiredTerrains()) {
-		pt::ptree terrain_tree{};
-		terrain_tree.put("", EnvironmentType::toString(terrain));
-		terrains_tree.push_back(std::make_pair("", terrain_tree));
+	{
+		pt::ptree tree{ getEnumSetTree<EnvironmentType::Terrain>(game_data.requiredTerrains()) };
+		if (tree.size()) datum.push_back(std::make_pair("required-terrains", tree));
 	}
-	if (!terrains_tree.empty()) datum.push_back(std::make_pair("required-terrains", terrains_tree));
 
 	// Required environmental vegetation
-	pt::ptree vegetations_tree{};
-	for (EnvironmentType::Vegetation vegetation : game_data.requiredVegetations()) {
-		pt::ptree vegetation_tree{};
-		vegetation_tree.put("", EnvironmentType::toString(vegetation));
-		vegetations_tree.push_back(std::make_pair("", vegetation_tree));
+	{
+		pt::ptree tree{ getEnumSetTree<EnvironmentType::Vegetation>(game_data.requiredVegetations()) };
+		if (tree.size()) datum.push_back(std::make_pair("required-vegetations", tree));
 	}
-	if (!vegetations_tree.empty()) datum.push_back(std::make_pair("required-vegetations", vegetations_tree));
 
 	// Required environmental water sources
-	pt::ptree waters_tree{};
-	for (EnvironmentType::Water water : game_data.requiredWaterSources()) {
-		pt::ptree water_tree{};
-		water_tree.put("", EnvironmentType::toString(water));
-		waters_tree.push_back(std::make_pair("", water_tree));
+	{
+		pt::ptree tree{ getEnumSetTree<EnvironmentType::Water>(game_data.requiredWaterSources()) };
+		if (tree.size()) datum.push_back(std::make_pair("required-water-sources", tree));
 	}
-	if (!waters_tree.empty()) datum.push_back(std::make_pair("required-water-sources", waters_tree));
 
 }

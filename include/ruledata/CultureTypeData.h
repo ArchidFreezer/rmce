@@ -465,6 +465,12 @@ public:
 	void addRequiredFeature(EnvironmentType::Feature feature) { required_features_.emplace(feature); }
 
 	/**
+	 * @brief Set the set of environment features required by the culture
+	 * @param features std::set of EnvironmentType::Feature to set as required features
+	 */
+	void setRequiredFeatures(std::set<EnvironmentType::Feature> features) { required_features_ = std::move(features); }
+
+	/**
 	 * @brief Get a container with the environment features required by the culture
 	 * @return std::set<EnvironmentType::Feature> environment features
 	 */
@@ -484,6 +490,12 @@ public:
 	 * @param terrain EnvironmentType::Terrain to add
 	 */
 	void addRequiredTerrain(EnvironmentType::Terrain terrain) { required_terrains_.emplace(terrain); }
+
+	/**
+	 * @brief Set the set of environment terrains required by the culture
+	 * @param terrains std::set of EnvironmentType::Terrain to set as required terrains
+	 */
+	void setRequiredTerrains(std::set<EnvironmentType::Terrain> terrains) { required_terrains_ = std::move(terrains); }
 
 	/**
 	 * @brief Get a container with the environment terrains required by the culture
@@ -507,6 +519,12 @@ public:
 	void addRequiredVegetation(EnvironmentType::Vegetation vegetation) { required_vegetations_.emplace(vegetation); }
 
 	/**
+	 * @brief Set the set of environment vegetations required by the culture
+	 * @param vegetations std::set of EnvironmentType::Vegetation to set as required vegetations
+	 */
+	void setRequiredVegetations(std::set<EnvironmentType::Vegetation> vegetations) { required_vegetations_ = std::move(vegetations); }
+
+	/**
 	 * @brief Get a container with the environment vegetations required by the culture
 	 * @return std::set<EnvironmentType::Vegetation> environment vegetations
 	 */
@@ -526,6 +544,12 @@ public:
 	 * @param water EnvironmentType::Water source to add
 	 */
 	void addRequiredWaterSource(EnvironmentType::Water water) { required_water_sources_.emplace(water); }
+
+	/**
+	 * @brief Set the set of environment water sources required by the culture
+	 * @param water_sources std::set of EnvironmentType::Water to set as required water sources
+	 */
+	void setRequiredWaterSources(std::set<EnvironmentType::Water> water_sources) { required_water_sources_ = std::move(water_sources); }
 
 	/**
 	 * @brief Get a container with the environment water sources required by the culture

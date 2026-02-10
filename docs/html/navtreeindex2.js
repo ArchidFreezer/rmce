@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"class_profession_data.html#ab57b394b3c486821e605229a7a391109":[2,0,42,36],
+"class_profession_data.html#ab965ce5c35a6f9e2e5ecc707e86cf92e":[2,0,42,56],
+"class_profession_data.html#abb6398a3092d08c8a0f01e55bd325b42":[2,0,42,49],
+"class_profession_data.html#abbec8ef3752671f1496aea7d14dbbac7":[2,0,42,9],
 "class_profession_data.html#abde47a2fb7f671007efa9678c0ed3f03":[2,0,42,29],
 "class_profession_data.html#acadb08aa2f517a8cf34702e796f8cd1b":[2,0,42,30],
 "class_profession_data.html#ad10e9bf98dac6454a6c9b9e156e73d12":[2,0,42,91],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "class_skill_progression_data.html":[2,0,55],
 "class_skill_progression_data.html#aa25e232c3e4eee2cf2012af9a6cba560":[2,0,55,0],
 "class_skill_progression_type_data.html":[2,0,56],
-"class_skill_progression_type_data.html#a065ce1356c42b1169dceafa14a137cdb":[2,0,56,14],
-"class_skill_progression_type_data.html#a215a3147cc5a83556e37ff0366bcfe61":[2,0,56,12],
-"class_skill_progression_type_data.html#a22eef783c787ebd6b70c856d52d0d7f9":[2,0,56,10],
-"class_skill_progression_type_data.html#a282160bc7d1a509b8c76261469d12c63":[2,0,56,4],
-"class_skill_progression_type_data.html#a2fb561755266f2779e5bd1e6252595c4":[2,0,56,3]
+"class_skill_progression_type_data.html#a065ce1356c42b1169dceafa14a137cdb":[2,0,56,14]
 };
