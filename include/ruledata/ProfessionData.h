@@ -352,6 +352,12 @@ public:
 	void addSkillGroupSkillDevelopmentTypeChoice(GameRuleDataChoice<SkillGroupData> choice, SkillDevelopmentType::Type type) { skill_group_skill_development_type_choices_.emplace(std::move(choice), type); }
 
 	/**
+	 * @brief Sets the skill development type choices for skill groups.
+	 * @param choices A map associating skill group data choices with their corresponding skill development types.
+	 */
+	void setSkillGroupSkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type> choices) { skill_group_skill_development_type_choices_ = std::move(choices); }
+
+	/**
 	 * @brief Get the number of choices a character has to make regarding development types skills in skill groups
 	 *
 	 * During character development the player may have the option change the development type of one of more skills.

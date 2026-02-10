@@ -10375,8 +10375,8 @@
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Occupational",
-                    "groups": [
+                    "type": "Occupational",
+                    "options": [
                         "SKILLGROUP_ARTISTIC"
                     ]
                 }
@@ -11349,8 +11349,8 @@
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "groups": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLGROUP_WEAPON"
                     ]
                 }
@@ -17575,8 +17575,8 @@
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "groups": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLGROUP_SPELLS"
                     ]
                 }
@@ -19516,8 +19516,8 @@
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Occupational",
-                    "groups": [
+                    "type": "Occupational",
+                    "options": [
                         "SKILLGROUP_ARTISTIC"
                     ]
                 }
@@ -22504,15 +22504,15 @@
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "groups": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLGROUP_WEAPON"
                     ]
                 },
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "groups": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLGROUP_ARMOUR"
                     ]
                 }
@@ -23153,8 +23153,8 @@
             "skill-group-skill-development-type-choices": [
                 {
                     "num-choices": "2",
-                    "development-type": "Everyman",
-                    "groups": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILLGROUP_SCIENCE_ANALYTIC"
                     ]
                 }

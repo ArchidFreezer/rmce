@@ -89,19 +89,7 @@ void ProfessionDatafileParserJson::parse() {
 		ref.setSkillGroupSkillDevelopmentTypes(parseGameDataPairEnumTree<SkillGroupData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-group-skill-development-types")));
 
 		// Skill group development type choices
-		if (boost::optional<const pt::ptree&> skill_group_development_type_choices = v.second.get_child_optional("skill-group-skill-development-type-choices")) {
-			for (const auto& choice_tree : skill_group_development_type_choices.get()) {
-
-				GameRuleDataChoice<SkillGroupData> choice_data{};
-				choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
-				std::string type_id{ choice_tree.second.get<std::string>("development-type") };
-				for (const auto& group_tree : choice_tree.second.get_child("groups")) {
-					std::string skill_id{ group_tree.second.get_value<std::string>() };
-					choice_data.addOption(factory().get<SkillGroupData>(skill_id));
-				}
-				ref.addSkillGroupSkillDevelopmentTypeChoice(std::move(choice_data), SkillDevelopmentType::fromString(type_id).value());
-			}
-		}
+		ref.setSkillGroupSkillDevelopmentTypeChoices(parseGameDataChoicePairEnumTree<SkillGroupData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-group-skill-development-type-choices")));
 
 		std::cout << "\tProfession name: " << ref.name() << std::endl;
 	}
@@ -231,22 +219,10 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	}
 
 	// Skill group development type choices
-	pt::ptree skill_group_skill_development_type_choices_tree{};
-	for (auto& skill_group_choice : game_data.skillGroupSkillDevelopmentTypeChoices()) {
-		pt::ptree skill_group_skill_development_type_choice_tree{};
-		skill_group_skill_development_type_choice_tree.put("num-choices", skill_group_choice.first.numChoices());
-		skill_group_skill_development_type_choice_tree.put("development-type", SkillDevelopmentType::toString(skill_group_choice.second));
-
-		pt::ptree groups_tree{};
-		for (auto& group : skill_group_choice.first.options()) {
-			pt::ptree group_tree{};
-			group_tree.put("", group->id());
-			groups_tree.push_back(std::make_pair("", group_tree));
-		}
-		skill_group_skill_development_type_choice_tree.push_back(std::make_pair("groups", groups_tree));
-		skill_group_skill_development_type_choices_tree.push_back(std::make_pair("", skill_group_skill_development_type_choice_tree));
+	{
+		pt::ptree tree{ getGameDataChoicePairEnumTree <SkillGroupData, SkillDevelopmentType::Type>(game_data.skillGroupSkillDevelopmentTypeChoices()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-type-choices", tree));
 	}
-	if (skill_group_skill_development_type_choices_tree.size()) { datum.push_back(std::make_pair("skill-group-skill-development-type-choices", skill_group_skill_development_type_choices_tree)); }
 
 }
 

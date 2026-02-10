@@ -55,6 +55,7 @@ var class_profession_data =
     [ "setSkillDevelopmentType", "class_profession_data.html#a267bb69e897f4c1fcd441b7ec8d85f19", null ],
     [ "setSkillDevelopmentTypes", "class_profession_data.html#a8c20071cbf33c2a2737f225852501307", null ],
     [ "setSkillGroupProfessionBonuses", "class_profession_data.html#a475019360661928e47f4295f6bed8ade", null ],
+    [ "setSkillGroupSkillDevelopmentTypeChoices", "class_profession_data.html#aa32c47c35e179754c57ee822272be9c8", null ],
     [ "setSkillGroupSkillDevelopmentTypes", "class_profession_data.html#ae59dd1af95053d7dcec201116dcb5dc9", null ],
     [ "setSkillGroupSpecialBonuses", "class_profession_data.html#af8a0ae845cae04b8a4be674aa6aea331", null ],
     [ "setSkillSubcategoryDevelopmentTypeChoices", "class_profession_data.html#af2c32924ed38ed5a037a6d724823d179", null ],
