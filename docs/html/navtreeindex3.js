@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"class_skill_group_data.html":[2,0,53],
 "class_skill_group_data.html#a10b5b4db425a0c9f3c337605c5101d51":[2,0,53,1],
 "class_skill_group_data.html#a4e1be1dfad07175f4c5793704017936c":[2,0,53,0],
 "class_skill_group_data.html#a8419e916559287e704b1858cce8c8f30":[2,0,53,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a3ce9d817402b59f65fb01ea044bb1ee9":[0,0,2,2,2],
 "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e":[0,0,2,2,3],
 "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ad464fb18dfeee2966a78fd644162e011":[0,0,2,2,4],
-"namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ae1ce0ec846f3ba0c8966ef540ae472aa":[0,0,2,2,0],
-"namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa":[0,0,2,3]
+"namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ae1ce0ec846f3ba0c8966ef540ae472aa":[0,0,2,2,0]
 };

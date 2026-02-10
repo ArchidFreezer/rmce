@@ -52,6 +52,7 @@ var class_race_data =
     [ "setAverageMaleHeight", "class_race_data.html#a565517a75e5dd91d4cae73e2696f2378", null ],
     [ "setBook", "class_race_data.html#a23fce6c0a13c67255efecb387bdc150e", null ],
     [ "setBuildModifier", "class_race_data.html#a92c8b1f16b77e534bd139527f1fc8a13", null ],
+    [ "setCategoryEverymanSkillChoices", "class_race_data.html#a3cc83d2b4ddaa40fffc419090fd5fec2", null ],
     [ "setChannelingProgression", "class_race_data.html#a5004739fa86293e69e415ee9d34820dc", null ],
     [ "setCriticalTableType", "class_race_data.html#a1a52f9d1b02c4eaefa10cabeecc91df1", null ],
     [ "setDescription", "class_race_data.html#aeb2289392171f07783a067288c877e9a", null ],

@@ -894,6 +894,12 @@ public:
 	void addCategoryEverymanSkillChoice(GameRuleDataChoice<SkillCategoryData> choice) { category_everyman_skill_choices_.emplace(std::move(choice)); }
 
 	/**
+	 * @brief Sets the everyman skill category choices for the game rule.
+	 * @param choices A set of game rule data choices containing skill category data to be set as the everyman skill choices.
+	 */
+	void setCategoryEverymanSkillChoices(std::set<GameRuleDataChoice<SkillCategoryData>> choices) { category_everyman_skill_choices_ = std::move(choices); }
+
+	/**
 	 * @brief Get the number of choices a character has to make regarding everyman skills in skill cetegories
 	 * 
 	 * During character development it is sometimes necessary to choose one or more skills from a skill category to have

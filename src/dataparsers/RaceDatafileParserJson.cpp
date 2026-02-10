@@ -80,19 +80,7 @@ void RaceDatafileParserJson::parse() {
 		ref.setSkillBonuses(parseSkillPairTree<int>(v.second.get_child_optional("skill-bonuses")));
 
 		// Get the skill category everyman choices
-		if (boost::optional<const pt::ptree&> category_choices = v.second.get_child_optional("skill-category-choices-everyman")) {
-			for (const auto& choice_tree : category_choices.get()) {
-
-				GameRuleDataChoice<SkillCategoryData> choice_data{};
-				choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
-
-				for (const auto& category_tree : choice_tree.second.get_child("options")) {
-					std::string category_id{ category_tree.second.get_value<std::string>() };
-					choice_data.addOption(factory().get<SkillCategoryData>(category_id));
-				}
-				ref.addCategoryEverymanSkillChoice(std::move(choice_data));
-			}
-		}
+		ref.setCategoryEverymanSkillChoices(parseGameDataChoiceSetTree<SkillCategoryData>(v.second.get_child_optional("skill-category-choices-everyman")));
 
 		std::cout << "\tRace name: " << ref.name() << std::endl;
 	}
@@ -176,14 +164,10 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	}
 
 	// Everyman skill category choices
-	pt::ptree everyman_category_choices_tree{};
-	for (const auto& category_choices : game_data.categoryEverymanSkillChoices()) {
-		pt::ptree category_choice_tree{};
-		populateGameRuleDataChoice<SkillCategoryData>(&category_choices, category_choice_tree);
-		everyman_category_choices_tree.push_back(std::make_pair("", category_choice_tree));
+	{
+		pt::ptree tree{ getGameDataChoiceSetTree<SkillCategoryData>(game_data.categoryEverymanSkillChoices()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-category-choices-everyman", tree));
 	}
-	
-	if (everyman_category_choices_tree.size()) datum.push_back(std::make_pair("skill-category-choices-everyman", everyman_category_choices_tree));
 
 }
 
