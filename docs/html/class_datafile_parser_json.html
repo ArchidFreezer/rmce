@@ -256,6 +256,18 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:ad44b34a91a4826face21893b580087ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a map of language abilities into a std::map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a>.  <br /></td></tr>
 <tr class="memitem:a7e4953d1337511471b133cdaf943ba12" id="r_a7e4953d1337511471b133cdaf943ba12"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a7e4953d1337511471b133cdaf943ba12">getLanguageAbilityMapTree</a> (std::map&lt; std::string, const <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt; map)</td></tr>
 <tr class="memdesc:a7e4953d1337511471b133cdaf943ba12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> into a boost ptree containing a map of language abilities.  <br /></td></tr>
+<tr class="memitem:a8811823a91ae5815a3fd76b6602fd530" id="r_a8811823a91ae5815a3fd76b6602fd530"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> GameRuleData&gt; </td></tr>
+<tr class="memitem:a8811823a91ae5815a3fd76b6602fd530 template"><td class="memItemLeft">std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_game_rule_data.html">GameRuleData</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8811823a91ae5815a3fd76b6602fd530">parseGameDataChoiceVectorTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:a8811823a91ae5815a3fd76b6602fd530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a property tree into a vector of game rule data choices.  <br /></td></tr>
+<tr class="memitem:a39018d61d0c133ac1134001290b67945" id="r_a39018d61d0c133ac1134001290b67945"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> GameRuleData&gt; </td></tr>
+<tr class="memitem:a39018d61d0c133ac1134001290b67945 template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a39018d61d0c133ac1134001290b67945">getGameDataChoiceVectorTree</a> (std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_game_rule_data.html">GameRuleData</a> &gt; &gt; vector)</td></tr>
+<tr class="memdesc:a39018d61d0c133ac1134001290b67945"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a vector of game rule data choices into a property tree representation.  <br /></td></tr>
+<tr class="memitem:a75d65c68fa767788904f13f10dadbb58" id="r_a75d65c68fa767788904f13f10dadbb58"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> GameRuleData&gt; </td></tr>
+<tr class="memitem:a75d65c68fa767788904f13f10dadbb58 template"><td class="memItemLeft">std::set&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_game_rule_data.html">GameRuleData</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a75d65c68fa767788904f13f10dadbb58">parseGameDataChoiceSetTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:a75d65c68fa767788904f13f10dadbb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a property tree into a set of game rule data choices.  <br /></td></tr>
+<tr class="memitem:ae885235cbe8351d382f1acc16b5f69ab" id="r_ae885235cbe8351d382f1acc16b5f69ab"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> GameRuleData&gt; </td></tr>
+<tr class="memitem:ae885235cbe8351d382f1acc16b5f69ab template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#ae885235cbe8351d382f1acc16b5f69ab">getGameDataChoiceSetTree</a> (std::set&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_game_rule_data.html">GameRuleData</a> &gt; &gt; set)</td></tr>
+<tr class="memdesc:ae885235cbe8351d382f1acc16b5f69ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a set of game rule data choices into a property tree representation.  <br /></td></tr>
 <tr class="inherit_header pro_methods_class_datafile_parser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_datafile_parser')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="class_datafile_parser.html">DatafileParser</a></td></tr>
 <tr class="memitem:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser" id="r_a4e7a26696510228b1a25308655066ef1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_datafile_parser.html#a4e7a26696510228b1a25308655066ef1">parse</a> ()=0</td></tr>
 <tr class="memdesc:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a ptree into game data objects.  <br /></td></tr>
@@ -509,6 +521,90 @@ template&lt;typename EnumType&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A property tree containing the enum vector data. </dd></dl>
+
+</div>
+</div>
+<a id="ae885235cbe8351d382f1acc16b5f69ab" name="ae885235cbe8351d382f1acc16b5f69ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae885235cbe8351d382f1acc16b5f69ab">&#9670;&#160;</a></span>getGameDataChoiceSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> GameRuleData&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getGameDataChoiceSetTree </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_game_rule_data.html">GameRuleData</a> &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>set</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a set of game rule data choices into a property tree representation. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a></td><td>The type of game rule data object that satisfies the <a class="el" href="concept_game_rule_data_object.html" title="Concept that ensures that a templated type is derived from the GameRuleData class.">GameRuleDataObject</a> concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">set</td><td>The set of game rule data choices to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A property tree (ptree) containing the serialized game data choice set. </dd></dl>
+
+</div>
+</div>
+<a id="a39018d61d0c133ac1134001290b67945" name="a39018d61d0c133ac1134001290b67945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39018d61d0c133ac1134001290b67945">&#9670;&#160;</a></span>getGameDataChoiceVectorTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> GameRuleData&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getGameDataChoiceVectorTree </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_game_rule_data.html">GameRuleData</a> &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>vector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a vector of game rule data choices into a property tree representation. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a></td><td>The type of game rule data object that satisfies the <a class="el" href="concept_game_rule_data_object.html" title="Concept that ensures that a templated type is derived from the GameRuleData class.">GameRuleDataObject</a> concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>The vector of game rule data choices to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A property tree (ptree) containing the serialized game data choice vector. </dd></dl>
 
 </div>
 </div>
@@ -952,6 +1048,90 @@ template&lt;typename EnumType&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector containing the parsed enum values. </dd></dl>
+
+</div>
+</div>
+<a id="a75d65c68fa767788904f13f10dadbb58" name="a75d65c68fa767788904f13f10dadbb58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d65c68fa767788904f13f10dadbb58">&#9670;&#160;</a></span>parseGameDataChoiceSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> GameRuleData&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_game_rule_data.html">GameRuleData</a> &gt; &gt; DatafileParserJson::parseGameDataChoiceSetTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parses a property tree into a set of game rule data choices. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a></td><td>The game rule data object type that satisfies the <a class="el" href="concept_game_rule_data_object.html" title="Concept that ensures that a templated type is derived from the GameRuleData class.">GameRuleDataObject</a> concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>An optional reference to a property tree containing the game data choice set to parse. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A set of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects templated on the specified <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> type. </dd></dl>
+
+</div>
+</div>
+<a id="a8811823a91ae5815a3fd76b6602fd530" name="a8811823a91ae5815a3fd76b6602fd530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8811823a91ae5815a3fd76b6602fd530">&#9670;&#160;</a></span>parseGameDataChoiceVectorTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> GameRuleData&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_game_rule_data.html">GameRuleData</a> &gt; &gt; DatafileParserJson::parseGameDataChoiceVectorTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parses a property tree into a vector of game rule data choices. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a></td><td>The game rule data object type that satisfies the <a class="el" href="concept_game_rule_data_object.html" title="Concept that ensures that a templated type is derived from the GameRuleData class.">GameRuleDataObject</a> concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>An optional reference to a property tree containing the game data choice vector to parse. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects templated on the specified <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> type. </dd></dl>
 
 </div>
 </div>

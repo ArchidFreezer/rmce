@@ -26,19 +26,7 @@ void ProfessionDatafileParserJson::parse() {
 		ref.setStats(parseEnumVectorTree<StatType::Type>(v.second.get_child("stats")));
 
 		// Get the base spell list choices
-		if (boost::optional<const pt::ptree&> spell_list_choices = v.second.get_child_optional("base-spell-list-choices")) {
-			for (const auto& choice_tree : spell_list_choices.get()) {
-
-				GameRuleDataChoice<SpellListData> choice_data{};
-				choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
-
-				for (const auto& list_tree : choice_tree.second.get_child("options")) {
-					std::string list_id{ list_tree.second.get_value<std::string>() };
-					choice_data.addOption(factory().get<SpellListData>(list_id));
-				}
-				ref.addBaseSpellListChoice(std::move(choice_data));
-			}
-		}
+		ref.setBaseSpellListChoices(parseGameDataChoiceVectorTree<SpellListData>(v.second.get_child_optional("base-spell-list-choices")));
 
 		// Get skill bonuses
 		ref.setSkillBonuses(parseSkillPairTree<int>(v.second.get_child_optional("skill-bonuses")));
@@ -165,13 +153,10 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	}
 
 	// Base spell list choices
-	pt::ptree base_spell_list_choices_tree{};
-	for (const auto& base_spell_list_choice : game_data.baseSpellListChoices()) {
-		pt::ptree base_spell_list_choice_tree{};
-		populateGameRuleDataChoice<SpellListData>(&base_spell_list_choice, base_spell_list_choice_tree);
-		base_spell_list_choices_tree.push_back(std::make_pair("", base_spell_list_choice_tree));
+	{
+		pt::ptree tree{getGameDataChoiceVectorTree<SpellListData>(game_data.baseSpellListChoices())};
+		if (tree.size()) datum.push_back(std::make_pair("base-spell-list-choices", tree));
 	}
-	if (base_spell_list_choices_tree.size()) datum.push_back(std::make_pair("base-spell-list-choices", base_spell_list_choices_tree));
 
 	// Skill bonuses
 	{

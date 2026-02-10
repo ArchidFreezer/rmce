@@ -41,6 +41,7 @@ var class_profession_data =
     [ "numSkillSubcategoryDevelopmentTypeChoices", "class_profession_data.html#afc26d174925c9d4056bb8edbb6b06103", null ],
     [ "realms", "class_profession_data.html#aa8297f08ca9c51d1c66839338b3f8601", null ],
     [ "removeStat", "class_profession_data.html#a7e7be19187ef69c1346979ab61b455fd", null ],
+    [ "setBaseSpellListChoices", "class_profession_data.html#a2fddb8719298e34ebd87ebb458055062", null ],
     [ "setBook", "class_profession_data.html#af6b92b9a2ad75fdb0fca1116c6470447", null ],
     [ "setDescription", "class_profession_data.html#a2da149897856d11d1094b5468cd4b3c5", null ],
     [ "setName", "class_profession_data.html#a7cab9b3550b1ad6fbd68ee28b1268728", null ],

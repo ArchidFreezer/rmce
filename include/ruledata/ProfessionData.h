@@ -237,6 +237,14 @@ public:
 	void addBaseSpellListChoice(GameRuleDataChoice<SpellListData> choice) { base_spell_list_choices_.push_back(std::move(choice)); }
 
 	/**
+	 * @brief Set the choices that defines base spell lists that the character has to choose from
+	 *
+	 * This will replace any existing choices with the new list.
+	 * @param choices vector of GameRuleDataChoice choice definitions
+	 */
+	void setBaseSpellListChoices(std::vector<GameRuleDataChoice<SpellListData>> choices) { base_spell_list_choices_ = std::move(choices); }
+
+	/**
 	 * @brief Get the number of choices a character has to make regarding base spell lists
 	 *
 	 * During character development it is sometimes necessary to choose one or more base spell lists.This returns how many

@@ -173,6 +173,8 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:ad10e9bf98dac6454a6c9b9e156e73d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the stats that that provide a bonus to the profession.  <br /></td></tr>
 <tr class="memitem:a9d53f6cd7446f7fe64ff592f252ad012" id="r_a9d53f6cd7446f7fe64ff592f252ad012"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9d53f6cd7446f7fe64ff592f252ad012">addBaseSpellListChoice</a> (<a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_spell_list_data.html">SpellListData</a> &gt; choice)</td></tr>
 <tr class="memdesc:a9d53f6cd7446f7fe64ff592f252ad012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines base spell lists that the character has to choose from.  <br /></td></tr>
+<tr class="memitem:a2fddb8719298e34ebd87ebb458055062" id="r_a2fddb8719298e34ebd87ebb458055062"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2fddb8719298e34ebd87ebb458055062">setBaseSpellListChoices</a> (std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_spell_list_data.html">SpellListData</a> &gt; &gt; choices)</td></tr>
+<tr class="memdesc:a2fddb8719298e34ebd87ebb458055062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the choices that defines base spell lists that the character has to choose from.  <br /></td></tr>
 <tr class="memitem:aaa4d933494e14b8131611af8e0ade94d" id="r_aaa4d933494e14b8131611af8e0ade94d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aaa4d933494e14b8131611af8e0ade94d">numBaseSpellListChoices</a> () const</td></tr>
 <tr class="memdesc:aaa4d933494e14b8131611af8e0ade94d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding base spell lists.  <br /></td></tr>
 <tr class="memitem:aa6e1488fe4562544f2868dcae5404d3c" id="r_aa6e1488fe4562544f2868dcae5404d3c"><td class="memItemLeft">const std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_spell_list_data.html">SpellListData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa6e1488fe4562544f2868dcae5404d3c">baseSpellListChoices</a> () const</td></tr>
@@ -1561,6 +1563,39 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the stat was removed </dd>
 <dd>
 <span class="tt">false</span> if the stat was not found or not removed </dd></dl>
+
+</div>
+</div>
+<a id="a2fddb8719298e34ebd87ebb458055062" name="a2fddb8719298e34ebd87ebb458055062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fddb8719298e34ebd87ebb458055062">&#9670;&#160;</a></span>setBaseSpellListChoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::setBaseSpellListChoices </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_spell_list_data.html">SpellListData</a> &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>choices</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the choices that defines base spell lists that the character has to choose from. </p>
+<p>This will replace any existing choices with the new list. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">choices</td><td>vector of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> choice definitions </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
