@@ -280,6 +280,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aba035e58cf1e965c1e337cbab90988b6" id="r_aba035e58cf1e965c1e337cbab90988b6"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> GameRuleData, typename EnumType&gt; </td></tr>
 <tr class="memitem:aba035e58cf1e965c1e337cbab90988b6 template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#aba035e58cf1e965c1e337cbab90988b6">getGameDataChoicePairEnumTree</a> (std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_game_rule_data.html">GameRuleData</a> &gt;, EnumType &gt; map)</td></tr>
 <tr class="memdesc:aba035e58cf1e965c1e337cbab90988b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a map of game rule data choices to enum values into a property tree structure.  <br /></td></tr>
+<tr class="memitem:a83247921730e77b692d27f205470e9f8" id="r_a83247921730e77b692d27f205470e9f8"><td class="memTemplParams" colspan="2">template&lt;typename EnumType&gt; </td></tr>
+<tr class="memitem:a83247921730e77b692d27f205470e9f8 template"><td class="memItemLeft">std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;, EnumType &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a83247921730e77b692d27f205470e9f8">parseSkillChoicePairEnumTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:a83247921730e77b692d27f205470e9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a property tree into a map of skill data choices to enum values.  <br /></td></tr>
+<tr class="memitem:a9d80cdb447dc402f56193dfa887bc2b8" id="r_a9d80cdb447dc402f56193dfa887bc2b8"><td class="memTemplParams" colspan="2">template&lt;typename EnumType&gt; </td></tr>
+<tr class="memitem:a9d80cdb447dc402f56193dfa887bc2b8 template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a9d80cdb447dc402f56193dfa887bc2b8">getSkillChoicePairEnumTree</a> (std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;, EnumType &gt; map)</td></tr>
+<tr class="memdesc:a9d80cdb447dc402f56193dfa887bc2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a map of skill choice pairs to a property tree representation.  <br /></td></tr>
 <tr class="inherit_header pro_methods_class_datafile_parser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_datafile_parser')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="class_datafile_parser.html">DatafileParser</a></td></tr>
 <tr class="memitem:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser" id="r_a4e7a26696510228b1a25308655066ef1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_datafile_parser.html#a4e7a26696510228b1a25308655066ef1">parse</a> ()=0</td></tr>
 <tr class="memdesc:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a ptree into game data objects.  <br /></td></tr>
@@ -880,6 +886,48 @@ template&lt;typename Primitive&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A constant property tree representation of the set. </dd></dl>
+
+</div>
+</div>
+<a id="a9d80cdb447dc402f56193dfa887bc2b8" name="a9d80cdb447dc402f56193dfa887bc2b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d80cdb447dc402f56193dfa887bc2b8">&#9670;&#160;</a></span>getSkillChoicePairEnumTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename EnumType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getSkillChoicePairEnumTree </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;, EnumType &gt;</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a map of skill choice pairs to a property tree representation. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">EnumType</td><td>The enumeration type used as the value type in the map. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>A map where keys are game rule data choices containing subcategorized skill data, and values are enumeration types. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A property tree (ptree) containing the serialized representation of the skill choice pair enumeration map. </dd></dl>
 
 </div>
 </div>
@@ -1492,6 +1540,48 @@ template&lt;typename Primitive&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A set containing the parsed primitive values from the tree. </dd></dl>
+
+</div>
+</div>
+<a id="a83247921730e77b692d27f205470e9f8" name="a83247921730e77b692d27f205470e9f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83247921730e77b692d27f205470e9f8">&#9670;&#160;</a></span>parseSkillChoicePairEnumTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename EnumType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;, EnumType &gt; DatafileParserJson::parseSkillChoicePairEnumTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parses a property tree into a map of skill data choices to enum values. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">EnumType</td><td>The enum type to be used as the value in the resulting map. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>An optional reference to a property tree containing the skill choice and enum pair data to parse. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A map where keys are game rule data choices containing subcategorized skill data, and values are of the specified enum type. </dd></dl>
 
 </div>
 </div>

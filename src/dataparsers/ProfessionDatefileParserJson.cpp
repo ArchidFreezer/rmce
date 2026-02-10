@@ -35,25 +35,7 @@ void ProfessionDatafileParserJson::parse() {
 		ref.setSkillDevelopmentTypes(parseSkillPairEnumTree<SkillDevelopmentType::Type>(v.second.get_child_optional("skill-development-types")));
 
 		// Skill development type choices
-		if (boost::optional<const pt::ptree&> skill_development_type_choices = v.second.get_child_optional("skill-development-type-choices")) {
-			for (const auto& choice_tree : skill_development_type_choices.get()) {
-
-				GameRuleDataChoice<SubcategoriedSkillData> choice_data{};
-				choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
-				std::string type_id{ choice_tree.second.get<std::string>("development-type") };
-
-				for (const auto& skill_tree : choice_tree.second.get_child("skills")) {
-					std::string skill_id{ skill_tree.second.get<std::string>("skill")};
-					boost::optional<std::string> subcategory = skill_tree.second.get_optional<std::string>("subcategory");
-					if (subcategory) {
-						choice_data.addOption(factory().subcategoriedSkillData(skill_id, subcategory.get()));
-					} else {
-						choice_data.addOption(factory().subcategoriedSkillData(skill_id));
-					}
-				}
-				ref.addSkillDevelopmentTypeChoice(std::move(choice_data), SkillDevelopmentType::fromString(type_id).value());
-			}
-		}
+		ref.setSkillDevelopmentTypeChoices(parseSkillChoicePairEnumTree<SkillDevelopmentType::Type>(v.second.get_child_optional("skill-development-type-choices")));
 
 		// Skill subcategory development type choices
 		ref.setSkillSubcategoryDevelopmentTypeChoices(parseGameDataChoicePairEnumTree<SkillData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-subcategory-development-type-choices")));
@@ -135,24 +117,10 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	}
 
 	// Skill development type choices
-	pt::ptree skill_development_type_choices_tree{};
-	for (auto& skill_choice : game_data.skillDevelopmentTypeChoices()) {
-		pt::ptree skill_development_type_choice_tree{};
-		skill_development_type_choice_tree.put("num-choices", skill_choice.first.numChoices());
-		skill_development_type_choice_tree.put("development-type", SkillDevelopmentType::toString(skill_choice.second));
-
-		pt::ptree skills_tree{};
-		for (auto& skill : skill_choice.first.options()) {
-			pt::ptree skill_tree{};
-			skill_tree.put("skill", skill->skillData().id());
-			if (skill->subcategory()) skill_tree.put("subcategory", skill->subcategory().value());
-			skills_tree.push_back(std::make_pair("", skill_tree));
-		}
-		skill_development_type_choice_tree.push_back(std::make_pair("skills", skills_tree));
-
-		skill_development_type_choices_tree.push_back(std::make_pair("", skill_development_type_choice_tree));
+	{
+		pt::ptree tree{ getSkillChoicePairEnumTree <SkillDevelopmentType::Type>(game_data.skillDevelopmentTypeChoices()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-development-type-choices", tree));
 	}
-	if (skill_development_type_choices_tree.size()) { datum.push_back(std::make_pair("skill-development-type-choices", skill_development_type_choices_tree)); }
 
 	// Skill subcategory development type choices
 	{

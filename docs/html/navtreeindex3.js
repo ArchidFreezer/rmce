@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"class_skill_group_data.html#a10b5b4db425a0c9f3c337605c5101d51":[2,0,53,1],
+"class_skill_group_data.html#a4e1be1dfad07175f4c5793704017936c":[2,0,53,0],
+"class_skill_group_data.html#a8419e916559287e704b1858cce8c8f30":[2,0,53,2],
 "class_skill_group_data.html#a88eb8a99d367a60cd5ddd20c30b5c787":[2,0,53,3],
 "class_skill_group_datafile_parser_json.html":[2,0,54],
 "class_skill_group_datafile_parser_json.html#a02bdb1289ee513e43248b3884db4a904":[2,0,54,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471a995e7b7e33ea3f37a72770505adf016e":[0,0,2,2,3],
 "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ad464fb18dfeee2966a78fd644162e011":[0,0,2,2,4],
 "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ae1ce0ec846f3ba0c8966ef540ae472aa":[0,0,2,2,0],
-"namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa":[0,0,2,3],
-"namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2":[0,0,2,4],
-"namespace_critical_table_type.html":[0,0,3],
-"namespace_critical_table_type.html#a2e9522e03d12fe02878b31b00f2663bf":[0,0,3,5]
+"namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa":[0,0,2,3]
 };

@@ -23484,13 +23484,13 @@
             "skill-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "skills": [
+                    "type": "Everyman",
+                    "options": [
                         {
-                            "skill": "SKILL_BOXING"
+                            "id": "SKILL_BOXING"
                         },
                         {
-                            "skill": "SKILL_TACKLING"
+                            "id": "SKILL_TACKLING"
                         }
                     ]
                 }

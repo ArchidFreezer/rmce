@@ -267,6 +267,12 @@ public:
 	void addSkillDevelopmentTypeChoice(GameRuleDataChoice<SubcategoriedSkillData> choice, SkillDevelopmentType::Type type) { skill_development_type_choices_.emplace(std::move(choice), type); }
 
 	/**
+	 * @brief Sets the skill development type choices for skills.
+	 * @param choices A map associating subcategoried skill data choices with their corresponding skill development types.
+	 */
+	void setSkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SubcategoriedSkillData>, SkillDevelopmentType::Type> choices) { skill_development_type_choices_ = std::move(choices); }
+
+	/**
 	 * @brief Get the number of choices a character has to make regarding everyman skills
 	 *
 	 * During character development the player may have the option change the development type of one of more skills.
