@@ -45,8 +45,7 @@ void SkillCategoryDatafileParserJson::parse() {
 		SkillProgressionTypeData& category_progression{ factory().get<SkillProgressionTypeData>(category_progression_id) };
 		ref.setSkillProgressions(skill_progression, category_progression);
 
-		bool use_realm_stats{ v.second.get<bool>("use-realm-stats") };
-		ref.setUseRealmStats(use_realm_stats);
+		ref.setUseRealmStats(v.second.get<bool>("use-realm-stats"));
 
 		// Check for any stats
 		ref.setStats(parseEnumVectorTree<StatType::Type>(v.second.get_child_optional("stats")));
