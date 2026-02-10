@@ -24,31 +24,6 @@
 class ArmourTypeData : public GameRuleData {
 public:
 	/**
-	 * @brief Constructor to fully populate the object
-	 * @param id Unique identifier for the armour type
-	 * @param type Actual ArmourType that the data represents
-	 * @param name Name of the armour type as seen in-game
-	 * @param description Description of what the armour type consists of
-	 * @param min_manoeuvre_mod The minimum modification applied to manoeuvres that the armour applies
-	 * @param max_manoeuvre_mod The maximum modification applied to manoeuvres that the armour applies
-	 * @param missile_attack_penalty The penalty applied to missile weapons attacks
-	 * @param quickness_penalty The penalty applied to the weaerers Quickness bonus
-	 * @param animal_only Whether the armour type is for animal skin/hide only
-	 * @param includes_greaves Whether the armour type is considered to have greaves
-	 */
-	ArmourTypeData(std::string_view id, ArmourType::Type type, std::string_view name, std::string_view description, int min_manoeuvre_mod, int max_manoeuvre_mod, int missile_attack_penalty, int quickness_penalty, bool animal_only, bool includes_greaves) :
-		GameRuleData(id),
-		type_{ type },
-		name_{ name },
-		description_{ description },
-		min_manoeuvre_mod_{ min_manoeuvre_mod },
-		max_manoeuvre_mod_{ max_manoeuvre_mod },
-		missile_attack_penalty_{ missile_attack_penalty },
-		quickness_penalty_{ quickness_penalty },
-		animal_only_{ animal_only },
-		includes_greaves_{ includes_greaves } {}
-
-	/**
 	 * @brief Constructor
 	 * @param id Unique identifier for the book
 	 */

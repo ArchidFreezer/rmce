@@ -20,13 +20,6 @@ public:
 	SkillGroupData(std::string_view id) : GameRuleData(id) {}
 
 	/**
-	 * @brief Constructor to initialise all values
- * @param id Unique identifier of the skill group
-	 * @param name Name of teh skill group
-	 */
-	SkillGroupData(std::string_view id, std::string_view name) : GameRuleData(id), name_{ name } {}
-
-	/**
 	 * @brief Set the name of the skill group
 	 * @param name skill group name
 	 */

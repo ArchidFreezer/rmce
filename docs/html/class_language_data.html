@@ -120,8 +120,6 @@ Collaboration diagram for LanguageData:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a020e7df325efe67e0988b5730152f6da" id="r_a020e7df325efe67e0988b5730152f6da"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a020e7df325efe67e0988b5730152f6da">LanguageData</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>, std::string_view <a class="el" href="#a3b143b4d6979343d8d39ed701fb38a22">name</a>, std::string_view <a class="el" href="#a4177a44d3e7802bebb18cac0d183b865">category</a>, std::string_view base_language, bool <a class="el" href="#ad6e3d452c38d41bdfde205882a1b075b">isSpoken</a>, bool <a class="el" href="#af84b4226cfb0decabda010a08b3a2808">isWritten</a>, bool <a class="el" href="#a69e765bb580248b28f7904fa73aa18fe">isSomantic</a>)</td></tr>
-<tr class="memdesc:a020e7df325efe67e0988b5730152f6da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:a579a0b682ae2958a0137ba6168b95743" id="r_a579a0b682ae2958a0137ba6168b95743"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a579a0b682ae2958a0137ba6168b95743">LanguageData</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>)</td></tr>
 <tr class="memdesc:a579a0b682ae2958a0137ba6168b95743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:ade16648fa674e117d683a1325b2d3be9" id="r_ade16648fa674e117d683a1325b2d3be9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ade16648fa674e117d683a1325b2d3be9">setName</a> (std::string_view <a class="el" href="#a3b143b4d6979343d8d39ed701fb38a22">name</a>)</td></tr>
@@ -176,76 +174,8 @@ Additional Inherited Members</h2></td></tr>
 <dd>
 <a class="el" href="class_language_dialect_data.html" title="Class representing the dialects that exist for a language.">LanguageDialectData</a> </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a020e7df325efe67e0988b5730152f6da" name="a020e7df325efe67e0988b5730152f6da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a020e7df325efe67e0988b5730152f6da">&#9670;&#160;</a></span>LanguageData() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">LanguageData::LanguageData </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>category</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>base_language</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isSpoken</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isWritten</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isSomantic</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>Unique id </td></tr>
-    <tr><td class="paramname">name</td><td>Name as seen in-game </td></tr>
-    <tr><td class="paramname">category</td><td>Language category the lasnguage belongs to </td></tr>
-    <tr><td class="paramname">base_language</td><td>Language this is considered to be a dialect of, may be the same </td></tr>
-    <tr><td class="paramname">isSpoken</td><td>Whether the language has a spoken form </td></tr>
-    <tr><td class="paramname">isWritten</td><td>Whether the language has a written form </td></tr>
-    <tr><td class="paramname">isSomantic</td><td>Whether the language has a somantic form </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a579a0b682ae2958a0137ba6168b95743" name="a579a0b682ae2958a0137ba6168b95743"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a579a0b682ae2958a0137ba6168b95743">&#9670;&#160;</a></span>LanguageData() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a579a0b682ae2958a0137ba6168b95743">&#9670;&#160;</a></span>LanguageData()</h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -317,8 +317,8 @@ namespace {
 	TEST(ProfessionData, GroupProfessionBonus) {
 		ProfessionData prof("PROF_ID");
 
-		SkillGroupData g1("GROUP1_ID", "Group1");
-		SkillGroupData g2("GROUP2_ID", "Group2");
+		SkillGroupData g1("GROUP1_ID");
+		SkillGroupData g2("GROUP2_ID");
 
 		EXPECT_EQ(prof.skillGroupsWithProfessionBonus().size(), 0);
 		EXPECT_FALSE(prof.isProfessionBonusSkillGroup(g2));
@@ -342,8 +342,8 @@ namespace {
 	TEST(ProfessionData, GroupSpecialBonus) {
 		ProfessionData prof("PROF_ID");
 
-		SkillGroupData g1("GROUP1_ID", "Group1");
-		SkillGroupData g2("GROUP2_ID", "Group2");
+		SkillGroupData g1("GROUP1_ID");
+		SkillGroupData g2("GROUP2_ID");
 
 		EXPECT_EQ(prof.skillGroupsWithSpecialBonus().size(), 0);
 		EXPECT_FALSE(prof.isSpecialBonusSkillGroup(g2));
@@ -366,8 +366,8 @@ namespace {
 	TEST(ProfessionData, GroupSkillDevelopmentType) {
 		ProfessionData prof("PROF_ID");
 
-		SkillGroupData g1("GROUP1_ID", "Group1");
-		SkillGroupData g2("GROUP2_ID", "Group2");
+		SkillGroupData g1("GROUP1_ID");
+		SkillGroupData g2("GROUP2_ID");
 
 		EXPECT_EQ(prof.skillGroupsWithSkillDevelopmentType().size(), 0);
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillGroup(g2));

@@ -21,25 +21,6 @@ public:
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier for the progression type
-	 * @param name In game name of the progression type
-	 * @param zero Bonus provided with 0 skill ranks
-	 * @param ten Bonus provided per rank for between 1 and 10 ranks
-	 * @param twenty Bonus provided per rank for between 11 and 20 ranks
-	 * @param thirty Bonus provided per rank for between 21 and 30 ranks
-	 * @param remaining Bonus provided per rank for over 30 ranks
-	 */
-	SkillProgressionTypeData(std::string_view id, std::string_view name, float zero, float ten, float twenty, float thirty, float remaining) :
-		GameRuleData(id),
-		name_{ name },
-		zero_{ zero },
-		ten_{ ten },
-		twenty_{ twenty },
-		thirty_{ thirty },
-		remaining_{ remaining } {}
-
-	/**
-	 * @brief Constructor
-	 * @param id Unique identifier for the progression type
 	 */
 	SkillProgressionTypeData(std::string_view id) : GameRuleData(id) {}
 

@@ -19,21 +19,6 @@ public:
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier for the book
-	 * @param code Book reference number from the publisher
-	 * @param name Name of the book
-	 * @param abbreviation Abbreviation of the book as used by the publisher
-	 * @param isbn ISBN book number
-	 */
-	BookData(std::string_view id, std::string_view code, std::string_view name, std::string_view abbreviation, std::string_view isbn) :
-		GameRuleData(id),
-		code_{ code },
-		name_{ name },
-		abbreviation_{ abbreviation },
-		isbn_{ isbn } {}
-
-	/**
-	 * @brief Constructor
-	 * @param id Unique identifier for the book
 	 */
 	BookData(std::string_view id) : GameRuleData(id) {}
 

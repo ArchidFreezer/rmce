@@ -2,7 +2,6 @@ var class_skill_category_data =
 [
     [ "UsingCharacterRealmStatsException", "class_skill_category_data_1_1_using_character_realm_stats_exception.html", "class_skill_category_data_1_1_using_character_realm_stats_exception" ],
     [ "SkillCategoryData", "class_skill_category_data.html#ab4a4332ae31c49b5d33b800767ebe3d3", null ],
-    [ "SkillCategoryData", "class_skill_category_data.html#ade97a1f08e8e0e6683bdf82fad30b88b", null ],
     [ "addStat", "class_skill_category_data.html#ae92350c9d91937939523110732fae66a", null ],
     [ "clearStats", "class_skill_category_data.html#aebd62a7951f85ada98ea67d7291d5d3b", null ],
     [ "defaultSkillProgression", "class_skill_category_data.html#ab53d50d8705559ff6386fd8471211c6e", null ],
