@@ -9430,8 +9430,8 @@
             "skill-subcategory-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "skills": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILL_LANGUAGES"
                     ]
                 }
@@ -13015,8 +13015,8 @@
             "skill-subcategory-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "skills": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILL_LANGUAGES"
                     ]
                 }
@@ -18265,8 +18265,8 @@
             "skill-subcategory-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "skills": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILL_METAL_CRAFTS"
                     ]
                 }
@@ -23498,8 +23498,8 @@
             "skill-subcategory-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "skills": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILL_SITUATIONAL_AWARENESS"
                     ]
                 }
@@ -25436,8 +25436,8 @@
             "skill-subcategory-development-type-choices": [
                 {
                     "num-choices": "1",
-                    "development-type": "Everyman",
-                    "skills": [
+                    "type": "Everyman",
+                    "options": [
                         "SKILL_SITUATIONAL_AWARENESS"
                     ]
                 }

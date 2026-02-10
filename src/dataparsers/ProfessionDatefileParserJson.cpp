@@ -56,19 +56,7 @@ void ProfessionDatafileParserJson::parse() {
 		}
 
 		// Skill subcategory development type choices
-		if (boost::optional<const pt::ptree&> skill_development_type_choices = v.second.get_child_optional("skill-subcategory-development-type-choices")) {
-			for (const auto& choice_tree : skill_development_type_choices.get()) {
-
-				GameRuleDataChoice<SkillData> choice_data{};
-				choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
-				std::string type_id{ choice_tree.second.get<std::string>("development-type") };
-				for (const auto& skill_tree : choice_tree.second.get_child("skills")) {
-					std::string skill_id{ skill_tree.second.get_value<std::string>() };
-					choice_data.addOption(factory().get<SkillData>(skill_id));
-				}
-				ref.addSkillSubcategoryDevelopmentTypeChoice(std::move(choice_data), SkillDevelopmentType::fromString(type_id).value());
-			}
-		}
+		ref.setSkillSubcategoryDevelopmentTypeChoices(parseGameDataChoicePairEnumTree<SkillData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-subcategory-development-type-choices")));
 
 		// Skill category profession bonus
 		ref.setSkillCategoryProfessionBonuses(parseGameDataPairTree<SkillCategoryData, int>(v.second.get_child_optional("skill-category-profession-bonuses")));
@@ -192,23 +180,8 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 
 	// Skill subcategory development type choices
 	{
-		pt::ptree skill_subcategory_development_type_choices_tree{};
-		for (auto& skill_choice : game_data.skillSubcategoryDevelopmentTypeChoices()) {
-			pt::ptree skill_subcategory_development_type_choice_tree{};
-			skill_subcategory_development_type_choice_tree.put("num-choices", skill_choice.first.numChoices());
-			skill_subcategory_development_type_choice_tree.put("development-type", SkillDevelopmentType::toString(skill_choice.second));
-
-			pt::ptree skills_tree{};
-			for (auto& skill : skill_choice.first.options()) {
-				pt::ptree skill_tree{};
-				skill_tree.put("", skill->id());
-				skills_tree.push_back(std::make_pair("", skill_tree));
-			}
-			skill_subcategory_development_type_choice_tree.push_back(std::make_pair("skills", skills_tree));
-
-			skill_subcategory_development_type_choices_tree.push_back(std::make_pair("", skill_subcategory_development_type_choice_tree));
-		}
-		if (skill_subcategory_development_type_choices_tree.size()) { datum.push_back(std::make_pair("skill-subcategory-development-type-choices", skill_subcategory_development_type_choices_tree)); }
+		pt::ptree tree{ getGameDataChoicePairEnumTree < SkillData, SkillDevelopmentType::Type > (game_data.skillSubcategoryDevelopmentTypeChoices()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-subcategory-development-type-choices", tree));
 	}
 
 	// Skill category profession bonus
