@@ -891,7 +891,7 @@ public:
 	 * @param choice GameRuleDataChoice choice definition
 	 * @see SkillDevelopmentType
 	 */
-	void addCategoryEverymanSkillChoice(GameRuleDataChoice<SkillCategoryData> choice) { category_everyman_skill_choices_.push_back(std::move(choice)); }
+	void addCategoryEverymanSkillChoice(GameRuleDataChoice<SkillCategoryData> choice) { category_everyman_skill_choices_.emplace(std::move(choice)); }
 
 	/**
 	 * @brief Get the number of choices a character has to make regarding everyman skills in skill cetegories
@@ -907,10 +907,10 @@ public:
 	/**
 	 * @brief Get a container with the choices the character needs to make to select one or more skills within a skill
 	 * category that may be made everyme skills
-	 * @return vector of GameRuleDataChoice objects with the choices to be made
+	 * @return set of GameRuleDataChoice objects with the choices to be made
 	 * @see SkillDevelopmentType
 	 */
-	const std::vector<GameRuleDataChoice<SkillCategoryData>>& categoryEverymanSkillChoices() const { return category_everyman_skill_choices_; }
+	const std::set<GameRuleDataChoice<SkillCategoryData>>& categoryEverymanSkillChoices() const { return category_everyman_skill_choices_; }
 
 private:
 	std::string name_{}; /**< Name of the race */
@@ -945,5 +945,5 @@ private:
 	std::set<const SkillCategoryData*> everyman_skill_categories_{}; /**< Skill categories that are considered everyman for the race */
 	std::set<const SkillCategoryData*> restricted_skill_categories_{}; /**< Skill categories that are considered restricted for the race */
 	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** Racial skill bonuses */
-	std::vector<GameRuleDataChoice<SkillCategoryData>> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skill from to become everyman */
+	std::set<GameRuleDataChoice<SkillCategoryData>> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skill from to become everyman */
 };

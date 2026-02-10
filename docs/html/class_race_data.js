@@ -18,7 +18,7 @@ var class_race_data =
     [ "averageMaleHeight", "class_race_data.html#a451973b0fdcb4e42aa073ac644af0a57", null ],
     [ "book", "class_race_data.html#a434bbfe06c1e84328651e6ead8661c55", null ],
     [ "buildModifier", "class_race_data.html#a1e208ff336ca91c064ab8810d7985349", null ],
-    [ "categoryEverymanSkillChoices", "class_race_data.html#a81e725136db3f34d6dd905bd3c6e4f49", null ],
+    [ "categoryEverymanSkillChoices", "class_race_data.html#a10d5c619cc5e210222dfc6e15945e6c3", null ],
     [ "channelingProgression", "class_race_data.html#a53bdca291bc014de5e13f2b93ace04d0", null ],
     [ "criticalTableType", "class_race_data.html#aadc9ade30c140d37caf70d7719aee2b4", null ],
     [ "description", "class_race_data.html#a526d35bee45d62f85f138da2fbb98be2", null ],

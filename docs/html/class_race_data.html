@@ -305,8 +305,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a43fdce02d6e738e83e7ba183605349b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a choice that defines the skill categories that a character may select one or more skills from to become everyman.  <br /></td></tr>
 <tr class="memitem:a9189e06472ce6b42a04b6cedc9d33f4d" id="r_a9189e06472ce6b42a04b6cedc9d33f4d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9189e06472ce6b42a04b6cedc9d33f4d">numCategoryEverymanSkillChoices</a> () const</td></tr>
 <tr class="memdesc:a9189e06472ce6b42a04b6cedc9d33f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of choices a character has to make regarding everyman skills in skill cetegories.  <br /></td></tr>
-<tr class="memitem:a81e725136db3f34d6dd905bd3c6e4f49" id="r_a81e725136db3f34d6dd905bd3c6e4f49"><td class="memItemLeft">const std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a81e725136db3f34d6dd905bd3c6e4f49">categoryEverymanSkillChoices</a> () const</td></tr>
-<tr class="memdesc:a81e725136db3f34d6dd905bd3c6e4f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills within a skill category that may be made everyme skills.  <br /></td></tr>
+<tr class="memitem:a10d5c619cc5e210222dfc6e15945e6c3" id="r_a10d5c619cc5e210222dfc6e15945e6c3"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a10d5c619cc5e210222dfc6e15945e6c3">categoryEverymanSkillChoices</a> () const</td></tr>
+<tr class="memdesc:a10d5c619cc5e210222dfc6e15945e6c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the choices the character needs to make to select one or more skills within a skill category that may be made everyme skills.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
 <tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
@@ -890,8 +890,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a81e725136db3f34d6dd905bd3c6e4f49" name="a81e725136db3f34d6dd905bd3c6e4f49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81e725136db3f34d6dd905bd3c6e4f49">&#9670;&#160;</a></span>categoryEverymanSkillChoices()</h2>
+<a id="a10d5c619cc5e210222dfc6e15945e6c3" name="a10d5c619cc5e210222dfc6e15945e6c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10d5c619cc5e210222dfc6e15945e6c3">&#9670;&#160;</a></span>categoryEverymanSkillChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -900,7 +900,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &amp; RaceData::categoryEverymanSkillChoices </td>
+          <td class="memname">const std::set&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &amp; RaceData::categoryEverymanSkillChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -914,7 +914,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get a container with the choices the character needs to make to select one or more skills within a skill category that may be made everyme skills. </p>
-<dl class="section return"><dt>Returns</dt><dd>vector of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>set of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_skill_development_type.html" title="Contains the SkillDevelopmentType enum and associated functions.">SkillDevelopmentType</a> </dd></dl>
 
 </div>
