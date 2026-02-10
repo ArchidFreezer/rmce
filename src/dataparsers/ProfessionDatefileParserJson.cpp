@@ -47,18 +47,7 @@ void ProfessionDatafileParserJson::parse() {
 		}
 
 		// Get skill bonuses
-		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-bonuses")) {
-			for (const auto& skill_bonus_tree : skill_bonuses.get()) {
-				std::string skill_name{ skill_bonus_tree.second.get<std::string>("skill") };
-				boost::optional<std::string> subcategory = skill_bonus_tree.second.get_optional<std::string>("subcategory");
-				int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-				if (subcategory) {
-					ref.setSkillBonus(factory().subcategoriedSkillData(skill_name, subcategory.get()), bonus);
-				} else {
-					ref.setSkillBonus(factory().subcategoriedSkillData(skill_name), bonus);
-				}
-			}
-		}
+		ref.setSkillBonuses(parseSkillPairTree<int>(v.second.get_child_optional("skill-bonuses")));
 
 		// Skill development types
 		if (boost::optional<const pt::ptree&> skill_development_types = v.second.get_child_optional("skill-development-types")) {
@@ -111,31 +100,13 @@ void ProfessionDatafileParserJson::parse() {
 		}
 
 		// Skill category profession bonus
-		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-category-profession-bonuses")) {
-			for (const auto& skill_bonus_tree : skill_bonuses.get()) {
-				std::string category_id{ skill_bonus_tree.second.get<std::string>("category") };
-				int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-				ref.addSkillCategoryProfessionBonus(factory().get<SkillCategoryData>(category_id), bonus);
-			}
-		}
+		ref.setSkillCategoryProfessionBonuses(parseGameDataPairTree<SkillCategoryData, int>(v.second.get_child_optional("skill-category-profession-bonuses")));
 
 		// Skill category special bonus
-		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-category-special-bonuses")) {
-			for (const auto& skill_bonus_tree : skill_bonuses.get()) {
-				std::string category_id{ skill_bonus_tree.second.get<std::string>("category") };
-				int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-				ref.addSkillCategorySpecialBonus(factory().get<SkillCategoryData>(category_id), bonus);
-			}
-		}
+		ref.setSkillCategorySpecialBonuses(parseGameDataPairTree<SkillCategoryData, int>(v.second.get_child_optional("skill-category-special-bonuses")));
 
 		// Skill category development types
-		if (boost::optional<const pt::ptree&> skill_development_types = v.second.get_child_optional("skill-category-skill-development-types")) {
-			for (const auto& skill_development_type : skill_development_types.get()) {
-				std::string category_id{ skill_development_type.second.get<std::string>("category") };
-				std::string type_id{ skill_development_type.second.get<std::string>("development-type") };
-				ref.addSkillCategorySkillDevelopmentType(factory().get<SkillCategoryData>(category_id), SkillDevelopmentType::fromString(type_id).value());
-			}
-		}
+		ref.setSkillCategorySkillDevelopmentTypes(parseGameDataPairEnumTree<SkillCategoryData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-category-skill-development-types")));
 
 		// Skill category development type choices
 		if (boost::optional<const pt::ptree&> skill_category_development_type_choices = v.second.get_child_optional("skill-category-skill-development-type-choices")) {
@@ -162,31 +133,13 @@ void ProfessionDatafileParserJson::parse() {
 		}
 
 		// Skill group profession bonus
-		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-group-profession-bonuses")) {
-			for (const auto& skill_bonus_tree : skill_bonuses.get()) {
-				std::string group_id{ skill_bonus_tree.second.get<std::string>("group") };
-				int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-				ref.addSkillGroupProfessionBonus(factory().get<SkillGroupData>(group_id), bonus);
-			}
-		}
+		ref.setSkillGroupProfessionBonuses(parseGameDataPairTree<SkillGroupData, int>(v.second.get_child_optional("skill-group-profession-bonuses")));
 
 		// Skill group special bonus
-		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-group-special-bonuses")) {
-			for (const auto& skill_bonus_tree : skill_bonuses.get()) {
-				std::string group_id{ skill_bonus_tree.second.get<std::string>("group") };
-				int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-				ref.addSkillGroupSpecialBonus(factory().get<SkillGroupData>(group_id), bonus);
-			}
-		}
+		ref.setSkillGroupSpecialBonuses(parseGameDataPairTree<SkillGroupData, int>(v.second.get_child_optional("skill-group-special-bonuses")));
 
 		// Skill group skill development types
-		if (boost::optional<const pt::ptree&> skill_development_types = v.second.get_child_optional("skill-group-skill-development-types")) {
-			for (const auto& skill_development_type : skill_development_types.get()) {
-				std::string group_id{ skill_development_type.second.get<std::string>("group") };
-				std::string type_id{ skill_development_type.second.get<std::string>("development-type") };
-				ref.addSkillGroupSkillDevelopmentType(factory().get<SkillGroupData>(group_id), SkillDevelopmentType::fromString(type_id).value());
-			}
-		}
+		ref.setSkillGroupSkillDevelopmentTypes(parseGameDataPairEnumTree<SkillGroupData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-group-skill-development-types")));
 
 		// Skill group development type choices
 		if (boost::optional<const pt::ptree&> skill_group_development_type_choices = v.second.get_child_optional("skill-group-skill-development-type-choices")) {
@@ -246,15 +199,10 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	if (base_spell_list_choices_tree.size()) datum.push_back(std::make_pair("base-spell-list-choices", base_spell_list_choices_tree));
 
 	// Skill bonuses
-	pt::ptree skill_bonuses_tree{};
-	for (auto& skill : game_data.skillsWithBonus()) {
-		pt::ptree skill_bonus_tree{};
-		skill_bonus_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_bonus_tree.put("subcategory", skill.subcategory().value());
-		skill_bonus_tree.put("bonus", game_data.skillBonus(skill));
-		skill_bonuses_tree.push_back(std::make_pair("", skill_bonus_tree));
+	{
+		pt::ptree tree{ getSkillPairTree<int>(game_data.skillBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-bonuses", tree));
 	}
-	if (skill_bonuses_tree.size()) datum.push_back(std::make_pair("skill-bonuses", skill_bonuses_tree));
 
 	// Skill development types
 	pt::ptree skill_development_types_tree{};
@@ -310,50 +258,20 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 
 	// Skill category profession bonus
 	{
-		pt::ptree skill_category_bonuses_tree{};
-		std::map<std::string, const SkillCategoryData*> categories{};
-		for (auto& skill_category : game_data.skillCategoriesWithProfessionBonus()) {
-			categories.emplace(skill_category->id(), skill_category);
-		}
-		for (const auto& skill_category : categories) {
-			pt::ptree skill_category_bonus_tree{};
-			skill_category_bonus_tree.put("category", skill_category.first);
-			skill_category_bonus_tree.put("bonus", game_data.skillCategoryProfessionBonus(*skill_category.second));
-			skill_category_bonuses_tree.push_back(std::make_pair("", skill_category_bonus_tree));
-		}
-		if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill-category-profession-bonuses", skill_category_bonuses_tree));
+		pt::ptree tree{ getGameDataPairTree<SkillCategoryData, int>(game_data.skillCategoryProfessionBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-category-profession-bonuses", tree));
 	}
 
 	// Skill category special bonus
 	{
-		pt::ptree skill_category_bonuses_tree{};
-		std::map<std::string, const SkillCategoryData*> categories{};
-		for (auto& skill_category : game_data.skillCategoriesWithSpecialBonus()) {
-			categories.emplace(skill_category->id(), skill_category);
-		}
-		for (const auto& skill_category : categories) {
-			pt::ptree skill_category_bonus_tree{};
-			skill_category_bonus_tree.put("category", skill_category.first);
-			skill_category_bonus_tree.put("bonus", game_data.skillCategorySpecialBonus(*skill_category.second));
-			skill_category_bonuses_tree.push_back(std::make_pair("", skill_category_bonus_tree));
-		}
-		if (skill_category_bonuses_tree.size()) datum.push_back(std::make_pair("skill-category-special-bonuses", skill_category_bonuses_tree));
+		pt::ptree tree{ getGameDataPairTree<SkillCategoryData, int>(game_data.skillCategorySpecialBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-category-special-bonuses", tree));
 	}
 
 	// Skill category development types
 	{
-		pt::ptree skill_category_skill_development_types_tree{};
-		std::map<std::string, const SkillCategoryData*> categories{};
-		for (auto& skill_category : game_data.skillCategoriesWithSkillDevelopmentType()) {
-			categories.emplace(skill_category->id(), skill_category);
-		}
-		for (const auto& skill_category : categories) {
-			pt::ptree skill_category_skill_development_type_tree{};
-			skill_category_skill_development_type_tree.put("category", skill_category.first);
-			skill_category_skill_development_type_tree.put("development-type", SkillDevelopmentType::toString(game_data.skillCategorySkillDevelopmentType(*skill_category.second)));
-			skill_category_skill_development_types_tree.push_back(std::make_pair("", skill_category_skill_development_type_tree));
-		}
-		if (skill_category_skill_development_types_tree.size()) datum.push_back(std::make_pair("skill-category-skill-development-types", skill_category_skill_development_types_tree));
+		pt::ptree tree{ getGameDataPairEnumTree<SkillCategoryData,SkillDevelopmentType::Type>(game_data.skillCategorySkillDevelopmentTypes()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-category-skill-development-types", tree));
 	}
 
 	// Skill category development type choices
@@ -392,50 +310,20 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 
 	// Skill group profession bonus
 	{
-		pt::ptree skill_group_bonuses_tree{};
-		std::map<std::string, const SkillGroupData*> groups{};
-		for (auto& skill_group : game_data.skillGroupsWithProfessionBonus()) {
-			groups.emplace(skill_group->id(), skill_group);
-		}
-		for (const auto& skill_group : groups) {
-			pt::ptree skill_group_bonus_tree{};
-			skill_group_bonus_tree.put("group", skill_group.first);
-			skill_group_bonus_tree.put("bonus", game_data.skillGroupProfessionBonus(*skill_group.second));
-			skill_group_bonuses_tree.push_back(std::make_pair("", skill_group_bonus_tree));
-		}
-		if (skill_group_bonuses_tree.size()) datum.push_back(std::make_pair("skill-group-profession-bonuses", skill_group_bonuses_tree));
+		pt::ptree tree{ getGameDataPairTree<SkillGroupData, int>(game_data.skillGroupProfessionBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-group-profession-bonuses", tree));
 	}
 
 	// Skill group special bonus
 	{
-		pt::ptree skill_group_bonuses_tree{};
-		std::map<std::string, const SkillGroupData*> groups{};
-		for (auto& skill_group : game_data.skillGroupsWithSpecialBonus()) {
-			groups.emplace(skill_group->id(), skill_group);
-		}
-		for (const auto& skill_group : groups) {
-			pt::ptree skill_group_bonus_tree{};
-			skill_group_bonus_tree.put("group", skill_group.first);
-			skill_group_bonus_tree.put("bonus", game_data.skillGroupSpecialBonus(*skill_group.second));
-			skill_group_bonuses_tree.push_back(std::make_pair("", skill_group_bonus_tree));
-		}
-		if (skill_group_bonuses_tree.size()) datum.push_back(std::make_pair("skill-group-special-bonuses", skill_group_bonuses_tree));
+		pt::ptree tree{ getGameDataPairTree<SkillGroupData, int>(game_data.skillGroupSpecialBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-group-special-bonuses", tree));
 	}
 
 	// Skill group skill development types
 	{
-		pt::ptree skill_group_skill_developments_tree{};
-		std::map<std::string, const SkillGroupData*> groups{};
-		for (auto& skill_group : game_data.skillGroupsWithSkillDevelopmentType()) {
-			groups.emplace(skill_group->id(), skill_group);
-		}
-		for (const auto& skill_group : groups) {
-			pt::ptree skill_group_skill_development_tree{};
-			skill_group_skill_development_tree.put("group", skill_group.first);
-			skill_group_skill_development_tree.put("development-type", SkillDevelopmentType::toString(game_data.skillGroupSkillDevelopmentType(*skill_group.second)));
-			skill_group_skill_developments_tree.push_back(std::make_pair("", skill_group_skill_development_tree));
-		}
-		if (skill_group_skill_developments_tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-types", skill_group_skill_developments_tree));
+		pt::ptree tree{ getGameDataPairEnumTree<SkillGroupData,SkillDevelopmentType::Type>(game_data.skillGroupSkillDevelopmentTypes()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-types", tree));
 	}
 
 	// Skill group development type choices

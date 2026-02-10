@@ -17,6 +17,9 @@
  */
 class WeaponTypeData : public GameRuleData {
 public:
+
+	WeaponTypeData() = delete; /**< Default constructor is deleted to ensure the base class is initialised */
+
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier for the book

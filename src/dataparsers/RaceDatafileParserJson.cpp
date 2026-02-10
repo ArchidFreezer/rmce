@@ -56,30 +56,10 @@ void RaceDatafileParserJson::parse() {
 		ref.setMentalismProgression(factory().get<SkillProgressionTypeData>(mentalism_progression));
 
 		// Get the starting languages
-		for (const auto& language : v.second.get_child("starting-languages")) {
-			std::string language_name{ language.second.get<std::string>("language") };
-			LanguageAbility ability(factory().get<LanguageData>(language_name));
-			boost::optional<int> somantic = language.second.get_optional<int>("somantic");
-			if (somantic) {	ability.updateSomanticRanks(somantic.get()); }
-			boost::optional<int> spoken = language.second.get_optional<int>("spoken");
-			if (spoken) { ability.updateSpokenRanks(spoken.get()); }				
-			boost::optional<int> written = language.second.get_optional<int>("written");
-			if (written) { ability.updateWrittenRanks(written.get()); }				
-			ref.setStartingLanguageAbility(ability);
-		}
+		ref.setStartingLanguageAbilities(parseLanguageAbilityMapTree(v.second.get_child_optional("starting-languages")));
 
 		// Get the adolescent languages
-		for (const auto& language : v.second.get_child("adolescent-languages")) {
-			std::string language_name{ language.second.get<std::string>("language") };
-			LanguageAbility ability(factory().get<LanguageData>(language_name));
-			boost::optional<int> somantic = language.second.get_optional<int>("somantic");
-			if (somantic) { ability.updateSomanticRanks(somantic.get()); }
-			boost::optional<int> spoken = language.second.get_optional<int>("spoken");
-			if (spoken) { ability.updateSpokenRanks(spoken.get()); }
-			boost::optional<int> written = language.second.get_optional<int>("written");
-			if (written) { ability.updateWrittenRanks(written.get()); }
-			ref.setAdolescentLanguageAbility(ability);
-		}
+		ref.setAdolescentLanguageAbilities(parseLanguageAbilityMapTree(v.second.get_child_optional("adolescent-languages")));
 
 		// Get Stat bonuses
 		if (boost::optional<const pt::ptree&> stat_bonuses = v.second.get_child_optional("stat-bonuses")) {
@@ -91,62 +71,19 @@ void RaceDatafileParserJson::parse() {
 		}
 
 		// Get everyman skills
-		if (boost::optional<const pt::ptree&> everyman_skills = v.second.get_child_optional("everyman-skills")) {
-			for (const auto& everyman_skill : everyman_skills.get()) {
-				std::string skill_name{ everyman_skill.second.get<std::string>("skill")};
-				boost::optional<std::string> subcategory = everyman_skill.second.get_optional<std::string>("subcategory");
-
-				if (subcategory) {
-					ref.addEverymanSkill(factory().subcategoriedSkillData(skill_name, subcategory.get()));
-				} else {
-					ref.addEverymanSkill(factory().subcategoriedSkillData(skill_name));
-				}
-			}
-		}
+		ref.setEverymanSkills(parseSkillSetTree(v.second.get_child_optional("everyman-skills")));
 
 		// Get restricted skills
-		if (boost::optional<const pt::ptree&> restricted_skills = v.second.get_child_optional("restricted-skills")) {
-			for (const auto& restricted_skill : restricted_skills.get()) {
-				std::string skill_name{ restricted_skill.second.get<std::string>("skill") };
-				boost::optional<std::string> subcategory = restricted_skill.second.get_optional<std::string>("subcategory");
-
-				if (subcategory) {
-					ref.addRestrictedSkill(factory().subcategoriedSkillData(skill_name, subcategory.get()));
-				} else {
-					ref.addRestrictedSkill(factory().subcategoriedSkillData(skill_name));
-				}
-			}
-		}
+		ref.setRestrictedSkills(parseSkillSetTree(v.second.get_child_optional("restricted-skills")));
 
 		// Everyman skill categories
-		if (boost::optional<const pt::ptree&> everyman_categories = v.second.get_child_optional("everyman-categories")) {
-			for (const auto& everyman_category : everyman_categories.get()) {
-				std::string category_name{ everyman_category.second.get_value<std::string>()};
-				ref.addEverymanSkillCategory(factory().get<SkillCategoryData>(category_name));
-			}
-		}
+		ref.setEverymanSkillCategories(parseGameDataSetTree<SkillCategoryData>(v.second.get_child_optional("everyman-categories")));
 
 		// Restricted skill categories
-		if (boost::optional<const pt::ptree&> restricted_categories = v.second.get_child_optional("restricted-categories")) {
-			for (const auto& restricted_category : restricted_categories.get()) {
-				std::string category_name{ restricted_category.second.get_value<std::string>() };
-				ref.addRestrictedSkillCategory(factory().get<SkillCategoryData>(category_name));
-			}
-		}
+		ref.setRestrictedSkillCategories(parseGameDataSetTree<SkillCategoryData>(v.second.get_child_optional("restricted-categories")));
 
 		// Get skill bonuses
-		if (boost::optional<const pt::ptree&> skill_bonuses = v.second.get_child_optional("skill-bonuses")) {
-			for (const auto& skill_bonus_tree : skill_bonuses.get()) {
-				std::string skill_name{ skill_bonus_tree.second.get<std::string>("skill") };
-				boost::optional<std::string> subcategory = skill_bonus_tree.second.get_optional<std::string>("subcategory");
-				int bonus{ skill_bonus_tree.second.get<int>("bonus") };
-				if (subcategory) {
-					ref.setSkillBonus(factory().subcategoriedSkillData(skill_name, subcategory.get()), bonus);
-				} else {
-					ref.setSkillBonus(factory().subcategoriedSkillData(skill_name), bonus);
-				}
-			}
-		}
+		ref.setSkillBonuses(parseSkillPairTree<int>(v.second.get_child_optional("skill-bonuses")));
 
 		// Get the skill category everyman choices
 		if (boost::optional<const pt::ptree&> category_choices = v.second.get_child_optional("skill-category-choices-everyman")) {
@@ -197,28 +134,36 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	datum.put("mentalism-progression", game_data.mentalismProgression().id());
 
 	// Starting languages
-	pt::ptree starting_languages_tree{};
-	for (auto& language_ability : game_data.startingLanguages()) {
-		pt::ptree language_ability_tree{};
-		language_ability_tree.put("language", language_ability.languageId());
-		if (language_ability.somantic()) language_ability_tree.put("somantic", language_ability.somantic());
-		if (language_ability.spoken()) language_ability_tree.put("spoken", language_ability.spoken());
-		if (language_ability.written()) language_ability_tree.put("written", language_ability.written());
-		starting_languages_tree.push_back(std::make_pair("", language_ability_tree));
+	{
+		pt::ptree tree{ getLanguageAbilityMapTree(game_data.startingLanguageAbilities()) };
+		if (tree.size()) datum.push_back(std::make_pair("starting-languages", tree));
 	}
-	datum.push_back(std::make_pair("starting-languages", starting_languages_tree));
+	//pt::ptree starting_languages_tree{};
+	//for (auto& language_ability : game_data.startingLanguages()) {
+	//	pt::ptree language_ability_tree{};
+	//	language_ability_tree.put("language", language_ability.languageId());
+	//	if (language_ability.somantic()) language_ability_tree.put("somantic", language_ability.somantic());
+	//	if (language_ability.spoken()) language_ability_tree.put("spoken", language_ability.spoken());
+	//	if (language_ability.written()) language_ability_tree.put("written", language_ability.written());
+	//	starting_languages_tree.push_back(std::make_pair("", language_ability_tree));
+	//}
+	//datum.push_back(std::make_pair("starting-languages", starting_languages_tree));
 
 	// Adolescent languages
-	pt::ptree adolescent_languages_tree{};
-	for (auto& language_ability : game_data.adolescentLanguages()) {
-		pt::ptree language_ability_tree{};
-		language_ability_tree.put("language", language_ability.languageId());
-		if (language_ability.somantic()) language_ability_tree.put("somantic", language_ability.somantic());
-		if (language_ability.spoken()) language_ability_tree.put("spoken", language_ability.spoken());
-		if (language_ability.written()) language_ability_tree.put("written", language_ability.written());
-		adolescent_languages_tree.push_back(std::make_pair("", language_ability_tree));
+	{
+		pt::ptree tree{ getLanguageAbilityMapTree(game_data.adolescentLanguageAbilities()) };
+		if (tree.size()) datum.push_back(std::make_pair("adolescent-languages", tree));
 	}
-	datum.push_back(std::make_pair("adolescent-languages", adolescent_languages_tree));
+	//pt::ptree adolescent_languages_tree{};
+	//for (auto& language_ability : game_data.adolescentLanguages()) {
+	//	pt::ptree language_ability_tree{};
+	//	language_ability_tree.put("language", language_ability.languageId());
+	//	if (language_ability.somantic()) language_ability_tree.put("somantic", language_ability.somantic());
+	//	if (language_ability.spoken()) language_ability_tree.put("spoken", language_ability.spoken());
+	//	if (language_ability.written()) language_ability_tree.put("written", language_ability.written());
+	//	adolescent_languages_tree.push_back(std::make_pair("", language_ability_tree));
+	//}
+	//datum.push_back(std::make_pair("adolescent-languages", adolescent_languages_tree));
 
 	// Stat bonus
 	pt::ptree stat_bonuses_tree{};
@@ -232,63 +177,34 @@ void RaceDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	if (stat_bonuses_tree.size()) datum.push_back(std::make_pair("stat-bonuses", stat_bonuses_tree));
 
 	// Everyman skills
-	pt::ptree everyman_skills_tree{};
-	for (auto& skill : game_data.everymanSkills()) {
-		pt::ptree skill_tree{};
-		skill_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_tree.put("subcategory", skill.subcategory().value());
-		everyman_skills_tree.push_back(std::make_pair("", skill_tree));
+	{
+		pt::ptree tree{ getSkillSetTree(game_data.everymanSkills()) };
+		if (tree.size()) datum.push_back(std::make_pair("everyman-skills", tree));
 	}
-	if (everyman_skills_tree.size()) datum.push_back(std::make_pair("everyman-skills", everyman_skills_tree));
 
 	// Restricted skills
-	pt::ptree restricted_skills_tree{};
-	for (auto& skill : game_data.restrictedSkills()) {
-		pt::ptree skill_tree{};
-		skill_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_tree.put("subcategory", skill.subcategory().value());
-		restricted_skills_tree.push_back(std::make_pair("", skill_tree));
+	{
+		pt::ptree tree{ getSkillSetTree(game_data.restrictedSkills()) };
+		if (tree.size()) datum.push_back(std::make_pair("restricted-skills", tree));
 	}
-	if (restricted_skills_tree.size()) datum.push_back(std::make_pair("restricted-skills", restricted_skills_tree));
 
 	// Everyman categories
-	pt::ptree everyman_categories_tree{};
-	// The categories are stored as a pointer so are not alpha sorted by name so we do that first to ensure consistent data file order
-	std::set<std::string> everyman_category_set{};
-	for (auto& category : game_data.everymanSkillCategories()) {
-		everyman_category_set.insert(category->id());
+	{
+		pt::ptree tree{ getGameDataSetTree<SkillCategoryData>(game_data.everymanSkillCategories()) };
+		if (tree.size()) datum.push_back(std::make_pair("everyman-categories", tree));
 	}
-	for (auto& category : everyman_category_set) {
-		pt::ptree everyman_category_tree{};
-		everyman_category_tree.put("", category);
-		everyman_categories_tree.push_back(std::make_pair("", everyman_category_tree));
-	}
-	if (everyman_categories_tree.size()) datum.push_back(std::make_pair("everyman-categories", everyman_categories_tree));
 
 	// Restricted categories
-	pt::ptree restricted_categories_tree{};
-	// The categories are stored as a pointer so are not alpha sorted by name so we do that first to ensure consistent data file order
-	std::set<std::string> restricted_category_set{};
-	for (auto& category : game_data.restrictedSkillCategories()) {
-		restricted_category_set.insert(category->id());
+	{
+		pt::ptree tree{ getGameDataSetTree<SkillCategoryData>(game_data.restrictedSkillCategories())};
+		if (tree.size()) datum.push_back(std::make_pair("restricted-categories", tree));
 	}
-	for (auto& category : restricted_category_set) {
-		pt::ptree restricted_category_tree{};
-		restricted_category_tree.put("", category);
-		restricted_categories_tree.push_back(std::make_pair("", restricted_category_tree));
-	}
-	if (restricted_categories_tree.size()) datum.push_back(std::make_pair("restricted-categories", restricted_categories_tree));
 
 	// Skill bonuses
-	pt::ptree skill_bonuses_tree{};
-	for (auto& skill : game_data.skillsWithBonus()) {
-		pt::ptree skill_bonus_tree{};
-		skill_bonus_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_bonus_tree.put("subcategory", skill.subcategory().value());
-		skill_bonus_tree.put("bonus", game_data.skillBonus(skill));
-		skill_bonuses_tree.push_back(std::make_pair("", skill_bonus_tree));
+	{
+		pt::ptree tree{ getSkillPairTree<int>(game_data.skillBonuses()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-bonuses", tree));
 	}
-	if (skill_bonuses_tree.size()) datum.push_back(std::make_pair("skill-bonuses", skill_bonuses_tree));
 
 	// Everyman skill category choices
 	pt::ptree everyman_category_choices_tree{};

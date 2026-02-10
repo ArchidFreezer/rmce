@@ -2963,7 +2963,7 @@
         {
             "id": "SKILL_LANGUAGES",
             "name": "Languages",
-            "category": "SKILLCATEGORY_COMMUNICATIONS",
+            "category": "SKILLCATEGORY_COMMUNICATION",
             "description": "Rolemaster is created for a world with a variety of cultures and languages. There is no such thing as a common tongue or an alignment tongue (though a GM can add them for his world system), although certain professions have developed their own languages for use in research. Each language must be developed individually, with the written and spoken versions of a language each counting separately. Skills in one language normally have little effect on others; however, 'brother languages,' those deriving from an immediate common ancestor, may be an exception. One's skill rank indicates the level of comprehension of a spoken or written language. One's skill bonus with a written form of language serves as a skill bonus to writing attempts using that language. The spoken skill bonus for a language is used to improve communication with someone. A successful static manoeuvre means that the spoken language rank of the person with whom you are communicating is temporarily increased for the purposes of this conversation, to a maximum of the rank developed by the individual performing the static manoeuvre. See the Mentalism Companion.",
             "book": "BOOK_FANTASY_ROLE_PLAYING",
             "action": "Static",
@@ -3047,7 +3047,7 @@
         {
             "id": "SKILL_LIP_READING",
             "name": "Lip Reading",
-            "category": "SKILLCATEGORY_COMMUNICATIONS",
+            "category": "SKILLCATEGORY_COMMUNICATION",
             "description": "This skill provides a bonus for reading lips and sign language. Lip Reading is only possible with languages that the lip reader knows and then only to the known spoken skill rank. Special creatures (e.g., the Chicken People) might cause a penalty to be added to the character's bonus due to distinct lack of lips. Line of sight must be maintained with the subject's mouth. Skill is halved for reading the lips of creatures not of the same general type. subcategories could include human, reptile, avian, non-human mammalian, etc.",
             "book": "BOOK_FANTASY_ROLE_PLAYING",
             "action": "Static",
@@ -3355,7 +3355,7 @@
         {
             "id": "SKILL_MAGICAL_LANGUAGE",
             "name": "Magical Language",
-            "category": "SKILLCATEGORY_COMMUNICATIONS",
+            "category": "SKILLCATEGORY_COMMUNICATION",
             "description": "This skill enables characters to learn magical languages. These languages are acquired in the same fashion as are regular languages. These Languages are rarely spoken except in conjunction with spell casting, where they aid the spell's potency. This is the language of Power Words.",
             "book": "BOOK_CHARACTER_LAW",
             "action": "Static",
@@ -5036,7 +5036,7 @@
         {
             "id": "SKILL_SIGNALING",
             "name": "Signaling",
-            "category": "SKILLCATEGORY_COMMUNICATIONS",
+            "category": "SKILLCATEGORY_COMMUNICATION",
             "description": "This skill provides a bonus when using any form of signal communications. This skill is a specialized form of linguistics and linguistics guidelines apply.",
             "book": "BOOK_FANTASY_ROLE_PLAYING",
             "action": "Static",

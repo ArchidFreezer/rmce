@@ -200,6 +200,38 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae063087e2bf89348b1fda607a8f50f5a" id="r_ae063087e2bf89348b1fda607a8f50f5a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae063087e2bf89348b1fda607a8f50f5a">setRootNode</a> (std::string root_node)</td></tr>
 <tr class="memdesc:ae063087e2bf89348b1fda607a8f50f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value of the root node key in the json file.  <br /></td></tr>
+<tr class="memitem:afed004d75ff39f69ebbf14c1ea75162d" id="r_afed004d75ff39f69ebbf14c1ea75162d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </td></tr>
+<tr class="memitem:afed004d75ff39f69ebbf14c1ea75162d template"><td class="memItemLeft">std::map&lt; const T *, U &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afed004d75ff39f69ebbf14c1ea75162d">parseGameDataPairTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:afed004d75ff39f69ebbf14c1ea75162d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a map of game data objects and values into a std::map of pointers to the game data objects and primitive type values.  <br /></td></tr>
+<tr class="memitem:a3720e43bf11a8d1723bcd93fba06a91f" id="r_a3720e43bf11a8d1723bcd93fba06a91f"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </td></tr>
+<tr class="memitem:a3720e43bf11a8d1723bcd93fba06a91f template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a3720e43bf11a8d1723bcd93fba06a91f">getGameDataPairTree</a> (std::map&lt; const T *, U &gt; map)</td></tr>
+<tr class="memdesc:a3720e43bf11a8d1723bcd93fba06a91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and primitive type values.  <br /></td></tr>
+<tr class="memitem:a4d2ee0bfea50c1b9f7c4d698a3798e79" id="r_a4d2ee0bfea50c1b9f7c4d698a3798e79"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </td></tr>
+<tr class="memitem:a4d2ee0bfea50c1b9f7c4d698a3798e79 template"><td class="memItemLeft">std::map&lt; const T *, U &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4d2ee0bfea50c1b9f7c4d698a3798e79">parseGameDataPairEnumTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:a4d2ee0bfea50c1b9f7c4d698a3798e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and enum type values.  <br /></td></tr>
+<tr class="memitem:a125419632db8817a736f4ffc7b93d154" id="r_a125419632db8817a736f4ffc7b93d154"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </td></tr>
+<tr class="memitem:a125419632db8817a736f4ffc7b93d154 template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a125419632db8817a736f4ffc7b93d154">getGameDataPairEnumTree</a> (std::map&lt; const T *, U &gt; map)</td></tr>
+<tr class="memdesc:a125419632db8817a736f4ffc7b93d154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of pointers to game data objects and enums into a boost ptree containing a map of game data objects and enum type values.  <br /></td></tr>
+<tr class="memitem:a00d925ce7330fa5b0373ccf882e41445" id="r_a00d925ce7330fa5b0373ccf882e41445"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
+<tr class="memitem:a00d925ce7330fa5b0373ccf882e41445 template"><td class="memItemLeft">std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, U &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a00d925ce7330fa5b0373ccf882e41445">parseSkillPairTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:a00d925ce7330fa5b0373ccf882e41445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a map of skills and values into a std::map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and primitive type values.  <br /></td></tr>
+<tr class="memitem:acee48a5b42cb334753958496ed2de723" id="r_acee48a5b42cb334753958496ed2de723"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
+<tr class="memitem:acee48a5b42cb334753958496ed2de723 template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#acee48a5b42cb334753958496ed2de723">getSkillPairTree</a> (std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, U &gt; map)</td></tr>
+<tr class="memdesc:acee48a5b42cb334753958496ed2de723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and values into a boost ptree containing a map of skills and primitive type values.  <br /></td></tr>
+<tr class="memitem:adb5a87edc157496d747344970b71af5f" id="r_adb5a87edc157496d747344970b71af5f"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </td></tr>
+<tr class="memitem:adb5a87edc157496d747344970b71af5f template"><td class="memItemLeft">std::set&lt; const T * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#adb5a87edc157496d747344970b71af5f">parseGameDataSetTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:adb5a87edc157496d747344970b71af5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a set of game data objects into a std::set of the game data objects.  <br /></td></tr>
+<tr class="memitem:ac54c52608d387ec55384ede17374dc8e" id="r_ac54c52608d387ec55384ede17374dc8e"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </td></tr>
+<tr class="memitem:ac54c52608d387ec55384ede17374dc8e template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#ac54c52608d387ec55384ede17374dc8e">getGameDataSetTree</a> (std::set&lt; const T * &gt; set)</td></tr>
+<tr class="memdesc:ac54c52608d387ec55384ede17374dc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::set of game data objects into a boost ptree containing a set of game data objects.  <br /></td></tr>
+<tr class="memitem:a2f5554440456ffbacde2e3e22376eab8" id="r_a2f5554440456ffbacde2e3e22376eab8"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2f5554440456ffbacde2e3e22376eab8">parseSkillSetTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:a2f5554440456ffbacde2e3e22376eab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a set of skills into a std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a>.  <br /></td></tr>
+<tr class="memitem:ad1f7e59a681143f3a17b9b316d54ed88" id="r_ad1f7e59a681143f3a17b9b316d54ed88"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#ad1f7e59a681143f3a17b9b316d54ed88">getSkillSetTree</a> (std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; set)</td></tr>
+<tr class="memdesc:ad1f7e59a681143f3a17b9b316d54ed88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> into a boost ptree containing a set of skills.  <br /></td></tr>
+<tr class="memitem:ad44b34a91a4826face21893b580087ef" id="r_ad44b34a91a4826face21893b580087ef"><td class="memItemLeft">const std::map&lt; std::string, const <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad44b34a91a4826face21893b580087ef">parseLanguageAbilityMapTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:ad44b34a91a4826face21893b580087ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a map of language abilities into a std::map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a>.  <br /></td></tr>
+<tr class="memitem:a7e4953d1337511471b133cdaf943ba12" id="r_a7e4953d1337511471b133cdaf943ba12"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a7e4953d1337511471b133cdaf943ba12">getLanguageAbilityMapTree</a> (std::map&lt; std::string, const <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt; map)</td></tr>
+<tr class="memdesc:a7e4953d1337511471b133cdaf943ba12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> into a boost ptree containing a map of language abilities.  <br /></td></tr>
 <tr class="inherit_header pro_methods_class_datafile_parser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_datafile_parser')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="class_datafile_parser.html">DatafileParser</a></td></tr>
 <tr class="memitem:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser" id="r_a4e7a26696510228b1a25308655066ef1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_datafile_parser.html#a4e7a26696510228b1a25308655066ef1">parse</a> ()=0</td></tr>
 <tr class="memdesc:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a ptree into game data objects.  <br /></td></tr>
@@ -323,6 +355,528 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a125419632db8817a736f4ffc7b93d154" name="a125419632db8817a736f4ffc7b93d154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125419632db8817a736f4ffc7b93d154">&#9670;&#160;</a></span>getGameDataPairEnumTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getGameDataPairEnumTree </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; const T *, U &gt;</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::map of pointers to game data objects and enums into a boost ptree containing a map of game data objects and enum type values. </p>
+<p>The boost ptree created by this function will generate the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;id of the game data object&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;enum associated with the game data object&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Enum type of the game data values </td></tr>
+    <tr><td class="paramname">T</td><td>Game data object type, must be derived from <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>Map of pointers to game data objects and values, with the game data objects retrieved from the cache using their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids </dd></dl>
+
+</div>
+</div>
+<a id="a3720e43bf11a8d1723bcd93fba06a91f" name="a3720e43bf11a8d1723bcd93fba06a91f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3720e43bf11a8d1723bcd93fba06a91f">&#9670;&#160;</a></span>getGameDataPairTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getGameDataPairTree </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; const T *, U &gt;</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and primitive type values. </p>
+<p>The boost ptree created by this function will generate the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;id of the game data object&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;value associated with the game data object&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Primitive type of the game data values </td></tr>
+    <tr><td class="paramname">T</td><td>Game data object type, must be derived from <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>Map of pointers to game data objects and values, with the game data objects retrieved from the cache using their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids </dd></dl>
+
+</div>
+</div>
+<a id="ac54c52608d387ec55384ede17374dc8e" name="ac54c52608d387ec55384ede17374dc8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54c52608d387ec55384ede17374dc8e">&#9670;&#160;</a></span>getGameDataSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getGameDataSetTree </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; const T * &gt;</td>          <td class="paramname"><span class="paramname"><em>set</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::set of game data objects into a boost ptree containing a set of game data objects. </p>
+<p>The boost ptree created by this function will generate the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">    &quot;id of game data object 1&quot;,</div>
+<div class="line">    &quot;id of game data object 2&quot;</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Game data object type, must be derived from <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">set</td><td>Set of game data objects, with the game data objects retrieved from the cache using their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the set of game data objects, with the game data objects represented by their ids </dd></dl>
+
+</div>
+</div>
+<a id="a7e4953d1337511471b133cdaf943ba12" name="a7e4953d1337511471b133cdaf943ba12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4953d1337511471b133cdaf943ba12">&#9670;&#160;</a></span>getLanguageAbilityMapTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getLanguageAbilityMapTree </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; std::string, const <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> into a boost ptree containing a map of language abilities. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>Map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a>, with the languages retrieved from the cache using their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the map of language abilities, with the languages represented by their ids </dd></dl>
+
+</div>
+</div>
+<a id="acee48a5b42cb334753958496ed2de723" name="acee48a5b42cb334753958496ed2de723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acee48a5b42cb334753958496ed2de723">&#9670;&#160;</a></span>getSkillPairTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getSkillPairTree </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, U &gt;</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and values into a boost ptree containing a map of skills and primitive type values. </p>
+<p>The boost ptree created by this function will generate the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;id of the game data object&quot;,</div>
+<div class="line">    &quot;subcategory&quot;: &quot;subcategory of the skill, optional&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;value associated with the game data object&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Primitive type of the skill values </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>Map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and values, with the skills retrieved from the cache using their ids and optional subcategories </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the map of skills and values, with the skills represented by their ids and optional subcategories </dd></dl>
+
+</div>
+</div>
+<a id="ad1f7e59a681143f3a17b9b316d54ed88" name="ad1f7e59a681143f3a17b9b316d54ed88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f7e59a681143f3a17b9b316d54ed88">&#9670;&#160;</a></span>getSkillSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getSkillSetTree </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>set</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> into a boost ptree containing a set of skills. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">set</td><td>Set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a>, with the skills retrieved from the cache using their ids and optional subcategories </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories </dd></dl>
+
+</div>
+</div>
+<a id="a4d2ee0bfea50c1b9f7c4d698a3798e79" name="a4d2ee0bfea50c1b9f7c4d698a3798e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d2ee0bfea50c1b9f7c4d698a3798e79">&#9670;&#160;</a></span>parseGameDataPairEnumTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; const T *, U &gt; DatafileParserJson::parseGameDataPairEnumTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and enum type values. </p>
+<p>The boost ptree expected by this function should be derived from the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;id of the game data object&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;enum associated with the game data object&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Enum type of the game data values </td></tr>
+    <tr><td class="paramname">T</td><td>Type of the game data objects being parsed, must be derived from <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the map of game data objects and enum, with the game data objects represented by their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Map of pointers to the game data objects and the enum, with the game data objects retrieved from the cache using their ids </dd></dl>
+
+</div>
+</div>
+<a id="afed004d75ff39f69ebbf14c1ea75162d" name="afed004d75ff39f69ebbf14c1ea75162d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afed004d75ff39f69ebbf14c1ea75162d">&#9670;&#160;</a></span>parseGameDataPairTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T, typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; const T *, U &gt; DatafileParserJson::parseGameDataPairTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a map of game data objects and values into a std::map of pointers to the game data objects and primitive type values. </p>
+<p>The boost ptree expected by this function should be derived from the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;id of the game data object&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;value associated with the game data object&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Primitive type of the game data values </td></tr>
+    <tr><td class="paramname">T</td><td>Type of the game data objects being parsed, must be derived from <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Map of pointers to the game data objects and the values, with the game data objects retrieved from the cache using their ids </dd></dl>
+
+</div>
+</div>
+<a id="adb5a87edc157496d747344970b71af5f" name="adb5a87edc157496d747344970b71af5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb5a87edc157496d747344970b71af5f">&#9670;&#160;</a></span>parseGameDataSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; const T * &gt; DatafileParserJson::parseGameDataSetTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a set of game data objects into a std::set of the game data objects. </p>
+<p>The boost ptree expected by this function should be derived from the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">    &quot;id of game data object 1&quot;,</div>
+<div class="line">    &quot;id of game data object 2&quot;</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Game data object type, must be derived from <a class="el" href="class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game.">GameRuleData</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the set of game data objects, with the game data objects represented by their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Set of the game data objects, with the game data objects retrieved from the cache using their ids </dd></dl>
+
+</div>
+</div>
+<a id="ad44b34a91a4826face21893b580087ef" name="ad44b34a91a4826face21893b580087ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44b34a91a4826face21893b580087ef">&#9670;&#160;</a></span>parseLanguageAbilityMapTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; std::string, const <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt; DatafileParserJson::parseLanguageAbilityMapTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a map of language abilities into a std::map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the map of language abilities, with the languages represented by their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a>, with the languages retrieved from the cache using their ids </dd></dl>
+
+</div>
+</div>
+<a id="a00d925ce7330fa5b0373ccf882e41445" name="a00d925ce7330fa5b0373ccf882e41445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d925ce7330fa5b0373ccf882e41445">&#9670;&#160;</a></span>parseSkillPairTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, U &gt; DatafileParserJson::parseSkillPairTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a map of skills and values into a std::map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and primitive type values. </p>
+<p>The boost ptree expected by this function should be derived from the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;id of the game data object&quot;,</div>
+<div class="line">    &quot;subcategory&quot;: &quot;subcategory of the skill, optional&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;value associated with the game data object&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Primitive type of the skill values </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the map of skills and values, with the skills represented by their ids and optional subcategories </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and the values, with the skills retrieved from the cache using their ids and optional subcategories </dd></dl>
+
+</div>
+</div>
+<a id="a2f5554440456ffbacde2e3e22376eab8" name="a2f5554440456ffbacde2e3e22376eab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5554440456ffbacde2e3e22376eab8">&#9670;&#160;</a></span>parseSkillSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; DatafileParserJson::parseSkillSetTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a set of skills into a std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a>, with the skills retrieved from the cache using their ids and optional subcategories </dd></dl>
+
+</div>
+</div>
 <a id="a4d43f820461e9883fc6003eb928bb980" name="a4d43f820461e9883fc6003eb928bb980"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d43f820461e9883fc6003eb928bb980">&#9670;&#160;</a></span>populateDatum()</h2>
 

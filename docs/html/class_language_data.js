@@ -1,6 +1,6 @@
 var class_language_data =
 [
-    [ "LanguageData", "class_language_data.html#a020e7df325efe67e0988b5730152f6da", null ],
+    [ "LanguageData", "class_language_data.html#aea501c79dc02000e30962f52d73b3048", null ],
     [ "LanguageData", "class_language_data.html#a579a0b682ae2958a0137ba6168b95743", null ],
     [ "baseLanguage", "class_language_data.html#a9030dff1871da9e870d86df6339e627b", null ],
     [ "category", "class_language_data.html#a4177a44d3e7802bebb18cac0d183b865", null ],

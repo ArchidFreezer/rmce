@@ -227,6 +227,12 @@ public:
 	const std::set<const WeaponTypeData*> preferredWeapons() const { return preferred_weapons_; }
 
 	/**
+	 * @brief Set the set of weapon types preferred by the culture
+	 * @param weapons std::set of WeaponTypeData pointers to set as preferred weapons
+	 */
+	void setPreferredWeapons(std::set<const WeaponTypeData*> weapons) { preferred_weapons_ = std::move(weapons); }
+
+	/**
 	 * @brief Get whether an weapon type is amongst those prefereed by the culture
 	 * @param weapon WeaponTypeData to check
 	 * @return `true` if the weapon type is preferred by the culture
@@ -248,6 +254,23 @@ public:
 		if (isRankSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + skill.id());
 		skill_ranks_.emplace(std::move(skill), ranks);
 	}
+
+	/**
+	 * @brief Set the map of skills and ranks the culture provides during adolescence
+	 * @param map Map of SubcategoriedSkillData and int number of ranks for each skill to set
+	 */
+	void setSkillRanks(std::map<SubcategoriedSkillData, int> map) {
+		for (auto& key : std::views::keys(map)) {
+			if (isRankSkill(key.skillData(), key.subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + key.id());
+		}
+		skill_ranks_ = std::move(map);
+	}
+
+	/**
+	 * @brief Get the map of skills and ranks the culture provides during adolescence
+	 * @return Map of SubcategoriedSkillData and int number of ranks for each skill
+	 */
+	const std::map<SubcategoriedSkillData, int>& skillRanks() const { return skill_ranks_; }
 
 	/**
 	 * @brief Get the number of ranks for a skill the culture provides during adolescence
@@ -306,6 +329,18 @@ public:
 	void addSkillCategoryRank(const SkillCategoryData& category, int ranks) { skill_category_ranks_.emplace(&category, ranks); }
 
 	/**
+	 * @brief Set the number of skill ranks a category receives during adolescence
+	 * @param map Map of SkillCategoryData and int number of adolescent ranks to set for each category
+	 */
+	void setSkillCategoryRanks(std::map<const SkillCategoryData*, int> map) { skill_category_ranks_ = std::move(map); }
+
+	/**
+	 * @brief Get the number of skill ranks a category receives during adolescence
+	 * @return Map of SkillCategoryData and int number of adolescent ranks for each category
+	 */
+	const std::map<const SkillCategoryData*, int>& skillCategoryRanks() const { return skill_category_ranks_; }
+
+	/**
 	 * @brief Get a container of all the skill categories with a adolescent ranks
 	 * @return std::set of categories with adolescent ranks
 	 */
@@ -347,6 +382,18 @@ public:
 	void addSkillCategorySkillRank(const SkillCategoryData& category, int ranks) { skill_category_skill_ranks_.emplace(&category, ranks); }
 
 	/**
+	 * @brief Set the number of skill ranks a skill in the category receives during adolescence
+	 * @param map Map of SkillCategoryData and int number of adolescent ranks to add to a skill in the category to set for each category
+	 */
+	void setSkillCategorySkillRanks(std::map<const SkillCategoryData*, int> map) { skill_category_skill_ranks_ = std::move(map); }
+
+	/**
+	 * @brief Get the number of skill ranks a skill in the category receives during adolescence
+	 * @return Map of SkillCategoryData and int number of adolescent ranks to add to a skill in the category for each category
+	 */
+	const std::map<const SkillCategoryData*, int>& skillCategorySkillRanks() const { return skill_category_skill_ranks_; }
+
+	/**
 	 * @brief Get a container of all the skill categories with a adolescent ranks to add to a skill
 	 * @return std::set of categories with adolescent ranks to be added to a skill
 	 */
@@ -385,6 +432,12 @@ public:
 	 * @param climate ClimateData to add
 	 */
 	void addRequiredClimate(ClimateData& climate) { required_climates_.emplace(&climate); }
+
+	/**
+	 * @brief Set the set of climate types required by the culture
+	 * @param climates std::set of ClimateData pointers to set as required climates
+	 */
+	void setRequiredClimates(std::set<const ClimateData*> climates) { required_climates_ = std::move(climates); }
 
 	/**
 	 * @brief Get a container with the climates required by the culture

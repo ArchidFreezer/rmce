@@ -1,6 +1,7 @@
 var class_skill_data =
 [
     [ "UsingCharacterRealmStatsException", "class_skill_data_1_1_using_character_realm_stats_exception.html", "class_skill_data_1_1_using_character_realm_stats_exception" ],
+    [ "SkillData", "class_skill_data.html#a78c7a06d59bd4aba7cfbdc31147abe8b", null ],
     [ "SkillData", "class_skill_data.html#a150f74a2353f3db89f647dc9f30617ea", null ],
     [ "actionType", "class_skill_data.html#a795138f3119a54e2ac79e57548a34da6", null ],
     [ "addStat", "class_skill_data.html#abf10402cb53bce7b58e876d26cf8f927", null ],

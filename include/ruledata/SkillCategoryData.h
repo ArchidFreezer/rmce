@@ -37,28 +37,14 @@ public:
  */
 class SkillCategoryData : public GameRuleData {
 public:
+
+	SkillCategoryData() = delete; /**< Default constructor is deleted to ensure the base class is initialised */
+
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier of the skill category
 	 */
 	SkillCategoryData(std::string_view id) : GameRuleData(id) {}
-
-	/**
-	 * @brief Constructor
-	 * @param group Skill group that the category belongs to
-	 * @param id Unique identifier of the skill category
-	 * @param name Name of the category as seen in-game
-	 * @param skill_progression Default progression type for skills in the category
-	 * @param category_progression Progression type for the skill category
-	 * @param use_realm_stats Whether to use characters realm stats for bonus rather than category stats
-	 */
-	SkillCategoryData(std::string_view id, std::string_view name, const SkillGroupData& group, const SkillProgressionTypeData& skill_progression, const SkillProgressionTypeData& category_progression, bool use_realm_stats) :
-		GameRuleData(id),
-		group_{ &group },
-		name_{ name },
-		skill_progression_{ &skill_progression },
-		skill_category_progression_{ &category_progression },
-		use_realm_stats_{ use_realm_stats } {}
 
 	/**
 	 * @brief Set the name of the skill category

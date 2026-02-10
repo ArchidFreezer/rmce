@@ -13,20 +13,8 @@
  */
 class SpellListData : public GameRuleData {
 public:
-	/**
-	 * @brief Constructor
-	 * @param id Unique identifier for the spell list
-	 * @param name Name of the spell llist as seen in game
-	 * @param type The type of spell list
-	 * @param evil Whether the spell list is considered evil in nature
-	 * @param summoning Whether the spell list contains summoning spells
-	 */
-	SpellListData(std::string_view id, std::string_view name, SpellListType::Type type, bool evil, bool summoning) :
-		GameRuleData(id),
-		name_{ name },
-		type_{ type },
-		evil_{ evil },
-		summoning_{ summoning } {}
+
+	SpellListData() = delete; /**< Default constructor is deleted to ensure the base class is initialised */
 
 	/**
 	 * @brief Constructor

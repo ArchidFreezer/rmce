@@ -1,6 +1,6 @@
 var class_armour_type_data =
 [
-    [ "ArmourTypeData", "class_armour_type_data.html#a4639edf60ec344dd8060f6af63e5526e", null ],
+    [ "ArmourTypeData", "class_armour_type_data.html#a45a0e7905e4632223d0b69f22246e36e", null ],
     [ "ArmourTypeData", "class_armour_type_data.html#a9f01466ec106e2b766fb6d382f940305", null ],
     [ "animalOnly", "class_armour_type_data.html#ab96238c3155edb9f18b760add3fecc4e", null ],
     [ "description", "class_armour_type_data.html#a2144214a669fd5c4b1c42eb367e89da4", null ],

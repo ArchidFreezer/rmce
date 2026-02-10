@@ -532,6 +532,12 @@ public:
 	void setStartingLanguageAbility(LanguageAbility language) { starting_languages_.emplace(language.language(), language); }
 
 	/**
+	 * @brief Sets the object's collection of starting language abilities to the provided map.
+	 * @param languages A map of language names to LanguageAbility objects. The map is copied into the object's starting_languages_ member.
+	 */
+	void setStartingLanguageAbilities(const std::map<std::string, const LanguageAbility> languages) {	starting_languages_ = std::move(languages); }
+
+	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language LanguageData language to get the ability for
 	 * @return LanguageAbility language ability
@@ -544,6 +550,12 @@ public:
 	 * @return LanguageAbility language ability
 	 */
 	const LanguageAbility& startingLanguageAbility(const std::string language_name) const { return starting_languages_.at(language_name); }
+
+	/**
+	 * @brief Returns a const reference to the map of starting language abilities.
+	 * @return A const reference to a std::map that maps language names (std::string) to const LanguageAbility values. The reference refers to the internal starting_languages_ member and remains valid as long as the containing object exists and the map is not modified.
+	 */
+	const std::map<std::string, const LanguageAbility>& startingLanguageAbilities() const { return starting_languages_; }
 	
 	/**
 	 * @brief Get a container with the LanguageAbility objects known during childhood
@@ -561,6 +573,12 @@ public:
 	void setAdolescentLanguageAbility(LanguageAbility language) { adolescent_languages_.emplace(language.language(), language); }
 
 	/**
+	 * @brief Sets the object's collection of adolescent language abilities to the provided map.
+	 * @param languages A map of language names to LanguageAbility objects. The map is copied into the object's adolescent_languages_ member.
+	 */
+	void setAdolescentLanguageAbilities(const std::map<std::string, const LanguageAbility> languages) {	adolescent_languages_ = std::move(languages); }
+
+	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language LanguageData language to get the ability for
 	 * @return LanguageAbility language ability
@@ -573,6 +591,12 @@ public:
 	 * @return LanguageAbility language ability
 	 */
 	const LanguageAbility& adolescentLanguageAbility(const std::string language_name) const { return adolescent_languages_.at(language_name); }
+
+	/**
+	 * @brief Returns a const reference to the internal map of adolescent language abilities.
+	 * @return A const reference to a std::map that maps language names (std::string) to const LanguageAbility objects for adolescents. The reference is to the internal member adolescent_languages_ and remains valid while the parent object exists and the map is not modified.
+	 */
+	const std::map<std::string, const LanguageAbility>& adolescentLanguageAbilities() const { return adolescent_languages_; }
 
 	/**
 	 * @brief Get a container with the LanguageAbility objects known during childhood
@@ -618,6 +642,12 @@ public:
 		if (isEverymanSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as everyman as it is already defined");
 		everyman_skills_.insert(std::move(skill));
 	}
+
+	/**
+	 * @brief Sets the everyman skills collection.
+	 * @param skills A set of subcategorized skill data to assign as everyman skills.
+	 */
+	void setEverymanSkills(const std::set<SubcategoriedSkillData> skills) {	everyman_skills_ = std::move(skills); }
 
 	/**
 	 * @brief Get a container of the skills that are considered everyman
@@ -674,6 +704,12 @@ public:
 	}
 
 	/**
+	 * @brief Sets the restricted skills to the specified set.
+	 * @param skills A set of subcategorized skill data to be set as restricted skills.
+	 */
+	void setRestrictedSkills(const std::set<SubcategoriedSkillData> skills) {	restricted_skills_ = std::move(skills); }
+
+	/**
 	 * @brief Check if a skill is restricted for the race
 	 * @param other Skill to check
 	 * @param subcategory optional subcategory of @a other
@@ -698,6 +734,14 @@ public:
 		if (isRestrictedSkillCategory(category)) throw InvalidSkillDevelopment("Cannot set " + category.id() + " as everyman as it is already set as restricted");
 		if (isEverymanSkillCategory(category)) throw InvalidSkillDevelopment("Cannot set " + category.id() + " as everyman as it is already defined");
 		everyman_skill_categories_.insert(&category);
+	}
+
+	/**
+	 * @brief Sets the everyman skill categories
+	 * @param categories A set of pointers to SkillCategoryData to mark as everyman.
+	 */
+	void setEverymanSkillCategories(const std::set<const SkillCategoryData*>& categories) {
+		everyman_skill_categories_ = categories;
 	}
 
 	/**
@@ -733,6 +777,12 @@ public:
 	}
 
 	/**
+	 * @brief Sets the restricted skill categories
+	 * @param categories A set of pointers to SkillCategoryData to mark as restricted.
+	 */
+	void setRestrictedSkillCategories(const std::set<const SkillCategoryData*> categories) { restricted_skill_categories_ = std::move(categories); }
+
+	/**
 	 * @brief Get a container of the skill categories that are considered restricted
 	 * @return std::set container of restricted skill categories
 	 * @see SkillDevelopmentType
@@ -762,6 +812,18 @@ public:
 		if (isBonusSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillBonus("There is already a bonus set for skill " + skill.id());
 		skill_bonuses_.emplace(std::move(skill), bonus); 
 	}
+
+	/**
+	 * @brief Sets the skill bonuses to the specified map.
+	 * @param bonuses A map of SubcategoriedSkillData to int representing the skill bonuses. The map is copied into the object's skill_bonuses_ member.
+	 */
+	void setSkillBonuses(const std::map<SubcategoriedSkillData, int> bonuses) {	skill_bonuses_ = std::move(bonuses);	}
+
+	/**
+	 * @brief Returns a read-only reference to the map of skill bonuses.
+	 * @return A const reference to the internal std::map<SubcategoriedSkillData, int> that maps each SubcategoriedSkillData to its integer bonus.
+	 */
+	const std::map<SubcategoriedSkillData, int>& skillBonuses() const { return skill_bonuses_; }
 
 	/**
 	 * @brief Get the bonus that the race provides to a skill
