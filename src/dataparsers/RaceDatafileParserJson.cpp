@@ -32,10 +32,9 @@ void RaceDatafileParserJson::parse() {
 		ref.setBook(factory().get<BookData>(book_id));
 
 		// Get the creature size
-		std::string creature_size = v.second.get<std::string>("creature-size");
-		if (CreatureSizeType::fromString(creature_size)) {
-			ref.setSize(CreatureSizeType::fromString(creature_size).value());
-		}
+		CreatureSizeType::Type size{};
+		fromString(v.second.get<std::string>("creature-size"), size);
+		ref.setSize(size);
 
 		// get the critical type
 		std::string critical_table = v.second.get<std::string>("critical-table");
