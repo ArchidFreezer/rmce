@@ -25,3 +25,9 @@ const std::optional<CreatureSizeType::Type> CreatureSizeType::fromString(std::st
 
 	return {};
 }
+
+void CreatureSizeType::fromString(std::string_view sv, CreatureSizeType::Type& type) {
+	std::optional<Type> opt_type = fromString(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for CreatureSizeType::Type: " + std::string(sv));
+}
