@@ -82,7 +82,7 @@ int main() {
 		//weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 		//race_parser.save("../../../../data/Races2.json");
 		//skill_group_parser.save("../../../../data/SkillGroups2.json");
-		profession_parser.save("../../../../data/Professions2.json");
+		//profession_parser.save("../../../../data/Professions2.json");
 		//climate_parser.save("../../../../data/Climates2.json");
 		//culture_type_parser.save("../../../../data/CultureTypes2.json");
 	} catch (std::runtime_error e) {
