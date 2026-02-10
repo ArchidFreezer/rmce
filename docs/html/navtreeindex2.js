@@ -182,6 +182,7 @@ var NAVTREEINDEX2 =
 "class_skill_data.html#a4e4f07684d64cc85dc79dd2a408d7fed":[2,0,50,30],
 "class_skill_data.html#a5978d0236241ba9c6a2c32ac3972210e":[2,0,50,14],
 "class_skill_data.html#a5afac48d16e1ccab415d1ba1fbaf4ecd":[2,0,50,19],
+"class_skill_data.html#a5de53bd012caf41d9377c526a108d466":[2,0,50,33],
 "class_skill_data.html#a621d0b53fb47883da1e043f36ebb637c":[2,0,50,28],
 "class_skill_data.html#a6deab857189531a00cd0460a5282cb4b":[2,0,50,22],
 "class_skill_data.html#a7815b928c8a6acd74d774acac8c6904d":[2,0,50,8],
@@ -203,7 +204,7 @@ var NAVTREEINDEX2 =
 "class_skill_data.html#ae8a94d4f53f3d2e2948fede5933e672d":[2,0,50,10],
 "class_skill_data.html#aef0895160838fa4dae181d088365d8ab":[2,0,50,32],
 "class_skill_data.html#af1b404d8ff11d7a8cb791858d9d81e8e":[2,0,50,6],
-"class_skill_data.html#af1f2ef4bf3be3398fbb7cde006d23e6d":[2,0,50,33],
+"class_skill_data.html#af1f2ef4bf3be3398fbb7cde006d23e6d":[2,0,50,34],
 "class_skill_data.html#aff733308308a6e04fef182646d2c5073":[2,0,50,15],
 "class_skill_data_1_1_using_character_realm_stats_exception.html":[2,0,50,0],
 "class_skill_data_1_1_using_character_realm_stats_exception.html#ae7ee35c5a0f724c34aae37dfe244a2bd":[2,0,50,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "class_skill_progression_type_data.html#a427372b17e20f95c6cd78720c5715490":[2,0,56,11],
 "class_skill_progression_type_data.html#a5577c9d06640ca96b18161a590d4e157":[2,0,56,8],
 "class_skill_progression_type_data.html#a5b54dd876e34e50738379ebf108b0d82":[2,0,56,2],
-"class_skill_progression_type_data.html#a63f3f9aea8e96d38c639ab39b78043bf":[2,0,56,0],
-"class_skill_progression_type_data.html#a8ac138018cbcf6df8889597a0a16d824":[2,0,56,7]
+"class_skill_progression_type_data.html#a63f3f9aea8e96d38c639ab39b78043bf":[2,0,56,0]
 };

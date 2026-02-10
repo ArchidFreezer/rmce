@@ -112,7 +112,6 @@
             "is-restricted": "false",
             "can-specialise": "true",
             "mandatory-subcategory": "false",
-            "stats": "",
             "exhaustion": "1",
             "distance-multiplier": "1"
         },
@@ -231,7 +230,6 @@
             "is-restricted": "true",
             "can-specialise": "true",
             "mandatory-subcategory": "false",
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -307,7 +305,6 @@
             "is-restricted": "false",
             "can-specialise": "true",
             "mandatory-subcategory": "false",
-            "stats": "",
             "exhaustion": "5",
             "distance-multiplier": "1"
         },
@@ -3079,7 +3076,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3098,7 +3094,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3117,7 +3112,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3136,7 +3130,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3155,7 +3148,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3174,7 +3166,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3193,7 +3184,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3212,7 +3202,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3231,7 +3220,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3250,7 +3238,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3269,7 +3256,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -3288,7 +3274,6 @@
             "subcategories": [
                 "{SpellList}"
             ],
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },
@@ -4268,7 +4253,6 @@
             "is-restricted": "false",
             "can-specialise": "false",
             "mandatory-subcategory": "false",
-            "stats": "",
             "exhaustion": "0",
             "distance-multiplier": "1"
         },

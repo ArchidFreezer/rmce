@@ -24,13 +24,11 @@ void SkillDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	}
 	if (psubcategories.size() > 0) datum.push_back(std::make_pair("subcategories", psubcategories));
 
-	pt::ptree pstats;
-	for (auto& stat : game_data.stats()) {
-		pt::ptree pstat;
-		pstat.put("", toString(stat));
-		pstats.push_back(std::make_pair("", pstat));
+	// Stats
+	{
+		pt::ptree tree{ getEnumVectorTree<StatType::Type>(game_data.stats()) };
+		if (tree.size()) datum.push_back(std::make_pair("stats", tree));
 	}
-	datum.push_back(std::make_pair("stats", pstats));
 
 	datum.put("exhaustion", game_data.exhaustionCost());
 	datum.put("distance-multiplier", game_data.distanceMultiplier());
@@ -73,13 +71,7 @@ void SkillDatafileParserJson::parse() {
 		ref.setCategory(factory().get<SkillCategoryData>(category));
 
 		// Get the stats if any are defined
-		if (boost::optional<const pt::ptree&> stat_tree = v.second.get_child_optional("stats")) {
-			for (const auto& stat : stat_tree.get()) {
-				if (StatType::fromString(stat.second.data())) {
-					ref.addStat(StatType::fromString(stat.second.data()).value());
-				}
-			}
-		}
+		ref.setStats(parseEnumVectorTree<StatType::Type>(v.second.get_child_optional("stats")));
 
 		// Get the Subcategories if any are defined
 		if (boost::optional<const pt::ptree&> subcategory_tree = v.second.get_child_optional("subcategories")) {

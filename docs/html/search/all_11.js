@@ -109,7 +109,7 @@ var searchData=
   ['setstatbonus_106',['setStatBonus',['../class_race_data.html#afd55f0b21d3f62ff574bb703c01cfbed',1,'RaceData']]],
   ['setstatbonuses_107',['setStatBonuses',['../class_race_data.html#ad65830933aefa726500ac9d0658f45f6',1,'RaceData']]],
   ['setstatlossracialtype_108',['setStatLossRacialType',['../class_race_data.html#a8703275d54a20b4fe273323b2bc90fa6',1,'RaceData']]],
-  ['setstats_109',['setStats',['../class_profession_data.html#a75775b4bbbc6a3b6a47503a39cf9a57a',1,'ProfessionData']]],
+  ['setstats_109',['setStats',['../class_profession_data.html#a75775b4bbbc6a3b6a47503a39cf9a57a',1,'ProfessionData::setStats()'],['../class_skill_data.html#a5de53bd012caf41d9377c526a108d466',1,'SkillData::setStats()']]],
   ['settemperature_110',['setTemperature',['../class_climate_data.html#ad3138513ce632b2e28a8f26af1f454d3',1,'ClimateData']]],
   ['setten_111',['setTen',['../class_skill_progression_type_data.html#a8ac138018cbcf6df8889597a0a16d824',1,'SkillProgressionTypeData']]],
   ['setthirty_112',['setThirty',['../class_skill_progression_type_data.html#a5577c9d06640ca96b18161a590d4e157',1,'SkillProgressionTypeData']]],

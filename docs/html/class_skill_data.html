@@ -174,6 +174,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5978d0236241ba9c6a2c32ac3972210e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a collection of the subcategories available for a skill.  <br /></td></tr>
 <tr class="memitem:abf10402cb53bce7b58e876d26cf8f927" id="r_abf10402cb53bce7b58e876d26cf8f927"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#abf10402cb53bce7b58e876d26cf8f927">addStat</a> (<a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> stat)</td></tr>
 <tr class="memdesc:abf10402cb53bce7b58e876d26cf8f927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add stat that applies stat bonus to the skill.  <br /></td></tr>
+<tr class="memitem:a5de53bd012caf41d9377c526a108d466" id="r_a5de53bd012caf41d9377c526a108d466"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5de53bd012caf41d9377c526a108d466">setStats</a> (std::vector&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; <a class="el" href="#af1f2ef4bf3be3398fbb7cde006d23e6d">stats</a>)</td></tr>
+<tr class="memdesc:a5de53bd012caf41d9377c526a108d466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the stats that apply a bonus to the skill.  <br /></td></tr>
 <tr class="memitem:ab91df05699c2cd1bda429c2d681e5675" id="r_ab91df05699c2cd1bda429c2d681e5675"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#ab91df05699c2cd1bda429c2d681e5675">numberOfStats</a> () const</td></tr>
 <tr class="memdesc:ab91df05699c2cd1bda429c2d681e5675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of stats currently associated with the category.  <br /></td></tr>
 <tr class="memitem:a5afac48d16e1ccab415d1ba1fbaf4ecd" id="r_a5afac48d16e1ccab415d1ba1fbaf4ecd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5afac48d16e1ccab415d1ba1fbaf4ecd">removeStat</a> (<a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> stat)</td></tr>
@@ -1174,6 +1176,48 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a5de53bd012caf41d9377c526a108d466" name="a5de53bd012caf41d9377c526a108d466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de53bd012caf41d9377c526a108d466">&#9670;&#160;</a></span>setStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkillData::setStats </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>stats</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the stats that apply a bonus to the skill. </p>
+<p>There are 3 stats associated with each skill and duplicates are allowed. This function replaces any existing stats with the new list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stats</td><td>vector of stats whose bonuses should be applied to the skill </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">TooManyStatsException</td><td>if attempting to add more than 3 <a class="el" href="#af1f2ef4bf3be3398fbb7cde006d23e6d" title="Gets the stats that that provide a bonus to the category and skills within it.">stats</a> </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_skill_data_1_1_using_character_realm_stats_exception.html" title="Thrown when attempting to add a skill category stats when the category is set to use character realm ...">UsingCharacterRealmStatsException</a></td><td>if attempting to add a stat when using character realm <a class="el" href="#af1f2ef4bf3be3398fbb7cde006d23e6d" title="Gets the stats that that provide a bonus to the category and skills within it.">stats</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>setUseRealmStats() </dd></dl>
 
 </div>
 </div>

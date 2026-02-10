@@ -33,5 +33,6 @@ var class_skill_data =
     [ "setMandatorySubcategory", "class_skill_data.html#a4e4f07684d64cc85dc79dd2a408d7fed", null ],
     [ "setName", "class_skill_data.html#aaeb3c2ee3707405bc1026970f8017cc5", null ],
     [ "setNotes", "class_skill_data.html#aef0895160838fa4dae181d088365d8ab", null ],
+    [ "setStats", "class_skill_data.html#a5de53bd012caf41d9377c526a108d466", null ],
     [ "stats", "class_skill_data.html#af1f2ef4bf3be3398fbb7cde006d23e6d", null ]
 ];

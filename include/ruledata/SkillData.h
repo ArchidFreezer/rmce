@@ -213,6 +213,18 @@ public:
 	int addStat(StatType::Type stat);
 
 	/**
+	 * @brief Set the stats that apply a bonus to the skill
+	 *
+	 * There are 3 stats associated with each skill and duplicates are allowed. This function replaces any existing stats with the new list.
+	 *
+	 * @param stats vector of stats whose bonuses should be applied to the skill
+	 * @throws TooManyStatsException if attempting to add more than 3 stats
+	 * @throws UsingCharacterRealmStatsException if attempting to add a stat when using character realm stats
+	 * @see setUseRealmStats()
+	 */
+	void setStats(std::vector<StatType::Type> stats) { stats_ = std::move(stats); }
+
+	/**
 	 * @brief Gets the number of stats currently associated with the category
 	 *
 	 * Up to 3 stats bonuses may be applied to skills in a skill category. This function returns the current number applied
