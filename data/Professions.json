@@ -28,28 +28,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DIVINATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DIVINATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HERB_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HERB_LORE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -357,8 +357,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_REALITY_AWARENESS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_REALITY_AWARENESS",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -661,20 +661,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_MILITARY_ORGANIZATION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_MILITARY_ORGANIZATION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_SIEGE_ENGINEERING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SIEGE_ENGINEERING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TACTICS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TACTICS",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -978,44 +978,44 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ASTRONOMY",
-                    "development-type": "Occupational"
+                    "id": "SKILL_ASTRONOMY",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_BASIC_MATH",
-                    "development-type": "Everyman"
+                    "id": "SKILL_BASIC_MATH",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DIRECTION_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DIRECTION_SENSE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DIVINATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DIVINATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DIVINATION_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DIVINATION_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_STAR_GAZING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_STAR_GAZING",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_WEATHER_WATCHING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -1330,12 +1330,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -1652,24 +1652,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MAGIC_RITUAL",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MAGIC_RITUAL",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_RELIGION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -1980,8 +1980,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ADRENAL_CONCENTRATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ADRENAL_CONCENTRATION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -2291,24 +2291,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DIVINATION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_DIVINATION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_RELIGION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -2623,28 +2623,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_DETECT_TRAPS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DETECT_TRAPS",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_LOCATE_HIDDEN",
-                    "development-type": "Everyman"
+                    "id": "SKILL_LOCATE_HIDDEN",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_LOCK_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_LOCK_LORE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_SENSE_AMBUSH",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SENSE_AMBUSH",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -3570,24 +3570,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_HYPNOSIS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HYPNOSIS",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_LIE_PERCEPTION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_MASTERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_MASTERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -3904,24 +3904,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ARTIFACT_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ARTIFACT_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_MAGIC_RITUAL",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MAGIC_RITUAL",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -4227,28 +4227,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_BOXING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_BOXING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_FRENZY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FRENZY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_LEADERSHIP",
-                    "development-type": "Everyman"
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SITUATIONAL_AWARENESS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SITUATIONAL_AWARENESS",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_WRESTLING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_WRESTLING",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -4553,44 +4553,44 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ADRENAL_STABILIZATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ADRENAL_STABILIZATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_ANIMAL_HEALING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_ANIMAL_HEALING",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_FIRST_AID",
-                    "development-type": "Occupational"
+                    "id": "SKILL_FIRST_AID",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_FORAGING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FORAGING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HERB_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HERB_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MIDWIFERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MIDWIFERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SECOND_AID",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SECOND_AID",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SURGERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SURGERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_USING_PREPARED_HERBS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -4900,20 +4900,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_MASTERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_MASTERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -5207,8 +5207,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -5535,44 +5535,44 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ADRENAL_STABILIZATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ADRENAL_STABILIZATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_ANIMAL_HEALING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ANIMAL_HEALING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_FIRST_AID",
-                    "development-type": "Occupational"
+                    "id": "SKILL_FIRST_AID",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_MIDWIFERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MIDWIFERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SCULPTING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_SCULPTING",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_SECOND_AID",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SECOND_AID",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SURGERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SURGERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_USING_PREPARED_HERBS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -5885,8 +5885,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_POWER_PERCEPTION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_POWER_PERCEPTION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -6201,8 +6201,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -6512,24 +6512,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_MAGIC_RITUAL",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MAGIC_RITUAL",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_MASTERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_MASTERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -6831,20 +6831,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_MASTERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_MASTERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -7149,24 +7149,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_LIE_PERCEPTION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MAGIC_RITUAL",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MAGIC_RITUAL",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -7485,20 +7485,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_LIE_PERCEPTION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SEDUCTION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SEDUCTION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -7813,16 +7813,16 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -8134,28 +8134,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ADRENAL_STABILIZATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ADRENAL_STABILIZATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_MAGIC_RITUAL",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MAGIC_RITUAL",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_MASTERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_MASTERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -8470,8 +8470,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_RELIGION",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -8788,12 +8788,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_JOUSTING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_JOUSTING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_RELIGION",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -9099,12 +9099,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HISTORY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HORTICULTURE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HORTICULTURE",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -9415,16 +9415,16 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_HERALDRY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HERALDRY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HISTORY",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 }
             ],
             "skill-subcategory-development-type-choices": [
@@ -9754,24 +9754,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ANIMAL_HANDLING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_FAUNA_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_READING_TRACKS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_READING_TRACKS",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TRACKING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TRACKING",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -10083,8 +10083,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -10409,24 +10409,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_FIRST_AID",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FIRST_AID",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HERB_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HERB_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MIDWIFERY",
-                    "development-type": "Occupational"
+                    "id": "SKILL_MIDWIFERY",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_USING_PREPARED_HERBS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -10728,20 +10728,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_HERALDRY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HERALDRY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HISTORY",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_PUBLIC_SPEAKING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -11047,20 +11047,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ATHLETIC_GAMES_BRAWN",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ATHLETIC_GAMES_BRAWN",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_ATHLETIC_GAMES_ENDURANCE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ATHLETIC_GAMES_ENDURANCE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_ATHLETIC_GAMES_GYMNASTIC",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ATHLETIC_GAMES_GYMNASTIC",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -11384,8 +11384,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -11706,20 +11706,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ASTRONOMY",
-                    "development-type": "Occupational"
+                    "id": "SKILL_ASTRONOMY",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_STAR_GAZING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_STAR_GAZING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -12035,12 +12035,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_DIRECTION_SENSE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_DIRECTION_SENSE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -12351,8 +12351,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_RELIGION",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -12664,16 +12664,16 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_HERB_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HERB_LORE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HISTORY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -12988,28 +12988,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_COOKING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_COOKING",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HISTORY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HORTICULTURE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HORTICULTURE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_MINING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_MINING",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_STONE_CRAFTS",
-                    "development-type": "Occupational"
+                    "id": "SKILL_STONE_CRAFTS",
+                    "value": "Occupational"
                 }
             ],
             "skill-subcategory-development-type-choices": [
@@ -13327,24 +13327,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ASTRONOMY",
-                    "development-type": "Occupational"
+                    "id": "SKILL_ASTRONOMY",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_DIVINATION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_DIVINATION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HISTORY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_STAR_GAZING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_STAR_GAZING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -13652,40 +13652,40 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ANIMAL_HANDLING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_ANIMAL_MASTERY",
-                    "development-type": "Standard"
+                    "id": "SKILL_ANIMAL_MASTERY",
+                    "value": "Standard"
                 },
                 {
-                    "skill": "SKILL_COOKING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_COOKING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DANCING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DANCING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HERB_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HERB_LORE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_HORTICULTURE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HORTICULTURE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_PLAY_INSTRUMENT",
-                    "development-type": "Everyman"
+                    "id": "SKILL_PLAY_INSTRUMENT",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_USING_PREPARED_HERBS",
-                    "development-type": "Occupational"
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -13997,16 +13997,16 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_FORAGING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_FORAGING",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_LORE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -14316,20 +14316,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ASTRONOMY",
-                    "development-type": "Occupational"
+                    "id": "SKILL_ASTRONOMY",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_GAMBLING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_GAMBLING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_STAR_GAZING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_STAR_GAZING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -14639,24 +14639,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_FIRST_AID",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FIRST_AID",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_READING_TRACKS",
-                    "development-type": "Occupational"
+                    "id": "SKILL_READING_TRACKS",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RIDING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RIDING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SENSE_AMBUSH",
-                    "development-type": "Occupational"
+                    "id": "SKILL_SENSE_AMBUSH",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -14975,24 +14975,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_FIRST_AID",
-                    "development-type": "Occupational"
+                    "id": "SKILL_FIRST_AID",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_FORAGING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FORAGING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HERB_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HERB_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_USING_PREPARED_HERBS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -15298,40 +15298,40 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_DIRECTION_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DIRECTION_SENSE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DISTANCE_RUNNING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DISTANCE_RUNNING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_FAUNA_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HUNTING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HUNTING",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_READING_TRACKS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_READING_TRACKS",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SETTING_TRAPS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SETTING_TRAPS",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TRACKING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TRACKING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TRAP_BUILDING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TRAP_BUILDING",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -15647,20 +15647,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_LIE_PERCEPTION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SENSE_AMBUSH",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SENSE_AMBUSH",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TRACKING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_TRACKING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -15972,24 +15972,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_DIRECTION_SENSE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_DIRECTION_SENSE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_FIRST_AID",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FIRST_AID",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_NAVIGATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_NAVIGATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_LORE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -16295,12 +16295,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_WEATHER_WATCHING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -16612,12 +16612,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TALE_TELLING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TALE_TELLING",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -16931,24 +16931,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_BODY_DEVELOPMENT",
-                    "development-type": "Restricted"
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_DANCING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DANCING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HERB_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HERB_LORE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_USING_PREPARED_HERBS",
-                    "development-type": "Occupational"
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -17262,16 +17262,16 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_BODY_DEVELOPMENT",
-                    "development-type": "Restricted"
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_SPELL_LORE",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -17609,12 +17609,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HISTORY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_RELIGION",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -17930,8 +17930,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_HERALDRY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HERALDRY",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -18254,12 +18254,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_FORAGING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FORAGING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 }
             ],
             "skill-subcategory-development-type-choices": [
@@ -18574,12 +18574,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_DISGUISE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_DISGUISE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_DUPING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_DUPING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -18894,24 +18894,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ASTRONOMY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ASTRONOMY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_NAVIGATION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_NAVIGATION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_STAR_GAZING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_STAR_GAZING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -19217,20 +19217,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HISTORY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_JUGGLING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_JUGGLING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TUMBLING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TUMBLING",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -19560,24 +19560,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_FAUNA_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_FLORA_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_FLORA_LORE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_HERB_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HERB_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HORTICULTURE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HORTICULTURE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -19888,24 +19888,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_BOAT_PILOT",
-                    "development-type": "Everyman"
+                    "id": "SKILL_BOAT_PILOT",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_ROPE_MASTERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ROPE_MASTERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SAILING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SAILING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_SWIMMING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -20221,28 +20221,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ASTRONOMY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ASTRONOMY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DIVINATION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_DIVINATION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HISTORY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_STAR_GAZING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_STAR_GAZING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_WEATHER_WATCHING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -20548,12 +20548,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_WEATHER_WATCHING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -20861,8 +20861,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -21194,28 +21194,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_FIRST_AID",
-                    "development-type": "Occupational"
+                    "id": "SKILL_FIRST_AID",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_HERB_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HERB_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_NAVIGATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_NAVIGATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_USING_PREPARED_HERBS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -21537,12 +21537,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_WEATHER_WATCHING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -21853,28 +21853,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_FLORA_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_FLORA_LORE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_HERB_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_HERB_LORE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_READING_TRACKS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_READING_TRACKS",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TRACKING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TRACKING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_USING_PREPARED_HERBS",
-                    "development-type": "Occupational"
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -22186,40 +22186,40 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ANIMAL_HANDLING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DRIVING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DRIVING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_FLETCHING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FLETCHING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HERALDRY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HERALDRY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HUNTING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HUNTING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_METAL_CRAFTS",
-                    "development-type": "Everyman"
+                    "id": "SKILL_METAL_CRAFTS",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MILITARY_ORGANIZATION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_MILITARY_ORGANIZATION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RIDING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RIDING",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -22546,16 +22546,16 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_FLYING_GLIDING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_FLYING_GLIDING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_WEATHER_WATCHING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -22866,12 +22866,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HISTORY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_RELIGION",
+                    "value": "Occupational"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -23473,12 +23473,12 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_DUPING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DUPING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_LOCK_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_LOCK_LORE",
+                    "value": "Everyman"
                 }
             ],
             "skill-development-type-choices": [
@@ -23808,28 +23808,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_DIRECTED_SPELLS",
-                    "development-type": "Restricted"
+                    "id": "SKILL_DIRECTED_SPELLS",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_READ_RUNES",
-                    "development-type": "Everyman"
+                    "id": "SKILL_READ_RUNES",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SCRIBING",
-                    "development-type": "Occupational"
+                    "id": "SKILL_SCRIBING",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_SYMBOL_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SYMBOL_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_WARDING_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_WARDING_LORE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -24131,40 +24131,40 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_ARTIFACT_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_ARTIFACT_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_DIVINATION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_DIVINATION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_DIVINATION_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DIVINATION_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_HISTORY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_HISTORY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_LIE_PERCEPTION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Occupational"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_STAR_GAZING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_STAR_GAZING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -24472,28 +24472,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DIVINATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DIVINATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MAGIC_RITUAL",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MAGIC_RITUAL",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_MASTERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_MASTERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -24797,28 +24797,28 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_CIRCLE_LORE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_CIRCLE_LORE",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MAGIC_RITUAL",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MAGIC_RITUAL",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SPELL_MASTERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_MASTERY",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -25413,24 +25413,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_DUPING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DUPING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_LOCK_LORE",
-                    "development-type": "Occupational"
+                    "id": "SKILL_LOCK_LORE",
+                    "value": "Occupational"
                 },
                 {
-                    "skill": "SKILL_OPERATING_EQUIPMENT",
-                    "development-type": "Everyman"
+                    "id": "SKILL_OPERATING_EQUIPMENT",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_SUBDUAL",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SUBDUAL",
+                    "value": "Everyman"
                 }
             ],
             "skill-subcategory-development-type-choices": [
@@ -25743,24 +25743,24 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Everyman"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_DIVINATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_DIVINATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_MEDITATION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_MEDITATION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_RELIGION",
-                    "development-type": "Everyman"
+                    "id": "SKILL_RELIGION",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_TIME_SENSE",
-                    "development-type": "Everyman"
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -26071,8 +26071,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -26365,20 +26365,20 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_BOXING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_BOXING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_CHANNELING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
                 },
                 {
-                    "skill": "SKILL_SENSE_AMBUSH",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SENSE_AMBUSH",
+                    "value": "Everyman"
                 },
                 {
-                    "skill": "SKILL_WRESTLING",
-                    "development-type": "Restricted"
+                    "id": "SKILL_WRESTLING",
+                    "value": "Restricted"
                 }
             ],
             "skill-category-profession-bonuses": [
@@ -26687,8 +26687,8 @@
             ],
             "skill-development-types": [
                 {
-                    "skill": "SKILL_SPELL_MASTERY",
-                    "development-type": "Everyman"
+                    "id": "SKILL_SPELL_MASTERY",
+                    "value": "Everyman"
                 }
             ],
             "skill-category-profession-bonuses": [

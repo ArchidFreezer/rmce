@@ -218,6 +218,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:acee48a5b42cb334753958496ed2de723" id="r_acee48a5b42cb334753958496ed2de723"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:acee48a5b42cb334753958496ed2de723 template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#acee48a5b42cb334753958496ed2de723">getSkillPairTree</a> (std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, U &gt; map)</td></tr>
 <tr class="memdesc:acee48a5b42cb334753958496ed2de723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and values into a boost ptree containing a map of skills and primitive type values.  <br /></td></tr>
+<tr class="memitem:a42b128d0ca7da8e1fd58127228a4221f" id="r_a42b128d0ca7da8e1fd58127228a4221f"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
+<tr class="memitem:a42b128d0ca7da8e1fd58127228a4221f template"><td class="memItemLeft">std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, U &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a42b128d0ca7da8e1fd58127228a4221f">parseSkillPairEnumTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:a42b128d0ca7da8e1fd58127228a4221f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a map of skills and enums into a std::map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and enum type values.  <br /></td></tr>
+<tr class="memitem:ac4dd472d6063b6c8d1e2815ea2a59e5f" id="r_ac4dd472d6063b6c8d1e2815ea2a59e5f"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
+<tr class="memitem:ac4dd472d6063b6c8d1e2815ea2a59e5f template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#ac4dd472d6063b6c8d1e2815ea2a59e5f">getSkillPairEnumTree</a> (std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, U &gt; map)</td></tr>
+<tr class="memdesc:ac4dd472d6063b6c8d1e2815ea2a59e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and values into a boost ptree containing a map of skills and enum type values.  <br /></td></tr>
 <tr class="memitem:adb5a87edc157496d747344970b71af5f" id="r_adb5a87edc157496d747344970b71af5f"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </td></tr>
 <tr class="memitem:adb5a87edc157496d747344970b71af5f template"><td class="memItemLeft">std::set&lt; const T * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#adb5a87edc157496d747344970b71af5f">parseGameDataSetTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
 <tr class="memdesc:adb5a87edc157496d747344970b71af5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a set of game data objects into a std::set of the game data objects.  <br /></td></tr>
@@ -533,6 +539,55 @@ template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleData
 
 </div>
 </div>
+<a id="ac4dd472d6063b6c8d1e2815ea2a59e5f" name="ac4dd472d6063b6c8d1e2815ea2a59e5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4dd472d6063b6c8d1e2815ea2a59e5f">&#9670;&#160;</a></span>getSkillPairEnumTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getSkillPairEnumTree </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, U &gt;</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a std::map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and values into a boost ptree containing a map of skills and enum type values. </p>
+<p>The boost ptree created by this function will generate the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;id of the game data object&quot;,</div>
+<div class="line">    &quot;subcategory&quot;: &quot;subcategory of the skill, optional&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;value associated with the enum&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>enum type of the skill values </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>Map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and enums, with the skills retrieved from the cache using their ids and optional subcategories </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the map of skills and enum values, with the skills represented by their ids and optional subcategories </dd></dl>
+
+</div>
+</div>
 <a id="acee48a5b42cb334753958496ed2de723" name="acee48a5b42cb334753958496ed2de723"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acee48a5b42cb334753958496ed2de723">&#9670;&#160;</a></span>getSkillPairTree()</h2>
 
@@ -791,6 +846,55 @@ template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleData
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Map of <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a>, with the languages retrieved from the cache using their ids </dd></dl>
+
+</div>
+</div>
+<a id="a42b128d0ca7da8e1fd58127228a4221f" name="a42b128d0ca7da8e1fd58127228a4221f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b128d0ca7da8e1fd58127228a4221f">&#9670;&#160;</a></span>parseSkillPairEnumTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, U &gt; DatafileParserJson::parseSkillPairEnumTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a map of skills and enums into a std::map of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and enum type values. </p>
+<p>The boost ptree expected by this function should be derived from the following json format: </p><div class="fragment"><div class="line">&quot;root_node&quot;: [</div>
+<div class="line">  {</div>
+<div class="line">    &quot;id&quot;: &quot;id of the game data object&quot;,</div>
+<div class="line">    &quot;subcategory&quot;: &quot;subcategory of the skill, optional&quot;,</div>
+<div class="line">    &quot;value&quot;: &quot;enum associated with the game data object&quot;</div>
+<div class="line">  }</div>
+<div class="line">]</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Enum type of the game data values </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the map of game data objects and enum, with the game data objects represented by their ids </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Map of pointers to the game data objects and the enum, with the game data objects retrieved from the cache using their ids </dd></dl>
 
 </div>
 </div>

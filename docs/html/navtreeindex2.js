@@ -1,9 +1,13 @@
 var NAVTREEINDEX2 =
 {
+"class_profession_data.html#ae8bb536bbcc5357503a28430a802ff5d":[2,0,42,31],
+"class_profession_data.html#aea4fb341f1f22cb2b2792bf74ac5d8b8":[2,0,42,67],
+"class_profession_data.html#aecb5417f5cff3520e4d559bbd4eaadc8":[2,0,42,56],
+"class_profession_data.html#aee3298c80b30fec7387fd709efcc764e":[2,0,42,74],
 "class_profession_data.html#aef95f03695275317d8f533a350418a96":[2,0,42,4],
 "class_profession_data.html#af0971669460ec8a13ecc677c4e609dd7":[2,0,42,34],
-"class_profession_data.html#af32001a2d38fa7a8b8d9c7eecb9fe4d6":[2,0,42,52],
-"class_profession_data.html#af4e11a2912113cab90d68a59a0e6f0d2":[2,0,42,63],
+"class_profession_data.html#af32001a2d38fa7a8b8d9c7eecb9fe4d6":[2,0,42,53],
+"class_profession_data.html#af4e11a2912113cab90d68a59a0e6f0d2":[2,0,42,64],
 "class_profession_data.html#af6b92b9a2ad75fdb0fca1116c6470447":[2,0,42,41],
 "class_profession_data.html#af7ae5b1efcadcb40cfa16fb0ca1fd9ee":[2,0,42,25],
 "class_profession_data.html#af8717a166374c822ab8a89a16101f3cd":[2,0,42,17],
@@ -11,7 +15,7 @@ var NAVTREEINDEX2 =
 "class_profession_data.html#afa775b7aead2b6dafb95e58c8f6eaf29":[2,0,42,27],
 "class_profession_data.html#afc26d174925c9d4056bb8edbb6b06103":[2,0,42,38],
 "class_profession_data.html#afd7ee141747ea4fa0dff4b2810915ee1":[2,0,42,26],
-"class_profession_data.html#aff52628eb28eb2c83350a362095e7d20":[2,0,42,56],
+"class_profession_data.html#aff52628eb28eb2c83350a362095e7d20":[2,0,42,57],
 "class_profession_data_1_1_invalid_category_development_cost.html":[2,0,42,0],
 "class_profession_data_1_1_invalid_category_development_cost.html#a384a8f466d0019e0767e33177ef8d24e":[2,0,42,0,0],
 "class_profession_data_1_1_invalid_skill_bonus.html":[2,0,42,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "class_skill_progression_type_datafile_parser_json.html#a655c5c2153c3fbf23a87b3afea1b3355":[2,0,57,1],
 "class_skill_progression_type_datafile_parser_json.html#a7c0426639ed93b313fff375eed739e97":[2,0,57,0],
 "class_skill_progression_type_datafile_parser_json.html#a92f3cd168fef745dd9ac4d811a2bc584":[2,0,57,4],
-"class_skill_progression_type_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,57,3],
-"class_special_attack_table.html":[2,0,58],
-"class_special_attack_table.html#a0425ce61e76bb3d55231c02d703ef33b":[2,0,58,6],
-"class_special_attack_table.html#a0e96e7ab22750a497b755c149029ea3f":[2,0,58,1],
-"class_special_attack_table.html#a26a3180443e63697c26aaf2a300f0e3a":[2,0,58,5]
+"class_skill_progression_type_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,57,3]
 };

@@ -201,6 +201,48 @@ protected:
 	inline const pt::ptree getSkillPairTree(std::map<SubcategoriedSkillData, U> map);
 
 	/**
+ * @brief Parse a boost ptree containing a map of skills and enums into a std::map of SubcategoriedSkillData and enum type values
+ *
+ * The boost ptree expected by this function should be derived from the following json format:
+ * @code{.json}
+ * "root_node": [
+ *   {
+ *     "id": "id of the game data object",
+ *     "subcategory": "subcategory of the skill, optional",
+ *     "value": "enum associated with the game data object"
+ *   }
+ * ]
+ * @endcode
+ *
+ * @tparam U Enum type of the game data values
+ * @param tree Boost ptree containing the map of game data objects and enum, with the game data objects represented by their ids
+ * @return Map of pointers to the game data objects and the enum, with the game data objects retrieved from the cache using their ids
+ */
+	template<typename U>
+	inline std::map<SubcategoriedSkillData, U> parseSkillPairEnumTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Parse a std::map of SubcategoriedSkillData and values into a boost ptree containing a map of skills and enum type values
+	 *
+	 * The boost ptree created by this function will generate the following json format:
+	 * @code{.json}
+	 * "root_node": [
+	 *   {
+	 *     "id": "id of the game data object",
+	 *     "subcategory": "subcategory of the skill, optional",
+	 *     "value": "value associated with the enum"
+	 *   }
+	 * ]
+	 * @endcode
+	 *
+	 * @tparam U enum type of the skill values
+	 * @param map Map of SubcategoriedSkillData and enums, with the skills retrieved from the cache using their ids and optional subcategories
+	 * @return Boost ptree containing the map of skills and enum values, with the skills represented by their ids and optional subcategories
+	 */
+	template<typename U>
+	inline const pt::ptree getSkillPairEnumTree(std::map<SubcategoriedSkillData, U> map);
+
+	/**
 	 * @brief Parse a boost ptree containing a set of game data objects into a std::set of the game data objects
 	 *
 	 * The boost ptree expected by this function should be derived from the following json format:
@@ -386,6 +428,39 @@ inline const pt::ptree DatafileParserJson::getSkillPairTree(std::map<Subcategori
 		value_tree.put("id", pair.first.skillData().id());
 		if (pair.first.subcategory()) value_tree.put("subcategory", pair.first.subcategory().value());
 		value_tree.put("value", map[pair.first]);
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+template<typename U>
+inline std::map<SubcategoriedSkillData, U> DatafileParserJson::parseSkillPairEnumTree(boost::optional<const pt::ptree&> tree) {
+	std::map<SubcategoriedSkillData, U> datum{};
+	if (tree) {
+		for (const auto& items : tree.get()) {
+			std::string id{ items.second.get<std::string>("id") };
+			boost::optional<std::string> subcategory = items.second.get_optional<std::string>("subcategory");
+			U enum_val{};
+			fromString(items.second.get<std::string>("value"), enum_val);
+			if (subcategory) {
+				datum.emplace(factory().subcategoriedSkillData(id, subcategory.get()), enum_val);
+			} else {
+				datum.emplace(factory().subcategoriedSkillData(id), enum_val);
+			}
+		}
+	}
+	return datum;
+}
+
+template<typename U>
+inline const pt::ptree DatafileParserJson::getSkillPairEnumTree(std::map<SubcategoriedSkillData, U> map) {
+	pt::ptree tree{};
+
+	for (const auto& pair : map) {
+		pt::ptree value_tree{};
+		value_tree.put("id", pair.first.skillData().id());
+		if (pair.first.subcategory()) value_tree.put("subcategory", pair.first.subcategory().value());
+		value_tree.put("value", toString(map[pair.first]));
 		tree.push_back(std::make_pair("", value_tree));
 	}
 	return tree;

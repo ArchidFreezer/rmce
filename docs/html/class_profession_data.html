@@ -223,6 +223,10 @@ void&#160;</td><td class="memItemRight"><b>clearStats</b> ()</td></tr>
 <tr class="memdesc:aee3298c80b30fec7387fd709efcc764e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bonus for a group.  <br /></td></tr>
 <tr class="memitem:a267bb69e897f4c1fcd441b7ec8d85f19" id="r_a267bb69e897f4c1fcd441b7ec8d85f19"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a267bb69e897f4c1fcd441b7ec8d85f19">setSkillDevelopmentType</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> type)</td></tr>
 <tr class="memdesc:a267bb69e897f4c1fcd441b7ec8d85f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the development type for a skill.  <br /></td></tr>
+<tr class="memitem:a8c20071cbf33c2a2737f225852501307" id="r_a8c20071cbf33c2a2737f225852501307"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8c20071cbf33c2a2737f225852501307">setSkillDevelopmentTypes</a> (std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; types)</td></tr>
+<tr class="memdesc:a8c20071cbf33c2a2737f225852501307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the skill development types mapping.  <br /></td></tr>
+<tr class="memitem:a2b37a69350e0b393785e3dd6fdab9abc" id="r_a2b37a69350e0b393785e3dd6fdab9abc"><td class="memItemLeft">std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2b37a69350e0b393785e3dd6fdab9abc">skillDevelopmentTypes</a> ()</td></tr>
+<tr class="memdesc:a2b37a69350e0b393785e3dd6fdab9abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a reference to the map of skill development types indexed by subcategorized skill data.  <br /></td></tr>
 <tr class="memitem:a839ac6a9fb0346a489118279c2f3ff57" id="r_a839ac6a9fb0346a489118279c2f3ff57"><td class="memItemLeft"><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a839ac6a9fb0346a489118279c2f3ff57">skillDevelopmentType</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill) const</td></tr>
 <tr class="memdesc:a839ac6a9fb0346a489118279c2f3ff57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the development type for a skill.  <br /></td></tr>
 <tr class="memitem:a1fced89c45563ec2775dd2c84bde14fe" id="r_a1fced89c45563ec2775dd2c84bde14fe"><td class="memItemLeft"><a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1fced89c45563ec2775dd2c84bde14fe">skillDevelopmentType</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
@@ -1863,6 +1867,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a8c20071cbf33c2a2737f225852501307" name="a8c20071cbf33c2a2737f225852501307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c20071cbf33c2a2737f225852501307">&#9670;&#160;</a></span>setSkillDevelopmentTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::setSkillDevelopmentTypes </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>types</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the skill development types mapping. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">types</td><td>A map associating subcategorized skill data with their corresponding skill development types. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1501243f53695932807d98a044cfc384" name="a1501243f53695932807d98a044cfc384"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1501243f53695932807d98a044cfc384">&#9670;&#160;</a></span>setSkillGroupProfessionBonuses()</h2>
 
@@ -2561,6 +2598,34 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get a container with the choices the character needs to make to select one or more skills that may have their development type changed. </p>
 <dl class="section return"><dt>Returns</dt><dd>map of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice</a> objects with the choices to be made </dd></dl>
+
+</div>
+</div>
+<a id="a2b37a69350e0b393785e3dd6fdab9abc" name="a2b37a69350e0b393785e3dd6fdab9abc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b37a69350e0b393785e3dd6fdab9abc">&#9670;&#160;</a></span>skillDevelopmentTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, <a class="el" href="namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b">SkillDevelopmentType::Type</a> &gt; &amp; ProfessionData::skillDevelopmentTypes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a reference to the map of skill development types indexed by subcategorized skill data. </p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the map containing skill development types. </dd></dl>
 
 </div>
 </div>

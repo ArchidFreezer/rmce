@@ -50,18 +50,7 @@ void ProfessionDatafileParserJson::parse() {
 		ref.setSkillBonuses(parseSkillPairTree<int>(v.second.get_child_optional("skill-bonuses")));
 
 		// Skill development types
-		if (boost::optional<const pt::ptree&> skill_development_types = v.second.get_child_optional("skill-development-types")) {
-			for (const auto& skill_development_type : skill_development_types.get()) {
-				std::string skill_name{ skill_development_type.second.get<std::string>("skill") };
-				boost::optional<std::string> subcategory = skill_development_type.second.get_optional<std::string>("subcategory");
-				std::string type_id{ skill_development_type.second.get<std::string>("development-type") };
-				if (subcategory) {
-					ref.setSkillDevelopmentType(factory().subcategoriedSkillData(skill_name, subcategory.get()), SkillDevelopmentType::fromString(type_id).value());
-				} else {
-					ref.setSkillDevelopmentType(factory().subcategoriedSkillData(skill_name), SkillDevelopmentType::fromString(type_id).value());
-				}
-			}
-		}
+		ref.setSkillDevelopmentTypes(parseSkillPairEnumTree<SkillDevelopmentType::Type>(v.second.get_child_optional("skill-development-types")));
 
 		// Skill development type choices
 		if (boost::optional<const pt::ptree&> skill_development_type_choices = v.second.get_child_optional("skill-development-type-choices")) {
@@ -205,15 +194,10 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	}
 
 	// Skill development types
-	pt::ptree skill_development_types_tree{};
-	for (auto& skill : game_data.skillsWithSkillDevelopmentType()) {
-		pt::ptree skill_development_type_tree{};
-		skill_development_type_tree.put("skill", skill.skillData().id());
-		if (skill.subcategory()) skill_development_type_tree.put("subcategory", skill.subcategory().value());
-		skill_development_type_tree.put("development-type", SkillDevelopmentType::toString(game_data.skillDevelopmentType(skill)));
-		skill_development_types_tree.push_back(std::make_pair("", skill_development_type_tree));
+	{
+		pt::ptree tree{ getSkillPairEnumTree<SkillDevelopmentType::Type>(game_data.skillDevelopmentTypes()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-development-types", tree));
 	}
-	if (skill_development_types_tree.size()) datum.push_back(std::make_pair("skill-development-types", skill_development_types_tree));
 
 	// Skill development type choices
 	pt::ptree skill_development_type_choices_tree{};

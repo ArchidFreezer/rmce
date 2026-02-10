@@ -449,6 +449,18 @@ public:
 	}
 
 	/**
+	 * @brief Sets the skill development types mapping.
+	 * @param types A map associating subcategorized skill data with their corresponding skill development types.
+	 */
+	void setSkillDevelopmentTypes(std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> types) { skill_development_types_ = std::move(types); }
+
+	/**
+	 * @brief Gets a reference to the map of skill development types indexed by subcategorized skill data.
+	 * @return A reference to the map containing skill development types.
+	 */
+	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type>& skillDevelopmentTypes() { return skill_development_types_; }
+
+	/**
 	 * @brief Get the development type for a skill
 	 * @param skill SubcategoriedSkillData to get the development type for
 	 * @return SkillDevelopmentType::Type value
