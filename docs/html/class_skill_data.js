@@ -14,7 +14,6 @@ var class_skill_data =
     [ "difficultySummary", "class_skill_data.html#aaf5e494fc1ab503887d9dd53a793c49a", null ],
     [ "distanceMultiplier", "class_skill_data.html#ad89399324be21ee23605fa113df9116a", null ],
     [ "exhaustionCost", "class_skill_data.html#a09340a1aecbe4de32239e4735f330bb8", null ],
-    [ "getSubcategories", "class_skill_data.html#a5978d0236241ba9c6a2c32ac3972210e", null ],
     [ "mandatorySubcategory", "class_skill_data.html#aff733308308a6e04fef182646d2c5073", null ],
     [ "name", "class_skill_data.html#a8a7675617a3c058a7a695878fb909192", null ],
     [ "notes", "class_skill_data.html#a86aa12d2e6cee44c52c6c246ab6aec56", null ],
@@ -34,5 +33,7 @@ var class_skill_data =
     [ "setName", "class_skill_data.html#aaeb3c2ee3707405bc1026970f8017cc5", null ],
     [ "setNotes", "class_skill_data.html#aef0895160838fa4dae181d088365d8ab", null ],
     [ "setStats", "class_skill_data.html#a5de53bd012caf41d9377c526a108d466", null ],
-    [ "stats", "class_skill_data.html#af1f2ef4bf3be3398fbb7cde006d23e6d", null ]
+    [ "setSubcategories", "class_skill_data.html#af839c6befa93dc7c30454dcd6f9b243c", null ],
+    [ "stats", "class_skill_data.html#af1f2ef4bf3be3398fbb7cde006d23e6d", null ],
+    [ "subcategories", "class_skill_data.html#a454233889958482aee75b51d517b6f80", null ]
 ];

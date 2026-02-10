@@ -16,13 +16,11 @@ void SkillDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 	datum.put("can-specialise", game_data.canSpecialise());
 	datum.put("mandatory-subcategory", game_data.mandatorySubcategory());
 
-	pt::ptree psubcategories;
-	for (auto& subcategory : game_data.getSubcategories()) {
-		pt::ptree psubcategory;
-		psubcategory.put("", subcategory);
-		psubcategories.push_back(std::make_pair("", psubcategory));
+	// Subcategories
+	{
+		pt::ptree tree{ getSetTree<std::string>(game_data.subcategories()) };
+		if (!tree.empty()) datum.push_back(std::make_pair("subcategories", tree));
 	}
-	if (psubcategories.size() > 0) datum.push_back(std::make_pair("subcategories", psubcategories));
 
 	// Stats
 	{
@@ -74,11 +72,7 @@ void SkillDatafileParserJson::parse() {
 		ref.setStats(parseEnumVectorTree<StatType::Type>(v.second.get_child_optional("stats")));
 
 		// Get the Subcategories if any are defined
-		if (boost::optional<const pt::ptree&> subcategory_tree = v.second.get_child_optional("subcategories")) {
-			for (const auto& subcategory : subcategory_tree.get()) {
-				ref.addSubcategory(subcategory.second.data());
-			}
-		}
+		ref.setSubcategories(parseSetTree<std::string>(v.second.get_child_optional("subcategories")));
 
 		std::cout << "\tSkill name: " << ref.name() << std::endl;
 	}

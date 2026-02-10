@@ -17,9 +17,9 @@ var searchData=
   ['getgamedatapairtree_14',['getGameDataPairTree',['../class_datafile_parser_json.html#ada318d4789375bedba6bf3507e879ead',1,'DatafileParserJson']]],
   ['getgamedatasettree_15',['getGameDataSetTree',['../class_datafile_parser_json.html#aa2c9f0b25f8d2d87f3149fb936d3b25b',1,'DatafileParserJson']]],
   ['getlanguageabilitymaptree_16',['getLanguageAbilityMapTree',['../class_datafile_parser_json.html#a7e4953d1337511471b133cdaf943ba12',1,'DatafileParserJson']]],
-  ['getskillpairenumtree_17',['getSkillPairEnumTree',['../class_datafile_parser_json.html#adb77352ca1a5cad58308f4e6aa675882',1,'DatafileParserJson']]],
-  ['getskillpairtree_18',['getSkillPairTree',['../class_datafile_parser_json.html#aa084a30f82c0826a77b6c5b42aa6fa2e',1,'DatafileParserJson']]],
-  ['getskillsettree_19',['getSkillSetTree',['../class_datafile_parser_json.html#ad1f7e59a681143f3a17b9b316d54ed88',1,'DatafileParserJson']]],
-  ['getsubcategories_20',['getSubcategories',['../class_skill_data.html#a5978d0236241ba9c6a2c32ac3972210e',1,'SkillData']]],
+  ['getsettree_17',['getSetTree',['../class_datafile_parser_json.html#a26bd2c1c1aee42c654770bf805ffa675',1,'DatafileParserJson']]],
+  ['getskillpairenumtree_18',['getSkillPairEnumTree',['../class_datafile_parser_json.html#adb77352ca1a5cad58308f4e6aa675882',1,'DatafileParserJson']]],
+  ['getskillpairtree_19',['getSkillPairTree',['../class_datafile_parser_json.html#aa084a30f82c0826a77b6c5b42aa6fa2e',1,'DatafileParserJson']]],
+  ['getskillsettree_20',['getSkillSetTree',['../class_datafile_parser_json.html#ad1f7e59a681143f3a17b9b316d54ed88',1,'DatafileParserJson']]],
   ['group_21',['group',['../class_skill_category_data.html#ae121918766e68affb742efbf5fbfd4b3',1,'SkillCategoryData']]]
 ];

@@ -193,11 +193,21 @@ public:
 	void addSubcategory(std::string subcategory) { subcategories_.insert(subcategory); }
 
 	/**
+	 * @brief Set the subcategory types available for selection for the skill
+	 *
+	 * Many skills require that a character develop the skill for each sub-category of the skill (e.g., Weapons, Riding,
+	 * Metal-crafts, etc.). This values replaces the list of those available for selection with the provided list.
+	 *
+	 * @param subcategories std::set of std::string types to set as the subcategories available for selection for the skill
+	 */
+	void setSubcategories(std::set<std::string> subcategories) { subcategories_ = std::move(subcategories); }
+
+	/**
 	 * @brief Gets a collection of the subcategories available for a skill
 	 * 
 	 * @return std::set reference containing the list of available subcategory types.
 	 */
-	const std::set<std::string>& getSubcategories() const { return subcategories_; }
+	const std::set<std::string>& subcategories() const { return subcategories_; }
 
 	/**
 	 * @brief Add stat that applies stat bonus to the skill
