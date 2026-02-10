@@ -58,9 +58,9 @@ var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
 "class_datafile_parser.html#a4b4af1c04bba4982985960e1839f7ccb",
-"class_profession_data.html#ad7a708da85b92f3bcf7773ec7fa16644",
-"class_skill_progression_type_data.html#ab2ed300888d62ecd26e6fd6c426b837f",
-"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1ae85d4c291006e586446d5b20b231c8b4"
+"class_profession_data.html#ad24eae9375e680d892f96ccf0d31b421",
+"class_skill_progression_type_data.html#a951619d33cdf197bb58be9233d54c5a5",
+"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aad7f1954dffe1e2964c66131345ec89c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

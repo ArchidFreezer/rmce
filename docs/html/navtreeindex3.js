@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"class_skill_progression_type_data.html#a951619d33cdf197bb58be9233d54c5a5":[2,0,56,1],
+"class_skill_progression_type_data.html#aa124385e708f575188ddc4f1ab277cc9":[2,0,56,6],
+"class_skill_progression_type_data.html#aab5699ac4a157015e7cda755c726f412":[2,0,56,13],
 "class_skill_progression_type_data.html#ab2ed300888d62ecd26e6fd6c426b837f":[2,0,56,9],
 "class_skill_progression_type_datafile_parser_json.html":[2,0,57],
 "class_skill_progression_type_datafile_parser_json.html#a3ba150fa80f94ea7868b6c455b00766e":[2,0,57,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aa23371e74c9cd3969bf1f0a350a05807":[0,0,4,1,6],
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aa3b2641d9352aed2d9ece60946edd867":[0,0,4,1,2],
 "namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aa4fde32e31b797740e87909fb0f2608d":[0,0,4,1,5],
-"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aa6f5ab56c584dc809f43d8c91da5eb9e":[0,0,4,1,3],
-"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aad7f1954dffe1e2964c66131345ec89c":[0,0,4,1,13],
-"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1ad41c3e4ae7c9a6fb70f44fe59c7362cf":[0,0,4,1,0],
-"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1ae1ce0ec846f3ba0c8966ef540ae472aa":[0,0,4,1,9]
+"namespace_critical_type.html#a49a54e0a6d9681ac61f96f9bbac7cbd1aa6f5ab56c584dc809f43d8c91da5eb9e":[0,0,4,1,3]
 };

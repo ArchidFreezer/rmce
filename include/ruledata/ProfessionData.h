@@ -186,6 +186,17 @@ public:
 	int addStat(StatType::Type stat);
 
 	/**
+	 * @brief Set the stats that apply stat bonuses to the profession
+	 *
+	 * There are 3 stats associated with each profession and duplicates are allowed. This function will replace any existing stats with the new list.
+	 *
+	 * @param stats Vector of stats whose bonus should be applied to the profession
+	 * @throws TooManyStatsException if attempting to set more than 3 stats
+	 * @see setUseRealmStats()
+	 */
+	void setStats(std::vector<StatType::Type> stats) { stats_ = std::move(stats); }
+
+	/**
 	 * @brief Gets the number of stats currently associated with the profession
 	 *
 	 * Up to 3 stats bonuses may be applied to profession. This function returns the current number applied
