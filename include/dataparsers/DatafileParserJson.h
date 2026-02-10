@@ -58,7 +58,7 @@ public:
  * @brief Write game rule data from the cache to a file
  * @param filename Path to the file to write the output to
  */
-	template<class T>
+	template<GameRuleDataObject GameRuleData>
 	void saveData(const std::string& filename);
 
 	/**
@@ -88,13 +88,13 @@ protected:
 	 * ]
 	 * @endcode
 	 * 
-	 * @tparam U Primitive type of the game data values
-	 * @tparam T Type of the game data objects being parsed, must be derived from GameRuleData
+	 * @tparam GameRuleData Type of the game data objects being parsed, must be derived from GameRuleData
+	 * @tparam Primitive Primitive type of the game data values
 	 * @param tree Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids
 	 * @return Map of pointers to the game data objects and the values, with the game data objects retrieved from the cache using their ids
 	 */
-	template<GameRuleDataObject T, typename U>
-	inline std::map<const T*, U> parseGameDataPairTree(boost::optional<const pt::ptree&> tree);
+	template<GameRuleDataObject GameRuleData, typename Primitive>
+	inline std::map<const GameRuleData*, Primitive> parseGameDataPairTree(boost::optional<const pt::ptree&> tree);
 
 	/**
 	 * @brief Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and primitive type values
@@ -109,13 +109,13 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam U Primitive type of the game data values
-	 * @tparam T Game data object type, must be derived from GameRuleData
+	 * @tparam GameRuleData Type of the game data objects being parsed, must be derived from GameRuleData
+	 * @tparam Primitive Primitive type of the game data values
 	 * @param map Map of pointers to game data objects and values, with the game data objects retrieved from the cache using their ids
 	 * @return Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids
 	 */
-	template<GameRuleDataObject T, typename U>
-	inline const pt::ptree getGameDataPairTree(std::map<const T*, U> map);
+	template<GameRuleDataObject GameRuleData, typename Primitive>
+	inline const pt::ptree getGameDataPairTree(std::map<const GameRuleData*, Primitive> map);
 
 	/**
 	 * @brief Parse a boost ptree containing a map of enums strings with associated values into a std::map of enum types and  values
@@ -130,13 +130,13 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam T Enum type being parsed
-	 * @tparam U Value type of the enum values
+	 * @tparam EnumType Enum type being parsed
+	 * @tparam Primitive Value type of the enum values
 	 * @param tree Boost ptree containing the map of enum types and associated values, with the enum types represented by the output of their toString() function
 	 * @return Map of enum types and associated values
 	 */
-	template<typename T, typename U>
-	inline std::map<T, U> parseEnumPairTree(boost::optional<const pt::ptree&> tree);
+	template<typename EnumType, typename Primitive>
+	inline std::map<EnumType, Primitive> parseEnumPairTree(boost::optional<const pt::ptree&> tree);
 
 	/**
 	 * @brief Creates a property tree from a map of enum key-value pairs.
@@ -151,13 +151,13 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam T The type of the map keys (typically an enum type).
-	 * @tparam U The type of the map values (typically an enum type).
+	 * @tparam EnumType The type of the map keys (typically an enum type).
+	 * @tparam Primitive The type of the map values (typically a primitive type).
 	 * @param map A map containing enum key-value pairs to convert into a property tree.
 	 * @return A const property tree representation of the enum pair map.
 	 */
-	template<typename T, typename U>
-	inline const pt::ptree getEnumPairTree(std::map<T, U> map);
+	template<typename EnumType, typename Primitive>
+	inline const pt::ptree getEnumPairTree(std::map<EnumType, Primitive> map);
 
 	/**
 	 * @brief Parse a std::map of pointers to game data objects and values into a boost ptree containing a map of game data objects and enum type values
@@ -172,13 +172,13 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam U Enum type of the game data values
-	 * @tparam T Type of the game data objects being parsed, must be derived from GameRuleData
+	 * @tparam EnumType Enum type of the game data values
+	 * @tparam GameRuleData Type of the game data objects being parsed, must be derived from GameRuleData
 	 * @param tree Boost ptree containing the map of game data objects and enum, with the game data objects represented by their ids
 	 * @return Map of pointers to the game data objects and the enum, with the game data objects retrieved from the cache using their ids
 	 */
-	template<GameRuleDataObject T, typename U>
-	inline std::map<const T*, U> parseGameDataPairEnumTree(boost::optional<const pt::ptree&> tree);
+	template<GameRuleDataObject GameRuleData, typename EnumType>
+	inline std::map<const GameRuleData*, EnumType> parseGameDataPairEnumTree(boost::optional<const pt::ptree&> tree);
 
 	/**
 	 * @brief Parse a std::map of pointers to game data objects and enums into a boost ptree containing a map of game data objects and enum type values
@@ -193,13 +193,13 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam U Enum type of the game data values
-	 * @tparam T Game data object type, must be derived from GameRuleData
+	 * @tparam EnumType Enum type of the game data values
+	 * @tparam GameRuleData Type of the game data objects being parsed, must be derived from GameRuleData
 	 * @param map Map of pointers to game data objects and values, with the game data objects retrieved from the cache using their ids
 	 * @return Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids
 	 */
-	template<GameRuleDataObject T, typename U>
-	inline const pt::ptree getGameDataPairEnumTree(std::map<const T*, U> map);
+	template<GameRuleDataObject GameRuleData, typename EnumType>
+	inline const pt::ptree getGameDataPairEnumTree(std::map<const GameRuleData*, EnumType> map);
 
 	/**
 	 * @brief Parse a boost ptree containing a map of skills and values into a std::map of SubcategoriedSkillData and primitive type values
@@ -215,12 +215,12 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam U Primitive type of the skill values
+	 * @tparam Primitive Primitive type of the skill values
 	 * @param tree Boost ptree containing the map of skills and values, with the skills represented by their ids and optional subcategories
 	 * @return Map of SubcategoriedSkillData and the values, with the skills retrieved from the cache using their ids and optional subcategories
 	 */
-	template<typename U>
-	inline std::map<SubcategoriedSkillData, U> parseSkillPairTree(boost::optional<const pt::ptree&> tree);
+	template<typename Primitive>
+	inline std::map<SubcategoriedSkillData, Primitive> parseSkillPairTree(boost::optional<const pt::ptree&> tree);
 
 	/**
 	 * @brief Parse a std::map of SubcategoriedSkillData and values into a boost ptree containing a map of skills and primitive type values
@@ -236,12 +236,12 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam U Primitive type of the skill values
+	 * @tparam Primitive Primitive type of the skill values
 	 * @param map Map of SubcategoriedSkillData and values, with the skills retrieved from the cache using their ids and optional subcategories
 	 * @return Boost ptree containing the map of skills and values, with the skills represented by their ids and optional subcategories
 	 */
-	template<typename U>
-	inline const pt::ptree getSkillPairTree(std::map<SubcategoriedSkillData, U> map);
+	template<typename Primitive>
+	inline const pt::ptree getSkillPairTree(std::map<SubcategoriedSkillData, Primitive> map);
 
 	/**
  * @brief Parse a boost ptree containing a map of skills and enums into a std::map of SubcategoriedSkillData and enum type values
@@ -257,12 +257,12 @@ protected:
  * ]
  * @endcode
  *
- * @tparam U Enum type of the game data values
+ * @tparam EnumType Enum type of the game data values
  * @param tree Boost ptree containing the map of game data objects and enum, with the game data objects represented by their ids
  * @return Map of pointers to the game data objects and the enum, with the game data objects retrieved from the cache using their ids
  */
-	template<typename U>
-	inline std::map<SubcategoriedSkillData, U> parseSkillPairEnumTree(boost::optional<const pt::ptree&> tree);
+	template<typename EnumType>
+	inline std::map<SubcategoriedSkillData, EnumType> parseSkillPairEnumTree(boost::optional<const pt::ptree&> tree);
 
 	/**
 	 * @brief Parse a std::map of SubcategoriedSkillData and values into a boost ptree containing a map of skills and enum type values
@@ -278,12 +278,12 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam U enum type of the skill values
+	 * @tparam EnumType enum type of the skill values
 	 * @param map Map of SubcategoriedSkillData and enums, with the skills retrieved from the cache using their ids and optional subcategories
 	 * @return Boost ptree containing the map of skills and enum values, with the skills represented by their ids and optional subcategories
 	 */
-	template<typename U>
-	inline const pt::ptree getSkillPairEnumTree(std::map<SubcategoriedSkillData, U> map);
+	template<typename EnumType>
+	inline const pt::ptree getSkillPairEnumTree(std::map<SubcategoriedSkillData, EnumType> map);
 
 	/**
 	 * @brief Parse a boost ptree containing a set of game data objects into a std::set of the game data objects
@@ -296,12 +296,12 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam T Game data object type, must be derived from GameRuleData
+	 * @tparam GameRuleData Game data object type, must be derived from GameRuleData
 	 * @param tree Boost ptree containing the set of game data objects, with the game data objects represented by their ids
 	 * @return Set of the game data objects, with the game data objects retrieved from the cache using their ids
 	 */
-	template<GameRuleDataObject T>
-	inline std::set<const T*> parseGameDataSetTree(boost::optional<const pt::ptree&> tree);
+	template<GameRuleDataObject GameRuleData>
+	inline std::set<const GameRuleData*> parseGameDataSetTree(boost::optional<const pt::ptree&> tree);
 
 	/**
 	 * @brief Parse a std::set of game data objects into a boost ptree containing a set of game data objects
@@ -314,48 +314,48 @@ protected:
 	 * ]
 	 * @endcode
 	 *
-	 * @tparam T Game data object type, must be derived from GameRuleData
+	 * @tparam GameRuleData Game data object type, must be derived from GameRuleData
 	 * @param set Set of game data objects, with the game data objects retrieved from the cache using their ids
 	 * @return Boost ptree containing the set of game data objects, with the game data objects represented by their ids
 	 */
-	template<GameRuleDataObject T>
-	inline const pt::ptree getGameDataSetTree(std::set<const T*> set);
+	template<GameRuleDataObject GameRuleData>
+	inline const pt::ptree getGameDataSetTree(std::set<const GameRuleData*> set);
 
 	/**
 	 * @brief Parse a boost ptree containing a set of enums into a std::set of the enum types
-	 * @tparam T enum type being parsed
+	 * @tparam EnumType enum type being parsed
 	 * @param tree Boost ptree containing the set of enums, with the enums represented by the output of their toString() function
 	 * @return Set of the enum types, with the enums retrieved from the output of their toString() function
 	 */
-	template<typename T>
-	inline std::set<T> parseEnumSetTree(boost::optional<const pt::ptree&> tree);
+	template<typename EnumType>
+	inline std::set<EnumType> parseEnumSetTree(boost::optional<const pt::ptree&> tree);
 
 	/**
 	 * @brief Converts a set of enumeration values into a property tree.
-	 * @tparam T The enumeration type of the elements in the set.
+	 * @tparam EnumType The enumeration type of the elements in the set.
 	 * @param set The set of enumeration values to convert.
 	 * @return A property tree representation of the enumeration set.
 	 */
-	template<typename T>
-	inline const pt::ptree getEnumSetTree(std::set<T> set);
+	template<typename EnumType>
+	inline const pt::ptree getEnumSetTree(std::set<EnumType> set);
 
 	/**
 	 * @brief Parses a property tree into a vector of enum values.
-	 * @tparam T The enum type to parse the values into.
+	 * @tparam EnumType The enum type to parse the values into.
 	 * @param tree An optional reference to a property tree containing the enum values to parse.
 	 * @return A vector containing the parsed enum values.
 	 */
-	template<typename T>
-	inline std::vector<T> parseEnumVectorTree(boost::optional<const pt::ptree&> tree);
+	template<typename EnumType>
+	inline std::vector<EnumType> parseEnumVectorTree(boost::optional<const pt::ptree&> tree);
 
 	/**
 	 * @brief Converts a vector of enum values to a property tree representation.
-	 * @tparam T The enum type of the elements in the vector.
+	 * @tparam EnumType The enum type of the elements in the vector.
 	 * @param vector The vector of enum values to convert.
 	 * @return A property tree containing the enum vector data.
 	 */
-	template<typename T>
-	inline const pt::ptree getEnumVectorTree(std::vector<T> vector);
+	template<typename EnumType>
+	inline const pt::ptree getEnumVectorTree(std::vector<EnumType> vector);
 
 	/**
 	 * @brief Parse a boost ptree containing a set of skills into a std::set of SubcategoriedSkillData
@@ -389,7 +389,7 @@ private:
 	std::string root_node_{}; /**< Key of the root node of the json file */
 };
 
-template<class T>
+template<GameRuleDataObject GameRuleData>
 inline void DatafileParserJson::saveData(const std::string& filename) {
 	if (filename.empty()) return;
 
@@ -400,7 +400,7 @@ inline void DatafileParserJson::saveData(const std::string& filename) {
 	pt::ptree data;
 
 	std::set<std::string> keys{};
-	factory().keys<T>(keys);
+	factory().keys<GameRuleData>(keys);
 
 	for (std::string key : keys) {
 		try {
@@ -417,24 +417,24 @@ inline void DatafileParserJson::saveData(const std::string& filename) {
 	pt::write_json(filename, tree);
 }
 
-template<GameRuleDataObject T, typename U>
-inline std::map<const T*, U> DatafileParserJson::parseGameDataPairTree(boost::optional<const pt::ptree&> tree) {
-	std::map<const T*, U> datum{};
+template<GameRuleDataObject GameRuleData, typename Primitive>
+inline std::map<const GameRuleData*, Primitive> DatafileParserJson::parseGameDataPairTree(boost::optional<const pt::ptree&> tree) {
+	std::map<const GameRuleData*, Primitive> datum{};
 
 	if (tree) {
 		for (const auto& items : tree.get()) {
 			std::string id{ items.second.get<std::string>("id") };
-			datum.emplace(&factory().get<T>(id), items.second.get<U>("value"));
+			datum.emplace(&factory().get<GameRuleData>(id), items.second.get<Primitive>("value"));
 		}
 	}
 	return datum;
 }
 
-template<GameRuleDataObject T, typename U>
-inline const pt::ptree DatafileParserJson::getGameDataPairTree(std::map<const T*, U> map) {
+template<GameRuleDataObject GameRuleData, typename Primitive>
+inline const pt::ptree DatafileParserJson::getGameDataPairTree(std::map<const GameRuleData*, Primitive> map) {
 	pt::ptree tree{};
 
-	std::map<std::string, const T*> sorted_map{};
+	std::map<std::string, const GameRuleData*> sorted_map{};
 	for (const auto& pair : map) {
 		sorted_map.emplace(pair.first->id(), pair.first);
 	}
@@ -448,22 +448,22 @@ inline const pt::ptree DatafileParserJson::getGameDataPairTree(std::map<const T*
 	return tree;
 }
 
-template<typename T, typename U>
-inline std::map<T, U> DatafileParserJson::parseEnumPairTree(boost::optional<const pt::ptree&> tree) {
-	std::map<T, U> datum{};
+template<typename EnumType, typename Primitive>
+inline std::map<EnumType, Primitive> DatafileParserJson::parseEnumPairTree(boost::optional<const pt::ptree&> tree) {
+	std::map<EnumType, Primitive> datum{};
 
 	if (tree) {
 		for (const auto& items : tree.get()) {
-			T enum_val{};
+			EnumType enum_val{};
 			fromString(items.second.get<std::string>("id"), enum_val);
-			datum.emplace(enum_val, items.second.get<U>("value"));
+			datum.emplace(enum_val, items.second.get<Primitive>("value"));
 		}
 	}
 	return datum;
 }
 
-template<typename T, typename U>
-inline const pt::ptree DatafileParserJson::getEnumPairTree(std::map<T, U> map) {
+template<typename EnumType, typename Primitive>
+inline const pt::ptree DatafileParserJson::getEnumPairTree(std::map<EnumType, Primitive> map) {
 	pt::ptree tree{};
 
 	for (const auto& pair : map) {
@@ -475,26 +475,26 @@ inline const pt::ptree DatafileParserJson::getEnumPairTree(std::map<T, U> map) {
 	return tree;
 }
 
-template<GameRuleDataObject T, typename U>
-inline std::map<const T*, U> DatafileParserJson::parseGameDataPairEnumTree(boost::optional<const pt::ptree&> tree) {
-	std::map<const T*, U> datum{};
+template<GameRuleDataObject GameRuleData, typename EnumType>
+inline std::map<const GameRuleData*, EnumType> DatafileParserJson::parseGameDataPairEnumTree(boost::optional<const pt::ptree&> tree) {
+	std::map<const GameRuleData*, EnumType> datum{};
 
 	if (tree) {
 		for (const auto& items : tree.get()) {
 			std::string id{ items.second.get<std::string>("id") };
-			U enum_val {};
+			EnumType enum_val {};
 			fromString(items.second.get<std::string>("value"), enum_val);
-			datum.emplace(&factory().get<T>(id), enum_val);
+			datum.emplace(&factory().get<GameRuleData>(id), enum_val);
 		}
 	}
 	return datum;
 }
 
-template<GameRuleDataObject T, typename U>
-inline const pt::ptree DatafileParserJson::getGameDataPairEnumTree(std::map<const T*, U> map) {
+template<GameRuleDataObject GameRuleData, typename EnumType>
+inline const pt::ptree DatafileParserJson::getGameDataPairEnumTree(std::map<const GameRuleData*, EnumType> map) {
 	pt::ptree tree{};
 
-	std::map<std::string, const T*> sorted_map{};
+	std::map<std::string, const GameRuleData*> sorted_map{};
 	for (const auto& pair : map) {
 		sorted_map.emplace(pair.first->id(), pair.first);
 	}
@@ -508,25 +508,25 @@ inline const pt::ptree DatafileParserJson::getGameDataPairEnumTree(std::map<cons
 	return tree;
 }
 
-template<typename U>
-inline std::map<SubcategoriedSkillData, U> DatafileParserJson::parseSkillPairTree(boost::optional<const pt::ptree&> tree) {
-	std::map<SubcategoriedSkillData, U> datum{};
+template<typename Primitive>
+inline std::map<SubcategoriedSkillData, Primitive> DatafileParserJson::parseSkillPairTree(boost::optional<const pt::ptree&> tree) {
+	std::map<SubcategoriedSkillData, Primitive> datum{};
 	if (tree) {
 		for (const auto& items : tree.get()) {
 			std::string id{ items.second.get<std::string>("id") };
 			boost::optional<std::string> subcategory = items.second.get_optional<std::string>("subcategory");
 			if (subcategory) {
-				datum.emplace(factory().subcategoriedSkillData(id, subcategory.get()), items.second.get<U>("value"));
+				datum.emplace(factory().subcategoriedSkillData(id, subcategory.get()), items.second.get<Primitive>("value"));
 			} else {
-				datum.emplace(factory().subcategoriedSkillData(id), items.second.get<U>("value"));
+				datum.emplace(factory().subcategoriedSkillData(id), items.second.get<Primitive>("value"));
 			}
 		}
 	}
 	return datum;
 }
 
-template<typename U>
-inline const pt::ptree DatafileParserJson::getSkillPairTree(std::map<SubcategoriedSkillData, U> map) {
+template<typename Primitive>
+inline const pt::ptree DatafileParserJson::getSkillPairTree(std::map<SubcategoriedSkillData, Primitive> map) {
 	pt::ptree tree{};
 
 	for (const auto& pair : map) {
@@ -539,14 +539,14 @@ inline const pt::ptree DatafileParserJson::getSkillPairTree(std::map<Subcategori
 	return tree;
 }
 
-template<typename U>
-inline std::map<SubcategoriedSkillData, U> DatafileParserJson::parseSkillPairEnumTree(boost::optional<const pt::ptree&> tree) {
-	std::map<SubcategoriedSkillData, U> datum{};
+template<typename EnumType>
+inline std::map<SubcategoriedSkillData, EnumType> DatafileParserJson::parseSkillPairEnumTree(boost::optional<const pt::ptree&> tree) {
+	std::map<SubcategoriedSkillData, EnumType> datum{};
 	if (tree) {
 		for (const auto& items : tree.get()) {
 			std::string id{ items.second.get<std::string>("id") };
 			boost::optional<std::string> subcategory = items.second.get_optional<std::string>("subcategory");
-			U enum_val{};
+			EnumType enum_val{};
 			fromString(items.second.get<std::string>("value"), enum_val);
 			if (subcategory) {
 				datum.emplace(factory().subcategoriedSkillData(id, subcategory.get()), enum_val);
@@ -558,8 +558,8 @@ inline std::map<SubcategoriedSkillData, U> DatafileParserJson::parseSkillPairEnu
 	return datum;
 }
 
-template<typename U>
-inline const pt::ptree DatafileParserJson::getSkillPairEnumTree(std::map<SubcategoriedSkillData, U> map) {
+template<typename EnumType>
+inline const pt::ptree DatafileParserJson::getSkillPairEnumTree(std::map<SubcategoriedSkillData, EnumType> map) {
 	pt::ptree tree{};
 
 	for (const auto& pair : map) {
@@ -572,20 +572,20 @@ inline const pt::ptree DatafileParserJson::getSkillPairEnumTree(std::map<Subcate
 	return tree;
 }
 
-template<GameRuleDataObject T>
-inline std::set<const T*> DatafileParserJson::parseGameDataSetTree(boost::optional<const pt::ptree&> tree) {
-	std::set<const T*> datum{};
+template<GameRuleDataObject GameRuleData>
+inline std::set<const GameRuleData*> DatafileParserJson::parseGameDataSetTree(boost::optional<const pt::ptree&> tree) {
+	std::set<const GameRuleData*> datum{};
 	if (tree) {
 		for (const auto& items : tree.get()) {
 			std::string id{ items.second.get_value<std::string>() };
-			datum.insert(&factory().get<T>(id));
+			datum.insert(&factory().get<GameRuleData>(id));
 		}
 	}
 	return datum;
 }
 
-template<GameRuleDataObject T>
-inline const pt::ptree DatafileParserJson::getGameDataSetTree(std::set<const T*> set) {
+template<GameRuleDataObject GameRuleData>
+inline const pt::ptree DatafileParserJson::getGameDataSetTree(std::set<const GameRuleData*> set) {
 	pt::ptree tree{};
 	std::set<std::string> sorted_set{};
 	for (const auto& item : set) {
@@ -599,12 +599,12 @@ inline const pt::ptree DatafileParserJson::getGameDataSetTree(std::set<const T*>
 	return tree;
 }
 
-template<typename T>
-inline std::set<T> DatafileParserJson::parseEnumSetTree(boost::optional<const pt::ptree&> tree) {
-	std::set<T> datum{};
+template<typename EnumType>
+inline std::set<EnumType> DatafileParserJson::parseEnumSetTree(boost::optional<const pt::ptree&> tree) {
+	std::set<EnumType> datum{};
 	if (tree) {
 		for (const auto& items : tree.get()) {
-			T enum_val{};
+			EnumType enum_val{};
 			fromString(items.second.get_value<std::string>(), enum_val);
 			datum.insert(enum_val);
 		}
@@ -612,8 +612,8 @@ inline std::set<T> DatafileParserJson::parseEnumSetTree(boost::optional<const pt
 	return datum;
 }
 
-template<typename T>
-inline const pt::ptree DatafileParserJson::getEnumSetTree(std::set<T> set) {
+template<typename EnumType>
+inline const pt::ptree DatafileParserJson::getEnumSetTree(std::set<EnumType> set) {
 	pt::ptree tree{};
 	for (const auto& item : set) {
 		pt::ptree value_tree{};
@@ -623,12 +623,12 @@ inline const pt::ptree DatafileParserJson::getEnumSetTree(std::set<T> set) {
 	return tree;
 }
 
-template<typename T>
-inline std::vector<T> DatafileParserJson::parseEnumVectorTree(boost::optional<const pt::ptree&> tree) {
-	std::vector<T> datum{};
+template<typename EnumType>
+inline std::vector<EnumType> DatafileParserJson::parseEnumVectorTree(boost::optional<const pt::ptree&> tree) {
+	std::vector<EnumType> datum{};
 	if (tree) {
 		for (const auto& items : tree.get()) {
-			T enum_val{};
+			EnumType enum_val{};
 			fromString(items.second.get_value<std::string>(), enum_val);
 			datum.push_back(enum_val);
 		}
@@ -636,8 +636,8 @@ inline std::vector<T> DatafileParserJson::parseEnumVectorTree(boost::optional<co
 	return datum;
 }
 
-template<typename T>
-inline const pt::ptree DatafileParserJson::getEnumVectorTree(std::vector<T> vector) {
+template<typename EnumType>
+inline const pt::ptree DatafileParserJson::getEnumVectorTree(std::vector<EnumType> vector) {
 	pt::ptree tree{};
 	for (const auto& item : vector) {
 		pt::ptree value_tree{};
