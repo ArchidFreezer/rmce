@@ -385,6 +385,24 @@ protected:
 	 */
 	const pt::ptree getLanguageAbilityMapTree(std::map<std::string, const LanguageAbility> map);
 
+	/**
+	 * @brief Parses a property tree into a vector of game rule data choices.
+	 * @tparam GameRuleData The game rule data object type that satisfies the GameRuleDataObject concept.
+	 * @param tree An optional reference to a property tree containing the game data choice vector to parse.
+	 * @return A vector of GameRuleDataChoice objects templated on the specified GameRuleData type.
+	 */
+	template<GameRuleDataObject GameRuleData>
+	std::vector<GameRuleDataChoice<GameRuleData>> parseGameDataChoiceVectorTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Converts a vector of game rule data choices into a property tree representation.
+	 * @tparam GameRuleData The type of game rule data object that satisfies the GameRuleDataObject concept.
+	 * @param vector The vector of game rule data choices to convert.
+	 * @return A property tree (ptree) containing the serialized game data choice vector.
+	 */
+	template<GameRuleDataObject GameRuleData>
+	const pt::ptree getGameDataChoiceVectorTree(std::vector<GameRuleDataChoice<GameRuleData>> vector);
+
 private:
 	std::string root_node_{}; /**< Key of the root node of the json file */
 };
@@ -643,6 +661,48 @@ inline const pt::ptree DatafileParserJson::getEnumVectorTree(std::vector<EnumTyp
 		pt::ptree value_tree{};
 		value_tree.put("", toString(item));
 		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+template<GameRuleDataObject GameRuleData>
+inline std::vector<GameRuleDataChoice<GameRuleData>> DatafileParserJson::parseGameDataChoiceVectorTree(boost::optional<const pt::ptree&> tree) {
+	std::vector<GameRuleDataChoice<GameRuleData>> datum{};
+	if (tree) {
+		for (const auto& choice_tree : tree.get()) {
+			GameRuleDataChoice<GameRuleData> choice_data{};
+			choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
+
+			for (const auto& list_tree : choice_tree.second.get_child("options")) {
+				std::string list_id{ list_tree.second.get_value<std::string>() };
+				choice_data.addOption(factory().get<GameRuleData>(list_id));
+			}
+			datum.push_back(choice_data);
+		}
+	}
+	return datum;
+}
+
+template<GameRuleDataObject GameRuleData>
+inline const pt::ptree DatafileParserJson::getGameDataChoiceVectorTree(std::vector<GameRuleDataChoice<GameRuleData>> vector) {
+	pt::ptree tree{};
+	for (const GameRuleDataChoice<GameRuleData>& item : vector) {
+		pt::ptree choice_tree{};
+		choice_tree.put("num-choices", item.numChoices());
+		pt::ptree options_tree{};
+
+		std::map<std::string, const GameRuleData*> sorted_options{};
+		for (const GameRuleData* option : item.options()) {
+			sorted_options.emplace(option->id(), option);
+		}
+
+		for (const auto& pair: sorted_options) {
+			pt::ptree option_tree{};
+			option_tree.put("", pair.second->id());
+			options_tree.push_back(std::make_pair("", option_tree));
+		}
+		choice_tree.push_back(std::make_pair("options", options_tree));
+		tree.push_back(std::make_pair("", choice_tree));
 	}
 	return tree;
 }
