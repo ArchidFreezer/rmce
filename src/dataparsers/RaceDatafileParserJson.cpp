@@ -37,10 +37,9 @@ void RaceDatafileParserJson::parse() {
 		ref.setSize(size);
 
 		// get the critical type
-		std::string critical_table = v.second.get<std::string>("critical-table");
-		if (CriticalTableType::fromString(critical_table)) {
-			ref.setCriticalTableType(CriticalTableType::fromString(critical_table).value());
-		}
+		CriticalTableType::Type crit_table_type{};
+		fromString(v.second.get<std::string>("critical-table"), crit_table_type);
+		ref.setCriticalTableType(crit_table_type);
 
 		// Get the realm progressions
 		std::string arcane_progression = v.second.get<std::string>("arcane-progression");
