@@ -154,6 +154,12 @@ public:
 	}
 
 	/**
+	 * @brief Add realms to those the profession draws power from
+	 * @param realms Set of RealmType::Type profession power realms
+	 */
+	void setRealms(std::set<RealmType::Type> realms) { realms_ = std::move(realms); }
+
+	/**
 	 * @brief Get whether the profession draws power from a power realm
 	 * @param realm RealmType::Type power realm
 	 * @return `true` if the profession draws power from the realm

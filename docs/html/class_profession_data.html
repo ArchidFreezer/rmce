@@ -152,6 +152,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0e3e79f8032373e8f15c8e9c05be0a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of spell user the profession is.  <br /></td></tr>
 <tr class="memitem:a52ca563a1135dc2f668edce4f863460d" id="r_a52ca563a1135dc2f668edce4f863460d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a52ca563a1135dc2f668edce4f863460d">addRealm</a> (<a class="el" href="namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8">RealmType::Type</a> realm)</td></tr>
 <tr class="memdesc:a52ca563a1135dc2f668edce4f863460d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a realm to those the profession draws power from.  <br /></td></tr>
+<tr class="memitem:a2c6f6410efa3784c3a794357187d36f2" id="r_a2c6f6410efa3784c3a794357187d36f2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2c6f6410efa3784c3a794357187d36f2">setRealms</a> (std::set&lt; <a class="el" href="namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8">RealmType::Type</a> &gt; <a class="el" href="#aa8297f08ca9c51d1c66839338b3f8601">realms</a>)</td></tr>
+<tr class="memdesc:a2c6f6410efa3784c3a794357187d36f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add realms to those the profession draws power from.  <br /></td></tr>
 <tr class="memitem:afd7ee141747ea4fa0dff4b2810915ee1" id="r_afd7ee141747ea4fa0dff4b2810915ee1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afd7ee141747ea4fa0dff4b2810915ee1">isRealm</a> (<a class="el" href="namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8">RealmType::Type</a> realm) const</td></tr>
 <tr class="memdesc:afd7ee141747ea4fa0dff4b2810915ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the profession draws power from a power realm.  <br /></td></tr>
 <tr class="memitem:aa8297f08ca9c51d1c66839338b3f8601" id="r_aa8297f08ca9c51d1c66839338b3f8601"><td class="memItemLeft">const std::set&lt; <a class="el" href="namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8">RealmType::Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa8297f08ca9c51d1c66839338b3f8601">realms</a> ()</td></tr>
@@ -1653,6 +1655,39 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Profession name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2c6f6410efa3784c3a794357187d36f2" name="a2c6f6410efa3784c3a794357187d36f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c6f6410efa3784c3a794357187d36f2">&#9670;&#160;</a></span>setRealms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfessionData::setRealms </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8">RealmType::Type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>realms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add realms to those the profession draws power from. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">realms</td><td>Set of <a class="el" href="namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8" title="Enumeration class representing the realms in a campaign.">RealmType::Type</a> profession power realms </td></tr>
   </table>
   </dd>
 </dl>

@@ -44,6 +44,7 @@ var class_profession_data =
     [ "setBook", "class_profession_data.html#af6b92b9a2ad75fdb0fca1116c6470447", null ],
     [ "setDescription", "class_profession_data.html#a2da149897856d11d1094b5468cd4b3c5", null ],
     [ "setName", "class_profession_data.html#a7cab9b3550b1ad6fbd68ee28b1268728", null ],
+    [ "setRealms", "class_profession_data.html#a2c6f6410efa3784c3a794357187d36f2", null ],
     [ "setSkillBonus", "class_profession_data.html#a4c3f01b3ce42e8b1e289c4d4d242206a", null ],
     [ "setSkillBonuses", "class_profession_data.html#a6c2798df69be0db95bf7a51441456ef1", null ],
     [ "setSkillCategoryProfessionBonuses", "class_profession_data.html#a596b1395b7ff7d045cc73e1b6040abf3", null ],

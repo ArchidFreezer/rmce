@@ -20,10 +20,7 @@ void ProfessionDatafileParserJson::parse() {
 		ref.setBook(factory().get<BookData>(book_id));
 
 		// Get the spell power realms
-		for (const auto& realm_tree : v.second.get_child("realms")) {
-			std::optional<RealmType::Type> realm = RealmType::fromString(realm_tree.second.get_value<std::string>());
-			if (realm) ref.addRealm(realm.value());
-		}
+		ref.setRealms(parseEnumSetTree<RealmType::Type>(v.second.get_child("realms")));
 
 		// Get the primary stats
 		for (const auto& stat_tree : v.second.get_child("stats")) {
@@ -159,14 +156,10 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	datum.put("spell-user-type", SpellUserType::toString(game_data.spellUserType()));
 
 	// Get the container tree for the realms
-	pt::ptree realms_tree{};
-	for (RealmType::Type realm : game_data.realms()) {
-		// Get the realm container
-		pt::ptree realm_tree{};
-		realm_tree.put("", RealmType::toString(realm));
-		realms_tree.push_back(std::make_pair("", realm_tree));
+	{
+		pt::ptree tree{ getEnumSetTree <RealmType::Type>(game_data.realms()) };
+		if (tree.size()) datum.push_back(std::make_pair("realms", tree));
 	}
-	datum.push_back(std::make_pair("realms", realms_tree));
 
 	// Get the container tree for the stats
 	pt::ptree stats_tree{};

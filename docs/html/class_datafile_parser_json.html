@@ -236,6 +236,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac54c52608d387ec55384ede17374dc8e" id="r_ac54c52608d387ec55384ede17374dc8e"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_game_rule_data_object.html">GameRuleDataObject</a> T&gt; </td></tr>
 <tr class="memitem:ac54c52608d387ec55384ede17374dc8e template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#ac54c52608d387ec55384ede17374dc8e">getGameDataSetTree</a> (std::set&lt; const T * &gt; set)</td></tr>
 <tr class="memdesc:ac54c52608d387ec55384ede17374dc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a std::set of game data objects into a boost ptree containing a set of game data objects.  <br /></td></tr>
+<tr class="memitem:a33049c2dce611d02c0c06cadf462537b" id="r_a33049c2dce611d02c0c06cadf462537b"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a33049c2dce611d02c0c06cadf462537b template"><td class="memItemLeft">std::set&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a33049c2dce611d02c0c06cadf462537b">parseEnumSetTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:a33049c2dce611d02c0c06cadf462537b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a set of enums into a std::set of the enum types.  <br /></td></tr>
+<tr class="memitem:a753a79c120a3f042823916728c2e743d" id="r_a753a79c120a3f042823916728c2e743d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a753a79c120a3f042823916728c2e743d template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a753a79c120a3f042823916728c2e743d">getEnumSetTree</a> (std::set&lt; T &gt; set)</td></tr>
+<tr class="memdesc:a753a79c120a3f042823916728c2e743d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a set of enumeration values into a property tree.  <br /></td></tr>
 <tr class="memitem:a2f5554440456ffbacde2e3e22376eab8" id="r_a2f5554440456ffbacde2e3e22376eab8"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2f5554440456ffbacde2e3e22376eab8">parseSkillSetTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
 <tr class="memdesc:a2f5554440456ffbacde2e3e22376eab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a boost ptree containing a set of skills into a std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a>.  <br /></td></tr>
 <tr class="memitem:ad1f7e59a681143f3a17b9b316d54ed88" id="r_ad1f7e59a681143f3a17b9b316d54ed88"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#ad1f7e59a681143f3a17b9b316d54ed88">getSkillSetTree</a> (std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; set)</td></tr>
@@ -413,6 +419,48 @@ template&lt;typename T, typename U&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A const property tree representation of the enum pair map. </dd></dl>
+
+</div>
+</div>
+<a id="a753a79c120a3f042823916728c2e743d" name="a753a79c120a3f042823916728c2e743d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753a79c120a3f042823916728c2e743d">&#9670;&#160;</a></span>getEnumSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const pt::ptree DatafileParserJson::getEnumSetTree </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>set</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a set of enumeration values into a property tree. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The enumeration type of the elements in the set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">set</td><td>The set of enumeration values to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A property tree representation of the enumeration set. </dd></dl>
 
 </div>
 </div>
@@ -772,6 +820,48 @@ template&lt;typename T, typename U&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Map of enum types and associated values </dd></dl>
+
+</div>
+</div>
+<a id="a33049c2dce611d02c0c06cadf462537b" name="a33049c2dce611d02c0c06cadf462537b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33049c2dce611d02c0c06cadf462537b">&#9670;&#160;</a></span>parseEnumSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; T &gt; DatafileParserJson::parseEnumSetTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a boost ptree containing a set of enums into a std::set of the enum types. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>enum type being parsed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>Boost ptree containing the set of enums, with the enums represented by the output of their toString() function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Set of the enum types, with the enums retrieved from the output of their toString() function </dd></dl>
 
 </div>
 </div>
