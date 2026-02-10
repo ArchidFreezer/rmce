@@ -26,7 +26,7 @@ void ProfessionDatafileParserJson::parse() {
 		ref.setStats(parseEnumVectorTree<StatType::Type>(v.second.get_child("stats")));
 
 		// Get the base spell list choices
-		ref.setBaseSpellListChoices(parseGameDataChoiceVectorTree<SpellListData>(v.second.get_child_optional("base-spell-list-choices")));
+		ref.setBaseSpellListChoices(parseGameDataChoiceSetTree<SpellListData>(v.second.get_child_optional("base-spell-list-choices")));
 
 		// Get skill bonuses
 		ref.setSkillBonuses(parseSkillPairTree<int>(v.second.get_child_optional("skill-bonuses")));
@@ -154,7 +154,7 @@ void ProfessionDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 
 	// Base spell list choices
 	{
-		pt::ptree tree{getGameDataChoiceVectorTree<SpellListData>(game_data.baseSpellListChoices())};
+		pt::ptree tree{getGameDataChoiceSetTree<SpellListData>(game_data.baseSpellListChoices())};
 		if (tree.size()) datum.push_back(std::make_pair("base-spell-list-choices", tree));
 	}
 

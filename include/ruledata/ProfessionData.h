@@ -234,15 +234,15 @@ public:
  * @brief Add a choice that defines base spell lists that the character has to choose from
  * @param choice GameRuleDataChoice choice definition
  */
-	void addBaseSpellListChoice(GameRuleDataChoice<SpellListData> choice) { base_spell_list_choices_.push_back(std::move(choice)); }
+	void addBaseSpellListChoice(GameRuleDataChoice<SpellListData> choice) { base_spell_list_choices_.emplace(std::move(choice)); }
 
 	/**
 	 * @brief Set the choices that defines base spell lists that the character has to choose from
 	 *
 	 * This will replace any existing choices with the new list.
-	 * @param choices vector of GameRuleDataChoice choice definitions
+	 * @param choices set of GameRuleDataChoice choice definitions
 	 */
-	void setBaseSpellListChoices(std::vector<GameRuleDataChoice<SpellListData>> choices) { base_spell_list_choices_ = std::move(choices); }
+	void setBaseSpellListChoices(std::set<GameRuleDataChoice<SpellListData>> choices) { base_spell_list_choices_ = std::move(choices); }
 
 	/**
 	 * @brief Get the number of choices a character has to make regarding base spell lists
@@ -255,9 +255,9 @@ public:
 
 	/**
 	 * @brief Get a container with the choices the character needs to make to select one or more base spell lists
-	 * @return vector of GameRuleDataChoice objects with the choices to be made
+	 * @return set of GameRuleDataChoice objects with the choices to be made
 	 */
-	const std::vector<GameRuleDataChoice<SpellListData>>& baseSpellListChoices() const { return base_spell_list_choices_; }
+	const std::set<GameRuleDataChoice<SpellListData>>& baseSpellListChoices() const { return base_spell_list_choices_; }
 
 	/**
 	 * @brief Add a choice that defines the skill that a character may select one or more from to become everyman
@@ -858,7 +858,7 @@ private:
 	SpellUserType::Type spell_user_type_{ SpellUserType::kNone }; /**< Spell user type */
 	std::set< RealmType::Type> realms_{};/**< Realm(s) that the profession draws power from */
 	std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the profession */
-	std::vector<GameRuleDataChoice<SpellListData>> base_spell_list_choices_{}; /**< Set of spell lists that the profession base lists should be chosen from */
+	std::set<GameRuleDataChoice<SpellListData>> base_spell_list_choices_{}; /**< Set of spell lists that the profession base lists should be chosen from */
 
 	// Skill bonuses
 	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */

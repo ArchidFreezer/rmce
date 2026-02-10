@@ -1,7 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"class_profession_data.html#abb6398a3092d08c8a0f01e55bd325b42":[2,0,42,49],
-"class_profession_data.html#abbec8ef3752671f1496aea7d14dbbac7":[2,0,42,9],
 "class_profession_data.html#abde47a2fb7f671007efa9678c0ed3f03":[2,0,42,29],
 "class_profession_data.html#acadb08aa2f517a8cf34702e796f8cd1b":[2,0,42,30],
 "class_profession_data.html#ad10e9bf98dac6454a6c9b9e156e73d12":[2,0,42,91],
@@ -10,6 +8,7 @@ var NAVTREEINDEX2 =
 "class_profession_data.html#ad6f867b7f3d3d48d6a357d84174f2e57":[2,0,42,66],
 "class_profession_data.html#ad7a708da85b92f3bcf7773ec7fa16644":[2,0,42,78],
 "class_profession_data.html#ad9faa42815c59326fd0740cc63624dd1":[2,0,42,62],
+"class_profession_data.html#adb2caea89f34c96dac120ee1127608f3":[2,0,42,19],
 "class_profession_data.html#adfb8f2c4d8d98e57347b70ce5b9eee3e":[2,0,42,7],
 "class_profession_data.html#ae0c02a113fd7fb002d72a69cc169e4b1":[2,0,42,32],
 "class_profession_data.html#ae59dd1af95053d7dcec201116dcb5dc9":[2,0,42,54],
@@ -21,6 +20,7 @@ var NAVTREEINDEX2 =
 "class_profession_data.html#af0971669460ec8a13ecc677c4e609dd7":[2,0,42,34],
 "class_profession_data.html#af4e11a2912113cab90d68a59a0e6f0d2":[2,0,42,67],
 "class_profession_data.html#af6b92b9a2ad75fdb0fca1116c6470447":[2,0,42,42],
+"class_profession_data.html#af72f55a11c365074e93e7e7ea9bbf2a0":[2,0,42,41],
 "class_profession_data.html#af7ae5b1efcadcb40cfa16fb0ca1fd9ee":[2,0,42,25],
 "class_profession_data.html#af8717a166374c822ab8a89a16101f3cd":[2,0,42,17],
 "class_profession_data.html#af8a0ae845cae04b8a4be674aa6aea331":[2,0,42,55],

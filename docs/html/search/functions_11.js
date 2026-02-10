@@ -16,7 +16,7 @@ var searchData=
   ['setaveragelifespan_13',['setAverageLifespan',['../class_race_data.html#a661ecb0395264298819e13d38c25ba69',1,'RaceData']]],
   ['setaveragemaleheight_14',['setAverageMaleHeight',['../class_race_data.html#a565517a75e5dd91d4cae73e2696f2378',1,'RaceData']]],
   ['setbaselanguage_15',['setBaseLanguage',['../class_language_data.html#a0d05f8a39ab8c17757e72198bdc77b23',1,'LanguageData']]],
-  ['setbasespelllistchoices_16',['setBaseSpellListChoices',['../class_profession_data.html#a2fddb8719298e34ebd87ebb458055062',1,'ProfessionData']]],
+  ['setbasespelllistchoices_16',['setBaseSpellListChoices',['../class_profession_data.html#af72f55a11c365074e93e7e7ea9bbf2a0',1,'ProfessionData']]],
   ['setbook_17',['setBook',['../class_profession_data.html#af6b92b9a2ad75fdb0fca1116c6470447',1,'ProfessionData::setBook()'],['../class_race_data.html#a23fce6c0a13c67255efecb387bdc150e',1,'RaceData::setBook()'],['../class_skill_data.html#a6deab857189531a00cd0460a5282cb4b',1,'SkillData::setBook()'],['../class_spell_list_data.html#ab5ad71952baf102de933401db942f1af',1,'SpellListData::setBook()'],['../class_weapon_type_data.html#a7937688b1dbf34ee19d2f0a022ffa80f',1,'WeaponTypeData::setBook(const BookData &amp;book)']]],
   ['setbreakage_18',['setBreakage',['../class_weapon_type_data.html#a30f73efb2afe5fc56fdb5bd2a62fec07',1,'WeaponTypeData']]],
   ['setbuildmodifier_19',['setBuildModifier',['../class_race_data.html#a92c8b1f16b77e534bd139527f1fc8a13',1,'RaceData']]],
