@@ -80,6 +80,18 @@ public:
 	const std::string& description() const { return description_; }
 
 	/**
+	 * @brief Set additional notes about the training package that may be relevant for a GM when running a character with the training package
+	 * @param notes std::string_view additional notes about the training package
+	 */
+	void setNotes(std::string_view notes) { notes_ = notes; }
+
+	/**
+	 * @brief Get additional notes about the training package that may be relevant for a GM when running a character with the training package
+	 * @return std::string reference of the additional notes about the training package
+	 */
+	const std::string& notes() const { return notes_; }
+
+	/**
 	 * @brief Set the book that the training package is defined in
 	 * @param book BookData pointer to the book
 	 */
@@ -303,12 +315,13 @@ public:
 	}
 
 private:
-	std::string name_{}; /**< Name of the profession */
-	std::string description_{}; /**< General description of the profession */
-	const BookData* book_{}; /**< Book that the profession is described in */
+	std::string name_{}; /**< Name of the training package */
+	std::string description_{}; /**< General description of the training package */
+	std::string notes_{}; /**< Additional notes about the training package that may be relevant for a GM when running a character with the training package */
+	const BookData* book_{}; /**< Book that the training package is described in */
 	std::set<const RaceData*> races_{}; /**< Races allowed to take the package if it is restricted, empty for all races */
 	std::map<std::string, int> qualifiers_{}; /**<  Requirements, if met, that reduce the cost of the package */
-	bool caster_only_{}; /**< Whether non spell user professions may take the package */
+	bool caster_only_{}; /**< Whether non spell user training packages may take the package */
 	bool lifestyle_{}; /**< Whether the package is a lifestyle package */
 	int time_to_acquire_{}; /**< Time, in months, to acquire the package */
 	int starting_money_max_{}; /**< Change in starting money a character gains during apprenticeship */
