@@ -670,7 +670,7 @@
       "spell-list-ranks": [
         {
           "id": "SPELLLIST_NOMENIST_CASTING",
-          "value": "3",
+          "value": "3"
         }
       ]
     },
@@ -1025,10 +1025,127 @@
       "flavour-text": "We are gathered here today to witness a holy event.",
       "description": "Ministers are responsible for the teaching within a religion. They are some of the most versed students of the doctrine and teachings of their religion that can be found. They spend their time sharing their thoughts with others of their own religion, and inviting all to attend their uplifting sermons.",
       "qualifier": "At least 10 ranks in Religion [-3 points]",
+      "notes": "Proselytizing may be developed as an open list regardless of the caster's chosen realm"
       "book": "Channeling Companion",
       "caster-prof-only": "false",
       "lifestyle": "false",
       "time": "63",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Holy symbol (+5 Spell Casting Static Maneuvers)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Relic of the faith (+10 Influence skills)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Original church text"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Favour performed for deity (one time +10 to Divine Intervention)"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Spell adder (+2)"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Close friends with a former student"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Daily III item (2nd level spell)"
+        },
+        {
+          "order": "8",
+          "chance": "10",
+          "value": "Religious rival"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Special religious token/sigil"
+        },
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_PROPAGANDA",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_LEADERSHIP",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_PHILOSOPHY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CHANNELING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ADMINISTRATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Specific lore",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_PROSELYTIZING",
+          "value": "2"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "2",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+          ]
+        }
+      ],
+      "lifestyle-skills": [
+        {
+          "id": "SKILL_RELIGION"
+        }
+      ]
     },
     {
       "name": "Hunter",
@@ -1204,6 +1321,102 @@
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "94",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Weapon (+10 non-magical)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Weapon (+5 magical)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Armour (+10 non-magical)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Armour (+5 non-magical)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Shield (+10 non-magical)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Promotion or award"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Promotion or award"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Close friends with a Paladin"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HERALDRY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MILITARY_ORGANIZATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TACTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Specific lore",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ARMOUR_HEAVY",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Strength",
+      ]
     },
     {
       "name": "Miner",
@@ -1445,7 +1658,7 @@
       "spell-list-ranks": [
         {
           "id": "SPELLLIST_CRYSTALIST_CASTING",
-          "value": "3",
+          "value": "3"
         }
       ],
       "lifestyle-skills": [
@@ -1459,10 +1672,126 @@
       "flavour-text": "Gather the assembly, there are important matters I must discuss with them.",
       "description": "A Chancellor handles the administrative affairs of a religion. He is also a spiritual leader of a congregation of believers. The Chancellor's job is to provide support and inspiration to the followers of his religion. He also handles and presides over many of the religion's ceremonies. Leaving the actual teaching to ministers, a Chancellor handles the major decisions that a religion has to face.",
       "qualifier": "At least 12 ranks in Religion [-4 points]",
+      "notes": "May develop Ceremonies spell list as an own realm open spell list if desirired"
       "book": "Channeling Companion",
       "caster-prof-only": "false",
       "lifestyle": "false",
       "time": "64",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Holy symbol (+10 to spell casting)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Relic of the faith (+10 Influence skills)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Spell adder (+2)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Favour owed by a Mythic"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Favour performed for faith (one time +10 to Divine Intervention)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Daily III item (3rd level spell)"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Sketchy map with notes on the location of a powerful religious relic"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Noble patron"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_PROPAGANDA",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_PHILOSOPHY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DIVINATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CHANNELING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ADMINISTRATION",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Specific lore",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "1"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_CEREMONIES",
+          "value": "2"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "3",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+          ]
+        }
+      ],
+      "lifestyle-skills": [
+        {
+          "id": "SKILL_RELIGION"
+        }
+      ]
     },
     {
       "name": "Blind Fighter",
@@ -1622,10 +1951,144 @@
       "name": "Missionary",
       "flavour-text": "The next house will be the one.",
       "description": "The missionary is a peaceful emissary sent into far away lands to proselytize and convert. They travel a great deal, and teach many people in their journeys. While traveling, they encounter many different types of people and cultures. Many ignore the missionary, while others are searching for something that he might have to offer them.",
+      "notes": "Proselytizing may be developed as an open list regardless of the caster's chosen realm"
       "book": "Channeling Companion",
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "149",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Holy symbol (+5 Spell Casting Static Maneuvers)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Rival missionary (follows and destroys work)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Daily III item (3rd level spell)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Map of region (with historic notations)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Favour performed for deity (one time +10 to Divine Intervention)"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Traveling companion/familiar (GM's choice)"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Covenant with deity (yet to be fulfilled)"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Special religious token/sigil"
+        },
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_TALE_TELLING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DIPLOMACY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_PROPAGANDA",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_FORAGING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SURVIVAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CHANNELING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Location specific",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Location specific",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Specific lore",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "6"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "2",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_PROSELYTIZING",
+          "value": "3"
+        }
+      ],
+      "lifestyle-skills": [
+        {
+          "id": "SKILL_PUBLIC_SPEAKING"
+        }
+      ]
     },
     {
       "name": "Scholar",
@@ -1733,15 +2196,15 @@
       "spell-list-ranks": [
         {
           "id": "SPELLLIST_HERBALIST_CASTING",
-          "value": "3",
+          "value": "3"
         }
       ],
       "lifestyle-skills": [
         {
-          "id": "SKILL_FLORA_LORE",
+          "id": "SKILL_FLORA_LORE"
         },
         {
-          "id": "SKILL_HERB_LORE",
+          "id": "SKILL_HERB_LORE"
         }
       ]
     },
@@ -1753,6 +2216,96 @@
       "caster-prof-only": "false",
       "lifestyle": "false",
       "time": "55",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "List of 'non-believers'"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Well-known reputation"
+        },
+        {
+          "order": "3",
+          "chance": "20",
+          "value": "Elusive target"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Knows a secret about local clergy member"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Torturing Tools (+5 non-magic to Interrogation)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_LIE_PERCEPTION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_INTERROGATION",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Specific lore",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_POWER_PERCEPTION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CONTACTING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
     },
     {
       "name": "Boarsaddler",
@@ -1851,10 +2404,154 @@
       "name": "Witch",
       "flavour-text": "Let them scorn and scoff. I will turn their precious homeland into a swamp and a wasteland.",
       "description": "A Witch is a Channeler that usually stays away from civilized society as a recluse that only leaves his or her home with definite goals in mind. A Witch often has a Demon as his Channeling source of power. Witches are in contact with Demons or other supernatural creatures often, for their own hidden and questionable purposes.",
+      "notes": "Liquid/Gas Skills and Nature Domination may be developed as an open list regardless of the caster's chosen realm"
       "book": "Channeling Companion",
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "162",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "20",
+          "value": "True Familiar"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "d5 potions (third level spells)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Book (+15 to Demon Lore)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Book (+15 to one Lore | Magical skill)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Favour from a lesser Demon"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Daily III item (candle, 3rd level spell)"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Hunted by a Mythic"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Covenant with Demon (yet to be fulfilled)"
+        },
+        {
+          "order": "9",
+          "chance": "20",
+          "value": "Daily II item (candle, 2nd level spell)"
+        },
+        {
+          "order": "10",
+          "chance": "0",
+          "value": "d5 potions (second level spells)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_RELIGION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DEMON_DEVIL_LORE",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_ARTIFACT_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CIRCLE_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SYMBOL_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_WARDING_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DIVINATION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MAGIC_RITUAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Specific lore",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "1",
+          "value": "2"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_LIQUID_GAS_SKILLS",
+          "value": "2"
+        },
+        {
+          "id": "SPELLLIST_NATURE_DOMINATION",
+          "value": "3"
+        }
+      ],
+      "stat-gains": [
+        "Empathy"
+      ]
     },
     {
       "name": "Arms Instructor",
@@ -2025,7 +2722,7 @@
       "spell-list-ranks": [
         {
           "id": "SPELLLIST_CORPIST_CASTING",
-          "value": "3",
+          "value": "3"
         }
       ],
       "lifestyle-skills": [
@@ -2182,10 +2879,10 @@
       ],
       "lifestyle-skills": [
         {
-          "id": "SKILL_MAGIC_RITUAL",
+          "id": "SKILL_MAGIC_RITUAL"
         },
         {
-          "id": "SKILL_SPELL_MASTERY",
+          "id": "SKILL_SPELL_MASTERY"
         }
       ]
     },
@@ -2306,7 +3003,7 @@
       "spell-list-ranks": [
         {
           "id": "SPELLLIST_ARACHNAMANCY",
-          "value": "3",
+          "value": "3"
         }
       ],
       "lifestyle-skills": [
@@ -2401,10 +3098,124 @@
       "name": "Theurgist",
       "flavour-text": "The wounded men! Do not retreat without bringing one of the wounded with you!",
       "description": "A Theurgist is the battlefield medic of religious troops. They normally travel with the regular troops and are sometimes even part of them. Many standing religious armies have at least two or three of these 'miracle workers' within their ranks, sometimes with as many as one per unit. They are the fighting healers, using their talents out on the battlefield to help those who would otherwise not survive the trip to the infirmary.",
+      "notes": "Concussion's Ways, Battlefield Healing and/or Holy Defences may be developed as an open list regardless of the caster's chosen realm"
       "book": "Channeling Companion",
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "116",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Holy symbol (+5 Spell Casting Static Maneuver)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Spell Adder (+1)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Daily I item (3rd level spell)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Weapon (+5 non-magical)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Armour (+5 non-magical)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Promotion or award"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Promotion or award"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Superior medical kit (+10 non-magical)"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Medical kit (+5 non-magical)"
+        },
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_HERB_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_CHANNELING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_FIRST_AID",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_DIAGNOSTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SECOND_AID",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Specific lore",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_CONCUSSION_S_WAYS",
+          "value": "3"
+        }
+      ],
+      "spell-list-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "3",
+          "options": [
+            "SPELLLIST_BATTLEFIELD_HEALING",
+            "SPELLLIST_HOLY_DEFENSES"
+          ]
+        }
+      ],
+      "stat-gains": [
+        "Constitution",
+        "Intuition"
+      ],
+      "lifestyle-skills": [
+        {
+          "id": "SKILL_FIRST_AID"
+        }
+      ]
     },
     {
       "name": "Martial Arts Street Performer",
@@ -2473,6 +3284,112 @@
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "129",
+      "starting-money-change": "10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Book (+15 to one Magic Lore)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Enemies with a rival cult .."
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Book (+5 to one Magic Lore)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Book (+5 to one Obscure Lore)"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Daily II item (2nd level spell)"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Summoner (friend or enemy; GM's discretion)"
+        },
+        {
+          "order": "7",
+          "chance": "10",
+          "value": "Special training (+10 OB vs. specific creature)"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Special ward"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_REALITY_AWARENESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DEMON_DEVIL_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_POWER_PERCEPTION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Specific lore",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Reasoning"
+      ],
+      "lifestyle-category-skill-choices": [
+        {
+          "num-choices": "1",
+          "value": "1",
+          "options": [
+            "SKILLCATEGORY_LORE_OBSCURE"
+          ]
+        }
+      ]
     },
     {
       "name": "Jester",
@@ -2694,10 +3611,108 @@
       "name": "Medic",
       "flavour-text": "This is going to hurt me as much as it does you.",
       "description": "Trained in the use of herbs, first aid, and the magic of his deity, the Medic has learned healing in many forms. He is often found in the temple, in a battle or on a mission to defend and watch over anyone that his religion asks to be protected and healed.",
+      "notes": "Concussion's Ways may be developed as an open list regardless of the caster's chosen realm."
       "book": "Channeling Companion",
       "caster-prof-only": "false",
       "lifestyle": "false",
       "time": "51",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "d5 Concussion Repair herbs"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "d5 Poison Antidote herbs"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "d5 Burn Repair herbs"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "d10 General Purpose herbs"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "d5 Muscle/Cartilage Repair herbs"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "d5 Bone Repair herbs"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "d5 Organ Repair herbs"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Superior medical kit (+10 non-magical)"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Medical kit (+5 non-magical)"
+        },
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_RELIGION",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_HEALING_TRANCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_FIRST_AID",
+          "value": "4"
+        },
+        {
+          "id": "SKILL_USING_PREPARED_HERBS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_DIAGNOSTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SECOND_AID",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_PREPARE_HERBS",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "2"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_CONCUSSION_S_WAYS",
+          "value": "3"
+        }
+      ]
     },
     {
       "name": "Meneumerakkinîm",
@@ -2779,10 +3794,116 @@
       "flavour-text": "Please leave me now, I must be alone to commune with my deity",
       "description": "A medium works towards becoming a spiritual link between himself and his deity. He claims to know the will of his deity on many subjects. The medium is adept at all kinds of trances, and spends much time lost in his own world of meditation.",
       "qualifier": "At least 10 ranks of skills in the Self Control skill category [-3 points]",
+      "notes": "Holy Trances may be developed as an open list regardless of the caster's chosen realm"
       "book": "Channeling Companion",
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "127",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Holy symbol (+5 Spell Casting Static Maneuvers)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Special focus item (+10 to entering trances)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Daily III item (3rd level spell)"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "5",
+          "chance": "10",
+          "value": "Favour from a high priest"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Special religious token/sigil"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_RELIGION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_PHILOSOPHY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DIVINATION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CHANNELING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_ADRENAL_STABILIZATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CLEANSING_TRANCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_HEALING_TRANCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MEDITATION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Specific lore",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "4"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_HOLY_TRANCES",
+          "value": "2"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "2",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+          ]
+        }
+      ],
+      "lifestyle-skills": [
+        {
+          "id": "SKILL_MEDITATION"
+        }
+      ]
     },
     {
       "name": "Martial Artist (revised)",
@@ -2920,7 +4041,7 @@
       ],
       "lifestyle-skills": [
         {
-          "id": "SKILL_ALCHEMY",
+          "id": "SKILL_ALCHEMY"
         }
       ]
     },
@@ -3093,7 +4214,7 @@
       "spell-list-ranks": [
         {
           "id": "SPELLLIST_GUILDCRAFT_MASTERY",
-          "value": "3",
+          "value": "3"
         }
       ],
       "stat-gains": [
@@ -3290,7 +4411,7 @@
       ],
       "lifestyle-skills": [
         {
-          "id": "SKILL_RESEARCH",
+          "id": "SKILL_RESEARCH"
         }
       ]
     },
@@ -3529,10 +4650,117 @@
       "name": "Protector",
       "flavour-text": "Demons? You'd better let me handle this.",
       "description": "Protectors are holy warriors that are sent into the world by their church with the specific mission of protecting people from one specific sort of creaturs (Demons, Elementals, etc.). They will hunt this type of creature down with a fanatical zeal, and stop at nothing to see these creatures erased from the land.",
+      "notes": "The Hunter may be developed as an open list regardless of the caster's chosen realm"
       "book": "Channeling Companion",
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "95",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Weapon (+10 non-magical)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Weapon (+5 non-magical)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "ArmoUr ( +5 non-magical)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Shield (+5 non-magical)"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Charm ( +5 protection against specific creature)"
+        },
+        {
+          "order": "6",
+          "chance": "10",
+          "value": "Enemies with a Summoner"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Close friends with a Paladin"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Specific lore",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "num-choices": "1",
+          "value": "3"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_THE_HUNTER",
+          "value": "3"
+        }
+      ],
+      "stat-gains": [
+        "Strength"
+      ]
     }
   ]
 }
