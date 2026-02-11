@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"class_profession_data.html#a9ff1f1396e0c86202ab56b359f0c8a9c":[2,0,42,83],
 "class_profession_data.html#aa32c47c35e179754c57ee822272be9c8":[2,0,42,56],
 "class_profession_data.html#aa4b75c5a60cd8ae160e1da682a964500":[2,0,42,72],
 "class_profession_data.html#aa8297f08ca9c51d1c66839338b3f8601":[2,0,42,39],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "class_skill_development_cost.html#a6d6c82ccb291e5abd344e7a648b9dab5":[2,0,52,8],
 "class_skill_development_cost.html#a80102cb45839ee41ea231cf1e74f9b91":[2,0,52,3],
 "class_skill_development_cost.html#a92d29a0d430901739503ba649be42e81":[2,0,52,5],
-"class_skill_development_cost.html#acd83b1247d4f9013d96b1de388e7892a":[2,0,52,0],
-"class_skill_development_cost.html#ae419c8ba528cd113ee7a9f451999d291":[2,0,52,6]
+"class_skill_development_cost.html#acd83b1247d4f9013d96b1de388e7892a":[2,0,52,0]
 };

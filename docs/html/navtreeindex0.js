@@ -74,7 +74,8 @@ var NAVTREEINDEX0 =
 "_table_column_matcher_8h_source.html":[3,0,3,0,6],
 "_table_row_8h_source.html":[3,0,3,0,7],
 "_table_row_matcher_8h_source.html":[3,0,3,0,8],
-"_weapon_type_data_8h_source.html":[3,0,3,36],
+"_training_package_data_8h_source.html":[3,0,3,36],
+"_weapon_type_data_8h_source.html":[3,0,3,37],
 "_weapon_type_datafile_parser_json_8h_source.html":[3,0,1,19],
 "annotated.html":[2,0],
 "class_armour_type_1_1_armour_type_not_found_exception.html":[0,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "class_culture_type_data_1_1_invalid_skill_rank.html#a7e6915ab9e8eae96d8c75f3daf32f6a2":[2,0,18,0,0],
 "class_culture_type_datafile_parser_json.html":[2,0,19],
 "class_culture_type_datafile_parser_json.html#a08ca6632b24c5cf125d239e8923e7484":[2,0,19,1],
-"class_culture_type_datafile_parser_json.html#a0a2b6599048e436d8f55946d03e74c10":[2,0,19,0],
-"class_culture_type_datafile_parser_json.html#a31ac99209385c2ef16a35b4b4f431942":[2,0,19,3]
+"class_culture_type_datafile_parser_json.html#a0a2b6599048e436d8f55946d03e74c10":[2,0,19,0]
 };
