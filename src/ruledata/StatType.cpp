@@ -61,3 +61,10 @@ constexpr bool StatType::isDevelopment(Type stat) {
 	default: return false;
 	}
 }
+
+
+void StatType::fromString(std::string_view sv, StatType::Type& type) {
+	std::optional<Type> opt_type = fromString(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for StatType::Type: " + std::string(sv));
+}

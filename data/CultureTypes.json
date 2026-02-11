@@ -13,10 +13,10 @@
             "religious-beliefs": "Religion in Aerial cultures finds its gods in the elemental— in the towering solidity of a great mountain, in the high ceiling of the vast sky, in the terrifying power of a blizzard. Aerial civilizations entrust their priests with the task of establishing a harmonious relationship with these gods. They attempt to do so through ritual chanting, prayer and meditative trances that, in their view, allow them to communicate directly with the deities. The priests may decide to make ritual sacrifices to the god of the blizzard, but this happens only rarely, and not all groups do so.<p> Some Aerial cultures also worship great birds of prey, like great eagles, that make their nests among mountain crags as gods.",
             "hobby-skill-ranks": "12",
             "preferred-armours": [
-                "Skin",
-                "Leather Jerkin",
-                "Leather Coat",
-                "Leather Breastplate"
+                "AT 1",
+                "AT 5",
+                "AT 6",
+                "AT 9"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_AXE_WOODSMAN_S",
@@ -33,166 +33,122 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "2"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CLIMBING",
-                    "rank": "5"
+                    "id": "SKILL_CLIMBING",
+                    "value": "5"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_HIDING",
-                    "rank": "1"
+                    "id": "SKILL_HIDING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "8"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "8"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_SOFT_LEATHER",
-                    "rank": "1"
+                    "id": "SKILL_SOFT_LEATHER_ARMOUR",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_STALKING",
-                    "rank": "1"
+                    "id": "SKILL_STALKING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "1"
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
                 }
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "required-terrains": [
@@ -212,7 +168,7 @@
             "religious-beliefs": "Aquatic groups worship tribal gods who will protect them from harm, whether it is destruction of their Aquatic habitat or attack by their neighbors. This deity usually takes a physical form that resembles the race that it is supposed to protect. In some instances, however, it may take an elemental or non-corporeal form. The patron god may appear in the form of a disturbance in the water, such as a tidal wave or a whirlpool.",
             "hobby-skill-ranks": "12",
             "preferred-armours": [
-                "Skin"
+                "AT 1"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_HANDAXE",
@@ -224,131 +180,91 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "2"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "8"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "8"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIDING",
+                    "id": "SKILL_RIDING",
                     "subcategory": "Sea-horse",
-                    "rank": "1"
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "5"
+                    "id": "SKILL_SWIMMING",
+                    "value": "5"
                 }
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "4"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "4"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "4"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "required-water-sources": [
@@ -369,7 +285,7 @@
             "religious-beliefs": "Arctic societies worship tribal gods who protect them from misfortune and the hazards of their environment. Sometimes, their deities take the form of animals that they hunt for food, and they believe that the god manifests itself through a particular creature that offers itself so that the tribe may survive. In other instances, the deity is a god of fire and warmth, the elemental embodiment of that which preserves life in a frozen climate. Arctic groups have a tribal priest, through whom all interactions with the god are channeled.<p> The vernal equinox is an especially important occasion in Arctic cultures because it marks the beginning of the brief period of the year in which they can experience the warmth of the sun with any regularity. Most Arctic groups mark it with a major religious ceremony.",
             "hobby-skill-ranks": "10",
             "preferred-armours": [
-                "Heavy Hide"
+                "AT 4"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_CLUB",
@@ -385,151 +301,111 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "1"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_HIDING",
-                    "rank": "1"
+                    "id": "SKILL_HIDING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "4"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "4"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_SOFT_LEATHER",
-                    "rank": "2"
+                    "id": "SKILL_SOFT_LEATHER_ARMOUR",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_STALKING",
-                    "rank": "1"
+                    "id": "SKILL_STALKING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "1"
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
                 }
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "2"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "2"
                 }
             ],
             "required-climates": [
-                "CLIMATETYPE_COLD_DRY",
-                "CLIMATETYPE_FRIGID"
+                "CLIMATE_COLD_DRY",
+                "CLIMATE_FRIGID"
             ],
             "required-vegetations": [
                 "Tundra"
@@ -548,9 +424,9 @@
             "religious-beliefs": "Desert cultures worship their own tribal god. This deity takes on the roles of the tribe’s divine protector and law-giver. In many cases, it’s a double-edged role, as far as the tribe itself is concerned. Their deity presents itself as an angry and jealous father who expects his tribe to worship him exclusively and adhere without fail to his ideas of virtue and justice. Only then will protect them from foes and harm, and if his tribe fails him or disobeys him, he may exact a terrible punishment from them.<p> Other Desert groups worship the disk of the sun as a god, and attribute to it any quality that they wish. It may serve as a figure of benevolence, a bringer of light and life, or as a harsh god that inflicts punishment, drought and death to the unwary.<p> Some Desert groups believe that their deity is a universal god, and they take upon themselves the mission of spreading their religion to other groups, whether by the sword or by peaceful evangelism.",
             "hobby-skill-ranks": "12",
             "preferred-armours": [
-                "Skin",
-                "Chain Shirt",
-                "Chain Shirt & Greaves"
+                "AT 1",
+                "AT 13",
+                "AT 14"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_BATTLE_AXE",
@@ -564,147 +440,103 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "1"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "4"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "4"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIDING",
+                    "id": "SKILL_RIDING",
                     "subcategory": "Horse",
-                    "rank": "5"
+                    "value": "5"
                 }
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "5"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "5"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "required-climates": [
-                "CLIMATETYPE_HOT_DRY"
+                "CLIMATE_HOT_DRY"
             ],
             "required-water-sources": [
                 "Desert"
@@ -723,8 +555,8 @@
             "religious-beliefs": "Each Highland tribe has its own mythology, which generally centers around a pantheon of petty tribal gods, whose motives and behavior makes them seem more like ignoble mortals than deities. These gods generally represent forces of nature, or particular emotions or fields of endeavor, like love or war. This mythology is preserved and transmitted through oral story telling, and the older the tribe, the longer and more involved are the tales that tell their myths. Highland religious practice usually involves ritual sacrifice of animals.",
             "hobby-skill-ranks": "12",
             "preferred-armours": [
-                "Skin",
-                "Leather Jerkin"
+                "AT 1",
+                "AT 5"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_BAW",
@@ -740,126 +572,82 @@
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "4"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "4"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "2"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "4"
-                },
-                {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "2"
                 }
             ],
             "required-terrains": [
@@ -881,9 +669,9 @@
             "hobby-skill-ranks": "12",
             "spell-list-ranks": "1",
             "preferred-armours": [
-                "Skin",
-                "Leather Jerkin",
-                "Leather Breastplate"
+                "AT 1",
+                "AT 5",
+                "AT 9"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_CAT_O_NINE_TAILS_FIGHTING",
@@ -901,150 +689,106 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "2"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CLIMBING",
-                    "rank": "1"
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "2"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIGID_LEATHER",
-                    "rank": "1"
+                    "id": "SKILL_RIGID_LEATHER_ARMOUR",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "5"
+                    "id": "SKILL_SWIMMING",
+                    "value": "5"
                 }
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "required-water-sources": [
@@ -1065,10 +809,10 @@
             "religious-beliefs": "Mining cultures worship tribal or elemental gods, or deities that combine aspects of both. Their tribal gods offer them collective protection from the hazards of their way of life, ensure their prosperity and\/or shield them from their enemies. Elemental gods also appeal to them, although the mysteries and perils of the Subterranean realm do not consume them as much as they do to Subterranean cultures. Even so, they have enough contact with the elemental powers that lurk deep in the earth to fear them and understand that they must be propitiated. Mining cultures may have pantheons that reflect both of these impulses, having a tribal deity who is “on their side” and intercedes for them against the dark gods who dwell beneath the surface of the earth.<p> To interact with their deities, Mining communities have warrior-priests who perform rituals and who channel their power when the need for heroic action arises. These rituals do not include blood sacrifice of intelligent beings, however. Food or valuable objects are offered instead.",
             "hobby-skill-ranks": "12",
             "preferred-armours": [
-                "Chain Shirt",
-                "Chain Shirt & Greaves",
-                "Full Chain",
-                "Chain Hauberk"
+                "AT 13",
+                "AT 14",
+                "AT 15",
+                "AT 16"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_BATTLE_AXE",
@@ -1086,150 +830,102 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "4"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "4"
                 },
                 {
-                    "skill": "SKILL_CHAIN",
-                    "rank": "2"
+                    "id": "SKILL_CHAIN_ARMOUR",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CLIMBING",
-                    "rank": "1"
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "8"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "8"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIGID_LEATHER",
-                    "rank": "2"
+                    "id": "SKILL_RIGID_LEATHER_ARMOUR",
+                    "value": "2"
                 }
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
-                    "rank": "4"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "4"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "4"
                 },
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
-                    "rank": "4"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "required-terrains": [
@@ -1250,11 +946,11 @@
             "religious-beliefs": "Most commonly, Plains folk worship gods that represent the sky or the weather, or some aspect of agriculture. Animal sacrifices meant to placate their gods are common, although offerings can also take the form of material goods or a fraction of the harvest.",
             "hobby-skill-ranks": "12",
             "preferred-armours": [
-                "Skin",
-                "Leather Jerkin",
-                "Leather Coat",
-                "Leather Breastplate",
-                "Leather Breastplate & Greaves"
+                "AT 1",
+                "AT 5",
+                "AT 6",
+                "AT 9",
+                "AT 10"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_CLUB",
@@ -1266,158 +962,114 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "2"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "6"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "6"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIDING",
+                    "id": "SKILL_RIDING",
                     "subcategory": "Horse",
-                    "rank": "3"
+                    "value": "3"
                 }
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "required-climates": [
-                "CLIMATETYPE_COLD_DRY",
-                "CLIMATETYPE_COOL_DRY",
-                "CLIMATETYPE_HOT_DRY",
-                "CLIMATETYPE_WARM_DRY"
+                "CLIMATE_COLD_DRY",
+                "CLIMATE_COOL_DRY",
+                "CLIMATE_HOT_DRY",
+                "CLIMATE_WARM_DRY"
             ],
             "required-vegetations": [
                 "Plains"
@@ -1436,9 +1088,9 @@
             "religious-beliefs": "Rural communities worship gods that represent the bounty of the harvest, or the abstract idea of plenty. They stage communal rituals that celebrate the spring and fall solstices (marking the time of sowing and harvesting, respectively), as well as religious ceremonies that ask their patron deity to bestow the blessing of a good harvest and keep them safe from catastrophe.",
             "hobby-skill-ranks": "12",
             "preferred-armours": [
-                "Skin",
-                "Leather Jerkin",
-                "Leather Coat"
+                "AT 1",
+                "AT 5",
+                "AT 6"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_CLUB",
@@ -1451,179 +1103,131 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "2"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_HIDING",
-                    "rank": "1"
+                    "id": "SKILL_HIDING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "8"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "8"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIDING",
+                    "id": "SKILL_RIDING",
                     "subcategory": "Horse",
-                    "rank": "1"
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_RIGID_LEATHER",
-                    "rank": "1"
+                    "id": "SKILL_RIGID_LEATHER_ARMOUR",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SOFT_LEATHER",
-                    "rank": "1"
+                    "id": "SKILL_SOFT_LEATHER_ARMOUR",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_STALKING",
-                    "rank": "1"
+                    "id": "SKILL_STALKING",
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "1"
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
                 }
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_1_H_EDGED",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_1_H_EDGED",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "required-features": [
@@ -1643,12 +1247,12 @@
             "religious-beliefs": "Subterranean cultures worship elemental gods associated with the earth and, sometimes, fire. Their deities represent strength that they draw from the depths of the earth, and the power of these gods sometimes expresses itself as volcanic explosions or earth tremors. Each Subterranean group has at least one spell caster whose duty it is to communicate with these gods and channel their power. Their religious rituals sometimes involve sacrificing animals or even intelligent beings to the deities. In the latter case, members of above ground races are considered the most valuable sacrificial victims, and groups will stage raids just to take prisoners.<p> The religion of some Subterranean cultures also describes light as a hostile deity who constantly threatens the existence of the group. In this formulation, above ground races are servants of that hostile god, especially Sylvan folk. Any Cleric from above ground who serves the god of the sun is also hated and feared.",
             "hobby-skill-ranks": "10",
             "preferred-armours": [
-                "Leather Jerkin",
-                "Leather Coat",
-                "Chain Shirt",
-                "Chain Shirt & Greaves",
-                "Full Chain",
-                "Chain Hauberk"
+                "AT 5",
+                "AT 6",
+                "AT 13",
+                "AT 14",
+                "AT 15",
+                "AT 16"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_BATTLE_AXE",
@@ -1665,126 +1269,78 @@
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_CONCUSSION",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_THROWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_THROWN",
+                    "value": "1"
                 }
             ],
             "required-features": [
@@ -1805,9 +1361,9 @@
             "hobby-skill-ranks": "10",
             "spell-list-ranks": "2",
             "preferred-armours": [
-                "Skin",
-                "Leather Jerkin",
-                "Leather Coat"
+                "AT 1",
+                "AT 5",
+                "AT 6"
             ],
             "preferred-weapons": [
                 "WEAPONTYPE_BLOW_GUN_SMALL",
@@ -1822,167 +1378,115 @@
             ],
             "skill-ranks": [
                 {
-                    "skill": "SKILL_ALERTNESS",
-                    "rank": "6"
+                    "id": "SKILL_ALERTNESS",
+                    "value": "6"
                 },
                 {
-                    "skill": "SKILL_CLIMBING",
-                    "rank": "2"
+                    "id": "SKILL_CLIMBING",
+                    "value": "2"
                 },
                 {
-                    "skill": "SKILL_CULTURE_LORE",
+                    "id": "SKILL_CULTURE_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_HIDING",
-                    "rank": "4"
+                    "id": "SKILL_HIDING",
+                    "value": "4"
                 },
                 {
-                    "skill": "SKILL_LANGUAGES",
-                    "rank": "10"
+                    "id": "SKILL_LANGUAGES",
+                    "value": "10"
                 },
                 {
-                    "skill": "SKILL_REGION_LORE",
+                    "id": "SKILL_REGION_LORE",
                     "subcategory": "Own",
-                    "rank": "3"
+                    "value": "3"
                 },
                 {
-                    "skill": "SKILL_RIDING",
+                    "id": "SKILL_RIDING",
                     "subcategory": "Horses",
-                    "rank": "1"
+                    "value": "1"
                 },
                 {
-                    "skill": "SKILL_STALKING",
-                    "rank": "4"
+                    "id": "SKILL_STALKING",
+                    "value": "4"
                 },
                 {
-                    "skill": "SKILL_SWIMMING",
-                    "rank": "3"
+                    "id": "SKILL_SWIMMING",
+                    "value": "3"
                 }
             ],
             "skill-category-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "2"
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "2"
                 },
                 {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "5"
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "5"
                 },
                 {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "rank": "4"
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "4"
                 },
                 {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "3"
                 }
             ],
             "skill-category-skill-ranks": [
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-                    "rank": "1"
+                    "id": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "value": "1"
                 },
                 {
-                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_COMMUNICATION",
-                    "rank": "2"
-                },
-                {
-                    "category": "SKILLCATEGORY_LORE_GENERAL",
-                    "rank": "3"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "rank": "5"
-                },
-                {
-                    "category": "SKILLCATEGORY_POWER_AWARENESS",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-                    "rank": "4"
-                },
-                {
-                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_0_H_EDGED",
-                    "rank": "1"
-                },
-                {
-                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
-                    "rank": "3"
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "3"
                 }
             ],
             "required-vegetations": [

@@ -122,6 +122,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a4b7e1e1ded953974db3b781b023918c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teach operator&lt;&lt; how to print a <a class="el" href="#ad1039e90c513235b47ae7b46516e51c8" title="Enumeration class representing the realms in a campaign.">RealmType::Type</a>.  <br /></td></tr>
 <tr class="memitem:ab198257d527cb6752850138553566e6e" id="r_ab198257d527cb6752850138553566e6e"><td class="memItemLeft">const std::optional&lt; <a class="el" href="#ad1039e90c513235b47ae7b46516e51c8">Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab198257d527cb6752850138553566e6e">fromString</a> (std::string_view sv)</td></tr>
 <tr class="memdesc:ab198257d527cb6752850138553566e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
+<tr class="memitem:a5b33afd8818e15db3aea38b681675a22" id="r_a5b33afd8818e15db3aea38b681675a22"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5b33afd8818e15db3aea38b681675a22">fromString</a> (std::string_view sv, <a class="el" href="#ad1039e90c513235b47ae7b46516e51c8">RealmType::Type</a> &amp;type)</td></tr>
+<tr class="memdesc:a5b33afd8818e15db3aea38b681675a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string and set it to the provided reference.  <br /></td></tr>
 <tr class="memitem:a925eae689753e8add14afd4f39fddb39" id="r_a925eae689753e8add14afd4f39fddb39"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a925eae689753e8add14afd4f39fddb39">isMagical</a> (<a class="el" href="#ad1039e90c513235b47ae7b46516e51c8">Type</a> realm)</td></tr>
 <tr class="memdesc:a925eae689753e8add14afd4f39fddb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the realm is magical or not.  <br /></td></tr>
 </table>
@@ -174,7 +176,7 @@ Functions</h2></td></tr>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ab198257d527cb6752850138553566e6e" name="ab198257d527cb6752850138553566e6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab198257d527cb6752850138553566e6e">&#9670;&#160;</a></span>fromString()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab198257d527cb6752850138553566e6e">&#9670;&#160;</a></span>fromString() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,6 +200,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="#ad1039e90c513235b47ae7b46516e51c8" title="Enumeration class representing the realms in a campaign.">RealmType::Type</a> represented by the string</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa1216a3092b07e13f22660504137628d" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a5b33afd8818e15db3aea38b681675a22" name="a5b33afd8818e15db3aea38b681675a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b33afd8818e15db3aea38b681675a22">&#9670;&#160;</a></span>fromString() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RealmType::fromString </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>sv</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ad1039e90c513235b47ae7b46516e51c8">RealmType::Type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the enumeration value based on a string and set it to the provided reference. </p>
+<p>Accepts values that are returned by <a class="el" href="#aa1216a3092b07e13f22660504137628d" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sv</td><td>string_view to get the enumeration for </td></tr>
+    <tr><td class="paramname">type</td><td>reference to set the <a class="el" href="#ad1039e90c513235b47ae7b46516e51c8" title="Enumeration class representing the realms in a campaign.">RealmType::Type</a> represented by the string to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if the string does not represent a valid <a class="el" href="#ad1039e90c513235b47ae7b46516e51c8" title="Enumeration class representing the realms in a campaign.">RealmType::Type</a></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#aa1216a3092b07e13f22660504137628d" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
 
 </div>

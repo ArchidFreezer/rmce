@@ -41,3 +41,9 @@ constexpr bool RealmType::isMagical(Type realm) {
 	default: return true;
 	}
 }
+
+void RealmType::fromString(std::string_view sv, RealmType::Type& type) {
+	std::optional<Type> opt_type = fromString(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for RealmType::Type: " + std::string(sv));
+}

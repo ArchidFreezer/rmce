@@ -16,6 +16,9 @@
  */
 class SkillData : public GameRuleData {
 public:
+
+	SkillData() = delete; /**< Default constructor is deleted to ensure the base class is initialised */
+
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier for the skill
@@ -190,11 +193,21 @@ public:
 	void addSubcategory(std::string subcategory) { subcategories_.insert(subcategory); }
 
 	/**
+	 * @brief Set the subcategory types available for selection for the skill
+	 *
+	 * Many skills require that a character develop the skill for each sub-category of the skill (e.g., Weapons, Riding,
+	 * Metal-crafts, etc.). This values replaces the list of those available for selection with the provided list.
+	 *
+	 * @param subcategories std::set of std::string types to set as the subcategories available for selection for the skill
+	 */
+	void setSubcategories(std::set<std::string> subcategories) { subcategories_ = std::move(subcategories); }
+
+	/**
 	 * @brief Gets a collection of the subcategories available for a skill
 	 * 
 	 * @return std::set reference containing the list of available subcategory types.
 	 */
-	const std::set<std::string>& getSubcategories() const { return subcategories_; }
+	const std::set<std::string>& subcategories() const { return subcategories_; }
 
 	/**
 	 * @brief Add stat that applies stat bonus to the skill
@@ -208,6 +221,18 @@ public:
 	 * @see setUseRealmStats()
 	 */
 	int addStat(StatType::Type stat);
+
+	/**
+	 * @brief Set the stats that apply a bonus to the skill
+	 *
+	 * There are 3 stats associated with each skill and duplicates are allowed. This function replaces any existing stats with the new list.
+	 *
+	 * @param stats vector of stats whose bonuses should be applied to the skill
+	 * @throws TooManyStatsException if attempting to add more than 3 stats
+	 * @throws UsingCharacterRealmStatsException if attempting to add a stat when using character realm stats
+	 * @see setUseRealmStats()
+	 */
+	void setStats(std::vector<StatType::Type> stats) { stats_ = std::move(stats); }
 
 	/**
 	 * @brief Gets the number of stats currently associated with the category

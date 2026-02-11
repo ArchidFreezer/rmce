@@ -22,22 +22,21 @@
  */
 class LanguageCategoryData : public GameRuleData {
 public:
-	/**
-	 * @brief Constructor
-	 * @param id Unique identifier of the language category
-	 * @param name Name of the category as seen in-game
-	 */
-	LanguageCategoryData(std::string_view id, std::string_view name) : GameRuleData(id), name_{ name } {}
+
+	LanguageCategoryData() = delete; /**< Default constructor is deleted to ensure the base class is initialised */
+
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier of the language category
 	 */
 	LanguageCategoryData(std::string_view id) : GameRuleData(id) {}
+
 	/**
 	 * @brief Set the name of the category
 	 * @param name Category name
 	 */
 	void setName(std::string_view name) { name_ = name; }
+
 	/**
 	 * @brief Get the name of the category as seen in-game
 	 * @return Name as a string reference

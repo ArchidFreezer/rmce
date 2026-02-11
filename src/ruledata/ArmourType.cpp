@@ -111,3 +111,9 @@ const std::optional<ArmourType::Type> ArmourType::fromDescription(std::string_vi
 
 	return {};
 }
+
+void ArmourType::fromString(std::string_view sv, ArmourType::Type& type) {
+	std::optional<Type> opt_type = fromString(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for ArmourType::Type: " + std::string(sv));
+}

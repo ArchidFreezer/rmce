@@ -124,6 +124,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa1b6ad16866e2f043cd0982e53d8d4e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teach operator&lt;&lt; how to print a <a class="el" href="#a5a93c3494093263d09281ce2aaad0471" title="Enumeration class representing the size of creatures.">CreatureSizeType::Type</a>.  <br /></td></tr>
 <tr class="memitem:a819b37e373e2847cb0d0b88bd9009afa" id="r_a819b37e373e2847cb0d0b88bd9009afa"><td class="memItemLeft">const std::optional&lt; <a class="el" href="#a5a93c3494093263d09281ce2aaad0471">Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a819b37e373e2847cb0d0b88bd9009afa">fromString</a> (std::string_view sv)</td></tr>
 <tr class="memdesc:a819b37e373e2847cb0d0b88bd9009afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string.  <br /></td></tr>
+<tr class="memitem:a2e30171e06364457f255ff704da95ff9" id="r_a2e30171e06364457f255ff704da95ff9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2e30171e06364457f255ff704da95ff9">fromString</a> (std::string_view sv, <a class="el" href="#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a> &amp;type)</td></tr>
+<tr class="memdesc:a2e30171e06364457f255ff704da95ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the enumeration value based on a string and set it to the provided reference.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the <a class="el" href="#a5a93c3494093263d09281ce2aaad0471" title="Enumeration class representing the size of creatures.">CreatureSizeType::Type</a> enum and associated functions. </p>
@@ -167,7 +169,7 @@ Functions</h2></td></tr>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a819b37e373e2847cb0d0b88bd9009afa" name="a819b37e373e2847cb0d0b88bd9009afa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a819b37e373e2847cb0d0b88bd9009afa">&#9670;&#160;</a></span>fromString()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a819b37e373e2847cb0d0b88bd9009afa">&#9670;&#160;</a></span>fromString() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,6 +192,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="#a5a93c3494093263d09281ce2aaad0471" title="Enumeration class representing the size of creatures.">CreatureSizeType::Type</a> represented by the string</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a243625f7ae7c758e9e3a9e4d6a256c8a" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a2e30171e06364457f255ff704da95ff9" name="a2e30171e06364457f255ff704da95ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e30171e06364457f255ff704da95ff9">&#9670;&#160;</a></span>fromString() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CreatureSizeType::fromString </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>sv</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a5a93c3494093263d09281ce2aaad0471">CreatureSizeType::Type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the enumeration value based on a string and set it to the provided reference. </p>
+<p>Accepts values that are returned by <a class="el" href="#a243625f7ae7c758e9e3a9e4d6a256c8a" title="Get the string representation of the given enum.">toString()</a> in a case insensitive manner.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sv</td><td>string_view to get the enumeration for </td></tr>
+    <tr><td class="paramname">type</td><td>reference to set the <a class="el" href="#a5a93c3494093263d09281ce2aaad0471" title="Enumeration class representing the size of creatures.">CreatureSizeType::Type</a> represented by the string to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if the string does not represent a valid <a class="el" href="#a5a93c3494093263d09281ce2aaad0471" title="Enumeration class representing the size of creatures.">CreatureSizeType::Type</a></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a243625f7ae7c758e9e3a9e4d6a256c8a" title="Get the string representation of the given enum.">toString()</a> </dd></dl>
 
 </div>

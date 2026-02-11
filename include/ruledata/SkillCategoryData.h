@@ -37,28 +37,14 @@ public:
  */
 class SkillCategoryData : public GameRuleData {
 public:
+
+	SkillCategoryData() = delete; /**< Default constructor is deleted to ensure the base class is initialised */
+
 	/**
 	 * @brief Constructor
 	 * @param id Unique identifier of the skill category
 	 */
 	SkillCategoryData(std::string_view id) : GameRuleData(id) {}
-
-	/**
-	 * @brief Constructor
-	 * @param group Skill group that the category belongs to
-	 * @param id Unique identifier of the skill category
-	 * @param name Name of the category as seen in-game
-	 * @param skill_progression Default progression type for skills in the category
-	 * @param category_progression Progression type for the skill category
-	 * @param use_realm_stats Whether to use characters realm stats for bonus rather than category stats
-	 */
-	SkillCategoryData(std::string_view id, std::string_view name, const SkillGroupData& group, const SkillProgressionTypeData& skill_progression, const SkillProgressionTypeData& category_progression, bool use_realm_stats) :
-		GameRuleData(id),
-		group_{ &group },
-		name_{ name },
-		skill_progression_{ &skill_progression },
-		skill_category_progression_{ &category_progression },
-		use_realm_stats_{ use_realm_stats } {}
 
 	/**
 	 * @brief Set the name of the skill category
@@ -91,7 +77,7 @@ public:
 	const SkillGroupData& group() const { return *group_; }
 
 	/**
-	 * @brief Add stat that applies stat boinus to skills in the category
+	 * @brief Add stat that applies stat bonus to skills in the category
 	 * 
 	 * There are 3 stats associated with each skill category and duplicates are allowed
 	 * 
@@ -102,6 +88,12 @@ public:
 	 * @see setUseRealmStats()
 	 */
 	int addStat(StatType::Type stat);
+
+	/**
+	 * @brief Set the stats that apply stat bonus to skills in the category
+	 * @param stats vector of stats whose bonus should be applied to skills category
+	 */
+	void setStats(std::vector<StatType::Type> stats) { stats_ = std::move(stats); }
 
 	/**
 	 * @brief Gets the number of stats currently associated with the category

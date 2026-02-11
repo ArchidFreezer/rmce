@@ -1,6 +1,6 @@
 var class_spell_list_data =
 [
-    [ "SpellListData", "class_spell_list_data.html#a940ee0e2a4d47ab6084d4042de5c0736", null ],
+    [ "SpellListData", "class_spell_list_data.html#ac2a7a461df4915d8f9d02d49a1982ce5", null ],
     [ "SpellListData", "class_spell_list_data.html#acf740860de0b9450d1b09a4b5804780e", null ],
     [ "addRealm", "class_spell_list_data.html#a53345c0868a2784b34e180191d5f0311", null ],
     [ "book", "class_spell_list_data.html#aca65d74704d5507e3527326592094460", null ],

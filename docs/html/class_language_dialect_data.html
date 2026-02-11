@@ -122,8 +122,6 @@ Collaboration diagram for LanguageDialectData:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d3ad512c39a0693f0be3ac15af4de47" id="r_a4d3ad512c39a0693f0be3ac15af4de47"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4d3ad512c39a0693f0be3ac15af4de47">LanguageDialectData</a> (std::string_view <a class="el" href="#a07d3c1de1af8b7de27e3b4ed6aacf1b0">name</a>)</td></tr>
 <tr class="memdesc:a4d3ad512c39a0693f0be3ac15af4de47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="memitem:a6133ca8e98452a5eda55202493dbb00a" id="r_a6133ca8e98452a5eda55202493dbb00a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6133ca8e98452a5eda55202493dbb00a">LanguageDialectData</a> (std::string_view <a class="el" href="#a07d3c1de1af8b7de27e3b4ed6aacf1b0">name</a>, std::set&lt; const <a class="el" href="class_language_data.html">LanguageData</a> * &gt; &amp;<a class="el" href="#aa70f55c77d77968305bae475532c3789">dialects</a>)</td></tr>
-<tr class="memdesc:a6133ca8e98452a5eda55202493dbb00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:a07d3c1de1af8b7de27e3b4ed6aacf1b0" id="r_a07d3c1de1af8b7de27e3b4ed6aacf1b0"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a07d3c1de1af8b7de27e3b4ed6aacf1b0">name</a> () const</td></tr>
 <tr class="memdesc:a07d3c1de1af8b7de27e3b4ed6aacf1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base language of the dialects.  <br /></td></tr>
 <tr class="memitem:aa70f55c77d77968305bae475532c3789" id="r_aa70f55c77d77968305bae475532c3789"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_language_data.html">LanguageData</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa70f55c77d77968305bae475532c3789">dialects</a> () const</td></tr>
@@ -162,7 +160,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_language_data.html" title="Class representing an individual language used in the campaign world.">LanguageData</a> </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4d3ad512c39a0693f0be3ac15af4de47" name="a4d3ad512c39a0693f0be3ac15af4de47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d3ad512c39a0693f0be3ac15af4de47">&#9670;&#160;</a></span>LanguageDialectData() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3ad512c39a0693f0be3ac15af4de47">&#9670;&#160;</a></span>LanguageDialectData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,44 +186,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Name of the base language of the dialects </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a6133ca8e98452a5eda55202493dbb00a" name="a6133ca8e98452a5eda55202493dbb00a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6133ca8e98452a5eda55202493dbb00a">&#9670;&#160;</a></span>LanguageDialectData() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">LanguageDialectData::LanguageDialectData </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::set&lt; const <a class="el" href="class_language_data.html">LanguageData</a> * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dialects</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>Name of the base language of the dialects </td></tr>
-    <tr><td class="paramname">dialects</td><td>Set to initilise the object with. <b>WARNING</b>: This constructor uses move semantics so will <em>invalidate</em> the object referenced in the parameter </td></tr>
   </table>
   </dd>
 </dl>

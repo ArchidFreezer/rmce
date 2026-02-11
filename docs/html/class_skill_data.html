@@ -125,6 +125,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a78c7a06d59bd4aba7cfbdc31147abe8b" id="r_a78c7a06d59bd4aba7cfbdc31147abe8b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a78c7a06d59bd4aba7cfbdc31147abe8b">SkillData</a> ()=delete</td></tr>
 <tr class="memitem:a150f74a2353f3db89f647dc9f30617ea" id="r_a150f74a2353f3db89f647dc9f30617ea"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a150f74a2353f3db89f647dc9f30617ea">SkillData</a> (std::string_view <a class="el" href="class_game_rule_data.html#a4059ad4327c807504f53df4b1c04600e">id</a>)</td></tr>
 <tr class="memdesc:a150f74a2353f3db89f647dc9f30617ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="memitem:aaeb3c2ee3707405bc1026970f8017cc5" id="r_aaeb3c2ee3707405bc1026970f8017cc5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaeb3c2ee3707405bc1026970f8017cc5">setName</a> (std::string_view <a class="el" href="#a8a7675617a3c058a7a695878fb909192">name</a>)</td></tr>
@@ -169,10 +170,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aff733308308a6e04fef182646d2c5073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the character must pick a subcategory of the skill.  <br /></td></tr>
 <tr class="memitem:a79b8349328a647d01b639de8b8d58771" id="r_a79b8349328a647d01b639de8b8d58771"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a79b8349328a647d01b639de8b8d58771">addSubcategory</a> (std::string subcategory)</td></tr>
 <tr class="memdesc:a79b8349328a647d01b639de8b8d58771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a subcategory type to the list of those available for selection.  <br /></td></tr>
-<tr class="memitem:a5978d0236241ba9c6a2c32ac3972210e" id="r_a5978d0236241ba9c6a2c32ac3972210e"><td class="memItemLeft">const std::set&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5978d0236241ba9c6a2c32ac3972210e">getSubcategories</a> () const</td></tr>
-<tr class="memdesc:a5978d0236241ba9c6a2c32ac3972210e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a collection of the subcategories available for a skill.  <br /></td></tr>
+<tr class="memitem:af839c6befa93dc7c30454dcd6f9b243c" id="r_af839c6befa93dc7c30454dcd6f9b243c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af839c6befa93dc7c30454dcd6f9b243c">setSubcategories</a> (std::set&lt; std::string &gt; <a class="el" href="#a454233889958482aee75b51d517b6f80">subcategories</a>)</td></tr>
+<tr class="memdesc:af839c6befa93dc7c30454dcd6f9b243c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the subcategory types available for selection for the skill.  <br /></td></tr>
+<tr class="memitem:a454233889958482aee75b51d517b6f80" id="r_a454233889958482aee75b51d517b6f80"><td class="memItemLeft">const std::set&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a454233889958482aee75b51d517b6f80">subcategories</a> () const</td></tr>
+<tr class="memdesc:a454233889958482aee75b51d517b6f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a collection of the subcategories available for a skill.  <br /></td></tr>
 <tr class="memitem:abf10402cb53bce7b58e876d26cf8f927" id="r_abf10402cb53bce7b58e876d26cf8f927"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#abf10402cb53bce7b58e876d26cf8f927">addStat</a> (<a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> stat)</td></tr>
 <tr class="memdesc:abf10402cb53bce7b58e876d26cf8f927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add stat that applies stat bonus to the skill.  <br /></td></tr>
+<tr class="memitem:a5de53bd012caf41d9377c526a108d466" id="r_a5de53bd012caf41d9377c526a108d466"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5de53bd012caf41d9377c526a108d466">setStats</a> (std::vector&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; <a class="el" href="#af1f2ef4bf3be3398fbb7cde006d23e6d">stats</a>)</td></tr>
+<tr class="memdesc:a5de53bd012caf41d9377c526a108d466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the stats that apply a bonus to the skill.  <br /></td></tr>
 <tr class="memitem:ab91df05699c2cd1bda429c2d681e5675" id="r_ab91df05699c2cd1bda429c2d681e5675"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#ab91df05699c2cd1bda429c2d681e5675">numberOfStats</a> () const</td></tr>
 <tr class="memdesc:ab91df05699c2cd1bda429c2d681e5675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of stats currently associated with the category.  <br /></td></tr>
 <tr class="memitem:a5afac48d16e1ccab415d1ba1fbaf4ecd" id="r_a5afac48d16e1ccab415d1ba1fbaf4ecd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5afac48d16e1ccab415d1ba1fbaf4ecd">removeStat</a> (<a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> stat)</td></tr>
@@ -212,8 +217,34 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing the definition of a skill that a character may develop. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a78c7a06d59bd4aba7cfbdc31147abe8b" name="a78c7a06d59bd4aba7cfbdc31147abe8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78c7a06d59bd4aba7cfbdc31147abe8b">&#9670;&#160;</a></span>SkillData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SkillData::SkillData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default constructor is deleted to ensure the base class is initialised </p>
+
+</div>
+</div>
 <a id="a150f74a2353f3db89f647dc9f30617ea" name="a150f74a2353f3db89f647dc9f30617ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a150f74a2353f3db89f647dc9f30617ea">&#9670;&#160;</a></span>SkillData()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a150f74a2353f3db89f647dc9f30617ea">&#9670;&#160;</a></span>SkillData() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -542,34 +573,6 @@ Additional Inherited Members</h2></td></tr>
 <p>Gets the exhaustion points expended per round when the skill is used at a normal pace. </p>
 <p>Normal pace is typically defined as walking pace</p>
 <dl class="section return"><dt>Returns</dt><dd>float exhaustion points expended per round; 0.0f if no additional points are expended </dd></dl>
-
-</div>
-</div>
-<a id="a5978d0236241ba9c6a2c32ac3972210e" name="a5978d0236241ba9c6a2c32ac3972210e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5978d0236241ba9c6a2c32ac3972210e">&#9670;&#160;</a></span>getSubcategories()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::set&lt; std::string &gt; &amp; SkillData::getSubcategories </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets a collection of the subcategories available for a skill. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::set reference containing the list of available subcategory types. </dd></dl>
 
 </div>
 </div>
@@ -1150,6 +1153,82 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a5de53bd012caf41d9377c526a108d466" name="a5de53bd012caf41d9377c526a108d466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de53bd012caf41d9377c526a108d466">&#9670;&#160;</a></span>setStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkillData::setStats </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>stats</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the stats that apply a bonus to the skill. </p>
+<p>There are 3 stats associated with each skill and duplicates are allowed. This function replaces any existing stats with the new list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stats</td><td>vector of stats whose bonuses should be applied to the skill </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">TooManyStatsException</td><td>if attempting to add more than 3 <a class="el" href="#af1f2ef4bf3be3398fbb7cde006d23e6d" title="Gets the stats that that provide a bonus to the category and skills within it.">stats</a> </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_skill_data_1_1_using_character_realm_stats_exception.html" title="Thrown when attempting to add a skill category stats when the category is set to use character realm ...">UsingCharacterRealmStatsException</a></td><td>if attempting to add a stat when using character realm <a class="el" href="#af1f2ef4bf3be3398fbb7cde006d23e6d" title="Gets the stats that that provide a bonus to the category and skills within it.">stats</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>setUseRealmStats() </dd></dl>
+
+</div>
+</div>
+<a id="af839c6befa93dc7c30454dcd6f9b243c" name="af839c6befa93dc7c30454dcd6f9b243c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af839c6befa93dc7c30454dcd6f9b243c">&#9670;&#160;</a></span>setSubcategories()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkillData::setSubcategories </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; std::string &gt;</td>          <td class="paramname"><span class="paramname"><em>subcategories</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the subcategory types available for selection for the skill. </p>
+<p>Many skills require that a character develop the skill for each sub-category of the skill (e.g., Weapons, Riding, Metal-crafts, etc.). This values replaces the list of those available for selection with the provided list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">subcategories</td><td>std::set of std::string types to set as the subcategories available for selection for the skill </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af1f2ef4bf3be3398fbb7cde006d23e6d" name="af1f2ef4bf3be3398fbb7cde006d23e6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1f2ef4bf3be3398fbb7cde006d23e6d">&#9670;&#160;</a></span>stats()</h2>
 
@@ -1176,6 +1255,34 @@ Additional Inherited Members</h2></td></tr>
 <p>Gets the stats that that provide a bonus to the category and skills within it. </p>
 <p>A stat may appear more than once in the list</p>
 <dl class="section return"><dt>Returns</dt><dd>std::vector of stats </dd></dl>
+
+</div>
+</div>
+<a id="a454233889958482aee75b51d517b6f80" name="a454233889958482aee75b51d517b6f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a454233889958482aee75b51d517b6f80">&#9670;&#160;</a></span>subcategories()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; std::string &gt; &amp; SkillData::subcategories </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a collection of the subcategories available for a skill. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::set reference containing the list of available subcategory types. </dd></dl>
 
 </div>
 </div>

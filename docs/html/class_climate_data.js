@@ -8,6 +8,7 @@ var class_climate_data =
     [ "name", "class_climate_data.html#a460c895e6b29326cece769403ec06211", null ],
     [ "precipitations", "class_climate_data.html#abc68949e4589291dc5c4339df7c8e363", null ],
     [ "setName", "class_climate_data.html#a1835da745fdcfa00b0e3365c27dcfb10", null ],
+    [ "setPrecipitations", "class_climate_data.html#a432102c643a444c3fd661e00b3145ee7", null ],
     [ "setTemperature", "class_climate_data.html#ad3138513ce632b2e28a8f26af1f454d3", null ],
     [ "temperature", "class_climate_data.html#a6dabc642b70fdba53f5f5fce9936d079", null ]
 ];

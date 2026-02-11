@@ -9,6 +9,7 @@ var namespace_skill_action_type =
       [ "kStatic", "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1aeb9af1ba35d0a6f48fd1e6218a4d82c9", null ]
     ] ],
     [ "fromString", "namespace_skill_action_type.html#abc1e846657bd836e013dc878eda0c866", null ],
+    [ "fromString", "namespace_skill_action_type.html#a5e7020a65674c46da0f6d553d7e0e3d6", null ],
     [ "operator<<", "namespace_skill_action_type.html#aa1f4a1ecdf8906d8d02613021b5f2d00", null ],
     [ "toString", "namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa", null ]
 ];

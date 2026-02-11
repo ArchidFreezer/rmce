@@ -25,3 +25,9 @@ const std::optional<CriticalTableType::Type> CriticalTableType::fromString(std::
 
 	return {};
 }
+
+void CriticalTableType::fromString(std::string_view sv, CriticalTableType::Type& type) {
+	std::optional<Type> opt_type = fromString(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for CriticalTableType::Type: " + std::string(sv));
+}

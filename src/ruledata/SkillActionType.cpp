@@ -23,3 +23,10 @@ const std::optional<SkillActionType::Type> SkillActionType::fromString(std::stri
 
 	return {};
 }
+
+
+void SkillActionType::fromString(std::string_view sv, SkillActionType::Type& type) {
+	std::optional<Type> opt_type = fromString(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for SkillActionType::Type: " + std::string(sv));
+}

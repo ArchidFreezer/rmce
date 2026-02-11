@@ -15,3 +15,61 @@ void DatafileParserJson::read(const std::string& filename) {
 	}
 
 }
+
+std::set<SubcategoriedSkillData> DatafileParserJson::parseSkillSetTree(boost::optional<const pt::ptree&> tree) {
+	std::set<SubcategoriedSkillData> datum{};
+	if (tree) {
+		for (const auto& items : tree.get()) {
+			std::string id{ items.second.get<std::string>("id") };
+			boost::optional<std::string> subcategory = items.second.get_optional<std::string>("subcategory");
+			if (subcategory) {
+				datum.insert(factory().subcategoriedSkillData(id, subcategory.get()));
+			} else {
+				datum.insert(factory().subcategoriedSkillData(id));
+			}
+		}
+	}
+	return datum;
+}
+
+const pt::ptree DatafileParserJson::getSkillSetTree(std::set<SubcategoriedSkillData> set) {
+	pt::ptree tree{};
+	for (const auto& item : set) {
+		pt::ptree value_tree{};
+		value_tree.put("id", item.skillData().id());
+		if (item.subcategory()) value_tree.put("subcategory", item.subcategory().value());
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}
+
+std::map<std::string, const LanguageAbility> DatafileParserJson::parseLanguageAbilityMapTree(boost::optional<const pt::ptree&> tree) {
+	std::map<std::string, const LanguageAbility> datum{};
+	if (tree) {
+		for (const auto& items : tree.get()) {
+			std::string language_name{ items.second.get<std::string>("language") };
+			LanguageAbility ability(factory().get<LanguageData>(language_name));
+			boost::optional<int> somantic = items.second.get_optional<int>("somantic");
+			if (somantic) { ability.updateSomanticRanks(somantic.get()); }
+			boost::optional<int> spoken = items.second.get_optional<int>("spoken");
+			if (spoken) { ability.updateSpokenRanks(spoken.get()); }
+			boost::optional<int> written = items.second.get_optional<int>("written");
+			if (written) { ability.updateWrittenRanks(written.get()); }
+			datum.emplace(language_name, ability);
+		}
+	}
+	return datum;
+}
+
+const pt::ptree DatafileParserJson::getLanguageAbilityMapTree(std::map<std::string, const LanguageAbility> map) {
+	pt::ptree tree{};
+	for (const auto& pair : map) {
+		pt::ptree value_tree{};
+		value_tree.put("language", pair.second.languageId());
+		if (pair.second.somantic()) value_tree.put("somantic", pair.second.somantic());
+		if (pair.second.spoken()) value_tree.put("spoken", pair.second.spoken());
+		if (pair.second.written()) value_tree.put("written", pair.second.written());
+		tree.push_back(std::make_pair("", value_tree));
+	}
+	return tree;
+}

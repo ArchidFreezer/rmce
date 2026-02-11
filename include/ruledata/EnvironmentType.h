@@ -64,6 +64,19 @@ namespace EnvironmentType {
 	const std::optional<Feature> feature(std::string_view sv);
 
 	/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @param type reference to set the EnvironmentType::Feature represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid EnvironmentType::Feature
+	 *
+	 * @see toString()
+	 */
+	void fromString(std::string_view sv, EnvironmentType::Feature& type);
+
+	/**
 	 * @brief Get the string representation of the given enum
 	 * @param feature The EnvironmentType::Feature to get the string of
 	 * @return Game display form of the enum value as a string
@@ -114,6 +127,19 @@ namespace EnvironmentType {
 	 * @see toString()
 	 */
 	const std::optional<Terrain> terrain(std::string_view sv);
+
+	/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @param type reference to set the EnvironmentType::Terrain represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid EnvironmentType::Terrain
+	 *
+	 * @see toString()
+	 */
+	void fromString(std::string_view sv, EnvironmentType::Terrain& type);
 
 	/**
 	 * @brief Get the string representation of the given enum
@@ -170,6 +196,19 @@ namespace EnvironmentType {
 	 * @see toString()
 	 */
 	const std::optional<Vegetation> vegetation(std::string_view sv);
+
+	/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @param type reference to set the EnvironmentType::Vegetation represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid EnvironmentType::Vegetation
+	 *
+	 * @see toString()
+	 */
+	void fromString(std::string_view sv, EnvironmentType::Vegetation& type);
 
 	/**
 	 * @brief Get the string representation of the given enum
@@ -229,6 +268,19 @@ namespace EnvironmentType {
 	 * @see toString()
 	 */
 	const std::optional<Water> water(std::string_view sv);
+
+	/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @param type reference to set the EnvironmentType::Water represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid EnvironmentType::Water
+	 *
+	 * @see toString()
+	 */
+	void fromString(std::string_view sv, EnvironmentType::Water& type);
 
 	/**
 	 * @brief Get the string representation of the given enum
