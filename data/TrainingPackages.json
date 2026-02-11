@@ -50,53 +50,53 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_BODY_DEVELOPMENT",
-          "ranks": "2"
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
         },,
         {
-          "skill": "SKILL_STUNNED_MANOEUVREING",
-          "ranks": "2"
+          "id": "SKILL_STUNNED_MANOEUVREING",
+          "value": "2"
         },
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+          "value": "2"
         },,
         {
-          "category": "SKILLCATEGORY_SELF_CONTROL",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
         },,
         {
-          "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+          "value": "2"
         },
       ],
       "category-multi-skill-rank-choices": [
         {
-          "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
-          "max-targets": "1",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+          "num-choices": "1",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
-          "max-targets": "2",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+          "num-choices": "2",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
-          "max-targets": "2",
-          "ranks": "4"
+          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+          "num-choices": "2",
+          "value": "4"
         }
       ],
       "group-category-and-skill-rank-choices": [
         {
-          "group": "SKILLGROUP_WEAPON",
-          "ranks": "2"
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
         },,
         {
-          "group": "SKILLGROUP_WEAPON",
-          "ranks": "1"
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
         },
       ],
       "stat-gains": [
@@ -159,74 +159,74 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_BODY_DEVELOPMENT",
-          "ranks": "1"
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
         },,
         {
-          "skill": "SKILL_FORAGING",
-          "ranks": "1"
+          "id": "SKILL_FORAGING",
+          "value": "1"
         },,
         {
-          "skill": "SKILL_SURVIVAL",
-          "ranks": "1"
+          "id": "SKILL_SURVIVAL",
+          "value": "1"
         },,
         {
-          "skill": "SKILL_CHANNELING",
-          "ranks": "2"
+          "id": "SKILL_CHANNELING",
+          "value": "2"
         },,
         {
-          "skill": "SKILL_CULTURE_LORE",
+          "id": "SKILL_CULTURE_LORE",
           "subcategory": "Local",
-          "ranks": "2"
+          "value": "2"
         },,
         {
-          "skill": "SKILL_REGION_LORE",
+          "id": "SKILL_REGION_LORE",
           "subcategory": "Local",
-          "ranks": "2"
+          "value": "2"
         },,
         {
-          "skill": "SKILL_RELIGION",
+          "id": "SKILL_RELIGION",
           "subcategory": "Own",
-          "ranks": "1"
+          "value": "1"
         },
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "value": "1"
         },,
         {
-          "category": "SKILLCATEGORY_LORE_GENERAL",
-          "ranks": "4"
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
         },,
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-          "ranks": "3"
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "3"
         },
       ],
       "category-multi-skill-rank-choices": [
         {
-          "category": "SKILLCATEGORY_ARMOUR_LIGHT",
-          "max-targets": "1",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "num-choices": "1",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-          "max-targets": "1",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "1",
+          "value": "1"
         }
       ],
       "group-category-and-skill-rank-choices": [
         {
-          "group": "SKILLGROUP_WEAPON",
-          "ranks": "1"
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
         },
       ],
       "spell-list-category-rank-choices": [
         {
-          "max-lists": "1",
-          "ranks": "3",
-          "categories": [
+          "num-choices": "1",
+          "value": "3",
+          "options": [
             "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
           ]
         },
@@ -281,26 +281,26 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_DIAGNOSTICS",
-          "ranks": "2"
+          "id": "SKILL_DIAGNOSTICS",
+          "value": "2"
         },,
         {
-          "skill": "SKILL_SECOND_AID",
-          "ranks": "2"
+          "id": "SKILL_SECOND_AID",
+          "value": "2"
         },,
         {
-          "skill": "SKILL_FIRST_AID",
-          "ranks": "1"
+          "id": "SKILL_FIRST_AID",
+          "value": "1"
         },,
         {
-          "skill": "SKILL_PREPARE_HERBS",
-          "ranks": "1"
+          "id": "SKILL_PREPARE_HERBS",
+          "value": "1"
         },
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "2"
         },
       ]
     },
@@ -335,66 +335,66 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_WEATHER_WATCHING",
-          "ranks": "1"
+          "id": "SKILL_WEATHER_WATCHING",
+          "value": "1"
         },,
         {
-          "skill": "SKILL_PLAY_INSTRUMENT",
+          "id": "SKILL_PLAY_INSTRUMENT",
           "subcategory": "Choice",
-          "ranks": "2"
+          "value": "2"
         },,
         {
-          "skill": "SKILL_REGION_LORE",
+          "id": "SKILL_REGION_LORE",
           "subcategory": "Local",
-          "ranks": "1"
+          "value": "1"
         },,
         {
-          "skill": "Riding",
+          "id": "Riding",
           "subcategory": "Choice",
-          "ranks": "1"
+          "value": "1"
         },
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_ARTISTIC_ACTIVE",
-          "ranks": "3"
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "3"
         },,
         {
-          "category": "SKILLCATEGORY_COMMUNICATIONS",
-          "ranks": "6"
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "6"
         },,
         {
-          "category": "SKILLCATEGORY_INFLUENCE",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
         },,
         {
-          "category": "SKILLCATEGORY_LORE_GENERAL",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
         },,
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "1"
         },,
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
         },
       ],
       "category-multi-skill-rank-choices": [
         {
-          "category": "SKILLCATEGORY_ARTISTIC_ACTIVE",
-          "max-targets": "2",
-          "ranks": "3"
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "2",
+          "value": "3"
         },,
         {
-          "category": "SKILLCATEGORY_COMMUNICATIONS",
-          "max-targets": "3",
-          "ranks": "6"
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "3",
+          "value": "6"
         },,
         {
-          "category": "SKILLCATEGORY_INFLUENCE",
-          "max-targets": "2",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "2",
+          "value": "2"
         },
       ]
     },
@@ -449,67 +449,67 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_FAUNA_LORE",
-          "ranks": "2"
+          "id": "SKILL_FAUNA_LORE",
+          "value": "2"
         },
         {
-          "skill": "SKILL_FLORA_LORE",
-          "ranks": "1"
+          "id": "SKILL_FLORA_LORE",
+          "value": "1"
         },
         {
-          "skill": "SKILL_REGION_LORE",
+          "id": "SKILL_REGION_LORE",
           "subcategory": "Local",
-          "ranks": "1"
+          "value": "1"
         },
         {
-          "skill": "SKILL_READING_TRACKS",
-          "ranks": "1"
+          "id": "SKILL_READING_TRACKS",
+          "value": "1"
         },
         {
-          "skill": "SKILL_TRACKING",
-          "ranks": "1"
+          "id": "SKILL_TRACKING",
+          "value": "1"
         },
         {
-          "skill": "SKILL_STALKING",
-          "ranks": "1"
+          "id": "SKILL_STALKING",
+          "value": "1"
         },
         {
-          "skill": "SKILL_HIDING",
-          "ranks": "1"
+          "id": "SKILL_HIDING",
+          "value": "1"
         }
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_LORE_GENERAL",
-          "ranks": "4"
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
         },
         {
-          "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "1"
         }
       ],
       "category-multi-skill-rank-choices": [
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-          "max-targets": "2",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "2",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-          "max-targets": "3",
-          "ranks": "4"
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "num-choices": "3",
+          "value": "4"
         }
       ],
       "stat-gains": [
@@ -552,42 +552,42 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_CIRCLE_LORE",
-          "ranks": "1"
+          "id": "SKILL_CIRCLE_LORE",
+          "value": "1"
         }
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_LORE_MAGICAL",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_LORE_OBSCURE",
-          "ranks": "3"
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "3"
         }
       ],
       "category-multi-skill-rank-choices": [
         {
-          "category": "SKILLCATEGORY_LORE_MAGICAL",
-          "max-targets": "1",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "1",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_LORE_OBSCURE",
-          "max-targets": "3",
-          "ranks": "3"
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "num-choices": "3",
+          "value": "3"
         },
         {
-          "category": "SKILLCATEGORY_POWER_MANIPULATION",
-          "max-targets": "2",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "2",
+          "value": "2"
         }
       ],
       "spell-list-category-rank-choices": [
         {
-          "max-lists": "1",
-          "ranks": "3",
-          "categories": [
+          "num-choices": "1",
+          "value": "3",
+          "options": [
             "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
             "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
           ]
@@ -649,28 +649,28 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_SCRIBING",
-          "ranks": "1"
+          "id": "SKILL_SCRIBING",
+          "value": "1"
         },
         {
-          "skill": "SKILL_HISTORY",
-          "ranks": "1"
+          "id": "SKILL_HISTORY",
+          "value": "1"
         },
         {
-          "skill": "SKILL_ANTHROPOLOGY",
-          "ranks": "2"
+          "id": "SKILL_ANTHROPOLOGY",
+          "value": "2"
         }
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_LORE_GENERAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
         }
       ],
       "spell-list-ranks": [
         {
-          "spell-list": "SPELLLIST_NOMENIST_CASTING",
-          "ranks": "3",
+          "id": "SPELLLIST_NOMENIST_CASTING",
+          "value": "3",
         }
       ]
     },
@@ -757,53 +757,53 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_FAUNA_LORE",
-          "ranks": "3"
+          "id": "SKILL_FAUNA_LORE",
+          "value": "3"
         },
         {
-          "skill": "SKILL_ANIMAL_HANDLING",
+          "id": "SKILL_ANIMAL_HANDLING",
           "subcategory": "Animal A"
-          "ranks": "2"
+          "value": "2"
         },
         {
-          "skill": "SKILL_ANIMAL_HEALING",
+          "id": "SKILL_ANIMAL_HEALING",
           "subcategory": "Animal A"
-          "ranks": "1"
+          "value": "1"
         },
         {
-          "skill": "SKILL_ANIMAL_MASTERY",
+          "id": "SKILL_ANIMAL_MASTERY",
           "subcategory": "Animal A"
-          "ranks": "1"
+          "value": "1"
         },
         {
-          "skill": "SKILL_ANIMAL_TRAINING",
+          "id": "SKILL_ANIMAL_TRAINING",
           "subcategory": "Animal A"
-          "ranks": "2"
+          "value": "2"
         },
         {
-          "skill": "SKILL_ANIMAL_HANDLING",
+          "id": "SKILL_ANIMAL_HANDLING",
           "subcategory": "Animal B"
-          "ranks": "1"
+          "value": "1"
         },
         {
-          "skill": "SKILL_ANIMAL_HANDLING",
+          "id": "SKILL_ANIMAL_HANDLING",
           "subcategory": "Animal C"
-          "ranks": "1"
+          "value": "1"
         },
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_LORE_GENERAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
-          "ranks": "3"
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "3"
         }
       ],
       "lifestyle-skills": [
         {
-          "skill": "SKILL_ANIMAL_HANDLING"
+          "id": "SKILL_ANIMAL_HANDLING"
         }
       ]
     },
@@ -898,6 +898,111 @@
       "caster-prof-only": "false",
       "lifestyle": "false",
       "time": "57",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Rare Book (15 gp or less value)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Lore Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Spectacles"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Lore Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Metal scroll case"
+        },
+        {
+          "order": "7",
+          "chance": "40",
+          "value": "Lore Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "8",
+          "chance": "40",
+          "value": "Stationary set (20 paper, 5 quills, 2 jars of ink)"
+        },
+        {
+          "order": "9",
+          "chance": "30",
+          "value": "Lore Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "10",
+          "chance": "0",
+          "value": "Lore Book (+5 non-magic to a specific lore)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SCRIBING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_DIPLOMACY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RESEARCH",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "2",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Pillager",
@@ -958,6 +1063,114 @@
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "104",
+      "starting-money-change": "-10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Daily Item III (3rd level spell)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Spell Adder (+2)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Map of the Region (+20 to Region Lore)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Daily Item II (2nd level spell)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Spyglass"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Spell Adder (+1)"
+        },
+        {
+          "order": "7",
+          "chance": "60",
+          "value": "Daily I item (1st level spell)"
+        },
+        {
+          "order": "8",
+          "chance": "30",
+          "value": "Compact cooking set"
+        },
+        {
+          "order": "9",
+          "chance": "10",
+          "value": "Riding animal"
+        },
+        {
+          "order": "10",
+          "chance": "0",
+          "value": "Weatherproof clothes"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "num-choices": "3",
+          "value": "3"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_TRAVELER_S_WAYS",
+          "value": "3",
+        }
+      ]
     },
     {
       "name": "Siege Engineer",
@@ -1095,52 +1308,52 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_OBSERVATION",
-          "ranks": "1"
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
         },
         {
-          "skill": "SKILL_ORIENTEERING",
-          "ranks": "1"
+          "id": "SKILL_ORIENTEERING",
+          "value": "1"
         },
         {
-          "skill": "SKILL_USING_PREPARED_HERBS",
-          "ranks": "1"
+          "id": "SKILL_USING_PREPARED_HERBS",
+          "value": "1"
         }
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_LORE_GENERAL",
-          "ranks": "3"
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
         },
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
         }
       ],
       "group-category-and-skill-rank-choices": [
         {
-          "group": "SKILLGROUP_WEAPON",
-          "ranks": "1"
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
         }
       ],
       "category-multi-skill-rank-choices": [
         {
-          "category": "SKILLCATEGORY_LORE_GENERAL",
-          "max-targets": "3",
-          "ranks": "3"
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "3",
+          "value": "3"
         },
         {
-          "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-          "max-targets": "2",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "2",
+          "value": "2"
         }
       ],
     },
@@ -1210,34 +1423,34 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_STONE_LORE",
-          "ranks": "2"
+          "id": "SKILL_STONE_LORE",
+          "value": "2"
         },
         {
-          "skill": "SKILL_EVALUATE_STONE",
-          "ranks": "3"
+          "id": "SKILL_EVALUATE_STONE",
+          "value": "3"
         },
         {
-          "skill": "SKILL_STONE_CRAFTS",
+          "id": "SKILL_STONE_CRAFTS",
           "subcategory": "Gem cutting",
-          "ranks": "2"
+          "value": "2"
         }
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_LORE_TECHNICAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
         }
       ],
       "spell-list-ranks": [
         {
-          "spell-list": "SPELLLIST_CRYSTALIST_CASTING",
-          "ranks": "3",
+          "id": "SPELLLIST_CRYSTALIST_CASTING",
+          "value": "3",
         }
       ],
       "lifestyle-skills": [
         {
-          "skill": "SKILL_STONE_LORE"
+          "id": "SKILL_STONE_LORE"
         }
       ]
     },
@@ -1332,57 +1545,57 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_REALITY_AWARENESS",
-          "ranks": "3"
+          "id": "SKILL_REALITY_AWARENESS",
+          "value": "3"
         },
         {
-          "skill": "SKILL_PLANAR_LORE",
-          "ranks": "2"
+          "id": "SKILL_PLANAR_LORE",
+          "value": "2"
         },
         {
-          "skill": "SKILL_DEMON_DEVIL_LORE",
-          "ranks": "3"
+          "id": "SKILL_DEMON_DEVIL_LORE",
+          "value": "3"
         },
         {
-          "skill": "SKILL_XENO_LORE",
-          "ranks": "3"
+          "id": "SKILL_XENO_LORE",
+          "value": "3"
         },
         {
-          "skill": "SKILL_SUMMONING",
-          "ranks": "3"
+          "id": "SKILL_SUMMONING",
+          "value": "3"
         }
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_AWARENESS_SENSES",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_COMMUNICATIONS",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_INFLUENCE",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_LORE_MAGICAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_LORE_OBSCURE",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_POWER_MANIPULATION",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "value": "1"
         }
       ],
       "language-choices": [
         {
-          "max-langauges": "xxx",
-          "ranks": "2",
-          "languages": [
+          "num-choices": "xxx",
+          "value": "2",
+          "options": [
             "Demonic I",
             "Demonic II"
           ]
@@ -1390,9 +1603,9 @@
       ],
       "spell-list-rank-choices": [
         {
-          "max-lists": "1",
-          "ranks": "3",
-          "spell-lists": [
+          "num-choices": "1",
+          "value": "3",
+          "options": [
             "SPELLLIST_ENTITY_SUMMONS",
             "SPELLLIST_PLANAR_SUMMONS"
           ]
@@ -1400,8 +1613,8 @@
       ],
       "lifestyle-skills": [
         {
-          "skill": "SKILL_DEMON_DEVIL_LORE",
-          "skill": "SKILL_XENO_LORE"
+          "id": "SKILL_DEMON_DEVIL_LORE",
+          "id": "SKILL_XENO_LORE"
         }
       ]
     },
@@ -1450,6 +1663,87 @@
       "caster-prof-only": "true",
       "lifestyle": "true",
       "time": "56",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Large Catalyst Case (9d10 herbal catalysts)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Medium Catalyst Case (5d10 herbal catalysts)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Clip Necklace"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Small Catalyst Case (3d10 herbal catalysts)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Small clay flower pots (6)"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Clip Broach"
+        },
+        {
+          "order": "7",
+          "chance": "40",
+          "value": "Gardening kit"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Bag of Seeds (5d10 seeds to herbal catalysts)"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Catalysts (1 gp worth of catalysts)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_HORTICULTURE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_FLORA_LORE",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_HERB_LORE",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_HERBALIST_CASTING",
+          "value": "3",
+        }
+      ],
+      "lifestyle-skills": [
+        {
+          "id": "SKILL_FLORA_LORE",
+        },
+        {
+          "id": "SKILL_HERB_LORE",
+        }
+      ]
     },
     {
       "name": "Inquisitor",
@@ -1710,33 +2004,33 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_SKINNING",
-          "ranks": "1"
+          "id": "SKILL_SKINNING",
+          "value": "1"
         },
         {
-          "skill": "SKILL_FAUNA_LORE",
-          "ranks": "2"
+          "id": "SKILL_FAUNA_LORE",
+          "value": "2"
         },
         {
-          "skill": "SKILL_HUNTING",
-          "ranks": "2"
+          "id": "SKILL_HUNTING",
+          "value": "2"
         }
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_LORE_GENERAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
         }
       ],
       "spell-list-ranks": [
         {
-          "spell-list": "SPELLLIST_CORPIST_CASTING",
-          "ranks": "3",
+          "id": "SPELLLIST_CORPIST_CASTING",
+          "value": "3",
         }
       ],
       "lifestyle-skills": [
         {
-          "skill": "SKILL_FAUNA_LORE"
+          "id": "SKILL_FAUNA_LORE"
         }
       ]
     },
@@ -1749,6 +2043,151 @@
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "30",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Divination Aid (+15 to divination)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Ritual Focus (+ 10 to one class of ritual)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Daily I item (casting 2nd level spell)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Ritual Focus (+5 to one class of ritual)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Incense (10 doses)"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Perfume (5 doses)"
+        },
+        {
+          "order": "7",
+          "chance": "40",
+          "value": "Lodestone"
+        },
+        {
+          "order": "8",
+          "chance": "40",
+          "value": "Silver mirror"
+        },
+        {
+          "order": "9",
+          "chance": "20",
+          "value": "Favourable reputation"
+        },
+        {
+          "order": "10",
+          "chance": "30",
+          "value": "Disreputable reputation"
+        },
+        {
+          "order": "11",
+          "chance": "0",
+          "value": "Divination Aid ( +5 to divination)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_TIME_SENSE",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_PROPAGANDA",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TEACHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SITUATIONAL_AWARENESS",
+          "subcategory": "Ritual",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_MEDITATION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_DIVINATION",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "2",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_CRAFTS",
+          "num-choices": "2",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "3",
+          "value": "6"
+        }
+      ],
+      "lifestyle-skills": [
+        {
+          "id": "SKILL_MAGIC_RITUAL",
+        },
+        {
+          "id": "SKILL_SPELL_MASTERY",
+        }
+      ]
     },
     {
       "name": "Shaguk Sh'rmauk-ënd",
@@ -1806,77 +2245,77 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_SENSE_AMBUSH",
-          "ranks": "2"
+          "id": "SKILL_SENSE_AMBUSH",
+          "value": "2"
         },
         {
-          "skill": "SKILL_POISON_LORE",
-          "ranks": "2"
+          "id": "SKILL_POISON_LORE",
+          "value": "2"
         },
         {
-          "skill": "SKILL_FAUNA_LORE",
+          "id": "SKILL_FAUNA_LORE",
           "subcategory": "Spiders",
-          "ranks": "3"
+          "value": "3"
         },
         {
-          "skill": "SKILL_ANIMAL_HANDLING",
+          "id": "SKILL_ANIMAL_HANDLING",
           "subcategory": "Spiders",
-          "ranks": "3"
+          "value": "3"
         },
         {
-          "skill": "SKILL_ANIMAL_MASTERY",
+          "id": "SKILL_ANIMAL_MASTERY",
           "subcategory": "Spiders",
-          "ranks": "3"
+          "value": "3"
         },
         {
-          "skill": "SKILL_USING_REMOVING_POISON",
-          "ranks": "3"
+          "id": "SKILL_USING_REMOVING_POISON",
+          "value": "3"
         },
         {
-          "skill": "SKILL_PREPARE_POISONS",
-          "ranks": "1"
+          "id": "SKILL_PREPARE_POISONS",
+          "value": "1"
         }
       ],
       "skill-rank-choices": [
         {
-          "ranks": "3",
+          "value": "3",
           "skills": [
             {
-              "skill": "SKILL_SPINNING",
+              "id": "SKILL_SPINNING",
             },
             {
-              "skill": "SKILL_WEAVING",
+              "id": "SKILL_WEAVING",
             }
           ]
         },
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_LORE_GENERAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_LORE_TECHNICAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "1"
         }
       ],
       "spell-list-ranks": [
         {
-          "spell-list": "SPELLLIST_ARACHNAMANCY",
-          "ranks": "3",
+          "id": "SPELLLIST_ARACHNAMANCY",
+          "value": "3",
         }
       ],
       "lifestyle-skills": [
         {
-          "skill": "SKILL_FAUNA_LORE",
+          "id": "SKILL_FAUNA_LORE",
           "subcategory": "Spiders"
         },
         {
-          "skill": "SKILL_ANIMAL_HANDLING",
+          "id": "SKILL_ANIMAL_HANDLING",
           "subcategory": "Spiders"
         }
       ]
@@ -2081,57 +2520,57 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_ATTUNEMENT",
-          "ranks": "1"
+          "id": "SKILL_ATTUNEMENT",
+          "value": "1"
         },
         {
-          "skill": "SKILL_READ_RUNES",
-          "ranks": "1"
+          "id": "SKILL_READ_RUNES",
+          "value": "1"
         }
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_LORE_MAGICAL",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_LORE_TECHNICAL",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_POWER_AWARENESS",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
         }
       ],
       "category-multi-skill-rank-choices": [
         {
-          "category": "SKILLCATEGORY_LORE_MAGICAL",
-          "max-targets": "1",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "1",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_LORE_TECHNICAL",
-          "max-targets": "1",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "num-choices": "1",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_POWER_MANIPULATION",
-          "max-targets": "1",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "1",
+          "value": "1"
         }
       ],
       "spell-list-category-rank-choices": [
         {
-          "max-lists": "2",
-          "ranks": "6",
-          "categories": [
+          "num-choices": "2",
+          "value": "6",
+          "options": [
             "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE"
           ]
         }
       ],
       "lifestyle-groups": [
         {
-          "group": "SKILLGROUP_LORE",
+          "id": "SKILLGROUP_LORE",
         }
       ]
     },
@@ -2144,6 +2583,104 @@
       "caster-prof-only": "false",
       "lifestyle": "false",
       "time": "105",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Favour from a professor"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Lore Book (+15 non-magic to one specific lore)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Rival student"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Lore Book (+10 non-magic to one specific lore)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Spell Adder (+2)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Daily III item (2nd level spell)"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Reputation in local marketplace (good or bad)"
+        },
+        {
+          "order": "8",
+          "chance": "30",
+          "value": "Daily II item (1st level spell)"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Friendly contact at local pub"
+        },
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_RESEARCH",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "4",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "num-choices": "1",
+          "value": "2"
+        }
+      ],
+      "spell-list-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "3",
+          "options": [
+            "SPELLLIST_GUILDCRAFT_MASTERY",
+            "SPELLLIST_TRAVELER_S_WAYS"
+          ]
+        }
+      ]
     },
     {
       "name": "Shirriff",
@@ -2286,10 +2823,106 @@
       "flavour-text": "There will be a few side effects, such as hair loss, abdominal cramping, diarrhea, and dizziness; but this should cure your seizures.",
       "description": "The potioner is a magical apothecary. The potioner uses spells to craft potions of healing, magic, and poison. The potioner may enhance normal herbs for general use as tonics and liniments or he may produce drugs that cloud the mind of the imbiber. Like an apothecary, the potioner attempts to draw the essence out of natural herbs to capture them in a bottle, but it is a rare potioner who manages by such sciences to create herbal remedies better than the simple animists of the wild.",
       "qualifier": "A total of 6 ranks in Alchemy and Biochemistry [-3 points]",
+      "notes": "May choose to develop Brewing Lore or Liquid/Gas Skills as an Own Realm TP spell list as long as the character does not develop another lifestyle training package.",
       "book": "Essence Companion",
       "caster-prof-only": "false",
       "lifestyle": "true",
       "time": "39",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "20",
+          "value": "Small Alchemy set (beakers, burners,, etc.)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Potion (5th level spell)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Healing Potion (Heals 2-20)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Poison (5th level circulatory)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Potion (3rd level spell)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Healing Potion (Heals 1-10)"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Poison (3rd level circulatory)"
+        },
+        {
+          "order": "8",
+          "chance": "40",
+          "value": "Metal vials (3)"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Lore Book (+10 to non-magic lore)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_HERB_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_POISON_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ALCHEMY",
+          "value": "2"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "1",
+          "skills": [
+            {
+              "id": "SKILL_PREPARE_HERBS"
+            },
+            {
+              "id": "SKILL_PREPARE_POISONS"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
+        }
+      ],
+      "spell-list-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "3",
+          "options": [
+            "SPELLLIST_BREWING_LORE",
+            "SPELLLIST_LIQUID_GAS_SKILLS"
+          ]
+        }
+      ],
+      "lifestyle-skills": [
+        {
+          "id": "SKILL_ALCHEMY",
+        }
+      ]
     },
     {
       "name": "Shieldsman",
@@ -2401,66 +3034,66 @@
       ],
       "skill-ranks": [
         {
-          "skill": "SKILL_RESEARCH",
-          "ranks": "1"
+          "id": "SKILL_RESEARCH",
+          "value": "1"
         }
       ],
       "category-ranks": [
         {
-          "category": "SKILLCATEGORY_LORE_MAGICAL",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_POWER_AWARENESS",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "1"
         },
         {
-          "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_URBAN",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
         }
       ],
       "category-multi-skill-rank-choices": [
         {
-          "category": "SKILLCATEGORY_LORE_MAGICAL",
-          "max-targets": "2",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "2",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
-          "max-targets": "2",
-          "ranks": "2"
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
         },
         {
-          "category": "SKILLCATEGORY_URBAN",
-          "max-targets": "1",
-          "ranks": "1"
+          "id": "SKILLCATEGORY_URBAN",
+          "num-choices": "1",
+          "value": "1"
         }
       ],
       "skill-rank-choices": [
         {
-          "ranks": "3",
+          "value": "3",
           "skills": [
             {
-              "skill": "SKILL_ATTUNEMENT",
+              "id": "SKILL_ATTUNEMENT",
             },
             {
-              "skill": "SKILL_READ_RUNES",
+              "id": "SKILL_READ_RUNES",
             }
           ]
         }
       ],
       "spell-list-ranks": [
         {
-          "spell-list": "SPELLLIST_GUILDCRAFT_MASTERY",
-          "ranks": "3",
+          "id": "SPELLLIST_GUILDCRAFT_MASTERY",
+          "value": "3",
         }
       ],
       "stat-gains": [
@@ -2544,6 +3177,122 @@
       "caster-prof-only": "false",
       "lifestyle": "false",
       "time": "114",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Magic Tome (4d10 total spell levels)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Source Book on Magic (+10 Research; one topic)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Source Book on Magic (+10 Research; one topic)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Source Book on Magic (+5 Research; one topic)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Spell Adder (+2)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Daily II item (casting 3rd level spell)"
+        },
+        {
+          "order": "7",
+          "chance": "40",
+          "value": "Spectacles"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Spell Adder (+1)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_TIME_SENSE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TEACHING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ATTUNEMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_READ_RUNES",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RESEARCH",
+          "value": "4"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "4"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "lifestyle-skills": [
+        {
+          "id": "SKILL_RESEARCH",
+        }
+      ]
     },
     {
       "name": "Court Magician",
