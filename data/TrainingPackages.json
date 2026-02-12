@@ -5460,6 +5460,135 @@
       "book": "Mentalism Companion",
       "lifestyle": "true",
       "time": "171",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "70",
+          "value": "Access to a library or other collection of manuscript"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Book (+10 to one lore)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Book (+10 to one lore)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Friends with a library curator or archivist"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Book (+10 to one specific General or Obscure Lore)"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Knowledge of an artifact (history, powers, and/or location; GM choice)"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Knowledge of a secret about the local region (GM discretion)"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Consulted by one or more personages of importance in local region"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Writing implements and a journal"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "2",
+          "skills": [
+            {
+              "id": "SKILL_SCRIBING"
+            },
+            {
+              "id": "SKILL_CALLIGRAPHY"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "4",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_SPECIALISED",
+          "num-choices": "1",
+          "value": "2"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+          "id": "SPELLLIST_DELVING_WAYS",
+          "value": "3"
+        },
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+          "id": "SPELLLIST_KNOWLEDGE_MASTERY",
+          "value": "3"
+        }
+      ]
+      "stat-gains": [
+        "Memory"
+      ],
     },
     {
       "name": "Mariner",
