@@ -4847,9 +4847,133 @@
       "name": "Oracle",
       "flavour-text": "He was a small man, of middle years and without outward sign of importance. But when he entered the hall, his simple sandals slapping on the tiles, my king stood and bowed before him. I knew at that moment that we had found the Oracle, and that our journey was complete. I learned later that it had only just begun.",
       "description": "Trained in the divinatory arts and in history, the Oracle's impartial advice is sought by the great and the lowly from near and far to pierce the veil and reveal the future. Ambiguous prophecies, obtained by esoteric methods, must be interpreted by the querent, thus ensuring the Oracle's legendary accuracy.",
+      "notes": [
+        "Knowledge of secrets should either relate to a query about some matter that the notable has made to the Oracle (in which case the Oracle will have knowledge of the query and the result of the divination), or it could take the form of astrological data about some matter which the notable believes to be correct.",
+        "Future Visions and/or Starlore lists may be developed as Base lists."
+      ],
       "book": "Mentalism Companion",
       "lifestyle": "true",
       "time": "83",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Knowledge of unexplained portent/prophecy concerning a person or place"
+        },
+        {
+          "order": "2",
+          "chance": "60",
+          "value": "Book (+10 nm to Dream Lore and Divination Lore)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Divinatory apparatus either set of Tarot cards or crystal ball etc. (+10 nonmagical, bonus to Divinations) (GM choice)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Astrological almanacs covering five years"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Knows a secret about an important person in the local region"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Knows a secret about a person of importance from beyond the local region"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Divinatory apparatus: set of Tarot cards, crystal ball, etc. (+20 nonmagical, bonus to Divinations)"
+        },
+        {
+          "order": "8",
+          "chance": "30",
+          "value": "Astrological almanacs covering ten years"
+        },
+        {
+          "order": "9",
+          "chance": "20",
+          "value": "Access to library/collection of historical, divinatory, or astrological records"
+        },
+        {
+          "order": "10",
+          "chance": "0",
+          "value": "An astrological almanac covering one year"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_DIVINATION",
+          "value": "3"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "2",
+          "skills": [
+            {
+              "id": "SKILL_TALE_TELLING"
+            },
+            {
+              "id": "SKILL_POETIC_IMPROVISATION"
+            }
+          ]
+        },
+        {
+          "value": "2",
+          "skills": [
+            {
+              "id": "SKILL_DREAM_LORE"
+            },
+            {
+              "id": "SKILL_DIVINATION_LORE"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "3"
+        }
+      ],
+      "spell-list-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "2",
+          "options": [
+            "SPELLLIST_FUTURE_VISIONS",
+            "SPELLLIST_STARLORE"
+          ]
+        }
+      ],
+      "stat-gains": [
+        "Presence",
+      ]
     },
     {
       "name": "School Master",
@@ -5036,6 +5160,119 @@
       "book": "Mentalism Companion",
       "lifestyle": "true",
       "time": "147",
+      "starting-money-change": "10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Superior medical kit (+20 nm to First Aid)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Book (+10 nm to Diagnosis or First Aid)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Book (+10 nm to Second Aid or Surgery)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Friends with person of importance in local region"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Owed a favour by person of importance in local region"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Medical supplies (value 2d10 gp)"
+        },
+        {
+          "order": "7",
+          "chance": "10",
+          "value": "Prepared medications"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Vow (moral obligation to patients) "
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_HERB_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_POISON_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ALCHEMY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ANATOMY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_FIRST_AID",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_USING_PREPARED_HERBS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_DIAGNOSTICS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SECOND_AID",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SURGERY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_PREPARE_HERBS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HYPNOSIS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MIDWIFERY",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "3"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_MEDICAL_LAW",
+          "value": "2"
+        },
+        {
+          "id": "SPELLLIST_PHYSICKS",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Executioner",
@@ -5056,9 +5293,122 @@
       "name": "Protégé",
       "flavour-text": "When I first met master Grimaud and his pupil, I thought the boy was his son, or perhaps his younger brother; I would have guessed them twins if their ages had been commensurate. They wore the same style gown, cut their hair the same way, walked the same, spoke the same, held the same opinions, and even cast their spells in the same signal manner. I would have laughed (I assure you, I almost did) but the boy showed such formidable apprehension of his master's art as to be truly remarkable. He is truly gifted. The boy will prove another Grimaud before you know it. With luck he might even improve upon the original....",
       "description": "The sole or star pupil of a learned spell user, the Protégé gains deep knowledge of a chosen area of magic, and a thorough understanding of the magical arts. Days spent in learning are repaid later with services rendered in assisting the mentor in his research and goals. Even if student surpasses master, or later rejects the ideals espoused by the mentor to follow another path, this long nurturing will shape and mold the Protégé's world-view and lifestyle for the rest of his career.",
+      "notes": [
+        "The last Special 'benefit' should ALWAYS be taken.",
+        "Secret knowledge can range from knowledge of the powers/locations of an artifact/person/herb/etc., to a special spell researched by the mentor. The exact nature will depend on the focus of the mentor and the apprentice.",
+        "The powerful enemy(s) could be either an enemy of the mentor who is hostile to the apprentice (by association) or could be the mentor himself (if the apprentice has renounced the ideals that the mentor serves).",
+        "The equipment can be considered to be either gifts from the mentor or items acquired while performing tasks for the mentor.",
+        "The spell lists available should be chosen with GM consent. The Spell Mastery skills should be assigned to the lists learned with this package to represent the special focus on those spells.",
+        "TP Spell lists should usually be chosen from those normally available to the character. Access should not be given to Training Package Spell Lists which are attached to specific training packages."
+      ],
       "book": "Mentalism Companion",
       "lifestyle": "true",
       "time": "105",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Friends with an ally of mentor"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "A powerful enemy/rival"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Book (+10 nm to a specific lore skill)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Potion (one dose, 5th level spell)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Daily I item (3rd level spell)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Secret knowledge"
+        },
+        {
+          "order": "7",
+          "chance": "40",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Spell adder (+2)"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Lifelong obligation to mentor"
+        },
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SPELL_MASTERY",
+          "subcategory": "List from package",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "2",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "1",
+          "value": "2"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "type": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+          "num-choices": "3",
+          "value": "6",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+          ]
+        }
+      ],
+      "stat-gains": [
+        "Realm"
+      ]
     },
     {
       "name": "Sage",
@@ -5075,6 +5425,159 @@
       "book": "Mentalism Companion",
       "lifestyle": "true",
       "time": "144",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Navigational instruments, e.g., a sextant, astrolabe, compass (+10 nm to Navigation)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Spyglass (+10 nm to sight-based distance Awareness)"
+        },
+        {
+          "order": "3",
+          "chance": "60",
+          "value": "Detailed chart of a local maritime region"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Detailed chart of a distant maritime region"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Chart (not detailed) of the known seas"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Close friends with another seafarer of equal rank"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Close friends with another seafarer of higher rank"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Navigational instruments (+20 nm to Navigation)"
+        },
+        {
+          "order": "9",
+          "chance": "20",
+          "value": "Spyglass (+20 to sight-based Awareness)"
+        },
+        {
+          "order": "10",
+          "chance": "0",
+          "value": "Navigational instruments (e.g., a sextant, astrolabe, compass etc.)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CLIMBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ROPE_MASTERY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DRAFTING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_LEADERSHIP",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SAILING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_BOAT_PILOT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CARTOGRAPHY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_NAVIGATION",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "2",
+          "skills": [
+            {
+              "id": "SKILL_SWIMMING"
+            },
+            {
+              "id": "SKILL_ROWING"
+            }
+          ]
+        },
+        {
+          "value": "1",
+          "skills": [
+            {
+              "id": "SKILL_STAR_GAZING"
+            },
+            {
+              "id": "SKILL_WEATHER_WATCHING"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "id": "SPELLLIST_SAILING_MASTERY",
+          "value": "2"
+        },
+        {
+          "id": "SPELLLIST_SEA_MASTERY",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Romantic",
