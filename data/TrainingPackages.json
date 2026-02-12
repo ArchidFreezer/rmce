@@ -664,6 +664,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_NOMENIST_CASTING",
           "value": "3"
         }
@@ -903,6 +904,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_CHARADES",
           "value": "3"
         }
@@ -1019,6 +1021,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_DREAM_TRAVEL",
           "value": "3"
         }
@@ -1199,9 +1202,6 @@
       "flavour-text": "We are gathered here today to witness a holy event.",
       "description": "Ministers are responsible for the teaching within a religion. They are some of the most versed students of the doctrine and teachings of their religion that can be found. They spend their time sharing their thoughts with others of their own religion, and inviting all to attend their uplifting sermons.",
       "qualifier": "At least 10 ranks in Religion [-3 points]",
-      "notes": [
-        "Proselytizing may be developed as an own realm open list regardless of the caster's chosen realm"
-      ],
       "book": "Channeling Companion",
       "lifestyle": "false",
       "time": "63",
@@ -1303,6 +1303,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "id": "SPELLLIST_PROSELYTIZING",
           "value": "2"
         }
@@ -1457,6 +1458,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_TRAVELER_S_WAYS",
           "value": "3",
         }
@@ -1818,6 +1820,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_CRYSTALIST_CASTING",
           "value": "3"
         }
@@ -1833,9 +1836,6 @@
       "flavour-text": "Gather the assembly, there are important matters I must discuss with them.",
       "description": "A Chancellor handles the administrative affairs of a religion. He is also a spiritual leader of a congregation of believers. The Chancellor's job is to provide support and inspiration to the followers of his religion. He also handles and presides over many of the religion's ceremonies. Leaving the actual teaching to ministers, a Chancellor handles the major decisions that a religion has to face.",
       "qualifier": "At least 12 ranks in Religion [-4 points]",
-      "notes": [
-        "May develop Ceremonies spell list as an own realm open spell list if desirired"
-      ],
       "book": "Channeling Companion",
       "lifestyle": "false",
       "time": "64",
@@ -1936,6 +1936,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "id": "SPELLLIST_CEREMONIES",
           "value": "2"
         }
@@ -2092,6 +2093,7 @@
       ],
       "spell-list-rank-choices": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "num-choices": "1",
           "value": "3",
           "options": [
@@ -2111,9 +2113,6 @@
       "name": "Missionary",
       "flavour-text": "The next house will be the one.",
       "description": "The missionary is a peaceful emissary sent into far away lands to proselytize and convert. They travel a great deal, and teach many people in their journeys. While traveling, they encounter many different types of people and cultures. Many ignore the missionary, while others are searching for something that he might have to offer them.",
-      "notes": [
-        "Proselytizing may be developed as an open list regardless of the caster's chosen realm"
-      ],
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "149",
@@ -2241,6 +2240,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "id": "SPELLLIST_PROSELYTIZING",
           "value": "3"
         }
@@ -2354,6 +2354,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_HERBALIST_CASTING",
           "value": "3"
         }
@@ -2553,9 +2554,6 @@
       "name": "Witch",
       "flavour-text": "Let them scorn and scoff. I will turn their precious homeland into a swamp and a wasteland.",
       "description": "A Witch is a Channeler that usually stays away from civilized society as a recluse that only leaves his or her home with definite goals in mind. A Witch often has a Demon as his Channeling source of power. Witches are in contact with Demons or other supernatural creatures often, for their own hidden and questionable purposes.",
-      "notes": [
-        "Liquid/Gas Skills and Nature Domination may be developed as an open list regardless of the caster's chosen realm"
-      ],
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "162",
@@ -2691,10 +2689,12 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "id": "SPELLLIST_LIQUID_GAS_SKILLS",
           "value": "2"
         },
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "id": "SPELLLIST_NATURE_DOMINATION",
           "value": "3"
         }
@@ -2864,6 +2864,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_CORPIST_CASTING",
           "value": "3"
         }
@@ -3142,6 +3143,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_ARACHNAMANCY",
           "value": "3"
         }
@@ -3321,6 +3323,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_ANIMAL_BONDING",
           "value": "3"
         }
@@ -3420,10 +3423,12 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_DREAM_LAW",
           "value": "2"
         },
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_DREAM_LORE",
           "value": "2"
         }
@@ -3447,9 +3452,6 @@
       "name": "Theurgist",
       "flavour-text": "The wounded men! Do not retreat without bringing one of the wounded with you!",
       "description": "A Theurgist is the battlefield medic of religious troops. They normally travel with the regular troops and are sometimes even part of them. Many standing religious armies have at least two or three of these 'miracle workers' within their ranks, sometimes with as many as one per unit. They are the fighting healers, using their talents out on the battlefield to help those who would otherwise not survive the trip to the infirmary.",
-      "notes": [
-        "Concussion's Ways, Battlefield Healing and/or Holy Defences may be developed as an open list regardless of the caster's chosen realm"
-      ],
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "116",
@@ -3543,12 +3545,14 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "id": "SPELLLIST_CONCUSSION_S_WAYS",
           "value": "3"
         }
       ],
       "spell-list-rank-choices": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "num-choices": "1",
           "value": "3",
           "options": [
@@ -3820,6 +3824,7 @@
       ],
       "spell-list-category-rank-choices": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "num-choices": "2",
           "value": "6",
           "options": [
@@ -3931,6 +3936,7 @@
       ],
       "spell-list-rank-choices": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "num-choices": "1",
           "value": "3",
           "options": [
@@ -3951,9 +3957,6 @@
       "name": "Medic",
       "flavour-text": "This is going to hurt me as much as it does you.",
       "description": "Trained in the use of herbs, first aid, and the magic of his deity, the Medic has learned healing in many forms. He is often found in the temple, in a battle or on a mission to defend and watch over anyone that his religion asks to be protected and healed.",
-      "notes": [
-        "Concussion's Ways may be developed as an open list regardless of the caster's chosen realm."
-      ],
       "book": "Channeling Companion",
       "lifestyle": "false",
       "time": "51",
@@ -4050,6 +4053,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "id": "SPELLLIST_CONCUSSION_S_WAYS",
           "value": "3"
         }
@@ -4126,9 +4130,6 @@
       "flavour-text": "Please leave me now, I must be alone to commune with my deity",
       "description": "A medium works towards becoming a spiritual link between himself and his deity. He claims to know the will of his deity on many subjects. The medium is adept at all kinds of trances, and spends much time lost in his own world of meditation.",
       "qualifier": "At least 10 ranks of skills in the Self Control skill category [-3 points]",
-      "notes": [
-        "Holy Trances may be developed as an own realm open list regardless of the caster's chosen realm"
-      ],
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "127",
@@ -4219,6 +4220,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "id": "SPELLLIST_HOLY_TRANCES",
           "value": "2"
         }
@@ -4273,9 +4275,6 @@
       "flavour-text": "There will be a few side effects, such as hair loss, abdominal cramping, diarrhea, and dizziness; but this should cure your seizures.",
       "description": "The potioner is a magical apothecary. The potioner uses spells to craft potions of healing, magic, and poison. The potioner may enhance normal herbs for general use as tonics and liniments or he may produce drugs that cloud the mind of the imbiber. Like an apothecary, the potioner attempts to draw the essence out of natural herbs to capture them in a bottle, but it is a rare potioner who manages by such sciences to create herbal remedies better than the simple animists of the wild.",
       "qualifier": "A total of 6 ranks in Alchemy and Biochemistry [-3 points]",
-      "notes": [
-        "May choose to develop Brewing Lore or Liquid/Gas Skills as an Own Realm TP spell list as long as the character does not develop another lifestyle training package.",
-      ],
       "book": "Essence Companion",
       "lifestyle": "true",
       "time": "39",
@@ -4361,6 +4360,7 @@
       ],
       "spell-list-rank-choices": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "num-choices": "1",
           "value": "3",
           "options": [
@@ -4535,6 +4535,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_GUILDCRAFT_MASTERY",
           "value": "3"
         }
@@ -4669,10 +4670,12 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_HOURI_S_BEGUILEMENT",
           "value": "2"
         },
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_HOURI_S_BEGUILEMENT",
           "value": "2"
         }
@@ -4885,7 +4888,7 @@
       "description": "Trained in the divinatory arts and in history, the Oracle's impartial advice is sought by the great and the lowly from near and far to pierce the veil and reveal the future. Ambiguous prophecies, obtained by esoteric methods, must be interpreted by the querent, thus ensuring the Oracle's legendary accuracy.",
       "notes": [
         "Knowledge of secrets should either relate to a query about some matter that the notable has made to the Oracle (in which case the Oracle will have knowledge of the query and the result of the divination), or it could take the form of astrological data about some matter which the notable believes to be correct.",
-        "Future Visions and/or Starlore lists may be developed as Base lists."
+        "Future Visions and/or Starlore lists may be developed as Base lists if appropriate to the profession."
       ],
       "book": "Mentalism Companion",
       "lifestyle": "true",
@@ -4999,6 +5002,7 @@
       ],
       "spell-list-rank-choices": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "num-choices": "1",
           "value": "2",
           "options": [
@@ -5301,10 +5305,12 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_MEDICAL_LAW",
           "value": "2"
         },
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_PHYSICKS",
           "value": "2"
         }
@@ -5438,7 +5444,8 @@
           "options": [
             "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
             "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
-            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+            "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS"
           ]
         }
       ],
@@ -5606,10 +5613,12 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_SAILING_MASTERY",
           "value": "2"
         },
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_SEA_MASTERY",
           "value": "2"
         }
@@ -5760,9 +5769,6 @@
       "name": "Protector",
       "flavour-text": "Demons? You'd better let me handle this.",
       "description": "Protectors are holy warriors that are sent into the world by their church with the specific mission of protecting people from one specific sort of creaturs (Demons, Elementals, etc.). They will hunt this type of creature down with a fanatical zeal, and stop at nothing to see these creatures erased from the land.",
-      "notes": [
-        "The Hunter may be developed as an open list regardless of the caster's chosen realm"
-      ]
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "95",
@@ -5865,6 +5871,7 @@
       ],
       "spell-list-ranks": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "id": "SPELLLIST_THE_HUNTER",
           "value": "3"
         }
