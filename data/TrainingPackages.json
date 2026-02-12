@@ -3438,6 +3438,118 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "111",
+      "races": [
+        "RACE_GNOLLS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Superior cloak (+20 Hiding, non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Weapon (+15 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Boots (+10 Stalking, non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Armour (+10 non-magic"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Owed favor by influential clan member "
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Cloak (+10 Hiding, non-magic)"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Gnoll familiar"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Melee weapon (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_STALKING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_CAVING",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "4"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "1",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Choice"
+      ]
     },
     {
       "name": "Tabula Rasa",
@@ -4596,6 +4708,121 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "99",
+      "races": [
+        "RACE_GNOLLS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Spell multiplier (x2)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Superior cloak (+to Hiding, non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Gnoll familiar"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Owed favour by influential clan member"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Melee weapon (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Daily III item (3rd level spell)"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Daily V item (1st level spell)"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Spell adder (+1)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_STALKING",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "2",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "spell-list-rank-choices": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+          "num-choices": "1",
+          "value": "3",
+          "options": [
+            "SPELLLIST_ESSENCE_S_PERCEPTIONS",
+            "SPELLLIST_WEATHER_WAYS"
+          ]
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "2",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+          ]
+        }
+      ],
+      "stat-gains": [
+        "Intuition"
+      ]
     },
     {
       "name": "Bodyguard",
