@@ -2343,10 +2343,15 @@
           "value": "6"
         }
       ],
-      "stat-gains": [
-        "Intuition",
-        "Reasoning"
-      ],
+      "stat-gain-choices": [
+        {
+          "num-choices": "1",
+          "options": [
+            "Intuition",
+            "Reasoning"
+          ]
+        }
+      ]
     },
     {
       "name": "Martial Arts Challenger",
@@ -3547,8 +3552,22 @@
           "value": "2"
         }
       ],
-      "stat-gains": [
-        "Choice"
+      "stat-gain-choices": [
+        {
+          "num-choices": "1",
+          "options": [
+            "Agility",
+            "Constitution",
+            "Empathy",
+            "Intuition",
+            "Memory",
+            "Presence",
+            "Quickness",
+            "Reasoning",
+            "Self Discipline",
+            "Strength"
+          ]
+        }
       ]
     },
     {
@@ -6990,10 +7009,15 @@
           ]
         }
       ],
-      "stat-gains": [
-        "Intuition",
-        "Presence"
-      ]
+      "stat-gain-choices": [
+        {
+          "num-choices": "1",
+          "options": [
+            "Intuition",
+            "Presence"
+          ]
+        }
+      ],
     },
     {
       "name": "Crafter",
