@@ -595,7 +595,9 @@
       "name": "Nomenist Caster",
       "flavour-text": "No. He didn't say, 'It's nice to meet you.' He said, 'It will be nice to eat you.",
       "description": "The Nomenist is a master of language who forever seeks to learn new languages to find the words of the Primal Tongue that operate for themselves. Nomenists may be found in cosmopolitan cities or on the fringes of civilization in the pursuit of old or new languages.",
-      "notes": "The Nomenist Caster training package is not required for Nomenist casters, but reflects the abilities of the true enthusiast of the Nomenist School of Magic.",
+      "notes": [
+        "The Nomenist Caster training package is not required for Nomenist casters, but reflects the abilities of the true enthusiast of the Nomenist School of Magic.",
+      ],
       "book": "Essence Companion",
       "lifestyle": "true",
       "specials": [
@@ -924,7 +926,9 @@
       "name": "Dream Traveller",
       "flavour-text": "Remember, my girl, in the dream realm things are seldom what the seem. You can't take anything for granted. Events have meaning. Colors have significance. Time follows no rules, and Nature's laws don't always apply. — What you see as a staff might actually be a snake; what you see a snake might actually be a spear. Things may fall up; a girl might be a ghoul, and a ghoul might be your friend. Confusing? Indeed so. And then of course some things might be exactly what they seem: in the words of a famous Dream Traveller, 'Sometimes a cigar is just a cigar.' You have to keep your wits about you.",
       "description": "To the uninitiated, sleep is merely relief from the troubles of the waking world, and bodily rest. To the Dream Traveller, sleep is the doorway into the dream world, a world as dangerous as the mundane world, with its own inexplicable physical laws and mind-bending unreality. Of all the mortal wayfarers in the dream realm, the Dream Traveller is most able to explore in safety, by using magic to strengthen the dream-self with the abilities of the other world; others are unprotected against the anarchy of dreams.",
-      "notes": "Secret knowledge relating to the real world may be gained whenever the character visits the dream world analogue of a real location, and may relate to the past, the present or the future. The interpretation of the relevance (if any) of dream world events and symbology to the real world is a matter for the character to reflect upon"
+      "notes": [
+        "Secret knowledge relating to the real world may be gained whenever the character visits the dream world analogue of a real location, and may relate to the past, the present or the future. The interpretation of the relevance (if any) of dream world events and symbology to the real world is a matter for the character to reflect upon"
+      ],
       "book": "Mentalism Companion",
       "lifestyle": "true",
       "time": "122",
@@ -1195,7 +1199,9 @@
       "flavour-text": "We are gathered here today to witness a holy event.",
       "description": "Ministers are responsible for the teaching within a religion. They are some of the most versed students of the doctrine and teachings of their religion that can be found. They spend their time sharing their thoughts with others of their own religion, and inviting all to attend their uplifting sermons.",
       "qualifier": "At least 10 ranks in Religion [-3 points]",
-      "notes": "Proselytizing may be developed as an open list regardless of the caster's chosen realm"
+      "notes": [
+        "Proselytizing may be developed as an own realm open list regardless of the caster's chosen realm"
+      ],
       "book": "Channeling Companion",
       "lifestyle": "false",
       "time": "63",
@@ -1326,7 +1332,9 @@
     {
       "name": "Berserker",
       "description": "A berserker is trained to lose control of his normal sensibilities in battle and become a fierce killing machine.",
-      "notes": "No more than two ranks may be allocated to any one weapon skill.",
+      "notes": [
+        "No more than two ranks may be allocated to any one weapon skill.",
+      ],
       "book": "Character Law",
       "lifestyle": "true",
       "time": "64",
@@ -1734,7 +1742,9 @@
       "name": "Crystalist Caster",
       "flavour-text": "Like the gemstone, there are many facets to my magic.",
       "description": "For Crystalists, power and wealth are synonymous: the most powerful Crystalists also carry the most elegant gems and stones. Crystalists can enchant gemstones to become the fuel and catalyst for their spells. Each casting erodes a part of this enchantment, so the crystals must be periodically re-enchanted. Crystalists do not have to spend as much time scrounging for catalysts as Herbalists or Corpists, but instead they must constantly spend their time re-enchanting their crystals. Crystalists tend to be flamboyant and extravagant, often wearing as many precious gems as they can afford all at the same time.",
-      "notes": "The Crystalist Caster Training Package is required for crystal casters.",
+      "notes": [
+        "The Crystalist Caster Training Package is required for crystal casters.",
+      ],
       "book": "Essence Companion",
       "lifestyle": "true",
       "time": "46",
@@ -1823,7 +1833,9 @@
       "flavour-text": "Gather the assembly, there are important matters I must discuss with them.",
       "description": "A Chancellor handles the administrative affairs of a religion. He is also a spiritual leader of a congregation of believers. The Chancellor's job is to provide support and inspiration to the followers of his religion. He also handles and presides over many of the religion's ceremonies. Leaving the actual teaching to ministers, a Chancellor handles the major decisions that a religion has to face.",
       "qualifier": "At least 12 ranks in Religion [-4 points]",
-      "notes": "May develop Ceremonies spell list as an own realm open spell list if desirired"
+      "notes": [
+        "May develop Ceremonies spell list as an own realm open spell list if desirired"
+      ],
       "book": "Channeling Companion",
       "lifestyle": "false",
       "time": "64",
@@ -2099,7 +2111,9 @@
       "name": "Missionary",
       "flavour-text": "The next house will be the one.",
       "description": "The missionary is a peaceful emissary sent into far away lands to proselytize and convert. They travel a great deal, and teach many people in their journeys. While traveling, they encounter many different types of people and cultures. Many ignore the missionary, while others are searching for something that he might have to offer them.",
-      "notes": "Proselytizing may be developed as an open list regardless of the caster's chosen realm"
+      "notes": [
+        "Proselytizing may be developed as an open list regardless of the caster's chosen realm"
+      ],
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "149",
@@ -2265,7 +2279,9 @@
       "name": "Herbalist Caster",
       "flavour-text": "Magic grows in the most unusual places.",
       "description": "Herbalists specialize in the understanding of plant life from an analytical point of view. Herbalists perceive plants as a natural source of power. An Herbalist differs from an animist in that an Herbalist perceives properties in the plant life, but does not worship plants. The Herbalist is analogous to a botanical chemist in some respects.",
-      "notes": "The Herbalist Caster training package is not required for herbalist casters, but reflects the abilities of the true enthusiast of the herbalist caster school.",
+      "notes": [
+        "The Herbalist Caster training package is not required for herbalist casters, but reflects the abilities of the true enthusiast of the herbalist caster school.",
+      ],
       "book": "Essence Companion",
       "lifestyle": "true",
       "time": "56",
@@ -2504,7 +2520,9 @@
       "name": "Bherscheurkûm",
       "translation": "Wrothful Beards",
       "description": "The Bherscheukïm are the berserkers of the Dwarven race. Unlike Mannish berserkers, who lose control of their reason in a mindless fury of slaying, those of the Mountain Folk retain more of their sense, for theirs is a different kind of frenzy - it is a loosing of the fetters that bind the soul-deep griefs of their race. The grim sadness and foredoomed resignation that lies within every Dwarf is given relief and expression by the fury of the Bherscheurkïm. Most weep while they fight...",
-      "notes": "Dwarf PCs wishing to run a more Human-like Berserker should use that training package from RMSR.",
+      "notes":[
+        "Dwarf PCs wishing to run a more Human-like Berserker should use that training package from RMSR.",
+      ],
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "116",
@@ -2535,7 +2553,9 @@
       "name": "Witch",
       "flavour-text": "Let them scorn and scoff. I will turn their precious homeland into a swamp and a wasteland.",
       "description": "A Witch is a Channeler that usually stays away from civilized society as a recluse that only leaves his or her home with definite goals in mind. A Witch often has a Demon as his Channeling source of power. Witches are in contact with Demons or other supernatural creatures often, for their own hidden and questionable purposes.",
-      "notes": "Liquid/Gas Skills and Nature Domination may be developed as an open list regardless of the caster's chosen realm"
+      "notes": [
+        "Liquid/Gas Skills and Nature Domination may be developed as an open list regardless of the caster's chosen realm"
+      ],
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "162",
@@ -2717,7 +2737,9 @@
     {
       "name": "Weapon Master",
       "description": "A weapon master has made a life out of studying and perfecting the use of weapons. However, he seldom has learned much beyond the use of weapons.",
-      "notes": "No more than two ranks may be allocated to any one weapon skill.",
+      "notes":[
+        "No more than two ranks may be allocated to any one weapon skill.",
+      ],
       "book": "Character Law",
       "lifestyle": "true",
       "time": "95",
@@ -2762,7 +2784,9 @@
       "name": "Corpist Caster",
       "flavour-text": "Uggh. I thought they smelled bad on the outside.",
       "description": "Corpists are often considered macabre or evil. Corpists use the body parts of creatures in order to affect magic. The more magical the creature the better the catalyst, so Corpists are often quite eager to join with adventurers just for the opportunity to gather catalyst material. While Corpist casters can be quite likable in most respects, it is difficult to be used to the smell that often seems to follow them. Also, familiars (and their magicians) tend to be very wary of such casters.",
-      "notes": "The Corpist Caster TP is not a required TP for corpist casters, but reflects the abilities of the true enthusiast of the corpist caster school.",
+      "notes": [
+        "The Corpist Caster TP is not a required TP for corpist casters, but reflects the abilities of the true enthusiast of the corpist caster school.",
+      ],
       "book": "Essence Companion",
       "lifestyle": "true",
       "time": "40",
@@ -3317,7 +3341,9 @@
       "name": "Dreamweaver",
       "flavour-text": "I see. You wish to know the dreams of the king? A strange ambition, and yet an enlightened one: the king dreams as oft as the next man, and what a man dreams might tell you much of him. And yet, I feel it my duty to warn you: a king has more than his share of worries, and perhaps more than his share of nightmares as well. Especially this king. Such dreams could prove unpleasant. And yet, if you are certain this is what you wish, I am certain I could satisfy your curiosity....",
       "description": "The Dreamweaver has specialized in tapping the power of the mind through dreams, being able to select and manipulate dreams, whether for divination, wish fulfilment, or to increase creativity. He also possesses almost total control of his sleeping pattern. With preparation, he can influence the dreams of others, inducing daydreams of pleasant aspect or nightmares of hellish terror as he chooses.",
-      "notes": "The content of all stored dreams requires GM approval."
+      "notes": [
+        "The content of all stored dreams requires GM approval."
+      ],
       "book": "Mentalism Companion",
       "lifestyle": "true",
       "time": "124",
@@ -3421,7 +3447,9 @@
       "name": "Theurgist",
       "flavour-text": "The wounded men! Do not retreat without bringing one of the wounded with you!",
       "description": "A Theurgist is the battlefield medic of religious troops. They normally travel with the regular troops and are sometimes even part of them. Many standing religious armies have at least two or three of these 'miracle workers' within their ranks, sometimes with as many as one per unit. They are the fighting healers, using their talents out on the battlefield to help those who would otherwise not survive the trip to the infirmary.",
-      "notes": "Concussion's Ways, Battlefield Healing and/or Holy Defences may be developed as an open list regardless of the caster's chosen realm"
+      "notes": [
+        "Concussion's Ways, Battlefield Healing and/or Holy Defences may be developed as an open list regardless of the caster's chosen realm"
+      ],
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "116",
@@ -3550,7 +3578,9 @@
     {
       "name": "Knight",
       "description": "A knight is a warrior dedicated to a cause or a lord (as opposed to a Paladin, who is dedicated to a greater power). A knight is known for his heavy armor and ability with weapons. Note that some GMs may decide that the character who takes this package must also take the 'Knighted' talent (see Appendix A-5 for more information on Talents).",
-      "notes": "Some GM's may decide that the character who takes this package must also take the 'Knighted' talent.",
+      "notes": [
+        "Some GM's may decide that the character who takes this package must also take the 'Knighted' talent.",
+      ]
       "book": "Fantasy Role Playing",
       "lifestyle": "true",
       "time": "69",
@@ -3921,7 +3951,9 @@
       "name": "Medic",
       "flavour-text": "This is going to hurt me as much as it does you.",
       "description": "Trained in the use of herbs, first aid, and the magic of his deity, the Medic has learned healing in many forms. He is often found in the temple, in a battle or on a mission to defend and watch over anyone that his religion asks to be protected and healed.",
-      "notes": "Concussion's Ways may be developed as an open list regardless of the caster's chosen realm."
+      "notes": [
+        "Concussion's Ways may be developed as an open list regardless of the caster's chosen realm."
+      ],
       "book": "Channeling Companion",
       "lifestyle": "false",
       "time": "51",
@@ -4094,7 +4126,9 @@
       "flavour-text": "Please leave me now, I must be alone to commune with my deity",
       "description": "A medium works towards becoming a spiritual link between himself and his deity. He claims to know the will of his deity on many subjects. The medium is adept at all kinds of trances, and spends much time lost in his own world of meditation.",
       "qualifier": "At least 10 ranks of skills in the Self Control skill category [-3 points]",
-      "notes": "Holy Trances may be developed as an open list regardless of the caster's chosen realm"
+      "notes": [
+        "Holy Trances may be developed as an own realm open list regardless of the caster's chosen realm"
+      ],
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "127",
@@ -4239,7 +4273,9 @@
       "flavour-text": "There will be a few side effects, such as hair loss, abdominal cramping, diarrhea, and dizziness; but this should cure your seizures.",
       "description": "The potioner is a magical apothecary. The potioner uses spells to craft potions of healing, magic, and poison. The potioner may enhance normal herbs for general use as tonics and liniments or he may produce drugs that cloud the mind of the imbiber. Like an apothecary, the potioner attempts to draw the essence out of natural herbs to capture them in a bottle, but it is a rare potioner who manages by such sciences to create herbal remedies better than the simple animists of the wild.",
       "qualifier": "A total of 6 ranks in Alchemy and Biochemistry [-3 points]",
-      "notes": "May choose to develop Brewing Lore or Liquid/Gas Skills as an Own Realm TP spell list as long as the character does not develop another lifestyle training package.",
+      "notes": [
+        "May choose to develop Brewing Lore or Liquid/Gas Skills as an Own Realm TP spell list as long as the character does not develop another lifestyle training package.",
+      ],
       "book": "Essence Companion",
       "lifestyle": "true",
       "time": "39",
@@ -5724,7 +5760,9 @@
       "name": "Protector",
       "flavour-text": "Demons? You'd better let me handle this.",
       "description": "Protectors are holy warriors that are sent into the world by their church with the specific mission of protecting people from one specific sort of creaturs (Demons, Elementals, etc.). They will hunt this type of creature down with a fanatical zeal, and stop at nothing to see these creatures erased from the land.",
-      "notes": "The Hunter may be developed as an open list regardless of the caster's chosen realm"
+      "notes": [
+        "The Hunter may be developed as an open list regardless of the caster's chosen realm"
+      ]
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "95",
