@@ -6183,6 +6183,120 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "105",
+      "notes": [
+        "One of the spell lists must be used for entertainment",
+      ]
+      "races": [
+        "RACE_GNOLLS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Musical instrument (+15 Play Instrument)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Spell adder (+2)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Melee weapon (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Gnoll familiar"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Daily IV item (2nd level spell)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Book of Songs"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Spell adder (+1)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Gnoll",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HISTORY",
+          "subcategory": "Gnoll",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "3",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "2",
+          "value": "2",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+          ]
+        }
+      ],
+      "stat-gain-choices": [
+        {
+          "num-choices": "xxx",
+          "options": [
+            "Agility",
+            "Presence"
+          ]
+        }
+      ]
     },
     {
       "name": "Physician",
