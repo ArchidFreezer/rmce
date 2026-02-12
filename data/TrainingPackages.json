@@ -6631,6 +6631,142 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "71",
+      "notes": [
+        "GM choice of which stat gain is available for a character",
+      ]
+      "starting-money-change": "10d10",
+      "races": [
+        "RACE_DWARVES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Spell adder (+2)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Melee weapon (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Owed favor by order"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Owed favour by high-ranking Dwarf"
+        },
+        {
+          "order": "6",
+          "chance": "10",
+          "value": "Spell adder(+3)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Melee weapon (+5 non-magic) and Spell adder (+l)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CHANNELING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SYMBOL_LORE",
+          "value": "1"
+        },
+        {
+          "id": "xxx",
+          "value": "xxx"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Dwarf",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HISTORY",
+          "subcategory": "Dwarvish",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DRAGON_LORE",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "spell-list-rank-choices": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+          "num-choices": "1",
+          "value": "1",
+          "options": [
+            "SPELLLIST_ANIMAL_SUMMONS",
+            "SPELLLIST_DARK_SUMMONS",
+            "SPELLLIST_ELEMENTAL_SUMMONS",
+            "SPELLLIST_ENTITY_SUMMONS",
+            "SPELLLIST_FEY_CONJURY",
+            "SPELLLIST_GATE_MASTERY",
+            "SPELLLIST_PLANAR_SUMMONS",
+            "SPELLLIST_SUMMONING_BOND",
+            "SPELLLIST_SUMMONING_CIRCLES",
+            "SPELLLIST_SUMMONING_MASTERY",
+            "SPELLLIST_SUMMONS"
+          ]
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "2",
+          "value": "2",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+          ]
+        }
+      ],
+      "stat-gains": [
+        "Intuition",
+        "Presence"
+      ]
     },
     {
       "name": "Crafter",
