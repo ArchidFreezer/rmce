@@ -15,61 +15,61 @@
           "order": "1",
           "chance": "50",
           "value": "Melee weapon (+15 non-magic)"
-        },,
+        },
         {
           "order": "2",
           "chance": "50",
           "value": "Armor (+10 non-magic)"
-        },,
+        },
         {
           "order": "3",
           "chance": "40",
           "value": "Shield (+10 non-magic)"
-        },,
+        },
         {
           "order": "4",
           "chance": "30",
           "value": "Melee weapon (+10 non-magic)"
-        },,
+        },
         {
           "order": "5",
           "chance": "30",
           "value": "2-4 doses Thortch or Concussion herbs"
-        },,
+        },
         {
           "order": "6",
           "chance": "20",
           "value": "Armor (+5 non-magic)"
-        },,
+        },
         {
           "order": "7",
           "chance": "0",
           "value": "Weapon (+5 non-magic)"
-        },
+        }
       ],
       "skill-ranks": [
         {
           "id": "SKILL_BODY_DEVELOPMENT",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILL_STUNNED_MANOEUVREING",
           "value": "2"
-        },
+        }
       ],
       "category-ranks": [
         {
           "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_SELF_CONTROL",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
           "value": "2"
-        },
+        }
       ],
       "category-multi-skill-rank-choices": [
         {
@@ -92,17 +92,17 @@
         {
           "id": "SKILLGROUP_WEAPON",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILLGROUP_WEAPON",
           "value": "1"
-        },
+        }
       ],
       "stat-gains": [
         "Constitution",
         "Strength"
       ]
-     },
+    },
     {
       "name": "Pilgrim",
       "flavour-text": "Just over the next ridge will be the promised land.",
@@ -118,89 +118,89 @@
           "order": "1",
           "chance": "50",
           "value": "Weapon (+5 non-magical)"
-        },,
+        },
         {
           "order": "2",
           "chance": "40",
           "value": "Shield (+5 non-magical)"
-        },,
+        },
         {
           "order": "3",
           "chance": "30",
           "value": "Armor (+5 non-magical)"
-        },,
+        },
         {
           "order": "4",
           "chance": "30",
           "value": "Favor from a Ranger"
-        },,
+        },
         {
           "order": "5",
           "chance": "20",
           "value": "Holy symbol (+5 Spell Casting Static Maneuvers)"
-        },,
+        },
         {
           "order": "6",
           "chance": "20",
           "value": "Map of region (with historic notations)"
-        },,
+        },
         {
           "order": "7",
           "chance": "20",
           "value": "Spell adder (+1)"
-        },,
+        },
         {
           "order": "8",
           "chance": "0",
           "value": "Special religious token/sigil"
-        },
+        }
       ],
       "skill-ranks": [
         {
           "id": "SKILL_BODY_DEVELOPMENT",
           "value": "1"
-        },,
+        },
         {
           "id": "SKILL_FORAGING",
           "value": "1"
-        },,
+        },
         {
           "id": "SKILL_SURVIVAL",
           "value": "1"
-        },,
+        },
         {
           "id": "SKILL_CHANNELING",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILL_CULTURE_LORE",
           "subcategory": "Local",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILL_REGION_LORE",
           "subcategory": "Local",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILL_RELIGION",
           "subcategory": "Own",
           "value": "1"
-        },
+        }
       ],
       "category-ranks": [
         {
           "id": "SKILLCATEGORY_ARMOUR_LIGHT",
           "value": "1"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_LORE_GENERAL",
           "value": "4"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
           "value": "3"
-        },
+        }
       ],
       "category-multi-skill-rank-choices": [
         {
@@ -218,7 +218,7 @@
         {
           "id": "SKILLGROUP_WEAPON",
           "value": "1"
-        },
+        }
       ],
       "spell-list-category-rank-choices": [
         {
@@ -227,7 +227,7 @@
           "options": [
             "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
           ]
-        },
+        }
       ]
     },
     {
@@ -244,61 +244,61 @@
           "order": "1",
           "chance": "50",
           "value": "d10 Concussion Repair herbs"
-        },,
+        },
         {
           "order": "2",
           "chance": "40",
           "value": "d10 Circulatory Repair herbs"
-        },,
+        },
         {
           "order": "3",
           "chance": "40",
           "value": "d10 General Purpose herbs"
-        },,
+        },
         {
           "order": "4",
           "chance": "40",
           "value": "Superior medical kit (+10 First Aid, Second Aid)"
-        },,
+        },
         {
           "order": "5",
           "chance": "30",
           "value": "1 Organ Repair herb"
-        },,
+        },
         {
           "order": "6",
           "chance": "60",
           "value": "1-4 Muscle/Cartilage Repair herbs"
-        },,
+        },
         {
           "order": "7",
           "chance": "0",
           "value": "Good medical kit (+5 non-magic)"
-        },
+        }
       ],
       "skill-ranks": [
         {
           "id": "SKILL_DIAGNOSTICS",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILL_SECOND_AID",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILL_FIRST_AID",
           "value": "1"
-        },,
+        },
         {
           "id": "SKILL_PREPARE_HERBS",
           "value": "1"
-        },
+        }
       ],
       "category-ranks": [
         {
           "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
           "value": "2"
-        },
+        }
       ]
     },
     {
@@ -312,86 +312,86 @@
           "order": "1",
           "chance": "50",
           "value": "Musical instrument (+10 non-magic)"
-        },,
+        },
         {
           "order": "2",
           "chance": "50",
           "value": "Weather-resistant clothing"
-        },,
+        },
         {
           "order": "3",
           "chance": "40",
           "value": "Noble contact"
-        },,
+        },
         {
           "order": "4",
           "chance": "0",
           "value": "Riding beast"
-        },
+        }
       ],
       "skill-ranks": [
         {
           "id": "SKILL_WEATHER_WATCHING",
           "value": "1"
-        },,
+        },
         {
           "id": "SKILL_PLAY_INSTRUMENT",
           "subcategory": "Choice",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILL_REGION_LORE",
           "subcategory": "Local",
           "value": "1"
-        },,
+        },
         {
           "id": "Riding",
           "subcategory": "Choice",
           "value": "1"
-        },
+        }
       ],
       "category-ranks": [
         {
           "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
           "value": "3"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_COMMUNICATIONS",
           "value": "6"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_INFLUENCE",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_LORE_GENERAL",
           "value": "2"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
           "value": "1"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
           "value": "1"
-        },
+        }
       ],
       "category-multi-skill-rank-choices": [
         {
           "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
           "num-choices": "2",
           "value": "3"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_COMMUNICATIONS",
           "num-choices": "3",
           "value": "6"
-        },,
+        },
         {
           "id": "SKILLCATEGORY_INFLUENCE",
           "num-choices": "2",
           "value": "2"
-        },
+        }
       ]
     },
     {
@@ -781,7 +781,7 @@
           "id": "SKILL_ANIMAL_HANDLING",
           "subcategory": "Animal C"
           "value": "1"
-        },
+        }
       ],
       "category-ranks": [
         {
@@ -1244,7 +1244,7 @@
           "order": "9",
           "chance": "0",
           "value": "Special religious token/sigil"
-        },
+        }
       ],
       "skill-ranks": [
         {
@@ -1721,7 +1721,7 @@
           "num-choices": "2",
           "value": "2"
         }
-      ],
+      ]
     },
     {
       "name": "Tuskerer",
@@ -2148,7 +2148,7 @@
           "order": "9",
           "chance": "0",
           "value": "Special religious token/sigil"
-        },
+        }
       ],
       "skill-ranks": [
         {
@@ -2447,7 +2447,7 @@
           "id": "SKILLGROUP_WEAPON",
           "value": "1"
         }
-      ],
+      ]
     },
     {
       "name": "Boarsaddler",
@@ -3100,7 +3100,7 @@
               "id": "SKILL_WEAVING",
             }
           ]
-        },
+        }
       ],
       "category-ranks": [
         {
@@ -3215,7 +3215,7 @@
           "order": "9",
           "chance": "0",
           "value": "Weather-resistant clothing"
-        },
+        }
       ],
       "skill-ranks": [
         {
@@ -3470,7 +3470,7 @@
           "order": "9",
           "chance": "0",
           "value": "Medical kit (+5 non-magical)"
-        },
+        }
       ],
       "skill-ranks": [
         {
@@ -3856,7 +3856,7 @@
           "order": "9",
           "chance": "0",
           "value": "Friendly contact at local pub"
-        },
+        }
       ],
       "skill-ranks": [
         {
@@ -3970,7 +3970,7 @@
           "order": "9",
           "chance": "0",
           "value": "Medical kit (+5 non-magical)"
-        },
+        }
       ],
       "skill-ranks": [
         {
@@ -5349,7 +5349,7 @@
           "order": "9",
           "chance": "0",
           "value": "Lifelong obligation to mentor"
-        },
+        }
       ],
       "skill-ranks": [
         {
