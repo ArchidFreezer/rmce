@@ -1595,6 +1595,92 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "false",
       "time": "43",
+      "starting-money-change": "xxx",
+      "races": [
+        "RACE_GOBLINS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "One gem (worth 5d10 sp)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "One ingot (worth 1d10 gp)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Miner's tools (+5 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "0",
+          "value": "Non-magic item (+5)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SPRINTING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SURVEILLANCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CAVING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_AMBUSH",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SILENT_ATTACK",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TRAP_BUILDING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CAMOUFLAGE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SETTING_TRAPS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MINING",
+          "value": "4"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_ATTACK",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "4"
+        }
+      ]
     },
     {
       "name": "Grave Robber",
@@ -1623,6 +1709,111 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "false",
       "time": "40",
+      "notes": [
+        "Superior clogs Only impose a -5 modifier to MMP; these clogs are lost on a failed maneuver only 25% of the time (see Section 8.3.1)",
+        "Quality singlasses provide 90% activity in bright light; -15 to all sight-based Awareness maneuvers."
+        
+      ]
+      "races": [
+        "RACE_GOBLINS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "60",
+          "value": "Superior clogs (see note)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Quality sunglasses (see note)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Missile weapon (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Quality lookit-glass (only -15 Observation)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Weapon (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_READING_TRACKS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TRACKING",
+         "value": "1"
+        },
+        {
+          "id": "SKILL_SURVEILLANCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ORIENTEERING",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "1",
+          "skills": [
+            {
+              "id": "SKILL_HIDING"
+            },
+            {
+              "id": "SKILL_STALKING"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Highwayman",
@@ -1739,6 +1930,72 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "false",
       "time": "52",
+      "races": [
+        "RACE_GOBLINS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Trained Battle Boar (+10 Riding, Mounted Combat)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Stone-spurred clogs (+5 Riding)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Shield (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Weapon (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MOUNTED_COMBAT",
+          "value": "6"
+        },
+        {
+          "id": "SKILL_RIDING",
+          "subcategory": "Boar",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ANIMAL_HANDLING",
+          "subcategory": "Boar",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "4"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Crystalist Caster",
@@ -2257,6 +2514,113 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "false",
       "time": "39",
+      "races": [
+        "RACE_GNOMES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Book (+15 Artifact Lore)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Book (+10 Spell Lore [Arcane])"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Book (+10 Spell Lore)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Knowledge of Most Potent item"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Sketchy map with notes of Potent item (distant)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Knowledge of Potent item"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Sketchy map with notation of unknown item"
+        },
+        {
+          "order": "8",
+          "chance": "30",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "9",
+          "chance": "20",
+          "value": "Knowledge of location Earth Nodes or Ley Line"
+        },
+        {
+          "order": "10",
+          "chance": "0",
+          "value": "Book (+10 Lore | Magical category)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_MNEMONICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RESEARCH",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_INTERROGATION",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "4",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Hephuzâd",
@@ -3576,6 +3940,125 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "107",
+      "notes": [
+        "Communication category choices must be spoken languages",
+      ]
+      "races": [
+        "RACE_GNOMES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Tome (+10 to Lore category)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Tome (+10 Spell Lore [Arcane])"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "d10 sketchy maps of various regions"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Daily III Item (3rd level spell)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Weapon or Armour (+5 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Daily I Item (1st level spell)"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Knowledge of location of Earth Node or Ley Line"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Book (+5 to specific Lore skill)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ALERTNESS",
+          "value": "4"
+        },
+        {
+          "id": "SKILL_INTERROGATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RESEARCH",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "4",
+          "value": "4"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gain-choices": [
+        {
+          "num-choices": "1",
+          "options": [
+            "Agility",
+            "Constitution",
+            "Empathy",
+            "Intuition",
+            "Memory",
+            "Presence",
+            "Quickness",
+            "Reasoning",
+            "Self Discipline",
+            "Strength"
+          ]
+        }
+      ]
     },
     {
       "name": "Chi Master",
@@ -4132,11 +4615,109 @@
       "time": "28",
     },
     {
+      "name": "Inventor (Goblin)",
+      "description": "This Goblin has dedicated his life to creating new and more dangerous machines. He has learned much about building inventions, gathering materials, and even basic calculations. Many Goblins pursue this lifestyle and are constantly trying to invent something that all Goblins will view as great. Naturally, anything worthy of being great must by its very nature be lethal or excruciatingly painful.",
+      "book": "Races &amp; Cultures: Underground Races",
+      "lifestyle": "false",
+      "time": "45",
+      "races": [
+        "RACE_GOBLINS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Working miscellaneous invention"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Working defensive invention"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Working offensive invention"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Fine set of tools (+15)"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Good set of tools (+10)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Standard set of tools"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_METAL_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_BASIC_MATH",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_GIMMICKRY",
+          "value": "4"
+        },
+        {
+          "id": "SKILL_SCROUNGING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_CRAFTS",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "num-choices": "2",
+          "value": "3"
+        }
+      ],
+      "stat-gains": [
+        "Intuition",
+        "Reasoning"
+      ]
+    },
+    {
       "name": "Inventor",
       "description": "New machines, siege engines, and mills do not just evolve, they are created. Inventors are considered unusual because they concentrate on mechanical and scientific problems to the exclusion of everyday affairs. Inventors are generally gifted in several crafts and arts.",
       "book": "Castles &amp; Ruins",
-      "lifestyle": "false",
-      "time": "45",
+      "lifestyle": "true",
+      "time": "110",
     },
     {
       "name": "Cultist",
@@ -5648,6 +6229,105 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "114",
+      "races": [
+        "RACE_GNOMES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Book (+15 Artifact Lore)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Book (+10 Spell Lore)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Book (+10 Spell Lore [Arcane])"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "General knowledge of location of Most Potent item"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Sketchy map (distant) with notes of Potent item"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "General knowledge of Potent item"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Sketchy map with notation of an unknown item"
+        },
+        {
+          "order": "8",
+          "chance": "30",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "9",
+          "chance": "20",
+          "value": "Knowledge of location of an Earth Node or Ley Line"
+        },
+        {
+          "order": "10",
+          "chance": "0",
+          "value": "Book (+ 10 Lore | Magical category)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ATTUNEMENT",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_POWER_PERCEPTION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_READ_RUNES",
+          "value": "3"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "7"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "2",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Empathy",
+        "Memory"
+      ]
     },
     {
       "name": "Loremaster",
