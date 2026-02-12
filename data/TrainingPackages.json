@@ -2262,9 +2262,91 @@
       "name": "Hephuzâd",
       "translation": "Smith/Forgebeard",
       "description": "The Hephuzâd are Dwarves who have begun to tread the path towards the craft that all Mountain Folk revere - smithwork. No Dwarf, no matter how ancient, how skilled, or how learned, is the smith he would wish to be. It is the most honored and respected of all Dwarven crafts, one of which every Dwarf will know at least a little. The Hephuzâd are the forge workers of a people that labors unceasingly, and are driven to master metals and jewels to create works of great splendor and strength.",
+      "notes": [
+        "The GM should choose one of the stat gains to be applied.",
+      ]
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "90",
+      "starting-money-change": "20",
+      "races": [
+        "RACE_DWARVES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "60",
+          "value": "1-4 Gems (5dl0 sp value total) for adornment"
+        },
+        {
+          "order": "2",
+          "chance": "80",
+          "value": "Exceptional forging tools (+15 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Excellent metal item (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Good quality tools (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Ingot of mithril, 4 coin weight"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_EVALUATE_ARMOUR",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_EVALUATE_METAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_EVALUATE_WEAPON",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_METAL_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_WEAPON_1_H_CONCUSSION",
+          "subcategory": "Hammer",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_CRAFTS",
+          "num-choices": "3",
+          "value": "6"
+        }
+      ],
+      "stat-gains": [
+        "Intuition",
+        "Reasoning"
+      ],
     },
     {
       "name": "Martial Arts Challenger",
@@ -2523,10 +2605,124 @@
       "description": "The Bherscheukïm are the berserkers of the Dwarven race. Unlike Mannish berserkers, who lose control of their reason in a mindless fury of slaying, those of the Mountain Folk retain more of their sense, for theirs is a different kind of frenzy - it is a loosing of the fetters that bind the soul-deep griefs of their race. The grim sadness and foredoomed resignation that lies within every Dwarf is given relief and expression by the fury of the Bherscheurkïm. Most weep while they fight...",
       "notes":[
         "Dwarf PCs wishing to run a more Human-like Berserker should use that training package from RMSR.",
+        "The weapon category/skill combined choice cannot be from the 2-H Weapon category"
       ],
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "116",
+      "starting-money-change": "4",
+      "races": [
+        "RACE_DWARVES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Two-handed weapon (+15 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Armor (+15 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Hand weapon (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Special training, +10 OB against Orcs"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Special training, +10 OB against Goblins"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Two-handed weapon (+5 non-magic)"
+        },
+        {
+          "order": "7",
+          "chance": "10",
+          "value": "Favour owed by important Dwarf"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Armour (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_FRENZY",
+          "value": "4"
+        },
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_DRAGON_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Dwarf",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HISTORY",
+          "subcategory": "Dwarvish",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_WEAPON_2_HANDED",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_WEAPON_2_HANDED",
+          "num-choices": "2",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+          "num-choices": "1",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Strength"
+      ]
     },
     {
       "name": "Antagonist",
@@ -4066,6 +4262,118 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "false",
       "time": "45",
+      "starting-money-change": "10",
+      "races": [
+        "RACE_DWARVES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Weapon or armor (+5 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Superior tools for disarming traps (+15 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Superior tools for picking locks (+15 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "High quality wutchiin gauntlets (+10 DB)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Map of secret tunnels"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Good quality tools for picking locks (+5 non-magic)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Good quality tools for disarming traps (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_LOCK_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DISARMING_TRAPS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_PICKING_LOCKS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ENGINEERING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MECHANITION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Goblin",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "4"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Shaguk Kun-Torâmim",
@@ -4381,6 +4689,48 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "false",
       "time": "22",
+      "races": [
+        "RACE_DWARVES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Cestûszak (shield) (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "0",
+          "value": "Shield (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SHIELD_MAKING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_TWO_WEAPON_COMBAT",
+          "subcategory": "Choice plus Cestûszak",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_TACTICS",
+          "subcategory": "Infantry Formation",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+          "subcategory": "Cestûszak",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Secret Society Member",
@@ -4881,6 +5231,96 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "40",
+      "starting-money-change": "10",
+      "races": [
+        "RACE_DWARVES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Melee or missile weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Shield (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Helm, ornate (resembles horrid beast; +5 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "1-6 doses Hurthkal lichen"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Melee weapon (+5 non-magic)"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "High quality ened (-10 to detect items concealed within)"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Other equipment (+5 non-magic)"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Armour (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_STUNNED_MANOEUVREING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Orc",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        },
+        {
+          "id": "SKILLGROUP_ARMOUR",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Oracle",
@@ -5184,6 +5624,125 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "84",
+      "starting-money-change": "10",
+      "races": [
+        "RACE_DWARVES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "80",
+          "value": "High quality hylhe cloak (-10 to detect items within)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "1-3 doses Cooilgan honey"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Coins, Helms, 1-4 hidden away"
+        },
+        {
+          "order": "6",
+          "chance": "10",
+          "value": "Other equipment (+5 non-magic)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Armour (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CLIMBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ALERTNESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ORIENTEERING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_STUNNED_MANOEUVREING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_DRAGON_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Orc",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Self Discipline",
+        "Strength"
+      ]
     },
     {
       "name": "Clerihew",
