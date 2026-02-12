@@ -2598,6 +2598,76 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "54",
+      "races": [
+        "RACE_DWARVES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Special Commendation"
+        },
+        {
+          "order": "2",
+          "chance": "60",
+          "value": "Favour owed by important Dwarf"
+        },
+        {
+          "order": "3",
+          "chance": "60",
+          "value": "High quality rope (supports quadruple normal weight)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "1-6 Nereid's Crown mushrooms"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "1 Nereid's Crown mushroom"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SWIMMING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CLIMBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ROPE_MASTERY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_BOAT_PILOT",
+          "subcategory": "Underground waterways",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ORIENTEERING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Agility"
+      ]
     },
     {
       "name": "Bherscheurkûm",
@@ -3532,9 +3602,125 @@
       "name": "Bhourdirrim",
       "translation": "Woodwise",
       "description": "The roadways and valleys beyond their cities must be patrolled and kept free of all predators and marauding Orc-kin. The Bhourdirrim are the soldiers who perform this task. They are the Dwarves who range forest and vale, who must learn the knowledge of limb and leaf that their kinsmen shun. Close-mouthed and dangerous, these Dwarves are little known amongst the Mannish races, though Orc-folk have learned to fear them.",
+      "notes": [
+        "This mob-fothaj is a specific type, worn only by a Dwarf who is or has been one of the Bhourdirrim.",
+      ]
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "106",
+      "races": [
+        "RACE_DWARVES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Missile weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Melee weapon (+5 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "High quality mob-fothaj hood (+5 non-magic Hiding)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "High quality khwakulm boots (+5 Stalking)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Armor (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_READING_TRACKS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SURVEILLANCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TRACKING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_REGION_LORE",
+          "subcategory": "Region of responsibility",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SIGNALING",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "1",
+          "skills": [
+            {
+              "id": "SKILL_HIDING"
+            },
+            {
+              "id": "SKILL_STALKING"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "6"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "3",
+          "value": "3"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Self Discipline"
+      ]
     },
     {
       "name": "Dreamweaver",
