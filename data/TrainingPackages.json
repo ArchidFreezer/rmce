@@ -6,7 +6,7 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "107",
-      "starting-money-change": "10",
+      "starting-money-change": "d10",
       "races": [
         "RACE_HOBGOBLINS"
       ],
@@ -809,7 +809,7 @@
       "book": "Mentalism Companion",
       "lifestyle": "true",
       "time": "102",
-      "starting-money-change": "10",
+      "starting-money-change": "d10",
       "specials": [
         {
           "order": "1",
@@ -1354,7 +1354,7 @@
       "book": "Essence Companion",
       "lifestyle": "true",
       "time": "104",
-      "starting-money-change": "-10",
+      "starting-money-change": "-d10",
       "specials": [
         {
           "order": "1",
@@ -2268,7 +2268,7 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "90",
-      "starting-money-change": "20",
+      "starting-money-change": "2d10",
       "races": [
         "RACE_DWARVES"
       ],
@@ -2680,7 +2680,7 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "116",
-      "starting-money-change": "4",
+      "starting-money-change": "d4",
       "races": [
         "RACE_DWARVES"
       ],
@@ -4014,7 +4014,7 @@
       "book": "Channeling Companion",
       "lifestyle": "true",
       "time": "129",
-      "starting-money-change": "10",
+      "starting-money-change": "d10",
       "specials": [
         {
           "order": "1",
@@ -4448,7 +4448,7 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "false",
       "time": "45",
-      "starting-money-change": "10",
+      "starting-money-change": "d10",
       "races": [
         "RACE_DWARVES"
       ],
@@ -5417,7 +5417,7 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "40",
-      "starting-money-change": "10",
+      "starting-money-change": "d10",
       "races": [
         "RACE_DWARVES"
       ],
@@ -5810,7 +5810,7 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "84",
-      "starting-money-change": "10",
+      "starting-money-change": "d10",
       "races": [
         "RACE_DWARVES"
       ],
@@ -5945,7 +5945,7 @@
       "book": "Mentalism Companion",
       "lifestyle": "true",
       "time": "147",
-      "starting-money-change": "10",
+      "starting-money-change": "d0",
       "specials": [
         {
           "order": "1",
