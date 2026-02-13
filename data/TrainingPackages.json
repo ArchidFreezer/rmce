@@ -2032,6 +2032,7 @@
           "subcategory": "Archer",
           "value": "1"
         }
+      ],
       "category-ranks": [
         {
           "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
@@ -2067,7 +2068,7 @@
         "Superior clogs Only impose a -5 modifier to MMP; these clogs are lost on a failed maneuver only 25% of the time (see Section 8.3.1)",
         "Quality singlasses provide 90% activity in bright light; -15 to all sight-based Awareness maneuvers."
         
-      ]
+      ],
       "races": [
         "RACE_GOBLINS"
       ],
@@ -2982,7 +2983,7 @@
       "description": "The Hephuzâd are Dwarves who have begun to tread the path towards the craft that all Mountain Folk revere - smithwork. No Dwarf, no matter how ancient, how skilled, or how learned, is the smith he would wish to be. It is the most honored and respected of all Dwarven crafts, one of which every Dwarf will know at least a little. The Hephuzâd are the forge workers of a people that labors unceasingly, and are driven to master metals and jewels to create works of great splendor and strength.",
       "notes": [
         "The GM should choose one of the stat gains to be applied.",
-      ]
+      ],
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "90",
@@ -3486,7 +3487,7 @@
       "name": "Bherscheurkûm",
       "translation": "Wrothful Beards",
       "description": "The Bherscheukïm are the berserkers of the Dwarven race. Unlike Mannish berserkers, who lose control of their reason in a mindless fury of slaying, those of the Mountain Folk retain more of their sense, for theirs is a different kind of frenzy - it is a loosing of the fetters that bind the soul-deep griefs of their race. The grim sadness and foredoomed resignation that lies within every Dwarf is given relief and expression by the fury of the Bherscheurkïm. Most weep while they fight...",
-      "notes":[
+      "notes": [
         "Dwarf PCs wishing to run a more Human-like Berserker should use that training package from RMSR.",
         "The weapon category/skill combined choice cannot be from the 2-H Weapon category"
       ],
@@ -3816,7 +3817,7 @@
     {
       "name": "Weapon Master",
       "description": "A weapon master has made a life out of studying and perfecting the use of weapons. However, he seldom has learned much beyond the use of weapons.",
-      "notes":[
+      "notes": [
         "No more than two ranks may be allocated to any one weapon skill.",
       ],
       "book": "Character Law",
@@ -4115,6 +4116,106 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "75",
+      "notes": [
+        "Armour category choice may only be taken from the light and medium armour categories"
+      ],
+      "races": [
+        "RACE_ORCS_GREATER"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Weapon (+15 Orcish racial weapon)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Shield (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "1-4 doses of Shorg (herb)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Melee weapon (+5 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "1-2 Gorslum herbs"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Other equipment (+5 non-magic)"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Armour (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_STUNNED_MANOEUVREING",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "1",
+          "skills": [
+            {
+              "id": "SKILL_CULTURE_LORE",
+              "subcategory": "Elf"
+            },
+            {
+              "id": "SKILL_CULTURE_LORE",
+              "subcategory": "Orc"
+            }
+          ]
+        }
+      ]
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_ARMOUR",
+          "value": "2"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Strength"
+      ]
     },
     {
       "name": "Arachnamancer",
@@ -4386,7 +4487,7 @@
       "time": "107",
       "notes": [
         "Communication category choices must be spoken languages",
-      ]
+      ],
       "races": [
         "RACE_GNOMES"
       ],
@@ -4662,7 +4763,7 @@
       "description": "The roadways and valleys beyond their cities must be patrolled and kept free of all predators and marauding Orc-kin. The Bhourdirrim are the soldiers who perform this task. They are the Dwarves who range forest and vale, who must learn the knowledge of limb and leaf that their kinsmen shun. Close-mouthed and dangerous, these Dwarves are little known amongst the Mannish races, though Orc-folk have learned to fear them.",
       "notes": [
         "This mob-fothaj is a specific type, worn only by a Dwarf who is or has been one of the Bhourdirrim.",
-      ]
+      ],
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "106",
@@ -5024,7 +5125,7 @@
       "description": "A knight is a warrior dedicated to a cause or a lord (as opposed to a Paladin, who is dedicated to a greater power). A knight is known for his heavy armor and ability with weapons. Note that some GMs may decide that the character who takes this package must also take the 'Knighted' talent (see Appendix A-5 for more information on Talents).",
       "notes": [
         "Some GM's may decide that the character who takes this package must also take the 'Knighted' talent.",
-      ]
+      ],
       "book": "Fantasy Role Playing",
       "lifestyle": "true",
       "time": "69",
@@ -5043,6 +5144,107 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "40",
+      "notes": [
+        "The spell list category choice for open only must be an evil list"
+      ],
+      "races": [
+        "RACE_ORCS_GREATER"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Spell adder (+2)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Melee weapon (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Daily III item (3rd level spell)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Owed favour by high-ranking Orc"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Spell adder (+1)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CHANNELING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "2",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+          ]
+        },
+        {
+          "num-choices": "1",
+          "value": "2",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+          ]
+        }
+      ],
+      "stat-gain-choices": [
+        {
+          "num-choices": "1",
+          "options": [
+            "Agility",
+            "Constitution",
+            "Empathy",
+            "Intuition",
+            "Memory",
+            "Presence",
+            "Quickness",
+            "Reasoning",
+            "Self Discipline",
+            "Strength"
+          ]
+        }
+      ]
     },
     {
       "name": "Spy",
@@ -6223,10 +6425,130 @@
     {
       "name": "Shaguk Stâz-pargun",
       "translation": "Orcs who ride beasts [into] carnage",
-      "description": "Shaguk-cûr raise both wolves of various types and a breed of giant bat that they utilize as cavalry. Often the riders will begin to identify with their respective beasts, some tattoing or scarring related images on themselves and some adorning arms and armor with the same images. The Shaguk Stâz-pargun enjoy a respected (but usually disliked) position among other Shaguk. Those who ride bats are in a good positions, for normally their smaller size would mark them for abuse.",
+      "description": "Shaguk-cûr raise both wolves of various types and a breed of giant bat that they utilize as cavalry. Often the riders will begin to identify with their respective beasts, some tattoing or scarring related images on themselves and some adorning arms and armor with the same images. The Shaguk Stâz-pargun enjoy a respected (but usually disliked) position among other Shaguk. Those who ride bats are in a good position, for normally their smaller size would mark them for abuse.",
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "116",
+      "notes": [
+        "Armour category choice may only be taken from the light and medium armour categories"
+      ],
+      "races": [
+        "RACE_ORCS_GREATER"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Trained beast (choice of wolf or bat)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Weapon (+15 Orcish racial weapon)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Superior saddle/tack (+5 Riding, Mounted Combat)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Shield (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "1-4 doses of Unirk (herb, wolf-riders only)"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Missile Weapon (+10 non-magic, bat-riders only)"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Other equipment (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MOUNTED_COMBAT",
+          "value": "2"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "1",
+          "skills": [
+            {
+              "id": "SKILL_CULTURE_LORE"
+              "subcategory": "Dwarf"
+            },
+            {
+              "id": "SKILL_CULTURE_LORE"
+              "subcategory": "Elf"
+            }
+          ]
+        },
+        {
+          "value": "1",
+          "skills": [
+            {
+              "id": "SKILL_RIDING",
+              "subcategory": "Bat"
+            },
+            {
+              "id": "SKILL_RIDING",
+              "subcategory": "Wolf"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "4"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "num-choices": "2",
+          "value": "3"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_ARMOUR",
+          "value": "2"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Strength"
+      ]
     },
     {
       "name": "Potioner",
@@ -7502,7 +7824,7 @@
       "time": "105",
       "notes": [
         "One of the spell lists must be used for entertainment",
-      ]
+      ],
       "races": [
         "RACE_GNOLLS"
       ],
@@ -8310,7 +8632,7 @@
       "time": "71",
       "notes": [
         "GM choice of which stat gain is available for a character",
-      ]
+      ],
       "starting-money-change": "10d10",
       "races": [
         "RACE_DWARVES"
