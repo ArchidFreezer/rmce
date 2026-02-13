@@ -1984,6 +1984,71 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "false",
       "time": "18",
+      "races": [
+        "RACE_KOBOLDS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Missile weapon, bow (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "1d10 arrows (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Favour of strong Hobgoblin"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "1-2 Hobgoblin herbs"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MOUNTED_COMBAT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RIDING",
+          "value": "Breliss"
+        },
+        {
+          "id": "SKILL_TACTICS",
+          "subcategory": "Archer",
+          "value": "1"
+        }
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_WEAPON_MISSILE",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_WEAPON_MISSILE",
+          "num-choices": "1",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Prowldark",
@@ -5763,6 +5828,102 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "93",
+      "races": [
+        "RACE_KOBOLDS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Boots, superior (+10 Stalking)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Cloak, superior (+ 10 Hiding)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "1-2 applications of weak poison"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Weapon (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CAVING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_AMBUSH",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SILENT_ATTACK",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_USING_REMOVING_POISON",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SETTING_TRAPS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_STALKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_PREPARE_POISONS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_ATTACK",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Quickness"
+      ]
     },
     {
       "name": "Vizier",
