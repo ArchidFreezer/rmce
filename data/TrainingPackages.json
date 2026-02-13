@@ -1113,6 +1113,88 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "110",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Wand (2nd level spell)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Daily III item (3rd level spell)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Book (+15 Item Lore)"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Daily II item (2nd level spell)"
+        },
+        {
+          "order": "5",
+          "chance": "15",
+          "value": "Single use item (up to 5th level)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Daily I item (2nd level spell)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ARTIFACT_LORE",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_ATTUNEMENT",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_POWER_PERCEPTION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RESEARCH",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_APPRAISAL",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+          "id": "SPELLLIST_ITEM_ENHANCEMENT",
+          "value": "3"
+        }
+      ]
     },
     {
       "name": "Ninja",
@@ -1142,6 +1224,86 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "128",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Book (+15 non-magic to a specific lore)"
+        },
+        {
+          "order": "2",
+          "chance": "20",
+          "value": "Book (+15 non-magic to a specific lore)"
+        },
+        {
+          "order": "3",
+          "chance": "0",
+          "value": "Special religious token/sigil"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BASIC_MATH",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "2",
+          "skills": [
+            {
+              "id": "SKILL_PUBLIC_SPEAKING"
+            },
+            {
+              "id": "SKILL_SEDUCTION"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "2",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_CRAFTS",
+          "num-choices": "1",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "num-choices": "1",
+          "value": "2"
+        }
+      ],
     },
     {
       "name": "Crusading Academic",
@@ -1537,6 +1699,87 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "78",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Astrolabe (+15 non-magic to Astronomy/Navigation)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Star chart (+10 non-magic to Star-gazing)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Lodestone (+50 non-magic to Direction Sense)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Spyglass (+10 non-magic to Observation)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Book (+10 non-magic to Astronomy)"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Book (+10 non-magic to Advanced Math)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Book (+5 non-magic to Star-gazing)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_DIRECTION_SENSE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TIME_SENSE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_STAR_GAZING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_WEATHER_WATCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_BASIC_MATH",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ADVANCED_MATH",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ASTRONOMY",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Journeying Apprentice",
@@ -1977,6 +2220,109 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "45",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Stolen jewelry (worth 10d10 sp)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Stolen jewelry (worth 8d10 sp)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Map of region (with notes on ancient battles and tombs)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Disarm Trap kit (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Reliable fencing contacts"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Lockpick kit (+5 non-magic)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Disarm Trap kit (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_LOCATE_HIDDEN",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_DETECT_TRAPS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ARTIFACT_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Local",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HISTORY",
+          "subcategory": "Local",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MAPPING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Breliss Archer",
@@ -5436,6 +5782,98 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "43",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Noble patron"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Favour from a noble"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Holy symbol (+10 magic to Channeling)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Augmented heraldric sign"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Special religious token/sigil"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_PROPAGANDA",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "3"
+        },
+        {
+          "id": "xxx",
+          "value": "xxx"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Own religion",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_HISTORY",
+          "subcategory": "Local",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ADMINISTRATION",
+          "value": "2"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "1",
+          "skills": [
+            {
+              "id": "SKILL_SINGING"
+            },
+            {
+              "id": "SKILL_TALE_TELLING"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        }
+      ],
     },
     {
       "name": "Shaguk Spîllak",
@@ -7495,6 +7933,84 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "85",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Favour from a noble"
+        },
+        {
+          "order": "2",
+          "chance": "25",
+          "value": "Drafting Tools (+15 to Engineering non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "20",
+          "value": "Book (+15 to Architecture)"
+        },
+        {
+          "order": "4",
+          "chance": "15",
+          "value": "Favour from a wealthy person"
+        },
+        {
+          "order": "5",
+          "chance": "15",
+          "value": "Wealthy contact"
+        },
+        {
+          "order": "6",
+          "chance": "10",
+          "value": "Heraldic sign"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Draft of an important structure"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_STONE_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_METAL_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ARCHITECTURE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ENGINEERING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_LEADERSHIP",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+          "id": "SPELLLIST_STRUCTURE_WARDINGS",
+          "value": "3"
+        },
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+          "id": "SPELLLIST_PERIMETER_WARDINGS",
+          "value": "3"
+        }
+      ]
     },
     {
       "name": "Magic Crafter",
@@ -7641,6 +8157,80 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "97",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Noble patron"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Favour from a noble"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Staff (+10 magic to Spell Mastery)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Exceptionally well-made craft (gift)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Outlandish clothing and ornamentation"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SPELL_MASTERY",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "2",
+          "value": "4"
+        }
+      ],
+      "spell-list-rank-choices": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+          "num-choices": "1",
+          "value": "3",
+          "options": [
+            "SPELLLIST_LESSER_ILLUSIONS",
+            "SPELLLIST_ILLUSIONS"
+          ]
+        }
+      ],
     },
     {
       "name": "Warrior-Priest",
@@ -8112,6 +8702,80 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "32",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Shield (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Rival (equal or better skill)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Weapon (+5 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Favour from an important person"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_QUICKDRAW",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SWASHBUCKLING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_HERALDRY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DISARM_FOE_ARMED",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CONTACTING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ],
     },
     {
       "name": "Hermit",
@@ -8623,6 +9287,63 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "28",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Battle axe (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Two-handed sword (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Torturing tools (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "0",
+          "value": "Favour from Local Ruler"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_POWER_STRIKING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_ROPE_MASTERY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_INTERROGATION",
+          "value": "3"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_WEAPON_2_HANDED",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_WEAPON_2_HANDED",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Shaguk Ru'Kleftäk-sher",
