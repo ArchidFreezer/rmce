@@ -2057,6 +2057,111 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "95",
+      "notes": [
+        "Weapons with bonuses will be of another racial make, i.e. Goblin, Ore, Dwarf, etc."
+      ],
+      "races": [
+        "RACE_TROGLODYTES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Melee weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Cloak, matching boots (+10 Stalking, +10 Hiding)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Armour (+10 non-magic; superior hides)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "1-4 Trophy skins of various races"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Weapon (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_STALKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CAVING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SURVIVAL",
+          "subcategory": "Subterranean",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
+          "id": "SPELLLIST_LOCATING_WAYS",
+          "value": "2"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "2",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+          ]
+        }
+      ],
+      "stat-gain-choices": [
+        {
+          "num-choices": "xxx",
+          "options": [
+            "Intuition",
+            "Self Discipline"
+          ]
+        }
+      ]
     },
     {
       "name": "Skulker",
@@ -2574,6 +2679,90 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "69",
+      "notes": [
+        "Weapons with bonuses will be of another racial make, i.e. Goblin, Ore, Dwarf, etc."
+      ],
+      "races": [
+        "RACE_TROGLODYTES"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Melee weapon (+15 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Armour (+10 non-magic; superior hides)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "1-4 Trophy skins of various races"
+        },
+        {
+          "order": "4",
+          "chance": "0",
+          "value": "Weapon (+5 non-magic) "
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ADRENAL_TOUGHNESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_STUNNED_MANOEUVREING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CAVING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SURVIVAL",
+          "subcategory": "Subterranean",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_REVERSE_STROKE",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ],
+      "stat-gain-choices": [
+        {
+          "num-choices": "1",
+          "options": [
+            "Constitution",
+            "Strength"
+          ]
+        }
+      ],
     },
     {
       "name": "Demonologist",
