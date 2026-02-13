@@ -3571,6 +3571,117 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "52",
+      "notes": [
+        "The communications category choices must be written languages for the 4 rank option and spoken langauges for the 2 rank option"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Wealthy patron"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Ancient map"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Map of region (with historic notations)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "5",
+          "chance": "50",
+          "value": "Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Riding beast"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DETECT_TRAPS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HISTORY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_REGION_LORE",
+          "subcategory": "Sepcific region",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ARTIFACT_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ANTHROPOLOGY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_APPRAISAL",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "2",
+          "skills": [
+            {
+              "id": "SKILL_CULTURE_LORE",
+              "subcategory": "Culture 1"
+            },
+            {
+              "id": "SKILL_CULTURE_LORE",
+              "subcategory": "Culture 2"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "4",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
     },
     {
       "name": "Martial Arts Champion",
@@ -7545,6 +7656,88 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "27",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "ook (+15 Poison Lore)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Medical Kit (+5 non-magical)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "d10 Concussion herbs"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "d10 Circulatory herbs"
+        },
+        {
+          "order": "5",
+          "chance": "50",
+          "value": "d10 Poison herbs"
+        },
+        {
+          "order": "6",
+          "chance": "50",
+          "value": "d10 Intoxicants"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "d10 General Purpose herbs"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_POISON_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_HERB_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ALCHEMY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_USING_REMOVING_POISON",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "xxx",
+          "skills": [
+            {
+              "id": "SKILL_PREPARE_HERBS"
+            },
+            {
+              "id": "SKILL_PREPARE_POISONS"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Collector",
@@ -8986,6 +9179,78 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "19",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Wealthy contact"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Favour from important person"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Favour from important person"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Draft of an important structure"
+        },
+        {
+          "order": "5",
+          "chance": "50",
+          "value": "Draft of an important structure"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Close friends with work boss"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_STONE_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_METAL_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ENGINEERING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ARCHITECTURE",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Herbalist",
