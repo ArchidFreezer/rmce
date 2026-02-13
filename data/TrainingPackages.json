@@ -2634,6 +2634,122 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "22",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Know a secret about local noble"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Know a secret about local noble"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Noble contact"
+        },
+        {
+          "order": "4",
+          "chance": "25",
+          "value": "Underworld contacts"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Assassin contacts"
+        },
+        {
+          "order": "6",
+          "chance": "15",
+          "value": "Favour from a noble"
+        },
+        {
+          "order": "7",
+          "chance": "15",
+          "value": "Know a secret about local lord"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Rival (equal or higher level)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ACTING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_INTERROGATION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_PROPAGANDA",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_HERALDRY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_TRICKERY",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "2",
+          "skills": [
+            {
+              "id": "SKILL_HIDING"
+            },
+            {
+              "id": "SKILL_STALKING"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "3",
+          "value": "4"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Catalyst Collector",
@@ -4991,6 +5107,102 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "98",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Animal friend appropriate to deity"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Relic of the faith (+20 to Influence skills, believers of the religion only)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Low level clergy contacts"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Religious rival (higher level)"
+        },
+        {
+          "order": "5",
+          "chance": "10",
+          "value": "Significant mark (odd colouration of eyes, or hair, birth mark, etc)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Holy symbol (+5 influence to believers)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_LIE_PERCEPTION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_REALITY_AWARENESS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_FORAGING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SURVIVAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DIVINATION",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Own",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "3"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+          "id": "SPELLLIST_DETECTION_MASTERY",
+          "value": "3"
+        }
+      ]
     },
     {
       "name": "Path Finder",
@@ -6102,6 +6314,94 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "110",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Mechanical item (+10 non-magic bonus)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Mechanical item (+5 non-magic bonus)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Draft for a new invention"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Patron"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Fine crafting tools (+15 to specific craft)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Good crafting tools (+10 to specific craft)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Crafting tools (+5 to specific craft)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_GIMMICKRY",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_CRAFTS",
+          "num-choices": "2",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Cultist",
@@ -6223,6 +6523,89 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "52",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Noble contact"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Favour from a noble"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Musical instrument (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Juggling balls (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Stilts (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Fine clothing, outrageous in design"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ACTING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_JUGGLING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_STILT_WALKING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_TUMBLING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_DIPLOMACY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DUPING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "3",
+          "value": "3"
+        }
+      ]
     },
     {
       "name": "Amateur Mage (revised)",
@@ -7251,6 +7634,78 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "44",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "20",
+          "value": "Horse, Heavy (+5 to Riding, and Mounted Combat manuevers)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Saddle (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Favour from a noble"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Horse, medium"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Falcon"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Horse, light"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ROPE_MASTERY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_FAUNA_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_REGION_LORE",
+          "subcategory": "Local",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ANIMAL_HANDLING",
+          "subcategory": "Choice",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ANIMAL_TRAINING",
+          "subcategory": "Choice",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RIDING",
+          "subcategory": "Choice",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Explorer",
@@ -7555,6 +8010,61 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "14",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "ools (+5 non-magic to crafts skill)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Tools (appropriate to a crafts skill)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Friends with local bartender"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Owed a favor from local noble"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Enemies with local noble"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Part of a work gang (3d10 workers)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_CRAFTS",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Assassin",
@@ -8018,6 +8528,92 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "72",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Daily I Item (3rd level spell)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Exceptional crafted work (10d10 sp)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Exceptional crafted work (8d10 sp)"
+        },
+        {
+          "order": "5",
+          "chance": "50",
+          "value": "Fine crafted work (6d10 sp)"
+        },
+        {
+          "order": "6",
+          "chance": "50",
+          "value": "Good crafted work (4d10 sp)"
+        },
+        {
+          "order": "7",
+          "chance": "40",
+          "value": "Fine crafting tools (+15 to specific craft)"
+        },
+        {
+          "order": "8",
+          "chance": "50",
+          "value": "Good crafting tools (+10 to specific craft)"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Crafting tools (+5 to specific craft)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ATTUNEMENT",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_CRAFTS",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "3",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+          ]
+        }
+      ]
     },
     {
       "name": "Famulus",
