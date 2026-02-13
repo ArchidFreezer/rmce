@@ -916,6 +916,86 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "94",
+      "races": [
+        "RACE_HOBGOBLINS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Trained Breliss (+10 Riding, Mounted Combat)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Breliss chain barding (AT 13, +10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Goblin companion, archer or spearman (GM's choice)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "2 doses Qurill herb"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Weapon (+10 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MOUNTED_COMBAT",
+          "value": "6"
+        },
+        {
+          "id": "SKILL_RIDING",
+          "subcategory": "Breliss",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ANIMAL_HANDLING",
+          "subcategory": "Breliss",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TACTICS",
+          "subcategory": "Cavalry",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "3"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Empathy"
+      ]
     },
     {
       "name": "Wanderer",
@@ -1189,6 +1269,117 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "false",
       "time": "49",
+      "races": [
+        "RACE_HOBGOBLINS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Missile weapon (+15 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "d10 Herbs (GM's choice)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Superior boots (+5 to Movement Maneuvers)"
+        },
+        {
+          "order": "4",
+          "chance": "0",
+          "value": "Weapon (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_READING_TRACKS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TRACKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SURVEILLANCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_FORAGING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ORIENTEERING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DISTANCE_RUNNING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SPRINTING",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "1",
+          "skills": [
+            {
+              "id": "SKILL_STALKING"
+            },
+            {
+              "id": "SKILL_HIDING"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Scout",
@@ -1334,7 +1525,7 @@
       "name": "Berserker",
       "description": "A berserker is trained to lose control of his normal sensibilities in battle and become a fierce killing machine.",
       "notes": [
-        "No more than two ranks may be allocated to any one weapon skill.",
+        "No more than two ranks may be allocated to any one weapon skill."
       ],
       "book": "Character Law",
       "lifestyle": "true",
@@ -3021,6 +3212,96 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "106",
+      "races": [
+        "RACE_HOBGOBLINS"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Trained Great Boar (+10 Riding, Mounted Combat)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "3 doses Thortch herb"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Shield (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Weapon (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MOUNTED_COMBAT",
+          "value": "4"
+        },
+        {
+          "id": "SKILL_JUMPING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_FRENZY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ANIMAL_HANDLING",
+          "subcategory": "Boar",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RIDING",
+          "subcategory": "Boar",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Empathy"
+      ]
     },
     {
       "name": "Zealot",
