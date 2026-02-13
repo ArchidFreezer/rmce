@@ -6023,6 +6023,105 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "69",
+      "races": [
+        "RACE_ORCS_GREY"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Spell multiplier (x2)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Melee weapon (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "1-2 Ulogât-Torâm"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Daily III item (3rd level spell)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Book (pages are Elf or Man skin,+ 10 Undead Lore)"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "1 Zombie servitor without hands"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Spell adder (+1)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_FIRST_AID",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SECOND_AID",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SURGERY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ANATOMY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_UNDEAD_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CHANNELING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+          "id": "SPELLLIST_NECROMANCY",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Intuition"
+      ]
     },
     {
       "name": "Sneak-knife",
@@ -7013,6 +7112,82 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "73",
+      "notes": [
+        "Must pick 2 spell lists from the available choices."
+      ],
+      "races": [
+        "RACE_ORCS_GREY"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Spell multiplier (x2)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Melee weapon (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Daily III item (3rd level spell)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Spell adder (+1)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CHANNELING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SPELL_LORE",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "2",
+          "value": "4",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+          ]
+        }
+      ],
     },
     {
       "name": "Engineer",
@@ -8074,6 +8249,111 @@
       "book": "Races &amp; Cultures: Underground Races",
       "lifestyle": "true",
       "time": "70",
+      "races": [
+        "RACE_ORCS_GREY"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Melee weapon (+20 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Spell multiplier (x2)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Shield (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Daily II item (2nd level spell)"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Weapon (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_TRANSCEND_ARMOR",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_ARMOUR",
+          "value": "2"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "2",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+          ]
+        }
+      ],
+      "stat-gain-choices": [
+        {
+          "num-choices": "1",
+          "options": [
+            "Agility",
+            "Constitution",
+            "Empathy",
+            "Intuition",
+            "Memory",
+            "Presence",
+            "Quickness",
+            "Reasoning",
+            "Self Discipline",
+            "Strength"
+          ]
+        }
+      ]
     },
     {
       "name": "Protégé",
