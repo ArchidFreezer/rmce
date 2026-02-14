@@ -1203,6 +1203,140 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
       "time": "170",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Disguise kit (+10 to Disguise skill)"
+        },
+        {
+          "order": "2",
+          "chance": "60",
+          "value": "Disguised weapon (staff/spear)"
+        },
+        {
+          "order": "3",
+          "chance": "20",
+          "value": "Current contract"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Secret identity (merchant)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Common poison (1d2 doses)"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Secret identity (pilgrim)"
+        },
+        {
+          "order": "7",
+          "chance": "40",
+          "value": "Secret identity (beggar)"
+        },
+        {
+          "order": "8",
+          "chance": "80",
+          "value": "Useful underworld contact"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Traditional black spying outfit"
+        },
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "num-choices": "2",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_ATTACK",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "num-choices": "4",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Agility",
+        "Constitution"
+      ]
     },
     {
       "name": "Cloistered Academic",
@@ -3408,7 +3542,7 @@
       ],
       "language-choices": [
         {
-          "num-choices": "xxx",
+          "num-choices": "2",
           "value": "2",
           "options": [
             "Demonic I",
@@ -3793,6 +3927,122 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
       "time": "110",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "60",
+          "value": "Victory at local tournament"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Victory at regional tournament"
+        },
+        {
+          "order": "3",
+          "chance": "25",
+          "value": "Weapon, +10 non-magical"
+        },
+        {
+          "order": "4",
+          "chance": "60",
+          "value": "Scrolls (+10 to Martial Arts Style Lore)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Rival martial arts school"
+        },
+        {
+          "order": "6",
+          "chance": "50",
+          "value": "Friendly martial arts teacher"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Rival martial artist"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Reputation as a good fighter"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STYLE_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_WEAPON_STYLE_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Strength"
+      ]
     },
     {
       "name": "Herbalist Caster",
@@ -4209,11 +4459,112 @@
     },
     {
       "name": "Martial Arts Champion",
-      "flavour-text": "I represent the honor of the House Fushan in this matter. I demand an apology in order to repair your slight against House Fushan's honor. I await your answer. If you do not wish to retract your words now, I will meet you tomorrow morning in the central square and restore House Fushan's honor over your unconscious body.",
+      "flavour-text": "I represent the honour of the House Fushan in this matter. I demand an apology in order to repair your slight against House Fushan's honor. I await your answer. If you do not wish to retract your words now, I will meet you tomorrow morning in the central square and restore House Fushan's honor over your unconscious body.",
       "description": "The martial arts champion is a character who specializes in fighting for the causes of others. He answers challenges posed to his family or employer. Not all martial arts champions fight for money, some are affiliated with a house or cause they serve by ties of blood or honor. Those martial arts champions that fight for money receive much less respect from their peers.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
       "time": "31",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Upcoming match"
+        },
+        {
+          "order": "2",
+          "chance": "10",
+          "value": "Weapon, +10 non-magical"
+        },
+        {
+          "order": "3",
+          "chance": "60",
+          "value": "Ceremonial garb for challenges"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Rival martial artist"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Ornate weapon"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Ornate armour"
+        },
+        {
+          "order": "7",
+          "chance": "50",
+          "value": "Favour from powerful organization"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Reputation as a good fighter"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Soldier",
@@ -4446,6 +4797,117 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
       "time": "78",
+      "notes": [
+        "Communications category skill choices must be language skills"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Prayer beads (+10 to Meditation)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Weapon, +5 non-magical"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Book (+10 to a specific lore skill)"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Book (+5 to a lore category)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Reputation as a holy hermit"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "2",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_SPECIAL_DEFENCES",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Necromancer",
@@ -4615,6 +5077,112 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
       "time": "106",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Impressive scar"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Wealthy student (1d2 silver/month)"
+        },
+        {
+          "order": "3",
+          "chance": "60",
+          "value": "Weapon, +10 non-magical"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Extra d10 (open-ended) in money"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Monthly income (1d10 students, 1d2 bp each)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Training hall in the city"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Friendly patron"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Certificates of mastery"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_LEADERSHIP",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_WEAPON_STYLE_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CONTACTING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
     },
     {
       "name": "Martial Arts Opera Performer",
@@ -4623,6 +5191,134 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
       "time": "187",
+      "notes": [
+        "Communication catagory skill choices must be languages"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Close friends with a famous performer"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Extra d10 (open-ended) in money"
+        },
+        {
+          "order": "3",
+          "chance": "20",
+          "value": "Small gifts from patrons"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Currently performing in a play"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Instrument (+5 non-magical)"
+        },
+        {
+          "order": "6",
+          "chance": "60",
+          "value": "Friendly contacts with former troupe"
+        },
+        {
+          "order": "7",
+          "chance": "40",
+          "value": "Contacts in the arts world"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Rich clothing"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Reputation as a skilled performer"
+        },
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ACTING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_TUMBLING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "2",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "3",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "num-choices": "2",
+          "value": "3"
+        }
+      ],
+      "stat-gains": [
+        "Agility"
+      ]
     },
     {
       "name": "Advisor",
@@ -4647,6 +5343,101 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "95",
+      "notes": [
+        "Martial Arts Combat Manoeuvres category choice ranks must be split equally between 2 manoeuvres"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Weapon, +10 non-magical"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Victory in regional tournament"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Weapon, +5 non-magical"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Rival martial artist"
+        },
+        {
+          "order": "5",
+          "chance": "50",
+          "value": "Scrolls (+10 Weapon Style Lore)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Books (+10 to a General Lore skill)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Reputation as a very skilled fighter"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "2",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "4"
+        }
+      ],
+      "lifestyle-category-skill-choices": [
+        {
+          "num-choices": "1",
+          "options": [
+            "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES"
+          ]
+        }
+      ]
     },
     {
       "name": "Detective",
@@ -4676,6 +5467,126 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
       "time": "46",
+      "notes": [
+        "Communications category rank choices must be spoken language ranks"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Friends with a wealthy merchant"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Useful contact in foreign sector"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Foreign merchandise (art, clothing)"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Maps of foreign lands"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Extra d10 (open-ended) in money"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Useful contacts in the city guard"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Horse"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Friends with tavern owner"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "4",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Mercenary",
@@ -5533,6 +6444,78 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
       "time": "81",
+      "notes": [
+        "2 Chi Powers should be selected which will become Lifestyle skills and gain 2 ranks"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Scrolls (+10 to a general lore skill)"
+        },
+        {
+          "order": "2",
+          "chance": "20",
+          "value": "Apprentice student"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Small training area in the outdoors"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Common medicinal herbs (1d5)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Reputation as a master of the esoteric martial arts"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CHI_POWERS_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MEDITATION",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Self Discipline"
+      ]
     },
     {
       "name": "Beastmaster",
@@ -6112,6 +7095,98 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
       "time": "37",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "70",
+          "value": "Friends on the street"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Scrolls (+5 to specific lore skill)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Props (+10 to performances)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Member of performing troupe"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Small-time underworld contact"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Extra money, 1d10 (open-ended)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Friendly tavern owner"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "num-choices": "4",
+          "value": "4"
+        }
+      ]
     },
     {
       "name": "Knight",
@@ -6645,7 +7720,6 @@
       "lifestyle-category-skill-choices": [
         {
           "num-choices": "1",
-          "value": "1",
           "options": [
             "SKILLCATEGORY_LORE_OBSCURE"
           ]
@@ -7719,6 +8793,108 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
       "time": "30",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Current contract (2d10 bronze/month)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Weapon, +5 non-magical"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Armour, +5 non-magical"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Useful contacts in the city guard"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Useful contacts in the underworld"
+        },
+        {
+          "order": "6",
+          "chance": "60",
+          "value": "Friendly wealthy patron"
+        },
+        {
+          "order": "7",
+          "chance": "40",
+          "value": "Common healing herbs (1d5)"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Friendly tavern owner"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SENSE_AMBUSH",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_STREETWISE",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
     },
     {
       "name": "Shaman Priest",
@@ -7856,6 +9032,143 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
       "time": "143",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Victory at local tournament"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Scrolls (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Scrolls (+5 non-magic to a lore category)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Common herbs (1d5)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Bracers (+5 Martial Arts Striking)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Book (+5 non-magic to a specific lore)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Reputation as a skilled fighter"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STYLE_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_NERVE_STRIKES",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_LOCKING_HOLDS",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "xxx",
+          "skills": [
+            {
+              "id": "xxx"
+            },
+            {
+              "id": "xxx"
+            }
+          ]
+        },
+        {
+          "value": "xxx",
+          "skills": [
+            {
+              "id": "xxx",
+              "subcategory": "xxx"
+            },
+            {
+              "id": "xxx",
+              "subcategory": "xxx"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Agility",
+        "Strength"
+      ]
     },
     {
       "name": "Groom",
@@ -8232,6 +9545,87 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
       "time": "22",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Friendly contact in the government"
+        },
+        {
+          "order": "2",
+          "chance": "20",
+          "value": "Friendly contact in the military forces"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Knowledge of members in another city"
+        },
+        {
+          "order": "4",
+          "chance": "60",
+          "value": "Friendly low-ranking underworld contact"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Wealth, 1d10 (open-ended)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Symbol of secret society"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
     },
     {
       "name": "Laborer",
@@ -8457,13 +9851,6 @@
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "true",
       "time": "76",
-    },
-    {
-      "name": "Inventor (Goblin)",
-      "description": "This Goblin has dedicated his life to creating new and more dangerous machines. He has learned much about building inventions, gathering materials, and even basic calculations. Many Goblins pursue this lifestyle and are constantly trying to invent something that all Goblins will view as great. Naturally, anything worthy of being great must by its very nature be lethal or excruciantingly painful.",
-      "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-      "lifestyle": "true",
-      "time": "110",
     },
     {
       "name": "Houri",
@@ -9064,6 +10451,102 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
       "time": "107",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Recent advancement in order"
+        },
+        {
+          "order": "2",
+          "chance": "70",
+          "value": "Prayer beads (+10 to Meditation)"
+        },
+        {
+          "order": "3",
+          "chance": "60",
+          "value": "Prayer scrolls (+10 to one general lore skill)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Weapon, +5 non-magical"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Herbs, 1d10 common healing herbs"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Reputation as a holy warrior"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Apothecary",
@@ -9505,6 +10988,99 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
       "time": "39",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Friendly contact with another school"
+        },
+        {
+          "order": "2",
+          "chance": "60",
+          "value": "Students (1d10 , income 1d2 bp)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Rival competing school in same area"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Scrolls (+5 to a general lore skill)"
+        },
+        {
+          "order": "5",
+          "chance": "35",
+          "value": "Training hall in city"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Weapon, +5 non-magical"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Rival master of opposing style"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Certificate in his martial arts style"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
     },
     {
       "name": "Temple Monk",
@@ -9513,6 +11089,120 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
       "time": "169",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Scroll (+10 to a general lore skill)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Healing Herbs, 1d5 of uncommon potency"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Healing Herbs, 1d10 of common potency"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Scroll (+10 to Martial Arts Style Lore)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Prayer beads (+10 to Meditation skill)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_NERVE_STRIKES",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_LOCKING_HOLDS",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "4"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "3",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "num-choices": "2",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SPECIAL_DEFENCES",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Self Discipline`"
+      ],
+      "lifestyle-category-skill-choices": [
+        {
+          "num-choices": "2",
+          "options": [
+            "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES"
+          ]
+        }
+      ]
     },
     {
       "name": "Cut Purse",
@@ -11138,7 +12828,7 @@
         {
           "order": "3",
           "chance": "40",
-          "value": "ArmoUr ( +5 non-magical)"
+          "value": "Armour ( +5 non-magical)"
         },
         {
           "order": "4",
