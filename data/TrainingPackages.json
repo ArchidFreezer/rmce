@@ -1904,6 +1904,68 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "29",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Book (+10 to Siege Engineering)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Book (+10 to Mechanition)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Draft of superior siege engine"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Mercenary contacts"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Tool kit (+10 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SIGNALING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MECHANITION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MILITARY_ORGANIZATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MINING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SIEGE_ENGINEERING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_WEAPON_MISSILE_ARTILLERY",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Finder",
@@ -5846,6 +5908,79 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
       "time": "41",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Exceptional set of clothes"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Knows secret about a noble"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Noble contact"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SCRIBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SERVICE",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_CRAFTS",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "3"
+        }
+      ]
     },
     {
       "name": "Theurgist",
@@ -7353,6 +7488,100 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "113",
+      "starting-money-change": "xxx",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Noble patron"
+        },
+        {
+          "order": "2",
+          "chance": "20",
+          "value": "Royal patron"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Favour from royalty"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Favour from a noble"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Augmented heraldic sign"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Finely crafted object (gift)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_LIE_PERCEPTION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_DIPLOMACY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_HISTORY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ATTUNEMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DIVINATION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ADMINISTRATION",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+          "id": "SPELLLIST_DELVING",
+          "value": "3"
+        }
+      ]
     },
     {
       "name": "Performer",
@@ -10482,6 +10711,64 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "74",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Exceptional quality clothing"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Jewelry (gift, worth 10d10 sp)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Rival (equal or higher level)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Hunted by jilted lover"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Special token from lost/past love"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CONTACTING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SEDUCTION",
+          "value": "3"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "3",
+          "value": "4"
+        }
+      ]
     },
     {
       "name": "Diplomat",
