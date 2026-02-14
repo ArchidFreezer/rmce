@@ -1003,6 +1003,101 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "95",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "80",
+          "value": "Weather-resistant clothing"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Riding beast (GM's discretion)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Cloak (+5 Hiding)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Boots (+5 Stalking)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Simple map of the known world"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CLIMBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SWIMMING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RIDING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "3",
+          "value": "3"
+        }
+      ],
+      "stat-gains": [
+        "Constitution"
+      ]
     },
     {
       "name": "Dream Traveller",
@@ -1344,6 +1439,101 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "95",
+      "notes": [
+        "Communication category choice ranks must be spent on a written language"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Patron (provides financial support)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Pet (small animal)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_RESEARCH",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "4",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "1",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Guardian",
@@ -1351,6 +1541,101 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "116",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Melee weapon (+10 non-magical)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Missile weapon (+10 non-magical)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "An animal companion (GM's discretion)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Camouflaged cloak (+10 Hiding)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Very good boots (+10 Stalking)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "A token/sigil recognized by local populace"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "6"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "3",
+          "value": "6"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Constitution"
+      ]
     },
     {
       "name": "Cloistered Zealot",
@@ -1445,6 +1730,97 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "110",
+      "notes": [
+        "Communication category choices must be spent on spoken languages"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "20",
+          "value": "Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "3",
+          "chance": "20",
+          "value": "Book (+10 non-magic to a specific lore)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "A token/sigil recognized by scholars"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Riding horse/beast"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Choose 1 or 2 cultures to share ranks",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "5",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Librarian",
@@ -1826,6 +2202,52 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "64",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Hand weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Hand weapon (+5 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "0",
+          "value": "Two-handed weapon"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_FRENZY",
+          "value": "4"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "4"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "3"
+        }
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Strength"
+      ]
     },
     {
       "name": "Astronomer",
@@ -2212,6 +2634,90 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "130",
+      "notes": [
+        "Communication category choices must be language ranks"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "1-5 books (+5 to specific lore skills)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "1-5 books (+5 to specific science skills)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Large book (+10 to a specific lore category)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Large book (+10 to a specific science category)"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "A book (+5 to a specific lore skill)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ALERTNESS",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "5"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "4",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "5",
+          "value": "10"
+        }
+      ],
+      "stat-gains": [
+        "Reasoning"
+      ]
     },
     {
       "name": "Templar",
@@ -2823,6 +3329,72 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
       "time": "35",
+      "starting-money-change": "d100",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Weapon (+5 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Stolen jewelry (5d10 sp)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Stolen gems (5d10 sp)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Stolen piece of art (5d10 sp)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Riding beast (GM's discretion)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ALERTNESS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_REGION_LORE",
+          "subcategory": "Local",
+          "value": "3"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "4"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "2",
+          "value": "4"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Political",
@@ -4338,6 +4910,83 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "73",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Daily I item (level 1 spell)"
+        },
+        {
+          "order": "3",
+          "chance": "0",
+          "value": "Special religious token/sigil"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_RELIGION",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_LANGUAGES",
+          "subcategory": "Native",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RELIGION",
+          "subcategory": "Own cause",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "xxx",
+          "num-choices": "xxx",
+          "value": "xxx"
+        },
+        {
+          "id": "xxx",
+          "num-choices": "xxx",
+          "value": "xxx"
+        },
+        {
+          "id": "xxx",
+          "num-choices": "xxx",
+          "value": "xxx"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "xxx",
+          "value": "xxx"
+        }
+      ],
+      "stat-gains": [
+        "Intuition"
+      ]
     },
     {
       "name": "Archaeologist",
@@ -5337,106 +5986,57 @@
     {
       "name": "Weapon Master",
       "description": "A weapon master has made a life out of studying and perfecting the use of weapons. However, he seldom has learned much beyond the use of weapons.",
-      "notes": [
-        "No more than two ranks may be allocated to any one weapon skill.",
-      ],
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "95",
-      "notes": [
-        "Martial Arts Combat Manoeuvres category choice ranks must be split equally between 2 manoeuvres"
-      ],
       "specials": [
         {
           "order": "1",
-          "chance": "50",
-          "value": "Weapon, +10 non-magical"
+          "chance": "40",
+          "value": "Weapon (+15 non-magic)"
         },
         {
           "order": "2",
           "chance": "40",
-          "value": "Victory in regional tournament"
+          "value": "Weapon (+15 non-magic)"
         },
         {
           "order": "3",
           "chance": "30",
-          "value": "Weapon, +5 non-magical"
+          "value": "Weapon (+10 non-magic)"
         },
         {
           "order": "4",
-          "chance": "40",
-          "value": "Rival martial artist"
+          "chance": "30",
+          "value": "Weapon (+10 non-magic)"
         },
         {
           "order": "5",
-          "chance": "50",
-          "value": "Scrolls (+10 Weapon Style Lore)"
-        },
-        {
-          "order": "6",
-          "chance": "30",
-          "value": "Books (+10 to a General Lore skill)"
-        },
-        {
-          "order": "7",
           "chance": "0",
-          "value": "Reputation as a very skilled fighter"
-        }
-      ],
-      "skill-ranks": [
-        {
-          "id": "SKILL_BODY_DEVELOPMENT",
-          "value": "2"
-        },
-        {
-          "id": "SKILL_MARTIAL_ARTS_STRIKING",
-          "value": "1"
-        },
-        {
-          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
-          "value": "1"
-        }
-      ],
-      "category-ranks": [
-        {
-          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
-          "value": "1"
-        },
-        {
-          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
-          "value": "1"
-        }
-      ],
-      "category-multi-skill-rank-choices": [
-        {
-          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
-          "num-choices": "1",
-          "value": "4"
-        },
-        {
-          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
-          "num-choices": "2",
-          "value": "4"
-        },
-        {
-          "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
-          "num-choices": "2",
-          "value": "2"
+          "value": "Weapon (+5 non-magic)"
         }
       ],
       "group-category-and-skill-rank-choices": [
         {
           "id": "SKILLGROUP_WEAPON",
+          "value": "5"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
           "value": "4"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "3"
+        },
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
         }
       ],
-      "lifestyle-category-skill-choices": [
-        {
-          "num-choices": "1",
-          "options": [
-            "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES"
-          ]
-        }
+      "stat-gains": [
+        "Agility",
+        "Strength"
       ]
     },
     {
@@ -5445,6 +6045,84 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
       "time": "33",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Contacts in a city’s administration"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Piece of jewelry (reward—worth 10d10 sp)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "d100 Gems (reward—worth 10d10 sp total)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Piece of artwork (reward—worth d10 sp)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Underworld contacts"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ALERTNESS",
+          "value": "4"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "num-choices": "4",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "City Guard",
@@ -5594,6 +6272,121 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "80",
+      "notes": [
+        "Communications category choice must be a spoken language"
+      ],
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Shield (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Medal (for wartime performance)"
+        },
+        {
+          "order": "5",
+          "chance": "50",
+          "value": "Favour from military figure"
+        },
+        {
+          "order": "6",
+          "chance": "50",
+          "value": "Favour from military figure"
+        },
+        {
+          "order": "7",
+          "chance": "50",
+          "value": "Extra d10 (open-ended) in money"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Extra d10 (open-ended) in money"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MILITARY_ORGANIZATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SIEGE_ENGINEERING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "1",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Constitution"
+      ]
     },
     {
       "name": "Corpist Caster",
@@ -7412,6 +8205,94 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
       "time": "44",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "False identification (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Cloak (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Contacts within friendly government"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Lock picks (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Important papers (worth 10d10 sp)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Weapon (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ALERTNESS",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "num-choices": "4",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Sailor",
@@ -7419,6 +8300,116 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
       "time": "28",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Passage credit on a ship"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Trade good (10d10 sp)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Passage credit on a ship"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Passage credit on a ship"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Close friends with a tavern owner"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Close friends with a ship captain"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Passage credit on a ship"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SWIMMING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CLIMBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ROPE_MASTERY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ORIENTEERING",
+          "value": "1"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "1",
+          "skills": [
+            {
+              "id": "SKILL_STAR_GAZING"
+            },
+            {
+              "id": "SKILL_WEATHER_WATCHING"
+            }
+          ]
+        },
+        {
+          "value": "xxx",
+          "skills": [
+            {
+              "id": "xxx",
+              "subcategory": "xxx"
+            },
+            {
+              "id": "xxx",
+              "subcategory": "xxx"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Inventor (Goblin)",
@@ -8902,6 +9893,94 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "69",
+      "notes": [
+        "Communication category choice must be a single language"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "20",
+          "value": "Large animal companion (GM's choice)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Spell adder (+1)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Daily I spell item (2nd level spell)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Small animal companion (GM's choice)"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "spell-list-category-rank-choices": [
+        {
+          "num-choices": "1",
+          "value": "2",
+          "options": [
+            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+          ]
+        }
+      ],
+      "stat-gains": [
+        "Intuition",
+        "Presence"
+      ]
     },
     {
       "name": "Con Man",
@@ -8909,6 +9988,87 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
       "time": "32",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Underworld contacts"
+        },
+        {
+          "order": "2",
+          "chance": "20",
+          "value": "Favour from an underworld figure"
+        },
+        {
+          "order": "3",
+          "chance": "20",
+          "value": "Fake identification (+30 Duping)"
+        },
+        {
+          "order": "4",
+          "chance": "10",
+          "value": "Investment (2d10 sp per year)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Fake identification (+15 Duping)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_LIE_PERCEPTION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DUPING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_BEGGING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Medium",
@@ -9255,6 +10415,110 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
       "time": "66",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Riding animal (GM choice)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Passage credit on a ship (GM discretion)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "d10 herbs (GM choice)"
+        },
+        {
+          "order": "5",
+          "chance": "0",
+          "value": "Map of the known world"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CLIMBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SWIMMING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_FIRST_AID",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gains": [
+        "Constitution"
+      ],
+      "stat-gain-choices": [
+        {
+          "num-choices": "1",
+          "options": [
+            "Agility",
+            "Empathy",
+            "Intuition",
+            "Memory",
+            "Presence",
+            "Quickness",
+            "Reasoning",
+            "Self Discipline",
+            "Strength"
+          ]
+        }
+      ]
     },
     {
       "name": "Shaguk Stâz-pargun",
@@ -9695,6 +10959,101 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
       "time": "30",
+      "starting-money-change": "xxx",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Hand weapon (+10 non-magical)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Missile weapon (+10 non-magical)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "2d10 missiles (+10 non-magical)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Underworld contacts"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "High ranking favour"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "High ranking favour"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "High ranking favour"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "High ranking favour"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Reliable safe house (place of hiding)"
+        },
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_ATTACK",
+          "num-choices": "2",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SENSES",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+          "num-choices": "1",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Burglar",
@@ -9844,6 +11203,101 @@
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
       "time": "116",
+      "notes": [
+        "Martial Arts Combat Manoeuvres category choice ranks must be split equally between 2 manoeuvres"
+      ],
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Weapon, +10 non-magical"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Victory in regional tournament"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Weapon, +5 non-magical"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Rival martial artist"
+        },
+        {
+          "order": "5",
+          "chance": "50",
+          "value": "Scrolls (+10 Weapon Style Lore)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Books (+10 to a General Lore skill)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Reputation as a very skilled fighter"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_STRIKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+          "num-choices": "2",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "4"
+        }
+      ],
+      "lifestyle-category-skill-choices": [
+        {
+          "num-choices": "1",
+          "options": [
+            "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES"
+          ]
+        }
+      ]
     },
     {
       "name": "Warlock",
@@ -11210,6 +12664,88 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
       "time": "37",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Stolen jewelry (worth 10d10 sp)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Stolen gems (worth 10d10 sp)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Stolen document (e.g., map, deed, etc.)"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Disguise kit (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Reliable fencing contacts"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Underworld contacts"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_PICKING_POCKETS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ALERTNESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Duelist",
@@ -12466,6 +14002,115 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
       "time": "48",
+      "notes": [
+        "Communications category choices must spend 3 ranks on written languages and 3 on spoken languages"
+      ],
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "City administration contacts in city A"
+        },
+        {
+          "order": "2",
+          "chance": "60",
+          "value": "City administration contacts in city B"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Potion (one dose, level 1 spell)"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Rune (level 1 spell)"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Finely crafted object (gift)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_LIE_PERCEPTION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_BRIBERY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Culture 1"
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Culture 2"
+          "value": "1"
+        },
+        {
+          "id": "SKILL_REGION_LORE",
+          "subcategory": "Region 1"
+          "value": "1"
+        },
+        {
+          "id": "SKILL_REGION_LORE",
+          "subcategory": "Region 2"
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DIPLOMACY",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "6"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "6",
+          "value": "6"
+        {
+          "id": "xxx",
+          "num-choices": "xxx",
+          "value": "xxx"
+        }
+      ]
     },
     {
       "name": "Architect",
@@ -12806,6 +14451,72 @@
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
       "time": "28",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Exceptional crafted work (10d10 sp)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Exceptional crafted work (8d10 sp)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Exceptional crafted work (6d10 sp)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Exceptional crafted work (4d10 sp)"
+        },
+        {
+          "order": "5",
+          "chance": "50",
+          "value": "Exceptional crafted work (2d10 sp)"
+        },
+        {
+          "order": "6",
+          "chance": "40",
+          "value": "Set of fine crafting tools (+15 to a specific craft)"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "xxxSet of good crafting tools (+10 to a specific craft)"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Set of crafting tools (+5 to a specific craft)"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_CRAFTS",
+          "num-choices": "3",
+          "value": "3"
+        }
+      ]
     },
     {
       "name": "Protector",
