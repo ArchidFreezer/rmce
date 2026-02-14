@@ -577,16 +577,26 @@
           "value": "2"
         }
       ],
-      "spell-list-category-rank-choices": [
+      "spell-list-rank-choices": [
         {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
           "num-choices": "1",
           "value": "3",
           "options": [
-            "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-            "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+            "SPELLLIST_ANIMAL_SUMMONS",
+            "SPELLLIST_DARK_SUMMONS",
+            "SPELLLIST_ELEMENTAL_SUMMONS",
+            "SPELLLIST_ENTITY_SUMMONS",
+            "SPELLLIST_FEY_CONJURY",
+            "SPELLLIST_GATE_MASTERY",
+            "SPELLLIST_PLANAR_SUMMONS",
+            "SPELLLIST_SUMMONING_BOND",
+            "SPELLLIST_SUMMONING_CIRCLES",
+            "SPELLLIST_SUMMONING_MASTERY",
+            "SPELLLIST_SUMMONS"
           ]
         }
-      ],
+      ]
       "stat-gains": [
         "Memory"
       ]
@@ -5789,6 +5799,95 @@
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
       "time": "75",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Powerful enemy (of higher status level)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Powerful rival (of higher status/level)"
+        },
+        {
+          "order": "3",
+          "chance": "25",
+          "value": "Fake identification (+20 Duping)"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Enemy (equal or higher level)"
+        },
+        {
+          "order": "5",
+          "chance": "15",
+          "value": "Rival (equal or higher level)"
+        },
+        {
+          "order": "6",
+          "chance": "15",
+          "value": "Finely crafted item (won in bet; 5d10sp)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Favour from an important person"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_ACTING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_MIMICRY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TALE_TELLING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DUPING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_PROPAGANDA",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SEDUCTION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_GAMBLING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Wandering Monk",
@@ -5915,6 +6014,101 @@
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "true",
       "time": "106",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "20",
+          "value": "Weapon or Armour (+10 non-magical)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Close friends with a grave digger"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Ancient family heirloom (from a lost lord)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Book (+20 to History skill)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Assorted jewelry worth 2d10 sp"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Faithful assistant (e.g., hunchback, animated limb, etc)"
+        },
+        {
+          "order": "7",
+          "chance": "0",
+          "value": "Digging tools ( + 10 non-magical)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SECOND_AID",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SURGERY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ANATOMY",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_UNDEAD_LORE",
+          "value": "2"
+        }
+      ],
+      "skill-rank-choices": [
+        {
+          "value": "2",
+          "skills": [
+            {
+              "id": "SKILL_CULTURE_LORE"
+            },
+            {
+              "id": "SKILL_HISTORY"
+            }
+          ]
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "1",
+          "value": "2"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+          "id": "SPELLLIST_NECROMANCY",
+          "value": "3"
+        }
+      ],
+      "stat-gains": [
+        "Intuition"
+      ]
     },
     {
       "name": "Witch",
@@ -6628,6 +6822,91 @@
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "true",
       "time": "120",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Know a secret about local noble"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Know a secret about local noble"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Contacts with d10 local nobles"
+        },
+        {
+          "order": "4",
+          "chance": "10",
+          "value": "Know a secret about local ruler/lord"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Close friends with an assassin"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Powerful enemies"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BRIBERY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SEDUCTION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_ACTING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_PSYCHOLOGY",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "spell-list-rank-choices": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+          "num-choices": "1",
+          "value": "3",
+          "options": [
+            "SPELLLIST_MIND_DEATH",
+            "SPELLLIST_MIND_DISEASE",
+            "SPELLLIST_MIND_DOMINATION",
+            "SPELLLIST_MIND_EROSION",
+            "SPELLLIST_MIND_ILLUSIONS",
+            "SPELLLIST_MIND_SUBVERSION"
+          ]
+        }
+      ],
+      "stat-gains": [
+        "Presence"
+      ]
     },
     {
       "name": "Caravan Guard",
@@ -11893,6 +12172,80 @@
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "true",
       "time": "120",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Book (+10 to Lore | Magical category)"
+        },
+        {
+          "order": "2",
+          "chance": "20",
+          "value": "Rune Paper (10th level)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Book (+15 to one Magic Lore)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Rune Paper (5th level)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Rune Paper (3rd level)"
+        },
+        {
+          "order": "6",
+          "chance": "0",
+          "value": "Rune Paper (1st level)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_READ_RUNES",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_SYMBOL_LORE",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_PAPER_MAKING",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "5"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "spell-list-ranks": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+          "id": "SPELLLIST_RUNE_MASTERY",
+          "value": "3"
+        }
+      ],
+      "stat-gains": [
+        "Empathy",
+        "Memory"
+      ],
     },
     {
       "name": "Adventurer",
@@ -12232,6 +12585,93 @@
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "true",
       "time": "76",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "20",
+          "value": "+2 Spell Adder"
+        },
+        {
+          "order": "2",
+          "chance": "20",
+          "value": "Faithful servant/lackey"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Faithful servant/lackey"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Knowledge of the location of an Earthnode"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Knowledge of the location of an Earthnode"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Knowledge of the location of an Earthnode"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Knowledge of the location of an Earthnode"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Knowledge of the location of an Earthnode"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_MEDITATION",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_SELF_CONTROL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_POWER_MANIPULATION",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "spell-list-rank-choices": [
+        {
+          "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+          "num-choices": "1",
+          "value": "3",
+          "options": [
+            "SPELLLIST_DARK_CONTACTS",
+            "SPELLLIST_DARK_SUMMONS",
+            "SPELLLIST_DARKNESS",
+            "SPELLLIST_ENTITY_SUMMONS",
+            "SPELLLIST_MATTER_DISRUPTION",
+            "SPELLLIST_PHYSICAL_EROSION"
+          ]
+        }
+      ],
+      "stat-gains": [
+        "Empathy"
+      ]
     },
     {
       "name": "Houri",
@@ -12618,6 +13058,90 @@
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "false",
       "time": "42",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Book (+10 to Lore | Magical category)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Book (+15 to one Magical Lore)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Book (+10 to one Obscure Lore)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "2 Books (each with +5 to one Magical Lore)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "+1 spell adder"
+        }
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Close friends with a library curator"
+        },
+        {
+          "order": "7",
+          "chance": "50",
+          "value": "Close friends with another spell user"
+        },
+        {
+          "order": "8",
+          "chance": "0",
+          "value": "Close friends with a local merchant"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_SCRIBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SERVICE",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "4",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Spell Researcher",
