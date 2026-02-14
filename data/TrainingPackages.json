@@ -2059,6 +2059,80 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
       "time": "33",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "1 detailed map of a region"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "d10 sketchy maps of several regions"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Good riding beast (+10 Riding)"
+        },
+        {
+          "order": "4",
+          "chance": "20",
+          "value": "Missile weapon (+5 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "100",
+          "value": "Riding beast (GM’s discretion)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_READING_TRACKS",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_TRACKING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "4"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
     },
     {
       "name": "Minister",
@@ -2192,6 +2266,110 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "true",
       "time": "18",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "d10 Animal Pelts (d10 sp each)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "d10 Animal Pelts (d10 sp each)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "d10 Animal Pelts (d10 sp each)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Good set of traps (+15 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Reliable buyer for animal pelts"
+        },
+        {
+          "order": "6",
+          "chance": "100",
+          "value": "Traps (+10 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_HUNTING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_FAUNA_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_FLORA_LORE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SKINNING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_READING_TRACKS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_TRACKING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_STALKING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HIDING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_WEAPON_MISSILE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "4"
+        },
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_WEAPON_MISSILE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Constitution"
+      ]
     },
     {
       "name": "Berserker",
@@ -5221,6 +5399,106 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
       "time": "26",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Melee Weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Missile Weapon (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Shield (+10 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Helm (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Friends with a ranking officer"
+        },
+        {
+          "order": "7",
+          "chance": "20",
+          "value": "Promotion"
+        },
+        {
+          "order": "8",
+          "chance": "20",
+          "value": "Promotion"
+        },
+        {
+          "order": "9",
+          "chance": "20",
+          "value": "Promotion"
+        },
+        {
+          "order": "10",
+          "chance": "20",
+          "value": "Promotion"
+        },
+        {
+          "order": "11",
+          "chance": "20",
+          "value": "Promotion"
+        },
+        {
+          "order": "12",
+          "chance": "100",
+          "value": "Melee Weapon (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_HERALDRY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_TACTICS",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Merchant",
@@ -5228,6 +5506,79 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
       "time": "23",
+      "notes": [
+        "Communication category choices must be language ranks"
+      ],
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "40",
+          "value": "Close friends with a merchant"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Close friends with a merchant"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Close friends with a merchant"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Merchant’s scale and weights"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Trade goods (10d10 sp)"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Trade goods (10d10 sp)"
+        },
+        {
+          "order": "7",
+          "chance": "100",
+          "value": "Trade goods (d10 sp)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BASIC_MATH",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_APPRAISAL",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "3",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Sokhudnerrim",
@@ -5982,6 +6333,61 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
       "time": "18",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "2d10 Concussion Repair herbs"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "d10 Poison antidotes"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "d10 Burn/Exposure herbs"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "d10 Circulatory Repair herbs"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "d10 General Purpose herbs"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Superior medical kit (+15 non-magical)"
+        },
+        {
+          "order": "7",
+          "chance": "100",
+          "value": "Medical kit (+5 non-magical)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_DIAGNOSTICS",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_SECOND_AID",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_FIRST_AID",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_USING_PREPARED_HERBS",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Weapon Master",
@@ -6130,6 +6536,91 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
       "time": "25",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "20",
+          "value": "Useful city contacts"
+        },
+        {
+          "order": "2",
+          "chance": "20",
+          "value": "Useful underworld contacts"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Promotion"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Promotion"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Promotion"
+        },
+        {
+          "order": "6",
+          "chance": "10",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "7",
+          "chance": "100",
+          "value": "Weapon (+5 non-magic)"
+        }
+
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_STREETWISE",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HERALDRY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_FIRST_AID",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_URBAN",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Manipulator",
@@ -7677,6 +8168,70 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
       "time": "18",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "80",
+          "value": "Weather-resistant clothing"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Riding beast (GM's discretion)"
+        },
+        {
+          "order": "3",
+          "chance": "100",
+          "value": "Simple map of the local region"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CLIMBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SWIMMING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_RIDING",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Servitor",
@@ -7990,6 +8545,107 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "true",
       "time": "69",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Warhorse (+10 to Riding, Mounted Combat)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Warhorse (+5 to Riding, Mounted Combat)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Warhorse"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "5",
+          "chance": "40",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "50",
+          "value": "Shield (+10 non-magic)"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Weapon (+5 non-magic)"
+        },
+        {
+          "order": "8",
+          "chance": "30",
+          "value": "Armour (+5 non-magic)"
+        },
+        {
+          "order": "9",
+          "chance": "40",
+          "value": "Shield (+5 non-magic)"
+        },
+        {
+          "order": "10",
+          "chance": "100",
+          "value": "Riding horse (+5 Riding)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_PLATE_ARMOUR",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_MOUNTED_COMBAT",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_HERALDRY",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_RIDING",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARMOUR_HEAVY",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+          "value": "1"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "2"
+        }
+      ],
+      "stat-gains": [
+        "Self Discipline",
+        "Strength"
+      ]
     },
     {
       "name": "Chaplain",
@@ -9654,6 +10310,82 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
       "time": "40",
+      "notes": [
+        "Communication category choices must be language ranks"
+      ],
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Disguise kit (+15 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Performance props (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "40",
+          "value": "Close friends with a tavern owner"
+        },
+        {
+          "order": "4",
+          "chance": "40",
+          "value": "Close friends with a tavern owner"
+        },
+        {
+          "order": "5",
+          "chance": "20",
+          "value": "Close friends with a famous performer"
+        },
+        {
+          "order": "6",
+          "chance": "100",
+          "value": "Make-up kit (+5 non-magic)"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+          "num-choices": "1",
+          "value": "3"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "5",
+          "value": "5"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Cloaker of Clans",
@@ -11061,6 +11793,99 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
       "time": "33",
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Stolen jewelry (worth 10d10 sp)"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "Stolen gems (worth 10d10 sp)"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "Stolen piece of art (worth 10d10 sp)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Lockpick kit (+10 non-magic)""
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Disarm trap kit (+10 non-magic)"
+        },
+        {
+          "order": "6",
+          "chance": "20",
+          "value": "Reliable fencing contacts"
+        },
+        {
+          "order": "7",
+          "chance": "100",
+          "value": "Lockpicks and disarm trap kit (+5 non-magic)"
+        }
+     ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_CLIMBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HERALDRY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_LOCK_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "City",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "2"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+          "num-choices": "2",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Runemaster",
@@ -11075,6 +11900,108 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "true",
       "time": "24",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "30",
+          "value": "Weapon (+10 non-magic)"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Armour (+10 non-magic)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Other Equipment (+5 non-magic)"
+        },
+        {
+          "order": "4",
+          "chance": "30",
+          "value": "Spell Adder (+1) or Daily I Item (1st level spell)"
+        },
+        {
+          "order": "5",
+          "chance": "100",
+          "value": "Choice of weapon or armor (+5 non-magic)"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_CLIMBING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_SWIMMING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ALERTNESS",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_OBSERVATION",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ATTUNEMENT",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_FIRST_AID",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_POWER_AWARENESS",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+          "value": "1"
+        }
+      ],
+      "group-category-and-skill-rank-choices": [
+        {
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
+        }
+      ],
+      "stat-gain-choices": [
+        {
+          "num-choices": "2",
+          "options": [
+            "Agility",
+            "Constitution",
+            "Empathy",
+            "Intuition",
+            "Memory",
+            "Presence",
+            "Quickness",
+            "Reasoning",
+            "Self Discipline",
+            "Strength"
+          ]
+        }
+      ]
     },
     {
       "name": "Guild Apprentice",
@@ -12203,6 +13130,73 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
       "time": "40",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "Book (+20 to a specific lore skill)"
+        },
+        {
+          "order": "2",
+          "chance": "40",
+          "value": "Book (+15 to a specific lore skill)"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Book (+10 to a specific lore skill)"
+        },
+        {
+          "order": "4",
+          "chance": "10",
+          "value": "1-5 books (+5 to specific lore skills)"
+        },
+        {
+          "order": "5",
+          "chance": "100",
+          "value": "Book (+5 to a lore category)"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "6"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "value": "3"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "num-choices": "3",
+          "value": "6"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_TECHNICAL",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_OBSCURE",
+          "num-choices": "1",
+          "value": "1"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_MAGICAL",
+          "num-choices": "2",
+          "value": "3"
+        }
+      ]
     },
     {
       "name": "Ghârnurghir",
@@ -14197,6 +15191,109 @@
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
       "time": "33",
+      "starting-money-change": "xxx",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "50",
+          "value": "3 Poison antidotes"
+        },
+        {
+          "order": "2",
+          "chance": "50",
+          "value": "4 Bone Repair herbs"
+        },
+        {
+          "order": "3",
+          "chance": "50",
+          "value": "10 Burn/Exposure herbs"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "2 Circulatory Repair herbs"
+        },
+        {
+          "order": "5",
+          "chance": "50",
+          "value": "10 Concussion Repair herbs"
+        },
+        {
+          "order": "6",
+          "chance": "50",
+          "value": "d10 General Purpose herbs"
+        },
+        {
+          "order": "7",
+          "chance": "50",
+          "value": "1 Life Preservation herbs"
+        },
+        {
+          "order": "8",
+          "chance": "50",
+          "value": "5 Muscle/Cartilage Repair herbs"
+        },
+        {
+          "order": "9",
+          "chance": "50",
+          "value": "3 Nerve Repair herbs"
+        },
+        {
+          "order": "10",
+          "chance": "50",
+          "value": "4 Organ Repair herbs"
+        },
+        {
+          "order": "11",
+          "chance": "30",
+          "value": "d10 Intoxicant herbs"
+        },
+        {
+          "order": "12",
+          "chance": "30",
+          "value": "d10 Poison herbs"
+        },
+        {
+          "order": "13",
+          "chance": "100",
+          "value": "d10 Concussion Repair herbs"
+        }
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_HORTICULTURE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_FLORA_LORE",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_FORAGING",
+          "value": "3"
+        },
+        {
+          "id": "SKILL_USING_PREPARED_HERBS",
+          "value": "2"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "value": "4"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+          "num-choices": "1",
+          "value": "1"
+        }
+      ]
     },
     {
       "name": "Fortune Teller",
