@@ -401,17 +401,16 @@ public:
 	bool realmStatGain() const { return realmStatGain_; }
 
 	/**
-	 * @brief Sets the available stat gain choices for selection.
-	 * @param num_choices The number of stats that can be selected.
-	 * @param stats A set of stat types that are available for selection.
+	 * @brief Set the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from
+	 * @param choices Pair of number of stats that may be chosen to receive a stat gain roll and set of StatType::Type stats to choose from
 	 */
-	void setStatGainChoices(int num_choices, std::set<StatType::Type> stats) { stat_gain_choices_ = std::make_pair(num_choices, std::move(stats)); }
+	void setStatGainChoices(EnumChoice<StatType::Type> choices) { stat_gain_choices_ = std::move(choices); }
 
 	/**
 	 * @brief Get the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from
 	 * @return Pair of number of stats that may be chosen to receive a stat gain roll and set of StatType::Type stats to choose from
 	 */
-	const std::pair<int, std::set<StatType::Type>> statGainChoices() const { return stat_gain_choices_; }
+	const EnumChoice<StatType::Type> statGainChoices() const { return stat_gain_choices_; }
 
 	/**
 	 * @brief Set the number of ranks for a skill the package provides
@@ -641,7 +640,7 @@ private:
 	std::vector<std::pair<std::string, int>> specials_{}; /**< Special benefits or maluses that may be gained by the package */
 	std::set<StatType::Type> stat_gains_{}; /**< Stats that receive a stat gain roll */
 	bool realmStatGain_{}; /**< Whether the package provides a stat gain roll for realm stats */
-	std::pair<int, std::set<StatType::Type>> stat_gain_choices_{}; /**< A set of stats from which the player may select one or more form to receive a stat gain roll */
+	EnumChoice<StatType::Type> stat_gain_choices_{}; /**< A set of stats from which the player may select one or more form to receive a stat gain roll */
 	std::map<SubcategoriedSkillData, int> skill_ranks_{}; /** Number of skill ranks gained */
 	std::set<std::pair<SubcategoriedSkillData, int>> skill_rank_choices_{}; /**< A set of skills with ranks from which the player may select one or more form to receive the skill ranks */
 	std::map<const SkillCategoryData*, int> skill_category_ranks_{}; /** Number of skill category ranks gained */
