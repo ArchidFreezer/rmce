@@ -3275,7 +3275,8 @@
         },
         {
           "id": "SKILL_RIDING",
-          "value": "Breliss"
+          "subcategory": "Breliss",
+          "value": "1"
         },
         {
           "id": "SKILL_TACTICS",
@@ -9144,10 +9145,6 @@
         {
           "id": "SKILL_PUBLIC_SPEAKING",
           "value": "3"
-        },
-        {
-          "id": "xxx",
-          "value": "xxx"
         },
         {
           "id": "SKILL_RELIGION",
@@ -16182,10 +16179,6 @@
         {
           "id": "SKILL_SYMBOL_LORE",
           "value": "1"
-        },
-        {
-          "id": "xxx",
-          "value": "xxx"
         },
         {
           "id": "SKILL_CULTURE_LORE",

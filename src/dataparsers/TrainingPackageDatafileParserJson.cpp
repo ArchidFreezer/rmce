@@ -66,12 +66,17 @@ void TrainingPackageDatafileParserJson::parse() {
 		}
 
 		// Stat gain choices
+		// TODO - The original json had the choices as an array rather than a single object with a num-choices tag and an options array, so this is currently set up to read the original format. This should be changed to read the new format
 		boost::optional<const pt::ptree&> stat_gain_choices_tree = v.second.get_child_optional("stat-gain-choices");
 //		ref.setStatGainChoices(parseStatGainChoices(stat_gain_choices_tree));
 		if (stat_gain_choices_tree) {
 			std::set<EnumChoice<StatType::Type>> stat_gain_choices{ parseEnumChoiceSetTree<StatType::Type>(stat_gain_choices_tree)};
 			ref.setStatGainChoices(*(stat_gain_choices.begin()));
 		}
+
+		// Skill ranks
+		boost::optional<const pt::ptree&> skill_ranks_tree = v.second.get_child_optional("skill-ranks");
+		if (skill_ranks_tree) { ref.setSkillRanks(parseSkillPairTree<int>(skill_ranks_tree)); }
 
 		std::cout << "\tTrainingPackage name: " << ref.name() << std::endl;
 	}
@@ -135,6 +140,12 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 	{
 		pt::ptree tree{ getStatGainChoicesTree(game_data) };
 		if (tree.size()) datum.push_back(std::make_pair("stat-gain-choices", tree));
+	}
+
+	// Skill ranks
+	{
+		pt::ptree tree{ getSkillPairTree<int>(game_data.skillRanks()) };
+		if (tree.size()) datum.push_back(std::make_pair("skill-ranks", tree));
 	}
 }
 

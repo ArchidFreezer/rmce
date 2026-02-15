@@ -43,7 +43,37 @@
                     "Self Discipline",
                     "Strength"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ATTUNEMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_ADVISOR",
@@ -96,6 +126,46 @@
             ],
             "stat-gains": [
                 "Intuition"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DIPLOMACY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HERALDRY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HISTORY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SIGNALING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -136,6 +206,16 @@
                 {
                     "value": "Spell Adder (+1)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ATTUNEMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_READ_RUNES",
+                    "value": "1"
                 }
             ]
         },
@@ -182,6 +262,37 @@
             ],
             "stat-gains": [
                 "Empathy"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FLORA_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HIDING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_READING_TRACKS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STALKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRACKING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -259,6 +370,42 @@
                     "value": "Caged Pigeons (2)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "subcategory": "Animal A",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "subcategory": "Animal B",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "subcategory": "Animal C",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ANIMAL_HEALING",
+                    "subcategory": "Animal A",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ANIMAL_MASTERY",
+                    "subcategory": "Animal A",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ANIMAL_TRAINING",
+                    "subcategory": "Animal A",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -297,6 +444,36 @@
                     "value": "Favour from an important person",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DUPING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_GAMBLING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MIMICRY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PROPAGANDA",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TALE_TELLING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -334,6 +511,24 @@
                 {
                     "value": "d10 General Purpose herbs",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALCHEMY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HERB_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_POISON_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_USING_REMOVING_POISON",
+                    "value": "1"
                 }
             ]
         },
@@ -374,6 +569,39 @@
                     "value": "Pet spider, Small",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "subcategory": "Spiders",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_ANIMAL_MASTERY",
+                    "subcategory": "Spiders",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_FAUNA_LORE",
+                    "subcategory": "Spiders",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_POISON_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PREPARE_POISONS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SENSE_AMBUSH",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_USING_REMOVING_POISON",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -411,6 +639,37 @@
                     "value": "Riding beast",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANTHROPOLOGY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_APPRAISAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ARTIFACT_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DETECT_TRAPS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HISTORY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Sepcific region",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -445,6 +704,24 @@
                 {
                     "value": "Close friends with work boss",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ARCHITECTURE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ENGINEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_METAL_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STONE_LORE",
+                    "value": "1"
                 }
             ]
         },
@@ -496,6 +773,24 @@
                     "value": "Certificates of mastery",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_WEAPON_STYLE_LORE",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -529,6 +824,28 @@
                 {
                     "value": "Daily I item (2nd level spell)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_APPRAISAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ARTIFACT_LORE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_ATTUNEMENT",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_POWER_PERCEPTION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_RESEARCH",
+                    "value": "2"
                 }
             ]
         },
@@ -615,6 +932,36 @@
                     "value": "Book (+5 non-magic to Star-gazing)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADVANCED_MATH",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ASTRONOMY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_BASIC_MATH",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_DIRECTION_SENSE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STAR_GAZING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -665,6 +1012,32 @@
             ],
             "stat-gains": [
                 "Empathy"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ANIMAL_HEALING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FLORA_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HIDING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STALKING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -693,6 +1066,16 @@
             ],
             "stat-gains": [
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FRENZY",
+                    "value": "4"
+                }
             ]
         },
         {
@@ -746,6 +1129,30 @@
             ],
             "stat-gains": [
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Dwarf",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DRAGON_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FRENZY",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILL_HISTORY",
+                    "subcategory": "Dwarvish",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -789,6 +1196,33 @@
             ],
             "stat-gains": [
                 "Self Discipline"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_READING_TRACKS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Region of responsibility",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SIGNALING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SURVEILLANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRACKING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -828,7 +1262,34 @@
                     "Constitution",
                     "Strength"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADRENAL_TOUGHNESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CAVING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REVERSE_STROKE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STUNNED_MANOEUVREING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SURVIVAL",
+                    "subcategory": "Subterranean",
+                    "value": "1"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_BOARSADDLER",
@@ -868,6 +1329,34 @@
             ],
             "stat-gains": [
                 "Empathy"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "subcategory": "Boar",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FRENZY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_JUMPING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MOUNTED_COMBAT",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "subcategory": "Boar",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -910,6 +1399,20 @@
                 {
                     "value": "Friendly tavern owner",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SENSE_AMBUSH",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_STREETWISE",
+                    "value": "1"
                 }
             ]
         },
@@ -955,6 +1458,31 @@
             ],
             "stat-gains": [
                 "Empathy"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "subcategory": "Breliss",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MOUNTED_COMBAT",
+                    "value": "6"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "subcategory": "Breliss",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TACTICS",
+                    "subcategory": "Cavalry",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -987,6 +1515,26 @@
                 {
                     "value": "1-2 Hobgoblin herbs",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MOUNTED_COMBAT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "subcategory": "Breliss",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TACTICS",
+                    "subcategory": "Archer",
+                    "value": "1"
                 }
             ]
         },
@@ -1026,6 +1574,25 @@
                 {
                     "value": "Lockpicks and disarm trap kit (+5 non-magic)",
                     "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "City",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HERALDRY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LOCK_LORE",
+                    "value": "2"
                 }
             ]
         },
@@ -1073,6 +1640,12 @@
                     "value": "Friends with tavern owner",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -1111,6 +1684,20 @@
                 {
                     "value": "Weather resistant clothing",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ORIENTEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "1"
                 }
             ]
         },
@@ -1161,6 +1748,41 @@
                     "value": "Noble patron",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_DIVINATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PHILOSOPHY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PROPAGANDA",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Specific lore",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -1195,6 +1817,30 @@
                 {
                     "value": "Special religious token\/sigil",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HISTORY",
+                    "subcategory": "Local",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PROPAGANDA",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Own religion",
+                    "value": "3"
                 }
             ]
         },
@@ -1235,6 +1881,28 @@
                 {
                     "value": "Tools of the trade (alchemical gear, fake mystical tomes etc.)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DISGUISE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_DUPING",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRICKERY",
+                    "value": "1"
                 }
             ]
         },
@@ -1279,6 +1947,24 @@
             ],
             "stat-gains": [
                 "Self Discipline"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CHI_POWERS_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MEDITATION",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -1317,6 +2003,28 @@
                 {
                     "value": "Weapon (+5 non-magic)",
                     "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HERALDRY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STREETWISE",
+                    "value": "1"
                 }
             ]
         },
@@ -1369,7 +2077,19 @@
                     "Agility",
                     "Presence"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Gnoll",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HISTORY",
+                    "subcategory": "Gnoll",
+                    "value": "1"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_CLOAKER_OF_CLANS",
@@ -1417,6 +2137,12 @@
             ],
             "stat-gains": [
                 "Intuition"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_STALKING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -1458,6 +2184,12 @@
                     "value": "Pet (small animal)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_RESEARCH",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -1479,6 +2211,12 @@
                 {
                     "value": "Special religious token\/sigil",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BASIC_MATH",
+                    "value": "1"
                 }
             ]
         },
@@ -1537,6 +2275,20 @@
             "stat-gains": [
                 "Empathy",
                 "Memory"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ATTUNEMENT",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_POWER_PERCEPTION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_READ_RUNES",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -1570,6 +2322,12 @@
             ],
             "stat-gains": [
                 "Memory"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CIRCLE_LORE",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -1600,6 +2358,20 @@
                 {
                     "value": "Fake identification (+15 Duping)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BEGGING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DUPING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "1"
                 }
             ]
         },
@@ -1655,6 +2427,20 @@
                     "value": "Catalysts (1 gp worth)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HUNTING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SKINNING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -1688,6 +2474,16 @@
                 {
                     "value": "Outlandish clothing and ornamentation",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SPELL_MASTERY",
+                    "value": "2"
                 }
             ]
         },
@@ -1773,6 +2569,24 @@
                     "value": "Good medical kit (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DIAGNOSTICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PREPARE_HERBS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SECOND_AID",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -1805,6 +2619,17 @@
                 {
                     "value": "Riding horse\/beast",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Choose 1 or 2 cultures to share ranks",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "2"
                 }
             ]
         },
@@ -1856,6 +2681,21 @@
                     "value": "Tiny crystal gemstone (dlO sp value)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_EVALUATE_STONE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_STONE_CRAFTS",
+                    "subcategory": "Gem cutting",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_STONE_LORE",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -1903,6 +2743,29 @@
             ],
             "stat-gains": [
                 "Reasoning"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DEMON_DEVIL_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_POWER_PERCEPTION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_REALITY_AWARENESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Specific lore",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -1937,6 +2800,20 @@
                 {
                     "value": "Underworld contacts",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PICKING_POCKETS",
+                    "value": "2"
                 }
             ]
         },
@@ -2011,6 +2888,28 @@
                     "value": "Knowledge of one trade good for a specific demonic type",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DEMON_DEVIL_LORE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_PLANAR_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_REALITY_AWARENESS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_SUMMONING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_XENO_LORE",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -2044,6 +2943,12 @@
                 {
                     "value": "Underworld contacts",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "4"
                 }
             ]
         },
@@ -2091,6 +2996,40 @@
                     "value": "Finely crafted object (gift)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BRIBERY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Culture 1",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Culture 2",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DIPLOMACY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Region 1",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Region 2",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -2129,6 +3068,24 @@
                     "value": "Medical kit (+5 non-magical)",
                     "chance": "100"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DIAGNOSTICS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SECOND_AID",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -2162,6 +3119,28 @@
                 {
                     "value": "Book on dreams (+10 to Dream Lore)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DREAM_LORE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_MEDITATION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_SLEEP_TRANCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "2"
                 }
             ]
         },
@@ -2205,6 +3184,40 @@
                     "value": "Book (+10 to Dream World Lore)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_DREAMWORLD_LORE",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILL_DREAM_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HEALING_TRANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MEDITATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_REALITY_AWARENESS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SLEEP_TRANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -2238,6 +3251,32 @@
                 {
                     "value": "Favour from an important person",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DISARM_FOE_ARMED",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HERALDRY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_QUICKDRAW",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SWASHBUCKLING",
+                    "value": "2"
                 }
             ]
         },
@@ -2291,7 +3330,31 @@
                     "Intuition",
                     "Presence"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Dwarf",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DRAGON_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HISTORY",
+                    "subcategory": "Dwarvish",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SYMBOL_LORE",
+                    "value": "1"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_ENGINEER",
@@ -2330,6 +3393,28 @@
                     "value": "Draft of an important structure",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ARCHITECTURE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ENGINEERING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_METAL_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STONE_LORE",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -2355,6 +3440,20 @@
                 {
                     "value": "Favour from Local Ruler",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_INTERROGATION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_POWER_STRIKING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_ROPE_MASTERY",
+                    "value": "2"
                 }
             ]
         },
@@ -2403,7 +3502,25 @@
                     "Self Discipline",
                     "Strength"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_FAMULUS",
@@ -2446,6 +3563,16 @@
                     "value": "Close friends with a local merchant",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_SCRIBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SERVICE",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -2486,6 +3613,32 @@
                     "value": "Lockpick kit (+10 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DETECT_TRAPS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HIDING_ITEMS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LOCATE_HIDDEN",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PICKING_LOCKS",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -2524,6 +3677,24 @@
                 {
                     "value": "Divinatory apparatus either set of Tarot cards, crystal ball etc, or an astrological almanac covering one year (GM choice)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DIVINATION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_DIVINATION_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DUPING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "1"
                 }
             ]
         },
@@ -2575,6 +3746,21 @@
                     "value": "Armour (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Orc",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STUNNED_MANOEUVREING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -2613,6 +3799,34 @@
                     "value": "Disarm Trap kit (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ARTIFACT_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DETECT_TRAPS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HISTORY",
+                    "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LOCATE_HIDDEN",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MAPPING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -2646,6 +3860,36 @@
                 {
                     "value": "Horse, light",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "subcategory": "Choice",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ANIMAL_TRAINING",
+                    "subcategory": "Choice",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "subcategory": "Choice",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ROPE_MASTERY",
+                    "value": "2"
                 }
             ]
         },
@@ -2737,7 +3981,13 @@
             "stat-gains": [
                 "Memory"
             ],
-            "realm-stat-gain": "true"
+            "realm-stat-gain": "true",
+            "skill-ranks": [
+                {
+                    "id": "SKILL_RESEARCH",
+                    "value": "1"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_HEDGE_WIZARD",
@@ -2798,6 +4048,33 @@
                     "value": "Divination Aid ( +5 to divination)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DIVINATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MEDITATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PROPAGANDA",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SITUATIONAL_AWARENESS",
+                    "subcategory": "Ritual",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_TEACHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -2842,7 +4119,34 @@
                     "Intuition",
                     "Reasoning"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_EVALUATE_ARMOUR",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_EVALUATE_METAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_EVALUATE_WEAPON",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_METAL_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_WEAPON_1_H_CONCUSSION",
+                    "subcategory": "Hammer",
+                    "value": "1"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_HERBALIST",
@@ -2905,6 +4209,24 @@
                     "value": "d10 Concussion Repair herbs",
                     "chance": "100"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_FLORA_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FORAGING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_HORTICULTURE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -2955,6 +4277,20 @@
                     "value": "Catalysts (1 gp worth of catalysts)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_FLORA_LORE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_HERB_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HORTICULTURE",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -3002,6 +4338,37 @@
             "stat-gains": [
                 "Constitution",
                 "Self Discipline"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FORAGING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_SURVIVAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -3048,6 +4415,16 @@
             "stat-gains": [
                 "Constitution",
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_STUNNED_MANOEUVREING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -3078,6 +4455,21 @@
                 {
                     "value": "Riding beast (GM's discretion)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "3"
                 }
             ]
         },
@@ -3125,6 +4517,24 @@
             ],
             "stat-gains": [
                 "Presence"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DISGUISE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -3171,6 +4581,41 @@
             "stat-gains": [
                 "Self Discipline",
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Orc",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DRAGON_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ORIENTEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STUNNED_MANOEUVREING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -3209,6 +4654,40 @@
             ],
             "stat-gains": [
                 "Constitution"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FLORA_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HIDING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HUNTING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_READING_TRACKS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SKINNING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STALKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRACKING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -3239,6 +4718,41 @@
                 {
                     "value": "Torturing Tools (+5 non-magic to Interrogation)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_INTERROGATION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_POWER_PERCEPTION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Specific lore",
+                    "value": "1"
                 }
             ]
         },
@@ -3277,6 +4791,12 @@
                 {
                     "value": "Crafting tools (+5 to specific craft)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_GIMMICKRY",
+                    "value": "2"
                 }
             ]
         },
@@ -3319,6 +4839,28 @@
             "stat-gains": [
                 "Intuition",
                 "Reasoning"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BASIC_MATH",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_GIMMICKRY",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILL_METAL_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SCROUNGING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -3352,6 +4894,36 @@
                 {
                     "value": "Fine clothing, outrageous in design",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ACTING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_DIPLOMACY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DUPING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_JUGGLING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STILT_WALKING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TUMBLING",
+                    "value": "2"
                 }
             ]
         },
@@ -3462,6 +5034,24 @@
             "stat-gains": [
                 "Self Discipline",
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_HERALDRY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MOUNTED_COMBAT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PLATE_ARMOUR",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -3495,6 +5085,12 @@
                 {
                     "value": "Part of a work gang (3d10 workers)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
                 }
             ]
         },
@@ -3546,6 +5142,20 @@
                 {
                     "value": "Lore Book (+5 non-magic to a specific lore)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DIPLOMACY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RESEARCH",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SCRIBING",
+                    "value": "3"
                 }
             ]
         },
@@ -3624,6 +5234,12 @@
                     "value": "Crafting tools (+5 to specific craft)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ATTUNEMENT",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -3661,6 +5277,24 @@
             ],
             "stat-gains": [
                 "Presence"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_BRIBERY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PSYCHOLOGY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -3712,6 +5346,40 @@
                     "value": "Navigational instruments (e.g., a sextant, astrolabe, compass etc.)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BOAT_PILOT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CARTOGRAPHY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DRAFTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_NAVIGATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ROPE_MASTERY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SAILING",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -3755,6 +5423,32 @@
             "stat-gains": [
                 "Agility",
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LOCKING_HOLDS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STYLE_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_NERVE_STRIKES",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -3807,6 +5501,28 @@
             ],
             "stat-gains": [
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STYLE_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_WEAPON_STYLE_LORE",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -3849,6 +5565,20 @@
                 {
                     "value": "Reputation as a good fighter",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "1"
                 }
             ]
         },
@@ -3903,6 +5633,24 @@
             ],
             "stat-gains": [
                 "Agility"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ACTING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TUMBLING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -3941,6 +5689,12 @@
                 {
                     "value": "Friendly tavern owner",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "1"
                 }
             ]
         },
@@ -3983,6 +5737,20 @@
                 {
                     "value": "Reputation as a very skilled fighter",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "1"
                 }
             ]
         },
@@ -4031,6 +5799,36 @@
                     "value": "Medical kit (+5 non-magical)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DIAGNOSTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILL_HEALING_TRANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PREPARE_HERBS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_SECOND_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -4071,6 +5869,45 @@
                 {
                     "value": "Special religious token\/sigil",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADRENAL_STABILIZATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_CLEANSING_TRANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_DIVINATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HEALING_TRANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MEDITATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PHILOSOPHY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Specific lore",
+                    "value": "1"
                 }
             ]
         },
@@ -4113,6 +5950,37 @@
                 {
                     "value": "Good quality tools for disarming traps (+5 non-magic)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Goblin",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DISARMING_TRAPS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ENGINEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LOCK_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MECHANITION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PICKING_LOCKS",
+                    "value": "2"
                 }
             ]
         },
@@ -4163,6 +6031,20 @@
             ],
             "stat-gains": [
                 "Constitution"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MILITARY_ORGANIZATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SIEGE_ENGINEERING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4205,6 +6087,16 @@
                     "value": "Trade goods (d10 sp)",
                     "chance": "100"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_APPRAISAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_BASIC_MATH",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4234,6 +6126,44 @@
                 {
                     "value": "Non-magic item (+5)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_AMBUSH",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CAMOUFLAGE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CAVING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MINING",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILL_SETTING_TRAPS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SILENT_ATTACK",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SPRINTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SURVEILLANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRAP_BUILDING",
+                    "value": "1"
                 }
             ]
         },
@@ -4288,6 +6218,41 @@
                     "value": "Special religious token\/sigil",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PHILOSOPHY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PROPAGANDA",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Specific lore",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4335,6 +6300,51 @@
                     "value": "Special religious token\/sigil",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Location specific",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_DIPLOMACY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FORAGING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PROPAGANDA",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Location specific",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Specific lore",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SURVIVAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TALE_TELLING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4376,6 +6386,24 @@
             ],
             "stat-gains": [
                 "Intuition"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANATOMY",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_SECOND_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SURGERY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_UNDEAD_LORE",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -4427,6 +6455,20 @@
             "stat-gains": [
                 "Agility",
                 "Constitution"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4472,6 +6514,20 @@
                 {
                     "value": "Lore Book (+5) one culture",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANTHROPOLOGY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HISTORY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SCRIBING",
+                    "value": "1"
                 }
             ]
         },
@@ -4531,6 +6587,12 @@
             ],
             "stat-gains": [
                 "Presence"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DIVINATION",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -4595,7 +6657,21 @@
                     "Self Discipline",
                     "Strength"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CAVING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_STALKING",
+                    "value": "3"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_PERFORMER",
@@ -4673,6 +6749,12 @@
             ],
             "stat-gains": [
                 "Reasoning"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4716,6 +6798,56 @@
                 {
                     "value": "Vow (moral obligation to patients) ",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALCHEMY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ANATOMY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_DIAGNOSTICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_HERB_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HYPNOSIS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MIDWIFERY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_POISON_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PREPARE_HERBS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SECOND_AID",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SURGERY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "2"
                 }
             ]
         },
@@ -4763,6 +6895,39 @@
             ],
             "stat-gains": [
                 "Memory"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Local",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FORAGING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Own",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SURVIVAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4791,6 +6956,44 @@
                 {
                     "value": "Weapon (+5 non-magic)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DISTANCE_RUNNING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FORAGING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ORIENTEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_READING_TRACKS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SPRINTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SURVEILLANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRACKING",
+                    "value": "1"
                 }
             ]
         },
@@ -4833,6 +7036,28 @@
                 {
                     "value": "Rival (equal or higher level)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ACTING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HERALDRY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_INTERROGATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PROPAGANDA",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TRICKERY",
+                    "value": "1"
                 }
             ]
         },
@@ -4887,6 +7112,20 @@
                     "value": "Lore Book (+10 to non-magic lore)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALCHEMY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HERB_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_POISON_LORE",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4920,6 +7159,37 @@
                 {
                     "value": "Holy symbol (+5 influence to believers)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DIVINATION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_FORAGING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REALITY_AWARENESS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Own",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SURVIVAL",
+                    "value": "1"
                 }
             ]
         },
@@ -4963,6 +7233,21 @@
             ],
             "stat-gains": [
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Specific lore",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -5019,7 +7304,14 @@
                     "chance": "0"
                 }
             ],
-            "realm-stat-gain": "true"
+            "realm-stat-gain": "true",
+            "skill-ranks": [
+                {
+                    "id": "SKILL_SPELL_MASTERY",
+                    "subcategory": "List from package",
+                    "value": "2"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_PROWLDARK",
@@ -5062,7 +7354,26 @@
                     "Intuition",
                     "Self Discipline"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CAVING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STALKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SURVIVAL",
+                    "subcategory": "Subterranean",
+                    "value": "1"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_ROMANTIC",
@@ -5091,6 +7402,16 @@
                 {
                     "value": "Special token from lost\/past love",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "value": "3"
                 }
             ]
         },
@@ -5130,6 +7451,20 @@
             "stat-gains": [
                 "Empathy",
                 "Memory"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_PAPER_MAKING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_READ_RUNES",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_SYMBOL_LORE",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -5218,6 +7553,24 @@
                     "value": "Passage credit on a ship",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ORIENTEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ROPE_MASTERY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SWIMMING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -5271,6 +7624,20 @@
                     "value": "Book (+10 Lore | Magical category)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_INTERROGATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MNEMONICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RESEARCH",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -5314,6 +7681,20 @@
                     "value": "Certificate in his martial arts style",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -5344,6 +7725,20 @@
                 {
                     "value": "Riding beast (GM’s discretion)",
                     "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_READING_TRACKS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRACKING",
+                    "value": "1"
                 }
             ]
         },
@@ -5410,6 +7805,16 @@
                     "value": "Noble contact",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_SCRIBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SERVICE",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -5454,6 +7859,32 @@
             ],
             "stat-gains": [
                 "Intuition"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANATOMY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SECOND_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SURGERY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_UNDEAD_LORE",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -5514,7 +7945,17 @@
                     "Self Discipline",
                     "Strength"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TRANSCEND_ARMOR",
+                    "value": "2"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_SHAGUK_SH_RMAUK_ëND",
@@ -5565,6 +8006,16 @@
             ],
             "stat-gains": [
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_STUNNED_MANOEUVREING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -5620,7 +8071,17 @@
                     "Self Discipline",
                     "Strength"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "1"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_SHAGUK_STâZ_PARGUN",
@@ -5671,6 +8132,16 @@
             ],
             "stat-gains": [
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MOUNTED_COMBAT",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -5706,6 +8177,16 @@
                 {
                     "value": "Spell adder (+1)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SPELL_LORE",
+                    "value": "2"
                 }
             ]
         },
@@ -5769,6 +8250,27 @@
                     "value": "Shield (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "subcategory": "Cestûszak",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SHIELD_MAKING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TACTICS",
+                    "subcategory": "Infantry Formation",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILL_TWO_WEAPON_COMBAT",
+                    "subcategory": "Choice plus Cestûszak",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -5817,6 +8319,24 @@
                     "value": "1 Leaningfellow mushroom",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STREETWISE",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -5846,6 +8366,28 @@
                 {
                     "value": "Tool kit (+10 non-magic)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_MECHANITION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MILITARY_ORGANIZATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MINING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SIEGE_ENGINEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SIGNALING",
+                    "value": "1"
                 }
             ]
         },
@@ -5883,6 +8425,32 @@
                 {
                     "value": "Weapon (+5 non-magic)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ORIENTEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_READING_TRACKS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SURVEILLANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRACKING",
+                    "value": "1"
                 }
             ]
         },
@@ -5924,6 +8492,40 @@
             ],
             "stat-gains": [
                 "Quickness"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_AMBUSH",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CAVING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PREPARE_POISONS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SETTING_TRAPS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SILENT_ATTACK",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_STALKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_USING_REMOVING_POISON",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -5960,6 +8562,29 @@
             ],
             "stat-gains": [
                 "Agility"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BOAT_PILOT",
+                    "subcategory": "Underground waterways",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ORIENTEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ROPE_MASTERY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -6019,6 +8644,20 @@
                     "value": "Melee Weapon (+5 non-magic)",
                     "chance": "100"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HERALDRY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TACTICS",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -6067,6 +8706,28 @@
                 {
                     "value": "Spell Adder (+1)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ATTUNEMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_READ_RUNES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RESEARCH",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILL_TEACHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TIME_SENSE",
+                    "value": "1"
                 }
             ]
         },
@@ -6121,6 +8782,12 @@
                     "value": "Friendly contact at local pub",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_RESEARCH",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -6155,6 +8822,12 @@
                 {
                     "value": "Weapon (+5 non-magic)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
                 }
             ]
         },
@@ -6219,7 +8892,21 @@
                     "Self Discipline",
                     "Strength"
                 ]
-            }
+            },
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILL_INTERROGATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RESEARCH",
+                    "value": "1"
+                }
+            ]
         },
         {
             "id": "TRAININGPACKAGE_TEMPLAR",
@@ -6265,6 +8952,33 @@
             ],
             "stat-gains": [
                 "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HERALDRY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MILITARY_ORGANIZATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Specific lore",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TACTICS",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -6299,6 +9013,28 @@
             ],
             "stat-gains": [
                 "Self Discipline"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LOCKING_HOLDS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_NERVE_STRIKES",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -6350,6 +9086,37 @@
             "stat-gains": [
                 "Constitution",
                 "Intuition"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_DIAGNOSTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_HERB_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Specific lore",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SECOND_AID",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -6371,6 +9138,24 @@
                 {
                     "value": "Simple map of the local region",
                     "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
                 }
             ]
         },
@@ -6397,6 +9182,27 @@
                 {
                     "value": "Riding beast",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "Riding",
+                    "subcategory": "Choice",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_PLAY_INSTRUMENT",
+                    "subcategory": "Choice",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "1"
                 }
             ]
         },
@@ -6430,6 +9236,26 @@
                 {
                     "value": "Weapon (+5 non-magic)",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "subcategory": "Boar",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MOUNTED_COMBAT",
+                    "value": "6"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "subcategory": "Boar",
+                    "value": "2"
                 }
             ]
         },
@@ -6474,6 +9300,32 @@
                     "value": "Finely crafted object (gift)",
                     "chance": "0"
                 }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ATTUNEMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DIPLOMACY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_DIVINATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HISTORY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -6507,6 +9359,24 @@
             ],
             "stat-gains": [
                 "Constitution"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_OBSERVATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -6540,6 +9410,20 @@
                 {
                     "value": "Reputation as a holy hermit",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "1"
                 }
             ]
         },
@@ -6586,6 +9470,12 @@
             ],
             "stat-gains": [
                 "Empathy"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_MEDITATION",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -6620,6 +9510,20 @@
                 {
                     "value": "Reputation as a holy warrior",
                     "chance": "0"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_STRIKING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "2"
                 }
             ]
         },
@@ -6709,6 +9613,45 @@
             ],
             "stat-gains": [
                 "Empathy"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ARTIFACT_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CIRCLE_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_DEMON_DEVIL_LORE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_DIVINATION",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MAGIC_RITUAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Specific lore",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SYMBOL_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_WARDING_LORE",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -6734,6 +9677,26 @@
             ],
             "stat-gains": [
                 "Intuition"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_LANGUAGES",
+                    "subcategory": "Native",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_RELIGION",
+                    "subcategory": "Own cause",
+                    "value": "1"
+                }
             ]
         }
     ]
