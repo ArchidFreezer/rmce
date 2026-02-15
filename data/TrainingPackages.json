@@ -5,8 +5,8 @@
       "description": "All Hobgoblins are reared to be fighters from infancy. If they survive to adulthood, they are very hardy creatures, eager to fight. The Hewer (a loose translation of the Hobgoblin word) is essentially a Hobgoblin soldier, a mud-colored giant Goblin who has avidly pursued training in the field of arms.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "107",
-      "starting-money-change": "d10",
+      "time-to-acquire": "107",
+      "starting-money-modifier-dice": "d10",
       "races": [
         "RACE_HOBGOBLINS"
       ],
@@ -109,7 +109,7 @@
       "description": "The pilgrim has lost his place of worship and is seeking another. His deity is still with him, but his church and religion have either been forcefully denied him or have been destroyed. He has had to wander the world looking for a place to freely practice his religion, perhaps being persecuted along the way. His life has become a search for his promised land.",
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "true",
-      "time": "121",
+      "time-to-acquire": "121",
       "stat-gains": [
         "Memory"
       ],
@@ -235,7 +235,7 @@
       "description": "A Goblin Croaker is the doctor of a Goblin clan or tribe. He does not pursue the art of surgery out of any desire to help his fellows or an altruistic desire to heal. Rather, the Goblin interest and fascination with mechanical workings has manifested itself in an overwhelming interest in the intricacies of anatomy and how the body works. A sick or wounded Goblin is a chance to tinker.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "17",
+      "time-to-acquire": "17",
       "races": [
         "RACE_GOBLINS"
       ],
@@ -306,7 +306,7 @@
       "description": "The Troubadour is a wandering minstrel who brings tales of wonder, gossip, and news to otherwise isolated towns, farmsteads, and castles. The Troubadour can expect good food and shelter if he tells a good tale even in the humblest of homes. A Troubadour is more than just a performer. The Troubadour is a professional traveller, entertainer, and gossip. The Troubadour lives his life in search of excitement, adventure, and a warm crowd to whom he can relate his tales.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "132",
+      "time-to-acquire": "132",
       "specials": [
         {
           "order": "1",
@@ -399,7 +399,7 @@
       "description": "Generally a loner, except for his animal friends, this type of character spends a great deal of time in the wilderness.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "true",
-      "time": "102",
+      "time-to-acquire": "102",
       "specials": [
         {
           "order": "1",
@@ -408,8 +408,8 @@
         },
         {
           "order": "2",
-          "chance": "Wild cat friend",
-          "value": "30"
+          "chance": "30",
+          "value": "Wild cat friend"
         },
         {
           "order": "3",
@@ -516,7 +516,7 @@
       "description": "Secluded from most of society with only their summoned and conjured companions as friends, the Conjurors venture out only with their thralls (much to the scorn of the local populace).",
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "true",
-      "time": "84",
+      "time-to-acquire": "84",
       "specials": [
         {
           "order": "1",
@@ -684,10 +684,19 @@
       "name": "Animal Handler",
       "flavour-text": "Sit Ubu. Sit. Good gabbit.",
       "description": "The animal handler is often employed by spell users of the Corpist school of magic. An animal handler is skilled at keeping, grooming, raising, breeding, and healing a wide variety of animals or creatures. Animal handlers may make profits with trained animal acts, zoos, or by stocking catalyst sources, though some do keep animals as a hobby.",
-      "qualifier": "Animal Friend Training Package or 90+ temporary Empathy statistic [-2 points].",
+            "qualifiers": [
+                {
+                    "qualifier": "90+ temporary Empathy stat",
+                    "reduction": "-2"
+                },
+                {
+                    "qualifier": "Animal Friend Training Package",
+                    "reduction": "-2"
+                }
+            ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "false",
-      "time": "37",
+      "time-to-acquire": "37",
       "specials": [
         {
           "order": "1",
@@ -818,8 +827,8 @@
       "description": "Misdirection, authentic-seeming tomes, mystical implements, and a glib tongue are the Charlatan's best tools in prising gold from the gullible and the greedy. To one patron, the Charlatan may claim to have uncovered the secrets of transmutation, to another the formula for eternal youth, but to both he will explain his need for monies in order to acquire the exotic ingredients and perform the necessary experiments... And once his prey is adequately fleeced, he will flee before his chicanery is discovered. Some few have added scraps of magic to their repertoire of deception, enhancing both trickery and credibility as well as masking their true intent from real masters of magic.",
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "102",
-      "starting-money-change": "d10",
+      "time-to-acquire": "102",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -925,7 +934,7 @@
       "description": "The Brelissker is the other, less common type of mounted Hobgoblin fighter, who rides the Boar-headed serpent into battle. More disciplined and less prone to heedless charges, the Brelissker sometimes has a Goblin companion he abuses less than most others. This Goblin many times will accompany the Brelissker into battle, sometimes as light foot soldier alongside his master, sometimes mounted behind the master plying a bow.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "94",
+      "time-to-acquire": "94",
       "races": [
         "RACE_HOBGOBLINS"
       ],
@@ -1012,7 +1021,7 @@
       "description": "The wanderer is similar to a traveller, except he has no 'home' region. He has forsaken any roots and chooses instead to wander the world.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "95",
+      "time-to-acquire": "95",
       "specials": [
         {
           "order": "1",
@@ -1118,7 +1127,7 @@
       ],
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "122",
+      "time-to-acquire": "122",
       "specials": [
         {
           "order": "1",
@@ -1217,7 +1226,7 @@
       "description": "The Artificer is fascinated by the toys of magic. Whenever possible the Artificer will pick up new magic items for use or even just curiosity. This fascination and greater understanding of magic items provides the Artificer with greater ability to access and use magic items.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "110",
+      "time-to-acquire": "110",
       "specials": [
         {
           "order": "1",
@@ -1307,7 +1316,7 @@
       "description": "The ninja is a character who has been raised by a secret clan of spies and assassins. Most of the character's life has been training for the jobs that he is going to do for his clan. In return for his training, the clan expects absolute loyalty - treachery is repaid in death for the offender. The clan teaches many types of skills including disguise, assassination, stealth, and endurance along with its weapon skills.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
-      "time": "170",
+      "time-to-acquire": "170",
       "specials": [
         {
           "order": "1",
@@ -1448,7 +1457,7 @@
       "description": "The cloistered academic spends his days locked away from the rest of the world, embroiled in his learning. Books are his life. If he is close to anyone, it will usually only be a small pet. Even servants and others living in the same household are largely ignored.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "95",
+      "time-to-acquire": "95",
       "notes": [
         "Communication category choice ranks must be spent on a written language"
       ],
@@ -1550,7 +1559,7 @@
       "description": "A guardian is a person who is given a specific area or region to guard and protect. Sometimes, guardians work together in larger organizations to protect very large regions.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "116",
+      "time-to-acquire": "116",
       "specials": [
         {
           "order": "1",
@@ -1652,7 +1661,7 @@
       "description": "The Cloistered Zealot lives a life of purity and scholarship in the name of his deity. Cloistered Zealots find a solid balance between preaching their religion and addressing the realities of life. Cloistered Zealots are well respected for their insights, wisdom, and intelligence.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "128",
+      "time-to-acquire": "128",
       "specials": [
         {
           "order": "1",
@@ -1739,7 +1748,7 @@
       "description": "Having spent years studying, the Crusading Academic now has a cause and is ready to tell the world about it. He is ready to travel the world, meet new people, and see strange places.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "110",
+      "time-to-acquire": "110",
       "notes": [
         "Communication category choices must be spent on spoken languages"
       ],
@@ -1838,7 +1847,7 @@
       "description": "The librarian may either be a serious book collector, or an organization freak for a collector or college. Librarians are fine researchers and great sources of information, though they are generally too sedentary to adventure abroad. The occasional librarian may go in search of a rare or exotic text, though they are often looked down on by the librarian elite. Librarians are also expected to act aloof and frown in dismay at the general populace whenever possible.",
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "false",
-      "time": "57",
+      "time-to-acquire": "57",
       "specials": [
         {
           "order": "1",
@@ -1950,7 +1959,7 @@
       "description": "Pillagers are the eyes and ears of a Hobgoblin army or raiding band, as well as those most responsible for gathering loot after battle and feeding soldiers while on the move. In battle they function as irregular light infantry, skirmishing and harassing the foe. Off the field they scout ahead, to the flanks and rear, spying out places to loot and burn and watching always for forces that might oppose them. A side duty accomplished during these tasks is foraging for food and game to supplement any rations brought along.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "49",
+      "time-to-acquire": "49",
       "races": [
         "RACE_HOBGOBLINS"
       ],
@@ -2068,8 +2077,8 @@
       "description": "Scouts can find employment in a variety of settings. Their general duties include travelling in front of a group for the purpose of finding hazards and/or dangers for the rest of the group to avoid.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
-      "time": "33",
-      "starting-money-change": "d10",
+      "time-to-acquire": "33",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -2148,10 +2157,15 @@
       "name": "Minister",
       "flavour-text": "We are gathered here today to witness a holy event.",
       "description": "Ministers are responsible for the teaching within a religion. They are some of the most versed students of the doctrine and teachings of their religion that can be found. They spend their time sharing their thoughts with others of their own religion, and inviting all to attend their uplifting sermons.",
-      "qualifier": "At least 10 ranks in Religion [-3 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "At least 10 ranks in Religion.",
+                    "reduction": "-3"
+                }
+            ],
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "false",
-      "time": "63",
+      "time-to-acquire": "63",
       "specials": [
         {
           "order": "1",
@@ -2275,8 +2289,8 @@
       "description": "The Hunter is at home in the wilds. He ventures into the civilized areas only to buy supplies and sell his pelts.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "true",
-      "time": "18",
-      "starting-money-change": "d10",
+      "time-to-acquire": "18",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -2389,7 +2403,7 @@
       ],
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "64",
+      "time-to-acquire": "64",
       "specials": [
         {
           "order": "1",
@@ -2442,7 +2456,7 @@
       "description": "The Astronomer studies the stellar, lunar, and solar cycles and links their passage to daily occurrences. An Astronomer is not content just to study and predict these cycles. A true Astronomer seeks to know why the cycles work the way they do. They strive to learn the secrets of heaven so that they can understand the earth. The Astronomer's constant study and focus tend to make him self-absorbed or too technical minded for easy conversation with non-Astronomers.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "78",
+      "time-to-acquire": "78",
       "specials": [
         {
           "order": "1",
@@ -2531,8 +2545,8 @@
       "description": "A journeying apprentice learns from a master who rarely stays in one place. Journeying apprentices learn practical magic and practical skills that assist himself and his master on their journeys. Journeying apprentices often have less book learning than a guild apprentice, though they are used to harsh conditions and difficult situations. The journeying apprentice learns from his master while driving wagons, riding horses, sitting at roadside inns, or walking along country lanes. Wanderlust and a thirst for adventure draw these students to such a wayward lifestyle, while skill and wits are what keep them alive long enough to one day become masters themselves.",
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
-      "time": "104",
-      "starting-money-change": "-d10",
+      "time-to-acquire": "104",
+      "starting-money-modifier-dice": "-d10",
       "specials": [
         {
           "order": "1",
@@ -2647,7 +2661,7 @@
       "description": "The Siege Engineer specializes in the destruction and reduction of castle defenses. Siege Engineers can organize military operations relating to sapping castle walls, building siege engines, and employing siege engines.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "29",
+      "time-to-acquire": "29",
       "specials": [
         {
           "order": "1",
@@ -2716,7 +2730,7 @@
       "description": "While most times Halflings are a peaceable and honest folk, there are those who find it irresistible to avail themselves of the gullibility of Big Folk. The Halflings' inherent agility and outstanding skill at all things dexterous and stealthy make it quite easy to do so. Most Finders would be pained to be called thieves, and only the most dastardly would actually steal from a Halfling, but Finders excel at finding and recovering property that is not theirs. They will often secure things with the intention of finding the real owner later...",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "50",
+      "time-to-acquire": "50",
       "races": [
         "RACE_HALFLINGS_HAERFEAT",
         "RACE_HALFLINGS_STAEKNIL",
@@ -2821,7 +2835,7 @@
       "description": "The philosopher spends a great deal of time theorizing about the reasons things happen. He is not generally well-suited for adventuring, but occasions do arise when his knowledge and/or wisdom is needed.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "130",
+      "time-to-acquire": "130",
       "notes": [
         "Communication category choices must be language ranks"
       ],
@@ -2913,7 +2927,7 @@
       "description": "The Templars are holy warriors that defend temples and other holy ground. Often without any magic of their own, they nevertheless will give their lives for the cause. At a moment's notice, they are willing to drop everything and join a crusade for the faith.",
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "true",
-      "time": "94",
+      "time-to-acquire": "94",
       "specials": [
         {
           "order": "1",
@@ -3016,8 +3030,8 @@
       "description": "The Goblin miner does more than just excavate caves. The miner is also responsible for preparing the tunnels he opens for the defense of the clan. He honeycombs the main tunnels with smaller secondary tunnels, sets traps across the Goblin domain, and waits to ambush attackers in his home. The Goblin miner prepares the first line of defense for Goblin mountains.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "43",
-      "starting-money-change": "xxx",
+      "time-to-acquire": "43",
+      "starting-money-modifier-dice": "xxx",
       "races": [
         "RACE_GOBLINS"
       ],
@@ -3109,7 +3123,7 @@
       "description": "Not everyone seeking the lost are as altruistic, or informed, as the Archaeologist. Many people are aware of jewelry being buried with a loved one, but the Grave Robber capitalizes on this information. A Grave Robber may seek out ancient grave sites, or even ruins, for their chance at quick and easy money. Of course, most people frown on such activities, and sometimes the dead themselves will rise up to protect their treasure, so though the money maybe quick, it isn't always easy.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "45",
+      "time-to-acquire": "45",
       "specials": [
         {
           "order": "1",
@@ -3219,7 +3233,7 @@
       "description": "The Brelisskers of Hobgoblin clans often ride into battle with a Goblin, or, occasionally, a Kobold behind them, plying a bow for missile support. Since Goblins are usually chosen for this task, a Kobold who is selected (usually by a method similar to those employed by press gangs) is actually considered to be fortunate. Should the Kobold survive his training and first skirmishes (which is doubtful) he will have gained valuable fighting ability and the respect of his Kobold peers.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "18",
+      "time-to-acquire": "18",
       "races": [
         "RACE_KOBOLDS"
       ],
@@ -3292,7 +3306,7 @@
       "description": "The Prowldark is a scout, tracker, and hunter. It is a Troglodyte who stalks the dark reaches of the subterranean world with all manner of beasts or other peoples as quarry. Rangers, Animists, Fighters - any of these may take the Prowldark package, though the latter will pay dearly for spell using ability. (This package is not limited to the listed professions.)",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "95",
+      "time-to-acquire": "95",
       "notes": [
         "Weapons with bonuses will be of another racial make, i.e. Goblin, Ore, Dwarf, etc."
       ],
@@ -3404,7 +3418,7 @@
       "description": "When night falls, any lands within roaming distance of a Goblin-infested mountains may fall prey to a prowling raiding band. Even those peoples who deem themselves distant may be mistaken, for if there is a place to rest on the way, then the Goblins may travel for two or three nights - they do not always strike out and return in a single night. Skulkers are the scouts of the Goblin tribe, sneaking out to spy on nearby lands and towns, or determining routes for a large band to follow.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "40",
+      "time-to-acquire": "40",
       "notes": [
         "Superior clogs Only impose a -5 modifier to MMP; these clogs are lost on a failed maneuver only 25% of the time (see Section 8.3.1)",
         "Quality singlasses provide 90% activity in bright light; -15 to all sight-based Awareness maneuvers."
@@ -3516,8 +3530,8 @@
       "description": "A highwayman is a roguish character who specializes in waylaying travellers on the road. They are often well-versed in regional lore and the outdoors in general.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
-      "time": "35",
-      "starting-money-change": "d100",
+      "time-to-acquire": "35",
+      "starting-money-modifier-dice": "d100",
       "specials": [
         {
           "order": "1",
@@ -3589,7 +3603,7 @@
       "description": "A pure social climber, the Political is totally amoral in his pursuit of power and prestige. The Political is kind only when it suits his needs. The Political's theory is: 'It is better to be feared than to be loved.' To this end he is ruthless and conniving, but he always tries to maintain a calculated dignified appearance.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "22",
+      "time-to-acquire": "22",
       "specials": [
         {
           "order": "1",
@@ -3713,7 +3727,7 @@
       "description": "Catalyst collectors make a living by supplying the various magic catalysts to the magic practitioners. Catalyst collectors are adventurers who seek out the rarer and more dangerous catalysts for profit. While they may or may not have any ability to cast magic, they are aware of the principles of magic and spell casting. Catalyst collectors often find employment working for guilds and colleges, where large amounts of simple catalysts are expended by students and the more rare are used by the masters.",
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "false",
-      "time": "37",
+      "time-to-acquire": "37",
       "specials": [
         {
           "order": "1",
@@ -3807,7 +3821,7 @@
       "description": "The Tuskerer is the most dangerous member of any Goblin war band. He rides the Battle Boars some tribes breed and raise, choosing his steed when it is still small and training it to become a vicious mount. Tuskerers have their pick of Goblin females and rarely wind up as a tribal Champion on the Day of Forgiveness. However, those whose egos become too insufferable have a greater chance than normal of falling victim to a trap or invention being tested. Tuskerers may walk more surely than their foot-bound fellows among Hobgoblins (though it is wise not to overdo it). Goblin pillagers are often reinforced by a few boar-mounted Goblins, who get their pick of loot. An actual Goblin army is lead by dozens of boar-mounted Goblins, who are first and most dangerous in a fray. They also tend to survive a rout more readily, for they can flee with great speed. A Goblin mounted on a well-trained boar is intimidating to the unprepared as a paladin covered in shining plate armor atop a powerful war-horse (see Battle Boar, page 39, C&amp;M).",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "52",
+      "time-to-acquire": "52",
       "races": [
         "RACE_GOBLINS"
       ],
@@ -3884,7 +3898,7 @@
       ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
-      "time": "46",
+      "time-to-acquire": "46",
       "specials": [
         {
           "order": "1",
@@ -3970,10 +3984,15 @@
       "name": "Chancellor",
       "flavour-text": "Gather the assembly, there are important matters I must discuss with them.",
       "description": "A Chancellor handles the administrative affairs of a religion. He is also a spiritual leader of a congregation of believers. The Chancellor's job is to provide support and inspiration to the followers of his religion. He also handles and presides over many of the religion's ceremonies. Leaving the actual teaching to ministers, a Chancellor handles the major decisions that a religion has to face.",
-      "qualifier": "At least 12 ranks in Religion [-4 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "At least 12 ranks in Religion.",
+                    "reduction": "-4"
+                }
+            ],
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "false",
-      "time": "64",
+      "time-to-acquire": "64",
       "specials": [
         {
           "order": "1",
@@ -4096,7 +4115,7 @@
       "description": "The Blind Fighter is the typical fighting Troglodyte, an individual bred in a brutal and violent society. They are taught from youth to bear weapons and fight in the total absence of light. Troglodytes with fury in them will give stout companies of Dwarves pause, and send the Shaguk yammering for their bolt holes.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "69",
+      "time-to-acquire": "69",
       "notes": [
         "Weapons with bonuses will be of another racial make, i.e. Goblin, Ore, Dwarf, etc."
       ],
@@ -4186,10 +4205,23 @@
       "name": "Demonologist",
       "flavour-text": "I'd give anything to know the secrets of all magic. Do we have a deal?",
       "description": "A demonologist specializes in dealing with demons. Demonologists are not always evil, though continued interchange with demons always leaves its mark, and all demonologists eventually succumb to the evil influences of the demons with which they interact. Demonologists may have dealings with demons of the Pales, most often the Void have the knowledge and power with which to tempt the demonologist. Demons of the Pale are generally used for drudge work or simple tasks, while the demons of the Void are the source of infernal knowledge.",
-      "qualifier": "Dark Pact flaw, Open Door flaw, or Dark Temptation flaw [-7 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "Dark Pact flaw",
+                    "reduction": "-7"
+                },
+                {
+                    "qualifier": "Open Door flaw",
+                    "reduction": "-7"
+                },
+                {
+                    "qualifier": "Dark Temptation flaw",
+                    "reduction": "-7"
+                }
+            ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
-      "time": "132",
+      "time-to-acquire": "132",
       "specials": [
         {
           "order": "1",
@@ -4334,7 +4366,7 @@
       "description": "The missionary is a peaceful emissary sent into far away lands to proselytize and convert. They travel a great deal, and teach many people in their journeys. While traveling, they encounter many different types of people and cultures. Many ignore the missionary, while others are searching for something that he might have to offer them.",
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "true",
-      "time": "149",
+      "time-to-acquire": "149",
       "specials": [
         {
           "order": "1",
@@ -4475,7 +4507,7 @@
       "description": "The Scholar profession is one that comes easily to a Gnome. A Gnomish scholar is not to be taken for a feeble acamedian - a Gnome scholar may be a doughty mage, the cleverest of thieves or even (very, very rarely) a warrior. Every Gnome aspires to the collection of knowledge.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "39",
+      "time-to-acquire": "39",
       "races": [
         "RACE_GNOMES"
       ],
@@ -4593,8 +4625,8 @@
       ],
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "90",
-      "starting-money-change": "2d10",
+      "time-to-acquire": "90",
+      "starting-money-modifier-dice": "2d10",
       "races": [
         "RACE_DWARVES"
       ],
@@ -4683,10 +4715,15 @@
       "name": "Martial Arts Challenger",
       "flavour-text": "I am known as the outstanding youth in this district. I desire to test your knowledge of kung fu. Would you oblige me with a test of skill?",
       "description": "The martial arts challenger is a character who lives and breathes in the martial arts world. He strives to prove himself the most skilled and powerful practitioner of his style of martial arts. By defeating all of the other martial artists in the area, he seeks to improve his reputation and the reputation of his chosen martial arts. Often the martial arts challenger seeks to build his reputation in order to open his own martial arts school.",
-      "qualifier": "Any training package that gives Martial Arts attacks skill ranks. [-3 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "Any training package that gives Martial Arts attacks skill ranks.",
+                    "reduction": "-3"
+                }
+            ],
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
-      "time": "110",
+      "time-to-acquire": "110",
       "specials": [
         {
           "order": "1",
@@ -4813,7 +4850,7 @@
       ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
-      "time": "56",
+      "time-to-acquire": "56",
       "specials": [
         {
           "order": "1",
@@ -4903,7 +4940,7 @@
       "description": "The inquisitor has a focused mission; discover any who are not believers in his faith. His reasons for doing this will differ from religion to religion. He might be simply checking up on the church in a particular region, sent to straighten things out, or he can be sent to root out and torture those who do not believe.",
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "false",
-      "time": "55",
+      "time-to-acquire": "55",
       "specials": [
         {
           "order": "1",
@@ -5000,7 +5037,7 @@
       "description": "The Boarsaddler is a Hobgoblin cavalryman who rides the Great Boars into combat. There is a great deal of competition between Boarsaddlers and the Brelisskers, a rivalry that often results in bloodshed.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "106",
+      "time-to-acquire": "106",
       "races": [
         "RACE_HOBGOBLINS"
       ],
@@ -5097,7 +5134,7 @@
       "description": "A zealot is a fanatic for a religion. They are generally enthusiastic, but not necessarily aggressive.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "73",
+      "time-to-acquire": "73",
       "specials": [
         {
           "order": "1",
@@ -5181,7 +5218,7 @@
       "description": "So much of the past has been forgotten that some individuals make it their job to return lost lore and items to civilization. Archaeologists are academic in nature, but adventurous at heart. Clearing monsters from a ruin is only the first step in the Archaeologist's adventure into the past.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "52",
+      "time-to-acquire": "52",
       "notes": [
         "The communications category choices must be written languages for the 4 rank option and spoken langauges for the 2 rank option"
       ],
@@ -5300,7 +5337,7 @@
       "description": "The martial arts champion is a character who specializes in fighting for the causes of others. He answers challenges posed to his family or employer. Not all martial arts champions fight for money, some are affiliated with a house or cause they serve by ties of blood or honor. Those martial arts champions that fight for money receive much less respect from their peers.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
-      "time": "31",
+      "time-to-acquire": "31",
       "specials": [
         {
           "order": "1",
@@ -5408,8 +5445,8 @@
       "description": "In almost every culture there is a professional warrior; whose job is to protect the peoples of that culture. If a promotion is gained (in the Special section), the character has been promoted in the ranks (more promotions equate to higher ranks).",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
-      "time": "26",
-      "starting-money-change": "d10",
+      "time-to-acquire": "26",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -5515,11 +5552,11 @@
       "description": "From the miserly old cloth-maker to the industrious, travelling silk merchant, everyone eventually deals with a seller of goods.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
-      "time": "23",
+      "time-to-acquire": "23",
       "notes": [
         "Communication category choices must be language ranks"
       ],
-      "starting-money-change": "d10",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -5596,7 +5633,7 @@
       "description": "In the cavernous depths of Dwarven cities lie far-flung lengths of tunnel, crevice, and cavern. Among them stretch the courses of underground waterways, some rushing little streams, others raging torrents that have never seen light. Also to be found are pools and lakes in grottos and depthless holes. Most of these waterways are crossed by bridges and mastered by locks and dams, or diverted by cunning channels. In this way do Dwarves conquer the waters of the deeps. Some of these provide highways for the transport of ores and equipment that cannot be ignored by such a practical race, even one that abhors unmastered water. Therefore, though it is often surprising to those who know Dwarves, there are numbers of underground sailors among the Mountain Folk, whose job is to guide the barges and bulky water craft among these shadowed waterways. These Dwarves are the Sokhudnerrim, whose name is a rare sign of Dwarvish humor. An unmistakable sign of a Sokhudnerrim is the sight of a Dwarf, in leather or the lightest of chain mails, with a length of rope tied about his waist - for no Dwarf will walk any deck without a safety line. They have taken such a rope belt as a badge of pride that names them members of a profession that few will pursue.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "54",
+      "time-to-acquire": "54",
       "races": [
         "RACE_DWARVES"
       ],
@@ -5678,8 +5715,8 @@
       ],
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "116",
-      "starting-money-change": "d4",
+      "time-to-acquire": "116",
+      "starting-money-modifier-dice": "d4",
       "races": [
         "RACE_DWARVES"
       ],
@@ -5798,7 +5835,7 @@
       "description": "Antagonists try to expose flaws in plans, point out the obvious, and generally make a nuisance of themselves. The best Antagonists manage to do this so subtly that other characters don't even realize that their efforts have been sabotaged by their own companion.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "75",
+      "time-to-acquire": "75",
       "specials": [
         {
           "order": "1",
@@ -5895,7 +5932,7 @@
       "description": "The wandering monk is a character who has spent some time in training at the temples of the region, but later decided that true wisdom is to be found by interacting with the people. In the course of his travels, the wandering monk learns the need for a strong defense and gains a better understanding of human nature.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
-      "time": "78",
+      "time-to-acquire": "78",
       "notes": [
         "Communications category skill choices must be language skills"
       ],
@@ -6013,7 +6050,7 @@
       "description": "Digging up the past to work with the dead (hopefully to animate them), with plans of world domination are all part of day-to-day life for the Necromancer. His knowledge of the past allows him to find the remains of dead lords for the creation of the most powerful Undead.",
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "true",
-      "time": "106",
+      "time-to-acquire": "106",
       "specials": [
         {
           "order": "1",
@@ -6116,7 +6153,7 @@
       "description": "A Witch is a Channeler that usually stays away from civilized society as a recluse that only leaves his or her home with definite goals in mind. A Witch often has a Demon as his Channeling source of power. Witches are in contact with Demons or other supernatural creatures often, for their own hidden and questionable purposes.",
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "true",
-      "time": "162",
+      "time-to-acquire": "162",
       "specials": [
         {
           "order": "1",
@@ -6267,11 +6304,16 @@
       "name": "Arms Instructor",
       "flavour-text": "Focus on your target when you strike. Better, much better. A few more weeks and you might be able to at least look like you knew what you were doing when some young bravo slices you open in the dueling ring.",
       "description": "The arms instructor is a character who makes his living by teaching his skill at arms to wealthy students. Successful arms instructors need not only skill in combat, but also skill in diplomacy in order to keep their students coming back for more training.",
-      "qualifier": "A total of 10 ranks in skills from any of the following groups: Combat Maneuvers or Weapon Group. [-3 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "A total of 10 ranks in skills from from any of the following groups: Combat Maneuvers or Weapon.",
+                    "reduction": "-3"
+                }
+            ],
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
-      "time": "106",
-      "starting-money-change": "d10",
+      "time-to-acquire": "106",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -6384,7 +6426,7 @@
       "description": "The martial arts opera performer is a character who has been trained at a very early age to participate in a type of acrobatic opera company. The character has been trained to be flexible and acrobatic in order to accomplish the graceful but physically demanding traditional forms of the opera. To mimic the great warriors and heroes of the past, the performer has studied martial arts from a very young age. Most martial arts opera performers begin their apprenticeship at the age of six and continue in their profession the rest of their lives.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
-      "time": "187",
+      "time-to-acquire": "187",
       "notes": [
         "Communication catagory skill choices must be languages"
       ],
@@ -6519,11 +6561,11 @@
       "description": "Great rulers need great advice. The Advisor is in a position of authority and respect, but he still must please his lord to maintain his position. Advisors are masters of wisdom, influence, and intrigue. Advisors tend to find themselves in many situations of temptation. Some succumb to baser desires, but every so often a man of true virtue is able to maintain his authority and loyalty to his liege.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "97",
+      "time-to-acquire": "97",
       "notes": [
         "Communications category skill choices must be languages"
       ],
-      "starting-money-change": "d10",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -6645,7 +6687,7 @@
       "description": "A doctor is a person dedicated to tending to the sick. This should include all types of persons who are caring for the sick, not just those that actually perform the healing (e.g., the nurses, attendants, etc.). Most people who tend to the sick are doing so on a voluntary basis.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
-      "time": "18",
+      "time-to-acquire": "18",
       "specials": [
         {
           "order": "1",
@@ -6707,7 +6749,7 @@
       "description": "A weapon master has made a life out of studying and perfecting the use of weapons. However, he seldom has learned much beyond the use of weapons.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "95",
+      "time-to-acquire": "95",
       "specials": [
         {
           "order": "1",
@@ -6763,7 +6805,7 @@
       "description": "A detective is the character who investigates a mysterious happening. This could be a member of the city guard or a specialist called upon when needed. A detective is rarely found outside an urban environment unless he is seeking clues to the current case.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
-      "time": "33",
+      "time-to-acquire": "33",
       "specials": [
         {
           "order": "1",
@@ -6848,8 +6890,8 @@
       "description": "Almost every urban area has some sort of paid police force. These characters are in charge of making sure that the city remains free of bedlam in the streets. If a promotion is gained (in the Special section), the character has been promoted in the ranks (more promotions equate to higher ranks).",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
-      "time": "25",
-      "starting-money-change": "d10",
+      "time-to-acquire": "25",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -6940,7 +6982,7 @@
       "description": "Behind the scenes, causing trouble, the Manipulator is rarely perceived as the source of the trouble he makes. The extent of his influence is rarely ever known to anyone but himself.",
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "true",
-      "time": "120",
+      "time-to-acquire": "120",
       "specials": [
         {
           "order": "1",
@@ -7033,7 +7075,7 @@
       "description": "The caravan guard is a character who escorts merchant caravans from city to city and protects them from bandit attacks. The caravan guard learns to be a shrewd judge of character, as well as a fierce combatant. Because the caravan guard is frequently outnumbered by less-experienced foes, he has learned to use strike quickly and decisively to protect himself. In the course of his journeys, a caravan guard will encounter many different cultures and customs.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
-      "time": "46",
+      "time-to-acquire": "46",
       "notes": [
         "Communications category rank choices must be spoken language ranks"
       ],
@@ -7160,11 +7202,11 @@
       "description": "A mercenary is an independent soldier who works for the highest paying employer. Most armies have at least a few mercenaries to fill out their ranks (and some are comprised mostly of mercenaries). Most mercenaries are well-versed in more than one culture and have a good working knowledge of warfare.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "80",
+      "time-to-acquire": "80",
       "notes": [
         "Communications category choice must be a spoken language"
       ],
-      "starting-money-change": "d10",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -7286,7 +7328,7 @@
       ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
-      "time": "40",
+      "time-to-acquire": "40",
       "specials": [
         {
           "order": "1",
@@ -7376,10 +7418,15 @@
       "name": "Hedge Wizard",
       "flavour-text": "Magic is like any other craft; to do it properly takes time.",
       "description": "A hedge wizard is a primitive Essence user who has learned the trade through oral tradition and practice, not through studying dusty books. Hedge wizards are generally found in less civilized areas, though hedge wizards can thrive anywhere a grandparent teaches the old traditions to their relatives. A hedge wizard generally excels at ritual magic, while finding spell lists more difficult to learn. Since hedge wizards tend to require time to cast most of their magic, they are practiced at intimidating others, convincing them that while it may take the hedge wizard longer to cast a spell, it till be suitably nasty. Hedge wizards are sometimes confused with witches, warlocks, and shamans.",
-      "qualifier": "Magic Bane flaw [-7 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "Magic Bane flaw.",
+                    "reduction": "-7"
+                }
+            ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
-      "time": "30",
+      "time-to-acquire": "30",
       "specials": [
         {
           "order": "1",
@@ -7532,7 +7579,7 @@
       "description": "These Shaguk-cûr have honed their natural Orcish fighting ability and ferocity, made themselves into fighters unmatched by many liveried soldiers of more civilized lands. They are the Shaguk Sh'rmauk-ënd.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "75",
+      "time-to-acquire": "75",
       "notes": [
         "Armour category choice may only be taken from the light and medium armour categories"
       ],
@@ -7640,7 +7687,7 @@
       "description": "The arachnamancer is an unusual essence user who has developed a great affinity for spiders. By studying the lifestyle and manners of many different types of spiders, the arachnamancer has developed a unique list that allows him to mimic many of the powers of the spider. It is theorized that intensive study of other animal groups could yield similar results, though no such research has ever been completed or developed to the extent of the arachnamancer.",
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
-      "time": "164",
+      "time-to-acquire": "164",
       "specials": [
         {
           "order": "1",
@@ -7761,7 +7808,7 @@
       "description": "A deity does not always go through standard channels in order to make his will known. When a deity chooses a spokesman from outside of the church it is generally because the church no longer listens to their deity as they should. People tend to scoff at prophets, thinking them mad. Clergy tend to frown on such unorthodox approaches to religion and may even persecute a prophet for heresy. A prophet finds little relief until his message gains acceptance or is proven true. For this reason, a deity only chooses followers of great faith and virtue for such a calling.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "98",
+      "time-to-acquire": "98",
       "specials": [
         {
           "order": "1",
@@ -7864,7 +7911,7 @@
       "description": "The Path Finder is a Gnoll who acts as a scout for the clan on the move, a guard for a clan that has settled, and a soldier when the need comes to fight. They are both woodwise and cavernwise, able to carry the fight to a foe outside the grotto, or reap a deadly toll of those who have come below ground.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "111",
+      "time-to-acquire": "111",
       "races": [
         "RACE_GNOLLS"
       ],
@@ -7997,7 +8044,7 @@
       "description": "The Tabula Rasa best exemplifies the Gnome who wanders in search of knowledge and adventure abroad to find purpose. He seeks knowledge of all sorts, paying keen attention to any references or possible clues of lost magics and items. The Tabula Rasa may be found alone or in company with others. It is a common background for Gnomes who are just beginning their careers.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "107",
+      "time-to-acquire": "107",
       "notes": [
         "Communication category choices must be spoken languages"
       ],
@@ -8122,10 +8169,15 @@
       "name": "Chi Master",
       "flavour-text": "Through inner stillness we gain self-enlightenment; a calm pond will reflect the moon. Anger and violence block our awareness; turbulent waters reveal nothing.",
       "description": "The Chi Master has dedicated himself to learning how to focus the energy of his mind and body to perform supernatural feats. The years of dedication and training required to reach the levels of mastery and control necessary have imbued him with a strong will and tireless energy.",
-      "qualifier": "A total of 10 skill ranks in the Self Control skill category. [-3 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "A total of 10 skill ranks in the Self Control skill category.",
+                    "reduction": "-3"
+                }
+            ],
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
-      "time": "81",
+      "time-to-acquire": "81",
       "notes": [
         "2 Chi Powers should be selected which will become Lifestyle skills and gain 2 ranks"
       ],
@@ -8205,7 +8257,7 @@
       "description": "A natural affinity with animals enables the Beastmaster to befriend creatures of the wilds. This friendship is deepened by magic to an almost symbiotic relationship, where each partner pledges loyalty and assistance to the other. Beastmasters will sometimes be ill at ease in the company of members of their own race, preferring the honesty of their animal companions.",
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "124",
+      "time-to-acquire": "124",
       "specials": [
         {
           "order": "1",
@@ -8351,7 +8403,7 @@
       ],
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "106",
+      "time-to-acquire": "106",
       "races": [
         "RACE_DWARVES"
       ],
@@ -8475,7 +8527,7 @@
       ],
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "124",
+      "time-to-acquire": "124",
       "specials": [
         {
           "order": "1",
@@ -8565,7 +8617,7 @@
       "description": "The traveller is simply that, a traveller. He is somewhat knowledgeable about his local region and knows the basics of the outdoors.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
-      "time": "18",
+      "time-to-acquire": "18",
       "specials": [
         {
           "order": "1",
@@ -8636,7 +8688,7 @@
       "description": "Servitors are lower class nobles or higher class commoners who serve in a lord's castle. A servitor could be anything from a page to a lady-in-waiting. Servitors receive very little compensation for their duties, but they gain great respect out of their close familiarity with the ruling class. In many ways the job of the Servitor can be boiled down to being paid to provide companionship. For this reason they are especially adept at being sociable and agreeable, because they have few other skills.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "41",
+      "time-to-acquire": "41",
       "specials": [
         {
           "order": "1",
@@ -8717,7 +8769,7 @@
       "description": "A Theurgist is the battlefield medic of religious troops. They normally travel with the regular troops and are sometimes even part of them. Many standing religious armies have at least two or three of these 'miracle workers' within their ranks, sometimes with as many as one per unit. They are the fighting healers, using their talents out on the battlefield to help those who would otherwise not survive the trip to the infirmary.",
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "true",
-      "time": "116",
+      "time-to-acquire": "116",
       "specials": [
         {
           "order": "1",
@@ -8840,7 +8892,7 @@
       "description": "The martial arts street performer is a character who uses his martial arts skills to gain money from spectators. He has a glib and agile tongue that often appears more skillful than his martial arts skills. The martial arts street performer is also looked down upon by 'more serious' (and wealthier) practitioners of the martial arts world. Yet one must eat, and it is honest work. Sometimes the performer is a martial artist who has fallen on hard times and is without patronage. Thus it can be very dangerous to bait inept street performers, as they may be skilled martial arts students new to their trade who will bitterly resent any slur on themselves and their newfound situation in life.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
-      "time": "37",
+      "time-to-acquire": "37",
       "specials": [
         {
           "order": "1",
@@ -8942,7 +8994,7 @@
       ],
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "true",
-      "time": "69",
+      "time-to-acquire": "69",
       "specials": [
         {
           "order": "1",
@@ -9050,8 +9102,8 @@
       "description": "A lord generally selects a clergy member to preside over the lord's religious services. A Chaplain is the lord's spiritual advisor and thereby a spiritual leader of the lord's land. Chaplains often head up the education of the lord's children as the clergy is often the only literate class. A GM may decide that all clergy members who preside over a church may also choose this training package.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "43",
-      "starting-money-change": "d10",
+      "time-to-acquire": "43",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -9150,7 +9202,7 @@
       "description": "The Shaguk Spîllak are the spell users, wizards and shamans of the Shaguk-cûr. While the Greater Orcs may not have the gift as a race that the Grey Orcs do, the clans still spawn occasional talented individuals. They are as black-hearted and treacherous as any of their sword-wielding kinsmen. They simply fight in a different way.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "40",
+      "time-to-acquire": "40",
       "notes": [
         "The spell list category choice for open only must be an evil list"
       ],
@@ -9258,8 +9310,8 @@
       "description": "A spy is a person who makes it his job to infiltrate enemy positions, gather information, and return that information to his people.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
-      "time": "44",
-      "starting-money-change": "d10",
+      "time-to-acquire": "44",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -9353,7 +9405,7 @@
       "description": "A sailor rarely travels inland; preferring to feel the spray of the ocean on his face. He is perfectly at home on the water (though he might spend a bit of time in the taverns on the docks).",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
-      "time": "28",
+      "time-to-acquire": "28",
       "specials": [
         {
           "order": "1",
@@ -9470,7 +9522,7 @@
       "description": "This Goblin has dedicated his life to creating new and more dangerous machines. He has learned much about building inventions, gathering materials, and even basic calculations. Many Goblins pursue this lifestyle and are constantly trying to invent something that all Goblins will view as great. Naturally, anything worthy of being great must by its very nature be lethal or excruciatingly painful.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "45",
+      "time-to-acquire": "45",
       "races": [
         "RACE_GOBLINS"
       ],
@@ -9568,7 +9620,7 @@
       "description": "New machines, siege engines, and mills do not just evolve, they are created. Inventors are considered unusual because they concentrate on mechanical and scientific problems to the exclusion of everyday affairs. Inventors are generally gifted in several crafts and arts.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "110",
+      "time-to-acquire": "110",
       "specials": [
         {
           "order": "1",
@@ -9664,8 +9716,8 @@
       "description": "A cultist studies the ways of summoning and conjuring. They can be either the leader of a strange cult, a follower of such a cult, or a character with extensive knowledge of such cults sent to destroy them. In all cases, they are experts on finding signs of the supernatural and extra-planar, and how to deal with the creatures that are summoned from other planes.",
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "true",
-      "time": "129",
-      "starting-money-change": "d10",
+      "time-to-acquire": "129",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -9776,7 +9828,7 @@
       "description": "Great rulers need great advice, but they also need to laugh. A Jester is a source of entertainment, advice, and diplomatic face-saving. The fool is sometimes abused, but most often they are well rewarded in food, clothing, and position. Even so, a lord or lady can always vent their ire or frustration on the affable fool instead of lashing out at powerful vassals.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "52",
+      "time-to-acquire": "52",
       "specials": [
         {
           "order": "1",
@@ -9865,10 +9917,19 @@
       "name": "Amateur Mage (revised)",
       "flavour-text": "Klatu Barada &lt;mumble mumble>. There I said it! I guess that takes care of everything.",
       "description": "The Amateur Mage has made a hobby of studying magic. He has devoted his spare time to furthering his knowledge, but hasn't actually become a true student yet. He is intrigued by the powers of magic and wants to know more.",
-      "qualifier": "Mentor background option or any Training Package that awards ranks in any skill in the Spell group [-6 points].",
+            "qualifiers": [
+                {
+                    "qualifier": "Mentor background option",
+                    "reduction": "-6"
+                },
+                {
+                    "qualifier": "Any Training Package that awards ranks in any skill in the Spell group",
+                    "reduction": "-6"
+                }
+            ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
-      "time": "70",
+      "time-to-acquire": "70",
       "specials": [
         {
           "order": "1",
@@ -9957,10 +10018,15 @@
       "name": "Spell Student",
       "flavour-text": "Are we going to be tested on this?",
       "description": "A spell student is taught the lessons of magic by a collegium or school of magic. Students learn magic from a number of different masters in classroom settings as well as independently in the college's library. Students have exposure to a tremendous variety of spell lists and magic theories, which often makes them the most educated of spell casters. Of course, students also tend to lack practical 'real world' experience, having spent so much time cloistered in their studies. Students may either learn spells to assist them in city life or less often spells to assist in practicing abroad.",
-      "qualifier": "Total temporary stats for Memory and Reasoning of 180 or greater [-5 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "Total temporary stats for Memory and Reasoning of 180 or greater",
+                    "reduction": "-5"
+                }
+            ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "false",
-      "time": "105",
+      "time-to-acquire": "105",
       "specials": [
         {
           "order": "1",
@@ -10066,7 +10132,7 @@
       "description": "Originally called Shire-reeve, the term was shortened to Shireeve, then finally to Shirrif, the Halfling equivalent of a constable, a peace-keeping officer. Employed to patrol the bounds of Halfling society, it is they who enforce the law when it must be enforced. Little more than guardians of the community, the Shirrifs nevertheless play a respected role amongst the Halflings, for it is they who at times must do unsavory tasks that must be done. They keep order in the villages and patrol the countryside, ensuring the safety of all Halfling-kind. The Shirrifs are easily identified by their badge of office, a single feather in their caps, earned only after apprenticing as a deputy-reeve for a period of a year. Their weapon of choice is the shalleknob, usually carved from the root of some hardwood tree. They also use at times a slinger.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "25",
+      "time-to-acquire": "25",
       "races": [
         "RACE_HALFLINGS_HAERFEAT",
         "RACE_HALFLINGS_STAEKNIL",
@@ -10171,7 +10237,7 @@
       "description": "Trained in the use of herbs, first aid, and the magic of his deity, the Medic has learned healing in many forms. He is often found in the temple, in a battle or on a mission to defend and watch over anyone that his religion asks to be protected and healed.",
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "false",
-      "time": "51",
+      "time-to-acquire": "51",
       "specials": [
         {
           "order": "1",
@@ -10277,8 +10343,8 @@
       "description": "Rare is the season that passes without bloody conflict between Dwarves and their most hated foes, the goblin or orc folk. Goblins often are the worse of the two, for though Orcs are hardier and stronger in war, the Goblins are more cunning in their machination, delighting in the invention, construction and employment of torturous machines and traps. Recognizing the peril presented by these varied wicked creations, many Dwarves seek to master skills that allow them to circumvent or disable them. The Meneumerakkinïm are Mountain Folk who have the unenviable task of disabling Goblin traps and machines.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "45",
-      "starting-money-change": "d10",
+      "time-to-acquire": "45",
+      "starting-money-modifier-dice": "d10",
       "races": [
         "RACE_DWARVES"
       ],
@@ -10397,7 +10463,7 @@
       "description": "Death is sure. The Shaguk who can make puppets of the dead is powerful indeed. There are necromantic spell users among both Shaguk-mîm and Shaguk-cûr, but it is the Grey Orcs who pursue necromancy most voraciously and excel at it, and it is the Grey Orcs who produce the most feared of the Shaguk Kun-Torâmim.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "69",
+      "time-to-acquire": "69",
       "races": [
         "RACE_ORCS_GREY"
       ],
@@ -10503,7 +10569,7 @@
       "description": "The Sneak-knife is the basic training package for a Kobold, as all of them prefer to attack from behind; a knife in the dark and poison compensate for their weaknesses. A Sneak-knife is stealthy and dangerous, often underestimated.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "93",
+      "time-to-acquire": "93",
       "races": [
         "RACE_KOBOLDS"
       ],
@@ -10606,8 +10672,8 @@
       "description": "Viziers serve royal patrons as advisors on affairs of state and magic. A Vizier divines the future, investigates magical affairs, and generally advises his lord in affairs of state. In return, a Vizier expects good pay, status, and the luxury of private research. Viziers often find it difficult not to abuse their dual status as magician and advisor. Of course, as long as the lord is satisfied, who will speak against them?",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "113",
-      "starting-money-change": "xxx",
+      "time-to-acquire": "113",
+      "starting-money-modifier-dice": "xxx",
       "specials": [
         {
           "order": "1",
@@ -10707,11 +10773,11 @@
       "description": "A performer is a character who makes it his business to entertain crowds, large or small. He will often be found in taverns or perhaps in organized theaters. He is a restless soul, however, and will seldom stay in one place for very long.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
-      "time": "40",
+      "time-to-acquire": "40",
       "notes": [
         "Communication category choices must be language ranks"
       ],
-      "starting-money-change": "d10",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -10790,7 +10856,7 @@
       "description": "The Cloaker of Clans is important to the Gnoll band on the march, for they are the Gnolls who craft magics to aid the Gnollish scouts and assist in concealing the clan while it is on the move. It is a profession that is well-respected, for the Cloakers of Clans are of great aid when defending home grottoes as well, using their magics to conceal ambushing bands of Gnoll defenders from those who trespass among or harm them.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "99",
+      "time-to-acquire": "99",
       "races": [
         "RACE_GNOLLS"
       ],
@@ -10913,7 +10979,7 @@
       "description": "The bodyguard specializes in protecting the life of a patron from attackers. The bodyguard learns how to anticipate and counter attacks as well as advising his client on the best course for his own personal safety.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
-      "time": "30",
+      "time-to-acquire": "30",
       "specials": [
         {
           "order": "1",
@@ -11022,7 +11088,7 @@
       "description": "In tribal communities, there are seldom organized churches. Instead, the groups are often lead by a single religious leader. This leader will often use animal totems and other forces of nature to assist him in his duties.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "69",
+      "time-to-acquire": "69",
       "notes": [
         "Communication category choice must be a single language"
       ],
@@ -11117,8 +11183,8 @@
       "description": "The lure of quick money often draws street urchins into the realm of the Con Man. The Con Man is adept at setting people up to rip them off. He often has several identities that he can assume (and proper papers to back up the identities).",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
-      "time": "32",
-      "starting-money-change": "d10",
+      "time-to-acquire": "32",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -11204,10 +11270,15 @@
       "name": "Medium",
       "flavour-text": "Please leave me now, I must be alone to commune with my deity",
       "description": "A medium works towards becoming a spiritual link between himself and his deity. He claims to know the will of his deity on many subjects. The medium is adept at all kinds of trances, and spends much time lost in his own world of meditation.",
-      "qualifier": "At least 10 ranks of skills in the Self Control skill category [-3 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "At least 10 ranks of skills in the Self Control skill category",
+                    "reduction": "-3"
+                }
+            ],
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "true",
-      "time": "127",
+      "time-to-acquire": "127",
       "specials": [
         {
           "order": "1",
@@ -11321,7 +11392,7 @@
       "description": "A martial artist is a warrior trained in the ways of unarmed combat and maneuvering. However, a martial artist is also schooled in the areas of knowledge and the arts, especially in the care of the body.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
-      "time": "143",
+      "time-to-acquire": "143",
       "specials": [
         {
           "order": "1",
@@ -11465,7 +11536,7 @@
       "description": "A Groom maintains and oversees a stable. A Groom may care solely for the lord's horses or he may watch over any manner of creature for his lord, including pigeons, falcons, bees, and fantasy creatures. Grooms may garner friendship and respect from knights and nobility, as they maintain the horses that makes knights so devastating.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "44",
+      "time-to-acquire": "44",
       "specials": [
         {
           "order": "1",
@@ -11544,7 +11615,7 @@
       "description": "Similar to the Adventurer, the Explorer specializes in travelling in uncharted areas and outdoor exploration. This could include sailing explorers as well as overland explorers.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "true",
-      "time": "66",
+      "time-to-acquire": "66",
       "specials": [
         {
           "order": "1",
@@ -11656,7 +11727,7 @@
       "description": "Shaguk-cûr raise both wolves of various types and a breed of giant bat that they utilize as cavalry. Often the riders will begin to identify with their respective beasts, some tattoing or scarring related images on themselves and some adorning arms and armor with the same images. The Shaguk Stâz-pargun enjoy a respected (but usually disliked) position among other Shaguk. Those who ride bats are in a good position, for normally their smaller size would mark them for abuse.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "116",
+      "time-to-acquire": "116",
       "notes": [
         "Armour category choice may only be taken from the light and medium armour categories"
       ],
@@ -11782,10 +11853,15 @@
       "name": "Potioner",
       "flavour-text": "There will be a few side effects, such as hair loss, abdominal cramping, diarrhea, and dizziness; but this should cure your seizures.",
       "description": "The potioner is a magical apothecary. The potioner uses spells to craft potions of healing, magic, and poison. The potioner may enhance normal herbs for general use as tonics and liniments or he may produce drugs that cloud the mind of the imbiber. Like an apothecary, the potioner attempts to draw the essence out of natural herbs to capture them in a bottle, but it is a rare potioner who manages by such sciences to create herbal remedies better than the simple animists of the wild.",
-      "qualifier": "A total of 6 ranks in Alchemy and Biochemistry [-3 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "A total of 6 ranks in Alchemy and Biochemistry ",
+                    "reduction": "-3"
+                }
+            ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
-      "time": "39",
+      "time-to-acquire": "39",
       "specials": [
         {
           "order": "1",
@@ -11888,7 +11964,7 @@
       "description": "The Shieldsman is simply a training package for those Dwarves who have received instruction in and gained experience with use of the shield in Dwarven formations while fighting in groups or companies. It also provides basic ability in the use of a shield as a weapon in combat (i.e., shield bash), a skill of which many Dwarves know basics, but few choose to master. There is no literal Dwarvish word for the training, as any of the Dwarven occupations (Lifestyle training packages) might provide such instruction.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "false",
-      "time": "22",
+      "time-to-acquire": "22",
       "races": [
         "RACE_DWARVES"
       ],
@@ -11938,7 +12014,7 @@
       "description": "The secret society member is a character who has been pulled from other walks of life and introduced to a secret movement. The current government does not support the movement's goals and thus the movement must keep a low profile. Members are taught how to fight and defend themselves for the time when the movement will come out of hiding and accomplish its goals.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
-      "time": "22",
+      "time-to-acquire": "22",
       "specials": [
         {
           "order": "1",
@@ -12026,7 +12102,7 @@
       "description": "Whenever raw manual labor is done, the people in charge rarely do it themselves. The nearby villages and towns were full of folks willing to work hard for a relatively small amount of money. Unskilled labor is often needed in and or around a castle (especially during construction of the structure).",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "14",
+      "time-to-acquire": "14",
       "specials": [
         {
           "order": "1",
@@ -12088,8 +12164,8 @@
       "description": "A professional, hired by someone to kill someone else. This occupation is perhaps one of the most dangerous. However, it is possible that an assassin can be owed favors by one or more people in high ranking positions in society (denoted by 'High ranking favor' below).",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
-      "time": "30",
-      "starting-money-change": "xxx",
+      "time-to-acquire": "30",
+      "starting-money-modifier-dice": "xxx",
       "specials": [
         {
           "order": "1",
@@ -12190,8 +12266,8 @@
       "description": "A burglar makes his living stealing goods from peoples homes or businesses. They ply their trade around heavily populated areas and then move on to another area.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
-      "time": "33",
-      "starting-money-change": "d10",
+      "time-to-acquire": "33",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -12290,7 +12366,7 @@
       "description": "The intricacies of magical symbology intrigue the Runemaster, driving him to delve deeper into their secrets. He is seldom without a parchment nearby.",
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "true",
-      "time": "120",
+      "time-to-acquire": "120",
       "specials": [
         {
           "order": "1",
@@ -12371,7 +12447,7 @@
       "description": "This is the character who seeks his fame and fortune by exploration and taking risks with his own life. The adventurer is at home in most types of inhabited places as well as many kinds of wilderness locales.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "true",
-      "time": "24",
+      "time-to-acquire": "24",
       "specials": [
         {
           "order": "1",
@@ -12396,7 +12472,7 @@
         {
           "order": "5",
           "chance": "100",
-          "value": "Choice of weapon or armor (+5 non-magic)"
+          "value": "Choice of weapon or armour (+5 non-magic)"
         }
       ],
       "skill-ranks": [
@@ -12479,10 +12555,15 @@
       "name": "Guild Apprentice",
       "flavour-text": "These chores will be a distant memory when I become head of the guild.",
       "description": "A guild apprentice is taught the lessons of magic by either a mercantile group of magicians or by a member of an established guild. Guild apprentices spend a lot of time studying magic in great detail, from books and from direct instruction from one or more masters. Guild apprentices tend to be well educated and prepared for a career in a city. Guild apprentices are generally taught magic that will assist their master in the day to day maintenance of a business as well as spells that assist them in their studies.",
-      "qualifier": "Total temporary stats for Memory and Reasoning of 180 or greater [-5 points]",
+            "qualifiers": [
+                {
+                    "qualifier": "Total temporary stats for Memory and Reasoning of 180 or greater",
+                    "reduction": "-5"
+                }
+            ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
-      "time": "86",
+      "time-to-acquire": "86",
       "specials": [
         {
           "order": "1",
@@ -12601,7 +12682,7 @@
       "description": "The weapon master is a character who has dedicated his life to mastering the use of his weapon. He desires to be the most skilled practitioner of his chosen weapon in the world.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
-      "time": "116",
+      "time-to-acquire": "116",
       "notes": [
         "Martial Arts Combat Manoeuvres category choice ranks must be split equally between 2 manoeuvres"
       ],
@@ -12703,7 +12784,7 @@
       "description": "Where subtle machinations would fail, the overt power of magic will prevail. The Warlock seeks to control those around him with the use of magic.",
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "true",
-      "time": "76",
+      "time-to-acquire": "76",
       "specials": [
         {
           "order": "1",
@@ -12798,7 +12879,7 @@
       "description": "Sometimes courtesan, sometimes mistress, the Houri is the foremost practitioner of seduction and a skilled manipulator of all, but most especially members of the opposite sex. With sorcerous arts, the Houri can beguile even the most cold hearted, enhancing innate beauty and adopting the appearance of others, yet the rose is not without its thorn, for the kiss of a Houri can undo even the mighty.",
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "108",
+      "time-to-acquire": "108",
       "specials": [
         {
           "order": "1",
@@ -12915,7 +12996,7 @@
       "description": "Among the more numerous of Shaguk-gûl who practice wizardry in its many forms, the Shaguk Zhun-Kleftäk are spell users who practice violent sorceries to the exclusion of almost all others. They have the bloodthirstiness and fighting temper of their kinsmen, but use magic instead of steel to vent their ferocity.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "73",
+      "time-to-acquire": "73",
       "notes": [
         "Must pick 2 spell lists from the available choices."
       ],
@@ -12998,8 +13079,8 @@
       "description": "Great castles require great architects, while enchanted castles require enchanted architects. The Engineer not only knows how to design, build, and organize a construction project, but also how to enchant it. In worlds where the magic flies fast and furious, no home is truly sound unless it is built by an experienced Engineer.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "85",
-      "starting-money-change": "d10",
+      "time-to-acquire": "85",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -13083,8 +13164,8 @@
       "description": "Some simple craftsmen are not as simple as they seem. Some of the most impressive and sturdy crafts are made with a little magical assistance. Magic Crafters can be of any realm, and they gain access to the training package spell lists to help in their trade.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "72",
-      "starting-money-change": "d10",
+      "time-to-acquire": "72",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -13176,8 +13257,8 @@
       "description": "Great mages, those of proficiency and power in magic, must start somewhere. The wizard's assistant, of Famulus, is a typical stepping stone on the road from apprentice to master. Many spell users entrust their day-to-day affairs and research to such assistants.",
       "book": "BOOK_ARCANE_COMPANION",
       "lifestyle": "false",
-      "time": "42",
-      "starting-money-change": "d10",
+      "time-to-acquire": "42",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -13266,10 +13347,15 @@
       "name": "Spell Researcher",
       "flavour-text": "Eureka! I've created an invisible fire wall! And they laughed at me at the academy!",
       "description": "A spell researcher is constantly drawn to the boundaries of known magic. The researcher seeks to understand why magic works, and looks for new ways to make it work. Whether he studies the varying theories of the realms of magic or its more practical applications, the researcher seeks to add to the growing stores of magical knowledge, often without regard to the effect their findings may have on the world around them.",
-      "qualifier": "A total of 20 ranks in skills in the Lore group [-5 points]",
+      "qualifiers": [
+        {
+          "qualifier": "A total of 20 ranks in skills in the Lore group",
+          "reduction": "-5"
+        }
+      ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "false",
-      "time": "114",
+      "time-to-acquire": "114",
       "specials": [
         {
           "order": "1",
@@ -13392,7 +13478,7 @@
       "description": "Lords can be quite demanding when seeking to satisfy their entertainment needs. Sometimes a lord will keep a magician on staff for the sole purpose of entertaining and impressing him and his guests. A Court Magician learns to couple his magic talents with showmanship for a grand display of magic power. Court Magicians may also serve in advisory positions, but they are generally considered to be flamboyant performers and not well learned sages.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "97",
+      "time-to-acquire": "97",
       "specials": [
         {
           "order": "1",
@@ -13474,7 +13560,7 @@
       "description": "The warrior-priest is a character who has studied at a militant temple to serve in the enforcement arm of the temple. The warrior-priest believes that he has been called to defend his religion and the goals it professes.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
-      "time": "107",
+      "time-to-acquire": "107",
       "specials": [
         {
           "order": "1",
@@ -13577,7 +13663,7 @@
       "description": "Seeing the efficacy of herbal medicines, Apothecaries attempt to distill the essence of the herbs into more potent elixirs and philters. While the success of Apothecaries in the arts of medicine and healing may be at question, their skill with poisons is undisputed.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "27",
+      "time-to-acquire": "27",
       "specials": [
         {
           "order": "1",
@@ -13666,7 +13752,7 @@
       "description": "The Collector training package represents those Gnomes who have honed their innate skill with item manipulation by studying the mastery of physical magics. The Collector is a Gnome who has both knowledge of enchanted items and the ability to use them. In addition, Collectors have an uncanny knack for ferreting out secrets and lost tidbits of lore that allow them to track down ensorcelled tools of all types, from trinkets to artifacts.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "114",
+      "time-to-acquire": "114",
       "races": [
         "RACE_GNOMES"
       ],
@@ -13772,7 +13858,7 @@
       "description": "The perpetual scholar. The Loremaster studies, constantly striving to know all there is to know. Some Loremasters specialize in areas of knowledge; while others are diverse, knowing little bits about lots of things.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
-      "time": "40",
+      "time-to-acquire": "40",
       "specials": [
         {
           "order": "1",
@@ -13847,8 +13933,8 @@
       "description": "The Ghârnurghir are the soldiery of the Mountain Folk, the Dwarves who are trained in the use of arms. It is important to note that virtually every dwarf is a doughty fighter in his (or her) own right - these Dwarves simply have greater and more professional training. The different kinds of Ghârnurghir are many and varied, the one thing all have in common is ferocity and pride in full measure.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "40",
-      "starting-money-change": "d10",
+      "time-to-acquire": "40",
+      "starting-money-modifier-dice": "d10",
       "races": [
         "RACE_DWARVES"
       ],
@@ -13949,7 +14035,7 @@
       ],
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "83",
+      "time-to-acquire": "83",
       "specials": [
         {
           "order": "1",
@@ -14078,7 +14164,7 @@
       "description": "The school master is a character who has spent many years learning a specific martial arts style. His training involved long hours of practice and conditioning, but now the character is an acknowledged master of his given martial arts style.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "false",
-      "time": "39",
+      "time-to-acquire": "39",
       "specials": [
         {
           "order": "1",
@@ -14179,7 +14265,7 @@
       "description": "The temple monk is a character who has spent most of his life in the sheltered walls of a temple learning both his religious doctrines and his martial arts skills. The temple monk is often surprised by the corruption in the material world, but he is not defenseless thanks to his extensive training. A temple monk strives to renounce the material world and pursue only his spiritual development.",
       "book": "BOOK_MARTIAL_ARTS_COMPANION",
       "lifestyle": "true",
-      "time": "169",
+      "time-to-acquire": "169",
       "specials": [
         {
           "order": "1",
@@ -14300,8 +14386,8 @@
       "description": "A specialized type of thief, the Cut Purse works the streets. He is particularly adept at watching crowds and determining who should have the heaviest pockets.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
-      "time": "37",
-      "starting-money-change": "d10",
+      "time-to-acquire": "37",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -14389,7 +14475,7 @@
       "description": "Where words leave off, swords pick up. Often disputes are settled in duels of honor. A duelist is a professional settler of such disputes. They can be hired to fight for lords, so the lord need not worry about his own safety. A duelist is adept at single combat, but not necessarily honorable combat. A duelist fights with honor only so long as he is sure he can win.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "32",
+      "time-to-acquire": "32",
       "specials": [
         {
           "order": "1",
@@ -14471,7 +14557,7 @@
       "description": "Retreating from civilization, the Hermit leads a solitary life of unremitting hardship. He makes his abode in the wastes, whether it be in the frozen mountains, under the blazing desert sun or on bleak island haunts. Distanced from the distractions of mundane life, the Hermit searches for spiritual or philosophical enlightenment.",
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "130",
+      "time-to-acquire": "130",
       "specials": [
         {
           "order": "1",
@@ -14603,8 +14689,8 @@
       "description": "The Unhomed are Dwarves who have left the cavernous homes of their fathers and gone wandering the world. Many young Dwarves (those less than a hundred years old) will follow this path if they have a taste for adventure and derring-do. Others, older and wiser, may have been one of the Ghârnurghir in younger years, or perhaps even a Dërnak, and come to have a wanderlust. Some are glory seekers, in pursuit of great treasures or feats of arms to win renown for their clan and race. Others feel dispossessed, have a gloom or taciturnity that even their fellows might view as weighty. Whatever their provenance, the Hoythij Râk may be encountered anywhere, at any time, and may be more dangerous than their warrior kin, for these Dwarves are unpredictable.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "84",
-      "starting-money-change": "d10",
+      "time-to-acquire": "84",
+      "starting-money-modifier-dice": "d10",
       "races": [
         "RACE_DWARVES"
       ],
@@ -14730,7 +14816,7 @@
       "description": "Among the Gnolls, music is an important part of an evening's rest. Rhymes and gently sung tales are heard often in the secrecy of Gnoll grottos, and rare indeed is the Gnoll who does not wish to have at least a bit of musical talent. The Clerihew are Gnollish bards.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "105",
+      "time-to-acquire": "105",
       "notes": [
         "One of the spell lists must be used for entertainment"
       ],
@@ -14852,8 +14938,8 @@
       "description": "A professional healer, highly trained in the diagnosis and treatment of injury and illness, the Physician will normally be bound by vows and duties towards the patients. Competence is not without its price, and only the wealthy will easily afford the services of the Physician. Some Physicians may be employed on a permanent basis by noble families becoming trusted confidants, while others will set up independent medical practices in the cities.",
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "147",
-      "starting-money-change": "d0",
+      "time-to-acquire": "147",
+      "starting-money-modifier-dice": "d0",
       "specials": [
         {
           "order": "1",
@@ -14974,7 +15060,7 @@
       "description": "Even the most benevolent of rulers find that they must sometimes punish criminals, spies, or enemies with painful death. The Executioner is trained to do so with great efficiency. Executioners are trained in the art of torture and interrogation as well. In lands with public beheadings or hangings, the Executioner is often expected to make a grand display of torturing the prisoner for as long as possible. An Executioner with a brutal reputation can be a deterrent to criminals and spies by mere rumor alone.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "28",
+      "time-to-acquire": "28",
       "specials": [
         {
           "order": "1",
@@ -15039,7 +15125,7 @@
       "description": "Though the Grey Orcs are not so physically powerful as their Greater kin, they have the strength of their Common cousins and the aggressiveness of any Orc. So it is that many who possess the ability to work spells may also wish to taste blood on their tusks and wet a blade. These Shaguk often pursue the profession of Shaguk Ru'Kleftäk-sher.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "70",
+      "time-to-acquire": "70",
       "races": [
         "RACE_ORCS_GREY"
       ],
@@ -15160,7 +15246,7 @@
       ],
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "105",
+      "time-to-acquire": "105",
       "specials": [
         {
           "order": "1",
@@ -15274,7 +15360,7 @@
       "description": "The Sage is the consummate scholar, with an unparalleled enthusiasm for learning, who acquires and assimilates knowledge from many sources, and can, by dint of special training, discern much from a simple examination of an object, whether it be commonplace or magical. Many Sages dedicate their lives to the preservation of knowledge, and will be found copying manuscripts in libraries or recording scraps of knowledge for posterity in their journals.",
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "171",
+      "time-to-acquire": "171",
       "specials": [
         {
           "order": "1",
@@ -15411,7 +15497,7 @@
       "description": "While a common sailor may find himself at sea thanks to the blandishments and occasional force of the press-gang, the Mariner has chosen a life on the ocean wave. Years of hard training in the skills of seamanship and the arts of navigation transform youthful midshipmen into competent sailing masters, ship's mates and naval officers, who with luck, ability, favour and perhaps hard cash, will one day command their own ship.",
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "true",
-      "time": "144",
+      "time-to-acquire": "144",
       "specials": [
         {
           "order": "1",
@@ -15573,7 +15659,7 @@
       "description": "The art of seduction is a way of life to some individuals. A sweet phrase here, a gallant flourish there, the Romantic always makes the most of every situation. A Romantic may be overly competitive, overly optimistic, or just overly happy. In any event, the Romantic seeks to be the center of attention, especially with the opposite sex.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "74",
+      "time-to-acquire": "74",
       "specials": [
         {
           "order": "1",
@@ -15638,11 +15724,11 @@
       "description": "A diplomat is a person who has made it his job to negotiate and talk to various other people in positions of power and authority. He is usually well versed in more than one culture and has contacts in many cities.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
-      "time": "48",
+      "time-to-acquire": "48",
       "notes": [
         "Communications category choices must spend 3 ranks on written languages and 3 on spoken languages"
       ],
-      "starting-money-change": "d10",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -15755,8 +15841,8 @@
       "description": "The Architect is hired to build sturdy towers, castles, and keeps. Architects design and organize the building of all of their structures, normally without the aid of any drafting. Castles can be built without an architect, but when siege engines begin to close in, it's nice to know that the walls were built by the best.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "false",
-      "time": "19",
-      "starting-money-change": "d10",
+      "time-to-acquire": "19",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -15834,8 +15920,8 @@
       "description": "A herbalist is a person who specializes in growing, preparing, and cultivating herbs. Very often, herbalists are found near urban areas (where demand for herbs is higher), though they also like the secluded nature of a more rural environment.",
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "false",
-      "time": "33",
-      "starting-money-change": "xxx",
+      "time-to-acquire": "33",
+      "starting-money-modifier-dice": "xxx",
       "specials": [
         {
           "order": "1",
@@ -15945,7 +16031,7 @@
       "description": "Often self-taught, some Fortune tellers earn their living from reassuring the anxious about the future, to others it is a pastime with which to entertain their jaded friends. Success in prediction is as much due to an eloquent flow of words and understanding the querent as to any true ability.",
       "book": "BOOK_MENTALISM_COMPANION",
       "lifestyle": "false",
-      "time": "40",
+      "time-to-acquire": "40",
       "specials": [
         {
           "order": "1",
@@ -16043,11 +16129,11 @@
       "description": "The Dërnakwmün are the priests of the Mountain Folk, the servitors of Dûntherradinbarak Mountainsbeard, Beard of the Earth. There are two different orders of Clerics, but the differences between the two are unclear, so much that the two seem often to run together.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
-      "time": "71",
+      "time-to-acquire": "71",
       "notes": [
         "GM choice of which stat gain is available for a character"
       ],
-      "starting-money-change": "10d10",
+      "starting-money-modifier-dice": "10d10",
       "races": [
         "RACE_DWARVES"
       ],
@@ -16191,8 +16277,8 @@
       "description": "Many people are good with their hands and have the desire to create things. This training package represents all those people; from the blacksmith, to the coppersmith, to the jeweler.",
       "book": "BOOK_CHARACTER_LAW",
       "lifestyle": "false",
-      "time": "28",
-      "starting-money-change": "d10",
+      "time-to-acquire": "28",
+      "starting-money-modifier-dice": "d10",
       "specials": [
         {
           "order": "1",
@@ -16265,7 +16351,7 @@
       "description": "Protectors are holy warriors that are sent into the world by their church with the specific mission of protecting people from one specific sort of creaturs (Demons, Elementals, etc.). They will hunt this type of creature down with a fanatical zeal, and stop at nothing to see these creatures erased from the land.",
       "book": "BOOK_CHANNELING_COMPANION",
       "lifestyle": "true",
-      "time": "95",
+      "time-to-acquire": "95",
       "specials": [
         {
           "order": "1",

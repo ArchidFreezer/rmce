@@ -118,6 +118,18 @@ public:
 	const std::string& description() const { return description_; }
 
 	/**
+	 * @brief Set the flavour text of the training package that may be relevant for a GM when running a character with the training package
+	 * @param flavour_text std::string_view flavour text about the training package
+	 */
+	void setFlavourText(std::string_view flavour_text) { flavour_text_ = flavour_text; }
+
+	/**
+	 * @brief Get the flavour text of the training package that may be relevant for a GM when running a character with the training package
+	 * @return std::string reference of the flavour text about the training package
+	 */
+	const std::string& flavourText() const { return flavour_text_; }
+
+	/**
 	 * @brief Add an additional note about the training package that may be relevant for a GM when running a character with the training package
 	 * @param note std::string_view additional note about the training package
 	 */
@@ -159,6 +171,12 @@ public:
 	void addRace(const RaceData& race) { races_.insert(&race); }
 
 	/**
+	 * @brief Sets the collection of race data.
+	 * @param races A set of pointers to RaceData objects to be stored.
+	 */
+	void setRaces(std::set <const RaceData*> races) { races_ = std::move(races); }
+
+	/**
 	 * @brief Set of races that may take the package
 	 * 
 	 * The set will be empty for packages that have no restrictions
@@ -193,6 +211,16 @@ public:
 	 * @param reduction Reduction in package cost
 	 */
 	void addQualifier(std::string_view qualifier, int reduction) { qualifiers_.emplace(qualifier, reduction); }
+
+	/**
+	 * @brief Set a collection of qualifiers that, if met, reduce the cost of the training package
+	 *
+	 * Only a single discout can apply so if a character meets the requireemnts of more than one qualifier the one with the
+	 * biggest discount should be applied.
+	 *
+	 * @param qualifiers Map of qualifier text and associated cost reduction
+	 */
+	void setQualifiers(std::map<std::string, int> qualifiers) { qualifiers_ = std::move(qualifiers); }
 
 	/**
 	 * @brief Get a collection of qualifiers that, if met, reduce the cost of the training package
@@ -263,10 +291,28 @@ public:
 	void setStaringMoneyModifierDice(std::string_view max) { starting_money_modifier_dice_ = max; }
 
 	/**
+	 * @brief Get the change in starting money for a character if the package is taken during apprenticeship as a dice string
+	 * 
+	 * The actual ammount is based on a random roll with this value setting the maximum or minimum change. The value
+	 * returned is based on an open-ended high dice roll with open ended rolls being generated if the roll result is the
+	 * maximum/minimum value.
+	 *
+	 * Examples:
+	 * + A value of 10 will return a number between 1 and 10, open-ended on 10 which may increase the number
+	 * + A value of -8 will return a number between -1 and -8, open-ended on 8, which may reduce the number
+	 *
+	 * @return Dice string representing the change in starting money for a character if the package is taken during apprenticeship
+	 */
+	const std::string& startingMoneyModifierDice() const { return starting_money_modifier_dice_; }
+
+	/**
 	 * @brief Get the change in starting money if the package is taken during apprenticeship
 	 * @return value of change in money
 	 */
 	int startingMoneyChange() const {
+
+		if (starting_money_modifier_dice_.empty()) return 0; // No change if the string is empty
+
 		// First we parse the dice string to get the absolute value of the change and then we roll it. The sign of the change is determined by whether the original value was positive or negative.
 		std::string starting_money_modifier_dice = starting_money_modifier_dice_; // Make a copy of the string to modify for parsing
 
@@ -584,6 +630,7 @@ public:
 private:
 	std::string name_{}; /**< Name of the training package */
 	std::string description_{}; /**< General description of the training package */
+	std::string flavour_text_{}; /**< Piece of text to set the flavour of the training package */
 	std::set<std::string> notes_{}; /**< Additional notes about the training package that may be relevant for a GM when running a character with the training package */
 	const BookData* book_{}; /**< Book that the training package is described in */
 	std::set<const RaceData*> races_{}; /**< Races allowed to take the package if it is restricted, empty for all races */

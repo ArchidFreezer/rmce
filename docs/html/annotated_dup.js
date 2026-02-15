@@ -87,6 +87,7 @@ var annotated_dup =
     [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", "class_table_column_creature_size_matcher" ],
     [ "TableRow", "class_table_row.html", "class_table_row" ],
     [ "TrainingPackageData", "class_training_package_data.html", "class_training_package_data" ],
+    [ "TrainingPackageDatafileParserJson", "class_training_package_datafile_parser_json.html", "class_training_package_datafile_parser_json" ],
     [ "WeaponTypeData", "class_weapon_type_data.html", "class_weapon_type_data" ],
     [ "WeaponTypeDatafileParserJson", "class_weapon_type_datafile_parser_json.html", "class_weapon_type_datafile_parser_json" ]
 ];

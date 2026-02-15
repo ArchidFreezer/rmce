@@ -64,6 +64,7 @@ var NAVTREEINDEX0 =
 "_stat_loss_type_8h_source.html":[3,0,3,33],
 "_stat_type_8h_source.html":[3,0,3,34],
 "_string_utils_8h.html":[3,0,0,4],
+"_string_utils_8h.html#a24c899c652d0bbf6ccf4fa496955b175":[3,0,0,4,3],
 "_string_utils_8h.html#a30a55dfc196129ba05a93feb243ff3b5":[3,0,0,4,2],
 "_string_utils_8h.html#a31cee08b448da5eaab597ae9aa8d9424":[3,0,0,4,1],
 "_string_utils_8h.html#acd53b635966070e138dea419304de22f":[3,0,0,4,0],
@@ -75,8 +76,9 @@ var NAVTREEINDEX0 =
 "_table_row_8h_source.html":[3,0,3,0,7],
 "_table_row_matcher_8h_source.html":[3,0,3,0,8],
 "_training_package_data_8h_source.html":[3,0,3,36],
+"_training_package_datafile_parser_json_8h_source.html":[3,0,1,19],
 "_weapon_type_data_8h_source.html":[3,0,3,37],
-"_weapon_type_datafile_parser_json_8h_source.html":[3,0,1,19],
+"_weapon_type_datafile_parser_json_8h_source.html":[3,0,1,20],
 "annotated.html":[2,0],
 "class_armour_type_1_1_armour_type_not_found_exception.html":[0,0,0,0],
 "class_armour_type_1_1_armour_type_not_found_exception.html":[2,0,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "class_culture_type_data.html#aff297079d857803cf964220e37f8afef":[2,0,19,16],
 "class_culture_type_data_1_1_invalid_skill_rank.html":[2,0,19,0],
 "class_culture_type_data_1_1_invalid_skill_rank.html#a7e6915ab9e8eae96d8c75f3daf32f6a2":[2,0,19,0,0],
-"class_culture_type_datafile_parser_json.html":[2,0,20],
-"class_culture_type_datafile_parser_json.html#a08ca6632b24c5cf125d239e8923e7484":[2,0,20,1],
-"class_culture_type_datafile_parser_json.html#a0a2b6599048e436d8f55946d03e74c10":[2,0,20,0]
+"class_culture_type_datafile_parser_json.html":[2,0,20]
 };

@@ -4,5 +4,6 @@ var searchData=
   ['tablecolumncreaturesizematcher_1',['TableColumnCreatureSizeMatcher',['../class_table_column_creature_size_matcher.html',1,'']]],
   ['tablerow_2',['TableRow',['../class_table_row.html',1,'']]],
   ['toomanystatsexception_3',['TooManyStatsException',['../class_stat_type_1_1_too_many_stats_exception.html',1,'StatType']]],
-  ['trainingpackagedata_4',['TrainingPackageData',['../class_training_package_data.html',1,'']]]
+  ['trainingpackagedata_4',['TrainingPackageData',['../class_training_package_data.html',1,'']]],
+  ['trainingpackagedatafileparserjson_5',['TrainingPackageDatafileParserJson',['../class_training_package_datafile_parser_json.html',1,'']]]
 ];

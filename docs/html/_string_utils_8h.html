@@ -263,6 +263,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a31cee08b448da5eaab597ae9aa8d9424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a lowercase string, removing all non alphanum characters.  <br /></td></tr>
 <tr class="memitem:a30a55dfc196129ba05a93feb243ff3b5" id="r_a30a55dfc196129ba05a93feb243ff3b5"><td class="memItemLeft">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a30a55dfc196129ba05a93feb243ff3b5">tokenise</a> (const std::string &amp;text, const std::string &amp;delimiters=&quot; &quot;)</td></tr>
 <tr class="memdesc:a30a55dfc196129ba05a93feb243ff3b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a string into tokens on one or more delimiters.  <br /></td></tr>
+<tr class="memitem:a24c899c652d0bbf6ccf4fa496955b175" id="r_a24c899c652d0bbf6ccf4fa496955b175"><td class="memItemLeft">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a24c899c652d0bbf6ccf4fa496955b175">tokeniseByString</a> (std::string_view text, const std::string &amp;delimiter)</td></tr>
+<tr class="memdesc:a24c899c652d0bbf6ccf4fa496955b175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a string into tokens on a delimiter string.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Set of utility finctions for string handling </p>
@@ -352,6 +354,41 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">text</td><td>String to split </td></tr>
     <tr><td class="paramname">delimiters</td><td>String containing the character(s) to use as tokens </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector of the tokens </dd></dl>
+
+</div>
+</div>
+<a id="a24c899c652d0bbf6ccf4fa496955b175" name="a24c899c652d0bbf6ccf4fa496955b175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c899c652d0bbf6ccf4fa496955b175">&#9670;&#160;</a></span>tokeniseByString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; tokeniseByString </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>delimiter</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Split a string into tokens on a delimiter string. </p>
+<p>The <em class="arg">delimiter</em> argument is used as a whole string to split the text, for example using the text string "Test 1,string 1,Test 2,string 2:Test 3:string 3" and delimiter ",Test " would return an array of the following:</p><ul>
+<li>Test 1,string 1</li>
+<li>2,string 2:Test 3:string 3</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>String to split </td></tr>
+    <tr><td class="paramname">delimiter</td><td>String to use as a token </td></tr>
   </table>
   </dd>
 </dl>

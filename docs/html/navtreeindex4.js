@@ -1,5 +1,16 @@
 var NAVTREEINDEX4 =
 {
+"functions_func_r.html":[2,3,1,16],
+"functions_func_s.html":[2,3,1,17],
+"functions_func_t.html":[2,3,1,18],
+"functions_func_u.html":[2,3,1,19],
+"functions_func_w.html":[2,3,1,20],
+"functions_func_z.html":[2,3,1,21],
+"functions_func_~.html":[2,3,1,22],
+"functions_g.html":[2,3,0,6],
+"functions_h.html":[2,3,0,7],
+"functions_i.html":[2,3,0,8],
+"functions_k.html":[2,3,0,9],
 "functions_l.html":[2,3,0,10],
 "functions_m.html":[2,3,0,11],
 "functions_n.html":[2,3,0,12],
@@ -238,16 +249,5 @@ var NAVTREEINDEX4 =
 "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055b":[0,0,11,1],
 "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba272488319413a0318c1de9e9fa61b7e5":[0,0,11,1,0],
 "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba821da62632c491ea619ead7b31c094bf":[0,0,11,1,3],
-"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba90443e6f295091a059b0a150ddee8778":[0,0,11,1,1],
-"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055bae412484be1c558bb641a11d900b98f6b":[0,0,11,1,2],
-"namespace_skill_development_type.html#a0c8feea403ee3e058364f7fcd135f976":[0,0,11,4],
-"namespace_skill_development_type.html#a6d7ff6ceb406f3f60ee4d3f6a23d53f5":[0,0,11,5],
-"namespace_skill_development_type.html#a78e027edf7f9ee37d3fee4ab3a33597e":[0,0,11,3],
-"namespace_skill_development_type.html#af6cc51b583e4c9f762214a2d0e2b76e7":[0,0,11,2],
-"namespace_spell_list_type.html":[0,0,12],
-"namespace_spell_list_type.html#a1418463326c56e317c2dc43ee6890857":[0,0,12,2],
-"namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3":[0,0,12,0],
-"namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3":[0,0,12,1],
-"namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3a0fab1fc4a5f67676f1ef3e5ed0aaaddb":[0,0,12,1,4],
-"namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3a39f741e416e95deb20cc27862c66e3dc":[0,0,12,1,3]
+"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba90443e6f295091a059b0a150ddee8778":[0,0,11,1,1]
 };

@@ -1,5 +1,16 @@
 var NAVTREEINDEX5 =
 {
+"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055bae412484be1c558bb641a11d900b98f6b":[0,0,11,1,2],
+"namespace_skill_development_type.html#a0c8feea403ee3e058364f7fcd135f976":[0,0,11,4],
+"namespace_skill_development_type.html#a6d7ff6ceb406f3f60ee4d3f6a23d53f5":[0,0,11,5],
+"namespace_skill_development_type.html#a78e027edf7f9ee37d3fee4ab3a33597e":[0,0,11,3],
+"namespace_skill_development_type.html#af6cc51b583e4c9f762214a2d0e2b76e7":[0,0,11,2],
+"namespace_spell_list_type.html":[0,0,12],
+"namespace_spell_list_type.html#a1418463326c56e317c2dc43ee6890857":[0,0,12,2],
+"namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3":[0,0,12,0],
+"namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3":[0,0,12,1],
+"namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3a0fab1fc4a5f67676f1ef3e5ed0aaaddb":[0,0,12,1,4],
+"namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3a39f741e416e95deb20cc27862c66e3dc":[0,0,12,1,3],
 "namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3ac76ad31b0ff1fcbb03eeae06f73420c8":[0,0,12,1,2],
 "namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3ad972115f06325253781715b97744abdd":[0,0,12,1,0],
 "namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3af9be16a4ac9fcc9b545ff52f0606eb09":[0,0,12,1,1],

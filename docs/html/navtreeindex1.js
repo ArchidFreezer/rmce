@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"class_culture_type_datafile_parser_json.html#a08ca6632b24c5cf125d239e8923e7484":[2,0,20,1],
+"class_culture_type_datafile_parser_json.html#a0a2b6599048e436d8f55946d03e74c10":[2,0,20,0],
 "class_culture_type_datafile_parser_json.html#a31ac99209385c2ef16a35b4b4f431942":[2,0,20,3],
 "class_culture_type_datafile_parser_json.html#a9cff84d9f336650a791990cb9f988156":[2,0,20,2],
 "class_datafile_parser.html":[2,0,21],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "class_profession_data.html#a86b1462d40ba65c55b0b45868cd2bd0d":[2,0,44,93],
 "class_profession_data.html#a8c20071cbf33c2a2737f225852501307":[2,0,44,54],
 "class_profession_data.html#a988f5d0eee42263e720c21244eef539c":[2,0,44,84],
-"class_profession_data.html#a9b5657d42ff468a15f77f2f687f7f247":[2,0,44,92],
-"class_profession_data.html#a9badc3b2f03a68b1d4cd99968dae7f9f":[2,0,44,88],
-"class_profession_data.html#a9d53f6cd7446f7fe64ff592f252ad012":[2,0,44,5]
+"class_profession_data.html#a9b5657d42ff468a15f77f2f687f7f247":[2,0,44,92]
 };

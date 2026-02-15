@@ -138,6 +138,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1a9c485061431ec2751488cbaead7e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the description of what defines the training package.  <br /></td></tr>
 <tr class="memitem:aa416e03138f2be1c1bcce6f869462968" id="r_aa416e03138f2be1c1bcce6f869462968"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa416e03138f2be1c1bcce6f869462968">description</a> () const</td></tr>
 <tr class="memdesc:aa416e03138f2be1c1bcce6f869462968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description of what the defines training package.  <br /></td></tr>
+<tr class="memitem:a60e92c2baa8ca1d5d08dd2f36e62b73e" id="r_a60e92c2baa8ca1d5d08dd2f36e62b73e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a60e92c2baa8ca1d5d08dd2f36e62b73e">setFlavourText</a> (std::string_view flavour_text)</td></tr>
+<tr class="memdesc:a60e92c2baa8ca1d5d08dd2f36e62b73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the flavour text of the training package that may be relevant for a GM when running a character with the training package.  <br /></td></tr>
+<tr class="memitem:a196c34d31b5b7a4a57cb9a8cf38febf3" id="r_a196c34d31b5b7a4a57cb9a8cf38febf3"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a196c34d31b5b7a4a57cb9a8cf38febf3">flavourText</a> () const</td></tr>
+<tr class="memdesc:a196c34d31b5b7a4a57cb9a8cf38febf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flavour text of the training package that may be relevant for a GM when running a character with the training package.  <br /></td></tr>
 <tr class="memitem:a4f9940913970198a5843d2cd2a232142" id="r_a4f9940913970198a5843d2cd2a232142"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4f9940913970198a5843d2cd2a232142">addNote</a> (std::string_view note)</td></tr>
 <tr class="memdesc:a4f9940913970198a5843d2cd2a232142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an additional note about the training package that may be relevant for a GM when running a character with the training package.  <br /></td></tr>
 <tr class="memitem:ae28dd1325ec5a465afadc164f9d28455" id="r_ae28dd1325ec5a465afadc164f9d28455"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae28dd1325ec5a465afadc164f9d28455">setNotes</a> (std::set&lt; std::string &gt; <a class="el" href="#aa2d679005b46b77f19d40aba6b0ac018">notes</a>)</td></tr>
@@ -150,12 +154,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7eead36745d53d541965cdbdecbe7e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the book that the training package is defined in.  <br /></td></tr>
 <tr class="memitem:acdfac246756ed1b5de938f51a4735b20" id="r_acdfac246756ed1b5de938f51a4735b20"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acdfac246756ed1b5de938f51a4735b20">addRace</a> (const <a class="el" href="class_race_data.html">RaceData</a> &amp;race)</td></tr>
 <tr class="memdesc:acdfac246756ed1b5de938f51a4735b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a race to those who can take the package if it is restricted.  <br /></td></tr>
+<tr class="memitem:ae924bead89c816b0b1f1126f16f10003" id="r_ae924bead89c816b0b1f1126f16f10003"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae924bead89c816b0b1f1126f16f10003">setRaces</a> (std::set&lt; const <a class="el" href="class_race_data.html">RaceData</a> * &gt; <a class="el" href="#a79740f166b2f9e0dfcc88b8832e829b9">races</a>)</td></tr>
+<tr class="memdesc:ae924bead89c816b0b1f1126f16f10003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the collection of race data.  <br /></td></tr>
 <tr class="memitem:a79740f166b2f9e0dfcc88b8832e829b9" id="r_a79740f166b2f9e0dfcc88b8832e829b9"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_race_data.html">RaceData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a79740f166b2f9e0dfcc88b8832e829b9">races</a> () const</td></tr>
 <tr class="memdesc:a79740f166b2f9e0dfcc88b8832e829b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of races that may take the package.  <br /></td></tr>
 <tr class="memitem:a14e4deb0bae2dd79779711e60a20f774" id="r_a14e4deb0bae2dd79779711e60a20f774"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a14e4deb0bae2dd79779711e60a20f774">available</a> (const <a class="el" href="class_race_data.html">RaceData</a> &amp;race)</td></tr>
 <tr class="memdesc:a14e4deb0bae2dd79779711e60a20f774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether a race can take the training package.  <br /></td></tr>
 <tr class="memitem:a23a8bd67d596ae20cae0445f84611fa1" id="r_a23a8bd67d596ae20cae0445f84611fa1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a23a8bd67d596ae20cae0445f84611fa1">addQualifier</a> (std::string_view qualifier, int reduction)</td></tr>
 <tr class="memdesc:a23a8bd67d596ae20cae0445f84611fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a qualifier that, if met, reduces the cost of the training package.  <br /></td></tr>
+<tr class="memitem:a61fe64ac93563d50df32c47f9e767409" id="r_a61fe64ac93563d50df32c47f9e767409"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61fe64ac93563d50df32c47f9e767409">setQualifiers</a> (std::map&lt; std::string, int &gt; <a class="el" href="#a78d16e0ae7a3263e2475f7181e975391">qualifiers</a>)</td></tr>
+<tr class="memdesc:a61fe64ac93563d50df32c47f9e767409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a collection of qualifiers that, if met, reduce the cost of the training package.  <br /></td></tr>
 <tr class="memitem:a78d16e0ae7a3263e2475f7181e975391" id="r_a78d16e0ae7a3263e2475f7181e975391"><td class="memItemLeft">const std::map&lt; std::string, int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a78d16e0ae7a3263e2475f7181e975391">qualifiers</a> () const</td></tr>
 <tr class="memdesc:a78d16e0ae7a3263e2475f7181e975391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a collection of qualifiers that, if met, reduce the cost of the training package.  <br /></td></tr>
 <tr class="memitem:a037a2e62a7a1bad8f3b571daa82e5cf9" id="r_a037a2e62a7a1bad8f3b571daa82e5cf9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a037a2e62a7a1bad8f3b571daa82e5cf9">setLifestyle</a> (bool <a class="el" href="#a574ac4a6f61c278e690eb383ab03ee51">lifestyle</a>)</td></tr>
@@ -615,6 +623,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a196c34d31b5b7a4a57cb9a8cf38febf3" name="a196c34d31b5b7a4a57cb9a8cf38febf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a196c34d31b5b7a4a57cb9a8cf38febf3">&#9670;&#160;</a></span>flavourText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; TrainingPackageData::flavourText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the flavour text of the training package that may be relevant for a GM when running a character with the training package. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string reference of the flavour text about the training package </dd></dl>
+
+</div>
+</div>
 <a id="ad174ba7ddcc84f49f95fd73bb9af6c54" name="ad174ba7ddcc84f49f95fd73bb9af6c54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad174ba7ddcc84f49f95fd73bb9af6c54">&#9670;&#160;</a></span>isRankSkill()</h2>
 
@@ -1036,6 +1072,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a60e92c2baa8ca1d5d08dd2f36e62b73e" name="a60e92c2baa8ca1d5d08dd2f36e62b73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e92c2baa8ca1d5d08dd2f36e62b73e">&#9670;&#160;</a></span>setFlavourText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TrainingPackageData::setFlavourText </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>flavour_text</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the flavour text of the training package that may be relevant for a GM when running a character with the training package. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flavour_text</td><td>std::string_view flavour text about the training package </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a13fe02d70014afe358dd17055fe584b4" name="a13fe02d70014afe358dd17055fe584b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a13fe02d70014afe358dd17055fe584b4">&#9670;&#160;</a></span>setLanguageChoices()</h2>
 
@@ -1294,6 +1363,73 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">notes</td><td>Set of additional notes about the training package </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a61fe64ac93563d50df32c47f9e767409" name="a61fe64ac93563d50df32c47f9e767409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61fe64ac93563d50df32c47f9e767409">&#9670;&#160;</a></span>setQualifiers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TrainingPackageData::setQualifiers </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; std::string, int &gt;</td>          <td class="paramname"><span class="paramname"><em>qualifiers</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a collection of qualifiers that, if met, reduce the cost of the training package. </p>
+<p>Only a single discout can apply so if a character meets the requireemnts of more than one qualifier the one with the biggest discount should be applied.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qualifiers</td><td>Map of qualifier text and associated cost reduction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae924bead89c816b0b1f1126f16f10003" name="ae924bead89c816b0b1f1126f16f10003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae924bead89c816b0b1f1126f16f10003">&#9670;&#160;</a></span>setRaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TrainingPackageData::setRaces </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; const <a class="el" href="class_race_data.html">RaceData</a> * &gt;</td>          <td class="paramname"><span class="paramname"><em>races</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the collection of race data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">races</td><td>A set of pointers to <a class="el" href="class_race_data.html" title="Class representing the data of a race.">RaceData</a> objects to be stored. </td></tr>
   </table>
   </dd>
 </dl>

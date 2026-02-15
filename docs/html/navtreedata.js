@@ -58,11 +58,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"class_culture_type_datafile_parser_json.html#a31ac99209385c2ef16a35b4b4f431942",
-"class_profession_data.html#a9ff1f1396e0c86202ab56b359f0c8a9c",
-"class_skill_development_cost.html#ae419c8ba528cd113ee7a9f451999d291",
-"functions_l.html",
-"namespace_spell_list_type.html#a27ead2ad2cf13fa100b8d6e9774661d3ac76ad31b0ff1fcbb03eeae06f73420c8"
+"class_culture_type_datafile_parser_json.html#a08ca6632b24c5cf125d239e8923e7484",
+"class_profession_data.html#a9badc3b2f03a68b1d4cd99968dae7f9f",
+"class_skill_development_cost.html#a92d29a0d430901739503ba649be42e81",
+"functions_func_r.html",
+"namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055bae412484be1c558bb641a11d900b98f6b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
