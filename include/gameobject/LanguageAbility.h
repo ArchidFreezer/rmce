@@ -34,9 +34,12 @@ public:
  */
 class LanguageAbility {
 public:
+
+	LanguageAbility(); /**< Default constructor */
+
 	/**
 	 * @brief Constructor setting the language the ability is in
-	 * @param language LanguageData refence to the language
+	 * @param language LanguageData reference to the language
 	 */
 	LanguageAbility(const LanguageData& language) : LanguageAbility(language, 0, 0, 0) {}
 
@@ -48,6 +51,12 @@ public:
 	 * @param somantic number of somantic ranks the character has
 	 */
 	LanguageAbility(const LanguageData& language, int spoken, int written, int somantic) : language_{ &language }, spoken_{ std::max(0,spoken) }, written_{ std::max(0,written) }, somantic_{ std::max(0,somantic) } {}
+
+	/**
+	 * @brief Set the language the ability is in
+	 * @param language LanguageData reference to the language
+	 */
+	void setLanguage(const LanguageData& language) { language_ = &language; }
 
 	/**
 	 * @brief Get the name of the language

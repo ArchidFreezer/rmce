@@ -45,3 +45,17 @@ const std::string lcaseconcat(std::string_view sv);
  * @return vector of the tokens
  */
 std::vector<std::string> tokenise(const std::string& text, const std::string& delimiters = " ");
+
+/**
+ * @brief Split a string into tokens on a delimiter string
+ * 
+ * The @a delimiter argument is used as a whole string to split the text, for example using the text string "Test 1,string 1,Test 2,string 2:Test 3:string 3" and delimiter ",Test " would return an array of
+ * the following:
+ * + Test 1,string 1
+ * + 2,string 2:Test 3:string 3
+ * 
+ * @param text String to split
+ * @param delimiter String to use as a token
+ * @return vector of the tokens
+ */
+std::vector<std::string> tokeniseByString(std::string_view text, const std::string& delimiter);

@@ -1,5 +1,0 @@
-<map id="ProfessionData::InvalidSkillDevelopment" name="ProfessionData::InvalidSkillDevelopment">
-<area shape="rect" id="Node000001" title="Thrown when there is an attempt to set a skill as everymen when it is already set as resticted or vis..." alt="" coords="5,80,188,123"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="35,5,158,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,46,99,81,94,79,95,50"/>
-</map>

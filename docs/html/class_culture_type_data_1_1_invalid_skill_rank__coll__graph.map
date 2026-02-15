@@ -1,5 +1,0 @@
-<map id="CultureTypeData::InvalidSkillRank" name="CultureTypeData::InvalidSkillRank">
-<area shape="rect" id="Node000001" title="Thrown when there is an attempt to set an invalid skill rank." alt="" coords="5,80,171,123"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="26,5,150,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,46,91,81,85,79,86,50"/>
-</map>

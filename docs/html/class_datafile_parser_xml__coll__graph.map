@@ -1,5 +1,0 @@
-<map id="DatafileParserXml" name="DatafileParserXml">
-<area shape="rect" id="Node000001" title="Abstract class to parse xml files containing game rule data." alt="" coords="5,80,133,107"/>
-<area shape="rect" id="Node000002" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="17,5,121,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,46,72,80,66,79,67,50"/>
-</map>

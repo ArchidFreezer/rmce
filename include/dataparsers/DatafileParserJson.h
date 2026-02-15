@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <DatafileParser.h>
+#include <EnumChoice.h>
 #include <LanguageAbility.h>
 #include <SkillDevelopmentType.h>
 #include <StatType.h>
@@ -440,6 +441,20 @@ protected:
 	const pt::ptree getGameDataChoiceSetTree(std::set<GameRuleDataChoice<GameRuleData>> set);
 
 	/**
+	 * @brief Parses a property tree into a set of skill data choices.
+	 * @param tree An optional reference to a property tree containing the skill choice set to parse.
+	 * @return A set of GameRuleDataChoice objects templated on SubcategoriedSkillData.
+	 */
+	std::set<GameRuleDataChoice<SubcategoriedSkillData>> parseSkillChoiceSetTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Converts a set of skill data choices into a property tree representation.
+	 * @param set The set of GameRuleDataChoice objects templated on SubcategoriedSkillData to convert.
+	 * @return A property tree (ptree) containing the serialized skill choice set.
+	 */
+	const pt::ptree getSkillChoiceSetTree(std::set<GameRuleDataChoice<SubcategoriedSkillData>> set);
+
+	/**
 	 * @brief Parses a property tree into a map of game rule data choices paired with enumeration values.
 	 * @tparam EnumType The enumeration type to be associated with each game rule data choice.
 	 * @tparam GameRuleData A concept or type constraint specifying the game rule data object type.
@@ -460,6 +475,26 @@ protected:
 	const pt::ptree getGameDataChoicePairEnumTree(std::map<GameRuleDataChoice<GameRuleData>, EnumType> map);
 
 	/**
+	 * @brief Parses a property tree into a map of game rule data choices paired with primitive values.
+	 * @tparam Primitive The primitive type of the values associated with each game rule data choice.
+	 * @tparam GameRuleData The game rule data object type that defines the available choices.
+	 * @param tree An optional reference to a property tree containing the game data choice-primitive pairs to parse.
+	 * @return A map where keys are game rule data choices and values are the associated primitive values parsed from the tree.
+	 */
+	template<GameRuleDataObject GameRuleData, typename Primitive>
+	std::map<GameRuleDataChoice<GameRuleData>, Primitive> parseGameDataChoicePairTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Converts a map of game rule data choices to a property tree.
+	 * @tparam Primitive The primitive type used as the value in the map.
+	 * @tparam GameRuleData The game rule data object type that satisfies the GameRuleDataObject concept.
+	 * @param map A map containing game rule data choices as keys and primitive values as values.
+	 * @return A property tree (ptree) representation of the game data choice-primitive pairs.
+	 */
+	template<GameRuleDataObject GameRuleData, typename Primitive>
+	const pt::ptree getGameDataChoicePairTree(std::map<GameRuleDataChoice<GameRuleData>, Primitive> map);
+
+	/**
 	 * @brief Parses a property tree into a map of skill data choices to enum values.
 	 * @tparam EnumType The enum type to be used as the value in the resulting map.
 	 * @param tree An optional reference to a property tree containing the skill choice and enum pair data to parse.
@@ -476,6 +511,34 @@ protected:
 	 */
 	template<typename EnumType>
 	const pt::ptree getSkillChoicePairEnumTree(std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> map);
+
+	/**
+	 * @brief Parses a property tree into a map of skill data choices paired with primitive values.
+	 * @tparam Primitive The primitive type of the values to be paired with skill choices in the resulting map.
+	 * @param tree An optional reference to a property tree containing skill choice-primitive pairs to parse.
+	 * @return A map where keys are game rule data choices for subcategorized skill data and values are of the specified primitive type.
+	 */
+	template<typename Primitive>
+	std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> parseSkillChoicePairTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Converts a map of skill choice data to a property tree representation.
+	 * @tparam Primitive The primitive type used as the value type in the map.
+	 * @param map A map where keys are game rule data choices containing subcategorized skill data, and values are primitive type values.
+	 * @return A constant property tree (ptree) representation of the skill choice data map.
+	 */
+	template<typename Primitive>
+	const pt::ptree getSkillChoicePairTree(std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> map);
+
+	/**
+	 * @brief Parses a property tree into a set of enumeration choices.
+	 * @tparam EnumType The enumeration type for the choices.
+	 * @param tree An optional reference to a property tree containing the enumeration choices to parse.
+	 * @return A set of parsed enumeration choices of the specified enum type.
+	 */
+	template<typename EnumType>
+	std::set<EnumChoice<EnumType>> parseEnumChoiceSetTree(boost::optional<const pt::ptree&> tree);
+
 
 private:
 	std::string root_node_{}; /**< Key of the root node of the json file */
@@ -857,7 +920,7 @@ inline const pt::ptree DatafileParserJson::getGameDataChoiceSetTree(std::set<Gam
 }
 
 template<GameRuleDataObject GameRuleData, typename EnumType>
-std::map<GameRuleDataChoice<GameRuleData>, EnumType> DatafileParserJson::parseGameDataChoicePairEnumTree(boost::optional<const pt::ptree&> tree) {
+inline std::map<GameRuleDataChoice<GameRuleData>, EnumType> DatafileParserJson::parseGameDataChoicePairEnumTree(boost::optional<const pt::ptree&> tree) {
 	std::map<GameRuleDataChoice<GameRuleData>, EnumType> datum{};
 	if (tree) {
 		for (const auto& choice_tree : tree.get()) {
@@ -876,7 +939,7 @@ std::map<GameRuleDataChoice<GameRuleData>, EnumType> DatafileParserJson::parseGa
 }
 
 template<GameRuleDataObject GameRuleData, typename EnumType>
-const pt::ptree DatafileParserJson::getGameDataChoicePairEnumTree(std::map<GameRuleDataChoice<GameRuleData>, EnumType> map) {
+inline const pt::ptree DatafileParserJson::getGameDataChoicePairEnumTree(std::map<GameRuleDataChoice<GameRuleData>, EnumType> map) {
 	pt::ptree tree{};
 	for (const auto& pair : map) {
 		pt::ptree choice_tree{};
@@ -898,8 +961,48 @@ const pt::ptree DatafileParserJson::getGameDataChoicePairEnumTree(std::map<GameR
 	return tree;
 }
 
+template<GameRuleDataObject GameRuleData, typename Primitive>
+inline std::map<GameRuleDataChoice<GameRuleData>, Primitive> DatafileParserJson::parseGameDataChoicePairTree(boost::optional<const pt::ptree&> tree) {
+	std::map<GameRuleDataChoice<GameRuleData>, Primitive> datum{};
+	if (tree) {
+		for (const auto& choice_tree : tree.get()) {
+			GameRuleDataChoice<GameRuleData> choice_data{};
+			choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
+			for (const auto& list_tree : choice_tree.second.get_child("options")) {
+				std::string list_id{ list_tree.second.get_value<std::string>() };
+				choice_data.addOption(factory().get<GameRuleData>(list_id));
+			}
+			datum.emplace(choice_data, choice_tree.second.get<Primitive>("value"));
+		}
+	}
+	return datum;
+}
+
+template<GameRuleDataObject GameRuleData, typename Primitive>
+inline const pt::ptree DatafileParserJson::getGameDataChoicePairTree(std::map<GameRuleDataChoice<GameRuleData>, Primitive> map) {
+	pt::ptree tree{};
+	for (const auto& pair : map) {
+		pt::ptree choice_tree{};
+		choice_tree.put("num-choices", pair.first.numChoices());
+		choice_tree.put("value", pair.second);
+		pt::ptree options_tree{};
+		std::map<std::string, const GameRuleData*> sorted_options{};
+		for (const GameRuleData* option : pair.first.options()) {
+			sorted_options.emplace(option->id(), option);
+		}
+		for (const auto& option_pair : sorted_options) {
+			pt::ptree option_tree{};
+			option_tree.put("", option_pair.second->id());
+			options_tree.push_back(std::make_pair("", option_tree));
+		}
+		choice_tree.push_back(std::make_pair("options", options_tree));
+		tree.push_back(std::make_pair("", choice_tree));
+	}
+	return tree;
+}
+
 template<typename EnumType>
-std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> DatafileParserJson::parseSkillChoicePairEnumTree(boost::optional<const pt::ptree&> tree) {
+inline std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> DatafileParserJson::parseSkillChoicePairEnumTree(boost::optional<const pt::ptree&> tree) {
 	std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> datum{};
 	if (tree) {
 		for (const auto& choice_tree : tree.get()) {
@@ -923,12 +1026,13 @@ std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> DatafileParserJso
 }
 
 template<typename EnumType>
-const pt::ptree DatafileParserJson::getSkillChoicePairEnumTree(std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> map) {
+inline const pt::ptree DatafileParserJson::getSkillChoicePairEnumTree(std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> map) {
 	pt::ptree tree{};
 	for (const auto& pair : map) {
 		pt::ptree choice_tree{};
 		choice_tree.put("num-choices", pair.first.numChoices());
 		choice_tree.put("type", toString(pair.second));
+
 		pt::ptree options_tree{};
 		std::map<std::string, const SubcategoriedSkillData*> sorted_options{};
 		for (const SubcategoriedSkillData* option : pair.first.options()) {
@@ -946,3 +1050,70 @@ const pt::ptree DatafileParserJson::getSkillChoicePairEnumTree(std::map<GameRule
 	return tree;
 }
 
+template<typename Primitive>
+inline std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> DatafileParserJson::parseSkillChoicePairTree(boost::optional<const pt::ptree&> tree) {
+	std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> datum{};
+	if (tree) {
+		for (const auto& choice_tree : tree.get()) {
+			GameRuleDataChoice<SubcategoriedSkillData> choice_data{};
+			choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
+			for (const auto& list_tree : choice_tree.second.get_child("options")) {
+				std::string list_id{ list_tree.second.get<std::string>("id") };
+				boost::optional<std::string> subcategory = list_tree.second.get_optional<std::string>("subcategory");
+				if (subcategory) {
+					choice_data.addOption(factory().subcategoriedSkillData(list_id, subcategory.get()));
+				} else {
+					choice_data.addOption(factory().subcategoriedSkillData(list_id));
+				}
+			}
+			datum.emplace(choice_data, choice_tree.second.get<int>("value"));
+		}
+	}
+	return datum;
+}
+
+template<typename Primitive>
+inline const pt::ptree DatafileParserJson::getSkillChoicePairTree(std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> map) {
+	pt::ptree tree{};
+	for (const auto& pair : map) {
+		pt::ptree choice_tree{};
+		choice_tree.put("num-choices", pair.first.numChoices());
+		choice_tree.put("value", pair.second);
+
+		pt::ptree options_tree{};
+		std::map<size_t, const SubcategoriedSkillData*> sorted_options{};
+		for (const SubcategoriedSkillData* option : pair.first.options()) {
+			size_t hash{ std::hash<std::string>()(option->skillData().id()) };
+			hash += option->subcategory() ? std::hash<std::string>()(option->subcategory().value()) : 0;
+			hash += std::hash<Primitive>()(pair.second);
+			sorted_options.emplace(hash, option);
+		}
+		for (const auto& option_pair : sorted_options) {
+			pt::ptree option_tree{};
+			option_tree.put("id", option_pair.second->skillData().id());
+			if (option_pair.second->subcategory()) option_tree.put("subcategory", option_pair.second->subcategory().value());
+			options_tree.push_back(std::make_pair("", option_tree));
+		}
+		choice_tree.push_back(std::make_pair("options", options_tree));
+		tree.push_back(std::make_pair("", choice_tree));
+	}
+	return tree;
+}
+
+template<typename EnumType>
+inline std::set<EnumChoice<EnumType>> DatafileParserJson::parseEnumChoiceSetTree(boost::optional<const pt::ptree&> tree) {
+	std::set<EnumChoice<EnumType>> datum{};
+	if (tree) {
+		for (const auto& choice_tree : tree.get()) {
+			EnumChoice<EnumType> choice_data{};
+			choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
+			for (const auto& list_tree : choice_tree.second.get_child("options")) {
+				EnumType enum_val{};
+				fromString(list_tree.second.get_value<std::string>(), enum_val);
+				choice_data.addOption(enum_val);
+			}
+			datum.emplace(choice_data);
+		}
+	}
+	return datum;
+}

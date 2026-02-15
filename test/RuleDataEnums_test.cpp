@@ -1,18 +1,27 @@
 #include <gtest/gtest.h>
 
+#include <AnimalOutlookType.h>
 #include <ArmourType.h>
+#include <AttackSizeType.h>
+#include <CreatureBonusXpType.h>
+#include <CreatureConstitutionVarianceType.h>
+#include <CreatureLevelVarianceType.h>
+#include <CreatureMovementSpeedType.h>
 #include <CreatureSizeType.h>
 #include <CriticalTableType.h>
 #include <CriticalType.h>
 #include <EnvironmentType.h>
 #include <HabitatType.h>
+#include <ManoeuvreDifficultyType.h>
 #include <RealmType.h>
 #include <ResistanceType.h>
 #include <SkillActionType.h>
 #include <SkillDevelopmentType.h>
 #include <SpellListType.h>
+#include "SpellUserType.h"
 #include <StatLossType.h>
 #include <StatType.h>
+#include <TreasureValueType.h>
 
 namespace {
 	TEST(RuleDataEnums, StatType) {
@@ -235,4 +244,113 @@ namespace {
 		EXPECT_NE(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltCoast)), EnvironmentType::Water::kLake);
 	}
 
+	TEST(RuleDataEnums, ManoeuvreDifficultyType) {
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kRoutine)), ManoeuvreDifficultyType::kRoutine);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kEasy)), ManoeuvreDifficultyType::kEasy);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kLight)), ManoeuvreDifficultyType::kLight);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kMedium)), ManoeuvreDifficultyType::kMedium);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kHard)), ManoeuvreDifficultyType::kHard);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kVeryHard)), ManoeuvreDifficultyType::kVeryHard);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kExtremelyHard)), ManoeuvreDifficultyType::kExtremelyHard);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kSheerFolly)), ManoeuvreDifficultyType::kSheerFolly);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kAbsurd)), ManoeuvreDifficultyType::kAbsurd);
+	}
+
+	TEST(RuleDataEnums, TreasureValueType) {
+		EXPECT_EQ(TreasureValueType::fromString(toString(TreasureValueType::kVeryPoor)), TreasureValueType::kVeryPoor);
+		EXPECT_EQ(TreasureValueType::fromString(toString(TreasureValueType::kPoor)), TreasureValueType::kPoor);
+		EXPECT_EQ(TreasureValueType::fromString(toString(TreasureValueType::kNormal)), TreasureValueType::kNormal);
+		EXPECT_EQ(TreasureValueType::fromString(toString(TreasureValueType::kRich)), TreasureValueType::kRich);
+		EXPECT_EQ(TreasureValueType::fromString(toString(TreasureValueType::kVeryRich)), TreasureValueType::kVeryRich);
+		EXPECT_EQ(TreasureValueType::fromString(toString(TreasureValueType::kSpecial)), TreasureValueType::kSpecial);
+	}
+
+	TEST(RuleDataEnums, AnimalOutlookType) {
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kAggressive)), AnimalOutlookType::kAggressive);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kAloof)), AnimalOutlookType::kAloof);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kAltruistic)), AnimalOutlookType::kAltruistic);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kBelligerent)), AnimalOutlookType::kBelligerent);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kBerserk)), AnimalOutlookType::kBerserk);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kCarefree)), AnimalOutlookType::kCarefree);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kCruel)), AnimalOutlookType::kCruel);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kDomineering)), AnimalOutlookType::kDomineering);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kGood)), AnimalOutlookType::kGood);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kGreedy)), AnimalOutlookType::kGreedy);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kHostile)), AnimalOutlookType::kHostile);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kHungry)), AnimalOutlookType::kHungry);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kInquisitive)), AnimalOutlookType::kInquisitive);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kJumpy)), AnimalOutlookType::kJumpy);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kNormal)), AnimalOutlookType::kNormal);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kPassive)), AnimalOutlookType::kPassive);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kPlayful)), AnimalOutlookType::kPlayful);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kProtective)), AnimalOutlookType::kProtective);
+		EXPECT_EQ(AnimalOutlookType::fromString(toString(AnimalOutlookType::kTimid)), AnimalOutlookType::kTimid);
+	}
+
+	TEST(RuleDataEnums, AttackSizeType) {
+		EXPECT_EQ(AttackSizeType::fromString(toString(AttackSizeType::kSmall)), AttackSizeType::kSmall);
+		EXPECT_EQ(AttackSizeType::fromString(toString(AttackSizeType::kMedium)), AttackSizeType::kMedium);
+		EXPECT_EQ(AttackSizeType::fromString(toString(AttackSizeType::kLarge)), AttackSizeType::kLarge);
+		EXPECT_EQ(AttackSizeType::fromString(toString(AttackSizeType::kHuge)), AttackSizeType::kHuge);
+	}
+
+	TEST(RuleDataEnums, CreatureBonusXpType) {
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kNone)), CreatureBonusXpType::kNone);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kA)), CreatureBonusXpType::kA);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kB)), CreatureBonusXpType::kB);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kC)), CreatureBonusXpType::kC);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kD)), CreatureBonusXpType::kD);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kE)), CreatureBonusXpType::kE);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kF)), CreatureBonusXpType::kF);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kG)), CreatureBonusXpType::kG);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kH)), CreatureBonusXpType::kH);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kI)), CreatureBonusXpType::kI);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kJ)), CreatureBonusXpType::kJ);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kK)), CreatureBonusXpType::kK);
+		EXPECT_EQ(CreatureBonusXpType::fromString(toString(CreatureBonusXpType::kL)), CreatureBonusXpType::kL);
+	}
+
+	TEST(RuleDataEnums, CreatureConstitutionVarianceType) {
+		EXPECT_EQ(CreatureConstitutionVarianceType::fromString(toString(CreatureConstitutionVarianceType::kNone)), CreatureConstitutionVarianceType::kNone);
+		EXPECT_EQ(CreatureConstitutionVarianceType::fromString(toString(CreatureConstitutionVarianceType::kA)), CreatureConstitutionVarianceType::kA);
+		EXPECT_EQ(CreatureConstitutionVarianceType::fromString(toString(CreatureConstitutionVarianceType::kB)), CreatureConstitutionVarianceType::kB);
+		EXPECT_EQ(CreatureConstitutionVarianceType::fromString(toString(CreatureConstitutionVarianceType::kC)), CreatureConstitutionVarianceType::kC);
+		EXPECT_EQ(CreatureConstitutionVarianceType::fromString(toString(CreatureConstitutionVarianceType::kD)), CreatureConstitutionVarianceType::kD);
+		EXPECT_EQ(CreatureConstitutionVarianceType::fromString(toString(CreatureConstitutionVarianceType::kE)), CreatureConstitutionVarianceType::kE);
+		EXPECT_EQ(CreatureConstitutionVarianceType::fromString(toString(CreatureConstitutionVarianceType::kF)), CreatureConstitutionVarianceType::kF);
+		EXPECT_EQ(CreatureConstitutionVarianceType::fromString(toString(CreatureConstitutionVarianceType::kG)), CreatureConstitutionVarianceType::kG);
+		EXPECT_EQ(CreatureConstitutionVarianceType::fromString(toString(CreatureConstitutionVarianceType::kH)), CreatureConstitutionVarianceType::kH);
+	}
+
+	TEST(RuleDataEnums, CreatureLevelVarianceType) {
+		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kNone)), CreatureLevelVarianceType::kNone);
+		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kA)), CreatureLevelVarianceType::kA);
+		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kB)), CreatureLevelVarianceType::kB);
+		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kC)), CreatureLevelVarianceType::kC);
+		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kD)), CreatureLevelVarianceType::kD);
+		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kE)), CreatureLevelVarianceType::kE);
+		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kF)), CreatureLevelVarianceType::kF);
+		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kG)), CreatureLevelVarianceType::kG);
+		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kH)), CreatureLevelVarianceType::kH);
+	}
+
+	TEST(RuleDataEnums, CreatureMovementSpeedType) {
+		EXPECT_EQ(CreatureMovementSpeedType::fromString(toString(CreatureMovementSpeedType::kInching)), CreatureMovementSpeedType::kInching);
+		EXPECT_EQ(CreatureMovementSpeedType::fromString(toString(CreatureMovementSpeedType::kCreeping)), CreatureMovementSpeedType::kCreeping);
+		EXPECT_EQ(CreatureMovementSpeedType::fromString(toString(CreatureMovementSpeedType::kVerySlow)), CreatureMovementSpeedType::kVerySlow);
+		EXPECT_EQ(CreatureMovementSpeedType::fromString(toString(CreatureMovementSpeedType::kSlow)), CreatureMovementSpeedType::kSlow);
+		EXPECT_EQ(CreatureMovementSpeedType::fromString(toString(CreatureMovementSpeedType::kMedium)), CreatureMovementSpeedType::kMedium);
+		EXPECT_EQ(CreatureMovementSpeedType::fromString(toString(CreatureMovementSpeedType::kModeratelyFast)), CreatureMovementSpeedType::kModeratelyFast);
+		EXPECT_EQ(CreatureMovementSpeedType::fromString(toString(CreatureMovementSpeedType::kFast)), CreatureMovementSpeedType::kFast);
+		EXPECT_EQ(CreatureMovementSpeedType::fromString(toString(CreatureMovementSpeedType::kVeryFast)), CreatureMovementSpeedType::kVeryFast);
+		EXPECT_EQ(CreatureMovementSpeedType::fromString(toString(CreatureMovementSpeedType::kBlindinglyFast)), CreatureMovementSpeedType::kBlindinglyFast);
+	}
+
+	TEST(RuleDataEnums, SpellUserType) {
+		EXPECT_EQ(SpellUserType::fromString(toString(SpellUserType::kPure)), SpellUserType::kPure);
+		EXPECT_EQ(SpellUserType::fromString(toString(SpellUserType::kHybrid)), SpellUserType::kHybrid);
+		EXPECT_EQ(SpellUserType::fromString(toString(SpellUserType::kSemi)), SpellUserType::kSemi);
+		EXPECT_EQ(SpellUserType::fromString(toString(SpellUserType::kNone)), SpellUserType::kNone);
+		EXPECT_EQ(SpellUserType::fromString(toString(SpellUserType::kChaotic)), SpellUserType::kChaotic);
+	}
 }

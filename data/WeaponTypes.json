@@ -944,6 +944,33 @@
             ]
         },
         {
+            "id": "WEAPONTYPE_CESTUSZAK",
+            "name": "Cestûszak",
+            "notes": "The Cestûszak is made of the hardest woods, layered and laquered as are all Dwarvish shields, bound with the strongest of metals and fitted with a spiked boss on the face and a well honed edge on a segment of the rim, to the fore of which a wielder's fist clutches the handgrip.",
+            "skill": "SKILL_WEAPON_1_H_CONCUSSION",
+            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "attack-table": "SPECIALATTACKTABLE_RAM",
+            "fumble": "4",
+            "breakage": "3",
+            "min-length": "3",
+            "max-length": "3",
+            "min-strength": "90",
+            "max-strength": "90",
+            "min-weight": "5",
+            "max-weight": "8",
+            "wooden-haft": "false",
+            "criticals": [
+                {
+                    "critical": "Slash",
+                    "modifier": "-10"
+                },
+                {
+                    "critical": "Krush",
+                    "modifier": "0"
+                }
+            ]
+        },
+        {
             "id": "WEAPONTYPE_CLAYMORE",
             "name": "Claymore",
             "notes": "Scottish two handed sword",

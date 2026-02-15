@@ -1,6 +1,7 @@
 #pragma once
 #include <ranges>
 #include <set>
+#include <string>
 #include <typeinfo>
 
 /**
@@ -37,6 +38,7 @@ public:
 	 * @brief Add an object to those that may be chosen from
 	 * @param option Enum object that may be chosen
 	 */
+	template <typename EnumType>
 	void addOption(EnumType option) { options_.insert(option); }
 
 	/**
@@ -49,6 +51,7 @@ public:
 	 * @brief Gets a container with the options that may be selected from
 	 * @return std::set of Enum objects
 	 */
+	template <typename EnumType>
 	const std::set<EnumType> options() const {
 		return options_;
 	}
@@ -59,6 +62,7 @@ public:
 	 * @return `true` if the object is an option
 	 * @return `false` if the object is not an option
 	 */
+	template <typename EnumType>
 	bool isOption(EnumType object) const {
 		for (auto& key : options_) {
 			if (key == object) return true;
@@ -77,12 +81,12 @@ public:
 	 */
 	bool operator<(const EnumChoice& other) const {
 		int this_hash{};
-		for (EnumType option : options_) {
+		for (auto& option : options_) {
 			this_hash += std::hash<std::string>{}(toString(option));
 		}
 
 		int that_hash{};
-		for (EnumType option : other.options_) {
+		for (auto& option : other.options_) {
 			that_hash += std::hash<std::string>{}(toString(option));
 		}
 

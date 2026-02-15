@@ -23,10 +23,10 @@ bool SkillCategoryData::removeStat(StatType::Type stat) {
 
 void SkillCategoryData::setSkillProgressions(const SkillProgressionTypeData& skill_progression, const SkillProgressionTypeData& skill_category_progression) {
 	// Check for invalid combinations first
-	if (skill_category_progression.name() != "Category Standard" && skill_category_progression.name() != "None") {
+	if (skill_category_progression.id() != "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD" && skill_category_progression.id() != "SKILLPROGRESSIONTYPE_NONE") {
 		throw InvalidSkillProgression("Category progression may only be Standard or None.");
 	}
-	if (skill_category_progression.name() == "Category Standard" && skill_progression.name() != "Standard") {
+	if (skill_category_progression.id() == "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD" && skill_progression.id() != "SKILLPROGRESSIONTYPE_STANDARD") {
 		throw InvalidSkillProgression("Category progression may only be Standard if the skill progression is also set to Standard.");
 	}
 	// Combination is valid
