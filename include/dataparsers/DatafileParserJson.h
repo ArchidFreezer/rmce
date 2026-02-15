@@ -478,25 +478,9 @@ protected:
 	template<typename EnumType>
 	const pt::ptree getSkillChoicePairEnumTree(std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> map);
 
-	/**
-	 * @brief Parses a property tree into a map of enum type choices to primitive values.
-	 * @tparam EnumType The type of the keys in the resulting map, which are enum type choices.
-	 * @tparam Primitive The type of the values in the resulting map, which are primitive types.
-	 * @param tree An optional reference to a property tree containing the game data choice and primitive pair data to parse.
-	 * @return A map where keys are enum type choices of the specified type and values are the corresponding primitive values.
-	 */
-	template<typename EnumType, typename Primitive>
-	std::map<EnumChoice<EnumType>, Primitive> parseEnumChoicePairTree(boost::optional<const pt::ptree&> tree);
+	template<typename EnumType>
+	std::set<EnumChoice<EnumType>> parseEnumChoiceSetTree(boost::optional<const pt::ptree&> tree);
 
-	/**
-	 * @brief Converts a map of enum type choices to primitive values into a property tree structure.
-	 * @tparam EnumType The type of the keys in the input map, which are enum type choices.
-	 * @tparam Primitive The type of the values in the input map, which are primitive types.
-	 * @param map A map associating enum type choices with their corresponding primitive values.
-	 * @return A property tree (ptree) representation of the enum choice to primitive value mappings.
-	 */
-	template<typename EnumType, typename Primitive>
-	const pt::ptree getEnumChoicePairTree(std::map<EnumChoice<EnumType>, Primitive> map);
 
 private:
 	std::string root_node_{}; /**< Key of the root node of the json file */
@@ -967,42 +951,20 @@ const pt::ptree DatafileParserJson::getSkillChoicePairEnumTree(std::map<GameRule
 	return tree;
 }
 
-template<typename EnumType, typename Primitive>
-std::map<EnumChoice<EnumType>, Primitive> DatafileParserJson::parseEnumChoicePairTree(boost::optional<const pt::ptree&> tree) {
-	std::map<EnumChoice<EnumType>, Primitive> datum{};
+template<typename EnumType>
+std::set<EnumChoice<EnumType>> DatafileParserJson::parseEnumChoiceSetTree(boost::optional<const pt::ptree&> tree) {
+	std::set<EnumChoice<EnumType>> datum{};
 	if (tree) {
 		for (const auto& choice_tree : tree.get()) {
 			EnumChoice<EnumType> choice_data{};
-			choice_data.setNumChoices(choice_tree.second.get<Primitive>("num-choices"));
+			choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
 			for (const auto& list_tree : choice_tree.second.get_child("options")) {
 				EnumType enum_val{};
 				fromString(list_tree.second.get_value<std::string>(), enum_val);
 				choice_data.addOption(enum_val);
 			}
-			datum.emplace(choice_data, num_choices);
+			datum.emplace(choice_data);
 		}
 	}
 	return datum;
-}
-
-template<typename EnumType, typename Primitive>
-const pt::ptree DatafileParserJson::getEnumChoicePairTree(std::map<EnumChoice<EnumType>, Primitive> map) {
-	pt::ptree tree{};
-	for (const auto& pair : map) {
-		pt::ptree choice_tree{};
-		choice_tree.put("num-choices", pair.second);
-		pt::ptree options_tree{};
-		std::map<std::string, EnumType> sorted_options{};
-		for (const EnumType option : pair.first.options()) {
-			sorted_options.emplace(toString(option), option);
-		}
-		for (const auto& option_pair : sorted_options) {
-			pt::ptree option_tree{};
-			option_tree.put("", option_pair.second);
-			options_tree.push_back(std::make_pair("", option_tree));
-		}
-		choice_tree.push_back(std::make_pair("options", options_tree));
-		tree.push_back(std::make_pair("", choice_tree));
-	}
-	return tree;
 }
