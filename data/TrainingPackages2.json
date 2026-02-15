@@ -28,7 +28,22 @@
                     "value": "Choice of weapon or armour (+5 non-magic)",
                     "chance": "100"
                 }
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "2",
+                "options": [
+                    "Agility",
+                    "Constitution",
+                    "Empathy",
+                    "Intuition",
+                    "Memory",
+                    "Presence",
+                    "Quickness",
+                    "Reasoning",
+                    "Self Discipline",
+                    "Strength"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_ADVISOR",
@@ -689,7 +704,7 @@
                 "Dwarf PCs wishing to run a more Human-like Berserker should use that training package from RMSR.",
                 "The weapon category\/skill combined choice cannot be from the 2-H Weapon category"
             ],
-            "games": [
+            "races": [
                 "RACE_DWARVES"
             ],
             "lifestyle": "true",
@@ -741,7 +756,7 @@
             "notes": [
                 "This mob-fothaj is a specific type, worn only by a Dwarf who is or has been one of the Bhourdirrim."
             ],
-            "games": [
+            "races": [
                 "RACE_DWARVES"
             ],
             "lifestyle": "true",
@@ -784,7 +799,7 @@
             "notes": [
                 "Weapons with bonuses will be of another racial make, i.e. Goblin, Ore, Dwarf, etc."
             ],
-            "games": [
+            "races": [
                 "RACE_TROGLODYTES"
             ],
             "lifestyle": "true",
@@ -806,14 +821,21 @@
                     "value": "Weapon (+5 non-magic) ",
                     "chance": "0"
                 }
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "1",
+                "options": [
+                    "Constitution",
+                    "Strength"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_BOARSADDLER",
             "name": "Boarsaddler",
             "description": "The Boarsaddler is a Hobgoblin cavalryman who rides the Great Boars into combat. There is a great deal of competition between Boarsaddlers and the Brelisskers, a rivalry that often results in bloodshed.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_HOBGOBLINS"
             ],
             "lifestyle": "true",
@@ -896,7 +918,7 @@
             "name": "Brelissker",
             "description": "The Brelissker is the other, less common type of mounted Hobgoblin fighter, who rides the Boar-headed serpent into battle. More disciplined and less prone to heedless charges, the Brelissker sometimes has a Goblin companion he abuses less than most others. This Goblin many times will accompany the Brelissker into battle, sometimes as light foot soldier alongside his master, sometimes mounted behind the master plying a bow.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_HOBGOBLINS"
             ],
             "lifestyle": "true",
@@ -940,7 +962,7 @@
             "name": "Breliss Archer",
             "description": "The Brelisskers of Hobgoblin clans often ride into battle with a Goblin, or, occasionally, a Kobold behind them, plying a bow for missile support. Since Goblins are usually chosen for this task, a Kobold who is selected (usually by a method similar to those employed by press gangs) is actually considered to be fortunate. Should the Kobold survive his training and first skirmishes (which is doubtful) he will have gained valuable fighting ability and the respect of his Kobold peers.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_KOBOLDS"
             ],
             "lifestyle": "false",
@@ -1306,7 +1328,7 @@
             "notes": [
                 "One of the spell lists must be used for entertainment"
             ],
-            "games": [
+            "races": [
                 "RACE_GNOLLS"
             ],
             "lifestyle": "true",
@@ -1340,14 +1362,21 @@
                     "value": "Spell adder (+1)",
                     "chance": "0"
                 }
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "1",
+                "options": [
+                    "Agility",
+                    "Presence"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_CLOAKER_OF_CLANS",
             "name": "Cloaker of Clans",
             "description": "The Cloaker of Clans is important to the Gnoll band on the march, for they are the Gnolls who craft magics to aid the Gnollish scouts and assist in concealing the clan while it is on the move. It is a profession that is well-respected, for the Cloakers of Clans are of great aid when defending home grottoes as well, using their magics to conceal ambushing bands of Gnoll defenders from those who trespass among or harm them.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_GNOLLS"
             ],
             "lifestyle": "true",
@@ -1458,7 +1487,7 @@
             "name": "Collector",
             "description": "The Collector training package represents those Gnomes who have honed their innate skill with item manipulation by studying the mastery of physical magics. The Collector is a Gnome who has both knowledge of enchanted items and the ability to use them. In addition, Collectors have an uncanny knack for ferreting out secrets and lost tidbits of lore that allow them to track down ensorcelled tools of all types, from trinkets to artifacts.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_GNOMES"
             ],
             "lifestyle": "true",
@@ -1710,7 +1739,7 @@
             "name": "Croaker",
             "description": "A Goblin Croaker is the doctor of a Goblin clan or tribe. He does not pursue the art of surgery out of any desire to help his fellows or an altruistic desire to heal. Rather, the Goblin interest and fascination with mechanical workings has manifested itself in an overwhelming interest in the intricacies of anatomy and how the body works. A sick or wounded Goblin is a chance to tinker.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_GOBLINS"
             ],
             "lifestyle": "false",
@@ -2220,7 +2249,7 @@
             "notes": [
                 "GM choice of which stat gain is available for a character"
             ],
-            "games": [
+            "races": [
                 "RACE_DWARVES"
             ],
             "lifestyle": "true",
@@ -2255,7 +2284,14 @@
                     "value": "Melee weapon (+5 non-magic) and Spell adder (+l)",
                     "chance": "0"
                 }
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "1",
+                "options": [
+                    "Intuition",
+                    "Presence"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_ENGINEER",
@@ -2353,7 +2389,21 @@
             ],
             "stat-gains": [
                 "Constitution"
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "1",
+                "options": [
+                    "Agility",
+                    "Empathy",
+                    "Intuition",
+                    "Memory",
+                    "Presence",
+                    "Quickness",
+                    "Reasoning",
+                    "Self Discipline",
+                    "Strength"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_FAMULUS",
@@ -2403,7 +2453,7 @@
             "name": "Finder",
             "description": "While most times Halflings are a peaceable and honest folk, there are those who find it irresistible to avail themselves of the gullibility of Big Folk. The Halflings' inherent agility and outstanding skill at all things dexterous and stealthy make it quite easy to do so. Most Finders would be pained to be called thieves, and only the most dastardly would actually steal from a Halfling, but Finders excel at finding and recovering property that is not theirs. They will often secure things with the intention of finding the real owner later...",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_HALFLINGS_HAERFEAT",
                 "RACE_HALFLINGS_STAEKNIL",
                 "RACE_HALFLINGS_WAENFEL",
@@ -2482,7 +2532,7 @@
             "name": "Ghârnurghir",
             "description": "The Ghârnurghir are the soldiery of the Mountain Folk, the Dwarves who are trained in the use of arms. It is important to note that virtually every dwarf is a doughty fighter in his (or her) own right - these Dwarves simply have greater and more professional training. The different kinds of Ghârnurghir are many and varied, the one thing all have in common is ferocity and pride in full measure.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_DWARVES"
             ],
             "lifestyle": "true",
@@ -2758,7 +2808,7 @@
             "notes": [
                 "The GM should choose one of the stat gains to be applied."
             ],
-            "games": [
+            "races": [
                 "RACE_DWARVES"
             ],
             "lifestyle": "true",
@@ -2785,7 +2835,14 @@
                     "value": "Ingot of mithril, 4 coin weight",
                     "chance": "0"
                 }
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "1",
+                "options": [
+                    "Intuition",
+                    "Reasoning"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_HERBALIST",
@@ -2952,7 +3009,7 @@
             "name": "Hewer",
             "description": "All Hobgoblins are reared to be fighters from infancy. If they survive to adulthood, they are very hardy creatures, eager to fight. The Hewer (a loose translation of the Hobgoblin word) is essentially a Hobgoblin soldier, a mud-colored giant Goblin who has avidly pursued training in the field of arms.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_HOBGOBLINS"
             ],
             "lifestyle": "true",
@@ -3075,7 +3132,7 @@
             "name": "Hoythij Râk",
             "description": "The Unhomed are Dwarves who have left the cavernous homes of their fathers and gone wandering the world. Many young Dwarves (those less than a hundred years old) will follow this path if they have a taste for adventure and derring-do. Others, older and wiser, may have been one of the Ghârnurghir in younger years, or perhaps even a Dërnak, and come to have a wanderlust. Some are glory seekers, in pursuit of great treasures or feats of arms to win renown for their clan and race. Others feel dispossessed, have a gloom or taciturnity that even their fellows might view as weighty. Whatever their provenance, the Hoythij Râk may be encountered anywhere, at any time, and may be more dangerous than their warrior kin, for these Dwarves are unpredictable.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_DWARVES"
             ],
             "lifestyle": "true",
@@ -3228,7 +3285,7 @@
             "name": "Inventor (Goblin)",
             "description": "This Goblin has dedicated his life to creating new and more dangerous machines. He has learned much about building inventions, gathering materials, and even basic calculations. Many Goblins pursue this lifestyle and are constantly trying to invent something that all Goblins will view as great. Naturally, anything worthy of being great must by its very nature be lethal or excruciatingly painful.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_GOBLINS"
             ],
             "lifestyle": "false",
@@ -4022,7 +4079,7 @@
             "name": "Meneumerakkinîm",
             "description": "Rare is the season that passes without bloody conflict between Dwarves and their most hated foes, the goblin or orc folk. Goblins often are the worse of the two, for though Orcs are hardier and stronger in war, the Goblins are more cunning in their machination, delighting in the invention, construction and employment of torturous machines and traps. Recognizing the peril presented by these varied wicked creations, many Dwarves seek to master skills that allow them to circumvent or disable them. The Meneumerakkinïm are Mountain Folk who have the unenviable task of disabling Goblin traps and machines.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_DWARVES"
             ],
             "lifestyle": "false",
@@ -4155,7 +4212,7 @@
             "name": "Miner",
             "description": "The Goblin miner does more than just excavate caves. The miner is also responsible for preparing the tunnels he opens for the defense of the clan. He honeycombs the main tunnels with smaller secondary tunnels, sets traps across the Goblin domain, and waits to ambush attackers in his home. The Goblin miner prepares the first line of defense for Goblin mountains.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_GOBLINS"
             ],
             "lifestyle": "false",
@@ -4481,7 +4538,7 @@
             "name": "Path Finder",
             "description": "The Path Finder is a Gnoll who acts as a scout for the clan on the move, a guard for a clan that has settled, and a soldier when the need comes to fight. They are both woodwise and cavernwise, able to carry the fight to a foe outside the grotto, or reap a deadly toll of those who have come below ground.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_GNOLLS"
             ],
             "lifestyle": "true",
@@ -4523,7 +4580,22 @@
                     "value": "Melee weapon (+5 non-magic)",
                     "chance": "0"
                 }
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "1",
+                "options": [
+                    "Agility",
+                    "Constitution",
+                    "Empathy",
+                    "Intuition",
+                    "Memory",
+                    "Presence",
+                    "Quickness",
+                    "Reasoning",
+                    "Self Discipline",
+                    "Strength"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_PERFORMER",
@@ -4698,7 +4770,7 @@
             "name": "Pillager",
             "description": "Pillagers are the eyes and ears of a Hobgoblin army or raiding band, as well as those most responsible for gathering loot after battle and feeding soldiers while on the move. In battle they function as irregular light infantry, skirmishing and harassing the foe. Off the field they scout ahead, to the flanks and rear, spying out places to loot and burn and watching always for forces that might oppose them. A side duty accomplished during these tasks is foraging for food and game to supplement any rations brought along.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_HOBGOBLINS"
             ],
             "lifestyle": "false",
@@ -4957,7 +5029,7 @@
             "notes": [
                 "Weapons with bonuses will be of another racial make, i.e. Goblin, Ore, Dwarf, etc."
             ],
-            "games": [
+            "races": [
                 "RACE_TROGLODYTES"
             ],
             "lifestyle": "true",
@@ -4983,7 +5055,14 @@
                     "value": "Weapon (+5 non-magic)",
                     "chance": "0"
                 }
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "1",
+                "options": [
+                    "Intuition",
+                    "Self Discipline"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_ROMANTIC",
@@ -5146,7 +5225,7 @@
             "name": "Scholar",
             "description": "The Scholar profession is one that comes easily to a Gnome. A Gnomish scholar is not to be taken for a feeble acamedian - a Gnome scholar may be a doughty mage, the cleverest of thieves or even (very, very rarely) a warrior. Every Gnome aspires to the collection of knowledge.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_GNOMES"
             ],
             "lifestyle": "false",
@@ -5338,7 +5417,7 @@
             "name": "Shaguk Kun-Torâmim",
             "description": "Death is sure. The Shaguk who can make puppets of the dead is powerful indeed. There are necromantic spell users among both Shaguk-mîm and Shaguk-cûr, but it is the Grey Orcs who pursue necromancy most voraciously and excel at it, and it is the Grey Orcs who produce the most feared of the Shaguk Kun-Torâmim.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_ORCS_GREY"
             ],
             "lifestyle": "true",
@@ -5382,7 +5461,7 @@
             "name": "Shaguk Ru'Kleftäk-sher",
             "description": "Though the Grey Orcs are not so physically powerful as their Greater kin, they have the strength of their Common cousins and the aggressiveness of any Orc. So it is that many who possess the ability to work spells may also wish to taste blood on their tusks and wet a blade. These Shaguk often pursue the profession of Shaguk Ru'Kleftäk-sher.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_ORCS_GREY"
             ],
             "lifestyle": "true",
@@ -5420,7 +5499,22 @@
                     "value": "Weapon (+5 non-magic)",
                     "chance": "0"
                 }
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "1",
+                "options": [
+                    "Agility",
+                    "Constitution",
+                    "Empathy",
+                    "Intuition",
+                    "Memory",
+                    "Presence",
+                    "Quickness",
+                    "Reasoning",
+                    "Self Discipline",
+                    "Strength"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_SHAGUK_SH_RMAUK_ëND",
@@ -5430,7 +5524,7 @@
             "notes": [
                 "Armour category choice may only be taken from the light and medium armour categories"
             ],
-            "games": [
+            "races": [
                 "RACE_ORCS_GREATER"
             ],
             "lifestyle": "true",
@@ -5481,7 +5575,7 @@
             "notes": [
                 "The spell list category choice for open only must be an evil list"
             ],
-            "games": [
+            "races": [
                 "RACE_ORCS_GREATER"
             ],
             "lifestyle": "true",
@@ -5511,7 +5605,22 @@
                     "value": "Spell adder (+1)",
                     "chance": "0"
                 }
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "1",
+                "options": [
+                    "Agility",
+                    "Constitution",
+                    "Empathy",
+                    "Intuition",
+                    "Memory",
+                    "Presence",
+                    "Quickness",
+                    "Reasoning",
+                    "Self Discipline",
+                    "Strength"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_SHAGUK_STâZ_PARGUN",
@@ -5521,7 +5630,7 @@
             "notes": [
                 "Armour category choice may only be taken from the light and medium armour categories"
             ],
-            "games": [
+            "races": [
                 "RACE_ORCS_GREATER"
             ],
             "lifestyle": "true",
@@ -5572,7 +5681,7 @@
             "notes": [
                 "Must pick 2 spell lists from the available choices."
             ],
-            "games": [
+            "races": [
                 "RACE_ORCS_GREY"
             ],
             "lifestyle": "true",
@@ -5646,7 +5755,7 @@
             "name": "Shieldsman",
             "description": "The Shieldsman is simply a training package for those Dwarves who have received instruction in and gained experience with use of the shield in Dwarven formations while fighting in groups or companies. It also provides basic ability in the use of a shield as a weapon in combat (i.e., shield bash), a skill of which many Dwarves know basics, but few choose to master. There is no literal Dwarvish word for the training, as any of the Dwarven occupations (Lifestyle training packages) might provide such instruction.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_DWARVES"
             ],
             "lifestyle": "false",
@@ -5667,7 +5776,7 @@
             "name": "Shirriff",
             "description": "Originally called Shire-reeve, the term was shortened to Shireeve, then finally to Shirrif, the Halfling equivalent of a constable, a peace-keeping officer. Employed to patrol the bounds of Halfling society, it is they who enforce the law when it must be enforced. Little more than guardians of the community, the Shirrifs nevertheless play a respected role amongst the Halflings, for it is they who at times must do unsavory tasks that must be done. They keep order in the villages and patrol the countryside, ensuring the safety of all Halfling-kind. The Shirrifs are easily identified by their badge of office, a single feather in their caps, earned only after apprenticing as a deputy-reeve for a period of a year. Their weapon of choice is the shalleknob, usually carved from the root of some hardwood tree. They also use at times a slinger.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_HALFLINGS_HAERFEAT",
                 "RACE_HALFLINGS_STAEKNIL",
                 "RACE_HALFLINGS_WAENFEL",
@@ -5749,7 +5858,7 @@
                 "Quality singlasses provide 90% activity in bright light; -15 to all sight-based Awareness maneuvers.",
                 "Superior clogs Only impose a -5 modifier to MMP; these clogs are lost on a failed maneuver only 25% of the time (see Section 8.3.1)"
             ],
-            "games": [
+            "races": [
                 "RACE_GOBLINS"
             ],
             "lifestyle": "false",
@@ -5782,7 +5891,7 @@
             "name": "Sneak-knife",
             "description": "The Sneak-knife is the basic training package for a Kobold, as all of them prefer to attack from behind; a knife in the dark and poison compensate for their weaknesses. A Sneak-knife is stealthy and dangerous, often underestimated.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_KOBOLDS"
             ],
             "lifestyle": "true",
@@ -5822,7 +5931,7 @@
             "name": "Sokhudnerrim",
             "description": "In the cavernous depths of Dwarven cities lie far-flung lengths of tunnel, crevice, and cavern. Among them stretch the courses of underground waterways, some rushing little streams, others raging torrents that have never seen light. Also to be found are pools and lakes in grottos and depthless holes. Most of these waterways are crossed by bridges and mastered by locks and dams, or diverted by cunning channels. In this way do Dwarves conquer the waters of the deeps. Some of these provide highways for the transport of ores and equipment that cannot be ignored by such a practical race, even one that abhors unmastered water. Therefore, though it is often surprising to those who know Dwarves, there are numbers of underground sailors among the Mountain Folk, whose job is to guide the barges and bulky water craft among these shadowed waterways. These Dwarves are the Sokhudnerrim, whose name is a rare sign of Dwarvish humor. An unmistakable sign of a Sokhudnerrim is the sight of a Dwarf, in leather or the lightest of chain mails, with a length of rope tied about his waist - for no Dwarf will walk any deck without a safety line. They have taken such a rope belt as a badge of pride that names them members of a profession that few will pursue.",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_DWARVES"
             ],
             "lifestyle": "true",
@@ -6057,7 +6166,7 @@
             "notes": [
                 "Communication category choices must be spoken languages"
             ],
-            "games": [
+            "races": [
                 "RACE_GNOMES"
             ],
             "lifestyle": "true",
@@ -6095,7 +6204,22 @@
                     "value": "Book (+5 to specific Lore skill)",
                     "chance": "0"
                 }
-            ]
+            ],
+            "stat-gain-choices": {
+                "num-choices": "1",
+                "options": [
+                    "Agility",
+                    "Constitution",
+                    "Empathy",
+                    "Intuition",
+                    "Memory",
+                    "Presence",
+                    "Quickness",
+                    "Reasoning",
+                    "Self Discipline",
+                    "Strength"
+                ]
+            }
         },
         {
             "id": "TRAININGPACKAGE_TEMPLAR",
@@ -6281,7 +6405,7 @@
             "name": "Tuskerer",
             "description": "The Tuskerer is the most dangerous member of any Goblin war band. He rides the Battle Boars some tribes breed and raise, choosing his steed when it is still small and training it to become a vicious mount. Tuskerers have their pick of Goblin females and rarely wind up as a tribal Champion on the Day of Forgiveness. However, those whose egos become too insufferable have a greater chance than normal of falling victim to a trap or invention being tested. Tuskerers may walk more surely than their foot-bound fellows among Hobgoblins (though it is wise not to overdo it). Goblin pillagers are often reinforced by a few boar-mounted Goblins, who get their pick of loot. An actual Goblin army is lead by dozens of boar-mounted Goblins, who are first and most dangerous in a fray. They also tend to survive a rout more readily, for they can flee with great speed. A Goblin mounted on a well-trained boar is intimidating to the unprepared as a paladin covered in shining plate armor atop a powerful war-horse (see Battle Boar, page 39, C&amp;M).",
             "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "games": [
+            "races": [
                 "RACE_GOBLINS"
             ],
             "lifestyle": "false",

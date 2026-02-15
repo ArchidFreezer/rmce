@@ -107,4 +107,18 @@ private:
 	 * @return A property tree representation of the special entries, where each entry is represented as a child node with the key and value.
 	 */
 	const pt::ptree getSpecialsTree(TrainingPackageData& game_data);
+
+	/**
+	 * @brief Parses stat gain choices from a property tree into a vector of string-integer pairs.
+	 * @param stat_gain_choices An optional reference to a property tree containing the stat gain choices to parse. If not present, an empty vector is returned.
+	 * @return A vector of pairs, where each pair contains a string key and an integer value representing the parsed stat gain choices.
+	 */
+	EnumChoice<StatType::Type> parseStatGainChoices(boost::optional<const pt::ptree&> stat_gain_choices);
+
+	/**
+	 * @brief Converts a vector of string-integer pairs representing stat gain choices into a property tree.
+	 * @param stat_gain_choices A vector of pairs, where each pair contains a string key and an integer value representing the stat gain choices to convert.
+	 * @return A property tree representation of the stat gain choices, where each entry is represented as a child node with the key and value.
+	 */
+	const pt::ptree getStatGainChoicesTree(TrainingPackageData& game_data);
 };

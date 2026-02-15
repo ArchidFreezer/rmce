@@ -3405,7 +3405,7 @@
       ],
       "stat-gain-choices": [
         {
-          "num-choices": "xxx",
+          "num-choices": "1",
           "options": [
             "Intuition",
             "Self Discipline"
@@ -14924,7 +14924,7 @@
       ],
       "stat-gain-choices": [
         {
-          "num-choices": "xxx",
+          "num-choices": "1",
           "options": [
             "Agility",
             "Presence"

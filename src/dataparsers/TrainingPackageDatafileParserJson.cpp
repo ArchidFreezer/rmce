@@ -65,6 +65,14 @@ void TrainingPackageDatafileParserJson::parse() {
 			}
 		}
 
+		// Stat gain choices
+		boost::optional<const pt::ptree&> stat_gain_choices_tree = v.second.get_child_optional("stat-gain-choices");
+//		ref.setStatGainChoices(parseStatGainChoices(stat_gain_choices_tree));
+		if (stat_gain_choices_tree) {
+			std::set<EnumChoice<StatType::Type>> stat_gain_choices{ parseEnumChoiceSetTree<StatType::Type>(stat_gain_choices_tree)};
+			ref.setStatGainChoices(*(stat_gain_choices.begin()));
+		}
+
 		std::cout << "\tTrainingPackage name: " << ref.name() << std::endl;
 	}
 
@@ -98,7 +106,7 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 	// Races
 	{
 		pt::ptree tree{ getGameDataSetTree<RaceData>(game_data.races()) };
-		if (tree.size()) datum.push_back(std::make_pair("games", tree));
+		if (tree.size()) datum.push_back(std::make_pair("races", tree));
 	}
 
 	// Lifestyle
@@ -123,6 +131,11 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 	// Realm stat gain
 	if (game_data.realmStatGain()) datum.put("realm-stat-gain", true);
 
+	// Stat gain choices
+	{
+		pt::ptree tree{ getStatGainChoicesTree(game_data) };
+		if (tree.size()) datum.push_back(std::make_pair("stat-gain-choices", tree));
+	}
 }
 
 std::map<std::string, int> TrainingPackageDatafileParserJson::parseQualifiers(boost::optional<const pt::ptree&> qualifiers) {
@@ -171,4 +184,39 @@ const pt::ptree TrainingPackageDatafileParserJson::getSpecialsTree(TrainingPacka
 		tree.push_back(std::make_pair("", value_tree));
 	}
 	return tree;
+}
+
+EnumChoice<StatType::Type> TrainingPackageDatafileParserJson::parseStatGainChoices(boost::optional<const pt::ptree&> stat_gain_choices) {
+	EnumChoice<StatType::Type> choices{};
+	if (!stat_gain_choices) return choices;
+
+	choices.setNumChoices(stat_gain_choices.value().get<int>("num-choices"));
+	for (const auto& option : stat_gain_choices.value().get_child("options")) {
+		StatType::Type stat_gain_option_enum{};
+		fromString(option.second.get_value<std::string>(), stat_gain_option_enum);
+		choices.addOption(stat_gain_option_enum);
+	}
+
+	return choices;
+}
+
+const pt::ptree TrainingPackageDatafileParserJson::getStatGainChoicesTree(TrainingPackageData& game_data) {
+	pt::ptree choice_tree{};
+	EnumChoice<StatType::Type> stat_gain_choices = game_data.statGainChoices();
+	if (!stat_gain_choices.numChoices()) return choice_tree;
+
+	choice_tree.put("num-choices", stat_gain_choices.numChoices());
+	pt::ptree options_tree{};
+	std::map<std::string, StatType::Type> sorted_options{};
+	for (const StatType::Type option : stat_gain_choices.options()) {
+		sorted_options.emplace(toString(option), option);
+	}
+	for (const auto& option_pair : sorted_options) {
+		pt::ptree option_tree{};
+		option_tree.put("", option_pair.second);
+		options_tree.push_back(std::make_pair("", option_tree));
+	}
+	choice_tree.push_back(std::make_pair("options", options_tree));
+
+	return choice_tree;
 }
