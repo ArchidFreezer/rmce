@@ -1,7 +1,7 @@
 {
   "training-packages": [
     {
-      "name": "Hewer"
+      "name": "Hewer",
       "description": "All Hobgoblins are reared to be fighters from infancy. If they survive to adulthood, they are very hardy creatures, eager to fight. The Hewer (a loose translation of the Hobgoblin word) is essentially a Hobgoblin soldier, a mud-colored giant Goblin who has avidly pursued training in the field of arms.",
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
@@ -596,7 +596,7 @@
             "SPELLLIST_SUMMONS"
           ]
         }
-      ]
+      ],
       "stat-gains": [
         "Memory"
       ]
@@ -606,7 +606,7 @@
       "flavour-text": "No. He didn't say, 'It's nice to meet you.' He said, 'It will be nice to eat you.",
       "description": "The Nomenist is a master of language who forever seeks to learn new languages to find the words of the Primal Tongue that operate for themselves. Nomenists may be found in cosmopolitan cities or on the fringes of civilization in the pursuit of old or new languages.",
       "notes": [
-        "The Nomenist Caster training package is not required for Nomenist casters, but reflects the abilities of the true enthusiast of the Nomenist School of Magic.",
+        "The Nomenist Caster training package is not required for Nomenist casters, but reflects the abilities of the true enthusiast of the Nomenist School of Magic."
       ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
@@ -767,32 +767,32 @@
         },
         {
           "id": "SKILL_ANIMAL_HANDLING",
-          "subcategory": "Animal A"
+          "subcategory": "Animal A",
           "value": "2"
         },
         {
           "id": "SKILL_ANIMAL_HEALING",
-          "subcategory": "Animal A"
+          "subcategory": "Animal A",
           "value": "1"
         },
         {
           "id": "SKILL_ANIMAL_MASTERY",
-          "subcategory": "Animal A"
+          "subcategory": "Animal A",
           "value": "1"
         },
         {
           "id": "SKILL_ANIMAL_TRAINING",
-          "subcategory": "Animal A"
+          "subcategory": "Animal A",
           "value": "2"
         },
         {
           "id": "SKILL_ANIMAL_HANDLING",
-          "subcategory": "Animal B"
+          "subcategory": "Animal B",
           "value": "1"
         },
         {
           "id": "SKILL_ANIMAL_HANDLING",
-          "subcategory": "Animal C"
+          "subcategory": "Animal C",
           "value": "1"
         }
       ],
@@ -1353,7 +1353,7 @@
           "order": "9",
           "chance": "0",
           "value": "Traditional black spying outfit"
-        },
+        }
       ],
       "skill-ranks": [
         {
@@ -1732,7 +1732,7 @@
           "num-choices": "1",
           "value": "2"
         }
-      ],
+      ]
     },
     {
       "name": "Crusading Academic",
@@ -2142,7 +2142,7 @@
           "id": "SKILLGROUP_WEAPON",
           "value": "1"
         }
-      ],
+      ]
     },
     {
       "name": "Minister",
@@ -2427,7 +2427,7 @@
         {
           "id": "SKILLGROUP_WEAPON",
           "value": "3"
-        }
+        },
         {
           "id": "SKILLGROUP_WEAPON",
           "value": "1"
@@ -2638,7 +2638,7 @@
         {
           "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
           "id": "SPELLLIST_TRAVELER_S_WAYS",
-          "value": "3",
+          "value": "3"
         }
       ]
     },
@@ -3008,7 +3008,7 @@
         }
       ],
       "stat-gains": [
-        "Strength",
+        "Strength"
       ]
     },
     {
@@ -3880,7 +3880,7 @@
       "flavour-text": "Like the gemstone, there are many facets to my magic.",
       "description": "For Crystalists, power and wealth are synonymous: the most powerful Crystalists also carry the most elegant gems and stones. Crystalists can enchant gemstones to become the fuel and catalyst for their spells. Each casting erodes a part of this enchantment, so the crystals must be periodically re-enchanted. Crystalists do not have to spend as much time scrounging for catalysts as Herbalists or Corpists, but instead they must constantly spend their time re-enchanting their crystals. Crystalists tend to be flamboyant and extravagant, often wearing as many precious gems as they can afford all at the same time.",
       "notes": [
-        "The Crystalist Caster Training Package is required for crystal casters.",
+        "The Crystalist Caster Training Package is required for crystal casters."
       ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
@@ -4180,7 +4180,7 @@
             "Strength"
           ]
         }
-      ],
+      ]
     },
     {
       "name": "Demonologist",
@@ -4589,7 +4589,7 @@
       "translation": "Smith/Forgebeard",
       "description": "The Hephuzâd are Dwarves who have begun to tread the path towards the craft that all Mountain Folk revere - smithwork. No Dwarf, no matter how ancient, how skilled, or how learned, is the smith he would wish to be. It is the most honored and respected of all Dwarven crafts, one of which every Dwarf will know at least a little. The Hephuzâd are the forge workers of a people that labors unceasingly, and are driven to master metals and jewels to create works of great splendor and strength.",
       "notes": [
-        "The GM should choose one of the stat gains to be applied.",
+        "The GM should choose one of the stat gains to be applied."
       ],
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
@@ -4809,7 +4809,7 @@
       "flavour-text": "Magic grows in the most unusual places.",
       "description": "Herbalists specialize in the understanding of plant life from an analytical point of view. Herbalists perceive plants as a natural source of power. An Herbalist differs from an animist in that an Herbalist perceives properties in the plant life, but does not worship plants. The Herbalist is analogous to a botanical chemist in some respects.",
       "notes": [
-        "The Herbalist Caster training package is not required for herbalist casters, but reflects the abilities of the true enthusiast of the herbalist caster school.",
+        "The Herbalist Caster training package is not required for herbalist casters, but reflects the abilities of the true enthusiast of the herbalist caster school."
       ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
@@ -5292,7 +5292,7 @@
           "num-choices": "2",
           "value": "2"
         }
-      ],
+      ]
     },
     {
       "name": "Martial Arts Champion",
@@ -6376,7 +6376,7 @@
           "id": "SKILLGROUP_WEAPON",
           "value": "1"
         }
-      ],
+      ]
     },
     {
       "name": "Martial Arts Opera Performer",
@@ -6433,7 +6433,7 @@
           "order": "9",
           "chance": "0",
           "value": "Reputation as a skilled performer"
-        },
+        }
       ],
       "skill-ranks": [
         {
@@ -6519,7 +6519,7 @@
       "description": "Great rulers need great advice. The Advisor is in a position of authority and respect, but he still must please his lord to maintain his position. Advisors are masters of wisdom, influence, and intrigue. Advisors tend to find themselves in many situations of temptation. Some succumb to baser desires, but every so often a man of true virtue is able to maintain his authority and loyalty to his liege.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "97",
+      "time": "97"
     },
     {
       "name": "Doctor",
@@ -7163,7 +7163,7 @@
       "flavour-text": "Uggh. I thought they smelled bad on the outside.",
       "description": "Corpists are often considered macabre or evil. Corpists use the body parts of creatures in order to affect magic. The more magical the creature the better the catalyst, so Corpists are often quite eager to join with adventurers just for the opportunity to gather catalyst material. While Corpist casters can be quite likable in most respects, it is difficult to be used to the smell that often seems to follow them. Also, familiars (and their magicians) tend to be very wary of such casters.",
       "notes": [
-        "The Corpist Caster TP is not a required TP for corpist casters, but reflects the abilities of the true enthusiast of the corpist caster school.",
+        "The Corpist Caster TP is not a required TP for corpist casters, but reflects the abilities of the true enthusiast of the corpist caster school."
       ],
       "book": "BOOK_ESSENCE_COMPANION",
       "lifestyle": "true",
@@ -7486,7 +7486,7 @@
             }
           ]
         }
-      ]
+      ],
       "category-ranks": [
         {
           "id": "SKILLCATEGORY_SELF_CONTROL",
@@ -7597,10 +7597,10 @@
           "value": "3",
           "skills": [
             {
-              "id": "SKILL_SPINNING",
+              "id": "SKILL_SPINNING"
             },
             {
-              "id": "SKILL_WEAVING",
+              "id": "SKILL_WEAVING"
             }
           ]
         }
@@ -7636,7 +7636,7 @@
           "subcategory": "Spiders"
         }
       ]
-    }
+    },
     {
       "name": "Prophet",
       "description": "A deity does not always go through standard channels in order to make his will known. When a deity chooses a spokesman from outside of the church it is generally because the church no longer listens to their deity as they should. People tend to scoff at prophets, thinking them mad. Clergy tend to frown on such unorthodox approaches to religion and may even persecute a prophet for heresy. A prophet finds little relief until his message gains acceptance or is proven true. For this reason, a deity only chooses followers of great faith and virtue for such a calling.",
@@ -7880,7 +7880,7 @@
       "lifestyle": "true",
       "time": "107",
       "notes": [
-        "Communication category choices must be spoken languages",
+        "Communication category choices must be spoken languages"
       ],
       "races": [
         "RACE_GNOMES"
@@ -8165,10 +8165,10 @@
           "value": "2",
           "skills": [
             {
-              "id": "SKILL_ANIMAL_MASTERY",
+              "id": "SKILL_ANIMAL_MASTERY"
             },
             {
-              "id": "SKILL_ANIMAL_TRAINING",
+              "id": "SKILL_ANIMAL_TRAINING"
             }
           ]
         }
@@ -8228,7 +8228,7 @@
       "translation": "Woodwise",
       "description": "The roadways and valleys beyond their cities must be patrolled and kept free of all predators and marauding Orc-kin. The Bhourdirrim are the soldiers who perform this task. They are the Dwarves who range forest and vale, who must learn the knowledge of limb and leaf that their kinsmen shun. Close-mouthed and dangerous, these Dwarves are little known amongst the Mannish races, though Orc-folk have learned to fear them.",
       "notes": [
-        "This mob-fothaj is a specific type, worn only by a Dwarf who is or has been one of the Bhourdirrim.",
+        "This mob-fothaj is a specific type, worn only by a Dwarf who is or has been one of the Bhourdirrim."
       ],
       "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
       "lifestyle": "true",
@@ -8819,7 +8819,7 @@
       "name": "Knight",
       "description": "A knight is a warrior dedicated to a cause or a lord (as opposed to a Paladin, who is dedicated to a greater power). A knight is known for his heavy armor and ability with weapons. Note that some GMs may decide that the character who takes this package must also take the 'Knighted' talent (see Appendix A-5 for more information on Talents).",
       "notes": [
-        "Some GM's may decide that the character who takes this package must also take the 'Knighted' talent.",
+        "Some GM's may decide that the character who takes this package must also take the 'Knighted' talent."
       ],
       "book": "BOOK_FANTASY_ROLE_PLAYING",
       "lifestyle": "true",
@@ -9023,7 +9023,7 @@
           "id": "SKILLCATEGORY_POWER_AWARENESS",
           "value": "2"
         }
-      ],
+      ]
     },
     {
       "name": "Shaguk Spîllak",
@@ -9830,7 +9830,7 @@
       ],
       "lifestyle-groups": [
         {
-          "id": "SKILLGROUP_LORE",
+          "id": "SKILLGROUP_LORE"
         }
       ]
     },
@@ -10896,7 +10896,7 @@
           "id": "SKILLGROUP_WEAPON",
           "value": "1"
         }
-      ],
+      ]
     },
     {
       "name": "Shaman Priest",
@@ -11601,11 +11601,11 @@
           "value": "1",
           "skills": [
             {
-              "id": "SKILL_CULTURE_LORE"
+              "id": "SKILL_CULTURE_LORE",
               "subcategory": "Dwarf"
             },
             {
-              "id": "SKILL_CULTURE_LORE"
+              "id": "SKILL_CULTURE_LORE",
               "subcategory": "Elf"
             }
           ]
@@ -11900,7 +11900,7 @@
           "num-choices": "1",
           "value": "1"
         }
-      ],
+      ]
     },
     {
       "name": "Laborer",
@@ -12016,7 +12016,7 @@
           "order": "9",
           "chance": "0",
           "value": "Reliable safe house (place of hiding)"
-        },
+        }
       ],
       "category-ranks": [
         {
@@ -12092,7 +12092,7 @@
         {
           "order": "4",
           "chance": "30",
-          "value": "Lockpick kit (+10 non-magic)""
+          "value": "Lockpick kit (+10 non-magic)"
         },
         {
           "order": "5",
@@ -12245,7 +12245,7 @@
       "stat-gains": [
         "Empathy",
         "Memory"
-      ],
+      ]
     },
     {
       "name": "Adventurer",
@@ -12456,10 +12456,10 @@
           "value": "3",
           "skills": [
             {
-              "id": "SKILL_ATTUNEMENT",
+              "id": "SKILL_ATTUNEMENT"
             },
             {
-              "id": "SKILL_READ_RUNES",
+              "id": "SKILL_READ_RUNES"
             }
           ]
         }
@@ -12872,7 +12872,7 @@
             "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
           ]
         }
-      ],
+      ]
     },
     {
       "name": "Engineer",
@@ -13084,7 +13084,7 @@
           "order": "5",
           "chance": "40",
           "value": "+1 spell adder"
-        }
+        },
         {
           "order": "6",
           "chance": "20",
@@ -13347,7 +13347,7 @@
             "SPELLLIST_ILLUSIONS"
           ]
         }
-      ],
+      ]
     },
     {
       "name": "Warrior-Priest",
@@ -13950,7 +13950,7 @@
         }
       ],
       "stat-gains": [
-        "Presence",
+        "Presence"
       ]
     },
     {
@@ -14052,7 +14052,7 @@
           "id": "SKILLGROUP_WEAPON",
           "value": "1"
         }
-      ],
+      ]
     },
     {
       "name": "Temple Monk",
@@ -14344,7 +14344,7 @@
           "id": "SKILLGROUP_WEAPON",
           "value": "2"
         }
-      ],
+      ]
     },
     {
       "name": "Hermit",
@@ -14613,7 +14613,7 @@
       "lifestyle": "true",
       "time": "105",
       "notes": [
-        "One of the spell lists must be used for entertainment",
+        "One of the spell lists must be used for entertainment"
       ],
       "races": [
         "RACE_GNOLLS"
@@ -15281,10 +15281,10 @@
           "id": "SPELLLIST_KNOWLEDGE_MASTERY",
           "value": "3"
         }
-      ]
+      ],
       "stat-gains": [
         "Memory"
-      ],
+      ]
     },
     {
       "name": "Mariner",
@@ -15577,22 +15577,22 @@
         },
         {
           "id": "SKILL_CULTURE_LORE",
-          "subcategory": "Culture 1"
+          "subcategory": "Culture 1",
           "value": "1"
         },
         {
           "id": "SKILL_CULTURE_LORE",
-          "subcategory": "Culture 2"
+          "subcategory": "Culture 2",
           "value": "1"
         },
         {
           "id": "SKILL_REGION_LORE",
-          "subcategory": "Region 1"
+          "subcategory": "Region 1",
           "value": "1"
         },
         {
           "id": "SKILL_REGION_LORE",
-          "subcategory": "Region 2"
+          "subcategory": "Region 2",
           "value": "1"
         },
         {
@@ -15623,6 +15623,7 @@
           "id": "SKILLCATEGORY_COMMUNICATIONS",
           "num-choices": "6",
           "value": "6"
+        },
         {
           "id": "xxx",
           "num-choices": "xxx",
@@ -15915,7 +15916,7 @@
           "id": "SKILLCATEGORY_POWER_AWARENESS",
           "value": "3"
         }
-      ],
+      ]
     },
     {
       "name": "Dërnakwmün",
@@ -15925,7 +15926,7 @@
       "lifestyle": "true",
       "time": "71",
       "notes": [
-        "GM choice of which stat gain is available for a character",
+        "GM choice of which stat gain is available for a character"
       ],
       "starting-money-change": "10d10",
       "races": [
@@ -16064,7 +16065,7 @@
             "Presence"
           ]
         }
-      ],
+      ]
     },
     {
       "name": "Crafter",
