@@ -25,7 +25,7 @@
                     "chance": "30"
                 },
                 {
-                    "value": "Choice of weapon or armor (+5 non-magic)",
+                    "value": "Choice of weapon or armour (+5 non-magic)",
                     "chance": "100"
                 }
             ]
@@ -78,6 +78,9 @@
                     "value": "Finely crafted object (gift; 5d10 sp)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Intuition"
             ]
         },
         {
@@ -161,6 +164,9 @@
                     "value": "Normal dog friend (mutt)",
                     "chance": "100"
                 }
+            ],
+            "stat-gains": [
+                "Empathy"
             ]
         },
         {
@@ -641,6 +647,9 @@
                     "value": "Weather-resistant clothing",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Empathy"
             ]
         },
         {
@@ -666,6 +675,9 @@
                     "value": "Two-handed weapon",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Strength"
             ]
         },
         {
@@ -716,6 +728,9 @@
                     "value": "Armour (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Strength"
             ]
         },
         {
@@ -756,6 +771,9 @@
                     "value": "Armor (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Self Discipline"
             ]
         },
         {
@@ -825,6 +843,9 @@
                     "value": "Weapon (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Empathy"
             ]
         },
         {
@@ -909,6 +930,9 @@
                     "value": "Weapon (+10 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Empathy"
             ]
         },
         {
@@ -1230,6 +1254,9 @@
                     "value": "Reputation as a master of the esoteric martial arts",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Self Discipline"
             ]
         },
         {
@@ -1358,6 +1385,9 @@
                     "value": "Spell adder (+1)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Intuition"
             ]
         },
         {
@@ -1474,6 +1504,10 @@
                     "value": "Book (+ 10 Lore | Magical category)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Empathy",
+                "Memory"
             ]
         },
         {
@@ -1504,6 +1538,9 @@
                     "value": "Summoning Circle etched on floor of current abode (+ 10 to Spell Casting Static Maneuvers with summoning spells)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Memory"
             ]
         },
         {
@@ -1834,6 +1871,9 @@
                     "value": "Special ward",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Reasoning"
             ]
         },
         {
@@ -2310,6 +2350,9 @@
                     "value": "Map of the known world",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Constitution"
             ]
         },
         {
@@ -2588,6 +2631,9 @@
                     "value": "A token\/sigil recognized by local populace",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Constitution"
             ]
         },
         {
@@ -2637,7 +2683,11 @@
                     "value": "Friendly contact at local pub",
                     "chance": "0"
                 }
-            ]
+            ],
+            "stat-gains": [
+                "Memory"
+            ],
+            "realm-stat-gain": "true"
         },
         {
             "id": "TRAININGPACKAGE_HEDGE_WIZARD",
@@ -2891,6 +2941,10 @@
                     "value": "Nothing particularly special (GM choice)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Constitution",
+                "Self Discipline"
             ]
         },
         {
@@ -2933,6 +2987,10 @@
                     "value": "Weapon (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Constitution",
+                "Strength"
             ]
         },
         {
@@ -3007,6 +3065,9 @@
                     "value": "Special token from former lover",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Presence"
             ]
         },
         {
@@ -3049,6 +3110,10 @@
                     "value": "Armour (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Self Discipline",
+                "Strength"
             ]
         },
         {
@@ -3084,6 +3149,9 @@
                     "value": "Traps (+10 non-magic)",
                     "chance": "100"
                 }
+            ],
+            "stat-gains": [
+                "Constitution"
             ]
         },
         {
@@ -3190,6 +3258,10 @@
                     "value": "Standard set of tools",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Intuition",
+                "Reasoning"
             ]
         },
         {
@@ -3329,6 +3401,10 @@
                     "value": "Riding horse (+5 Riding)",
                     "chance": "100"
                 }
+            ],
+            "stat-gains": [
+                "Self Discipline",
+                "Strength"
             ]
         },
         {
@@ -3525,6 +3601,9 @@
                     "value": "Powerful enemies",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Presence"
             ]
         },
         {
@@ -3615,6 +3694,10 @@
                     "value": "Reputation as a skilled fighter",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Agility",
+                "Strength"
             ]
         },
         {
@@ -3664,6 +3747,9 @@
                     "value": "Reputation as a good fighter",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Strength"
             ]
         },
         {
@@ -3757,6 +3843,9 @@
                     "value": "Reputation as a skilled performer",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Agility"
             ]
         },
         {
@@ -4014,6 +4103,9 @@
                     "value": "Extra d10 (open-ended) in money",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Constitution"
             ]
         },
         {
@@ -4224,6 +4316,9 @@
                     "value": "Digging tools ( + 10 non-magical)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Intuition"
             ]
         },
         {
@@ -4271,6 +4366,10 @@
                     "value": "Traditional black spying outfit",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Agility",
+                "Constitution"
             ]
         },
         {
@@ -4372,6 +4471,9 @@
                     "value": "An astrological almanac covering one year",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Presence"
             ]
         },
         {
@@ -4496,6 +4598,9 @@
                     "value": "A book (+5 to a specific lore skill)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Reasoning"
             ]
         },
         {
@@ -4583,6 +4688,9 @@
                     "value": "Special religious token\/sigil",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Memory"
             ]
         },
         {
@@ -4780,6 +4888,9 @@
                     "value": "Close friends with a Paladin",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Strength"
             ]
         },
         {
@@ -4835,7 +4946,8 @@
                     "value": "Lifelong obligation to mentor",
                     "chance": "0"
                 }
-            ]
+            ],
+            "realm-stat-gain": "true"
         },
         {
             "id": "TRAININGPACKAGE_PROWLDARK",
@@ -4935,6 +5047,10 @@
                     "value": "Rune Paper (1st level)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Empathy",
+                "Memory"
             ]
         },
         {
@@ -4982,6 +5098,9 @@
                     "value": "Writing implements and a journal",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Memory"
             ]
         },
         {
@@ -5253,6 +5372,9 @@
                     "value": "Spell adder (+1)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Intuition"
             ]
         },
         {
@@ -5346,6 +5468,9 @@
                     "value": "Armour (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Strength"
             ]
         },
         {
@@ -5434,6 +5559,9 @@
                     "value": "Other equipment (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Strength"
             ]
         },
         {
@@ -5507,6 +5635,10 @@
                     "value": "Small animal companion (GM's choice)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Intuition",
+                "Presence"
             ]
         },
         {
@@ -5680,6 +5812,9 @@
                     "value": "Weapon (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Quickness"
             ]
         },
         {
@@ -5713,6 +5848,9 @@
                     "value": "1 Nereid's Crown mushroom",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Agility"
             ]
         },
         {
@@ -6000,6 +6138,9 @@
                     "value": "Close friends with a Paladin",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Strength"
             ]
         },
         {
@@ -6031,6 +6172,9 @@
                     "value": "Prayer beads (+10 to Meditation skill)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Self Discipline"
             ]
         },
         {
@@ -6078,6 +6222,10 @@
                     "value": "Medical kit (+5 non-magical)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Constitution",
+                "Intuition"
             ]
         },
         {
@@ -6232,6 +6380,9 @@
                     "value": "Simple map of the known world",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Constitution"
             ]
         },
         {
@@ -6308,6 +6459,9 @@
                     "value": "Knowledge of the location of an Earthnode",
                     "chance": "20"
                 }
+            ],
+            "stat-gains": [
+                "Empathy"
             ]
         },
         {
@@ -6373,6 +6527,10 @@
                     "value": "Weapon (+5 non-magic)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Agility",
+                "Strength"
             ]
         },
         {
@@ -6424,6 +6582,9 @@
                     "value": "d5 potions (second level spells)",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Empathy"
             ]
         },
         {
@@ -6446,6 +6607,9 @@
                     "value": "Special religious token\/sigil",
                     "chance": "0"
                 }
+            ],
+            "stat-gains": [
+                "Intuition"
             ]
         }
     ]

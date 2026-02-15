@@ -94,7 +94,17 @@ private:
 	 */
 	const pt::ptree getQualifiersTree(TrainingPackageData& game_data);
 
+	/**
+	 * @brief Parses special entries from a property tree into a vector of string-integer pairs.
+	 * @param specials An optional reference to a property tree containing the special entries to parse. If not present, an empty vector is returned.
+	 * @return A vector of pairs, where each pair contains a string key and an integer value representing the parsed special entries.
+	 */
 	std::vector<std::pair<std::string, int>> parseSpecials(boost::optional<const pt::ptree&> specials);
 
+	/**
+	 * @brief Converts a vector of string-integer pairs representing special entries into a property tree.
+	 * @param specials A vector of pairs, where each pair contains a string key and an integer value representing the special entries to convert.
+	 * @return A property tree representation of the special entries, where each entry is represented as a child node with the key and value.
+	 */
 	const pt::ptree getSpecialsTree(TrainingPackageData& game_data);
 };

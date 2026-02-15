@@ -47,6 +47,24 @@ void TrainingPackageDatafileParserJson::parse() {
 		boost::optional<const pt::ptree&> specials_tree = v.second.get_child_optional("specials");
 		if (specials_tree) ref.setSpecials(parseSpecials(specials_tree));
 
+		// Stat gains
+		// TODO - Fix this to read two tags, one for realm stat gain and one for normal stat gains, to avoid the need for the special case of "Realm" in the stat gains list
+		boost::optional<const pt::ptree&> stat_gains = v.second.get_child_optional("stat-gains");
+		if (stat_gains) {
+			for (const auto& stat_gain : stat_gains.get()) {
+				std::string stat_gain_str = stat_gain.second.get_value<std::string>();
+
+				if (stat_gain_str == "Realm") {
+					ref.setRealmStatGain(true);
+					continue;
+				}
+
+				StatType::Type stat_gain_enum{};
+				fromString(stat_gain_str, stat_gain_enum);
+				ref.addStatGain(stat_gain_enum);
+			}
+		}
+
 		std::cout << "\tTrainingPackage name: " << ref.name() << std::endl;
 	}
 
@@ -95,6 +113,15 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 		pt::ptree tree{ getSpecialsTree(game_data) };
 		if (tree.size()) datum.push_back(std::make_pair("specials", tree));
 	}
+
+	// Stat gains
+	{
+		pt::ptree tree{getEnumSetTree<StatType::Type>(game_data.statGains())};
+		if (tree.size()) datum.push_back(std::make_pair("stat-gains", tree));
+	}
+
+	// Realm stat gain
+	if (game_data.realmStatGain()) datum.put("realm-stat-gain", true);
 
 }
 
