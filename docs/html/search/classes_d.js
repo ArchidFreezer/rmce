@@ -13,8 +13,10 @@ var searchData=
   ['skillprogressiontypedatafileparserjson_10',['SkillProgressionTypeDatafileParserJson',['../class_skill_progression_type_datafile_parser_json.html',1,'']]],
   ['specialattacktable_11',['SpecialAttackTable',['../class_special_attack_table.html',1,'']]],
   ['specialattacktabledatafileparserjson_12',['SpecialAttackTableDatafileParserJson',['../class_special_attack_table_datafile_parser_json.html',1,'']]],
-  ['spelllistdata_13',['SpellListData',['../class_spell_list_data.html',1,'']]],
-  ['spelllistdatafileparserjson_14',['SpellListDatafileParserJson',['../class_spell_list_datafile_parser_json.html',1,'']]],
-  ['spellusertypenotfoundexception_15',['SpellUserTypeNotFoundException',['../class_spell_user_type_1_1_spell_user_type_not_found_exception.html',1,'SpellUserType']]],
-  ['subcategoriedskilldata_16',['SubcategoriedSkillData',['../class_subcategoried_skill_data.html',1,'']]]
+  ['spelllistcategorychoices_13',['SpellListCategoryChoices',['../struct_spell_list_category_choices.html',1,'']]],
+  ['spelllistchoices_14',['SpellListChoices',['../struct_spell_list_choices.html',1,'']]],
+  ['spelllistdata_15',['SpellListData',['../class_spell_list_data.html',1,'']]],
+  ['spelllistdatafileparserjson_16',['SpellListDatafileParserJson',['../class_spell_list_datafile_parser_json.html',1,'']]],
+  ['spellusertypenotfoundexception_17',['SpellUserTypeNotFoundException',['../class_spell_user_type_1_1_spell_user_type_not_found_exception.html',1,'SpellUserType']]],
+  ['subcategoriedskilldata_18',['SubcategoriedSkillData',['../class_subcategoried_skill_data.html',1,'']]]
 ];

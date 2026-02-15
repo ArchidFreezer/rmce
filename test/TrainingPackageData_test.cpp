@@ -45,11 +45,6 @@ namespace {
 			}
 		}
 
-		tp1.setSpellUserOnly(false);
-		EXPECT_FALSE(tp1.spellUserOnly());
-		tp1.setSpellUserOnly(true);
-		EXPECT_TRUE(tp1.spellUserOnly());
-
 		tp1.setLifestyle(false);
 		EXPECT_FALSE(tp1.lifestyle());
 		tp1.setLifestyle(true);
@@ -59,7 +54,7 @@ namespace {
 		EXPECT_EQ(tp1.timeToAcquire(), 15);
 
 		// Starting money positive
-		tp1.setStaringMoneyChangeMax(10);
+		tp1.setStaringMoneyModifierDice("2d10");
 		int max{ 0 };
 		for (int x{ 0 }; x < 25; x++) {
 			int change = tp1.startingMoneyChange();
@@ -69,7 +64,7 @@ namespace {
 		EXPECT_GT(max, 10);
 
 		// Starting money negative
-		tp1.setStaringMoneyChangeMax(-10);
+		tp1.setStaringMoneyModifierDice("-d10");
 		int min{ 0 };
 		for (int x{ 0 }; x < 25; x++) {
 			int change = tp1.startingMoneyChange();

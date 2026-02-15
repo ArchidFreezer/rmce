@@ -4,9 +4,47 @@
 #include <set>
 #include <stdexcept>
 #include <string_view>
+#include <tuple>
 #include <Dice.h>
 #include <GameRuleData.h>
 #include <RaceData.h>
+
+/**
+ * @brief Represents a set of skill rank choices from a category available in a package, including constraints on selection and rank allocation.
+ */
+struct CategoryMultiSkillRankChoice {
+	const SkillCategoryData* category; /**< The skill category from which the player can choose to gain the skill ranks */
+	int ranks; /**< The number of skill ranks that can be gained */
+	int num_choices; /**< The maximum number of skills that can be chosen to gain the skill ranks */
+};
+
+/**
+ * @brief Represents a set of spell list choices available in a package, including constraints on selection and rank allocation.
+ */
+struct SpellListChoices {
+	std::optional<std::string_view> spell_list_category; /**< Optional category of spell lists to choose from. The default category from the profession should be used if this is not provided or it is preferable. */
+	int ranks; /**< The number of ranks the package provides in the spell list */
+	int num_choices; /**< The number of spell lists that can be chosen from */
+	std::set<std::string> spell_lists; /**< The spell lists that can be chosen from */
+};
+
+/**
+ * @brief Represents a set of spell list category choices available in a package, including constraints on selection and rank allocation.
+ */
+struct SpellListCategoryChoices {
+	int ranks; /**< The number of ranks the package provides in the spell list */
+	int num_choices; /**< The number of spell lists that can be chosen from the category */
+	std::set<std::string> spell_list_categories; /**< The spell list categories that can be chosen from */
+};
+
+/**
+ * @brief Represents a set of language choices available in a package, including constraints on selection and rank allocation.
+ */
+struct LanguageChoices {
+	int ranks; /**< The number of ranks the package provides in the language */
+	int num_choices; /**< The number of languages that can be chosen */
+	std::set<std::string> languages; /**< The languages that can be chosen from */
+};
 
 /**
  * @class TrainingPackageData
@@ -80,16 +118,22 @@ public:
 	const std::string& description() const { return description_; }
 
 	/**
-	 * @brief Set additional notes about the training package that may be relevant for a GM when running a character with the training package
-	 * @param notes std::string_view additional notes about the training package
+	 * @brief Add an additional note about the training package that may be relevant for a GM when running a character with the training package
+	 * @param note std::string_view additional note about the training package
 	 */
-	void setNotes(std::string_view notes) { notes_ = notes; }
+	void addNote(std::string_view note) { notes_.emplace(note); }
+
+	/**
+	 * @brief Set additional notes about the training package that may be relevant for a GM when running a character with the training package
+	 * @param notes Set of additional notes about the training package
+	 */
+	void setNotes(std::set<std::string> notes) { notes_ = std::move(notes); }
 
 	/**
 	 * @brief Get additional notes about the training package that may be relevant for a GM when running a character with the training package
 	 * @return std::string reference of the additional notes about the training package
 	 */
-	const std::string& notes() const { return notes_; }
+	const std::set<std::string>& notes() const { return notes_; }
 
 	/**
 	 * @brief Set the book that the training package is defined in
@@ -161,22 +205,6 @@ public:
 	const std::map<std::string, int> qualifiers() const { return qualifiers_; }
 
 	/**
-	 * @brief Set whether non spell users may take the package
-	 * 
-	 * Some training packages are only for semi, hybrid and pure spell users
-	 * @param caster_only `true` if the package is only for spell users; `false` otherwise
-	 */
-	void setSpellUserOnly(bool caster_only) { caster_only_ = caster_only; }
-
-	/**
-	 * @brief Get whether non spell users may take the package
-	 * 
-	 * @return `true` if only semi, hybrid and pure spell users may take the package
-	 * @return `false` if the package is available to any profession
-	 */
-	bool spellUserOnly() const { return caster_only_; }
-
-	/**
 	 * @brief Set whether the package is lifestyle based
 	 * 
 	 * @param lifestyle `true` if the package is a lfestyle package; `false` if the package is vocational
@@ -232,16 +260,68 @@ public:
 	 *
 	 * @param max Maximum difference in starting money
 	 */
-	void setStaringMoneyChangeMax(int max) { starting_money_max_ = max; }
+	void setStaringMoneyModifierDice(std::string_view max) { starting_money_modifier_dice_ = max; }
 
 	/**
 	 * @brief Get the change in starting money if the package is taken during apprenticeship
 	 * @return value of change in money
 	 */
-	int startingMoneyChange() const { 
-		int abs_value = Dice(std::abs(starting_money_max_), 1, 0).roll().result();
-		return (starting_money_max_ > 0 ? abs_value : abs_value * -1);
+	int startingMoneyChange() const {
+		// First we parse the dice string to get the absolute value of the change and then we roll it. The sign of the change is determined by whether the original value was positive or negative.
+		std::string starting_money_modifier_dice = starting_money_modifier_dice_; // Make a copy of the string to modify for parsing
+
+		// Get whether this is an increase or decrease in starting money
+		bool neg = starting_money_modifier_dice.substr(0, 1) == "-";
+
+		if (neg) {
+			// Remove the negative sign for parsing
+			starting_money_modifier_dice = starting_money_modifier_dice.substr(1);
+		}
+
+		// Get the number of dice and the number of sides on the dice from the string. The format is expected to be [number of dice]d[number of sides]
+		std::vector<std::string> dice_parts = tokenise(starting_money_modifier_dice, "d");
+
+		int num_dice = 1;
+		int num_sides = 10;
+		int val = 0;
+		if (dice_parts.size() > 1) { // We have multiple dice so no open ended rolls
+			num_dice = std::stoi(dice_parts[0]);
+			num_sides = std::stoi(dice_parts[1]);
+			val = Dice(num_sides, 0, 0).roll(num_dice).result();
+		} else { // Single die with open ended rolls
+			num_sides = std::stoi(dice_parts[0]);
+			val = Dice(num_sides, 1, 0).roll(true).result();
+		}
+
+		return (neg ? val * -1 : val);
 	}
+
+	/**
+	 * @brief Add a special benefit or malus that may be gained by the package
+	 * @param special Description of the special benefit or malus
+	 * @param chance Modifier to the chance of getting the special. This is added to the d100 roll when determining whether the special is gained.
+	 */
+	void addSpecial(std::string_view special, int chance) { specials_.emplace_back(std::make_pair(special, chance)); }
+
+	/**
+	 * @brief Set a collection of special benefits or maluses that may be gained by the package
+	 * 
+	 * The chance parameter is added to the d100 roll when determining whether the special is gained. For example, if a special has a chance of 20, then it would be gained on a roll of 80 or less on a d100. If the chance was -10, then it would only be gained on a roll of 90 or less.
+	 * If a special is gained then the chance value should be halved for each subsequent roll to determine whether the special is gained again.
+	 * 
+	 * @param specials Vector of pairs of special benefit or malus descriptions and associated chances
+	 */
+	void setSpecials(std::vector<std::pair<std::string, int>> specials) { specials_ = std::move(specials); }
+
+	/**
+	 * @brief Get a collection of special benefits or maluses that may be gained by the package
+	 * 
+	 * The chance parameter is added to the d100 roll when determining whether the special is gained. For example, if a special has a chance of 20, then it would be gained on a roll of 80 or less on a d100. If the chance was -10, then it would only be gained on a roll of 90 or less.
+	 * If a special is gained then the chance value should be halved for each subsequent roll to determine whether the special is gained again.
+	 *
+	 * @return Vector of pairs of special benefit or malus descriptions and associated chances
+	 */
+	std::vector<std::pair<std::string, int>> specials() const { return specials_; }
 
 	/**
 	 * @brief Add a stat that receives a stat gain roll as part of the package
@@ -250,10 +330,42 @@ public:
 	void addStatGain(StatType::Type stat) { stat_gains_.emplace(stat); }
 
 	/**
+	 * @brief Set a collection of stats that receive a stat gain roll as part of the package
+	 * @param stat_gains Set of StatType::Type stats to gain rolls for
+	 */
+	void setStatGains(std::set<StatType::Type> stat_gains) { stat_gains_ = std::move(stat_gains); }
+
+	/**
 	 * @brief Get set of stats that receive a stat gain roll
 	 * @return Set of StatType::Type stats that recieve a stat gain roll
 	 */
 	const std::set< StatType::Type> statGains() const { return stat_gains_; }
+
+	/**
+	 * @brief Set whether the package provides a stat gain roll for realm stats
+	 * @param realmStatGain `true` if the package provides a stat gain roll for realm stats; `false` otherwise
+	 */
+	void setRealmStatGain(bool realmStatGain) { realmStatGain_ = realmStatGain; }
+
+	/**
+	 * @brief Get whether the package provides a stat gain roll for realm stats
+	 * @return `true` if the package provides a stat gain roll for realm stats
+	 * @return `false` if the package does not provide a stat gain roll for realm stats
+	 */
+	bool realmStatGain() const { return realmStatGain_; }
+
+	/**
+	 * @brief Sets the available stat gain choices for selection.
+	 * @param num_choices The number of stats that can be selected.
+	 * @param stats A set of stat types that are available for selection.
+	 */
+	void setStatGainChoices(int num_choices, std::set<StatType::Type> stats) { stat_gain_choices_ = std::make_pair(num_choices, std::move(stats)); }
+
+	/**
+	 * @brief Get the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from
+	 * @return Pair of number of stats that may be chosen to receive a stat gain roll and set of StatType::Type stats to choose from
+	 */
+	const std::pair<int, std::set<StatType::Type>> statGainChoices() const { return stat_gain_choices_; }
 
 	/**
 	 * @brief Set the number of ranks for a skill the package provides
@@ -264,6 +376,12 @@ public:
 		if (isRankSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + skill.id());
 		skill_ranks_.emplace(std::move(skill), ranks);
 	}
+
+	/**
+	 * @brief Set a collection of skills and ranks the package provides
+	 * @param skill_ranks Map of SubcategoriedSkillData and associated number of ranks these will overwrite any existing skill ranks
+	 */
+	void setSkillRanks(std::map<SubcategoriedSkillData, int> skill_ranks) {	skill_ranks_ = std::move(skill_ranks); }
 
 	/**
 	 * @brief Get the number of ranks for a skill the package provides
@@ -314,18 +432,179 @@ public:
 		return false;
 	}
 
+	/**
+	 * @brief Get a collection of skills and ranks the package provides
+	 * @return Map of SubcategoriedSkillData and associated number of ranks
+	 */
+	const std::map<SubcategoriedSkillData, int> skillRanks() const { return skill_ranks_; }
+
+	/**
+	 * @brief Sets the skill rank choices for this object.
+	 * @param skill_rank_choices A set of pairs containing skill data and their corresponding rank values to be assigned.
+	 */
+	void setSkillRankChoices(std::set<std::pair<SubcategoriedSkillData, int>> skill_rank_choices) { skill_rank_choices_ = std::move(skill_rank_choices); }
+
+	/**
+	 * @brief Get a collection of skills with ranks that the player can choose from to gain the skill ranks
+	 * @return Set of pairs of SubcategoriedSkillData and associated number of ranks
+	 */
+	const std::set<std::pair<SubcategoriedSkillData, int>> skillRankChoices() const { return skill_rank_choices_; }
+
+	/**
+	 * @brief Sets the skill category ranks for this package.
+	 * @param skill_category_ranks A map associating skill category data with their corresponding rank values.
+	 */
+	void setSkillCategoryRanks(std::map<const SkillCategoryData*, int> skill_category_ranks) { skill_category_ranks_ = std::move(skill_category_ranks); }
+
+	/**
+	 * @brief Get a collection of skill categories and ranks the package provides
+	 * @return Map of SkillCategoryData pointers and associated number of ranks
+	 */
+	const std::map<const SkillCategoryData*, int> skillCategoryRanks() const { return skill_category_ranks_; }
+
+	/**
+	 * @brief Sets the skill category from which the player can choose to gain the skill ranks, the number of skill ranks that can be gained, and the number of skills that can be chosen to gain the skill ranks.
+	 * 
+	 * Allows the player to select one or more skills from a single category to receive the skill ranks. This is typically used for general skills where the character can select a category of skills and then one or more specific skills within that category to gain the ranks in.
+	 * 
+	 * @param skill_category_multi_skill_rank_choices Tuple containing a SkillCategoryData pointer representing the skill category from which the player can choose to gain the skill ranks, an integer representing the number of skill ranks that can be gained, and an integer representing the number of skills that can be chosen to gain the skill ranks.
+	 */
+	void setSkillCategoryMultiSkillRankChoices(std::set<CategoryMultiSkillRankChoice> skill_category_multi_skill_rank_choices) { skill_category_multi_skill_rank_choices_ = std::move(skill_category_multi_skill_rank_choices); }
+
+	/**
+	 * @brief Get the skill category from which the player can choose to gain the skill ranks, the number of skill ranks that can be gained, and the number of skills that can be chosen to gain the skill ranks.
+	 * @return Tuple containing a SkillCategoryData pointer representing the skill category from which the player can choose to gain the skill ranks, an integer representing the number of skill ranks that can be gained, and an integer representing the number of skills that can be chosen to gain the skill ranks.
+	 */
+	const std::set<CategoryMultiSkillRankChoice> skillCategoryMultiSkillRankChoices() { return skill_category_multi_skill_rank_choices_; }
+
+	/**
+	 * @brief Sets the skill group category and skill ranks for this package.
+	 * 
+	 * Allows the player to select a single category from the group to recieve the skill ranks and also a single skill from that category to receive the skill ranks.
+	 * This is typically used for weapon skills where the character can select a category of weapons and then a specific weapon within that category to gain the ranks in.
+	 * 
+	 * @param skill_group_category_and_skill_ranks A map associating SkillGroupData pointers with their corresponding rank values.
+	 */
+	void setSkillGroupCategoryAndSkillRanks(std::map<const SkillGroupData*, int> skill_group_category_and_skill_ranks) { skill_group_category_and_skill_ranks_ = std::move(skill_group_category_and_skill_ranks); }
+
+	/**
+	 * @brief Gets the skill group category and skill ranks map.
+	 *
+	 * Allows the player to select a single category from the group to recieve the skill ranks and also a single skill from that category to receive the skill ranks.
+	 * This is typically used for weapon skills where the character can select a category of weapons and then a specific weapon within that category to gain the ranks in.
+	 *
+	 * @return A map containing skill group data pointers as keys and their corresponding rank values as integers.
+	 */
+	const std::map<const SkillGroupData*, int> skillGroupCategoryAndSkillRanks() const { return skill_group_category_and_skill_ranks_; }
+
+	/**
+	 * @brief Sets the spell list choices for this package.
+	 * @param spell_list_choices A set of SpellListChoices representing the spell list choices available in the package.
+	 */
+	void setSpellListChoices(std::set<SpellListChoices> spell_list_choices) { spell_list_choices_ = std::move(spell_list_choices); }
+
+	/**
+	 * @brief Get the spell list choices for this package.
+	 * @return A set of SpellListChoices representing the spell list choices available in the package.
+	 */
+	const std::set<SpellListChoices> spellListChoices() const { return spell_list_choices_; }
+
+	/**
+	 * @brief Sets the spell list category choices for this package.
+	 * @param spell_list_category_choices A set of SpellListCategoryChoices representing the spell list category choices available in the package.
+	 */
+	void setSpellListCategoryChoices(std::set<SpellListCategoryChoices> spell_list_category_choices) { spell_list_category_choices_ = std::move(spell_list_category_choices); }
+
+	/**
+	 * @brief Get the spell list category choices for this package.
+	 * @return A set of SpellListCategoryChoices representing the spell list category choices available in the package.
+	 */
+	const std::set<SpellListCategoryChoices> spellListCategoryChoices() const { return spell_list_category_choices_; }
+
+	/**
+	 * @brief Sets the lifestyle skills for this package.
+	 * @param lifestyle_skills A set of SubcategoriedSkillData representing the lifestyle skills that may gain up to 15 ranks via the package rather than the usual cap of 10.
+	 */
+	void setLifestyleSkills(std::set<SubcategoriedSkillData> lifestyle_skills) { lifestyle_skills_ = std::move(lifestyle_skills); }
+
+	/**
+	 * @brief Get the lifestyle skills for this package.
+	 * @return A set of SubcategoriedSkillData representing the lifestyle skills that may gain up to 15 ranks via the package rather than the usual cap of 10.
+	 */
+	const std::set<SubcategoriedSkillData> lifestyleSkills() const { return lifestyle_skills_; }
+
+	/**
+	 * @brief Sets the lifestyle skill categories for this package.
+	 * @param lifestyle_skill_categories A set of SkillCategoryData pointers representing the skill categories for which all skills within the category may gain up to 15 ranks via the package rather than the usual cap of 10.
+	 */
+	void setLifestyleSkillCategories(std::set<const SkillCategoryData*> lifestyle_skill_categories) { lifestyle_skill_categories_ = std::move(lifestyle_skill_categories); }
+
+	/**
+	 * @brief Get the lifestyle skill categories for this package.
+	 * @return A set of SkillCategoryData pointers representing the skill categories for which all skills within the category may gain up to 15 ranks via the package rather than the usual cap of 10.
+	 */
+	const std::set<const SkillCategoryData*> lifestyleSkillCategories() const { return lifestyle_skill_categories_; }
+
+	/**
+	 * @brief Sets the lifestyle skill groups for this package.
+	 * @param lifestyle_skill_groups A set of SkillGroupData pointers representing the skill groups for which all skills within the group may gain up to 15 ranks via the package rather than the usual cap of 10.
+	 */
+	void setLifestyleSkillGroups(std::set<const SkillGroupData*> lifestyle_skill_groups) { lifestyle_skill_groups_ = std::move(lifestyle_skill_groups); }
+
+	/**
+	 * @brief Get the lifestyle skill groups for this package.
+	 * @return A set of SkillGroupData pointers representing the skill groups for which all skills within the group may gain up to 15 ranks via the package rather than the usual cap of 10.
+	 */
+	const std::set<const SkillGroupData*> lifestyleSkillGroups() const { return lifestyle_skill_groups_; }
+
+	/**
+	 * @brief Sets the lifestyle skill category multi skill rank choices for this package.
+	 * @param lifestyle_skill_category_multi_skill_rank_choices A set of pairs of a set of SkillCategoryData pointers representing the skill categories from which the player may select one or more to gain up to 15 ranks from the package rather than the usual cap of 10 and an integer representing the number of skill categories that can be chosen.
+	 */
+	void setLifestyleSkillCategoryMultiSkillRankChoices(std::set<std::pair<std::set<const SkillCategoryData*>, int>> lifestyle_skill_category_multi_skill_rank_choices) { lifestyle_skill_category_multi_skill_rank_choices_ = std::move(lifestyle_skill_category_multi_skill_rank_choices); }
+
+	/**
+	 * @brief Get the lifestyle skill category multi skill rank choices for this package.
+	 * @return A set of pairs of a set of SkillCategoryData pointers representing the skill categories from which the player may select one or more to gain up to 15 ranks from the package rather than the usual cap of 10 and an integer representing the number of skill categories that can be chosen.
+	 */
+	const std::set<std::pair<std::set<const SkillCategoryData*>, int>> lifestyleSkill() const { return lifestyle_skill_category_multi_skill_rank_choices_; }
+
+	/**
+	 * @brief Sets the language choices.
+	 * @param language_choices A set of language choices to be stored.
+	 */
+	void setLanguageChoices(std::set<LanguageChoices> language_choices) { language_choices_ = std::move(language_choices); }
+
+	/**
+	 * @brief Get the language choices.
+	 * @return A set of language choices representing the language choices that the player may select from to gain ranks in languages.
+	 */
+	const std::set<LanguageChoices> languageChoices() const { return language_choices_; }
+	
 private:
 	std::string name_{}; /**< Name of the training package */
 	std::string description_{}; /**< General description of the training package */
-	std::string notes_{}; /**< Additional notes about the training package that may be relevant for a GM when running a character with the training package */
+	std::set<std::string> notes_{}; /**< Additional notes about the training package that may be relevant for a GM when running a character with the training package */
 	const BookData* book_{}; /**< Book that the training package is described in */
 	std::set<const RaceData*> races_{}; /**< Races allowed to take the package if it is restricted, empty for all races */
 	std::map<std::string, int> qualifiers_{}; /**<  Requirements, if met, that reduce the cost of the package */
-	bool caster_only_{}; /**< Whether non spell user training packages may take the package */
 	bool lifestyle_{}; /**< Whether the package is a lifestyle package */
 	int time_to_acquire_{}; /**< Time, in months, to acquire the package */
-	int starting_money_max_{}; /**< Change in starting money a character gains during apprenticeship */
+	std::string starting_money_modifier_dice_{}; /**< Change in starting money a character gains during apprenticeship */
+	std::vector<std::pair<std::string, int>> specials_{}; /**< Special benefits or maluses that may be gained by the package */
 	std::set<StatType::Type> stat_gains_{}; /**< Stats that receive a stat gain roll */
+	bool realmStatGain_{}; /**< Whether the package provides a stat gain roll for realm stats */
+	std::pair<int, std::set<StatType::Type>> stat_gain_choices_{}; /**< A set of stats from which the player may select one or more form to receive a stat gain roll */
 	std::map<SubcategoriedSkillData, int> skill_ranks_{}; /** Number of skill ranks gained */
-
+	std::set<std::pair<SubcategoriedSkillData, int>> skill_rank_choices_{}; /**< A set of skills with ranks from which the player may select one or more form to receive the skill ranks */
+	std::map<const SkillCategoryData*, int> skill_category_ranks_{}; /** Number of skill category ranks gained */
+	std::set<CategoryMultiSkillRankChoice> skill_category_multi_skill_rank_choices_{}; /**< A set of skill categories from which the player may select one or more to receive the skill ranks */
+	std::map<const SkillGroupData*, int> skill_group_category_and_skill_ranks_{}; /** A number fo ranks that may be set on a single caltegory within the group and also a single skill within that category */
+	std::set<SpellListChoices> spell_list_choices_{}; /**< A set of spell list choices that the player may select from to gain spell lists and ranks in those spell lists */
+	std::set<SpellListCategoryChoices> spell_list_category_choices_{}; /**< A set of spell list category choices that the player may select from to gain ranks in spell lists within those categories */
+	std::set<SubcategoriedSkillData> lifestyle_skills_{}; /**< A set of skills that may gain up to 15 ranks via the package rather than the usual cap of 10 */
+	std::set<const SkillCategoryData*> lifestyle_skill_categories_{}; /**< A set of skill categories for which all skills within the category may gain up to 15 ranks via the package rather than the usual cap of 10 */
+	std::set<const SkillGroupData*> lifestyle_skill_groups_{}; /**< A set of skill groups for which all skills within the group may gain up to 15 ranks via the package rather than the usual cap of 10 */
+	std::set<std::pair<std::set<const SkillCategoryData*>, int>> lifestyle_skill_category_multi_skill_rank_choices_{}; /**< A set of pairs of a set of skill categories from which the player may select one or more to gain up to 15 ranks from the package rather than the usual cap of 10 */
+	std::set<LanguageChoices> language_choices_{}; /**< A set of language choices that the player may select from to gain ranks in languages */
 };

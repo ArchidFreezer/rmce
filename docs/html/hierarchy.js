@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "CategoryMultiSkillRankChoice", "struct_category_multi_skill_rank_choice.html", null ],
     [ "column_row_matcher", null, [
       [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", null ],
       [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", null ]
@@ -61,6 +62,7 @@ var hierarchy =
     [ "GameRuleDataChoice&lt; T &gt;", "class_game_rule_data_choice.html", null ],
     [ "GameRuleDataFactory", "class_game_rule_data_factory.html", null ],
     [ "LanguageAbility", "class_language_ability.html", null ],
+    [ "LanguageChoices", "struct_language_choices.html", null ],
     [ "NumberMatcherFactory", "class_number_matcher_factory.html", null ],
     [ "std::runtime_error", null, [
       [ "ArmourType::ArmourTypeNotFoundException", "class_armour_type_1_1_armour_type_not_found_exception.html", null ],
@@ -91,6 +93,8 @@ var hierarchy =
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
+    [ "SpellListCategoryChoices", "struct_spell_list_category_choices.html", null ],
+    [ "SpellListChoices", "struct_spell_list_choices.html", null ],
     [ "table_row_matcher", null, [
       [ "NumberRange< NumberType >", "class_number_range.html", null ]
     ] ],
