@@ -6519,7 +6519,126 @@
       "description": "Great rulers need great advice. The Advisor is in a position of authority and respect, but he still must please his lord to maintain his position. Advisors are masters of wisdom, influence, and intrigue. Advisors tend to find themselves in many situations of temptation. Some succumb to baser desires, but every so often a man of true virtue is able to maintain his authority and loyalty to his liege.",
       "book": "BOOK_CASTLES_RUINS",
       "lifestyle": "true",
-      "time": "97"
+      "time": "97",
+      "notes": [
+        "Communications category skill choices must be languages"
+      ],
+      "starting-money-change": "d10",
+      "specials": [
+        {
+          "order": "1",
+          "chance": "20",
+          "value": "Royal contact"
+        },
+        {
+          "order": "2",
+          "chance": "30",
+          "value": "Royal patron"
+        },
+        {
+          "order": "3",
+          "chance": "30",
+          "value": "Noble contact"
+        },
+        {
+          "order": "4",
+          "chance": "50",
+          "value": "Noble patron"
+        },
+        {
+          "order": "5",
+          "chance": "30",
+          "value": "Favour from noble"
+        },
+        {
+          "order": "6",
+          "chance": "30",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "7",
+          "chance": "30",
+          "value": "Favour from an important person"
+        },
+        {
+          "order": "8",
+          "chance": "50",
+          "value": "Augmented heraldic sign"
+        },
+        {
+          "order": "9",
+          "chance": "0",
+          "value": "Finely crafted object (gift; 5d10 sp)"
+        }
+      ],
+      "stat-gains": [
+        "Intuition"
+      ],
+      "skill-ranks": [
+        {
+          "id": "SKILL_LIE_PERCEPTION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_SIGNALING",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_DIPLOMACY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_PUBLIC_SPEAKING",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_CULTURE_LORE",
+          "subcategory": "Local",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HERALDRY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_HISTORY",
+          "value": "1"
+        },
+        {
+          "id": "SKILL_ADMINISTRATION",
+          "value": "2"
+        },
+        {
+          "id": "SKILL_REGION_LORE",
+          "subcategory": "Local",
+          "value": "1"
+        }
+      ],
+      "category-ranks": [
+        {
+          "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_INFLUENCE",
+          "value": "2"
+        },
+        {
+          "id": "SKILLCATEGORY_LORE_GENERAL",
+          "value": "4"
+        }
+      ],
+      "category-multi-skill-rank-choices": [
+        {
+          "id": "SKILLCATEGORY_COMMUNICATIONS",
+          "num-choices": "2",
+          "value": "2"
+        }
+      ]
     },
     {
       "name": "Doctor",
