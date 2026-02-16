@@ -301,6 +301,15 @@
                     "value": "2",
                     "num-choices": "1"
                 }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "6",
+                    "num-choices": "2",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE"
+                    ]
+                }
             ]
         },
         {
@@ -2647,6 +2656,15 @@
                         "SPELLLIST_CEREMONIES"
                     ]
                 }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+                    ]
+                }
             ]
         },
         {
@@ -3113,6 +3131,16 @@
                     "value": "2",
                     "num-choices": "2"
                 }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "2",
+                    "num-choices": "2",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                    ]
+                }
             ]
         },
         {
@@ -3216,6 +3244,16 @@
                     "options": [
                         "SPELLLIST_WEATHER_WAYS",
                         "SPELLLIST_ESSENCE_S_PERCEPTIONS"
+                    ]
+                }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
                     ]
                 }
             ]
@@ -3570,14 +3608,14 @@
                     "value": "3",
                     "num-choices": "1",
                     "options": [
-                        "SPELLLIST_SUMMONING_MASTERY",
-                        "SPELLLIST_SUMMONING_CIRCLES",
-                        "SPELLLIST_SUMMONS",
                         "SPELLLIST_SUMMONING_BOND",
+                        "SPELLLIST_SUMMONING_MASTERY",
+                        "SPELLLIST_SUMMONS",
+                        "SPELLLIST_SUMMONING_CIRCLES",
                         "SPELLLIST_ANIMAL_SUMMONS",
+                        "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_FEY_CONJURY",
                         "SPELLLIST_ELEMENTAL_SUMMONS",
-                        "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_PLANAR_SUMMONS",
                         "SPELLLIST_DARK_SUMMONS",
                         "SPELLLIST_GATE_MASTERY"
@@ -3823,8 +3861,8 @@
                     "value": "3",
                     "num-choices": "1",
                     "options": [
-                        "SPELLLIST_LESSER_ILLUSIONS",
-                        "SPELLLIST_ILLUSIONS"
+                        "SPELLLIST_ILLUSIONS",
+                        "SPELLLIST_LESSER_ILLUSIONS"
                     ]
                 }
             ]
@@ -5074,17 +5112,26 @@
                     "value": "1",
                     "num-choices": "1",
                     "options": [
-                        "SPELLLIST_SUMMONING_MASTERY",
-                        "SPELLLIST_SUMMONING_CIRCLES",
-                        "SPELLLIST_SUMMONS",
                         "SPELLLIST_SUMMONING_BOND",
+                        "SPELLLIST_SUMMONING_MASTERY",
+                        "SPELLLIST_SUMMONS",
+                        "SPELLLIST_SUMMONING_CIRCLES",
                         "SPELLLIST_ANIMAL_SUMMONS",
+                        "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_FEY_CONJURY",
                         "SPELLLIST_ELEMENTAL_SUMMONS",
-                        "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_PLANAR_SUMMONS",
                         "SPELLLIST_DARK_SUMMONS",
                         "SPELLLIST_GATE_MASTERY"
+                    ]
+                }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "2",
+                    "num-choices": "2",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -8007,6 +8054,15 @@
                     "value": "3",
                     "num-choices": "3"
                 }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+                    ]
+                }
             ]
         },
         {
@@ -8086,11 +8142,11 @@
                     "value": "3",
                     "num-choices": "1",
                     "options": [
-                        "SPELLLIST_MIND_DEATH",
-                        "SPELLLIST_MIND_SUBVERSION",
                         "SPELLLIST_MIND_ILLUSIONS",
                         "SPELLLIST_MIND_DISEASE",
+                        "SPELLLIST_MIND_DEATH",
                         "SPELLLIST_MIND_DOMINATION",
+                        "SPELLLIST_MIND_SUBVERSION",
                         "SPELLLIST_MIND_EROSION"
                     ]
                 }
@@ -9106,6 +9162,15 @@
                         "SPELLLIST_HOLY_TRANCES"
                     ]
                 }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+                    ]
+                }
             ]
         },
         {
@@ -9608,6 +9673,15 @@
                     "num-choices": "1",
                     "options": [
                         "SPELLLIST_PROSELYTIZING"
+                    ]
+                }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -10698,6 +10772,15 @@
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
                 }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+                    ]
+                }
             ]
         },
         {
@@ -11337,6 +11420,18 @@
                     "value": "3",
                     "num-choices": "2"
                 }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "6",
+                    "num-choices": "3",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                    ]
+                }
             ]
         },
         {
@@ -11434,6 +11529,16 @@
                     "num-choices": "1",
                     "options": [
                         "SPELLLIST_LOCATING_WAYS"
+                    ]
+                }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
                     ]
                 }
             ]
@@ -12443,6 +12548,16 @@
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
                 }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                    ]
+                }
             ]
         },
         {
@@ -12623,6 +12738,23 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
+                }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+                    ]
+                },
+                {
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                    ]
                 }
             ]
         },
@@ -12811,6 +12943,16 @@
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
                 }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "4",
+                    "num-choices": "2",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                    ]
+                }
             ]
         },
         {
@@ -12891,6 +13033,15 @@
                     "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "value": "3",
                     "num-choices": "3"
+                }
+            ],
+            "spell-list-category-rank-choices": [
+                {
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
+                    ]
                 }
             ]
         },
@@ -14837,9 +14988,9 @@
                         "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_MATTER_DISRUPTION",
                         "SPELLLIST_PHYSICAL_EROSION",
-                        "SPELLLIST_DARKNESS",
                         "SPELLLIST_DARK_CONTACTS",
-                        "SPELLLIST_DARK_SUMMONS"
+                        "SPELLLIST_DARK_SUMMONS",
+                        "SPELLLIST_DARKNESS"
                     ]
                 }
             ]

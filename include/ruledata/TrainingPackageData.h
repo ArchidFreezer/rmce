@@ -68,7 +68,22 @@ struct SpellListChoices {
 struct SpellListCategoryChoices {
 	int ranks; /**< The number of ranks the package provides in the spell list */
 	int num_choices; /**< The number of spell lists that can be chosen from the category */
-	std::set<std::string> spell_list_categories; /**< The spell list categories that can be chosen from */
+	std::set<const SkillCategoryData*> spell_list_categories; /**< The spell list categories that can be chosen from */
+
+	/** Overload the less than operator to allow this struct to be used in sorted containers */
+	bool operator<(const SpellListCategoryChoices& other) const {
+		size_t this_hash{ std::hash<int>{}(ranks) };
+		this_hash += std::hash<int>{}(num_choices);
+		for (const SkillCategoryData* category : spell_list_categories) {
+			this_hash += std::hash<std::string>{}(category->id());
+		}
+		size_t that_hash{ std::hash<int>{}(other.ranks) };
+		that_hash += std::hash<int>{}(other.num_choices);
+		for (const SkillCategoryData* category : other.spell_list_categories) {
+			that_hash += std::hash<std::string>{}(category->id());
+		}
+		return (this_hash < that_hash);
+	}
 };
 
 /**

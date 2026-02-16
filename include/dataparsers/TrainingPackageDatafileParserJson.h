@@ -158,4 +158,8 @@ private:
 	 * @return A property tree representation of the spell list choices, where each entry is represented as a child node with the relevant data.
 	 */
 	const pt::ptree getSpellListChoicesTree(TrainingPackageData& game_data);
+
+	std::set<SpellListCategoryChoices> parseSpellListCategoryChoicesTree(boost::optional<const pt::ptree&> spell_list_category_choices);
+
+	const pt::ptree getSpellListCategoryChoicesTree(TrainingPackageData& game_data);
 };

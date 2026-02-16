@@ -104,6 +104,10 @@ void TrainingPackageDatafileParserJson::parse() {
 		boost::optional<const pt::ptree&> spell_list_rank_choices_tree = v.second.get_child_optional("spell-list-rank-choices");
 		if (spell_list_rank_choices_tree) { ref.addSpellListChoices(parseSpellListChoicesTree(spell_list_rank_choices_tree)); }
 
+		// Spell list category rank choices
+		boost::optional<const pt::ptree&> spell_list_category_rank_choices_tree = v.second.get_child_optional("spell-list-category-rank-choices");
+		if (spell_list_category_rank_choices_tree) { ref.setSpellListCategoryChoices(parseSpellListCategoryChoicesTree(spell_list_category_rank_choices_tree)); }
+
 		std::cout << "\tTrainingPackage name: " << ref.name() << std::endl;
 	}
 
@@ -202,6 +206,12 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 	{
 		pt::ptree tree{ getSpellListChoicesTree(game_data) };
 		if (tree.size()) datum.push_back(std::make_pair("spell-list-ranks", tree));
+	}
+
+	// Spell list rank choices
+	{
+		pt::ptree tree{ getSpellListCategoryChoicesTree(game_data) };
+		if (tree.size()) datum.push_back(std::make_pair("spell-list-category-rank-choices", tree));
 	}
 }
 
@@ -380,5 +390,43 @@ const pt::ptree TrainingPackageDatafileParserJson::getSpellListChoicesTree(Train
 		choice_tree.push_back(std::make_pair("", choice_struct_tree));
 	}
 
+	return choice_tree;
+}
+
+std::set<SpellListCategoryChoices> TrainingPackageDatafileParserJson::parseSpellListCategoryChoicesTree(boost::optional<const pt::ptree&> spell_list_category_choices) {
+	std::set<SpellListCategoryChoices> choices{};
+	if (!spell_list_category_choices) return choices;
+
+	for (const auto& choice : spell_list_category_choices.get()) {
+		SpellListCategoryChoices choice_struct{};
+		choice_struct.ranks = choice.second.get<int>("value");
+		choice_struct.num_choices = choice.second.get<int>("num-choices", 1);
+		boost::optional<const pt::ptree&> spell_lists_tree = choice.second.get_child_optional("options");
+		if (spell_lists_tree) {
+			for (const auto& spell_list : spell_lists_tree.get()) {
+				std::string spell_list_id = spell_list.second.get_value<std::string>();
+				choice_struct.spell_list_categories.emplace(&factory().get<SkillCategoryData>(spell_list_id));
+			}
+		}
+		choices.emplace(choice_struct);
+	}
+	return choices;
+}
+
+const pt::ptree TrainingPackageDatafileParserJson::getSpellListCategoryChoicesTree(TrainingPackageData& game_data) {
+	pt::ptree choice_tree{};
+	for (const auto& choice : game_data.spellListCategoryChoices()) {
+		pt::ptree choice_struct_tree{};
+		choice_struct_tree.put("value", choice.ranks);
+		choice_struct_tree.put("num-choices", choice.num_choices);
+		pt::ptree options_tree{};
+		for (const auto& spell_list_category : choice.spell_list_categories) {
+			pt::ptree option_tree{};
+			option_tree.put("", spell_list_category->id());
+			options_tree.push_back(std::make_pair("", option_tree));
+		}
+		if (options_tree.size()) choice_struct_tree.push_back(std::make_pair("options", options_tree));
+		choice_tree.push_back(std::make_pair("", choice_struct_tree));
+	}
 	return choice_tree;
 }
