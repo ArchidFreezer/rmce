@@ -4,7 +4,7 @@
 #include <GameRuleData.h>
 #include <LanguageAbility.h>
 #include <ProfessionData.h>
-//#include <TrainingPackageData.h>
+#include <TrainingPackageData.h>
 
 /**
  * @class CultureData
@@ -90,24 +90,30 @@ public:
 	void setLanguageAbility(LanguageAbility language) { languages_.emplace(language.language(), language); }
 
 	/**
+	 * @brief Sets the language abilities map for this object.
+	 * @param languages A map associating language identifiers with their corresponding language ability levels.
+	 */
+	void setLanguageAbilities(std::map<std::string, LanguageAbility> languages) { languages_ = std::move(languages); }
+
+	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language LanguageData language to get the ability for
 	 * @return LanguageAbility language ability
 	 */
-	const LanguageAbility& languageAbility(const LanguageData& language) const { return startingLanguageAbility(language.name()); }
+	const LanguageAbility& languageAbility(const LanguageData& language) const { return languageAbility(language.name()); }
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language_name name of the language to get the ability for
 	 * @return LanguageAbility language ability
 	 */
-	const LanguageAbility& languageAbility(const std::string language_name) const { return languages_.at(language_name); }
+	const LanguageAbility& languageAbility(const std::string& language_name) const { return languages_.at(language_name); }
 
 	/**
 	 * @brief Get a container with the LanguageAbility objects known during adolescence
 	 * @return std::vector of LanguageAbility object references
 	 */
-	const std::vector<LanguageAbility> languages() const {
+	const std::vector<LanguageAbility>& languages() const {
 		auto values = std::views::values(languages_);
 		return { values.begin(), values.end() };
 	}
@@ -119,10 +125,16 @@ public:
 	void addHobbySkill(const SubcategoriedSkillData& skill) { hobby_skills_.emplace(skill); }
 
 	/**
+	 * @brief Set the skills typically taken by an adolescent of the culture
+	 * @param hobby_skills std::set of SubcategoriedSkillData representing the skills typically taken by an adolescent of the culture
+	 */
+	void setHobbySkills(std::set<SubcategoriedSkillData> hobby_skills) { hobby_skills_ = std::move(hobby_skills); }
+
+	/**
 	 * @brief Get a container with the skills typically taken by an adolescent of the culture
 	 * @return std::set<SubcategoriedSkillData> typical hobby skills
 	 */
-	const std::set<const SubcategoriedSkillData> hobbySkills() const { return hobby_skills_; }
+	const std::set<SubcategoriedSkillData>& hobbySkills() const { return hobby_skills_; }
 
 	/**
 	 * @brief Get whether a skill is typically taken by an adolescent of the culture
@@ -144,10 +156,16 @@ public:
 	void addHobbySkillCategory(const SkillCategoryData& skill_category) { hobby_skill_categories_.emplace(&skill_category); }
 
 	/**
+	 * @brief Set the skill categories typically taken by an adolescent of the culture
+	 * @param hobby_skill_categories std::set of SkillCategoryData pointers representing the skill categories typically taken by an adolescent of the culture
+	 */
+	void setHobbySkillCategories(std::set<const SkillCategoryData*> hobby_skill_categories) { hobby_skill_categories_ = std::move(hobby_skill_categories); }
+
+	/**
 	 * @brief Get a container with the skill categories typically taken by an adolescent of the culture
 	 * @return std::set<SkillCategoryData> skill categories
 	 */
-	const std::set<const SkillCategoryData*> hobbySkillCategories() const { return hobby_skill_categories_; }
+	const std::set<const SkillCategoryData*>& hobbySkillCategories() const { return hobby_skill_categories_; }
 
 	/**
 	 * @brief Get whether a skill category is typically taken by an adolescent of the culture
@@ -169,25 +187,43 @@ public:
 	void addPreferredProfession(const ProfessionData& profession) { preferred_professions_.emplace(&profession); }
 
 	/**
+	 * @brief Set the professions that are typically preferred by a member of the culture
+	 * @param preferred_professions std::set of ProfessionData pointers representing the professions that are typically preferred by a member of the culture
+	 */
+	void setPreferredProfessions(std::set<const ProfessionData*> preferred_professions) { preferred_professions_ = std::move(preferred_professions); }
+
+	/**
 	 * @brief Get a container with the professions that are typically preferred by a member of the culture
 	 * 
 	 * This is not an exclusive list by any means, but rather suggestions
 	 * @return std::set<ProfessionData> professions
 	 */
-	const std::set<const ProfessionData*> preferredProfessions() const { return preferred_professions_; }
+	const std::set<const ProfessionData*>& preferredProfessions() const { return preferred_professions_; }
 
 	/**
-	 * @brief Get whether a profession is typically restricted to a member of the culture
+	 * @brief Get whether a profession is typically preferred by a member of the culture
 	 * @param profession ProfessionData to check
-	 * @return `true` if the profession is typically restricted by a member of the culture
-	 * @return `false` if the profession is not typically restricted by a member of the culture
+	 * @return `true` if the profession is typically preferred by a member of the culture
+	 * @return `false` if the profession is not typically preferred by a member of the culture
 	 */
-	bool isRestrictedProfession(const ProfessionData& profession) const {
-		for (const auto& key : restricted_professions_) {
+	bool isPreferredProfession(const ProfessionData& profession) const {
+		for (const auto& key : preferredProfessions()) {
 			if (profession.id() == key->id()) return true;
 		}
 		return false;
 	}
+
+	/**
+	 * @brief Add a profession that is typically restricted to a member of the culture
+	 * @param profession ProfessionData to add
+	 */
+	void addRestrictedProfession(const ProfessionData& profession) { restricted_professions_.emplace(&profession); }
+
+	/**
+	 * @brief Set the professions that are typically restricted to a member of the culture
+	 * @param restricted_professions std::set of ProfessionData pointers representing the professions that are typically restricted to a member of the culture
+	 */
+	void setRestrictedProfessions(std::set<const ProfessionData*> restricted_professions) { restricted_professions_ = std::move(restricted_professions); }
 
 	/**
 	 * @brief Get a container with the professions that are typically restricted to a member of the culture
@@ -195,7 +231,7 @@ public:
 	 * This is not an exclusive list by any means, but rather suggestions
 	 * @return std::set<ProfessionData> professions
 	 */
-	const std::set<const ProfessionData*> restrictedProfessions() const { return restricted_professions_; }
+	const std::set<const ProfessionData*>& restrictedProfessions() const { return restricted_professions_; }
 
 	/**
 	 * @brief Get whether a profession is typically restricted to a member of the culture
@@ -215,10 +251,10 @@ private:
 	std::string description_{}; /**< General description of the culture */
 	const CultureTypeData* culture_type_{}; /**< Culture type this culture is based on */
 	bool high_culture_{}; /**< Whether the culture has developed */
-	std::map<std::string, const LanguageAbility> languages_{}; /**< Language ranks that members of the race learn prior during their adolescence */
-	std::set<const SubcategoriedSkillData> hobby_skills_{}; /**< Set of skills that would typically be given skill ranks by adolescents of this culture */
+	std::map<std::string, LanguageAbility> languages_{}; /**< Language ranks that members of the race learn prior during their adolescence */
+	std::set<SubcategoriedSkillData> hobby_skills_{}; /**< Set of skills that would typically be given skill ranks by adolescents of this culture */
 	std::set<const SkillCategoryData*> hobby_skill_categories_{}; /**< Set of skill categories that would typically be given skill ranks by adolescents of this culture */
 	std::set<const ProfessionData*> preferred_professions_{}; /**< Set of preferred professions for members of the culture */
 	std::set<const ProfessionData*> restricted_professions_{}; /**< Set of restricted professions for members of the culture */
-//	std::map<const TrainingPackageData*, float> training_package_modifiers_{}; /**< Modifiers to training package development point cost that members of the culture receive */
+	std::map<const TrainingPackageData*, float> training_package_modifiers_{}; /**< Modifiers to training package development point cost that members of the culture receive */
 };
