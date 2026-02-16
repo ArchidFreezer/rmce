@@ -658,16 +658,22 @@ public:
 	const std::set<const SkillGroupData*>& lifestyleSkillGroups() const { return lifestyle_skill_groups_; }
 
 	/**
-	 * @brief Sets the lifestyle skill category multi skill rank choices for this package.
-	 * @param lifestyle_skill_category_multi_skill_rank_choices A set of pairs of a set of SkillCategoryData pointers representing the skill categories from which the player may select one or more to gain up to 15 ranks from the package rather than the usual cap of 10 and an integer representing the number of skill categories that can be chosen.
+	 * @brief Get the lifestyle category skill choices for this package.
+	 * 
+	 * Lifestyle skills may have up to 15 ranks rather than the usual cap of 10. This method allows for the player to select one or more skills from a category to gain up to 15 ranks from the package rather than the usual cap of 10.
+	 * 
+	 * @param lifestyle_category_skill_choices A set of GameRuleDataChoice<SkillCategoryData> representing skill categories that the player can select one of more skills from to become lifestyle skills.
 	 */
-	void setLifestyleSkillCategoryMultiSkillRankChoices(std::set<std::pair<std::set<const SkillCategoryData*>, int>> lifestyle_skill_category_multi_skill_rank_choices) { lifestyle_skill_category_multi_skill_rank_choices_ = std::move(lifestyle_skill_category_multi_skill_rank_choices); }
+	void setLifestyleCategorySkillChoices(std::set<GameRuleDataChoice<SkillCategoryData>> lifestyle_category_skill_choices) { lifestyle_category_skill_choices_ = std::move(lifestyle_category_skill_choices); }
 
 	/**
-	 * @brief Get the lifestyle skill category multi skill rank choices for this package.
-	 * @return A set of pairs of a set of SkillCategoryData pointers representing the skill categories from which the player may select one or more to gain up to 15 ranks from the package rather than the usual cap of 10 and an integer representing the number of skill categories that can be chosen.
+	 * @brief Get the lifestyle category skill choices for this package.
+	 *
+	 * Lifestyle skills may have up to 15 ranks rather than the usual cap of 10. This method allows for the player to select one or more skills from a category to gain up to 15 ranks from the package rather than the usual cap of 10.
+	 *
+	 * @return A set of GameRuleDataChoice<SkillCategoryData> representing skill categories that the player can select one of more skills from to become lifestyle skills.
 	 */
-	const std::set<std::pair<std::set<const SkillCategoryData*>, int>>& lifestyleSkill() const { return lifestyle_skill_category_multi_skill_rank_choices_; }
+	const std::set<GameRuleDataChoice<SkillCategoryData>>& lifestyleCategorySkillChoices() const { return lifestyle_category_skill_choices_; }
 
 	/**
 	 * @brief Sets the language choices.
@@ -706,6 +712,6 @@ private:
 	std::set<SubcategoriedSkillData> lifestyle_skills_{}; /**< A set of skills that may gain up to 15 ranks via the package rather than the usual cap of 10 */
 	std::set<const SkillCategoryData*> lifestyle_skill_categories_{}; /**< A set of skill categories for which all skills within the category may gain up to 15 ranks via the package rather than the usual cap of 10 */
 	std::set<const SkillGroupData*> lifestyle_skill_groups_{}; /**< A set of skill groups for which all skills within the group may gain up to 15 ranks via the package rather than the usual cap of 10 */
-	std::set<std::pair<std::set<const SkillCategoryData*>, int>> lifestyle_skill_category_multi_skill_rank_choices_{}; /**< A set of pairs of a set of skill categories from which the player may select one or more to gain up to 15 ranks from the package rather than the usual cap of 10 */
+	std::set<GameRuleDataChoice<SkillCategoryData>> lifestyle_category_skill_choices_{}; /**< A set of choices of skill categories from which the player may select one or more skill to gain up to 15 ranks from the package rather than the usual cap of 10 */
 	std::set<LanguageChoices> language_choices_{}; /**< A set of language choices that the player may select from to gain ranks in languages */
 };
