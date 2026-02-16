@@ -73,6 +73,28 @@
                     "id": "SKILL_SWIMMING",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -166,6 +188,24 @@
                     "id": "SKILL_SIGNALING",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
+                }
             ]
         },
         {
@@ -216,6 +256,20 @@
                 {
                     "id": "SKILL_READ_RUNES",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
                 }
             ]
         },
@@ -291,6 +345,28 @@
                 },
                 {
                     "id": "SKILL_TRACKING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "value": "1"
                 }
             ]
@@ -406,6 +482,16 @@
                     "id": "SKILL_FAUNA_LORE",
                     "value": "3"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -472,6 +558,28 @@
                 },
                 {
                     "id": "SKILL_TALE_TELLING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
                     "value": "1"
                 }
             ]
@@ -543,6 +651,20 @@
                             "id": "SKILL_PREPARE_POISONS"
                         }
                     ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 }
             ]
         },
@@ -630,6 +752,20 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -710,6 +846,24 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -761,6 +915,20 @@
                 },
                 {
                     "id": "SKILL_STONE_LORE",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
                     "value": "1"
                 }
             ]
@@ -831,6 +999,24 @@
                     "id": "SKILL_WEAPON_STYLE_LORE",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -887,6 +1073,20 @@
                     "id": "SKILL_RESEARCH",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -933,6 +1133,20 @@
                 {
                     "value": "Reliable safe house (place of hiding)",
                     "chance": "0"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "2"
                 }
             ]
         },
@@ -1000,6 +1214,20 @@
                 },
                 {
                     "id": "SKILL_WEATHER_WATCHING",
+                    "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
                     "value": "2"
                 }
             ]
@@ -1092,6 +1320,28 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -1128,6 +1378,12 @@
                 },
                 {
                     "id": "SKILL_FRENZY",
+                    "value": "4"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
                     "value": "4"
                 }
             ]
@@ -1206,6 +1462,28 @@
                     "id": "SKILL_HISTORY",
                     "subcategory": "Dwarvish",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_WEAPON_2_HANDED",
+                    "value": "3"
                 }
             ]
         },
@@ -1291,6 +1569,28 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "6"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -1355,6 +1655,20 @@
                 {
                     "id": "SKILL_SURVIVAL",
                     "subcategory": "Subterranean",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
                     "value": "1"
                 }
             ]
@@ -1425,6 +1739,20 @@
                     "subcategory": "Boar",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -1480,6 +1808,24 @@
                 },
                 {
                     "id": "SKILL_STREETWISE",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
                     "value": "1"
                 }
             ]
@@ -1551,6 +1897,12 @@
                     "subcategory": "Cavalry",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -1603,6 +1955,16 @@
                     "id": "SKILL_TACTICS",
                     "subcategory": "Archer",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "2"
                 }
             ]
         },
@@ -1662,6 +2024,24 @@
                     "id": "SKILL_LOCK_LORE",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -1712,6 +2092,32 @@
             "skill-ranks": [
                 {
                     "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
                     "value": "1"
                 }
             ]
@@ -1765,6 +2171,24 @@
                 },
                 {
                     "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value": "1"
                 }
             ]
@@ -1851,6 +2275,24 @@
                     "subcategory": "Specific lore",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -1924,6 +2366,24 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -1986,6 +2446,32 @@
                     "id": "SKILL_TRICKERY",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -2047,6 +2533,20 @@
                     "id": "SKILL_MEDITATION",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -2106,6 +2606,24 @@
                 },
                 {
                     "id": "SKILL_STREETWISE",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
                     "value": "1"
                 }
             ]
@@ -2171,6 +2689,24 @@
                     "subcategory": "Gnoll",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -2225,6 +2761,24 @@
                     "id": "SKILL_STALKING",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -2272,6 +2826,28 @@
                     "id": "SKILL_RESEARCH",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -2313,6 +2889,28 @@
                             "id": "SKILL_SEDUCTION"
                         }
                     ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
                 }
             ]
         },
@@ -2385,6 +2983,20 @@
                     "id": "SKILL_READ_RUNES",
                     "value": "3"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "7"
+                }
             ]
         },
         {
@@ -2423,6 +3035,16 @@
                 {
                     "id": "SKILL_CIRCLE_LORE",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "3"
                 }
             ]
         },
@@ -2467,6 +3089,28 @@
                 },
                 {
                     "id": "SKILL_LIE_PERCEPTION",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
                     "value": "1"
                 }
             ]
@@ -2537,6 +3181,12 @@
                     "id": "SKILL_SKINNING",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -2581,6 +3231,20 @@
                     "id": "SKILL_SPELL_MASTERY",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -2623,6 +3287,12 @@
                 {
                     "value": "Set of crafting tools (+5 to a specific craft)",
                     "chance": "0"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "3"
                 }
             ]
         },
@@ -2683,6 +3353,12 @@
                     "id": "SKILL_SECOND_AID",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -2726,6 +3402,28 @@
                 {
                     "id": "SKILL_PUBLIC_SPEAKING",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
                 }
             ]
         },
@@ -2791,6 +3489,12 @@
                 {
                     "id": "SKILL_STONE_LORE",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
                 }
             ]
         },
@@ -2862,6 +3566,28 @@
                     "subcategory": "Specific lore",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -2910,6 +3636,24 @@
                 {
                     "id": "SKILL_PICKING_POCKETS",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "3"
                 }
             ]
         },
@@ -3006,6 +3750,32 @@
                     "id": "SKILL_XENO_LORE",
                     "value": "3"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -3045,6 +3815,24 @@
                 {
                     "id": "SKILL_ALERTNESS",
                     "value": "4"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
                 }
             ]
         },
@@ -3125,6 +3913,24 @@
                     "id": "SKILL_REGION_LORE",
                     "subcategory": "Region 2",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "6"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
                 }
             ]
         },
@@ -3238,6 +4044,28 @@
                     "id": "SKILL_TIME_SENSE",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -3314,6 +4142,20 @@
                     "id": "SKILL_TIME_SENSE",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -3373,6 +4215,16 @@
                 {
                     "id": "SKILL_SWASHBUCKLING",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
                 }
             ]
         },
@@ -3450,6 +4302,24 @@
                     "id": "SKILL_SYMBOL_LORE",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -3511,6 +4381,12 @@
                     "id": "SKILL_STONE_LORE",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -3550,6 +4426,20 @@
                 {
                     "id": "SKILL_ROPE_MASTERY",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_WEAPON_2_HANDED",
+                    "value": "1"
                 }
             ]
         },
@@ -3616,6 +4506,28 @@
                     "id": "SKILL_SWIMMING",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -3668,6 +4580,20 @@
                 {
                     "id": "SKILL_SERVICE",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
                 }
             ]
         },
@@ -3733,6 +4659,28 @@
                 },
                 {
                     "id": "SKILL_PICKING_LOCKS",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
                     "value": "1"
                 }
             ]
@@ -3806,6 +4754,28 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -3869,6 +4839,16 @@
                 },
                 {
                     "id": "SKILL_STUNNED_MANOEUVREING",
+                    "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
                     "value": "2"
                 }
             ]
@@ -3937,6 +4917,32 @@
                     "id": "SKILL_MAPPING",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4001,6 +5007,16 @@
                     "id": "SKILL_ROPE_MASTERY",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -4038,6 +5054,28 @@
             ],
             "stat-gains": [
                 "Constitution"
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "6"
+                }
             ]
         },
         {
@@ -4110,6 +5148,28 @@
                             "id": "SKILL_READ_RUNES"
                         }
                     ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
                 }
             ]
         },
@@ -4199,6 +5259,32 @@
                     "id": "SKILL_TIME_SENSE",
                     "value": "3"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4268,6 +5354,16 @@
                 {
                     "id": "SKILL_WEAPON_1_H_CONCUSSION",
                     "subcategory": "Hammer",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "value": "1"
                 }
             ]
@@ -4351,6 +5447,16 @@
                     "id": "SKILL_USING_PREPARED_HERBS",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "4"
+                }
             ]
         },
         {
@@ -4414,6 +5520,12 @@
                 {
                     "id": "SKILL_HORTICULTURE",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
                 }
             ]
         },
@@ -4507,6 +5619,28 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -4563,6 +5697,20 @@
                     "id": "SKILL_STUNNED_MANOEUVREING",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -4608,6 +5756,16 @@
                     "id": "SKILL_REGION_LORE",
                     "subcategory": "Local",
                     "value": "3"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "4"
                 }
             ]
         },
@@ -4672,6 +5830,28 @@
                 {
                     "id": "SKILL_SEDUCTION",
                     "value": "3"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
                 }
             ]
         },
@@ -4754,6 +5934,32 @@
                     "id": "SKILL_STUNNED_MANOEUVREING",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4826,6 +6032,28 @@
                     "id": "SKILL_TRACKING",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4892,6 +6120,28 @@
                     "subcategory": "Specific lore",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -4934,6 +6184,24 @@
             "skill-ranks": [
                 {
                     "id": "SKILL_GIMMICKRY",
+                    "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value": "2"
                 }
             ]
@@ -4997,6 +6265,24 @@
                 },
                 {
                     "id": "SKILL_SCROUNGING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
                     "value": "1"
                 }
             ]
@@ -5063,6 +6349,20 @@
                     "id": "SKILL_TUMBLING",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -5114,6 +6414,28 @@
                 {
                     "value": "Weatherproof clothes",
                     "chance": "0"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "3"
                 }
             ]
         },
@@ -5190,6 +6512,20 @@
                     "id": "SKILL_RIDING",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_HEAVY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -5229,6 +6565,16 @@
                 {
                     "id": "SKILL_BODY_DEVELOPMENT",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
                 }
             ]
         },
@@ -5295,6 +6641,28 @@
                     "id": "SKILL_SCRIBING",
                     "value": "3"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -5324,6 +6692,24 @@
                 {
                     "value": "Book (+5 to a lore category)",
                     "chance": "100"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "6"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
                 }
             ]
         },
@@ -5376,6 +6762,12 @@
             "skill-ranks": [
                 {
                     "id": "SKILL_ATTUNEMENT",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
                     "value": "1"
                 }
             ]
@@ -5432,6 +6824,16 @@
                 {
                     "id": "SKILL_SEDUCTION",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "4"
                 }
             ]
         },
@@ -5544,6 +6946,32 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -5612,6 +7040,28 @@
                 {
                     "id": "SKILL_NERVE_STRIKES",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
                 }
             ]
         },
@@ -5687,6 +7137,28 @@
                     "id": "SKILL_WEAPON_STYLE_LORE",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -5742,6 +7214,24 @@
                 },
                 {
                     "id": "SKILL_PUBLIC_SPEAKING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
                     "value": "1"
                 }
             ]
@@ -5815,6 +7305,36 @@
                     "id": "SKILL_TUMBLING",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -5859,6 +7379,28 @@
                 {
                     "id": "SKILL_PUBLIC_SPEAKING",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "3"
                 }
             ]
         },
@@ -5914,6 +7456,16 @@
                 },
                 {
                     "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
                     "value": "1"
                 }
             ]
@@ -5991,6 +7543,20 @@
                 },
                 {
                     "id": "SKILL_USING_PREPARED_HERBS",
+                    "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value": "2"
                 }
             ]
@@ -6073,6 +7639,20 @@
                     "subcategory": "Specific lore",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "4"
+                }
             ]
         },
         {
@@ -6146,6 +7726,28 @@
                     "id": "SKILL_PICKING_LOCKS",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "4"
+                }
             ]
         },
         {
@@ -6209,6 +7811,20 @@
                     "id": "SKILL_SIEGE_ENGINEERING",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -6259,6 +7875,16 @@
                 },
                 {
                     "id": "SKILL_BASIC_MATH",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
                     "value": "1"
                 }
             ]
@@ -6328,6 +7954,28 @@
                 {
                     "id": "SKILL_TRAP_BUILDING",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_ATTACK",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "4"
                 }
             ]
         },
@@ -6416,6 +8064,20 @@
                     "id": "SKILL_RELIGION",
                     "subcategory": "Specific lore",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 }
             ]
         },
@@ -6509,6 +8171,24 @@
                     "id": "SKILL_TALE_TELLING",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "6"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -6582,6 +8262,16 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -6647,6 +8337,32 @@
                     "id": "SKILL_MARTIAL_ARTS_SWEEPING",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -6705,6 +8421,12 @@
                 },
                 {
                     "id": "SKILL_SCRIBING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "1"
                 }
             ]
@@ -6797,6 +8519,24 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -6875,6 +8615,28 @@
                     "id": "SKILL_STALKING",
                     "value": "3"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -6912,6 +8674,24 @@
                 {
                     "value": "Make-up kit (+5 non-magic)",
                     "chance": "100"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
                 }
             ]
         },
@@ -6958,6 +8738,24 @@
                 {
                     "id": "SKILL_ALERTNESS",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "2"
                 }
             ]
         },
@@ -7053,6 +8851,16 @@
                     "id": "SKILL_USING_PREPARED_HERBS",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -7131,6 +8939,20 @@
                 {
                     "id": "SKILL_SURVIVAL",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "3"
                 }
             ]
         },
@@ -7213,6 +9035,28 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -7290,6 +9134,32 @@
                             "id": "SKILL_STALKING"
                         }
                     ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2"
                 }
             ]
         },
@@ -7372,6 +9242,12 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -7437,6 +9313,32 @@
                     "id": "SKILL_SURVIVAL",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -7492,6 +9394,24 @@
                 {
                     "id": "SKILL_RELIGION",
                     "subcategory": "Specific lore",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
                     "value": "1"
                 }
             ]
@@ -7557,6 +9477,20 @@
                     "subcategory": "List from package",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -7619,6 +9553,20 @@
                     "subcategory": "Subterranean",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -7658,6 +9606,20 @@
                 {
                     "id": "SKILL_SEDUCTION",
                     "value": "3"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2"
                 }
             ]
         },
@@ -7709,6 +9671,16 @@
                 },
                 {
                     "id": "SKILL_SYMBOL_LORE",
+                    "value": "3"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
                     "value": "3"
                 }
             ]
@@ -7774,6 +9746,28 @@
                             "id": "SKILL_SCRIBING"
                         }
                     ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "2"
                 }
             ]
         },
@@ -7845,6 +9839,28 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -7912,6 +9928,32 @@
                     "id": "SKILL_RESEARCH",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -7969,6 +10011,20 @@
                     "id": "SKILL_MARTIAL_ARTS_SWEEPING",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -8014,6 +10070,20 @@
                     "id": "SKILL_TRACKING",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -8048,6 +10118,28 @@
                 {
                     "value": "Symbol of secret society",
                     "chance": "0"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
                 }
             ]
         },
@@ -8088,6 +10180,20 @@
                 {
                     "id": "SKILL_SERVICE",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
                 }
             ]
         },
@@ -8159,6 +10265,16 @@
                     "id": "SKILL_UNDEAD_LORE",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -8228,6 +10344,12 @@
                 {
                     "id": "SKILL_TRANSCEND_ARMOR",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "1"
                 }
             ]
         },
@@ -8302,6 +10424,16 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -8366,6 +10498,12 @@
                 {
                     "id": "SKILL_CHANNELING",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "value": "2"
                 }
             ]
         },
@@ -8450,6 +10588,16 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "4"
+                }
             ]
         },
         {
@@ -8496,6 +10644,16 @@
                     "id": "SKILL_SPELL_LORE",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -8537,6 +10695,24 @@
             "stat-gains": [
                 "Intuition",
                 "Presence"
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -8578,6 +10754,12 @@
                     "id": "SKILL_TWO_WEAPON_COMBAT",
                     "subcategory": "Choice plus Cestûszak",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "value": "1"
                 }
             ]
         },
@@ -8645,6 +10827,24 @@
                     "id": "SKILL_STREETWISE",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -8695,6 +10895,12 @@
                 },
                 {
                     "id": "SKILL_SIGNALING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
                     "value": "1"
                 }
             ]
@@ -8774,6 +10980,24 @@
                         }
                     ]
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -8848,6 +11072,24 @@
                     "id": "SKILL_USING_REMOVING_POISON",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_ATTACK",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -8905,6 +11147,20 @@
                 },
                 {
                     "id": "SKILL_SWIMMING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value": "1"
                 }
             ]
@@ -8980,6 +11236,16 @@
                     "id": "SKILL_TACTICS",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -9051,6 +11317,36 @@
                     "id": "SKILL_TIME_SENSE",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "4"
+                }
             ]
         },
         {
@@ -9110,6 +11406,24 @@
                     "id": "SKILL_RESEARCH",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -9150,6 +11464,28 @@
                 {
                     "id": "SKILL_ALERTNESS",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "4"
                 }
             ]
         },
@@ -9228,6 +11564,28 @@
                     "id": "SKILL_RESEARCH",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -9301,6 +11659,20 @@
                     "id": "SKILL_TACTICS",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_HEAVY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -9356,6 +11728,28 @@
                 {
                     "id": "SKILL_NERVE_STRIKES",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "4"
                 }
             ]
         },
@@ -9439,6 +11833,16 @@
                     "id": "SKILL_SECOND_AID",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -9477,6 +11881,28 @@
                 },
                 {
                     "id": "SKILL_SWIMMING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value": "1"
                 }
             ]
@@ -9524,6 +11950,32 @@
                 },
                 {
                     "id": "SKILL_WEATHER_WATCHING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "6"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value": "1"
                 }
             ]
@@ -9578,6 +12030,12 @@
                     "id": "SKILL_RIDING",
                     "subcategory": "Boar",
                     "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "4"
                 }
             ]
         },
@@ -9648,6 +12106,24 @@
                     "id": "SKILL_LIE_PERCEPTION",
                     "value": "2"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                }
             ]
         },
         {
@@ -9699,6 +12175,36 @@
                     "id": "SKILL_SWIMMING",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "3"
+                }
             ]
         },
         {
@@ -9746,6 +12252,36 @@
                 {
                     "id": "SKILL_MARTIAL_ARTS_SWEEPING",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "3"
                 }
             ]
         },
@@ -9798,6 +12334,20 @@
                     "id": "SKILL_MEDITATION",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -9845,6 +12395,28 @@
                 },
                 {
                     "id": "SKILL_MARTIAL_ARTS_SWEEPING",
+                    "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SELF_CONTROL",
                     "value": "2"
                 }
             ]
@@ -9974,6 +12546,28 @@
                     "id": "SKILL_WARDING_LORE",
                     "value": "1"
                 }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_MAGICAL",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_OBSCURE",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "1"
+                }
             ]
         },
         {
@@ -10018,6 +12612,20 @@
                     "id": "SKILL_RELIGION",
                     "subcategory": "Own cause",
                     "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "4"
                 }
             ]
         }

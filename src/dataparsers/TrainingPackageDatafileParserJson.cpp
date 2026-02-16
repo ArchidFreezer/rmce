@@ -83,6 +83,10 @@ void TrainingPackageDatafileParserJson::parse() {
 		boost::optional<const pt::ptree&> skill_rank_choices_tree = v.second.get_child_optional("skill-rank-choices");
 		if (skill_rank_choices_tree) { ref.setSkillRankChoices(parseSkillChoicePairTree<int>(skill_rank_choices_tree)); }
 
+		// Skill category ranks
+		boost::optional<const pt::ptree&> skill_category_ranks_tree = v.second.get_child_optional("category-ranks");
+		if (skill_category_ranks_tree) { ref.setSkillCategoryRanks(parseGameDataPairTree<SkillCategoryData, int>(skill_category_ranks_tree)); }
+
 		std::cout << "\tTrainingPackage name: " << ref.name() << std::endl;
 	}
 
@@ -157,6 +161,12 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 	{
 		pt::ptree tree{ getSkillChoicePairTree<int>(game_data.skillRankChoices()) };
 		if (tree.size()) datum.push_back(std::make_pair("skill-rank-choices", tree));
+	}
+
+	// Skill category ranks
+	{
+		pt::ptree tree{ getGameDataPairTree<SkillCategoryData ,int>(game_data.skillCategoryRanks()) };
+		if (tree.size()) datum.push_back(std::make_pair("category-ranks", tree));
 	}
 }
 
