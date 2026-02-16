@@ -348,7 +348,6 @@ const pt::ptree TrainingPackageDatafileParserJson::getStatGainChoicesTree(Traini
 	return choice_tree;
 }
 
-
 std::set<CategoryMultiSkillRankChoice> TrainingPackageDatafileParserJson::parseCategoryMultiSkillRankChoices(boost::optional<const pt::ptree&> category_multi_skill_rank_choices) {
 	std::set<CategoryMultiSkillRankChoice> choices{};
 	if (!category_multi_skill_rank_choices) return choices;
@@ -430,10 +429,16 @@ const pt::ptree TrainingPackageDatafileParserJson::getSpellListChoicesTree(Train
 		choice_struct_tree.put("value", choice.ranks);
 		choice_struct_tree.put("num-choices", choice.num_choices);
 
-		pt::ptree options_tree{};
+		// Sort the spell lists by id to ensure consistent ordering in the output json
+		std::map<std::string, const SpellListData*> sorted_spell_lists{};
 		for (const auto& spell_list : choice.spell_lists) {
+			sorted_spell_lists.emplace(spell_list->id(), spell_list);
+		}
+
+		pt::ptree options_tree{};
+		for(const auto& spell_list_pair : sorted_spell_lists) {
 			pt::ptree option_tree{};
-			option_tree.put("", spell_list->id());
+			option_tree.put("", spell_list_pair.second->id());
 			options_tree.push_back(std::make_pair("", option_tree));
 		}
 		if (options_tree.size()) choice_struct_tree.push_back(std::make_pair("options", options_tree));
@@ -469,10 +474,17 @@ const pt::ptree TrainingPackageDatafileParserJson::getSpellListCategoryChoicesTr
 		pt::ptree choice_struct_tree{};
 		choice_struct_tree.put("value", choice.ranks);
 		choice_struct_tree.put("num-choices", choice.num_choices);
-		pt::ptree options_tree{};
+
+		// Sort the spell list categories by id to ensure consistent ordering in the output json
+		std::map<std::string, const SkillCategoryData*> sorted_spell_list_categories{};
 		for (const auto& spell_list_category : choice.spell_list_categories) {
+			sorted_spell_list_categories.emplace(spell_list_category->id(), spell_list_category);
+		}
+
+		pt::ptree options_tree{};
+		for(const auto& spell_list_category_pair : sorted_spell_list_categories) {
 			pt::ptree option_tree{};
-			option_tree.put("", spell_list_category->id());
+			option_tree.put("", spell_list_category_pair.second->id());
 			options_tree.push_back(std::make_pair("", option_tree));
 		}
 		if (options_tree.size()) choice_struct_tree.push_back(std::make_pair("options", options_tree));
