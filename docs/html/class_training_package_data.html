@@ -162,10 +162,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a14e4deb0bae2dd79779711e60a20f774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether a race can take the training package.  <br /></td></tr>
 <tr class="memitem:a23a8bd67d596ae20cae0445f84611fa1" id="r_a23a8bd67d596ae20cae0445f84611fa1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a23a8bd67d596ae20cae0445f84611fa1">addQualifier</a> (std::string_view qualifier, int reduction)</td></tr>
 <tr class="memdesc:a23a8bd67d596ae20cae0445f84611fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a qualifier that, if met, reduces the cost of the training package.  <br /></td></tr>
-<tr class="memitem:a61fe64ac93563d50df32c47f9e767409" id="r_a61fe64ac93563d50df32c47f9e767409"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61fe64ac93563d50df32c47f9e767409">setQualifiers</a> (std::map&lt; std::string, int &gt; <a class="el" href="#a78d16e0ae7a3263e2475f7181e975391">qualifiers</a>)</td></tr>
+<tr class="memitem:a61fe64ac93563d50df32c47f9e767409" id="r_a61fe64ac93563d50df32c47f9e767409"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61fe64ac93563d50df32c47f9e767409">setQualifiers</a> (std::map&lt; std::string, int &gt; <a class="el" href="#a2c76b8945210dbfb21b7b3e840a0f6f9">qualifiers</a>)</td></tr>
 <tr class="memdesc:a61fe64ac93563d50df32c47f9e767409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a collection of qualifiers that, if met, reduce the cost of the training package.  <br /></td></tr>
-<tr class="memitem:a78d16e0ae7a3263e2475f7181e975391" id="r_a78d16e0ae7a3263e2475f7181e975391"><td class="memItemLeft">const std::map&lt; std::string, int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a78d16e0ae7a3263e2475f7181e975391">qualifiers</a> () const</td></tr>
-<tr class="memdesc:a78d16e0ae7a3263e2475f7181e975391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a collection of qualifiers that, if met, reduce the cost of the training package.  <br /></td></tr>
+<tr class="memitem:a2c76b8945210dbfb21b7b3e840a0f6f9" id="r_a2c76b8945210dbfb21b7b3e840a0f6f9"><td class="memItemLeft">const std::map&lt; std::string, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2c76b8945210dbfb21b7b3e840a0f6f9">qualifiers</a> () const</td></tr>
+<tr class="memdesc:a2c76b8945210dbfb21b7b3e840a0f6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a collection of qualifiers that, if met, reduce the cost of the training package.  <br /></td></tr>
 <tr class="memitem:a037a2e62a7a1bad8f3b571daa82e5cf9" id="r_a037a2e62a7a1bad8f3b571daa82e5cf9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a037a2e62a7a1bad8f3b571daa82e5cf9">setLifestyle</a> (bool <a class="el" href="#a574ac4a6f61c278e690eb383ab03ee51">lifestyle</a>)</td></tr>
 <tr class="memdesc:a037a2e62a7a1bad8f3b571daa82e5cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the package is lifestyle based.  <br /></td></tr>
 <tr class="memitem:a574ac4a6f61c278e690eb383ab03ee51" id="r_a574ac4a6f61c278e690eb383ab03ee51"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a574ac4a6f61c278e690eb383ab03ee51">lifestyle</a> () const</td></tr>
@@ -176,28 +176,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0b5e0f6685ed9a0f359c4bef5bdb40d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of months to acquire the package.  <br /></td></tr>
 <tr class="memitem:ae3b4a9c7b36cae240887e84694b2bdf7" id="r_ae3b4a9c7b36cae240887e84694b2bdf7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae3b4a9c7b36cae240887e84694b2bdf7">setStaringMoneyModifierDice</a> (std::string_view max)</td></tr>
 <tr class="memdesc:ae3b4a9c7b36cae240887e84694b2bdf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The change in starting money for a character.  <br /></td></tr>
+<tr class="memitem:a5c933864ab42afee30ce62c77e7c9ac9" id="r_a5c933864ab42afee30ce62c77e7c9ac9"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5c933864ab42afee30ce62c77e7c9ac9">startingMoneyModifierDice</a> () const</td></tr>
+<tr class="memdesc:a5c933864ab42afee30ce62c77e7c9ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the change in starting money for a character if the package is taken during apprenticeship as a dice string.  <br /></td></tr>
 <tr class="memitem:a81a33022cded64e72cabe13258a76b19" id="r_a81a33022cded64e72cabe13258a76b19"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a81a33022cded64e72cabe13258a76b19">startingMoneyChange</a> () const</td></tr>
 <tr class="memdesc:a81a33022cded64e72cabe13258a76b19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the change in starting money if the package is taken during apprenticeship.  <br /></td></tr>
 <tr class="memitem:aa5cf3cb0ff62330b57e0a282713da29f" id="r_aa5cf3cb0ff62330b57e0a282713da29f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa5cf3cb0ff62330b57e0a282713da29f">addSpecial</a> (std::string_view special, int chance)</td></tr>
 <tr class="memdesc:aa5cf3cb0ff62330b57e0a282713da29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a special benefit or malus that may be gained by the package.  <br /></td></tr>
-<tr class="memitem:afbc8be15cdabc20f3fe6be6fdd8b1ccd" id="r_afbc8be15cdabc20f3fe6be6fdd8b1ccd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afbc8be15cdabc20f3fe6be6fdd8b1ccd">setSpecials</a> (std::vector&lt; std::pair&lt; std::string, int &gt; &gt; <a class="el" href="#acef45245618bfb122046ed80877122ee">specials</a>)</td></tr>
+<tr class="memitem:afbc8be15cdabc20f3fe6be6fdd8b1ccd" id="r_afbc8be15cdabc20f3fe6be6fdd8b1ccd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afbc8be15cdabc20f3fe6be6fdd8b1ccd">setSpecials</a> (std::vector&lt; std::pair&lt; std::string, int &gt; &gt; <a class="el" href="#a2cbce6f0a651e28e90c3cf017f8fc8b2">specials</a>)</td></tr>
 <tr class="memdesc:afbc8be15cdabc20f3fe6be6fdd8b1ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a collection of special benefits or maluses that may be gained by the package.  <br /></td></tr>
-<tr class="memitem:acef45245618bfb122046ed80877122ee" id="r_acef45245618bfb122046ed80877122ee"><td class="memItemLeft">std::vector&lt; std::pair&lt; std::string, int &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acef45245618bfb122046ed80877122ee">specials</a> () const</td></tr>
-<tr class="memdesc:acef45245618bfb122046ed80877122ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a collection of special benefits or maluses that may be gained by the package.  <br /></td></tr>
+<tr class="memitem:a2cbce6f0a651e28e90c3cf017f8fc8b2" id="r_a2cbce6f0a651e28e90c3cf017f8fc8b2"><td class="memItemLeft">const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2cbce6f0a651e28e90c3cf017f8fc8b2">specials</a> () const</td></tr>
+<tr class="memdesc:a2cbce6f0a651e28e90c3cf017f8fc8b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a collection of special benefits or maluses that may be gained by the package.  <br /></td></tr>
 <tr class="memitem:a49f7b570a75eb16d0399a57ba3dde6bd" id="r_a49f7b570a75eb16d0399a57ba3dde6bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a49f7b570a75eb16d0399a57ba3dde6bd">addStatGain</a> (<a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> stat)</td></tr>
 <tr class="memdesc:a49f7b570a75eb16d0399a57ba3dde6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a stat that receives a stat gain roll as part of the package.  <br /></td></tr>
 <tr class="memitem:a2858becd5b3cc83b9da9510683a30e57" id="r_a2858becd5b3cc83b9da9510683a30e57"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2858becd5b3cc83b9da9510683a30e57">setStatGains</a> (std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; stat_gains)</td></tr>
 <tr class="memdesc:a2858becd5b3cc83b9da9510683a30e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a collection of stats that receive a stat gain roll as part of the package.  <br /></td></tr>
-<tr class="memitem:a1275a27cbdfaf894337282d475f683c8" id="r_a1275a27cbdfaf894337282d475f683c8"><td class="memItemLeft">const std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1275a27cbdfaf894337282d475f683c8">statGains</a> () const</td></tr>
-<tr class="memdesc:a1275a27cbdfaf894337282d475f683c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of stats that receive a stat gain roll.  <br /></td></tr>
+<tr class="memitem:a036d27424d4630eaef86b66ef04031f7" id="r_a036d27424d4630eaef86b66ef04031f7"><td class="memItemLeft">const std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a036d27424d4630eaef86b66ef04031f7">statGains</a> () const</td></tr>
+<tr class="memdesc:a036d27424d4630eaef86b66ef04031f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set of stats that receive a stat gain roll.  <br /></td></tr>
 <tr class="memitem:a3c1aae34b18d64472f0de9ac0d0d67cd" id="r_a3c1aae34b18d64472f0de9ac0d0d67cd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3c1aae34b18d64472f0de9ac0d0d67cd">setRealmStatGain</a> (bool <a class="el" href="#aec114fbe633e6b270b5d00e5fa943d28">realmStatGain</a>)</td></tr>
 <tr class="memdesc:a3c1aae34b18d64472f0de9ac0d0d67cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the package provides a stat gain roll for realm stats.  <br /></td></tr>
 <tr class="memitem:aec114fbe633e6b270b5d00e5fa943d28" id="r_aec114fbe633e6b270b5d00e5fa943d28"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aec114fbe633e6b270b5d00e5fa943d28">realmStatGain</a> () const</td></tr>
 <tr class="memdesc:aec114fbe633e6b270b5d00e5fa943d28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the package provides a stat gain roll for realm stats.  <br /></td></tr>
-<tr class="memitem:ab40b236f894eea346aa9daed2c863723" id="r_ab40b236f894eea346aa9daed2c863723"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab40b236f894eea346aa9daed2c863723">setStatGainChoices</a> (int num_choices, std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; stats)</td></tr>
-<tr class="memdesc:ab40b236f894eea346aa9daed2c863723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the available stat gain choices for selection.  <br /></td></tr>
-<tr class="memitem:ae3076dae3e4b04caf5b655daab496e7c" id="r_ae3076dae3e4b04caf5b655daab496e7c"><td class="memItemLeft">const std::pair&lt; int, std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae3076dae3e4b04caf5b655daab496e7c">statGainChoices</a> () const</td></tr>
-<tr class="memdesc:ae3076dae3e4b04caf5b655daab496e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from.  <br /></td></tr>
+<tr class="memitem:a4a0976cadfe76bb661f611d62f87383a" id="r_a4a0976cadfe76bb661f611d62f87383a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4a0976cadfe76bb661f611d62f87383a">setStatGainChoices</a> (<a class="el" href="class_enum_choice.html">EnumChoice</a>&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; choices)</td></tr>
+<tr class="memdesc:a4a0976cadfe76bb661f611d62f87383a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from.  <br /></td></tr>
+<tr class="memitem:a16f574966f8fd9acf405a84bdddc2da7" id="r_a16f574966f8fd9acf405a84bdddc2da7"><td class="memItemLeft">const <a class="el" href="class_enum_choice.html">EnumChoice</a>&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a16f574966f8fd9acf405a84bdddc2da7">statGainChoices</a> () const</td></tr>
+<tr class="memdesc:a16f574966f8fd9acf405a84bdddc2da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from.  <br /></td></tr>
 <tr class="memitem:ab4f168e5f0c7233b451e79671368192f" id="r_ab4f168e5f0c7233b451e79671368192f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab4f168e5f0c7233b451e79671368192f">addSkillRank</a> (<a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> skill, int ranks)</td></tr>
 <tr class="memdesc:ab4f168e5f0c7233b451e79671368192f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of ranks for a skill the package provides.  <br /></td></tr>
 <tr class="memitem:a71737a0a1667c75bbe1b340a41953ef3" id="r_a71737a0a1667c75bbe1b340a41953ef3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a71737a0a1667c75bbe1b340a41953ef3">setSkillRanks</a> (std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; skill_ranks)</td></tr>
@@ -210,52 +212,52 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1b4adc0b791a4618ae451ad6cd5806cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a container with the skills that the package provides.  <br /></td></tr>
 <tr class="memitem:ad174ba7ddcc84f49f95fd73bb9af6c54" id="r_ad174ba7ddcc84f49f95fd73bb9af6c54"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad174ba7ddcc84f49f95fd73bb9af6c54">isRankSkill</a> (const <a class="el" href="class_skill_data.html">SkillData</a> &amp;skill, std::optional&lt; std::string_view &gt; subcategory=std::nullopt) const</td></tr>
 <tr class="memdesc:ad174ba7ddcc84f49f95fd73bb9af6c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the package provides skill ranks for the skill.  <br /></td></tr>
-<tr class="memitem:af255e6b89f07dbb1adb92d74135e097d" id="r_af255e6b89f07dbb1adb92d74135e097d"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af255e6b89f07dbb1adb92d74135e097d">skillRanks</a> () const</td></tr>
-<tr class="memdesc:af255e6b89f07dbb1adb92d74135e097d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a collection of skills and ranks the package provides.  <br /></td></tr>
-<tr class="memitem:a3553a5401a5af467906e942abf739889" id="r_a3553a5401a5af467906e942abf739889"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3553a5401a5af467906e942abf739889">setSkillRankChoices</a> (std::set&lt; std::pair&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &gt; skill_rank_choices)</td></tr>
-<tr class="memdesc:a3553a5401a5af467906e942abf739889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the skill rank choices for this object.  <br /></td></tr>
-<tr class="memitem:a15718dc31391a1f19874c2340369701d" id="r_a15718dc31391a1f19874c2340369701d"><td class="memItemLeft">const std::set&lt; std::pair&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a15718dc31391a1f19874c2340369701d">skillRankChoices</a> () const</td></tr>
-<tr class="memdesc:a15718dc31391a1f19874c2340369701d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a collection of skills with ranks that the player can choose from to gain the skill ranks.  <br /></td></tr>
+<tr class="memitem:a02a6b72be8d211e254d1175cd073e362" id="r_a02a6b72be8d211e254d1175cd073e362"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a02a6b72be8d211e254d1175cd073e362">skillRanks</a> () const</td></tr>
+<tr class="memdesc:a02a6b72be8d211e254d1175cd073e362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a collection of skills and ranks the package provides.  <br /></td></tr>
+<tr class="memitem:a5ce33f3747eae76271e8eb739525faf1" id="r_a5ce33f3747eae76271e8eb739525faf1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ce33f3747eae76271e8eb739525faf1">setSkillRankChoices</a> (std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;, int &gt; skill_rank_choices)</td></tr>
+<tr class="memdesc:a5ce33f3747eae76271e8eb739525faf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the skill rank choices for this package.  <br /></td></tr>
+<tr class="memitem:a6625fc5d2c0aa259043eb8326de7154b" id="r_a6625fc5d2c0aa259043eb8326de7154b"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6625fc5d2c0aa259043eb8326de7154b">skillRankChoices</a> () const</td></tr>
+<tr class="memdesc:a6625fc5d2c0aa259043eb8326de7154b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the skill rank choices available for this training package.  <br /></td></tr>
 <tr class="memitem:aed485813b4f9119283722d26da10592e" id="r_aed485813b4f9119283722d26da10592e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aed485813b4f9119283722d26da10592e">setSkillCategoryRanks</a> (std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, int &gt; skill_category_ranks)</td></tr>
 <tr class="memdesc:aed485813b4f9119283722d26da10592e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the skill category ranks for this package.  <br /></td></tr>
-<tr class="memitem:ac37b691e955bda2dcda2a48f5c588f66" id="r_ac37b691e955bda2dcda2a48f5c588f66"><td class="memItemLeft">const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac37b691e955bda2dcda2a48f5c588f66">skillCategoryRanks</a> () const</td></tr>
-<tr class="memdesc:ac37b691e955bda2dcda2a48f5c588f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a collection of skill categories and ranks the package provides.  <br /></td></tr>
+<tr class="memitem:a36668a2414baa95e8131387ae768334c" id="r_a36668a2414baa95e8131387ae768334c"><td class="memItemLeft">const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a36668a2414baa95e8131387ae768334c">skillCategoryRanks</a> () const</td></tr>
+<tr class="memdesc:a36668a2414baa95e8131387ae768334c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a collection of skill categories and ranks the package provides.  <br /></td></tr>
 <tr class="memitem:aefd95d515e0dd4c9776b3154a4b86c05" id="r_aefd95d515e0dd4c9776b3154a4b86c05"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aefd95d515e0dd4c9776b3154a4b86c05">setSkillCategoryMultiSkillRankChoices</a> (std::set&lt; <a class="el" href="struct_category_multi_skill_rank_choice.html">CategoryMultiSkillRankChoice</a> &gt; skill_category_multi_skill_rank_choices)</td></tr>
 <tr class="memdesc:aefd95d515e0dd4c9776b3154a4b86c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the skill category from which the player can choose to gain the skill ranks, the number of skill ranks that can be gained, and the number of skills that can be chosen to gain the skill ranks.  <br /></td></tr>
-<tr class="memitem:ae56e800649ca0709558e2d5d74e37afa" id="r_ae56e800649ca0709558e2d5d74e37afa"><td class="memItemLeft">const std::set&lt; <a class="el" href="struct_category_multi_skill_rank_choice.html">CategoryMultiSkillRankChoice</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae56e800649ca0709558e2d5d74e37afa">skillCategoryMultiSkillRankChoices</a> ()</td></tr>
-<tr class="memdesc:ae56e800649ca0709558e2d5d74e37afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the skill category from which the player can choose to gain the skill ranks, the number of skill ranks that can be gained, and the number of skills that can be chosen to gain the skill ranks.  <br /></td></tr>
+<tr class="memitem:af3eb7dd49938ee4681355927f06efaa7" id="r_af3eb7dd49938ee4681355927f06efaa7"><td class="memItemLeft">const std::set&lt; <a class="el" href="struct_category_multi_skill_rank_choice.html">CategoryMultiSkillRankChoice</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af3eb7dd49938ee4681355927f06efaa7">skillCategoryMultiSkillRankChoices</a> ()</td></tr>
+<tr class="memdesc:af3eb7dd49938ee4681355927f06efaa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the skill category from which the player can choose to gain the skill ranks, the number of skill ranks that can be gained, and the number of skills that can be chosen to gain the skill ranks.  <br /></td></tr>
 <tr class="memitem:ae4725dfad208f8e239002e34245c4d37" id="r_ae4725dfad208f8e239002e34245c4d37"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae4725dfad208f8e239002e34245c4d37">setSkillGroupCategoryAndSkillRanks</a> (std::map&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> *, int &gt; skill_group_category_and_skill_ranks)</td></tr>
 <tr class="memdesc:ae4725dfad208f8e239002e34245c4d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the skill group category and skill ranks for this package.  <br /></td></tr>
-<tr class="memitem:a1c6fffa7ac22cabb4e66c73ec93a5f20" id="r_a1c6fffa7ac22cabb4e66c73ec93a5f20"><td class="memItemLeft">const std::map&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> *, int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1c6fffa7ac22cabb4e66c73ec93a5f20">skillGroupCategoryAndSkillRanks</a> () const</td></tr>
-<tr class="memdesc:a1c6fffa7ac22cabb4e66c73ec93a5f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the skill group category and skill ranks map.  <br /></td></tr>
+<tr class="memitem:aed01cae66c592f975199997913b547ea" id="r_aed01cae66c592f975199997913b547ea"><td class="memItemLeft">const std::map&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> *, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aed01cae66c592f975199997913b547ea">skillGroupCategoryAndSkillRanks</a> () const</td></tr>
+<tr class="memdesc:aed01cae66c592f975199997913b547ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the skill group category and skill ranks map.  <br /></td></tr>
 <tr class="memitem:a3fe0f0d210958af31f8a1abfd3d25dcb" id="r_a3fe0f0d210958af31f8a1abfd3d25dcb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3fe0f0d210958af31f8a1abfd3d25dcb">setSpellListChoices</a> (std::set&lt; <a class="el" href="struct_spell_list_choices.html">SpellListChoices</a> &gt; spell_list_choices)</td></tr>
 <tr class="memdesc:a3fe0f0d210958af31f8a1abfd3d25dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the spell list choices for this package.  <br /></td></tr>
-<tr class="memitem:ae7d0588c8596cf62accbcd0c5ded1972" id="r_ae7d0588c8596cf62accbcd0c5ded1972"><td class="memItemLeft">const std::set&lt; <a class="el" href="struct_spell_list_choices.html">SpellListChoices</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae7d0588c8596cf62accbcd0c5ded1972">spellListChoices</a> () const</td></tr>
-<tr class="memdesc:ae7d0588c8596cf62accbcd0c5ded1972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spell list choices for this package.  <br /></td></tr>
+<tr class="memitem:aa468407cb6bf0d920643f011effcfb7a" id="r_aa468407cb6bf0d920643f011effcfb7a"><td class="memItemLeft">const std::set&lt; <a class="el" href="struct_spell_list_choices.html">SpellListChoices</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa468407cb6bf0d920643f011effcfb7a">spellListChoices</a> () const</td></tr>
+<tr class="memdesc:aa468407cb6bf0d920643f011effcfb7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spell list choices for this package.  <br /></td></tr>
 <tr class="memitem:a3081e391d095cceaf1f4b9325be97c48" id="r_a3081e391d095cceaf1f4b9325be97c48"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3081e391d095cceaf1f4b9325be97c48">setSpellListCategoryChoices</a> (std::set&lt; <a class="el" href="struct_spell_list_category_choices.html">SpellListCategoryChoices</a> &gt; spell_list_category_choices)</td></tr>
 <tr class="memdesc:a3081e391d095cceaf1f4b9325be97c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the spell list category choices for this package.  <br /></td></tr>
-<tr class="memitem:a0ecb807cfafa7488017ed75a5eaea34e" id="r_a0ecb807cfafa7488017ed75a5eaea34e"><td class="memItemLeft">const std::set&lt; <a class="el" href="struct_spell_list_category_choices.html">SpellListCategoryChoices</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0ecb807cfafa7488017ed75a5eaea34e">spellListCategoryChoices</a> () const</td></tr>
-<tr class="memdesc:a0ecb807cfafa7488017ed75a5eaea34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spell list category choices for this package.  <br /></td></tr>
+<tr class="memitem:aa6f651cc48b68906b8990df7abb47159" id="r_aa6f651cc48b68906b8990df7abb47159"><td class="memItemLeft">const std::set&lt; <a class="el" href="struct_spell_list_category_choices.html">SpellListCategoryChoices</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa6f651cc48b68906b8990df7abb47159">spellListCategoryChoices</a> () const</td></tr>
+<tr class="memdesc:aa6f651cc48b68906b8990df7abb47159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spell list category choices for this package.  <br /></td></tr>
 <tr class="memitem:ab8c6aacc313c55f013bec6d69f85392d" id="r_ab8c6aacc313c55f013bec6d69f85392d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab8c6aacc313c55f013bec6d69f85392d">setLifestyleSkills</a> (std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; lifestyle_skills)</td></tr>
 <tr class="memdesc:ab8c6aacc313c55f013bec6d69f85392d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lifestyle skills for this package.  <br /></td></tr>
-<tr class="memitem:a8bbfd2671a0cfdb06286095b8ebd09f4" id="r_a8bbfd2671a0cfdb06286095b8ebd09f4"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8bbfd2671a0cfdb06286095b8ebd09f4">lifestyleSkills</a> () const</td></tr>
-<tr class="memdesc:a8bbfd2671a0cfdb06286095b8ebd09f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the lifestyle skills for this package.  <br /></td></tr>
+<tr class="memitem:a461856c9a8bc19f5f6b97a2de095b2b9" id="r_a461856c9a8bc19f5f6b97a2de095b2b9"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a461856c9a8bc19f5f6b97a2de095b2b9">lifestyleSkills</a> () const</td></tr>
+<tr class="memdesc:a461856c9a8bc19f5f6b97a2de095b2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the lifestyle skills for this package.  <br /></td></tr>
 <tr class="memitem:a52354d8d29fa5ec3ad2dc4375910d37c" id="r_a52354d8d29fa5ec3ad2dc4375910d37c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a52354d8d29fa5ec3ad2dc4375910d37c">setLifestyleSkillCategories</a> (std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; lifestyle_skill_categories)</td></tr>
 <tr class="memdesc:a52354d8d29fa5ec3ad2dc4375910d37c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lifestyle skill categories for this package.  <br /></td></tr>
-<tr class="memitem:ab4fcc4cb35e44e351df2084ff6d52193" id="r_ab4fcc4cb35e44e351df2084ff6d52193"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab4fcc4cb35e44e351df2084ff6d52193">lifestyleSkillCategories</a> () const</td></tr>
-<tr class="memdesc:ab4fcc4cb35e44e351df2084ff6d52193"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the lifestyle skill categories for this package.  <br /></td></tr>
+<tr class="memitem:a5ece820aa930271509fe5d29713fbfbe" id="r_a5ece820aa930271509fe5d29713fbfbe"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5ece820aa930271509fe5d29713fbfbe">lifestyleSkillCategories</a> () const</td></tr>
+<tr class="memdesc:a5ece820aa930271509fe5d29713fbfbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the lifestyle skill categories for this package.  <br /></td></tr>
 <tr class="memitem:a500c0de64e3727df77501cc4fb7e0781" id="r_a500c0de64e3727df77501cc4fb7e0781"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a500c0de64e3727df77501cc4fb7e0781">setLifestyleSkillGroups</a> (std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt; lifestyle_skill_groups)</td></tr>
 <tr class="memdesc:a500c0de64e3727df77501cc4fb7e0781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lifestyle skill groups for this package.  <br /></td></tr>
-<tr class="memitem:a6f9d77ea0ae108bad477d8fbb553f050" id="r_a6f9d77ea0ae108bad477d8fbb553f050"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6f9d77ea0ae108bad477d8fbb553f050">lifestyleSkillGroups</a> () const</td></tr>
-<tr class="memdesc:a6f9d77ea0ae108bad477d8fbb553f050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the lifestyle skill groups for this package.  <br /></td></tr>
+<tr class="memitem:af87f50d2f5291c67220917473dfd6763" id="r_af87f50d2f5291c67220917473dfd6763"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af87f50d2f5291c67220917473dfd6763">lifestyleSkillGroups</a> () const</td></tr>
+<tr class="memdesc:af87f50d2f5291c67220917473dfd6763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the lifestyle skill groups for this package.  <br /></td></tr>
 <tr class="memitem:aab57ee66896a9e3f36ae062f8d6a0714" id="r_aab57ee66896a9e3f36ae062f8d6a0714"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aab57ee66896a9e3f36ae062f8d6a0714">setLifestyleSkillCategoryMultiSkillRankChoices</a> (std::set&lt; std::pair&lt; std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;, int &gt; &gt; lifestyle_skill_category_multi_skill_rank_choices)</td></tr>
 <tr class="memdesc:aab57ee66896a9e3f36ae062f8d6a0714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lifestyle skill category multi skill rank choices for this package.  <br /></td></tr>
-<tr class="memitem:a1050755bdc9548659074db8dc3764925" id="r_a1050755bdc9548659074db8dc3764925"><td class="memItemLeft">const std::set&lt; std::pair&lt; std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;, int &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1050755bdc9548659074db8dc3764925">lifestyleSkill</a> () const</td></tr>
-<tr class="memdesc:a1050755bdc9548659074db8dc3764925"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the lifestyle skill category multi skill rank choices for this package.  <br /></td></tr>
+<tr class="memitem:ac03c279695328439c4e44e3f1a1a18f9" id="r_ac03c279695328439c4e44e3f1a1a18f9"><td class="memItemLeft">const std::set&lt; std::pair&lt; std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;, int &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac03c279695328439c4e44e3f1a1a18f9">lifestyleSkill</a> () const</td></tr>
+<tr class="memdesc:ac03c279695328439c4e44e3f1a1a18f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the lifestyle skill category multi skill rank choices for this package.  <br /></td></tr>
 <tr class="memitem:a13fe02d70014afe358dd17055fe584b4" id="r_a13fe02d70014afe358dd17055fe584b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a13fe02d70014afe358dd17055fe584b4">setLanguageChoices</a> (std::set&lt; <a class="el" href="struct_language_choices.html">LanguageChoices</a> &gt; language_choices)</td></tr>
 <tr class="memdesc:a13fe02d70014afe358dd17055fe584b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the language choices.  <br /></td></tr>
-<tr class="memitem:ade7cc14acabb00e7e9829d54ced55cb2" id="r_ade7cc14acabb00e7e9829d54ced55cb2"><td class="memItemLeft">const std::set&lt; <a class="el" href="struct_language_choices.html">LanguageChoices</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ade7cc14acabb00e7e9829d54ced55cb2">languageChoices</a> () const</td></tr>
-<tr class="memdesc:ade7cc14acabb00e7e9829d54ced55cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the language choices.  <br /></td></tr>
+<tr class="memitem:a23d401c19ba5640d36d27c6fe3f645eb" id="r_a23d401c19ba5640d36d27c6fe3f645eb"><td class="memItemLeft">const std::set&lt; <a class="el" href="struct_language_choices.html">LanguageChoices</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a23d401c19ba5640d36d27c6fe3f645eb">languageChoices</a> () const</td></tr>
+<tr class="memdesc:a23d401c19ba5640d36d27c6fe3f645eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the language choices.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
 <tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
@@ -692,8 +694,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ade7cc14acabb00e7e9829d54ced55cb2" name="ade7cc14acabb00e7e9829d54ced55cb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade7cc14acabb00e7e9829d54ced55cb2">&#9670;&#160;</a></span>languageChoices()</h2>
+<a id="a23d401c19ba5640d36d27c6fe3f645eb" name="a23d401c19ba5640d36d27c6fe3f645eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d401c19ba5640d36d27c6fe3f645eb">&#9670;&#160;</a></span>languageChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -702,7 +704,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; <a class="el" href="struct_language_choices.html">LanguageChoices</a> &gt; TrainingPackageData::languageChoices </td>
+          <td class="memname">const std::set&lt; <a class="el" href="struct_language_choices.html">LanguageChoices</a> &gt; &amp; TrainingPackageData::languageChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -750,8 +752,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1050755bdc9548659074db8dc3764925" name="a1050755bdc9548659074db8dc3764925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1050755bdc9548659074db8dc3764925">&#9670;&#160;</a></span>lifestyleSkill()</h2>
+<a id="ac03c279695328439c4e44e3f1a1a18f9" name="ac03c279695328439c4e44e3f1a1a18f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac03c279695328439c4e44e3f1a1a18f9">&#9670;&#160;</a></span>lifestyleSkill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -760,7 +762,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; std::pair&lt; std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;, int &gt; &gt; TrainingPackageData::lifestyleSkill </td>
+          <td class="memname">const std::set&lt; std::pair&lt; std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;, int &gt; &gt; &amp; TrainingPackageData::lifestyleSkill </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -778,8 +780,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab4fcc4cb35e44e351df2084ff6d52193" name="ab4fcc4cb35e44e351df2084ff6d52193"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4fcc4cb35e44e351df2084ff6d52193">&#9670;&#160;</a></span>lifestyleSkillCategories()</h2>
+<a id="a5ece820aa930271509fe5d29713fbfbe" name="a5ece820aa930271509fe5d29713fbfbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ece820aa930271509fe5d29713fbfbe">&#9670;&#160;</a></span>lifestyleSkillCategories()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -788,7 +790,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; TrainingPackageData::lifestyleSkillCategories </td>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; &amp; TrainingPackageData::lifestyleSkillCategories </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -806,8 +808,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f9d77ea0ae108bad477d8fbb553f050" name="a6f9d77ea0ae108bad477d8fbb553f050"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f9d77ea0ae108bad477d8fbb553f050">&#9670;&#160;</a></span>lifestyleSkillGroups()</h2>
+<a id="af87f50d2f5291c67220917473dfd6763" name="af87f50d2f5291c67220917473dfd6763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af87f50d2f5291c67220917473dfd6763">&#9670;&#160;</a></span>lifestyleSkillGroups()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -816,7 +818,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt; TrainingPackageData::lifestyleSkillGroups </td>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> * &gt; &amp; TrainingPackageData::lifestyleSkillGroups </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -834,8 +836,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a8bbfd2671a0cfdb06286095b8ebd09f4" name="a8bbfd2671a0cfdb06286095b8ebd09f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bbfd2671a0cfdb06286095b8ebd09f4">&#9670;&#160;</a></span>lifestyleSkills()</h2>
+<a id="a461856c9a8bc19f5f6b97a2de095b2b9" name="a461856c9a8bc19f5f6b97a2de095b2b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a461856c9a8bc19f5f6b97a2de095b2b9">&#9670;&#160;</a></span>lifestyleSkills()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -844,7 +846,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; TrainingPackageData::lifestyleSkills </td>
+          <td class="memname">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; &amp; TrainingPackageData::lifestyleSkills </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -918,8 +920,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a78d16e0ae7a3263e2475f7181e975391" name="a78d16e0ae7a3263e2475f7181e975391"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78d16e0ae7a3263e2475f7181e975391">&#9670;&#160;</a></span>qualifiers()</h2>
+<a id="a2c76b8945210dbfb21b7b3e840a0f6f9" name="a2c76b8945210dbfb21b7b3e840a0f6f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c76b8945210dbfb21b7b3e840a0f6f9">&#9670;&#160;</a></span>qualifiers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -928,7 +930,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::map&lt; std::string, int &gt; TrainingPackageData::qualifiers </td>
+          <td class="memname">const std::map&lt; std::string, int &gt; &amp; TrainingPackageData::qualifiers </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1570,8 +1572,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a3553a5401a5af467906e942abf739889" name="a3553a5401a5af467906e942abf739889"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3553a5401a5af467906e942abf739889">&#9670;&#160;</a></span>setSkillRankChoices()</h2>
+<a id="a5ce33f3747eae76271e8eb739525faf1" name="a5ce33f3747eae76271e8eb739525faf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce33f3747eae76271e8eb739525faf1">&#9670;&#160;</a></span>setSkillRankChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1582,7 +1584,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void TrainingPackageData::setSkillRankChoices </td>
           <td>(</td>
-          <td class="paramtype">std::set&lt; std::pair&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>skill_rank_choices</em></span></td><td>)</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;, int &gt;</td>          <td class="paramname"><span class="paramname"><em>skill_rank_choices</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1593,10 +1595,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the skill rank choices for this object. </p>
+<p>Set the skill rank choices for this package. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">skill_rank_choices</td><td>A set of pairs containing skill data and their corresponding rank values to be assigned. </td></tr>
+    <tr><td class="paramname">skill_rank_choices</td><td>A set of <a class="el" href="class_game_rule_data_choice.html" title="Class representing a choice that a player has available from a set of GameRuleData objects.">GameRuleDataChoice&lt;SubcategoriedSkillData&gt;</a> representing the skill rank choices available in the package. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1774,8 +1776,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab40b236f894eea346aa9daed2c863723" name="ab40b236f894eea346aa9daed2c863723"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab40b236f894eea346aa9daed2c863723">&#9670;&#160;</a></span>setStatGainChoices()</h2>
+<a id="a4a0976cadfe76bb661f611d62f87383a" name="a4a0976cadfe76bb661f611d62f87383a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0976cadfe76bb661f611d62f87383a">&#9670;&#160;</a></span>setStatGainChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1786,12 +1788,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void TrainingPackageData::setStatGainChoices </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_choices</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="class_enum_choice.html">EnumChoice</a>&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>choices</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>stats</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1801,11 +1799,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the available stat gain choices for selection. </p>
+<p>Set the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">num_choices</td><td>The number of stats that can be selected. </td></tr>
-    <tr><td class="paramname">stats</td><td>A set of stat types that are available for selection. </td></tr>
+    <tr><td class="paramname">choices</td><td>Pair of number of stats that may be chosen to receive a stat gain roll and set of <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd" title="Enumeration class representing the type of base stats of a character.">StatType::Type</a> stats to choose from </td></tr>
   </table>
   </dd>
 </dl>
@@ -1880,8 +1877,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae56e800649ca0709558e2d5d74e37afa" name="ae56e800649ca0709558e2d5d74e37afa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae56e800649ca0709558e2d5d74e37afa">&#9670;&#160;</a></span>skillCategoryMultiSkillRankChoices()</h2>
+<a id="af3eb7dd49938ee4681355927f06efaa7" name="af3eb7dd49938ee4681355927f06efaa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3eb7dd49938ee4681355927f06efaa7">&#9670;&#160;</a></span>skillCategoryMultiSkillRankChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1890,7 +1887,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; <a class="el" href="struct_category_multi_skill_rank_choice.html">CategoryMultiSkillRankChoice</a> &gt; TrainingPackageData::skillCategoryMultiSkillRankChoices </td>
+          <td class="memname">const std::set&lt; <a class="el" href="struct_category_multi_skill_rank_choice.html">CategoryMultiSkillRankChoice</a> &gt; &amp; TrainingPackageData::skillCategoryMultiSkillRankChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1908,8 +1905,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac37b691e955bda2dcda2a48f5c588f66" name="ac37b691e955bda2dcda2a48f5c588f66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac37b691e955bda2dcda2a48f5c588f66">&#9670;&#160;</a></span>skillCategoryRanks()</h2>
+<a id="a36668a2414baa95e8131387ae768334c" name="a36668a2414baa95e8131387ae768334c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36668a2414baa95e8131387ae768334c">&#9670;&#160;</a></span>skillCategoryRanks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1918,7 +1915,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, int &gt; TrainingPackageData::skillCategoryRanks </td>
+          <td class="memname">const std::map&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> *, int &gt; &amp; TrainingPackageData::skillCategoryRanks </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1936,8 +1933,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c6fffa7ac22cabb4e66c73ec93a5f20" name="a1c6fffa7ac22cabb4e66c73ec93a5f20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c6fffa7ac22cabb4e66c73ec93a5f20">&#9670;&#160;</a></span>skillGroupCategoryAndSkillRanks()</h2>
+<a id="aed01cae66c592f975199997913b547ea" name="aed01cae66c592f975199997913b547ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed01cae66c592f975199997913b547ea">&#9670;&#160;</a></span>skillGroupCategoryAndSkillRanks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1946,7 +1943,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::map&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> *, int &gt; TrainingPackageData::skillGroupCategoryAndSkillRanks </td>
+          <td class="memname">const std::map&lt; const <a class="el" href="class_skill_group_data.html">SkillGroupData</a> *, int &gt; &amp; TrainingPackageData::skillGroupCategoryAndSkillRanks </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2038,8 +2035,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a15718dc31391a1f19874c2340369701d" name="a15718dc31391a1f19874c2340369701d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15718dc31391a1f19874c2340369701d">&#9670;&#160;</a></span>skillRankChoices()</h2>
+<a id="a6625fc5d2c0aa259043eb8326de7154b" name="a6625fc5d2c0aa259043eb8326de7154b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6625fc5d2c0aa259043eb8326de7154b">&#9670;&#160;</a></span>skillRankChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2048,7 +2045,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; std::pair&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &gt; TrainingPackageData::skillRankChoices </td>
+          <td class="memname">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;, int &gt; &amp; TrainingPackageData::skillRankChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2061,13 +2058,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get a collection of skills with ranks that the player can choose from to gain the skill ranks. </p>
-<dl class="section return"><dt>Returns</dt><dd>Set of pairs of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> and associated number of ranks </dd></dl>
+<p>Gets the skill rank choices available for this training package. </p>
+<dl class="section return"><dt>Returns</dt><dd>A set of skill rank choices, where each choice contains subcategorized skill data. </dd></dl>
 
 </div>
 </div>
-<a id="af255e6b89f07dbb1adb92d74135e097d" name="af255e6b89f07dbb1adb92d74135e097d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af255e6b89f07dbb1adb92d74135e097d">&#9670;&#160;</a></span>skillRanks()</h2>
+<a id="a02a6b72be8d211e254d1175cd073e362" name="a02a6b72be8d211e254d1175cd073e362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a6b72be8d211e254d1175cd073e362">&#9670;&#160;</a></span>skillRanks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2076,7 +2073,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; TrainingPackageData::skillRanks </td>
+          <td class="memname">const std::map&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>, int &gt; &amp; TrainingPackageData::skillRanks </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2122,8 +2119,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="acef45245618bfb122046ed80877122ee" name="acef45245618bfb122046ed80877122ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acef45245618bfb122046ed80877122ee">&#9670;&#160;</a></span>specials()</h2>
+<a id="a2cbce6f0a651e28e90c3cf017f8fc8b2" name="a2cbce6f0a651e28e90c3cf017f8fc8b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cbce6f0a651e28e90c3cf017f8fc8b2">&#9670;&#160;</a></span>specials()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2132,7 +2129,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::pair&lt; std::string, int &gt; &gt; TrainingPackageData::specials </td>
+          <td class="memname">const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp; TrainingPackageData::specials </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2151,8 +2148,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0ecb807cfafa7488017ed75a5eaea34e" name="a0ecb807cfafa7488017ed75a5eaea34e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ecb807cfafa7488017ed75a5eaea34e">&#9670;&#160;</a></span>spellListCategoryChoices()</h2>
+<a id="aa6f651cc48b68906b8990df7abb47159" name="aa6f651cc48b68906b8990df7abb47159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6f651cc48b68906b8990df7abb47159">&#9670;&#160;</a></span>spellListCategoryChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2161,7 +2158,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; <a class="el" href="struct_spell_list_category_choices.html">SpellListCategoryChoices</a> &gt; TrainingPackageData::spellListCategoryChoices </td>
+          <td class="memname">const std::set&lt; <a class="el" href="struct_spell_list_category_choices.html">SpellListCategoryChoices</a> &gt; &amp; TrainingPackageData::spellListCategoryChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2179,8 +2176,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae7d0588c8596cf62accbcd0c5ded1972" name="ae7d0588c8596cf62accbcd0c5ded1972"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7d0588c8596cf62accbcd0c5ded1972">&#9670;&#160;</a></span>spellListChoices()</h2>
+<a id="aa468407cb6bf0d920643f011effcfb7a" name="aa468407cb6bf0d920643f011effcfb7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa468407cb6bf0d920643f011effcfb7a">&#9670;&#160;</a></span>spellListChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2189,7 +2186,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; <a class="el" href="struct_spell_list_choices.html">SpellListChoices</a> &gt; TrainingPackageData::spellListChoices </td>
+          <td class="memname">const std::set&lt; <a class="el" href="struct_spell_list_choices.html">SpellListChoices</a> &gt; &amp; TrainingPackageData::spellListChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2235,8 +2232,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae3076dae3e4b04caf5b655daab496e7c" name="ae3076dae3e4b04caf5b655daab496e7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3076dae3e4b04caf5b655daab496e7c">&#9670;&#160;</a></span>statGainChoices()</h2>
+<a id="a5c933864ab42afee30ce62c77e7c9ac9" name="a5c933864ab42afee30ce62c77e7c9ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c933864ab42afee30ce62c77e7c9ac9">&#9670;&#160;</a></span>startingMoneyModifierDice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2245,7 +2242,40 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::pair&lt; int, std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; &gt; TrainingPackageData::statGainChoices </td>
+          <td class="memname">const std::string &amp; TrainingPackageData::startingMoneyModifierDice </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the change in starting money for a character if the package is taken during apprenticeship as a dice string. </p>
+<p>The actual ammount is based on a random roll with this value setting the maximum or minimum change. The value returned is based on an open-ended high dice roll with open ended rolls being generated if the roll result is the maximum/minimum value.</p>
+<p>Examples:</p><ul>
+<li>A value of 10 will return a number between 1 and 10, open-ended on 10 which may increase the number</li>
+<li>A value of -8 will return a number between -1 and -8, open-ended on 8, which may reduce the number</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_dice.html" title="Represents a single die object.">Dice</a> string representing the change in starting money for a character if the package is taken during apprenticeship </dd></dl>
+
+</div>
+</div>
+<a id="a16f574966f8fd9acf405a84bdddc2da7" name="a16f574966f8fd9acf405a84bdddc2da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f574966f8fd9acf405a84bdddc2da7">&#9670;&#160;</a></span>statGainChoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_enum_choice.html">EnumChoice</a>&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; TrainingPackageData::statGainChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2263,8 +2293,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1275a27cbdfaf894337282d475f683c8" name="a1275a27cbdfaf894337282d475f683c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1275a27cbdfaf894337282d475f683c8">&#9670;&#160;</a></span>statGains()</h2>
+<a id="a036d27424d4630eaef86b66ef04031f7" name="a036d27424d4630eaef86b66ef04031f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036d27424d4630eaef86b66ef04031f7">&#9670;&#160;</a></span>statGains()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2273,7 +2303,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; TrainingPackageData::statGains </td>
+          <td class="memname">const std::set&lt; <a class="el" href="namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fd">StatType::Type</a> &gt; &amp; TrainingPackageData::statGains </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

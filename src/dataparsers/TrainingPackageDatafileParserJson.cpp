@@ -1,3 +1,4 @@
+#include <EnumChoice.h>
 #include <TrainingPackageDatafileParserJson.h>
 
 void TrainingPackageDatafileParserJson::parse() {
@@ -78,6 +79,10 @@ void TrainingPackageDatafileParserJson::parse() {
 		boost::optional<const pt::ptree&> skill_ranks_tree = v.second.get_child_optional("skill-ranks");
 		if (skill_ranks_tree) { ref.setSkillRanks(parseSkillPairTree<int>(skill_ranks_tree)); }
 
+		// Skill rank choices
+		boost::optional<const pt::ptree&> skill_rank_choices_tree = v.second.get_child_optional("skill-rank-choices");
+		//if (skill_rank_choices_tree) { ref.setSkillRankChoices(parseSkillChoiceSetTree(skill_rank_choices_tree)); }
+
 		std::cout << "\tTrainingPackage name: " << ref.name() << std::endl;
 	}
 
@@ -146,6 +151,12 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 	{
 		pt::ptree tree{ getSkillPairTree<int>(game_data.skillRanks()) };
 		if (tree.size()) datum.push_back(std::make_pair("skill-ranks", tree));
+	}
+
+	// Skill rank choices
+	{
+		//pt::ptree tree{ getSkillChoiceSetTree(game_data.skillRankChoices()) };
+		//if (tree.size()) datum.push_back(std::make_pair("skill-rank-choices", tree));
 	}
 }
 
@@ -219,7 +230,7 @@ const pt::ptree TrainingPackageDatafileParserJson::getStatGainChoicesTree(Traini
 	choice_tree.put("num-choices", stat_gain_choices.numChoices());
 	pt::ptree options_tree{};
 	std::map<std::string, StatType::Type> sorted_options{};
-	for (const StatType::Type option : stat_gain_choices.options()) {
+	for (const StatType::Type option : stat_gain_choices.options<StatType::Type>()) {
 		sorted_options.emplace(toString(option), option);
 	}
 	for (const auto& option_pair : sorted_options) {

@@ -530,6 +530,19 @@
                     "id": "SKILL_USING_REMOVING_POISON",
                     "value": "1"
                 }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_PREPARE_HERBS"
+                        },
+                        {
+                            "id": "SKILL_PREPARE_POISONS"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -602,6 +615,19 @@
                     "id": "SKILL_USING_REMOVING_POISON",
                     "value": "3"
                 }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_SPINNING"
+                        },
+                        {
+                            "id": "SKILL_WEAVING"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -669,6 +695,21 @@
                     "id": "SKILL_REGION_LORE",
                     "subcategory": "Sepcific region",
                     "value": "1"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_CULTURE_LORE_Culture 1",
+                            "subcategory": "Culture 1"
+                        },
+                        {
+                            "id": "SKILL_CULTURE_LORE_Culture 2",
+                            "subcategory": "Culture 2"
+                        }
+                    ]
                 }
             ]
         },
@@ -1038,6 +1079,19 @@
                     "id": "SKILL_STALKING",
                     "value": "1"
                 }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_ANIMAL_MASTERY"
+                        },
+                        {
+                            "id": "SKILL_ANIMAL_TRAINING"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -1222,6 +1276,19 @@
                 {
                     "id": "SKILL_TRACKING",
                     "value": "2"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_HIDING"
+                        },
+                        {
+                            "id": "SKILL_STALKING"
+                        }
+                    ]
                 }
             ]
         },
@@ -1842,6 +1909,19 @@
                     "subcategory": "Own religion",
                     "value": "3"
                 }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_SINGING"
+                        },
+                        {
+                            "id": "SKILL_TALE_TELLING"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -2217,6 +2297,19 @@
                 {
                     "id": "SKILL_BASIC_MATH",
                     "value": "1"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_PUBLIC_SPEAKING"
+                        },
+                        {
+                            "id": "SKILL_SEDUCTION"
+                        }
+                    ]
                 }
             ]
         },
@@ -3696,6 +3789,19 @@
                     "id": "SKILL_LIE_PERCEPTION",
                     "value": "1"
                 }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_POETIC_IMPROVISATION"
+                        },
+                        {
+                            "id": "SKILL_TALE_TELLING"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -3986,6 +4092,19 @@
                 {
                     "id": "SKILL_RESEARCH",
                     "value": "1"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_ATTUNEMENT"
+                        },
+                        {
+                            "id": "SKILL_READ_RUNES"
+                        }
+                    ]
                 }
             ]
         },
@@ -4368,6 +4487,19 @@
                 {
                     "id": "SKILL_WEATHER_WATCHING",
                     "value": "2"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_PHILOSOPHY"
+                        },
+                        {
+                            "id": "SKILL_RELIGION"
+                        }
+                    ]
                 }
             ]
         },
@@ -5379,6 +5511,30 @@
                 {
                     "id": "SKILL_SAILING",
                     "value": "3"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_STAR_GAZING"
+                        },
+                        {
+                            "id": "SKILL_WEATHER_WATCHING"
+                        }
+                    ]
+                },
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_ROWING"
+                        },
+                        {
+                            "id": "SKILL_SWIMMING"
+                        }
+                    ]
                 }
             ]
         },
@@ -6404,6 +6560,19 @@
                     "id": "SKILL_UNDEAD_LORE",
                     "value": "2"
                 }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_CULTURE_LORE"
+                        },
+                        {
+                            "id": "SKILL_HISTORY"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -6592,6 +6761,30 @@
                 {
                     "id": "SKILL_DIVINATION",
                     "value": "3"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_DIVINATION_LORE"
+                        },
+                        {
+                            "id": "SKILL_DREAM_LORE"
+                        }
+                    ]
+                },
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_POETIC_IMPROVISATION"
+                        },
+                        {
+                            "id": "SKILL_TALE_TELLING"
+                        }
+                    ]
                 }
             ]
         },
@@ -6995,6 +7188,19 @@
                     "id": "SKILL_TRACKING",
                     "value": "1"
                 }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_HIDING"
+                        },
+                        {
+                            "id": "SKILL_STALKING"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -7058,6 +7264,19 @@
                 {
                     "id": "SKILL_TRICKERY",
                     "value": "1"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_HIDING"
+                        },
+                        {
+                            "id": "SKILL_STALKING"
+                        }
+                    ]
                 }
             ]
         },
@@ -7125,6 +7344,19 @@
                 {
                     "id": "SKILL_POISON_LORE",
                     "value": "1"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_PREPARE_HERBS"
+                        },
+                        {
+                            "id": "SKILL_PREPARE_POISONS"
+                        }
+                    ]
                 }
             ]
         },
@@ -7515,6 +7747,19 @@
             ],
             "stat-gains": [
                 "Memory"
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_CALLIGRAPHY"
+                        },
+                        {
+                            "id": "SKILL_SCRIBING"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -7570,6 +7815,19 @@
                 {
                     "id": "SKILL_SWIMMING",
                     "value": "2"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_STAR_GAZING"
+                        },
+                        {
+                            "id": "SKILL_WEATHER_WATCHING"
+                        }
+                    ]
                 }
             ]
         },
@@ -8016,6 +8274,21 @@
                     "id": "SKILL_STUNNED_MANOEUVREING",
                     "value": "1"
                 }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_CULTURE_LORE_Elf",
+                            "subcategory": "Elf"
+                        },
+                        {
+                            "id": "SKILL_CULTURE_LORE_Orc",
+                            "subcategory": "Orc"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -8141,6 +8414,34 @@
                 {
                     "id": "SKILL_MOUNTED_COMBAT",
                     "value": "2"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_CULTURE_LORE_Dwarf",
+                            "subcategory": "Dwarf"
+                        },
+                        {
+                            "id": "SKILL_CULTURE_LORE_Elf",
+                            "subcategory": "Elf"
+                        }
+                    ]
+                },
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_RIDING_Bat",
+                            "subcategory": "Bat"
+                        },
+                        {
+                            "id": "SKILL_RIDING_Wolf",
+                            "subcategory": "Wolf"
+                        }
+                    ]
                 }
             ]
         },
@@ -8451,6 +8752,19 @@
                 {
                     "id": "SKILL_TRACKING",
                     "value": "1"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_HIDING"
+                        },
+                        {
+                            "id": "SKILL_STALKING"
+                        }
+                    ]
                 }
             ]
         },

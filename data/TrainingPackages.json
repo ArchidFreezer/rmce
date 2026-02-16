@@ -1687,8 +1687,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "2",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_PUBLIC_SPEAKING"
             },
@@ -2025,8 +2026,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_STALKING"
             },
@@ -3483,8 +3485,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_HIDING"
             },
@@ -3671,8 +3674,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "2",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_HIDING"
             },
@@ -5288,8 +5292,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "2",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_CULTURE_LORE",
               "subcategory": "Culture 1"
@@ -6109,8 +6114,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "2",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_CULTURE_LORE"
             },
@@ -7641,8 +7647,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_CULTURE_LORE",
               "subcategory": "Elf"
@@ -7761,8 +7768,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "3",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_SPINNING"
             },
@@ -8334,8 +8342,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "2",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_ANIMAL_MASTERY"
             },
@@ -8469,8 +8478,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_HIDING"
             },
@@ -9163,8 +9173,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_SINGING"
             },
@@ -9460,26 +9471,14 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_STAR_GAZING"
             },
             {
               "id": "SKILL_WEATHER_WATCHING"
-            }
-          ]
-        },
-        {
-          "value": "xxx",
-          "skills": [
-            {
-              "id": "xxx",
-              "subcategory": "xxx"
-            },
-            {
-              "id": "xxx",
-              "subcategory": "xxx"
             }
           ]
         }
@@ -11453,32 +11452,6 @@
           "value": "1"
         }
       ],
-      "skill-rank-choices": [
-        {
-          "value": "xxx",
-          "skills": [
-            {
-              "id": "xxx"
-            },
-            {
-              "id": "xxx"
-            }
-          ]
-        },
-        {
-          "value": "xxx",
-          "skills": [
-            {
-              "id": "xxx",
-              "subcategory": "xxx"
-            },
-            {
-              "id": "xxx",
-              "subcategory": "xxx"
-            }
-          ]
-        }
-      ],
       "category-ranks": [
         {
           "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
@@ -11785,8 +11758,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_CULTURE_LORE",
               "subcategory": "Dwarf"
@@ -11798,8 +11772,9 @@
           ]
         },
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_RIDING",
               "subcategory": "Bat"
@@ -11922,8 +11897,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_PREPARE_HERBS"
             },
@@ -12650,8 +12626,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "3",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_ATTUNEMENT"
             },
@@ -13718,8 +13695,9 @@
       ],
       "skill-rank-choices": [
         {
-          "value": "xxx",
-          "skills": [
+          "num-choices": "1",
+          "value": "1",
+          "options": [
             {
               "id": "SKILL_PREPARE_HERBS"
             },
@@ -14093,8 +14071,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "2",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_TALE_TELLING"
             },
@@ -14104,8 +14083,9 @@
           ]
         },
         {
+          "num-choices": "1",
           "value": "2",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_DREAM_LORE"
             },
@@ -14630,8 +14610,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "2",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_PHILOSOPHY"
             },
@@ -15407,8 +15388,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "2",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_SCRIBING"
             },
@@ -15583,8 +15565,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "2",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_SWIMMING"
             },
@@ -15594,8 +15577,9 @@
           ]
         },
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_STAR_GAZING"
             },
@@ -16086,8 +16070,9 @@
       ],
       "skill-rank-choices": [
         {
+          "num-choices": "1",
           "value": "1",
-          "skills": [
+          "options": [
             {
               "id": "SKILL_TALE_TELLING"
             },

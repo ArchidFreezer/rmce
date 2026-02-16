@@ -41,6 +41,7 @@ var annotated_dup =
     [ "DatafileParserJson", "class_datafile_parser_json.html", "class_datafile_parser_json" ],
     [ "DatafileParserXml", "class_datafile_parser_xml.html", "class_datafile_parser_xml" ],
     [ "Dice", "class_dice.html", "class_dice" ],
+    [ "EnumChoice", "class_enum_choice.html", "class_enum_choice" ],
     [ "FilenameNotSetException", "class_filename_not_set_exception.html", "class_filename_not_set_exception" ],
     [ "GameRuleData", "class_game_rule_data.html", "class_game_rule_data" ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", "class_game_rule_data_cache" ],

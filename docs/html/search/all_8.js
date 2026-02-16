@@ -17,7 +17,7 @@ var searchData=
   ['iseverymanskillcategory_14',['isEverymanSkillCategory',['../class_race_data.html#a410867af73cdd882a41dc051f4c7e155',1,'RaceData']]],
   ['isevil_15',['isEvil',['../class_spell_list_data.html#a72dae77ba546a4ca97d66c7c67925908',1,'SpellListData']]],
   ['ismagical_16',['isMagical',['../namespace_realm_type.html#a925eae689753e8add14afd4f39fddb39',1,'RealmType::isMagical()'],['../namespace_resistance_type.html#aaa069bb0e3bc6ff69023c291bd451844',1,'ResistanceType::isMagical()']]],
-  ['isoption_17',['isOption',['../class_game_rule_data_choice.html#aa3c8819169cd57186f3c3f2c08126462',1,'GameRuleDataChoice']]],
+  ['isoption_17',['isOption',['../class_enum_choice.html#ad9a83e6239992f3d009da5ae41e943de',1,'EnumChoice::isOption()'],['../class_game_rule_data_choice.html#aa3c8819169cd57186f3c3f2c08126462',1,'GameRuleDataChoice::isOption()']]],
   ['ispreferredarmour_18',['isPreferredArmour',['../class_culture_type_data.html#a642485600f9cf178b513b5ac1d29b797',1,'CultureTypeData']]],
   ['ispreferredweapon_19',['isPreferredWeapon',['../class_culture_type_data.html#a6767dbabf34bd590af914e9f080d8623',1,'CultureTypeData']]],
   ['isprimary_20',['isPrimary',['../namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b',1,'StatType']]],

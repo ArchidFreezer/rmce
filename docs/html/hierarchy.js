@@ -30,6 +30,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "Dice", "class_dice.html", null ],
+    [ "EnumChoice&lt; EnumType &gt;", "class_enum_choice.html", null ],
     [ "GameRuleData", "class_game_rule_data.html", [
       [ "LookupTable< NumberRange< int >, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string >", "class_lookup_table.html", [
         [ "BoundIntRowLookupTable< TableColumnArmourTypeMatcher, ArmourType::Type, std::string >", "class_bound_int_row_lookup_table.html", [

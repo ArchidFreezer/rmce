@@ -441,6 +441,20 @@ protected:
 	const pt::ptree getGameDataChoiceSetTree(std::set<GameRuleDataChoice<GameRuleData>> set);
 
 	/**
+	 * @brief Parses a property tree into a set of skill data choices.
+	 * @param tree An optional reference to a property tree containing the skill choice set to parse.
+	 * @return A set of GameRuleDataChoice objects templated on SubcategoriedSkillData.
+	 */
+	std::set<GameRuleDataChoice<SubcategoriedSkillData>> parseSkillChoiceSetTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Converts a set of skill data choices into a property tree representation.
+	 * @param set The set of GameRuleDataChoice objects templated on SubcategoriedSkillData to convert.
+	 * @return A property tree (ptree) containing the serialized skill choice set.
+	 */
+	const pt::ptree getSkillChoiceSetTree(std::set<GameRuleDataChoice<SubcategoriedSkillData>> set);
+
+	/**
 	 * @brief Parses a property tree into a map of game rule data choices paired with enumeration values.
 	 * @tparam EnumType The enumeration type to be associated with each game rule data choice.
 	 * @tparam GameRuleData A concept or type constraint specifying the game rule data object type.
@@ -862,7 +876,7 @@ inline const pt::ptree DatafileParserJson::getGameDataChoiceSetTree(std::set<Gam
 }
 
 template<GameRuleDataObject GameRuleData, typename EnumType>
-std::map<GameRuleDataChoice<GameRuleData>, EnumType> DatafileParserJson::parseGameDataChoicePairEnumTree(boost::optional<const pt::ptree&> tree) {
+inline std::map<GameRuleDataChoice<GameRuleData>, EnumType> DatafileParserJson::parseGameDataChoicePairEnumTree(boost::optional<const pt::ptree&> tree) {
 	std::map<GameRuleDataChoice<GameRuleData>, EnumType> datum{};
 	if (tree) {
 		for (const auto& choice_tree : tree.get()) {
@@ -881,7 +895,7 @@ std::map<GameRuleDataChoice<GameRuleData>, EnumType> DatafileParserJson::parseGa
 }
 
 template<GameRuleDataObject GameRuleData, typename EnumType>
-const pt::ptree DatafileParserJson::getGameDataChoicePairEnumTree(std::map<GameRuleDataChoice<GameRuleData>, EnumType> map) {
+inline const pt::ptree DatafileParserJson::getGameDataChoicePairEnumTree(std::map<GameRuleDataChoice<GameRuleData>, EnumType> map) {
 	pt::ptree tree{};
 	for (const auto& pair : map) {
 		pt::ptree choice_tree{};
@@ -904,7 +918,7 @@ const pt::ptree DatafileParserJson::getGameDataChoicePairEnumTree(std::map<GameR
 }
 
 template<typename EnumType>
-std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> DatafileParserJson::parseSkillChoicePairEnumTree(boost::optional<const pt::ptree&> tree) {
+inline std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> DatafileParserJson::parseSkillChoicePairEnumTree(boost::optional<const pt::ptree&> tree) {
 	std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> datum{};
 	if (tree) {
 		for (const auto& choice_tree : tree.get()) {
@@ -928,12 +942,13 @@ std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> DatafileParserJso
 }
 
 template<typename EnumType>
-const pt::ptree DatafileParserJson::getSkillChoicePairEnumTree(std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> map) {
+inline const pt::ptree DatafileParserJson::getSkillChoicePairEnumTree(std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> map) {
 	pt::ptree tree{};
 	for (const auto& pair : map) {
 		pt::ptree choice_tree{};
 		choice_tree.put("num-choices", pair.first.numChoices());
 		choice_tree.put("type", toString(pair.second));
+
 		pt::ptree options_tree{};
 		std::map<std::string, const SubcategoriedSkillData*> sorted_options{};
 		for (const SubcategoriedSkillData* option : pair.first.options()) {
@@ -952,7 +967,7 @@ const pt::ptree DatafileParserJson::getSkillChoicePairEnumTree(std::map<GameRule
 }
 
 template<typename EnumType>
-std::set<EnumChoice<EnumType>> DatafileParserJson::parseEnumChoiceSetTree(boost::optional<const pt::ptree&> tree) {
+inline std::set<EnumChoice<EnumType>> DatafileParserJson::parseEnumChoiceSetTree(boost::optional<const pt::ptree&> tree) {
 	std::set<EnumChoice<EnumType>> datum{};
 	if (tree) {
 		for (const auto& choice_tree : tree.get()) {

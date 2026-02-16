@@ -10,7 +10,7 @@ var searchData=
   ['addeverymanskill_7',['addEverymanSkill',['../class_race_data.html#a2bee6e327faef8218831867ee80d5de0',1,'RaceData']]],
   ['addeverymanskillcategory_8',['addEverymanSkillCategory',['../class_race_data.html#a844a3d215733d95401206411575b8c70',1,'RaceData']]],
   ['addnote_9',['addNote',['../class_training_package_data.html#a4f9940913970198a5843d2cd2a232142',1,'TrainingPackageData']]],
-  ['addoption_10',['addOption',['../class_game_rule_data_choice.html#a026f3416f2deba94f33690040087835a',1,'GameRuleDataChoice']]],
+  ['addoption_10',['addOption',['../class_enum_choice.html#a21f6df9d73a3a73b253db84d783bba34',1,'EnumChoice::addOption()'],['../class_game_rule_data_choice.html#a026f3416f2deba94f33690040087835a',1,'GameRuleDataChoice::addOption()']]],
   ['addprecipitation_11',['addPrecipitation',['../class_climate_data.html#ad4cac693a708a5221531298637d1c3ad',1,'ClimateData']]],
   ['addpreferredarmour_12',['addPreferredArmour',['../class_culture_type_data.html#accc6f3a9a10eeaba90ead2a3241375cf',1,'CultureTypeData']]],
   ['addpreferredweapon_13',['addPreferredWeapon',['../class_culture_type_data.html#a89061ae5dea0eed5042d817d7cf2fe56',1,'CultureTypeData']]],
