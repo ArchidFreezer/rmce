@@ -1018,9 +1018,12 @@ inline const pt::ptree DatafileParserJson::getSkillChoicePairTree(std::map<GameR
 		choice_tree.put("value", pair.second);
 
 		pt::ptree options_tree{};
-		std::map<std::string, const SubcategoriedSkillData*> sorted_options{};
+		std::map<size_t, const SubcategoriedSkillData*> sorted_options{};
 		for (const SubcategoriedSkillData* option : pair.first.options()) {
-			sorted_options.emplace(option->skillData().id(), option);
+			size_t hash{ std::hash<std::string>()(option->skillData().id()) };
+			hash += option->subcategory() ? std::hash<std::string>()(option->subcategory().value()) : 0;
+			hash += std::hash<Primitive>()(pair.second);
+			sorted_options.emplace(hash, option);
 		}
 		for (const auto& option_pair : sorted_options) {
 			pt::ptree option_tree{};

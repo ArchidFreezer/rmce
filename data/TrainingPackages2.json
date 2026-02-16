@@ -787,10 +787,10 @@
                     "value": "3",
                     "options": [
                         {
-                            "id": "SKILL_SPINNING"
+                            "id": "SKILL_WEAVING"
                         },
                         {
-                            "id": "SKILL_WEAVING"
+                            "id": "SKILL_SPINNING"
                         }
                     ]
                 }
@@ -882,6 +882,10 @@
                     "num-choices": "1",
                     "value": "2",
                     "options": [
+                        {
+                            "id": "SKILL_CULTURE_LORE",
+                            "subcategory": "Culture 2"
+                        },
                         {
                             "id": "SKILL_CULTURE_LORE",
                             "subcategory": "Culture 1"
@@ -5848,10 +5852,10 @@
                     "value": "3",
                     "options": [
                         {
-                            "id": "SKILL_ATTUNEMENT"
+                            "id": "SKILL_READ_RUNES"
                         },
                         {
-                            "id": "SKILL_READ_RUNES"
+                            "id": "SKILL_ATTUNEMENT"
                         }
                     ]
                 }
@@ -7938,10 +7942,10 @@
                     "value": "1",
                     "options": [
                         {
-                            "id": "SKILL_STAR_GAZING"
+                            "id": "SKILL_WEATHER_WATCHING"
                         },
                         {
-                            "id": "SKILL_WEATHER_WATCHING"
+                            "id": "SKILL_STAR_GAZING"
                         }
                     ]
                 },
@@ -7950,10 +7954,10 @@
                     "value": "2",
                     "options": [
                         {
-                            "id": "SKILL_ROWING"
+                            "id": "SKILL_SWIMMING"
                         },
                         {
-                            "id": "SKILL_SWIMMING"
+                            "id": "SKILL_ROWING"
                         }
                     ]
                 }
@@ -9502,10 +9506,10 @@
                     "value": "2",
                     "options": [
                         {
-                            "id": "SKILL_CULTURE_LORE"
+                            "id": "SKILL_HISTORY"
                         },
                         {
-                            "id": "SKILL_HISTORY"
+                            "id": "SKILL_CULTURE_LORE"
                         }
                     ]
                 }
@@ -9797,10 +9801,10 @@
                     "value": "2",
                     "options": [
                         {
-                            "id": "SKILL_DIVINATION_LORE"
+                            "id": "SKILL_DREAM_LORE"
                         },
                         {
-                            "id": "SKILL_DREAM_LORE"
+                            "id": "SKILL_DIVINATION_LORE"
                         }
                     ]
                 },
@@ -11227,10 +11231,10 @@
                     "value": "2",
                     "options": [
                         {
-                            "id": "SKILL_CALLIGRAPHY"
+                            "id": "SKILL_SCRIBING"
                         },
                         {
-                            "id": "SKILL_SCRIBING"
+                            "id": "SKILL_CALLIGRAPHY"
                         }
                     ]
                 }
@@ -11351,10 +11355,10 @@
                     "value": "1",
                     "options": [
                         {
-                            "id": "SKILL_STAR_GAZING"
+                            "id": "SKILL_WEATHER_WATCHING"
                         },
                         {
-                            "id": "SKILL_WEATHER_WATCHING"
+                            "id": "SKILL_STAR_GAZING"
                         }
                     ]
                 }
@@ -12078,6 +12082,10 @@
                     "options": [
                         {
                             "id": "SKILL_CULTURE_LORE",
+                            "subcategory": "Orc"
+                        },
+                        {
+                            "id": "SKILL_CULTURE_LORE",
                             "subcategory": "Elf"
                         }
                     ]
@@ -12256,6 +12264,10 @@
                         {
                             "id": "SKILL_CULTURE_LORE",
                             "subcategory": "Dwarf"
+                        },
+                        {
+                            "id": "SKILL_CULTURE_LORE",
+                            "subcategory": "Elf"
                         }
                     ]
                 },
@@ -12266,6 +12278,10 @@
                         {
                             "id": "SKILL_RIDING",
                             "subcategory": "Wolf"
+                        },
+                        {
+                            "id": "SKILL_RIDING",
+                            "subcategory": "Bat"
                         }
                     ]
                 }
