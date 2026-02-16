@@ -43,7 +43,7 @@ void CultureDatafileParserJson::parse() {
 		// Training package modifiers are optional
 		ref.setTrainingPackageModifiers(parseGameDataPairTree<TrainingPackageData, float>(v.second.get_child_optional("training-package-modifiers")));
 
-		std::cout << "\tSpell List name: " << ref.name() << std::endl;
+		std::cout << "\tCulture name: " << ref.name() << std::endl;
 
 	}
 	std::cout << " done" << std::endl;
