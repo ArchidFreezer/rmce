@@ -137,15 +137,6 @@ private:
 	const pt::ptree getCategoryMultiSkillRankChoicesTree(TrainingPackageData& game_data);
 
 	/**
-	 * @brief Parses spell list ranks from a property tree and returns a set of spell list choices.
-	 * @param spell_list_ranks An optional reference to a property tree containing spell list rank data to parse.
-	 * @return A set of SpellListChoices parsed from the input property tree, or an empty set if the input is not present.
-	 * 
-	 * TODO: Delete this once all the spell list choices in the json file are converted to spell list choices instead of spell list ranks, as this is only needed for backwards compatibility with the old json format
-	 */
-	std::set<SpellListChoices> parseSpellListRanksTree(boost::optional<const pt::ptree&> spell_list_ranks);
-
-	/**
 	 * @brief Parses spell list choices from a property tree and returns them as a set.
 	 * @param spell_list_choices An optional reference to a property tree containing spell list choice data to parse. If empty, an empty set is returned.
 	 * @return A set of SpellListChoices objects parsed from the input property tree.

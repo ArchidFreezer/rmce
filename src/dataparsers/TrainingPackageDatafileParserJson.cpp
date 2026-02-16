@@ -49,31 +49,16 @@ void TrainingPackageDatafileParserJson::parse() {
 		if (specials_tree) ref.setSpecials(parseSpecials(specials_tree));
 
 		// Stat gains
-		// TODO - Fix this to read two tags, one for realm stat gain and one for normal stat gains, to avoid the need for the special case of "Realm" in the stat gains list
 		boost::optional<const pt::ptree&> stat_gains = v.second.get_child_optional("stat-gains");
-		if (stat_gains) {
-			for (const auto& stat_gain : stat_gains.get()) {
-				std::string stat_gain_str = stat_gain.second.get_value<std::string>();
+		if (stat_gains) ref.setStatGains(parseEnumSetTree<StatType::Type>(stat_gains));
 
-				if (stat_gain_str == "Realm") {
-					ref.setRealmStatGain(true);
-					continue;
-				}
-
-				StatType::Type stat_gain_enum{};
-				fromString(stat_gain_str, stat_gain_enum);
-				ref.addStatGain(stat_gain_enum);
-			}
-		}
+		// Realm stat gain
+		boost::optional<const pt::ptree&> realm_stat_gain_tree = v.second.get_child_optional("realm-stat-gain");
+		if (realm_stat_gain_tree) { ref.setRealmStatGain(realm_stat_gain_tree.get().get_value<bool>()); }
 
 		// Stat gain choices
-		// TODO - The original json had the choices as an array rather than a single object with a num-choices tag and an options array, so this is currently set up to read the original format. This should be changed to read the new format
 		boost::optional<const pt::ptree&> stat_gain_choices_tree = v.second.get_child_optional("stat-gain-choices");
-//		ref.setStatGainChoices(parseStatGainChoices(stat_gain_choices_tree));
-		if (stat_gain_choices_tree) {
-			std::set<EnumChoice<StatType::Type>> stat_gain_choices{ parseEnumChoiceSetTree<StatType::Type>(stat_gain_choices_tree)};
-			ref.setStatGainChoices(*(stat_gain_choices.begin()));
-		}
+		ref.setStatGainChoices(parseStatGainChoices(stat_gain_choices_tree));
 
 		// Skill ranks
 		boost::optional<const pt::ptree&> skill_ranks_tree = v.second.get_child_optional("skill-ranks");
@@ -97,12 +82,7 @@ void TrainingPackageDatafileParserJson::parse() {
 
 		// Spell list ranks
 		boost::optional<const pt::ptree&> spell_list_ranks_tree = v.second.get_child_optional("spell-list-ranks");
-		if (spell_list_ranks_tree) { ref.setSpellListChoices(parseSpellListRanksTree(spell_list_ranks_tree)); } // TODO switch to using parseSpellListChoicesTree when the json is updated to the new format
-
-		// Spell list rank choices
-		// TODO - Delete this block once the json file has been convcerted to use the new format with a single spell-list-choices tag rather than separate spell-list-ranks and spell-list-rank-choices tags, as currently the json file is still in the old format which has the rank choices under a separate tag
-		boost::optional<const pt::ptree&> spell_list_rank_choices_tree = v.second.get_child_optional("spell-list-rank-choices");
-		if (spell_list_rank_choices_tree) { ref.addSpellListChoices(parseSpellListChoicesTree(spell_list_rank_choices_tree)); }
+		if (spell_list_ranks_tree) { ref.setSpellListChoices(parseSpellListChoicesTree(spell_list_ranks_tree)); }
 
 		// Spell list category rank choices
 		boost::optional<const pt::ptree&> spell_list_category_rank_choices_tree = v.second.get_child_optional("spell-list-category-rank-choices");
@@ -376,25 +356,6 @@ const pt::ptree TrainingPackageDatafileParserJson::getCategoryMultiSkillRankChoi
 	}
 
 	return choice_tree;
-}
-
-std::set<SpellListChoices> TrainingPackageDatafileParserJson::parseSpellListRanksTree(boost::optional<const pt::ptree&> spell_list_ranks) {
-	std::set<SpellListChoices> choices{};
-	if (!spell_list_ranks) return choices;
-
-	for (const auto& choice : spell_list_ranks.get()) {
-		SpellListChoices choice_struct{};
-		boost::optional<std::string> category_id = choice.second.get_optional<std::string>("optional-category");
-		if (category_id) choice_struct.spell_list_category = &factory().get<SkillCategoryData>(category_id.value());
-		choice_struct.ranks = choice.second.get<int>("value");
-		choice_struct.num_choices = choice.second.get<int>("num-choices", 1);
-		std::string spell_list_id = choice.second.get<std::string>("id");
-		choice_struct.spell_lists.emplace(&factory().get<SpellListData>(spell_list_id));
-
-		choices.emplace(choice_struct);
-	}
-
-	return choices;
 }
 
 std::set<SpellListChoices> TrainingPackageDatafileParserJson::parseSpellListChoicesTree(boost::optional<const pt::ptree&> spell_list_choices) {
