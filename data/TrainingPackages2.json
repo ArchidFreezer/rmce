@@ -534,6 +534,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
                             "id": "SKILL_PREPARE_HERBS"
@@ -619,6 +620,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "3",
                     "options": [
                         {
                             "id": "SKILL_SPINNING"
@@ -700,13 +702,10 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "2",
                     "options": [
                         {
-                            "id": "SKILL_CULTURE_LORE_Culture 1",
-                            "subcategory": "Culture 1"
-                        },
-                        {
-                            "id": "SKILL_CULTURE_LORE_Culture 2",
+                            "id": "SKILL_CULTURE_LORE",
                             "subcategory": "Culture 2"
                         }
                     ]
@@ -1083,6 +1082,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "2",
                     "options": [
                         {
                             "id": "SKILL_ANIMAL_MASTERY"
@@ -1281,6 +1281,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
                             "id": "SKILL_HIDING"
@@ -1913,6 +1914,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
                             "id": "SKILL_SINGING"
@@ -2302,6 +2304,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "2",
                     "options": [
                         {
                             "id": "SKILL_PUBLIC_SPEAKING"
@@ -3793,6 +3796,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
                             "id": "SKILL_POETIC_IMPROVISATION"
@@ -4097,6 +4101,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "3",
                     "options": [
                         {
                             "id": "SKILL_ATTUNEMENT"
@@ -4492,6 +4497,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "2",
                     "options": [
                         {
                             "id": "SKILL_PHILOSOPHY"
@@ -5516,6 +5522,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
                             "id": "SKILL_STAR_GAZING"
@@ -5527,6 +5534,7 @@
                 },
                 {
                     "num-choices": "1",
+                    "value": "2",
                     "options": [
                         {
                             "id": "SKILL_ROWING"
@@ -6564,6 +6572,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "2",
                     "options": [
                         {
                             "id": "SKILL_CULTURE_LORE"
@@ -6766,6 +6775,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "2",
                     "options": [
                         {
                             "id": "SKILL_DIVINATION_LORE"
@@ -6777,6 +6787,7 @@
                 },
                 {
                     "num-choices": "1",
+                    "value": "2",
                     "options": [
                         {
                             "id": "SKILL_POETIC_IMPROVISATION"
@@ -7192,6 +7203,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
                             "id": "SKILL_HIDING"
@@ -7269,6 +7281,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "2",
                     "options": [
                         {
                             "id": "SKILL_HIDING"
@@ -7349,6 +7362,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
                             "id": "SKILL_PREPARE_HERBS"
@@ -7751,6 +7765,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "2",
                     "options": [
                         {
                             "id": "SKILL_CALLIGRAPHY"
@@ -7820,6 +7835,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
                             "id": "SKILL_STAR_GAZING"
@@ -8278,14 +8294,11 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
-                            "id": "SKILL_CULTURE_LORE_Elf",
+                            "id": "SKILL_CULTURE_LORE",
                             "subcategory": "Elf"
-                        },
-                        {
-                            "id": "SKILL_CULTURE_LORE_Orc",
-                            "subcategory": "Orc"
                         }
                     ]
                 }
@@ -8419,27 +8432,21 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
-                            "id": "SKILL_CULTURE_LORE_Dwarf",
+                            "id": "SKILL_CULTURE_LORE",
                             "subcategory": "Dwarf"
-                        },
-                        {
-                            "id": "SKILL_CULTURE_LORE_Elf",
-                            "subcategory": "Elf"
                         }
                     ]
                 },
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
-                            "id": "SKILL_RIDING_Bat",
+                            "id": "SKILL_RIDING",
                             "subcategory": "Bat"
-                        },
-                        {
-                            "id": "SKILL_RIDING_Wolf",
-                            "subcategory": "Wolf"
                         }
                     ]
                 }
@@ -8757,6 +8764,7 @@
             "skill-rank-choices": [
                 {
                     "num-choices": "1",
+                    "value": "1",
                     "options": [
                         {
                             "id": "SKILL_HIDING"
