@@ -310,6 +310,9 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE"
                     ]
                 }
+            ],
+            "lifestyle-groups": [
+                "SKILLGROUP_LORE"
             ]
         },
         {
@@ -542,6 +545,11 @@
                 {
                     "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "value": "3"
+                }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING"
                 }
             ]
         },
@@ -826,6 +834,16 @@
                     "options": [
                         "SPELLLIST_ARACHNAMANCY"
                     ]
+                }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "subcategory": "Spiders"
+                },
+                {
+                    "id": "SKILL_FAUNA_LORE",
+                    "subcategory": "Spiders"
                 }
             ]
         },
@@ -2665,6 +2683,11 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_RELIGION"
+                }
             ]
         },
         {
@@ -3137,8 +3160,8 @@
                     "value": "2",
                     "num-choices": "2",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -3252,8 +3275,8 @@
                     "value": "2",
                     "num-choices": "1",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -3608,10 +3631,10 @@
                     "value": "3",
                     "num-choices": "1",
                     "options": [
+                        "SPELLLIST_SUMMONING_CIRCLES",
+                        "SPELLLIST_SUMMONS",
                         "SPELLLIST_SUMMONING_BOND",
                         "SPELLLIST_SUMMONING_MASTERY",
-                        "SPELLLIST_SUMMONS",
-                        "SPELLLIST_SUMMONING_CIRCLES",
                         "SPELLLIST_ANIMAL_SUMMONS",
                         "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_FEY_CONJURY",
@@ -3789,6 +3812,11 @@
                         "SPELLLIST_CORPIST_CASTING"
                     ]
                 }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_FAUNA_LORE"
+                }
             ]
         },
         {
@@ -3861,8 +3889,8 @@
                     "value": "3",
                     "num-choices": "1",
                     "options": [
-                        "SPELLLIST_ILLUSIONS",
-                        "SPELLLIST_LESSER_ILLUSIONS"
+                        "SPELLLIST_LESSER_ILLUSIONS",
+                        "SPELLLIST_ILLUSIONS"
                     ]
                 }
             ]
@@ -4170,6 +4198,11 @@
                     "options": [
                         "SPELLLIST_CRYSTALIST_CASTING"
                     ]
+                }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_STONE_LORE"
                 }
             ]
         },
@@ -4484,6 +4517,11 @@
                         "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_PLANAR_SUMMONS"
                     ]
+                }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_DEMON_DEVIL_LORE"
                 }
             ]
         },
@@ -5112,10 +5150,10 @@
                     "value": "1",
                     "num-choices": "1",
                     "options": [
+                        "SPELLLIST_SUMMONING_CIRCLES",
+                        "SPELLLIST_SUMMONS",
                         "SPELLLIST_SUMMONING_BOND",
                         "SPELLLIST_SUMMONING_MASTERY",
-                        "SPELLLIST_SUMMONS",
-                        "SPELLLIST_SUMMONING_CIRCLES",
                         "SPELLLIST_ANIMAL_SUMMONS",
                         "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_FEY_CONJURY",
@@ -6285,6 +6323,14 @@
                     "value": "6",
                     "num-choices": "3"
                 }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_MAGIC_RITUAL"
+                },
+                {
+                    "id": "SKILL_SPELL_MASTERY"
+                }
             ]
         },
         {
@@ -6550,6 +6596,14 @@
                     "options": [
                         "SPELLLIST_HERBALIST_CASTING"
                     ]
+                }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_FLORA_LORE"
+                },
+                {
+                    "id": "SKILL_HERB_LORE"
                 }
             ]
         },
@@ -8142,12 +8196,12 @@
                     "value": "3",
                     "num-choices": "1",
                     "options": [
-                        "SPELLLIST_MIND_ILLUSIONS",
-                        "SPELLLIST_MIND_DISEASE",
+                        "SPELLLIST_MIND_EROSION",
                         "SPELLLIST_MIND_DEATH",
                         "SPELLLIST_MIND_DOMINATION",
-                        "SPELLLIST_MIND_SUBVERSION",
-                        "SPELLLIST_MIND_EROSION"
+                        "SPELLLIST_MIND_DISEASE",
+                        "SPELLLIST_MIND_ILLUSIONS",
+                        "SPELLLIST_MIND_SUBVERSION"
                     ]
                 }
             ]
@@ -9171,6 +9225,11 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_MEDITATION"
+                }
             ]
         },
         {
@@ -9684,6 +9743,11 @@
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_RELIGION"
+                }
             ]
         },
         {
@@ -9815,6 +9879,11 @@
                     "options": [
                         "SPELLLIST_PROSELYTIZING"
                     ]
+                }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_PUBLIC_SPEAKING"
                 }
             ]
         },
@@ -11112,6 +11181,11 @@
                         "SPELLLIST_BREWING_LORE"
                     ]
                 }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_ALCHEMY"
+                }
             ]
         },
         {
@@ -11426,10 +11500,10 @@
                     "value": "6",
                     "num-choices": "3",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
                         "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS"
                     ]
                 }
             ]
@@ -11537,8 +11611,8 @@
                     "value": "2",
                     "num-choices": "1",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -12554,8 +12628,8 @@
                     "value": "2",
                     "num-choices": "1",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -12752,8 +12826,8 @@
                     "value": "2",
                     "num-choices": "1",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -12949,8 +13023,8 @@
                     "value": "4",
                     "num-choices": "2",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -13746,6 +13820,11 @@
                     "value": "1",
                     "num-choices": "1"
                 }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_RESEARCH"
+                }
             ]
         },
         {
@@ -14372,6 +14451,11 @@
                         "SPELLLIST_HOLY_DEFENSES"
                     ]
                 }
+            ],
+            "lifestyle-skills": [
+                {
+                    "id": "SKILL_FIRST_AID"
+                }
             ]
         },
         {
@@ -14988,8 +15072,8 @@
                         "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_MATTER_DISRUPTION",
                         "SPELLLIST_PHYSICAL_EROSION",
-                        "SPELLLIST_DARK_CONTACTS",
                         "SPELLLIST_DARK_SUMMONS",
+                        "SPELLLIST_DARK_CONTACTS",
                         "SPELLLIST_DARKNESS"
                     ]
                 }

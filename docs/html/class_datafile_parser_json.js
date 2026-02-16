@@ -20,6 +20,7 @@ var class_datafile_parser_json =
     [ "getSkillPairEnumTree", "class_datafile_parser_json.html#adb77352ca1a5cad58308f4e6aa675882", null ],
     [ "getSkillPairTree", "class_datafile_parser_json.html#aa084a30f82c0826a77b6c5b42aa6fa2e", null ],
     [ "getSkillSetTree", "class_datafile_parser_json.html#ad1f7e59a681143f3a17b9b316d54ed88", null ],
+    [ "parseEnumChoiceSetTree", "class_datafile_parser_json.html#ac458ebacdc80e80fc6dd0a69defbb296", null ],
     [ "parseEnumPairTree", "class_datafile_parser_json.html#a07dff7d00c85a035730e576d94bc762d", null ],
     [ "parseEnumSetTree", "class_datafile_parser_json.html#ae343d31c88eb04b7722be4bd14a6d29c", null ],
     [ "parseEnumVectorTree", "class_datafile_parser_json.html#af0ce6804dba844d1d440707e05da2462", null ],

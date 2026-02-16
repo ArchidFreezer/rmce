@@ -298,9 +298,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a18a22a809bf73ffd77f7ba55b6650184" id="r_a18a22a809bf73ffd77f7ba55b6650184"><td class="memTemplParams" colspan="2">template&lt;typename Primitive&gt; </td></tr>
 <tr class="memitem:a18a22a809bf73ffd77f7ba55b6650184 template"><td class="memItemLeft">const pt::ptree&#160;</td><td class="memItemRight"><a class="el" href="#a18a22a809bf73ffd77f7ba55b6650184">getSkillChoicePairTree</a> (std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;, Primitive &gt; map)</td></tr>
 <tr class="memdesc:a18a22a809bf73ffd77f7ba55b6650184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a map of skill choice data to a property tree representation.  <br /></td></tr>
-<tr class="memitem:ac458ebacdc80e80fc6dd0a69defbb296" id="r_ac458ebacdc80e80fc6dd0a69defbb296"><td class="memTemplParams" colspan="2"><a id="ac458ebacdc80e80fc6dd0a69defbb296" name="ac458ebacdc80e80fc6dd0a69defbb296"></a>
-template&lt;typename EnumType&gt; </td></tr>
-<tr class="memitem:ac458ebacdc80e80fc6dd0a69defbb296 template"><td class="memItemLeft">std::set&lt; <a class="el" href="class_enum_choice.html">EnumChoice</a>&lt; EnumType &gt; &gt;&#160;</td><td class="memItemRight"><b>parseEnumChoiceSetTree</b> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memitem:ac458ebacdc80e80fc6dd0a69defbb296" id="r_ac458ebacdc80e80fc6dd0a69defbb296"><td class="memTemplParams" colspan="2">template&lt;typename EnumType&gt; </td></tr>
+<tr class="memitem:ac458ebacdc80e80fc6dd0a69defbb296 template"><td class="memItemLeft">std::set&lt; <a class="el" href="class_enum_choice.html">EnumChoice</a>&lt; EnumType &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac458ebacdc80e80fc6dd0a69defbb296">parseEnumChoiceSetTree</a> (boost::optional&lt; const pt::ptree &amp; &gt; tree)</td></tr>
+<tr class="memdesc:ac458ebacdc80e80fc6dd0a69defbb296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a property tree into a set of enumeration choices.  <br /></td></tr>
 <tr class="inherit_header pro_methods_class_datafile_parser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_datafile_parser')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="class_datafile_parser.html">DatafileParser</a></td></tr>
 <tr class="memitem:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser" id="r_a4e7a26696510228b1a25308655066ef1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_datafile_parser.html#a4e7a26696510228b1a25308655066ef1">parse</a> ()=0</td></tr>
 <tr class="memdesc:a4e7a26696510228b1a25308655066ef1 inherit pro_methods_class_datafile_parser"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a ptree into game data objects.  <br /></td></tr>
@@ -1151,6 +1151,48 @@ template&lt;typename Primitive&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories </dd></dl>
+
+</div>
+</div>
+<a id="ac458ebacdc80e80fc6dd0a69defbb296" name="ac458ebacdc80e80fc6dd0a69defbb296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac458ebacdc80e80fc6dd0a69defbb296">&#9670;&#160;</a></span>parseEnumChoiceSetTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename EnumType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; <a class="el" href="class_enum_choice.html">EnumChoice</a>&lt; EnumType &gt; &gt; DatafileParserJson::parseEnumChoiceSetTree </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const pt::ptree &amp; &gt;</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parses a property tree into a set of enumeration choices. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">EnumType</td><td>The enumeration type for the choices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tree</td><td>An optional reference to a property tree containing the enumeration choices to parse. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A set of parsed enumeration choices of the specified enum type. </dd></dl>
 
 </div>
 </div>

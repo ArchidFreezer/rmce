@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"class_skill_datafile_parser_json.html#a1969f36f66f71162741e9ff986c43f87":[2,0,54,0],
 "class_skill_datafile_parser_json.html#a84c7d584d3bc2c6dadda4a7a1e6e8046":[2,0,54,4],
 "class_skill_datafile_parser_json.html#a9ac7a9a729e5626370581892a4de9db9":[2,0,54,1],
 "class_skill_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,54,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "functions_d.html":[2,3,0,3],
 "functions_e.html":[2,3,0,4],
 "functions_f.html":[2,3,0,5],
-"functions_func.html":[2,3,1],
-"functions_func.html":[2,3,1,0]
+"functions_func.html":[2,3,1]
 };

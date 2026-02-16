@@ -108,6 +108,18 @@ void TrainingPackageDatafileParserJson::parse() {
 		boost::optional<const pt::ptree&> spell_list_category_rank_choices_tree = v.second.get_child_optional("spell-list-category-rank-choices");
 		if (spell_list_category_rank_choices_tree) { ref.setSpellListCategoryChoices(parseSpellListCategoryChoicesTree(spell_list_category_rank_choices_tree)); }
 
+		// Lifestyle skills
+		boost::optional<const pt::ptree&> lifestyle_skills_tree = v.second.get_child_optional("lifestyle-skills");
+		if (lifestyle_skills_tree) { ref.setLifestyleSkills(parseSkillSetTree(lifestyle_skills_tree)); }
+
+		// Lifestyle categories
+		boost::optional<const pt::ptree&> lifestyle_categories_tree = v.second.get_child_optional("lifestyle-categories");
+		if (lifestyle_categories_tree) { ref.setLifestyleSkillCategories(parseGameDataSetTree<SkillCategoryData>(lifestyle_categories_tree)); }
+
+		// Lifestyle groups
+		boost::optional<const pt::ptree&> lifestyle_groups_tree = v.second.get_child_optional("lifestyle-groups");
+		if (lifestyle_groups_tree) { ref.setLifestyleSkillGroups(parseGameDataSetTree<SkillGroupData>(lifestyle_groups_tree)); }
+
 		std::cout << "\tTrainingPackage name: " << ref.name() << std::endl;
 	}
 
@@ -212,6 +224,24 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 	{
 		pt::ptree tree{ getSpellListCategoryChoicesTree(game_data) };
 		if (tree.size()) datum.push_back(std::make_pair("spell-list-category-rank-choices", tree));
+	}
+
+	// Lifestyle skills
+	{
+		pt::ptree tree{ getSkillSetTree(game_data.lifestyleSkills()) };
+		if (tree.size()) datum.push_back(std::make_pair("lifestyle-skills", tree));
+	}
+
+	// Lifestyle categories
+	{
+		pt::ptree tree{ getGameDataSetTree<SkillCategoryData>(game_data.lifestyleSkillCategories()) };
+		if (tree.size()) datum.push_back(std::make_pair("lifestyle-categories", tree));
+	}
+
+	// Lifestyle groups
+	{
+		pt::ptree tree{ getGameDataSetTree<SkillGroupData>(game_data.lifestyleSkillGroups()) };
+		if (tree.size()) datum.push_back(std::make_pair("lifestyle-groups", tree));
 	}
 }
 

@@ -9988,9 +9988,7 @@
         }
       ],
       "lifestyle-groups": [
-        {
-          "id": "SKILLGROUP_LORE"
-        }
+        "SKILLGROUP_LORE"
       ]
     },
     {

@@ -990,9 +990,6 @@ inline const pt::ptree DatafileParserJson::getSkillChoicePairEnumTree(std::map<G
 	return tree;
 }
 
-
-
-
 template<typename Primitive>
 inline std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> DatafileParserJson::parseSkillChoicePairTree(boost::optional<const pt::ptree&> tree) {
 	std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> datum{};
@@ -1042,18 +1039,6 @@ inline const pt::ptree DatafileParserJson::getSkillChoicePairTree(std::map<GameR
 	}
 	return tree;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 template<typename EnumType>
 inline std::set<EnumChoice<EnumType>> DatafileParserJson::parseEnumChoiceSetTree(boost::optional<const pt::ptree&> tree) {
