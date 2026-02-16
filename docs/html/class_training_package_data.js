@@ -8,6 +8,7 @@ var class_training_package_data =
     [ "addRace", "class_training_package_data.html#acdfac246756ed1b5de938f51a4735b20", null ],
     [ "addSkillRank", "class_training_package_data.html#ab4f168e5f0c7233b451e79671368192f", null ],
     [ "addSpecial", "class_training_package_data.html#aa5cf3cb0ff62330b57e0a282713da29f", null ],
+    [ "addSpellListChoices", "class_training_package_data.html#a51bbb9c5e014746580110985b47133f9", null ],
     [ "addStatGain", "class_training_package_data.html#a49f7b570a75eb16d0399a57ba3dde6bd", null ],
     [ "available", "class_training_package_data.html#a14e4deb0bae2dd79779711e60a20f774", null ],
     [ "book", "class_training_package_data.html#a7eead36745d53d541965cdbdecbe7e84", null ],

@@ -808,6 +808,16 @@
                     "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
                     "value": "1"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_ARACHNAMANCY"
+                    ]
+                }
             ]
         },
         {
@@ -1182,6 +1192,16 @@
                     "value": "1",
                     "num-choices": "1"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_ITEM_ENHANCEMENT"
+                    ]
+                }
             ]
         },
         {
@@ -1486,6 +1506,16 @@
                     "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
                     "value": "2",
                     "num-choices": "2"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_ANIMAL_BONDING"
+                    ]
                 }
             ]
         },
@@ -2607,6 +2637,16 @@
                     "id": "SKILLCATEGORY_POWER_AWARENESS",
                     "value": "1"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_CEREMONIES"
+                    ]
+                }
             ]
         },
         {
@@ -2792,6 +2832,16 @@
                     "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "1",
                     "num-choices": "1"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_CHARADES"
+                    ]
                 }
             ]
         },
@@ -3157,6 +3207,17 @@
                     "value": "2",
                     "num-choices": "2"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_WEATHER_WAYS",
+                        "SPELLLIST_ESSENCE_S_PERCEPTIONS"
+                    ]
+                }
             ]
         },
         {
@@ -3502,6 +3563,26 @@
                     "value": "2",
                     "num-choices": "2"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_SUMMONING_MASTERY",
+                        "SPELLLIST_SUMMONING_CIRCLES",
+                        "SPELLLIST_SUMMONS",
+                        "SPELLLIST_SUMMONING_BOND",
+                        "SPELLLIST_ANIMAL_SUMMONS",
+                        "SPELLLIST_FEY_CONJURY",
+                        "SPELLLIST_ELEMENTAL_SUMMONS",
+                        "SPELLLIST_ENTITY_SUMMONS",
+                        "SPELLLIST_PLANAR_SUMMONS",
+                        "SPELLLIST_DARK_SUMMONS",
+                        "SPELLLIST_GATE_MASTERY"
+                    ]
+                }
             ]
         },
         {
@@ -3660,6 +3741,16 @@
                     "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "1"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_CORPIST_CASTING"
+                    ]
+                }
             ]
         },
         {
@@ -3724,6 +3815,17 @@
                     "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
                     "value": "4",
                     "num-choices": "2"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_LESSER_ILLUSIONS",
+                        "SPELLLIST_ILLUSIONS"
+                    ]
                 }
             ]
         },
@@ -4020,6 +4122,16 @@
                 {
                     "id": "SKILLCATEGORY_LORE_TECHNICAL",
                     "value": "1"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_CRYSTALIST_CASTING"
+                    ]
                 }
             ]
         },
@@ -4323,6 +4435,17 @@
                 {
                     "id": "SKILLCATEGORY_POWER_MANIPULATION",
                     "value": "1"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_ENTITY_SUMMONS",
+                        "SPELLLIST_PLANAR_SUMMONS"
+                    ]
                 }
             ]
         },
@@ -4643,6 +4766,24 @@
                     "id": "SKILLCATEGORY_SELF_CONTROL",
                     "value": "2"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_DREAM_LAW"
+                    ]
+                },
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_DREAM_LORE"
+                    ]
+                }
             ]
         },
         {
@@ -4732,6 +4873,16 @@
                 {
                     "id": "SKILLCATEGORY_SELF_CONTROL",
                     "value": "2"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_DREAM_TRAVEL"
+                    ]
                 }
             ]
         },
@@ -4916,6 +5067,26 @@
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                    "value": "1",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_SUMMONING_MASTERY",
+                        "SPELLLIST_SUMMONING_CIRCLES",
+                        "SPELLLIST_SUMMONS",
+                        "SPELLLIST_SUMMONING_BOND",
+                        "SPELLLIST_ANIMAL_SUMMONS",
+                        "SPELLLIST_FEY_CONJURY",
+                        "SPELLLIST_ELEMENTAL_SUMMONS",
+                        "SPELLLIST_ENTITY_SUMMONS",
+                        "SPELLLIST_PLANAR_SUMMONS",
+                        "SPELLLIST_DARK_SUMMONS",
+                        "SPELLLIST_GATE_MASTERY"
+                    ]
+                }
             ]
         },
         {
@@ -4982,6 +5153,24 @@
                 {
                     "id": "SKILLCATEGORY_LORE_TECHNICAL",
                     "value": "1"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_STRUCTURE_WARDINGS"
+                    ]
+                },
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_PERIMETER_WARDINGS"
+                    ]
                 }
             ]
         },
@@ -5898,6 +6087,16 @@
                     "value": "2",
                     "num-choices": "2"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_GUILDCRAFT_MASTERY"
+                    ]
+                }
             ]
         },
         {
@@ -6295,6 +6494,16 @@
                     "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "1"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_HERBALIST_CASTING"
+                    ]
+                }
             ]
         },
         {
@@ -6680,6 +6889,16 @@
                     "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
                     "value": "2",
                     "num-choices": "2"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_HOURI_S_BEGUILEMENT"
+                    ]
                 }
             ]
         },
@@ -7369,6 +7588,16 @@
                     "value": "3",
                     "num-choices": "3"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_TRAVELER_S_WAYS"
+                    ]
+                }
             ]
         },
         {
@@ -7850,6 +8079,21 @@
                     "value": "1",
                     "num-choices": "1"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_MIND_DEATH",
+                        "SPELLLIST_MIND_SUBVERSION",
+                        "SPELLLIST_MIND_ILLUSIONS",
+                        "SPELLLIST_MIND_DISEASE",
+                        "SPELLLIST_MIND_DOMINATION",
+                        "SPELLLIST_MIND_EROSION"
+                    ]
+                }
             ]
         },
         {
@@ -7993,6 +8237,24 @@
                     "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "2",
                     "num-choices": "2"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_SEA_MASTERY"
+                    ]
+                },
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_SAILING_MASTERY"
+                    ]
                 }
             ]
         },
@@ -8730,6 +8992,16 @@
                     "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value": "2"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_CONCUSSION_S_WAYS"
+                    ]
+                }
             ]
         },
         {
@@ -8823,6 +9095,16 @@
                 {
                     "id": "SKILLCATEGORY_SELF_CONTROL",
                     "value": "4"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_HOLY_TRANCES"
+                    ]
                 }
             ]
         },
@@ -9318,6 +9600,16 @@
                     "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "3"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_PROSELYTIZING"
+                    ]
+                }
             ]
         },
         {
@@ -9440,6 +9732,16 @@
                     "value": "5",
                     "num-choices": "2"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_PROSELYTIZING"
+                    ]
+                }
             ]
         },
         {
@@ -9529,6 +9831,16 @@
                     "id": "SKILLCATEGORY_POWER_MANIPULATION",
                     "value": "2",
                     "num-choices": "1"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_NECROMANCY"
+                    ]
                 }
             ]
         },
@@ -9730,6 +10042,16 @@
                     "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "1"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_NOMENIST_CASTING"
+                    ]
+                }
             ]
         },
         {
@@ -9844,6 +10166,17 @@
                     "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "3",
                     "num-choices": "2"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_STARLORE",
+                        "SPELLLIST_FUTURE_VISIONS"
+                    ]
                 }
             ]
         },
@@ -10235,6 +10568,24 @@
                 {
                     "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value": "3"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_MEDICAL_LAW"
+                    ]
+                },
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_PHYSICKS"
+                    ]
                 }
             ]
         },
@@ -10667,6 +11018,17 @@
                     "id": "SKILLCATEGORY_LORE_TECHNICAL",
                     "value": "1"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_LIQUID_GAS_SKILLS",
+                        "SPELLLIST_BREWING_LORE"
+                    ]
+                }
             ]
         },
         {
@@ -10757,6 +11119,16 @@
                 {
                     "id": "SKILLCATEGORY_POWER_AWARENESS",
                     "value": "3"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_DETECTION_MASTERY"
+                    ]
                 }
             ]
         },
@@ -10855,6 +11227,16 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_THE_HUNTER"
+                    ]
                 }
             ]
         },
@@ -11044,6 +11426,16 @@
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_LOCATING_WAYS"
+                    ]
+                }
             ]
         },
         {
@@ -11174,6 +11566,16 @@
                     "value": "2",
                     "num-choices": "2"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_RUNE_MASTERY"
+                    ]
+                }
             ]
         },
         {
@@ -11291,6 +11693,24 @@
                     "id": "SKILLCATEGORY_LORE_TECHNICAL",
                     "value": "2",
                     "num-choices": "2"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_DELVING_WAYS"
+                    ]
+                },
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_KNOWLEDGE_MASTERY"
+                    ]
                 }
             ]
         },
@@ -11919,6 +12339,16 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_NECROMANCY"
+                    ]
                 }
             ]
         },
@@ -13259,6 +13689,17 @@
                     "value": "3",
                     "num-choices": "3"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_TRAVELER_S_WAYS",
+                        "SPELLLIST_GUILDCRAFT_MASTERY"
+                    ]
+                }
             ]
         },
         {
@@ -13761,6 +14202,25 @@
                     "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value": "1"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_CONCUSSION_S_WAYS"
+                    ]
+                },
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_BATTLEFIELD_HEALING",
+                        "SPELLLIST_HOLY_DEFENSES"
+                    ]
+                }
             ]
         },
         {
@@ -14072,6 +14532,16 @@
                     "id": "SKILLCATEGORY_POWER_AWARENESS",
                     "value": "2"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_DELVING"
+                    ]
+                }
             ]
         },
         {
@@ -14357,6 +14827,21 @@
                     "value": "2",
                     "num-choices": "2"
                 }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_ENTITY_SUMMONS",
+                        "SPELLLIST_MATTER_DISRUPTION",
+                        "SPELLLIST_PHYSICAL_EROSION",
+                        "SPELLLIST_DARKNESS",
+                        "SPELLLIST_DARK_CONTACTS",
+                        "SPELLLIST_DARK_SUMMONS"
+                    ]
+                }
             ]
         },
         {
@@ -14627,6 +15112,24 @@
                     "id": "SKILLCATEGORY_LORE_MAGICAL",
                     "value": "1",
                     "num-choices": "1"
+                }
+            ],
+            "spell-list-ranks": [
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "2",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_LIQUID_GAS_SKILLS"
+                    ]
+                },
+                {
+                    "optional-category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "value": "3",
+                    "num-choices": "1",
+                    "options": [
+                        "SPELLLIST_NATURE_DOMINATION"
+                    ]
                 }
             ]
         },

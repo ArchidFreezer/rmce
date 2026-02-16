@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa":[0,0,10,6],
 "namespace_skill_action_type.html#aa1f4a1ecdf8906d8d02613021b5f2d00":[0,0,10,5],
 "namespace_skill_action_type.html#abc1e846657bd836e013dc878eda0c866":[0,0,10,3],
 "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1":[0,0,10,1],
@@ -88,11 +89,12 @@ var NAVTREEINDEX5 =
 "struct_language_choices.html#ac6444168b69bcdc9a4cbb69332489182":[2,0,38,2],
 "struct_spell_list_category_choices.html":[2,0,63],
 "struct_spell_list_category_choices.html#a114e0b5d9266fdbf9c197f0cf2a05253":[2,0,63,0],
-"struct_spell_list_category_choices.html#a7496c1f0e06200f97f9fada94d4a6f69":[2,0,63,2],
 "struct_spell_list_category_choices.html#a83fecfa87767f658d2a14d15dca3132e":[2,0,63,1],
+"struct_spell_list_category_choices.html#ababfdad1306862d40791bd6f4a5e458f":[2,0,63,2],
 "struct_spell_list_choices.html":[2,0,64],
-"struct_spell_list_choices.html#a58cc8f62bd8706317f3c05007e5fe1fb":[2,0,64,1],
-"struct_spell_list_choices.html#a8bfe1208e58e55e0211631be01eb8c0c":[2,0,64,0],
-"struct_spell_list_choices.html#a994a7775b3fd859f794b7503d341ed87":[2,0,64,2],
-"struct_spell_list_choices.html#ad0093c26a888347bc098c789ce3aa028":[2,0,64,3]
+"struct_spell_list_choices.html#a58cc8f62bd8706317f3c05007e5fe1fb":[2,0,64,2],
+"struct_spell_list_choices.html#a8bfe1208e58e55e0211631be01eb8c0c":[2,0,64,1],
+"struct_spell_list_choices.html#aa96b8be9e4f79904202a32d74284c155":[2,0,64,4],
+"struct_spell_list_choices.html#adb37d822f4fc515970b3e60124c8837f":[2,0,64,3],
+"struct_spell_list_choices.html#ae1bb9c845ec4ddfa0ce59cda73bc0b19":[2,0,64,0]
 };

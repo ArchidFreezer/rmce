@@ -788,25 +788,25 @@ $(function(){initNavTree('_datafile_parser_json_8h_source.html','',''); });
 <div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>        choice_tree.put(<span class="stringliteral">&quot;value&quot;</span>, pair.second);</div>
 <div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span> </div>
 <div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>        pt::ptree options_tree{};</div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>        std::map&lt;std::string, const SubcategoriedSkillData*&gt; sorted_options{};</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>        std::map&lt;size_t, const SubcategoriedSkillData*&gt; sorted_options{};</div>
 <div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a>* option : pair.first.options()) {</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>            sorted_options.emplace(option-&gt;skillData().id(), option);</div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>        }</div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; option_pair : sorted_options) {</div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>            pt::ptree option_tree{};</div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>            option_tree.put(<span class="stringliteral">&quot;id&quot;</span>, option_pair.second-&gt;skillData().id());</div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>            <span class="keywordflow">if</span> (option_pair.second-&gt;subcategory()) option_tree.put(<span class="stringliteral">&quot;subcategory&quot;</span>, option_pair.second-&gt;subcategory().value());</div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>            options_tree.push_back(std::make_pair(<span class="stringliteral">&quot;&quot;</span>, option_tree));</div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>        }</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>        choice_tree.push_back(std::make_pair(<span class="stringliteral">&quot;options&quot;</span>, options_tree));</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>        tree.push_back(std::make_pair(<span class="stringliteral">&quot;&quot;</span>, choice_tree));</div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    }</div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>    <span class="keywordflow">return</span> tree;</div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>}</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>            <span class="keywordtype">size_t</span> hash{ std::hash&lt;std::string&gt;()(option-&gt;skillData().<span class="keywordtype">id</span>()) };</div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>            hash += option-&gt;subcategory() ? std::hash&lt;std::string&gt;()(option-&gt;subcategory().value()) : 0;</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>            hash += std::hash&lt;Primitive&gt;()(pair.second);</div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>            sorted_options.emplace(hash, option);</div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>        }</div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; option_pair : sorted_options) {</div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>            pt::ptree option_tree{};</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>            option_tree.put(<span class="stringliteral">&quot;id&quot;</span>, option_pair.second-&gt;skillData().id());</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>            <span class="keywordflow">if</span> (option_pair.second-&gt;subcategory()) option_tree.put(<span class="stringliteral">&quot;subcategory&quot;</span>, option_pair.second-&gt;subcategory().value());</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>            options_tree.push_back(std::make_pair(<span class="stringliteral">&quot;&quot;</span>, option_tree));</div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>        }</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>        choice_tree.push_back(std::make_pair(<span class="stringliteral">&quot;options&quot;</span>, options_tree));</div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>        tree.push_back(std::make_pair(<span class="stringliteral">&quot;&quot;</span>, choice_tree));</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>    }</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>    <span class="keywordflow">return</span> tree;</div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>}</div>
 </div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span> </div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span> </div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span> </div>
 <div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span> </div>
 <div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span> </div>
 <div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span> </div>
@@ -817,23 +817,26 @@ $(function(){initNavTree('_datafile_parser_json_8h_source.html','',''); });
 <div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span> </div>
 <div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span> </div>
 <div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span> </div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> EnumType&gt;</div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span><span class="keyword">inline</span> std::set&lt;EnumChoice&lt;EnumType&gt;&gt; DatafileParserJson::parseEnumChoiceSetTree(boost::optional&lt;const pt::ptree&amp;&gt; tree) {</div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>    std::set&lt;EnumChoice&lt;EnumType&gt;&gt; datum{};</div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>    <span class="keywordflow">if</span> (tree) {</div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; choice_tree : tree.get()) {</div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>            EnumChoice&lt;EnumType&gt; choice_data{};</div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>            choice_data.<a class="code hl_function" href="class_enum_choice.html#a45a00f93d6e672761fcf5d8ea6678285">setNumChoices</a>(choice_tree.second.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;num-choices&quot;</span>));</div>
-<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; list_tree : choice_tree.second.get_child(<span class="stringliteral">&quot;options&quot;</span>)) {</div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>                EnumType enum_val{};</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>                <a class="code hl_function" href="namespace_armour_type.html#a68c2e7dfe3dc1cc1982140a3c972790b">fromString</a>(list_tree.second.get_value&lt;std::string&gt;(), enum_val);</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>                choice_data.<a class="code hl_function" href="class_enum_choice.html#a21f6df9d73a3a73b253db84d783bba34">addOption</a>(enum_val);</div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>            }</div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>            datum.emplace(choice_data);</div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>        }</div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>    }</div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>    <span class="keywordflow">return</span> datum;</div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>}</div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span> </div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span> </div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span> </div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> EnumType&gt;</div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span><span class="keyword">inline</span> std::set&lt;EnumChoice&lt;EnumType&gt;&gt; DatafileParserJson::parseEnumChoiceSetTree(boost::optional&lt;const pt::ptree&amp;&gt; tree) {</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    std::set&lt;EnumChoice&lt;EnumType&gt;&gt; datum{};</div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>    <span class="keywordflow">if</span> (tree) {</div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; choice_tree : tree.get()) {</div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>            EnumChoice&lt;EnumType&gt; choice_data{};</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>            choice_data.<a class="code hl_function" href="class_enum_choice.html#a45a00f93d6e672761fcf5d8ea6678285">setNumChoices</a>(choice_tree.second.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;num-choices&quot;</span>));</div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; list_tree : choice_tree.second.get_child(<span class="stringliteral">&quot;options&quot;</span>)) {</div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>                EnumType enum_val{};</div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>                <a class="code hl_function" href="namespace_armour_type.html#a68c2e7dfe3dc1cc1982140a3c972790b">fromString</a>(list_tree.second.get_value&lt;std::string&gt;(), enum_val);</div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>                choice_data.<a class="code hl_function" href="class_enum_choice.html#a21f6df9d73a3a73b253db84d783bba34">addOption</a>(enum_val);</div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>            }</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>            datum.emplace(choice_data);</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>        }</div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>    }</div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>    <span class="keywordflow">return</span> datum;</div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>}</div>
 <div class="ttc" id="aclass_datafile_parser_html_a477a6e021f59a24424c97ef0a7748569"><div class="ttname"><a href="class_datafile_parser.html#a477a6e021f59a24424c97ef0a7748569">DatafileParser::read</a></div><div class="ttdeci">virtual void read(const std::string &amp;filename)=0</div><div class="ttdoc">Read game rule data from file, convert to objects and store in the game rule data cache.</div></div>
 <div class="ttc" id="aclass_datafile_parser_html_a810f729c20b10e7cd71c1d902f8e336a"><div class="ttname"><a href="class_datafile_parser.html#a810f729c20b10e7cd71c1d902f8e336a">DatafileParser::filename</a></div><div class="ttdeci">const std::string &amp; filename() const</div><div class="ttdoc">Get the file to parse.</div><div class="ttdef"><b>Definition</b> DatafileParser.h:123</div></div>
 <div class="ttc" id="aclass_datafile_parser_html_aa22e3b1d9277aa0ea0824790a3055f2f"><div class="ttname"><a href="class_datafile_parser.html#aa22e3b1d9277aa0ea0824790a3055f2f">DatafileParser::factory</a></div><div class="ttdeci">GameRuleDataFactory &amp; factory()</div><div class="ttdoc">Get the game rule factoryfactorydata cache.</div><div class="ttdef"><b>Definition</b> DatafileParser.h:117</div></div>

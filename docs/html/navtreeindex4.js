@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"functions_func_b.html":[2,3,1,1],
 "functions_func_c.html":[2,3,1,2],
 "functions_func_d.html":[2,3,1,3],
 "functions_func_e.html":[2,3,1,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411afa7ddc2fc4573cfbf9721e732113e7d3":[0,0,9,1,2],
 "namespace_resistance_type.html#acfff2a0e137639fb170a93715ae4448f":[0,0,9,2],
 "namespace_skill_action_type.html":[0,0,10],
-"namespace_skill_action_type.html#a5e7020a65674c46da0f6d553d7e0e3d6":[0,0,10,4],
-"namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa":[0,0,10,6]
+"namespace_skill_action_type.html#a5e7020a65674c46da0f6d553d7e0e3d6":[0,0,10,4]
 };

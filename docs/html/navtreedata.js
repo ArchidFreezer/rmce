@@ -61,8 +61,8 @@ var NAVTREEINDEX =
 "class_culture_type_datafile_parser_json.html",
 "class_profession_data.html#a6c2798df69be0db95bf7a51441456ef1",
 "class_skill_datafile_parser_json.html#a84c7d584d3bc2c6dadda4a7a1e6e8046",
-"functions_func_c.html",
-"namespace_skill_action_type.html#aa1f4a1ecdf8906d8d02613021b5f2d00"
+"functions_func_b.html",
+"namespace_skill_action_type.html#a9abaf1587836162a4209f7d46f1cafaa"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

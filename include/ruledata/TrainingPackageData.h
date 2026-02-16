@@ -9,7 +9,8 @@
 #include <EnumChoice.h>
 #include <GameRuleData.h>
 #include <RaceData.h>
-
+#include <SpellListData.h>
+#include <SkillCategoryData.h>
 /**
  * @brief Represents a set of skill rank choices from a category available in a package, including constraints on selection and rank allocation.
  */
@@ -36,10 +37,29 @@ struct CategoryMultiSkillRankChoice {
  * @brief Represents a set of spell list choices available in a package, including constraints on selection and rank allocation.
  */
 struct SpellListChoices {
-	std::optional<std::string_view> spell_list_category; /**< Optional category of spell lists to choose from. The default category from the profession should be used if this is not provided or it is preferable. */
+	std::optional<const SkillCategoryData*> spell_list_category; /**< Optional category of spell lists to choose from. The default category from the profession should be used if this is not provided or it is preferable. */
 	int ranks; /**< The number of ranks the package provides in the spell list */
 	int num_choices; /**< The number of spell lists that can be chosen from */
-	std::set<std::string> spell_lists; /**< The spell lists that can be chosen from */
+	std::set<const SpellListData*> spell_lists; /**< The spell lists that can be chosen from */
+
+	/** Overload the less than operator to allow this struct to be used in sorted containers */
+	bool operator<(const SpellListChoices& other) const {
+		size_t this_hash{ 0 };
+		if (spell_list_category) this_hash += std::hash<std::string_view>{}(spell_list_category.value()->id());
+		this_hash += std::hash<int>{}(ranks);
+		this_hash += std::hash<int>{}(num_choices);
+		for (const SpellListData* spell_list : spell_lists) {
+			this_hash += std::hash<std::string>{}(spell_list->id());
+		}
+		size_t that_hash{ 0 };
+		if (other.spell_list_category) that_hash += std::hash<std::string_view>{}(other.spell_list_category.value()->id());
+		that_hash += std::hash<int>{}(other.ranks);
+		that_hash += std::hash<int>{}(other.num_choices);
+		for (const SpellListData* spell_list : other.spell_lists) {
+			that_hash += std::hash<std::string>{}(spell_list->id());
+		}
+		return (this_hash < that_hash);
+	}
 };
 
 /**
@@ -561,6 +581,12 @@ public:
 	 * @param spell_list_choices A set of SpellListChoices representing the spell list choices available in the package.
 	 */
 	void setSpellListChoices(std::set<SpellListChoices> spell_list_choices) { spell_list_choices_ = std::move(spell_list_choices); }
+
+	/**
+	 * @brief Add spell list choices for this package.
+	 * @param spell_list_choices A set of SpellListChoices representing the spell list choices to be added to the package.
+	 */
+	void addSpellListChoices(std::set<SpellListChoices> spell_list_choices) { spell_list_choices_.insert(spell_list_choices.begin(), spell_list_choices.end()); }
 
 	/**
 	 * @brief Get the spell list choices for this package.

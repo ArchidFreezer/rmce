@@ -232,6 +232,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aed01cae66c592f975199997913b547ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the skill group category and skill ranks map.  <br /></td></tr>
 <tr class="memitem:a3fe0f0d210958af31f8a1abfd3d25dcb" id="r_a3fe0f0d210958af31f8a1abfd3d25dcb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3fe0f0d210958af31f8a1abfd3d25dcb">setSpellListChoices</a> (std::set&lt; <a class="el" href="struct_spell_list_choices.html">SpellListChoices</a> &gt; spell_list_choices)</td></tr>
 <tr class="memdesc:a3fe0f0d210958af31f8a1abfd3d25dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the spell list choices for this package.  <br /></td></tr>
+<tr class="memitem:a51bbb9c5e014746580110985b47133f9" id="r_a51bbb9c5e014746580110985b47133f9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a51bbb9c5e014746580110985b47133f9">addSpellListChoices</a> (std::set&lt; <a class="el" href="struct_spell_list_choices.html">SpellListChoices</a> &gt; spell_list_choices)</td></tr>
+<tr class="memdesc:a51bbb9c5e014746580110985b47133f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add spell list choices for this package.  <br /></td></tr>
 <tr class="memitem:aa468407cb6bf0d920643f011effcfb7a" id="r_aa468407cb6bf0d920643f011effcfb7a"><td class="memItemLeft">const std::set&lt; <a class="el" href="struct_spell_list_choices.html">SpellListChoices</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa468407cb6bf0d920643f011effcfb7a">spellListChoices</a> () const</td></tr>
 <tr class="memdesc:aa468407cb6bf0d920643f011effcfb7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spell list choices for this package.  <br /></td></tr>
 <tr class="memitem:a3081e391d095cceaf1f4b9325be97c48" id="r_a3081e391d095cceaf1f4b9325be97c48"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3081e391d095cceaf1f4b9325be97c48">setSpellListCategoryChoices</a> (std::set&lt; <a class="el" href="struct_spell_list_category_choices.html">SpellListCategoryChoices</a> &gt; spell_list_category_choices)</td></tr>
@@ -494,6 +496,39 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">special</td><td>Description of the special benefit or malus </td></tr>
     <tr><td class="paramname">chance</td><td>Modifier to the chance of getting the special. This is added to the d100 roll when determining whether the special is gained. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a51bbb9c5e014746580110985b47133f9" name="a51bbb9c5e014746580110985b47133f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51bbb9c5e014746580110985b47133f9">&#9670;&#160;</a></span>addSpellListChoices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TrainingPackageData::addSpellListChoices </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; <a class="el" href="struct_spell_list_choices.html">SpellListChoices</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>spell_list_choices</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add spell list choices for this package. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell_list_choices</td><td>A set of <a class="el" href="struct_spell_list_choices.html" title="Represents a set of spell list choices available in a package, including constraints on selection and...">SpellListChoices</a> representing the spell list choices to be added to the package. </td></tr>
   </table>
   </dd>
 </dl>
