@@ -35,6 +35,8 @@ var annotated_dup =
     [ "ClimateData", "class_climate_data.html", "class_climate_data" ],
     [ "ClimateDatafileParserJson", "class_climate_datafile_parser_json.html", "class_climate_datafile_parser_json" ],
     [ "ColNotFoundException", "class_col_not_found_exception.html", "class_col_not_found_exception" ],
+    [ "CultureData", "class_culture_data.html", "class_culture_data" ],
+    [ "CultureDatafileParserXml", "class_culture_datafile_parser_xml.html", "class_culture_datafile_parser_xml" ],
     [ "CultureTypeData", "class_culture_type_data.html", "class_culture_type_data" ],
     [ "CultureTypeDatafileParserJson", "class_culture_type_datafile_parser_json.html", "class_culture_type_datafile_parser_json" ],
     [ "DatafileParser", "class_datafile_parser.html", "class_datafile_parser" ],

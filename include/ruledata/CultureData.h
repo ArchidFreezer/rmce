@@ -87,7 +87,7 @@ public:
 	 * @brief Add the number of ranks a member of the race gets in a language during adolescence
 	 * @param language LanguageAbility containing the ranks for a language
 	 */
-	void setLanguageAbility(LanguageAbility language) { languages_.emplace(language.language(), language); }
+	void addLanguageAbility(LanguageAbility language) { languages_.emplace(language.language(), language); }
 
 	/**
 	 * @brief Sets the language abilities map for this object.
@@ -244,6 +244,36 @@ public:
 			if (profession.id() == key->id()) return true;
 		}
 		return false;
+	}
+
+	/**
+	 * @brief Add a modifier to the development point cost of a training package for members of the culture
+	 * @param training_package TrainingPackageData pointer to the training package
+	 * @param modifier int modifier to the development point cost of the training package for members of the culture
+	 */
+	void addTrainingPackageModifier(const TrainingPackageData& training_package, float modifier) { training_package_modifiers_.emplace(&training_package, modifier); }
+
+	/**
+	 * @brief Set the modifiers to the development point cost of training packages for members of the culture
+	 * @param training_package_modifiers std::map associating TrainingPackageData pointers with their corresponding int modifiers to the development point cost of the training package for members of the culture
+	 */
+	void setTrainingPackageModifiers(std::map<const TrainingPackageData*, float> training_package_modifiers) { training_package_modifiers_ = std::move(training_package_modifiers); }
+
+	/**
+	 * @brief Get the modifier to the development point cost of a training package for members of the culture
+	 * 
+	 * The modifier returned is a float that can be multiplied by the normal development point cost of the training package to get the modified cost for members of the culture.
+	 * For example, a modifier of 0.8 would indicate that members of the culture pay 80% of the normal development point cost for the training package, while a modifier of 1.2 
+	 * would indicate that members of the culture pay 120% of the normal development point cost for the training package.
+	 * 
+	 * @param training_package TrainingPackageData pointer to the training package
+	 * @return float modifier to the development point cost of the training package for members of the culture
+	 */
+	float trainingPackageModifier(const TrainingPackageData& training_package) const {
+		for (const auto& key : training_package_modifiers_) {
+			if (training_package.id() == key.first->id()) return key.second;
+		}
+		return 1.0f; // Default modifier is 100% of the normal cost
 	}
 
 private:

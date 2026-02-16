@@ -141,36 +141,54 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9c5531a8f155de1c2601da341b774ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the culture has a low level of technical or cultural acheivements.  <br /></td></tr>
 <tr class="memitem:ae64808d7b5b26fb05ad02ecfdefe0578" id="r_ae64808d7b5b26fb05ad02ecfdefe0578"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae64808d7b5b26fb05ad02ecfdefe0578">highCulture</a> () const</td></tr>
 <tr class="memdesc:ae64808d7b5b26fb05ad02ecfdefe0578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the culture has a low level of technical or cultural acheivements.  <br /></td></tr>
-<tr class="memitem:ab1c7d7cda7a35993519a28554c99170b" id="r_ab1c7d7cda7a35993519a28554c99170b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab1c7d7cda7a35993519a28554c99170b">setLanguageAbility</a> (<a class="el" href="class_language_ability.html">LanguageAbility</a> language)</td></tr>
-<tr class="memdesc:ab1c7d7cda7a35993519a28554c99170b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the number of ranks a member of the race gets in a language during adolescence.  <br /></td></tr>
+<tr class="memitem:a1475b202c28805e74994343f363bb792" id="r_a1475b202c28805e74994343f363bb792"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1475b202c28805e74994343f363bb792">addLanguageAbility</a> (<a class="el" href="class_language_ability.html">LanguageAbility</a> language)</td></tr>
+<tr class="memdesc:a1475b202c28805e74994343f363bb792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the number of ranks a member of the race gets in a language during adolescence.  <br /></td></tr>
+<tr class="memitem:abc8ab8edd53577afa05f86f01c7ab362" id="r_abc8ab8edd53577afa05f86f01c7ab362"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abc8ab8edd53577afa05f86f01c7ab362">setLanguageAbilities</a> (std::map&lt; std::string, <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt; <a class="el" href="#add782e4bbf61994d6618a1df6f04bcf5">languages</a>)</td></tr>
+<tr class="memdesc:abc8ab8edd53577afa05f86f01c7ab362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the language abilities map for this object.  <br /></td></tr>
 <tr class="memitem:ac669b838153aa0456bcab6454d807b9e" id="r_ac669b838153aa0456bcab6454d807b9e"><td class="memItemLeft">const <a class="el" href="class_language_ability.html">LanguageAbility</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac669b838153aa0456bcab6454d807b9e">languageAbility</a> (const <a class="el" href="class_language_data.html">LanguageData</a> &amp;language) const</td></tr>
 <tr class="memdesc:ac669b838153aa0456bcab6454d807b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the staring ability a member of the race has in a language.  <br /></td></tr>
-<tr class="memitem:a53b19dba3b58143d8de34b39571eae3c" id="r_a53b19dba3b58143d8de34b39571eae3c"><td class="memItemLeft">const <a class="el" href="class_language_ability.html">LanguageAbility</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a53b19dba3b58143d8de34b39571eae3c">languageAbility</a> (const std::string language_name) const</td></tr>
-<tr class="memdesc:a53b19dba3b58143d8de34b39571eae3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the staring ability a member of the race has in a language.  <br /></td></tr>
-<tr class="memitem:ad68d7bbd4114aab55700e7590bff6ca6" id="r_ad68d7bbd4114aab55700e7590bff6ca6"><td class="memItemLeft">const std::vector&lt; <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad68d7bbd4114aab55700e7590bff6ca6">languages</a> () const</td></tr>
-<tr class="memdesc:ad68d7bbd4114aab55700e7590bff6ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> objects known during adolescence.  <br /></td></tr>
+<tr class="memitem:a750d7810070325448ffb31ff5d3464db" id="r_a750d7810070325448ffb31ff5d3464db"><td class="memItemLeft">const <a class="el" href="class_language_ability.html">LanguageAbility</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a750d7810070325448ffb31ff5d3464db">languageAbility</a> (const std::string &amp;language_name) const</td></tr>
+<tr class="memdesc:a750d7810070325448ffb31ff5d3464db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the staring ability a member of the race has in a language.  <br /></td></tr>
+<tr class="memitem:add782e4bbf61994d6618a1df6f04bcf5" id="r_add782e4bbf61994d6618a1df6f04bcf5"><td class="memItemLeft">const std::vector&lt; <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#add782e4bbf61994d6618a1df6f04bcf5">languages</a> () const</td></tr>
+<tr class="memdesc:add782e4bbf61994d6618a1df6f04bcf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the <a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> objects known during adolescence.  <br /></td></tr>
 <tr class="memitem:a04e62a31640bb5d9414b50c736fcbc59" id="r_a04e62a31640bb5d9414b50c736fcbc59"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a04e62a31640bb5d9414b50c736fcbc59">addHobbySkill</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill)</td></tr>
 <tr class="memdesc:a04e62a31640bb5d9414b50c736fcbc59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a skill to those typically taken by an adolescent of the culture.  <br /></td></tr>
-<tr class="memitem:a4c37037dec7de56f3fd062c7f26a9e03" id="r_a4c37037dec7de56f3fd062c7f26a9e03"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4c37037dec7de56f3fd062c7f26a9e03">hobbySkills</a> () const</td></tr>
-<tr class="memdesc:a4c37037dec7de56f3fd062c7f26a9e03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the skills typically taken by an adolescent of the culture.  <br /></td></tr>
+<tr class="memitem:a6f163271c9fa50c8a8468494f045e075" id="r_a6f163271c9fa50c8a8468494f045e075"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6f163271c9fa50c8a8468494f045e075">setHobbySkills</a> (std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; hobby_skills)</td></tr>
+<tr class="memdesc:a6f163271c9fa50c8a8468494f045e075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the skills typically taken by an adolescent of the culture.  <br /></td></tr>
+<tr class="memitem:a3c16d056d028bb9f22d3dc064606c30d" id="r_a3c16d056d028bb9f22d3dc064606c30d"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3c16d056d028bb9f22d3dc064606c30d">hobbySkills</a> () const</td></tr>
+<tr class="memdesc:a3c16d056d028bb9f22d3dc064606c30d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the skills typically taken by an adolescent of the culture.  <br /></td></tr>
 <tr class="memitem:a456bff5d26bf550f0bafab69b39f503b" id="r_a456bff5d26bf550f0bafab69b39f503b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a456bff5d26bf550f0bafab69b39f503b">isHobbySkill</a> (const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &amp;skill) const</td></tr>
 <tr class="memdesc:a456bff5d26bf550f0bafab69b39f503b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a skill is typically taken by an adolescent of the culture.  <br /></td></tr>
 <tr class="memitem:a63a551d781d5eafdeccea70e25e9e43f" id="r_a63a551d781d5eafdeccea70e25e9e43f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a63a551d781d5eafdeccea70e25e9e43f">addHobbySkillCategory</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;skill_category)</td></tr>
 <tr class="memdesc:a63a551d781d5eafdeccea70e25e9e43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a skill category to those typically taken by an adolescent of the culture.  <br /></td></tr>
-<tr class="memitem:a42468476087e0e92c62f80e8736849cc" id="r_a42468476087e0e92c62f80e8736849cc"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a42468476087e0e92c62f80e8736849cc">hobbySkillCategories</a> () const</td></tr>
-<tr class="memdesc:a42468476087e0e92c62f80e8736849cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the skill categories typically taken by an adolescent of the culture.  <br /></td></tr>
+<tr class="memitem:abd6a4b3dc846e8a99e59cd8cf117273f" id="r_abd6a4b3dc846e8a99e59cd8cf117273f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abd6a4b3dc846e8a99e59cd8cf117273f">setHobbySkillCategories</a> (std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; hobby_skill_categories)</td></tr>
+<tr class="memdesc:abd6a4b3dc846e8a99e59cd8cf117273f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the skill categories typically taken by an adolescent of the culture.  <br /></td></tr>
+<tr class="memitem:ae12ad599612b1002a5bafc8d52bcb37c" id="r_ae12ad599612b1002a5bafc8d52bcb37c"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae12ad599612b1002a5bafc8d52bcb37c">hobbySkillCategories</a> () const</td></tr>
+<tr class="memdesc:ae12ad599612b1002a5bafc8d52bcb37c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the skill categories typically taken by an adolescent of the culture.  <br /></td></tr>
 <tr class="memitem:a0774b5390fdfdb702c24920354958c37" id="r_a0774b5390fdfdb702c24920354958c37"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0774b5390fdfdb702c24920354958c37">isHobbySkillCategory</a> (const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &amp;skill_category) const</td></tr>
 <tr class="memdesc:a0774b5390fdfdb702c24920354958c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a skill category is typically taken by an adolescent of the culture.  <br /></td></tr>
 <tr class="memitem:ad3cec2262270d0477b83ac745be702bb" id="r_ad3cec2262270d0477b83ac745be702bb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad3cec2262270d0477b83ac745be702bb">addPreferredProfession</a> (const <a class="el" href="class_profession_data.html">ProfessionData</a> &amp;profession)</td></tr>
 <tr class="memdesc:ad3cec2262270d0477b83ac745be702bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a profession that is typically preferred by a member of the culture.  <br /></td></tr>
-<tr class="memitem:ae26afa51cc1ab0a761e5800f0061567f" id="r_ae26afa51cc1ab0a761e5800f0061567f"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae26afa51cc1ab0a761e5800f0061567f">preferredProfessions</a> () const</td></tr>
-<tr class="memdesc:ae26afa51cc1ab0a761e5800f0061567f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the professions that are typically preferred by a member of the culture.  <br /></td></tr>
+<tr class="memitem:ad1672c4007071b7fe5e2cdc3db3f3e1f" id="r_ad1672c4007071b7fe5e2cdc3db3f3e1f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad1672c4007071b7fe5e2cdc3db3f3e1f">setPreferredProfessions</a> (std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt; preferred_professions)</td></tr>
+<tr class="memdesc:ad1672c4007071b7fe5e2cdc3db3f3e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the professions that are typically preferred by a member of the culture.  <br /></td></tr>
+<tr class="memitem:a0e3c6d36f17861c54758e22b28d22f70" id="r_a0e3c6d36f17861c54758e22b28d22f70"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0e3c6d36f17861c54758e22b28d22f70">preferredProfessions</a> () const</td></tr>
+<tr class="memdesc:a0e3c6d36f17861c54758e22b28d22f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the professions that are typically preferred by a member of the culture.  <br /></td></tr>
+<tr class="memitem:a035ed9b5ff8d219d51a8792871d16c6b" id="r_a035ed9b5ff8d219d51a8792871d16c6b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a035ed9b5ff8d219d51a8792871d16c6b">isPreferredProfession</a> (const <a class="el" href="class_profession_data.html">ProfessionData</a> &amp;profession) const</td></tr>
+<tr class="memdesc:a035ed9b5ff8d219d51a8792871d16c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a profession is typically preferred by a member of the culture.  <br /></td></tr>
+<tr class="memitem:a55dba8d3304b30fc64ed9e49497c6e09" id="r_a55dba8d3304b30fc64ed9e49497c6e09"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a55dba8d3304b30fc64ed9e49497c6e09">addRestrictedProfession</a> (const <a class="el" href="class_profession_data.html">ProfessionData</a> &amp;profession)</td></tr>
+<tr class="memdesc:a55dba8d3304b30fc64ed9e49497c6e09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a profession that is typically restricted to a member of the culture.  <br /></td></tr>
+<tr class="memitem:a42aeaef519ec24affdbf9ca92c6a7558" id="r_a42aeaef519ec24affdbf9ca92c6a7558"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a42aeaef519ec24affdbf9ca92c6a7558">setRestrictedProfessions</a> (std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt; restricted_professions)</td></tr>
+<tr class="memdesc:a42aeaef519ec24affdbf9ca92c6a7558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the professions that are typically restricted to a member of the culture.  <br /></td></tr>
+<tr class="memitem:a3490a7ef39f1b419fcd507046fde8df5" id="r_a3490a7ef39f1b419fcd507046fde8df5"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3490a7ef39f1b419fcd507046fde8df5">restrictedProfessions</a> () const</td></tr>
+<tr class="memdesc:a3490a7ef39f1b419fcd507046fde8df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the professions that are typically restricted to a member of the culture.  <br /></td></tr>
 <tr class="memitem:a8a7c975e973cf51c63bf3b747282f1c0" id="r_a8a7c975e973cf51c63bf3b747282f1c0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8a7c975e973cf51c63bf3b747282f1c0">isRestrictedProfession</a> (const <a class="el" href="class_profession_data.html">ProfessionData</a> &amp;profession) const</td></tr>
 <tr class="memdesc:a8a7c975e973cf51c63bf3b747282f1c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a profession is typically restricted to a member of the culture.  <br /></td></tr>
-<tr class="memitem:aa46334edbe3f170bc39001cf52d2d287" id="r_aa46334edbe3f170bc39001cf52d2d287"><td class="memItemLeft">const std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa46334edbe3f170bc39001cf52d2d287">restrictedProfessions</a> () const</td></tr>
-<tr class="memdesc:aa46334edbe3f170bc39001cf52d2d287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a container with the professions that are typically restricted to a member of the culture.  <br /></td></tr>
-<tr class="memitem:a8a7c975e973cf51c63bf3b747282f1c0" id="r_a8a7c975e973cf51c63bf3b747282f1c0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8a7c975e973cf51c63bf3b747282f1c0">isRestrictedProfession</a> (const <a class="el" href="class_profession_data.html">ProfessionData</a> &amp;profession) const</td></tr>
-<tr class="memdesc:a8a7c975e973cf51c63bf3b747282f1c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a profession is typically restricted to a member of the culture.  <br /></td></tr>
+<tr class="memitem:a188b7b769f662e37bc0dfee14462b16b" id="r_a188b7b769f662e37bc0dfee14462b16b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a188b7b769f662e37bc0dfee14462b16b">addTrainingPackageModifier</a> (const <a class="el" href="class_training_package_data.html">TrainingPackageData</a> &amp;training_package, float modifier)</td></tr>
+<tr class="memdesc:a188b7b769f662e37bc0dfee14462b16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a modifier to the development point cost of a training package for members of the culture.  <br /></td></tr>
+<tr class="memitem:a717ce19e0289ebe87fb9643cace64995" id="r_a717ce19e0289ebe87fb9643cace64995"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a717ce19e0289ebe87fb9643cace64995">setTrainingPackageModifiers</a> (std::map&lt; const <a class="el" href="class_training_package_data.html">TrainingPackageData</a> *, float &gt; training_package_modifiers)</td></tr>
+<tr class="memdesc:a717ce19e0289ebe87fb9643cace64995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the modifiers to the development point cost of training packages for members of the culture.  <br /></td></tr>
+<tr class="memitem:a4618c7eb0db28535afd07dd3603b41cf" id="r_a4618c7eb0db28535afd07dd3603b41cf"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a4618c7eb0db28535afd07dd3603b41cf">trainingPackageModifier</a> (const <a class="el" href="class_training_package_data.html">TrainingPackageData</a> &amp;training_package) const</td></tr>
+<tr class="memdesc:a4618c7eb0db28535afd07dd3603b41cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modifier to the development point cost of a training package for members of the culture.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
 <tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
@@ -296,6 +314,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a1475b202c28805e74994343f363bb792" name="a1475b202c28805e74994343f363bb792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1475b202c28805e74994343f363bb792">&#9670;&#160;</a></span>addLanguageAbility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureData::addLanguageAbility </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_language_ability.html">LanguageAbility</a></td>          <td class="paramname"><span class="paramname"><em>language</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add the number of ranks a member of the race gets in a language during adolescence. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">language</td><td><a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> containing the ranks for a language </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad3cec2262270d0477b83ac745be702bb" name="ad3cec2262270d0477b83ac745be702bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3cec2262270d0477b83ac745be702bb">&#9670;&#160;</a></span>addPreferredProfession()</h2>
 
@@ -323,6 +374,77 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">profession</td><td><a class="el" href="class_profession_data.html" title="Class representing the character modifiers that a profession defines.">ProfessionData</a> to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a55dba8d3304b30fc64ed9e49497c6e09" name="a55dba8d3304b30fc64ed9e49497c6e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55dba8d3304b30fc64ed9e49497c6e09">&#9670;&#160;</a></span>addRestrictedProfession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureData::addRestrictedProfession </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_profession_data.html">ProfessionData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>profession</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a profession that is typically restricted to a member of the culture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">profession</td><td><a class="el" href="class_profession_data.html" title="Class representing the character modifiers that a profession defines.">ProfessionData</a> to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a188b7b769f662e37bc0dfee14462b16b" name="a188b7b769f662e37bc0dfee14462b16b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a188b7b769f662e37bc0dfee14462b16b">&#9670;&#160;</a></span>addTrainingPackageModifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureData::addTrainingPackageModifier </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_training_package_data.html">TrainingPackageData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>training_package</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>modifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a modifier to the development point cost of a training package for members of the culture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">training_package</td><td><a class="el" href="class_training_package_data.html" title="A training package is a group of benefits (and sometimes disadvantages) that can be developed using d...">TrainingPackageData</a> pointer to the training package </td></tr>
+    <tr><td class="paramname">modifier</td><td>int modifier to the development point cost of the training package for members of the culture </td></tr>
   </table>
   </dd>
 </dl>
@@ -415,8 +537,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a42468476087e0e92c62f80e8736849cc" name="a42468476087e0e92c62f80e8736849cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42468476087e0e92c62f80e8736849cc">&#9670;&#160;</a></span>hobbySkillCategories()</h2>
+<a id="ae12ad599612b1002a5bafc8d52bcb37c" name="ae12ad599612b1002a5bafc8d52bcb37c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae12ad599612b1002a5bafc8d52bcb37c">&#9670;&#160;</a></span>hobbySkillCategories()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +547,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; CultureData::hobbySkillCategories </td>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt; &amp; CultureData::hobbySkillCategories </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -443,8 +565,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4c37037dec7de56f3fd062c7f26a9e03" name="a4c37037dec7de56f3fd062c7f26a9e03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c37037dec7de56f3fd062c7f26a9e03">&#9670;&#160;</a></span>hobbySkills()</h2>
+<a id="a3c16d056d028bb9f22d3dc064606c30d" name="a3c16d056d028bb9f22d3dc064606c30d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c16d056d028bb9f22d3dc064606c30d">&#9670;&#160;</a></span>hobbySkills()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,7 +575,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; const <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; CultureData::hobbySkills </td>
+          <td class="memname">const std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt; &amp; CultureData::hobbySkills </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -543,8 +665,44 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a035ed9b5ff8d219d51a8792871d16c6b" name="a035ed9b5ff8d219d51a8792871d16c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a035ed9b5ff8d219d51a8792871d16c6b">&#9670;&#160;</a></span>isPreferredProfession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CultureData::isPreferredProfession </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_profession_data.html">ProfessionData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>profession</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get whether a profession is typically preferred by a member of the culture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">profession</td><td><a class="el" href="class_profession_data.html" title="Class representing the character modifiers that a profession defines.">ProfessionData</a> to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the profession is typically preferred by a member of the culture </dd>
+<dd>
+<span class="tt">false</span> if the profession is not typically preferred by a member of the culture </dd></dl>
+
+</div>
+</div>
 <a id="a8a7c975e973cf51c63bf3b747282f1c0" name="a8a7c975e973cf51c63bf3b747282f1c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a7c975e973cf51c63bf3b747282f1c0">&#9670;&#160;</a></span>isRestrictedProfession() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7c975e973cf51c63bf3b747282f1c0">&#9670;&#160;</a></span>isRestrictedProfession()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -576,42 +734,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the profession is typically restricted to a member of the culture </dd>
 <dd>
 <span class="tt">false</span> if the profession is not typically restricted to a member of the culture </dd></dl>
-
-</div>
-</div>
-<a id="a8a7c975e973cf51c63bf3b747282f1c0" name="a8a7c975e973cf51c63bf3b747282f1c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a7c975e973cf51c63bf3b747282f1c0">&#9670;&#160;</a></span>isRestrictedProfession() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool CultureData::isRestrictedProfession </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_profession_data.html">ProfessionData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>profession</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get whether a profession is typically restricted to a member of the culture. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">profession</td><td><a class="el" href="class_profession_data.html" title="Class representing the character modifiers that a profession defines.">ProfessionData</a> to check </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the profession is typically restricted by a member of the culture </dd>
-<dd>
-<span class="tt">false</span> if the profession is not typically restricted by a member of the culture </dd></dl>
 
 </div>
 </div>
@@ -649,8 +771,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a53b19dba3b58143d8de34b39571eae3c" name="a53b19dba3b58143d8de34b39571eae3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53b19dba3b58143d8de34b39571eae3c">&#9670;&#160;</a></span>languageAbility() <span class="overload">[2/2]</span></h2>
+<a id="a750d7810070325448ffb31ff5d3464db" name="a750d7810070325448ffb31ff5d3464db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a750d7810070325448ffb31ff5d3464db">&#9670;&#160;</a></span>languageAbility() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,7 +783,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">const <a class="el" href="class_language_ability.html">LanguageAbility</a> &amp; CultureData::languageAbility </td>
           <td>(</td>
-          <td class="paramtype">const std::string</td>          <td class="paramname"><span class="paramname"><em>language_name</em></span></td><td>)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>language_name</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -683,8 +805,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ad68d7bbd4114aab55700e7590bff6ca6" name="ad68d7bbd4114aab55700e7590bff6ca6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad68d7bbd4114aab55700e7590bff6ca6">&#9670;&#160;</a></span>languages()</h2>
+<a id="add782e4bbf61994d6618a1df6f04bcf5" name="add782e4bbf61994d6618a1df6f04bcf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add782e4bbf61994d6618a1df6f04bcf5">&#9670;&#160;</a></span>languages()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -693,7 +815,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt; CultureData::languages </td>
+          <td class="memname">const std::vector&lt; <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt; &amp; CultureData::languages </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -739,8 +861,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae26afa51cc1ab0a761e5800f0061567f" name="ae26afa51cc1ab0a761e5800f0061567f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae26afa51cc1ab0a761e5800f0061567f">&#9670;&#160;</a></span>preferredProfessions()</h2>
+<a id="a0e3c6d36f17861c54758e22b28d22f70" name="a0e3c6d36f17861c54758e22b28d22f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3c6d36f17861c54758e22b28d22f70">&#9670;&#160;</a></span>preferredProfessions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -749,7 +871,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt; CultureData::preferredProfessions </td>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt; &amp; CultureData::preferredProfessions </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -767,8 +889,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aa46334edbe3f170bc39001cf52d2d287" name="aa46334edbe3f170bc39001cf52d2d287"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa46334edbe3f170bc39001cf52d2d287">&#9670;&#160;</a></span>restrictedProfessions()</h2>
+<a id="a3490a7ef39f1b419fcd507046fde8df5" name="a3490a7ef39f1b419fcd507046fde8df5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3490a7ef39f1b419fcd507046fde8df5">&#9670;&#160;</a></span>restrictedProfessions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -777,7 +899,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt; CultureData::restrictedProfessions </td>
+          <td class="memname">const std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt; &amp; CultureData::restrictedProfessions </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -894,8 +1016,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab1c7d7cda7a35993519a28554c99170b" name="ab1c7d7cda7a35993519a28554c99170b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1c7d7cda7a35993519a28554c99170b">&#9670;&#160;</a></span>setLanguageAbility()</h2>
+<a id="abd6a4b3dc846e8a99e59cd8cf117273f" name="abd6a4b3dc846e8a99e59cd8cf117273f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd6a4b3dc846e8a99e59cd8cf117273f">&#9670;&#160;</a></span>setHobbySkillCategories()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -904,9 +1026,9 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void CultureData::setLanguageAbility </td>
+          <td class="memname">void CultureData::setHobbySkillCategories </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_language_ability.html">LanguageAbility</a></td>          <td class="paramname"><span class="paramname"><em>language</em></span></td><td>)</td>
+          <td class="paramtype">std::set&lt; const <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> * &gt;</td>          <td class="paramname"><span class="paramname"><em>hobby_skill_categories</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -917,10 +1039,76 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Add the number of ranks a member of the race gets in a language during adolescence. </p>
+<p>Set the skill categories typically taken by an adolescent of the culture. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">language</td><td><a class="el" href="class_language_ability.html" title="Class representing the ability a character has in a language.">LanguageAbility</a> containing the ranks for a language </td></tr>
+    <tr><td class="paramname">hobby_skill_categories</td><td>std::set of <a class="el" href="class_skill_category_data.html" title="Class to represent a skill category.">SkillCategoryData</a> pointers representing the skill categories typically taken by an adolescent of the culture </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6f163271c9fa50c8a8468494f045e075" name="a6f163271c9fa50c8a8468494f045e075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f163271c9fa50c8a8468494f045e075">&#9670;&#160;</a></span>setHobbySkills()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureData::setHobbySkills </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; <a class="el" href="class_subcategoried_skill_data.html">SubcategoriedSkillData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>hobby_skills</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the skills typically taken by an adolescent of the culture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hobby_skills</td><td>std::set of <a class="el" href="class_subcategoried_skill_data.html" title="Wrapper class for a Skilldata object that allows for a specific skill subcategory to be defined.">SubcategoriedSkillData</a> representing the skills typically taken by an adolescent of the culture </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abc8ab8edd53577afa05f86f01c7ab362" name="abc8ab8edd53577afa05f86f01c7ab362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc8ab8edd53577afa05f86f01c7ab362">&#9670;&#160;</a></span>setLanguageAbilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureData::setLanguageAbilities </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; std::string, <a class="el" href="class_language_ability.html">LanguageAbility</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>languages</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the language abilities map for this object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">languages</td><td>A map associating language identifiers with their corresponding language ability levels. </td></tr>
   </table>
   </dd>
 </dl>
@@ -957,6 +1145,140 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad1672c4007071b7fe5e2cdc3db3f3e1f" name="ad1672c4007071b7fe5e2cdc3db3f3e1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1672c4007071b7fe5e2cdc3db3f3e1f">&#9670;&#160;</a></span>setPreferredProfessions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureData::setPreferredProfessions </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt;</td>          <td class="paramname"><span class="paramname"><em>preferred_professions</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the professions that are typically preferred by a member of the culture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">preferred_professions</td><td>std::set of <a class="el" href="class_profession_data.html" title="Class representing the character modifiers that a profession defines.">ProfessionData</a> pointers representing the professions that are typically preferred by a member of the culture </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a42aeaef519ec24affdbf9ca92c6a7558" name="a42aeaef519ec24affdbf9ca92c6a7558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42aeaef519ec24affdbf9ca92c6a7558">&#9670;&#160;</a></span>setRestrictedProfessions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureData::setRestrictedProfessions </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; const <a class="el" href="class_profession_data.html">ProfessionData</a> * &gt;</td>          <td class="paramname"><span class="paramname"><em>restricted_professions</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the professions that are typically restricted to a member of the culture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">restricted_professions</td><td>std::set of <a class="el" href="class_profession_data.html" title="Class representing the character modifiers that a profession defines.">ProfessionData</a> pointers representing the professions that are typically restricted to a member of the culture </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a717ce19e0289ebe87fb9643cace64995" name="a717ce19e0289ebe87fb9643cace64995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717ce19e0289ebe87fb9643cace64995">&#9670;&#160;</a></span>setTrainingPackageModifiers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CultureData::setTrainingPackageModifiers </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; const <a class="el" href="class_training_package_data.html">TrainingPackageData</a> *, float &gt;</td>          <td class="paramname"><span class="paramname"><em>training_package_modifiers</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the modifiers to the development point cost of training packages for members of the culture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">training_package_modifiers</td><td>std::map associating <a class="el" href="class_training_package_data.html" title="A training package is a group of benefits (and sometimes disadvantages) that can be developed using d...">TrainingPackageData</a> pointers with their corresponding int modifiers to the development point cost of the training package for members of the culture </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4618c7eb0db28535afd07dd3603b41cf" name="a4618c7eb0db28535afd07dd3603b41cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4618c7eb0db28535afd07dd3603b41cf">&#9670;&#160;</a></span>trainingPackageModifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CultureData::trainingPackageModifier </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_training_package_data.html">TrainingPackageData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>training_package</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the modifier to the development point cost of a training package for members of the culture. </p>
+<p>The modifier returned is a float that can be multiplied by the normal development point cost of the training package to get the modified cost for members of the culture. For example, a modifier of 0.8 would indicate that members of the culture pay 80% of the normal development point cost for the training package, while a modifier of 1.2 would indicate that members of the culture pay 120% of the normal development point cost for the training package.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">training_package</td><td><a class="el" href="class_training_package_data.html" title="A training package is a group of benefits (and sometimes disadvantages) that can be developed using d...">TrainingPackageData</a> pointer to the training package </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>float modifier to the development point cost of the training package for members of the culture </dd></dl>
 
 </div>
 </div>

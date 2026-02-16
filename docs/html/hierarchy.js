@@ -26,6 +26,7 @@ var hierarchy =
         [ "WeaponTypeDatafileParserJson", "class_weapon_type_datafile_parser_json.html", null ]
       ] ],
       [ "DatafileParserXml", "class_datafile_parser_xml.html", [
+        [ "CultureDatafileParserXml", "class_culture_datafile_parser_xml.html", null ],
         [ "ProfessionDatafileParserXml", "class_profession_datafile_parser_xml.html", null ]
       ] ]
     ] ],
@@ -44,6 +45,7 @@ var hierarchy =
       [ "ArmourTypeData", "class_armour_type_data.html", null ],
       [ "BookData", "class_book_data.html", null ],
       [ "ClimateData", "class_climate_data.html", null ],
+      [ "CultureData", "class_culture_data.html", null ],
       [ "CultureTypeData", "class_culture_type_data.html", null ],
       [ "LanguageCategoryData", "class_language_category_data.html", null ],
       [ "LanguageData", "class_language_data.html", null ],
