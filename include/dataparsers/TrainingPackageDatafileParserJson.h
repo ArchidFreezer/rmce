@@ -121,4 +121,18 @@ private:
 	 * @return A property tree representation of the stat gain choices, where each entry is represented as a child node with the key and value.
 	 */
 	const pt::ptree getStatGainChoicesTree(TrainingPackageData& game_data);
+
+	/**
+	 * @brief Parses category multi skill rank choices from a property tree into a set of CategoryMultiSkillRankChoice objects.
+	 * @param category_multi_skill_rank_choices An optional reference to a property tree containing the category multi skill rank choices to parse. If not present, an empty set is returned.
+	 * @return A set of CategoryMultiSkillRankChoice objects representing the parsed category multi skill rank choices.
+	 */
+	std::set<CategoryMultiSkillRankChoice> parseCategoryMultiSkillRankChoices(boost::optional<const pt::ptree&> category_multi_skill_rank_choices);
+
+	/**
+	 * @brief Converts a set of CategoryMultiSkillRankChoice objects representing category multi skill rank choices into a property tree.
+	 * @param category_multi_skill_rank_choices A set of CategoryMultiSkillRankChoice objects representing the category multi skill rank choices to convert.
+	 * @return A property tree representation of the category multi skill rank choices, where each entry is represented as a child node with the relevant data.
+	 */
+	const pt::ptree getCategoryMultiSkillRankChoicesTree(TrainingPackageData& game_data);
 };

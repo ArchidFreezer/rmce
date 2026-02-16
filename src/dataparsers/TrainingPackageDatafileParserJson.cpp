@@ -87,6 +87,10 @@ void TrainingPackageDatafileParserJson::parse() {
 		boost::optional<const pt::ptree&> skill_category_ranks_tree = v.second.get_child_optional("category-ranks");
 		if (skill_category_ranks_tree) { ref.setSkillCategoryRanks(parseGameDataPairTree<SkillCategoryData, int>(skill_category_ranks_tree)); }
 
+		// Skill category multi-skill rank choices
+		boost::optional<const pt::ptree&> skill_category_multi_rank_choices_tree = v.second.get_child_optional("category-multi-skill-rank-choices");
+		if (skill_category_multi_rank_choices_tree) { ref.setSkillCategoryMultiSkillRankChoices(parseCategoryMultiSkillRankChoices(skill_category_multi_rank_choices_tree)); }
+
 		std::cout << "\tTrainingPackage name: " << ref.name() << std::endl;
 	}
 
@@ -167,6 +171,12 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 	{
 		pt::ptree tree{ getGameDataPairTree<SkillCategoryData ,int>(game_data.skillCategoryRanks()) };
 		if (tree.size()) datum.push_back(std::make_pair("category-ranks", tree));
+	}
+
+	// Skill category multi-skill rank choices
+	{
+		pt::ptree tree{ getCategoryMultiSkillRankChoicesTree(game_data) };
+		if (tree.size()) datum.push_back(std::make_pair("category-multi-skill-rank-choices", tree));
 	}
 }
 
@@ -249,6 +259,37 @@ const pt::ptree TrainingPackageDatafileParserJson::getStatGainChoicesTree(Traini
 		options_tree.push_back(std::make_pair("", option_tree));
 	}
 	choice_tree.push_back(std::make_pair("options", options_tree));
+
+	return choice_tree;
+}
+
+
+std::set<CategoryMultiSkillRankChoice> TrainingPackageDatafileParserJson::parseCategoryMultiSkillRankChoices(boost::optional<const pt::ptree&> category_multi_skill_rank_choices) {
+	std::set<CategoryMultiSkillRankChoice> choices{};
+	if (!category_multi_skill_rank_choices) return choices;
+
+	for (const auto& choice : category_multi_skill_rank_choices.get()) {
+		CategoryMultiSkillRankChoice choice_struct{};
+		std::string category_id = choice.second.get<std::string>("id");
+		choice_struct.category = &factory().get<SkillCategoryData>(category_id);
+		choice_struct.ranks = choice.second.get<int>("value");
+		choice_struct.num_choices = choice.second.get<int>("num-choices");
+		choices.emplace(choice_struct);
+	}
+
+	return choices;
+}
+
+const pt::ptree TrainingPackageDatafileParserJson::getCategoryMultiSkillRankChoicesTree(TrainingPackageData& game_data) {
+	pt::ptree choice_tree{};
+
+	for (const auto& choice : game_data.skillCategoryMultiSkillRankChoices()) {
+		pt::ptree choice_struct_tree{};
+		choice_struct_tree.put("id", choice.category->id());
+		choice_struct_tree.put("value", choice.ranks);
+		choice_struct_tree.put("num-choices", choice.num_choices);
+		choice_tree.push_back(std::make_pair("", choice_struct_tree));
+	}
 
 	return choice_tree;
 }

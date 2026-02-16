@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"class_profession_data.html#a6c2798df69be0db95bf7a51441456ef1":[2,0,45,47],
+"class_profession_data.html#a706ac19a71fa100285f6fd19ef859da4":[2,0,45,89],
 "class_profession_data.html#a73faa993a3f72b09a8e07764fcf05f0a":[2,0,45,11],
 "class_profession_data.html#a756926a0917e7b834e676850b58a04cc":[2,0,45,15],
 "class_profession_data.html#a75775b4bbbc6a3b6a47503a39cf9a57a":[2,0,45,61],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "class_skill_data_1_1_using_character_realm_stats_exception.html":[2,0,53,0],
 "class_skill_data_1_1_using_character_realm_stats_exception.html#ae7ee35c5a0f724c34aae37dfe244a2bd":[2,0,53,0,0],
 "class_skill_datafile_parser_json.html":[2,0,54],
-"class_skill_datafile_parser_json.html#a1969f36f66f71162741e9ff986c43f87":[2,0,54,0],
-"class_skill_datafile_parser_json.html#a84c7d584d3bc2c6dadda4a7a1e6e8046":[2,0,54,4],
-"class_skill_datafile_parser_json.html#a9ac7a9a729e5626370581892a4de9db9":[2,0,54,1]
+"class_skill_datafile_parser_json.html#a1969f36f66f71162741e9ff986c43f87":[2,0,54,0]
 };

@@ -17,6 +17,19 @@ struct CategoryMultiSkillRankChoice {
 	const SkillCategoryData* category; /**< The skill category from which the player can choose to gain the skill ranks */
 	int ranks; /**< The number of skill ranks that can be gained */
 	int num_choices; /**< The maximum number of skills that can be chosen to gain the skill ranks */
+
+	/** Overload the less than operator to allow this struct to be used in sorted containers */
+	bool operator<(const CategoryMultiSkillRankChoice& other) const {	
+		size_t this_hash{ std::hash<std::string>{}(category->id()) };
+		this_hash += std::hash<int>{}(ranks);
+		this_hash += std::hash<int>{}(num_choices);
+
+		size_t that_hash{ std::hash<std::string>{}(other.category->id()) };
+		that_hash += std::hash<int>{}(other.ranks);
+		that_hash += std::hash<int>{}(other.num_choices);
+
+		return (this_hash < that_hash);
+	}
 };
 
 /**

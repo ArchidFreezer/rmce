@@ -5191,23 +5191,6 @@
           "value": "3"
         }
       ],
-      "category-multi-skill-rank-choices": [
-        {
-          "id": "xxx",
-          "num-choices": "xxx",
-          "value": "xxx"
-        },
-        {
-          "id": "xxx",
-          "num-choices": "xxx",
-          "value": "xxx"
-        },
-        {
-          "id": "xxx",
-          "num-choices": "xxx",
-          "value": "xxx"
-        }
-      ],
       "group-category-and-skill-rank-choices": [
         {
           "id": "xxx",
@@ -15809,11 +15792,6 @@
           "id": "SKILLCATEGORY_COMMUNICATIONS",
           "num-choices": "6",
           "value": "6"
-        },
-        {
-          "id": "xxx",
-          "num-choices": "xxx",
-          "value": "xxx"
         }
       ]
     },

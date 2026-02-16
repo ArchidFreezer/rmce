@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"namespace_skill_action_type.html#aa1f4a1ecdf8906d8d02613021b5f2d00":[0,0,10,5],
+"namespace_skill_action_type.html#abc1e846657bd836e013dc878eda0c866":[0,0,10,3],
 "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1":[0,0,10,1],
 "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1":[0,0,10,2],
 "namespace_skill_action_type.html#ad0f96873022bba25ead1499306ca8de1a1f0d5fe7d41b5fec009974b34c8ba95e":[0,0,10,2,2],
@@ -76,9 +78,10 @@ var NAVTREEINDEX5 =
 "namespaces.html":[0,0],
 "pages.html":[],
 "struct_category_multi_skill_rank_choice.html":[2,0,15],
-"struct_category_multi_skill_rank_choice.html#a27f49c7ca582b892a9ebd905f855d908":[2,0,15,0],
-"struct_category_multi_skill_rank_choice.html#aedddb7f0ace083e709c750df35c7148e":[2,0,15,1],
-"struct_category_multi_skill_rank_choice.html#af8497fae8baa063fd0aff0c726397e54":[2,0,15,2],
+"struct_category_multi_skill_rank_choice.html#a2511335714df57bfc55041c303c64d1a":[2,0,15,0],
+"struct_category_multi_skill_rank_choice.html#a27f49c7ca582b892a9ebd905f855d908":[2,0,15,1],
+"struct_category_multi_skill_rank_choice.html#aedddb7f0ace083e709c750df35c7148e":[2,0,15,2],
+"struct_category_multi_skill_rank_choice.html#af8497fae8baa063fd0aff0c726397e54":[2,0,15,3],
 "struct_language_choices.html":[2,0,38],
 "struct_language_choices.html#a76ef19b7ba4c524c2650a259aa007a6b":[2,0,38,0],
 "struct_language_choices.html#ab7dceb994eb86af0400692f5bcec3347":[2,0,38,1],

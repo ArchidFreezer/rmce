@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"class_skill_datafile_parser_json.html#a84c7d584d3bc2c6dadda4a7a1e6e8046":[2,0,54,4],
+"class_skill_datafile_parser_json.html#a9ac7a9a729e5626370581892a4de9db9":[2,0,54,1],
 "class_skill_datafile_parser_json.html#acee6344e37ab0f16e68cce025c63cd25":[2,0,54,3],
 "class_skill_datafile_parser_json.html#af935aaddfed54bb060c92ee7f868ffa8":[2,0,54,2],
 "class_skill_development_cost.html":[2,0,55],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "functions_f.html":[2,3,0,5],
 "functions_func.html":[2,3,1],
 "functions_func.html":[2,3,1,0],
-"functions_func_b.html":[2,3,1,1],
-"functions_func_c.html":[2,3,1,2],
-"functions_func_d.html":[2,3,1,3]
+"functions_func_b.html":[2,3,1,1]
 };
