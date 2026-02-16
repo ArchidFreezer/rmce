@@ -26,6 +26,12 @@ const std::optional<HabitatType::Temperature> HabitatType::temperature(std::stri
 	return {};
 }
 
+void HabitatType::fromString(std::string_view sv, HabitatType::Temperature& type) {
+	std::optional<Temperature> opt_type = temperature(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for HabitatType::Temperature: " + std::string(sv));
+}
+
 const std::string HabitatType::toString(HabitatType::Precipitation precipitation) {
 	using enum HabitatType::Precipitation;
 
@@ -50,4 +56,10 @@ const std::optional<HabitatType::Precipitation> HabitatType::precipitation(std::
 	if (val == "arid") return kArid;
 
 	return {};
+}
+
+void HabitatType::fromString(std::string_view sv, HabitatType::Precipitation& type) {
+	std::optional<Precipitation> opt_type = precipitation(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for HabitatType::Precipitation: " + std::string(sv));
 }

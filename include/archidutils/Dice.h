@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Random.h"
+#include <stdexcept>
 
 /**
  * @class Dice
@@ -65,21 +66,36 @@ class Dice {
 public:
 	/**
 	 * @brief Constructor that does not allow open ended rolls
+	 * 
+	 * Setting the number of sides to 0 is a valid operation which will always return 0 as a roll result
+	 * 
 	 * @param sides Number of sides on the dice
+	 * @throws invalid_argument if the number of sides < 0
 	 */
 	Dice(int sides);
 	/**
 	 * @brief Constructor that allows open ended rolls
+	 * 
+	 * Setting the number of sides to 0 is a valid operation which will always return 0 as a roll result
+	 *
 	 * @param sides Number of sides on the dice
-	 * @param open_ended_range The range of numbers at the top and bottom end that will trigger an open ended roll
+	 * @param open_ended_range The range of numbers at the top and bottom end that will trigger an open ended roll<br>
 	 *                         Use a value of 0 to disable open ended rolls
+	 * @throws invalid_argument if @a sides < 0
+	 * @throws invalid_argument if @a open_ended_range >= @a sides
 	 */
 	Dice(int sides, int open_ended_range);
 	/**
 	 * @brief Constructor that allows control of which open ended rolls may be made
+	 * 
+	 * Setting the number of sides to 0 is a valid operation which will always return 0 as a roll result
+	 *
 	 * @param sides Number of sides on the dice
 	 * @param open_ended_high_range The range of numbers at the top end that will trigger an open ended high roll; 0 to disable
 	 * @param open_ended_low_range The range of numbers at the bottom end that will trigger an open ended low roll; 0 to disable
+	 * @throws invalid_argument if @a sides < 0
+	 * @throws invalid_argument if @a open_ended_high_range >= @a sides
+	 * @throws invalid_argument if @a open_ended_low_range >= @a sides
 	 */
 	Dice(int sides, int open_ended_high_range, int open_ended_low_range);
 
@@ -97,11 +113,14 @@ public:
 	 * If the dice roll is this value or higher then the dice are re-rolled and the values summed. This continues until a roll
 	 * which is below this is rolled.
 	 * 
-	 * If `min_open_high` < 0 then the minimum will be set to 0
-	 *
 	 * @param min_open_high The minimum value to trigger another roll
+	 * @throws invalid_argument if @a min_open_high <= 1
 	 */
-	void setMinOpenHigh(int min_open_high) { min_open_high_ = std::min(0,min_open_high); }
+	void setMinOpenHigh(int min_open_high) { 
+		if (min_open_high <= 1)  throw std::invalid_argument("Open ended high minimum must be greater than 1.");
+
+		min_open_high_ = min_open_high;
+	}
 
 	/**
 	 * @brief Gets the number at which an open ended low roll is triggered.
@@ -118,8 +137,13 @@ public:
 	 * the existing value.
 	 *
 	 * @param max_open_low The maximum value to trigger another roll
+	 * @throws invalid_argument if @a max_open_low >= sides on the dice
 	 */
-	void setMaxOpenLow(int max_open_low) { max_open_low_ = max_open_low; }
+	void setMaxOpenLow(int max_open_low) { 
+		if (max_open_low >= sides_)  throw std::invalid_argument("Open ended low maximum must be less than the number of sides.");
+		
+		max_open_low_ = max_open_low;
+	}
 
 	/**
 	 * @brief Returns the number of sides currently configured on the dice.
@@ -129,16 +153,6 @@ public:
 	 * @return int number of sides
 	 */
 	int sides() const { return sides_; }
-
-	/**
-	 * @brief Sets the number of sides of the dice to use.
-	 * 
-	 * When rolling the dice a number will be returned between 1 and `sides`.
-	 * If `sides` is < 1 then the number of sides will be set to 1.
-	 *
-	 * @param sides Number of sides
-	 */
-	void setSides(int sides) { sides_ = std::max(1, sides); }
 
 	/**
 	 * @brief Gets the total value of the last dice roll

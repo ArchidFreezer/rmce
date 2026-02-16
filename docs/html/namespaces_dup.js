@@ -61,6 +61,7 @@ var namespaces_dup =
         [ "kSubterfuge", "namespace_realm_type.html#ad1039e90c513235b47ae7b46516e51c8a7e1fe9e6691db650fda0f10318a70fde", null ]
       ] ],
       [ "fromString", "namespace_realm_type.html#ab198257d527cb6752850138553566e6e", null ],
+      [ "fromString", "namespace_realm_type.html#a5b33afd8818e15db3aea38b681675a22", null ],
       [ "isMagical", "namespace_realm_type.html#a925eae689753e8add14afd4f39fddb39", null ],
       [ "operator<<", "namespace_realm_type.html#a4b7e1e1ded953974db3b781b023918c7", null ],
       [ "toString", "namespace_realm_type.html#aa1216a3092b07e13f22660504137628d", null ]
@@ -96,6 +97,7 @@ var namespaces_dup =
         [ "kStandard", "namespace_skill_development_type.html#a06b071dab597df9cd190f774db7f055ba821da62632c491ea619ead7b31c094bf", null ]
       ] ],
       [ "fromString", "namespace_skill_development_type.html#af6cc51b583e4c9f762214a2d0e2b76e7", null ],
+      [ "fromString", "namespace_skill_development_type.html#a78e027edf7f9ee37d3fee4ab3a33597e", null ],
       [ "operator<<", "namespace_skill_development_type.html#a0c8feea403ee3e058364f7fcd135f976", null ],
       [ "toString", "namespace_skill_development_type.html#a6d7ff6ceb406f3f60ee4d3f6a23d53f5", null ]
     ] ],

@@ -154,6 +154,12 @@ public:
 	}
 
 	/**
+	 * @brief Add realms to those the profession draws power from
+	 * @param realms Set of RealmType::Type profession power realms
+	 */
+	void setRealms(std::set<RealmType::Type> realms) { realms_ = std::move(realms); }
+
+	/**
 	 * @brief Get whether the profession draws power from a power realm
 	 * @param realm RealmType::Type power realm
 	 * @return `true` if the profession draws power from the realm
@@ -178,6 +184,17 @@ public:
 	 * @see setUseRealmStats()
 	 */
 	int addStat(StatType::Type stat);
+
+	/**
+	 * @brief Set the stats that apply stat bonuses to the profession
+	 *
+	 * There are 3 stats associated with each profession and duplicates are allowed. This function will replace any existing stats with the new list.
+	 *
+	 * @param stats Vector of stats whose bonus should be applied to the profession
+	 * @throws TooManyStatsException if attempting to set more than 3 stats
+	 * @see setUseRealmStats()
+	 */
+	void setStats(std::vector<StatType::Type> stats) { stats_ = std::move(stats); }
 
 	/**
 	 * @brief Gets the number of stats currently associated with the profession
@@ -217,7 +234,15 @@ public:
  * @brief Add a choice that defines base spell lists that the character has to choose from
  * @param choice GameRuleDataChoice choice definition
  */
-	void addBaseSpellListChoice(GameRuleDataChoice<SpellListData> choice) { base_spell_list_choices_.push_back(std::move(choice)); }
+	void addBaseSpellListChoice(GameRuleDataChoice<SpellListData> choice) { base_spell_list_choices_.emplace(std::move(choice)); }
+
+	/**
+	 * @brief Set the choices that defines base spell lists that the character has to choose from
+	 *
+	 * This will replace any existing choices with the new list.
+	 * @param choices set of GameRuleDataChoice choice definitions
+	 */
+	void setBaseSpellListChoices(std::set<GameRuleDataChoice<SpellListData>> choices) { base_spell_list_choices_ = std::move(choices); }
 
 	/**
 	 * @brief Get the number of choices a character has to make regarding base spell lists
@@ -230,9 +255,9 @@ public:
 
 	/**
 	 * @brief Get a container with the choices the character needs to make to select one or more base spell lists
-	 * @return vector of GameRuleDataChoice objects with the choices to be made
+	 * @return set of GameRuleDataChoice objects with the choices to be made
 	 */
-	const std::vector<GameRuleDataChoice<SpellListData>>& baseSpellListChoices() const { return base_spell_list_choices_; }
+	const std::set<GameRuleDataChoice<SpellListData>>& baseSpellListChoices() const { return base_spell_list_choices_; }
 
 	/**
 	 * @brief Add a choice that defines the skill that a character may select one or more from to become everyman
@@ -240,6 +265,12 @@ public:
 	 * @param type SkillDevelopmentType::Type type choices will have
 	 */
 	void addSkillDevelopmentTypeChoice(GameRuleDataChoice<SubcategoriedSkillData> choice, SkillDevelopmentType::Type type) { skill_development_type_choices_.emplace(std::move(choice), type); }
+
+	/**
+	 * @brief Sets the skill development type choices for skills.
+	 * @param choices A map associating subcategoried skill data choices with their corresponding skill development types.
+	 */
+	void setSkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SubcategoriedSkillData>, SkillDevelopmentType::Type> choices) { skill_development_type_choices_ = std::move(choices); }
 
 	/**
 	 * @brief Get the number of choices a character has to make regarding everyman skills
@@ -266,6 +297,12 @@ public:
 	void addSkillSubcategoryDevelopmentTypeChoice(GameRuleDataChoice<SkillData> choice, SkillDevelopmentType::Type type) { skill_subcategory_skill_development_type_choices_.emplace(std::move(choice), type); }
 
 	/**
+	 * @brief Sets the skill development type choices for skill subcategories.
+	 * @param choices A map associating skill data choices with their corresponding skill development types.
+	 */
+	void setSkillSubcategoryDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillData>, SkillDevelopmentType::Type> choices) { skill_subcategory_skill_development_type_choices_ = std::move(choices); }
+
+	/**
 	 * @brief Get the number of choices a character has to make regarding skill subcategoryeveryman skills
 	 *
 	 * During character development the player may have the option change the development type of one of more skills.
@@ -288,6 +325,12 @@ public:
 	 * @param type SkillDevelopmentType::Type type choices will have
 	 */
 	void addSkillCategorySkillDevelopmentTypeChoice(GameRuleDataChoice<SkillCategoryData> choice, SkillDevelopmentType::Type type) { skill_category_skill_development_type_choices_.emplace(std::move(choice), type); }
+
+	/**
+	 * @brief Sets the skill development type choices for skill categories.
+	 * @param choices A map associating skill category data choices with their corresponding skill development types.
+	 */
+	void setSkillCategorySkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillCategoryData>, SkillDevelopmentType::Type> choices) { skill_category_skill_development_type_choices_ = std::move(choices); }
 
 	/**
 	 * @brief Get the number of choices a character has to make regarding development types skills in skill categories
@@ -315,6 +358,12 @@ public:
 	void addSkillGroupSkillDevelopmentTypeChoice(GameRuleDataChoice<SkillGroupData> choice, SkillDevelopmentType::Type type) { skill_group_skill_development_type_choices_.emplace(std::move(choice), type); }
 
 	/**
+	 * @brief Sets the skill development type choices for skill groups.
+	 * @param choices A map associating skill group data choices with their corresponding skill development types.
+	 */
+	void setSkillGroupSkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type> choices) { skill_group_skill_development_type_choices_ = std::move(choices); }
+
+	/**
 	 * @brief Get the number of choices a character has to make regarding development types skills in skill groups
 	 *
 	 * During character development the player may have the option change the development type of one of more skills.
@@ -338,6 +387,20 @@ public:
 	 * @param bonus bonus value
 	 */
 	void addSkillGroupSpecialBonus(const SkillGroupData& group, int bonus) { skill_group_special_bonuses_.emplace(&group, bonus); }
+
+	/**
+	 * @brief Sets the object's skill-group special bonuses from the provided map.
+	 * 
+	 * The map is stored in the object's internal skill_group_special_bonuses_ (the contents are transferred into internal storage; depending on overloads/qualifiers this may be moved or copied).
+	 * @param bonuses A map whose keys are pointers to SkillGroupData and whose values are integer bonus amounts. 
+	 */
+	void setSkillGroupSpecialBonuses(std::map<const SkillGroupData*, int> bonuses) { skill_group_special_bonuses_ = std::move(bonuses); }
+
+	/**
+	 * @brief Get a container with groups that the profession has a special bonus for
+	 * @return std::map of const SkillGroupData* and bonus value
+	 */
+	const std::map<const SkillGroupData*, int>& skillGroupSpecialBonuses() const { return skill_group_special_bonuses_; }
 
 	/**
 	 * @brief Get a container with groups that add a special bonus to skills
@@ -376,6 +439,20 @@ public:
 	 * @param bonus bonus value
 	 */
 	void addSkillGroupProfessionBonus(const SkillGroupData& group, int bonus) { skill_group_profession_bonuses_.emplace(&group, bonus); }
+
+	/**
+	 * @brief Sets the object's skill-group profession bonuses from the provided map.
+	 * 
+	 * The map is stored in the object's internal skill_group_profession_bonuses_ (the contents are transferred into internal storage; depending on overloads/qualifiers this may be moved or copied).
+	 * @param bonuses A map whose keys are pointers to SkillGroupData and whose values are integer bonus amounts. 
+	 */
+	void setSkillGroupProfessionBonuses(std::map<const SkillGroupData*, int> bonuses) { skill_group_profession_bonuses_ = std::move(bonuses); }
+
+	/**
+	 * @brief Get a container with groups that that the profession has a bonus for
+	 * @return std::map of const SkillGroupData* and bonus value
+	 */
+	const std::map<const SkillGroupData*, int>& skillGroupProfessionBonuses() const { return skill_group_profession_bonuses_; }
 
 	/**
 	 * @brief Get a container with the names of groups that have bonuses
@@ -419,6 +496,18 @@ public:
 		}
 		skill_development_types_.emplace(std::move(skill), type); 
 	}
+
+	/**
+	 * @brief Sets the skill development types mapping.
+	 * @param types A map associating subcategorized skill data with their corresponding skill development types.
+	 */
+	void setSkillDevelopmentTypes(std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> types) { skill_development_types_ = std::move(types); }
+
+	/**
+	 * @brief Gets a reference to the map of skill development types indexed by subcategorized skill data.
+	 * @return A reference to the map containing skill development types.
+	 */
+	std::map<SubcategoriedSkillData, SkillDevelopmentType::Type>& skillDevelopmentTypes() { return skill_development_types_; }
 
 	/**
 	 * @brief Get the development type for a skill
@@ -477,6 +566,20 @@ public:
 	void addSkillCategorySkillDevelopmentType(const SkillCategoryData& category, SkillDevelopmentType::Type type) { skill_category_skill_development_types_.emplace(&category, type); }
 
 	/**
+	 * @brief Sets the internal mapping from skill categories to their corresponding skill development types by assigning the provided map.
+	 * 
+	 * The function stores this mapping in the object's internal state (the map will be assigned from the provided argument).
+	 * @param types A map that associates pointers to SkillCategoryData (keys) with SkillDevelopmentType::Type values. 
+	 */
+	void setSkillCategorySkillDevelopmentTypes(std::map<const SkillCategoryData*, SkillDevelopmentType::Type> types) { skill_category_skill_development_types_ = std::move(types); }
+
+	/**
+	 * @brief Get a container with the skill categories that the profession has a skill development type for
+	 * @return std::map of const SkillCategoryData* and SkillDevelopmentType::Type
+	 */
+	const std::map<const SkillCategoryData*, SkillDevelopmentType::Type>& skillCategorySkillDevelopmentTypes() const { return skill_category_skill_development_types_; }
+
+	/**
 	 * @brief Get a container of all the skill categories with a SkillDevelopmentType
 	 * @return std::set of categories with a SkillDevelopmentType
 	 */
@@ -516,6 +619,18 @@ public:
 	 * @param type SkillDevelopmentType::Type to set
 	 */
 	void addSkillGroupSkillDevelopmentType(const SkillGroupData& group, SkillDevelopmentType::Type type) { skill_group_skill_development_types_.emplace(&group, type); }
+
+	/**
+	 * @brief Sets the internal mapping from skill groups to their corresponding skill development types by assigning the provided map.
+	 * @param types A map that associates pointers to SkillGroupData (keys) with SkillDevelopmentType::Type values. The function stores this mapping in the object's internal state (the map will be assigned from the provided argument).
+	 */
+	void setSkillGroupSkillDevelopmentTypes(std::map<const SkillGroupData*, SkillDevelopmentType::Type> types) { skill_group_skill_development_types_ = std::move(types); }
+
+	/**
+	 * @brief Gets a reference to container with the skill group skill development types
+	 * @return A map that associates pointers to SkillGroupData (keys) with SkillDevelopmentType::Type values.
+	 */
+	const std::map<const SkillGroupData*, SkillDevelopmentType::Type>& skillGroupSkillDevelopmentTypes() { return skill_group_skill_development_types_; }
 
 	/**
 	 * @brief Get a container with the names of groups that have skill development type changes
@@ -559,6 +674,18 @@ public:
 	void addSkillCategorySpecialBonus(const SkillCategoryData& category, int bonus) { skill_category_special_bonuses_.emplace(&category, bonus); }
 
 	/**
+	 * @brief Sets the object's skill category special bonuses from the provided map, replacing any existing bonuses.
+	 * @param bonuses A map from const SkillCategoryData* to int containing skill category special bonuses. The map is assigned to the object's internal skill_category_special_bonuses_ member, replacing its previous contents.
+	 */
+	void setSkillCategorySpecialBonuses(std::map<const SkillCategoryData*, int> bonuses) { skill_category_special_bonuses_ = std::move(bonuses); }
+
+	/**
+	 * @brief Get a container with the skill categories that the profession has a special bonus for
+	 * @return std::map of const SkillCategoryData* and bonus value
+	 */
+	const std::map<const SkillCategoryData*, int>& skillCategorySpecialBonuses() const { return skill_category_special_bonuses_; }
+
+	/**
 	 * @brief Get a container of all the skill categories with a special bonus
 	 * @return std::set of categories with a bonus
 	 */
@@ -598,6 +725,18 @@ public:
 	 * @param bonus int bonus value
 	 */
 	void addSkillCategoryProfessionBonus(const SkillCategoryData& category, int bonus) { skill_category_profession_bonuses_.emplace(&category, bonus); }
+
+	/**
+	 * @brief Sets the object's skill category profession bonuses from the provided map, replacing any existing bonuses.
+	 * @param bonuses A map from const SkillCategoryData* to int containing skill category profession bonuses. The map is assigned to the object's internal skill_category_profession_bonuses_ member, replacing its previous contents.
+	 */
+	void setSkillCategoryProfessionBonuses(std::map<const SkillCategoryData*, int> bonuses) { skill_category_profession_bonuses_ = std::move(bonuses); }
+
+	/**
+	 * @brief Get a container with the skill categories that the profession has a bonus for
+	 * @return std::map of const SkillCategoryData* and bonus value
+	 */
+	const std::map<const SkillCategoryData*, int>& skillCategoryProfessionBonuses() const { return skill_category_profession_bonuses_; }
 
 	/**
 	 * @brief Get a container of all the skill categories with a profession bonus
@@ -644,6 +783,12 @@ public:
 	}
 
 	/**
+	 * @brief Sets the object's skill bonuses from the provided map, replacing any existing bonuses.
+	 * @param bonuses A map from SubcategoriedSkillData to int containing skill bonuses. The map is assigned to the object's internal skill_bonuses_ member, replacing its previous contents.
+	 */
+	void setSkillBonuses(std::map<SubcategoriedSkillData, int> bonuses) {	skill_bonuses_ = std::move(bonuses); }
+
+	/**
 	 * @brief Get the bonus that the profession provides to a skill
 	 * @param skill SubcategoriedSkillData to get the bonus for
 	 * @return bonus value
@@ -677,6 +822,12 @@ public:
 		}
 		return ret;
 	}
+
+	/**
+	 * @brief Get a container with the skills that the profession has a bonus for
+	 * @return std::map of SubcategoriedSkillData and bonus value
+	 */
+	const std::map<SubcategoriedSkillData, int>& skillBonuses() const { return skill_bonuses_; }
 
 	/**
 	 * @brief Check if there is a professional bonus for a skill
@@ -731,7 +882,7 @@ private:
 	SpellUserType::Type spell_user_type_{ SpellUserType::kNone }; /**< Spell user type */
 	std::set< RealmType::Type> realms_{};/**< Realm(s) that the profession draws power from */
 	std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the profession */
-	std::vector<GameRuleDataChoice<SpellListData>> base_spell_list_choices_{}; /**< Set of spell lists that the profession base lists should be chosen from */
+	std::set<GameRuleDataChoice<SpellListData>> base_spell_list_choices_{}; /**< Set of spell lists that the profession base lists should be chosen from */
 
 	// Skill bonuses
 	std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */

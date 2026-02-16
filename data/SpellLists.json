@@ -41,7 +41,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -90,8 +90,8 @@
             ]
         },
         {
-            "id": "SPELLLIST_ARACHNEMANCY",
-            "name": "Arachnemancy",
+            "id": "SPELLLIST_ARACHNAMANCY",
+            "name": "Arachnamancy",
             "book": "BOOK_ESSENCE_COMPANION",
             "type": "Training Package",
             "evil": "false",
@@ -395,7 +395,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -528,7 +528,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -994,7 +994,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -1005,7 +1005,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -1016,7 +1016,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -1717,7 +1717,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -1728,7 +1728,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -1916,7 +1916,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -2270,7 +2270,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -2458,7 +2458,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -2958,7 +2958,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -3213,7 +3213,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {
@@ -3224,7 +3224,7 @@
             "evil": "false",
             "summoning": "false",
             "realms": [
-                "Neutral"
+                "Mentalism"
             ]
         },
         {

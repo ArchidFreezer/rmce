@@ -17,10 +17,8 @@ void ClimateDatafileParserJson::parse() {
 		if (temperature) ref.setTemperature(temperature.value());
 
 		// Get the precipitations
-		for (const auto& precipitations : v.second.get_child("precipitations")) {
-			std::optional<HabitatType::Precipitation> precipitation = HabitatType::precipitation(precipitations.second.get_value<std::string>());
-			if (precipitation) ref.addPrecipitation(precipitation.value());
-		}
+		ref.setPrecipitations(parseEnumSetTree<HabitatType::Precipitation>(v.second.get_child("precipitations")));
+
 		std::cout << "\tClimate name: " << ref.name() << std::endl;
 
 	}
@@ -33,13 +31,9 @@ void ClimateDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum)
 	datum.put("name", game_data.name());
 	datum.put("temperature", HabitatType::toString(game_data.temperature()));
 
-	// Get the container tree for the precipitations
-	pt::ptree precipitations_tree{};
-	for (HabitatType::Precipitation precipitation : game_data.precipitations()) {
-		// Get the realm container
-		pt::ptree precipitation_tree{};
-		precipitation_tree.put("", HabitatType::toString(precipitation));
-		precipitations_tree.push_back(std::make_pair("", precipitation_tree));
+	// Precipitations
+	{
+		pt::ptree tree{ getEnumSetTree<HabitatType::Precipitation>(game_data.precipitations()) };
+		if (tree.size())datum.push_back(std::make_pair("precipitations", tree));
 	}
-	datum.push_back(std::make_pair("precipitations", precipitations_tree));
 }

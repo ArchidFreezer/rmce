@@ -68,4 +68,17 @@ namespace SkillActionType {
 	 * @see toString()
 	 */
 	const std::optional<Type> fromString(std::string_view sv);
+
+	/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @param type reference to set the SkillActionType::Type represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid SkillActionType::Type
+	 *
+	 * @see toString()
+	 */
+	void fromString(std::string_view sv, SkillActionType::Type& type);
 }

@@ -15,6 +15,8 @@ var namespace_habitat_type =
       [ "kCool", "namespace_habitat_type.html#a4ded50a929b10bd8b2dc0642e9f5c325ab9480fe865ab6bbfb66c8308068a06c2", null ],
       [ "kCold", "namespace_habitat_type.html#a4ded50a929b10bd8b2dc0642e9f5c325a735ea69825df35eefc36aeb4533bc83a", null ]
     ] ],
+    [ "fromString", "namespace_habitat_type.html#aabd31b4bdfd17ff5a095171c44eee5d7", null ],
+    [ "fromString", "namespace_habitat_type.html#a5b347c4e186b8cdc96033e3de39530d9", null ],
     [ "operator<<", "namespace_habitat_type.html#a2e434c571a3902b224e700e4fc975c29", null ],
     [ "operator<<", "namespace_habitat_type.html#aab590f49a75bb245220d10f7764d2e08", null ],
     [ "precipitation", "namespace_habitat_type.html#aef6de4a2944d03520ade695702c653d7", null ],

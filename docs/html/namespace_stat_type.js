@@ -15,6 +15,7 @@ var namespace_stat_type =
       [ "kStrength", "namespace_stat_type.html#a460b688487711eed2df8a48dbc81f1fda6fce47e612f62a75603a515fce9e975e", null ]
     ] ],
     [ "fromString", "namespace_stat_type.html#a2f85576f2fed028b417137f93b43636a", null ],
+    [ "fromString", "namespace_stat_type.html#af93fff9df755300bf640023c8de732fe", null ],
     [ "isDevelopment", "namespace_stat_type.html#a5aeda3248844e3b589b773ba2707ab8e", null ],
     [ "isPrimary", "namespace_stat_type.html#a6766e88fd04db40b10c5a1479026f39b", null ],
     [ "operator<<", "namespace_stat_type.html#a2d76ec9118654faf46dbcc93820337e2", null ],

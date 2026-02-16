@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "CategoryMultiSkillRankChoice", "struct_category_multi_skill_rank_choice.html", null ],
     [ "column_row_matcher", null, [
       [ "TableColumnArmourTypeMatcher", "class_table_column_armour_type_matcher.html", null ],
       [ "TableColumnCreatureSizeMatcher", "class_table_column_creature_size_matcher.html", null ]
@@ -21,14 +22,15 @@ var hierarchy =
         [ "SkillProgressionTypeDatafileParserJson", "class_skill_progression_type_datafile_parser_json.html", null ],
         [ "SpecialAttackTableDatafileParserJson", "class_special_attack_table_datafile_parser_json.html", null ],
         [ "SpellListDatafileParserJson", "class_spell_list_datafile_parser_json.html", null ],
+        [ "TrainingPackageDatafileParserJson", "class_training_package_datafile_parser_json.html", null ],
         [ "WeaponTypeDatafileParserJson", "class_weapon_type_datafile_parser_json.html", null ]
       ] ],
       [ "DatafileParserXml", "class_datafile_parser_xml.html", [
-        [ "CultureTypeDatafileParserXml", "class_culture_type_datafile_parser_xml.html", null ],
         [ "ProfessionDatafileParserXml", "class_profession_datafile_parser_xml.html", null ]
       ] ]
     ] ],
     [ "Dice", "class_dice.html", null ],
+    [ "EnumChoice&lt; EnumType &gt;", "class_enum_choice.html", null ],
     [ "GameRuleData", "class_game_rule_data.html", [
       [ "LookupTable< NumberRange< int >, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string >", "class_lookup_table.html", [
         [ "BoundIntRowLookupTable< TableColumnArmourTypeMatcher, ArmourType::Type, std::string >", "class_bound_int_row_lookup_table.html", [
@@ -55,6 +57,7 @@ var hierarchy =
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ],
       [ "SpellListData", "class_spell_list_data.html", null ],
       [ "SubcategoriedSkillData", "class_subcategoried_skill_data.html", null ],
+      [ "TrainingPackageData", "class_training_package_data.html", null ],
       [ "WeaponTypeData", "class_weapon_type_data.html", null ]
     ] ],
     [ "GameRuleDataCache", "class_game_rule_data_cache.html", null ],
@@ -84,12 +87,15 @@ var hierarchy =
       [ "SkillData::UsingCharacterRealmStatsException", "class_skill_data_1_1_using_character_realm_stats_exception.html", null ],
       [ "SpellUserType::SpellUserTypeNotFoundException", "class_spell_user_type_1_1_spell_user_type_not_found_exception.html", null ],
       [ "StatType::TooManyStatsException", "class_stat_type_1_1_too_many_stats_exception.html", null ],
+      [ "TrainingPackageData::InvalidSkillRank", "class_training_package_data_1_1_invalid_skill_rank.html", null ],
       [ "WeaponTypeData::InvalidWeaponRangeException", "class_weapon_type_data_1_1_invalid_weapon_range_exception.html", null ]
     ] ],
     [ "SkillDevelopmentCost", "class_skill_development_cost.html", null ],
     [ "SkillProgressionData", "class_skill_progression_data.html", [
       [ "SkillProgressionTypeData", "class_skill_progression_type_data.html", null ]
     ] ],
+    [ "SpellListCategoryChoices", "struct_spell_list_category_choices.html", null ],
+    [ "SpellListChoices", "struct_spell_list_choices.html", null ],
     [ "table_row_matcher", null, [
       [ "NumberRange< NumberType >", "class_number_range.html", null ]
     ] ],

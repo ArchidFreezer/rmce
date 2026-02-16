@@ -1,6 +1,7 @@
 var class_weapon_type_data =
 [
     [ "InvalidWeaponRangeException", "class_weapon_type_data_1_1_invalid_weapon_range_exception.html", "class_weapon_type_data_1_1_invalid_weapon_range_exception" ],
+    [ "WeaponTypeData", "class_weapon_type_data.html#a8f93e353889a02e26e4671a625a7cc54", null ],
     [ "WeaponTypeData", "class_weapon_type_data.html#ab2e4e905306d39ddad56f4e79b24ca27", null ],
     [ "addCriticalModifier", "class_weapon_type_data.html#a0867f63ec3d071edab88db5c11d73526", null ],
     [ "addRange", "class_weapon_type_data.html#ac277ca05a84e9ac5ae193b6d44c58370", null ],

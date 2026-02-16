@@ -41,7 +41,8 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", "functions_func" ]
+        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -57,10 +58,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"class_datafile_parser.html#a68666b626124d4f7109a4373441aa3f3",
-"class_profession_datafile_parser_xml.html#ac0d6b0589eb48fd2b4669c9ac903707a",
-"class_spell_user_type_1_1_spell_user_type_not_found_exception.html#a6a74e9e361302a1022747afe329b76cc",
-"namespace_environment_type.html#ad9fdc2879aea3afdff9f0e613b2ce83ca3ca31e7ed4e2b90cb62fd07b254bd656"
+"class_culture_type_datafile_parser_json.html",
+"class_profession_data.html#a52ca563a1135dc2f668edce4f863460d",
+"class_skill_data_1_1_using_character_realm_stats_exception.html#ae7ee35c5a0f724c34aae37dfe244a2bd",
+"functions_f.html",
+"namespace_resistance_type.html#acfff2a0e137639fb170a93715ae4448f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

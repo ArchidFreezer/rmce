@@ -10,6 +10,7 @@ var dir_d27df6bdec76b9f4631be2492a3421fa =
     [ "CriticalTableType.h", "_critical_table_type_8h_source.html", null ],
     [ "CriticalType.h", "_critical_type_8h_source.html", null ],
     [ "CultureTypeData.h", "_culture_type_data_8h_source.html", null ],
+    [ "EnumChoice.h", "_enum_choice_8h_source.html", null ],
     [ "EnvironmentType.h", "_environment_type_8h_source.html", null ],
     [ "GameRuleData.h", "_game_rule_data_8h_source.html", null ],
     [ "GameRuleDataCache.h", "_game_rule_data_cache_8h_source.html", null ],
@@ -36,5 +37,6 @@ var dir_d27df6bdec76b9f4631be2492a3421fa =
     [ "StatLossType.h", "_stat_loss_type_8h_source.html", null ],
     [ "StatType.h", "_stat_type_8h_source.html", null ],
     [ "SubcategoriedSkillData.h", "_subcategoried_skill_data_8h_source.html", null ],
+    [ "TrainingPackageData.h", "_training_package_data_8h_source.html", null ],
     [ "WeaponTypeData.h", "_weapon_type_data_8h_source.html", null ]
 ];

@@ -10,6 +10,7 @@ var namespace_creature_size_type =
       [ "kHuge", "namespace_creature_size_type.html#a5a93c3494093263d09281ce2aaad0471ad464fb18dfeee2966a78fd644162e011", null ]
     ] ],
     [ "fromString", "namespace_creature_size_type.html#a819b37e373e2847cb0d0b88bd9009afa", null ],
+    [ "fromString", "namespace_creature_size_type.html#a2e30171e06364457f255ff704da95ff9", null ],
     [ "operator<<", "namespace_creature_size_type.html#aa1b6ad16866e2f043cd0982e53d8d4e2", null ],
     [ "toString", "namespace_creature_size_type.html#a243625f7ae7c758e9e3a9e4d6a256c8a", null ]
 ];

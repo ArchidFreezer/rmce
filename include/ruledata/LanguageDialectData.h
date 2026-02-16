@@ -36,18 +36,6 @@ public:
 		name_{ name } {}
 
 	/**
-	 * @brief Constructor
-	 * @param name Name of the base language of the dialects
-	 * @param dialects Set to initilise the object with. __WARNING__: This constructor uses move semantics so will 
-   *        _invalidate_ the object referenced in the parameter
-	 */
-	LanguageDialectData(std::string_view name, std::set<const LanguageData*>& dialects) :
-		GameRuleData(name),
-		name_{ name },
-		dialects_{ std::move(dialects) } {}
-
-
-	/**
 	 * @brief Base language of the dialects
 	 * 
 	 * It should be noted that in many cases that there is no such thing as a base language and all

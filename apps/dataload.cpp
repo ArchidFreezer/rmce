@@ -18,6 +18,7 @@
 #include <SkillProgressionTypeDatafileParserJson.h>
 #include <SpecialAttackTableDatafileParserJson.h>
 #include <SpellListDatafileParserJson.h>
+#include <TrainingPackageDatafileParserJson.h>
 #include <WeaponTypeDatafileParserJson.h>
 
 int main() {
@@ -42,6 +43,7 @@ int main() {
 	ProfessionDatafileParserJson profession_parser(cache, "../../../../data/Professions.json");
 	ClimateDatafileParserJson climate_parser(cache, "../../../../data/Climates.json");
 	CultureTypeDatafileParserJson culture_type_parser(cache, "../../../../data/CultureTypes.json");
+	TrainingPackageDatafileParserJson training_package_parser(cache, "../../../../data/TrainingPackages.json");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
@@ -61,6 +63,7 @@ int main() {
 	parsers.push_back(&profession_parser);
 	parsers.push_back(&climate_parser);
 	parsers.push_back(&culture_type_parser);
+	parsers.push_back(&training_package_parser);
 
 	try {
 		// Iterate through the parsers retrieving the ID only and populating the cache with empty game data objects
@@ -69,22 +72,23 @@ int main() {
 		}
 
 
-//		book_parser.save("../../../../data/Books2.json");
-//		language_category_parser.save("../../../../data/LanguageCategories2.json");
-//		language_parser.save("../../../../data/Languages2.json");
-//		skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
-//		attack_table_parser.save("../../../../data/AttackTables2.json");
-//		special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
-//		spell_list_parser.save("../../../../data/SpellLists2.json");
-//		skill_category_parser.save("../../../../data/SkillCategories2.json");
-//		armour_type_parser.save("../../../../data/ArmourTypes2.json");
-//		skill_parser.save("../../../../data/Skills2.json");
-//		weapon_type_parser.save("../../../../data/WeaponTypes2.json");
-//		race_parser.save("../../../../data/Races2.json");
-//		skill_group_parser.save("../../../../data/SkillGroups2.json");
-//		profession_parser.save("../../../../data/Professions2.json");
-//		climate_parser.save("../../../../data/Climates2.json");
-//		culture_type_parser.save("../../../../data/CultureTypes2.json");
+		//book_parser.save("../../../../data/Books2.json");
+		//language_category_parser.save("../../../../data/LanguageCategories2.json");
+		//language_parser.save("../../../../data/Languages2.json");
+		//skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
+		//attack_table_parser.save("../../../../data/AttackTables2.json");
+		//special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
+		//spell_list_parser.save("../../../../data/SpellLists2.json");
+		//skill_category_parser.save("../../../../data/SkillCategories2.json");
+		//armour_type_parser.save("../../../../data/ArmourTypes2.json");
+		//skill_parser.save("../../../../data/Skills2.json");
+		//weapon_type_parser.save("../../../../data/WeaponTypes2.json");
+		//race_parser.save("../../../../data/Races2.json");
+		//skill_group_parser.save("../../../../data/SkillGroups2.json");
+		//profession_parser.save("../../../../data/Professions2.json");
+		//climate_parser.save("../../../../data/Climates2.json");
+		//culture_type_parser.save("../../../../data/CultureTypes2.json");
+		training_package_parser.save("../../../../data/TrainingPackages2.json");
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
 	}

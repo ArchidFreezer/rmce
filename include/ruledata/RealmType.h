@@ -64,6 +64,19 @@ namespace RealmType {
 	const std::optional<Type> fromString(std::string_view sv);
 
 	/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @param type reference to set the RealmType::Type represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid RealmType::Type
+	 *
+	 * @see toString()
+	 */
+	void fromString(std::string_view sv, RealmType::Type& type);
+
+	/**
 	 * @brief Checks if the realm is magical or not
 	 * @param realm RealmType::Type to test
 	 * @return `true` if the Type is magical

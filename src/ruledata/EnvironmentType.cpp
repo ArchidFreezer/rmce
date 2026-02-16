@@ -54,6 +54,12 @@ const std::optional<EnvironmentType::Feature> EnvironmentType::feature(std::stri
 	return {};
 }
 
+void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Feature& type) {
+	std::optional<Feature> opt_type = feature(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for EnvironmentType::Feature: " + std::string(sv));
+}
+
 const std::string EnvironmentType::toString(EnvironmentType::Terrain terrain) {
 	using enum EnvironmentType::Terrain;
 
@@ -88,6 +94,12 @@ const std::optional<EnvironmentType::Terrain> EnvironmentType::terrain(std::stri
 	if (val == "waste") return kWaste;
 	
 	return {};
+}
+
+void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Terrain& type) {
+	std::optional<Terrain> opt_type = terrain(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for EnvironmentType::Terrain: " + std::string(sv));
 }
 
 const std::string EnvironmentType::toString(EnvironmentType::Vegetation vegetation) {
@@ -136,6 +148,12 @@ const std::optional<EnvironmentType::Vegetation> EnvironmentType::vegetation(std
 	if (val == "tundra") return kTundra;
 
 	return {};
+}
+
+void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Vegetation& type) {
+	std::optional<Vegetation> opt_type = vegetation(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for EnvironmentType::Vegetation: " + std::string(sv));
 }
 
 const std::string EnvironmentType::toString(EnvironmentType::Water water) {
@@ -190,5 +208,11 @@ const std::optional<EnvironmentType::Water> EnvironmentType::water(std::string_v
 	if (val == "saltwatercoast") return kSaltCoast;
 
 	return {};
+}
+
+void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Water& type) {
+	std::optional<Water> opt_type = water(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for EnvironmentType::Water: " + std::string(sv));
 }
 

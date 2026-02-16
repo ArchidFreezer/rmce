@@ -201,6 +201,12 @@ public:
 	void addPreferredArmour(ArmourType::Type armour_type) { preferred_armour_.emplace(armour_type); }
 
 	/**
+	 * @brief Set the set of armour types preferred by the culture
+	 * @param armours std::set of ArmourType::Type to set as preferred armours
+	 */
+	void setPreferredArmours(std::set<ArmourType::Type> armours) { preferred_armour_ = std::move(armours); }
+
+	/**
 	 * @brief Get a container with the armour types preferred by the culture
 	 * @return std::set<ArmourType::Type> armour types
 	 */
@@ -227,6 +233,12 @@ public:
 	const std::set<const WeaponTypeData*> preferredWeapons() const { return preferred_weapons_; }
 
 	/**
+	 * @brief Set the set of weapon types preferred by the culture
+	 * @param weapons std::set of WeaponTypeData pointers to set as preferred weapons
+	 */
+	void setPreferredWeapons(std::set<const WeaponTypeData*> weapons) { preferred_weapons_ = std::move(weapons); }
+
+	/**
 	 * @brief Get whether an weapon type is amongst those prefereed by the culture
 	 * @param weapon WeaponTypeData to check
 	 * @return `true` if the weapon type is preferred by the culture
@@ -248,6 +260,23 @@ public:
 		if (isRankSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + skill.id());
 		skill_ranks_.emplace(std::move(skill), ranks);
 	}
+
+	/**
+	 * @brief Set the map of skills and ranks the culture provides during adolescence
+	 * @param map Map of SubcategoriedSkillData and int number of ranks for each skill to set
+	 */
+	void setSkillRanks(std::map<SubcategoriedSkillData, int> map) {
+		for (auto& key : std::views::keys(map)) {
+			if (isRankSkill(key.skillData(), key.subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + key.id());
+		}
+		skill_ranks_ = std::move(map);
+	}
+
+	/**
+	 * @brief Get the map of skills and ranks the culture provides during adolescence
+	 * @return Map of SubcategoriedSkillData and int number of ranks for each skill
+	 */
+	const std::map<SubcategoriedSkillData, int>& skillRanks() const { return skill_ranks_; }
 
 	/**
 	 * @brief Get the number of ranks for a skill the culture provides during adolescence
@@ -306,6 +335,18 @@ public:
 	void addSkillCategoryRank(const SkillCategoryData& category, int ranks) { skill_category_ranks_.emplace(&category, ranks); }
 
 	/**
+	 * @brief Set the number of skill ranks a category receives during adolescence
+	 * @param map Map of SkillCategoryData and int number of adolescent ranks to set for each category
+	 */
+	void setSkillCategoryRanks(std::map<const SkillCategoryData*, int> map) { skill_category_ranks_ = std::move(map); }
+
+	/**
+	 * @brief Get the number of skill ranks a category receives during adolescence
+	 * @return Map of SkillCategoryData and int number of adolescent ranks for each category
+	 */
+	const std::map<const SkillCategoryData*, int>& skillCategoryRanks() const { return skill_category_ranks_; }
+
+	/**
 	 * @brief Get a container of all the skill categories with a adolescent ranks
 	 * @return std::set of categories with adolescent ranks
 	 */
@@ -345,6 +386,18 @@ public:
 	 * @param ranks int number of adolescent ranks to add to a skill in the category
 	 */
 	void addSkillCategorySkillRank(const SkillCategoryData& category, int ranks) { skill_category_skill_ranks_.emplace(&category, ranks); }
+
+	/**
+	 * @brief Set the number of skill ranks a skill in the category receives during adolescence
+	 * @param map Map of SkillCategoryData and int number of adolescent ranks to add to a skill in the category to set for each category
+	 */
+	void setSkillCategorySkillRanks(std::map<const SkillCategoryData*, int> map) { skill_category_skill_ranks_ = std::move(map); }
+
+	/**
+	 * @brief Get the number of skill ranks a skill in the category receives during adolescence
+	 * @return Map of SkillCategoryData and int number of adolescent ranks to add to a skill in the category for each category
+	 */
+	const std::map<const SkillCategoryData*, int>& skillCategorySkillRanks() const { return skill_category_skill_ranks_; }
 
 	/**
 	 * @brief Get a container of all the skill categories with a adolescent ranks to add to a skill
@@ -387,6 +440,12 @@ public:
 	void addRequiredClimate(ClimateData& climate) { required_climates_.emplace(&climate); }
 
 	/**
+	 * @brief Set the set of climate types required by the culture
+	 * @param climates std::set of ClimateData pointers to set as required climates
+	 */
+	void setRequiredClimates(std::set<const ClimateData*> climates) { required_climates_ = std::move(climates); }
+
+	/**
 	 * @brief Get a container with the climates required by the culture
 	 * @return std::set<ClimateData> climates
 	 */
@@ -412,6 +471,12 @@ public:
 	void addRequiredFeature(EnvironmentType::Feature feature) { required_features_.emplace(feature); }
 
 	/**
+	 * @brief Set the set of environment features required by the culture
+	 * @param features std::set of EnvironmentType::Feature to set as required features
+	 */
+	void setRequiredFeatures(std::set<EnvironmentType::Feature> features) { required_features_ = std::move(features); }
+
+	/**
 	 * @brief Get a container with the environment features required by the culture
 	 * @return std::set<EnvironmentType::Feature> environment features
 	 */
@@ -431,6 +496,12 @@ public:
 	 * @param terrain EnvironmentType::Terrain to add
 	 */
 	void addRequiredTerrain(EnvironmentType::Terrain terrain) { required_terrains_.emplace(terrain); }
+
+	/**
+	 * @brief Set the set of environment terrains required by the culture
+	 * @param terrains std::set of EnvironmentType::Terrain to set as required terrains
+	 */
+	void setRequiredTerrains(std::set<EnvironmentType::Terrain> terrains) { required_terrains_ = std::move(terrains); }
 
 	/**
 	 * @brief Get a container with the environment terrains required by the culture
@@ -454,6 +525,12 @@ public:
 	void addRequiredVegetation(EnvironmentType::Vegetation vegetation) { required_vegetations_.emplace(vegetation); }
 
 	/**
+	 * @brief Set the set of environment vegetations required by the culture
+	 * @param vegetations std::set of EnvironmentType::Vegetation to set as required vegetations
+	 */
+	void setRequiredVegetations(std::set<EnvironmentType::Vegetation> vegetations) { required_vegetations_ = std::move(vegetations); }
+
+	/**
 	 * @brief Get a container with the environment vegetations required by the culture
 	 * @return std::set<EnvironmentType::Vegetation> environment vegetations
 	 */
@@ -473,6 +550,12 @@ public:
 	 * @param water EnvironmentType::Water source to add
 	 */
 	void addRequiredWaterSource(EnvironmentType::Water water) { required_water_sources_.emplace(water); }
+
+	/**
+	 * @brief Set the set of environment water sources required by the culture
+	 * @param water_sources std::set of EnvironmentType::Water to set as required water sources
+	 */
+	void setRequiredWaterSources(std::set<EnvironmentType::Water> water_sources) { required_water_sources_ = std::move(water_sources); }
 
 	/**
 	 * @brief Get a container with the environment water sources required by the culture

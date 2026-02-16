@@ -54,6 +54,20 @@ namespace HabitatType {
 	 * @see toString()
 	 */
 	const std::optional<Temperature> temperature(std::string_view sv);
+
+	/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @param type reference to set the HabitatType::Temperature represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid HabitatType::Temperature
+	 *
+	 * @see toString()
+	 */
+	void fromString(std::string_view sv, HabitatType::Temperature& type);
+
 	/**
 	 * @brief Get the string representation of the given enum
 	 * @param temperature The HabitatType::Temperature to get the string of
@@ -93,6 +107,20 @@ namespace HabitatType {
 	 * @see toString()
 	 */
 	const std::optional<Precipitation> precipitation(std::string_view sv);
+
+	/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
+	 *
+	 * Accepts values that are returned by toString() in a case insensitive manner.
+	 *
+	 * @param sv string_view to get the enumeration for
+	 * @param type reference to set the HabitatType::Precipitation represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid HabitatType::Precipitation
+	 *
+	 * @see toString()
+	 */
+	void fromString(std::string_view sv, HabitatType::Precipitation& type);
+
 	/**
 	 * @brief Get the string representation of the given enum
 	 * @param precipitation The HabitatType::Precipitation to get the string of

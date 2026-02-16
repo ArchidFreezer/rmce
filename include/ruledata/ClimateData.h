@@ -54,6 +54,12 @@ public:
 	void addPrecipitation(HabitatType::Precipitation precipitation) { if (!hasPrecipitaton(precipitation)) precipitations_.emplace(precipitation); }
 
 	/**
+	 * @brief Set the precipitations that may be found in the climate
+	 * @param precipitations Set of HabitatType::Precipitation to set
+	 */
+	void setPrecipitations(std::set<HabitatType::Precipitation> precipitations) { precipitations_ = std::move(precipitations); }
+
+	/**
 	 * @brief Check if a precipitation may be found in the cliamte
 	 * @param precipitation HabitatType::Precipitation precipitation to check
 	 * @return `true` if the climate may have the precipitation

@@ -170,8 +170,8 @@
             ]
         },
         {
-            "id": "SKILLCATEGORY_COMMUNICATIONS",
-            "group": "SKILLGROUP_COMMUNICATIONS",
+            "id": "SKILLCATEGORY_COMMUNICATION",
+            "group": "SKILLGROUP_COMMUNICATION",
             "name": "Communications",
             "use-realm-stats": "false",
             "skill-progression": "SKILLPROGRESSIONTYPE_STANDARD",
@@ -370,8 +370,7 @@
             "name": "Power Point Development",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
@@ -431,8 +430,7 @@
             "name": "Special Defences",
             "use-realm-stats": "false",
             "skill-progression": "SKILLPROGRESSIONTYPE_COMBINED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS",
@@ -440,8 +438,7 @@
             "name": "Arcane Base Lists",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS",
@@ -449,8 +446,7 @@
             "name": "Arcane Closed Lists",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS",
@@ -458,8 +454,7 @@
             "name": "Arcane Open Lists",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS",
@@ -467,8 +462,7 @@
             "name": "Other Realm Base Lists",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS",
@@ -476,8 +470,7 @@
             "name": "Other Realm Closed Lists",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS",
@@ -485,8 +478,7 @@
             "name": "Other Realm Open Lists",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE",
@@ -494,8 +486,7 @@
             "name": "Other Realm Training Package",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
@@ -503,8 +494,7 @@
             "name": "Own Realm Closed Lists",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
@@ -512,8 +502,7 @@
             "name": "Own Realm Open Lists",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS",
@@ -521,8 +510,7 @@
             "name": "Own Realm Other Base Lists",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
@@ -530,8 +518,7 @@
             "name": "Own Realm Own Base Lists",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
@@ -539,8 +526,7 @@
             "name": "Own Realm Training Package",
             "use-realm-stats": "true",
             "skill-progression": "SKILLPROGRESSIONTYPE_LIMITED",
-            "category-progression": "SKILLPROGRESSIONTYPE_NONE",
-            "stats": ""
+            "category-progression": "SKILLPROGRESSIONTYPE_NONE"
         },
         {
             "id": "SKILLCATEGORY_SUBTERFUGE_ATTACK",

@@ -123,4 +123,13 @@ namespace {
 		}
 		EXPECT_TRUE(unmodified_different);
 	}
+
+	TEST(Dice, Exception) {
+		EXPECT_THROW(Dice(-1), std::invalid_argument);
+		EXPECT_NO_THROW(Dice(6, 0));
+		EXPECT_NO_THROW(Dice(6, 5));
+		EXPECT_THROW(Dice(6, 6), std::invalid_argument);
+		EXPECT_THROW(Dice(6, 6, 0), std::invalid_argument);
+		EXPECT_THROW(Dice(6, 0, 6), std::invalid_argument);
+	}
 }
