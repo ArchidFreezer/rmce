@@ -1,5 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,5,137,32"/>
-<area shape="rect" id="Node000001" href="$class_number_range.html" title="Stores a range of contiguous numbers allowing checking against another number." alt="" coords="185,5,388,32"/>
-<area shape="poly" id="edge68_Node000000_Node000001" title=" " alt="" coords="152,16,187,19,181,19,153,21"/>
+<area shape="rect" id="Node000000" href="$class_skill_development_cost.html" title="Represents the number of development points a character has to spend to gain a rank in a skill." alt="" coords="5,5,157,32"/>
 </map>

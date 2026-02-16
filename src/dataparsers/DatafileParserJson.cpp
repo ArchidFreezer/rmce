@@ -73,3 +73,50 @@ const pt::ptree DatafileParserJson::getLanguageAbilityMapTree(std::map<std::stri
 	}
 	return tree;
 }
+
+std::set<GameRuleDataChoice<SubcategoriedSkillData>> DatafileParserJson::parseSkillChoiceSetTree(boost::optional<const pt::ptree&> tree) {
+	std::set<GameRuleDataChoice<SubcategoriedSkillData>> datum{};
+	if (tree) {
+		for (const auto& choice_tree : tree.get()) {
+			GameRuleDataChoice<SubcategoriedSkillData> choice_data{};
+			choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
+
+			for (const auto& options_tree : choice_tree.second.get_child("options")) {
+				std::string skill_id{ options_tree.second.get<std::string>("id")};
+				boost::optional<std::string> subcategory = options_tree.second.get_optional<std::string>("subcategory");
+				if (subcategory) {
+					choice_data.addOption(factory().subcategoriedSkillData(skill_id, subcategory.get()));
+				} else {
+					choice_data.addOption(factory().subcategoriedSkillData(skill_id));
+				}
+			}
+			datum.emplace(choice_data);
+		}
+	}
+	return datum;
+}
+
+const pt::ptree DatafileParserJson::getSkillChoiceSetTree(std::set<GameRuleDataChoice<SubcategoriedSkillData>> set) {
+	pt::ptree tree{};
+	for (const GameRuleDataChoice<SubcategoriedSkillData>& item : set) {
+		pt::ptree choice_tree{};
+		choice_tree.put("num-choices", item.numChoices());
+		pt::ptree options_tree{};
+
+		std::map<std::string, const SubcategoriedSkillData*> sorted_options{};
+		for (const SubcategoriedSkillData* option : item.options()) {
+			sorted_options.emplace(option->id(), option);
+		}
+
+		for (const auto& pair : sorted_options) {
+			pt::ptree option_tree{};
+			option_tree.put("id", pair.second->id());
+			if (pair.second->subcategory()) option_tree.put("subcategory", pair.second->subcategory().value());
+			options_tree.push_back(std::make_pair("", option_tree));
+		}
+		choice_tree.push_back(std::make_pair("options", options_tree));
+		tree.push_back(std::make_pair("", choice_tree));
+	}
+	return tree;
+}
+
