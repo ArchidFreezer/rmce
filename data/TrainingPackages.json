@@ -5193,8 +5193,8 @@
       ],
       "group-category-and-skill-rank-choices": [
         {
-          "id": "xxx",
-          "value": "xxx"
+          "id": "SKILLGROUP_WEAPON",
+          "value": "1"
         }
       ],
       "stat-gains": [

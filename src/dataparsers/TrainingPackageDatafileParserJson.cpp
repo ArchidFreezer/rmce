@@ -91,6 +91,10 @@ void TrainingPackageDatafileParserJson::parse() {
 		boost::optional<const pt::ptree&> skill_category_multi_rank_choices_tree = v.second.get_child_optional("category-multi-skill-rank-choices");
 		if (skill_category_multi_rank_choices_tree) { ref.setSkillCategoryMultiSkillRankChoices(parseCategoryMultiSkillRankChoices(skill_category_multi_rank_choices_tree)); }
 
+		// Skill group: category and skill ranks
+		boost::optional<const pt::ptree&> skill_group_tree = v.second.get_child_optional("group-category-and-skill-rank-choices");
+		if (skill_group_tree) { ref.setSkillGroupCategoryAndSkillRanks(parseGameDataPairTree<SkillGroupData, int>(skill_group_tree)); }
+
 		std::cout << "\tTrainingPackage name: " << ref.name() << std::endl;
 	}
 
@@ -177,6 +181,12 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 	{
 		pt::ptree tree{ getCategoryMultiSkillRankChoicesTree(game_data) };
 		if (tree.size()) datum.push_back(std::make_pair("category-multi-skill-rank-choices", tree));
+	}
+
+	// Skill group: category and skill ranks
+	{
+		pt::ptree tree{ getGameDataPairTree<SkillGroupData, int>(game_data.skillGroupCategoryAndSkillRanks()) };
+		if (tree.size()) datum.push_back(std::make_pair("group-category-and-skill-rank-choices", tree));
 	}
 }
 
