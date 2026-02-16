@@ -510,6 +510,12 @@ protected:
 	template<typename Primitive>
 	const pt::ptree getSkillChoicePairTree(std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> map);
 
+	/**
+	 * @brief Parses a property tree into a set of enumeration choices.
+	 * @tparam EnumType The enumeration type for the choices.
+	 * @param tree An optional reference to a property tree containing the enumeration choices to parse.
+	 * @return A set of parsed enumeration choices of the specified enum type.
+	 */
 	template<typename EnumType>
 	std::set<EnumChoice<EnumType>> parseEnumChoiceSetTree(boost::optional<const pt::ptree&> tree);
 
