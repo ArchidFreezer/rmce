@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['num_5fchoices_0',['num_choices',['../struct_category_multi_skill_rank_choice.html#aedddb7f0ace083e709c750df35c7148e',1,'CategoryMultiSkillRankChoice::num_choices'],['../struct_spell_list_choices.html#a8bfe1208e58e55e0211631be01eb8c0c',1,'SpellListChoices::num_choices'],['../struct_spell_list_category_choices.html#a114e0b5d9266fdbf9c197f0cf2a05253',1,'SpellListCategoryChoices::num_choices'],['../struct_language_choices.html#ab7dceb994eb86af0400692f5bcec3347',1,'LanguageChoices::num_choices']]]
+  ['ranks_0',['ranks',['../struct_category_multi_skill_rank_choice.html#af8497fae8baa063fd0aff0c726397e54',1,'CategoryMultiSkillRankChoice::ranks'],['../struct_spell_list_choices.html#a58cc8f62bd8706317f3c05007e5fe1fb',1,'SpellListChoices::ranks'],['../struct_spell_list_category_choices.html#a83fecfa87767f658d2a14d15dca3132e',1,'SpellListCategoryChoices::ranks']]]
 ];

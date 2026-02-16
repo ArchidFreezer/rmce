@@ -475,6 +475,26 @@ protected:
 	const pt::ptree getGameDataChoicePairEnumTree(std::map<GameRuleDataChoice<GameRuleData>, EnumType> map);
 
 	/**
+	 * @brief Parses a property tree into a map of game rule data choices paired with primitive values.
+	 * @tparam Primitive The primitive type of the values associated with each game rule data choice.
+	 * @tparam GameRuleData The game rule data object type that defines the available choices.
+	 * @param tree An optional reference to a property tree containing the game data choice-primitive pairs to parse.
+	 * @return A map where keys are game rule data choices and values are the associated primitive values parsed from the tree.
+	 */
+	template<GameRuleDataObject GameRuleData, typename Primitive>
+	std::map<GameRuleDataChoice<GameRuleData>, Primitive> parseGameDataChoicePairTree(boost::optional<const pt::ptree&> tree);
+
+	/**
+	 * @brief Converts a map of game rule data choices to a property tree.
+	 * @tparam Primitive The primitive type used as the value in the map.
+	 * @tparam GameRuleData The game rule data object type that satisfies the GameRuleDataObject concept.
+	 * @param map A map containing game rule data choices as keys and primitive values as values.
+	 * @return A property tree (ptree) representation of the game data choice-primitive pairs.
+	 */
+	template<GameRuleDataObject GameRuleData, typename Primitive>
+	const pt::ptree getGameDataChoicePairTree(std::map<GameRuleDataChoice<GameRuleData>, Primitive> map);
+
+	/**
 	 * @brief Parses a property tree into a map of skill data choices to enum values.
 	 * @tparam EnumType The enum type to be used as the value in the resulting map.
 	 * @param tree An optional reference to a property tree containing the skill choice and enum pair data to parse.
@@ -925,6 +945,46 @@ inline const pt::ptree DatafileParserJson::getGameDataChoicePairEnumTree(std::ma
 		pt::ptree choice_tree{};
 		choice_tree.put("num-choices", pair.first.numChoices());
 		choice_tree.put("type", toString(pair.second));
+		pt::ptree options_tree{};
+		std::map<std::string, const GameRuleData*> sorted_options{};
+		for (const GameRuleData* option : pair.first.options()) {
+			sorted_options.emplace(option->id(), option);
+		}
+		for (const auto& option_pair : sorted_options) {
+			pt::ptree option_tree{};
+			option_tree.put("", option_pair.second->id());
+			options_tree.push_back(std::make_pair("", option_tree));
+		}
+		choice_tree.push_back(std::make_pair("options", options_tree));
+		tree.push_back(std::make_pair("", choice_tree));
+	}
+	return tree;
+}
+
+template<GameRuleDataObject GameRuleData, typename Primitive>
+inline std::map<GameRuleDataChoice<GameRuleData>, Primitive> DatafileParserJson::parseGameDataChoicePairTree(boost::optional<const pt::ptree&> tree) {
+	std::map<GameRuleDataChoice<GameRuleData>, Primitive> datum{};
+	if (tree) {
+		for (const auto& choice_tree : tree.get()) {
+			GameRuleDataChoice<GameRuleData> choice_data{};
+			choice_data.setNumChoices(choice_tree.second.get<int>("num-choices"));
+			for (const auto& list_tree : choice_tree.second.get_child("options")) {
+				std::string list_id{ list_tree.second.get_value<std::string>() };
+				choice_data.addOption(factory().get<GameRuleData>(list_id));
+			}
+			datum.emplace(choice_data, choice_tree.second.get<Primitive>("value"));
+		}
+	}
+	return datum;
+}
+
+template<GameRuleDataObject GameRuleData, typename Primitive>
+inline const pt::ptree DatafileParserJson::getGameDataChoicePairTree(std::map<GameRuleDataChoice<GameRuleData>, Primitive> map) {
+	pt::ptree tree{};
+	for (const auto& pair : map) {
+		pt::ptree choice_tree{};
+		choice_tree.put("num-choices", pair.first.numChoices());
+		choice_tree.put("value", pair.second);
 		pt::ptree options_tree{};
 		std::map<std::string, const GameRuleData*> sorted_options{};
 		for (const GameRuleData* option : pair.first.options()) {

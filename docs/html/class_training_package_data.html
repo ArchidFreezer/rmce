@@ -256,10 +256,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a35dbb8208e9b3b674cac213416b465cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the lifestyle category skill choices for this package.  <br /></td></tr>
 <tr class="memitem:a18e58a3a9fdcf310f864fb0428a6b6f4" id="r_a18e58a3a9fdcf310f864fb0428a6b6f4"><td class="memItemLeft">const std::set&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_skill_category_data.html">SkillCategoryData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a18e58a3a9fdcf310f864fb0428a6b6f4">lifestyleCategorySkillChoices</a> () const</td></tr>
 <tr class="memdesc:a18e58a3a9fdcf310f864fb0428a6b6f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the lifestyle category skill choices for this package.  <br /></td></tr>
-<tr class="memitem:a13fe02d70014afe358dd17055fe584b4" id="r_a13fe02d70014afe358dd17055fe584b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a13fe02d70014afe358dd17055fe584b4">setLanguageChoices</a> (std::set&lt; <a class="el" href="struct_language_choices.html">LanguageChoices</a> &gt; language_choices)</td></tr>
-<tr class="memdesc:a13fe02d70014afe358dd17055fe584b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the language choices.  <br /></td></tr>
-<tr class="memitem:a23d401c19ba5640d36d27c6fe3f645eb" id="r_a23d401c19ba5640d36d27c6fe3f645eb"><td class="memItemLeft">const std::set&lt; <a class="el" href="struct_language_choices.html">LanguageChoices</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a23d401c19ba5640d36d27c6fe3f645eb">languageChoices</a> () const</td></tr>
-<tr class="memdesc:a23d401c19ba5640d36d27c6fe3f645eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the language choices.  <br /></td></tr>
+<tr class="memitem:a500411cee9cb3208e9cf51c3ead97d55" id="r_a500411cee9cb3208e9cf51c3ead97d55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a500411cee9cb3208e9cf51c3ead97d55">setLanguageChoices</a> (std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_language_data.html">LanguageData</a> &gt;, int &gt; language_choices)</td></tr>
+<tr class="memdesc:a500411cee9cb3208e9cf51c3ead97d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the language choices.  <br /></td></tr>
+<tr class="memitem:ac2fa2ed5dbd0cf8669467588de414dbd" id="r_ac2fa2ed5dbd0cf8669467588de414dbd"><td class="memItemLeft">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_language_data.html">LanguageData</a> &gt;, int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac2fa2ed5dbd0cf8669467588de414dbd">languageChoices</a> () const</td></tr>
+<tr class="memdesc:ac2fa2ed5dbd0cf8669467588de414dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the language choices.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_rule_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_rule_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_rule_data.html">GameRuleData</a></td></tr>
 <tr class="memitem:ae41e24b7b627445273425b0b6baf1968 inherit pub_methods_class_game_rule_data" id="r_ae41e24b7b627445273425b0b6baf1968"><td class="memItemLeft">
 &#160;</td><td class="memItemRight"><b>GameRuleData</b> ()=delete</td></tr>
@@ -729,8 +729,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a23d401c19ba5640d36d27c6fe3f645eb" name="a23d401c19ba5640d36d27c6fe3f645eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23d401c19ba5640d36d27c6fe3f645eb">&#9670;&#160;</a></span>languageChoices()</h2>
+<a id="ac2fa2ed5dbd0cf8669467588de414dbd" name="ac2fa2ed5dbd0cf8669467588de414dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2fa2ed5dbd0cf8669467588de414dbd">&#9670;&#160;</a></span>languageChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -739,7 +739,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::set&lt; <a class="el" href="struct_language_choices.html">LanguageChoices</a> &gt; &amp; TrainingPackageData::languageChoices </td>
+          <td class="memname">const std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_language_data.html">LanguageData</a> &gt;, int &gt; &amp; TrainingPackageData::languageChoices </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1143,8 +1143,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a13fe02d70014afe358dd17055fe584b4" name="a13fe02d70014afe358dd17055fe584b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13fe02d70014afe358dd17055fe584b4">&#9670;&#160;</a></span>setLanguageChoices()</h2>
+<a id="a500411cee9cb3208e9cf51c3ead97d55" name="a500411cee9cb3208e9cf51c3ead97d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a500411cee9cb3208e9cf51c3ead97d55">&#9670;&#160;</a></span>setLanguageChoices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1155,7 +1155,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void TrainingPackageData::setLanguageChoices </td>
           <td>(</td>
-          <td class="paramtype">std::set&lt; <a class="el" href="struct_language_choices.html">LanguageChoices</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>language_choices</em></span></td><td>)</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="class_game_rule_data_choice.html">GameRuleDataChoice</a>&lt; <a class="el" href="class_language_data.html">LanguageData</a> &gt;, int &gt;</td>          <td class="paramname"><span class="paramname"><em>language_choices</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

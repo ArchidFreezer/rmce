@@ -53,7 +53,7 @@ var searchData=
   ['setisspoken_50',['setIsSpoken',['../class_language_data.html#adc0f7a2c2ae171b84c9911d56a30e15e',1,'LanguageData']]],
   ['setissummoning_51',['setIsSummoning',['../class_spell_list_data.html#a60e959c2fab95900c23134e3e853ac6b',1,'SpellListData']]],
   ['setiswritten_52',['setIsWritten',['../class_language_data.html#a5ade03bddb9a8857fba33b0f5dc743ba',1,'LanguageData']]],
-  ['setlanguagechoices_53',['setLanguageChoices',['../class_training_package_data.html#a13fe02d70014afe358dd17055fe584b4',1,'TrainingPackageData']]],
+  ['setlanguagechoices_53',['setLanguageChoices',['../class_training_package_data.html#a500411cee9cb3208e9cf51c3ead97d55',1,'TrainingPackageData']]],
   ['setlifestyle_54',['setLifestyle',['../class_training_package_data.html#a037a2e62a7a1bad8f3b571daa82e5cf9',1,'TrainingPackageData']]],
   ['setlifestylecategoryskillchoices_55',['setLifestyleCategorySkillChoices',['../class_training_package_data.html#a35dbb8208e9b3b674cac213416b465cb',1,'TrainingPackageData']]],
   ['setlifestyleskillcategories_56',['setLifestyleSkillCategories',['../class_training_package_data.html#a52354d8d29fa5ec3ad2dc4375910d37c',1,'TrainingPackageData']]],

@@ -87,15 +87,6 @@ struct SpellListCategoryChoices {
 };
 
 /**
- * @brief Represents a set of language choices available in a package, including constraints on selection and rank allocation.
- */
-struct LanguageChoices {
-	int ranks; /**< The number of ranks the package provides in the language */
-	int num_choices; /**< The number of languages that can be chosen */
-	std::set<std::string> languages; /**< The languages that can be chosen from */
-};
-
-/**
  * @class TrainingPackageData
  * @brief A training package is a group of benefits (and sometimes disadvantages) that can be developed using development
  * points
@@ -679,13 +670,13 @@ public:
 	 * @brief Sets the language choices.
 	 * @param language_choices A set of language choices to be stored.
 	 */
-	void setLanguageChoices(std::set<LanguageChoices> language_choices) { language_choices_ = std::move(language_choices); }
+	void setLanguageChoices(std::map<GameRuleDataChoice<LanguageData>, int> language_choices) { language_choices_ = std::move(language_choices); }
 
 	/**
 	 * @brief Get the language choices.
 	 * @return A set of language choices representing the language choices that the player may select from to gain ranks in languages.
 	 */
-	const std::set<LanguageChoices>& languageChoices() const { return language_choices_; }
+	const std::map<GameRuleDataChoice<LanguageData>, int>& languageChoices() const { return language_choices_; }
 	
 private:
 	std::string name_{}; /**< Name of the training package */
@@ -713,5 +704,5 @@ private:
 	std::set<const SkillCategoryData*> lifestyle_skill_categories_{}; /**< A set of skill categories for which all skills within the category may gain up to 15 ranks via the package rather than the usual cap of 10 */
 	std::set<const SkillGroupData*> lifestyle_skill_groups_{}; /**< A set of skill groups for which all skills within the group may gain up to 15 ranks via the package rather than the usual cap of 10 */
 	std::set<GameRuleDataChoice<SkillCategoryData>> lifestyle_category_skill_choices_{}; /**< A set of choices of skill categories from which the player may select one or more skill to gain up to 15 ranks from the package rather than the usual cap of 10 */
-	std::set<LanguageChoices> language_choices_{}; /**< A set of language choices that the player may select from to gain ranks in languages */
+	std::map<GameRuleDataChoice<LanguageData>, int> language_choices_{}; /**< A set of language choices that the player may select from to gain ranks in languages */
 };

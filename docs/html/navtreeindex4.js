@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"functions_f.html":[2,3,0,5],
+"functions_func.html":[2,3,1],
 "functions_func.html":[2,3,1,0],
 "functions_func_b.html":[2,3,1,1],
 "functions_func_c.html":[2,3,1,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411acce6937d6b3406ce3f260a27cf69873f":[0,0,9,1,6],
 "namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411ad7f6da955ae2a5788fc5a31c3a7555c6":[0,0,9,1,3],
 "namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411aece059b52386d38cd6da9729cca08b4e":[0,0,9,1,9],
-"namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411afa7ddc2fc4573cfbf9721e732113e7d3":[0,0,9,1,2],
-"namespace_resistance_type.html#acfff2a0e137639fb170a93715ae4448f":[0,0,9,2],
-"namespace_skill_action_type.html":[0,0,10]
+"namespace_resistance_type.html#abfaba2ccf07237c2443093eed82b5411afa7ddc2fc4573cfbf9721e732113e7d3":[0,0,9,1,2]
 };

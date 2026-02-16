@@ -54,7 +54,6 @@ var annotated_dup =
     [ "LanguageAbility", "class_language_ability.html", "class_language_ability" ],
     [ "LanguageCategoryData", "class_language_category_data.html", "class_language_category_data" ],
     [ "LanguageCategoryDatafileParserJson", "class_language_category_datafile_parser_json.html", "class_language_category_datafile_parser_json" ],
-    [ "LanguageChoices", "struct_language_choices.html", "struct_language_choices" ],
     [ "LanguageData", "class_language_data.html", "class_language_data" ],
     [ "LanguageDatafileParserJson", "class_language_datafile_parser_json.html", "class_language_datafile_parser_json" ],
     [ "LanguageDialectData", "class_language_dialect_data.html", "class_language_dialect_data" ],

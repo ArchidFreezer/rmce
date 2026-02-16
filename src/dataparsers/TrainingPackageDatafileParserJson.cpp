@@ -124,6 +124,10 @@ void TrainingPackageDatafileParserJson::parse() {
 		boost::optional<const pt::ptree&> lifestyle_category_skill_choices_tree = v.second.get_child_optional("lifestyle-category-skill-choices");
 		if (lifestyle_category_skill_choices_tree) { ref.setLifestyleCategorySkillChoices(parseGameDataChoiceSetTree<SkillCategoryData>(lifestyle_category_skill_choices_tree)); }
 
+		// Language choices
+		boost::optional<const pt::ptree&> language_choices_tree = v.second.get_child_optional("language-choices");
+		if (language_choices_tree) { ref.setLanguageChoices(parseGameDataChoicePairTree<LanguageData, int>(language_choices_tree)); }
+
 		std::cout << "\tTrainingPackage name: " << ref.name() << std::endl;
 	}
 
@@ -252,6 +256,12 @@ void TrainingPackageDatafileParserJson::populateDatum(std::string& id, pt::ptree
 	{
 		pt::ptree tree{ getGameDataChoiceSetTree<SkillCategoryData>(game_data.lifestyleCategorySkillChoices()) };
 		if (tree.size()) datum.push_back(std::make_pair("lifestyle-category-skill-choices", tree));
+	}
+
+	// Language choices
+	{
+		pt::ptree tree{ getGameDataChoicePairTree<LanguageData, int>(game_data.languageChoices()) };
+		if (tree.size()) datum.push_back(std::make_pair("language-choices", tree));
 	}
 }
 

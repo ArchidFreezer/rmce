@@ -3160,8 +3160,8 @@
                     "value": "2",
                     "num-choices": "2",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -3275,8 +3275,8 @@
                     "value": "2",
                     "num-choices": "1",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -3633,8 +3633,8 @@
                     "options": [
                         "SPELLLIST_SUMMONING_BOND",
                         "SPELLLIST_SUMMONING_CIRCLES",
-                        "SPELLLIST_SUMMONS",
                         "SPELLLIST_SUMMONING_MASTERY",
+                        "SPELLLIST_SUMMONS",
                         "SPELLLIST_ANIMAL_SUMMONS",
                         "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_FEY_CONJURY",
@@ -4531,6 +4531,16 @@
                 {
                     "id": "SKILL_DEMON_DEVIL_LORE"
                 }
+            ],
+            "language-choices": [
+                {
+                    "num-choices": "2",
+                    "value": "2",
+                    "options": [
+                        "Demonic I",
+                        "Demonic II"
+                    ]
+                }
             ]
         },
         {
@@ -5160,8 +5170,8 @@
                     "options": [
                         "SPELLLIST_SUMMONING_BOND",
                         "SPELLLIST_SUMMONING_CIRCLES",
-                        "SPELLLIST_SUMMONS",
                         "SPELLLIST_SUMMONING_MASTERY",
+                        "SPELLLIST_SUMMONS",
                         "SPELLLIST_ANIMAL_SUMMONS",
                         "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_FEY_CONJURY",
@@ -8204,10 +8214,10 @@
                     "value": "3",
                     "num-choices": "1",
                     "options": [
-                        "SPELLLIST_MIND_DOMINATION",
                         "SPELLLIST_MIND_DISEASE",
                         "SPELLLIST_MIND_EROSION",
                         "SPELLLIST_MIND_ILLUSIONS",
+                        "SPELLLIST_MIND_DOMINATION",
                         "SPELLLIST_MIND_SUBVERSION",
                         "SPELLLIST_MIND_DEATH"
                     ]
@@ -11516,10 +11526,10 @@
                     "value": "6",
                     "num-choices": "3",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
                         "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE"
                     ]
                 }
             ]
@@ -11627,8 +11637,8 @@
                     "value": "2",
                     "num-choices": "1",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -12644,8 +12654,8 @@
                     "value": "2",
                     "num-choices": "1",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -12842,8 +12852,8 @@
                     "value": "2",
                     "num-choices": "1",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -13039,8 +13049,8 @@
                     "value": "4",
                     "num-choices": "2",
                     "options": [
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS"
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                        "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS"
                     ]
                 }
             ]
@@ -15096,8 +15106,8 @@
                         "SPELLLIST_ENTITY_SUMMONS",
                         "SPELLLIST_MATTER_DISRUPTION",
                         "SPELLLIST_PHYSICAL_EROSION",
-                        "SPELLLIST_DARK_CONTACTS",
                         "SPELLLIST_DARKNESS",
+                        "SPELLLIST_DARK_CONTACTS",
                         "SPELLLIST_DARK_SUMMONS"
                     ]
                 }
