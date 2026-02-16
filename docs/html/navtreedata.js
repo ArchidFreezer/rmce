@@ -58,11 +58,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_armour_type_8h_source.html",
-"class_culture_type_datafile_parser_json.html",
-"class_profession_data.html#a52ca563a1135dc2f668edce4f863460d",
-"class_skill_data_1_1_using_character_realm_stats_exception.html#ae7ee35c5a0f724c34aae37dfe244a2bd",
-"functions_f.html",
-"namespace_resistance_type.html#acfff2a0e137639fb170a93715ae4448f"
+"class_culture_type_data.html#a69472e471a435edded17a336a85ae613",
+"class_lookup_table.html#a259db3187ece523a7f57735fd3ec8b31",
+"class_skill_category_data.html#aebd62a7951f85ada98ea67d7291d5d3b",
+"class_weapon_type_data.html#a7937688b1dbf34ee19d2f0a022ffa80f",
+"namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20a2813c1d45030bdc5b74a5f10984e70df"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
