@@ -6,6 +6,7 @@
 #include <string_view>
 #include <tuple>
 #include <Dice.h>
+#include <EnumChoice.h>
 #include <GameRuleData.h>
 #include <RaceData.h>
 
@@ -230,7 +231,7 @@ public:
 	 * 
 	 * @return Map of qualifier text and associated cost reduction
 	 */
-	const std::map<std::string, int> qualifiers() const { return qualifiers_; }
+	const std::map<std::string, int>& qualifiers() const { return qualifiers_; }
 
 	/**
 	 * @brief Set whether the package is lifestyle based
@@ -367,7 +368,7 @@ public:
 	 *
 	 * @return Vector of pairs of special benefit or malus descriptions and associated chances
 	 */
-	std::vector<std::pair<std::string, int>> specials() const { return specials_; }
+	const std::vector<std::pair<std::string, int>>& specials() const { return specials_; }
 
 	/**
 	 * @brief Add a stat that receives a stat gain roll as part of the package
@@ -385,7 +386,7 @@ public:
 	 * @brief Get set of stats that receive a stat gain roll
 	 * @return Set of StatType::Type stats that recieve a stat gain roll
 	 */
-	const std::set< StatType::Type> statGains() const { return stat_gains_; }
+	const std::set< StatType::Type>& statGains() const { return stat_gains_; }
 
 	/**
 	 * @brief Set whether the package provides a stat gain roll for realm stats
@@ -404,7 +405,7 @@ public:
 	 * @brief Set the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from
 	 * @param choices Pair of number of stats that may be chosen to receive a stat gain roll and set of StatType::Type stats to choose from
 	 */
-	void setStatGainChoices(EnumChoice<StatType::Type> choices) { stat_gain_choices_ = std::move(choices); }
+	void setStatGainChoices(EnumChoice<StatType::Type> choices) { stat_gain_choices_ = choices; }
 
 	/**
 	 * @brief Get the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from
@@ -481,19 +482,19 @@ public:
 	 * @brief Get a collection of skills and ranks the package provides
 	 * @return Map of SubcategoriedSkillData and associated number of ranks
 	 */
-	const std::map<SubcategoriedSkillData, int> skillRanks() const { return skill_ranks_; }
+	const std::map<SubcategoriedSkillData, int>& skillRanks() const { return skill_ranks_; }
 
 	/**
-	 * @brief Sets the skill rank choices for this object.
-	 * @param skill_rank_choices A set of pairs containing skill data and their corresponding rank values to be assigned.
+	 * @brief Set the skill rank choices for this package.
+	 * @param skill_rank_choices A set of GameRuleDataChoice<SubcategoriedSkillData> representing the skill rank choices available in the package.
 	 */
-	void setSkillRankChoices(std::set<std::pair<SubcategoriedSkillData, int>> skill_rank_choices) { skill_rank_choices_ = std::move(skill_rank_choices); }
+	void setSkillRankChoices(std::map<GameRuleDataChoice<SubcategoriedSkillData>, int> skill_rank_choices) { skill_rank_choices_ = std::move(skill_rank_choices); }
 
 	/**
-	 * @brief Get a collection of skills with ranks that the player can choose from to gain the skill ranks
-	 * @return Set of pairs of SubcategoriedSkillData and associated number of ranks
+	 * @brief Gets the skill rank choices available for this training package.
+	 * @return A set of skill rank choices, where each choice contains subcategorized skill data.
 	 */
-	const std::set<std::pair<SubcategoriedSkillData, int>> skillRankChoices() const { return skill_rank_choices_; }
+	const std::map<GameRuleDataChoice<SubcategoriedSkillData>, int>& skillRankChoices() const { return skill_rank_choices_; }
 
 	/**
 	 * @brief Sets the skill category ranks for this package.
@@ -505,7 +506,7 @@ public:
 	 * @brief Get a collection of skill categories and ranks the package provides
 	 * @return Map of SkillCategoryData pointers and associated number of ranks
 	 */
-	const std::map<const SkillCategoryData*, int> skillCategoryRanks() const { return skill_category_ranks_; }
+	const std::map<const SkillCategoryData*, int>& skillCategoryRanks() const { return skill_category_ranks_; }
 
 	/**
 	 * @brief Sets the skill category from which the player can choose to gain the skill ranks, the number of skill ranks that can be gained, and the number of skills that can be chosen to gain the skill ranks.
@@ -520,7 +521,7 @@ public:
 	 * @brief Get the skill category from which the player can choose to gain the skill ranks, the number of skill ranks that can be gained, and the number of skills that can be chosen to gain the skill ranks.
 	 * @return Tuple containing a SkillCategoryData pointer representing the skill category from which the player can choose to gain the skill ranks, an integer representing the number of skill ranks that can be gained, and an integer representing the number of skills that can be chosen to gain the skill ranks.
 	 */
-	const std::set<CategoryMultiSkillRankChoice> skillCategoryMultiSkillRankChoices() { return skill_category_multi_skill_rank_choices_; }
+	const std::set<CategoryMultiSkillRankChoice>& skillCategoryMultiSkillRankChoices() { return skill_category_multi_skill_rank_choices_; }
 
 	/**
 	 * @brief Sets the skill group category and skill ranks for this package.
@@ -540,7 +541,7 @@ public:
 	 *
 	 * @return A map containing skill group data pointers as keys and their corresponding rank values as integers.
 	 */
-	const std::map<const SkillGroupData*, int> skillGroupCategoryAndSkillRanks() const { return skill_group_category_and_skill_ranks_; }
+	const std::map<const SkillGroupData*, int>& skillGroupCategoryAndSkillRanks() const { return skill_group_category_and_skill_ranks_; }
 
 	/**
 	 * @brief Sets the spell list choices for this package.
@@ -552,7 +553,7 @@ public:
 	 * @brief Get the spell list choices for this package.
 	 * @return A set of SpellListChoices representing the spell list choices available in the package.
 	 */
-	const std::set<SpellListChoices> spellListChoices() const { return spell_list_choices_; }
+	const std::set<SpellListChoices>& spellListChoices() const { return spell_list_choices_; }
 
 	/**
 	 * @brief Sets the spell list category choices for this package.
@@ -564,7 +565,7 @@ public:
 	 * @brief Get the spell list category choices for this package.
 	 * @return A set of SpellListCategoryChoices representing the spell list category choices available in the package.
 	 */
-	const std::set<SpellListCategoryChoices> spellListCategoryChoices() const { return spell_list_category_choices_; }
+	const std::set<SpellListCategoryChoices>& spellListCategoryChoices() const { return spell_list_category_choices_; }
 
 	/**
 	 * @brief Sets the lifestyle skills for this package.
@@ -576,7 +577,7 @@ public:
 	 * @brief Get the lifestyle skills for this package.
 	 * @return A set of SubcategoriedSkillData representing the lifestyle skills that may gain up to 15 ranks via the package rather than the usual cap of 10.
 	 */
-	const std::set<SubcategoriedSkillData> lifestyleSkills() const { return lifestyle_skills_; }
+	const std::set<SubcategoriedSkillData>& lifestyleSkills() const { return lifestyle_skills_; }
 
 	/**
 	 * @brief Sets the lifestyle skill categories for this package.
@@ -588,7 +589,7 @@ public:
 	 * @brief Get the lifestyle skill categories for this package.
 	 * @return A set of SkillCategoryData pointers representing the skill categories for which all skills within the category may gain up to 15 ranks via the package rather than the usual cap of 10.
 	 */
-	const std::set<const SkillCategoryData*> lifestyleSkillCategories() const { return lifestyle_skill_categories_; }
+	const std::set<const SkillCategoryData*>& lifestyleSkillCategories() const { return lifestyle_skill_categories_; }
 
 	/**
 	 * @brief Sets the lifestyle skill groups for this package.
@@ -600,7 +601,7 @@ public:
 	 * @brief Get the lifestyle skill groups for this package.
 	 * @return A set of SkillGroupData pointers representing the skill groups for which all skills within the group may gain up to 15 ranks via the package rather than the usual cap of 10.
 	 */
-	const std::set<const SkillGroupData*> lifestyleSkillGroups() const { return lifestyle_skill_groups_; }
+	const std::set<const SkillGroupData*>& lifestyleSkillGroups() const { return lifestyle_skill_groups_; }
 
 	/**
 	 * @brief Sets the lifestyle skill category multi skill rank choices for this package.
@@ -612,7 +613,7 @@ public:
 	 * @brief Get the lifestyle skill category multi skill rank choices for this package.
 	 * @return A set of pairs of a set of SkillCategoryData pointers representing the skill categories from which the player may select one or more to gain up to 15 ranks from the package rather than the usual cap of 10 and an integer representing the number of skill categories that can be chosen.
 	 */
-	const std::set<std::pair<std::set<const SkillCategoryData*>, int>> lifestyleSkill() const { return lifestyle_skill_category_multi_skill_rank_choices_; }
+	const std::set<std::pair<std::set<const SkillCategoryData*>, int>>& lifestyleSkill() const { return lifestyle_skill_category_multi_skill_rank_choices_; }
 
 	/**
 	 * @brief Sets the language choices.
@@ -624,7 +625,7 @@ public:
 	 * @brief Get the language choices.
 	 * @return A set of language choices representing the language choices that the player may select from to gain ranks in languages.
 	 */
-	const std::set<LanguageChoices> languageChoices() const { return language_choices_; }
+	const std::set<LanguageChoices>& languageChoices() const { return language_choices_; }
 	
 private:
 	std::string name_{}; /**< Name of the training package */
@@ -640,9 +641,9 @@ private:
 	std::vector<std::pair<std::string, int>> specials_{}; /**< Special benefits or maluses that may be gained by the package */
 	std::set<StatType::Type> stat_gains_{}; /**< Stats that receive a stat gain roll */
 	bool realmStatGain_{}; /**< Whether the package provides a stat gain roll for realm stats */
-	EnumChoice<StatType::Type> stat_gain_choices_{}; /**< A set of stats from which the player may select one or more form to receive a stat gain roll */
+	EnumChoice<StatType::Type> stat_gain_choices_{}; /**< A set of stats from which the player may select one or more from to receive a stat gain roll */
 	std::map<SubcategoriedSkillData, int> skill_ranks_{}; /** Number of skill ranks gained */
-	std::set<std::pair<SubcategoriedSkillData, int>> skill_rank_choices_{}; /**< A set of skills with ranks from which the player may select one or more form to receive the skill ranks */
+	std::map<GameRuleDataChoice<SubcategoriedSkillData>, int> skill_rank_choices_{}; /**< A set of skills with ranks from which the player may select one or more from to receive the skill ranks */
 	std::map<const SkillCategoryData*, int> skill_category_ranks_{}; /** Number of skill category ranks gained */
 	std::set<CategoryMultiSkillRankChoice> skill_category_multi_skill_rank_choices_{}; /**< A set of skill categories from which the player may select one or more to receive the skill ranks */
 	std::map<const SkillGroupData*, int> skill_group_category_and_skill_ranks_{}; /** A number fo ranks that may be set on a single caltegory within the group and also a single skill within that category */
