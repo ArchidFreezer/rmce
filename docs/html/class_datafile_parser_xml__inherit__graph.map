@@ -1,9 +1,7 @@
 <map id="DatafileParserXml" name="DatafileParserXml">
-<area shape="rect" id="Node000001" title="Abstract class to parse xml files containing game rule data." alt="" coords="128,80,255,107"/>
-<area shape="rect" id="Node000003" href="$class_culture_datafile_parser_xml.html" title="Process CultureData objects for xml files." alt="" coords="5,155,175,181"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,115,109,156,106,152,159,117"/>
-<area shape="rect" id="Node000004" href="$class_profession_datafile_parser_xml.html" title="Process ProfessionData objects for xml files." alt="" coords="199,155,389,181"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="223,113,279,154,273,154,221,119"/>
-<area shape="rect" id="Node000002" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="139,5,244,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,46,194,81,189,79,190,50"/>
+<area shape="rect" id="Node000001" title="Abstract class to parse xml files containing game rule data." alt="" coords="36,80,164,107"/>
+<area shape="rect" id="Node000003" href="$class_profession_datafile_parser_xml.html" title="Process ProfessionData objects for xml files." alt="" coords="5,155,195,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="102,121,102,155,98,153,98,124"/>
+<area shape="rect" id="Node000002" href="$class_datafile_parser.html" title="Abstract class to facilitate reading and writing of game rule data to and from files." alt="" coords="48,5,152,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,45,103,80,97,79,99,50"/>
 </map>

@@ -13,6 +13,7 @@ var searchData=
   ['trainingpackagedata_10',['TrainingPackageData',['../class_training_package_data.html#a49c18e5c95fb5cfa8d7167434cf2cdec',1,'TrainingPackageData::TrainingPackageData()=delete'],['../class_training_package_data.html#a19d1b210a1a0788e2b960d7372031183',1,'TrainingPackageData::TrainingPackageData(std::string_view id)']]],
   ['trainingpackagedatafileparserjson_11',['TrainingPackageDatafileParserJson',['../class_training_package_datafile_parser_json.html#a805d560c6c05e24413c8a903c535be6f',1,'TrainingPackageDatafileParserJson::TrainingPackageDatafileParserJson(GameRuleDataCache &amp;cache, std::string_view filename)'],['../class_training_package_datafile_parser_json.html#afaf366027a939b1eb87a3649cac53adb',1,'TrainingPackageDatafileParserJson::TrainingPackageDatafileParserJson(GameRuleDataCache &amp;cache)']]],
   ['trainingpackagemodifier_12',['trainingPackageModifier',['../class_culture_data.html#a4618c7eb0db28535afd07dd3603b41cf',1,'CultureData']]],
-  ['twenty_13',['twenty',['../class_skill_progression_type_data.html#aab5699ac4a157015e7cda755c726f412',1,'SkillProgressionTypeData']]],
-  ['type_14',['type',['../class_armour_type_data.html#aec25856e02cf0e9034af28b3b98fc05d',1,'ArmourTypeData::type()'],['../class_spell_list_data.html#ab476e7f47a6b5a95e35c5a3b06d735df',1,'SpellListData::type()']]]
+  ['trainingpackagemodifiers_13',['trainingPackageModifiers',['../class_culture_data.html#a0f2883dab51dcbcae899065278b4639b',1,'CultureData']]],
+  ['twenty_14',['twenty',['../class_skill_progression_type_data.html#aab5699ac4a157015e7cda755c726f412',1,'SkillProgressionTypeData']]],
+  ['type_15',['type',['../class_armour_type_data.html#aec25856e02cf0e9034af28b3b98fc05d',1,'ArmourTypeData::type()'],['../class_spell_list_data.html#ab476e7f47a6b5a95e35c5a3b06d735df',1,'SpellListData::type()']]]
 ];

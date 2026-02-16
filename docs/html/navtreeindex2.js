@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"class_lookup_table.html#a259db3187ece523a7f57735fd3ec8b31":[2,0,43,5],
+"class_lookup_table.html#a3d7dcb3255fcb3fe89a39c4709a24aec":[2,0,43,6],
+"class_lookup_table.html#a79baa60def4bde036545c713d3f6c340":[2,0,43,1],
 "class_lookup_table.html#a8ec5b9fe6f25c737bb3e09fec3ce5bd4":[2,0,43,4],
 "class_lookup_table.html#a908db0b57ea5e680deccb80d7fe6f7ab":[2,0,43,0],
 "class_lookup_table.html#aa8b34807f6c7a4338ec46ee454858129":[2,0,43,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "class_skill_category_data.html#acff494c7de611d5090f816063b386703":[2,0,52,6],
 "class_skill_category_data.html#add00c6912fa1fb1f278933e9a307fed5":[2,0,52,1],
 "class_skill_category_data.html#ae121918766e68affb742efbf5fbfd4b3":[2,0,52,7],
-"class_skill_category_data.html#ae92350c9d91937939523110732fae66a":[2,0,52,3],
-"class_skill_category_data.html#aebd62a7951f85ada98ea67d7291d5d3b":[2,0,52,4],
-"class_skill_category_data.html#aee354c5df79300626b481c1b0893dcdf":[2,0,52,11],
-"class_skill_category_data_1_1_using_character_realm_stats_exception.html":[2,0,52,0]
+"class_skill_category_data.html#ae92350c9d91937939523110732fae66a":[2,0,52,3]
 };

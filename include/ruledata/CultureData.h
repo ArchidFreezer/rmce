@@ -93,7 +93,7 @@ public:
 	 * @brief Sets the language abilities map for this object.
 	 * @param languages A map associating language identifiers with their corresponding language ability levels.
 	 */
-	void setLanguageAbilities(std::map<std::string, LanguageAbility> languages) { languages_ = std::move(languages); }
+	void setLanguageAbilities(std::map<std::string, const LanguageAbility> languages) { languages_ = std::move(languages); }
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
@@ -117,6 +117,12 @@ public:
 		auto values = std::views::values(languages_);
 		return { values.begin(), values.end() };
 	}
+
+	/**
+	 * @brief Get a container with the LanguageAbility objects known during adolescence
+	 * @return std::map associating language identifiers with their corresponding language ability levels
+	 */
+	const std::map<std::string, const LanguageAbility>& languageAbilities() const { return languages_; }
 
 	/**
 	 * @brief Add a skill to those typically taken by an adolescent of the culture
@@ -260,6 +266,12 @@ public:
 	void setTrainingPackageModifiers(std::map<const TrainingPackageData*, float> training_package_modifiers) { training_package_modifiers_ = std::move(training_package_modifiers); }
 
 	/**
+	 * @brief Get a container with the modifiers to the development point cost of training packages for members of the culture
+	 * @return std::map associating TrainingPackageData pointers with their corresponding int modifiers to the development point cost of the training package for members of the culture
+	 */
+	std::map<const TrainingPackageData*, float> trainingPackageModifiers() const { return training_package_modifiers_; }
+
+	/**
 	 * @brief Get the modifier to the development point cost of a training package for members of the culture
 	 * 
 	 * The modifier returned is a float that can be multiplied by the normal development point cost of the training package to get the modified cost for members of the culture.
@@ -281,7 +293,7 @@ private:
 	std::string description_{}; /**< General description of the culture */
 	const CultureTypeData* culture_type_{}; /**< Culture type this culture is based on */
 	bool high_culture_{}; /**< Whether the culture has developed */
-	std::map<std::string, LanguageAbility> languages_{}; /**< Language ranks that members of the race learn prior during their adolescence */
+	std::map<std::string, const LanguageAbility> languages_{}; /**< Language ranks that members of the race learn prior during their adolescence */
 	std::set<SubcategoriedSkillData> hobby_skills_{}; /**< Set of skills that would typically be given skill ranks by adolescents of this culture */
 	std::set<const SkillCategoryData*> hobby_skill_categories_{}; /**< Set of skill categories that would typically be given skill ranks by adolescents of this culture */
 	std::set<const ProfessionData*> preferred_professions_{}; /**< Set of preferred professions for members of the culture */

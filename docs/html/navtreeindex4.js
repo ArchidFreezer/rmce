@@ -1,5 +1,8 @@
 var NAVTREEINDEX4 =
 {
+"class_weapon_type_data.html#a7937688b1dbf34ee19d2f0a022ffa80f":[2,0,74,23],
+"class_weapon_type_data.html#a7d4294a57fb0b62d2b01afec5e6a6bc9":[2,0,74,35],
+"class_weapon_type_data.html#a8c77df27aa438abe55b8ffa659e488b7":[2,0,74,29],
 "class_weapon_type_data.html#a8dbd4c9ed51c12000356404cd7ffd862":[2,0,74,17],
 "class_weapon_type_data.html#a8f93e353889a02e26e4671a625a7cc54":[2,0,74,1],
 "class_weapon_type_data.html#a97311fe076de813b446cd163628c7d56":[2,0,74,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX4 =
 "namespace_habitat_type.html#a5b347c4e186b8cdc96033e3de39530d9":[0,0,6,4],
 "namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20":[0,0,6,1],
 "namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20a0d254f21cc940f41cf7cc1c8ff46ce1f":[0,0,6,1,3],
-"namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20a1a73ce7c6bc7ec5134af43bef7ac79dc":[0,0,6,1,1],
-"namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20a2813c1d45030bdc5b74a5f10984e70df":[0,0,6,1,4],
-"namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20a94c3dc266b8dc2c9879e761b04ec6f2b":[0,0,6,1,2],
-"namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20afa10417b85b0576f918776dbf4991347":[0,0,6,1,0]
+"namespace_habitat_type.html#a7bb583005375465c02dfbde5e0a57b20a1a73ce7c6bc7ec5134af43bef7ac79dc":[0,0,6,1,1]
 };

@@ -17,6 +17,7 @@ var class_culture_data =
     [ "isHobbySkillCategory", "class_culture_data.html#a0774b5390fdfdb702c24920354958c37", null ],
     [ "isPreferredProfession", "class_culture_data.html#a035ed9b5ff8d219d51a8792871d16c6b", null ],
     [ "isRestrictedProfession", "class_culture_data.html#a8a7c975e973cf51c63bf3b747282f1c0", null ],
+    [ "languageAbilities", "class_culture_data.html#a288b1e383e4ad4cdae095909a9c19d71", null ],
     [ "languageAbility", "class_culture_data.html#ac669b838153aa0456bcab6454d807b9e", null ],
     [ "languageAbility", "class_culture_data.html#a750d7810070325448ffb31ff5d3464db", null ],
     [ "languages", "class_culture_data.html#add782e4bbf61994d6618a1df6f04bcf5", null ],
@@ -28,10 +29,11 @@ var class_culture_data =
     [ "setHighCulture", "class_culture_data.html#a9c5531a8f155de1c2601da341b774ea5", null ],
     [ "setHobbySkillCategories", "class_culture_data.html#abd6a4b3dc846e8a99e59cd8cf117273f", null ],
     [ "setHobbySkills", "class_culture_data.html#a6f163271c9fa50c8a8468494f045e075", null ],
-    [ "setLanguageAbilities", "class_culture_data.html#abc8ab8edd53577afa05f86f01c7ab362", null ],
+    [ "setLanguageAbilities", "class_culture_data.html#a053ecd624826b499b7d860274cee8918", null ],
     [ "setName", "class_culture_data.html#a7ad66e89de13d4c5e350592b7158a04c", null ],
     [ "setPreferredProfessions", "class_culture_data.html#ad1672c4007071b7fe5e2cdc3db3f3e1f", null ],
     [ "setRestrictedProfessions", "class_culture_data.html#a42aeaef519ec24affdbf9ca92c6a7558", null ],
     [ "setTrainingPackageModifiers", "class_culture_data.html#a717ce19e0289ebe87fb9643cace64995", null ],
-    [ "trainingPackageModifier", "class_culture_data.html#a4618c7eb0db28535afd07dd3603b41cf", null ]
+    [ "trainingPackageModifier", "class_culture_data.html#a4618c7eb0db28535afd07dd3603b41cf", null ],
+    [ "trainingPackageModifiers", "class_culture_data.html#a0f2883dab51dcbcae899065278b4639b", null ]
 ];

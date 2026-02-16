@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"class_culture_type_data.html#a69472e471a435edded17a336a85ae613":[2,0,21,21],
+"class_culture_type_data.html#a6f12efc1a2f1e5e8f11cf4dfb3470387":[2,0,21,51],
+"class_culture_type_data.html#a730348765865578bd3745f9646f20a5d":[2,0,21,49],
 "class_culture_type_data.html#a744e2862d7a6a58523d3db0f5135f7de":[2,0,21,65],
 "class_culture_type_data.html#a7df0733b373c98e29939e0c574a8147c":[2,0,21,10],
 "class_culture_type_data.html#a7f60ef928f690ddd70500ffab72366a1":[2,0,21,15],
@@ -246,8 +249,5 @@ var NAVTREEINDEX1 =
 "class_language_dialect_data.html#a4d3ad512c39a0693f0be3ac15af4de47":[2,0,42,0],
 "class_language_dialect_data.html#aa70f55c77d77968305bae475532c3789":[2,0,42,2],
 "class_language_dialect_data.html#ae0b417d7604423fe01389fec301474ef":[2,0,42,5],
-"class_lookup_table.html":[2,0,43],
-"class_lookup_table.html#a259db3187ece523a7f57735fd3ec8b31":[2,0,43,5],
-"class_lookup_table.html#a3d7dcb3255fcb3fe89a39c4709a24aec":[2,0,43,6],
-"class_lookup_table.html#a79baa60def4bde036545c713d3f6c340":[2,0,43,1]
+"class_lookup_table.html":[2,0,43]
 };

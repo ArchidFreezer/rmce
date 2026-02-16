@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"class_skill_category_data.html#aebd62a7951f85ada98ea67d7291d5d3b":[2,0,52,4],
+"class_skill_category_data.html#aee354c5df79300626b481c1b0893dcdf":[2,0,52,11],
+"class_skill_category_data_1_1_using_character_realm_stats_exception.html":[2,0,52,0],
 "class_skill_category_data_1_1_using_character_realm_stats_exception.html#a01ff2aa4b83cd2fa306595ce88f8abc6":[2,0,52,0,0],
 "class_skill_category_datafile_parser_json.html":[2,0,53],
 "class_skill_category_datafile_parser_json.html#a10fe2f5867c26ff505977384beb4eaf0":[2,0,53,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "class_weapon_type_data.html#a564ca672760708f9aefed67a0e561951":[2,0,74,37],
 "class_weapon_type_data.html#a630176698e531a091d7f6ebace07ac7f":[2,0,74,18],
 "class_weapon_type_data.html#a6e0d98256c70a089c5317f46cc1e87c1":[2,0,74,36],
-"class_weapon_type_data.html#a718ca64dfc7dbf136a7e2bf4bdf937d7":[2,0,74,27],
-"class_weapon_type_data.html#a7937688b1dbf34ee19d2f0a022ffa80f":[2,0,74,23],
-"class_weapon_type_data.html#a7d4294a57fb0b62d2b01afec5e6a6bc9":[2,0,74,35],
-"class_weapon_type_data.html#a8c77df27aa438abe55b8ffa659e488b7":[2,0,74,29]
+"class_weapon_type_data.html#a718ca64dfc7dbf136a7e2bf4bdf937d7":[2,0,74,27]
 };
