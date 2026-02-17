@@ -1,0 +1,46 @@
+{
+    "creature-paces": [
+        {
+            "id": "CREATUREPACE_WALK",
+            "name": "Walk",
+            "movement-multiplier": "1",
+            "exhaustion-multipler": "0.0166666667",
+            "manoeuvre-difficulty": "Normal"
+        },
+        {
+            "id": "CREATUREPACE_JOG",
+            "name": "Jog",
+            "movement-multiplier": "1.5",
+            "exhaustion-multipler": "0.0333333333",
+            "manoeuvre-difficulty": "Routine"
+        },
+        {
+            "id": "CREATUREPACE_RUN",
+            "name": "Run",
+            "movement-multiplier": "2",
+            "exhaustion-multipler": "0.0833333333",
+            "manoeuvre-difficulty": "Easy"
+        },
+        {
+            "id": "CREATUREPACE_SPRINT",
+            "name": "Sprint",
+            "movement-multiplier": "3",
+            "exhaustion-multipler": "2",
+            "manoeuvre-difficulty": "Light"
+        },
+        {
+            "id": "CREATUREPACE_FAST_SPRINT",
+            "name": "Fast Sprint",
+            "movement-multiplier": "4",
+            "exhaustion-multipler": "6",
+            "manoeuvre-difficulty": "Medium"
+        },
+        {
+            "id": "CREATUREPACE_DASH",
+            "name": "Dash",
+            "movement-multiplier": "5",
+            "exhaustion-multipler": "50",
+            "manoeuvre-difficulty": "Hard"
+        }
+    ]
+}
