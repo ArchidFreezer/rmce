@@ -59,10 +59,10 @@ int main() {
 	parsers.push_back(&language_parser);
 	parsers.push_back(&profession_parser);
 	parsers.push_back(&race_parser);
+	parsers.push_back(&skill_progression_parser);
 	parsers.push_back(&skill_category_parser);
 	parsers.push_back(&skill_group_parser);
 	parsers.push_back(&skill_parser);
-	parsers.push_back(&skill_progression_parser);
 	parsers.push_back(&special_attack_table_parser);
 	parsers.push_back(&spell_list_parser);
 	parsers.push_back(&training_package_parser);
