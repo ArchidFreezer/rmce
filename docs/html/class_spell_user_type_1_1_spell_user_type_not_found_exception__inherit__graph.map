@@ -1,5 +1,0 @@
-<map id="SpellUserType::SpellUserTypeNotFoundException" name="SpellUserType::SpellUserTypeNotFoundException">
-<area shape="rect" id="Node000001" title="Thrown to indicate that no SpellUserType::Type enum was found." alt="" coords="5,80,177,123"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="29,5,153,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,46,94,81,88,79,89,50"/>
-</map>

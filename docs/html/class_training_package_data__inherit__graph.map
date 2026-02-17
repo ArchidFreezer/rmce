@@ -1,5 +1,0 @@
-<map id="TrainingPackageData" name="TrainingPackageData">
-<area shape="rect" id="Node000001" title="A training package is a group of benefits (and sometimes disadvantages) that can be developed using d..." alt="" coords="5,80,152,107"/>
-<area shape="rect" id="Node000002" href="$class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="23,5,134,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,46,81,80,76,79,77,50"/>
-</map>

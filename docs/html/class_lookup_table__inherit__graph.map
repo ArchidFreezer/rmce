@@ -1,5 +1,0 @@
-<map id="LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;" name="LookupTable&lt; RowMatcherClass, RowDatatype, ColumnMatcherClass, ColumnDataType, CellDatatype &gt;">
-<area shape="rect" id="Node000001" title="Base class representing a lookup table index by row and column." alt="" coords="5,80,249,139"/>
-<area shape="rect" id="Node000002" href="$class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="71,5,183,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,46,129,80,125,78,125,50"/>
-</map>

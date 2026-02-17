@@ -1,9 +1,0 @@
-<map id="SpecialAttackTable" name="SpecialAttackTable">
-<area shape="rect" id="Node000001" title="Class to contain a game special attack table." alt="" coords="703,29,837,56"/>
-<area shape="rect" id="Node000002" href="$class_bound_int_row_lookup_table.html" title=" " alt="" coords="426,13,655,72"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="671,40,706,43,700,43,671,45"/>
-<area shape="rect" id="Node000003" href="$class_lookup_table.html" title=" " alt="" coords="165,5,378,80"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="394,40,428,43,423,43,394,45"/>
-<area shape="rect" id="Node000004" href="$class_game_rule_data.html" title="Polymorphic class that is the base for objects that store data on the rules of the game." alt="" coords="5,29,117,56"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="132,40,167,42,162,43,132,45"/>
-</map>

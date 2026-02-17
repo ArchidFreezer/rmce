@@ -1,5 +1,0 @@
-<map id="TrainingPackageData::InvalidSkillRank" name="TrainingPackageData::InvalidSkillRank">
-<area shape="rect" id="Node000001" title="Thrown when there is an attempt to set an invalid skill rank." alt="" coords="5,80,152,123"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="17,5,140,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,46,81,81,76,79,77,50"/>
-</map>
