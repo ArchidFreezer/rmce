@@ -6,6 +6,7 @@
 #include <CriticalType.h>
 #include <EnvironmentType.h>
 #include <HabitatType.h>
+#include <ManoeuvreDifficultyType.h>
 #include <RealmType.h>
 #include <ResistanceType.h>
 #include <SkillActionType.h>
@@ -233,6 +234,18 @@ namespace {
 		EXPECT_EQ(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltCoast)), EnvironmentType::Water::kSaltCoast);
 
 		EXPECT_NE(EnvironmentType::water(EnvironmentType::toString(EnvironmentType::Water::kSaltCoast)), EnvironmentType::Water::kLake);
+	}
+
+	TEST(RuleDataEnums, ManoeuvreDifficultyType) {
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kRoutine)), ManoeuvreDifficultyType::kRoutine);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kEasy)), ManoeuvreDifficultyType::kEasy);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kLight)), ManoeuvreDifficultyType::kLight);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kMedium)), ManoeuvreDifficultyType::kMedium);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kHard)), ManoeuvreDifficultyType::kHard);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kVeryHard)), ManoeuvreDifficultyType::kVeryHard);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kExtremelyHard)), ManoeuvreDifficultyType::kExtremelyHard);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kSheerFolly)), ManoeuvreDifficultyType::kSheerFolly);
+		EXPECT_EQ(ManoeuvreDifficultyType::fromString(toString(ManoeuvreDifficultyType::kAbsurd)), ManoeuvreDifficultyType::kAbsurd);
 	}
 
 }
