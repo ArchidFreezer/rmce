@@ -4,6 +4,7 @@ const std::string ManoeuvreDifficultyType::toString(Type size) {
 	using enum Type;
 
 	switch (size) {
+	case kNormal: return "Normal";
 	case kRoutine: return "Routine";
 	case kEasy: return "Easy";
 	case kLight: return "Light";
@@ -21,6 +22,7 @@ const std::optional<ManoeuvreDifficultyType::Type> ManoeuvreDifficultyType::from
 	using enum Type;
 
 	const std::string val = lcaseconcat(sv);
+	if (val == "normal") return kNormal;
 	if (val == "routine") return kRoutine;
 	if (val == "easy") return kEasy;
 	if (val == "light") return kLight;

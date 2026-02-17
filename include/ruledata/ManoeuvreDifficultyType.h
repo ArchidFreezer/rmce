@@ -20,6 +20,7 @@ namespace ManoeuvreDifficultyType {
 	 * @brief Enumeration class representing the size of creatures
 	 */
 	enum class Type {
+		kNormal, /**< Normal - does not require any manoeuvre roll */
 		kRoutine, /**< Routine */
 		kEasy, /**< Easy */
 		kLight, /**< Light */
