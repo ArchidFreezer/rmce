@@ -14,6 +14,22 @@
 namespace AnimalOutlookType {
 
 	/**
+	* @brief Thrown to indicate that no AnimalOutlookType::Type enum was found
+	*
+	*/
+	class AnimalOutlookTypeNotFoundException : public std::runtime_error {
+	public:
+		/**
+		 * @brief Exception constructor
+		 *
+		 * std::runtime_error will handle the string
+		 *
+		 * @param error String to display for the error
+		 */
+		AnimalOutlookTypeNotFoundException(const std::string& error) : std::runtime_error{ error }	{}
+	};
+
+	/**
 	 * @brief Enumeration class representing the size of creatures
 	 */
 	enum class Type {
