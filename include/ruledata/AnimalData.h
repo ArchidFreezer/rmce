@@ -95,11 +95,7 @@ public:
 	 * The minimum value is 1 and the maximum value is 9 with 1 being the most common and 9 being the least common. Any value outside of this range will be set to the closest valid value.
 	 * @param frequency_factor Frequency factor for the animal, used to determine how common it is to find in the appropriate environ.
 	 */
-	void setFrequencyFactor(int frequency_factor) { 
-		if (frequency_factor < 1) frequency_factor_ = 1;
-		else if (frequency_factor > 9) frequency_factor_ = 9;
-		else frequency_factor_ = frequency_factor;
-	}
+	void setFrequencyFactor(int frequency_factor);
 
 	/**
 	 * @brief Get the frequency factor of the animal
@@ -116,18 +112,7 @@ public:
 	 * @brief Get the modifier to a Hunting skill roll when attempting to hunt this particular animal
 	 * @return Hunting modifier for the animal, used to determine how difficult it is to hunt the animal. This is derived from the frequency factor with more common animals being easier to hunt and less common animals being harder to hunt.
 	 */
-	int huntingModifier() const {
-		if (frequencyFactor() == 1) return 30;
-		else if (frequencyFactor() == 2) return 20;
-		else if (frequencyFactor() == 3) return 10;
-		else if (frequencyFactor() == 4) return 0;
-		else if (frequencyFactor() == 5) return -10;
-		else if (frequencyFactor() == 6) return -20;
-		else if (frequencyFactor() == 7) return -30;
-		else if (frequencyFactor() == 8) return -50;
-		else if (frequencyFactor() == 9) return -70;
-		else return -200;
-	}
+	int huntingModifier() const;
 
 	/**
 	 * @brief Get the percentage chance of an animal existing in an appropriate environment
@@ -136,18 +121,7 @@ public:
 	 * 
 	 * @return Percentage chance of an animal existing in an appropriate environment, used to determine if the animal is present when searching for animals in the environment.
 	 */
-	int existencePercentageChance() const {
-		if (frequencyFactor() == 1) return 100;
-		else if (frequencyFactor() == 2) return 90;
-		else if (frequencyFactor() == 3) return 75;
-		else if (frequencyFactor() == 4) return 50;
-		else if (frequencyFactor() == 5) return 40;
-		else if (frequencyFactor() == 6) return 30;
-		else if (frequencyFactor() == 7) return 20;
-		else if (frequencyFactor() == 8) return 9;
-		else if (frequencyFactor() == 9) return 4;
-		else return 0;
-	}
+	int existencePercentageChance() const;
 
 	/**
 	 * @brief Set the moving manoeuvre bonus of the animal
