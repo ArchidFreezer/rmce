@@ -6,6 +6,7 @@
 #include <AttackTableDatafileParserJson.h>
 #include <BookDatafileParserJson.h>
 #include <ClimateDatafileParserJson.h>
+#include <CreaturePaceDatafileParserJson.h>
 #include <CultureDatafileParserJson.h>
 #include <CultureTypeDatafileParserJson.h>
 #include <LanguageCategoryDatafileParserJson.h>
@@ -32,6 +33,7 @@ int main() {
 	AttackTableDatafileParserJson attack_table_parser(cache, "../../../../data/AttackTables.json");
 	BookDatafileParserJson book_parser(cache, "../../../../data/Books.json");
 	ClimateDatafileParserJson climate_parser(cache, "../../../../data/Climates.json");
+	CreaturePaceDatafileParserJson creature_pace_parser(cache, "../../../../data/CreaturePaces.json");
 	CultureDatafileParserJson culture_parser(cache, "../../../../data/Cultures.json");
 	CultureTypeDatafileParserJson culture_type_parser(cache, "../../../../data/CultureTypes.json");
 	LanguageCategoryDatafileParserJson language_category_parser(cache, "../../../../data/LanguageCategories.json");
@@ -53,6 +55,7 @@ int main() {
 	parsers.push_back(&attack_table_parser);
 	parsers.push_back(&book_parser);
 	parsers.push_back(&climate_parser);
+	parsers.push_back(&creature_pace_parser);
 	parsers.push_back(&culture_parser);
 	parsers.push_back(&culture_type_parser);
 	parsers.push_back(&language_category_parser);
@@ -79,6 +82,7 @@ int main() {
 		//attack_table_parser.save("../../../../data/AttackTables2.json");
 		//book_parser.save("../../../../data/Books2.json");
 		//climate_parser.save("../../../../data/Climates2.json");
+		//creature_pace_parser.save("../../../../data/CreaturePaces2.json");
 		//culture_parser.save("../../../../data/Cultures2.json");
 		//culture_type_parser.save("../../../../data/CultureTypes2.json");
 		//language_category_parser.save("../../../../data/LanguageCategories2.json");
