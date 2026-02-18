@@ -68,22 +68,3 @@ int AnimalData::existencePercentageChance() const {
 	else if (frequencyFactor() == 9) return 4;
 	else return 0;
 }
-
-int TableColumnBonusXpCodeMatcher::column(AnimalData::BonusXpCode match) const {
-	switch (match) {
-	case AnimalData::BonusXpCode::kNone: return 0;
-	case AnimalData::BonusXpCode::kA: return 1;
-	case AnimalData::BonusXpCode::kB: return 2;
-	case AnimalData::BonusXpCode::kC: return 3;
-	case AnimalData::BonusXpCode::kD: return 4;
-	case AnimalData::BonusXpCode::kE: return 5;
-	case AnimalData::BonusXpCode::kF: return 6;
-	case AnimalData::BonusXpCode::kG: return 7;
-	case AnimalData::BonusXpCode::kH: return 8;
-	case AnimalData::BonusXpCode::kI: return 9;
-	case AnimalData::BonusXpCode::kJ: return 10;
-	case AnimalData::BonusXpCode::kK: return 11;
-	case AnimalData::BonusXpCode::kL: return 12;
-	}
-	return 0;
-}

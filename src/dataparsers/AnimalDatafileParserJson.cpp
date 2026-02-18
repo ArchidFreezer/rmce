@@ -1,8 +1,7 @@
-#include <RealmType.h>
 #include <AnimalData.h>
 #include <AnimalDatafileParserJson.h>
-#include <GameRuleDataFactory.h>
 #include <NumberMatcherFactory.h>
+#include <table/CreatureBonusXpTable.h>
 
 void AnimalDatafileParserJson::parse() {
 	std::cout << "Loading Animal data ..." << std::endl;
@@ -35,9 +34,6 @@ void AnimalDatafileParserJson::parse() {
 			// If the bonus XP code is not provided, set it to kNone
 			ref.setBonusXpCode(AnimalData::BonusXpCode::kNone);
 		}
-
-		std::string table_id = "CREATURE_BONUS_XP_TABLE";
-		ref.setCreatureBonusXpTable(factory().get<CreatureBonusXpTable>(table_id));
 
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 

@@ -1,6 +1,7 @@
 #include <AnimalData.h>
 #include <AnimalDatafileParserXml.h>
 #include <NumberMatcherFactory.h>
+#include <table/CreatureBonusXpTable.h>
 
 void AnimalDatafileParserXml::parse() {
 	std::cout << "Loading Animal data ...\n";
@@ -25,11 +26,6 @@ void AnimalDatafileParserXml::parse() {
 		AnimalData::BonusXpCode xp_code{};
 		ref.fromString(v.second.get<std::string>("bonus-xp-code"), xp_code);
 		ref.setBonusXpCode(xp_code);
-
-		std::string table_id = "CREATURE_BONUS_XP_TABLE";
-		ref.setCreatureBonusXpTable(factory().get<CreatureBonusXpTable>(table_id));
-
-
 
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
