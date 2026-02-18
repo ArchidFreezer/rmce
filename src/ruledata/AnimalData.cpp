@@ -244,3 +244,7 @@ int AnimalData::staminaBonus() const {
 	default: return 0;
 	}
 }
+
+int AnimalData::hits(int level) const {
+	return baseHits() + staminaBonus() + (hitsPerLevelDifference() * level);
+}

@@ -169,7 +169,17 @@ public:
 	 */
 	CreatureBonusConstitutionType::Type bonusConstitutionCode() const { return bonus_constitution_code_; }
 
-
+	/**
+	 * @brief Get the number of hits for the animal at a given level
+	 *
+	 * This is used to determine how much damage an animal can take before it dies at a given level. The number of hits is calculated based on the base hits, the constitution code and a random roll.
+	 *
+	 * @param level Level of the animal, used to determine how much damage it can take before it dies.
+	 * @return Number of hits for the animal at the given level, used to determine how much damage it can take before it dies.
+	 * 
+	 * TODO: Take into account the average level of animal.
+	 */
+	int hits(int level) const;
 
 private:
 	std::string name_{}; /**< In game name of the animal */
