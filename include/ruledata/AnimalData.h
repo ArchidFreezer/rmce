@@ -5,6 +5,9 @@
 
 #include <GameRuleData.h>
 #include <ManoeuvreDifficultyType.h>
+#include <table/BoundIntRowLookupTable.h>
+
+class CreatureBonusXpTable;
 
 /**
  * @class AnimalData
@@ -24,7 +27,20 @@ public:
 	 *
 	 * This is used to determine how much bonus XP is awarded for killing the animal. The actual bonus XP is determined by a lookup table that maps the bonus XP code to a bonus XP value.
 	 */
-	enum class BonusXpCode { kA, kB, kC, kD, kE, kF, kG, kH, kI, kJ, kK, kL	};
+	enum class BonusXpCode { kNone, kA, kB, kC, kD, kE, kF, kG, kH, kI, kJ, kK, kL	};
+
+	/**
+ * @brief Get the enumeration value based on a string and set it to the provided reference
+ *
+ * Accepts values that are returned by toString() in a case insensitive manner.
+ *
+ * @param sv string_view to get the enumeration for
+ * @param type reference to set the BonusXpCode represented by the string to
+ * @throws std::invalid_argument if the string does not represent a valid BonusXpCode
+ *
+ * @see toString()
+ */
+	void fromString(std::string_view sv, BonusXpCode& type);
 
 	/**
 	 * @brief Default constructor is deleted to ensure the base class is initialised
@@ -156,12 +172,22 @@ public:
 	void setBonusXpCode(BonusXpCode bonus_xp_code) { bonus_xp_code_ = bonus_xp_code; }
 
 	/**
-	 * @brief Get the bonus XP code for the animal
-	 * @return Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal.
-	 * 
-	 * // TODO : The bonus XP code is currently just an integer that is used in a lookup table to determine the actual bonus XP. This is not ideal and should be replaced with a more flexible system such as a formula or a reference to a BonusXpData object that contains the formula.
+	 * @brief Get the string representation of a BonusXpCode enumeration value
+	 *
+	 * The output is the same as the input accepted by fromString() for the same enumeration value.
+	 *
+	 * @return String representation of the BonusXpCode enumeration value
+	 *
+	 * @see fromString()
 	 */
-	BonusXpCode bonusXpCode() const { return bonus_xp_code_; }
+	std::string bonusXpCodeToString() const;
+
+	/**
+	 * @brief Set the creature bonus XP table to use for determining the bonus XP awarded for killing the animal based on its bonus XP code
+	 * @param creature_bonus_xp_table reference to the creature bonus XP table to use for determining the bonus XP awarded for killing the animal based on its bonus XP code
+	 */
+	void setCreatureBonusXpTable(const CreatureBonusXpTable& creature_bonus_xp_table) { creature_bonus_xp_table_ = &creature_bonus_xp_table; }
+
 
 private:
 	std::string name_{}; /**< In game name of the animal */
@@ -172,4 +198,45 @@ private:
 	int frequency_factor_{}; /**< Frequency factor for the animal, used to determine how common it is to find in the appropriate environ. */
 	int moving_manoeuvre_bonus_{}; /**< Bonus to Manoeuvre rolls when the animal is moving, used to determine how difficult it is to hit the animal when it is moving. */
 	BonusXpCode bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
+	const CreatureBonusXpTable* creature_bonus_xp_table_{}; /**< Pointer to the creature bonus XP table, used to determine how much bonus XP is awarded for killing the animal based on its bonus XP code. */
+
+};
+
+/**
+ * @class TableColumnBonusXpCodeMatcher
+ * @brief Class to match the bonus XP code to a table column index
+ *
+ * This is used as the column matcher for the CreatureBonusXpTable class.It takes a BonusXpCode and returns the corresponding column index for that code.
+ */
+class TableColumnBonusXpCodeMatcher {
+public:
+	/**
+	 * @brief Get the index of the table column
+	 * @return int table column index
+	 */
+	int column(AnimalData::BonusXpCode match) const;
+};
+
+/**
+ * @class CreatureBonusXpTable
+ * @brief Class to contain the creature bonus XP table
+ *
+ * This is a simple lookup table that takes a bonus XP code and a character level, returning the bonus XP awarded for killing or subduing an animal.
+ * The bonus XP code is defined in the AnimalData class
+ */
+class CreatureBonusXpTable : public BoundIntRowLookupTable<TableColumnBonusXpCodeMatcher, AnimalData::BonusXpCode, int> {
+public:
+
+	/**
+	 * @brief Constructor defining the name of the table
+	 *
+	 */
+	CreatureBonusXpTable(std::string_view id) : BoundIntRowLookupTable(id, 1, 250) {}
+
+	/**
+	 * @brief In-game name of the table as used by players and NPCs
+	 * @return Name of the table
+	 */
+	const std::string& name() const { return "Creature Bonus XP Table"; }
+
 };
