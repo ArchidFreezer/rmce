@@ -152,7 +152,7 @@ public:
 	 */
 	void setBonusXpCode(CreatureBonusXpType::Type bonus_xp_code) { bonus_xp_code_ = bonus_xp_code; }
 
-  /**
+	/**
 	 * @brief Get the bonus XP code for the animal
 	 * @return Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal.
 	 */
