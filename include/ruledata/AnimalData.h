@@ -160,12 +160,18 @@ public:
 
 	/**
 	 * @brief Set the bonus constitution code for the animal
+	 * 
+	 * This is used behind the scenes to generate the hits for an animal for a given level.
+	 * 
 	 * @param constitution_variance_type Bonus constitution code for the animal, used to determine how much constitution variance a creature has.
 	 */
 	void setConstitutionVarianceType(CreatureConstitutionVarianceType::Type constitution_variance_type) { constitution_variance_type_ = constitution_variance_type; }
 
 	/**
 	 * @brief Get the bonus constitution code for the animal
+	 *
+	 * This is used behind the scenes to generate the hits for an animal for a given level.
+	 *
 	 * @return Bonus constitution code for the animal, used to determine how much constitution variance a creature has.
 	 */
 	CreatureConstitutionVarianceType::Type constitutionVarianceType() const { return constitution_variance_type_; }
