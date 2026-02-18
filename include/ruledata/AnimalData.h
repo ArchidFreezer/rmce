@@ -240,6 +240,15 @@ public:
 	 */
 	int hits(int level) const;
 
+	/**
+	 * @brief Get the exhaustion points for the animal
+	 *
+	 * The exhaustion points are calculated based on the constitution code and a random roll.
+	 *
+	 * @return Exhaustion points for the animal, used to determine how much exhaustion an animal gains when it is attacked.
+	 */
+	int exhaustionPoints() const;
+
 private:
 	std::string name_{}; /**< In game name of the animal */
 	std::string description_{}; /**< Description of the animal for flavour purposes */

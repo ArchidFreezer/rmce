@@ -248,3 +248,8 @@ int AnimalData::staminaBonus() const {
 int AnimalData::hits(int level) const {
 	return baseHits() + staminaBonus() + (hitsPerLevelDifference() * (level-averageLevel()) );
 }
+
+
+int AnimalData::exhaustionPoints() const {
+	return bonusExhaustionPoints() + (staminaBonus() * 3) + 40;
+}
