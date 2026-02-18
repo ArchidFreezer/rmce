@@ -2,11 +2,13 @@
 #include <AnimalDatafileParserJson.h>
 #include <NumberMatcherFactory.h>
 #include <table/CreatureBonusXpTable.h>
+#include <table/CreatureLevelVarianceTable.h>
 
 void AnimalDatafileParserJson::parse() {
 	std::cout << "Loading Animal data ..." << std::endl;
 
 	buildCreatureBonusXpTable();
+	buildCreatureLevelVarianceTable();
 
 	// Get the books to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
@@ -91,4 +93,31 @@ void AnimalDatafileParserJson::buildCreatureBonusXpTable() {
 	table.addRow(number_matcher.matcher(17, 18), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(60).addCell(120).addCell(240).addCell(480).addCell(720).addCell(960).addCell(1200).addCell(1800).addCell(2400).addCell(3000));
 	table.addRow(number_matcher.matcher(19, 20), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(55).addCell(110).addCell(220).addCell(440).addCell(660).addCell(880).addCell(1100).addCell(1650).addCell(2200).addCell(2750));
 	table.addRow(number_matcher.matcher(20, 1000), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(50).addCell(100).addCell(200).addCell(400).addCell(600).addCell(800).addCell(1000).addCell(1500).addCell(2000).addCell(2500));
+}
+
+void AnimalDatafileParserJson::buildCreatureLevelVarianceTable() {
+	std::string id = "CREATURE_LEVEL_VARIANCE_TABLE";
+	CreatureLevelVarianceTable& table = factory().get<CreatureLevelVarianceTable>(id);
+	NumberMatcherFactory number_matcher{};
+	table.addRow(number_matcher.matcher(-100, 0), TableRow<int>().addCell(0).addCell(-1).addCell(-2).addCell(-3).addCell(-4).addCell(-5).addCell(-6).addCell(-10).addCell(-3));
+	table.addRow(number_matcher.matcher(1, 10), TableRow<int>().addCell(0).addCell(-1).addCell(-2).addCell(-3).addCell(-4).addCell(-5).addCell(-6).addCell(-10).addCell(-2));
+	table.addRow(number_matcher.matcher(11, 15), TableRow<int>().addCell(0).addCell(0).addCell(-1).addCell(-2).addCell(-3).addCell(-4).addCell(-5).addCell(-8).addCell(-2));
+	table.addRow(number_matcher.matcher(16, 20), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(-1).addCell(-2).addCell(-3).addCell(-4).addCell(-6).addCell(-1));
+	table.addRow(number_matcher.matcher(21, 25), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(0).addCell(-1).addCell(-2).addCell(-3).addCell(-4).addCell(-1));
+	table.addRow(number_matcher.matcher(26, 35), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(0).addCell(0).addCell(-1).addCell(-2).addCell(-2).addCell(-1));
+	table.addRow(number_matcher.matcher(36, 45), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(0).addCell(0).addCell(0).addCell(-1).addCell(-1).addCell(0));
+	table.addRow(number_matcher.matcher(46, 55), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(0).addCell(0).addCell(0).addCell(0).addCell(0).addCell(0));
+	table.addRow(number_matcher.matcher(56, 65), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(0).addCell(0).addCell(0).addCell(1).addCell(1).addCell(0));
+	table.addRow(number_matcher.matcher(66, 75), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(0).addCell(0).addCell(1).addCell(2).addCell(2).addCell(1));
+	table.addRow(number_matcher.matcher(76, 80), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(0).addCell(1).addCell(2).addCell(3).addCell(4).addCell(1));
+	table.addRow(number_matcher.matcher(81, 85), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(1).addCell(2).addCell(3).addCell(4).addCell(6).addCell(1));
+	table.addRow(number_matcher.matcher(86, 90), TableRow<int>().addCell(0).addCell(0).addCell(1).addCell(1).addCell(3).addCell(4).addCell(5).addCell(8).addCell(2));
+	table.addRow(number_matcher.matcher(91, 100), TableRow<int>().addCell(0).addCell(1).addCell(1).addCell(2).addCell(4).addCell(5).addCell(6).addCell(10).addCell(2));
+	table.addRow(number_matcher.matcher(101, 140), TableRow<int>().addCell(0).addCell(1).addCell(1).addCell(2).addCell(5).addCell(6).addCell(7).addCell(11).addCell(3));
+	table.addRow(number_matcher.matcher(141, 170), TableRow<int>().addCell(0).addCell(1).addCell(2).addCell(3).addCell(6).addCell(7).addCell(8).addCell(12).addCell(3));
+	table.addRow(number_matcher.matcher(171, 190), TableRow<int>().addCell(0).addCell(1).addCell(2).addCell(4).addCell(7).addCell(8).addCell(9).addCell(13).addCell(3));
+	table.addRow(number_matcher.matcher(191, 200), TableRow<int>().addCell(0).addCell(2).addCell(3).addCell(5).addCell(8).addCell(9).addCell(10).addCell(14).addCell(3));
+	table.addRow(number_matcher.matcher(201, 250), TableRow<int>().addCell(0).addCell(2).addCell(4).addCell(6).addCell(9).addCell(10).addCell(11).addCell(15).addCell(3));
+	table.addRow(number_matcher.matcher(251, 300), TableRow<int>().addCell(0).addCell(3).addCell(5).addCell(7).addCell(10).addCell(11).addCell(12).addCell(16).addCell(4));
+	table.addRow(number_matcher.matcher(301, 350), TableRow<int>().addCell(0).addCell(4).addCell(6).addCell(8).addCell(11).addCell(12).addCell(13).addCell(17).addCell(4));
 }

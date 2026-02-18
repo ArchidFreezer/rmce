@@ -63,4 +63,11 @@ private:
 	 * This is used to determine how much bonus XP is awarded for killing an animal based on its bonus XP code.
 	 */
 	void buildCreatureBonusXpTable();
+
+	/**
+	 * @brief Build the lookup table that maps the level variance code to a difference in the level of the animal from the average
+	 */
+
+	void buildCreatureLevelVarianceTable();
+
 };

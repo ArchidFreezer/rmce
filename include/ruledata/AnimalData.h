@@ -171,14 +171,44 @@ public:
 	CreatureConstitutionVarianceType::Type constitutionVarianceType() const { return constitution_variance_type_; }
 
 	/**
-	 * @brief Set the bonus level code for the animal
-	 * @param level_variance_type Bonus level code for the animal, used to determine how much level variance a creature has.
+	 * @brief Set the  level variance code for the animal
+	 * 
+	 * In order to use this it should be applied to the CreatureLevelVarianceTable with an open-ended d100 roll
+	 * 
+	 * @code{.cpp}
+	 * GameRuleDataCache cache{};
+	 * GameRuleDataFactory factory{ cache };
+	 * 
+	 * std::string table_id = "CREATURE_LEVEL_VARIANCE_TABLE";
+	 * CreatureLevelVarianceTable& table = factory.get<CreatureLevelVarianceTable>(table_id);
+	 * 
+	 * int variance = table.cell(animal.levelVarianceType(), Dice(100, 5).roll().result());
+	 * int animal_level = animal.averageLevel() + variance;
+	 * @endcode
+	 * 
+	 * @param level_variance_type Level variance code for the animal, used to determine how much level variance a creature has.
+	 * @see CreatureLevelVarianceTable for how the level variance code is used to determine the level variance of a creature.
 	 */
 	void setLevelVarianceType(CreatureLevelVarianceType::Type level_variance_type) { level_variance_type_ = level_variance_type; }
 
 	/**
-	 * @brief Get the bonus level code for the animal
-	 * @return Bonus level code for the animal, used to determine how much level variance a creature has.
+	 * @brief Get the level varaince code for the animal
+	 *
+	 * In order to use this it should be applied to the CreatureLevelVarianceTable with an open-ended d100 roll
+	 *
+	 * @code{.cpp}
+	 * GameRuleDataCache cache{};
+	 * GameRuleDataFactory factory{ cache };
+	 *
+	 * std::string table_id = "CREATURE_LEVEL_VARIANCE_TABLE";
+	 * CreatureLevelVarianceTable& table = factory.get<CreatureLevelVarianceTable>(table_id);
+	 *
+	 * int variance = table.cell(animal.levelVarianceType(), Dice(100, 5).roll().result());
+	 * int animal_level = animal.averageLevel() + variance;
+	 * @endcode
+	 *
+	 * @return Level variance code for the animal, used to determine how much level variance a creature has.
+	 * @see CreatureLevelVarianceTable for how the level variance code is used to determine the level variance of a creature.
 	 */
 	CreatureLevelVarianceType::Type levelVarianceType() const { return level_variance_type_; }
 
@@ -201,8 +231,6 @@ public:
 	 *
 	 * @param level Level of the animal, used to determine how much damage it can take before it dies.
 	 * @return Number of hits for the animal at the given level, used to determine how much damage it can take before it dies.
-	 * 
-	 * TODO: Take into account the average level of animal.
 	 */
 	int hits(int level) const;
 
