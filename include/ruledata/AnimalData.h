@@ -3,7 +3,8 @@
 #include <set>
 #include <string_view>
 
-#include <CreatureBonusConstitutionType.h>
+#include <CreatureConstitutionVarianceType.h>
+#include <CreatureLevelVarianceType.h>
 #include <CreatureBonusXpType.h>
 #include <GameRuleData.h>
 #include <ManoeuvreDifficultyType.h>
@@ -159,15 +160,39 @@ public:
 
 	/**
 	 * @brief Set the bonus constitution code for the animal
-	 * @param bonus_constitution_code Bonus constitution code for the animal, used to determine how much constitution variance a creature has.
+	 * @param constitution_variance_type Bonus constitution code for the animal, used to determine how much constitution variance a creature has.
 	 */
-	void setBonusConstitutionCode(CreatureBonusConstitutionType::Type bonus_constitution_code) { bonus_constitution_code_ = bonus_constitution_code; }
+	void setConstitutionVarianceType(CreatureConstitutionVarianceType::Type constitution_variance_type) { constitution_variance_type_ = constitution_variance_type; }
 
 	/**
 	 * @brief Get the bonus constitution code for the animal
 	 * @return Bonus constitution code for the animal, used to determine how much constitution variance a creature has.
 	 */
-	CreatureBonusConstitutionType::Type bonusConstitutionCode() const { return bonus_constitution_code_; }
+	CreatureConstitutionVarianceType::Type constitutionVarianceType() const { return constitution_variance_type_; }
+
+	/**
+	 * @brief Set the bonus level code for the animal
+	 * @param level_variance_type Bonus level code for the animal, used to determine how much level variance a creature has.
+	 */
+	void setLevelVarianceType(CreatureLevelVarianceType::Type level_variance_type) { level_variance_type_ = level_variance_type; }
+
+	/**
+	 * @brief Get the bonus level code for the animal
+	 * @return Bonus level code for the animal, used to determine how much level variance a creature has.
+	 */
+	CreatureLevelVarianceType::Type levelVarianceType() const { return level_variance_type_; }
+
+	/**
+	 * @brief Set the average level of the animal
+	 * @param average_level Average level of the animal, used to determine how much damage it can take before it dies.
+	 */
+	void setAverageLevel(int average_level) { average_level_ = average_level; }
+
+	/**
+	 * @brief Get the average level of the animal
+	 * @return Average level of the animal, used to determine how much damage it can take before it dies.
+	 */
+	int averageLevel() const { return average_level_; }
 
 	/**
 	 * @brief Get the number of hits for the animal at a given level
@@ -190,7 +215,9 @@ private:
 	int frequency_factor_{}; /**< Frequency factor for the animal, used to determine how common it is to find in the appropriate environ. */
 	int moving_manoeuvre_bonus_{}; /**< Bonus to Manoeuvre rolls when the animal is moving, used to determine how difficult it is to hit the animal when it is moving. */
 	CreatureBonusXpType::Type bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
-	CreatureBonusConstitutionType::Type bonus_constitution_code_{}; /**< Bonus constitution code for the animal, used to determine how much constitution variance a creature has. */
+	CreatureConstitutionVarianceType::Type constitution_variance_type_{}; /**< Bonus constitution code for the animal, used to determine how much constitution variance a creature has. */
+	CreatureLevelVarianceType::Type level_variance_type_{}; /**< Bonus level code for the animal, used to determine how much level variance a creature has. */
+	int average_level_{}; /**< Average level of the animal, used to determine how much damage it can take before it dies. */
 
 	/**
 	 * @brief Gets the number of hits per level difference based on the constitution code.

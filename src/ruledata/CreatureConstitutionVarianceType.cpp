@@ -1,6 +1,6 @@
-#include <CreatureBonusConstitutionType.h>
+#include <CreatureConstitutionVarianceType.h>
 
-const std::string CreatureBonusConstitutionType::toString(Type size) {
+const std::string CreatureConstitutionVarianceType::toString(Type size) {
 	using enum Type;
 
 	switch (size) {
@@ -13,11 +13,11 @@ const std::string CreatureBonusConstitutionType::toString(Type size) {
 	case kF: return "F";
 	case kG: return "G";
 	case kH: return "H";
-	default: throw std::invalid_argument("Invalid CreatureBonusConstitutionType::Type enumeration value");
+	default: throw std::invalid_argument("Invalid CreatureConstitutionVarianceType::Type enumeration value");
 	}
 }
 
-const std::optional<CreatureBonusConstitutionType::Type> CreatureBonusConstitutionType::fromString(std::string_view sv) {
+const std::optional<CreatureConstitutionVarianceType::Type> CreatureConstitutionVarianceType::fromString(std::string_view sv) {
 	using enum Type;
 
 	if (sv.empty() || sv == "None" || sv == "-") { return kNone; }
@@ -29,13 +29,13 @@ const std::optional<CreatureBonusConstitutionType::Type> CreatureBonusConstituti
 	else if (sv.size() == 1 && sv[0] == 'F') { return kF; }
 	else if (sv.size() == 1 && sv[0] == 'G') { return kG; }
 	else if (sv.size() == 1 && sv[0] == 'H') { return kH; }
-	else throw std::invalid_argument("Invalid string value for CreatureBonusConstitutionType::Type: " + std::string(sv));
+	else throw std::invalid_argument("Invalid string value for CreatureConstitutionVarianceType::Type: " + std::string(sv));
 
 	return {};
 }
 
-void CreatureBonusConstitutionType::fromString(std::string_view sv, CreatureBonusConstitutionType::Type& type) {
+void CreatureConstitutionVarianceType::fromString(std::string_view sv, CreatureConstitutionVarianceType::Type& type) {
 	std::optional<Type> opt_type = fromString(sv);
 	if (opt_type) type = opt_type.value();
-	else throw std::invalid_argument("Invalid string value for CreatureBonusConstitutionType::Type: " + std::string(sv));
+	else throw std::invalid_argument("Invalid string value for CreatureConstitutionVarianceType::Type: " + std::string(sv));
 }

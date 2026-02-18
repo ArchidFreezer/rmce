@@ -25,24 +25,24 @@ namespace {
 	// The followimg member function is private and thus cannot be tested directly but the output can be tested through the public interface.
 	//TEST(AnimalDataTest, HitsPerLevelDifference) {
 	//	AnimalData animal("TEST_ANIMAL");
-	//	animal.setBonusConstitutionCode(CreatureBonusConstitutionType::Type::kNone);
+	//	animal.setConstitutionVarianceType(CreatureBonusConstitutionType::Type::kNone);
 	//	EXPECT_EQ(animal.hitsPerLevelDifference(), 0);
-	//	animal.setBonusConstitutionCode(CreatureBonusConstitutionType::Type::kC);
+	//	animal.setConstitutionVarianceType(CreatureBonusConstitutionType::Type::kC);
 	//	EXPECT_EQ(animal.hitsPerLevelDifference(), 3);
-	//	animal.setBonusConstitutionCode(CreatureBonusConstitutionType::Type::kH);
+	//	animal.setConstitutionVarianceType(CreatureBonusConstitutionType::Type::kH);
 	//	EXPECT_EQ(animal.hitsPerLevelDifference(), 15);
 	//}
 
 	// The followimg member function is private and thus cannot be tested directly but the output can be tested through the public interface.
 	//TEST(AnimalDataTest, BonusExhaustionPoints) {
 	//	AnimalData animal("TEST_ANIMAL");
-	//	animal.setBonusConstitutionCode(CreatureBonusConstitutionType::Type::kNone);
+	//	animal.setConstitutionVarianceType(CreatureBonusConstitutionType::Type::kNone);
 	//	EXPECT_EQ(animal.bonusExhaustionPoints(), 0);
-	//	animal.setBonusConstitutionCode(CreatureBonusConstitutionType::Type::kD);
+	//	animal.setConstitutionVarianceType(CreatureBonusConstitutionType::Type::kD);
 	//	EXPECT_EQ(animal.bonusExhaustionPoints(), 0);
-	//	animal.setBonusConstitutionCode(CreatureBonusConstitutionType::Type::kE);
+	//	animal.setConstitutionVarianceType(CreatureBonusConstitutionType::Type::kE);
 	//	EXPECT_EQ(animal.bonusExhaustionPoints(), 50);
-	//	animal.setBonusConstitutionCode(CreatureBonusConstitutionType::Type::kH);
+	//	animal.setConstitutionVarianceType(CreatureBonusConstitutionType::Type::kH);
 	//	EXPECT_EQ(animal.bonusExhaustionPoints(), 200);
 	//}
 }

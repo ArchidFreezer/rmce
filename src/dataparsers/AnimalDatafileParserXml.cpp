@@ -27,9 +27,15 @@ void AnimalDatafileParserXml::parse() {
 		CreatureBonusXpType::fromString(v.second.get<std::string>("bonus-xp-code"), xp_code);
 		ref.setBonusXpCode(xp_code);
 
-		CreatureBonusConstitutionType::Type constitution_code{};
-		CreatureBonusConstitutionType::fromString(v.second.get<std::string>("constitution-code"), constitution_code);
-		ref.setBonusConstitutionCode(constitution_code);
+		CreatureConstitutionVarianceType::Type constitution_code{};
+		CreatureConstitutionVarianceType::fromString(v.second.get<std::string>("constitution-code"), constitution_code);
+		ref.setConstitutionVarianceType(constitution_code);
+
+		const auto& plevel = v.second.get_child("level-code");
+		CreatureLevelVarianceType::Type level_code{};
+		CreatureLevelVarianceType::fromString(plevel.get_value<std::string>(), level_code);
+		ref.setLevelVarianceType(level_code);
+		ref.setAverageLevel(plevel.get<int>("<xmlattr>.level"));
 
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 

@@ -35,31 +35,31 @@ int AnimalData::existencePercentageChance() const {
 }
 
 int AnimalData::hitsPerLevelDifference() const {
-	switch(bonusConstitutionCode()) {
-		case CreatureBonusConstitutionType::Type::kNone: return 0;
-		case CreatureBonusConstitutionType::Type::kA: return 1;
-		case CreatureBonusConstitutionType::Type::kB: return 2;
-		case CreatureBonusConstitutionType::Type::kC: return 3;
-		case CreatureBonusConstitutionType::Type::kD: return 5;
-		case CreatureBonusConstitutionType::Type::kE: return 8;
-		case CreatureBonusConstitutionType::Type::kF: return 10;
-		case CreatureBonusConstitutionType::Type::kG: return 12;
-		case CreatureBonusConstitutionType::Type::kH: return 15;
+	switch(constitutionVarianceType()) {
+		case CreatureConstitutionVarianceType::Type::kNone: return 0;
+		case CreatureConstitutionVarianceType::Type::kA: return 1;
+		case CreatureConstitutionVarianceType::Type::kB: return 2;
+		case CreatureConstitutionVarianceType::Type::kC: return 3;
+		case CreatureConstitutionVarianceType::Type::kD: return 5;
+		case CreatureConstitutionVarianceType::Type::kE: return 8;
+		case CreatureConstitutionVarianceType::Type::kF: return 10;
+		case CreatureConstitutionVarianceType::Type::kG: return 12;
+		case CreatureConstitutionVarianceType::Type::kH: return 15;
 		default: return 0;
 	}
 }
 
 int AnimalData::bonusExhaustionPoints() const {
-	switch(bonusConstitutionCode()) {
-	case CreatureBonusConstitutionType::Type::kNone:
-	case CreatureBonusConstitutionType::Type::kA:
-	case CreatureBonusConstitutionType::Type::kB:
-	case CreatureBonusConstitutionType::Type::kC:
-	case CreatureBonusConstitutionType::Type::kD: return 0;
-	case CreatureBonusConstitutionType::Type::kE: return 50;
-	case CreatureBonusConstitutionType::Type::kF: return 100;
-	case CreatureBonusConstitutionType::Type::kG: return 150;
-	case CreatureBonusConstitutionType::Type::kH: return 200;
+	switch(constitutionVarianceType()) {
+	case CreatureConstitutionVarianceType::Type::kNone:
+	case CreatureConstitutionVarianceType::Type::kA:
+	case CreatureConstitutionVarianceType::Type::kB:
+	case CreatureConstitutionVarianceType::Type::kC:
+	case CreatureConstitutionVarianceType::Type::kD: return 0;
+	case CreatureConstitutionVarianceType::Type::kE: return 50;
+	case CreatureConstitutionVarianceType::Type::kF: return 100;
+	case CreatureConstitutionVarianceType::Type::kG: return 150;
+	case CreatureConstitutionVarianceType::Type::kH: return 200;
 	default: return 0;
 	}
 }
@@ -69,9 +69,9 @@ int AnimalData::staminaBonus() const {
 	NumberMatcherFactory number_matcher{};
 
 	int d100_roll = Dice(100).roll(false).result();
-	switch(bonusConstitutionCode()) {
-	case CreatureBonusConstitutionType::Type::kNone: return 0;
-	case CreatureBonusConstitutionType::Type::kA: {
+	switch(constitutionVarianceType()) {
+	case CreatureConstitutionVarianceType::Type::kNone: return 0;
+	case CreatureConstitutionVarianceType::Type::kA: {
 		if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -5;
 		else if (number_matcher.matcher(2, 5)->matches(d100_roll)) return -4;
 		else if (number_matcher.matcher(6, 9)->matches(d100_roll)) return -3;
@@ -85,7 +85,7 @@ int AnimalData::staminaBonus() const {
 		else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 5;
 		else return 0; // Should never be hit
 	}
-	case CreatureBonusConstitutionType::Type::kB: {
+	case CreatureConstitutionVarianceType::Type::kB: {
 		if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -7;
 		else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -6;
 		else if (number_matcher.matcher(3, 4)->matches(d100_roll)) return -5;
@@ -103,7 +103,7 @@ int AnimalData::staminaBonus() const {
 		else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 7;
 		else return 0; // Should never be hit
 	}
-	case CreatureBonusConstitutionType::Type::kC: {
+	case CreatureConstitutionVarianceType::Type::kC: {
 		if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 		else if (number_matcher.matcher(2, 3)->matches(d100_roll)) return -7;
 		else if (number_matcher.matcher(4, 5)->matches(d100_roll)) return -6;
@@ -120,7 +120,7 @@ int AnimalData::staminaBonus() const {
 		else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 5;
 		else return 0; // Should never be hit
 	}
-	case CreatureBonusConstitutionType::Type::kD: {
+	case CreatureConstitutionVarianceType::Type::kD: {
 		if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 		else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -7;
 		else if (number_matcher.matcher(3, 3)->matches(d100_roll)) return -6;
@@ -140,7 +140,7 @@ int AnimalData::staminaBonus() const {
 		else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 8;
 		else return 0; // Should never be hit
 	}
-	case CreatureBonusConstitutionType::Type::kE: {
+	case CreatureConstitutionVarianceType::Type::kE: {
 		if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 		else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -7;
 		else if (number_matcher.matcher(3, 3)->matches(d100_roll)) return -6;
@@ -164,7 +164,7 @@ int AnimalData::staminaBonus() const {
 		else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 12;
 		else return 0; // Should never be hit
 	}
-	case CreatureBonusConstitutionType::Type::kF: {
+	case CreatureConstitutionVarianceType::Type::kF: {
 		if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 		else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -7;
 		else if (number_matcher.matcher(3, 3)->matches(d100_roll)) return -6;
@@ -189,7 +189,7 @@ int AnimalData::staminaBonus() const {
 		else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 15;
 		else return 0; // Should never be hit
 	}
-	case CreatureBonusConstitutionType::Type::kG: {
+	case CreatureConstitutionVarianceType::Type::kG: {
 		if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 		else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -7;
 		else if (number_matcher.matcher(3, 3)->matches(d100_roll)) return -6;
@@ -215,7 +215,7 @@ int AnimalData::staminaBonus() const {
 		else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 20;
 		else return 0; // Should never be hit
 	}
-	case CreatureBonusConstitutionType::Type::kH: {
+	case CreatureConstitutionVarianceType::Type::kH: {
 		if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 		else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -7;
 		else if (number_matcher.matcher(3, 3)->matches(d100_roll)) return -6;
@@ -246,5 +246,5 @@ int AnimalData::staminaBonus() const {
 }
 
 int AnimalData::hits(int level) const {
-	return baseHits() + staminaBonus() + (hitsPerLevelDifference() * level);
+	return baseHits() + staminaBonus() + (hitsPerLevelDifference() * (level-averageLevel()) );
 }

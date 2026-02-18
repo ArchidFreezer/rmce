@@ -35,15 +35,22 @@ void AnimalDatafileParserJson::parse() {
 			ref.setBonusXpCode(CreatureBonusXpType::Type::kNone);
 		}
 
-		boost::optional<std::string> bonus_con_code_str = v.second.get_optional<std::string>("bonus-constitution-code");
+		boost::optional<std::string> bonus_con_code_str = v.second.get_optional<std::string>("constitution-variance-type");
 		if (bonus_con_code_str) {
-			CreatureBonusConstitutionType::Type constitution_code{};
-			CreatureBonusConstitutionType::fromString(bonus_con_code_str.value(), constitution_code);
-			ref.setBonusConstitutionCode(constitution_code);
+			CreatureConstitutionVarianceType::Type constitution_code{};
+			CreatureConstitutionVarianceType::fromString(bonus_con_code_str.value(), constitution_code);
+			ref.setConstitutionVarianceType(constitution_code);
 		} else {
 			// If the bonus constitution code is not provided, set it to kNone
-			ref.setBonusConstitutionCode(CreatureBonusConstitutionType::Type::kNone);
+			ref.setConstitutionVarianceType(CreatureConstitutionVarianceType::Type::kNone);
 		}
+
+		std::string level_code_str = v.second.get<std::string>("level-variance-type");
+		CreatureLevelVarianceType::Type level_code{};
+		CreatureLevelVarianceType::fromString(level_code_str, level_code);
+		ref.setLevelVarianceType(level_code);
+
+		ref.setAverageLevel(v.second.get<int>("average-level")); 
 
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
@@ -62,7 +69,9 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 	datum.put("defensive-bonus", game_data.defensiveBonus());
 	datum.put("frequency-code", game_data.frequencyFactor());
 	if (game_data.bonusXpCode() != CreatureBonusXpType::Type::kNone) datum.put("bonus-xp-code", CreatureBonusXpType::toString(game_data.bonusXpCode()));
-	if (game_data.bonusConstitutionCode() != CreatureBonusConstitutionType::Type::kNone) datum.put("bonus-constitution-code", CreatureBonusConstitutionType::toString(game_data.bonusConstitutionCode()));
+	if (game_data.constitutionVarianceType() != CreatureConstitutionVarianceType::Type::kNone) datum.put("constitution-variance-type", CreatureConstitutionVarianceType::toString(game_data.constitutionVarianceType()));
+	datum.put("level-variance-type", CreatureLevelVarianceType::toString(game_data.levelVarianceType()));
+	datum.put("average-level", game_data.averageLevel());
 
 }
 

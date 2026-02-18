@@ -7,11 +7,11 @@
 
 #include "StringUtils.h"
 /**
- * @brief Contains the CreatureBonusConstitutionTypeType::Type enum and associated functions
+ * @brief Contains the CreatureConstitutionVarianceTypeType::Type enum and associated functions
  *
  * The enumeration is used to represent the variance in constitution for a type of animal.
  */
-namespace CreatureBonusConstitutionType {
+namespace CreatureConstitutionVarianceType {
 
 	/**
 	 * @brief Enumeration class representing the bonus constitution code for an animal
@@ -28,13 +28,13 @@ namespace CreatureBonusConstitutionType {
 
 	/**
 	 * @brief Get the string representation of the given enum
-	 * @param size The CreatureBonusConstitutionTypeType::Type to get the string of
+	 * @param size The CreatureConstitutionVarianceTypeType::Type to get the string of
 	 * @return Game display form of the enum value as a string
 	 */
 	const std::string toString(Type size);
 
 	/**
-	 * @brief Teach operator<< how to print a CreatureBonusConstitutionTypeType::Type
+	 * @brief Teach operator<< how to print a CreatureConstitutionVarianceTypeType::Type
 	 * @param out Output stream that the enum should be printed to
 	 * @param size Enum value to output
 	 * @return Output stream reference containing the output enum value
@@ -49,7 +49,7 @@ namespace CreatureBonusConstitutionType {
 	 * Accepts values that are returned by toString() in a case insensitive manner.
 	 *
 	 * @param sv string_view to get the enumeration for
-	 * @return CreatureBonusConstitutionTypeType::Type represented by the string
+	 * @return CreatureConstitutionVarianceTypeType::Type represented by the string
 	 *
 	 * @see toString()
 	 */
@@ -61,11 +61,11 @@ namespace CreatureBonusConstitutionType {
 	 * Accepts values that are returned by toString() in a case insensitive manner.
 	 *
 	 * @param sv string_view to get the enumeration for
-	 * @param type reference to set the CreatureBonusConstitutionTypeType::Type represented by the string to
-	 * @throws std::invalid_argument if the string does not represent a valid CreatureBonusConstitutionTypeType::Type
+	 * @param type reference to set the CreatureConstitutionVarianceTypeType::Type represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid CreatureConstitutionVarianceTypeType::Type
 	 *
 	 * @see toString()
 	 */
-	void fromString(std::string_view sv, CreatureBonusConstitutionType::Type& type);
+	void fromString(std::string_view sv, CreatureConstitutionVarianceType::Type& type);
 
 }
