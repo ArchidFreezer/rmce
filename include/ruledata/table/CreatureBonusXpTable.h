@@ -1,5 +1,5 @@
 #pragma once
-#include <AnimalData.h>
+#include <CreatureBonusXpType.h>
 #include <table/BoundIntRowLookupTable.h>
 
 /**
@@ -14,21 +14,21 @@ public:
 	 * @brief Get the index of the table column
 	 * @return int table column index
 	 */
-	int column(AnimalData::BonusXpCode match) const {
+	int column(CreatureBonusXpType::Type match) const {
 		switch (match) {
-		case AnimalData::BonusXpCode::kNone: return 0;
-		case AnimalData::BonusXpCode::kA: return 1;
-		case AnimalData::BonusXpCode::kB: return 2;
-		case AnimalData::BonusXpCode::kC: return 3;
-		case AnimalData::BonusXpCode::kD: return 4;
-		case AnimalData::BonusXpCode::kE: return 5;
-		case AnimalData::BonusXpCode::kF: return 6;
-		case AnimalData::BonusXpCode::kG: return 7;
-		case AnimalData::BonusXpCode::kH: return 8;
-		case AnimalData::BonusXpCode::kI: return 9;
-		case AnimalData::BonusXpCode::kJ: return 10;
-		case AnimalData::BonusXpCode::kK: return 11;
-		case AnimalData::BonusXpCode::kL: return 12;
+		case CreatureBonusXpType::Type::kNone: return 0;
+		case CreatureBonusXpType::Type::kA: return 1;
+		case CreatureBonusXpType::Type::kB: return 2;
+		case CreatureBonusXpType::Type::kC: return 3;
+		case CreatureBonusXpType::Type::kD: return 4;
+		case CreatureBonusXpType::Type::kE: return 5;
+		case CreatureBonusXpType::Type::kF: return 6;
+		case CreatureBonusXpType::Type::kG: return 7;
+		case CreatureBonusXpType::Type::kH: return 8;
+		case CreatureBonusXpType::Type::kI: return 9;
+		case CreatureBonusXpType::Type::kJ: return 10;
+		case CreatureBonusXpType::Type::kK: return 11;
+		case CreatureBonusXpType::Type::kL: return 12;
 		}
 		return 0;
 	}
@@ -41,7 +41,7 @@ public:
  * This is a simple lookup table that takes a bonus XP code and a character level, returning the bonus XP awarded for killing or subduing an animal.
  * The bonus XP code is defined in the AnimalData class
  */
-class CreatureBonusXpTable : public BoundIntRowLookupTable<TableColumnBonusXpCodeMatcher, AnimalData::BonusXpCode, int> {
+class CreatureBonusXpTable : public BoundIntRowLookupTable<TableColumnBonusXpCodeMatcher, CreatureBonusXpType::Type, int> {
 public:
 
 	/**

@@ -27,12 +27,12 @@ void AnimalDatafileParserJson::parse() {
 
 		boost::optional<std::string> bonus_xp_code_str = v.second.get_optional<std::string>("bonus-xp-code");
 		if (bonus_xp_code_str) {
-			AnimalData::BonusXpCode xp_code{};
-			ref.fromString(bonus_xp_code_str.value(), xp_code);
+			CreatureBonusXpType::Type xp_code{};
+			CreatureBonusXpType::fromString(bonus_xp_code_str.value(), xp_code);
 			ref.setBonusXpCode(xp_code);
 		} else {
 			// If the bonus XP code is not provided, set it to kNone
-			ref.setBonusXpCode(AnimalData::BonusXpCode::kNone);
+			ref.setBonusXpCode(CreatureBonusXpType::Type::kNone);
 		}
 
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
@@ -51,7 +51,7 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 	datum.put("base-movement", game_data.baseMovement());
 	datum.put("defensive-bonus", game_data.defensiveBonus());
 	datum.put("frequency-code", game_data.frequencyFactor());
-	if (game_data.bonusXpCodeToString() != "None") datum.put("bonus-xp-code", game_data.bonusXpCodeToString());
+	if (game_data.bonusXpCode() != CreatureBonusXpType::Type::kNone) datum.put("bonus-xp-code", CreatureBonusXpType::toString(game_data.bonusXpCode()));
 
 }
 

@@ -3,10 +3,10 @@
 #include <set>
 #include <string_view>
 
+#include <CreatureBonusXpType.h>
 #include <GameRuleData.h>
 #include <ManoeuvreDifficultyType.h>
-
-class CreatureBonusXpTable;
+#include <table/CreatureBonusXpTable.h>
 
 /**
  * @class AnimalData
@@ -20,26 +20,6 @@ class CreatureBonusXpTable;
  */
 class AnimalData : public GameRuleData {
 public:
-
-	/**
-	 * @brief Enumeration class representing the bonus XP code for an animal
-	 *
-	 * This is used to determine how much bonus XP is awarded for killing the animal. The actual bonus XP is determined by a lookup table that maps the bonus XP code to a bonus XP value.
-	 */
-	enum class BonusXpCode { kNone, kA, kB, kC, kD, kE, kF, kG, kH, kI, kJ, kK, kL	};
-
-	/**
- * @brief Get the enumeration value based on a string and set it to the provided reference
- *
- * Accepts values that are returned by toString() in a case insensitive manner.
- *
- * @param sv string_view to get the enumeration for
- * @param type reference to set the BonusXpCode represented by the string to
- * @throws std::invalid_argument if the string does not represent a valid BonusXpCode
- *
- * @see toString()
- */
-	void fromString(std::string_view sv, BonusXpCode& type);
 
 	/**
 	 * @brief Default constructor is deleted to ensure the base class is initialised
@@ -114,7 +94,7 @@ public:
 
 	/**
 	 * @brief Set the frequency factor of the animal
-	 * 
+	 *
 	 * The minimum value is 1 and the maximum value is 9 with 1 being the most common and 9 being the least common. Any value outside of this range will be set to the closest valid value.
 	 * @param frequency_factor Frequency factor for the animal, used to determine how common it is to find in the appropriate environ.
 	 */
@@ -122,10 +102,10 @@ public:
 
 	/**
 	 * @brief Get the frequency factor of the animal
-	 * 
+	 *
 	 * The minimum value is 1 and the maximum value is 9 with 1 being the most common and 9 being the least common.
 	 * @return Frequency factor for the animal, used to determine how common it is to find in the appropriate environ.
-	 * 
+	 *
 	 * @see huntingModifier() for how the frequency factor is used to determine the difficulty of hunting the animal
 	 * @see existencePercentageChance() for how the frequency factor is used to determine the chance of an animal existing in an appropriate environment
 	 */
@@ -139,18 +119,18 @@ public:
 
 	/**
 	 * @brief Get the percentage chance of an animal existing in an appropriate environment
-	 * 
+	 *
 	 * This is derived from the frequency factor with more common animals being more likely to be found and less common animals being less likely to be found.
-	 * 
+	 *
 	 * @return Percentage chance of an animal existing in an appropriate environment, used to determine if the animal is present when searching for animals in the environment.
 	 */
 	int existencePercentageChance() const;
 
 	/**
 	 * @brief Set the moving manoeuvre bonus of the animal
-	 * 
+	 *
 	 * The MM Bonus is used if the Gamemaster requires a manoeuver roll to move at paces greater than a walk.
-	 * 
+	 *
 	 * @param moving_manoeuvre_bonus Bonus to Manoeuvre rolls when the animal is moving, used to determine how difficult it is to hit the animal when it is moving.
 	 */
 	void setMovingManoeuvreBonus(int moving_manoeuvre_bonus) { moving_manoeuvre_bonus_ = moving_manoeuvre_bonus; }
@@ -168,18 +148,14 @@ public:
 	 * @brief Set the bonus XP code for the animal
 	 * @param bonus_xp_code Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal.
 	 */
-	void setBonusXpCode(BonusXpCode bonus_xp_code) { bonus_xp_code_ = bonus_xp_code; }
+	void setBonusXpCode(CreatureBonusXpType::Type bonus_xp_code) { bonus_xp_code_ = bonus_xp_code; }
 
-	/**
-	 * @brief Get the string representation of a BonusXpCode enumeration value
-	 *
-	 * The output is the same as the input accepted by fromString() for the same enumeration value.
-	 *
-	 * @return String representation of the BonusXpCode enumeration value
-	 *
-	 * @see fromString()
+  /**
+	 * @brief Get the bonus XP code for the animal
+	 * @return Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal.
 	 */
-	std::string bonusXpCodeToString() const;
+	CreatureBonusXpType::Type bonusXpCode() const { return bonus_xp_code_; }
+
 
 private:
 	std::string name_{}; /**< In game name of the animal */
@@ -189,6 +165,6 @@ private:
 	int defensive_bonus_{}; /**< Defensive bonus for the animal, used to determine how much damage it takes when attacked. */
 	int frequency_factor_{}; /**< Frequency factor for the animal, used to determine how common it is to find in the appropriate environ. */
 	int moving_manoeuvre_bonus_{}; /**< Bonus to Manoeuvre rolls when the animal is moving, used to determine how difficult it is to hit the animal when it is moving. */
-	BonusXpCode bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
+	CreatureBonusXpType::Type bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
 
 };

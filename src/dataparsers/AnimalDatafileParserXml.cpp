@@ -23,8 +23,8 @@ void AnimalDatafileParserXml::parse() {
 		ref.setFrequencyFactor(v.second.get<int>("frequency-code"));
 		ref.setMovingManoeuvreBonus(v.second.get<int>("moving-manoeuvre-bonus"));
 
-		AnimalData::BonusXpCode xp_code{};
-		ref.fromString(v.second.get<std::string>("bonus-xp-code"), xp_code);
+		CreatureBonusXpType::Type xp_code{};
+		CreatureBonusXpType::fromString(v.second.get<std::string>("bonus-xp-code"), xp_code);
 		ref.setBonusXpCode(xp_code);
 
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
