@@ -18,6 +18,14 @@
  */
 class AnimalData : public GameRuleData {
 public:
+
+	/**
+	 * @brief Enumeration class representing the bonus XP code for an animal
+	 *
+	 * This is used to determine how much bonus XP is awarded for killing the animal. The actual bonus XP is determined by a lookup table that maps the bonus XP code to a bonus XP value.
+	 */
+	enum class BonusXpCode { kA, kB, kC, kD, kE, kF, kG, kH, kI, kJ, kK, kL	};
+
 	/**
 	 * @brief Default constructor is deleted to ensure the base class is initialised
 	 */
@@ -145,7 +153,7 @@ public:
 	 * @brief Set the bonus XP code for the animal
 	 * @param bonus_xp_code Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal.
 	 */
-	void setBonusXpCode(int bonus_xp_code) { bonus_xp_code_ = bonus_xp_code; }
+	void setBonusXpCode(BonusXpCode bonus_xp_code) { bonus_xp_code_ = bonus_xp_code; }
 
 	/**
 	 * @brief Get the bonus XP code for the animal
@@ -153,7 +161,7 @@ public:
 	 * 
 	 * // TODO : The bonus XP code is currently just an integer that is used in a lookup table to determine the actual bonus XP. This is not ideal and should be replaced with a more flexible system such as a formula or a reference to a BonusXpData object that contains the formula.
 	 */
-	int bonusXpCode() const { return bonus_xp_code_; }
+	BonusXpCode bonusXpCode() const { return bonus_xp_code_; }
 
 private:
 	std::string name_{}; /**< In game name of the animal */
@@ -163,5 +171,5 @@ private:
 	int defensive_bonus_{}; /**< Defensive bonus for the animal, used to determine how much damage it takes when attacked. */
 	int frequency_factor_{}; /**< Frequency factor for the animal, used to determine how common it is to find in the appropriate environ. */
 	int moving_manoeuvre_bonus_{}; /**< Bonus to Manoeuvre rolls when the animal is moving, used to determine how difficult it is to hit the animal when it is moving. */
-	int bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
+	BonusXpCode bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
 };
