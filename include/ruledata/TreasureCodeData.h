@@ -48,4 +48,4 @@ public:
 private:
 	TreasureValueType::Type items_value_type_{}; /**< Relative value of items in a treasure pile */
 	TreasureValueType::Type wealth_value_type_{}; /**< Relative value of wealth in a treasure pile */
-}
+};

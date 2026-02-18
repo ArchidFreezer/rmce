@@ -22,6 +22,7 @@
 #include <SpecialAttackTableDatafileParserJson.h>
 #include <SpellListDatafileParserJson.h>
 #include <TrainingPackageDatafileParserJson.h>
+#include <TreasureCodeDatafileParserJson.h>
 #include <WeaponTypeDatafileParserJson.h>
 
 int main() {
@@ -50,6 +51,7 @@ int main() {
 	SpecialAttackTableDatafileParserJson special_attack_table_parser(cache, "../../../../data/SpecialAttackTables.json");
 	SpellListDatafileParserJson spell_list_parser(cache, "../../../../data/SpellLists.json");
 	TrainingPackageDatafileParserJson training_package_parser(cache, "../../../../data/TrainingPackages.json");
+	TreasureCodeDatafileParserJson treasure_code_parser(cache, "../../../../data/TreasureCodes.json");
 	WeaponTypeDatafileParserJson weapon_type_parser(cache, "../../../../data/WeaponTypes.json");
 
 	// Store the parsers in a vector so we can iterate through them
@@ -74,6 +76,7 @@ int main() {
 	parsers.push_back(&special_attack_table_parser);
 	parsers.push_back(&spell_list_parser);
 	parsers.push_back(&training_package_parser);
+	parsers.push_back(&treasure_code_parser);
 	parsers.push_back(&weapon_type_parser);
 
 	try {
@@ -82,7 +85,7 @@ int main() {
 			parser->read();
 		}
 
-		animal_parser_json.save("../../../../data/Animals2.json");
+		//animal_parser_json.save("../../../../data/Animals2.json");
 		//armour_type_parser.save("../../../../data/ArmourTypes2.json");
 		//attack_table_parser.save("../../../../data/AttackTables2.json");
 		//book_parser.save("../../../../data/Books2.json");
@@ -101,6 +104,7 @@ int main() {
 		//special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
 		//spell_list_parser.save("../../../../data/SpellLists2.json");
 		//training_package_parser.save("../../../../data/TrainingPackages2.json");
+		treasure_code_parser.save("../../../../data/TreasureCodes2.json");
 		//weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
