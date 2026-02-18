@@ -198,4 +198,12 @@ private:
 	 */
 	int bonusExhaustionPoints() const;
 
+	/**
+	 * @brief Gets the stamina bonus.
+	 * 
+	 * This value is used when calculating the number of hits for an animal based on its constitution code and a random roll.
+	 * @return The stamina bonus value.
+	 */
+	int staminaBonus() const;
+
 };
