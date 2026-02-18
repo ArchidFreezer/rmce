@@ -3,6 +3,7 @@
 #include <set>
 #include <string_view>
 
+#include <CreatureBonusConstitutionType.h>
 #include <CreatureBonusXpType.h>
 #include <GameRuleData.h>
 #include <ManoeuvreDifficultyType.h>
@@ -156,6 +157,19 @@ public:
 	 */
 	CreatureBonusXpType::Type bonusXpCode() const { return bonus_xp_code_; }
 
+	/**
+	 * @brief Set the bonus constitution code for the animal
+	 * @param bonus_constitution_code Bonus constitution code for the animal, used to determine how much constitution variance a creature has.
+	 */
+	void setBonusConstitutionCode(CreatureBonusConstitutionType::Type bonus_constitution_code) { bonus_constitution_code_ = bonus_constitution_code; }
+
+	/**
+	 * @brief Get the bonus constitution code for the animal
+	 * @return Bonus constitution code for the animal, used to determine how much constitution variance a creature has.
+	 */
+	CreatureBonusConstitutionType::Type bonusConstitutionCode() const { return bonus_constitution_code_; }
+
+
 
 private:
 	std::string name_{}; /**< In game name of the animal */
@@ -166,5 +180,22 @@ private:
 	int frequency_factor_{}; /**< Frequency factor for the animal, used to determine how common it is to find in the appropriate environ. */
 	int moving_manoeuvre_bonus_{}; /**< Bonus to Manoeuvre rolls when the animal is moving, used to determine how difficult it is to hit the animal when it is moving. */
 	CreatureBonusXpType::Type bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
+	CreatureBonusConstitutionType::Type bonus_constitution_code_{}; /**< Bonus constitution code for the animal, used to determine how much constitution variance a creature has. */
+
+	/**
+	 * @brief Gets the number of hits per level difference based on the constitution code.
+	 * 
+	 * This value is used to determine how much the hit points of an animal may vary for any given level based on its constitution code. Higher constitution codes represent greater variance in hit points.
+	 * @return The number of hits per level difference.
+	 */
+	int hitsPerLevelDifference() const;
+
+	/**
+	 * @brief Gets the bonus exhaustion points.
+	 * 
+	 * This value is used when calculating the exhaustion points for an animal based on its constitution code. Animals with a bonus constitution code will have bonus exhaustion points added to their exhaustion points.
+	 * @return The bonus exhaustion points value.
+	 */
+	int bonusExhaustionPoints() const;
 
 };

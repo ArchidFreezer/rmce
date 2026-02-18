@@ -4850,7 +4850,7 @@
          <frequency-code>5</frequency-code>
          <moving-manoeuvre-bonus>10</moving-manoeuvre-bonus>
          <bonus-xp-code>-</bonus-xp-code>
-         <constitution-code></constitution-code>
+         <constitution-code>-</constitution-code>
          <treasure-code>-</treasure-code>
          <size>TINY</size>
          <armour-type>AT12</armour-type>
@@ -5332,7 +5332,7 @@
          <frequency-code>5</frequency-code>
          <moving-manoeuvre-bonus>10</moving-manoeuvre-bonus>
          <bonus-xp-code>-</bonus-xp-code>
-         <constitution-code></constitution-code>
+         <constitution-code>-</constitution-code>
          <treasure-code>-</treasure-code>
          <size>TINY</size>
          <armour-type>AT11</armour-type>
@@ -5602,7 +5602,7 @@
          <frequency-code>5</frequency-code>
          <moving-manoeuvre-bonus>10</moving-manoeuvre-bonus>
          <bonus-xp-code>-</bonus-xp-code>
-         <constitution-code></constitution-code>
+         <constitution-code>-</constitution-code>
          <treasure-code>-</treasure-code>
          <size>TINY</size>
          <armour-type>AT1</armour-type>
@@ -6464,7 +6464,7 @@
          <frequency-code>7</frequency-code>
          <moving-manoeuvre-bonus>10</moving-manoeuvre-bonus>
          <bonus-xp-code>-</bonus-xp-code>
-         <constitution-code></constitution-code>
+         <constitution-code>-</constitution-code>
          <treasure-code>-</treasure-code>
          <size>TINY</size>
          <armour-type>AT11</armour-type>
@@ -7541,7 +7541,7 @@
          <frequency-code>3</frequency-code>
          <moving-manoeuvre-bonus>10</moving-manoeuvre-bonus>
          <bonus-xp-code>-</bonus-xp-code>
-         <constitution-code></constitution-code>
+         <constitution-code>-</constitution-code>
          <treasure-code>-</treasure-code>
          <size>TINY</size>
          <armour-type>AT1</armour-type>
@@ -13900,7 +13900,7 @@
          <frequency-code>1</frequency-code>
          <moving-manoeuvre-bonus>10</moving-manoeuvre-bonus>
          <bonus-xp-code>-</bonus-xp-code>
-         <constitution-code></constitution-code>
+         <constitution-code>-</constitution-code>
          <treasure-code>-</treasure-code>
          <size>TINY</size>
          <armour-type>AT11</armour-type>
@@ -14100,7 +14100,7 @@
          <frequency-code>5</frequency-code>
          <moving-manoeuvre-bonus>10</moving-manoeuvre-bonus>
          <bonus-xp-code>-</bonus-xp-code>
-         <constitution-code></constitution-code>
+         <constitution-code>-</constitution-code>
          <treasure-code>-</treasure-code>
          <size>TINY</size>
          <armour-type>AT12</armour-type>
@@ -15193,7 +15193,7 @@
          <frequency-code>2</frequency-code>
          <moving-manoeuvre-bonus>30</moving-manoeuvre-bonus>
          <bonus-xp-code>-</bonus-xp-code>
-         <constitution-code></constitution-code>
+         <constitution-code>-</constitution-code>
          <treasure-code>-</treasure-code>
          <size>TINY</size>
          <armour-type>AT1</armour-type>
@@ -17582,7 +17582,7 @@
          <frequency-code>2</frequency-code>
          <moving-manoeuvre-bonus>10</moving-manoeuvre-bonus>
          <bonus-xp-code>-</bonus-xp-code>
-         <constitution-code></constitution-code>
+         <constitution-code>-</constitution-code>
          <treasure-code>-</treasure-code>
          <size>TINY</size>
          <armour-type>AT12</armour-type>

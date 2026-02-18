@@ -27,6 +27,10 @@ void AnimalDatafileParserXml::parse() {
 		CreatureBonusXpType::fromString(v.second.get<std::string>("bonus-xp-code"), xp_code);
 		ref.setBonusXpCode(xp_code);
 
+		CreatureBonusConstitutionType::Type constitution_code{};
+		CreatureBonusConstitutionType::fromString(v.second.get<std::string>("constitution-code"), constitution_code);
+		ref.setBonusConstitutionCode(constitution_code);
+
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
 	}

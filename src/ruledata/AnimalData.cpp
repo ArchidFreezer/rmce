@@ -31,3 +31,33 @@ int AnimalData::existencePercentageChance() const {
 	else if (frequencyFactor() == 9) return 4;
 	else return 0;
 }
+
+int AnimalData::hitsPerLevelDifference() const {
+	switch(bonusConstitutionCode()) {
+		case CreatureBonusConstitutionType::Type::kNone: return 0;
+		case CreatureBonusConstitutionType::Type::kA: return 1;
+		case CreatureBonusConstitutionType::Type::kB: return 2;
+		case CreatureBonusConstitutionType::Type::kC: return 3;
+		case CreatureBonusConstitutionType::Type::kD: return 5;
+		case CreatureBonusConstitutionType::Type::kE: return 8;
+		case CreatureBonusConstitutionType::Type::kF: return 10;
+		case CreatureBonusConstitutionType::Type::kG: return 12;
+		case CreatureBonusConstitutionType::Type::kH: return 15;
+		default: return 0;
+	}
+}
+
+int AnimalData::bonusExhaustionPoints() const {
+	switch(bonusConstitutionCode()) {
+	case CreatureBonusConstitutionType::Type::kNone:
+	case CreatureBonusConstitutionType::Type::kA:
+	case CreatureBonusConstitutionType::Type::kB:
+	case CreatureBonusConstitutionType::Type::kC:
+	case CreatureBonusConstitutionType::Type::kD: return 0;
+	case CreatureBonusConstitutionType::Type::kE: return 50;
+	case CreatureBonusConstitutionType::Type::kF: return 100;
+	case CreatureBonusConstitutionType::Type::kG: return 150;
+	case CreatureBonusConstitutionType::Type::kH: return 200;
+	default: return 0;
+	}
+}
