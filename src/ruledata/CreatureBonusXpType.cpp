@@ -25,7 +25,7 @@ const std::optional<CreatureBonusXpType::Type> CreatureBonusXpType::fromString(s
 	using enum Type;
 
 	if (sv.empty() || sv == "None" || sv == "-") { return kNone; } 
-	else if (sv.size() == 1 && sv[0] == 'A') {  return kA; } 
+	else if (sv.size() == 1 && sv[0] == 'A') { return kA; } 
 	else if (sv.size() == 1 && sv[0] == 'B') { return kB; }
 	else if (sv.size() == 1 && sv[0] == 'C') { return kC; } 
 	else if (sv.size() == 1 && sv[0] == 'D') { return kD; } 
