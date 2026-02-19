@@ -18,7 +18,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "4"
+            },
+            "number-young-range": {
+                "min": "20",
+                "max": "30"
+            }
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_LARGE_IN_WATER",
@@ -38,7 +46,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "20",
+                "max": "30"
+            }
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_LARGE_ON_LAND",
@@ -58,7 +74,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "20",
+                "max": "30"
+            }
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_SMALL_IN_WATER",
@@ -77,7 +101,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "20",
+                "max": "30"
+            }
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_SMALL_ON_LAND",
@@ -96,7 +128,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "20",
+                "max": "30"
+            }
         },
         {
             "id": "ANIMAL_ALPACA",
@@ -115,7 +155,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_ANTEATER",
@@ -134,7 +182,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_ANTELOPE_LIKE_LARGE",
@@ -153,7 +209,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "200"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_ANTELOPE_LIKE_SMALL",
@@ -172,7 +236,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Jumpy",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "5",
+                "max": "500"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_ANTS",
@@ -190,7 +262,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "20",
+                "max": "2000"
+            },
+            "number-young-range": {
+                "min": "1000000",
+                "max": "1000000"
+            }
         },
         {
             "id": "ANIMAL_ARMADILLO",
@@ -209,7 +289,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_BACTRIAN",
@@ -228,7 +316,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_BATS_LARGE",
@@ -247,7 +343,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "50"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_BATS_SMALL",
@@ -266,7 +370,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "100"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_BATTLE_BOAR",
@@ -286,7 +398,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "10"
+            }
         },
         {
             "id": "ANIMAL_BEARS_LARGE",
@@ -306,7 +426,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "6"
+            }
         },
         {
             "id": "ANIMAL_BEARS_SMALL",
@@ -326,7 +454,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "6"
+            }
         },
         {
             "id": "ANIMAL_BEAVER",
@@ -345,7 +481,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_BEETLES",
@@ -363,7 +507,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "100"
+            },
+            "number-young-range": {
+                "min": "10000",
+                "max": "10000"
+            }
         },
         {
             "id": "ANIMAL_BEE_WASP",
@@ -381,7 +533,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "300"
+            },
+            "number-young-range": {
+                "min": "1000",
+                "max": "1000"
+            }
         },
         {
             "id": "ANIMAL_BIRDS_LARGE",
@@ -400,7 +560,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "100"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_BIRDS_SMALL",
@@ -419,7 +587,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "200"
+            },
+            "number-young-range": {
+                "min": "5",
+                "max": "12"
+            }
         },
         {
             "id": "ANIMAL_BOAR",
@@ -439,7 +615,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "10"
+            }
         },
         {
             "id": "ANIMAL_BOA_PYTHON",
@@ -459,7 +643,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "25"
+            }
         },
         {
             "id": "ANIMAL_BONE_WORM",
@@ -478,7 +670,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_JOG",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "8"
+            },
+            "number-young-range": {
+                "min": "10",
+                "max": "20"
+            }
         },
         {
             "id": "ANIMAL_BUFFALO_BULL",
@@ -498,7 +698,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "50"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_CARNIVOROUS_FLYING_SQUIRRELS",
@@ -517,7 +725,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Belligerent",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "5",
+                "max": "500"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_CATS_LARGE",
@@ -536,7 +752,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_CATS_SMALL",
@@ -555,7 +779,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_CHAMELEON",
@@ -574,7 +806,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "50"
+            }
         },
         {
             "id": "ANIMAL_CHEETAH",
@@ -594,7 +834,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_COBRA",
@@ -614,7 +862,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "10",
+                "max": "30"
+            }
         },
         {
             "id": "ANIMAL_CONDOR",
@@ -633,7 +889,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_CONGER_EEL",
@@ -653,7 +917,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1000000",
+                "max": "1000000"
+            }
         },
         {
             "id": "ANIMAL_CRABS",
@@ -672,7 +944,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "10000",
+                "max": "75000"
+            }
         },
         {
             "id": "ANIMAL_CRISON",
@@ -691,7 +971,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "4",
+                "max": "40"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_DEER",
@@ -710,7 +998,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_DIDEX",
@@ -729,7 +1025,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "4"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_DOGS_LARGE",
@@ -748,7 +1052,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_DOGS_SMALL",
@@ -767,7 +1079,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_DOLPHIN",
@@ -787,7 +1107,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "20",
+                "max": "100"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_DONKEY",
@@ -806,7 +1134,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_DROMEDARY_DRAFT",
@@ -825,7 +1161,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_DROMEDARY_RACER",
@@ -844,7 +1188,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_EAGLE",
@@ -863,7 +1215,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_ELECTRIC_EEL",
@@ -883,7 +1243,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1000000",
+                "max": "1000000"
+            }
         },
         {
             "id": "ANIMAL_ELECTRIC_RAY",
@@ -903,7 +1271,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "14",
+                "max": "20"
+            }
         },
         {
             "id": "ANIMAL_ELECTRIC_WASP_FLY",
@@ -921,7 +1297,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Protective",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "5",
+                "max": "500"
+            }
         },
         {
             "id": "ANIMAL_ELEPHANTS_AFRICAN",
@@ -941,7 +1325,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Large"
+            "critical-table": "Large",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_ELEPHANTS_INDIAN",
@@ -961,7 +1353,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Large"
+            "critical-table": "Large",
+            "encounter-range": {
+                "min": "2",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_ELK",
@@ -980,7 +1380,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "4",
+                "max": "40"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_FALCON_PEREGRINE",
@@ -999,7 +1407,15 @@
             "attack-quickness": "Blindingly Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_FERRET",
@@ -1018,7 +1434,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Playful",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "8"
+            }
         },
         {
             "id": "ANIMAL_FISHING_CAT_IN_WATER",
@@ -1037,7 +1461,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_FISHING_CAT_ON_LAND",
@@ -1056,7 +1488,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_FISH_LARGE",
@@ -1075,7 +1515,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1000000",
+                "max": "1000000"
+            }
         },
         {
             "id": "ANIMAL_FISH_MEDIUM",
@@ -1094,7 +1542,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1000000",
+                "max": "1000000"
+            }
         },
         {
             "id": "ANIMAL_FISH_SMALL",
@@ -1113,7 +1569,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "100"
+            },
+            "number-young-range": {
+                "min": "1000000",
+                "max": "1000000"
+            }
         },
         {
             "id": "ANIMAL_FLEAS",
@@ -1131,7 +1595,15 @@
             "attack-quickness": "Very Slow",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "100"
+            },
+            "number-young-range": {
+                "min": "100000",
+                "max": "100000"
+            }
         },
         {
             "id": "ANIMAL_FLYINGFISH",
@@ -1150,7 +1622,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "5",
+                "max": "50"
+            },
+            "number-young-range": {
+                "min": "1000",
+                "max": "1000"
+            }
         },
         {
             "id": "ANIMAL_FLYING_FROG",
@@ -1169,7 +1649,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_JOG",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1000",
+                "max": "1000"
+            }
         },
         {
             "id": "ANIMAL_FLYING_LIZARD",
@@ -1188,7 +1676,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_JOG",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_FRESHWATER_EEL",
@@ -1207,7 +1703,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1000000",
+                "max": "1000000"
+            }
         },
         {
             "id": "ANIMAL_FROG",
@@ -1226,7 +1730,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "20000"
+            }
         },
         {
             "id": "ANIMAL_FURRED_SNAKE_GIANT",
@@ -1246,7 +1758,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Hungry",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_GABBIT",
@@ -1265,7 +1785,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Jumpy",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "20",
+                "max": "40"
+            }
         },
         {
             "id": "ANIMAL_GEMSTING",
@@ -1286,7 +1814,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Hungry",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_GIBBONS",
@@ -1305,7 +1841,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_GILA_MONSTER",
@@ -1324,7 +1868,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "3",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_GIRAFFE",
@@ -1343,7 +1895,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_GLIDING_MAMMAL",
@@ -1362,7 +1922,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_GORILLA",
@@ -1382,7 +1950,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_GREAT_APES",
@@ -1402,7 +1978,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "5",
+                "max": "15"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_GREAT_BOAR",
@@ -1422,7 +2006,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "5",
+                "max": "30"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "8"
+            }
         },
         {
             "id": "ANIMAL_GREAT_PORCUPINE",
@@ -1443,7 +2035,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Belligerent",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "3",
+                "max": "6"
+            }
         },
         {
             "id": "ANIMAL_GULO",
@@ -1464,7 +2064,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Hungry",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_GUYASCUTUS",
@@ -1485,7 +2093,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_HAWK",
@@ -1504,7 +2120,15 @@
             "attack-quickness": "Blindingly Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_HIPPOPOTOMUS_IN_WATER",
@@ -1524,7 +2148,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_HIPPOPOTOMUS_ON_LAND",
@@ -1544,7 +2176,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_HORNED_SNAKE",
@@ -1565,7 +2205,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Hungry",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "6",
+                "max": "12"
+            }
         },
         {
             "id": "ANIMAL_HORSE_VIPER",
@@ -1586,7 +2234,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Hungry",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_HOUSECAT",
@@ -1605,7 +2261,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_IHL_WOLF",
@@ -1624,7 +2288,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_JACKALOPE",
@@ -1645,7 +2317,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "4",
+                "max": "6"
+            }
         },
         {
             "id": "ANIMAL_JADEBACK",
@@ -1666,7 +2346,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Hungry",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "20",
+                "max": "40"
+            }
         },
         {
             "id": "ANIMAL_JELLYFISH",
@@ -1685,7 +2373,15 @@
             "attack-quickness": "Inching",
             "max-pace": "CREATUREPACE_WALK",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "100"
+            },
+            "number-young-range": {
+                "min": "100000",
+                "max": "100000"
+            }
         },
         {
             "id": "ANIMAL_KANGAROOS_WALLABIES_LARGE",
@@ -1704,7 +2400,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_KANGAROOS_WALLABIES_SMALL",
@@ -1723,7 +2427,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_KILLER_WHALE",
@@ -1743,7 +2455,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Belligerent",
-            "critical-table": "Large"
+            "critical-table": "Large",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_KOALA",
@@ -1762,7 +2482,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Jumpy",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_KOMODO_DRAGON",
@@ -1782,7 +2510,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "10",
+                "max": "15"
+            }
         },
         {
             "id": "ANIMAL_KRAEGUTH",
@@ -1802,7 +2538,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "4"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_LAMPREY",
@@ -1821,7 +2565,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "10000",
+                "max": "10000"
+            }
         },
         {
             "id": "ANIMAL_LESSER_PRIMATES",
@@ -1840,7 +2592,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "10",
+                "max": "40"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_LION",
@@ -1860,7 +2620,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_LIZARDS_LARGE",
@@ -1879,7 +2647,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "10",
+                "max": "40"
+            }
         },
         {
             "id": "ANIMAL_LIZARDS_SMALL",
@@ -1898,7 +2674,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "40"
+            }
         },
         {
             "id": "ANIMAL_LLAMA",
@@ -1917,7 +2701,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_LOBSTERS",
@@ -1936,7 +2728,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "10000",
+                "max": "75000"
+            }
         },
         {
             "id": "ANIMAL_MANTA_RAY",
@@ -1955,7 +2755,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_MARMOSETS_AND_TAMARINS",
@@ -1974,7 +2782,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_MOLE",
@@ -1993,7 +2809,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Jumpy",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "7"
+            }
         },
         {
             "id": "ANIMAL_MONGOOSE",
@@ -2012,7 +2836,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "6"
+            }
         },
         {
             "id": "ANIMAL_MOOSE",
@@ -2032,7 +2864,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_MORAY_EEL",
@@ -2052,7 +2892,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Belligerent",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1000000",
+                "max": "1000000"
+            }
         },
         {
             "id": "ANIMAL_MULE",
@@ -2071,7 +2919,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_MUSTANG",
@@ -2090,7 +2946,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_MUSTELIDS_CIVITS_LARGE",
@@ -2109,7 +2973,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Inquisitive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_MUSTELIDS_CIVITS_SMALL",
@@ -2128,7 +3000,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Inquisitive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "8"
+            }
         },
         {
             "id": "ANIMAL_NEW_WORLD_MONKEYS",
@@ -2147,7 +3027,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "5",
+                "max": "35"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_NILE_MONITOR",
@@ -2166,7 +3054,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "10",
+                "max": "60"
+            }
         },
         {
             "id": "ANIMAL_NON_POISONOUS_SNAKE",
@@ -2185,7 +3081,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "60"
+            }
         },
         {
             "id": "ANIMAL_OCTOPUS_SQUID_LARGE",
@@ -2205,7 +3109,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "20000",
+                "max": "200000"
+            }
         },
         {
             "id": "ANIMAL_OCTOPUS_SQUID_MEDIUM",
@@ -2225,7 +3137,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "20000",
+                "max": "200000"
+            }
         },
         {
             "id": "ANIMAL_OCTOPUS_SQUID_SMALL",
@@ -2244,7 +3164,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "20000",
+                "max": "200000"
+            }
         },
         {
             "id": "ANIMAL_OLD_WORLD_MONKEYS_SMALL",
@@ -2263,7 +3191,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "5",
+                "max": "200"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_OPOSSUM",
@@ -2282,7 +3218,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "18"
+            }
         },
         {
             "id": "ANIMAL_OSTRICH",
@@ -2301,7 +3245,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_OTTER",
@@ -2320,7 +3272,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_OWL",
@@ -2339,7 +3299,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "10"
+            }
         },
         {
             "id": "ANIMAL_OXEN",
@@ -2359,7 +3327,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "50"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_PANDA_GIANT",
@@ -2379,7 +3355,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_PANGOLIN",
@@ -2398,7 +3382,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_PENGUIN",
@@ -2417,7 +3409,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "50"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_PIG",
@@ -2436,7 +3436,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Jumpy",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "6"
+            }
         },
         {
             "id": "ANIMAL_PIRANHA",
@@ -2455,7 +3463,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "100"
+            },
+            "number-young-range": {
+                "min": "10000",
+                "max": "10000"
+            }
         },
         {
             "id": "ANIMAL_PIT_VIPER",
@@ -2475,7 +3491,15 @@
             "attack-quickness": "Blindingly Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "8"
+            }
         },
         {
             "id": "ANIMAL_PLATYPUS",
@@ -2494,7 +3518,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_PLOW_HORSE",
@@ -2513,7 +3545,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_PONY",
@@ -2532,7 +3572,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_PORCUPINE_NEW_WORLD",
@@ -2551,7 +3599,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_PORCUPINE_OLD_WORLD",
@@ -2570,7 +3626,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_PORPOISE",
@@ -2590,7 +3654,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_PORTUGESE_MAN_O_WAR",
@@ -2610,7 +3682,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "10000",
+                "max": "10000"
+            }
         },
         {
             "id": "ANIMAL_PRAYING_MANTIS",
@@ -2628,7 +3708,15 @@
             "attack-quickness": "Blindingly Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "10",
+                "max": "400"
+            }
         },
         {
             "id": "ANIMAL_QUARTERHORSE",
@@ -2647,7 +3735,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_RABBIT_HARE",
@@ -2666,7 +3762,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Jumpy",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "7"
+            }
         },
         {
             "id": "ANIMAL_RACCOON",
@@ -2685,7 +3789,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "3",
+                "max": "6"
+            }
         },
         {
             "id": "ANIMAL_RAT",
@@ -2704,7 +3816,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "12"
+            }
         },
         {
             "id": "ANIMAL_REGAL_STAG",
@@ -2724,7 +3844,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Protective",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "1"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_REINDEER_CARIBOU",
@@ -2743,7 +3871,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "4",
+                "max": "40"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_RHINOCEROS",
@@ -2763,7 +3899,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_RIVER_DOLPHIN",
@@ -2783,7 +3927,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "6"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_RODENTS_LARGE",
@@ -2802,7 +3954,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "200"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "10"
+            }
         },
         {
             "id": "ANIMAL_RODENTS_SMALL",
@@ -2821,7 +3981,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "12"
+            }
         },
         {
             "id": "ANIMAL_RUMTIFUSEL",
@@ -2842,7 +4010,15 @@
             "attack-quickness": "Blindingly Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Hungry",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "3",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_SALAMANDER_NEWT",
@@ -2861,7 +4037,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "10",
+                "max": "500"
+            }
         },
         {
             "id": "ANIMAL_SAWFISH",
@@ -2881,7 +4065,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "5",
+                "max": "10"
+            }
         },
         {
             "id": "ANIMAL_SCORPIONS",
@@ -2899,7 +4091,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "20"
+            }
         },
         {
             "id": "ANIMAL_SCRA_PREN",
@@ -2919,7 +4119,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Hungry",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "1"
+            },
+            "number-young-range": {
+                "min": "5",
+                "max": "8"
+            }
         },
         {
             "id": "ANIMAL_SEAL_IN_WATER",
@@ -2938,7 +4146,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_SEAL_ON_LAND",
@@ -2957,7 +4173,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "10",
+                "max": "1000"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_SEA_ANEMONE",
@@ -2976,7 +4200,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "100000",
+                "max": "100000"
+            }
         },
         {
             "id": "ANIMAL_SEA_LION_IN_WATER",
@@ -2995,7 +4227,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_SEA_LION_ON_LAND",
@@ -3014,7 +4254,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "10",
+                "max": "1000"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_SEA_SNAKE",
@@ -3034,7 +4282,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "10",
+                "max": "30"
+            }
         },
         {
             "id": "ANIMAL_SERPENTUS",
@@ -3054,7 +4310,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "5",
+                "max": "50"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_SHARK_LARGE",
@@ -3074,7 +4338,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Belligerent",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "10"
+            }
         },
         {
             "id": "ANIMAL_SHARK_SMALL",
@@ -3094,7 +4366,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "100"
+            }
         },
         {
             "id": "ANIMAL_SHEEP",
@@ -3113,7 +4393,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_SHREW",
@@ -3132,7 +4420,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Belligerent",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "10"
+            }
         },
         {
             "id": "ANIMAL_SKUNK",
@@ -3151,7 +4447,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "6"
+            }
         },
         {
             "id": "ANIMAL_SLOTH",
@@ -3170,7 +4474,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_SPIDER_NON_POISONOUS",
@@ -3188,7 +4500,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "100",
+                "max": "3000"
+            }
         },
         {
             "id": "ANIMAL_SPIDER_POISONOUS",
@@ -3206,7 +4526,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "100",
+                "max": "3000"
+            }
         },
         {
             "id": "ANIMAL_STARFISH",
@@ -3225,7 +4553,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "100000",
+                "max": "100000"
+            }
         },
         {
             "id": "ANIMAL_STINGRAY",
@@ -3245,7 +4581,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "5",
+                "max": "13"
+            }
         },
         {
             "id": "ANIMAL_STRIDER_BIRD",
@@ -3264,7 +4608,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "4"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_SWAMP_OCTOPUS",
@@ -3284,7 +4636,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "1"
+            },
+            "number-young-range": {
+                "min": "20",
+                "max": "30"
+            }
         },
         {
             "id": "ANIMAL_SWORDFISH_SAILFISH",
@@ -3304,7 +4664,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "10000000",
+                "max": "10000000"
+            }
         },
         {
             "id": "ANIMAL_TAPIR",
@@ -3323,7 +4691,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Jumpy",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_TASMANIAN_DEVIL",
@@ -3343,7 +4719,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_TATZELWURM",
@@ -3364,7 +4748,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Belligerent",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "1"
+            },
+            "number-young-range": {
+                "min": "5",
+                "max": "10"
+            }
         },
         {
             "id": "ANIMAL_TENTMORSE",
@@ -3384,7 +4776,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Hungry",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "1"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_THOROUGHBRED",
@@ -3403,7 +4803,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_TICKS",
@@ -3421,7 +4829,15 @@
             "attack-quickness": "Very Slow",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "100"
+            },
+            "number-young-range": {
+                "min": "1000",
+                "max": "3000"
+            }
         },
         {
             "id": "ANIMAL_TIGER",
@@ -3441,7 +4857,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_TOAD",
@@ -3460,7 +4884,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "2000",
+                "max": "40000"
+            }
         },
         {
             "id": "ANIMAL_TORTOISES_LARGE",
@@ -3479,7 +4911,15 @@
             "attack-quickness": "Very Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "150"
+            }
         },
         {
             "id": "ANIMAL_TORTOISES_SMALL",
@@ -3498,7 +4938,15 @@
             "attack-quickness": "Very Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "50"
+            }
         },
         {
             "id": "ANIMAL_TREE_FROG",
@@ -3517,7 +4965,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "5",
+                "max": "1000"
+            }
         },
         {
             "id": "ANIMAL_TRIVREN",
@@ -3536,7 +4992,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "4",
+                "max": "7"
+            }
         },
         {
             "id": "ANIMAL_TURTLES_LARGE_IN_WATER",
@@ -3555,7 +5019,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "150"
+            }
         },
         {
             "id": "ANIMAL_TURTLES_LARGE_ON_LAND",
@@ -3574,7 +5046,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "150"
+            }
         },
         {
             "id": "ANIMAL_TURTLES_SMALL_IN_WATER",
@@ -3593,7 +5073,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "50"
+            }
         },
         {
             "id": "ANIMAL_TURTLES_SMALL_ON_LAND",
@@ -3612,7 +5100,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Passive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "50"
+            }
         },
         {
             "id": "ANIMAL_VIPER",
@@ -3632,7 +5128,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "5",
+                "max": "50"
+            }
         },
         {
             "id": "ANIMAL_VIPERFISH",
@@ -3651,7 +5155,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "100000",
+                "max": "100000"
+            }
         },
         {
             "id": "ANIMAL_VULTURE",
@@ -3670,7 +5182,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_WALRUS_IN_WATER",
@@ -3690,7 +5210,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_WALRUS_ON_LAND",
@@ -3710,7 +5238,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "10",
+                "max": "1000"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_WARHORSE_GREATER",
@@ -3729,7 +5265,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_WARHORSE_LESSER",
@@ -3748,7 +5292,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_WAR_SNAIL",
@@ -3768,7 +5320,15 @@
             "attack-quickness": "Slow",
             "max-pace": "CREATUREPACE_JOG",
             "outlook": "Normal",
-            "critical-table": "Large"
+            "critical-table": "Large",
+            "encounter-range": {
+                "min": "1",
+                "max": "1"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "32"
+            }
         },
         {
             "id": "ANIMAL_WATER_BUFFALOS",
@@ -3788,7 +5348,15 @@
             "attack-quickness": "Medium",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "50"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "2"
+            }
         },
         {
             "id": "ANIMAL_WHALE_BALEEN",
@@ -3808,7 +5376,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Passive",
-            "critical-table": "Super Large"
+            "critical-table": "Super Large",
+            "encounter-range": {
+                "min": "2",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_WHALE_BEAKED",
@@ -3828,7 +5404,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Large"
+            "critical-table": "Large",
+            "encounter-range": {
+                "min": "6",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_WHALE_NARWHAL",
@@ -3848,7 +5432,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Large"
+            "critical-table": "Large",
+            "encounter-range": {
+                "min": "2",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_WHALE_TOOTHED_LARGE",
@@ -3868,7 +5460,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
-            "critical-table": "Super Large"
+            "critical-table": "Super Large",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_WHALE_TOOTHED_SMALL",
@@ -3888,7 +5488,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Large"
+            "critical-table": "Large",
+            "encounter-range": {
+                "min": "2",
+                "max": "10"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_WINGED_PANTHER_GREATER",
@@ -3908,7 +5516,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
-            "critical-table": "Large"
+            "critical-table": "Large",
+            "encounter-range": {
+                "min": "1",
+                "max": "6"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_WINGED_PANTHER_LESSER",
@@ -3928,7 +5544,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "6"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "4"
+            }
         },
         {
             "id": "ANIMAL_WOLF",
@@ -3948,7 +5572,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "5"
+            }
         },
         {
             "id": "ANIMAL_WOLVERINE",
@@ -3968,7 +5600,15 @@
             "attack-quickness": "Very Fast",
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Belligerent",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "2",
+                "max": "3"
+            }
         },
         {
             "id": "ANIMAL_WOMBAT",
@@ -3987,7 +5627,15 @@
             "attack-quickness": "Moderately Fast",
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "5"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         },
         {
             "id": "ANIMAL_WOODPECKER",
@@ -4006,7 +5654,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "7"
+            }
         },
         {
             "id": "ANIMAL_ZEBRA",
@@ -4025,7 +5681,15 @@
             "attack-quickness": "Fast",
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
-            "critical-table": "Normal"
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "2",
+                "max": "20"
+            },
+            "number-young-range": {
+                "min": "1",
+                "max": "1"
+            }
         }
     ]
 }

@@ -71,6 +71,22 @@ void AnimalDatafileParserXml::parse() {
 		CriticalSizeTableType::fromString(v.second.get<std::string>("critical-table"), critical_table_code);
 		ref.setCriticalTableType(critical_table_code);
 
+		// Encounter range
+		{
+			pt::ptree tree{ v.second.get_child("encounter-size") };
+			int min{ tree.get<int>("min") };
+			int max{ tree.get<int>("max") };
+			ref.setEncounterRange(std::make_pair(min, max));
+		}
+
+		// Number of young range
+		{
+			pt::ptree tree{ v.second.get_child("number-young") };
+			int min{ tree.get<int>("min") };
+			int max{ tree.get<int>("max") };
+			ref.setNumberYoungRange(std::make_pair(min, max));
+		}
+
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
 	}

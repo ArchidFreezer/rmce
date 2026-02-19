@@ -384,6 +384,30 @@ public:
 	 */
 	const std::set<CriticalModifierType::Type>& criticalModifiers() const { return critical_modifiers_; }
 
+	/**
+	 * @brief Set the encounter range for the animal
+	 * @param encounter_range A pair containing the minimum and maximum number of animals typically enountered in a single encounter, used to determine how many animals are encountered when an encounter with the animal is generated.
+	 */
+	void setEncounterRange(std::pair<int, int> encounter_range) { encounter_range_ = encounter_range; }
+
+	/**
+	 * @brief Get the encounter range for the animal
+	 * @return A pair containing the minimum and maximum number of animals typically enountered in a single encounter, used to determine how many animals are encountered when an encounter with the animal is generated.
+	 */
+	const std::pair<int, int> encounterRange() const { return encounter_range_; }
+
+	/**
+	 * @brief Set the number of young range for the animal
+	 * @param number_young_range A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal.
+	 */
+	void setNumberYoungRange(std::pair<int, int> number_young_range) { number_young_range_ = number_young_range; }
+
+	/**
+	 * @brief Get the number of young range for the animal
+	 * @return A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal.
+	 */
+	const std::pair<int, int> numberYoungRange() const { return number_young_range_; }
+
 private:
 	std::string name_{}; /**< In game name of the animal */
 	std::string description_{}; /**< Description of the animal for flavour purposes */
@@ -405,6 +429,9 @@ private:
 	AnimalOutlookType::Type outlook_{}; /**< Outlook of the animal, used to determine how it behaves in combat and how it reacts to the world around it. */
 	CriticalSizeTableType::Type critical_table_type_{}; /**< Critical table type for the animal, used to determine which critical table to use when the animal is hit with a critical hit. */
 	std::set<CriticalModifierType::Type> critical_modifiers_{}; /**< Set of critical modifiers for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit. */
+	std::pair<int, int> encounter_range_{}; /**< A pair containing the minimum and maximum number of animals typically enountered in a single encounter, used to determine how many animals are encountered when an encounter with the animal is generated. */
+	std::pair<int, int> number_young_range_{}; /**< A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal. */
+	// TODO: Add location and attack data
 
 	/**
 	 * @brief Gets the number of hits per level difference based on the constitution code.

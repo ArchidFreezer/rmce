@@ -85,9 +85,29 @@ void AnimalDatafileParserJson::parse() {
 		ref.setCriticalTableType(critical_table_code);
 
 		// Critical modifiers are optional
+		// TODO: The data in the legacy XML file is incorrect and the json file needs to be manually updated.
 		boost::optional<const pt::ptree&> critical_modifiers = v.second.get_child_optional("critical_modifiers");
 		if (critical_modifiers) ref.setCriticalModifiers(parseEnumSetTree<CriticalModifierType::Type>(critical_modifiers));
 
+		// Encounter range
+		{
+			boost::optional<const pt::ptree&> tree = v.second.get_child_optional("encounter-range");
+			if (tree) {
+				int min = tree->get<int>("min");
+				int max = tree->get<int>("max");
+				ref.setEncounterRange(std::make_pair(min, max));
+			}
+		}
+
+		// Number young range
+		{
+			boost::optional<const pt::ptree&> tree = v.second.get_child_optional("number-young-range");
+			if (tree) {
+				int number_young_min = tree->get<int>("min");
+				int number_young_max = tree->get<int>("max");
+				ref.setNumberYoungRange(std::make_pair(number_young_min, number_young_max));
+			}
+		}
 
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
@@ -122,6 +142,25 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 	{
 		pt::ptree tree{ getEnumSetTree<CriticalModifierType::Type>(game_data.criticalModifiers()) };
 		if (tree.size()) datum.push_back(std::make_pair("critical_modifiers", tree));
+	}
+
+
+	// Encounter range
+	std::pair<int, int> encounter_range = game_data.encounterRange();
+	if (encounter_range.first > 0 && encounter_range.second > 0) {
+		pt::ptree encounter_range_tree{};
+		encounter_range_tree.put("min", encounter_range.first);
+		encounter_range_tree.put("max", encounter_range.second);
+		datum.push_back(std::make_pair("encounter-range", encounter_range_tree));
+	}
+
+	// Number young range
+	std::pair<int, int> number_young_range = game_data.numberYoungRange();
+	if (number_young_range.first > 0 && number_young_range.second > 0) {
+		pt::ptree number_young_range_tree{};
+		number_young_range_tree.put("min", number_young_range.first);
+		number_young_range_tree.put("max", number_young_range.second);
+		datum.push_back(std::make_pair("number-young-range", number_young_range_tree));
 	}
 
 }
