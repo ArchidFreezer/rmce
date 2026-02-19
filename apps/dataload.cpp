@@ -80,7 +80,7 @@ int main() {
 	parsers.push_back(&weapon_type_parser);
 
 	try {
-		// Iterate through the parsers retrieving the ID only and populating the cache with empty game data objects
+		// Iterate through the parsers populating the cache with game data objects from the datafiles
 		for (auto& parser : parsers) {
 			parser->read();
 		}
