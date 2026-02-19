@@ -150,7 +150,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -247,7 +247,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
             </location>
@@ -345,14 +345,14 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -440,14 +440,14 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -526,7 +526,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
             </location>
@@ -595,8 +595,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -685,12 +685,12 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -778,9 +778,9 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -874,14 +874,14 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -1060,15 +1060,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -1133,7 +1133,7 @@
                   <climate>WARM_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                </water-sources>
             </location>
@@ -1217,12 +1217,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -1319,14 +1319,14 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -1411,9 +1411,9 @@
                   <vegetation>TUNDRA</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -1478,7 +1478,7 @@
                   <climate>COLD_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -1561,7 +1561,7 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -1641,7 +1641,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -1716,8 +1716,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -1798,15 +1798,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -1895,10 +1895,10 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -1954,8 +1954,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -2054,13 +2054,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -2129,8 +2129,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -2223,15 +2223,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -2315,12 +2315,12 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -2398,7 +2398,7 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
@@ -2467,7 +2467,7 @@
                   <climate>WARM_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                </water-sources>
             </location>
@@ -2563,13 +2563,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -2651,7 +2651,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                </water-sources>
             </location>
@@ -2746,7 +2746,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
             </location>
@@ -2846,14 +2846,14 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -2930,15 +2930,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -3032,10 +3032,10 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -3134,7 +3134,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
@@ -3225,7 +3225,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -3321,13 +3321,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -3411,11 +3411,11 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -3509,7 +3509,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
             </location>
@@ -3605,7 +3605,7 @@
                <water-sources>
                   <water-source>BREAKS</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -3688,12 +3688,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -3775,7 +3775,7 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                </water-sources>
             </location>
@@ -3873,8 +3873,8 @@
                   <vegetation>TUNDRA</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -3958,7 +3958,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
@@ -4042,15 +4042,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -4143,7 +4143,7 @@
                </vegetations>
                <water-sources>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -4235,15 +4235,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -4338,7 +4338,7 @@
                </vegetations>
                <water-sources>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -4419,13 +4419,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -4487,8 +4487,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -4573,13 +4573,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -4646,8 +4646,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -4742,11 +4742,11 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -4815,8 +4815,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -4905,7 +4905,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
             </location>
@@ -5005,15 +5005,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -5104,12 +5104,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -5197,7 +5197,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -5387,7 +5387,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
             </location>
@@ -5479,7 +5479,7 @@
                <water-sources>
                   <water-source>BREAKS</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -5574,10 +5574,10 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -5647,11 +5647,11 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -5744,10 +5744,10 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -5845,13 +5845,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -5925,8 +5925,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -6009,7 +6009,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
@@ -6085,8 +6085,8 @@
                   <climate>COLD_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -6173,15 +6173,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -6280,10 +6280,10 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -6364,15 +6364,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -6438,8 +6438,8 @@
                   <climate>COLD_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -6523,13 +6523,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -6616,11 +6616,11 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -6710,7 +6710,7 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>OASIS</water-source>
@@ -6778,8 +6778,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -6873,13 +6873,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -6954,9 +6954,9 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -7025,8 +7025,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -7110,7 +7110,7 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -7288,13 +7288,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -7371,7 +7371,7 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -7432,8 +7432,8 @@
                   <climate>COLD_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -7514,7 +7514,7 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -7595,7 +7595,7 @@
                   <water-source>BREAKS</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -7686,7 +7686,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
             </location>
@@ -7777,14 +7777,14 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -7887,13 +7887,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -7969,15 +7969,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -8067,7 +8067,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
@@ -8144,8 +8144,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -8216,7 +8216,7 @@
                   <vegetation>TUNDRA</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>LAKE</water-source>
                </water-sources>
@@ -8308,15 +8308,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -8380,8 +8380,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -8457,10 +8457,10 @@
                   <vegetation>HEATH</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -8553,15 +8553,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -8656,15 +8656,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -8736,8 +8736,8 @@
                   <climate>COOL_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -8823,7 +8823,7 @@
                   <vegetation>HEATH</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -8904,7 +8904,7 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -8977,8 +8977,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -9147,12 +9147,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -9240,7 +9240,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -9327,13 +9327,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -9419,7 +9419,7 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -9594,8 +9594,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -9674,15 +9674,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -9766,11 +9766,11 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -10024,12 +10024,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -10114,9 +10114,9 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -10201,7 +10201,7 @@
                   <vegetation>TUNDRA</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                </water-sources>
             </location>
@@ -10296,7 +10296,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -10389,7 +10389,7 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -10486,7 +10486,7 @@
                <water-sources>
                   <water-source>BREAKS</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -10564,7 +10564,7 @@
                   <vegetation>HEATH</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -10623,7 +10623,7 @@
                   <climate>COOL_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -10678,8 +10678,8 @@
                   <climate>WARM_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -10747,11 +10747,11 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -10813,7 +10813,7 @@
                   <climate>HOT_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                </water-sources>
             </location>
@@ -10889,8 +10889,8 @@
                </climates>
                <water-sources>
                   <water-source>LAKE</water-source>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -10954,8 +10954,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -11040,13 +11040,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -11121,7 +11121,7 @@
                   <vegetation>TUNDRA</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                </water-sources>
             </location>
@@ -11195,7 +11195,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
@@ -11467,7 +11467,7 @@
                   <vegetation>HEATH</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -11640,11 +11640,11 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -11725,7 +11725,7 @@
                <water-sources>
                   <water-source>BREAKS</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -11803,7 +11803,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
             </location>
@@ -11903,13 +11903,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12000,11 +12000,11 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12101,12 +12101,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12197,11 +12197,11 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12283,11 +12283,11 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12367,15 +12367,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12463,15 +12463,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12651,10 +12651,10 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12734,13 +12734,13 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12805,8 +12805,8 @@
                   <climate>COLD_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12886,15 +12886,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -12961,8 +12961,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -13054,12 +13054,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -13151,8 +13151,8 @@
                   <vegetation>TUNDRA</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -13318,9 +13318,9 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -13400,7 +13400,7 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -13492,7 +13492,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -13586,10 +13586,10 @@
                   <vegetation>TUNDRA</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -13770,12 +13770,12 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -13864,11 +13864,11 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -13958,12 +13958,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -14059,7 +14059,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -14143,9 +14143,9 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -14238,15 +14238,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -14326,14 +14326,14 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -14432,10 +14432,10 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -14512,8 +14512,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -14581,8 +14581,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -14647,8 +14647,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -14733,7 +14733,7 @@
                   <vegetation>JUNGLE</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
@@ -14825,15 +14825,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -14928,14 +14928,14 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15014,7 +15014,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
             </location>
@@ -15090,11 +15090,11 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15158,8 +15158,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15251,12 +15251,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15335,8 +15335,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15419,12 +15419,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15504,14 +15504,14 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15583,8 +15583,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15668,10 +15668,10 @@
                   <vegetation>HEATH</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15829,8 +15829,8 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15919,7 +15919,7 @@
                <water-sources>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -15995,11 +15995,11 @@
                   <climate>FRIGID</climate>
                </climates>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -16071,7 +16071,7 @@
                   <vegetation>DECIDUOUS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                </water-sources>
             </location>
@@ -16156,14 +16156,14 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -16216,7 +16216,7 @@
                   <climate>COOL_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -16294,9 +16294,9 @@
                   <vegetation>TUNDRA</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -16376,7 +16376,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -16462,7 +16462,7 @@
                   <special-feature>RUINS</special-feature>
                </special-features>
                <water-sources>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                </water-sources>
             </location>
          </locations>
@@ -16537,15 +16537,15 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>OCEANS</water-source>
+                  <water-source>OCEAN</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -16639,10 +16639,10 @@
                   <vegetation>DECIDUOUS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -16736,11 +16736,11 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -16821,7 +16821,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>MARSH</water-source>
                </water-sources>
             </location>
@@ -16922,12 +16922,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -17027,7 +17027,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
             </location>
@@ -17122,7 +17122,7 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -17209,7 +17209,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
@@ -17287,10 +17287,10 @@
                   <climate>COLD_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -17383,7 +17383,7 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>OASIS</water-source>
                </water-sources>
             </location>
@@ -17466,12 +17466,12 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -17540,8 +17540,8 @@
                   <climate>COLD_DRY</climate>
                </climates>
                <water-sources>
-                  <water-source>OCEANS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>OCEAN</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -17642,14 +17642,14 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>GLACIER</water-source>
                   <water-source>ISLET</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -17739,11 +17739,11 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>
@@ -17835,11 +17835,11 @@
                </vegetations>
                <water-sources>
                   <water-source>BREAKS</water-source>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
                </water-sources>
             </location>
          </locations>
@@ -17994,12 +17994,12 @@
                   <vegetation>PLAINS</vegetation>
                </vegetations>
                <water-sources>
-                  <water-source>FRESH_COAST</water-source>
+                  <water-source>FRESHWATER_COAST</water-source>
                   <water-source>LAKE</water-source>
                   <water-source>MARSH</water-source>
                   <water-source>OASIS</water-source>
-                  <water-source>SALT_SHORE</water-source>
-                  <water-source>DESERTS</water-source>
+                  <water-source>SALTWATER_COAST</water-source>
+                  <water-source>DESERT</water-source>
                </water-sources>
             </location>
          </locations>

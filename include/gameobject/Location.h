@@ -162,6 +162,19 @@ public:
 	 */
 	const std::set<const ClimateData*> climates() const { return climates_; }
 
+	/**
+	* @brief Check if a specific location matches the criteria defined in this object
+	* 
+	* Checks whether @a specified location is considered be a subset of this location, menaning for if there is a feature, terrain, vegetation, water or climate that is defined in this location
+	* the specific location must also have one defined to be considered a match. If there is no feature, terrain, vegetation, water or climate defined in this location then it is not considered
+	* when matching and the specific location may or may not have it without impacting the result.
+	* 
+	* @param specific_location Location to check against the criteria defined in this object
+	* @return `true` if the location matches the criteria defined in this object
+	* @return `false` if the location does not match the criteria defined in this object
+	* */
+	bool matches(const Location& specific_location) const;
+
 private:
 	std::set<EnvironmentType::Feature> features_{}; /**< Set of environmental features that are found in the location */	
 	std::set<EnvironmentType::Terrain> terrains_{}; /**< Set of terrain types that are found in the location */

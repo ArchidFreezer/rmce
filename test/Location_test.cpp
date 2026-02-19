@@ -85,4 +85,141 @@ namespace {
 		EXPECT_TRUE(location.hasWater(EnvironmentType::Water::kSaltCoast));
 		EXPECT_FALSE(location.hasWater(EnvironmentType::Water::kFreshCoast));
 	}
+
+	TEST(LocationTest, TestEmptySetters) {
+		Location location;
+		location.setFeatures({});
+		location.setTerrains({});
+		location.setVegetation({});
+		location.setWater({});
+		EXPECT_FALSE(location.hasFeature(EnvironmentType::Feature::kCave));
+		EXPECT_FALSE(location.hasTerrain(EnvironmentType::Terrain::kAlpine));
+		EXPECT_FALSE(location.hasVegetation(EnvironmentType::Vegetation::kBarren));
+		EXPECT_FALSE(location.hasWater(EnvironmentType::Water::kOasis));
+	}
+
+	TEST(LocationTest, TestMatcher) {
+		Location location;
+		location.setFeatures({ EnvironmentType::Feature::kCave, EnvironmentType::Feature::kRuins });
+		location.setTerrains({ EnvironmentType::Terrain::kAlpine, EnvironmentType::Terrain::kRough });
+		location.setVegetation({ EnvironmentType::Vegetation::kBarren, EnvironmentType::Vegetation::kJungle });
+		location.setWater({ EnvironmentType::Water::kOasis, EnvironmentType::Water::kSaltCoast });
+		Location specific_location;
+		specific_location.setFeatures({ EnvironmentType::Feature::kCave });
+		specific_location.setTerrains({ EnvironmentType::Terrain::kAlpine });
+		specific_location.setVegetation({ EnvironmentType::Vegetation::kBarren });
+		specific_location.setWater({ EnvironmentType::Water::kOasis });
+		EXPECT_TRUE(location.matches(specific_location));
+		specific_location.setFeatures({ EnvironmentType::Feature::kEnchanted });
+		EXPECT_FALSE(location.matches(specific_location));
+	}
+
+	TEST(LocationTest, TestMatcherEmpty) {
+		Location location;
+		Location specific_location;
+		EXPECT_TRUE(location.matches(specific_location));
+		specific_location.setFeatures({ EnvironmentType::Feature::kCave });
+		EXPECT_TRUE(location.matches(specific_location));
+		location.setFeatures({ EnvironmentType::Feature::kCave });
+		EXPECT_TRUE(location.matches(specific_location));
+	}
+
+	TEST(LocationTest, TestMatcherPartial) {
+		Location location;
+		location.setFeatures({ EnvironmentType::Feature::kCave, EnvironmentType::Feature::kRuins });
+		location.setTerrains({ EnvironmentType::Terrain::kAlpine, EnvironmentType::Terrain::kRough });
+		location.setVegetation({ EnvironmentType::Vegetation::kBarren, EnvironmentType::Vegetation::kJungle });
+		location.setWater({ EnvironmentType::Water::kOasis, EnvironmentType::Water::kSaltCoast });
+		Location specific_location;
+		specific_location.setFeatures({ EnvironmentType::Feature::kCave });
+		specific_location.setTerrains({ EnvironmentType::Terrain::kAlpine });
+		specific_location.setVegetation({ EnvironmentType::Vegetation::kBarren });
+		specific_location.setWater({ EnvironmentType::Water::kOasis });
+		EXPECT_TRUE(location.matches(specific_location));
+		specific_location.setFeatures({ EnvironmentType::Feature::kEnchanted });
+		EXPECT_FALSE(location.matches(specific_location));
+		specific_location.setFeatures({ EnvironmentType::Feature::kRuins });
+		EXPECT_TRUE(location.matches(specific_location));
+	}
+
+	TEST(LocationTest, TestMatcherMultiple) {
+		Location location;
+		location.setFeatures({ EnvironmentType::Feature::kCave, EnvironmentType::Feature::kRuins });
+		location.setTerrains({ EnvironmentType::Terrain::kAlpine, EnvironmentType::Terrain::kRough });
+		location.setVegetation({ EnvironmentType::Vegetation::kBarren, EnvironmentType::Vegetation::kJungle });
+		location.setWater({ EnvironmentType::Water::kOasis, EnvironmentType::Water::kSaltCoast });
+		Location specific_location;
+		specific_location.setFeatures({ EnvironmentType::Feature::kCave, EnvironmentType::Feature::kRuins });
+		specific_location.setTerrains({ EnvironmentType::Terrain::kAlpine, EnvironmentType::Terrain::kRough });
+		specific_location.setVegetation({ EnvironmentType::Vegetation::kBarren, EnvironmentType::Vegetation::kJungle });
+		specific_location.setWater({ EnvironmentType::Water::kOasis, EnvironmentType::Water::kSaltCoast });
+		EXPECT_TRUE(location.matches(specific_location));
+		specific_location.setFeatures({ EnvironmentType::Feature::kEnchanted });
+		EXPECT_FALSE(location.matches(specific_location));
+	}
+
+	TEST(LocationTest, TestMatcherSubset) {
+		Location location;
+		location.setFeatures({ EnvironmentType::Feature::kCave, EnvironmentType::Feature::kRuins });
+		location.setTerrains({ EnvironmentType::Terrain::kAlpine, EnvironmentType::Terrain::kRough });
+		location.setVegetation({ EnvironmentType::Vegetation::kBarren, EnvironmentType::Vegetation::kJungle });
+		location.setWater({ EnvironmentType::Water::kOasis, EnvironmentType::Water::kSaltCoast });
+		Location specific_location;
+		specific_location.setFeatures({ EnvironmentType::Feature::kCave });
+		specific_location.setTerrains({ EnvironmentType::Terrain::kAlpine });
+		specific_location.setVegetation({ EnvironmentType::Vegetation::kBarren });
+		specific_location.setWater({ EnvironmentType::Water::kOasis });
+		EXPECT_TRUE(location.matches(specific_location));
+	}
+
+	TEST(LocationTest, TestMatcherSuperset) {
+		Location location;
+		location.setFeatures({ EnvironmentType::Feature::kCave });
+		location.setTerrains({ EnvironmentType::Terrain::kAlpine });
+		location.setVegetation({ EnvironmentType::Vegetation::kBarren });
+		location.setWater({ EnvironmentType::Water::kOasis });
+		Location specific_location;
+		specific_location.setFeatures({ EnvironmentType::Feature::kCave, EnvironmentType::Feature::kRuins });
+		specific_location.setTerrains({ EnvironmentType::Terrain::kAlpine, EnvironmentType::Terrain::kRough });
+		specific_location.setVegetation({ EnvironmentType::Vegetation::kBarren, EnvironmentType::Vegetation::kJungle });
+		specific_location.setWater({ EnvironmentType::Water::kOasis, EnvironmentType::Water::kSaltCoast });
+		EXPECT_TRUE(location.matches(specific_location));
+	}
+
+	TEST(LocationTest, TestMatcherNoMatch) {
+		Location location;
+		location.setFeatures({ EnvironmentType::Feature::kCave });
+		location.setTerrains({ EnvironmentType::Terrain::kAlpine });
+		location.setVegetation({ EnvironmentType::Vegetation::kBarren });
+		location.setWater({ EnvironmentType::Water::kOasis });
+		Location specific_location;
+		specific_location.setFeatures({ EnvironmentType::Feature::kEnchanted });
+		specific_location.setTerrains({ EnvironmentType::Terrain::kUnderground });
+		specific_location.setVegetation({ EnvironmentType::Vegetation::kDeciduous });
+		specific_location.setWater({ EnvironmentType::Water::kFreshCoast });
+		EXPECT_FALSE(location.matches(specific_location));
+	}
+
+	TEST(LocationTest, TestMatcherMatchNoFeature) {
+		Location location;
+		location.setTerrains({ EnvironmentType::Terrain::kAlpine });
+		location.setVegetation({ EnvironmentType::Vegetation::kBarren });
+		location.setWater({ EnvironmentType::Water::kOasis });
+		Location specific_location;
+		specific_location.setFeatures({ EnvironmentType::Feature::kCave, EnvironmentType::Feature::kRuins });
+		specific_location.setTerrains({ EnvironmentType::Terrain::kAlpine, EnvironmentType::Terrain::kRough });
+		specific_location.setVegetation({ EnvironmentType::Vegetation::kBarren, EnvironmentType::Vegetation::kJungle });
+		specific_location.setWater({ EnvironmentType::Water::kOasis, EnvironmentType::Water::kSaltCoast });
+		EXPECT_TRUE(location.matches(specific_location));
+	}
+
+	TEST(LocationTest, TestMatcherEmptySpecific) {
+		Location location;
+		location.setFeatures({ EnvironmentType::Feature::kCave });
+		location.setTerrains({ EnvironmentType::Terrain::kAlpine });
+		location.setVegetation({ EnvironmentType::Vegetation::kBarren });
+		location.setWater({ EnvironmentType::Water::kOasis });
+		Location specific_location;
+		EXPECT_FALSE(location.matches(specific_location));
+	}
 } // namespace
