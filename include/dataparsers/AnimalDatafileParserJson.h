@@ -68,6 +68,6 @@ private:
 	 * @brief Build the lookup table that maps the level variance code to a difference in the level of the animal from the average
 	 */
 
-	void buildCreatureLevelVarianceTable();
+	void buildLevelVarianceTable();
 
 };

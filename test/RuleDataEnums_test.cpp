@@ -5,7 +5,7 @@
 #include <AttackSizeType.h>
 #include <CreatureBonusXpType.h>
 #include <CreatureConstitutionVarianceType.h>
-#include <CreatureLevelVarianceType.h>
+#include <LevelVarianceType.h>
 #include <CreatureMovementSpeedType.h>
 #include <CreatureSizeType.h>
 #include <CriticalTableType.h>
@@ -322,16 +322,16 @@ namespace {
 		EXPECT_EQ(CreatureConstitutionVarianceType::fromString(toString(CreatureConstitutionVarianceType::kH)), CreatureConstitutionVarianceType::kH);
 	}
 
-	TEST(RuleDataEnums, CreatureLevelVarianceType) {
-		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kNone)), CreatureLevelVarianceType::kNone);
-		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kA)), CreatureLevelVarianceType::kA);
-		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kB)), CreatureLevelVarianceType::kB);
-		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kC)), CreatureLevelVarianceType::kC);
-		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kD)), CreatureLevelVarianceType::kD);
-		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kE)), CreatureLevelVarianceType::kE);
-		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kF)), CreatureLevelVarianceType::kF);
-		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kG)), CreatureLevelVarianceType::kG);
-		EXPECT_EQ(CreatureLevelVarianceType::fromString(toString(CreatureLevelVarianceType::kH)), CreatureLevelVarianceType::kH);
+	TEST(RuleDataEnums, LevelVarianceType) {
+		EXPECT_EQ(LevelVarianceType::fromString(toString(LevelVarianceType::kNone)), LevelVarianceType::kNone);
+		EXPECT_EQ(LevelVarianceType::fromString(toString(LevelVarianceType::kA)), LevelVarianceType::kA);
+		EXPECT_EQ(LevelVarianceType::fromString(toString(LevelVarianceType::kB)), LevelVarianceType::kB);
+		EXPECT_EQ(LevelVarianceType::fromString(toString(LevelVarianceType::kC)), LevelVarianceType::kC);
+		EXPECT_EQ(LevelVarianceType::fromString(toString(LevelVarianceType::kD)), LevelVarianceType::kD);
+		EXPECT_EQ(LevelVarianceType::fromString(toString(LevelVarianceType::kE)), LevelVarianceType::kE);
+		EXPECT_EQ(LevelVarianceType::fromString(toString(LevelVarianceType::kF)), LevelVarianceType::kF);
+		EXPECT_EQ(LevelVarianceType::fromString(toString(LevelVarianceType::kG)), LevelVarianceType::kG);
+		EXPECT_EQ(LevelVarianceType::fromString(toString(LevelVarianceType::kH)), LevelVarianceType::kH);
 	}
 
 	TEST(RuleDataEnums, CreatureMovementSpeedType) {

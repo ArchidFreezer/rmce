@@ -2,13 +2,13 @@
 #include <AnimalDatafileParserJson.h>
 #include <NumberMatcherFactory.h>
 #include <table/CreatureBonusXpTable.h>
-#include <table/CreatureLevelVarianceTable.h>
+#include <table/LevelVarianceTable.h>
 
 void AnimalDatafileParserJson::parse() {
 	std::cout << "Loading Animal data ..." << std::endl;
 
 	buildCreatureBonusXpTable();
-	buildCreatureLevelVarianceTable();
+	buildLevelVarianceTable();
 
 	// Get the books to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
@@ -48,8 +48,8 @@ void AnimalDatafileParserJson::parse() {
 		}
 
 		std::string level_code_str = v.second.get<std::string>("level-variance-type");
-		CreatureLevelVarianceType::Type level_code{};
-		CreatureLevelVarianceType::fromString(level_code_str, level_code);
+		LevelVarianceType::Type level_code{};
+		LevelVarianceType::fromString(level_code_str, level_code);
 		ref.setLevelVarianceType(level_code);
 
 		ref.setAverageLevel(v.second.get<int>("average-level")); 
@@ -146,7 +146,7 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 	datum.put("frequency-code", game_data.frequencyFactor());
 	if (game_data.bonusXpCode() != CreatureBonusXpType::Type::kNone) datum.put("bonus-xp-code", CreatureBonusXpType::toString(game_data.bonusXpCode()));
 	if (game_data.constitutionVarianceType() != CreatureConstitutionVarianceType::Type::kNone) datum.put("constitution-variance-type", CreatureConstitutionVarianceType::toString(game_data.constitutionVarianceType()));
-	datum.put("level-variance-type", CreatureLevelVarianceType::toString(game_data.levelVarianceType()));
+	datum.put("level-variance-type", LevelVarianceType::toString(game_data.levelVarianceType()));
 	datum.put("average-level", game_data.averageLevel());
 	if (game_data.treasureCode()) datum.put("treasure-code", game_data.treasureCode().value()->id());
 	datum.put("size", CreatureSizeType::toString(game_data.size()));
@@ -235,9 +235,9 @@ void AnimalDatafileParserJson::buildCreatureBonusXpTable() {
 	table.addRow(number_matcher.matcher(20, 1000), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(50).addCell(100).addCell(200).addCell(400).addCell(600).addCell(800).addCell(1000).addCell(1500).addCell(2000).addCell(2500));
 }
 
-void AnimalDatafileParserJson::buildCreatureLevelVarianceTable() {
+void AnimalDatafileParserJson::buildLevelVarianceTable() {
 	std::string id = "CREATURE_LEVEL_VARIANCE_TABLE";
-	CreatureLevelVarianceTable& table = factory().get<CreatureLevelVarianceTable>(id);
+	LevelVarianceTable& table = factory().get<LevelVarianceTable>(id);
 	NumberMatcherFactory number_matcher{};
 	table.addRow(number_matcher.matcher(-100, 0), TableRow<int>().addCell(0).addCell(-1).addCell(-2).addCell(-3).addCell(-4).addCell(-5).addCell(-6).addCell(-10).addCell(-3));
 	table.addRow(number_matcher.matcher(1, 10), TableRow<int>().addCell(0).addCell(-1).addCell(-2).addCell(-3).addCell(-4).addCell(-5).addCell(-6).addCell(-10).addCell(-2));

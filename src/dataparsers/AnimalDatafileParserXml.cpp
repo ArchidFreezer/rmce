@@ -2,13 +2,13 @@
 #include <AnimalDatafileParserXml.h>
 #include <NumberMatcherFactory.h>
 #include <table/CreatureBonusXpTable.h>
-#include <table/CreatureLevelVarianceTable.h>
+#include <table/LevelVarianceTable.h>
 
 void AnimalDatafileParserXml::parse() {
 	std::cout << "Loading Animal data ...\n";
 
 	buildCreatureBonusXpTable();
-	buildCreatureLevelVarianceTable();
+	buildLevelVarianceTable();
 
 	// Get the lists to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
@@ -34,8 +34,8 @@ void AnimalDatafileParserXml::parse() {
 		ref.setConstitutionVarianceType(constitution_code);
 
 		const auto& plevel = v.second.get_child("level-code");
-		CreatureLevelVarianceType::Type level_code{};
-		CreatureLevelVarianceType::fromString(plevel.get_value<std::string>(), level_code);
+		LevelVarianceType::Type level_code{};
+		LevelVarianceType::fromString(plevel.get_value<std::string>(), level_code);
 		ref.setLevelVarianceType(level_code);
 		ref.setAverageLevel(plevel.get<int>("<xmlattr>.level"));
 
@@ -177,9 +177,9 @@ void AnimalDatafileParserXml::buildCreatureBonusXpTable() {
 	table.addRow(number_matcher.matcher(20, 1000), TableRow<int>().addCell(0).addCell(0).addCell(0).addCell(50).addCell(100).addCell(200).addCell(400).addCell(600).addCell(800).addCell(1000).addCell(1500).addCell(2000).addCell(2500));
 }
 
-void AnimalDatafileParserXml::buildCreatureLevelVarianceTable() {
+void AnimalDatafileParserXml::buildLevelVarianceTable() {
 	std::string id = "CREATURE_LEVEL_VARIANCE_TABLE";
-	CreatureLevelVarianceTable& table = factory().get<CreatureLevelVarianceTable>(id);
+	LevelVarianceTable& table = factory().get<LevelVarianceTable>(id);
 	NumberMatcherFactory number_matcher{};
 	table.addRow(number_matcher.matcher(-100, 0), TableRow<int>().addCell(0).addCell(-1).addCell(-2).addCell(-3).addCell(-4).addCell(-5).addCell(-6).addCell(-10).addCell(-3));
 	table.addRow(number_matcher.matcher(1, 10), TableRow<int>().addCell(0).addCell(-1).addCell(-2).addCell(-3).addCell(-4).addCell(-5).addCell(-6).addCell(-10).addCell(-2));

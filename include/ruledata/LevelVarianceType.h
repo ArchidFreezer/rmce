@@ -7,11 +7,11 @@
 
 #include "StringUtils.h"
 /**
- * @brief Contains the CreatureLevelVarianceTypeType::Type enum and associated functions
+ * @brief Contains the LevelVarianceTypeType::Type enum and associated functions
  *
  * The enumeration is used to represent the variance in level for a type of animal.
  */
-namespace CreatureLevelVarianceType {
+namespace LevelVarianceType {
 
 	/**
 	 * @brief Enumeration class representing the bonus constitution code for an animal
@@ -24,13 +24,13 @@ namespace CreatureLevelVarianceType {
 
 	/**
 	 * @brief Get the string representation of the given enum
-	 * @param size The CreatureLevelVarianceTypeType::Type to get the string of
+	 * @param size The LevelVarianceTypeType::Type to get the string of
 	 * @return Game display form of the enum value as a string
 	 */
 	const std::string toString(Type size);
 
 	/**
-	 * @brief Teach operator<< how to print a CreatureLevelVarianceTypeType::Type
+	 * @brief Teach operator<< how to print a LevelVarianceTypeType::Type
 	 * @param out Output stream that the enum should be printed to
 	 * @param size Enum value to output
 	 * @return Output stream reference containing the output enum value
@@ -45,7 +45,7 @@ namespace CreatureLevelVarianceType {
 	 * Accepts values that are returned by toString() in a case insensitive manner.
 	 *
 	 * @param sv string_view to get the enumeration for
-	 * @return CreatureLevelVarianceTypeType::Type represented by the string
+	 * @return LevelVarianceTypeType::Type represented by the string
 	 *
 	 * @see toString()
 	 */
@@ -57,11 +57,11 @@ namespace CreatureLevelVarianceType {
 	 * Accepts values that are returned by toString() in a case insensitive manner.
 	 *
 	 * @param sv string_view to get the enumeration for
-	 * @param type reference to set the CreatureLevelVarianceTypeType::Type represented by the string to
-	 * @throws std::invalid_argument if the string does not represent a valid CreatureLevelVarianceTypeType::Type
+	 * @param type reference to set the LevelVarianceTypeType::Type represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid LevelVarianceTypeType::Type
 	 *
 	 * @see toString()
 	 */
-	void fromString(std::string_view sv, CreatureLevelVarianceType::Type& type);
+	void fromString(std::string_view sv, LevelVarianceType::Type& type);
 
 }

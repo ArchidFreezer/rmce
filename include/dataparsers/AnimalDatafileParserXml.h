@@ -45,6 +45,6 @@ private:
 
 	void buildCreatureBonusXpTable();
 
-	void buildCreatureLevelVarianceTable();
+	void buildLevelVarianceTable();
 
 };
