@@ -6,7 +6,7 @@
 #include <AnimalOutlookType.h>
 #include <ArmourType.h>
 #include <CreatureConstitutionVarianceType.h>
-#include <CreatureLevelVarianceType.h>
+#include <LevelVarianceType.h>
 #include <CreatureBonusXpType.h>
 #include <CreatureMovementSpeedType.h>
 #include <CreaturePaceData.h>
@@ -188,44 +188,44 @@ public:
 	/**
 	 * @brief Set the  level variance code for the animal
 	 * 
-	 * In order to use this it should be applied to the CreatureLevelVarianceTable with an open-ended d100 roll
+	 * In order to use this it should be applied to the LevelVarianceTable with an open-ended d100 roll
 	 * 
 	 * @code{.cpp}
 	 * GameRuleDataCache cache{};
 	 * GameRuleDataFactory factory{ cache };
 	 * 
 	 * std::string table_id = "CREATURE_LEVEL_VARIANCE_TABLE";
-	 * CreatureLevelVarianceTable& table = factory.get<CreatureLevelVarianceTable>(table_id);
+	 * LevelVarianceTable& table = factory.get<LevelVarianceTable>(table_id);
 	 * 
 	 * int variance = table.cell(animal.levelVarianceType(), Dice(100, 5).roll().result());
 	 * int animal_level = animal.averageLevel() + variance;
 	 * @endcode
 	 * 
 	 * @param level_variance_type Level variance code for the animal, used to determine how much level variance a creature has.
-	 * @see CreatureLevelVarianceTable for how the level variance code is used to determine the level variance of a creature.
+	 * @see LevelVarianceTable for how the level variance code is used to determine the level variance of a creature.
 	 */
-	void setLevelVarianceType(CreatureLevelVarianceType::Type level_variance_type) { level_variance_type_ = level_variance_type; }
+	void setLevelVarianceType(LevelVarianceType::Type level_variance_type) { level_variance_type_ = level_variance_type; }
 
 	/**
 	 * @brief Get the level varaince code for the animal
 	 *
-	 * In order to use this it should be applied to the CreatureLevelVarianceTable with an open-ended d100 roll
+	 * In order to use this it should be applied to the LevelVarianceTable with an open-ended d100 roll
 	 *
 	 * @code{.cpp}
 	 * GameRuleDataCache cache{};
 	 * GameRuleDataFactory factory{ cache };
 	 *
 	 * std::string table_id = "CREATURE_LEVEL_VARIANCE_TABLE";
-	 * CreatureLevelVarianceTable& table = factory.get<CreatureLevelVarianceTable>(table_id);
+	 * LevelVarianceTable& table = factory.get<LevelVarianceTable>(table_id);
 	 *
 	 * int variance = table.cell(animal.levelVarianceType(), Dice(100, 5).roll().result());
 	 * int animal_level = animal.averageLevel() + variance;
 	 * @endcode
 	 *
 	 * @return Level variance code for the animal, used to determine how much level variance a creature has.
-	 * @see CreatureLevelVarianceTable for how the level variance code is used to determine the level variance of a creature.
+	 * @see LevelVarianceTable for how the level variance code is used to determine the level variance of a creature.
 	 */
-	CreatureLevelVarianceType::Type levelVarianceType() const { return level_variance_type_; }
+	LevelVarianceType::Type levelVarianceType() const { return level_variance_type_; }
 
 	/**
 	 * @brief Set the average level of the animal
@@ -431,7 +431,7 @@ private:
 	int moving_manoeuvre_bonus_{}; /**< Bonus to Manoeuvre rolls when the animal is moving, used to determine how difficult it is to hit the animal when it is moving. */
 	CreatureBonusXpType::Type bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
 	CreatureConstitutionVarianceType::Type constitution_variance_type_{}; /**< Bonus constitution code for the animal, used to determine how much constitution variance a creature has. */
-	CreatureLevelVarianceType::Type level_variance_type_{}; /**< Bonus level code for the animal, used to determine how much level variance a creature has. */
+	LevelVarianceType::Type level_variance_type_{}; /**< Bonus level code for the animal, used to determine how much level variance a creature has. */
 	int average_level_{}; /**< Average level of the animal, used to determine how much damage it can take before it dies. */
 	std::optional<const TreasureCodeData*> treasure_code_{}; /**< Optional pointer to a TreasureCodeData object that represents the treasure that can be found on the animal or in it's lair when it is killed. This is optional as not all animals will have treasure. */
 	CreatureSizeType::Type size_{}; /**< Size of the animal, used as a relative guide with Medium being approximately man-sized */
