@@ -7,7 +7,7 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(dataload_test "SkillProgressionTypeData_test.cpp" "SkillCategoryData_test.cpp" "Dice_test.cpp" "NumberRange_test.cpp" "StringUtils_test.cpp" "RuleDataEnums_test.cpp" "TableRow_test.cpp" "TableColumnCreatureSizeMatcher_test.cpp" "LookupTable_test.cpp" "BoundIntRowLookupTable_test.cpp" "AttackTable_test.cpp" "SpecialAttackTable_test.cpp" "LanguageAbility_test.cpp" "RaceData_test.cpp" "ProfessionData_test.cpp" "SkillDevelopmentCost_test.cpp" "ClimateData_test.cpp" "TrainingPackageData_test.cpp" "AnimalData_test.cpp")
+add_executable(dataload_test "SkillProgressionTypeData_test.cpp" "SkillCategoryData_test.cpp" "Dice_test.cpp" "NumberRange_test.cpp" "StringUtils_test.cpp" "RuleDataEnums_test.cpp" "TableRow_test.cpp" "TableColumnCreatureSizeMatcher_test.cpp" "LookupTable_test.cpp" "BoundIntRowLookupTable_test.cpp" "AttackTable_test.cpp" "SpecialAttackTable_test.cpp" "LanguageAbility_test.cpp" "RaceData_test.cpp" "ProfessionData_test.cpp" "SkillDevelopmentCost_test.cpp" "ClimateData_test.cpp" "TrainingPackageData_test.cpp" "AnimalData_test.cpp" "Location_test.cpp" "LocationMatcher_test.cpp")
 target_compile_features(dataload_test PRIVATE cxx_std_20)
 target_include_directories(dataload_test PUBLIC "${PROJECT_SOURCE_DIR}/src")
 target_link_libraries(
