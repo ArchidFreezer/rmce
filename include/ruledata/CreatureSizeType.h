@@ -5,7 +5,7 @@
 #include <optional>
 #include <string_view>
 
-#include "StringUtils.h"
+#include <StringUtils.h>
 
 /**
  * @brief Contains the CreatureSizeType::Type enum and associated functions
@@ -14,22 +14,6 @@
  * valid sizes that there are tables for.
  */
 namespace CreatureSizeType {
-
-	/**
-	* @brief Thrown to indicate that no CreatureSizeType::Type enum was found
-	*
-	*/
-	class CreatureSizeTypeNotFoundException : public std::runtime_error {
-	public:
-		/**
-		 * @brief Exception constructor
-		 *
-		 * std::runtime_error will handle the string
-		 *
-		 * @param error String to display for the error
-		 */
-		CreatureSizeTypeNotFoundException(const std::string& error) : std::runtime_error{ error }	{}
-	};
 
 	/**
 	 * @brief Enumeration class representing the size of creatures

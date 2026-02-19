@@ -18,6 +18,7 @@ namespace CreatureMovementSpeedType {
 	 * @brief Enumeration class representing the size of creatures
 	 */
 	enum class Type {
+		kImmobile, /**< Immobile */
 		kInching, /**< Inching */
 		kCreeping, /**<  Creeping */
 		kVerySlow, /**< Very Slow */
