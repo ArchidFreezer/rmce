@@ -26,6 +26,20 @@
             "number-young-range": {
                 "min": "20",
                 "max": "30"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_HUMID",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -54,6 +68,23 @@
             "number-young-range": {
                 "min": "20",
                 "max": "30"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -82,6 +113,23 @@
             "number-young-range": {
                 "min": "20",
                 "max": "30"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -109,6 +157,23 @@
             "number-young-range": {
                 "min": "20",
                 "max": "30"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -136,6 +201,23 @@
             "number-young-range": {
                 "min": "20",
                 "max": "30"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -163,6 +245,31 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Heath",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Desert",
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -190,6 +297,33 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -217,6 +351,33 @@
             "number-young-range": {
                 "min": "1",
                 "max": "3"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -244,6 +405,33 @@
             "number-young-range": {
                 "min": "1",
                 "max": "3"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -270,6 +458,40 @@
             "number-young-range": {
                 "min": "1000000",
                 "max": "1000000"
+            },
+            "location": {
+                "terrains": [
+                    "Rough",
+                    "Underground",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -297,6 +519,32 @@
             "number-young-range": {
                 "min": "1",
                 "max": "4"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Deciduous",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -324,6 +572,31 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -351,6 +624,39 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "features": [
+                    "Cave",
+                    "Cavern"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -378,6 +684,38 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "features": [
+                    "Cave",
+                    "Cavern"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -406,6 +744,30 @@
             "number-young-range": {
                 "min": "2",
                 "max": "10"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -434,6 +796,27 @@
             "number-young-range": {
                 "min": "1",
                 "max": "6"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Glacier",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -462,6 +845,26 @@
             "number-young-range": {
                 "min": "1",
                 "max": "6"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous"
+                ],
+                "water-sources": [
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -489,6 +892,29 @@
             "number-young-range": {
                 "min": "2",
                 "max": "3"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -515,6 +941,38 @@
             "number-young-range": {
                 "min": "10000",
                 "max": "10000"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -541,6 +999,34 @@
             "number-young-range": {
                 "min": "1000",
                 "max": "1000"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -568,6 +1054,43 @@
             "number-young-range": {
                 "min": "1",
                 "max": "5"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough",
+                    "Underground"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -595,6 +1118,41 @@
             "number-young-range": {
                 "min": "5",
                 "max": "12"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough",
+                    "Underground"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -623,6 +1181,30 @@
             "number-young-range": {
                 "min": "2",
                 "max": "10"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -651,6 +1233,27 @@
             "number-young-range": {
                 "min": "2",
                 "max": "25"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -678,6 +1281,34 @@
             "number-young-range": {
                 "min": "10",
                 "max": "20"
+            },
+            "location": {
+                "features": [
+                    "Battlefield",
+                    "Burial",
+                    "Cavern",
+                    "Ruins"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -706,6 +1337,32 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -733,6 +1390,28 @@
             "number-young-range": {
                 "min": "2",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -760,6 +1439,33 @@
             "number-young-range": {
                 "min": "1",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -787,6 +1493,34 @@
             "number-young-range": {
                 "min": "1",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -814,6 +1548,19 @@
             "number-young-range": {
                 "min": "2",
                 "max": "50"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -842,6 +1589,22 @@
             "number-young-range": {
                 "min": "2",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -870,6 +1633,24 @@
             "number-young-range": {
                 "min": "10",
                 "max": "30"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -897,6 +1678,33 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Glacier",
+                    "Lake"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -925,6 +1733,21 @@
             "number-young-range": {
                 "min": "1000000",
                 "max": "1000000"
+            },
+            "location": {
+                "water-sources": [
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -952,6 +1775,31 @@
             "number-young-range": {
                 "min": "10000",
                 "max": "75000"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -979,6 +1827,30 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Glacier"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1006,6 +1878,34 @@
             "number-young-range": {
                 "min": "1",
                 "max": "3"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1033,6 +1933,34 @@
             "number-young-range": {
                 "min": "2",
                 "max": "3"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1060,6 +1988,43 @@
             "number-young-range": {
                 "min": "1",
                 "max": "5"
+            },
+            "location": {
+                "features": [
+                    "Habitation",
+                    "Rural"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1087,6 +2052,43 @@
             "number-young-range": {
                 "min": "1",
                 "max": "5"
+            },
+            "location": {
+                "features": [
+                    "Habitation",
+                    "Rural"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1115,6 +2117,22 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1142,6 +2160,30 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1169,6 +2211,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -1196,6 +2255,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -1223,6 +2299,35 @@
             "number-young-range": {
                 "min": "2",
                 "max": "3"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1251,6 +2356,20 @@
             "number-young-range": {
                 "min": "1000000",
                 "max": "1000000"
+            },
+            "location": {
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1279,6 +2398,23 @@
             "number-young-range": {
                 "min": "14",
                 "max": "20"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1305,6 +2441,34 @@
             "number-young-range": {
                 "min": "5",
                 "max": "500"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1333,6 +2497,26 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1361,6 +2545,26 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1388,6 +2592,34 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1415,6 +2647,38 @@
             "number-young-range": {
                 "min": "2",
                 "max": "5"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1442,6 +2706,36 @@
             "number-young-range": {
                 "min": "1",
                 "max": "8"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1469,6 +2763,31 @@
             "number-young-range": {
                 "min": "1",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1496,6 +2815,31 @@
             "number-young-range": {
                 "min": "1",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1523,6 +2867,27 @@
             "number-young-range": {
                 "min": "1000000",
                 "max": "1000000"
+            },
+            "location": {
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1550,6 +2915,27 @@
             "number-young-range": {
                 "min": "1000000",
                 "max": "1000000"
+            },
+            "location": {
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1577,6 +2963,27 @@
             "number-young-range": {
                 "min": "1000000",
                 "max": "1000000"
+            },
+            "location": {
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1603,6 +3010,36 @@
             "number-young-range": {
                 "min": "100000",
                 "max": "100000"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1630,6 +3067,25 @@
             "number-young-range": {
                 "min": "1000",
                 "max": "1000"
+            },
+            "location": {
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Islet",
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1657,6 +3113,18 @@
             "number-young-range": {
                 "min": "1000",
                 "max": "1000"
+            },
+            "location": {
+                "vegetation": [
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_HUMID",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1684,6 +3152,20 @@
             "number-young-range": {
                 "min": "1",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Islet",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_HUMID",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1711,6 +3193,24 @@
             "number-young-range": {
                 "min": "1000000",
                 "max": "1000000"
+            },
+            "location": {
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1738,6 +3238,34 @@
             "number-young-range": {
                 "min": "2",
                 "max": "20000"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1766,6 +3294,22 @@
             "number-young-range": {
                 "min": "2",
                 "max": "4"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Glacier"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -1793,6 +3337,43 @@
             "number-young-range": {
                 "min": "20",
                 "max": "40"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1822,6 +3403,34 @@
             "number-young-range": {
                 "min": "2",
                 "max": "4"
+            },
+            "location": {
+                "features": [
+                    "Volcanic"
+                ],
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -1849,6 +3458,33 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1876,6 +3512,22 @@
             "number-young-range": {
                 "min": "3",
                 "max": "5"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -1903,6 +3555,27 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1930,6 +3603,24 @@
             "number-young-range": {
                 "min": "2",
                 "max": "3"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1958,6 +3649,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -1986,6 +3695,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2014,6 +3741,36 @@
             "number-young-range": {
                 "min": "2",
                 "max": "8"
+            },
+            "location": {
+                "terrains": [
+                    "Rough",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2043,6 +3800,16 @@
             "number-young-range": {
                 "min": "3",
                 "max": "6"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2072,6 +3839,22 @@
             "number-young-range": {
                 "min": "2",
                 "max": "5"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Glacier"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -2101,6 +3884,29 @@
             "number-young-range": {
                 "min": "1",
                 "max": "3"
+            },
+            "location": {
+                "features": [
+                    "Cave",
+                    "Volcanic"
+                ],
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -2128,6 +3934,38 @@
             "number-young-range": {
                 "min": "2",
                 "max": "5"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2156,6 +3994,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2184,6 +4040,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2213,6 +4087,29 @@
             "number-young-range": {
                 "min": "6",
                 "max": "12"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath"
+                ],
+                "water-sources": [
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2242,6 +4139,26 @@
             "number-young-range": {
                 "min": "2",
                 "max": "3"
+            },
+            "location": {
+                "features": [
+                    "Dimention",
+                    "Enchanted",
+                    "Rural"
+                ],
+                "vegetation": [
+                    "Plains"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2269,6 +4186,34 @@
             "number-young-range": {
                 "min": "1",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2296,6 +4241,36 @@
             "number-young-range": {
                 "min": "2",
                 "max": "5"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2325,6 +4300,21 @@
             "number-young-range": {
                 "min": "4",
                 "max": "6"
+            },
+            "location": {
+                "features": [
+                    "Cave",
+                    "Rural"
+                ],
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "climates": [
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2354,6 +4344,38 @@
             "number-young-range": {
                 "min": "20",
                 "max": "40"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2381,6 +4403,24 @@
             "number-young-range": {
                 "min": "100000",
                 "max": "100000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2408,6 +4448,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Desert",
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -2435,6 +4492,29 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2463,6 +4543,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2490,6 +4587,19 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake"
+                ],
+                "climates": [
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -2518,6 +4628,21 @@
             "number-young-range": {
                 "min": "10",
                 "max": "15"
+            },
+            "location": {
+                "vegetation": [
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Islet"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2546,6 +4671,29 @@
             "number-young-range": {
                 "min": "2",
                 "max": "5"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2573,6 +4721,18 @@
             "number-young-range": {
                 "min": "10000",
                 "max": "10000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -2600,6 +4760,26 @@
             "number-young-range": {
                 "min": "1",
                 "max": "3"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2628,6 +4808,24 @@
             "number-young-range": {
                 "min": "2",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Lake",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2655,6 +4853,37 @@
             "number-young-range": {
                 "min": "10",
                 "max": "40"
+            },
+            "location": {
+                "terrains": [
+                    "Rough",
+                    "Underground",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Desert",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2682,6 +4911,39 @@
             "number-young-range": {
                 "min": "1",
                 "max": "40"
+            },
+            "location": {
+                "terrains": [
+                    "Rough",
+                    "Underground",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2709,6 +4971,30 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Heath",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -2736,6 +5022,22 @@
             "number-young-range": {
                 "min": "10000",
                 "max": "75000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2763,6 +5065,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2790,6 +5109,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2817,6 +5153,31 @@
             "number-young-range": {
                 "min": "2",
                 "max": "7"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2844,6 +5205,33 @@
             "number-young-range": {
                 "min": "1",
                 "max": "6"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Desert",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2872,6 +5260,25 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -2900,6 +5307,21 @@
             "number-young-range": {
                 "min": "1000000",
                 "max": "1000000"
+            },
+            "location": {
+                "water-sources": [
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2927,6 +5349,29 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2954,6 +5399,29 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -2981,6 +5449,36 @@
             "number-young-range": {
                 "min": "1",
                 "max": "5"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3008,6 +5506,36 @@
             "number-young-range": {
                 "min": "1",
                 "max": "8"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3035,6 +5563,22 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3062,6 +5606,25 @@
             "number-young-range": {
                 "min": "10",
                 "max": "60"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3089,6 +5652,38 @@
             "number-young-range": {
                 "min": "2",
                 "max": "60"
+            },
+            "location": {
+                "terrains": [
+                    "Rough",
+                    "Underground"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3117,6 +5712,24 @@
             "number-young-range": {
                 "min": "20000",
                 "max": "200000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3145,6 +5758,24 @@
             "number-young-range": {
                 "min": "20000",
                 "max": "200000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3172,6 +5803,24 @@
             "number-young-range": {
                 "min": "20000",
                 "max": "200000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3199,6 +5848,26 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "climates": [
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3226,6 +5895,25 @@
             "number-young-range": {
                 "min": "1",
                 "max": "18"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Heath"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3253,6 +5941,16 @@
             "number-young-range": {
                 "min": "2",
                 "max": "5"
+            },
+            "location": {
+                "vegetation": [
+                    "Plains"
+                ],
+                "climates": [
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -3280,6 +5978,31 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3307,6 +6030,35 @@
             "number-young-range": {
                 "min": "1",
                 "max": "10"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3335,6 +6087,36 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3363,6 +6145,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Deciduous"
+                ],
+                "water-sources": [
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3390,6 +6189,25 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3417,6 +6235,25 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -3444,6 +6281,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "6"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3471,6 +6325,17 @@
             "number-young-range": {
                 "min": "10000",
                 "max": "10000"
+            },
+            "location": {
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID"
+                ]
             }
         },
         {
@@ -3499,6 +6364,42 @@
             "number-young-range": {
                 "min": "2",
                 "max": "8"
+            },
+            "location": {
+                "terrains": [
+                    "Rough",
+                    "Underground",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3526,6 +6427,28 @@
             "number-young-range": {
                 "min": "1",
                 "max": "3"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3553,6 +6476,26 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3580,6 +6523,31 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3607,6 +6575,21 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3634,6 +6617,27 @@
             "number-young-range": {
                 "min": "1",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Desert",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3662,6 +6666,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3690,6 +6711,24 @@
             "number-young-range": {
                 "min": "10000",
                 "max": "10000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3716,6 +6755,27 @@
             "number-young-range": {
                 "min": "10",
                 "max": "400"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3743,6 +6803,22 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3770,6 +6846,34 @@
             "number-young-range": {
                 "min": "1",
                 "max": "7"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3797,6 +6901,28 @@
             "number-young-range": {
                 "min": "3",
                 "max": "6"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3824,6 +6950,38 @@
             "number-young-range": {
                 "min": "1",
                 "max": "12"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3852,6 +7010,29 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3879,6 +7060,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Heath",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Glacier"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -3907,6 +7105,25 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3935,6 +7152,20 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3962,6 +7193,37 @@
             "number-young-range": {
                 "min": "1",
                 "max": "10"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -3989,6 +7251,37 @@
             "number-young-range": {
                 "min": "1",
                 "max": "12"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4018,6 +7311,24 @@
             "number-young-range": {
                 "min": "3",
                 "max": "5"
+            },
+            "location": {
+                "features": [
+                    "Rural"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4045,6 +7356,35 @@
             "number-young-range": {
                 "min": "10",
                 "max": "500"
+            },
+            "location": {
+                "terrains": [
+                    "Rough",
+                    "Underground"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4073,6 +7413,20 @@
             "number-young-range": {
                 "min": "5",
                 "max": "10"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4099,6 +7453,34 @@
             "number-young-range": {
                 "min": "2",
                 "max": "20"
+            },
+            "location": {
+                "features": [
+                    "Volcanic"
+                ],
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -4127,6 +7509,29 @@
             "number-young-range": {
                 "min": "5",
                 "max": "8"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath"
+                ],
+                "water-sources": [
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4154,6 +7559,18 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -4181,6 +7598,18 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -4208,6 +7637,24 @@
             "number-young-range": {
                 "min": "100000",
                 "max": "100000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4235,6 +7682,19 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "WARM_AVERAGE"
+                ]
             }
         },
         {
@@ -4262,6 +7722,19 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "WARM_AVERAGE"
+                ]
             }
         },
         {
@@ -4290,6 +7763,20 @@
             "number-young-range": {
                 "min": "10",
                 "max": "30"
+            },
+            "location": {
+                "water-sources": [
+                    "Lake",
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY"
+                ]
             }
         },
         {
@@ -4318,6 +7805,38 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "terrains": [
+                    "Rough",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4346,6 +7865,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "10"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4374,6 +7911,24 @@
             "number-young-range": {
                 "min": "2",
                 "max": "100"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4401,6 +7956,33 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4428,6 +8010,37 @@
             "number-young-range": {
                 "min": "1",
                 "max": "10"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4455,6 +8068,30 @@
             "number-young-range": {
                 "min": "2",
                 "max": "6"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4482,6 +8119,25 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4508,6 +8164,38 @@
             "number-young-range": {
                 "min": "100",
                 "max": "3000"
+            },
+            "location": {
+                "features": [
+                    "Volcanic"
+                ],
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4534,6 +8222,31 @@
             "number-young-range": {
                 "min": "100",
                 "max": "3000"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Marsh",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4561,6 +8274,24 @@
             "number-young-range": {
                 "min": "100000",
                 "max": "100000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4589,6 +8320,23 @@
             "number-young-range": {
                 "min": "5",
                 "max": "13"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4616,6 +8364,23 @@
             "number-young-range": {
                 "min": "1",
                 "max": "4"
+            },
+            "location": {
+                "terrains": [
+                    "Rough",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Plains"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4644,6 +8409,20 @@
             "number-young-range": {
                 "min": "20",
                 "max": "30"
+            },
+            "location": {
+                "vegetation": [
+                    "Jungle"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4672,6 +8451,24 @@
             "number-young-range": {
                 "min": "10000000",
                 "max": "10000000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4699,6 +8496,18 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Marsh"
+                ],
+                "climates": [
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4727,6 +8536,21 @@
             "number-young-range": {
                 "min": "2",
                 "max": "4"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4756,6 +8580,32 @@
             "number-young-range": {
                 "min": "5",
                 "max": "10"
+            },
+            "location": {
+                "features": [
+                    "Cave",
+                    "Cavern"
+                ],
+                "terrains": [
+                    "Alpine",
+                    "Rough",
+                    "Underground"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4784,6 +8634,18 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4811,6 +8673,22 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4837,6 +8715,33 @@
             "number-young-range": {
                 "min": "1000",
                 "max": "3000"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4865,6 +8770,28 @@
             "number-young-range": {
                 "min": "2",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4892,6 +8819,27 @@
             "number-young-range": {
                 "min": "2000",
                 "max": "40000"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4919,6 +8867,33 @@
             "number-young-range": {
                 "min": "2",
                 "max": "150"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Desert",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4946,6 +8921,31 @@
             "number-young-range": {
                 "min": "1",
                 "max": "50"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -4973,6 +8973,22 @@
             "number-young-range": {
                 "min": "5",
                 "max": "1000"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Jungle"
+                ],
+                "water-sources": [
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5000,6 +9016,40 @@
             "number-young-range": {
                 "min": "4",
                 "max": "7"
+            },
+            "location": {
+                "terrains": [
+                    "Alpine",
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5027,6 +9077,33 @@
             "number-young-range": {
                 "min": "2",
                 "max": "150"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Desert",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5054,6 +9131,33 @@
             "number-young-range": {
                 "min": "2",
                 "max": "150"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Desert",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5081,6 +9185,31 @@
             "number-young-range": {
                 "min": "1",
                 "max": "50"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5108,6 +9237,31 @@
             "number-young-range": {
                 "min": "1",
                 "max": "50"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5136,6 +9290,33 @@
             "number-young-range": {
                 "min": "5",
                 "max": "50"
+            },
+            "location": {
+                "terrains": [
+                    "Rough"
+                ],
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Oasis"
+                ],
+                "climates": [
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5163,6 +9344,24 @@
             "number-young-range": {
                 "min": "100000",
                 "max": "100000"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5190,6 +9389,37 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5218,6 +9448,18 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -5246,6 +9488,18 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -5273,6 +9527,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5300,6 +9572,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5328,6 +9618,37 @@
             "number-young-range": {
                 "min": "1",
                 "max": "32"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Islet",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5356,6 +9677,25 @@
             "number-young-range": {
                 "min": "1",
                 "max": "2"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5384,6 +9724,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5412,6 +9770,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5440,6 +9816,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5468,6 +9862,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5496,6 +9908,24 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "water-sources": [
+                    "Ocean",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5524,6 +9954,24 @@
             "number-young-range": {
                 "min": "2",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Lake",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5552,6 +10000,24 @@
             "number-young-range": {
                 "min": "2",
                 "max": "4"
+            },
+            "location": {
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Lake",
+                    "Oasis"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5580,6 +10046,36 @@
             "number-young-range": {
                 "min": "1",
                 "max": "5"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath",
+                    "Jungle",
+                    "Plains",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Desert",
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Lake",
+                    "Marsh",
+                    "Oasis",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5608,6 +10104,23 @@
             "number-young-range": {
                 "min": "2",
                 "max": "3"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Tundra"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Glacier",
+                    "Lake"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "FRIGID"
+                ]
             }
         },
         {
@@ -5635,6 +10148,26 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous",
+                    "Heath"
+                ],
+                "water-sources": [
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5662,6 +10195,29 @@
             "number-young-range": {
                 "min": "1",
                 "max": "7"
+            },
+            "location": {
+                "vegetation": [
+                    "Coniferous",
+                    "Deciduous"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast",
+                    "Lake",
+                    "Marsh",
+                    "Saltwater Coast"
+                ],
+                "climates": [
+                    "COLD_DRY",
+                    "COOL_AVERAGE",
+                    "COOL_DRY",
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         },
         {
@@ -5689,6 +10245,30 @@
             "number-young-range": {
                 "min": "1",
                 "max": "1"
+            },
+            "location": {
+                "terrains": [
+                    "Rough",
+                    "Underground",
+                    "Waste"
+                ],
+                "vegetation": [
+                    "Heath",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Desert",
+                    "Lake",
+                    "Marsh"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_DRY",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
             }
         }
     ]

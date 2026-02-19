@@ -109,6 +109,25 @@ void AnimalDatafileParserJson::parse() {
 			}
 		}
 
+		// Location
+		{
+			boost::optional<const pt::ptree&> location_tree = v.second.get_child_optional("location");
+			if (location_tree) {
+				Location location{};
+				boost::optional<const pt::ptree&> features_tree = location_tree->get_child_optional("features");
+				if (features_tree) location.setFeatures(parseEnumSetTree<EnvironmentType::Feature>(features_tree));
+				boost::optional<const pt::ptree&> terrains_tree = location_tree->get_child_optional("terrains");
+				if (terrains_tree) location.setTerrains(parseEnumSetTree<EnvironmentType::Terrain>(terrains_tree));
+				boost::optional<const pt::ptree&> vegetation_tree = location_tree->get_child_optional("vegetation");
+				if (vegetation_tree) location.setVegetation(parseEnumSetTree<EnvironmentType::Vegetation>(vegetation_tree));
+				boost::optional<const pt::ptree&> water_sources_tree = location_tree->get_child_optional("water-sources");
+				if (water_sources_tree) location.setWater(parseEnumSetTree<EnvironmentType::Water>(water_sources_tree));
+				boost::optional<const pt::ptree&> climates_tree = location_tree->get_child_optional("climates");
+				if (climates_tree) location.setClimates(parseGameDataSetTree<ClimateData>(climates_tree));
+				ref.setLocation(location);
+			}
+		}
+
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
 	}
@@ -161,6 +180,39 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 		number_young_range_tree.put("min", number_young_range.first);
 		number_young_range_tree.put("max", number_young_range.second);
 		datum.push_back(std::make_pair("number-young-range", number_young_range_tree));
+	}
+
+	// Location
+	{
+		pt::ptree location_tree{};
+		Location location = game_data.location();
+
+		// required features
+		{
+			pt::ptree tree{ getEnumSetTree<EnvironmentType::Feature>(location.features()) };
+			if (tree.size()) location_tree.push_back(std::make_pair("features", tree));
+		}
+		// required terrains
+		{
+			pt::ptree tree{ getEnumSetTree<EnvironmentType::Terrain>(location.terrains()) };
+			if (tree.size()) location_tree.push_back(std::make_pair("terrains", tree));
+		}
+		// required vegetation
+		{
+			pt::ptree tree{ getEnumSetTree<EnvironmentType::Vegetation>(location.vegetation()) };
+			if (tree.size()) location_tree.push_back(std::make_pair("vegetation", tree));
+		}
+		// required water sources
+		{
+			pt::ptree tree{ getEnumSetTree<EnvironmentType::Water>(location.water()) };
+			if (tree.size()) location_tree.push_back(std::make_pair("water-sources", tree));
+		}
+		// required climates
+		{
+			pt::ptree tree{ getGameDataSetTree<ClimateData>(location.climates()) };
+			if (tree.size()) location_tree.push_back(std::make_pair("climates", tree));
+		}
+		if (location_tree.size()) datum.push_back(std::make_pair("location", location_tree));
 	}
 
 }

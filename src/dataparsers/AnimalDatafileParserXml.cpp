@@ -87,6 +87,73 @@ void AnimalDatafileParserXml::parse() {
 			ref.setNumberYoungRange(std::make_pair(min, max));
 		}
 
+		// Locations
+		{
+			boost::optional<const pt::ptree&> locations = v.second.get_child_optional("locations");
+			if (locations) {
+				for (const auto& location : locations.get()) {
+					Location location_ref{};
+
+					// We don't want to include any location elements if the XML has all the enum values as this indicates that the animal can be found in any of the element
+
+					// Get the climates
+					boost::optional<const pt::ptree&> climates = location.second.get_child_optional("climates");
+					if (climates) {
+						for (const auto& climate : climates.get()) {
+							std::string climate_id{ climate.second.get_value<std::string>() };
+							location_ref.addClimate(&factory().get<ClimateData>(climate_id));
+						}
+					}
+
+					// Get the features
+					int num_enum_features{ 10 };
+					boost::optional<const pt::ptree&> features = location.second.get_child_optional("special-features");
+					if (features && features.get().count("special-feature") < num_enum_features) {
+						for (const auto& feature : features.get()) {
+							EnvironmentType::Feature feature_enum{};
+							EnvironmentType::fromString(feature.second.get_value<std::string>(), feature_enum);
+							location_ref.addFeature(feature_enum);
+						}
+					}
+
+					// Get the terrains
+					int num_enum_terrains{ 4 };
+					boost::optional<const pt::ptree&> terrains = location.second.get_child_optional("terrains");
+					if (terrains && terrains.get().count("terrain") < num_enum_terrains)  {
+						for (const auto& terrain : terrains.get()) {
+							EnvironmentType::Terrain terrain_enum{};
+							EnvironmentType::fromString(terrain.second.get_value<std::string>(), terrain_enum);
+							location_ref.addTerrain(terrain_enum);
+						}
+					}
+
+					// Get the vegetation
+					int num_enum_vegetations{ 8 };
+					boost::optional<const pt::ptree&> vegetations = location.second.get_child_optional("vegetations");
+					if (vegetations && vegetations.get().count("vegetation") < num_enum_vegetations) {
+						for (const auto& vegetation : vegetations.get()) {
+							EnvironmentType::Vegetation vegetation_enum{};
+							EnvironmentType::fromString(vegetation.second.get_value<std::string>(), vegetation_enum);
+							location_ref.addVegetation(vegetation_enum);
+						}
+					}
+
+					// Get the water types
+					int num_enum_water_types{ 10 };
+					boost::optional<const pt::ptree&> water_types = location.second.get_child_optional("water-sources");
+					if (water_types && water_types.get().count("water-source") < num_enum_water_types) {
+						for (const auto& water_type : water_types.get()) {
+							EnvironmentType::Water water_source_enum{};
+							EnvironmentType::fromString(water_type.second.get_value<std::string>(), water_source_enum);
+							location_ref.addWater(water_source_enum);
+						}
+					}
+
+					ref.setLocation(location_ref);
+				}
+			}
+		}
+
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
 	}

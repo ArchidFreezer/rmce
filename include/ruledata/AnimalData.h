@@ -14,6 +14,7 @@
 #include <CriticalModifierType.h>
 #include <CriticalSizeTableType.h>
 #include <GameRuleData.h>
+#include <Location.h>
 #include <ManoeuvreDifficultyType.h>
 #include <TreasureCodeData.h>
 #include <table/CreatureBonusXpTable.h>
@@ -408,6 +409,18 @@ public:
 	 */
 	const std::pair<int, int> numberYoungRange() const { return number_young_range_; }
 
+	/**
+	 * @brief Set the location definition for the animal
+	 * @param location Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there.
+	 */
+	void setLocation(Location location) { location_ = std::make_unique<Location>(std::move(location)); }
+
+	/**
+	 * @brief Get the location for the animal
+	 * @return Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there.
+	 */
+	const Location& location() const { return *location_; }
+
 private:
 	std::string name_{}; /**< In game name of the animal */
 	std::string description_{}; /**< Description of the animal for flavour purposes */
@@ -431,7 +444,8 @@ private:
 	std::set<CriticalModifierType::Type> critical_modifiers_{}; /**< Set of critical modifiers for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit. */
 	std::pair<int, int> encounter_range_{}; /**< A pair containing the minimum and maximum number of animals typically enountered in a single encounter, used to determine how many animals are encountered when an encounter with the animal is generated. */
 	std::pair<int, int> number_young_range_{}; /**< A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal. */
-	// TODO: Add location and attack data
+	std::unique_ptr<Location> location_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */
+	// TODO: Add attack data
 
 	/**
 	 * @brief Gets the number of hits per level difference based on the constitution code.
