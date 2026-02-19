@@ -9,10 +9,10 @@
  *
  * This class represents the relative pace of the creature compared to it's base rate of movement.
  *
- * A creature’s actual movement rate is determined by its Base Rate as modified by its pace (up to its Max Pace) and possibly a maneuver roll using its Movement and Maneuver Bonus (MM Bonus).
- * To determine a creature’s movement rate for a given round, the GM should first decide on the creature’s pace and then the base movement rate can be multiplied by the movement rate multiplier.
+ * A creature's actual movement rate is determined by its Base Rate as modified by its pace (up to its Max Pace) and possibly a maneuver roll using its Movement and Maneuver Bonus (MM Bonus).
+ * To determine a creature's movement rate for a given round, the GM should first decide on the creature's pace and then the base movement rate can be multiplied by the movement rate multiplier.
  * 
- * A creature’s pace also determines how many exhaustion points it uses each round. A creature’s exhaustion points is dependent upon its Constitution
+ * A creature's pace also determines how many exhaustion points it uses each round. A creature's exhaustion points is dependent upon its Constitution
  *
  * @brief Class representing data about creature paces
  */

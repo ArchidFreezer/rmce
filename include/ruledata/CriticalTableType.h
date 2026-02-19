@@ -8,7 +8,7 @@
 /**
  * @brief Contains the CriticalTableType::Type enum and associated functions
  *
- * Normally when resolving a critical strike the type of criticalk determines the lookup table used, but for large
+ * Normally when resolving a critical strike the type of critical determines the lookup table used, but for large
  * creatures it is the size of the creature and the nature of the damage that determines this, with Physical and Spell
  * damage being the only factors. This represents the valid types of critical table to use.
  */

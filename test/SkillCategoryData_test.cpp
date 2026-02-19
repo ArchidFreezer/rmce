@@ -6,10 +6,10 @@
 
 namespace {
 	TEST(SkillCategoryData, Constructor) {
-		SkillProgressionTypeData spd_sk_std("SKILL_STANDARD_ID");
+		SkillProgressionTypeData spd_sk_std("SKILLPROGRESSIONTYPE_STANDARD");
 		spd_sk_std.setName("Standard");
 
-		SkillProgressionTypeData spd_c_std("CAT_STANDARD_ID");
+		SkillProgressionTypeData spd_c_std("SKILLPROGRESSIONTYPE_CATEGORY_STANDARD");
 		spd_c_std.setName("Category Standard");
 
 		SkillGroupData sg("GROUP1_ID");
@@ -33,9 +33,9 @@ namespace {
 		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), spd_c_std.name().c_str());
 
 
-		SkillProgressionTypeData spd_ltd("LIMITED_ID");
+		SkillProgressionTypeData spd_ltd("SKILLPROGRESSIONTYPE_LIMITED");
 		spd_ltd.setName("Limited");
-		SkillProgressionTypeData spd_none("NONE_ID");
+		SkillProgressionTypeData spd_none("SKILLPROGRESSIONTYPE_NONE");
 		spd_none.setName("None");
 		SkillCategoryData scd2("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		scd2.setSkillProgressions(spd_ltd, spd_none);
@@ -44,7 +44,7 @@ namespace {
 	}
 
 	TEST(SkillCategoryData, Stats) {
-		SkillProgressionTypeData spd_std("STANDARD_ID");
+		SkillProgressionTypeData spd_std("SKILLPROGRESSIONTYPE_STANDARD");
 		SkillGroupData sg("Artistic");
 		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		int i{};
@@ -78,7 +78,7 @@ namespace {
 	}
 	
 	TEST(SkillCategoryData, CharStats) {
-		SkillProgressionTypeData spd_std("STANDARD_ID");
+		SkillProgressionTypeData spd_std("SKILLPROGRESSIONTYPE_STANDARD");
 		SkillGroupData sg("Artistic");
 		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		int i{};
@@ -105,17 +105,17 @@ namespace {
 	}
 
 	TEST(SkillCategoryData, SkillProgression) {
-		SkillProgressionTypeData spd_cmb("COMBINED_ID");
+		SkillProgressionTypeData spd_cmb("SKILLPROGRESSIONTYPE_COMBINED");
 		spd_cmb.setName("Combined");
-		SkillProgressionTypeData spd_ltd("LIMITED_ID");
+		SkillProgressionTypeData spd_ltd("SKILLPROGRESSIONTYPE_LIMITED");
 		spd_ltd.setName("Limited");
-		SkillProgressionTypeData spd_none("NONE_ID");
+		SkillProgressionTypeData spd_none("SKILLPROGRESSIONTYPE_NONE");
 		spd_none.setName("None");
-		SkillProgressionTypeData spd_spc("SPECIAL_ID");
+		SkillProgressionTypeData spd_spc("SKILLPROGRESSIONTYPE_SPECIAL");
 		spd_spc.setName("Special");
-		SkillProgressionTypeData spd_std("STANDARD_ID");
+		SkillProgressionTypeData spd_std("SKILLPROGRESSIONTYPE_STANDARD");
 		spd_std.setName("Standard");
-		SkillProgressionTypeData spd_cstd("CATEGORY_STANDARD_ID");
+		SkillProgressionTypeData spd_cstd("SKILLPROGRESSIONTYPE_CATEGORY_STANDARD");
 		spd_cstd.setName("Category Standard");
 		SkillGroupData sg("Artistic");
 		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");

@@ -1,4 +1,4 @@
-#include "CreatureSizeType.h"
+#include <CreatureSizeType.h>
 
 const std::string CreatureSizeType::toString(Type size) {
 	using enum Type;
