@@ -3,11 +3,19 @@
 #include <set>
 #include <string_view>
 
+#include <AnimalOutlookType.h>
+#include <ArmourType.h>
 #include <CreatureConstitutionVarianceType.h>
 #include <CreatureLevelVarianceType.h>
 #include <CreatureBonusXpType.h>
+#include <CreatureMovementSpeedType.h>
+#include <CreaturePaceData.h>
+#include <CreatureSizeType.h>
+#include <CriticalModifierType.h>
+#include <CriticalSizeTableType.h>
 #include <GameRuleData.h>
 #include <ManoeuvreDifficultyType.h>
+#include <TreasureCodeData.h>
 #include <table/CreatureBonusXpTable.h>
 
 /**
@@ -249,6 +257,133 @@ public:
 	 */
 	int exhaustionPoints() const;
 
+	/**
+	 * @brief Sets the treasure code data for this object.
+	 * @param treasure_code A pointer to the treasure code data to associate with this object. May be null to clear the current treasure code.
+	 */
+	void setTreasureCode(const TreasureCodeData& treasure_code) { treasure_code_ = &treasure_code; }
+
+	/**
+	 * @brief Gets the treasure code data associated with this object, if any.
+	 *
+	 * The treasure code is stored as a pointer and may not have been initialised so it is considered optional. A check should be made
+	 * before using the value to determine if it has been set yet:
+	 * @code{.cpp}
+	 * if (animal.treasureCode()) {                        // Check if the treasure code has been set
+	 *   const TreasureCodeData* treasure_code = animal.treasureCode().value();   // Get the treasure code pointer
+	 *   // Use the code
+	 * }
+	 * @endcode
+	 * or
+	 * @code
+	 * std::cout << (animal.treasureCode() ? animal.treasureCode().value()->id() : "Treasure code not set") << std::endl;
+	 * @endcode
+	 * @return An optional containing a pointer to the treasure code data associated with this object, or an empty optional if no treasure code is associated.
+	 */
+	const std::optional<const TreasureCodeData*> treasureCode() const { return treasure_code_; }
+
+	/**
+	 * @brief Set the size of the animal
+	 * @param size Size of the animal, used as a relative guide with Medium being approximately man sized
+	 */
+	void setSize(CreatureSizeType::Type size) { size_ = size; }
+
+	/**
+	 * @brief Get the size of the animal
+	 * @return Size of the animal, used as a relative guide with Medium being approximately man sized
+	 */
+	CreatureSizeType::Type size() const { return size_; }
+
+	/**
+	 * @brief Set the armour type of the animal
+	 * @param armour_type Armour type of the animal, used to determine how much damage it takes when attacked.
+	 */
+	void setArmourType(ArmourType::Type armour_type) { armour_type_ = armour_type; }
+
+	/**
+	 * @brief Get the armour type of the animal
+	 * @return Armour type of the animal, used to determine how much damage it takes when attacked.
+	 */
+	ArmourType::Type armourType() const { return armour_type_; }
+
+	/**
+	 * @brief Set the movement speed of the animal
+	 * @param movement_speed Movement speed of the animal, used to determine how far it can move in a turn.
+	 */
+	void setMovementSpeed(CreatureMovementSpeedType::Type movement_speed) { movement_speed_ = movement_speed; }
+
+	/**
+	 * @brief Get the movement speed of the animal
+	 * @return Movement speed of the animal, used to determine how far it can move in a turn.
+	 */
+	CreatureMovementSpeedType::Type movementSpeed() const { return movement_speed_; }
+
+	/**
+	 * @brief Set the attack quickness of the animal
+	 * @param attack_quickness The speed that the creature attacks at, impacting initiative and DB
+	 */
+	void setAttackQuickness(CreatureMovementSpeedType::Type attack_quickness) { attack_quickness_ = attack_quickness; }
+
+	/**
+	 * @brief Get the attack quickness of the animal
+	 * @return The speed that the creature attacks at, impacting initiative and DB
+	 */
+	CreatureMovementSpeedType::Type attackQuickness() const { return attack_quickness_; }
+
+	/**
+	 * @brief Set the maximum pace of the animal
+	 * @param max_pace Pointer to the maximum pace of the animal, used to determine how far it can move in a turn based on its movement speed. This is stored as a pointer to avoid having to copy the pace data for each animal and instead just reference the same data for all animals with the same movement speed.
+	 */
+	void setMaxPace(const CreaturePaceData& max_pace) { max_pace_ = &max_pace; }
+
+	/**
+	 * @brief Get the pace data for the animal
+	 * @return Pointer to the pace data for the animal, used to determine how far it can move in a turn based on its movement speed. This is stored as a pointer to avoid having to copy the pace data for each animal and instead just reference the same data for all animals with the same movement speed.
+	 */
+	const CreaturePaceData* maxPace() const { return max_pace_; }
+
+	/**
+	 * @brief Set the outlook of the animal
+	 * @param outlook Outlook of the animal, used to determine how it behaves in combat and how it reacts to the world around it.
+	 */
+	void setOutlook(AnimalOutlookType::Type outlook) { outlook_ = outlook; }
+
+	/**
+	 * @brief Get the outlook of the animal
+	 * @return Outlook of the animal, used to determine how it behaves in combat and how it reacts to the world around it.
+	 */
+	AnimalOutlookType::Type outlook() const { return outlook_; }
+
+	/**
+	 * @brief Set the critical table type for the animal
+	 * @param critical_table_type Critical table type for the animal, used to determine which critical table to use when the animal is hit with a critical hit.
+	 */
+	void setCriticalTableType(CriticalSizeTableType::Type critical_table_type) { critical_table_type_ = critical_table_type; }
+
+	/**
+	 * @brief Get the critical table type for the animal
+	 * @return Critical table type for the animal, used to determine which critical table to use when the animal is hit with a critical hit.
+	 */
+	CriticalSizeTableType::Type criticalTableType() const { return critical_table_type_; }
+
+	/**
+	 * @brief Add a critical modifier to the animal
+	 * @param critical_modifier Critical modifier for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit.
+	 */
+	void addCriticalModifier(CriticalModifierType::Type critical_modifier) { critical_modifiers_.emplace(critical_modifier); }
+
+	/**
+	 * @brief Set the critical modifiers for the animal
+	 * @param critical_modifiers Set of critical modifiers for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit.
+	 */
+	void setCriticalModifiers(std::set<CriticalModifierType::Type> critical_modifiers) { critical_modifiers_ = std::move(critical_modifiers); }
+
+	/**
+	 * @brief Get the set of critical modifiers for the animal
+	 * @return Set of critical modifiers for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit.
+	 */
+	const std::set<CriticalModifierType::Type>& criticalModifiers() const { return critical_modifiers_; }
+
 private:
 	std::string name_{}; /**< In game name of the animal */
 	std::string description_{}; /**< Description of the animal for flavour purposes */
@@ -261,6 +396,15 @@ private:
 	CreatureConstitutionVarianceType::Type constitution_variance_type_{}; /**< Bonus constitution code for the animal, used to determine how much constitution variance a creature has. */
 	CreatureLevelVarianceType::Type level_variance_type_{}; /**< Bonus level code for the animal, used to determine how much level variance a creature has. */
 	int average_level_{}; /**< Average level of the animal, used to determine how much damage it can take before it dies. */
+	std::optional<const TreasureCodeData*> treasure_code_{}; /**< Optional pointer to a TreasureCodeData object that represents the treasure that can be found on the animal or in it's lair when it is killed. This is optional as not all animals will have treasure. */
+	CreatureSizeType::Type size_{}; /**< Size of the animal, used as a relative guide with Medium being approximately man-sized */
+	ArmourType::Type armour_type_{}; /**< Armour type of the animal, used to determine how much damage it takes when attacked. */
+	CreatureMovementSpeedType::Type movement_speed_{}; /**< Movement speed of the animal, used to determine how far it can move in a turn. */
+	CreatureMovementSpeedType::Type attack_quickness_{}; /**< The speed that the creature attacks at, impacting initiative and DB */
+	const CreaturePaceData* max_pace_{}; /**< Pointer to the maximum pace of the animal, used to determine how far it can move in a turn based on its movement speed. This is stored as a pointer to avoid having to copy the pace data for each animal and instead just reference the same data for all animals with the same movement speed. */	
+	AnimalOutlookType::Type outlook_{}; /**< Outlook of the animal, used to determine how it behaves in combat and how it reacts to the world around it. */
+	CriticalSizeTableType::Type critical_table_type_{}; /**< Critical table type for the animal, used to determine which critical table to use when the animal is hit with a critical hit. */
+	std::set<CriticalModifierType::Type> critical_modifiers_{}; /**< Set of critical modifiers for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit. */
 
 	/**
 	 * @brief Gets the number of hits per level difference based on the constitution code.

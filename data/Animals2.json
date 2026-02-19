@@ -11,7 +11,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Medium",
+            "armour-type": "AT 7",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_LARGE_IN_WATER",
@@ -24,7 +31,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 7",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_LARGE_ON_LAND",
@@ -37,7 +51,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 7",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_SMALL_IN_WATER",
@@ -49,7 +70,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "D",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Medium",
+            "armour-type": "AT 7",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_SMALL_ON_LAND",
@@ -61,7 +89,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "D",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Medium",
+            "armour-type": "AT 7",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ALPACA",
@@ -73,7 +108,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ANTEATER",
@@ -85,7 +127,14 @@
             "frequency-code": "7",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ANTELOPE_LIKE_LARGE",
@@ -97,7 +146,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "F",
             "level-variance-type": "C",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ANTELOPE_LIKE_SMALL",
@@ -109,7 +165,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Jumpy",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ANTS",
@@ -120,7 +183,14 @@
             "defensive-bonus": "30",
             "frequency-code": "1",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 11",
+            "movement-speed": "Inching",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ARMADILLO",
@@ -132,7 +202,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "D",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 12",
+            "movement-speed": "Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BACTRIAN",
@@ -144,7 +221,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BATS_LARGE",
@@ -156,7 +240,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BATS_SMALL",
@@ -168,7 +259,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BATTLE_BOAR",
@@ -181,7 +279,14 @@
             "bonus-xp-code": "D",
             "constitution-variance-type": "G",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BEARS_LARGE",
@@ -194,7 +299,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "F",
             "level-variance-type": "G",
-            "average-level": "10"
+            "average-level": "10",
+            "size": "Large",
+            "armour-type": "AT 8",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BEARS_SMALL",
@@ -207,7 +319,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "F",
             "level-variance-type": "E",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Large",
+            "armour-type": "AT 8",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BEAVER",
@@ -219,7 +338,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "C",
             "level-variance-type": "A",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BEETLES",
@@ -230,7 +356,14 @@
             "defensive-bonus": "30",
             "frequency-code": "2",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 12",
+            "movement-speed": "Inching",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BEE_WASP",
@@ -241,7 +374,14 @@
             "defensive-bonus": "40",
             "frequency-code": "2",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BIRDS_LARGE",
@@ -253,7 +393,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BIRDS_SMALL",
@@ -265,7 +412,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BOAR",
@@ -278,7 +432,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 4",
+            "movement-speed": "Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BOA_PYTHON",
@@ -291,7 +452,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "F",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BONE_WORM",
@@ -303,7 +471,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_JOG",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_BUFFALO_BULL",
@@ -316,7 +491,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "G",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_CARNIVOROUS_FLYING_SQUIRRELS",
@@ -328,7 +510,14 @@
             "frequency-code": "6",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Belligerent",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_CATS_LARGE",
@@ -340,7 +529,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "E",
             "level-variance-type": "D",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_CATS_SMALL",
@@ -352,7 +548,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_CHAMELEON",
@@ -364,7 +567,14 @@
             "frequency-code": "8",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_CHEETAH",
@@ -377,7 +587,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "G",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Blindingly Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_COBRA",
@@ -390,7 +607,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "B",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Slow",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_CONDOR",
@@ -402,7 +626,14 @@
             "frequency-code": "7",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Medium",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_CONGER_EEL",
@@ -415,7 +646,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_CRABS",
@@ -427,7 +665,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 12",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_CRISON",
@@ -439,7 +684,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 4",
+            "movement-speed": "Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_DEER",
@@ -451,7 +703,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "F",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_DIDEX",
@@ -463,7 +722,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_DOGS_LARGE",
@@ -475,7 +741,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "G",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_DOGS_SMALL",
@@ -487,7 +760,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "F",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_DOLPHIN",
@@ -500,7 +780,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "E",
             "level-variance-type": "F",
-            "average-level": "8"
+            "average-level": "8",
+            "size": "Large",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_DONKEY",
@@ -512,7 +799,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_DROMEDARY_DRAFT",
@@ -524,7 +818,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_DROMEDARY_RACER",
@@ -536,7 +837,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "D",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_EAGLE",
@@ -548,7 +856,14 @@
             "frequency-code": "6",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ELECTRIC_EEL",
@@ -561,7 +876,14 @@
             "bonus-xp-code": "D",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ELECTRIC_RAY",
@@ -574,7 +896,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 1",
+            "movement-speed": "Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ELECTRIC_WASP_FLY",
@@ -585,7 +914,14 @@
             "defensive-bonus": "40",
             "frequency-code": "6",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Protective",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ELEPHANTS_AFRICAN",
@@ -598,7 +934,14 @@
             "bonus-xp-code": "F",
             "constitution-variance-type": "H",
             "level-variance-type": "F",
-            "average-level": "7"
+            "average-level": "7",
+            "size": "Huge",
+            "armour-type": "AT 12",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Large"
         },
         {
             "id": "ANIMAL_ELEPHANTS_INDIAN",
@@ -611,7 +954,14 @@
             "bonus-xp-code": "E",
             "constitution-variance-type": "H",
             "level-variance-type": "E",
-            "average-level": "7"
+            "average-level": "7",
+            "size": "Huge",
+            "armour-type": "AT 12",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Large"
         },
         {
             "id": "ANIMAL_ELK",
@@ -623,7 +973,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "G",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FALCON_PEREGRINE",
@@ -635,7 +992,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Blindingly Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FERRET",
@@ -647,7 +1011,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Playful",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FISHING_CAT_IN_WATER",
@@ -659,7 +1030,14 @@
             "frequency-code": "6",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FISHING_CAT_ON_LAND",
@@ -671,7 +1049,14 @@
             "frequency-code": "6",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FISH_LARGE",
@@ -683,7 +1068,14 @@
             "frequency-code": "1",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FISH_MEDIUM",
@@ -695,7 +1087,14 @@
             "frequency-code": "1",
             "constitution-variance-type": "B",
             "level-variance-type": "B",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FISH_SMALL",
@@ -707,7 +1106,14 @@
             "frequency-code": "1",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FLEAS",
@@ -718,7 +1124,14 @@
             "defensive-bonus": "30",
             "frequency-code": "7",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 11",
+            "movement-speed": "Creeping",
+            "attack-quickness": "Very Slow",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FLYINGFISH",
@@ -730,7 +1143,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FLYING_FROG",
@@ -742,7 +1162,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_JOG",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FLYING_LIZARD",
@@ -754,7 +1181,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_JOG",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FRESHWATER_EEL",
@@ -766,7 +1200,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FROG",
@@ -778,7 +1219,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 3",
+            "movement-speed": "Slow",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_FURRED_SNAKE_GIANT",
@@ -791,7 +1239,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Medium",
+            "armour-type": "AT 8",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Hungry",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GABBIT",
@@ -803,7 +1258,14 @@
             "frequency-code": "1",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Jumpy",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GEMSTING",
@@ -816,7 +1278,15 @@
             "bonus-xp-code": "E",
             "constitution-variance-type": "F",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "treasure-code": "a",
+            "size": "Medium",
+            "armour-type": "AT 12",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Hungry",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GIBBONS",
@@ -828,7 +1298,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GILA_MONSTER",
@@ -840,7 +1317,14 @@
             "frequency-code": "6",
             "constitution-variance-type": "C",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GIRAFFE",
@@ -852,7 +1336,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "F",
             "level-variance-type": "C",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GLIDING_MAMMAL",
@@ -864,7 +1355,14 @@
             "frequency-code": "6",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GORILLA",
@@ -877,7 +1375,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "G",
             "level-variance-type": "D",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GREAT_APES",
@@ -890,7 +1395,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GREAT_BOAR",
@@ -903,7 +1415,14 @@
             "bonus-xp-code": "E",
             "constitution-variance-type": "G",
             "level-variance-type": "F",
-            "average-level": "7"
+            "average-level": "7",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GREAT_PORCUPINE",
@@ -916,7 +1435,15 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "treasure-code": "a",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Belligerent",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GULO",
@@ -929,7 +1456,15 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "F",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "treasure-code": "f",
+            "size": "Medium",
+            "armour-type": "AT 4",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Hungry",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_GUYASCUTUS",
@@ -942,7 +1477,15 @@
             "bonus-xp-code": "D",
             "constitution-variance-type": "E",
             "level-variance-type": "H",
-            "average-level": "3"
+            "average-level": "3",
+            "treasure-code": "a",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_HAWK",
@@ -954,7 +1497,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "B",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Blindingly Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_HIPPOPOTOMUS_IN_WATER",
@@ -967,7 +1517,14 @@
             "bonus-xp-code": "D",
             "constitution-variance-type": "F",
             "level-variance-type": "E",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_HIPPOPOTOMUS_ON_LAND",
@@ -980,7 +1537,14 @@
             "bonus-xp-code": "D",
             "constitution-variance-type": "F",
             "level-variance-type": "E",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_HORNED_SNAKE",
@@ -993,7 +1557,15 @@
             "bonus-xp-code": "D",
             "constitution-variance-type": "F",
             "level-variance-type": "E",
-            "average-level": "5"
+            "average-level": "5",
+            "treasure-code": "a",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Hungry",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_HORSE_VIPER",
@@ -1006,7 +1578,15 @@
             "bonus-xp-code": "E",
             "constitution-variance-type": "E",
             "level-variance-type": "F",
-            "average-level": "6"
+            "average-level": "6",
+            "treasure-code": "a",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Medium",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Hungry",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_HOUSECAT",
@@ -1018,7 +1598,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_IHL_WOLF",
@@ -1030,7 +1617,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_JACKALOPE",
@@ -1043,7 +1637,15 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "D",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "treasure-code": "a",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_JADEBACK",
@@ -1056,7 +1658,15 @@
             "bonus-xp-code": "D",
             "constitution-variance-type": "F",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "treasure-code": "a",
+            "size": "Medium",
+            "armour-type": "AT 20",
+            "movement-speed": "Slow",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Hungry",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_JELLYFISH",
@@ -1068,7 +1678,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Inching",
+            "attack-quickness": "Inching",
+            "max-pace": "CREATUREPACE_WALK",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_KANGAROOS_WALLABIES_LARGE",
@@ -1080,7 +1697,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_KANGAROOS_WALLABIES_SMALL",
@@ -1092,7 +1716,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_KILLER_WHALE",
@@ -1105,7 +1736,14 @@
             "bonus-xp-code": "F",
             "constitution-variance-type": "H",
             "level-variance-type": "F",
-            "average-level": "9"
+            "average-level": "9",
+            "size": "Huge",
+            "armour-type": "AT 8",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Belligerent",
+            "critical-table": "Large"
         },
         {
             "id": "ANIMAL_KOALA",
@@ -1117,7 +1755,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "B",
             "level-variance-type": "B",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Jumpy",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_KOMODO_DRAGON",
@@ -1130,7 +1775,14 @@
             "bonus-xp-code": "D",
             "constitution-variance-type": "F",
             "level-variance-type": "E",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Large",
+            "armour-type": "AT 7",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_KRAEGUTH",
@@ -1143,7 +1795,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "F",
             "level-variance-type": "F",
-            "average-level": "9"
+            "average-level": "9",
+            "size": "Large",
+            "armour-type": "AT 9",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_LAMPREY",
@@ -1155,7 +1814,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "D",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_LESSER_PRIMATES",
@@ -1167,7 +1833,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_LION",
@@ -1180,7 +1853,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "F",
             "level-variance-type": "D",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_LIZARDS_LARGE",
@@ -1192,7 +1872,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_LIZARDS_SMALL",
@@ -1204,7 +1891,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_LLAMA",
@@ -1216,7 +1910,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_LOBSTERS",
@@ -1228,7 +1929,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 12",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_MANTA_RAY",
@@ -1240,7 +1948,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_MARMOSETS_AND_TAMARINS",
@@ -1252,7 +1967,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_MOLE",
@@ -1264,7 +1986,14 @@
             "frequency-code": "7",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Jumpy",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_MONGOOSE",
@@ -1276,7 +2005,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_MOOSE",
@@ -1289,7 +2025,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "G",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_MORAY_EEL",
@@ -1302,7 +2045,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Belligerent",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_MULE",
@@ -1314,7 +2064,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "F",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_MUSTANG",
@@ -1326,7 +2083,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "F",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_MUSTELIDS_CIVITS_LARGE",
@@ -1338,7 +2102,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Inquisitive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_MUSTELIDS_CIVITS_SMALL",
@@ -1350,7 +2121,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Inquisitive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_NEW_WORLD_MONKEYS",
@@ -1362,7 +2140,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_NILE_MONITOR",
@@ -1374,7 +2159,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 7",
+            "movement-speed": "Medium",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_NON_POISONOUS_SNAKE",
@@ -1386,7 +2178,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Slow",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_OCTOPUS_SQUID_LARGE",
@@ -1399,7 +2198,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "E",
             "level-variance-type": "D",
-            "average-level": "6"
+            "average-level": "6",
+            "size": "Large",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_OCTOPUS_SQUID_MEDIUM",
@@ -1412,7 +2218,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 1",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_OCTOPUS_SQUID_SMALL",
@@ -1424,7 +2237,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_OLD_WORLD_MONKEYS_SMALL",
@@ -1436,7 +2256,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_OPOSSUM",
@@ -1448,7 +2275,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_OSTRICH",
@@ -1460,7 +2294,14 @@
             "frequency-code": "7",
             "constitution-variance-type": "F",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Medium",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_OTTER",
@@ -1472,7 +2313,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_OWL",
@@ -1484,7 +2332,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_OXEN",
@@ -1497,7 +2352,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PANDA_GIANT",
@@ -1510,7 +2372,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Medium",
+            "armour-type": "AT 8",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PANGOLIN",
@@ -1522,7 +2391,14 @@
             "frequency-code": "7",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 12",
+            "movement-speed": "Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PENGUIN",
@@ -1534,7 +2410,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "B",
             "level-variance-type": "B",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PIG",
@@ -1546,7 +2429,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "D",
             "level-variance-type": "A",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 4",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Jumpy",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PIRANHA",
@@ -1558,7 +2448,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PIT_VIPER",
@@ -1571,7 +2468,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Slow",
+            "attack-quickness": "Blindingly Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PLATYPUS",
@@ -1583,7 +2487,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "B",
             "level-variance-type": "B",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PLOW_HORSE",
@@ -1595,7 +2506,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PONY",
@@ -1607,7 +2525,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PORCUPINE_NEW_WORLD",
@@ -1619,7 +2544,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PORCUPINE_OLD_WORLD",
@@ -1631,7 +2563,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PORPOISE",
@@ -1644,7 +2583,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "E",
             "level-variance-type": "E",
-            "average-level": "7"
+            "average-level": "7",
+            "size": "Large",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PORTUGESE_MAN_O_WAR",
@@ -1657,7 +2603,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_PRAYING_MANTIS",
@@ -1668,7 +2621,14 @@
             "defensive-bonus": "30",
             "frequency-code": "5",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 11",
+            "movement-speed": "Creeping",
+            "attack-quickness": "Blindingly Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_QUARTERHORSE",
@@ -1680,7 +2640,14 @@
             "frequency-code": "7",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_RABBIT_HARE",
@@ -1692,7 +2659,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "D",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Jumpy",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_RACCOON",
@@ -1704,7 +2678,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_RAT",
@@ -1716,7 +2697,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_REGAL_STAG",
@@ -1729,7 +2717,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "G",
             "level-variance-type": "B",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Protective",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_REINDEER_CARIBOU",
@@ -1741,7 +2736,14 @@
             "frequency-code": "1",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_RHINOCEROS",
@@ -1754,7 +2756,14 @@
             "bonus-xp-code": "E",
             "constitution-variance-type": "G",
             "level-variance-type": "F",
-            "average-level": "7"
+            "average-level": "7",
+            "size": "Large",
+            "armour-type": "AT 12",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_RIVER_DOLPHIN",
@@ -1767,7 +2776,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "E",
             "level-variance-type": "E",
-            "average-level": "6"
+            "average-level": "6",
+            "size": "Large",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_RODENTS_LARGE",
@@ -1779,7 +2795,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_RODENTS_SMALL",
@@ -1791,7 +2814,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_RUMTIFUSEL",
@@ -1804,7 +2834,15 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "C",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "treasure-code": "a",
+            "size": "Small",
+            "armour-type": "AT 4",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Blindingly Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Hungry",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SALAMANDER_NEWT",
@@ -1816,7 +2854,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 4",
+            "movement-speed": "Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SAWFISH",
@@ -1829,7 +2874,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "F",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SCORPIONS",
@@ -1840,7 +2892,14 @@
             "defensive-bonus": "30",
             "frequency-code": "5",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 12",
+            "movement-speed": "Inching",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SCRA_PREN",
@@ -1853,7 +2912,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "F",
             "level-variance-type": "C",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Hungry",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SEAL_IN_WATER",
@@ -1865,7 +2931,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SEAL_ON_LAND",
@@ -1877,7 +2950,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SEA_ANEMONE",
@@ -1889,7 +2969,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Immobile",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SEA_LION_IN_WATER",
@@ -1901,7 +2988,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SEA_LION_ON_LAND",
@@ -1913,7 +3007,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SEA_SNAKE",
@@ -1926,7 +3027,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Slow",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SERPENTUS",
@@ -1939,7 +3047,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "G",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 12",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SHARK_LARGE",
@@ -1952,7 +3067,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "F",
             "level-variance-type": "E",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Belligerent",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SHARK_SMALL",
@@ -1965,7 +3087,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 4",
+            "movement-speed": "Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SHEEP",
@@ -1977,7 +3106,14 @@
             "frequency-code": "2",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SHREW",
@@ -1989,7 +3125,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Tiny",
+            "armour-type": "AT 11",
+            "movement-speed": "Slow",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Belligerent",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SKUNK",
@@ -2001,7 +3144,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "B",
             "level-variance-type": "B",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SLOTH",
@@ -2013,7 +3163,14 @@
             "frequency-code": "7",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SPIDER_NON_POISONOUS",
@@ -2024,7 +3181,14 @@
             "defensive-bonus": "10",
             "frequency-code": "5",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Inching",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SPIDER_POISONOUS",
@@ -2035,7 +3199,14 @@
             "defensive-bonus": "10",
             "frequency-code": "3",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 1",
+            "movement-speed": "Inching",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_STARFISH",
@@ -2047,7 +3218,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Tiny",
+            "armour-type": "AT 8",
+            "movement-speed": "Inching",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_STINGRAY",
@@ -2060,7 +3238,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 1",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_STRIDER_BIRD",
@@ -2072,7 +3257,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SWAMP_OCTOPUS",
@@ -2085,7 +3277,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "F",
             "level-variance-type": "D",
-            "average-level": "6"
+            "average-level": "6",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_SWORDFISH_SAILFISH",
@@ -2098,7 +3297,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "F",
             "level-variance-type": "C",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TAPIR",
@@ -2110,7 +3316,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "D",
             "level-variance-type": "A",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 4",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Jumpy",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TASMANIAN_DEVIL",
@@ -2123,7 +3336,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TATZELWURM",
@@ -2136,7 +3356,15 @@
             "bonus-xp-code": "D",
             "constitution-variance-type": "F",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "treasure-code": "a",
+            "size": "Medium",
+            "armour-type": "AT 8",
+            "movement-speed": "Medium",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Belligerent",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TENTMORSE",
@@ -2149,7 +3377,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Hungry",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_THOROUGHBRED",
@@ -2161,7 +3396,14 @@
             "frequency-code": "6",
             "constitution-variance-type": "D",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TICKS",
@@ -2172,7 +3414,14 @@
             "defensive-bonus": "30",
             "frequency-code": "5",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 12",
+            "movement-speed": "Creeping",
+            "attack-quickness": "Very Slow",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TIGER",
@@ -2185,7 +3434,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "F",
             "level-variance-type": "E",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TOAD",
@@ -2197,7 +3453,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 3",
+            "movement-speed": "Slow",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TORTOISES_LARGE",
@@ -2209,7 +3472,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Medium",
+            "armour-type": "AT 12",
+            "movement-speed": "Creeping",
+            "attack-quickness": "Very Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TORTOISES_SMALL",
@@ -2221,7 +3491,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 12",
+            "movement-speed": "Creeping",
+            "attack-quickness": "Very Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TREE_FROG",
@@ -2233,7 +3510,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Tiny",
+            "armour-type": "AT 3",
+            "movement-speed": "Slow",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TRIVREN",
@@ -2245,7 +3529,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TURTLES_LARGE_IN_WATER",
@@ -2257,7 +3548,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 12",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TURTLES_LARGE_ON_LAND",
@@ -2269,7 +3567,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "E",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 12",
+            "movement-speed": "Creeping",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TURTLES_SMALL_IN_WATER",
@@ -2281,7 +3586,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 12",
+            "movement-speed": "Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_TURTLES_SMALL_ON_LAND",
@@ -2293,7 +3605,14 @@
             "frequency-code": "3",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "0"
+            "average-level": "0",
+            "size": "Small",
+            "armour-type": "AT 12",
+            "movement-speed": "Creeping",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Passive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_VIPER",
@@ -2306,7 +3625,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "B",
             "level-variance-type": "B",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Slow",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_VIPERFISH",
@@ -2318,7 +3644,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "B",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_VULTURE",
@@ -2330,7 +3663,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "B",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_WALRUS_IN_WATER",
@@ -2343,7 +3683,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "F",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_WALRUS_ON_LAND",
@@ -2356,7 +3703,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "F",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_RUN",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_WARHORSE_GREATER",
@@ -2368,7 +3722,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "G",
             "level-variance-type": "F",
-            "average-level": "6"
+            "average-level": "6",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_WARHORSE_LESSER",
@@ -2380,7 +3741,14 @@
             "frequency-code": "5",
             "constitution-variance-type": "F",
             "level-variance-type": "E",
-            "average-level": "5"
+            "average-level": "5",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_WAR_SNAIL",
@@ -2393,7 +3761,14 @@
             "bonus-xp-code": "B",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 12",
+            "movement-speed": "Very Slow",
+            "attack-quickness": "Slow",
+            "max-pace": "CREATUREPACE_JOG",
+            "outlook": "Normal",
+            "critical-table": "Large"
         },
         {
             "id": "ANIMAL_WATER_BUFFALOS",
@@ -2406,7 +3781,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "D",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Medium",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_WHALE_BALEEN",
@@ -2419,7 +3801,14 @@
             "bonus-xp-code": "F",
             "constitution-variance-type": "H",
             "level-variance-type": "G",
-            "average-level": "10"
+            "average-level": "10",
+            "size": "Huge",
+            "armour-type": "AT 8",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Passive",
+            "critical-table": "Super Large"
         },
         {
             "id": "ANIMAL_WHALE_BEAKED",
@@ -2432,7 +3821,14 @@
             "bonus-xp-code": "E",
             "constitution-variance-type": "G",
             "level-variance-type": "E",
-            "average-level": "6"
+            "average-level": "6",
+            "size": "Huge",
+            "armour-type": "AT 8",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Large"
         },
         {
             "id": "ANIMAL_WHALE_NARWHAL",
@@ -2445,7 +3841,14 @@
             "bonus-xp-code": "E",
             "constitution-variance-type": "F",
             "level-variance-type": "E",
-            "average-level": "7"
+            "average-level": "7",
+            "size": "Large",
+            "armour-type": "AT 8",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Large"
         },
         {
             "id": "ANIMAL_WHALE_TOOTHED_LARGE",
@@ -2458,7 +3861,14 @@
             "bonus-xp-code": "F",
             "constitution-variance-type": "H",
             "level-variance-type": "F",
-            "average-level": "9"
+            "average-level": "9",
+            "size": "Huge",
+            "armour-type": "AT 8",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Normal",
+            "critical-table": "Super Large"
         },
         {
             "id": "ANIMAL_WHALE_TOOTHED_SMALL",
@@ -2471,7 +3881,14 @@
             "bonus-xp-code": "D",
             "constitution-variance-type": "F",
             "level-variance-type": "E",
-            "average-level": "7"
+            "average-level": "7",
+            "size": "Large",
+            "armour-type": "AT 8",
+            "movement-speed": "Moderately Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Large"
         },
         {
             "id": "ANIMAL_WINGED_PANTHER_GREATER",
@@ -2484,7 +3901,14 @@
             "bonus-xp-code": "E",
             "constitution-variance-type": "G",
             "level-variance-type": "F",
-            "average-level": "8"
+            "average-level": "8",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Large"
         },
         {
             "id": "ANIMAL_WINGED_PANTHER_LESSER",
@@ -2497,7 +3921,14 @@
             "bonus-xp-code": "C",
             "constitution-variance-type": "F",
             "level-variance-type": "D",
-            "average-level": "4"
+            "average-level": "4",
+            "size": "Large",
+            "armour-type": "AT 4",
+            "movement-speed": "Very Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_WOLF",
@@ -2510,7 +3941,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "E",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Aggressive",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_WOLVERINE",
@@ -2523,7 +3961,14 @@
             "bonus-xp-code": "A",
             "constitution-variance-type": "D",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Belligerent",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_WOMBAT",
@@ -2535,7 +3980,14 @@
             "frequency-code": "6",
             "constitution-variance-type": "C",
             "level-variance-type": "B",
-            "average-level": "2"
+            "average-level": "2",
+            "size": "Medium",
+            "armour-type": "AT 3",
+            "movement-speed": "Medium",
+            "attack-quickness": "Moderately Fast",
+            "max-pace": "CREATUREPACE_FAST_SPRINT",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_WOODPECKER",
@@ -2547,7 +3999,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "A",
             "level-variance-type": "A",
-            "average-level": "1"
+            "average-level": "1",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Timid",
+            "critical-table": "Normal"
         },
         {
             "id": "ANIMAL_ZEBRA",
@@ -2559,7 +4018,14 @@
             "frequency-code": "4",
             "constitution-variance-type": "G",
             "level-variance-type": "C",
-            "average-level": "3"
+            "average-level": "3",
+            "size": "Large",
+            "armour-type": "AT 3",
+            "movement-speed": "Fast",
+            "attack-quickness": "Fast",
+            "max-pace": "CREATUREPACE_DASH",
+            "outlook": "Normal",
+            "critical-table": "Normal"
         }
     ]
 }

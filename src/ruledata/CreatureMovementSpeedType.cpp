@@ -4,6 +4,7 @@ const std::string CreatureMovementSpeedType::toString(Type size) {
 	using enum Type;
 
 	switch (size) {
+	case kImmobile: return "Immobile";
 	case kInching: return "Inching";
 	case kCreeping: return "Creeping";
 	case kVerySlow: return "Very Slow";
@@ -21,6 +22,7 @@ const std::optional<CreatureMovementSpeedType::Type> CreatureMovementSpeedType::
 	using enum Type;
 
 	const std::string val = lcaseconcat(sv);
+	if (val == "immobile") return kImmobile;
 	if (val == "inching") return kInching;
 	if (val == "creeping") return kCreeping;
 	if (val == "veryslow") return kVerySlow;

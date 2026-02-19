@@ -15368,7 +15368,7 @@
          <attack-quickness>VERY_FAST</attack-quickness>
          <movement-speed>MEDIUM</movement-speed>
          <max-pace>DASH</max-pace>
-         <outlook>PROTECT</outlook>
+         <outlook>PROTECTIVE</outlook>
          <critical-modifier>NO_STUN_BLEED</critical-modifier>
          <critical-table>NORMAL</critical-table>
          <level-code level="1">A</level-code>
@@ -16689,7 +16689,7 @@
          <attack-quickness>FAST</attack-quickness>
          <movement-speed>FAST</movement-speed>
          <max-pace>DASH</max-pace>
-         <outlook>PROTECT</outlook>
+         <outlook>PROTECTIVE</outlook>
          <critical-modifier>NO_STUN_BLEED</critical-modifier>
          <critical-table>NORMAL</critical-table>
          <level-code level="4">B</level-code>

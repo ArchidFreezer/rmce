@@ -54,6 +54,41 @@ void AnimalDatafileParserJson::parse() {
 
 		ref.setAverageLevel(v.second.get<int>("average-level")); 
 
+		boost::optional<std::string> treasure_code_id = v.second.get_optional<std::string>("treasure-code");
+		if (treasure_code_id) ref.setTreasureCode(factory().get<TreasureCodeData>(treasure_code_id.value()));
+
+		CreatureSizeType::Type size_code{};
+		CreatureSizeType::fromString(v.second.get<std::string>("size"), size_code);
+		ref.setSize(size_code);
+
+		ArmourType::Type armour_code{};
+		ArmourType::fromString(v.second.get<std::string>("armour-type"), armour_code);
+		ref.setArmourType(armour_code);
+
+		CreatureMovementSpeedType::Type movement_speed_code{};
+		CreatureMovementSpeedType::fromString(v.second.get<std::string>("movement-speed"), movement_speed_code);
+		ref.setMovementSpeed(movement_speed_code);
+
+		CreatureMovementSpeedType::Type attack_quickness_code{};
+		CreatureMovementSpeedType::fromString(v.second.get<std::string>("attack-quickness"), attack_quickness_code);
+		ref.setAttackQuickness(attack_quickness_code);
+
+		std::string max_pace_id{ v.second.get<std::string>("max-pace") };
+		ref.setMaxPace(factory().get<CreaturePaceData>(max_pace_id));
+
+		AnimalOutlookType::Type outlook_code{};
+		AnimalOutlookType::fromString(v.second.get<std::string>("outlook"), outlook_code);
+		ref.setOutlook(outlook_code);
+
+		CriticalSizeTableType::Type critical_table_code{};
+		CriticalSizeTableType::fromString(v.second.get<std::string>("critical-table"), critical_table_code);
+		ref.setCriticalTableType(critical_table_code);
+
+		// Critical modifiers are optional
+		boost::optional<const pt::ptree&> critical_modifiers = v.second.get_child_optional("critical_modifiers");
+		if (critical_modifiers) ref.setCriticalModifiers(parseEnumSetTree<CriticalModifierType::Type>(critical_modifiers));
+
+
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
 	}
@@ -74,6 +109,20 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 	if (game_data.constitutionVarianceType() != CreatureConstitutionVarianceType::Type::kNone) datum.put("constitution-variance-type", CreatureConstitutionVarianceType::toString(game_data.constitutionVarianceType()));
 	datum.put("level-variance-type", CreatureLevelVarianceType::toString(game_data.levelVarianceType()));
 	datum.put("average-level", game_data.averageLevel());
+	if (game_data.treasureCode()) datum.put("treasure-code", game_data.treasureCode().value()->id());
+	datum.put("size", CreatureSizeType::toString(game_data.size()));
+	datum.put("armour-type", ArmourType::toString(game_data.armourType()));
+	datum.put("movement-speed", CreatureMovementSpeedType::toString(game_data.movementSpeed()));
+	datum.put("attack-quickness", CreatureMovementSpeedType::toString(game_data.attackQuickness()));
+	datum.put("max-pace", game_data.maxPace()->id());
+	datum.put("outlook", AnimalOutlookType::toString(game_data.outlook()));
+	datum.put("critical-table", CriticalSizeTableType::toString(game_data.criticalTableType()));
+
+	// Critical modifiers are optional, only add to the tree if there are any
+	{
+		pt::ptree tree{ getEnumSetTree<CriticalModifierType::Type>(game_data.criticalModifiers()) };
+		if (tree.size()) datum.push_back(std::make_pair("critical_modifiers", tree));
+	}
 
 }
 

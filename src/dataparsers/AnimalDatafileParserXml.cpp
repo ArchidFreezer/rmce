@@ -39,6 +39,38 @@ void AnimalDatafileParserXml::parse() {
 		ref.setLevelVarianceType(level_code);
 		ref.setAverageLevel(plevel.get<int>("<xmlattr>.level"));
 
+		std::string treasure_code_id = v.second.get<std::string>("treasure-code");
+		if (treasure_code_id != "-") {
+			ref.setTreasureCode(factory().get<TreasureCodeData>(treasure_code_id));
+		}
+
+		CreatureSizeType::Type size_code{};
+		CreatureSizeType::fromString(v.second.get<std::string>("size"), size_code);
+		ref.setSize(size_code);
+
+		ArmourType::Type armour_code{};
+		ArmourType::fromString(v.second.get<std::string>("armour-type"), armour_code);
+		ref.setArmourType(armour_code);
+
+		CreatureMovementSpeedType::Type movement_speed_code{};
+		CreatureMovementSpeedType::fromString(v.second.get<std::string>("movement-speed"), movement_speed_code);
+		ref.setMovementSpeed(movement_speed_code);
+
+		CreatureMovementSpeedType::Type attack_quickness_code{};
+		CreatureMovementSpeedType::fromString(v.second.get<std::string>("attack-quickness"), attack_quickness_code);
+		ref.setAttackQuickness(attack_quickness_code);
+
+		std::string max_pace_id{ GameRuleData::generateId("CreaturePace", v.second.get<std::string>("max-pace")) };
+		ref.setMaxPace(factory().get<CreaturePaceData>(max_pace_id));
+
+		AnimalOutlookType::Type outlook_code{};
+		AnimalOutlookType::fromString(v.second.get<std::string>("outlook"), outlook_code);
+		ref.setOutlook(outlook_code);
+
+		CriticalSizeTableType::Type critical_table_code{};
+		CriticalSizeTableType::fromString(v.second.get<std::string>("critical-table"), critical_table_code);
+		ref.setCriticalTableType(critical_table_code);
+
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
 	}
