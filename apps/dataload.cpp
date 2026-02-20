@@ -12,6 +12,7 @@
 #include <CultureTypeDatafileParserJson.h>
 #include <LanguageCategoryDatafileParserJson.h>
 #include <LanguageDatafileParserJson.h>
+#include <PoisonDatafileParserJson.h>
 #include <PoisonTypeDatafileParserJson.h>
 #include <ProfessionDatafileParserXml.h>
 #include <ProfessionDatefileParserJson.h>
@@ -43,6 +44,7 @@ int main() {
 	CultureTypeDatafileParserJson culture_type_parser(cache, "../../../../data/CultureTypes.json");
 	LanguageCategoryDatafileParserJson language_category_parser(cache, "../../../../data/LanguageCategories.json");
 	LanguageDatafileParserJson language_parser(cache, "../../../../data/Languages.json");
+	PoisonDatafileParserJson poison_parser(cache, "../../../../data/Poisons.json");
 	PoisonTypeDatafileParserJson poison_type_parser(cache, "../../../../data/PoisonTypes.json");
 	ProfessionDatafileParserJson profession_parser(cache, "../../../../data/Professions.json");
 	RaceDatafileParserJson race_parser(cache, "../../../../data/Races.json");
@@ -69,6 +71,7 @@ int main() {
 	parsers.push_back(&culture_type_parser);
 	parsers.push_back(&language_category_parser);
 	parsers.push_back(&language_parser);
+	parsers.push_back(&poison_parser);
 	parsers.push_back(&poison_type_parser);
 	parsers.push_back(&profession_parser);
 	parsers.push_back(&race_parser);
@@ -98,6 +101,7 @@ int main() {
 		//culture_type_parser.save("../../../../data/CultureTypes2.json");
 		//language_category_parser.save("../../../../data/LanguageCategories2.json");
 		//language_parser.save("../../../../data/Languages2.json");
+		//poison_parser.save("../../../../data/Poisons2.json");
 		//poison_type_parser.save("../../../../data/PoisonTypes2.json");
 		//profession_parser.save("../../../../data/Professions2.json");
 		//race_parser.save("../../../../data/Races2.json");
