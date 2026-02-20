@@ -2,8 +2,10 @@
 
 #include <set>
 #include <string_view>
+#include <vector>
 
 #include <AnimalOutlookType.h>
+#include <AnimalAttack.h>
 #include <ArmourType.h>
 #include <CreatureConstitutionVarianceType.h>
 #include <LevelVarianceType.h>
@@ -16,6 +18,7 @@
 #include <GameRuleData.h>
 #include <Location.h>
 #include <ManoeuvreDifficultyType.h>
+#include <NumberRange.h>
 #include <TreasureCodeData.h>
 #include <table/CreatureBonusXpTable.h>
 
@@ -421,6 +424,50 @@ public:
 	 */
 	const Location& location() const { return *location_; }
 
+	/**
+	 * @brief Add an attack to the animal
+	 * @param chance_range Pointer to a NumberRange<int> that represents the chance of the attack being used in a round, used as the key for the attack in the attacks map.
+	 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the attacks map.
+	 */
+	void addAttack(const NumberRange<int>& chance_range, AnimalAttack attack) { attacks_.emplace(&chance_range, std::move(attack)); }
+
+	/**
+	 * @brief Get the map of attacks for the animal
+	 * @return Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances.
+	 */
+	const std::map<const NumberRange<int>*, AnimalAttack>& attacks() const { return attacks_; }
+
+	/**
+	 * @brief Get the attack for a given d100 roll
+	 * @param d100_roll The result of a d100 roll, used to determine which attack is used in a round based on the chance ranges defined for each attack.
+	 * @return The attack for the given d100 roll, determined by finding the first attack in the attacks map where the d100 roll falls within the chance range key. If no such attack is found, a default constructed AnimalAttack is returned.
+	 */
+	AnimalAttack getAttack(int d100_roll) const;
+
+	/**
+	 * @brief Add an attack to be used in the same round as the primary attack if it results in a non-tiny critical
+	 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the same_round_attacks set.
+	 */
+	void addSameRoundAttack(AnimalAttack attack) { same_round_attacks_.emplace_back(std::move(attack)); }
+
+	/**
+	 * @brief Get the set of attacks that are used in the same round as the primary attack if it results in a non-tiny critical
+	 * @return Set of attacks that are used in the same round as the primary attack if it results in a non-tiny critical
+	 */
+	const std::vector<AnimalAttack>& sameRoundAttacks() const { return same_round_attacks_; }
+
+	/**
+	 * @brief Add an attack to be used in the round after the primary attack if it results in a non-tiny critical
+	 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the next_round_attacks set.
+	 */
+	void addNextRoundAttack(AnimalAttack attack) { next_round_attacks_.emplace_back(std::move(attack)); }
+
+	/**
+	 * @brief Get the set of attacks that are used in the round after the primary attack if it results in a non-tiny critical
+	 * @return Set of attacks that are used in the round after the primary attack if it results in a non-tiny critical
+	 */
+	const std::vector<AnimalAttack>& nextRoundAttacks() const { return next_round_attacks_; }
+
 private:
 	std::string name_{}; /**< In game name of the animal */
 	std::string description_{}; /**< Description of the animal for flavour purposes */
@@ -445,7 +492,9 @@ private:
 	std::pair<int, int> encounter_range_{}; /**< A pair containing the minimum and maximum number of animals typically enountered in a single encounter, used to determine how many animals are encountered when an encounter with the animal is generated. */
 	std::pair<int, int> number_young_range_{}; /**< A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal. */
 	std::unique_ptr<Location> location_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */
-	// TODO: Add attack data
+	std::map<const NumberRange<int>*, AnimalAttack> attacks_{}; /**< Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances. */
+	std::vector<AnimalAttack> same_round_attacks_{}; /**< Set of attacks that are used in the same round as the primary attack if it results in a non-tiny critical */
+	std::vector<AnimalAttack> next_round_attacks_{}; /**< Set of attacks that are used in the round after the primary attack if it results in a non-tiny critical */
 
 	/**
 	 * @brief Gets the number of hits per level difference based on the constitution code.

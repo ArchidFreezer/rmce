@@ -253,3 +253,13 @@ int AnimalData::hits(int level) const {
 int AnimalData::exhaustionPoints() const {
 	return bonusExhaustionPoints() + (staminaBonus() * 3) + 40;
 }
+
+AnimalAttack AnimalData::getAttack(int d100_roll) const {
+	if (d100_roll < 1 || d100_roll > 100) return AnimalAttack{}; // Invalid roll, return default attack
+	for (const auto& attack : attacks_) {
+		if (attack.first->matches(d100_roll)) {
+			return attack.second;
+		}
+	}
+	return AnimalAttack{}; // Should never be hit if the data is correct, but return a default attack if no match is found
+}
