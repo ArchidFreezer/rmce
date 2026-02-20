@@ -5,15 +5,50 @@
 #include <AttackSizeType.h>
 #include <CriticalTableType.h>
 #include <CriticalType.h>
+#include <PoisonData.h>
+#include <NumberRange.h>
 #include <WeaponTypeData.h>
 #include <table/AttackTable.h>
 #include <table/SpecialAttackTable.h>
 
+/**
+ * @brief Represents the characteristics of an animal attack.
+ * 
+ * Many of the fields in this class are optional and it is expected that only one or two of the fields will be set for given attack. For example, a bear's claw attack would have an offensive bonus and a non-weapon attack table,
+ * but no weapon type or special attack, while a giant spider's bite would have an offensive bonus, a non-weapon attack table and a poison effect, but no weapon type or special attack table.
+ * 
+ * Animals will typically have multiple attacks available to them, for example a bear would have a claw attack and a bot attack, and the creature data will specify the chance that each attack is used in a round.
+ * The fields in this class are used to determine the results of an attack when it is used.
+ */
 class AnimalAttack {
 public:
 
 	/**
-	 * @brief Constructor
+	 * @brief Set the percentage chance that this attack will be used
+	 * 
+	 * This is not the chance that the attack will be used in a round, it is the chance the results of the attack should be applied to the target. For example, starfish only have a 10% chance of being poisonous
+	 * so even though that attack is always used, the results of the attack are only applied 10% of the time. This is typically used on seconday attacks that are applied if a primary aattack gains a critical, though not necessarily.
+	 * 
+	 * What this is NOT is the chance that the attack will be used in a round, which is defined in the animal data.
+	 * 
+	 * @param chance Percentage chance that this attack will be used
+	 */
+	void setChance(const NumberRange<int>* chance) { chance_ = chance; }
+
+	/**
+	 * @brief Get the percentage chance that this attack will be used
+	 *
+	 * This is not the chance that the attack will be used in a round, it is the chance the results of the attack should be applied to the target. For example, starfish only have a 10% chance of being poisonous
+	 * so even though that attack is always used, the results of the attack are only applied 10% of the time. This is typically used on seconday attacks that are applied if a primary aattack gains a critical, though not necessarily.
+	 *
+	 * What this is NOT is the chance that the attack will be used in a round, which is defined in the animal data.
+	 *
+	 * @return NumberRange<int> Percentage chance that this attack will be used
+	 */
+	const NumberRange<int>* chance() const { return chance_; }
+
+	/**
+	 * @brief set the offensive bonus for the attack
 	 * @param offensive_bonus Offensive bonus for the attack, used to determine how difficult it is to hit with the attack.
 	 */
 	void setOffensiveBonus(int offensive_bonus) { offensive_bonus_ = offensive_bonus; }
@@ -188,7 +223,63 @@ public:
 	 */
 	std::optional<CriticalType::Type> criticalType() const { return critical_type_; }
 
+	/**
+	 * @brief Set the poison applied by the attack, if any. If not set then the attack does not apply any poison.
+	 * @param poison Poison applied by the attack, if any. If not set then the attack does not apply any poison.
+	 */
+	void setPoison(const PoisonData& poison) { poison_ = &poison; }
+
+	/**
+	 * @brief Get the poison applied by the attack, if any. If not set then the attack does not apply any poison.
+	 * @return PoisonData* Poison applied by the attack, if any. If not set then the attack does not apply any poison.
+	 */
+	std::optional<const PoisonData*> poison() const { return poison_; }
+
+	/**
+	 * @brief Set the number of hits per round the target takes following the attack
+	 * @param hits_per_rounds Number of hits per round the target takes following the attack
+	 */
+	void setHitsPerRounds(int hits_per_rounds) { hits_per_rounds_ = hits_per_rounds; }
+
+	/**
+	 * @brief Get the number of hits per round the target takes following the attack
+	 * @return int Number of hits per round the target takes following the attack
+	 */
+	int hitsPerRounds() const { return hits_per_rounds_; }
+
+	/**
+	 * @brief Set the range of the attack, used to determine how far away the target can be for the attack to be used. This is used for attacks like a Spitting Cobra that spits venom to blind it's targets.
+	 * 
+	 * The range is in feet
+	 * 
+	 * @param range Range of the attack, used to determine how far away the target can be for the attack to be used. This is used for attacks like a Spitting Cobra that spits venom to blind it's targets.
+	 */
+	void setRange(int range) { range_ = range; }
+
+	/**
+	 * @brief Get the range of the attack, used to determine how far away the target can be for the attack to be used. This is used for attacks like a Spitting Cobra that spits venom to blind it's targets.
+	 * 
+	 * The range is in feet
+	 * 
+	 * @return int Range of the attack, used to determine how far away the target can be for the attack to be used. This is used for attacks like a Spitting Cobra that spits venom to blind it's targets.
+	 */
+	int range() const { return range_; }
+
+	/**
+	 * @brief Set special attacks that are not specifically defined above.
+	 * @param special Special attacks that are not specifically defined above.
+	 */
+	void setSpecial(std::string special) { special_ = std::move(special); }
+
+	/**
+	 * @brief Get special attacks that are not specifically defined above.
+	 * @return std::optional<std::string> Special attacks that are not specifically defined above.
+	 */
+	std::optional<const std::string> special() const { return special_; }
+
+
 private:
+	const NumberRange<int>* chance_{}; /**< Percentage chance that this attack will be used */
 	int offensive_bonus_{}; /**< Offensive bonus for the attack, used to determine how difficult it is to hit with the attack. */
 	AttackSizeType::Type non_weapon_size_{}; /**< Size of a non-weapon attack. */
 	const SpecialAttackTable* non_weapon_table_{}; /**< SpecialAttackTable for non-weapon attacks. */
@@ -196,8 +287,12 @@ private:
 	const AttackTable* special_table_{}; /**< AttackTable for special attacks, used to determine the attack result for special attacks. */
 	std::set<const AnimalAttack*> multi_attacks_{}; /**< Set of attacks that the creature may use in a round */
 	int min_num_attackers_{}; /**< If this number of creatures attack as a group, this attack may be used. For example, (10) indicates that if 10 of these creatures attack as a group they may use the given attack. */
-	int num_attacks_{}; /**< Number of attacks that the creature makes with this attack in a round, used to indicate that there should be multiple rolls to represent multiple attacks such as a bear's two claws and one bite. */
-	int concussion_multiplier_{}; /**< Multiplier for concussion damage, used to determine how much concussion damage is dealt by the attack. */
+	int num_attacks_{ 1 }; /**< Number of attacks that the creature makes with this attack in a round, used to indicate that there should be multiple rolls to represent multiple attacks such as a bear's two claws and one bite. */
+	int concussion_multiplier_{ 1 }; /**< Multiplier for concussion damage, used to determine how much concussion damage is dealt by the attack. */
 	std::optional<CriticalTableType::Type> critical_table_{}; /**< Critical table to use for the attack, used to determine which critical table to use for the attack. If not set then the default critical table will be used. */
 	std::optional<CriticalType::Type> critical_type_{}; /**< Critical type for the attack, used to determine which critical table to use for the attack. If not set then the default critical table will be used. */
+	std::optional<const PoisonData*> poison_{}; /**< Poison applied by the attack, if any. If not set then the attack does not apply any poison. */
+	int hits_per_rounds_{}; /**< Number of hits per round the target takes following the attack. */
+	int range_{}; /**< Range of the attack, used to determine how far away the target can be for the attack to be used. This is used for attacks like a Spitting Cobra that spits venom to blind it's targets. */
+	std::optional<std::string> special_{}; /**< Special attacks that are not specifically defined above. */
 };
