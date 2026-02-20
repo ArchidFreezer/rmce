@@ -78,6 +78,13 @@
             "level-variance": "A"
         },
         {
+            "id": "POISON_SOLDIER_ANT_VENOM",
+            "name": "Soldier Ant Venom",
+            "type": "POISONTYPE_RESPIRATORY",
+            "level": "1",
+            "level-variance": "C"
+        },
+        {
             "id": "POISON_SPIDER_VENOM",
             "name": "Spider Venom",
             "type": "POISONTYPE_MUSCLE",
