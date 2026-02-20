@@ -5,7 +5,6 @@
 #include <AttackSizeType.h>
 #include <CriticalTableType.h>
 #include <CriticalType.h>
-#include <NumberRange.h>
 #include <WeaponTypeData.h>
 #include <table/AttackTable.h>
 #include <table/SpecialAttackTable.h>
@@ -23,18 +22,6 @@ public:
 	 * @return int Offensive bonus for the attack, used to determine how difficult it is to hit with the attack.
 	 */
 	int offensiveBonus() const { return offensive_bonus_; }
-
-	/**
-	 * @brief Set the percentage chance that this attack will be used
-	 * @param chance Percentage chance that this attack will be used
-	 */
-	void setChance(const NumberRange<int>* chance) { chance_ = chance; }
-
-	/**
-	 * @brief Get the percentage chance that this attack will be used
-	 * @return NumberRange<int> Percentage chance that this attack will be used
-	 */
-	const NumberRange<int>* chance() const { return chance_; }
 
 	/**
 	 * @brief Set the size of a non-weapon attack
@@ -202,7 +189,6 @@ public:
 	std::optional<CriticalType::Type> criticalType() const { return critical_type_; }
 
 private:
-	const NumberRange<int>* chance_{}; /**< Percentage chance that this attack will be used */
 	int offensive_bonus_{}; /**< Offensive bonus for the attack, used to determine how difficult it is to hit with the attack. */
 	AttackSizeType::Type non_weapon_size_{}; /**< Size of a non-weapon attack. */
 	const SpecialAttackTable* non_weapon_table_{}; /**< SpecialAttackTable for non-weapon attacks. */
