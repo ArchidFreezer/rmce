@@ -1,0 +1,274 @@
+{
+    "poison-types": [
+        {
+            "id": "POISONTYPE_CIRCULATORY",
+            "type": "Circulatory",
+            "areas-affected": "feet, legs, hands, arms, abdomen, chest, neck, head",
+            "severity-effect-onsets": [
+                {
+                    "severity": "Mild",
+                    "min": "1",
+                    "max": "50"
+                },
+                {
+                    "severity": "Moderate",
+                    "min": "3",
+                    "max": "30"
+                },
+                {
+                    "severity": "Severe",
+                    "min": "5",
+                    "max": "50"
+                },
+                {
+                    "severity": "Extreme",
+                    "min": "10",
+                    "max": "100"
+                }
+            ],
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "Lasting 1-50 hours with swelling around the point of injection or ingestion; drowsiness (-15); slightly blurred vision (-25)"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "Lessening of motor coordination in legs (-25 for leg maneuvers) and arms (-25 for hand maneuvers); mild euphoria (-20)"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "Discoloration and chills; incapacitating headaches (no activity; 1-10 hits\/round until unconsciousness)"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "Death due to circulatory failure (i.e., oxygen starvation and associated waste poisoning)"
+                }
+            ]
+        },
+        {
+            "id": "POISONTYPE_CONVERSION",
+            "type": "Conversion",
+            "areas-affected": "kidneys, bowels, intestines, stomach, liver, lungs, heart, throat, brain, legs, arms",
+            "severity-effect-onsets": [
+                {
+                    "severity": "Mild",
+                    "min": "5",
+                    "max": "50"
+                },
+                {
+                    "severity": "Moderate",
+                    "min": "10",
+                    "max": "100"
+                },
+                {
+                    "severity": "Severe",
+                    "min": "2",
+                    "max": "200"
+                },
+                {
+                    "severity": "Extreme",
+                    "min": "20",
+                    "max": "200"
+                }
+            ],
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "Lasting 5-50 hours; queasiness and an upset stomach (2-20 hits; -20)"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "Painful vomiting (3-30 hits; 10% chance of incapacity each round)"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "Partial conversion (1-100%) of bodily tissue to another form (with associated disability; death if area affected is a critical organ); victim at -51 to -100; lapse into unconsciousness 1-50 rounds after initial severe effect"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "Complete transformation of bodily tissue to another form; death if area affected critical to survival"
+                }
+            ]
+        },
+        {
+            "id": "POISONTYPE_MUSCLE",
+            "type": "Muscle",
+            "areas-affected": "hands, arms, shoulders, feet, legs, hips, jaw, nose, ears, eyes, bowels, heart",
+            "severity-effect-onsets": [
+                {
+                    "severity": "Mild",
+                    "min": "3",
+                    "max": "30"
+                },
+                {
+                    "severity": "Moderate",
+                    "min": "5",
+                    "max": "50"
+                },
+                {
+                    "severity": "Severe",
+                    "min": "360",
+                    "max": "3600"
+                },
+                {
+                    "severity": "Extreme",
+                    "min": "360",
+                    "max": "18000"
+                }
+            ],
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "Lasting 3-30 hours; light-headedness and swelling (-10); pain (1-5 hits\/round)"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "Moderate loss of overall coordination (-30); in any given round, there is 5% chance muscles necessary to given action will not operate"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "Fever and sweating; lapse into unconsciousness for 1-10 days"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "Death due to overall muscle failure (e.g., cessation of heart activity)"
+                }
+            ]
+        },
+        {
+            "id": "POISONTYPE_NERVE",
+            "type": "Nerve",
+            "areas-affected": "extremities, eyes, mouth, brain",
+            "severity-effect-onsets": [
+                {
+                    "severity": "Mild",
+                    "min": "1",
+                    "max": "10"
+                },
+                {
+                    "severity": "Moderate",
+                    "min": "1",
+                    "max": "20"
+                },
+                {
+                    "severity": "Severe",
+                    "min": "2",
+                    "max": "20"
+                },
+                {
+                    "severity": "Extreme",
+                    "min": "2",
+                    "max": "50"
+                }
+            ],
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "Lasting 1-10 hours; mild loss of thought and motor coordination (-30)"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "Nervous system shock (5-50 hits; -75)"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "Stroke (-100); temporary stats reduced by 1-80 (d100 roll, ignoring 81-100)"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "Death due to brain failure"
+                }
+            ]
+        },
+        {
+            "id": "POISONTYPE_REDUCTION",
+            "type": "Reduction",
+            "areas-affected": "kidneys, bowels, intestines, stomach, liver, lungs, heart, throat, brain, legs, arms",
+            "severity-effect-onsets": [
+                {
+                    "severity": "Mild",
+                    "min": "10",
+                    "max": "100"
+                },
+                {
+                    "severity": "Moderate",
+                    "min": "20",
+                    "max": "200"
+                },
+                {
+                    "severity": "Severe",
+                    "min": "3",
+                    "max": "300"
+                },
+                {
+                    "severity": "Extreme",
+                    "min": "360",
+                    "max": "3600"
+                }
+            ],
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "Lasting 10-100 hours; great pain (4 hits\/round until unconscious)"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "Bleeding through pores (3 hits\/round)"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "Incapacitation; after 1-100 minutes lapse into coma lasting 1-100 days"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "Death due to dissolution of vital tissue and destruction of associated organs (e.g., liver reduced to fluid)"
+                }
+            ]
+        },
+        {
+            "id": "POISONTYPE_RESPIRATORY",
+            "type": "Respiratory",
+            "areas-affected": "lungs, throat, brain",
+            "severity-effect-onsets": [
+                {
+                    "severity": "Mild",
+                    "min": "1",
+                    "max": "20"
+                },
+                {
+                    "severity": "Moderate",
+                    "min": "2",
+                    "max": "20"
+                },
+                {
+                    "severity": "Severe",
+                    "min": "1",
+                    "max": "100"
+                },
+                {
+                    "severity": "Extreme",
+                    "min": "2",
+                    "max": "200"
+                }
+            ],
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "Lasting 1-20 hours; mild euphoria (-20)"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "Significant euphoria (-50); choking pain (1-5 hits\/round for 1-100 rounds)"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "Uncontrollable coughing (1-10 hits\/round for 1-10 rounds); lapse into unconsciousness; 50% chance of coma for 1-10 days"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "Death due to respiratory failure and associated oxygen starvation"
+                }
+            ]
+        }
+    ]
+}
