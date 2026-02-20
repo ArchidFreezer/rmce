@@ -5,6 +5,7 @@
 #include <AttackSizeType.h>
 #include <CriticalTableType.h>
 #include <CriticalType.h>
+#include <Dice.h>
 #include <PoisonData.h>
 #include <NumberRange.h>
 #include <WeaponTypeData.h>
@@ -45,7 +46,26 @@ public:
 	 *
 	 * @return NumberRange<int> Percentage chance that this attack will be used
 	 */
-	const NumberRange<int>* chance() const { return chance_; }
+	std::optional<const NumberRange<int>*> chance() const { return chance_; }
+
+	/**
+	 * @brief Check if the attack should be used based on a d100 roll and the percentage chance of the attack being used
+	 * 
+	 * If there is not a percentage chance defined for the attack, it is assumed that the attack should always be used and this method will return `true`.
+	 * 
+	 * @param d100_roll The result of a d100 roll, used to determine if the attack should be used based on the percentage chance of the attack being used
+	 * @return `true` if the attack should be used, `false` otherwise
+	 */
+	bool shouldUseAttack(int d100_roll) const { return (chance_.has_value() ? chance_.value()->matches(d100_roll) : true); }
+
+	/**
+	 * @brief Check if the attack should be used based on a randmly generated d100 roll and the percentage chance of the attack being used
+	 * 
+	 * If there is not a percentage chance defined for the attack, it is assumed that the attack should always be used and this method will return `true`.
+	 * 
+	 * @return `true` if the attack should be used, `false` otherwise
+	 */
+	bool shouldUseAttack() const { return shouldUseAttack(Dice(100).roll(false).result()); }
 
 	/**
 	 * @brief set the offensive bonus for the attack
@@ -279,7 +299,7 @@ public:
 
 
 private:
-	const NumberRange<int>* chance_{}; /**< Percentage chance that this attack will be used */
+	std::optional <const NumberRange<int>*> chance_{}; /**< Percentage chance that this attack will be used */
 	int offensive_bonus_{}; /**< Offensive bonus for the attack, used to determine how difficult it is to hit with the attack. */
 	AttackSizeType::Type non_weapon_size_{}; /**< Size of a non-weapon attack. */
 	const SpecialAttackTable* non_weapon_table_{}; /**< SpecialAttackTable for non-weapon attacks. */
