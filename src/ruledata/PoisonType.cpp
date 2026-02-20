@@ -23,3 +23,9 @@ const std::optional<PoisonType::Type> PoisonType::fromString(std::string_view sv
 	if (val == "respiratory") return kRespiratory;
 	return {};
 }
+
+void PoisonType::fromString(std::string_view sv, PoisonType::Type& type) {
+	std::optional<Type> opt_type = fromString(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for PoisonType::Type: " + std::string(sv));
+}

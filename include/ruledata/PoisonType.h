@@ -10,8 +10,7 @@
 /**
  * @brief Contains the PoisonType::Type enum and associated functions
  *
- * During combat and in other situations the size of a creature determines the lookup table to use. This defines the
- * valid sizes that there are tables for.
+ * There are several different types of poisons in the game, each with different symptoms and areas of the body that they affect. This defines these types and provides functions for converting between the enum values and their string representations.
  */
 namespace PoisonType {
 
@@ -30,19 +29,19 @@ namespace PoisonType {
 
 	/**
 	 * @brief Get the string representation of the given enum
-	 * @param size The PoisonType::Type to get the string of
+	 * @param type The PoisonType::Type to get the string of
 	 * @return Game display form of the enum value as a string
 	 */
-	const std::string toString(Type size);
+	const std::string toString(Type type);
 
 	/**
 	 * @brief Teach operator<< how to print a PoisonType::Type
 	 * @param out Output stream that the enum should be printed to
-	 * @param size Enum value to output
+	 * @param type Enum value to output
 	 * @return Output stream reference containing the output enum value
 	 */
-	inline std::ostream& operator<<(std::ostream& out, Type size) {
-		return out << toString(size);
+	inline std::ostream& operator<<(std::ostream& out, Type type) {
+		return out << toString(type);
 	}
 
 	/**
