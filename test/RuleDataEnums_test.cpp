@@ -13,6 +13,7 @@
 #include <EnvironmentType.h>
 #include <HabitatType.h>
 #include <ManoeuvreDifficultyType.h>
+#include <PoisonType.h>
 #include <RealmType.h>
 #include <ResistanceType.h>
 #include <SkillActionType.h>
@@ -352,5 +353,14 @@ namespace {
 		EXPECT_EQ(SpellUserType::fromString(toString(SpellUserType::kSemi)), SpellUserType::kSemi);
 		EXPECT_EQ(SpellUserType::fromString(toString(SpellUserType::kNone)), SpellUserType::kNone);
 		EXPECT_EQ(SpellUserType::fromString(toString(SpellUserType::kChaotic)), SpellUserType::kChaotic);
+	}
+
+	TEST(RuleDataEnums, PoisonType) {
+		EXPECT_EQ(PoisonType::fromString(toString(PoisonType::kCirculatory)), PoisonType::kCirculatory);
+		EXPECT_EQ(PoisonType::fromString(toString(PoisonType::kConversion)), PoisonType::kConversion);
+		EXPECT_EQ(PoisonType::fromString(toString(PoisonType::kMuscle)), PoisonType::kMuscle);
+		EXPECT_EQ(PoisonType::fromString(toString(PoisonType::kNerve)), PoisonType::kNerve);
+		EXPECT_EQ(PoisonType::fromString(toString(PoisonType::kReduction)), PoisonType::kReduction);
+		EXPECT_EQ(PoisonType::fromString(toString(PoisonType::kRespiratory)), PoisonType::kRespiratory);
 	}
 }
