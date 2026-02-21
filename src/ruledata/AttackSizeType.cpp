@@ -23,3 +23,9 @@ const std::optional<AttackSizeType::Type> AttackSizeType::fromString(std::string
 
 	return {};
 }
+
+void AttackSizeType::fromString(std::string_view sv, AttackSizeType::Type& type) {
+	std::optional<Type> opt_type = fromString(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for AttackSizeType::Type: " + std::string(sv));
+}
