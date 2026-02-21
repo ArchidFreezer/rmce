@@ -442,7 +442,15 @@ public:
 	 * @param d100_roll The result of a d100 roll, used to determine which attack is used in a round based on the chance ranges defined for each attack.
 	 * @return The attack for the given d100 roll, determined by finding the first attack in the attacks map where the d100 roll falls within the chance range key. If no such attack is found, a default constructed AnimalAttack is returned.
 	 */
-	AnimalAttack getAttack(int d100_roll) const;
+	AnimalAttack getAttack(int d100_roll) const { return getAttack(1, d100_roll); };
+
+	/**
+	 * @brief Get the attack for a given d100 roll
+	 * @param num_attackers The number of attackers in the round, used to determine which attack is used in a round based on the chance ranges defined for each attack. This is used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
+	 * @param d100_roll The result of a d100 roll, used to determine which attack is used in a round based on the chance ranges defined for each attack.
+	 * @return The attack for the given d100 roll, determined by finding the first attack in the attacks map where the d100 roll falls within the chance range key. If no such attack is found, a default constructed AnimalAttack is returned.
+	 */
+	AnimalAttack getAttack(int num_attackers, int d100_roll) const;
 
 	/**
 	 * @brief Add an attack to be used in the same round as the primary attack if it results in a non-tiny critical
@@ -467,6 +475,40 @@ public:
 	 * @return Set of attacks that are used in the round after the primary attack if it results in a non-tiny critical
 	 */
 	const std::vector<AnimalAttack>& nextRoundAttacks() const { return next_round_attacks_; }
+
+	/**
+	 * @brief Add an attack to be used based on the number of attackers in the round
+	 * 
+	 * This is typically used for small creatures where a single one is not very dangerous but a group of them can be. For example, Piranhas on there ownb are not that dangerous, but a shoal can be deadly.
+	 * If there are multiple of these defined the one with the largest group size that is less than or equal to the number of attackers in the round will be used. For example, if there are attacks defined for 2 or more attackers and 4 or more attackers and there are 3 attackers in the round then the attack for 2 or more attackers will be used as it is the largest group size that is less than or equal to the number of attackers in the round.
+	 * 
+	 * @param num_attackers The number of attackers in the round, used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
+	 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the attacks_by_num_attackers map with the key being the number of attackers required for the attack to be used.
+	 */
+	void addAttackByNumAttackers(int num_attackers, AnimalAttack attack) { attacks_by_num_attackers_.emplace(num_attackers, std::move(attack)); }
+
+	/**
+	 * @brief Get the map of attacks for the animal based on the number of attackers in the round
+	 *
+	 * This is typically used for small creatures where a single one is not very dangerous but a group of them can be. For example, Piranhas on there ownb are not that dangerous, but a shoal can be deadly.
+	 * If there are multiple of these defined the one with the largest group size that is less than or equal to the number of attackers in the round will be used. For example, if there are attacks defined for 2 or more attackers and 4 or more attackers and there are 3 attackers in the round then the attack for 2 or more attackers will be used as it is the largest group size that is less than or equal to the number of attackers in the round.
+	 *
+	 * @return Map of attack data for the animal, keyed by the number of attackers in the round. This is used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
+	 */
+	const std::map<int, AnimalAttack>& attacksByNumAttackers() const { return attacks_by_num_attackers_; }
+
+	/**
+	 * @brief Get the attack for a given number of attackers in the round
+	 *
+	 * This is typically used for small creatures where a single one is not very dangerous but a group of them can be. For example, Piranhas on there ownb are not that dangerous, but a shoal can be deadly.
+	 * If there are multiple of these defined the one with the largest group size that is less than or equal to the number of attackers in the round will be used. For example, if there are attacks defined for 2 or more attackers and 4 or more attackers and there are 3 attackers in the round then the attack for 2 or more attackers will be used as it is the largest group size that is less than or equal to the number of attackers in the round.
+	 * 
+	 * The reurn value needs to be checked to see if an attack was found for the given number of attackers in the round as it is possible that there are no attacks defined for the number of attackers in the round. For example, if there are attacks defined for 4 or more attackers and 6 or more attackers and there are only 3 attackers in the round then no attack would be found and an empty optional would be returned.
+	 *
+	 * @param num_attackers The number of attackers in the round, used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
+	 * @return The attack for the given number of attackers in the round, determined by finding the attack in the attacks_by_num_attackers map with the largest key that is less than or equal to the number of attackers in the round. If no such attack is found, a default constructed AnimalAttack is returned.
+	 */
+	std::optional<AnimalAttack> getAttackByNumAttackers(int num_attackers) const;
 
 private:
 	std::string name_{}; /**< In game name of the animal */
@@ -493,6 +535,7 @@ private:
 	std::pair<int, int> number_young_range_{}; /**< A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal. */
 	std::unique_ptr<Location> location_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */
 	std::map<const NumberRange<int>*, AnimalAttack> attacks_{}; /**< Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances. */
+	std::map<int, AnimalAttack> attacks_by_num_attackers_{}; /**< Map of attack data for the animal, keyed by the number of attackers in the round. This is used to determine if the attack should be used based on the number of attackers in the round. For example, an attack may only be used if there are 2 or more attackers in the round. */
 	std::vector<AnimalAttack> same_round_attacks_{}; /**< Set of attacks that are used in the same round as the primary attack if it results in a non-tiny critical */
 	std::vector<AnimalAttack> next_round_attacks_{}; /**< Set of attacks that are used in the round after the primary attack if it results in a non-tiny critical */
 

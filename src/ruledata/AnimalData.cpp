@@ -254,12 +254,30 @@ int AnimalData::exhaustionPoints() const {
 	return bonusExhaustionPoints() + (staminaBonus() * 3) + 40;
 }
 
-AnimalAttack AnimalData::getAttack(int d100_roll) const {
-	if (d100_roll < 1 || d100_roll > 100) return AnimalAttack{}; // Invalid roll, return default attack
+AnimalAttack AnimalData::getAttack(int num_attackers, int d100_roll) const {
+	AnimalAttack curr_attack{};
 	for (const auto& attack : attacks_) {
+		if (attack.second.usesMultipleAttackers() && num_attackers > attack.second.minNumAttackers()) return attack.second; // Always use the attack that requires multiple attackers if the number of attackers is sufficient, regardless of the d100 roll
 		if (attack.first->matches(d100_roll)) {
-			return attack.second;
+			curr_attack = attack.second;
 		}
 	}
-	return AnimalAttack{}; // Should never be hit if the data is correct, but return a default attack if no match is found
+	return curr_attack;
+}
+
+std::optional<AnimalAttack> AnimalData::getAttackByNumAttackers(int num_attackers) const {
+	AnimalAttack curr_attack{};
+	int curr_number{ 0 };
+	for (const auto& attack : attacks_) {
+		if (attack.second.usesMultipleAttackers()) {
+			int attack_num{ attack.second.minNumAttackers() };
+			if (attack_num > curr_number && attack_num <= num_attackers) {
+				curr_attack = attack.second;
+				curr_number = attack_num;
+			}
+		}
+	}
+	if (curr_number == 0) return std::nullopt;
+	
+	return curr_attack;
 }
