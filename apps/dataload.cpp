@@ -10,6 +10,8 @@
 #include <CreaturePaceDatafileParserJson.h>
 #include <CultureDatafileParserJson.h>
 #include <CultureTypeDatafileParserJson.h>
+#include <DiseaseDatafileParserJson.h>
+#include <DiseaseTypeDatafileParserJson.h>
 #include <LanguageCategoryDatafileParserJson.h>
 #include <LanguageDatafileParserJson.h>
 #include <PoisonDatafileParserJson.h>
@@ -42,6 +44,8 @@ int main() {
 	CreaturePaceDatafileParserJson creature_pace_parser(cache, "../../../../data/CreaturePaces.json");
 	CultureDatafileParserJson culture_parser(cache, "../../../../data/Cultures.json");
 	CultureTypeDatafileParserJson culture_type_parser(cache, "../../../../data/CultureTypes.json");
+	DiseaseDatafileParserJson disease_parser(cache, "../../../../data/Diseases.json");
+	DiseaseTypeDatafileParserJson disease_type_parser(cache, "../../../../data/DiseaseTypes.json");
 	LanguageCategoryDatafileParserJson language_category_parser(cache, "../../../../data/LanguageCategories.json");
 	LanguageDatafileParserJson language_parser(cache, "../../../../data/Languages.json");
 	PoisonDatafileParserJson poison_parser(cache, "../../../../data/Poisons.json");
@@ -69,6 +73,8 @@ int main() {
 	parsers.push_back(&creature_pace_parser);
 	parsers.push_back(&culture_parser);
 	parsers.push_back(&culture_type_parser);
+	parsers.push_back(&disease_parser);
+	parsers.push_back(&disease_type_parser);
 	parsers.push_back(&language_category_parser);
 	parsers.push_back(&language_parser);
 	parsers.push_back(&poison_parser);
@@ -99,6 +105,8 @@ int main() {
 		//creature_pace_parser.save("../../../../data/CreaturePaces2.json");
 		//culture_parser.save("../../../../data/Cultures2.json");
 		//culture_type_parser.save("../../../../data/CultureTypes2.json");
+		//disease_parser.save("../../../../data/Diseases2.json");
+		//disease_type_parser.save("../../../../data/DiseaseTypes2.json");
 		//language_category_parser.save("../../../../data/LanguageCategories2.json");
 		//language_parser.save("../../../../data/Languages2.json");
 		//poison_parser.save("../../../../data/Poisons2.json");

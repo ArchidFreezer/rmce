@@ -1,0 +1,124 @@
+{
+    "disease-types": [
+        {
+            "id": "DISEASETYPE_BUBONIC",
+            "type": "Bubonic",
+            "transmission": "Injection",
+            "description": "Strikes in 1-10 days",
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "rashes; mild glandular swelling; fever (-15)"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "inflammations and swelling in the glands, particularly in the armpit and groin areas (-25); puss-filled infections (10% chance of immobilization for each limb or eye)"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "lesions ooze puss; bleeding through pores; high fever; complete immobilization (50% chance of coma for 1-50 days)"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "death due to viral or bacterial infection in 1-20 days"
+                }
+            ]
+        },
+        {
+            "id": "DISEASETYPE_CHEMICAL",
+            "type": "Chemical",
+            "transmission": "Ingestion",
+            "description": "Strikes after continued exposure or use. See rules for addiction",
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "no significant permanent damage; withdrawal results in mild spasms, sweating, and irritability (-15)"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "occasional hallucinations (5% chance; -25); intermittent spasms (5% chance; -35); double vision (10% chance; -40); impaired Memory and Agility (-1 to -10 temp stat); withdrawal results in immobility"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "frequent hallucinations (10% chance; -50); intermittent fevers; shaking; weakened temporary stats (d100-1 to each stat); withdrawal results in immobility"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "slow death (1-50 months) due to destruction of internal organs (e.g., liver, kidneys, intestines); withdrawal results in immobility"
+                }
+            ]
+        },
+        {
+            "id": "DISEASETYPE_GENETIC",
+            "type": "Genetic",
+            "transmission": "Hereditary",
+            "description": "Strikes prior to outset of character’s entry into game or at a random moment during the game (e.g., whenever he rolls an unmodified 123)",
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "01-80 = an allergy; 81-100 = mild dyslexia (double development cost for written languages and -20 to reading attempts). For allergies, roll 2d10 with the following results: 2-4 = a specific type of herb or medicine; 5-7 = alcohol; 8-9 = dairy products; 10 = ragweed; 11 = pollen; 12 = a specific sweetener; 13-14 = a specific common plant; 15-17 = wheat products; 18-20 = a specific kind of meat"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "01-30 = epilepsy (any unmodified roll of 03 by character results in immobilizing seizure lasting d100 rounds); 31-50 = colour-blindness; 51-80 = pronounced dyslexia (quadruple development cost for written languages and -40 to reading attempts); 81-00 = narcolepsy (any unmodified roll of 02 by character results in 2-20 rounds of unstirrable sleep). For colour-blindness, roll 2d10 with the following results: 2-6 = complete color- blindness; 7-13 = red/green colour-blindness; 14-20 = blue/ orange colour-blindness"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "01-20 = cell anemia (character immune to specific disease such as malaria but has a -25 Constitution penalty and bleeds at double normal rate); 21-60 = hemophilia (character bleeds at four times normal rate); 61-100 = diabetes (-30 Constitution penalty and character must prepare own food specially or have a 50% chance of entering a coma for d10 hours)"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "death in d100 days due to a cancer, or some extreme form of the plights listed above"
+                }
+            ]
+        },
+        {
+            "id": "DISEASETYPE_PNEUMONIC",
+            "type": "Pneumonic",
+            "transmission": "Inhalation",
+            "description": "Strikes in d100 hours after exposure",
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "fever; sweating; dizziness (-20)"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "raging fever (-25); infected wounds (if any; -50); instability (-50 to moving maneuvers and missile attacks)"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "immobilizing coma for d100 day"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "death due to viral or bacterial infection in d100 hours"
+                }
+            ]
+        },
+        {
+            "id": "DISEASETYPE_PSYCHIATRIC",
+            "type": "Psychiatric",
+            "transmission": "Environment",
+            "description": "Strikes randomly, often as a result of trauma",
+            "severity-symptoms": [
+                {
+                    "severity": "Mild",
+                    "symptoms": "mild neuroses. Roll d100 with the following results: 01-10 = communication difficulty (e.g., stuttering); 11-25 = obsession (e.g., cleanliness); 26-40 = anger (e.g., directed grudge); 41-100 = light phobias (e.g., vertigo, claustrophobia, etc.)"
+                },
+                {
+                    "severity": "Moderate",
+                    "symptoms": "strong neuroses. Roll d100 with the following results: 01-08 = strong phobia of groups; 09-15 = strong phobia of open spaces; 16-30 = strong phobia of heights; 31-45 = strong phobia of confined spaces; 46-52 = strong phobia of water; 53-60 = strong phobia of a specific animal; 61-68 = strong phobia of storms; 69-75 = strong phobia of fast movement; 76-80 = sexual fetish for a particular type of object; 81-85 = sexual voyeurism; 86-90 = sexual addiction; 91-92 = cross-gender attraction; 93-94 = sexual exhibitionism; 95-96 = compulsive sexual attraction to children or dead bodies; 97-98 = sexual sadism; 99- 100 = sexual masochism"
+                },
+                {
+                    "severity": "Severe",
+                    "symptoms": "psychoses. Roll d100 with the following results: 01-25 = manic/depression; 26-50 = paranoia; 51-75 = schizophrenia; 76-90 = hysteria; 91-100 = multiple personalities"
+                },
+                {
+                    "severity": "Extreme",
+                    "symptoms": "death in d50 weeks. Roll d100 with the following results: 01-90 = suicide; 91-100 = murder/suicide"
+                }
+            ]
+        }
+    ]
+}
