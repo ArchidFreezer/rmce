@@ -8,6 +8,13 @@
             "level-variance": "A"
         },
         {
+            "id": "DISEASE_RAT_BITE",
+            "name": "Rat Bite",
+            "type": "DISEASETYPE_BUBONIC",
+            "level": "2",
+            "level-variance": "B"
+        },
+        {
             "id": "DISEASE_TICK_BITE",
             "name": "Tick Bite",
             "type": "DISEASETYPE_BUBONIC",
