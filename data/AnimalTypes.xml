@@ -1406,22 +1406,22 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>50</offensive-bonus>
-                  <next-round-non-tiny-attacks>
-                     <offensive-bonus>35</offensive-bonus>
-                     <non-weapon-attack>
-                        <attack-table>Beak</attack-table>
-                        <attack-size>SMALL</attack-size>
-                     </non-weapon-attack>
-                  </next-round-non-tiny-attacks>
                   <non-weapon-attack>
                      <attack-table>Claw</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
+         <next-round-non-tiny-attacks>
+            <attack>
+               <offensive-bonus>35</offensive-bonus>
+               <non-weapon-attack>
+                  <attack-table>Beak</attack-table>
+                  <attack-size>SMALL</attack-size>
+               </non-weapon-attack>
+            </attack>
+         </next-round-non-tiny-attacks>
       </animal-type>
       <animal-type id="00001000000000184">
          <name>Freshwater Eel</name>
@@ -1797,22 +1797,18 @@
          </locations>
          <standard-attacks>
             <attack chance="70">
-               <attack>
                   <offensive-bonus>60</offensive-bonus>
                   <non-weapon-attack>
                      <attack-table>Claw</attack-table>
                      <attack-size>LARGE</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
             <attack chance="30">
-               <attack>
                   <offensive-bonus>50</offensive-bonus>
                   <non-weapon-attack>
                      <attack-table>Ram</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
       </animal-type>
@@ -2543,22 +2539,22 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>30</offensive-bonus>
-                  <next-round-non-tiny-attacks>
-                     <offensive-bonus>30</offensive-bonus>
-                     <non-weapon-attack>
-                        <attack-table>Beak</attack-table>
-                        <attack-size>MEDIUM</attack-size>
-                     </non-weapon-attack>
-                  </next-round-non-tiny-attacks>
                   <non-weapon-attack>
                      <attack-table>Claw</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
+         <next-round-non-tiny-attacks>
+            <attack>
+               <offensive-bonus>30</offensive-bonus>
+               <non-weapon-attack>
+                  <attack-table>Beak</attack-table>
+                  <attack-size>MEDIUM</attack-size>
+               </non-weapon-attack>
+            </attack>
+         </next-round-non-tiny-attacks>
       </animal-type>
       <animal-type id="00001000000000274">
          <name>Komodo Dragon</name>
@@ -9689,32 +9685,30 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>0</offensive-bonus>
-                  <same-round-non-tiny-attacks>
-                     <offensive-bonus>10</offensive-bonus>
-                     <non-weapon-attack>
-                        <attack-table>Beak</attack-table>
-                        <attack-size>SMALL</attack-size>
-                     </non-weapon-attack>
-                  </same-round-non-tiny-attacks>
                   <non-weapon-attack>
-                     <attack-table>Ram</attack-table>
+                     <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
-            <attack chance="100">
-               <attack>
+            <attack>
                   <offensive-bonus>10</offensive-bonus>
                   <min-group-size>6</min-group-size>
                   <non-weapon-attack>
                      <attack-table>Ram</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
+         <same-round-non-tiny-attacks>
+            <attack>
+               <offensive-bonus>10</offensive-bonus>
+               <non-weapon-attack>
+                  <attack-table>Beak</attack-table>
+                  <attack-size>SMALL</attack-size>
+               </non-weapon-attack>
+            </attack>
+         </same-round-non-tiny-attacks>         
       </animal-type>
       <animal-type id="00001000000000212">
          <name>Gulo</name>
@@ -9865,23 +9859,19 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>20</offensive-bonus>
                   <non-weapon-attack>
                      <attack-table>Bite</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
-            <attack chance="100">
-               <attack>
+            <attack>
                   <offensive-bonus>30</offensive-bonus>
                   <min-group-size>3</min-group-size>
                   <non-weapon-attack>
                      <attack-table>Bite</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
       </animal-type>
@@ -11097,23 +11087,19 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>0</offensive-bonus>
                   <non-weapon-attack>
-                     <attack-table>Ram</attack-table>
+                     <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
-            <attack chance="100">
-               <attack>
+            <attack>
                   <offensive-bonus>0</offensive-bonus>
                   <min-group-size>10</min-group-size>
                   <non-weapon-attack>
                      <attack-table>Ram</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
       </animal-type>
@@ -11707,22 +11693,22 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>35</offensive-bonus>
-                  <next-round-non-tiny-attacks>
-                     <offensive-bonus>10</offensive-bonus>
-                     <non-weapon-attack>
-                        <attack-table>Beak</attack-table>
-                        <attack-size>SMALL</attack-size>
-                     </non-weapon-attack>
-                  </next-round-non-tiny-attacks>
                   <non-weapon-attack>
                      <attack-table>Claw</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
+         <next-round-non-tiny-attacks>
+            <attack>
+               <offensive-bonus>10</offensive-bonus>
+               <non-weapon-attack>
+                  <attack-table>Beak</attack-table>
+                  <attack-size>SMALL</attack-size>
+               </non-weapon-attack>
+            </attack>
+         </next-round-non-tiny-attacks>
       </animal-type>
       <animal-type id="000010000000000de">
          <name>Cats, Large</name>
@@ -12077,22 +12063,22 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>45</offensive-bonus>
-                  <next-round-non-tiny-attacks>
-                     <offensive-bonus>20</offensive-bonus>
-                     <non-weapon-attack>
-                        <attack-table>Beak</attack-table>
-                        <attack-size>SMALL</attack-size>
-                     </non-weapon-attack>
-                  </next-round-non-tiny-attacks>
                   <non-weapon-attack>
                      <attack-table>Claw</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
+         <next-round-non-tiny-attacks>
+            <attack>
+               <offensive-bonus>20</offensive-bonus>
+               <non-weapon-attack>
+                  <attack-table>Beak</attack-table>
+                  <attack-size>SMALL</attack-size>
+               </non-weapon-attack>
+            </attack>
+         </next-round-non-tiny-attacks>
       </animal-type>
       <animal-type id="000010000000001e0">
          <name>Tasmanian Devil</name>
@@ -12933,13 +12919,11 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>30</offensive-bonus>
                   <non-weapon-attack>
                      <attack-table>Beak</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
       </animal-type>
@@ -13447,29 +13431,31 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>10</offensive-bonus>
-                  <same-round-non-tiny-attacks>
-                     <offensive-bonus>0</offensive-bonus>
-                     <next-round-non-tiny-attacks>
-                        <offensive-bonus>20</offensive-bonus>
-                        <non-weapon-attack>
-                           <attack-table>Bite</attack-table>
-                           <attack-size>SMALL</attack-size>
-                        </non-weapon-attack>
-                     </next-round-non-tiny-attacks>
-                     <non-weapon-attack>
-                        <attack-table>Bite</attack-table>
-                        <attack-size>SMALL</attack-size>
-                     </non-weapon-attack>
-                  </same-round-non-tiny-attacks>
                   <non-weapon-attack>
-                     <attack-table>Ram</attack-table>
+                     <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
+         <next-round-non-tiny-attacks>
+            <attack>
+               <offensive-bonus>20</offensive-bonus>
+               <non-weapon-attack>
+                  <attack-table>Bite</attack-table>
+                  <attack-size>SMALL</attack-size>
+               </non-weapon-attack>
+            </attack>
+         </next-round-non-tiny-attacks>
+         <same-round-non-tiny-attacks>
+            <attack>
+               <offensive-bonus>0</offensive-bonus>
+               <non-weapon-attack>
+                  <attack-table>Bite</attack-table>
+                  <attack-size>SMALL</attack-size>
+               </non-weapon-attack>
+            </attack>
+         </same-round-non-tiny-attacks>         
       </animal-type>
       <animal-type id="00001000000000110">
          <name>Mongoose</name>
@@ -13641,22 +13627,22 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>40</offensive-bonus>
-                  <next-round-non-tiny-attacks>
-                     <offensive-bonus>25</offensive-bonus>
-                     <non-weapon-attack>
-                        <attack-table>Beak</attack-table>
-                        <attack-size>SMALL</attack-size>
-                     </non-weapon-attack>
-                  </next-round-non-tiny-attacks>
                   <non-weapon-attack>
                      <attack-table>Claw</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
+         <next-round-non-tiny-attacks>
+            <attack>
+               <offensive-bonus>25</offensive-bonus>
+               <non-weapon-attack>
+                  <attack-table>Beak</attack-table>
+                  <attack-size>SMALL</attack-size>
+               </non-weapon-attack>
+            </attack>
+         </next-round-non-tiny-attacks>
       </animal-type>
       <animal-type id="000010000000001f6">
          <name>Ants</name>
@@ -14103,32 +14089,26 @@
          </locations>
          <standard-attacks>
             <attack chance="50">
-               <attack>
                   <offensive-bonus>0</offensive-bonus>
                   <non-weapon-attack>
                      <attack-table>Claw</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
-            <attack chance="100">
-               <attack>
+            <attack>
                   <offensive-bonus>20</offensive-bonus>
                   <min-group-size>3</min-group-size>
                   <non-weapon-attack>
                      <attack-table>Claw</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
             <attack chance="50">
-               <attack>
                   <offensive-bonus>0</offensive-bonus>
                   <non-weapon-attack>
                      <attack-table>Beak</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
       </animal-type>
@@ -14205,31 +14185,25 @@
          </locations>
          <standard-attacks>
             <attack chance="70">
-               <attack>
                   <offensive-bonus>20</offensive-bonus>
                   <non-weapon-attack>
                      <attack-table>Horn</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
             <attack chance="10">
-               <attack>
                   <offensive-bonus>10</offensive-bonus>
                   <non-weapon-attack>
-                     <attack-table>Claw</attack-table>
+                     <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
             <attack chance="20">
-               <attack>
                   <offensive-bonus>0</offensive-bonus>
                   <non-weapon-attack>
                      <attack-table>Beak</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
       </animal-type>
@@ -15005,33 +14979,20 @@
             </location>
          </locations>
          <standard-attacks>
-            <attack chance="100">
-               <attack>
+            <attack>
                   <offensive-bonus>20</offensive-bonus>
                   <min-group-size>10</min-group-size>
                   <non-weapon-attack>
-                     <attack-table>Stinger</attack-table>
+                     <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
-            <attack chance="80">
-               <attack>
+            <attack chance="100">
                   <offensive-bonus>0</offensive-bonus>
                   <non-weapon-attack>
-                     <attack-table>Stinger</attack-table>
+                     <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
-            </attack>
-            <attack chance="20">
-               <attack>
-                  <offensive-bonus>0</offensive-bonus>
-                  <non-weapon-attack>
-                     <attack-table>Beak</attack-table>
-                     <attack-size>SMALL</attack-size>
-                  </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
       </animal-type>
@@ -16632,33 +16593,20 @@
             </location>
          </locations>
          <standard-attacks>
-            <attack chance="50">
-               <attack>
-                  <offensive-bonus>0</offensive-bonus>
-                  <non-weapon-attack>
-                     <attack-table>Beak</attack-table>
-                     <attack-size>SMALL</attack-size>
-                  </non-weapon-attack>
-               </attack>
-            </attack>
-            <attack chance="50">
-               <attack>
-                  <offensive-bonus>0</offensive-bonus>
-                  <non-weapon-attack>
-                     <attack-table>Claw</attack-table>
-                     <attack-size>SMALL</attack-size>
-                  </non-weapon-attack>
-               </attack>
-            </attack>
             <attack chance="100">
-               <attack>
+                  <offensive-bonus>0</offensive-bonus>
+                  <non-weapon-attack>
+                     <attack-table>Tiny</attack-table>
+                     <attack-size>SMALL</attack-size>
+                  </non-weapon-attack>
+            </attack>
+            <attack>
                   <offensive-bonus>0</offensive-bonus>
                   <min-group-size>6</min-group-size>
                   <non-weapon-attack>
                      <attack-table>Claw</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
       </animal-type>
@@ -17065,33 +17013,31 @@
             </location>
          </locations>
          <standard-attacks>
-            <attack chance="100">
-               <attack>
+            <attack>
                   <offensive-bonus>20</offensive-bonus>
                   <min-group-size>30</min-group-size>
                   <non-weapon-attack>
                      <attack-table>Ram</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>10</offensive-bonus>
-                  <same-round-non-tiny-attacks>
-                     <offensive-bonus>0</offensive-bonus>
-                     <non-weapon-attack>
-                        <attack-table>Bite</attack-table>
-                        <attack-size>SMALL</attack-size>
-                     </non-weapon-attack>
-                  </same-round-non-tiny-attacks>
                   <non-weapon-attack>
-                     <attack-table>Ram</attack-table>
+                     <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
+         <same-round-non-tiny-attacks>
+            <attack>
+               <offensive-bonus>0</offensive-bonus>
+               <non-weapon-attack>
+                  <attack-table>Tiny</attack-table>
+                  <attack-size>SMALL</attack-size>
+               </non-weapon-attack>
+            </attack>
+         </same-round-non-tiny-attacks>         
       </animal-type>
       <animal-type id="000010000000001b0">
          <name>Kangaroos/Wallabies, Small</name>
@@ -17247,23 +17193,19 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>10</offensive-bonus>
                   <non-weapon-attack>
-                     <attack-table>Bite</attack-table>
+                     <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
             <attack chance="100">
-               <attack>
                   <offensive-bonus>20</offensive-bonus>
                   <min-group-size>6</min-group-size>
                   <non-weapon-attack>
                      <attack-table>Bite</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               </attack>
             </attack>
          </standard-attacks>
       </animal-type>
