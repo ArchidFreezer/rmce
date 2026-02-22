@@ -281,3 +281,10 @@ std::optional<AnimalAttack> AnimalData::getAttackByNumAttackers(int num_attacker
 	
 	return curr_attack;
 }
+
+std::optional<AnimalAttack> AnimalData::getConditionalAttack(int ref) const {
+	for (const auto& attack : conditional_attacks_) {
+		if (attack.first == ref) return attack.second; // Return the attack that matches the reference value
+	}
+	return std::nullopt;
+}

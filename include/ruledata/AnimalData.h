@@ -126,6 +126,30 @@ public:
 	int frequencyFactor() const { return frequency_factor_; }
 
 	/**
+	 * @brief Set the carry capacity of the animal
+	 * @param carry_capacity Carry capacity of the animal, used to determine how much weight the animal can carry when used as a mount or pack animal.
+	 */
+	void setCarryCapacity(int carry_capacity) { carry_capacity_ = carry_capacity; }
+
+	/**
+	 * @brief Get the carry capacity of the animal
+	 * @return Carry capacity of the animal, used to determine how much weight the animal can carry when used as a mount or pack animal.
+	 */
+	int carryCapacity() const { return carry_capacity_; }
+
+	/**
+	 * @brief Set the riding bonus of the animal
+	 * @param riding_bonus Riding bonus of the animal, used to determine how difficult it is to ride the animal when used as a mount.
+	 */
+	void setRidingBonus(int riding_bonus) { riding_bonus_ = riding_bonus; }
+
+	/**
+	 * @brief Get the riding bonus of the animal
+	 * @return Riding bonus of the animal, used to determine how difficult it is to ride the animal when used as a mount.
+	 */
+	int ridingBonus() const { return riding_bonus_; }
+
+	/**
 	 * @brief Get the modifier to a Hunting skill roll when attempting to hunt this particular animal
 	 * @return Hunting modifier for the animal, used to determine how difficult it is to hunt the animal. This is derived from the frequency factor with more common animals being easier to hunt and less common animals being harder to hunt.
 	 */
@@ -453,30 +477,6 @@ public:
 	AnimalAttack getAttack(int num_attackers, int d100_roll) const;
 
 	/**
-	 * @brief Add an attack to be used in the same round as the primary attack if it results in a non-tiny critical
-	 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the same_round_attacks set.
-	 */
-	void addSameRoundAttack(AnimalAttack attack) { same_round_attacks_.emplace_back(std::move(attack)); }
-
-	/**
-	 * @brief Get the set of attacks that are used in the same round as the primary attack if it results in a non-tiny critical
-	 * @return Set of attacks that are used in the same round as the primary attack if it results in a non-tiny critical
-	 */
-	const std::vector<AnimalAttack>& sameRoundAttacks() const { return same_round_attacks_; }
-
-	/**
-	 * @brief Add an attack to be used in the round after the primary attack if it results in a non-tiny critical
-	 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the next_round_attacks set.
-	 */
-	void addNextRoundAttack(AnimalAttack attack) { next_round_attacks_.emplace_back(std::move(attack)); }
-
-	/**
-	 * @brief Get the set of attacks that are used in the round after the primary attack if it results in a non-tiny critical
-	 * @return Set of attacks that are used in the round after the primary attack if it results in a non-tiny critical
-	 */
-	const std::vector<AnimalAttack>& nextRoundAttacks() const { return next_round_attacks_; }
-
-	/**
 	 * @brief Add an attack to be used based on the number of attackers in the round
 	 * 
 	 * This is typically used for small creatures where a single one is not very dangerous but a group of them can be. For example, Piranhas on there ownb are not that dangerous, but a shoal can be deadly.
@@ -510,6 +510,50 @@ public:
 	 */
 	std::optional<AnimalAttack> getAttackByNumAttackers(int num_attackers) const;
 
+	/**
+	 * @brief Add a ranged attack to the animal
+	 * @param attack AnimalAttack object that represents the ranged attack, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks.
+	 */
+	void addRangedAttack(AnimalAttack attack) { ranged_attacks_.emplace_back(std::move(attack)); }
+
+	/**
+	 * @brief Get the vector of ranged attacks for the animal
+	 * @return Vector of ranged attack data for the animal, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks.
+	 */
+	const std::vector<AnimalAttack>& rangedAttacks() const { return ranged_attacks_; }
+
+	/**
+	 * @brief Add a conditional attack to the animal
+	 *
+	 * A conditional attack is an attack that is only used if a certain condition is met. The condition is determined by the reference integer which can be used to look up the condition in a table or to determine the condition in some other way. For example, the reference integer could be used to determine if the attack is only used during a certain phase of combat or if it is only used if the animal has taken a certain amount of damage.
+	 *
+	 * @param ref The reference integer for the conditional attack, used to determine the condition under which the attack is used.
+	 * @param attack AnimalAttack object that represents the conditional attack, used to determine the details of the attack and as the value for the conditional attack in the conditional_attacks map with the key being the reference integer for the condition under which the attack is used.
+	 */
+	void addConditionalAttack(int ref, AnimalAttack attack) { conditional_attacks_.emplace(ref, std::move(attack)); }
+
+	/**
+	 * @brief Get the conditional attack for a given reference integer
+	 *
+	 * A conditional attack is an attack that is only used if a certain condition is met. The condition is determined by the reference integer which can be used to look up the condition in a table or to determine the condition in some other way. For example, the reference integer could be used to determine if the attack is only used during a certain phase of combat or if it is only used if the animal has taken a certain amount of damage.
+	 *
+	 * The return value needs to be checked to see if an attack was found for the given reference integer as it is possible that there are no attacks defined for the reference integer. For example, if there are attacks defined for reference integers 1 and 2 and the reference integer 3 is passed in then no attack would be found and an empty optional would be returned.
+	 *
+	 * @param ref The reference integer for the conditional attack, used to determine the condition under which the attack is used.
+	 * @return The conditional attack for the given reference integer, determined by looking up the reference integer in the conditional_attacks map. If no such attack is found, a default constructed AnimalAttack is returned.
+	 */
+	std::optional<AnimalAttack> getConditionalAttack(int ref) const;
+
+	/**
+	 * @brief Get the map of conditional attacks for the animal
+	 *
+	 * A conditional attack is an attack that is only used if a certain condition is met. The condition is determined by the reference integer which can be used to look up the condition in a table or to determine the condition in some other way. For example, the reference integer could be used to determine if the attack is only used during a certain phase of combat or if it is only used if the animal has taken a certain amount of damage.
+	 *
+	 * @return Map of conditional attack data for the animal, keyed by the reference integer for the condition under which the attack is used. This is used to determine which attacks are conditional attacks and to look up the details of the conditional attacks based on the reference integer for the condition under which they are used.
+	 */
+	const std::map<int, AnimalAttack>& conditionalAttacks() const { return conditional_attacks_; }
+
+
 private:
 	std::string name_{}; /**< In game name of the animal */
 	std::string description_{}; /**< Description of the animal for flavour purposes */
@@ -518,6 +562,8 @@ private:
 	int defensive_bonus_{}; /**< Defensive bonus for the animal, used to determine how much damage it takes when attacked. */
 	int frequency_factor_{}; /**< Frequency factor for the animal, used to determine how common it is to find in the appropriate environ. */
 	int moving_manoeuvre_bonus_{}; /**< Bonus to Manoeuvre rolls when the animal is moving, used to determine how difficult it is to hit the animal when it is moving. */
+	int carry_capacity_{}; /**< Carrying capacity of the animal, used to determine how much weight it can carry when used as a mount or pack animal. This is not used for animals that are not meant to be used as mounts or pack animals. */
+	int riding_bonus_{}; /**< Riding bonus for the animal, used to determine the bonus to riding skill rolls when using the animal as a mount. This is not used for animals that are not meant to be used as mounts. */
 	CreatureBonusXpType::Type bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
 	CreatureConstitutionVarianceType::Type constitution_variance_type_{}; /**< Bonus constitution code for the animal, used to determine how much constitution variance a creature has. */
 	LevelVarianceType::Type level_variance_type_{}; /**< Bonus level code for the animal, used to determine how much level variance a creature has. */
@@ -536,8 +582,8 @@ private:
 	std::unique_ptr<Location> location_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */
 	std::map<const NumberRange<int>*, AnimalAttack> attacks_{}; /**< Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances. */
 	std::map<int, AnimalAttack> attacks_by_num_attackers_{}; /**< Map of attack data for the animal, keyed by the number of attackers in the round. This is used to determine if the attack should be used based on the number of attackers in the round. For example, an attack may only be used if there are 2 or more attackers in the round. */
-	std::vector<AnimalAttack> same_round_attacks_{}; /**< Set of attacks that are used in the same round as the primary attack if it results in a non-tiny critical */
-	std::vector<AnimalAttack> next_round_attacks_{}; /**< Set of attacks that are used in the round after the primary attack if it results in a non-tiny critical */
+	std::vector<AnimalAttack> ranged_attacks_{}; /**< Vector of ranged attack data for the animal, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks. */
+	std::map<int, AnimalAttack> conditional_attacks_{}; /**< Map of attack data for the animal where the attack is conditional. These may be called by other attacks the produce a non-tiny ciritcal result when they are resolved. */
 
 	/**
 	 * @brief Gets the number of hits per level difference based on the constitution code.
