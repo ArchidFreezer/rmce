@@ -4985,6 +4985,14 @@
                     "chance-max": "100",
                     "use-all-attacks": "true"
                 }
+            ],
+            "ranged-attacks": [
+                {
+                    "range": "10",
+                    "offensive-bonus": "60",
+                    "weapon-attack": "ATTACKTABLE_CLUB",
+                    "attacks-per-round": "5"
+                }
             ]
         },
         {
@@ -5382,7 +5390,18 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "ranged-attacks": [
+                {
+                    "range": "10",
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    },
+                    "same-round-conditional-attack-id": "1"
+                }
+            ]
         },
         {
             "id": "ANIMAL_HORSE_VIPER",
@@ -10654,6 +10673,12 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "ranged-attacks": [
+                {
+                    "range": "10",
+                    "special": "Their powerful odour is an effective weapon against enemies, causing the victim to momentarily stop breathing (treat spray as a 'Tear Cloud'—Illusionist base list 'Feel-Taste-Smell')"
+                }
             ]
         },
         {
@@ -10888,6 +10913,14 @@
                         "table": "SPECIALATTACKTABLE_STINGER",
                         "size": "Small"
                     },
+                    "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "ranged-attacks": [
+                {
+                    "range": "10",
+                    "offensive-bonus": "10",
+                    "weapon-attack": "ATTACKTABLE_WHIP",
                     "same-round-conditional-attack-id": "1"
                 }
             ]

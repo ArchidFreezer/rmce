@@ -151,17 +151,17 @@ void AnimalDatafileParserJson::parse() {
 		}
 
 		// Ranged attacks
-		//{
-		//	boost::optional<const pt::ptree&> tree_opt = v.second.get_child_optional("ranged-attacks");
-		//	if (tree_opt) {
-		//		for (const auto& attack_tree : tree_opt.value()) {
-		//			const pt::ptree& tree = attack_tree.second;
-		//			AnimalAttack attack{};
-		//			parseAnimalAttack(attack, tree, false);
-		//			ref.addRangedAttack(attack);
-		//		}
-		//	}
-		//}
+		{
+			boost::optional<const pt::ptree&> tree_opt = v.second.get_child_optional("ranged-attacks");
+			if (tree_opt) {
+				for (const auto& attack_tree : tree_opt.value()) {
+					const pt::ptree& tree = attack_tree.second;
+					AnimalAttack attack{};
+					parseAnimalAttack(attack, tree, false);
+					ref.addRangedAttack(attack);
+				}
+			}
+		}
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
 	}
