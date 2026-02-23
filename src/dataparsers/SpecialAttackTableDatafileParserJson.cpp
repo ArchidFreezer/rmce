@@ -102,9 +102,9 @@ void SpecialAttackTableDatafileParserJson::parse() {
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& ptable : tree) {
 		std::string name = ptable.second.get<std::string>("name");
-		std::string id = ptable.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
+		std::string id = ptable.second.get<std::string>("id");
 
-		SpecialAttackTable& table = factory().get<SpecialAttackTable>(name);
+		SpecialAttackTable& table = factory().get<SpecialAttackTable>(id);
 		table.setName(name);
 		table.setLimit(AttackSizeType::kSmall, ptable.second.get<int>("small"));
 		table.setLimit(AttackSizeType::kMedium, ptable.second.get<int>("medium"));
