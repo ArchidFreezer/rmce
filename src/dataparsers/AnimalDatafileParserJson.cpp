@@ -27,6 +27,12 @@ void AnimalDatafileParserJson::parse() {
 		ref.setDefensiveBonus(v.second.get<int>("defensive-bonus"));
 		ref.setFrequencyFactor(v.second.get<int>("frequency-code"));
 
+		boost::optional<int> carry_capacity = v.second.get_optional<int>("carry_capacity");
+		if (carry_capacity) { ref.setCarryCapacity(carry_capacity.get()); }
+
+		boost::optional<int> riding_bonus = v.second.get_optional<int>("riding-bonus");
+		if (riding_bonus) { ref.setRidingBonus(riding_bonus.get()); }
+
 		boost::optional<std::string> bonus_xp_code_str = v.second.get_optional<std::string>("bonus-xp-code");
 		if (bonus_xp_code_str) {
 			CreatureBonusXpType::Type xp_code{};
@@ -156,6 +162,9 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 	datum.put("max-pace", game_data.maxPace()->id());
 	datum.put("outlook", AnimalOutlookType::toString(game_data.outlook()));
 	datum.put("critical-table", CriticalSizeTableType::toString(game_data.criticalTableType()));
+
+	if (game_data.carryCapacity()) datum.put("carry_capacity", game_data.carryCapacity());
+	if (game_data.ridingBonus()) datum.put("riding-bonus", game_data.ridingBonus());
 
 	// Critical modifiers are optional, only add to the tree if there are any
 	{

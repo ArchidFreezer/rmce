@@ -238,6 +238,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "50",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -565,6 +566,8 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "450",
+            "riding-bonus": "-15",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -737,6 +740,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "200",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -789,6 +794,8 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "150",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "1",
                 "max": "5"
@@ -838,6 +845,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "50",
             "encounter-range": {
                 "min": "1",
                 "max": "5"
@@ -1330,6 +1338,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "350",
             "encounter-range": {
                 "min": "1",
                 "max": "50"
@@ -1432,6 +1441,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "75",
             "encounter-range": {
                 "min": "1",
                 "max": "2"
@@ -1820,6 +1830,7 @@
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "400",
             "encounter-range": {
                 "min": "4",
                 "max": "40"
@@ -1926,6 +1937,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Timid",
             "critical-table": "Normal",
+            "carry_capacity": "150",
             "encounter-range": {
                 "min": "1",
                 "max": "4"
@@ -1981,6 +1993,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "50",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -2110,6 +2123,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "150",
             "encounter-range": {
                 "min": "20",
                 "max": "100"
@@ -2153,6 +2167,8 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "300",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -2204,6 +2220,8 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "400",
+            "riding-bonus": "-5",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -2248,6 +2266,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "225",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -2490,6 +2509,8 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
             "critical-table": "Large",
+            "carry_capacity": "1000",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "1",
                 "max": "2"
@@ -2538,6 +2559,8 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
             "critical-table": "Large",
+            "carry_capacity": "1000",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "2",
                 "max": "10"
@@ -2585,6 +2608,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "350",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "4",
                 "max": "40"
@@ -2860,6 +2885,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "25",
             "encounter-range": {
                 "min": "1",
                 "max": "5"
@@ -3548,6 +3574,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
             "critical-table": "Normal",
+            "carry_capacity": "300",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "2",
                 "max": "10"
@@ -3642,6 +3670,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "150",
             "encounter-range": {
                 "min": "1",
                 "max": "10"
@@ -3688,6 +3717,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "100",
             "encounter-range": {
                 "min": "5",
                 "max": "15"
@@ -3734,6 +3764,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "300",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "5",
                 "max": "30"
@@ -4234,6 +4266,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
             "critical-table": "Normal",
+            "carry_capacity": "50",
             "encounter-range": {
                 "min": "1",
                 "max": "20"
@@ -4536,6 +4569,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Belligerent",
             "critical-table": "Large",
+            "carry_capacity": "400",
             "encounter-range": {
                 "min": "1",
                 "max": "5"
@@ -4664,6 +4698,8 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Timid",
             "critical-table": "Normal",
+            "carry_capacity": "250",
+            "riding-bonus": "-20",
             "encounter-range": {
                 "min": "1",
                 "max": "4"
@@ -4801,6 +4837,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "100",
             "encounter-range": {
                 "min": "2",
                 "max": "10"
@@ -4964,6 +5001,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "50",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -5253,6 +5291,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "400",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "1",
                 "max": "2"
@@ -5342,6 +5382,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "450",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -5392,6 +5434,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "250",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -5599,6 +5642,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "50",
             "encounter-range": {
                 "min": "1",
                 "max": "5"
@@ -5705,6 +5749,7 @@
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "50",
             "encounter-range": {
                 "min": "1",
                 "max": "2"
@@ -6080,6 +6125,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "400",
             "encounter-range": {
                 "min": "1",
                 "max": "50"
@@ -6274,6 +6320,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Jumpy",
             "critical-table": "Normal",
+            "carry_capacity": "100",
             "encounter-range": {
                 "min": "1",
                 "max": "5"
@@ -6469,6 +6516,8 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "500",
+            "riding-bonus": "10",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -6516,6 +6565,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "180",
+            "riding-bonus": "5",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -6659,6 +6710,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "100",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -6796,6 +6848,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "300",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -7003,6 +7056,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Protective",
             "critical-table": "Normal",
+            "carry_capacity": "150",
             "encounter-range": {
                 "min": "1",
                 "max": "1"
@@ -7053,6 +7107,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "350",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "4",
                 "max": "40"
@@ -7145,6 +7201,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Timid",
             "critical-table": "Normal",
+            "carry_capacity": "125",
             "encounter-range": {
                 "min": "2",
                 "max": "6"
@@ -7798,6 +7855,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "400",
+            "riding-bonus": "10",
             "encounter-range": {
                 "min": "5",
                 "max": "50"
@@ -7858,6 +7917,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Belligerent",
             "critical-table": "Normal",
+            "carry_capacity": "100",
             "encounter-range": {
                 "min": "1",
                 "max": "10"
@@ -7904,6 +7964,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "10",
             "encounter-range": {
                 "min": "1",
                 "max": "20"
@@ -7949,6 +8010,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "100",
             "encounter-range": {
                 "min": "1",
                 "max": "10"
@@ -8250,6 +8312,52 @@
             }
         },
         {
+            "id": "ANIMAL_SPITTING_COBRA",
+            "name": "Spitting Cobra",
+            "description": "Snakes are akin to lizards, but are limbless. Stories of giant serpents are quite common. Snakes are often used to fill the bottom of pit traps, making them much more deadly. Carnivorous creatures, snakes can be found anywhere. Most are very quick in combat, but move along the ground relatively slowly. Flexible and often quite quick, they rely on powerful jaws and venomous fangs to kill their prey. Some have jaws with detachable connections, enabling the snakes to free the upper and lower bones and swallow extremely large victims. Cobras use more powerful nerve-poisons that act faster and can kill very large prey (level 4A Nerve Poison), but cobra attacks are usually slower, and their venom is often delivered by a chewing rather than an injection method. However, some cobras (10%) can spit their poison, blinding their adversary.",
+            "base-hits": "20",
+            "base-movement": "40",
+            "defensive-bonus": "40",
+            "frequency-code": "4",
+            "bonus-xp-code": "B",
+            "constitution-variance-type": "B",
+            "level-variance-type": "B",
+            "average-level": "2",
+            "size": "Small",
+            "armour-type": "AT 1",
+            "movement-speed": "Slow",
+            "attack-quickness": "Very Fast",
+            "max-pace": "CREATUREPACE_SPRINT",
+            "outlook": "Aggressive",
+            "critical-table": "Normal",
+            "encounter-range": {
+                "min": "1",
+                "max": "2"
+            },
+            "number-young-range": {
+                "min": "10",
+                "max": "30"
+            },
+            "location": {
+                "vegetation": [
+                    "Deciduous",
+                    "Jungle",
+                    "Plains"
+                ],
+                "water-sources": [
+                    "Breaks",
+                    "Freshwater Coast"
+                ],
+                "climates": [
+                    "HOT_AVERAGE",
+                    "HOT_HUMID",
+                    "WARM_AVERAGE",
+                    "WARM_DRY",
+                    "WARM_HUMID"
+                ]
+            }
+        },
+        {
             "id": "ANIMAL_STARFISH",
             "name": "Starfish",
             "description": "Starfish, or sea stars, are coral-eating animals that look like their name. They slowly crawl across the bottom, consuming the tiny coral inhabitants along the way. 10% have poison barbs on top that deliver a level 2B Nerve Poison.",
@@ -8357,6 +8465,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Timid",
             "critical-table": "Normal",
+            "carry_capacity": "200",
+            "riding-bonus": "-15",
             "encounter-range": {
                 "min": "1",
                 "max": "4"
@@ -8666,6 +8776,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "200",
+            "riding-bonus": "-5",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -8763,6 +8875,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "100",
             "encounter-range": {
                 "min": "1",
                 "max": "2"
@@ -8860,6 +8973,7 @@
             "max-pace": "CREATUREPACE_RUN",
             "outlook": "Passive",
             "critical-table": "Normal",
+            "carry_capacity": "25",
             "encounter-range": {
                 "min": "1",
                 "max": "2"
@@ -9520,6 +9634,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "400",
+            "riding-bonus": "30",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -9565,6 +9681,8 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "350",
+            "riding-bonus": "15",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -9611,6 +9729,8 @@
             "max-pace": "CREATUREPACE_JOG",
             "outlook": "Normal",
             "critical-table": "Large",
+            "carry_capacity": "1200",
+            "riding-bonus": "-10",
             "encounter-range": {
                 "min": "1",
                 "max": "1"
@@ -9670,6 +9790,7 @@
             "max-pace": "CREATUREPACE_FAST_SPRINT",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "400",
             "encounter-range": {
                 "min": "1",
                 "max": "50"
@@ -9717,6 +9838,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Passive",
             "critical-table": "Super Large",
+            "carry_capacity": "250",
             "encounter-range": {
                 "min": "2",
                 "max": "10"
@@ -9763,6 +9885,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Timid",
             "critical-table": "Large",
+            "carry_capacity": "200",
             "encounter-range": {
                 "min": "6",
                 "max": "10"
@@ -9809,6 +9932,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
             "critical-table": "Large",
+            "carry_capacity": "200",
             "encounter-range": {
                 "min": "2",
                 "max": "10"
@@ -9855,6 +9979,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Normal",
             "critical-table": "Super Large",
+            "carry_capacity": "400",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -9901,6 +10026,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Timid",
             "critical-table": "Large",
+            "carry_capacity": "200",
             "encounter-range": {
                 "min": "2",
                 "max": "10"
@@ -9947,6 +10073,7 @@
             "max-pace": "CREATUREPACE_SPRINT",
             "outlook": "Aggressive",
             "critical-table": "Large",
+            "carry_capacity": "100",
             "encounter-range": {
                 "min": "1",
                 "max": "6"
@@ -10039,6 +10166,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Aggressive",
             "critical-table": "Normal",
+            "carry_capacity": "50",
             "encounter-range": {
                 "min": "2",
                 "max": "20"
@@ -10238,6 +10366,7 @@
             "max-pace": "CREATUREPACE_DASH",
             "outlook": "Normal",
             "critical-table": "Normal",
+            "carry_capacity": "180",
             "encounter-range": {
                 "min": "2",
                 "max": "20"

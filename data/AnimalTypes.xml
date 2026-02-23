@@ -77,8 +77,8 @@
                  <attack-table>Claw</attack-table>
                  <attack-size>LARGE</attack-size>
               </non-weapon-attack>
-            </attack>
                <next_round_id>1</next_round_id>
+            </attack>
          </standard-attacks>
          <conditional-attacks>
             <attack id="1">
@@ -2581,7 +2581,6 @@
          <description>The Komodo Dragon is a huge low-slung lizard, with a bulky body and a long, thick tail. Its muscular legs end in fierce, talon like claws. These cruel claws enable the Komodo Dragon to grasp and maim prey as large as a deer or as tough as a wild boar. They also aid in climbing, and these beasts are quite capable of scaling steep grades or large trees. Quick and agile daylight hunters, Komodos swim and sprint quite well, although they spend most of their time sunning in splendid repose.</description>
          <base-hits>110</base-hits>
          <base-movement>50</base-movement>
-         <carry-capacity>100</carry-capacity>
          <defensive-bonus>30</defensive-bonus>
          <frequency-code>3</frequency-code>
          <moving-manoeuvre-bonus>10</moving-manoeuvre-bonus>
@@ -6997,7 +6996,6 @@
          <description>Alligators and crocodiles-and their relatives the smaller, more graceful gavials and caimans-are the largest and deadliest of reptiles. Males and females are virtually indistinguishable (except to each other), although males tend to be larger. Crocodiles differ from alligators by virtue of their always exposed front teeth. Alligators have sockets in the upper jaw that hide their cruel canines. Large alligators and crocodiles are sometimes referred to as Leviathans. Adapted for water, they are aggressive, carnivorous beasts and avid swimmers and divers. While on land, they are more vulnerable, stuck with short, stout legs and a small stride. Nonetheless, they can be quick over short distances and are very fierce when defending their nest piles. All groups have long muscular tails, bodies, and snouts and possess big, well-anchored conical teeth. Great forward teeth allow them to grapple their prey, while nose and throat flaps permit them to fight under water without fear of drowning. They use their grappling bite to drown foes as they rip them apart. Their thick, horny hides have bony back plates which act like body armor and cover the only part of the creature which is commonly above the water level.</description>
          <base-hits>120</base-hits>
          <base-movement>30</base-movement>
-         <carry-capacity>75</carry-capacity>
          <defensive-bonus>10</defensive-bonus>
          <frequency-code>2</frequency-code>
          <moving-manoeuvre-bonus>0</moving-manoeuvre-bonus>
@@ -8765,7 +8763,6 @@
          <description>Alligators and crocodiles-and their relatives the smaller, more graceful gavials and caimans-are the largest and deadliest of reptiles. Males and females are virtually indistinguishable (except to each other), although males tend to be larger. Crocodiles differ from alligators by virtue of their always exposed front teeth. Alligators have sockets in the upper jaw that hide their cruel canines. Large alligators and crocodiles are sometimes referred to as Leviathans. Adapted for water, they are aggressive, carnivorous beasts and avid swimmers and divers. While on land, they are more vulnerable, stuck with short, stout legs and a small stride. Nonetheless, they can be quick over short distances and are very fierce when defending their nest piles. All groups have long muscular tails, bodies, and snouts and possess big, well-anchored conical teeth. Great forward teeth allow them to grapple their prey, while nose and throat flaps permit them to fight under water without fear of drowning. They use their grappling bite to drown foes as they rip them apart. Their thick, horny hides have bony back plates which act like body armor and cover the only part of the creature which is commonly above the water level.</description>
          <base-hits>85</base-hits>
          <base-movement>40</base-movement>
-         <carry-capacity>50</carry-capacity>
          <defensive-bonus>20</defensive-bonus>
          <frequency-code>2</frequency-code>
          <moving-manoeuvre-bonus>20</moving-manoeuvre-bonus>
@@ -13225,7 +13222,6 @@
          <description>Alligators and crocodiles-and their relatives the smaller, more graceful gavials and caimans-are the largest and deadliest of reptiles. Males and females are virtually indistinguishable (except to each other), although males tend to be larger. Crocodiles differ from alligators by virtue of their always exposed front teeth. Alligators have sockets in the upper jaw that hide their cruel canines. Large alligators and crocodiles are sometimes referred to as Leviathans. Adapted for water, they are aggressive, carnivorous beasts and avid swimmers and divers. While on land, they are more vulnerable, stuck with short, stout legs and a small stride. Nonetheless, they can be quick over short distances and are very fierce when defending their nest piles. All groups have long muscular tails, bodies, and snouts and possess big, well-anchored conical teeth. Great forward teeth allow them to grapple their prey, while nose and throat flaps permit them to fight under water without fear of drowning. They use their grappling bite to drown foes as they rip them apart. Their thick, horny hides have bony back plates which act like body armor and cover the only part of the creature which is commonly above the water level.</description>
          <base-hits>120</base-hits>
          <base-movement>50</base-movement>
-         <carry-capacity>75</carry-capacity>
          <defensive-bonus>10</defensive-bonus>
          <frequency-code>2</frequency-code>
          <moving-manoeuvre-bonus>10</moving-manoeuvre-bonus>
@@ -14530,7 +14526,6 @@
          <description>Alligators and crocodiles-and their relatives the smaller, more graceful gavials and caimans-are the largest and deadliest of reptiles. Males and females are virtually indistinguishable (except to each other), although males tend to be larger. Crocodiles differ from alligators by virtue of their always exposed front teeth. Alligators have sockets in the upper jaw that hide their cruel canines. Large alligators and crocodiles are sometimes referred to as Leviathans. Adapted for water, they are aggressive, carnivorous beasts and avid swimmers and divers. While on land, they are more vulnerable, stuck with short, stout legs and a small stride. Nonetheless, they can be quick over short distances and are very fierce when defending their nest piles. All groups have long muscular tails, bodies, and snouts and possess big, well-anchored conical teeth. Great forward teeth allow them to grapple their prey, while nose and throat flaps permit them to fight under water without fear of drowning. They use their grappling bite to drown foes as they rip them apart. Their thick, horny hides have bony back plates which act like body armor and cover the only part of the creature which is commonly above the water level.</description>
          <base-hits>85</base-hits>
          <base-movement>20</base-movement>
-         <carry-capacity>50</carry-capacity>
          <defensive-bonus>20</defensive-bonus>
          <frequency-code>2</frequency-code>
          <moving-manoeuvre-bonus>0</moving-manoeuvre-bonus>
@@ -15416,12 +15411,12 @@
                 </non-weapon-attack>
                <next_round_id>1</next_round_id>
             </attack>
+         </standard-attacks>
          <conditional-attacks>
             <attack id="1">
                <special>d10 hits/round</special>
             </attack>
          </conditional-attacks>
-         </standard-attacks>
       </animal-type>
       <animal-type id="00001000000000120">
          <name>Skunk</name>
@@ -15686,7 +15681,6 @@
          <base-hits>120</base-hits>
          <base-movement>110</base-movement>
          <carry-capacity>180</carry-capacity>
-         <riding-bonus>-10</riding-bonus>
          <defensive-bonus>30</defensive-bonus>
          <frequency-code>4</frequency-code>
          <moving-manoeuvre-bonus>30</moving-manoeuvre-bonus>
