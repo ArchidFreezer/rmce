@@ -43,10 +43,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -96,7 +104,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -146,10 +158,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -198,7 +218,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -247,10 +271,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -308,7 +340,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -367,7 +403,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -426,10 +466,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -488,10 +536,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -609,7 +665,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -668,7 +728,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -733,7 +797,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -797,7 +865,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -856,7 +928,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -912,10 +988,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "90"
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "85"
+                    "offensive-bonus": "85",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -969,10 +1053,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -1027,7 +1119,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -1090,7 +1186,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -1149,7 +1249,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -1218,10 +1322,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -1288,7 +1400,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -1345,7 +1461,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -1399,10 +1519,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -1462,7 +1590,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -1522,10 +1654,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -1579,7 +1719,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -1639,10 +1783,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -1705,10 +1857,18 @@
                     "use-all-attacks": "true"
                 },
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -1753,7 +1913,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -1802,7 +1966,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -1853,7 +2021,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_STINGER",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -1912,7 +2084,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -1960,7 +2136,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -2017,7 +2197,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -2074,7 +2258,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -2134,10 +2322,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -2198,10 +2394,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -2271,7 +2475,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "45"
+                    "offensive-bonus": "45",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -2340,7 +2548,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -2390,10 +2602,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -2451,10 +2671,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -2505,7 +2733,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -2555,7 +2787,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -2616,7 +2852,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -2666,7 +2906,11 @@
                     "use-all-attacks": "true"
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 },
                 {
                     "offensive-bonus": "80",
@@ -2724,7 +2968,11 @@
                     "weapon-attack": "ATTACKTABLE_SHOCK_BOLT"
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 },
                 {
                     "use-all-attacks": "true"
@@ -2786,7 +3034,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -2841,10 +3093,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "75",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Huge"
+                    }
                 }
             ]
         },
@@ -2899,10 +3159,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "75",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Huge"
+                    }
                 }
             ]
         },
@@ -2964,10 +3232,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "65"
+                    "offensive-bonus": "65",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -3031,7 +3307,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "45"
+                    "offensive-bonus": "45",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3093,7 +3373,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3150,10 +3434,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
                     "use-all-attacks": "true"
@@ -3213,10 +3505,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
                     "use-all-attacks": "true"
@@ -3273,7 +3573,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -3326,7 +3630,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3379,7 +3687,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3440,7 +3752,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3491,7 +3807,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3535,7 +3855,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3581,7 +3905,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3631,7 +3959,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3691,10 +4023,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3743,7 +4083,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -3812,7 +4156,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3874,10 +4222,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_STINGER",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -3936,10 +4292,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3987,10 +4351,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -4045,7 +4417,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -4095,7 +4471,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -4147,10 +4527,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -4202,10 +4590,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "45"
+                    "offensive-bonus": "45",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -4270,10 +4666,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "150"
+                    "offensive-bonus": "150",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Huge"
+                    }
                 },
                 {
-                    "offensive-bonus": "100"
+                    "offensive-bonus": "100",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -4317,10 +4721,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
                     "use-all-attacks": "true"
@@ -4373,10 +4785,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -4433,10 +4853,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -4500,7 +4928,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -4551,10 +4983,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -4605,10 +5045,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -4665,7 +5113,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -4719,10 +5171,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -4785,10 +5245,18 @@
                     "use-all-attacks": "true"
                 },
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -4851,7 +5319,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -4900,10 +5372,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -4969,7 +5449,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -5066,7 +5550,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -5121,7 +5609,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5172,10 +5664,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "110"
+                    "offensive-bonus": "110",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Huge"
+                    }
                 },
                 {
-                    "offensive-bonus": "100"
+                    "offensive-bonus": "100",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -5220,7 +5720,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5268,10 +5772,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -5329,13 +5841,25 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -5379,7 +5903,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5431,10 +5959,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5486,7 +6022,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "85"
+                    "offensive-bonus": "85",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -5549,10 +6089,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 },
                 {
                     "use-all-attacks": "true"
@@ -5620,7 +6168,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5677,7 +6229,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5725,7 +6281,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5774,7 +6334,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5823,10 +6387,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5883,7 +6455,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5942,7 +6518,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5996,7 +6576,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "55"
+                    "offensive-bonus": "55",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -6044,7 +6628,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -6101,10 +6689,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -6160,10 +6756,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -6228,10 +6832,18 @@
                     "use-all-attacks": "true"
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -6293,7 +6905,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -6341,10 +6957,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -6396,10 +7020,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -6463,7 +7095,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -6515,7 +7151,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -6566,7 +7206,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -6616,7 +7260,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -6668,10 +7316,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -6722,7 +7378,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -6764,10 +7424,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -6824,7 +7492,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -6885,7 +7557,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "35"
+                    "offensive-bonus": "35",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -6949,10 +7625,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -7002,10 +7686,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -7056,7 +7748,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -7107,7 +7803,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7157,7 +7857,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -7200,7 +7904,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7269,7 +7977,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_STINGER",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7323,10 +8035,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7380,10 +8100,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -7442,10 +8170,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7495,10 +8231,18 @@
                     "use-all-attacks": "true"
                 },
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7554,10 +8298,18 @@
                     "use-all-attacks": "true"
                 },
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7608,7 +8360,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -7659,7 +8415,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -7755,10 +8515,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -7818,7 +8586,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7872,13 +8644,21 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 },
                 {
                     "use-all-attacks": "true"
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7942,7 +8722,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7999,10 +8783,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -8053,10 +8845,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -8108,7 +8908,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "120"
+                    "offensive-bonus": "120",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Huge"
+                    }
                 }
             ]
         },
@@ -8156,7 +8960,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -8219,7 +9027,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -8282,7 +9094,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -8334,7 +9150,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "90"
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -8395,7 +9215,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -8442,10 +9266,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -8504,10 +9336,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_STINGER",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -8563,7 +9403,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "65"
+                    "offensive-bonus": "65",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -8607,10 +9451,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -8654,7 +9506,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -8747,10 +9603,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -8795,7 +9659,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -8842,7 +9710,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -8909,10 +9781,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -8964,7 +9844,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "100"
+                    "offensive-bonus": "100",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -9016,7 +9900,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -9076,7 +9964,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -9139,7 +10031,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "45"
+                    "offensive-bonus": "45",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -9195,7 +10091,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -9246,7 +10146,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -9360,7 +10264,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -9411,7 +10319,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_STINGER",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -9461,7 +10373,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -9563,10 +10479,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -9613,7 +10537,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -9664,10 +10592,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "90"
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -9711,7 +10647,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -9759,10 +10699,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 },
                 {
                     "use-all-attacks": "true"
@@ -9825,10 +10773,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -9873,10 +10829,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -9926,10 +10890,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -10038,10 +11010,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "75",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "90"
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -10094,10 +11074,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -10157,7 +11145,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -10214,7 +11206,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -10262,10 +11258,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -10331,10 +11335,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -10393,10 +11405,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -10455,7 +11475,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -10512,10 +11536,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -10572,7 +11604,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -10632,7 +11668,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -10682,7 +11722,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -10745,7 +11789,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -10790,10 +11838,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -10838,10 +11894,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -10893,10 +11957,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -10948,10 +12020,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -11017,7 +12097,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "5"
+                    "offensive-bonus": "5",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -11070,10 +12154,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -11125,10 +12217,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "75",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Huge"
+                    }
                 },
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Huge"
+                    }
                 }
             ]
         },
@@ -11180,10 +12280,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "85"
+                    "offensive-bonus": "85",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Huge"
+                    }
                 }
             ]
         },
@@ -11235,13 +12343,25 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Huge"
+                    }
                 }
             ]
         },
@@ -11293,10 +12413,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "90"
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Huge"
+                    }
                 },
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Huge"
+                    }
                 }
             ]
         },
@@ -11348,10 +12476,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "75",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -11403,10 +12539,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "95"
+                    "offensive-bonus": "95",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    }
                 },
                 {
-                    "offensive-bonus": "95"
+                    "offensive-bonus": "95",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -11457,10 +12601,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "75",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -11524,7 +12676,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "65"
+                    "offensive-bonus": "65",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -11574,10 +12730,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "45"
+                    "offensive-bonus": "45",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 },
                 {
                     "use-all-attacks": "true"
@@ -11632,7 +12796,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -11687,13 +12855,25 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 },
                 {
-                    "offensive-bonus": "0"
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -11750,10 +12930,18 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
                 }
             ]
         }

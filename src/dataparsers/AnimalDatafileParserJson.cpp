@@ -258,6 +258,12 @@ void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const Anima
 
 	if (attack.hasWeaponAttack() || attack.hasNonWeaponAttack()) tree.put("offensive-bonus", attack.offensiveBonus());
 	if (attack.hasWeaponAttack()) tree.put("weapon-attack", attack.weaponTable()->id());
+	if (attack.hasNonWeaponAttack()) {
+		pt::ptree non_weapon_tree{};
+		non_weapon_tree.put("table", attack.nonWeaponTable()->id());
+		non_weapon_tree.put("size", AttackSizeType::toString(attack.nonWeaponSize()));
+		tree.push_back(std::make_pair("non-weapon-attack", non_weapon_tree));
+	}
 	if (attack.useAllAttacks()) tree.put("use-all-attacks", attack.useAllAttacks());
 }
 
