@@ -24443,9 +24443,9 @@
             ]
         },
         {
-            "id": "PROFESSION_SORCEROR",
-            "name": "Sorceror",
-            "description": "Sorcerors are Hybrid spell users who combine the realms of Essence and Channeling, concentrating on spells of destruction. Their base spells deal with the specific destruction of animate and inanimate material.",
+            "id": "PROFESSION_SORCERER",
+            "name": "Sorcerer",
+            "description": "Sorcerers are Hybrid spell users who combine the realms of Essence and Channeling, concentrating on spells of destruction. Their base spells deal with the specific destruction of animate and inanimate material.",
             "book": "BOOK_CHARACTER_LAW",
             "spell-user-type": "Hybrid",
             "realms": [
