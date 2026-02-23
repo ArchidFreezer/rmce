@@ -162,6 +162,33 @@ void AnimalDatafileParserJson::parse() {
 				}
 			}
 		}
+
+		// Conditional Attacks
+		{
+			boost::optional<const pt::ptree&> tree_opt = v.second.get_child_optional("conditional-attacks");
+			if (tree_opt) {
+				for (const auto& attack_tree : tree_opt.value()) {
+					const pt::ptree& tree = attack_tree.second;
+					AnimalAttack attack{};
+					parseAnimalAttack(attack, tree);
+					ref.addConditionalAttack(attack.conditionalAttackRef().value(), attack);
+				}
+			}
+		}
+
+		// Group Attacks
+		{
+			boost::optional<const pt::ptree&> tree_opt = v.second.get_child_optional("group-attacks");
+			if (tree_opt) {
+				for (const auto& attack_tree : tree_opt.value()) {
+					const pt::ptree& tree = attack_tree.second;
+					AnimalAttack attack{};
+					parseAnimalAttack(attack, tree, false);
+					ref.addGroupAttack(attack.minGroupSize(), attack);
+				}
+			}
+		}
+
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
 	}
@@ -322,7 +349,11 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 void AnimalDatafileParserJson::parseAnimalAttack(AnimalAttack& attack, const pt::ptree& tree, bool parse_chance) {
 	NumberMatcherFactory number_matcher{};
 
-	if (parse_chance) { attack.setChance(number_matcher.matcher(tree.get<int>("chance-min"), tree.get<int>("chance-max"))); }
+	if (parse_chance) { 
+		boost::optional<int> chance_min = tree.get_optional<int>("chance-min");
+		boost::optional<int> chance_max = tree.get_optional<int>("chance-max");
+		if (chance_max && chance_min)	attack.setChance(number_matcher.matcher(chance_min.value(), chance_max.value()));
+	}
 	if (tree.get_optional<int>("id")) attack.setConditionalAttackRef(tree.get<int>("id"));
 	if (tree.get_optional<int>("min-group-size")) attack.setMinGroupSize(tree.get<int>("min-group-size"));
 	if (tree.get_optional<int>("range")) attack.setRange(tree.get<int>("range"));

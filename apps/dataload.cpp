@@ -1,7 +1,6 @@
 ﻿#include <filesystem>
 #include <iostream>
 
-#include <AnimalDatafileParserXml.h>
 #include <AnimalDatafileParserJson.h>
 #include <ArmourTypeDatafileParserJson.h>
 #include <AttackTableDatafileParserJson.h>
@@ -36,7 +35,6 @@ int main() {
 	GameRuleDataCache cache{};
 
 	AnimalDatafileParserJson animal_parser(cache, "../../../../data/Animals.json");
-	AnimalDatafileParserXml animal_parser_xml(cache, "../../../../data/AnimalTypes.xml");
 	ArmourTypeDatafileParserJson armour_type_parser(cache, "../../../../data/ArmourTypes.json");
 	AttackTableDatafileParserJson attack_table_parser(cache, "../../../../data/AttackTables.json");
 	BookDatafileParserJson book_parser(cache, "../../../../data/Books.json");
@@ -65,7 +63,6 @@ int main() {
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
 	parsers.push_back(&animal_parser);
-	//parsers.push_back(&animal_parser_xml);
 	parsers.push_back(&armour_type_parser);
 	parsers.push_back(&attack_table_parser);
 	parsers.push_back(&book_parser);
@@ -97,7 +94,7 @@ int main() {
 			parser->read();
 		}
 
-		animal_parser.save("../../../../data/Animals2.json");
+		//animal_parser.save("../../../../data/Animals2.json");
 		//armour_type_parser.save("../../../../data/ArmourTypes2.json");
 		//attack_table_parser.save("../../../../data/AttackTables2.json");
 		//book_parser.save("../../../../data/Books2.json");
