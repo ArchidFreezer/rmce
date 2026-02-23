@@ -17542,8 +17542,8 @@
                </water-sources>
             </location>
          </locations>
-         <standard-attacks>
-            <attack chance="100">
+         <group-attacks>
+            <attack>
                   <offensive-bonus>0</offensive-bonus>
                   <min-group-size>50</min-group-size>
                   <non-weapon-attack>
@@ -17551,7 +17551,7 @@
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
             </attack>
-         </standard-attacks>
+         </group-attacks>
       </animal-type>
       <animal-type id="00001000000000250">
          <name>Serpentus</name>

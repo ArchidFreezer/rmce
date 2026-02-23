@@ -152,7 +152,7 @@ public:
 	 * 
 	 * @return `true` if the attack is used when multiple attackers are present, `false` otherwise
 	 */
-	bool usesMultipleAttackers() const { return min_group_size_ > 0; }
+	bool usesMultipleAttackers() const { return min_group_size_ > 1; }
 
 	/**
 	 * @brief Set the number of attacks that the creature makes with this attack in a round, used to indicate that there should be multiple rolls to represent multiple attacks such as a bear's two claws and one bite

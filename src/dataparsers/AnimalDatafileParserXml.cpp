@@ -186,6 +186,20 @@ void AnimalDatafileParserXml::parse() {
 			}
 		}
 
+		// Group Attacks
+		{
+			boost::optional<const pt::ptree&> tree = v.second.get_child_optional("group-attacks");
+			if (tree) {
+				// Loop through all the attacks
+				for (const auto& attack : tree.get()) {
+					// Get the change that the attack is used each round
+					AnimalAttack animal_attack{};
+					parseAnimalAttack(attack.second, animal_attack);
+					ref.addGroupAttack(animal_attack.minGroupSize(), animal_attack);
+				}
+			}
+		}
+
 		std::cout << "\tAnimal name: " << ref.name() << "\n";
 
 	}
