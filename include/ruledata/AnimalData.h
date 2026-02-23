@@ -2,8 +2,10 @@
 
 #include <set>
 #include <string_view>
+#include <vector>
 
 #include <AnimalOutlookType.h>
+#include <AnimalAttack.h>
 #include <ArmourType.h>
 #include <CreatureConstitutionVarianceType.h>
 #include <LevelVarianceType.h>
@@ -16,6 +18,7 @@
 #include <GameRuleData.h>
 #include <Location.h>
 #include <ManoeuvreDifficultyType.h>
+#include <NumberRange.h>
 #include <TreasureCodeData.h>
 #include <table/CreatureBonusXpTable.h>
 
@@ -121,6 +124,30 @@ public:
 	 * @see existencePercentageChance() for how the frequency factor is used to determine the chance of an animal existing in an appropriate environment
 	 */
 	int frequencyFactor() const { return frequency_factor_; }
+
+	/**
+	 * @brief Set the carry capacity of the animal
+	 * @param carry_capacity Carry capacity of the animal, used to determine how much weight the animal can carry when used as a mount or pack animal.
+	 */
+	void setCarryCapacity(int carry_capacity) { carry_capacity_ = carry_capacity; }
+
+	/**
+	 * @brief Get the carry capacity of the animal
+	 * @return Carry capacity of the animal, used to determine how much weight the animal can carry when used as a mount or pack animal.
+	 */
+	int carryCapacity() const { return carry_capacity_; }
+
+	/**
+	 * @brief Set the riding bonus of the animal
+	 * @param riding_bonus Riding bonus of the animal, used to determine how difficult it is to ride the animal when used as a mount.
+	 */
+	void setRidingBonus(int riding_bonus) { riding_bonus_ = riding_bonus; }
+
+	/**
+	 * @brief Get the riding bonus of the animal
+	 * @return Riding bonus of the animal, used to determine how difficult it is to ride the animal when used as a mount.
+	 */
+	int ridingBonus() const { return riding_bonus_; }
 
 	/**
 	 * @brief Get the modifier to a Hunting skill roll when attempting to hunt this particular animal
@@ -421,6 +448,112 @@ public:
 	 */
 	const Location& location() const { return *location_; }
 
+	/**
+	 * @brief Add an attack to the animal
+	 * @param chance_range Pointer to a NumberRange<int> that represents the chance of the attack being used in a round, used as the key for the attack in the attacks map.
+	 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the attacks map.
+	 */
+	void addAttack(const NumberRange<int>* chance_range, AnimalAttack attack) { attacks_.emplace(chance_range, std::move(attack)); }
+
+	/**
+	 * @brief Get the map of attacks for the animal
+	 * @return Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances.
+	 */
+	const std::map<const NumberRange<int>*, AnimalAttack>& attacks() const { return attacks_; }
+
+	/**
+	 * @brief Get the attack for a given d100 roll
+	 * @param d100_roll The result of a d100 roll, used to determine which attack is used in a round based on the chance ranges defined for each attack.
+	 * @return The attack for the given d100 roll, determined by finding the first attack in the attacks map where the d100 roll falls within the chance range key. If no such attack is found, a default constructed AnimalAttack is returned.
+	 */
+	AnimalAttack getAttack(int d100_roll) const { return getAttack(1, d100_roll); };
+
+	/**
+	 * @brief Get the attack for a given d100 roll
+	 * @param num_attackers The number of attackers in the round, used to determine which attack is used in a round based on the chance ranges defined for each attack. This is used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
+	 * @param d100_roll The result of a d100 roll, used to determine which attack is used in a round based on the chance ranges defined for each attack.
+	 * @return The attack for the given d100 roll, determined by finding the first attack in the attacks map where the d100 roll falls within the chance range key. If no such attack is found, a default constructed AnimalAttack is returned.
+	 */
+	AnimalAttack getAttack(int num_attackers, int d100_roll) const;
+
+	/**
+	 * @brief Add an attack to be used based on the number of attackers in the round
+	 * 
+	 * This is typically used for small creatures where a single one is not very dangerous but a group of them can be. For example, Piranhas on there ownb are not that dangerous, but a shoal can be deadly.
+	 * If there are multiple of these defined the one with the largest group size that is less than or equal to the number of attackers in the round will be used. For example, if there are attacks defined for 2 or more attackers and 4 or more attackers and there are 3 attackers in the round then the attack for 2 or more attackers will be used as it is the largest group size that is less than or equal to the number of attackers in the round.
+	 * 
+	 * @param num_attackers The number of attackers in the round, used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
+	 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the attacks_by_num_attackers map with the key being the number of attackers required for the attack to be used.
+	 */
+	void addGroupAttack(int num_attackers, AnimalAttack attack) { group_attacks_.emplace(num_attackers, std::move(attack)); }
+
+	/**
+	 * @brief Get the map of attacks for the animal based on the number of attackers in the round
+	 *
+	 * This is typically used for small creatures where a single one is not very dangerous but a group of them can be. For example, Piranhas on there ownb are not that dangerous, but a shoal can be deadly.
+	 * If there are multiple of these defined the one with the largest group size that is less than or equal to the number of attackers in the round will be used. For example, if there are attacks defined for 2 or more attackers and 4 or more attackers and there are 3 attackers in the round then the attack for 2 or more attackers will be used as it is the largest group size that is less than or equal to the number of attackers in the round.
+	 *
+	 * @return Map of attack data for the animal, keyed by the number of attackers in the round. This is used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
+	 */
+	const std::map<int, AnimalAttack>& groupAttacks() const { return group_attacks_; }
+
+	/**
+	 * @brief Get the attack for a given number of attackers in the round
+	 *
+	 * This is typically used for small creatures where a single one is not very dangerous but a group of them can be. For example, Piranhas on there ownb are not that dangerous, but a shoal can be deadly.
+	 * If there are multiple of these defined the one with the largest group size that is less than or equal to the number of attackers in the round will be used. For example, if there are attacks defined for 2 or more attackers and 4 or more attackers and there are 3 attackers in the round then the attack for 2 or more attackers will be used as it is the largest group size that is less than or equal to the number of attackers in the round.
+	 * 
+	 * The reurn value needs to be checked to see if an attack was found for the given number of attackers in the round as it is possible that there are no attacks defined for the number of attackers in the round. For example, if there are attacks defined for 4 or more attackers and 6 or more attackers and there are only 3 attackers in the round then no attack would be found and an empty optional would be returned.
+	 *
+	 * @param num_attackers The number of attackers in the round, used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
+	 * @return The attack for the given number of attackers in the round, determined by finding the attack in the attacks_by_num_attackers map with the largest key that is less than or equal to the number of attackers in the round. If no such attack is found, a default constructed AnimalAttack is returned.
+	 */
+	std::optional<AnimalAttack> getAttackByNumAttackers(int num_attackers) const;
+
+	/**
+	 * @brief Add a ranged attack to the animal
+	 * @param attack AnimalAttack object that represents the ranged attack, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks.
+	 */
+	void addRangedAttack(AnimalAttack attack) { ranged_attacks_.emplace_back(std::move(attack)); }
+
+	/**
+	 * @brief Get the vector of ranged attacks for the animal
+	 * @return Vector of ranged attack data for the animal, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks.
+	 */
+	const std::vector<AnimalAttack>& rangedAttacks() const { return ranged_attacks_; }
+
+	/**
+	 * @brief Add a conditional attack to the animal
+	 *
+	 * A conditional attack is an attack that is only used if a certain condition is met. The condition is determined by the reference integer which can be used to look up the condition in a table or to determine the condition in some other way. For example, the reference integer could be used to determine if the attack is only used during a certain phase of combat or if it is only used if the animal has taken a certain amount of damage.
+	 *
+	 * @param ref The reference integer for the conditional attack, used to determine the condition under which the attack is used.
+	 * @param attack AnimalAttack object that represents the conditional attack, used to determine the details of the attack and as the value for the conditional attack in the conditional_attacks map with the key being the reference integer for the condition under which the attack is used.
+	 */
+	void addConditionalAttack(int ref, AnimalAttack attack) { conditional_attacks_.emplace(ref, std::move(attack)); }
+
+	/**
+	 * @brief Get the conditional attack for a given reference integer
+	 *
+	 * A conditional attack is an attack that is only used if a certain condition is met. The condition is determined by the reference integer which can be used to look up the condition in a table or to determine the condition in some other way. For example, the reference integer could be used to determine if the attack is only used during a certain phase of combat or if it is only used if the animal has taken a certain amount of damage.
+	 *
+	 * The return value needs to be checked to see if an attack was found for the given reference integer as it is possible that there are no attacks defined for the reference integer. For example, if there are attacks defined for reference integers 1 and 2 and the reference integer 3 is passed in then no attack would be found and an empty optional would be returned.
+	 *
+	 * @param ref The reference integer for the conditional attack, used to determine the condition under which the attack is used.
+	 * @return The conditional attack for the given reference integer, determined by looking up the reference integer in the conditional_attacks map. If no such attack is found, a default constructed AnimalAttack is returned.
+	 */
+	std::optional<AnimalAttack> getConditionalAttack(int ref) const;
+
+	/**
+	 * @brief Get the map of conditional attacks for the animal
+	 *
+	 * A conditional attack is an attack that is only used if a certain condition is met. The condition is determined by the reference integer which can be used to look up the condition in a table or to determine the condition in some other way. For example, the reference integer could be used to determine if the attack is only used during a certain phase of combat or if it is only used if the animal has taken a certain amount of damage.
+	 *
+	 * @return Map of conditional attack data for the animal, keyed by the reference integer for the condition under which the attack is used. This is used to determine which attacks are conditional attacks and to look up the details of the conditional attacks based on the reference integer for the condition under which they are used.
+	 */
+	const std::map<int, AnimalAttack>& conditionalAttacks() const { return conditional_attacks_; }
+
+
 private:
 	std::string name_{}; /**< In game name of the animal */
 	std::string description_{}; /**< Description of the animal for flavour purposes */
@@ -429,6 +562,8 @@ private:
 	int defensive_bonus_{}; /**< Defensive bonus for the animal, used to determine how much damage it takes when attacked. */
 	int frequency_factor_{}; /**< Frequency factor for the animal, used to determine how common it is to find in the appropriate environ. */
 	int moving_manoeuvre_bonus_{}; /**< Bonus to Manoeuvre rolls when the animal is moving, used to determine how difficult it is to hit the animal when it is moving. */
+	int carry_capacity_{}; /**< Carrying capacity of the animal, used to determine how much weight it can carry when used as a mount or pack animal. This is not used for animals that are not meant to be used as mounts or pack animals. */
+	int riding_bonus_{}; /**< Riding bonus for the animal, used to determine the bonus to riding skill rolls when using the animal as a mount. This is not used for animals that are not meant to be used as mounts. */
 	CreatureBonusXpType::Type bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
 	CreatureConstitutionVarianceType::Type constitution_variance_type_{}; /**< Bonus constitution code for the animal, used to determine how much constitution variance a creature has. */
 	LevelVarianceType::Type level_variance_type_{}; /**< Bonus level code for the animal, used to determine how much level variance a creature has. */
@@ -445,7 +580,10 @@ private:
 	std::pair<int, int> encounter_range_{}; /**< A pair containing the minimum and maximum number of animals typically enountered in a single encounter, used to determine how many animals are encountered when an encounter with the animal is generated. */
 	std::pair<int, int> number_young_range_{}; /**< A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal. */
 	std::unique_ptr<Location> location_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */
-	// TODO: Add attack data
+	std::map<const NumberRange<int>*, AnimalAttack> attacks_{}; /**< Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances. */
+	std::map<int, AnimalAttack> group_attacks_{}; /**< Map of attack data for the animal, keyed by the number of attackers in the round. This is used to determine if the attack should be used based on the number of attackers in the round. For example, an attack may only be used if there are 2 or more attackers in the round. */
+	std::vector<AnimalAttack> ranged_attacks_{}; /**< Vector of ranged attack data for the animal, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks. */
+	std::map<int, AnimalAttack> conditional_attacks_{}; /**< Map of attack data for the animal where the attack is conditional. These may be called by other attacks the produce a non-tiny ciritcal result when they are resolved. */
 
 	/**
 	 * @brief Gets the number of hits per level difference based on the constitution code.

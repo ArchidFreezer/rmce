@@ -10,6 +10,8 @@ void AnimalDatafileParserJson::parse() {
 	buildCreatureBonusXpTable();
 	buildLevelVarianceTable();
 
+	NumberMatcherFactory number_matcher{};
+
 	// Get the books to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
@@ -26,6 +28,12 @@ void AnimalDatafileParserJson::parse() {
 		ref.setBaseMovement(v.second.get<int>("base-movement"));
 		ref.setDefensiveBonus(v.second.get<int>("defensive-bonus"));
 		ref.setFrequencyFactor(v.second.get<int>("frequency-code"));
+
+		boost::optional<int> carry_capacity = v.second.get_optional<int>("carry_capacity");
+		if (carry_capacity) { ref.setCarryCapacity(carry_capacity.get()); }
+
+		boost::optional<int> riding_bonus = v.second.get_optional<int>("riding-bonus");
+		if (riding_bonus) { ref.setRidingBonus(riding_bonus.get()); }
 
 		boost::optional<std::string> bonus_xp_code_str = v.second.get_optional<std::string>("bonus-xp-code");
 		if (bonus_xp_code_str) {
@@ -128,6 +136,59 @@ void AnimalDatafileParserJson::parse() {
 			}
 		}
 
+		// Standard attacks
+		{
+			boost::optional<const pt::ptree&> tree_opt = v.second.get_child_optional("standard-attacks");
+			if (tree_opt) {
+				for (const auto& attack_tree : tree_opt.value()) {
+					const pt::ptree& tree = attack_tree.second;
+					const NumberRange<int>* range = number_matcher.matcher(tree.get<int>("chance-min"), tree.get<int>("chance-max"));
+					AnimalAttack attack{};
+					parseAnimalAttack(attack, tree);
+					ref.addAttack(range, attack);
+				}
+			}
+		}
+
+		// Ranged attacks
+		{
+			boost::optional<const pt::ptree&> tree_opt = v.second.get_child_optional("ranged-attacks");
+			if (tree_opt) {
+				for (const auto& attack_tree : tree_opt.value()) {
+					const pt::ptree& tree = attack_tree.second;
+					AnimalAttack attack{};
+					parseAnimalAttack(attack, tree, false);
+					ref.addRangedAttack(attack);
+				}
+			}
+		}
+
+		// Conditional Attacks
+		{
+			boost::optional<const pt::ptree&> tree_opt = v.second.get_child_optional("conditional-attacks");
+			if (tree_opt) {
+				for (const auto& attack_tree : tree_opt.value()) {
+					const pt::ptree& tree = attack_tree.second;
+					AnimalAttack attack{};
+					parseAnimalAttack(attack, tree);
+					ref.addConditionalAttack(attack.conditionalAttackRef().value(), attack);
+				}
+			}
+		}
+
+		// Group Attacks
+		{
+			boost::optional<const pt::ptree&> tree_opt = v.second.get_child_optional("group-attacks");
+			if (tree_opt) {
+				for (const auto& attack_tree : tree_opt.value()) {
+					const pt::ptree& tree = attack_tree.second;
+					AnimalAttack attack{};
+					parseAnimalAttack(attack, tree, false);
+					ref.addGroupAttack(attack.minGroupSize(), attack);
+				}
+			}
+		}
+
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
 	}
@@ -156,6 +217,9 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 	datum.put("max-pace", game_data.maxPace()->id());
 	datum.put("outlook", AnimalOutlookType::toString(game_data.outlook()));
 	datum.put("critical-table", CriticalSizeTableType::toString(game_data.criticalTableType()));
+
+	if (game_data.carryCapacity()) datum.put("carry_capacity", game_data.carryCapacity());
+	if (game_data.ridingBonus()) datum.put("riding-bonus", game_data.ridingBonus());
 
 	// Critical modifiers are optional, only add to the tree if there are any
 	{
@@ -215,6 +279,150 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 		if (location_tree.size()) datum.push_back(std::make_pair("location", location_tree));
 	}
 
+	// Standard Attacks
+	{
+		// Get the map of attacks from the game data
+		std::map<const NumberRange<int>*, AnimalAttack> attacks = game_data.attacks();
+
+		// Start but sorting the attacks by their number range pointer value so that they are output in a consistent order in the json file.
+		// We use a map to do this and store the pointer value as the key and the pointer itself as the value so that we can access the attack data when populating the boost ptree for each attack.
+		std::map<const NumberRange<int>, const NumberRange<int>*> ordered_attacks{};
+		for (auto& attack : game_data.attacks()) {
+			for (auto& attack : game_data.attacks()) {
+				ordered_attacks.insert(std::make_pair(*attack.first, attack.first));
+			}
+		}
+
+		// Parse the attackdata and place into the boost ptree
+		pt::ptree attacks_tree{};
+		for (auto& attack : ordered_attacks) {
+			pt::ptree attack_tree{};
+			populateAnimalAttack(attack_tree, attacks[attack.second]);
+			attacks_tree.push_back(std::make_pair("", attack_tree));
+		}
+
+		// Only add the attacks to the tree if there are any, otherwise we will end up with an empty attacks array in the json file which is not ideal.
+		if (attacks_tree.size()) datum.push_back(std::make_pair("standard-attacks", attacks_tree));
+	}
+
+	// Group Attacks
+	{
+		// Parse the attackdata and place into the boost ptree
+		pt::ptree group_attacks_tree{};
+		for (const auto& group_attack : game_data.groupAttacks()) {
+			pt::ptree group_attack_tree{};
+			populateAnimalAttack(group_attack_tree, group_attack.second);
+			group_attacks_tree.push_back(std::make_pair("", group_attack_tree));
+		}
+		// Only add the group attacks to the tree if there are any, otherwise we will end up with an empty group attacks array in the json file which is not ideal.
+		if (group_attacks_tree.size()) datum.push_back(std::make_pair("group-attacks", group_attacks_tree));
+	}
+
+	// Ranged Attacks
+	{
+		// Parse the attackdata and place into the boost ptree
+		pt::ptree ranged_attacks_tree{};
+		for (const auto& ranged_attack : game_data.rangedAttacks()) {
+			pt::ptree ranged_attack_tree{};
+			populateAnimalAttack(ranged_attack_tree, ranged_attack);
+			ranged_attacks_tree.push_back(std::make_pair("", ranged_attack_tree));
+		}
+		// Only add the ranged attacks to the tree if there are any, otherwise we will end up with an empty ranged attacks array in the json file which is not ideal.
+		if (ranged_attacks_tree.size()) datum.push_back(std::make_pair("ranged-attacks", ranged_attacks_tree));
+	}
+
+	// Conditional Attacks
+	{
+		// Parse the attackdata and place into the boost ptree
+		pt::ptree conditional_attacks_tree{};
+		for (const auto& conditional_attack : game_data.conditionalAttacks()) {
+			pt::ptree conditional_attack_tree{};
+			populateAnimalAttack(conditional_attack_tree, conditional_attack.second);
+			conditional_attacks_tree.push_back(std::make_pair("", conditional_attack_tree));
+		}
+		// Only add the conditional attacks to the tree if there are any, otherwise we will end up with an empty conditional attacks array in the json file which is not ideal.
+		if (conditional_attacks_tree.size()) datum.push_back(std::make_pair("conditional-attacks", conditional_attacks_tree));
+	}
+}
+
+// Write boost ptree data for an AnimalAttack into an AnimalAttack object
+void AnimalDatafileParserJson::parseAnimalAttack(AnimalAttack& attack, const pt::ptree& tree, bool parse_chance) {
+	NumberMatcherFactory number_matcher{};
+
+	if (parse_chance) { 
+		boost::optional<int> chance_min = tree.get_optional<int>("chance-min");
+		boost::optional<int> chance_max = tree.get_optional<int>("chance-max");
+		if (chance_max && chance_min)	attack.setChance(number_matcher.matcher(chance_min.value(), chance_max.value()));
+	}
+	if (tree.get_optional<int>("id")) attack.setConditionalAttackRef(tree.get<int>("id"));
+	if (tree.get_optional<int>("min-group-size")) attack.setMinGroupSize(tree.get<int>("min-group-size"));
+	if (tree.get_optional<int>("range")) attack.setRange(tree.get<int>("range"));
+	if (tree.get_optional<int>("offensive-bonus")) attack.setOffensiveBonus(tree.get<int>("offensive-bonus"));
+	if (tree.get_optional<std::string>("weapon-attack")) {
+		std::string weapon_attack_id = tree.get<std::string>("weapon-attack");
+		attack.setWeaponTable(factory().get<AttackTable>(weapon_attack_id));
+	}
+	boost::optional<const pt::ptree&> non_weapon_attack_tree = tree.get_child_optional("non-weapon-attack");
+	if (non_weapon_attack_tree) {
+		std::string attack_table_id = non_weapon_attack_tree->get<std::string>("table");
+		attack.setNonWeaponTable(factory().get<SpecialAttackTable>(attack_table_id));
+		std::string size_str = non_weapon_attack_tree->get<std::string>("size");
+		AttackSizeType::Type size{};
+		AttackSizeType::fromString(size_str, size);
+		attack.setNonWeaponSize(size);
+	}
+	if (tree.get_optional<bool>("use-all-attacks")) attack.setUseAllAttacks(tree.get<bool>("use-all-attacks"));
+	if (tree.get_optional<int>("attacks-per-round")) attack.setNumAttacks(tree.get<int>("attacks-per-round"));
+	if (tree.get_optional<std::string>("special")) attack.setSpecial(tree.get<std::string>("special"));
+	if (tree.get_optional<std::string>("poison")) {
+		std::string poison_id = tree.get<std::string>("poison");
+		attack.setPoison(factory().get<PoisonData>(poison_id));
+	}
+	if (tree.get_optional<std::string>("disease")) {
+		std::string disease_id = tree.get<std::string>("disease");
+		attack.setDisease(factory().get<DiseaseData>(disease_id));
+	}
+	if (tree.get_optional<std::string>("auto-critical-type")) {
+		std::string auto_critical_type_str = tree.get<std::string>("auto-critical-type");
+		CriticalType::Type auto_critical_type{};
+		CriticalType::fromString(auto_critical_type_str, auto_critical_type);
+		attack.setAutoCriticalType(auto_critical_type);
+	}
+	if (tree.get_optional<std::string>("auto-critical-size")) attack.setAutoCriticalSize(tree.get<std::string>("auto-critical-size"));
+	if (tree.get_optional<int>("same-round-conditional-attack-id")) attack.setSameRoundAttackId(tree.get<int>("same-round-conditional-attack-id"));
+	if (tree.get_optional<int>("next-round-conditional-attack-id")) attack.setNextRoundAttackId(tree.get<int>("next-round-conditional-attack-id"));
+}
+
+// Write AnimalAttack to boost ptree
+void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const AnimalAttack& attack) {
+	if (attack.chance().has_value()) {
+		// Copy the pointer value, not the pointed-to object
+		const NumberRange<int>* chance_range = attack.chance().value();
+		tree.put("chance-min", chance_range->min());
+		tree.put("chance-max", chance_range->max());
+	}
+	if (attack.conditionalAttackRef()) tree.put("id", attack.conditionalAttackRef().value());
+	if (attack.minGroupSize() > 1) tree.put("min-group-size", attack.minGroupSize());
+	if (attack.range()) tree.put("range", attack.range());
+	if (attack.hasWeaponAttack() || attack.hasNonWeaponAttack()) tree.put("offensive-bonus", attack.offensiveBonus());
+	if (attack.hasWeaponAttack()) tree.put("weapon-attack", attack.weaponTable()->id());
+	if (attack.hasNonWeaponAttack()) {
+		pt::ptree non_weapon_tree{};
+		non_weapon_tree.put("table", attack.nonWeaponTable()->id());
+		non_weapon_tree.put("size", AttackSizeType::toString(attack.nonWeaponSize()));
+		tree.push_back(std::make_pair("non-weapon-attack", non_weapon_tree));
+	}
+	if (attack.useAllAttacks()) tree.put("use-all-attacks", attack.useAllAttacks());
+	if (attack.numAttacks() > 1) tree.put("attacks-per-round", attack.numAttacks());
+	if (attack.special()) tree.put("special", attack.special().value());
+
+	if (attack.poison()) tree.put("poison", attack.poison().value()->id());
+	if (attack.disease()) tree.put("disease", attack.disease().value()->id());
+	if (attack.autoCriticalType()) tree.put("auto-critical-type", CriticalType::toString(attack.autoCriticalType().value()));
+	if (attack.autoCriticalSize()) tree.put("auto-critical-size", attack.autoCriticalSize().value());
+
+	if (attack.sameRoundAttackId()) tree.put("same-round-conditional-attack-id", attack.sameRoundAttackId());
+	if (attack.nextRoundAttackId()) tree.put("next-round-conditional-attack-id", attack.nextRoundAttackId());
 }
 
 void AnimalDatafileParserJson::buildCreatureBonusXpTable() {

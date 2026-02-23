@@ -43,6 +43,13 @@
             "level-variance": "B"
         },
         {
+            "id": "POISON_PLAYPUS_VENOM",
+            "name": "Platypus Venom",
+            "type": "POISONTYPE_MUSCLE",
+            "level": "5",
+            "level-variance": "B"
+        },
+        {
             "id": "POISON_PORTUGUESE_MAN_OF_WAR_VENOM",
             "name": "Portuguese Man-of-War Venom",
             "type": "POISONTYPE_MUSCLE",

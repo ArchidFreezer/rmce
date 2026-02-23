@@ -70,4 +70,25 @@ private:
 
 	void buildLevelVarianceTable();
 
+	/**
+	 * @brief Parse an AnimalAttack object and write into a boost ptree
+	 *
+	 * Parse a boost::ptree containing the data for an animal attack and populate an AnimalAttack object with that data
+	 *
+	 * @param tree Boost ptree to populate with the data from the object
+	 * @param ref Reference to the AnimalAttack object containing the data for the animal attack
+	 */
+	void populateAnimalAttack(pt::ptree& tree, const AnimalAttack& attack);
+
+	/**
+	 * @brief Parse a ptree into an AnimalAttack object
+	 *
+	 * Parse a boost::ptree containing the data for an animal attack and populate an AnimalAttack object with that data
+	 *
+	 * @param tree Boost ptree containing the data for the animal attack
+	 * @param ref Reference to the AnimalAttack object to populate with the data from the boost ptree
+	 * @param parse_chance Whether to parse the chance value for the attack, this is used to allow parsing of attacks that are used in a context where the chance value is not relevant such as conditional attacks.
+	 */
+	void parseAnimalAttack(AnimalAttack& attack, const pt::ptree& tree, bool parse_chance = true);
+
 };
