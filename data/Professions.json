@@ -1302,6 +1302,322 @@
             ]
         },
         {
+            "id": "PROFESSION_BARBARIAN",
+            "name": "Barbarian",
+            "description": "Barbarians are non spell users who are uncivilized, outdoor fighters. Their combat skills are narrower than other non spell users, but they are very good at what they do. They shun armour, but are stronger than any other profession. literary examples of Barbarians would include Conan, Fafhrd, and Cerebus.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "spell-user-type": "None",
+            "realms": [
+                "Arms"
+            ],
+            "stats": [
+                "Constitution",
+                "Strength"
+            ],
+            "skill-development-types": [
+                {
+                    "id": "SKILL_CHANNELING",
+                    "value": "Restricted"
+                },
+                {
+                    "id": "SKILL_FORAGING",
+                    "value": "Everyman"
+                },
+                {
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "Everyman"
+                }
+            ],
+            "skill-subcategory-development-type-choices": [
+                {
+                    "num-choices": "1",
+                    "type": "Everyman",
+                    "options": [
+                        "SKILL_SURVIVAL"
+                    ]
+                },
+                {
+                    "num-choices": "1",
+                    "type": "Everyman",
+                    "options": [
+                        "SKILL_RIDING"
+                    ]
+                }
+            ],
+            "skill-category-profession-bonuses": [
+                {
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "15"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "value": "5"
+                }
+            ],
+            "skill-category-skill-development-types": [
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "Restricted"
+                }
+            ],
+            "skill-category-costs": [
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_HEAVY",
+                    "cost": "10"
+                },
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "cost": "2:2:2"
+                },
+                {
+                    "category": "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "cost": "4:4:4"
+                },
+                {
+                    "category": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "cost": "2:5"
+                },
+                {
+                    "category": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "cost": "2:5"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "cost": "2:4"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "cost": "2:5"
+                },
+                {
+                    "category": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "cost": "2:6"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "cost": "2:6"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "cost": "2:6"
+                },
+                {
+                    "category": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "cost": "1:5"
+                },
+                {
+                    "category": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "cost": "2:4"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "cost": "4:12"
+                },
+                {
+                    "category": "SKILLCATEGORY_COMMUNICATION",
+                    "cost": "4:4:4"
+                },
+                {
+                    "category": "SKILLCATEGORY_CRAFTS",
+                    "cost": "4:10"
+                },
+                {
+                    "category": "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "cost": "20"
+                },
+                {
+                    "category": "SKILLCATEGORY_INFLUENCE",
+                    "cost": "2:7"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_GENERAL",
+                    "cost": "1:3"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_MAGICAL",
+                    "cost": "6"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_OBSCURE",
+                    "cost": "3:7"
+                },
+                {
+                    "category": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "cost": "2:6"
+                },
+                {
+                    "category": "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+                    "cost": "6:15"
+                },
+                {
+                    "category": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "cost": "3:6"
+                },
+                {
+                    "category": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "cost": "3:8"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "cost": "1:3"
+                },
+                {
+                    "category": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "cost": "1:3"
+                },
+                {
+                    "category": "SKILLCATEGORY_POWER_AWARENESS",
+                    "cost": "8"
+                },
+                {
+                    "category": "SKILLCATEGORY_POWER_MANIPULATION",
+                    "cost": "18"
+                },
+                {
+                    "category": "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "cost": "20"
+                },
+                {
+                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "cost": "3:7"
+                },
+                {
+                    "category": "SKILLCATEGORY_SCIENCE_ANALYTIC_SPECIALISED",
+                    "cost": "15"
+                },
+                {
+                    "category": "SKILLCATEGORY_SELF_CONTROL",
+                    "cost": "2:7"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPECIAL_ATTACKS",
+                    "cost": "2:7"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPECIAL_DEFENCES",
+                    "cost": "25"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS",
+                    "cost": "70"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS",
+                    "cost": "50"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS",
+                    "cost": "35"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS",
+                    "cost": "120"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS",
+                    "cost": "105"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS",
+                    "cost": "90"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE",
+                    "cost": "16:16"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
+                    "cost": "40"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "cost": "25"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS",
+                    "cost": "80"
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                    "cost": ""
+                },
+                {
+                    "category": "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "cost": "8:8:8"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_ATTACK",
+                    "cost": "3:9"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "cost": "3:9"
+                },
+                {
+                    "category": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "cost": "1:4"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "cost": "3:7"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_PROFESSIONAL",
+                    "cost": "8"
+                },
+                {
+                    "category": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+                    "cost": "5:12"
+                },
+                {
+                    "category": "SKILLCATEGORY_URBAN",
+                    "cost": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "cost": "1:5"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "cost": "2:5"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_2_HANDED",
+                    "cost": "3:8"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE",
+                    "cost": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_MISSILE_ARTILLERY",
+                    "cost": "4"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "cost": "6"
+                },
+                {
+                    "category": "SKILLCATEGORY_WEAPON_THROWN",
+                    "cost": "6"
+                }
+            ],
+            "skill-group-profession-bonuses": [
+                {
+                    "id": "SKILLGROUP_AWARENESS",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLGROUP_OUTDOOR",
+                    "value": "10"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "15"
+                }
+            ]
+        },
+        {
             "id": "PROFESSION_BARD",
             "name": "Bard",
             "description": "Bards are Semi spell users who combine the realm of Mentalism with the realm of Arms. Their base spells deal with sound, lore, entertaining, and item use.",
