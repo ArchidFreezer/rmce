@@ -25,6 +25,12 @@ void AnimalDatafileParserXml::parse() {
 		ref.setFrequencyFactor(v.second.get<int>("frequency-code"));
 		ref.setMovingManoeuvreBonus(v.second.get<int>("moving-manoeuvre-bonus"));
 
+		boost::optional<int> carry_capacity = v.second.get_optional<int>("carry-capacity");
+		if(carry_capacity) { ref.setCarryCapacity(carry_capacity.get()); }
+
+		boost::optional<int> riding_bonus = v.second.get_optional<int>("riding-bonus");
+		if (riding_bonus) { ref.setRidingBonus(riding_bonus.get()); }
+
 		CreatureBonusXpType::Type xp_code{};
 		CreatureBonusXpType::fromString(v.second.get<std::string>("bonus-xp-code"), xp_code);
 		ref.setBonusXpCode(xp_code);
@@ -156,60 +162,27 @@ void AnimalDatafileParserXml::parse() {
 			}
 		}
 
-		// Attacks
+		NumberMatcherFactory number_matcher{};
+
+		// Standard Attacks
 		{
-			pt::ptree tree{ v.second.get_child("standard-attacks") };
-			NumberMatcherFactory number_matcher{};
-			int curr_attack{ 0 };
+			boost::optional<const pt::ptree&> tree = v.second.get_child_optional("standard-attacks");
+			if (tree) {
+				int curr_attack{ 0 };
 
-			// There are some attacks that state to use all others in the same round so we need to create outside the loop to enable us to add all other attacks into it as we loop through the attacks
-			AnimalAttack all_attacks{};
+				// Loop through all the attacks
+				for (const auto& attack : tree.get()) {
 
-			// Loop through all the attacks
-			for (const auto& attack : tree) {
+					// Get the change that the attack is used each round
+					int chance{ attack.second.get<int>("<xmlattr>.chance") };
+					const NumberRange<int>* chance_range = number_matcher.matcher(curr_attack + 1, chance);
+					curr_attack += chance;
+					if (curr_attack > 100)  throw std::runtime_error("Chance values for attacks on animal " + ref.name() + " add up to more than 100%.");
 
-				// Get the change that the attack is used each round
-				int chance{ attack.second.get<int>("<xmlattr>.chance") }; 
-				NumberRange<int> chance_range{ curr_attack + 1, chance };
-				curr_attack += chance;
-				if (curr_attack > 100)  throw std::runtime_error("Chance values for attacks on animal " + ref.name() + " add up to more than 100%.");
-
-				// Get the details of the attack
-				pt::ptree attack_details{ attack.second.get_child("attack") };
-
-				// Next we need to see whether his attack defines to use all other attacks
-				boost::optional<bool> use_all_attacks_opt = attack_details.get_optional<bool>("use-all-attacks");
-				if (use_all_attacks_opt && use_all_attacks_opt.get()) {
-					ref.addAttack(chance_range, all_attacks);
-					continue;
+					AnimalAttack animal_attack{};
+					parseAnimalAttack(attack.second, animal_attack);
+					ref.addAttack(chance_range, animal_attack);
 				}
-
-				AnimalAttack animal_attack{};
-				ref.addAttack(chance_range, animal_attack); // Add to the animal as a possible attack
-				all_attacks.addMultiAttack(animal_attack); // Add to the multi-attack in case there is an attack that uses all other attacks
-				
-				animal_attack.setOffensiveBonus(attack_details.get<int>("offensive-bonus"));
-
-				boost::optional<int> min_group_size = attack_details.get_optional<int>("min-group-size");
-				if (min_group_size) { animal_attack.setMinNumAttackers(min_group_size.get());	}
-
-				boost::optional<pt::ptree&> non_weapon_attack = attack_details.get_child_optional("non-weapon-attack");
-				if (non_weapon_attack) {
-					std::string non_weapon_size_str{ non_weapon_attack.get().get<std::string>("attack-size") };
-					if (non_weapon_size_str == "TINY") {
-						animal_attack.setNonWeaponSize(AttackSizeType::Type::kSmall);
-						std::string non_weapon_table_id{ "SPECIALATTACKTABLE_TINY" };
-						animal_attack.setNonWeaponTable(factory().get<SpecialAttackTable>(non_weapon_table_id));
-					} else {
-						AttackSizeType::Type non_weapon_size{};
-						AttackSizeType::fromString(non_weapon_size_str, non_weapon_size);
-						animal_attack.setNonWeaponSize(non_weapon_size);
-						std::string non_weapon_table_id{ GameRuleData::generateId("SpecialAttackTable", non_weapon_attack.get().get<std::string>("attack-table")) };
-						animal_attack.setNonWeaponTable(factory().get<SpecialAttackTable>(non_weapon_table_id));
-					}
-				}
-
-				boost::optional<pt::ptree&> next_round_attack = attack_details.get_child_optional("secondary-attack");
 			}
 		}
 
@@ -217,6 +190,75 @@ void AnimalDatafileParserXml::parse() {
 
 	}
 }
+
+void AnimalDatafileParserXml::parseAnimalAttack(const pt::ptree& tree, AnimalAttack& ref) {
+
+	NumberMatcherFactory number_matcher{};
+
+	boost::optional<int> chance = tree.get_optional<int>("chance");
+	if (chance) ref.setChance(number_matcher.matcher(1, chance.get()));
+
+	boost::optional<int> offensive_bonus = tree.get_optional<int>("offensive-bonus");
+	if (offensive_bonus) ref.setOffensiveBonus(offensive_bonus.get());
+
+	boost::optional<const pt::ptree&> non_weapon_attack = tree.get_child_optional("non-weapon-attack");
+	if (non_weapon_attack) {
+		std::string non_weapon_size_str{ non_weapon_attack.get().get<std::string>("attack-size") };
+		if (non_weapon_size_str == "TINY") {
+			ref.setNonWeaponSize(AttackSizeType::Type::kSmall);
+			std::string non_weapon_table_id{ "SPECIALATTACKTABLE_TINY" };
+			ref.setNonWeaponTable(factory().get<SpecialAttackTable>(non_weapon_table_id));
+		} else {
+			AttackSizeType::Type non_weapon_size{};
+			AttackSizeType::fromString(non_weapon_size_str, non_weapon_size);
+			ref.setNonWeaponSize(non_weapon_size);
+			std::string non_weapon_table_id{ GameRuleData::generateId("SpecialAttackTable", non_weapon_attack.get().get<std::string>("attack-table")) };
+			ref.setNonWeaponTable(factory().get<SpecialAttackTable>(non_weapon_table_id));
+		}
+	}
+
+	boost::optional<std::string> weapon_attack_str = tree.get_optional<std::string>("weapon-attack");
+	if (weapon_attack_str) {
+		std::string weapon_table_id{ GameRuleData::generateId("AttackTable", weapon_attack_str.value()) };
+		ref.setWeaponTable(factory().get<AttackTable>(weapon_table_id));
+	}
+
+	boost::optional<int> attacks_per_round = tree.get_optional<int>("attacks-per-round");
+	if (attacks_per_round) ref.setNumAttacks(attacks_per_round.get());
+
+	boost::optional<bool> use_all_attacks = tree.get_optional<bool>("use-all-attacks");
+	if (use_all_attacks) ref.setUseAllAttacks(use_all_attacks.get());
+
+	boost::optional<int> min_group_size = tree.get_optional<int>("min-group-size");
+	if (min_group_size) ref.setMinGroupSize(min_group_size.get());
+
+	boost::optional<int> same_round_attack_id = tree.get_optional<int>("same-round-id");
+	if (same_round_attack_id) ref.setSameRoundAttackId(same_round_attack_id.get());
+
+	boost::optional<int> next_round_attack_id = tree.get_optional<int>("next-round-id");
+	if (next_round_attack_id) ref.setNextRoundAttackId(next_round_attack_id.get());
+
+	boost::optional<std::string> special = tree.get_optional<std::string>("special");
+	if (special) ref.setSpecial(special.get());
+
+	boost::optional<std::string> poison = tree.get_optional<std::string>("poison");
+	if (poison) ref.setPoison(factory().get<PoisonData>(poison.get()));
+
+	boost::optional<std::string> disease = tree.get_optional<std::string>("disease");
+	if (disease) ref.setDisease(factory().get<DiseaseData>(disease.get()));
+
+	boost::optional<const pt::ptree&> crit = tree.get_child_optional("crit");
+	if (crit) {
+		CriticalType::Type type{};
+		CriticalType::fromString(crit.get().get<std::string>("type"), type);
+		ref.setAutoCriticalType(type);
+		ref.setAutoCriticalSize(crit.get().get<std::string>("size"));
+	}
+
+}
+
+
+
 
 void AnimalDatafileParserXml::buildCreatureBonusXpTable() {
 	std::string id = "CREATURE_BONUS_XP_TABLE";

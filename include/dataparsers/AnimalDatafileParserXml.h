@@ -47,4 +47,6 @@ private:
 
 	void buildLevelVarianceTable();
 
+	void parseAnimalAttack(const pt::ptree& tree, AnimalAttack& ref);
+
 };
