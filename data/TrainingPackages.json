@@ -2748,6 +2748,112 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_CHAMBERLAIN",
+            "name": "Chamberlain",
+            "description": "A chamberlain is an official in charge of a sovereign or noble's household. He serves as an advisor, administrator and facilitator, keeping everything running smoothly while the lord attends to more important matters. A chamberlain often finds himself privy to his lord's private business, and can undertake quiet missions on his lord's behalf",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "true",
+            "time-to-acquire": "74",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Minor item related to office (i.e., a magical pen)",
+                    "chance": "10"
+                },
+                {
+                    "value": "Favour from an important person",
+                    "chance": "30"
+                },
+                {
+                    "value": "Favour from royalty",
+                    "chance": "30"
+                },
+                {
+                    "value": "Noble patron",
+                    "chance": "30"
+                },
+                {
+                    "value": "Knowledge of a political secret or intrigue",
+                    "chance": "50"
+                },
+                {
+                    "value": "Seal of office",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Local culture",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DIPLOMACY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local region",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SCROUNGING",
+                    "value": "1"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "value": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_FIRST_AID"
+                        },
+                        {
+                            "id": "SKILL_USING_PREPARED_HERBS"
+                        }
+                    ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "3",
+                    "num-choices": "3"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_CHANCELLOR",
             "name": "Chancellor",
             "description": "A Chancellor handles the administrative affairs of a religion. He is also a spiritual leader of a congregation of believers. The Chancellor's job is to provide support and inspiration to the followers of his religion. He also handles and presides over many of the religion's ceremonies. Leaving the actual teaching to ministers, a Chancellor handles the major decisions that a religion has to face.",
