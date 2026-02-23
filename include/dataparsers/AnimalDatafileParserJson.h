@@ -78,7 +78,7 @@ private:
 	 * @param tree Boost ptree to populate with the data from the object
 	 * @param ref Reference to the AnimalAttack object containing the data for the animal attack
 	 */
-	void populateAnimalAttack(pt::ptree& tree, const AnimalAttack attack);
+	void populateAnimalAttack(pt::ptree& tree, const AnimalAttack& attack);
 
 	/**
 	 * @brief Parse a ptree into an AnimalAttack object
@@ -87,7 +87,8 @@ private:
 	 *
 	 * @param tree Boost ptree containing the data for the animal attack
 	 * @param ref Reference to the AnimalAttack object to populate with the data from the boost ptree
+	 * @param parse_chance Whether to parse the chance value for the attack, this is used to allow parsing of attacks that are used in a context where the chance value is not relevant such as conditional attacks.
 	 */
-	void parseAnimalAttack(const pt::ptree& tree, AnimalAttack attack);
+	void parseAnimalAttack(AnimalAttack& attack, const pt::ptree& tree, bool parse_chance = true);
 
 };

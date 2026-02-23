@@ -10,6 +10,8 @@ void AnimalDatafileParserJson::parse() {
 	buildCreatureBonusXpTable();
 	buildLevelVarianceTable();
 
+	NumberMatcherFactory number_matcher{};
+
 	// Get the books to parse and loop through them
 	const pt::ptree& tree = ptree().get_child(rootNode());
 	for (const auto& v : tree) {
@@ -134,6 +136,32 @@ void AnimalDatafileParserJson::parse() {
 			}
 		}
 
+		// Standard attacks
+		{
+			boost::optional<const pt::ptree&> tree_opt = v.second.get_child_optional("standard-attacks");
+			if (tree_opt) {
+				for (const auto& attack_tree : tree_opt.value()) {
+					const pt::ptree& tree = attack_tree.second;
+					const NumberRange<int>* range = number_matcher.matcher(tree.get<int>("chance-min"), tree.get<int>("chance-max"));
+					AnimalAttack attack{};
+					parseAnimalAttack(attack, tree);
+					ref.addAttack(range, attack);
+				}
+			}
+		}
+
+		// Ranged attacks
+		//{
+		//	boost::optional<const pt::ptree&> tree_opt = v.second.get_child_optional("ranged-attacks");
+		//	if (tree_opt) {
+		//		for (const auto& attack_tree : tree_opt.value()) {
+		//			const pt::ptree& tree = attack_tree.second;
+		//			AnimalAttack attack{};
+		//			parseAnimalAttack(attack, tree, false);
+		//			ref.addRangedAttack(attack);
+		//		}
+		//	}
+		//}
 		std::cout << "\tAnimal name: " << ref.name() << std::endl;
 
 	}
@@ -290,11 +318,57 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 	}
 }
 
-void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const AnimalAttack attack) {
+// Write boost ptree data for an AnimalAttack into an AnimalAttack object
+void AnimalDatafileParserJson::parseAnimalAttack(AnimalAttack& attack, const pt::ptree& tree, bool parse_chance) {
+	NumberMatcherFactory number_matcher{};
+
+	if (parse_chance) { attack.setChance(number_matcher.matcher(tree.get<int>("chance-min"), tree.get<int>("chance-max"))); }
+	if (tree.get_optional<int>("id")) attack.setConditionalAttackRef(tree.get<int>("id"));
+	if (tree.get_optional<int>("min-group-size")) attack.setMinGroupSize(tree.get<int>("min-group-size"));
+	if (tree.get_optional<int>("range")) attack.setRange(tree.get<int>("range"));
+	if (tree.get_optional<int>("offensive-bonus")) attack.setOffensiveBonus(tree.get<int>("offensive-bonus"));
+	if (tree.get_optional<std::string>("weapon-attack")) {
+		std::string weapon_attack_id = tree.get<std::string>("weapon-attack");
+		attack.setWeaponTable(factory().get<AttackTable>(weapon_attack_id));
+	}
+	boost::optional<const pt::ptree&> non_weapon_attack_tree = tree.get_child_optional("non-weapon-attack");
+	if (non_weapon_attack_tree) {
+		std::string attack_table_id = non_weapon_attack_tree->get<std::string>("table");
+		attack.setNonWeaponTable(factory().get<SpecialAttackTable>(attack_table_id));
+		std::string size_str = non_weapon_attack_tree->get<std::string>("size");
+		AttackSizeType::Type size{};
+		AttackSizeType::fromString(size_str, size);
+		attack.setNonWeaponSize(size);
+	}
+	if (tree.get_optional<bool>("use-all-attacks")) attack.setUseAllAttacks(tree.get<bool>("use-all-attacks"));
+	if (tree.get_optional<int>("attacks-per-round")) attack.setNumAttacks(tree.get<int>("attacks-per-round"));
+	if (tree.get_optional<std::string>("special")) attack.setSpecial(tree.get<std::string>("special"));
+	if (tree.get_optional<std::string>("poison")) {
+		std::string poison_id = tree.get<std::string>("poison");
+		attack.setPoison(factory().get<PoisonData>(poison_id));
+	}
+	if (tree.get_optional<std::string>("disease")) {
+		std::string disease_id = tree.get<std::string>("disease");
+		attack.setDisease(factory().get<DiseaseData>(disease_id));
+	}
+	if (tree.get_optional<std::string>("auto-critical-type")) {
+		std::string auto_critical_type_str = tree.get<std::string>("auto-critical-type");
+		CriticalType::Type auto_critical_type{};
+		CriticalType::fromString(auto_critical_type_str, auto_critical_type);
+		attack.setAutoCriticalType(auto_critical_type);
+	}
+	if (tree.get_optional<std::string>("auto-critical-size")) attack.setAutoCriticalSize(tree.get<std::string>("auto-critical-size"));
+	if (tree.get_optional<int>("same-round-conditional-attack-id")) attack.setSameRoundAttackId(tree.get<int>("same-round-conditional-attack-id"));
+	if (tree.get_optional<int>("next-round-conditional-attack-id")) attack.setNextRoundAttackId(tree.get<int>("next-round-conditional-attack-id"));
+}
+
+// Write AnimalAttack to boost ptree
+void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const AnimalAttack& attack) {
 	if (attack.chance().has_value()) {
 		// Copy the pointer value, not the pointed-to object
 		const NumberRange<int>* chance_range = attack.chance().value();
-		tree.put("chance", chance_range->max() - chance_range->min());
+		tree.put("chance-min", chance_range->min());
+		tree.put("chance-max", chance_range->max());
 	}
 	if (attack.conditionalAttackRef()) tree.put("id", attack.conditionalAttackRef().value());
 	if (attack.minGroupSize() > 1) tree.put("min-group-size", attack.minGroupSize());
@@ -311,14 +385,14 @@ void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const Anima
 	if (attack.numAttacks() > 1) tree.put("attacks-per-round", attack.numAttacks());
 	if (attack.special()) tree.put("special", attack.special().value());
 
-	if (attack.poison()) { tree.put("poison", attack.poison().value()->id()); }
-	if (attack.disease()) { tree.put("disease", attack.disease().value()->id()); }
+	if (attack.poison()) tree.put("poison", attack.poison().value()->id());
+	if (attack.disease()) tree.put("disease", attack.disease().value()->id());
+	if (attack.autoCriticalType()) tree.put("auto-critical-type", CriticalType::toString(attack.autoCriticalType().value()));
+	if (attack.autoCriticalSize()) tree.put("auto-critical-size", attack.autoCriticalSize().value());
 
 	if (attack.sameRoundAttackId()) tree.put("same-round-conditional-attack-id", attack.sameRoundAttackId());
 	if (attack.nextRoundAttackId()) tree.put("next-round-conditional-attack-id", attack.nextRoundAttackId());
 }
-
-void AnimalDatafileParserJson::parseAnimalAttack(const pt::ptree& tree, AnimalAttack attack) {}
 
 void AnimalDatafileParserJson::buildCreatureBonusXpTable() {
 	std::string id = "CREATURE_BONUS_XP_TABLE";

@@ -175,12 +175,13 @@ void AnimalDatafileParserXml::parse() {
 
 					// Get the chance that the attack is used each round
 					int chance{ attack.second.get<int>("<xmlattr>.chance") };
-					const NumberRange<int>* chance_range = number_matcher.matcher(curr_attack + 1, chance);
+					const NumberRange<int>* chance_range = number_matcher.matcher(curr_attack + 1, curr_attack + chance);
 					curr_attack += chance;
 					if (curr_attack > 100)  throw std::runtime_error("Chance values for attacks on animal " + ref.name() + " add up to more than 100%.");
 
 					AnimalAttack animal_attack{};
 					parseAnimalAttack(attack.second, animal_attack);
+					animal_attack.setChance(chance_range);
 					ref.addAttack(chance_range, animal_attack);
 				}
 			}

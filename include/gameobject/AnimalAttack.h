@@ -296,7 +296,7 @@ public:
 	 * @brief Get the type of critical that this attack always results in
 	 * @return CriticalType::Type Type of critical that this attack always results in
 	 */
-	CriticalType::Type autoCriticalType() const { return auto_critical_type_; }
+	std::optional <CriticalType::Type> autoCriticalType() const { return auto_critical_type_; }
 
 	/**
 	 * @brief Set the size of the auto critical, used for attacks that always result in a non-tiny crit to determine the size of the crit
@@ -308,7 +308,7 @@ public:
 	 * @brief Get the size of the auto critical, used for attacks that always result in a non-tiny crit to determine the size of the crit
 	 * @return std::string Size of the auto critical, used for attacks that always result in a non-tiny crit to determine the size of the crit
 	 */
-	std::string autoCriticalSize() const { return auto_critical_size_; }
+	std::optional <std::string> autoCriticalSize() const { return auto_critical_size_; }
 
 private:
 	std::optional <const NumberRange<int>*> chance_{}; /**< Percentage chance that this attack will be used */
@@ -327,6 +327,6 @@ private:
 	std::optional<std::string> special_{}; /**< Special attacks that are not specifically defined above. */
 	int same_round_attack_id_{}; /**< If this is set and the current attack results in a non-tiny crit the conditional attack with the given ID will also be used this round */
 	int next_round_attack_id_{}; /**< If this is set and the current attack results in a non-tiny crit the conditional attack with the given ID will be used next round */
-	CriticalType::Type auto_critical_type_{}; /**< Type of critical that this attack always results in. */
-	std::string auto_critical_size_{}; /**< Size of the auto critical, used for attacks that always result in a non-tiny crit to determine the size of the crit. */
+	std::optional <CriticalType::Type> auto_critical_type_{}; /**< Type of critical that this attack always results in. */
+	std::optional <std::string> auto_critical_size_{}; /**< Size of the auto critical, used for attacks that always result in a non-tiny crit to determine the size of the crit. */
 };
