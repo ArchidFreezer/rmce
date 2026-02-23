@@ -108,7 +108,7 @@ int main() {
 		//language_parser.save("../../../../data/Languages2.json");
 		//poison_parser.save("../../../../data/Poisons2.json");
 		//poison_type_parser.save("../../../../data/PoisonTypes2.json");
-		//profession_parser.save("../../../../data/Professions2.json");
+		profession_parser.save("../../../../data/Professions2.json");
 		//race_parser.save("../../../../data/Races2.json");
 		//skill_category_parser.save("../../../../data/SkillCategories2.json");
 		//skill_group_parser.save("../../../../data/SkillGroups2.json");
