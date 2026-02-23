@@ -47,3 +47,10 @@ const std::optional<CriticalType::Type> CriticalType::fromString(std::string_vie
 
 	return {};
 }
+
+
+void CriticalType::fromString(std::string_view sv, CriticalType::Type& type) {
+	std::optional<Type> opt_type = fromString(sv);
+	if (opt_type) type = opt_type.value();
+	else throw std::invalid_argument("Invalid string value for CriticalType::Type: " + std::string(sv));
+}

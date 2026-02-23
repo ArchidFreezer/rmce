@@ -257,7 +257,7 @@ int AnimalData::exhaustionPoints() const {
 AnimalAttack AnimalData::getAttack(int num_attackers, int d100_roll) const {
 	AnimalAttack curr_attack{};
 	for (const auto& attack : attacks_) {
-		if (attack.second.usesMultipleAttackers() && num_attackers > attack.second.minNumAttackers()) return attack.second; // Always use the attack that requires multiple attackers if the number of attackers is sufficient, regardless of the d100 roll
+		if (attack.second.usesMultipleAttackers() && num_attackers > attack.second.minGroupSize()) return attack.second; // Always use the attack that requires multiple attackers if the number of attackers is sufficient, regardless of the d100 roll
 		if (attack.first->matches(d100_roll)) {
 			curr_attack = attack.second;
 		}
@@ -270,7 +270,7 @@ std::optional<AnimalAttack> AnimalData::getAttackByNumAttackers(int num_attacker
 	int curr_number{ 0 };
 	for (const auto& attack : attacks_) {
 		if (attack.second.usesMultipleAttackers()) {
-			int attack_num{ attack.second.minNumAttackers() };
+			int attack_num{ attack.second.minGroupSize() };
 			if (attack_num > curr_number && attack_num <= num_attackers) {
 				curr_attack = attack.second;
 				curr_number = attack_num;

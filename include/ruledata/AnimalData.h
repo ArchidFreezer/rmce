@@ -453,7 +453,7 @@ public:
 	 * @param chance_range Pointer to a NumberRange<int> that represents the chance of the attack being used in a round, used as the key for the attack in the attacks map.
 	 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the attacks map.
 	 */
-	void addAttack(const NumberRange<int>& chance_range, AnimalAttack attack) { attacks_.emplace(&chance_range, std::move(attack)); }
+	void addAttack(const NumberRange<int>* chance_range, AnimalAttack attack) { attacks_.emplace(chance_range, std::move(attack)); }
 
 	/**
 	 * @brief Get the map of attacks for the animal
