@@ -137,6 +137,20 @@ private:
 	const pt::ptree getCategoryMultiSkillRankChoicesTree(TrainingPackageData& game_data);
 
 	/**
+	 * @brief Parses group multi skill rank choices from a property tree into a set of GroupMultiSkillRankChoice objects.
+	 * @param group_multi_skill_rank_choices An optional reference to a property tree containing the group multi skill rank choices to parse. If not present, an empty set is returned.
+	 * @return A vector of GroupMultiSkillRankChoice objects representing the parsed group multi skill rank choices.
+	 */
+	std::vector<GroupMultiSkillRankChoice> parseGroupMultiSkillRankChoices(boost::optional<const pt::ptree&> group_multi_skill_rank_choices);
+
+	/**
+	 * @brief Converts a set of GroupMultiSkillRankChoice objects representing group multi skill rank choices into a property tree.
+	 * @param group_multi_skill_rank_choices A set of GroupMultiSkillRankChoice objects representing the group multi skill rank choices to convert.
+	 * @return A property tree representation of the group multi skill rank choices, where each entry is represented as a child node with the relevant data.
+	 */
+	const pt::ptree getGroupMultiSkillRankChoicesTree(TrainingPackageData& game_data);
+
+	/**
 	 * @brief Parses spell list choices from a property tree and returns them as a set.
 	 * @param spell_list_choices An optional reference to a property tree containing spell list choice data to parse. If empty, an empty set is returned.
 	 * @return A set of SpellListChoices objects parsed from the input property tree.
