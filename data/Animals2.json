@@ -676,7 +676,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_SOLDIER_ANT_VENOM"
                 }
             ]
         },
@@ -2307,7 +2308,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_COBRA_VENOM"
                 }
             ]
         },
@@ -4164,7 +4166,8 @@
             "conditional-attacks": [
                 {
                     "chance": "4",
-                    "id": "1"
+                    "id": "1",
+                    "disease": "DISEASE_FLEA_BITE"
                 }
             ]
         },
@@ -4711,7 +4714,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_GEMSTING_VENOM"
                 }
             ]
         },
@@ -4857,7 +4861,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_GILA_MONSTER_VENOM"
                 }
             ]
         },
@@ -5744,7 +5749,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_HORNED_SNAKE_VENOM"
                 }
             ]
         },
@@ -5824,7 +5830,8 @@
                     }
                 },
                 {
-                    "id": "2"
+                    "id": "2",
+                    "poison": "POISON_HORSE_VIPER_VENOM"
                 }
             ]
         },
@@ -6112,7 +6119,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_JADEBACK_VENOM"
                 }
             ]
         },
@@ -8965,7 +8973,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_VIPER_VENOM"
                 }
             ]
         },
@@ -9036,7 +9045,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_PLAYPUS_VENOM"
                 }
             ]
         },
@@ -9438,6 +9448,7 @@
             "conditional-attacks": [
                 {
                     "id": "1",
+                    "poison": "POISON_PORTUGUESE_MAN_OF_WAR_VENOM",
                     "next-round-conditional-attack-id": "2"
                 },
                 {
@@ -9798,7 +9809,8 @@
             "conditional-attacks": [
                 {
                     "chance": "4",
-                    "id": "1"
+                    "id": "1",
+                    "disease": "DISEASE_RAT_BITE"
                 }
             ]
         },
@@ -10477,7 +10489,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_SCORPION_VENOM"
                 }
             ]
         },
@@ -10544,7 +10557,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_SCRA_PREN_VENOM"
                 }
             ]
         },
@@ -10708,6 +10722,7 @@
             "conditional-attacks": [
                 {
                     "id": "1",
+                    "poison": "POISON_SEA_ANEMONE_VENOM",
                     "same-round-conditional-attack-id": "2"
                 },
                 {
@@ -10878,7 +10893,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_SEA_SNAKE_VENOM"
                 }
             ]
         },
@@ -11506,7 +11522,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_SPIDER_VENOM"
                 }
             ]
         },
@@ -11575,7 +11592,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_COBRA_VENOM"
                 }
             ]
         },
@@ -11636,7 +11654,8 @@
             "conditional-attacks": [
                 {
                     "chance": "9",
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_STARFISH_VENOM"
                 }
             ]
         },
@@ -11702,7 +11721,8 @@
                     "same-round-conditional-attack-id": "2"
                 },
                 {
-                    "id": "2"
+                    "id": "2",
+                    "poison": "POISON_STINGRAY_VENOM"
                 }
             ]
         },
@@ -12156,7 +12176,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_TENTMORSE_VENOM"
                 }
             ]
         },
@@ -12307,7 +12328,8 @@
             "conditional-attacks": [
                 {
                     "chance": "1",
-                    "id": "1"
+                    "id": "1",
+                    "disease": "DISEASE_TICK_BITE"
                 }
             ]
         },
@@ -13064,7 +13086,8 @@
             ],
             "conditional-attacks": [
                 {
-                    "id": "1"
+                    "id": "1",
+                    "poison": "POISON_VIPER_VENOM"
                 }
             ]
         },

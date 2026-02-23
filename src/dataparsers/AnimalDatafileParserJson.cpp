@@ -310,6 +310,10 @@ void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const Anima
 	if (attack.useAllAttacks()) tree.put("use-all-attacks", attack.useAllAttacks());
 	if (attack.numAttacks() > 1) tree.put("attacks-per-round", attack.numAttacks());
 	if (attack.special()) tree.put("special", attack.special().value());
+
+	if (attack.poison()) { tree.put("poison", attack.poison().value()->id()); }
+	if (attack.disease()) { tree.put("disease", attack.disease().value()->id()); }
+
 	if (attack.sameRoundAttackId()) tree.put("same-round-conditional-attack-id", attack.sameRoundAttackId());
 	if (attack.nextRoundAttackId()) tree.put("next-round-conditional-attack-id", attack.nextRoundAttackId());
 }
