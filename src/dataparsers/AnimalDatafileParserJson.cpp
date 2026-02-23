@@ -229,7 +229,8 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 		// Get the map of attacks from the game data
 		std::map<const NumberRange<int>*, AnimalAttack> attacks = game_data.attacks();
 
-		// Start but sorting the attacks by their number range pointer value so that they are output in a consistent order in the json file. We use a map to do this and store the pointer value as the key and the pointer itself as the value so that we can access the attack data when populating the boost ptree for each attack.
+		// Start but sorting the attacks by their number range pointer value so that they are output in a consistent order in the json file.
+		// We use a map to do this and store the pointer value as the key and the pointer itself as the value so that we can access the attack data when populating the boost ptree for each attack.
 		std::map<const NumberRange<int>, const NumberRange<int>*> ordered_attacks{};
 		for (auto& attack : game_data.attacks()) {
 			for (auto& attack : game_data.attacks()) {
@@ -237,6 +238,7 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 			}
 		}
 
+		// Parse the attackdata and place into the boost ptree
 		pt::ptree attacks_tree{};
 		for (auto& attack : ordered_attacks) {
 			pt::ptree attack_tree{};
@@ -244,8 +246,21 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 			attacks_tree.push_back(std::make_pair("", attack_tree));
 		}
 
-
+		// Only add the attacks to the tree if there are any, otherwise we will end up with an empty attacks array in the json file which is not ideal.
 		if (attacks_tree.size()) datum.push_back(std::make_pair("standard-attacks", attacks_tree));
+	}
+
+	// Group Attacks
+	{
+		// Parse the attackdata and place into the boost ptree
+		pt::ptree group_attacks_tree{};
+		for (const auto& group_attack : game_data.groupAttacks()) {
+			pt::ptree group_attack_tree{};
+			populateAnimalAttack(group_attack_tree, group_attack.second);
+			group_attacks_tree.push_back(std::make_pair("", group_attack_tree));
+		}
+		// Only add the group attacks to the tree if there are any, otherwise we will end up with an empty group attacks array in the json file which is not ideal.
+		if (group_attacks_tree.size()) datum.push_back(std::make_pair("group-attacks", group_attacks_tree));
 	}
 }
 
@@ -256,6 +271,7 @@ void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const Anima
 		tree.put("chance", chance_range->max() - chance_range->min());
 	}
 
+	if (attack.minGroupSize() > 1) tree.put("min-group-size", attack.minGroupSize());
 	if (attack.hasWeaponAttack() || attack.hasNonWeaponAttack()) tree.put("offensive-bonus", attack.offensiveBonus());
 	if (attack.hasWeaponAttack()) tree.put("weapon-attack", attack.weaponTable()->id());
 	if (attack.hasNonWeaponAttack()) {

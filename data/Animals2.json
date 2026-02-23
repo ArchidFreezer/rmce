@@ -609,7 +609,25 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "group-attacks": [
+                {
+                    "min-group-size": "30",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                },
+                {
+                    "min-group-size": "100",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_STINGER",
+                        "size": "Small"
+                    }
+                }
+            ]
         },
         {
             "id": "ANIMAL_ARMADILLO",
@@ -803,6 +821,16 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "3",
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -868,6 +896,16 @@
                     "offensive-bonus": "10",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Small"
                     }
                 }
@@ -1184,8 +1222,9 @@
                     "WARM_HUMID"
                 ]
             },
-            "standard-attacks": [
+            "group-attacks": [
                 {
+                    "min-group-size": "50",
                     "offensive-bonus": "0",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BEAK",
@@ -1250,6 +1289,16 @@
             "standard-attacks": [
                 {
                     "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "10",
+                    "offensive-bonus": "20",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
                         "size": "Small"
@@ -1335,6 +1384,16 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "3",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -1403,6 +1462,16 @@
                     "offensive-bonus": "0",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
                         "size": "Small"
                     }
                 }
@@ -2200,6 +2269,16 @@
                     "offensive-bonus": "0",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
                         "size": "Small"
                     }
                 }
@@ -3637,6 +3716,16 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "3",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -3691,6 +3780,16 @@
                     "offensive-bonus": "0",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
                         "size": "Small"
                     }
                 }
@@ -3759,6 +3858,16 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "12",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_STINGER",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -3814,6 +3923,16 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "30",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -3859,6 +3978,16 @@
                     "offensive-bonus": "0",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "10",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
                         "size": "Small"
                     }
                 }
@@ -3909,6 +4038,16 @@
                     "offensive-bonus": "0",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
                         "size": "Small"
                     }
                 }
@@ -6176,6 +6315,16 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -6286,6 +6435,16 @@
                     "offensive-bonus": "0",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
                         "size": "Small"
                     }
                 }
@@ -7103,6 +7262,16 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -7912,6 +8081,24 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "20",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
+                },
+                {
+                    "min-group-size": "60",
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -8470,7 +8657,17 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ]
         },
         {
             "id": "ANIMAL_QUARTERHORSE",
@@ -8591,6 +8788,16 @@
                     "offensive-bonus": "0",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
                         "size": "Small"
                     }
                 }
@@ -8727,6 +8934,16 @@
                     "offensive-bonus": "20",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Small"
                     }
                 }
@@ -9099,6 +9316,16 @@
                     "offensive-bonus": "20",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Small"
                     }
                 }
@@ -10213,7 +10440,25 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "group-attacks": [
+                {
+                    "min-group-size": "6",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                },
+                {
+                    "min-group-size": "12",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ]
         },
         {
             "id": "ANIMAL_SPIDER_POISONOUS",
@@ -10270,6 +10515,16 @@
                     "offensive-bonus": "0",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "group-attacks": [
+                {
+                    "min-group-size": "50",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_STINGER",
                         "size": "Small"
                     }
                 }
@@ -10961,7 +11216,25 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "group-attacks": [
+                {
+                    "min-group-size": "12",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_STINGER",
+                        "size": "Small"
+                    }
+                },
+                {
+                    "min-group-size": "100",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
+                }
+            ]
         },
         {
             "id": "ANIMAL_TIGER",
