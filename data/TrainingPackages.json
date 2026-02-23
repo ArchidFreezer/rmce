@@ -1238,7 +1238,7 @@
             "book": "BOOK_CHARACTER_LAW",
             "lifestyle": "false",
             "time-to-acquire": "30",
-            "starting-money-modifier-dice": "xxx",
+            "starting-money-modifier-dice": "d10",
             "specials": [
                 {
                     "value": "Hand weapon (+10 non-magical)",
@@ -1404,6 +1404,106 @@
                 {
                     "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
                     "value": "2"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_ATHLETE",
+            "name": "Athlete",
+            "description": "An athlete is devoted to the pursuit of excellence in physical prowess. Athletes often obtain a level of fame comparable to adventurers, and they lead lives that are considerably less dangerous. An athlete can excel at almost any physical game or sport, although rarely does he compete in more than a few related activities.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "60",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Equipment used in athletic specialty (+10 non-magic)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Sporting event victory medal (worth 2d10 sp)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Competitive rival ",
+                    "chance": "50"
+                },
+                {
+                    "value": "d10 Loyal fans",
+                    "chance": "20"
+                },
+                {
+                    "value": "Wealthy sponsor",
+                    "chance": "20"
+                },
+                {
+                    "value": "Invitation to prestigious sporting event",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "value": "2",
+                    "options": [
+                        {
+                            "id": "SKILL_ATHLETIC_GAMES_GYMNASTIC"
+                        },
+                        {
+                            "id": "SKILL_ATHLETIC_GAMES_BRAWN"
+                        },
+                        {
+                            "id": "SKILL_ATHLETIC_GAMES_ENDURANCE"
+                        }
+                    ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ],
+            "group-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "2",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "2",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "2",
+                    "num-choices": "1"
                 }
             ]
         },
@@ -3929,7 +4029,7 @@
                     "chance": "40"
                 },
                 {
-                    "value": "xxxSet of good crafting tools (+10 to a specific craft)",
+                    "value": "Set of good crafting tools (+10 to a specific craft)",
                     "chance": "30"
                 },
                 {
@@ -6446,7 +6546,7 @@
             "book": "BOOK_FANTASY_ROLE_PLAYING",
             "lifestyle": "false",
             "time-to-acquire": "33",
-            "starting-money-modifier-dice": "xxx",
+            "starting-money-modifier-dice": "d10",
             "specials": [
                 {
                     "value": "3 Poison antidotes",
@@ -9570,7 +9670,7 @@
             ],
             "lifestyle": "false",
             "time-to-acquire": "43",
-            "starting-money-modifier-dice": "xxx",
+            "starting-money-modifier-dice": "d10",
             "specials": [
                 {
                     "value": "One gem (worth 5d10 sp)",
@@ -14723,7 +14823,7 @@
             "book": "BOOK_CASTLES_RUINS",
             "lifestyle": "true",
             "time-to-acquire": "113",
-            "starting-money-modifier-dice": "xxx",
+            "starting-money-modifier-dice": "d10",
             "specials": [
                 {
                     "value": "Noble patron",
