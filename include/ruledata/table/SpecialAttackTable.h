@@ -64,7 +64,7 @@ public:
 	 *
 	 * @param id std::string Unique identifier of the table, typically the table name
 	 */
-	SpecialAttackTable(std::string_view id) : BoundIntRowLookupTable(generateId("SpecialAttackTable", id), 0, 150) {}
+	SpecialAttackTable(std::string_view id) : BoundIntRowLookupTable(id, 0, 150) {}
 
 	/**
 	 * @brief Gets the value of a cell in the table
