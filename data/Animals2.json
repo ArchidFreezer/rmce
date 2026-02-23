@@ -40,7 +40,15 @@
                     "HOT_HUMID",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "80"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_LARGE_IN_WATER",
@@ -85,7 +93,12 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_LARGE_ON_LAND",
@@ -130,7 +143,15 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_SMALL_IN_WATER",
@@ -174,7 +195,12 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ALLIGATORS_CROCODILES_SMALL_ON_LAND",
@@ -218,7 +244,15 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ALPACA",
@@ -271,7 +305,12 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ANTEATER",
@@ -325,7 +364,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ANTELOPE_LIKE_LARGE",
@@ -379,7 +423,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ANTELOPE_LIKE_SMALL",
@@ -433,7 +485,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                },
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ANTS",
@@ -546,7 +606,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BACTRIAN",
@@ -600,7 +665,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BATS_LARGE",
@@ -660,7 +730,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BATS_SMALL",
@@ -719,7 +794,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BATTLE_BOAR",
@@ -773,7 +853,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BEARS_LARGE",
@@ -824,7 +909,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "85"
+                },
+                {
+                    "offensive-bonus": "90"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BEARS_SMALL",
@@ -873,7 +966,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "70"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BEAVER",
@@ -923,7 +1024,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BEETLES",
@@ -981,7 +1087,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_BEE_WASP",
@@ -1035,7 +1144,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_BIRDS_LARGE",
@@ -1099,7 +1211,11 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                "",
+                ""
+            ]
         },
         {
             "id": "ANIMAL_BIRDS_SMALL",
@@ -1161,7 +1277,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_BOAR",
@@ -1213,7 +1332,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BOA_PYTHON",
@@ -1262,7 +1386,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "70"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BONE_WORM",
@@ -1317,7 +1449,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_BUFFALO_BULL",
@@ -1372,7 +1509,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_CARNIVOROUS_FLYING_SQUIRRELS",
@@ -1421,7 +1566,12 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_CATS_LARGE",
@@ -1476,7 +1626,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_CATS_SMALL",
@@ -1531,7 +1689,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                "",
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_CHAMELEON",
@@ -1571,7 +1738,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_CHEETAH",
@@ -1615,7 +1785,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_COBRA",
@@ -1661,7 +1836,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_CONDOR",
@@ -1715,7 +1895,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_CONGER_EEL",
@@ -1758,7 +1943,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "70"
+                }
+            ]
         },
         {
             "id": "ANIMAL_CRABS",
@@ -1810,7 +2000,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_CRISON",
@@ -1862,7 +2055,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_DEER",
@@ -1917,7 +2115,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                },
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_DIDEX",
@@ -1973,7 +2179,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_DOGS_LARGE",
@@ -2038,7 +2252,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "45"
+                }
+            ]
         },
         {
             "id": "ANIMAL_DOGS_SMALL",
@@ -2102,7 +2321,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_DOLPHIN",
@@ -2147,7 +2371,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_DONKEY",
@@ -2200,7 +2432,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_DROMEDARY_DRAFT",
@@ -2246,7 +2486,12 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_DROMEDARY_RACER",
@@ -2291,7 +2536,12 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_EAGLE",
@@ -2347,7 +2597,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ELECTRIC_EEL",
@@ -2389,7 +2644,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                "",
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ELECTRIC_RAY",
@@ -2434,7 +2698,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                "",
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ELECTRIC_WASP_FLY",
@@ -2488,7 +2761,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ELEPHANTS_AFRICAN",
@@ -2538,7 +2816,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "75"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ELEPHANTS_INDIAN",
@@ -2588,7 +2874,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "75"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_ELK",
@@ -2645,7 +2939,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "65"
+                }
+            ]
         },
         {
             "id": "ANIMAL_FALCON_PEREGRINE",
@@ -2704,7 +3006,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "45"
+                }
+            ]
         },
         {
             "id": "ANIMAL_FERRET",
@@ -2761,7 +3068,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_FISHING_CAT_IN_WATER",
@@ -2813,7 +3125,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                },
+                "",
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_FISHING_CAT_ON_LAND",
@@ -2865,7 +3186,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                "",
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_FISH_LARGE",
@@ -2914,7 +3244,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_FISH_MEDIUM",
@@ -2962,7 +3297,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_FISH_SMALL",
@@ -3010,7 +3350,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_FLEAS",
@@ -3066,7 +3409,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_FLYINGFISH",
@@ -3112,7 +3458,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_FLYING_FROG",
@@ -3151,7 +3502,10 @@
                     "HOT_HUMID",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_FLYING_LIZARD",
@@ -3192,7 +3546,10 @@
                     "HOT_HUMID",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_FRESHWATER_EEL",
@@ -3237,7 +3594,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_FROG",
@@ -3292,7 +3654,11 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                "",
+                ""
+            ]
         },
         {
             "id": "ANIMAL_FURRED_SNAKE_GIANT",
@@ -3336,7 +3702,12 @@
                     "COLD_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_GABBIT",
@@ -3400,7 +3771,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_GEMSTING",
@@ -3457,7 +3831,15 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "80"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_GIBBONS",
@@ -3511,7 +3893,15 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_GILA_MONSTER",
@@ -3554,7 +3944,15 @@
                     "HOT_DRY",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_GIRAFFE",
@@ -3604,7 +4002,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_GLIDING_MAMMAL",
@@ -3649,7 +4052,12 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_GORILLA",
@@ -3696,7 +4104,15 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_GREAT_APES",
@@ -3743,7 +4159,15 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "45"
+                }
+            ]
         },
         {
             "id": "ANIMAL_GREAT_BOAR",
@@ -3803,7 +4227,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "150"
+                },
+                {
+                    "offensive-bonus": "100"
+                }
+            ]
         },
         {
             "id": "ANIMAL_GREAT_PORCUPINE",
@@ -3842,7 +4274,16 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "40"
+                },
+                ""
+            ]
         },
         {
             "id": "ANIMAL_GULO",
@@ -3887,7 +4328,15 @@
                     "COLD_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "70"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_GUYASCUTUS",
@@ -3939,7 +4388,15 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "70"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_HAWK",
@@ -3998,7 +4455,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_HIPPOPOTOMUS_IN_WATER",
@@ -4044,7 +4506,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_HIPPOPOTOMUS_ON_LAND",
@@ -4090,7 +4560,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_HORNED_SNAKE",
@@ -4142,7 +4620,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_HORSE_VIPER",
@@ -4191,7 +4674,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_HOUSECAT",
@@ -4246,7 +4737,14 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                },
+                "",
+                ""
+            ]
         },
         {
             "id": "ANIMAL_IHL_WOLF",
@@ -4304,7 +4802,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "70"
+                }
+            ]
         },
         {
             "id": "ANIMAL_JACKALOPE",
@@ -4348,7 +4851,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_JADEBACK",
@@ -4409,7 +4920,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "70"
+                }
+            ]
         },
         {
             "id": "ANIMAL_JELLYFISH",
@@ -4454,7 +4970,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_KANGAROOS_WALLABIES_LARGE",
@@ -4498,7 +5017,12 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_KANGAROOS_WALLABIES_SMALL",
@@ -4548,7 +5072,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_KILLER_WHALE",
@@ -4594,7 +5123,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "110"
+                },
+                {
+                    "offensive-bonus": "100"
+                }
+            ]
         },
         {
             "id": "ANIMAL_KOALA",
@@ -4634,7 +5171,12 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_KOMODO_DRAGON",
@@ -4677,7 +5219,15 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_KRAEGUTH",
@@ -4730,7 +5280,18 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "70"
+                },
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_LAMPREY",
@@ -4769,7 +5330,12 @@
                     "COOL_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_LESSER_PRIMATES",
@@ -4816,7 +5382,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_LION",
@@ -4863,7 +5437,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "85"
+                }
+            ]
         },
         {
             "id": "ANIMAL_LIZARDS_LARGE",
@@ -4921,7 +5500,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                },
+                {
+                    "offensive-bonus": "20"
+                },
+                ""
+            ]
         },
         {
             "id": "ANIMAL_LIZARDS_SMALL",
@@ -4981,7 +5569,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_LLAMA",
@@ -5033,7 +5624,12 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_LOBSTERS",
@@ -5076,7 +5672,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_MANTA_RAY",
@@ -5120,7 +5719,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_MARMOSETS_AND_TAMARINS",
@@ -5164,7 +5768,15 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_MOLE",
@@ -5216,7 +5828,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_MONGOOSE",
@@ -5270,7 +5887,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_MOOSE",
@@ -5319,7 +5941,12 @@
                     "COOL_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "55"
+                }
+            ]
         },
         {
             "id": "ANIMAL_MORAY_EEL",
@@ -5362,7 +5989,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_MULE",
@@ -5414,7 +6046,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_MUSTANG",
@@ -5465,7 +6105,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_MUSTELIDS_CIVITS_LARGE",
@@ -5522,7 +6170,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                "",
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_MUSTELIDS_CIVITS_SMALL",
@@ -5579,7 +6236,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_NEW_WORLD_MONKEYS",
@@ -5622,7 +6284,15 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_NILE_MONITOR",
@@ -5669,7 +6339,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_NON_POISONOUS_SNAKE",
@@ -5728,7 +6406,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_OCTOPUS_SQUID_LARGE",
@@ -5775,7 +6458,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_OCTOPUS_SQUID_MEDIUM",
@@ -5821,7 +6509,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_OCTOPUS_SQUID_SMALL",
@@ -5866,7 +6559,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_OLD_WORLD_MONKEYS_SMALL",
@@ -5913,7 +6611,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_OPOSSUM",
@@ -5959,7 +6665,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_OSTRICH",
@@ -5996,7 +6705,15 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_OTTER",
@@ -6048,7 +6765,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_OWL",
@@ -6104,7 +6826,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "35"
+                }
+            ]
         },
         {
             "id": "ANIMAL_OXEN",
@@ -6163,7 +6890,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PANDA_GIANT",
@@ -6208,7 +6943,15 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PANGOLIN",
@@ -6254,7 +6997,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PENGUIN",
@@ -6300,7 +7048,12 @@
                     "COOL_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PIG",
@@ -6345,7 +7098,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PIRANHA",
@@ -6383,7 +7141,12 @@
                     "HOT_DRY",
                     "HOT_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PIT_VIPER",
@@ -6447,7 +7210,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PLATYPUS",
@@ -6496,7 +7264,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PLOW_HORSE",
@@ -6545,7 +7321,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                },
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PONY",
@@ -6599,7 +7383,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PORCUPINE_NEW_WORLD",
@@ -6641,7 +7433,16 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                },
+                "",
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PORCUPINE_OLD_WORLD",
@@ -6689,7 +7490,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                },
+                "",
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PORPOISE",
@@ -6735,7 +7545,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PORTUGESE_MAN_O_WAR",
@@ -6781,7 +7596,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_PRAYING_MANTIS",
@@ -6872,7 +7692,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_RABBIT_HARE",
@@ -6927,7 +7755,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_RACCOON",
@@ -6976,7 +7807,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                "",
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_RAT",
@@ -7035,7 +7875,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_REGAL_STAG",
@@ -7087,7 +7932,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_REINDEER_CARIBOU",
@@ -7133,7 +7986,15 @@
                     "COOL_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_RHINOCEROS",
@@ -7180,7 +8041,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "120"
+                }
+            ]
         },
         {
             "id": "ANIMAL_RIVER_DOLPHIN",
@@ -7223,7 +8089,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_RODENTS_LARGE",
@@ -7281,7 +8152,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_RODENTS_SMALL",
@@ -7339,7 +8215,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_RUMTIFUSEL",
@@ -7386,7 +8267,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "90"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SALAMANDER_NEWT",
@@ -7442,7 +8328,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SAWFISH",
@@ -7484,7 +8375,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "70"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SCORPIONS",
@@ -7538,7 +8437,13 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                },
+                ""
+            ]
         },
         {
             "id": "ANIMAL_SCRA_PREN",
@@ -7589,7 +8494,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "65"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SEAL_IN_WATER",
@@ -7628,7 +8538,15 @@
                     "COOL_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SEAL_ON_LAND",
@@ -7667,7 +8585,12 @@
                     "COOL_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SEA_ANEMONE",
@@ -7712,7 +8635,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_SEA_LION_IN_WATER",
@@ -7752,7 +8678,15 @@
                     "FRIGID",
                     "WARM_AVERAGE"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SEA_LION_ON_LAND",
@@ -7792,7 +8726,12 @@
                     "FRIGID",
                     "WARM_AVERAGE"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SEA_SNAKE",
@@ -7834,7 +8773,12 @@
                     "WARM_AVERAGE",
                     "WARM_DRY"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SERPENTUS",
@@ -7896,7 +8840,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SHARK_LARGE",
@@ -7943,7 +8895,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "100"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SHARK_SMALL",
@@ -7990,7 +8947,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SHEEP",
@@ -8045,7 +9007,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SHREW",
@@ -8103,7 +9070,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "45"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SKUNK",
@@ -8154,7 +9126,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SLOTH",
@@ -8200,7 +9177,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SPIDER_NON_POISONOUS",
@@ -8309,7 +9291,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_SPITTING_COBRA",
@@ -8355,7 +9340,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_STARFISH",
@@ -8400,7 +9390,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_STINGRAY",
@@ -8445,7 +9440,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_STRIDER_BIRD",
@@ -8491,7 +9491,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SWAMP_OCTOPUS",
@@ -8533,7 +9541,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_SWORDFISH_SAILFISH",
@@ -8579,7 +9592,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "90"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_TAPIR",
@@ -8618,7 +9639,12 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_TASMANIAN_DEVIL",
@@ -8661,7 +9687,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "40"
+                },
+                ""
+            ]
         },
         {
             "id": "ANIMAL_TATZELWURM",
@@ -8716,7 +9751,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_TENTMORSE",
@@ -8756,7 +9799,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_THOROUGHBRED",
@@ -8801,7 +9852,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                },
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_TICKS",
@@ -8905,7 +9964,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "90"
+                },
+                {
+                    "offensive-bonus": "75"
+                }
+            ]
         },
         {
             "id": "ANIMAL_TOAD",
@@ -8953,7 +10020,11 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                "",
+                ""
+            ]
         },
         {
             "id": "ANIMAL_TORTOISES_LARGE",
@@ -9008,7 +10079,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_TORTOISES_SMALL",
@@ -9060,7 +10136,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                }
+            ]
         },
         {
             "id": "ANIMAL_TREE_FROG",
@@ -9103,7 +10184,11 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                "",
+                ""
+            ]
         },
         {
             "id": "ANIMAL_TRIVREN",
@@ -9164,7 +10249,13 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                },
+                ""
+            ]
         },
         {
             "id": "ANIMAL_TURTLES_LARGE_IN_WATER",
@@ -9218,7 +10309,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_TURTLES_LARGE_ON_LAND",
@@ -9272,7 +10371,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_TURTLES_SMALL_IN_WATER",
@@ -9324,7 +10428,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_TURTLES_SMALL_ON_LAND",
@@ -9376,7 +10488,10 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                ""
+            ]
         },
         {
             "id": "ANIMAL_VIPER",
@@ -9431,7 +10546,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "20"
+                }
+            ]
         },
         {
             "id": "ANIMAL_VIPERFISH",
@@ -9476,7 +10596,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_VULTURE",
@@ -9534,7 +10659,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WALRUS_IN_WATER",
@@ -9574,7 +10704,15 @@
                     "COOL_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WALRUS_ON_LAND",
@@ -9614,7 +10752,15 @@
                     "COOL_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "30"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WARHORSE_GREATER",
@@ -9661,7 +10807,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "70"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WARHORSE_LESSER",
@@ -9708,7 +10862,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WAR_SNAIL",
@@ -9769,7 +10931,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "5"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WATER_BUFFALOS",
@@ -9817,7 +10984,15 @@
                     "WARM_AVERAGE",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WHALE_BALEEN",
@@ -9864,7 +11039,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "75"
+                },
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WHALE_BEAKED",
@@ -9911,7 +11094,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "85"
+                },
+                {
+                    "offensive-bonus": "60"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WHALE_NARWHAL",
@@ -9958,7 +11149,18 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "50"
+                },
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WHALE_TOOTHED_LARGE",
@@ -10005,7 +11207,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "90"
+                },
+                {
+                    "offensive-bonus": "80"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WHALE_TOOTHED_SMALL",
@@ -10052,7 +11262,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "60"
+                },
+                {
+                    "offensive-bonus": "75"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WINGED_PANTHER_GREATER",
@@ -10099,7 +11317,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "95"
+                },
+                {
+                    "offensive-bonus": "95"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WINGED_PANTHER_LESSER",
@@ -10145,7 +11371,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "75"
+                },
+                {
+                    "offensive-bonus": "70"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WOLF",
@@ -10204,7 +11438,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "65"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WOLVERINE",
@@ -10249,7 +11488,16 @@
                     "COOL_DRY",
                     "FRIGID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "45"
+                },
+                "",
+                {
+                    "offensive-bonus": "50"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WOMBAT",
@@ -10296,7 +11544,12 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         },
         {
             "id": "ANIMAL_WOODPECKER",
@@ -10346,7 +11599,16 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "10"
+                },
+                {
+                    "offensive-bonus": "20"
+                },
+                ""
+            ]
         },
         {
             "id": "ANIMAL_ZEBRA",
@@ -10398,7 +11660,15 @@
                     "WARM_DRY",
                     "WARM_HUMID"
                 ]
-            }
+            },
+            "standard-attacks": [
+                {
+                    "offensive-bonus": "30"
+                },
+                {
+                    "offensive-bonus": "40"
+                }
+            ]
         }
     ]
 }

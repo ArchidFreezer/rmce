@@ -70,4 +70,24 @@ private:
 
 	void buildLevelVarianceTable();
 
+	/**
+	 * @brief Parse an AnimalAttack object and write into a boost ptree
+	 *
+	 * Parse a boost::ptree containing the data for an animal attack and populate an AnimalAttack object with that data
+	 *
+	 * @param tree Boost ptree to populate with the data from the object
+	 * @param ref Reference to the AnimalAttack object containing the data for the animal attack
+	 */
+	void populateAnimalAttack(pt::ptree& tree, const AnimalAttack attack);
+
+	/**
+	 * @brief Parse a ptree into an AnimalAttack object
+	 *
+	 * Parse a boost::ptree containing the data for an animal attack and populate an AnimalAttack object with that data
+	 *
+	 * @param tree Boost ptree containing the data for the animal attack
+	 * @param ref Reference to the AnimalAttack object to populate with the data from the boost ptree
+	 */
+	void parseAnimalAttack(const pt::ptree& tree, AnimalAttack attack);
+
 };

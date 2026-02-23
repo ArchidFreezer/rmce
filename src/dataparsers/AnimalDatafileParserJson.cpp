@@ -224,7 +224,30 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 		if (location_tree.size()) datum.push_back(std::make_pair("location", location_tree));
 	}
 
+	// Standard Attacks
+	{
+		pt::ptree attacks_tree{};
+		for (auto& attack : game_data.attacks()) {
+			pt::ptree attack_tree{};
+			populateAnimalAttack(attack_tree, attack.second);
+			attacks_tree.push_back(std::make_pair("", attack_tree));
+		}
+		if (attacks_tree.size()) datum.push_back(std::make_pair("standard-attacks", attacks_tree));
+	}
 }
+
+void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const AnimalAttack attack) {
+	if (attack.chance().has_value()) {
+		// Copy the pointer value, not the pointed-to object
+		const NumberRange<int>* chance_range = attack.chance().value();
+		tree.put("chance", chance_range->max() - chance_range->min());
+	}
+
+	if (attack.offensiveBonus()) tree.put("offensive-bonus", attack.offensiveBonus());
+	//if (attack.hasWeaponAttack()) tree.put("weapon-attack", attack.weaponTable()->id());
+}
+
+void AnimalDatafileParserJson::parseAnimalAttack(const pt::ptree& tree, AnimalAttack attack) {}
 
 void AnimalDatafileParserJson::buildCreatureBonusXpTable() {
 	std::string id = "CREATURE_BONUS_XP_TABLE";
