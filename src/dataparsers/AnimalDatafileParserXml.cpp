@@ -173,7 +173,7 @@ void AnimalDatafileParserXml::parse() {
 				// Loop through all the attacks
 				for (const auto& attack : tree.get()) {
 
-					// Get the change that the attack is used each round
+					// Get the chance that the attack is used each round
 					int chance{ attack.second.get<int>("<xmlattr>.chance") };
 					const NumberRange<int>* chance_range = number_matcher.matcher(curr_attack + 1, chance);
 					curr_attack += chance;
@@ -192,10 +192,37 @@ void AnimalDatafileParserXml::parse() {
 			if (tree) {
 				// Loop through all the attacks
 				for (const auto& attack : tree.get()) {
-					// Get the change that the attack is used each round
 					AnimalAttack animal_attack{};
 					parseAnimalAttack(attack.second, animal_attack);
 					ref.addGroupAttack(animal_attack.minGroupSize(), animal_attack);
+				}
+			}
+		}
+
+		// Ranged Attacks
+		{
+			boost::optional<const pt::ptree&> tree = v.second.get_child_optional("ranged-attacks");
+			if (tree) {
+				// Loop through all the attacks
+				for (const auto& attack : tree.get()) {
+					AnimalAttack animal_attack{};
+					parseAnimalAttack(attack.second, animal_attack);
+					ref.addRangedAttack(animal_attack);
+				}
+			}
+		}
+
+		// Conditional Attacks
+		{
+			boost::optional<const pt::ptree&> tree = v.second.get_child_optional("conditional-attacks");
+			if (tree) {
+				// Loop through all the attacks
+				for (const auto& attack : tree.get()) {
+					// Get the conditional id that is cross referenced by other attacks to determine if the attack is used in the same round or the next round
+					int id{ attack.second.get<int>("<xmlattr>.id") };
+					AnimalAttack animal_attack{};
+					parseAnimalAttack(attack.second, animal_attack);
+					ref.addConditionalAttack(id, animal_attack);
 				}
 			}
 		}
