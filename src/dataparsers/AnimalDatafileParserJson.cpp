@@ -275,6 +275,19 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 		// Only add the ranged attacks to the tree if there are any, otherwise we will end up with an empty ranged attacks array in the json file which is not ideal.
 		if (ranged_attacks_tree.size()) datum.push_back(std::make_pair("ranged-attacks", ranged_attacks_tree));
 	}
+
+	// Conditional Attacks
+	{
+		// Parse the attackdata and place into the boost ptree
+		pt::ptree conditional_attacks_tree{};
+		for (const auto& conditional_attack : game_data.conditionalAttacks()) {
+			pt::ptree conditional_attack_tree{};
+			populateAnimalAttack(conditional_attack_tree, conditional_attack.second);
+			conditional_attacks_tree.push_back(std::make_pair("", conditional_attack_tree));
+		}
+		// Only add the conditional attacks to the tree if there are any, otherwise we will end up with an empty conditional attacks array in the json file which is not ideal.
+		if (conditional_attacks_tree.size()) datum.push_back(std::make_pair("conditional-attacks", conditional_attacks_tree));
+	}
 }
 
 void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const AnimalAttack attack) {
@@ -283,7 +296,7 @@ void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const Anima
 		const NumberRange<int>* chance_range = attack.chance().value();
 		tree.put("chance", chance_range->max() - chance_range->min());
 	}
-
+	if (attack.conditionalAttackRef()) tree.put("id", attack.conditionalAttackRef().value());
 	if (attack.minGroupSize() > 1) tree.put("min-group-size", attack.minGroupSize());
 	if (attack.range()) tree.put("range", attack.range());
 	if (attack.hasWeaponAttack() || attack.hasNonWeaponAttack()) tree.put("offensive-bonus", attack.offensiveBonus());
@@ -296,7 +309,7 @@ void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const Anima
 	}
 	if (attack.useAllAttacks()) tree.put("use-all-attacks", attack.useAllAttacks());
 	if (attack.numAttacks() > 1) tree.put("attacks-per-round", attack.numAttacks());
-	//if (attack.special()) tree.put("special", attack.special().value());
+	if (attack.special()) tree.put("special", attack.special().value());
 	if (attack.sameRoundAttackId()) tree.put("same-round-conditional-attack-id", attack.sameRoundAttackId());
 	if (attack.nextRoundAttackId()) tree.put("next-round-conditional-attack-id", attack.nextRoundAttackId());
 }

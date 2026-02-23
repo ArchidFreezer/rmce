@@ -6719,14 +6719,12 @@
          </locations>
          <standard-attacks>
             <attack chance="100">
-               <attack id="nnn">
                   <offensive-bonus>30</offensive-bonus>
                   <non-weapon-attack>
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
                <next-round-id>1</next-round-id>
-               </attack>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -6828,7 +6826,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same-round-id>nnn</same-round-id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -7070,7 +7068,7 @@
                    <attack-table>Ram</attack-table>
                    <attack-size>MEDIUM</attack-size>
                 </non-weapon-attack>
-               <next-round-id>nnn</next-round-id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -10121,7 +10119,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next-round-id>nnn</next-round-id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -13860,7 +13858,7 @@
                    <attack-table>Stinger</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same-round-id>nnn</same-round-id>
+               <same-round-id>1</same-round-id>
             </attack>
          </group-attacks>
          <conditional-attacks>
@@ -14600,7 +14598,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next-round-id>nnn</next-round-id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>

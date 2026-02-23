@@ -222,6 +222,7 @@ void AnimalDatafileParserXml::parse() {
 					int id{ attack.second.get<int>("<xmlattr>.id") };
 					AnimalAttack animal_attack{};
 					parseAnimalAttack(attack.second, animal_attack);
+					animal_attack.setConditionalAttackRef(id);
 					ref.addConditionalAttack(id, animal_attack);
 				}
 			}

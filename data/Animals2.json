@@ -111,6 +111,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -170,6 +180,17 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_RAM",
                         "size": "Medium"
+                    },
+                    "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
                     }
                 }
             ]
@@ -225,6 +246,16 @@
                         "size": "Medium"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -284,6 +315,17 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_RAM",
                         "size": "Small"
+                    },
+                    "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
                     }
                 }
             ]
@@ -628,7 +670,13 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_STINGER",
                         "size": "Small"
-                    }
+                    },
+                    "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
                 }
             ]
         },
@@ -976,6 +1024,25 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    },
+                    "same-round-conditional-attack-id": "2"
+                },
+                {
+                    "id": "2",
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
+                }
             ]
         },
         {
@@ -1044,6 +1111,25 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "65",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    },
+                    "next-round-conditional-attack-id": "1"
+                },
+                {
+                    "id": "2",
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -1109,6 +1195,25 @@
                         "size": "Large"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    },
+                    "next-round-conditional-attack-id": "2"
+                },
+                {
+                    "id": "2",
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -1543,6 +1648,25 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    },
+                    "same-round-conditional-attack-id": "2"
+                },
+                {
+                    "id": "2",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -1607,6 +1731,16 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Medium"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Large"
                     }
                 }
             ]
@@ -1745,6 +1879,16 @@
                         "size": "Medium"
                     }
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
+                }
             ]
         },
         {
@@ -1803,6 +1947,17 @@
                         "size": "Small"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    },
+                    "same-round-conditional-attack-id": "2"
                 }
             ]
         },
@@ -1873,6 +2028,16 @@
                     "offensive-bonus": "40",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Medium"
                     }
                 }
@@ -2000,6 +2165,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -2053,6 +2228,25 @@
                         "size": "Medium"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    },
+                    "same-round-conditional-attack-id": "2"
+                },
+                {
+                    "id": "2",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -2109,6 +2303,11 @@
                         "size": "Small"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
                 }
             ]
         },
@@ -2173,6 +2372,16 @@
                         "size": "Large"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "45",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -2954,6 +3163,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "35",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -3203,6 +3422,16 @@
                         "size": "Huge"
                     }
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -3268,6 +3497,16 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_HORN",
                         "size": "Huge"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
                     }
                 }
             ]
@@ -3344,6 +3583,16 @@
                         "size": "Large"
                     }
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
+                }
             ]
         },
         {
@@ -3413,6 +3662,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -3479,6 +3738,16 @@
                         "size": "Small"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -3891,6 +4160,12 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "chance": "4",
+                    "id": "1"
+                }
             ]
         },
         {
@@ -3954,6 +4229,16 @@
                     "offensive-bonus": "20",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
                         "size": "Small"
                     }
                 }
@@ -4073,6 +4358,16 @@
                     "offensive-bonus": "10",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
                         "size": "Small"
                     }
                 }
@@ -4201,6 +4496,16 @@
                         "size": "Small"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -4403,6 +4708,11 @@
                     },
                     "attacks-per-round": "2"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
+                }
             ]
         },
         {
@@ -4474,6 +4784,16 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -4533,6 +4853,11 @@
                         "table": "SPECIALATTACKTABLE_CLAW",
                         "size": "Small"
                     }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
                 }
             ]
         },
@@ -4648,6 +4973,25 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "0",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    },
+                    "next-round-conditional-attack-id": "2"
+                },
+                {
+                    "id": "2",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -4707,6 +5051,16 @@
                 },
                 {
                     "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "70",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Medium"
@@ -4775,6 +5129,16 @@
                         "size": "Medium"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -4850,6 +5214,16 @@
                     "offensive-bonus": "100",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
                         "size": "Large"
                     }
                 }
@@ -4981,6 +5355,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -5051,6 +5435,24 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
+                },
+                {
+                    "id": "2",
+                    "offensive-bonus": "120",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Large"
+                    }
+                }
             ]
         },
         {
@@ -5120,6 +5522,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "25",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -5180,6 +5592,16 @@
                     "offensive-bonus": "60",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Large"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "100",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
                         "size": "Large"
                     }
                 }
@@ -5246,6 +5668,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "100",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
+                }
             ]
         },
         {
@@ -5308,6 +5740,11 @@
                         "size": "Medium"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
                 }
             ]
         },
@@ -5375,6 +5812,19 @@
                         "size": "Medium"
                     },
                     "same-round-conditional-attack-id": "2"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Large"
+                    }
+                },
+                {
+                    "id": "2"
                 }
             ]
         },
@@ -5578,6 +6028,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -5648,6 +6108,11 @@
                         "size": "Medium"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
                 }
             ]
         },
@@ -5753,6 +6218,16 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -5812,6 +6287,16 @@
                         "size": "Small"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -5874,6 +6359,16 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_RAM",
                         "size": "Large"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "150",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Huge"
                     }
                 }
             ]
@@ -5985,6 +6480,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    }
+                }
             ]
         },
         {
@@ -6062,6 +6567,16 @@
                         "size": "Medium"
                     }
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
+                }
             ]
         },
         {
@@ -6110,6 +6625,12 @@
                         "size": "Small"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "special": "d10 hits\/round"
                 }
             ]
         },
@@ -6175,6 +6696,16 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -6231,6 +6762,25 @@
                         "size": "Large"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "85",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    },
+                    "next-round-conditional-attack-id": "2"
+                },
+                {
+                    "id": "2",
+                    "offensive-bonus": "120",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -6625,6 +7175,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -6750,6 +7310,16 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -6808,6 +7378,16 @@
                         "size": "Large"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -6930,6 +7510,16 @@
                         "size": "Medium"
                     }
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -6996,6 +7586,16 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Small"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Medium"
                     }
                 }
             ]
@@ -7138,6 +7738,17 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Small"
+                    },
+                    "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
                     }
                 }
             ]
@@ -7195,6 +7806,16 @@
                 },
                 {
                     "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Small"
@@ -7263,6 +7884,16 @@
                         "size": "Medium"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -7399,6 +8030,16 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -7455,6 +8096,16 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -7509,6 +8160,16 @@
                         "size": "Small"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7574,6 +8235,16 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -7629,6 +8300,16 @@
                         "size": "Small"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -7810,6 +8491,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -7942,6 +8633,16 @@
                 },
                 {
                     "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "80",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_CLAW",
                         "size": "Medium"
@@ -8112,6 +8813,16 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "2",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -8251,6 +8962,11 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
+                }
             ]
         },
         {
@@ -8317,6 +9033,11 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
+                }
             ]
         },
         {
@@ -8381,6 +9102,16 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Medium"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
                     }
                 }
             ]
@@ -8453,6 +9184,16 @@
                         "size": "Small"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -8693,6 +9434,16 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "next-round-conditional-attack-id": "2"
+                },
+                {
+                    "id": "2",
+                    "special": "Digestion if trapped and paralyzed"
+                }
             ]
         },
         {
@@ -8808,6 +9559,16 @@
                     "offensive-bonus": "30",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
                         "size": "Medium"
                     }
                 }
@@ -9033,6 +9794,12 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "chance": "4",
+                    "id": "1"
+                }
             ]
         },
         {
@@ -9161,6 +9928,17 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_RAM",
                         "size": "Medium"
+                    },
+                    "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
                     }
                 }
             ]
@@ -9219,6 +9997,25 @@
                         "size": "Huge"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "100",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Huge"
+                    },
+                    "next-round-conditional-attack-id": "2"
+                },
+                {
+                    "id": "2",
+                    "offensive-bonus": "120",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Large"
+                    }
                 }
             ]
         },
@@ -9339,6 +10136,16 @@
                         "size": "Small"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -9667,6 +10474,11 @@
                         "size": "Small"
                     }
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
+                }
             ]
         },
         {
@@ -9728,6 +10540,11 @@
                     },
                     "attacks-per-round": "3",
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
                 }
             ]
         },
@@ -9879,7 +10696,28 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    },
+                    "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "same-round-conditional-attack-id": "2"
+                },
+                {
+                    "id": "2",
+                    "offensive-bonus": "100",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
+                }
             ]
         },
         {
@@ -10037,6 +10875,11 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
+                }
             ]
         },
         {
@@ -10113,6 +10956,16 @@
                     "offensive-bonus": "60",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_RAM",
+                        "size": "Medium"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
                         "size": "Medium"
                     }
                 }
@@ -10293,6 +11146,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -10426,6 +11289,16 @@
                 {
                     "range": "10",
                     "special": "Their powerful odour is an effective weapon against enemies, causing the victim to momentarily stop breathing (treat spray as a 'Tear Cloud'—Illusionist base list 'Feel-Taste-Smell')"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "20",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -10630,6 +11503,11 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
+                }
             ]
         },
         {
@@ -10694,6 +11572,11 @@
                     "weapon-attack": "ATTACKTABLE_WHIP",
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
+                }
             ]
         },
         {
@@ -10749,6 +11632,12 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "chance": "9",
+                    "id": "1"
+                }
             ]
         },
         {
@@ -10800,6 +11689,20 @@
                     "offensive-bonus": "80",
                     "weapon-attack": "ATTACKTABLE_WHIP",
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_STINGER",
+                        "size": "Medium"
+                    },
+                    "same-round-conditional-attack-id": "2"
+                },
+                {
+                    "id": "2"
                 }
             ]
         },
@@ -10916,6 +11819,16 @@
                     "attacks-per-round": "8",
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Large"
+                    }
+                }
             ]
         },
         {
@@ -11026,6 +11939,16 @@
                         "size": "Medium"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "2",
+                    "offensive-bonus": "40",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -11161,6 +12084,17 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_CLAW",
+                        "size": "Medium"
+                    },
+                    "attacks-per-round": "2"
+                }
             ]
         },
         {
@@ -11218,6 +12152,11 @@
                         "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Medium"
                     }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
                 }
             ]
         },
@@ -11280,6 +12219,16 @@
                         "size": "Medium"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -11354,6 +12303,12 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "chance": "1",
+                    "id": "1"
+                }
             ]
         },
         {
@@ -11422,6 +12377,16 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "110",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Large"
+                    }
+                }
             ]
         },
         {
@@ -11486,6 +12451,16 @@
                         "size": "Small"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -11671,6 +12646,16 @@
                         "size": "Small"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "10",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TINY",
+                        "size": "Small"
+                    }
                 }
             ]
         },
@@ -12076,6 +13061,11 @@
                     },
                     "same-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1"
+                }
             ]
         },
         {
@@ -12197,6 +13187,16 @@
                         "size": "Medium"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BEAK",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -12374,6 +13374,16 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "60",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Medium"
+                    }
+                }
             ]
         },
         {
@@ -12437,6 +13447,16 @@
                         "size": "Medium"
                     },
                     "next-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "50",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -12832,6 +13852,16 @@
                         "size": "Huge"
                     }
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "70",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_GRAPPLE",
+                        "size": "Huge"
+                    }
+                }
             ]
         },
         {
@@ -12959,6 +13989,17 @@
                     },
                     "next-round-conditional-attack-id": "1"
                 }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "80",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_HORN",
+                        "size": "Large"
+                    },
+                    "same-round-conditional-attack-id": "2"
+                }
             ]
         },
         {
@@ -13021,6 +14062,16 @@
                         "size": "Medium"
                     },
                     "same-round-conditional-attack-id": "1"
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "90",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_BITE",
+                        "size": "Medium"
+                    }
                 }
             ]
         },
@@ -13349,6 +14400,16 @@
                     "offensive-bonus": "40",
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_FALL",
+                        "size": "Medium"
+                    }
+                }
+            ],
+            "conditional-attacks": [
+                {
+                    "id": "1",
+                    "offensive-bonus": "30",
+                    "non-weapon-attack": {
+                        "table": "SPECIALATTACKTABLE_TRAMPLE",
                         "size": "Medium"
                     }
                 }

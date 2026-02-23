@@ -50,6 +50,24 @@ public:
 	std::optional<const NumberRange<int>*> chance() const { return chance_; }
 
 	/**
+	 * @brief Set the reference integer for the conditional attack that this attack may trigger
+	 * 
+	 * A conditional attack is an attack that is only used if a certain condition is met. The condition is determined by the reference integer which can be used to look up the condition in a table or to determine the condition in some other way. For example, the reference integer could be used to determine if the attack is only used during a certain phase of combat or if it is only used if the animal has taken a certain amount of damage.
+	 * 
+	 * @param conditional_attack_ref Reference integer for the conditional attack that this attack may trigger, used to determine the condition under which the conditional attack is used and as the key for looking up the conditional attack in the conditional_attacks map in AnimalData.
+	 */
+	void setConditionalAttackRef(int conditional_attack_ref) { conditional_attack_ref_ = conditional_attack_ref; }
+
+	/**
+	 * @brief Get the reference integer for the conditional attack that this attack may trigger
+	 * 
+	 * A conditional attack is an attack that is only used if a certain condition is met. The condition is determined by the reference integer which can be used to look up the condition in a table or to determine the condition in some other way. For example, the reference integer could be used to determine if the attack is only used during a certain phase of combat or if it is only used if the animal has taken a certain amount of damage.
+	 * 
+	 * @return int Reference integer for the conditional attack that this attack may trigger, used to determine the condition under which the conditional attack is used and as the key for looking up the conditional attack in the conditional_attacks map in AnimalData.
+	 */
+	std::optional<int> conditionalAttackRef() const { return conditional_attack_ref_; }
+
+	/**
 	 * @brief Check if the attack should be used based on a d100 roll and the percentage chance of the attack being used
 	 * 
 	 * If there is not a percentage chance defined for the attack, it is assumed that the attack should always be used and this method will return `true`.
@@ -294,6 +312,7 @@ public:
 
 private:
 	std::optional <const NumberRange<int>*> chance_{}; /**< Percentage chance that this attack will be used */
+	std::optional<int> conditional_attack_ref_{}; /**< If this is set, the attack is a conditional attack that is used if another attack results in a non-tiny crit, the ID of the attack to use if the condition is met */
 	int offensive_bonus_{}; /**< Offensive bonus for the attack, used to determine how difficult it is to hit with the attack. */
 	AttackSizeType::Type non_weapon_size_{}; /**< Size of a non-weapon attack. */
 	const SpecialAttackTable* non_weapon_table_{}; /**< SpecialAttackTable for non-weapon attacks. */
