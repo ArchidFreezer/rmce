@@ -2665,6 +2665,89 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_CAVALIER",
+            "name": "Cavalier",
+            "description": "A cavalier normally serves a lord, noble, or king of some kind. Most cavaliers follow a strict code of ethics and conduct. A cavalier would rather die than be dishonored. A cavalier typically travels across the countryside, slaying monsters and wooing ladies. He is the servant of his lord and the defender of the common man.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "30",
+            "specials": [
+                {
+                    "value": "Weapon (+10 non-magic)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Armour (+10 non-magic)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Shield (+5 non-magic)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Noble patron",
+                    "chance": "50"
+                },
+                {
+                    "value": "Affection of a married lady",
+                    "chance": "50"
+                },
+                {
+                    "value": "Fine horse (+10 riding)",
+                    "chance": "60"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_JOUSTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MOUNTED_COMBAT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ],
+            "group-category-and-skill-rank-choices": [
+                {
+                    "id": "SKILLGROUP_ARTISTIC",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_CHANCELLOR",
             "name": "Chancellor",
             "description": "A Chancellor handles the administrative affairs of a religion. He is also a spiritual leader of a congregation of believers. The Chancellor's job is to provide support and inspiration to the followers of his religion. He also handles and presides over many of the religion's ceremonies. Leaving the actual teaching to ministers, a Chancellor handles the major decisions that a religion has to face.",
