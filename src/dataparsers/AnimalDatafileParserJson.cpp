@@ -226,12 +226,25 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 
 	// Standard Attacks
 	{
-		pt::ptree attacks_tree{};
+		// Get the map of attacks from the game data
+		std::map<const NumberRange<int>*, AnimalAttack> attacks = game_data.attacks();
+
+		// Start but sorting the attacks by their number range pointer value so that they are output in a consistent order in the json file. We use a map to do this and store the pointer value as the key and the pointer itself as the value so that we can access the attack data when populating the boost ptree for each attack.
+		std::map<const NumberRange<int>, const NumberRange<int>*> ordered_attacks{};
 		for (auto& attack : game_data.attacks()) {
+			for (auto& attack : game_data.attacks()) {
+				ordered_attacks.insert(std::make_pair(*attack.first, attack.first));
+			}
+		}
+
+		pt::ptree attacks_tree{};
+		for (auto& attack : ordered_attacks) {
 			pt::ptree attack_tree{};
-			populateAnimalAttack(attack_tree, attack.second);
+			populateAnimalAttack(attack_tree, attacks[attack.second]);
 			attacks_tree.push_back(std::make_pair("", attack_tree));
 		}
+
+
 		if (attacks_tree.size()) datum.push_back(std::make_pair("standard-attacks", attacks_tree));
 	}
 }
@@ -243,8 +256,9 @@ void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const Anima
 		tree.put("chance", chance_range->max() - chance_range->min());
 	}
 
-	if (attack.offensiveBonus()) tree.put("offensive-bonus", attack.offensiveBonus());
-	//if (attack.hasWeaponAttack()) tree.put("weapon-attack", attack.weaponTable()->id());
+	if (attack.hasWeaponAttack() || attack.hasNonWeaponAttack()) tree.put("offensive-bonus", attack.offensiveBonus());
+	if (attack.hasWeaponAttack()) tree.put("weapon-attack", attack.weaponTable()->id());
+	if (attack.useAllAttacks()) tree.put("use-all-attacks", attack.useAllAttacks());
 }
 
 void AnimalDatafileParserJson::parseAnimalAttack(const pt::ptree& tree, AnimalAttack attack) {}

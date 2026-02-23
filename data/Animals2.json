@@ -146,10 +146,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "40"
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "60"
                 }
             ]
         },
@@ -912,10 +912,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "85"
+                    "offensive-bonus": "90"
                 },
                 {
-                    "offensive-bonus": "90"
+                    "offensive-bonus": "85"
                 }
             ]
         },
@@ -969,10 +969,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "70"
                 },
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "60"
                 }
             ]
         },
@@ -1089,7 +1089,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -1146,7 +1148,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -1213,8 +1217,12 @@
                 ]
             },
             "standard-attacks": [
-                "",
-                ""
+                {
+                    "offensive-bonus": "0"
+                },
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -1279,7 +1287,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -1691,12 +1701,14 @@
                 ]
             },
             "standard-attacks": [
-                "",
                 {
-                    "offensive-bonus": "30"
+                    "use-all-attacks": "true"
                 },
                 {
                     "offensive-bonus": "20"
+                },
+                {
+                    "offensive-bonus": "30"
                 }
             ]
         },
@@ -1740,7 +1752,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -2002,7 +2016,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -2646,12 +2662,15 @@
                 ]
             },
             "standard-attacks": [
-                "",
+                {
+                    "use-all-attacks": "true"
+                },
                 {
                     "offensive-bonus": "40"
                 },
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "weapon-attack": "ATTACKTABLE_SHOCK_BOLT"
                 }
             ]
         },
@@ -2701,11 +2720,14 @@
             },
             "standard-attacks": [
                 {
+                    "offensive-bonus": "60",
+                    "weapon-attack": "ATTACKTABLE_SHOCK_BOLT"
+                },
+                {
                     "offensive-bonus": "50"
                 },
-                "",
                 {
-                    "offensive-bonus": "60"
+                    "use-all-attacks": "true"
                 }
             ]
         },
@@ -2819,10 +2841,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "60"
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "75"
                 }
             ]
         },
@@ -2877,10 +2899,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "60"
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "75"
                 }
             ]
         },
@@ -3128,11 +3150,13 @@
             },
             "standard-attacks": [
                 {
+                    "offensive-bonus": "30"
+                },
+                {
                     "offensive-bonus": "20"
                 },
-                "",
                 {
-                    "offensive-bonus": "30"
+                    "use-all-attacks": "true"
                 }
             ]
         },
@@ -3191,9 +3215,11 @@
                 {
                     "offensive-bonus": "40"
                 },
-                "",
                 {
                     "offensive-bonus": "30"
+                },
+                {
+                    "use-all-attacks": "true"
                 }
             ]
         },
@@ -3352,7 +3378,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -3411,7 +3439,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -3504,7 +3534,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -3548,7 +3580,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -3656,8 +3690,12 @@
                 ]
             },
             "standard-attacks": [
-                "",
-                ""
+                {
+                    "offensive-bonus": "0"
+                },
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -3773,7 +3811,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -4162,10 +4202,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "45"
                 },
                 {
-                    "offensive-bonus": "45"
+                    "offensive-bonus": "50"
                 }
             ]
         },
@@ -4282,7 +4322,9 @@
                 {
                     "offensive-bonus": "40"
                 },
-                ""
+                {
+                    "use-all-attacks": "true"
+                }
             ]
         },
         {
@@ -4331,10 +4373,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "60"
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "70"
                 }
             ]
         },
@@ -4740,10 +4782,14 @@
             },
             "standard-attacks": [
                 {
+                    "use-all-attacks": "true"
+                },
+                {
                     "offensive-bonus": "10"
                 },
-                "",
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -4854,10 +4900,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "40"
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "50"
                 }
             ]
         },
@@ -5283,10 +5329,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "70"
                 },
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "60"
                 },
                 {
                     "offensive-bonus": "80"
@@ -5508,7 +5554,9 @@
                 {
                     "offensive-bonus": "20"
                 },
-                ""
+                {
+                    "use-all-attacks": "true"
+                }
             ]
         },
         {
@@ -5571,7 +5619,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -5674,7 +5724,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -6172,7 +6224,9 @@
                 ]
             },
             "standard-attacks": [
-                "",
+                {
+                    "use-all-attacks": "true"
+                },
                 {
                     "offensive-bonus": "40"
                 },
@@ -6667,7 +6721,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -6946,10 +7002,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "60"
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "50"
                 }
             ]
         },
@@ -7267,10 +7323,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "20"
                 },
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "30"
                 }
             ]
         },
@@ -7436,9 +7492,11 @@
             },
             "standard-attacks": [
                 {
+                    "use-all-attacks": "true"
+                },
+                {
                     "offensive-bonus": "10"
                 },
-                "",
                 {
                     "offensive-bonus": "10"
                 }
@@ -7493,9 +7551,11 @@
             },
             "standard-attacks": [
                 {
+                    "use-all-attacks": "true"
+                },
+                {
                     "offensive-bonus": "10"
                 },
-                "",
                 {
                     "offensive-bonus": "10"
                 }
@@ -7757,7 +7817,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -7809,9 +7871,11 @@
                 ]
             },
             "standard-attacks": [
-                "",
                 {
                     "offensive-bonus": "30"
+                },
+                {
+                    "use-all-attacks": "true"
                 },
                 {
                     "offensive-bonus": "40"
@@ -8378,10 +8442,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "50"
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "70"
                 }
             ]
         },
@@ -8442,7 +8506,9 @@
                 {
                     "offensive-bonus": "10"
                 },
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -8541,10 +8607,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "40"
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "30"
                 }
             ]
         },
@@ -8681,10 +8747,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "40"
                 },
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "30"
                 }
             ]
         },
@@ -9293,7 +9359,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -9443,7 +9511,8 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "80"
+                    "offensive-bonus": "80",
+                    "weapon-attack": "ATTACKTABLE_WHIP"
                 }
             ]
         },
@@ -9690,12 +9759,14 @@
             },
             "standard-attacks": [
                 {
+                    "offensive-bonus": "40"
+                },
+                {
                     "offensive-bonus": "50"
                 },
                 {
-                    "offensive-bonus": "40"
-                },
-                ""
+                    "use-all-attacks": "true"
+                }
             ]
         },
         {
@@ -9802,10 +9873,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "40"
+                    "offensive-bonus": "50"
                 },
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "40"
                 }
             ]
         },
@@ -9967,10 +10038,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "90"
+                    "offensive-bonus": "75"
                 },
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "90"
                 }
             ]
         },
@@ -10022,8 +10093,12 @@
                 ]
             },
             "standard-attacks": [
-                "",
-                ""
+                {
+                    "offensive-bonus": "0"
+                },
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -10186,8 +10261,12 @@
                 ]
             },
             "standard-attacks": [
-                "",
-                ""
+                {
+                    "offensive-bonus": "0"
+                },
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -10252,9 +10331,11 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "10"
+                    "offensive-bonus": "0"
                 },
-                ""
+                {
+                    "offensive-bonus": "10"
+                }
             ]
         },
         {
@@ -10312,10 +10393,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "50"
+                    "offensive-bonus": "60"
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "50"
                 }
             ]
         },
@@ -10431,10 +10512,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "30"
+                    "offensive-bonus": "20"
                 },
                 {
-                    "offensive-bonus": "20"
+                    "offensive-bonus": "30"
                 }
             ]
         },
@@ -10490,7 +10571,9 @@
                 ]
             },
             "standard-attacks": [
-                ""
+                {
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
@@ -11097,10 +11180,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "85"
+                    "offensive-bonus": "60"
                 },
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "85"
                 }
             ]
         },
@@ -11265,10 +11348,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "60"
+                    "offensive-bonus": "75"
                 },
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "60"
                 }
             ]
         },
@@ -11374,10 +11457,10 @@
             },
             "standard-attacks": [
                 {
-                    "offensive-bonus": "75"
+                    "offensive-bonus": "70"
                 },
                 {
-                    "offensive-bonus": "70"
+                    "offensive-bonus": "75"
                 }
             ]
         },
@@ -11491,11 +11574,13 @@
             },
             "standard-attacks": [
                 {
+                    "offensive-bonus": "50"
+                },
+                {
                     "offensive-bonus": "45"
                 },
-                "",
                 {
-                    "offensive-bonus": "50"
+                    "use-all-attacks": "true"
                 }
             ]
         },
@@ -11602,12 +11687,14 @@
             },
             "standard-attacks": [
                 {
+                    "offensive-bonus": "20"
+                },
+                {
                     "offensive-bonus": "10"
                 },
                 {
-                    "offensive-bonus": "20"
-                },
-                ""
+                    "offensive-bonus": "0"
+                }
             ]
         },
         {
