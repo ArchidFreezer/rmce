@@ -1,0 +1,84 @@
+Animist
+Arcanist
+Armsmaster
+Astrologer
+Bard
+Channeling Alchemist
+Chaotic
+Cleric
+Dabbler
+Dërnakwmün-Khad
+Dërnakwmün-Pør
+Enchanter
+Essence Alchemist
+Fighter
+Healer
+Illusionist
+Lay Healer
+Layman
+Magehunter
+Magent
+Magician
+Mana Molder
+Mentalism Alchemist
+Mentalist
+Monk
+Mystic
+Mythic
+Paladin
+Priest of Agriculture
+Priest of Ancestors
+Priest of Animals
+Priest of Arts
+Priest of Birth, Children
+Priest of Community
+Priest of Competition
+Priest of Crafts
+Priest of Darkness, Night
+Priest of Dawn
+Priest of Death
+Priest of Disease
+Priest of Earth
+Priest of Fate, Destiny
+Priest of Fertility
+Priest of Fire
+Priest of Fortune, Luck
+Priest of Guardianship
+Priest of Healing
+Priest of Hunting
+Priest of Justice, Revenge
+Priest of Light
+Priest of Lightning
+Priest of Literature, Poetry
+Priest of Love
+Priest of Magic
+Priest of Marriage
+Priest of Messengers
+Priest of Metalwork
+Priest of Mischief, Trickery
+Priest of Moon
+Priest of Music, Dance
+Priest of Nature
+Priest of Oceans, Rivers
+Priest of Oracles, Prophecy
+Priest of Sky, Weather
+Priest of Strength
+Priest of Sun
+Priest of Thunder
+Priest of Vegetation
+Priest of War
+Priest of Wind
+Priest of Wisdom
+Ranger
+Rogue
+Runemage
+Seer
+Sorcerer
+Summoner
+Taoist Monk
+Thief
+Warlock
+Warrior Mage
+Warrior Monk
+Wizard
+Zen Monk
