@@ -2,6 +2,7 @@ Animist
 Arcanist
 Armsmaster
 Astrologer
+Barbarian
 Bard
 Channeling Alchemist
 Chaotic
@@ -25,6 +26,7 @@ Mentalist
 Monk
 Mystic
 Mythic
+Outrider
 Paladin
 Priest of Agriculture
 Priest of Ancestors
@@ -72,9 +74,11 @@ Priest of Wisdom
 Ranger
 Rogue
 Runemage
+Sage
 Seer
 Sorcerer
 Summoner
+Swashbuckler
 Taoist Monk
 Thief
 Warlock
