@@ -13,7 +13,7 @@
  * @class GameRuleDataCache
  * @brief Class to store game rule data, such as profession definitions, spell lists, etc.
  * 
- * The class is thread safe and can cache any object type that is derived from the polymorphic #GameRuleData class
+ * The class is thread safe and can cache any object type that is derived from the polymorphic GameRuleData class
  * 
  * The game rule data that is stored must be passed as a unique_ptr which ensures that there is only a single copy and it
  * is the cache that owns the object. This ensures that all objects are correctly
@@ -69,7 +69,7 @@ public:
 	 * @brief Get the rule data object with the given id
 	 * 
 	 * @tparam T Class of the data object to be retrieved
-	 *           Must be derived from #GameRuleData
+	 *           Must be derived from GameRuleData
 	 * @param id Id of the object being retrieved
 	 * @return Reference to the data object
 	 * @throws out_of_range if there is no rule data for the id with the given type
@@ -83,7 +83,7 @@ public:
 	 * This changes ownership of the rule data to the cache
 	 * 
 	 * @tparam T Class of the data object to be retrieved
-	 *           Must be derived from #GameRuleData
+	 *           Must be derived from GameRuleData
 	 * @param datum Object to move to the cache
 	 * @param id Identifier of the data object
 	 */
@@ -93,7 +93,7 @@ public:
 	/**
 	 * @brief Check if data object exists in the cache
 	 * @tparam T Class of the data object to be retrieved
-	 *           Must be derived from #GameRuleData
+	 *           Must be derived from GameRuleData
 	 * @param id Identifier of the data object
 	 * @return Reference to the data object
 	 */
@@ -106,11 +106,20 @@ public:
 	 * The parameter is first erased and then populated with the key data so following the call it will only contain the ids
 	 * 
 	 * @tparam T Class of the data object to be retrieved
-	 *           Must be derived from #GameRuleData
+	 *           Must be derived from GameRuleData
 	 * @param keys Set of strings to populate with the ids of the data objects
 	 */
 	template <GameRuleDataObject T>
 	void keys(std::set<std::string>& keys);
+
+	/**
+	 * @brief Get the number of data objects of a specific type in the cache
+	 * @tparam T Class of the data object to be retrieved
+	 *           Must be derived from GameRuleData
+	 * @return Number of data objects of the specified type in the cache
+	 */
+	template <GameRuleDataObject T>
+	int size();
 	
 private:
 	/**
@@ -193,4 +202,14 @@ inline void GameRuleDataCache::keys(std::set<std::string>& keys)
 	for (auto it = ruledata_hash_map.begin(); it != ruledata_hash_map.end(); ++it) {
 		keys.insert(it->first);
 	}
+}
+
+template<GameRuleDataObject T>
+inline int GameRuleDataCache::size() {
+	// Grab a mutex for thread safety
+	auto& mutex = mutexes[typeid(T)];
+	std::lock_guard<std::mutex> guard(mutex);
+	// Grab a reference to the hash map for the particular type of data we want
+	auto& ruledata_hash_map = state[typeid(T)];
+	return ruledata_hash_map.size();
 }
