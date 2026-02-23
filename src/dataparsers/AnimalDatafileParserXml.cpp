@@ -273,6 +273,9 @@ void AnimalDatafileParserXml::parseAnimalAttack(const pt::ptree& tree, AnimalAtt
 	boost::optional<int> min_group_size = tree.get_optional<int>("min-group-size");
 	if (min_group_size) ref.setMinGroupSize(min_group_size.get());
 
+	boost::optional<int> range = tree.get_optional<int>("range");
+	if (range) ref.setRange(range.get());
+
 	boost::optional<int> same_round_attack_id = tree.get_optional<int>("same-round-id");
 	if (same_round_attack_id) ref.setSameRoundAttackId(same_round_attack_id.get());
 

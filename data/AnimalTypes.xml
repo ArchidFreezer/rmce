@@ -77,7 +77,7 @@
                  <attack-table>Claw</attack-table>
                  <attack-size>LARGE</attack-size>
               </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -169,7 +169,7 @@
                    <attack-table>Grapple</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -259,7 +259,7 @@
                  <attack-table>Grapple</attack-table>
                  <attack-size>LARGE</attack-size>
               </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="70">
               <offensive-bonus>75</offensive-bonus>
@@ -367,7 +367,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </group-attacks>
          <standard-attacks>
@@ -377,7 +377,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>TINY</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -610,7 +610,7 @@
                    <attack-table>Grapple</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -798,7 +798,7 @@
                      <attack-table>Fall</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -978,7 +978,7 @@
                      <attack-table>Claw</attack-table>
                      <attack-size>LARGE</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -995,7 +995,7 @@
                   <attack-table>Bite</attack-table>
                   <attack-size>LARGE</attack-size>
                </non-weapon-attack>
-               <next_round_id>2</next_round_id>
+               <next-round-id>2</next-round-id>
             </attack>
          </conditional-attacks>         
       </animal-type>
@@ -1081,7 +1081,7 @@
                   <attack-table>Ram</attack-table>
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -1331,7 +1331,7 @@
                      <attack-table>Stinger</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -1418,7 +1418,7 @@
                      <attack-table>Claw</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -1650,7 +1650,7 @@
                      <attack-table>Fall</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -1718,7 +1718,7 @@
                    <attack-table>Grapple</attack-table>
                    <attack-size>MEDIUM</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -2120,7 +2120,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>HUGE</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="50">
                   <offensive-bonus>80</offensive-bonus>
@@ -2393,7 +2393,7 @@
                   <attack-table>Tiny</attack-table>
                   <attack-size>SMALL</attack-size>
                </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -2403,7 +2403,7 @@
                   <attack-table>Bite</attack-table>
                   <attack-size>SMALL</attack-size>
                </non-weapon-attack>
-               <same_round_id>2</same_round_id>
+               <same-round-id>2</same-round-id>
             </attack>
          </conditional-attacks>
          <conditional-attacks>
@@ -2563,7 +2563,7 @@
                      <attack-table>Claw</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -2653,7 +2653,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -2740,7 +2740,7 @@
                      <attack-table>Horn</attack-table>
                      <attack-size>HUGE</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -2750,7 +2750,7 @@
                         <attack-table>Ram</attack-table>
                         <attack-size>HUGE</attack-size>
                      </non-weapon-attack>
-               <next_round_id>2</next_round_id>
+               <next-round-id>2</next-round-id>
             </attack>
             <attack id="2">
                         <offensive-bonus>120</offensive-bonus>
@@ -2848,7 +2848,7 @@
                   <attack-table>Beak</attack-table>
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -2937,7 +2937,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -3035,7 +3035,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -3390,7 +3390,7 @@
                    <attack-table>Ram</attack-table>
                    <attack-size>LARGE</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
             <attack chance="50">
                 <offensive-bonus>50</offensive-bonus>
@@ -3484,7 +3484,7 @@
                      <attack-table>Fall</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="20">
                   <offensive-bonus>40</offensive-bonus>
@@ -3758,7 +3758,7 @@
                    <attack-table>Claw</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -4021,7 +4021,7 @@
                   <attack-table>Grapple</attack-table>
                   <attack-size>LARGE</attack-size>
                </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="50">
                <offensive-bonus>80</offensive-bonus>
@@ -4029,7 +4029,7 @@
                   <attack-table>Bite</attack-table>
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
-               <same_round_id>2</same_round_id>
+               <same-round-id>2</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -4215,7 +4215,7 @@
                      <attack-table>Grapple</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="50">
                   <offensive-bonus>30</offensive-bonus>
@@ -4542,7 +4542,7 @@
                  <attack-table>Bite</attack-table>
                  <attack-size>SMALL</attack-size>
               </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -4706,7 +4706,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>LARGE</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
             <attack chance="50">
                   <offensive-bonus>65</offensive-bonus>
@@ -4862,7 +4862,7 @@
                    <attack-table>Stinger</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
             <attack>
                 <offensive-bonus>0</offensive-bonus>
@@ -4871,7 +4871,7 @@
                    <attack-table>Beak</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </group-attacks>
          <conditional-attacks>
@@ -4974,7 +4974,7 @@
                  <attack-table>Claw</attack-table>
                  <attack-size>LARGE</attack-size>
               </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="40">
               <offensive-bonus>80</offensive-bonus>
@@ -5075,7 +5075,7 @@
                  <attack-table>Horn</attack-table>
                  <attack-size>HUGE</attack-size>
               </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
             <attack chance="50">
               <offensive-bonus>100</offensive-bonus>
@@ -5170,7 +5170,7 @@
                  <attack-table>Horn</attack-table>
                  <attack-size>LARGE</attack-size>
               </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -5180,7 +5180,7 @@
                  <attack-table>Bite</attack-table>
                  <attack-size>LARGE</attack-size>
               </non-weapon-attack>
-               <same_round_id>2</same_round_id>
+               <same-round-id>2</same-round-id>
             </attack>
             <attack id="2">
               <offensive-bonus>70</offensive-bonus>
@@ -5274,7 +5274,7 @@
                      <attack-table>Grapple</attack-table>
                      <attack-size>LARGE</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -5291,7 +5291,7 @@
                   <attack-table>Claw</attack-table>
                   <attack-size>LARGE</attack-size>
                </non-weapon-attack>
-               <next_round_id>2</next_round_id>
+               <next-round-id>2</next-round-id>
             </attack>
          </conditional-attacks>         
       </animal-type>
@@ -5446,7 +5446,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
             <attack chance="30">
                   <offensive-bonus>30</offensive-bonus>
@@ -5873,7 +5873,7 @@
                    <attack-table>Grapple</attack-table>
                    <attack-size>LARGE</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -5966,7 +5966,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>LARGE</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -6130,7 +6130,7 @@
                      <attack-table>Grapple</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -6313,7 +6313,7 @@
                   <attack-table>Ram</attack-table>
                   <attack-size>SMALL</attack-size>
                </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -6468,7 +6468,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <group-attacks>
@@ -6479,7 +6479,7 @@
                      <attack-table>Stinger</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </group-attacks>
          <conditional-attacks>
@@ -6725,14 +6725,14 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
                </attack>
             </attack>
          </standard-attacks>
          <conditional-attacks>
             <attack id="1">
                <poison>POISON_SEA_ANEMONE_VENOM</poison>
-               <same_round_id>2</same_round_id>
+               <same-round-id>2</same-round-id>
             </attack>
             <attack id="2">
                <offensive-bonus>100</offensive-bonus>
@@ -6828,7 +6828,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>nnn</same_round_id>
+               <same-round-id>nnn</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -6906,7 +6906,7 @@
                    <attack-table>Stinger</attack-table>
                    <attack-size>LARGE</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
             <attack chance="40">
                   <attacks-per-round>2</attacks-per-round>
@@ -6978,13 +6978,13 @@
                    <attack-table>Grapple</attack-table>
                    <attack-size>LARGE</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
             <attack id="1">
                <poison>POISON_PORTUGUESE_MAN_OF_WAR_VENOM</poison>
-               <next_round_id>2</next_round_id>
+               <next-round-id>2</next-round-id>
             </attack>
             <attack id="2">
                <special>Digestion if trapped and paralyzed</special>
@@ -7070,7 +7070,7 @@
                    <attack-table>Ram</attack-table>
                    <attack-size>MEDIUM</attack-size>
                 </non-weapon-attack>
-               <next_round_id>nnn</next_round_id>
+               <next-round-id>nnn</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -7541,7 +7541,7 @@
                    <attack-table>Tiny</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -7557,7 +7557,7 @@
                    <attack-table>Stinger</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </group-attacks>
       </animal-type>
@@ -7638,7 +7638,7 @@
                  <attack-table>Grapple</attack-table>
                  <attack-size>LARGE</attack-size>
               </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="70">
               <offensive-bonus>75</offensive-bonus>
@@ -7734,7 +7734,7 @@
                      <attack-table>Grapple</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="50">
                   <offensive-bonus>30</offensive-bonus>
@@ -7928,7 +7928,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -7938,7 +7938,7 @@
                   <attack-table>Bite</attack-table>
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
-               <same_round_id>2</same_round_id>
+               <same-round-id>2</same-round-id>
             </attack>
             <attack id="2">
                <offensive-bonus>60</offensive-bonus>
@@ -8022,7 +8022,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>LARGE</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="40">
                   <offensive-bonus>60</offensive-bonus>
@@ -8261,7 +8261,7 @@
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
                <attacks-per-round>2</attacks-per-round>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
             <attack chance="25">
                <offensive-bonus>40</offensive-bonus>
@@ -8404,7 +8404,7 @@
                    <attack-table>Tiny</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -8497,7 +8497,7 @@
                      <attack-table>Grapple</attack-table>
                      <attack-size>LARGE</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="20">
                   <offensive-bonus>50</offensive-bonus>
@@ -8749,7 +8749,7 @@
                    <attack-table>Bite</attack-table>
                    <attack-size>MEDIUM</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -8830,7 +8830,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -8968,7 +8968,7 @@
                  <attack-table>Ram</attack-table>
                  <attack-size>MEDIUM</attack-size>
               </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -8987,7 +8987,7 @@
                   <attack-table>Trample</attack-table>
                   <attack-size>SMALL</attack-size>
                </non-weapon-attack>
-               <next_round_id>2</next_round_id>
+               <next-round-id>2</next-round-id>
             </attack>
          </conditional-attacks>         
       </animal-type>
@@ -9342,7 +9342,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -9440,7 +9440,7 @@
                    <attack-table>Grapple</attack-table>
                    <attack-size>LARGE</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -9457,7 +9457,7 @@
                   <attack-table>Claw</attack-table>
                   <attack-size>LARGE</attack-size>
                </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </conditional-attacks>         
       </animal-type>
@@ -9768,7 +9768,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -9853,7 +9853,7 @@
                   <attack-table>Ram</attack-table>
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -10027,7 +10027,7 @@
                      <attack-table>Claw</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -10121,7 +10121,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>nnn</next_round_id>
+               <next-round-id>nnn</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -10207,7 +10207,7 @@
                      <attack-table>Horn</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -10217,7 +10217,7 @@
                   <attack-table>Ram</attack-table>
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
-               <same_round_id>2</same_round_id>
+               <same-round-id>2</same-round-id>
             </attack>
             <attack id="2">
                <offensive-bonus>40</offensive-bonus>
@@ -10304,7 +10304,7 @@
                      <attack-table>Grapple</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="30">
                   <offensive-bonus>70</offensive-bonus>
@@ -10786,7 +10786,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -11103,7 +11103,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -11277,7 +11277,7 @@
                   <attack-table>Ram</attack-table>
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -11287,7 +11287,7 @@
                   <attack-table>Horn</attack-table>
                   <attack-size>LARGE</attack-size>
                </non-weapon-attack>
-               <same_round_id>2</same_round_id>
+               <same-round-id>2</same-round-id>
             </attack>
          </conditional-attacks>
          <conditional-attacks>
@@ -11365,7 +11365,7 @@
                </water-sources>
             </location>
          </locations>
-         <standard-attacks>
+         <ranged-attacks>
             <attack chance="100">
               <range>10</range>
               <offensive-bonus>80</offensive-bonus>
@@ -11373,9 +11373,9 @@
                  <attack-table>Horn</attack-table>
                  <attack-size>MEDIUM</attack-size>
               </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
-         </standard-attacks>
+         </ranged-attacks>
          <conditional-attacks>
             <attack id="1">
               <poison>POISON_HORNED_SNAKE_VENOM</poison>
@@ -11695,7 +11695,7 @@
                      <attack-table>Fall</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="40">
                   <offensive-bonus>30</offensive-bonus>
@@ -11799,7 +11799,7 @@
                      <attack-table>Claw</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -11895,7 +11895,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="40">
                   <offensive-bonus>40</offensive-bonus>
@@ -12173,7 +12173,7 @@
                      <attack-table>Claw</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -12446,7 +12446,7 @@
                  <attack-table>Ram</attack-table>
                  <attack-size>MEDIUM</attack-size>
               </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -12465,7 +12465,7 @@
                   <attack-table>Trample</attack-table>
                   <attack-size>SMALL</attack-size>
                </non-weapon-attack>
-               <next_round_id>2</next_round_id>
+               <next-round-id>2</next-round-id>
             </attack>
          </conditional-attacks>         
       </animal-type>
@@ -12637,7 +12637,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -12701,7 +12701,7 @@
             <attack chance="100">
                <offensive-bonus>80</offensive-bonus>
                <weapon-attack>Whip</weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -12711,7 +12711,7 @@
                   <attack-table>Stinger</attack-table>
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
-               <same_round_id>2</same_round_id>
+               <same-round-id>2</same-round-id>
             </attack>
             <attack id="2">
                <poison>POISON_STINGRAY_VENOM</poison>
@@ -12794,7 +12794,7 @@
                    <attack-table>Grapple</attack-table>
                    <attack-size>MEDIUM</attack-size>
                 </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -13112,7 +13112,7 @@
                      <attack-table>Grapple</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
             <attack chance="70">
                   <offensive-bonus>50</offensive-bonus>
@@ -13208,7 +13208,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -13289,7 +13289,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>LARGE</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -13375,7 +13375,7 @@
                      <attack-table>Fall</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="30">
                   <offensive-bonus>30</offensive-bonus>
@@ -13471,7 +13471,7 @@
                    <attack-table>Ram</attack-table>
                    <attack-size>LARGE</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -13557,7 +13557,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -13574,7 +13574,7 @@
                   <attack-table>Bite</attack-table>
                   <attack-size>SMALL</attack-size>
                </non-weapon-attack>
-               <next_round_id>2</next_round_id>
+               <next-round-id>2</next-round-id>
             </attack>
          </conditional-attacks>         
       </animal-type>
@@ -13660,7 +13660,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -13754,7 +13754,7 @@
                      <attack-table>Claw</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -13851,7 +13851,7 @@
                    <attack-table>Tiny</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
             <attack>
                 <offensive-bonus>0</offensive-bonus>
@@ -13860,7 +13860,7 @@
                    <attack-table>Stinger</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same_round_id>nnn</same_round_id>
+               <same-round-id>nnn</same-round-id>
             </attack>
          </group-attacks>
          <conditional-attacks>
@@ -13951,7 +13951,7 @@
                      <attack-table>Fall</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -14029,7 +14029,7 @@
                    <attack-table>Stinger</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
             <attack chance="50">
                 <offensive-bonus>0</offensive-bonus>
@@ -14452,7 +14452,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -14600,7 +14600,7 @@
                      <attack-table>Ram</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>nnn</next_round_id>
+               <next-round-id>nnn</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -14690,7 +14690,7 @@
                      <attack-table>Grapple</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="50">
                   <offensive-bonus>30</offensive-bonus>
@@ -14869,7 +14869,7 @@
                      <attack-table>Grapple</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="50">
                   <offensive-bonus>30</offensive-bonus>
@@ -15409,7 +15409,7 @@
                    <attack-table>Grapple</attack-table>
                    <attack-size>SMALL</attack-size>
                 </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -15503,7 +15503,7 @@
                      <attack-table>Bite</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -15596,7 +15596,7 @@
                   <attack-table>Ram</attack-table>
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -15749,7 +15749,7 @@
                  <attack-table>Ram</attack-table>
                  <attack-size>MEDIUM</attack-size>
               </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="50">
               <offensive-bonus>40</offensive-bonus>
@@ -16206,7 +16206,7 @@
                      <attack-table>Fall</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -16369,7 +16369,7 @@
                   <attack-table>Grapple</attack-table>
                   <attack-size>LARGE</attack-size>
                </non-weapon-attack>
-               <next_round_id>2</next_round_id>
+               <next-round-id>2</next-round-id>
             </attack>
             <attack chance="50">
                <offensive-bonus>50</offensive-bonus>
@@ -16377,7 +16377,7 @@
                   <attack-table>Ram</attack-table>
                   <attack-size>LARGE</attack-size>
                </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -16659,7 +16659,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -16846,7 +16846,7 @@
                      <attack-table>Fall</attack-table>
                      <attack-size>MEDIUM</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="70">
                   <offensive-bonus>10</offensive-bonus>
@@ -16939,7 +16939,7 @@
                      <attack-table>Stinger</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -17019,7 +17019,7 @@
                <range>10</range>
                <offensive-bonus>10</offensive-bonus>
                <weapon-attack>Whip</weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </ranged-attacks>
          <standard-attacks>
@@ -17029,7 +17029,7 @@
                      <attack-table>Stinger</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -17122,7 +17122,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -17201,7 +17201,7 @@
                      <attack-table>Tiny</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -17286,7 +17286,7 @@
                      <attack-table>Claw</attack-table>
                      <attack-size>SMALL</attack-size>
                   </non-weapon-attack>
-               <same_round_id>1</same_round_id>
+               <same-round-id>1</same-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>
@@ -17442,7 +17442,7 @@
                  <attack-table>Bite</attack-table>
                  <attack-size>HUGE</attack-size>
               </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="30">
               <offensive-bonus>100</offensive-bonus>
@@ -17636,7 +17636,7 @@
                   <attack-table>Fall</attack-table>
                   <attack-size>MEDIUM</attack-size>
                </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
             <attack chance="50">
                <offensive-bonus>60</offensive-bonus>
@@ -17739,7 +17739,7 @@
                  <attack-table>Ram</attack-table>
                  <attack-size>MEDIUM</attack-size>
               </non-weapon-attack>
-               <next_round_id>1</next_round_id>
+               <next-round-id>1</next-round-id>
             </attack>
          </standard-attacks>
          <conditional-attacks>

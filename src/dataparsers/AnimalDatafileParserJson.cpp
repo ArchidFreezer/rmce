@@ -262,6 +262,19 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 		// Only add the group attacks to the tree if there are any, otherwise we will end up with an empty group attacks array in the json file which is not ideal.
 		if (group_attacks_tree.size()) datum.push_back(std::make_pair("group-attacks", group_attacks_tree));
 	}
+
+	// Ranged Attacks
+	{
+		// Parse the attackdata and place into the boost ptree
+		pt::ptree ranged_attacks_tree{};
+		for (const auto& ranged_attack : game_data.rangedAttacks()) {
+			pt::ptree ranged_attack_tree{};
+			populateAnimalAttack(ranged_attack_tree, ranged_attack);
+			ranged_attacks_tree.push_back(std::make_pair("", ranged_attack_tree));
+		}
+		// Only add the ranged attacks to the tree if there are any, otherwise we will end up with an empty ranged attacks array in the json file which is not ideal.
+		if (ranged_attacks_tree.size()) datum.push_back(std::make_pair("ranged-attacks", ranged_attacks_tree));
+	}
 }
 
 void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const AnimalAttack attack) {
@@ -272,6 +285,7 @@ void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const Anima
 	}
 
 	if (attack.minGroupSize() > 1) tree.put("min-group-size", attack.minGroupSize());
+	if (attack.range()) tree.put("range", attack.range());
 	if (attack.hasWeaponAttack() || attack.hasNonWeaponAttack()) tree.put("offensive-bonus", attack.offensiveBonus());
 	if (attack.hasWeaponAttack()) tree.put("weapon-attack", attack.weaponTable()->id());
 	if (attack.hasNonWeaponAttack()) {
@@ -282,6 +296,9 @@ void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const Anima
 	}
 	if (attack.useAllAttacks()) tree.put("use-all-attacks", attack.useAllAttacks());
 	if (attack.numAttacks() > 1) tree.put("attacks-per-round", attack.numAttacks());
+	//if (attack.special()) tree.put("special", attack.special().value());
+	if (attack.sameRoundAttackId()) tree.put("same-round-conditional-attack-id", attack.sameRoundAttackId());
+	if (attack.nextRoundAttackId()) tree.put("next-round-conditional-attack-id", attack.nextRoundAttackId());
 }
 
 void AnimalDatafileParserJson::parseAnimalAttack(const pt::ptree& tree, AnimalAttack attack) {}
