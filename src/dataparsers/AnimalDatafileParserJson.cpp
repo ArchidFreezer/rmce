@@ -265,6 +265,7 @@ void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const Anima
 		tree.push_back(std::make_pair("non-weapon-attack", non_weapon_tree));
 	}
 	if (attack.useAllAttacks()) tree.put("use-all-attacks", attack.useAllAttacks());
+	if (attack.numAttacks() > 1) tree.put("attacks-per-round", attack.numAttacks());
 }
 
 void AnimalDatafileParserJson::parseAnimalAttack(const pt::ptree& tree, AnimalAttack attack) {}

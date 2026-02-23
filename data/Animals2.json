@@ -2398,7 +2398,8 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BEAK",
                         "size": "Large"
-                    }
+                    },
+                    "attacks-per-round": "2"
                 },
                 {
                     "offensive-bonus": "50",
@@ -4233,7 +4234,8 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BEAK",
                         "size": "Large"
-                    }
+                    },
+                    "attacks-per-round": "2"
                 }
             ]
         },
@@ -8724,7 +8726,7 @@
                 {
                     "offensive-bonus": "20",
                     "non-weapon-attack": {
-                        "table": "SPECIALATTACKTABLE_SPECIALATTACKTABLE_TINY",
+                        "table": "SPECIALATTACKTABLE_TINY",
                         "size": "Small"
                     }
                 }
@@ -9407,7 +9409,8 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_BITE",
                         "size": "Medium"
-                    }
+                    },
+                    "attacks-per-round": "3"
                 }
             ]
         },
@@ -10541,7 +10544,8 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_GRAPPLE",
                         "size": "Medium"
-                    }
+                    },
+                    "attacks-per-round": "8"
                 }
             ]
         },
@@ -10833,7 +10837,8 @@
                     "non-weapon-attack": {
                         "table": "SPECIALATTACKTABLE_GRAPPLE",
                         "size": "Medium"
-                    }
+                    },
+                    "attacks-per-round": "2"
                 },
                 {
                     "offensive-bonus": "40",
