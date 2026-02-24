@@ -84,6 +84,16 @@ bool GroupMultiSkillRankChoice::operator<(const GroupMultiSkillRankChoice& other
 	return (this_hash < that_hash);
 }
 
+bool SkillGroupCategoryAndSkillRankChoice::operator<(const SkillGroupCategoryAndSkillRankChoice& other) const {
+	size_t this_hash{ std::hash<std::string>{}(group->id()) };
+	this_hash += std::hash<int>{}(ranks);
+
+	size_t that_hash{ std::hash<std::string>{}(other.group->id()) };
+	that_hash += std::hash<int>{}(other.ranks);
+
+	return (this_hash < that_hash);
+}
+
 bool SpellListChoices::operator<(const SpellListChoices& other) const {
 	size_t this_hash{ 0 };
 	if (spell_list_category) this_hash += std::hash<std::string_view>{}(spell_list_category.value()->id());

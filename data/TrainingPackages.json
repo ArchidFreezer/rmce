@@ -1141,6 +1141,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -1693,6 +1697,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "3"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -2103,6 +2111,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -5595,22 +5607,22 @@
                     "chance": "30"
                 },
                 {
-                    "value": "Instrument used w/ artistic skill (+5 non-magic)",
+                    "value": "Instrument used w\/ artistic skill (+5 non-magic)",
                     "chance": "100"
                 }
             ],
             "skill-ranks": [
                 {
-                    "id": "SKILL_SEDUCTION",
-                    "value": "3"
+                    "id": "SKILL_DANCING",
+                    "value": "1"
                 },
                 {
                     "id": "SKILL_DUPING",
                     "value": "2"
                 },
                 {
-                    "id": "SKILL_DANCING",
-                    "value": "1"
+                    "id": "SKILL_SEDUCTION",
+                    "value": "3"
                 }
             ],
             "category-ranks": [
@@ -5629,11 +5641,6 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
-                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
-                    "value": "1",
-                    "num-choices": "1"
-                },
-                {
                     "id": "SKILLCATEGORY_INFLUENCE",
                     "value": "1",
                     "num-choices": "1"
@@ -5642,6 +5649,11 @@
                     "id": "SKILLCATEGORY_URBAN",
                     "value": "2",
                     "num-choices": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "1",
+                    "num-choices": "1"
                 }
             ]
         },
@@ -5929,11 +5941,11 @@
             ],
             "skill-ranks": [
                 {
-                    "id": "SKILL_BODY_DEVELOPMENT",
-                    "value": "2"
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "1"
                 },
                 {
-                    "id": "SKILL_HORTICULTURE",
+                    "id": "SKILL_BODY_DEVELOPMENT",
                     "value": "2"
                 },
                 {
@@ -5945,8 +5957,8 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILL_ANIMAL_HANDLING",
-                    "value": "1"
+                    "id": "SKILL_HORTICULTURE",
+                    "value": "2"
                 }
             ],
             "category-ranks": [
@@ -6260,6 +6272,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -7299,6 +7315,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -9940,7 +9960,7 @@
             "group-category-and-skill-rank-choices": [
                 {
                     "id": "SKILLGROUP_WEAPON",
-                    "value": "1"
+                    "value": "2"
                 }
             ]
         },
@@ -11867,6 +11887,10 @@
             "group-category-and-skill-rank-choices": [
                 {
                     "id": "SKILLGROUP_WEAPON",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
                     "value": "1"
                 }
             ],
@@ -13212,6 +13236,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "2"
                 }
             ]
         },
@@ -13431,6 +13459,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -14713,6 +14745,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -15171,6 +15207,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -15707,6 +15747,18 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "5"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },

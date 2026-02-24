@@ -36,6 +36,17 @@ struct GroupMultiSkillRankChoice {
 };
 
 /**
+ * @brief Represents a skill rank choice for a category and skill within it from a group available in a package, including constraints on selection and rank allocation.
+ */
+struct SkillGroupCategoryAndSkillRankChoice {
+	const SkillGroupData* group; /**< The skill group from which the player can choose a category and skill to gain the ranks */
+	int ranks; /**< The number of ranks that can be gained */
+
+	/** Overload the less than operator to allow this struct to be used in sorted containers */
+	bool operator<(const SkillGroupCategoryAndSkillRankChoice& other) const;
+};
+
+/**
  * @brief Represents a set of spell list choices available in a package, including constraints on selection and rank allocation.
  */
 struct SpellListChoices {
@@ -490,7 +501,7 @@ public:
 	 *
 	 * Allows the player to select one or more skills from a single group to receive the skill ranks. This is typically used for weapon skills where the character can select a category of weapons and then one or more specific weapons within that category to gain the ranks in.
 	 *
-	 * @param group_multi_skill_rank_choices Vector containing GroupMultiSkillRankChoice structs, each representing a skill group from which the player can choose to gain skill ranks, along with the number of skill ranks that can be gained and the number of skills that can be chosen to gain those ranks.
+	 * @param skill_group_multi_skill_rank_choices Vector containing GroupMultiSkillRankChoice structs, each representing a skill group from which the player can choose to gain skill ranks, along with the number of skill ranks that can be gained and the number of skills that can be chosen to gain those ranks.
 	 */
 	void setSkillGroupMultiSkillRankChoices(std::vector<GroupMultiSkillRankChoice> skill_group_multi_skill_rank_choices) { skill_group_multi_skill_rank_choices_ = std::move(skill_group_multi_skill_rank_choices); }
 
@@ -511,7 +522,7 @@ public:
 	 * 
 	 * @param skill_group_category_and_skill_ranks A map associating SkillGroupData pointers with their corresponding rank values.
 	 */
-	void setSkillGroupCategoryAndSkillRanks(std::map<const SkillGroupData*, int> skill_group_category_and_skill_ranks) { skill_group_category_and_skill_ranks_ = std::move(skill_group_category_and_skill_ranks); }
+	void setSkillGroupCategoryAndSkillRanks(std::vector<SkillGroupCategoryAndSkillRankChoice> skill_group_category_and_skill_ranks) { skill_group_category_and_skill_ranks_ = std::move(skill_group_category_and_skill_ranks); }
 
 	/**
 	 * @brief Gets the skill group category and skill ranks map.
@@ -519,9 +530,9 @@ public:
 	 * Allows the player to select a single category from the group to recieve the skill ranks and also a single skill from that category to receive the skill ranks.
 	 * This is typically used for weapon skills where the character can select a category of weapons and then a specific weapon within that category to gain the ranks in.
 	 *
-	 * @return A map containing skill group data pointers as keys and their corresponding rank values as integers.
+	 * @return A vector containing skill group data pointers as keys and their corresponding rank values as integers.
 	 */
-	const std::map<const SkillGroupData*, int>& skillGroupCategoryAndSkillRanks() const { return skill_group_category_and_skill_ranks_; }
+	const std::vector<SkillGroupCategoryAndSkillRankChoice>& skillGroupCategoryAndSkillRanks() const { return skill_group_category_and_skill_ranks_; }
 
 	/**
 	 * @brief Sets the spell list choices for this package.
@@ -639,7 +650,7 @@ private:
 	std::map<const SkillCategoryData*, int> skill_category_ranks_{}; /** Number of skill category ranks gained */
 	std::set<CategoryMultiSkillRankChoice> skill_category_multi_skill_rank_choices_{}; /**< A set of skill categories from which the player may select one or more to receive the skill ranks */
 	std::vector<GroupMultiSkillRankChoice> skill_group_multi_skill_rank_choices_{}; /**< A set of skill groups from which the player may select one or more to receive the skill ranks */
-	std::map<const SkillGroupData*, int> skill_group_category_and_skill_ranks_{}; /** A number fo ranks that may be set on a single caltegory within the group and also a single skill within that category */
+	std::vector<SkillGroupCategoryAndSkillRankChoice> skill_group_category_and_skill_ranks_{}; /** A number fo ranks that may be set on a single caltegory within the group and also a single skill within that category */
 	std::set<SpellListChoices> spell_list_choices_{}; /**< A set of spell list choices that the player may select from to gain spell lists and ranks in those spell lists */
 	std::set<SpellListCategoryChoices> spell_list_category_choices_{}; /**< A set of spell list category choices that the player may select from to gain ranks in spell lists within those categories */
 	std::set<SubcategoriedSkillData> lifestyle_skills_{}; /**< A set of skills that may gain up to 15 ranks via the package rather than the usual cap of 10 */
