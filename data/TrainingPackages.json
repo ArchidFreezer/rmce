@@ -6280,6 +6280,183 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_GLADIATOR",
+            "name": "Gladiator",
+            "description": "A gladiator is a professional fighter (or captive) who is trained to fight other men or animals in order to entertain people. This usually occurs in a public arena, and sometimes they fight to the death.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "true",
+            "time-to-acquire": "116",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Weapon (+10 non-magical)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Noble patron",
+                    "chance": "50"
+                },
+                {
+                    "value": "Trophy (worth 2d10 sp)",
+                    "chance": "10"
+                },
+                {
+                    "value": "Shield (+10 non-magic)",
+                    "chance": "100"
+                }
+            ],
+            "stat-gains": [
+                "Constitution",
+                "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_BOXING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SPRINTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TUMBLING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_WRESTLING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ],
+            "group-category-and-skill-rank-choices": [
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_GOSSIP",
+            "name": "Gossip",
+            "description": "A gossip is adept at gathering information and then conveying it to others in the form of stories and tales. Gossips often know several incriminating facts about their neighbors and friends and they seldom keep these facts to themselves. Often a gossip won't even need to hear anything worth repeating, they'll make it up as long as they have an audience. Sometimes a gossip will overhear a tale that is just too good to share (like the location of buried treasure), but they usually cannot resist telling \"just a few people\".",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "22",
+            "specials": [
+                {
+                    "value": "Useful contacts with local innkeeper",
+                    "chance": "30"
+                },
+                {
+                    "value": "Incriminating secret (about someone else)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Embarrassing secret (about someone else)",
+                    "chance": "40"
+                },
+                {
+                    "value": "Valuable secret (about someone else) ",
+                    "chance": "30"
+                },
+                {
+                    "value": "Reputation as a gossip",
+                    "chance": "40"
+                },
+                {
+                    "value": "Large bar tab at local tavern",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_LIP_READING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "subcategory": "Trust",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SITUATIONAL_AWARENESS",
+                    "subcategory": "Eavesdropping",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TALE_TELLING",
+                    "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_GRAVE_ROBBER",
             "name": "Grave Robber",
             "description": "Not everyone seeking the lost are as altruistic, or informed, as the Archaeologist. Many people are aware of jewelry being buried with a loved one, but the Grave Robber capitalizes on this information. A Grave Robber may seek out ancient grave sites, or even ruins, for their chance at quick and easy money. Of course, most people frown on such activities, and sometimes the dead themselves will rise up to protect their treasure, so though the money maybe quick, it isn't always easy.",
@@ -6555,6 +6732,98 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_GUIDE",
+            "name": "Guide",
+            "description": "A guide makes his living leading people from one place to another. Usually, a guide knows a lot about the out- doors and the region in which he operates. Most guides can be trusted to take their charges to their destination faithfully, but some are dishonest, and seek to make an easy profit by preying upon the ignorance of others.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "30",
+            "specials": [
+                {
+                    "value": "Weapon (+5 non-magic)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Weather resistant clothing",
+                    "chance": "50"
+                },
+                {
+                    "value": "Riding beast (GM discretion)",
+                    "chance": "40"
+                },
+                {
+                    "value": "Compass (+10 Navigation, Orienteering)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Reinforced rope (50' - can carry 25% more weight)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Detailed map of the region",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ORIENTEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TALE_TELLING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "2"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_GUILD_APPRENTICE",
             "name": "Guild Apprentice",
             "description": "A guild apprentice is taught the lessons of magic by either a mercantile group of magicians or by a member of an established guild. Guild apprentices spend a lot of time studying magic in great detail, from books and from direct instruction from one or more masters. Guild apprentices tend to be well educated and prepared for a career in a city. Guild apprentices are generally taught magic that will assist their master in the day to day maintenance of a business as well as spells that assist them in their studies.",
@@ -6673,6 +6942,89 @@
                     "options": [
                         "SPELLLIST_GUILDCRAFT_MASTERY"
                     ]
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_GUILD_MEMBER",
+            "name": "Guild Member",
+            "description": "Guild members are the principle tradesmen in a society that has a system of guilds. They make up the primary population of crafters, merchants, and artisans, selling their services to whomever can afford them. A guild member will often have influential contacts among the various power groups of a city, and will know who to talk with to get things done.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "18",
+            "specials": [
+                {
+                    "value": "Tools for primary trade\/craft (+10 non-magic)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Useful contacts with local tradesmen",
+                    "chance": "50"
+                },
+                {
+                    "value": "Reputation as an honest and skilled craftsman",
+                    "chance": "20"
+                },
+                {
+                    "value": "Work of primary trade\/craft (worth 1d10 sp)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Rival within guild",
+                    "chance": "30"
+                },
+                {
+                    "value": "Mission for guild master",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRADING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRADING_LORE",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+                    "value": "2",
+                    "num-choices": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "2",
+                    "num-choices": "1"
                 }
             ]
         },
@@ -6822,6 +7174,98 @@
                 },
                 {
                     "id": "SKILL_SPELL_MASTERY"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_HENCHMAN",
+            "name": "Henchman",
+            "description": "A henchman is usually a servant or employee of a more significant individual. For example a henchman could be a squire, bodyguard, valet, page, lady-in-waiting, messenger, butler, etc. A henchman often has access to his master's secrets and can call upon his master's protection so long as he serves faithfully.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "31",
+            "specials": [
+                {
+                    "value": "Favour from an important person",
+                    "chance": "50"
+                },
+                {
+                    "value": "Favour from former employer",
+                    "chance": "50"
+                },
+                {
+                    "value": "Good reputation among peers",
+                    "chance": "50"
+                },
+                {
+                    "value": "Secret about current employer",
+                    "chance": "50"
+                },
+                {
+                    "value": "Exceptional set of clothes",
+                    "chance": "50"
+                },
+                {
+                    "value": "Tools for primary job (+5 non-magic)",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SCROUNGING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SERVICE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SITUATIONAL_AWARENESS",
+                    "subcategory": "Employer's Attention",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2",
+                    "num-choices": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "2",
+                    "num-choices": "1"
                 }
             ]
         },
