@@ -8170,6 +8170,105 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_INNKEEPER",
+            "name": "Innkeeper",
+            "description": "An innkeeper is a person that runs and manages an establishment that provides lodging, food, and\/or drink to travelers. This training package could be used to represent vocations involving other types of commercial endeavors. An innkeeper is more than just a merchant; he is a friend who opens his home to travelers, he is a confidant who rewards good tales with drink and warm company, and he is an eternal source of news and rumors. Sometimes an innkeeper will hear a tale that is too good to ignore, and then he will pick up his rusty sword and leave the inn to go in search of adventure",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "28",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Close friends with a merchant",
+                    "chance": "50"
+                },
+                {
+                    "value": "Reputation as a good innkeeper",
+                    "chance": "60"
+                },
+                {
+                    "value": "Useful city contacts",
+                    "chance": "30"
+                },
+                {
+                    "value": "d10 Loyal customers",
+                    "chance": "50"
+                },
+                {
+                    "value": "Large debt to moneylender or noble",
+                    "chance": "40"
+                },
+                {
+                    "value": "Useful legends and adventure hooks",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADVERTISING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_BASIC_MATH",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SERVICE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TRADING",
+                    "value": "1"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "value": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_COOKING",
+                            "subcategory": "Stews"
+                        },
+                        {
+                            "id": "SKILL_COOKING",
+                            "subcategory": "Brewing"
+                        }
+                    ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2",
+                    "num-choices": "2"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_INQUISITOR",
             "name": "Inquisitor",
             "description": "The inquisitor has a focused mission; discover any who are not believers in his faith. His reasons for doing this will differ from religion to religion. He might be simply checking up on the church in a particular region, sent to straighten things out, or he can be sent to root out and torture those who do not believe.",
@@ -10836,6 +10935,89 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_MOTHER",
+            "name": "Mother",
+            "description": "A mother is just that- a female parent. Normally, only a female character of reproductive age (and with a child) may choose to take this training package. However, a GM may wish to allow any parent to take this package. The GM may decide that the training time varies according to the character's race and culture. Mothers often adventure when seeking to recover their lost children.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "9",
+            "specials": [
+                {
+                    "value": "Child",
+                    "chance": "50"
+                },
+                {
+                    "value": "Child",
+                    "chance": "30"
+                },
+                {
+                    "value": "Destined child",
+                    "chance": "10"
+                },
+                {
+                    "value": "First aid kit (+10 non-magic)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Backpack\/harness for carrying child",
+                    "chance": "50"
+                },
+                {
+                    "value": "Favour from another mother in community",
+                    "chance": "40"
+                },
+                {
+                    "value": "Child",
+                    "chance": "100"
+                }
+            ],
+            "stat-gains": [
+                "Empathy"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_COOKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_INTERROGATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "subcategory": "Moral",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SITUATIONAL_AWARENESS",
+                    "subcategory": "Potential Threat (to child)",
+                    "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_NECROMANCER",
             "name": "Necromancer",
             "description": "Digging up the past to work with the dead (hopefully to animate them), with plans of world domination are all part of day-to-day life for the Necromancer. His knowledge of the past allows him to find the remains of dead lords for the creation of the most powerful Undead.",
@@ -11070,6 +11252,103 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_NOBLE",
+            "name": "Noble",
+            "description": "Nobles are members of the ruling class. Usually, in a feudal society, they are raised from birth to be leaders and administrators. However, not all nobles rule-there are many minor nobles (2nd, 3rd, 4th sons) that do not own or control lands or money.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "true",
+            "time-to-acquire": "88",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Royal patron",
+                    "chance": "30"
+                },
+                {
+                    "value": "Favour from royalty",
+                    "chance": "20"
+                },
+                {
+                    "value": "Favour from an important person",
+                    "chance": "40"
+                },
+                {
+                    "value": "Family jewels (worth d100 sp)",
+                    "chance": "30"
+                },
+                {
+                    "value": "d5 rival siblings",
+                    "chance": "40"
+                },
+                {
+                    "value": "Evil relative determined to destroy you",
+                    "chance": "20"
+                },
+                {
+                    "value": "Riding horse\/beast (+10 Riding)",
+                    "chance": "100"
+                }
+            ],
+            "stat-gains": [
+                "Presence"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DIPLOMACY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HERALDRY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_POISON_PERCEPTION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2",
+                    "num-choices": "2"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_NOMENIST_CASTER",
             "name": "Nomenist Caster",
             "description": "The Nomenist is a master of language who forever seeks to learn new languages to find the words of the Primal Tongue that operate for themselves. Nomenists may be found in cosmopolitan cities or on the fringes of civilization in the pursuit of old or new languages.",
@@ -11268,6 +11547,86 @@
                         "SPELLLIST_FUTURE_VISIONS",
                         "SPELLLIST_STARLORE"
                     ]
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_PANHANDLER",
+            "name": "Panhandler",
+            "description": "The panhandler is a denizen of the city landscape. He makes a living by begging and taking handouts from oth- ers. A panhandler often has to disguise himself to avoid arousing anger in those he solicits for aid. A panhandler will do almost anything to better his position, even crawl into a dark cavern in search of a rumored treasure.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "26",
+            "specials": [
+                {
+                    "value": "Useful underworld contacts",
+                    "chance": "30"
+                },
+                {
+                    "value": "Tattered rags (+5 Begging)",
+                    "chance": "40"
+                },
+                {
+                    "value": "Disease (random bubonic disease)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Make-up kit (+10 Disguise)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Small palm knife (+10 Picking Pockets)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Tin begging cup",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BEGGING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DISGUISE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MINGLING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SCROUNGING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "3"
                 }
             ]
         },
@@ -11566,7 +11925,7 @@
             "book": "BOOK_MENTALISM_COMPANION",
             "lifestyle": "true",
             "time-to-acquire": "147",
-            "starting-money-modifier-dice": "d0",
+            "starting-money-modifier-dice": "d10",
             "specials": [
                 {
                     "value": "Superior medical kit (+20 nm to First Aid)",
@@ -11905,6 +12264,111 @@
             "category-multi-skill-rank-choices": [
                 {
                     "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ],
+            "group-category-and-skill-rank-choices": [
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_PIRATE",
+            "name": "Pirate",
+            "description": "A pirate is a roguish character who specializes in robbing vessels on the high seas. He is normally well versed in the lore of the sea and has many a tale to tell.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "true",
+            "time-to-acquire": "105",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Stolen jewelry (worth 5d10 sp)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Peg leg (+5 Tale Telling)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Parrot",
+                    "chance": "60"
+                },
+                {
+                    "value": "Eye patch (+5 Interrogation)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Weapon (+10 non-magic)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Treasure map",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_APPRAISAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ROPE_MASTERY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SAILING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SURVIVAL",
+                    "subcategory": "Sea",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "3"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value": "1",
                     "num-choices": "1"
                 }
@@ -13217,6 +13681,96 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_SCRIBE",
+            "name": "Scribe",
+            "description": "A scribe is usually an educated individual that makes a living by writing. Scribes can also be found copying manuscripts and other documents. Scribes seldom travel, but when they do, it is usually in the service of a patron or scholar who seeks to deliver a message or obtain a rare bit of lore.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "notes": [
+                "Communications choice should be a written language."
+            ],
+            "lifestyle": "false",
+            "time-to-acquire": "45",
+            "specials": [
+                {
+                    "value": "Set of pens and inkwell (+10 non-magic)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Book (+10 non-magic to a specific lore skill)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Contacts in local church",
+                    "chance": "30"
+                },
+                {
+                    "value": "Contacts among the nobility",
+                    "chance": "40"
+                },
+                {
+                    "value": "Esoteric arcane knowledge (GM discretion)",
+                    "chance": "10"
+                },
+                {
+                    "value": "Set of pens and inkwell (+5 non-magic)",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BASIC_MATH",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CALLIGRAPHY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MNEMONICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SCRIBING",
+                    "value": "2"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "value": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_PAINTING"
+                        },
+                        {
+                            "id": "SKILL_POETIC_IMPROVISATION"
+                        }
+                    ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "5",
+                    "num-choices": "1"
                 }
             ]
         },
@@ -15655,6 +16209,75 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_VETERINARIAN",
+            "name": "Veterinarian",
+            "description": "Veterinarians are primarily healers of animals. However, in a pinch, they can also patch up sentient beings. Rangers and Animists make good veterinarians, as they are close to the land and like to see animals in good shape. In a medi- eval society, veterinarians were almost as respected as doctors, since the economy depended on the livestock of the peasants.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "30",
+            "specials": [
+                {
+                    "value": "2d10 Concussion Repair herbs",
+                    "chance": "50"
+                },
+                {
+                    "value": "d10 General Purpose herbs",
+                    "chance": "50"
+                },
+                {
+                    "value": "Animal companion",
+                    "chance": "50"
+                },
+                {
+                    "value": "Favour of local farmer",
+                    "chance": "30"
+                },
+                {
+                    "value": "Emnity of local farmer",
+                    "chance": "30"
+                },
+                {
+                    "value": "Medical kil (+5 non-magical)",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HEALING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_DIAGNOSTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MIDWIFERY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SECOND_AID",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "3"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "3",
+                    "num-choices": "3"
                 }
             ]
         },
