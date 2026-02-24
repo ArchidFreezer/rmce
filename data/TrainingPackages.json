@@ -1141,6 +1141,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -1238,7 +1242,7 @@
             "book": "BOOK_CHARACTER_LAW",
             "lifestyle": "false",
             "time-to-acquire": "30",
-            "starting-money-modifier-dice": "xxx",
+            "starting-money-modifier-dice": "d10",
             "specials": [
                 {
                     "value": "Hand weapon (+10 non-magical)",
@@ -1404,6 +1408,106 @@
                 {
                     "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
                     "value": "2"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_ATHLETE",
+            "name": "Athlete",
+            "description": "An athlete is devoted to the pursuit of excellence in physical prowess. Athletes often obtain a level of fame comparable to adventurers, and they lead lives that are considerably less dangerous. An athlete can excel at almost any physical game or sport, although rarely does he compete in more than a few related activities.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "60",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Equipment used in athletic specialty (+10 non-magic)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Sporting event victory medal (worth 2d10 sp)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Competitive rival ",
+                    "chance": "50"
+                },
+                {
+                    "value": "d10 Loyal fans",
+                    "chance": "20"
+                },
+                {
+                    "value": "Wealthy sponsor",
+                    "chance": "20"
+                },
+                {
+                    "value": "Invitation to prestigious sporting event",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "value": "2",
+                    "options": [
+                        {
+                            "id": "SKILL_ATHLETIC_GAMES_GYMNASTIC"
+                        },
+                        {
+                            "id": "SKILL_ATHLETIC_GAMES_BRAWN"
+                        },
+                        {
+                            "id": "SKILL_ATHLETIC_GAMES_ENDURANCE"
+                        }
+                    ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ],
+            "group-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "2",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "2",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLGROUP_ATHLETIC",
+                    "value": "2",
+                    "num-choices": "1"
                 }
             ]
         },
@@ -1593,6 +1697,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "3"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -2003,6 +2111,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -2561,6 +2673,195 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_CAVALIER",
+            "name": "Cavalier",
+            "description": "A cavalier normally serves a lord, noble, or king of some kind. Most cavaliers follow a strict code of ethics and conduct. A cavalier would rather die than be dishonored. A cavalier typically travels across the countryside, slaying monsters and wooing ladies. He is the servant of his lord and the defender of the common man.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "30",
+            "specials": [
+                {
+                    "value": "Weapon (+10 non-magic)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Armour (+10 non-magic)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Shield (+5 non-magic)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Noble patron",
+                    "chance": "50"
+                },
+                {
+                    "value": "Affection of a married lady",
+                    "chance": "50"
+                },
+                {
+                    "value": "Fine horse (+10 riding)",
+                    "chance": "60"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_JOUSTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MOUNTED_COMBAT",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ],
+            "group-category-and-skill-rank-choices": [
+                {
+                    "id": "SKILLGROUP_ARTISTIC",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_CHAMBERLAIN",
+            "name": "Chamberlain",
+            "description": "A chamberlain is an official in charge of a sovereign or noble's household. He serves as an advisor, administrator and facilitator, keeping everything running smoothly while the lord attends to more important matters. A chamberlain often finds himself privy to his lord's private business, and can undertake quiet missions on his lord's behalf",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "true",
+            "time-to-acquire": "74",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Minor item related to office (i.e., a magical pen)",
+                    "chance": "10"
+                },
+                {
+                    "value": "Favour from an important person",
+                    "chance": "30"
+                },
+                {
+                    "value": "Favour from royalty",
+                    "chance": "30"
+                },
+                {
+                    "value": "Noble patron",
+                    "chance": "30"
+                },
+                {
+                    "value": "Knowledge of a political secret or intrigue",
+                    "chance": "50"
+                },
+                {
+                    "value": "Seal of office",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Local culture",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DIPLOMACY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local region",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SCROUNGING",
+                    "value": "1"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "value": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_FIRST_AID"
+                        },
+                        {
+                            "id": "SKILL_USING_PREPARED_HERBS"
+                        }
+                    ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "3",
+                    "num-choices": "3"
                 }
             ]
         },
@@ -3929,7 +4230,7 @@
                     "chance": "40"
                 },
                 {
-                    "value": "xxxSet of good crafting tools (+10 to a specific craft)",
+                    "value": "Set of good crafting tools (+10 to a specific craft)",
                     "chance": "30"
                 },
                 {
@@ -5278,6 +5579,85 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_ESCORT",
+            "name": "Escort",
+            "description": "An escort is a professional companion-as a friend, as an entertainer, and sometimes as a protector. Often escorts learn secrets about their clients that can lead them into adventures.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "29",
+            "specials": [
+                {
+                    "value": "Exceptional set of clothes",
+                    "chance": "50"
+                },
+                {
+                    "value": "Favour from an important person",
+                    "chance": "20"
+                },
+                {
+                    "value": "Favour from royalty",
+                    "chance": "20"
+                },
+                {
+                    "value": "Contact in the underworld ",
+                    "chance": "40"
+                },
+                {
+                    "value": "Embarrassing secret of a local noble",
+                    "chance": "30"
+                },
+                {
+                    "value": "Instrument used w\/ artistic skill (+5 non-magic)",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_DANCING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DUPING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "value": "3"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2",
+                    "num-choices": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_EXECUTIONER",
             "name": "Executioner",
             "description": "Even the most benevolent of rulers find that they must sometimes punish criminals, spies, or enemies with painful death. The Executioner is trained to do so with great efficiency. Executioners are trained in the art of torture and interrogation as well. In lands with public beheadings or hangings, the Executioner is often expected to make a grand display of torturing the prisoner for as long as possible. An Executioner with a brutal reputation can be a deterrent to criminals and spies by mere rumor alone.",
@@ -5522,6 +5902,96 @@
                 },
                 {
                     "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2",
+                    "num-choices": "2"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_FARMER",
+            "name": "Farmer",
+            "description": "Farmers devote their lives to growing the food that the rest of society consumes. Farmers usually make up a majority of the population. Usually a great tragedy must strike before a farmer will seek adventure. Sometimes a simple peasant lad is destined for greatness, and must leave his family farm to seek his fortune.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "true",
+            "time-to-acquire": "95",
+            "specials": [
+                {
+                    "value": "Superior farm impl. (+5 pitch fork, non-magic)",
+                    "chance": "20"
+                },
+                {
+                    "value": "d10 chickens",
+                    "chance": "50"
+                },
+                {
+                    "value": "Cow (+5 Herding)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Simple map of local area",
+                    "chance": "50"
+                },
+                {
+                    "value": "Riding beast (GM discretion)",
+                    "chance": "100"
+                }
+            ],
+            "stat-gains": [
+                "Constitution"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FLORA_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_HORTICULTURE",
+                    "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "2",
+                    "num-choices": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value": "2",
                     "num-choices": "2"
                 }
@@ -5802,6 +6272,187 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_GLADIATOR",
+            "name": "Gladiator",
+            "description": "A gladiator is a professional fighter (or captive) who is trained to fight other men or animals in order to entertain people. This usually occurs in a public arena, and sometimes they fight to the death.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "true",
+            "time-to-acquire": "116",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Weapon (+10 non-magical)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Noble patron",
+                    "chance": "50"
+                },
+                {
+                    "value": "Trophy (worth 2d10 sp)",
+                    "chance": "10"
+                },
+                {
+                    "value": "Shield (+10 non-magic)",
+                    "chance": "100"
+                }
+            ],
+            "stat-gains": [
+                "Constitution",
+                "Strength"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_BOXING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SPRINTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TUMBLING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_WRESTLING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_SPECIAL_ATTACKS",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ],
+            "group-category-and-skill-rank-choices": [
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_GOSSIP",
+            "name": "Gossip",
+            "description": "A gossip is adept at gathering information and then conveying it to others in the form of stories and tales. Gossips often know several incriminating facts about their neighbors and friends and they seldom keep these facts to themselves. Often a gossip won't even need to hear anything worth repeating, they'll make it up as long as they have an audience. Sometimes a gossip will overhear a tale that is just too good to share (like the location of buried treasure), but they usually cannot resist telling \"just a few people\".",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "22",
+            "specials": [
+                {
+                    "value": "Useful contacts with local innkeeper",
+                    "chance": "30"
+                },
+                {
+                    "value": "Incriminating secret (about someone else)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Embarrassing secret (about someone else)",
+                    "chance": "40"
+                },
+                {
+                    "value": "Valuable secret (about someone else) ",
+                    "chance": "30"
+                },
+                {
+                    "value": "Reputation as a gossip",
+                    "chance": "40"
+                },
+                {
+                    "value": "Large bar tab at local tavern",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_LIP_READING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "subcategory": "Trust",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SITUATIONAL_AWARENESS",
+                    "subcategory": "Eavesdropping",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TALE_TELLING",
+                    "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
                 }
             ]
         },
@@ -6081,6 +6732,98 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_GUIDE",
+            "name": "Guide",
+            "description": "A guide makes his living leading people from one place to another. Usually, a guide knows a lot about the out- doors and the region in which he operates. Most guides can be trusted to take their charges to their destination faithfully, but some are dishonest, and seek to make an easy profit by preying upon the ignorance of others.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "30",
+            "specials": [
+                {
+                    "value": "Weapon (+5 non-magic)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Weather resistant clothing",
+                    "chance": "50"
+                },
+                {
+                    "value": "Riding beast (GM discretion)",
+                    "chance": "40"
+                },
+                {
+                    "value": "Compass (+10 Navigation, Orienteering)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Reinforced rope (50' - can carry 25% more weight)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Detailed map of the region",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ORIENTEERING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TALE_TELLING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "2"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_GUILD_APPRENTICE",
             "name": "Guild Apprentice",
             "description": "A guild apprentice is taught the lessons of magic by either a mercantile group of magicians or by a member of an established guild. Guild apprentices spend a lot of time studying magic in great detail, from books and from direct instruction from one or more masters. Guild apprentices tend to be well educated and prepared for a career in a city. Guild apprentices are generally taught magic that will assist their master in the day to day maintenance of a business as well as spells that assist them in their studies.",
@@ -6199,6 +6942,89 @@
                     "options": [
                         "SPELLLIST_GUILDCRAFT_MASTERY"
                     ]
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_GUILD_MEMBER",
+            "name": "Guild Member",
+            "description": "Guild members are the principle tradesmen in a society that has a system of guilds. They make up the primary population of crafters, merchants, and artisans, selling their services to whomever can afford them. A guild member will often have influential contacts among the various power groups of a city, and will know who to talk with to get things done.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "18",
+            "specials": [
+                {
+                    "value": "Tools for primary trade\/craft (+10 non-magic)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Useful contacts with local tradesmen",
+                    "chance": "50"
+                },
+                {
+                    "value": "Reputation as an honest and skilled craftsman",
+                    "chance": "20"
+                },
+                {
+                    "value": "Work of primary trade\/craft (worth 1d10 sp)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Rival within guild",
+                    "chance": "30"
+                },
+                {
+                    "value": "Mission for guild master",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRADING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_TRADING_LORE",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_LORE_TECHNICAL",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+                    "value": "2",
+                    "num-choices": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "2",
+                    "num-choices": "1"
                 }
             ]
         },
@@ -6352,6 +7178,98 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_HENCHMAN",
+            "name": "Henchman",
+            "description": "A henchman is usually a servant or employee of a more significant individual. For example a henchman could be a squire, bodyguard, valet, page, lady-in-waiting, messenger, butler, etc. A henchman often has access to his master's secrets and can call upon his master's protection so long as he serves faithfully.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "31",
+            "specials": [
+                {
+                    "value": "Favour from an important person",
+                    "chance": "50"
+                },
+                {
+                    "value": "Favour from former employer",
+                    "chance": "50"
+                },
+                {
+                    "value": "Good reputation among peers",
+                    "chance": "50"
+                },
+                {
+                    "value": "Secret about current employer",
+                    "chance": "50"
+                },
+                {
+                    "value": "Exceptional set of clothes",
+                    "chance": "50"
+                },
+                {
+                    "value": "Tools for primary job (+5 non-magic)",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SCROUNGING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SERVICE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SITUATIONAL_AWARENESS",
+                    "subcategory": "Employer's Attention",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2",
+                    "num-choices": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_CRAFTS",
+                    "value": "2",
+                    "num-choices": "1"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_HEPHUZâD",
             "name": "Hephuzâd",
             "description": "The Hephuzâd are Dwarves who have begun to tread the path towards the craft that all Mountain Folk revere - smithwork. No Dwarf, no matter how ancient, how skilled, or how learned, is the smith he would wish to be. It is the most honored and respected of all Dwarven crafts, one of which every Dwarf will know at least a little. The Hephuzâd are the forge workers of a people that labors unceasingly, and are driven to master metals and jewels to create works of great splendor and strength.",
@@ -6446,7 +7364,7 @@
             "book": "BOOK_FANTASY_ROLE_PLAYING",
             "lifestyle": "false",
             "time-to-acquire": "33",
-            "starting-money-modifier-dice": "xxx",
+            "starting-money-modifier-dice": "d10",
             "specials": [
                 {
                     "value": "3 Poison antidotes",
@@ -6841,6 +7759,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -7242,6 +8164,105 @@
                 },
                 {
                     "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2",
+                    "num-choices": "2"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_INNKEEPER",
+            "name": "Innkeeper",
+            "description": "An innkeeper is a person that runs and manages an establishment that provides lodging, food, and\/or drink to travelers. This training package could be used to represent vocations involving other types of commercial endeavors. An innkeeper is more than just a merchant; he is a friend who opens his home to travelers, he is a confidant who rewards good tales with drink and warm company, and he is an eternal source of news and rumors. Sometimes an innkeeper will hear a tale that is too good to ignore, and then he will pick up his rusty sword and leave the inn to go in search of adventure",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "28",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Close friends with a merchant",
+                    "chance": "50"
+                },
+                {
+                    "value": "Reputation as a good innkeeper",
+                    "chance": "60"
+                },
+                {
+                    "value": "Useful city contacts",
+                    "chance": "30"
+                },
+                {
+                    "value": "d10 Loyal customers",
+                    "chance": "50"
+                },
+                {
+                    "value": "Large debt to moneylender or noble",
+                    "chance": "40"
+                },
+                {
+                    "value": "Useful legends and adventure hooks",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADVERTISING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_BASIC_MATH",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SERVICE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_TRADING",
+                    "value": "1"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "value": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_COOKING",
+                            "subcategory": "Stews"
+                        },
+                        {
+                            "id": "SKILL_COOKING",
+                            "subcategory": "Brewing"
+                        }
+                    ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
                     "value": "2",
                     "num-choices": "2"
                 }
@@ -9482,7 +10503,7 @@
             "group-category-and-skill-rank-choices": [
                 {
                     "id": "SKILLGROUP_WEAPON",
-                    "value": "1"
+                    "value": "2"
                 }
             ]
         },
@@ -9570,7 +10591,7 @@
             ],
             "lifestyle": "false",
             "time-to-acquire": "43",
-            "starting-money-modifier-dice": "xxx",
+            "starting-money-modifier-dice": "d10",
             "specials": [
                 {
                     "value": "One gem (worth 5d10 sp)",
@@ -9914,6 +10935,89 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_MOTHER",
+            "name": "Mother",
+            "description": "A mother is just that- a female parent. Normally, only a female character of reproductive age (and with a child) may choose to take this training package. However, a GM may wish to allow any parent to take this package. The GM may decide that the training time varies according to the character's race and culture. Mothers often adventure when seeking to recover their lost children.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "9",
+            "specials": [
+                {
+                    "value": "Child",
+                    "chance": "50"
+                },
+                {
+                    "value": "Child",
+                    "chance": "30"
+                },
+                {
+                    "value": "Destined child",
+                    "chance": "10"
+                },
+                {
+                    "value": "First aid kit (+10 non-magic)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Backpack\/harness for carrying child",
+                    "chance": "50"
+                },
+                {
+                    "value": "Favour from another mother in community",
+                    "chance": "40"
+                },
+                {
+                    "value": "Child",
+                    "chance": "100"
+                }
+            ],
+            "stat-gains": [
+                "Empathy"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ALERTNESS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_COOKING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FIRST_AID",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_INTERROGATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "subcategory": "Moral",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SITUATIONAL_AWARENESS",
+                    "subcategory": "Potential Threat (to child)",
+                    "value": "2"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "1"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_NECROMANCER",
             "name": "Necromancer",
             "description": "Digging up the past to work with the dead (hopefully to animate them), with plans of world domination are all part of day-to-day life for the Necromancer. His knowledge of the past allows him to find the remains of dead lords for the creation of the most powerful Undead.",
@@ -10148,6 +11252,103 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_NOBLE",
+            "name": "Noble",
+            "description": "Nobles are members of the ruling class. Usually, in a feudal society, they are raised from birth to be leaders and administrators. However, not all nobles rule-there are many minor nobles (2nd, 3rd, 4th sons) that do not own or control lands or money.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "true",
+            "time-to-acquire": "88",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Royal patron",
+                    "chance": "30"
+                },
+                {
+                    "value": "Favour from royalty",
+                    "chance": "20"
+                },
+                {
+                    "value": "Favour from an important person",
+                    "chance": "40"
+                },
+                {
+                    "value": "Family jewels (worth d100 sp)",
+                    "chance": "30"
+                },
+                {
+                    "value": "d5 rival siblings",
+                    "chance": "40"
+                },
+                {
+                    "value": "Evil relative determined to destroy you",
+                    "chance": "20"
+                },
+                {
+                    "value": "Riding horse\/beast (+10 Riding)",
+                    "chance": "100"
+                }
+            ],
+            "stat-gains": [
+                "Presence"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ADMINISTRATION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DIPLOMACY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HERALDRY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LEADERSHIP",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_LIE_PERCEPTION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_POISON_PERCEPTION",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_AWARENESS_SENSES",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2",
+                    "num-choices": "2"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_NOMENIST_CASTER",
             "name": "Nomenist Caster",
             "description": "The Nomenist is a master of language who forever seeks to learn new languages to find the words of the Primal Tongue that operate for themselves. Nomenists may be found in cosmopolitan cities or on the fringes of civilization in the pursuit of old or new languages.",
@@ -10346,6 +11547,86 @@
                         "SPELLLIST_FUTURE_VISIONS",
                         "SPELLLIST_STARLORE"
                     ]
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_PANHANDLER",
+            "name": "Panhandler",
+            "description": "The panhandler is a denizen of the city landscape. He makes a living by begging and taking handouts from oth- ers. A panhandler often has to disguise himself to avoid arousing anger in those he solicits for aid. A panhandler will do almost anything to better his position, even crawl into a dark cavern in search of a rumored treasure.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "26",
+            "specials": [
+                {
+                    "value": "Useful underworld contacts",
+                    "chance": "30"
+                },
+                {
+                    "value": "Tattered rags (+5 Begging)",
+                    "chance": "40"
+                },
+                {
+                    "value": "Disease (random bubonic disease)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Make-up kit (+10 Disguise)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Small palm knife (+10 Picking Pockets)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Tin begging cup",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BEGGING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_CONTACTING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CULTURE_LORE",
+                    "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_DISGUISE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MINGLING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SCROUNGING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "3"
                 }
             ]
         },
@@ -10644,7 +11925,7 @@
             "book": "BOOK_MENTALISM_COMPANION",
             "lifestyle": "true",
             "time-to-acquire": "147",
-            "starting-money-modifier-dice": "d0",
+            "starting-money-modifier-dice": "d10",
             "specials": [
                 {
                     "value": "Superior medical kit (+20 nm to First Aid)",
@@ -10983,6 +12264,111 @@
             "category-multi-skill-rank-choices": [
                 {
                     "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "1",
+                    "num-choices": "1"
+                }
+            ],
+            "group-category-and-skill-rank-choices": [
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_PIRATE",
+            "name": "Pirate",
+            "description": "A pirate is a roguish character who specializes in robbing vessels on the high seas. He is normally well versed in the lore of the sea and has many a tale to tell.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "true",
+            "time-to-acquire": "105",
+            "starting-money-modifier-dice": "d10",
+            "specials": [
+                {
+                    "value": "Stolen jewelry (worth 5d10 sp)",
+                    "chance": "20"
+                },
+                {
+                    "value": "Peg leg (+5 Tale Telling)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Parrot",
+                    "chance": "60"
+                },
+                {
+                    "value": "Eye patch (+5 Interrogation)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Weapon (+10 non-magic)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Treasure map",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_APPRAISAL",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CLIMBING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_REGION_LORE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_ROPE_MASTERY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SAILING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SURVIVAL",
+                    "subcategory": "Sea",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SWIMMING",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_WEATHER_WATCHING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "value": "3"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
                     "value": "1",
                     "num-choices": "1"
                 }
@@ -11407,6 +12793,10 @@
                 }
             ],
             "group-category-and-skill-rank-choices": [
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "2"
+                },
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "1"
@@ -12295,6 +13685,96 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_SCRIBE",
+            "name": "Scribe",
+            "description": "A scribe is usually an educated individual that makes a living by writing. Scribes can also be found copying manuscripts and other documents. Scribes seldom travel, but when they do, it is usually in the service of a patron or scholar who seeks to deliver a message or obtain a rare bit of lore.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "notes": [
+                "Communications choice should be a written language."
+            ],
+            "lifestyle": "false",
+            "time-to-acquire": "45",
+            "specials": [
+                {
+                    "value": "Set of pens and inkwell (+10 non-magic)",
+                    "chance": "30"
+                },
+                {
+                    "value": "Book (+10 non-magic to a specific lore skill)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Contacts in local church",
+                    "chance": "30"
+                },
+                {
+                    "value": "Contacts among the nobility",
+                    "chance": "40"
+                },
+                {
+                    "value": "Esoteric arcane knowledge (GM discretion)",
+                    "chance": "10"
+                },
+                {
+                    "value": "Set of pens and inkwell (+5 non-magic)",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BASIC_MATH",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_CALLIGRAPHY",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_MNEMONICS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_SCRIBING",
+                    "value": "2"
+                }
+            ],
+            "skill-rank-choices": [
+                {
+                    "num-choices": "1",
+                    "value": "1",
+                    "options": [
+                        {
+                            "id": "SKILL_PAINTING"
+                        },
+                        {
+                            "id": "SKILL_POETIC_IMPROVISATION"
+                        }
+                    ]
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "value": "1"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "value": "5",
+                    "num-choices": "1"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_SECRET_SOCIETY_MEMBER",
             "name": "Secret Society Member",
             "description": "The secret society member is a character who has been pulled from other walks of life and introduced to a secret movement. The current government does not support the movement's goals and thus the movement must keep a low profile. Members are taught how to fight and defend themselves for the time when the movement will come out of hiding and accomplish its goals.",
@@ -12754,6 +14234,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "2"
                 }
             ]
         },
@@ -12973,6 +14457,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -14255,6 +15743,10 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
@@ -14713,6 +16205,79 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "2"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_VETERINARIAN",
+            "name": "Veterinarian",
+            "description": "Veterinarians are primarily healers of animals. However, in a pinch, they can also patch up sentient beings. Rangers and Animists make good veterinarians, as they are close to the land and like to see animals in good shape. In a medi- eval society, veterinarians were almost as respected as doctors, since the economy depended on the livestock of the peasants.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "30",
+            "specials": [
+                {
+                    "value": "2d10 Concussion Repair herbs",
+                    "chance": "50"
+                },
+                {
+                    "value": "d10 General Purpose herbs",
+                    "chance": "50"
+                },
+                {
+                    "value": "Animal companion",
+                    "chance": "50"
+                },
+                {
+                    "value": "Favour of local farmer",
+                    "chance": "30"
+                },
+                {
+                    "value": "Emnity of local farmer",
+                    "chance": "30"
+                },
+                {
+                    "value": "Medical kil (+5 non-magical)",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_ANIMAL_HEALING",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_DIAGNOSTICS",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_MIDWIFERY",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_SECOND_AID",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "3"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "3",
+                    "num-choices": "3"
                 }
             ]
         },
@@ -14723,7 +16288,7 @@
             "book": "BOOK_CASTLES_RUINS",
             "lifestyle": "true",
             "time-to-acquire": "113",
-            "starting-money-modifier-dice": "xxx",
+            "starting-money-modifier-dice": "d10",
             "specials": [
                 {
                     "value": "Noble patron",
@@ -15249,6 +16814,18 @@
                 {
                     "id": "SKILLGROUP_WEAPON",
                     "value": "5"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "4"
+                },
+                {
+                    "id": "SKILLGROUP_WEAPON",
+                    "value": "1"
                 }
             ]
         },
