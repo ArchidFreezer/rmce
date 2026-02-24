@@ -108,7 +108,7 @@ int main() {
 		//language_parser.save("../../../../data/Languages2.json");
 		//poison_parser.save("../../../../data/Poisons2.json");
 		//poison_type_parser.save("../../../../data/PoisonTypes2.json");
-		profession_parser.save("../../../../data/Professions2.json");
+		//profession_parser.save("../../../../data/Professions2.json");
 		//race_parser.save("../../../../data/Races2.json");
 		//skill_category_parser.save("../../../../data/SkillCategories2.json");
 		//skill_group_parser.save("../../../../data/SkillGroups2.json");
@@ -116,7 +116,7 @@ int main() {
 		//skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
 		//special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
 		//spell_list_parser.save("../../../../data/SpellLists2.json");
-		//training_package_parser.save("../../../../data/TrainingPackages2.json");
+		training_package_parser.save("../../../../data/TrainingPackages2.json");
 		//treasure_code_parser.save("../../../../data/TreasureCodes2.json");
 		//weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 	} catch (std::runtime_error e) {

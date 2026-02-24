@@ -5567,6 +5567,85 @@
             ]
         },
         {
+            "id": "TRAININGPACKAGE_ESCORT",
+            "name": "Escort",
+            "description": "An escort is a professional companion-as a friend, as an entertainer, and sometimes as a protector. Often escorts learn secrets about their clients that can lead them into adventures.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "false",
+            "time-to-acquire": "29",
+            "specials": [
+                {
+                    "value": "Exceptional set of clothes",
+                    "chance": "50"
+                },
+                {
+                    "value": "Favour from an important person",
+                    "chance": "20"
+                },
+                {
+                    "value": "Favour from royalty",
+                    "chance": "20"
+                },
+                {
+                    "value": "Contact in the underworld ",
+                    "chance": "40"
+                },
+                {
+                    "value": "Embarrassing secret of a local noble",
+                    "chance": "30"
+                },
+                {
+                    "value": "Instrument used w/ artistic skill (+5 non-magic)",
+                    "chance": "100"
+                }
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_SEDUCTION",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILL_DUPING",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_DANCING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_INFLUENCE",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_URBAN",
+                    "value": "2",
+                    "num-choices": "2"
+                }
+            ]
+        },
+        {
             "id": "TRAININGPACKAGE_EXECUTIONER",
             "name": "Executioner",
             "description": "Even the most benevolent of rulers find that they must sometimes punish criminals, spies, or enemies with painful death. The Executioner is trained to do so with great efficiency. Executioners are trained in the art of torture and interrogation as well. In lands with public beheadings or hangings, the Executioner is often expected to make a grand display of torturing the prisoner for as long as possible. An Executioner with a brutal reputation can be a deterrent to criminals and spies by mere rumor alone.",
@@ -5811,6 +5890,96 @@
                 },
                 {
                     "id": "SKILLCATEGORY_POWER_AWARENESS",
+                    "value": "2",
+                    "num-choices": "2"
+                }
+            ]
+        },
+        {
+            "id": "TRAININGPACKAGE_FARMER",
+            "name": "Farmer",
+            "description": "Farmers devote their lives to growing the food that the rest of society consumes. Farmers usually make up a majority of the population. Usually a great tragedy must strike before a farmer will seek adventure. Sometimes a simple peasant lad is destined for greatness, and must leave his family farm to seek his fortune.",
+            "book": "BOOK_SCHOOL_OF_HARD_KNOCKS",
+            "lifestyle": "true",
+            "time-to-acquire": "95",
+            "specials": [
+                {
+                    "value": "Superior farm impl. (+5 pitch fork, non-magic)",
+                    "chance": "20"
+                },
+                {
+                    "value": "d10 chickens",
+                    "chance": "50"
+                },
+                {
+                    "value": "Cow (+5 Herding)",
+                    "chance": "50"
+                },
+                {
+                    "value": "Simple map of local area",
+                    "chance": "50"
+                },
+                {
+                    "value": "Riding beast (GM discretion)",
+                    "chance": "100"
+                }
+            ],
+            "stat-gains": [
+                "Constitution"
+            ],
+            "skill-ranks": [
+                {
+                    "id": "SKILL_BODY_DEVELOPMENT",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_HORTICULTURE",
+                    "value": "2"
+                },
+                {
+                    "id": "SKILL_FAUNA_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_FLORA_LORE",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_ANIMAL_HANDLING",
+                    "value": "1"
+                }
+            ],
+            "category-ranks": [
+                {
+                    "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "value": "2"
+                }
+            ],
+            "category-multi-skill-rank-choices": [
+                {
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "value": "2",
+                    "num-choices": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value": "2",
                     "num-choices": "2"
                 }
