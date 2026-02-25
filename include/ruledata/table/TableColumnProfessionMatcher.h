@@ -97,9 +97,9 @@ public:
 		case "PROFESSION_ZEN_MONK": return 33;
 		case "PROFESSION_CHAOTIC": return 34;
 		case "PROFESSION_MAGEHUNTER": return 35;
-		//case "PROFESSION_NIGHTBLADE": return 36;
-		//case "PROFESSION_DERVISH": return 37;
-		//case "PROFESSION_SWORD_DANCER": return 38;
+		case "PROFESSION_NIGHTBLADE": return 36;
+		case "PROFESSION_DERVISH": return 37;
+		case "PROFESSION_SWORD_DANCER": return 38;
 		case "PROFESSION_SEER": return 39;
 		case "PROFESSION_ASTROLOGER": return 40;
 		case "PROFESSION_ENCHANTER": return 41;
@@ -108,19 +108,23 @@ public:
 		case "PROFESSION_OUTRIDER": return 44;
 		case "PROFESSION_SAGE": return 45;
 		case "PROFESSION_SWASHBUCKLER": return 46;
-		//case "PROFESSION_SHAO_LIN_MONK": return 47;
-		//case "PROFESSION_ELEMENTALIST": return 48;
-		//case "PROFESSION_ELEMANTAL_PRIEST": return 49;
-		//case "PROFESSION_ELEMENTAL_CHAMPION": return 50;
-		//case "PROFESSION_ARCANE_ELEMENTALIST": return 51;
-		//case "PROFESSION_ELEMENTAL_EXPLORER": return 52;
-		//case "PROFESSION_PRIEST_CHAN_ESS": return 53;
-		//case "PROFESSION_PRIEST_CHAN_MENT": return 54;
-		//case "PROFESSION_PRIEST_CHAN_ARMS": return 55;
-		//case "PROFESSION_PRIEST_ARMS": return 56;
+		case "PROFESSION_SHAO_LIN_MONK": return 47;
+		case "PROFESSION_ELEMENTALIST": return 48;
+		case "PROFESSION_ELEMANTAL_PRIEST": return 49;
+		case "PROFESSION_ELEMENTAL_CHAMPION": return 50;
+		case "PROFESSION_ARCANE_ELEMENTALIST": return 51;
+		case "PROFESSION_ELEMENTAL_EXPLORER": return 52;
+		case "PROFESSION_PRIEST_CHAN_ESS": return 53;
+		case "PROFESSION_PRIEST_CHAN_MENT": return 54;
+		case "PROFESSION_PRIEST_CHAN_ARMS": return 55;
+		case "PROFESSION_PRIEST_ARMS": return 56;
 
 		default:
 			return -1; // Return -1 for unknown profession types
 		}
+	}
+
+	int numColumns() const {
+		return 57; // Total number of profession types defined in the switch statement
 	}
 }
