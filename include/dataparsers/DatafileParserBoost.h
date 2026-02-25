@@ -25,7 +25,7 @@ public:
 };
 
 /**
- * @class DatafileParser
+ * @class DatafileParserBoost
  * 
  * @brief Abstract class to facilitate reading and writing of game rule data to and from files.
  * 
@@ -35,7 +35,7 @@ public:
  * 
  * The class also contains a reference to a data cache where the data objects read from the file should be stored.
  */
-class DatafileParser
+class DatafileParserBoost
 {
 public:
 	/**
@@ -44,7 +44,7 @@ public:
 	 * @param datatype String containing the name of the type of data being processed
 	 * @param filename Path to the datafile to parse
 	 */
-	DatafileParser(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) :
+	DatafileParserBoost(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) :
 		cache_{ cache },
 		rule_datatype_{ datatype },
 		filename_{ filename },
@@ -55,14 +55,14 @@ public:
 	 * @param cache Reference to a cache object to store the data objects
 	 * @param datatype String containing the name of the type of data being processed
 	 */
-	DatafileParser(GameRuleDataCache& cache, std::string_view datatype) :	DatafileParser(cache, datatype, "") {}
+	DatafileParserBoost(GameRuleDataCache& cache, std::string_view datatype) :	DatafileParserBoost(cache, datatype, "") {}
 
 	/**
 	 * @brief Default destructor
 	 *
 	 * This is made virtual to define the class as polymorphic as a standard practice, even though there is another virtial method.
 	 */
-	virtual ~DatafileParser() = default;
+	virtual ~DatafileParserBoost() = default;
 	
 	/**
 	 * @brief Getter for the type of data being processed
@@ -159,7 +159,7 @@ private:
 };
 
 template<GameRuleDataObject T>
-inline void DatafileParser::populateGameRuleDataChoice(const GameRuleDataChoice<T>* game_data_choice, pt::ptree& tree) {
+inline void DatafileParserBoost::populateGameRuleDataChoice(const GameRuleDataChoice<T>* game_data_choice, pt::ptree& tree) {
 
 	// We want the same json output each time so we sort the data before we write them
 	std::set<std::string> option_set{};

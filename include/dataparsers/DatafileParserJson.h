@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include <DatafileParser.h>
+#include <DatafileParserBoost.h>
 #include <EnumChoice.h>
 #include <LanguageAbility.h>
 #include <SkillDevelopmentType.h>
@@ -11,14 +11,14 @@
  * @class DatafileParserJson
  * @brief Abstract class to parse json files containing game rule data
  *
- * This class implements the DatafileParser::read function to read the file into a boost ptree structure
+ * This class implements the DatafileParserBoost::read function to read the file into a boost ptree structure
  *
- * @see #DatafileParser
+ * @see #DatafileParserBoost
  */
-class DatafileParserJson : public DatafileParser {
+class DatafileParserJson : public DatafileParserBoost {
 public:
 	// We need this to prevent name hiding as we have a method with the same name defined in this class
-	using DatafileParser::read;
+	using DatafileParserBoost::read;
 	
 	/**
 	 * @brief Constructor
@@ -26,14 +26,14 @@ public:
 	 * @param datatype String containing the type of data to parse
 	 * @param filename Path to the datafile to parse
 	 */
-	DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) : DatafileParser(cache, datatype, filename) {}
+	DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) : DatafileParserBoost(cache, datatype, filename) {}
 
 	/**
 	 * @brief Constructor
 	 * @param cache Cache to use for #LanguageCategoryData objects
 	 * @param datatype String containing the type of data to parse
 	 */
-	DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype) : DatafileParser(cache, datatype) {}
+	DatafileParserJson(GameRuleDataCache& cache, std::string_view datatype) : DatafileParserBoost(cache, datatype) {}
 
 	/**
 	 * @brief Default destructor

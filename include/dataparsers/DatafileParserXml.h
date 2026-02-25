@@ -1,19 +1,19 @@
 #pragma once
 #include <iostream>
-#include "DatafileParser.h"
+#include "DatafileParserBoost.h"
 
 /**
  * @class DatafileParserXml
  * @brief Abstract class to parse xml files containing game rule data
  *
- * This class implements the DatafileParser::read function to read the file into a boost ptree structure
+ * This class implements the DatafileParserBoost::read function to read the file into a boost ptree structure
  *
- * @see #DatafileParser
+ * @see #DatafileParserBoost
  */
-class DatafileParserXml : public DatafileParser {
+class DatafileParserXml : public DatafileParserBoost {
 public:
 	// We need this to prevent name hiding as we have a method with the same name defined in this class
-	using DatafileParser::read;
+	using DatafileParserBoost::read;
 
 	/**
 	 * @brief Constructor
@@ -21,14 +21,14 @@ public:
 	 * @param datatype String containing the type of data to parse
 	 * @param filename Path to the datafile to parse
 	 */
-	DatafileParserXml(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) : DatafileParser(cache, datatype, filename) {}
+	DatafileParserXml(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) : DatafileParserBoost(cache, datatype, filename) {}
 
 	/**
 	 * @brief Constructor
 	 * @param cache Cache to use for #LanguageCategoryData objects
 	 * @param datatype String containing the type of data to parse
 	 */
-	DatafileParserXml(GameRuleDataCache& cache, std::string_view datatype) : DatafileParser(cache, datatype) {}
+	DatafileParserXml(GameRuleDataCache& cache, std::string_view datatype) : DatafileParserBoost(cache, datatype) {}
 
 	/**
 	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache

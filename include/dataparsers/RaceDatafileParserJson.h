@@ -20,7 +20,7 @@
 class RaceDatafileParserJson : public DatafileParserJson {
 public:
 	// We need this to prevent name hiding as we have a method with the same name defined in this class
-//	using DatafileParser::save;
+//	using DatafileParserBoost::save;
 
 	/**
 	 * @brief Constructor

@@ -61,7 +61,7 @@ int main() {
 	WeaponTypeDatafileParserJson weapon_type_parser(cache, "../../../../data/WeaponTypes.json");
 
 	// Store the parsers in a vector so we can iterate through them
-	std::vector<DatafileParser*> parsers;
+	std::vector<DatafileParserBoost*> parsers;
 	parsers.push_back(&animal_parser);
 	parsers.push_back(&armour_type_parser);
 	parsers.push_back(&attack_table_parser);
@@ -116,7 +116,7 @@ int main() {
 		//skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
 		//special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
 		//spell_list_parser.save("../../../../data/SpellLists2.json");
-		training_package_parser.save("../../../../data/TrainingPackages2.json");
+		//training_package_parser.save("../../../../data/TrainingPackages2.json");
 		//treasure_code_parser.save("../../../../data/TreasureCodes2.json");
 		//weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 	} catch (std::runtime_error e) {
