@@ -3,26 +3,9 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/xml_parser.hpp>
 #include <boost/property_tree/json_parser.hpp>
-#include <GameRuleDataCache.h>
-#include <GameRuleDataChoice.h>
-#include <GameRuleDataFactory.h>
+#include <DatafileParser.h>
 
 namespace pt = boost::property_tree;
-
-/**
- * @brief Exception thrown if a call is made to read from a file when the filename has not been set
- */
-class FilenameNotSetException : public std::runtime_error {
-public:
-	/**
-	 * @brief Exception constructor
-	 *
-	 * std::runtime_error will handle the string
-	 *
-	 * @param error String to display for the error
-	 */
-	FilenameNotSetException(const std::string& error) : std::runtime_error{ error }	{}
-};
 
 /**
  * @class DatafileParserBoost
@@ -35,7 +18,7 @@ public:
  * 
  * The class also contains a reference to a data cache where the data objects read from the file should be stored.
  */
-class DatafileParserBoost
+class DatafileParserBoost : public DatafileParser
 {
 public:
 	/**
@@ -44,11 +27,7 @@ public:
 	 * @param datatype String containing the name of the type of data being processed
 	 * @param filename Path to the datafile to parse
 	 */
-	DatafileParserBoost(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) :
-		cache_{ cache },
-		rule_datatype_{ datatype },
-		filename_{ filename },
-		factory_{ GameRuleDataFactory(cache) } {}
+	DatafileParserBoost(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) : DatafileParser(cache, datatype, filename) {}
 
 	/**
 	 * @brief Consructor
@@ -65,40 +44,6 @@ public:
 	virtual ~DatafileParserBoost() = default;
 	
 	/**
-	 * @brief Getter for the type of data being processed
-	 * @return String containing the name of the type of data being processed
-	 */
-	const std::string& ruleDatatype() const { return rule_datatype_; }
-
-	/**
-	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache
-	 * @param filename Path to the file to read the output from
-	 */
-	virtual void read(const std::string& filename) = 0;
-
-	/**
-	 * @brief Read game rule data from file, convert to objects and store in the game rule data cache
-	 * 
-	 * The file to be read from may be set in either the constructor or via methods
-	 * @see setFilename
-	 */
-	void read() { read(filename()); }
-
-	/**
-	 * @brief Write game rule data from the cache to a file
-	 * @param filename Path to the file to write the output to
-	 */
-	virtual void save(const std::string& filename) = 0;
-
-	/**
-	 * @brief Write game rule data from the cache to a file
-	 *
-	 * The file to save to from may be set in either the constructor or via methods
-	 * @see setFilename
-	 */
-	void save() { save(filename()); }
-
-	/**
 	 * @brief Clears all children from the boost ptree
 	 * 
 	 * This forces the datafile to be re-read
@@ -111,31 +56,7 @@ public:
 	 */
 	pt::ptree& ptree() { return ptree_; };
 
-	/**
-	 * @brief Get the game rule factoryfactorydata cache
-	 */
-	GameRuleDataFactory& factory() { return factory_; };
-
-	/**
-	 * @brief Get the file to parse
-	 * @return Pathe to the file to parse
-	 */
-	const std::string& filename() const { return filename_; };
-
-	/**
-	 * @brief Set the file to pasre
-	 * @param filename Path to the file to parse
-	 */
-	void setFilename(const std::string& filename) { filename_ = filename; };
-
 protected:
-	/**
-	 * @brief Parse a ptree into game data objects
-	 *
-	 * Parse a boost::ptree containing the language rule data, convert to objects and store in a data cache
-	 */
-	virtual void parse() = 0;
-
 	/**
 	 * @brief Process a GameRuleDataChoice object into a boost pt::ptree
 	 *
@@ -150,11 +71,7 @@ protected:
 	void populateGameRuleDataChoice(const GameRuleDataChoice<T>* game_data_choice, pt::ptree& tree);
 
 private:
-	GameRuleDataCache& cache_; /**< Reference to a cache object to store the data objects */
-	GameRuleDataFactory factory_; /**< Factory to act as wrapper to cache, creating objects if required */
 	pt::ptree ptree_{}; /**< Boost ptree to use when reading structured data file files */
-	std::string rule_datatype_{}; /**< Name of the type of data being processed */
-	std::string filename_{}; /**< Path to the file to parse */
 
 };
 
