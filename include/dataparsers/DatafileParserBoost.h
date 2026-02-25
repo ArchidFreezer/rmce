@@ -58,6 +58,13 @@ public:
 
 protected:
 	/**
+	 * @brief Parse a ptree into game data objects
+	 *
+	 * Parse a boost::ptree containing the language rule data, convert to objects and store in a data cache
+	 */
+	virtual void parse() = 0;
+
+	/**
 	 * @brief Process a GameRuleDataChoice object into a boost pt::ptree
 	 *
 	 * Utility function to simplify the parsing code, taking a GameRuleDataChoice<@a T> object and creating its

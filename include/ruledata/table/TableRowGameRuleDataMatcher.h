@@ -4,17 +4,15 @@
 /**
  * @class TableRowGameRuleDataMatcher
  * @brief Class to identify the row index in a table using GameRuleData objects as the key
- * 
- * @tparam T Type of GameRuleData object that this row matches
  */
-template <GameRuleDataObject T>
 class TableRowGameRuleDataMatcher {
 public:
+
 	/**
 	 * @brief Constructor
 	 * @param game_data GameRuleData object that this row matches
 	 */
-	TableRowGameRuleDataMatcher(const T& game_data) : game_data_{ &game_data } {}
+	TableRowGameRuleDataMatcher(const GameRuleData& game_data) : game_data_{ &game_data } {}
 
 	/**
 	 * @brief Implement an operator< method for the class
@@ -38,10 +36,10 @@ public:
 	 * @return `true` if \a game_data is matched by this row;
 	 * @return `false` if \a game_data is not matched by this row;
 	 */
-	bool matches(const T* game_data) const {
+	bool matches(const GameRuleData* game_data) const {
 		return game_data_->id() == game_data->id();
 	}
 
 private:
-	const T* game_data_{ nullptr }; /**< GameRuleData object that this row matches */
+	const GameRuleData* game_data_{ nullptr }; /**< GameRuleData object that this row matches */
 };

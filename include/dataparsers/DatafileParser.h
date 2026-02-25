@@ -108,14 +108,6 @@ public:
 	 */
 	void setFilename(const std::string& filename) { filename_ = filename; };
 
-protected:
-	/**
-	 * @brief Parse a ptree into game data objects
-	 *
-	 * Parse a boost::ptree containing the language rule data, convert to objects and store in a data cache
-	 */
-	virtual void parse() = 0;
-
 private:
 	GameRuleDataCache& cache_; /**< Reference to a cache object to store the data objects */
 	GameRuleDataFactory factory_; /**< Factory to act as wrapper to cache, creating objects if required */

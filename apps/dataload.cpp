@@ -24,6 +24,7 @@
 #include <SkillProgressionTypeDatafileParserJson.h>
 #include <SpecialAttackTableDatafileParserJson.h>
 #include <SpellListDatafileParserJson.h>
+#include <TrainingPackageCostTableDatafileParser.h>
 #include <TrainingPackageDatafileParserJson.h>
 #include <TreasureCodeDatafileParserJson.h>
 #include <WeaponTypeDatafileParserJson.h>
@@ -56,12 +57,13 @@ int main() {
 	SkillProgressionTypeDatafileParserJson skill_progression_parser(cache, "../../../../data/SkillProgressionTypes.json");
 	SpecialAttackTableDatafileParserJson special_attack_table_parser(cache, "../../../../data/SpecialAttackTables.json");
 	SpellListDatafileParserJson spell_list_parser(cache, "../../../../data/SpellLists.json");
+	TrainingPackageCostTableDatafileParser training_package_cost_table_parser(cache, "../../../../data/TrainingPackageCosts.tsv");
 	TrainingPackageDatafileParserJson training_package_parser(cache, "../../../../data/TrainingPackages.json");
 	TreasureCodeDatafileParserJson treasure_code_parser(cache, "../../../../data/TreasureCodes.json");
 	WeaponTypeDatafileParserJson weapon_type_parser(cache, "../../../../data/WeaponTypes.json");
 
 	// Store the parsers in a vector so we can iterate through them
-	std::vector<DatafileParserBoost*> parsers;
+	std::vector<DatafileParser*> parsers;
 	parsers.push_back(&animal_parser);
 	parsers.push_back(&armour_type_parser);
 	parsers.push_back(&attack_table_parser);
@@ -84,6 +86,7 @@ int main() {
 	parsers.push_back(&skill_progression_parser);
 	parsers.push_back(&special_attack_table_parser);
 	parsers.push_back(&spell_list_parser);
+	parsers.push_back(&training_package_cost_table_parser);
 	parsers.push_back(&training_package_parser);
 	parsers.push_back(&treasure_code_parser);
 	parsers.push_back(&weapon_type_parser);
@@ -93,6 +96,7 @@ int main() {
 		for (auto& parser : parsers) {
 			parser->read();
 		}
+
 
 		//animal_parser.save("../../../../data/Animals2.json");
 		//armour_type_parser.save("../../../../data/ArmourTypes2.json");
@@ -116,6 +120,7 @@ int main() {
 		//skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
 		//special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
 		//spell_list_parser.save("../../../../data/SpellLists2.json");
+		//training_package_cost_table_parser.save("../../../../data/TrainingPackageCosts2.tsv"); // Not cyurrently implemented as the data is already in a suitable format and there are no changes to be made to it, but this is here for completeness and in case we want to make changes to the data in the future
 		//training_package_parser.save("../../../../data/TrainingPackages2.json");
 		//treasure_code_parser.save("../../../../data/TreasureCodes2.json");
 		//weapon_type_parser.save("../../../../data/WeaponTypes2.json");

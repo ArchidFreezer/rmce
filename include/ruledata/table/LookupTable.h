@@ -160,8 +160,6 @@ inline const CellDatatype& LookupTable<RowMatcherClass, RowDatatype, ColumnMatch
 	}
 
 	// We didn't find a row so build the message to put in the exception
-	std::string msg{ "No rows found matching index(s): [" + std::to_string(row_index) };
-	if (unmodified_row_index != row_index) msg += ", " + std::to_string(unmodified_row_index);
-	msg += "]";
+	std::string msg{ "No rows found matching index(s)" };
 	throw RowNotFoundException(msg);
 }
