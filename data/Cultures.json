@@ -2198,11 +2198,6 @@
             "high-culture": "true",
             "background-languages": [
                 {
-                    "language": "LANGUAGE_ANY",
-                    "spoken": "4",
-                    "written": "4"
-                },
-                {
                     "language": "LANGUAGE_COMMON_SPEECH",
                     "spoken": "8",
                     "written": "8"
@@ -2352,11 +2347,6 @@
             "culture-type": "CULTURETYPE_LITTORAL",
             "high-culture": "true",
             "background-languages": [
-                {
-                    "language": "LANGUAGE_ANY",
-                    "spoken": "4",
-                    "written": "4"
-                },
                 {
                     "language": "LANGUAGE_COMMON_SPEECH",
                     "spoken": "8",
@@ -2508,11 +2498,6 @@
             "high-culture": "true",
             "background-languages": [
                 {
-                    "language": "LANGUAGE_ANY",
-                    "spoken": "4",
-                    "written": "4"
-                },
-                {
                     "language": "LANGUAGE_COMMON_SPEECH",
                     "spoken": "8",
                     "written": "8"
@@ -2653,11 +2638,6 @@
             "culture-type": "CULTURETYPE_LITTORAL",
             "high-culture": "true",
             "background-languages": [
-                {
-                    "language": "LANGUAGE_ANY",
-                    "spoken": "4",
-                    "written": "4"
-                },
                 {
                     "language": "LANGUAGE_COMMON_SPEECH",
                     "spoken": "8",
