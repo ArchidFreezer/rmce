@@ -1,0 +1,57 @@
+Fighter
+Thief
+Rogue
+Warrior Monk
+Layman
+Healer
+Mystic
+Warlock
+Sorcerer
+Runemage
+Summoner
+Magician
+Illusionist
+Ess. Alchemist
+Mana Molder
+Cleric
+Animist
+Chan. Alchemist
+Priest
+Mentalist
+Lay Healer
+Ment. Alchemist
+Arcanist
+Wizard
+Ranger
+Paladin
+Mythic
+Monk
+Taoist Monk
+Dabbler
+Warrior Mage
+Bard
+Magent
+Zen Monk
+Chaotic
+Magehunter
+Nightblade
+Dervish
+Sword-Dancer
+Seer
+Astrologer
+Enchanter
+Armsmaster
+Barbarian
+Outrider
+Sage
+Swashbuckler
+Shao-lin Monk
+Elementalist
+Elemental Priest
+Elemental Champion
+Arcane Elementalist
+Elemental Explorer
+Priest (Chan/Ess)
+Priest (Chan/Ment)
+Priest (Chan/Arms)
+Priest (Arms)
