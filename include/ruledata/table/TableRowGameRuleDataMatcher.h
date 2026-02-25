@@ -38,8 +38,8 @@ public:
 	 * @return `true` if \a game_data is matched by this row;
 	 * @return `false` if \a game_data is not matched by this row;
 	 */
-	bool matches(const T& game_data) const {
-		return game_data_->id() == game_data.id();
+	bool matches(const T* game_data) const {
+		return game_data_->id() == game_data->id();
 	}
 
 private:
