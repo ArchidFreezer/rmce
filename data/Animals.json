@@ -37,8 +37,8 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_HUMID",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
                 ]
             },
             "standard-attacks": [
@@ -100,10 +100,10 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -167,10 +167,10 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -242,10 +242,10 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -308,10 +308,10 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -389,13 +389,13 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -452,15 +452,15 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -518,14 +518,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -592,14 +592,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -671,15 +671,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "group-attacks": [
@@ -750,15 +750,15 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -816,14 +816,14 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -886,15 +886,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -967,14 +967,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1043,13 +1043,13 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1125,13 +1125,13 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1213,14 +1213,14 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1302,15 +1302,15 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1371,15 +1371,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "group-attacks": [
@@ -1436,14 +1436,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1520,15 +1520,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1612,15 +1612,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1687,13 +1687,13 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1768,12 +1768,12 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1850,16 +1850,16 @@
                     "Tundra"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -1917,15 +1917,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2001,11 +2001,11 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2076,14 +2076,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2162,14 +2162,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2230,11 +2230,11 @@
                     "Jungle"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2293,14 +2293,14 @@
                     "Plains"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2373,11 +2373,11 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2443,13 +2443,13 @@
                     "Lake"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2507,14 +2507,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2569,15 +2569,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2644,13 +2644,13 @@
                     "Glacier"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2708,15 +2708,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2787,12 +2787,12 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2869,16 +2869,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -2944,16 +2944,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3002,14 +3002,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3075,14 +3075,14 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3145,10 +3145,10 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3201,10 +3201,10 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3264,14 +3264,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3330,12 +3330,12 @@
                     "Lake"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3394,15 +3394,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3471,14 +3471,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3536,12 +3536,12 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3617,12 +3617,12 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3702,15 +3702,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3793,14 +3793,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3871,15 +3871,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -3946,14 +3946,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4023,14 +4023,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4095,16 +4095,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4154,16 +4154,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4223,16 +4223,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4301,15 +4301,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4378,15 +4378,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4456,8 +4456,8 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_HUMID",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
                 ]
             },
             "standard-attacks": [
@@ -4518,8 +4518,8 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_HUMID",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_HUMID"
                 ]
             },
             "standard-attacks": [
@@ -4588,15 +4588,15 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4655,14 +4655,14 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4736,8 +4736,8 @@
                     "Glacier"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -4804,15 +4804,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4839,7 +4839,7 @@
             "constitution-variance-type": "F",
             "level-variance-type": "D",
             "average-level": "4",
-            "treasure-code": "a",
+            "treasure-code": "TREASURECODE_A",
             "size": "Medium",
             "armour-type": "AT 12",
             "movement-speed": "Moderately Fast",
@@ -4876,11 +4876,11 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -4959,10 +4959,10 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5034,9 +5034,9 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_DRY"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY"
                 ]
             },
             "standard-attacks": [
@@ -5108,12 +5108,12 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5165,11 +5165,11 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5244,10 +5244,10 @@
                     "Plains"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5322,10 +5322,10 @@
                     "Plains"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5410,13 +5410,13 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5463,7 +5463,7 @@
             "constitution-variance-type": "E",
             "level-variance-type": "C",
             "average-level": "3",
-            "treasure-code": "a",
+            "treasure-code": "TREASURECODE_A",
             "size": "Medium",
             "armour-type": "AT 3",
             "movement-speed": "Medium",
@@ -5484,9 +5484,9 @@
                     "Deciduous"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5535,7 +5535,7 @@
             "constitution-variance-type": "F",
             "level-variance-type": "B",
             "average-level": "2",
-            "treasure-code": "f",
+            "treasure-code": "TREASURECODE_F",
             "size": "Medium",
             "armour-type": "AT 4",
             "movement-speed": "Moderately Fast",
@@ -5563,8 +5563,8 @@
                     "Glacier"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -5611,7 +5611,7 @@
             "constitution-variance-type": "E",
             "level-variance-type": "H",
             "average-level": "3",
-            "treasure-code": "a",
+            "treasure-code": "TREASURECODE_A",
             "size": "Large",
             "armour-type": "AT 3",
             "movement-speed": "Fast",
@@ -5645,9 +5645,9 @@
                     "Tundra"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5739,14 +5739,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5810,11 +5810,11 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5887,11 +5887,11 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -5938,7 +5938,7 @@
             "constitution-variance-type": "F",
             "level-variance-type": "E",
             "average-level": "5",
-            "treasure-code": "a",
+            "treasure-code": "TREASURECODE_A",
             "size": "Large",
             "armour-type": "AT 4",
             "movement-speed": "Moderately Fast",
@@ -5967,14 +5967,14 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "ranged-attacks": [
@@ -6007,7 +6007,7 @@
             "constitution-variance-type": "E",
             "level-variance-type": "F",
             "average-level": "6",
-            "treasure-code": "a",
+            "treasure-code": "TREASURECODE_A",
             "size": "Large",
             "armour-type": "AT 4",
             "movement-speed": "Medium",
@@ -6033,14 +6033,14 @@
                     "Plains"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6124,14 +6124,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6207,14 +6207,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6241,7 +6241,7 @@
             "constitution-variance-type": "D",
             "level-variance-type": "A",
             "average-level": "1",
-            "treasure-code": "a",
+            "treasure-code": "TREASURECODE_A",
             "size": "Medium",
             "armour-type": "AT 3",
             "movement-speed": "Very Fast",
@@ -6267,9 +6267,9 @@
                     "Plains"
                 ],
                 "climates": [
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6316,7 +6316,7 @@
             "constitution-variance-type": "F",
             "level-variance-type": "B",
             "average-level": "2",
-            "treasure-code": "a",
+            "treasure-code": "TREASURECODE_A",
             "size": "Medium",
             "armour-type": "AT 20",
             "movement-speed": "Slow",
@@ -6353,15 +6353,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6415,16 +6415,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6472,10 +6472,10 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6543,11 +6543,11 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6607,15 +6607,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6685,8 +6685,8 @@
                     "Lake"
                 ],
                 "climates": [
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6737,10 +6737,10 @@
                     "Islet"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6817,14 +6817,14 @@
                     "Jungle"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -6900,10 +6900,10 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -6963,12 +6963,12 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7041,12 +7041,12 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7131,11 +7131,11 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7215,12 +7215,12 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7287,13 +7287,13 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7339,15 +7339,15 @@
                     "Ocean"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7404,15 +7404,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7464,10 +7464,10 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7542,15 +7542,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7608,14 +7608,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7683,10 +7683,10 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -7744,14 +7744,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7808,13 +7808,13 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7890,13 +7890,13 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -7976,15 +7976,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8058,15 +8058,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8128,10 +8128,10 @@
                     "Jungle"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8205,11 +8205,11 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8292,14 +8292,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8358,16 +8358,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8426,16 +8426,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8493,16 +8493,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8566,12 +8566,12 @@
                     "Plains"
                 ],
                 "climates": [
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8644,11 +8644,11 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8705,9 +8705,9 @@
                     "Plains"
                 ],
                 "climates": [
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8772,14 +8772,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8839,14 +8839,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8919,15 +8919,15 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -8990,9 +8990,9 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9064,12 +9064,12 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9124,9 +9124,9 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -9177,12 +9177,12 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9240,9 +9240,9 @@
                     "Lake"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9327,15 +9327,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9395,14 +9395,14 @@
                     "Lake"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9471,14 +9471,14 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9556,14 +9556,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9631,12 +9631,12 @@
                     "Jungle"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9703,13 +9703,13 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9772,15 +9772,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9828,16 +9828,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -9902,12 +9902,12 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "group-attacks": [
@@ -9956,12 +9956,12 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10040,14 +10040,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10110,14 +10110,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10193,15 +10193,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10279,12 +10279,12 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10347,10 +10347,10 @@
                     "Glacier"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -10424,11 +10424,11 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10497,12 +10497,12 @@
                     "Lake"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10563,15 +10563,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10643,15 +10643,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10688,7 +10688,7 @@
             "constitution-variance-type": "C",
             "level-variance-type": "C",
             "average-level": "3",
-            "treasure-code": "a",
+            "treasure-code": "TREASURECODE_A",
             "size": "Small",
             "armour-type": "AT 4",
             "movement-speed": "Very Slow",
@@ -10713,13 +10713,13 @@
                     "Deciduous"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10779,14 +10779,14 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10834,12 +10834,12 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10909,11 +10909,11 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -10984,14 +10984,14 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11046,10 +11046,10 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -11105,10 +11105,10 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -11155,16 +11155,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11227,11 +11227,11 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "WARM_AVERAGE"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11287,11 +11287,11 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "WARM_AVERAGE"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11340,11 +11340,11 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11417,14 +11417,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11493,16 +11493,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11551,16 +11551,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11618,15 +11618,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11698,15 +11698,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11760,15 +11760,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11837,12 +11837,12 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -11905,13 +11905,13 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "group-attacks": [
@@ -11974,13 +11974,13 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12051,11 +12051,11 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12117,16 +12117,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12183,15 +12183,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12256,12 +12256,12 @@
                     "Plains"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12317,13 +12317,13 @@
                     "Jungle"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12383,16 +12383,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12450,8 +12450,8 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12513,10 +12513,10 @@
                     "Deciduous"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12557,7 +12557,7 @@
             "constitution-variance-type": "F",
             "level-variance-type": "D",
             "average-level": "4",
-            "treasure-code": "a",
+            "treasure-code": "TREASURECODE_A",
             "size": "Medium",
             "armour-type": "AT 8",
             "movement-speed": "Medium",
@@ -12592,11 +12592,11 @@
                     "Tundra"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12665,10 +12665,10 @@
                     "Deciduous"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12736,12 +12736,12 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12818,14 +12818,14 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "group-attacks": [
@@ -12898,13 +12898,13 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -12977,13 +12977,13 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13062,14 +13062,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13125,14 +13125,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13182,11 +13182,11 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13270,15 +13270,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13345,14 +13345,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13419,14 +13419,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13482,14 +13482,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13554,14 +13554,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13621,13 +13621,13 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13681,16 +13681,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13751,15 +13751,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -13818,10 +13818,10 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -13878,10 +13878,10 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -13942,13 +13942,13 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14020,13 +14020,13 @@
                     "Freshwater Coast"
                 ],
                 "climates": [
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14110,15 +14110,15 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14174,10 +14174,10 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14235,16 +14235,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14302,16 +14302,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14369,16 +14369,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14445,16 +14445,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14523,16 +14523,16 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14594,12 +14594,12 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14672,12 +14672,12 @@
                     "Oasis"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14760,14 +14760,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14820,10 +14820,10 @@
                     "Lake"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "FRIGID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_FRIGID"
                 ]
             },
             "standard-attacks": [
@@ -14890,12 +14890,12 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -14949,14 +14949,14 @@
                     "Saltwater Coast"
                 ],
                 "climates": [
-                    "COLD_DRY",
-                    "COOL_AVERAGE",
-                    "COOL_DRY",
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_COLD_DRY",
+                    "CLIMATE_COOL_DRY",
+                    "CLIMATE_COOL_TEMPERATE",
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [
@@ -15032,12 +15032,12 @@
                     "Marsh"
                 ],
                 "climates": [
-                    "HOT_AVERAGE",
-                    "HOT_DRY",
-                    "HOT_HUMID",
-                    "WARM_AVERAGE",
-                    "WARM_DRY",
-                    "WARM_HUMID"
+                    "CLIMATE_HOT_DRY",
+                    "CLIMATE_HOT_HUMID",
+                    "CLIMATE_HOT_TEMPERATE",
+                    "CLIMATE_WARM_DRY",
+                    "CLIMATE_WARM_HUMID",
+                    "CLIMATE_WARM_TEMPERATE"
                 ]
             },
             "standard-attacks": [

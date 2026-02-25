@@ -9104,7 +9104,7 @@
                     "num-choices": "1",
                     "type": "Everyman",
                     "options": [
-                        "SKILL_REGION"
+                        "SKILL_REGION_LORE"
                     ]
                 }
             ],
@@ -26036,6 +26036,20 @@
                     "value": "Occupational"
                 }
             ],
+            "skill-category-profession-bonuses": [
+                {
+                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "value": "5"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "value": "15"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "15"
+                }
+            ],
             "skill-category-skill-development-type-choices": [
                 {
                     "num-choices": "1",
@@ -26050,20 +26064,6 @@
                     "options": [
                         "SKILLCATEGORY_LORE_OBSCURE"
                     ]
-                }
-            ],
-            "skill-category-profession-bonuses": [
-                {
-                    "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
-                    "value": "5"
-                },
-                {
-                    "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
-                    "value": "15"
-                },
-                {
-                    "id": "SKILLCATEGORY_COMMUNICATION",
-                    "value": "15"
                 }
             ],
             "skill-category-costs": [

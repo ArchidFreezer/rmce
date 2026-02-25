@@ -201,7 +201,7 @@
                     "value": "2"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "2"
                 },
                 {
@@ -215,7 +215,7 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "2",
                     "num-choices": "2"
                 }
@@ -936,7 +936,7 @@
                     "value": "2"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "4"
                 },
                 {
@@ -950,14 +950,14 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "2",
-                    "num-choices": "2"
-                },
-                {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "4",
                     "num-choices": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "2",
+                    "num-choices": "2"
                 }
             ]
         },
@@ -1910,7 +1910,7 @@
                     "value": "6"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "1"
                 },
                 {
@@ -2523,7 +2523,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "2"
                 },
                 {
@@ -2555,6 +2555,11 @@
                     "num-choices": "1"
                 },
                 {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "4",
+                    "num-choices": "4"
+                },
+                {
                     "id": "SKILLCATEGORY_ARMOUR_LIGHT",
                     "value": "1",
                     "num-choices": "1"
@@ -2568,11 +2573,6 @@
                     "id": "SKILLCATEGORY_URBAN",
                     "value": "1",
                     "num-choices": "1"
-                },
-                {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "4",
-                    "num-choices": "4"
                 },
                 {
                     "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
@@ -2950,7 +2950,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "1"
                 },
                 {
@@ -3630,7 +3630,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "3"
                 },
                 {
@@ -3652,6 +3652,11 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "3",
+                    "num-choices": "1"
+                },
+                {
                     "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "4",
                     "num-choices": "4"
@@ -3660,11 +3665,6 @@
                     "id": "SKILLCATEGORY_LORE_TECHNICAL",
                     "value": "3",
                     "num-choices": "3"
-                },
-                {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "3",
-                    "num-choices": "1"
                 },
                 {
                     "id": "SKILLCATEGORY_LORE_MAGICAL",
@@ -3721,7 +3721,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "3"
                 },
                 {
@@ -3748,11 +3748,6 @@
                     "num-choices": "2"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "3",
-                    "num-choices": "2"
-                },
-                {
                     "id": "SKILLCATEGORY_CRAFTS",
                     "value": "3",
                     "num-choices": "1"
@@ -3761,6 +3756,11 @@
                     "id": "SKILLCATEGORY_SELF_CONTROL",
                     "value": "2",
                     "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "3",
+                    "num-choices": "2"
                 }
             ]
         },
@@ -4372,7 +4372,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "5"
                 },
                 {
@@ -4399,14 +4399,14 @@
                     "num-choices": "2"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "5",
-                    "num-choices": "5"
-                },
-                {
                     "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value": "1",
                     "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "5",
+                    "num-choices": "5"
                 },
                 {
                     "id": "SKILLCATEGORY_LORE_TECHNICAL",
@@ -4797,7 +4797,7 @@
                     "value": "2"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "2"
                 },
                 {
@@ -5009,7 +5009,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "6"
                 },
                 {
@@ -5023,7 +5023,7 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "6",
                     "num-choices": "6"
                 }
@@ -6447,7 +6447,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "1"
                 },
                 {
@@ -8965,7 +8965,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "2"
                 },
                 {
@@ -8992,13 +8992,13 @@
                     "num-choices": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "4",
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "value": "3",
                     "num-choices": "2"
                 },
                 {
-                    "id": "SKILLCATEGORY_LORE_GENERAL",
-                    "value": "3",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "4",
                     "num-choices": "2"
                 }
             ]
@@ -9821,7 +9821,7 @@
                     "value": "3"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "5"
                 },
                 {
@@ -9843,14 +9843,14 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "5",
-                    "num-choices": "3"
-                },
-                {
                     "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
                     "value": "3",
                     "num-choices": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "5",
+                    "num-choices": "3"
                 },
                 {
                     "id": "SKILLCATEGORY_INFLUENCE",
@@ -10480,11 +10480,6 @@
                     "num-choices": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "2",
-                    "num-choices": "1"
-                },
-                {
                     "id": "SKILLCATEGORY_ATHLETIC_BRAWN",
                     "value": "1",
                     "num-choices": "1"
@@ -10497,6 +10492,11 @@
                 {
                     "id": "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "value": "1",
+                    "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "2",
                     "num-choices": "1"
                 }
             ],
@@ -10560,7 +10560,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "3"
                 },
                 {
@@ -10570,14 +10570,14 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "3",
+                    "num-choices": "3"
+                },
+                {
                     "id": "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
                     "value": "1",
                     "num-choices": "1"
-                },
-                {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "3",
-                    "num-choices": "3"
                 }
             ]
         },
@@ -10760,7 +10760,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "3"
                 },
                 {
@@ -10890,7 +10890,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "4"
                 },
                 {
@@ -10908,14 +10908,14 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "5",
+                    "num-choices": "2"
+                },
+                {
                     "id": "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value": "1",
                     "num-choices": "1"
-                },
-                {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "5",
-                    "num-choices": "2"
                 }
             ],
             "spell-list-ranks": [
@@ -11800,7 +11800,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "5"
                 },
                 {
@@ -11810,11 +11810,6 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "5",
-                    "num-choices": "5"
-                },
-                {
                     "id": "SKILLCATEGORY_ARTISTIC_ACTIVE",
                     "value": "3",
                     "num-choices": "1"
@@ -11823,6 +11818,11 @@
                     "id": "SKILLCATEGORY_INFLUENCE",
                     "value": "2",
                     "num-choices": "2"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "5",
+                    "num-choices": "5"
                 },
                 {
                     "id": "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
@@ -11882,7 +11882,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "5"
                 },
                 {
@@ -11901,14 +11901,14 @@
                     "num-choices": "1"
                 },
                 {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "10",
+                    "num-choices": "5"
+                },
+                {
                     "id": "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
                     "value": "2",
                     "num-choices": "2"
-                },
-                {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "10",
-                    "num-choices": "5"
                 },
                 {
                     "id": "SKILLCATEGORY_LORE_GENERAL",
@@ -12463,7 +12463,7 @@
                     "value": "2"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "4"
                 },
                 {
@@ -12485,7 +12485,7 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "4",
                     "num-choices": "3"
                 }
@@ -13758,7 +13758,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "2"
                 },
                 {
@@ -13768,7 +13768,7 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "5",
                     "num-choices": "1"
                 }
@@ -14585,7 +14585,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "2"
                 },
                 {
@@ -14613,14 +14613,14 @@
                     "num-choices": "2"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "2",
-                    "num-choices": "2"
-                },
-                {
                     "id": "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "value": "3",
                     "num-choices": "3"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "2",
+                    "num-choices": "2"
                 }
             ],
             "spell-list-category-rank-choices": [
@@ -14655,11 +14655,6 @@
             ],
             "skill-ranks": [
                 {
-                    "id": "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
-                    "subcategory": "Cestûszak",
-                    "value": "1"
-                },
-                {
                     "id": "SKILL_SHIELD_MAKING",
                     "value": "2"
                 },
@@ -14672,6 +14667,11 @@
                     "id": "SKILL_TWO_WEAPON_COMBAT",
                     "subcategory": "Choice plus Cestûszak",
                     "value": "2"
+                },
+                {
+                    "id": "SKILL_WEAPON_1_H_CONCUSSION",
+                    "subcategory": "Cestûszak",
+                    "value": "1"
                 }
             ],
             "category-ranks": [
@@ -14831,7 +14831,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "1"
                 }
             ],
@@ -15492,7 +15492,7 @@
                     "value": "2"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "2"
                 },
                 {
@@ -15510,11 +15510,6 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "2",
-                    "num-choices": "2"
-                },
-                {
                     "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
                     "value": "2",
                     "num-choices": "2"
@@ -15528,6 +15523,11 @@
                     "id": "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "value": "4",
                     "num-choices": "4"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "2",
+                    "num-choices": "2"
                 },
                 {
                     "id": "SKILLCATEGORY_INFLUENCE",
@@ -15614,7 +15614,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "3"
                 },
                 {
@@ -15636,14 +15636,14 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "3",
+                    "num-choices": "3"
+                },
+                {
                     "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "4",
                     "num-choices": "4"
-                },
-                {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "3",
-                    "num-choices": "3"
                 }
             ],
             "group-category-and-skill-rank-choices": [
@@ -16080,11 +16080,6 @@
             ],
             "skill-ranks": [
                 {
-                    "id": "Riding",
-                    "subcategory": "Choice",
-                    "value": "1"
-                },
-                {
                     "id": "SKILL_PLAY_INSTRUMENT",
                     "subcategory": "Choice",
                     "value": "2"
@@ -16092,6 +16087,11 @@
                 {
                     "id": "SKILL_REGION_LORE",
                     "subcategory": "Local",
+                    "value": "1"
+                },
+                {
+                    "id": "SKILL_RIDING",
+                    "subcategory": "Choice",
                     "value": "1"
                 },
                 {
@@ -16105,7 +16105,7 @@
                     "value": "3"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "6"
                 },
                 {
@@ -16127,7 +16127,7 @@
             ],
             "category-multi-skill-rank-choices": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "6",
                     "num-choices": "3"
                 },
@@ -16442,7 +16442,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "3"
                 },
                 {
@@ -16465,12 +16465,12 @@
                     "num-choices": "3"
                 },
                 {
-                    "id": "SKILLCATEGORY_LORE_GENERAL",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "3",
                     "num-choices": "3"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "3",
                     "num-choices": "3"
                 }
@@ -16529,7 +16529,7 @@
                     "value": "2"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "4"
                 },
                 {
@@ -16570,11 +16570,6 @@
                     "num-choices": "3"
                 },
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
-                    "value": "4",
-                    "num-choices": "2"
-                },
-                {
                     "id": "SKILLCATEGORY_LORE_GENERAL",
                     "value": "3",
                     "num-choices": "2"
@@ -16583,6 +16578,11 @@
                     "id": "SKILLCATEGORY_SPECIAL_DEFENCES",
                     "value": "1",
                     "num-choices": "1"
+                },
+                {
+                    "id": "SKILLCATEGORY_COMMUNICATION",
+                    "value": "4",
+                    "num-choices": "2"
                 },
                 {
                     "id": "SKILLCATEGORY_LORE_TECHNICAL",
@@ -17025,7 +17025,7 @@
             ],
             "category-ranks": [
                 {
-                    "id": "SKILLCATEGORY_COMMUNICATIONS",
+                    "id": "SKILLCATEGORY_COMMUNICATION",
                     "value": "2"
                 },
                 {
