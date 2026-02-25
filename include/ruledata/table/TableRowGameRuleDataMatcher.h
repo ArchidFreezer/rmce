@@ -40,6 +40,12 @@ public:
 		return game_data_->id() == game_data->id();
 	}
 
+	/**
+	 * @brief Get the GameRuleData object that this row matches
+	 * @return Pointer to the GameRuleData object that this row matches
+	 */
+	const GameRuleData* gameData() const { return game_data_; }
+
 private:
 	const GameRuleData* game_data_{ nullptr }; /**< GameRuleData object that this row matches */
 };

@@ -32,5 +32,10 @@ public:
 	 */
 	void read(const std::string& filename) override;
 
-	void save(const std::string& filename) override { /* Not implemented as we do not need to write this data to file */ }
+	/**
+	 * @brief Write training package cost table data from the cache to a file
+	 * @param filename Path to the file to write the output to
+	 */
+	void save(const std::string& filename) override;
+
 };

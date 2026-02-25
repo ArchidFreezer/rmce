@@ -120,7 +120,7 @@ int main() {
 		//skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
 		//special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
 		//spell_list_parser.save("../../../../data/SpellLists2.json");
-		//training_package_cost_table_parser.save("../../../../data/TrainingPackageCosts2.tsv"); // Not cyurrently implemented as the data is already in a suitable format and there are no changes to be made to it, but this is here for completeness and in case we want to make changes to the data in the future
+		//training_package_cost_table_parser.save("../../../../data/TrainingPackageCosts2.tsv");
 		//training_package_parser.save("../../../../data/TrainingPackages2.json");
 		//treasure_code_parser.save("../../../../data/TreasureCodes2.json");
 		//weapon_type_parser.save("../../../../data/WeaponTypes2.json");

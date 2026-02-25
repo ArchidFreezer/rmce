@@ -51,3 +51,32 @@ void TrainingPackageCostTableDatafileParser::read(const std::string& filename) {
 		std::cout << "Adding training package cost table row for package: " << package_name << "\n";
 	}
 }
+
+void TrainingPackageCostTableDatafileParser::save(const std::string& filename) {
+	// Read the file and store the data in the cache
+	std::ofstream file(filename);
+
+	if (!file.is_open()) {
+		throw std::runtime_error("Could not open file: " + filename);
+	}
+
+	std::string id = "TRAINING_PACKAGE_COST_TABLE";
+	TrainingPackageCostTable& table = factory().get<TrainingPackageCostTable>(id);
+
+	// Sort the rows by the training package name and write them to the file, with the first column being the training package name and the rest being the costs for each profession
+	int num_cols{ 0 };
+	std::map<std::string, TableRow<int>> sorted_rows{};
+	std::map<const TableRowGameRuleDataMatcher*, TableRow<int>> rows = table.modified();
+	for (const auto& [matcher, row] : rows) {
+		sorted_rows[matcher->gameData()->id()] = row;
+		if (row.colCount() > num_cols) { num_cols = row.colCount();	}
+	}
+
+	for (const auto& [package_name, row] : sorted_rows) {
+		file << package_name;
+		for (int i{ 0 }; i < num_cols; i++) {
+			file << "\t" << row.cell(i);
+		}
+		file << "\n";
+	}
+}
