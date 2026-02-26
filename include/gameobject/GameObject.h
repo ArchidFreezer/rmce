@@ -48,34 +48,6 @@ public:
 	virtual ~GameObject() = default;
 
 	/**
-	 * @brief Copy constructor that creates a new GameObject from an existing one.
-	 * @param other The GameObject to copy from.
-	 */
-	GameObject(const GameObject& other) : id_{ other.id_ } {};
-
-	/**
-	 * @brief Assignment operator that assigns the unique identifier of another GameObject to this one.
-	 * @param other The GameObject to assign from.
-	 * @return A reference to this GameObject after assignment.
-	 */
-	GameObject& operator=(const GameObject& other) {
-		if (this != &other) {
-			id_ = other.id_;
-		}
-		return *this;
-	}
-
-	/**
-	 * @brief Set the unique id of the game data object
-	 *
-	 * Each object containing game rule data requires a unique identifier to allow it to be referenced. This method allows for serialisation and deserialization of the object by allowing the unique identifier to be set from a string reference.
-	 * This is necessary for deserialization where the unique identifier is stored as a string in the data file and needs to be converted back to a UUID when the object is created.
-	 *
-	 * @param id Unique identifier for the object as a string reference.
-	 */
-	void setId(const std::string& id) { id_ = boost::uuids::string_generator()(id); }
-
-	/**
 	 * @brief Get the unique id of the game data object
 	 *
 	 * Each object containing game rule data requires a unique identifier to allow it to be referenced. This method allows for the unique identifier to be retrieved as a string reference, which is necessary for serialisation where the unique
@@ -83,7 +55,7 @@ public:
 	 *
 	 * @return Identifier as a string reference.
 	 */
-	const std::string id() const { return to_string(id_); }
+	std::string id() const { return to_string(id_); }
 
 	/**
 	 * @brief Override the less than operator
