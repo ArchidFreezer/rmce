@@ -4,12 +4,16 @@
 
 /**
  * @class GameObjectFactory
- * @brief Factory class to get GameObject objects from their ID
+ * @brief Factory class to manage the creation and retrieval of GameObject objects
  *
+ * Persistent objects that need to be serialised should be managed through the #get methods.
+ * 
  * If the object already exists it will be retrieved from the cache and if not it will be created and moved into the cache
  * first and then retrieved and returned. In all cases the actual object reference returned will come from the cache to
  * ensure that the reference is to a persistent object.
- */
+ * 
+* Transient objects should use the #create method which does not use the cache and the objects will not be serialised.
+	*/
 class GameObjectFactory {
 public:
 
@@ -41,7 +45,10 @@ public:
 	/**
 	 * @brief Get a new GameObject object with a randomly generated UUID as its ID
 	 * 
-	 * The object is not added to the cache and is suitable for temporary objects that do not need to be referenced by ID, e.g. objects that are only used in the context of a single function call and do not need to be stored persistently.
+	 * The object is not added to the cache and is suitable for temporary objects that do not need to be referenced by ID, e.g. objects that are only used in the context of a single function call.
+	 * 
+	 * Objects created with this method will not be serialised.
+	 * 
 	 * @tparam T type of GameObject object to create
 	 * @return Uniqur pointer to GameObject object of type @a T
 	 */
@@ -50,6 +57,9 @@ public:
 
 	/**
 	 * @brief Get a new GameObject object with a randomly generated UUID as its ID and add it to the cache
+	 * 
+	 * Objects created with this method will be serialised.
+	 * 
 	 * @tparam T type of GameObject object to create
 	 * @return GameObject object from the cache of type @a T
 	 */
@@ -64,6 +74,9 @@ public:
 
 	/**
 	 * @brief Get standard GameObject objects that may be created with an ID only
+	 * 
+	 * Objects created with this method will be serialised.
+	 * 
 	 * @tparam T type of GameObject object to create
 	 * @param id Unique ID of the object
 	 * @return GameObject object from the cache of type @a T

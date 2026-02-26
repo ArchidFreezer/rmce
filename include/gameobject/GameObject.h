@@ -27,8 +27,10 @@ concept game_object = std::is_base_of<GameObject, T>::value;
  *
  * @brief Polymorphic class that is the base for objects that store data on the rules of the game
  *
- * This class is used as the base for all classes that contain objects with data for the game rules, e.g. Professions,
- * Languages, Skills, etc.
+ * This class is used as the base for all classes that define objects of specific in-game entities, either persistent or transient.
+ * 
+ * Creation of these objects is through a factory class that has members to create both persistent objects that will be serialised and transient objects that will not be serialised.
+ * @see GameObjectFactory
  */
 class GameObject {
 	friend class GameObjectFactory; // Allow the factory to access the private members of the class to set the unique identifier when creating objects
@@ -59,8 +61,8 @@ public:
 	 * The creation of this overload allows all GameObject objects to be used as keys in sorted containers
 	 *
 	 * @param other GameObject object to compoare against
-	 * @return `true` if this object is consdiered to be < \a other
-	 * @return `false` if this object is not consdiered to be < \a other
+	 * @return `true` if this object is considered to be < \a other
+	 * @return `false` if this object is not considered to be < \a other
 	 */
 	bool operator<(const GameObject& other) const { return (id_ < other.id_); }
 
@@ -70,8 +72,8 @@ public:
 	 * The creation of this overload allows all GameObject objects to be compared for equality based on their unique identifier
 	 *
 	 * @param other GameObject object to compoare against
-	 * @return `true` if this object is consdiered to be == \a other
-	 * @return `false` if this object is not consdiered to be == \a other
+	 * @return `true` if this object is considered to be == \a other
+	 * @return `false` if this object is not considered to be == \a other
 	 */
 	bool operator==(const GameObject& other) const { return (id_ == other.id_); }
 

@@ -13,7 +13,7 @@
  * @class GameObjectCache
  * @brief Class to persistently store game objects allowing other objects to safely store pointers.
  * 
- * Becasue the game objects are stored in the cache, other objects can store pointers to them without worrying about ownership and lifetime issues. This allows for more efficient memory usage and easier management of game objects.
+ * Because the game objects are stored in the cache, other objects can store pointers to them without worrying about ownership and lifetime issues. This allows for more efficient memory usage and easier management of game objects.
  *
  * The class is thread safe and can cache any object type that is derived from the polymorphic GameObject class
  *
