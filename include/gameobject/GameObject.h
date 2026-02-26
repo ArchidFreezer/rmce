@@ -31,14 +31,9 @@ concept game_object = std::is_base_of<GameObject, T>::value;
  * Languages, Skills, etc.
  */
 class GameObject {
+	friend class GameObjectFactory; // Allow the factory to access the private members of the class to set the unique identifier when creating objects
 
 public:
-	/**
-	 * @brief Default constructor
-	 *
-	 * Sets the unique identifier for the object to a randomly generated UUID. This ensures that each object has a unique identifier without requiring the caller to provide one.
-	 */
-	GameObject() : id_{ boost::uuids::random_generator()() } {};
 
 	/**
 	 * @brief Default destructor
@@ -46,6 +41,7 @@ public:
 	 * This is made virtual to define the class as polymorphic as a standard best practice.
 	 */
 	virtual ~GameObject() = default;
+
 
 	/**
 	 * @brief Get the unique id of the game data object
@@ -79,7 +75,32 @@ public:
 	 */
 	bool operator==(const GameObject& other) const { return (id_ == other.id_); }
 
+
 private:
 	boost::uuids::uuid id_; // Unique tag to ensure that each object has a unique identifier
 
+	/**
+	 * @brief Default constructor
+	 * 
+	 * This is private to ensure that the factory class is used to create objects
+	 * 
+	 * Sets the unique identifier for the object to a randomly generated UUID. This ensures that each object has a unique identifier without requiring the caller to provide one.
+	 */
+	GameObject() : id_{ boost::uuids::random_generator()() } {};
+
+	/**
+	 * @brief Default copy constructor for GameObject.
+	 * @param other The GameObject instance to copy from.
+	 */
+	GameObject(const GameObject& other) = default; // Default copy constructor
+	
+	/**
+	 * @brief Set the unique id of the game data object
+	 *
+	 * Each object containing game rule data requires a unique identifier to allow it to be referenced.
+	 * This is necessary for deserialization where the unique identifier is stored as a string in the data file and needs to be converted back to a UUID when the object is created.
+	 *
+	 * @param id Unique identifier for the object as a string reference.
+	 */
+	void setId(const std::string& id) { id_ = boost::uuids::string_generator()(id); }
 };

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <GameObject.h>
 #include <GameObjectCache.h>
 
 /**
@@ -47,7 +46,7 @@ public:
 	 * @return Uniqur pointer to GameObject object of type @a T
 	 */
 	template <game_object T>
-	std::unique_ptr<T> create() { return std::move(std::make_unique<T>());}
+	std::unique_ptr<T> create() { return std::unique_ptr<T>(new T()); }
 
 	/**
 	 * @brief Get a new GameObject object with a randomly generated UUID as its ID and add it to the cache
@@ -56,7 +55,8 @@ public:
 	 */
 	template<game_object T>
 	T& get() {
-		std::unique_ptr<T> obj = std::make_unique<T>();
+		// Create a new object and add it to the cache.
+		std::unique_ptr<T> obj(new T());
 		std::string id = obj->id(); // We need to store this as adding the object to the cache moves it, invalidating the object we have created
 		cache_.add<T>(std::move(obj));
 		return cache_.get<T>(id);
@@ -70,8 +70,11 @@ public:
 	 */
 	template<game_object T>
 	T& get(std::string id) {
+		// If the object already exists in the cache then we can return it without creating a new one
 		if (cache_.exists<T>(id)) return cache_.get<T>(id);
-		std::unique_ptr<T> obj = std::make_unique<T>();
+
+		// Create a new object and add it to the cache. We need to store the id as adding the object to the cache moves it, invalidating the object we have created
+		std::unique_ptr<T> obj(new T());
 		obj->setId(id);
 		cache_.add<T>(std::move(obj));
 		return cache_.get<T>(id);
