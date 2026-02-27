@@ -5,15 +5,15 @@ using namespace rm;
 
 namespace {
 	TEST(RaceData, AdolescentLanguageAbility) {
-		RaceData race("RACE_ID");
+		rule::RaceData race("RACE_ID");
 
-		LanguageData l1("L1_ID");
+		rule::LanguageData l1("L1_ID");
 		l1.setName("L1_NAME");
 		l1.setIsSomantic(true);
 		LanguageAbility la1(l1, 6, 4, 2);
 		race.setAdolescentLanguageAbility(la1);
 
-		LanguageData l2("L2_ID");
+		rule::LanguageData l2("L2_ID");
 		l2.setName("L2_NAME");
 		LanguageAbility la2(l2, 5, 5, 0);
 		race.setAdolescentLanguageAbility(la2);
@@ -32,15 +32,15 @@ namespace {
 	}
 
 	TEST(RaceData, StartingLanguageAbility) {
-		RaceData race("RACE_ID");
+		rule::RaceData race("RACE_ID");
 
-		LanguageData l1("L1_ID");
+		rule::LanguageData l1("L1_ID");
 		l1.setName("L1_NAME");
 		l1.setIsSomantic(true);
 		LanguageAbility la1(l1, 6, 4, 2);
 		race.setStartingLanguageAbility(la1);
 
-		LanguageData l2("L2_ID");
+		rule::LanguageData l2("L2_ID");
 		l2.setName("L2_NAME");
 		LanguageAbility la2(l2, 5, 5, 0);
 		race.setStartingLanguageAbility(la2);
@@ -59,7 +59,7 @@ namespace {
 	}
 
 	TEST(RaceData, StatBonus) {
-		RaceData race("RACE_ID");
+		rule::RaceData race("RACE_ID");
 
 		race.setStatBonus(rule::enums::StatType::kAgility, 5);
 		race.setStatBonus(rule::enums::StatType::kStrength, 10);
@@ -76,21 +76,21 @@ namespace {
 	}
 
 	TEST(RaceData, EverymanSkills) {
-		RaceData race("RACE_ID");
+		rule::RaceData race("RACE_ID");
 
-		SkillData sk1("SKILL1_ID");
-		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
+		rule::SkillData sk1("SKILL1_ID");
+		rule::SkillData sk2("SKILL2_ID");
+		rule::SubcategoriedSkillData s1(sk1, "Sub");
+		rule::SubcategoriedSkillData s2(sk2, "Sub");
 		EXPECT_STREQ(s1.id().c_str(), "SKILL1_ID_Sub");
 
 		race.addEverymanSkill(std::move(s1));
 		race.addEverymanSkill(std::move(s2));
 
-		const std::set<SubcategoriedSkillData> eset(race.everymanSkills());
+		const std::set<rule::SubcategoriedSkillData> eset(race.everymanSkills());
 		EXPECT_EQ(eset.size(), 2);
 
-		const std::set<SubcategoriedSkillData> eset2(race.everymanSkills());
+		const std::set<rule::SubcategoriedSkillData> eset2(race.everymanSkills());
 		EXPECT_EQ(eset2.size(), 2);
 
 		int count{ 0 };
@@ -101,36 +101,36 @@ namespace {
 		}
 		EXPECT_EQ(count, 2);
 
-		SubcategoriedSkillData s2b(sk2, "Sub");
+		rule::SubcategoriedSkillData s2b(sk2, "Sub");
 		EXPECT_FALSE(race.isEverymanSkill(sk2));
 		EXPECT_TRUE(race.isEverymanSkill(sk2, "Sub"));
-		EXPECT_THROW(race.addEverymanSkill(std::move(s2b)), InvalidSkillDevelopment);
+		EXPECT_THROW(race.addEverymanSkill(std::move(s2b)), rule::InvalidSkillDevelopment);
 
-		SkillData sk3("SKILL3_ID");
+		rule::SkillData sk3("SKILL3_ID");
 		EXPECT_FALSE(race.isEverymanSkill(sk3));
 
-		SkillData sk4("SKILL4_ID");
-		SubcategoriedSkillData s4(sk4, "");
+		rule::SkillData sk4("SKILL4_ID");
+		rule::SubcategoriedSkillData s4(sk4, "");
 		race.addRestrictedSkill(std::move(s4));
-		SubcategoriedSkillData s5(sk4, "");
-		EXPECT_THROW(race.addEverymanSkill(std::move(s5)), InvalidSkillDevelopment);
+		rule::SubcategoriedSkillData s5(sk4, "");
+		EXPECT_THROW(race.addEverymanSkill(std::move(s5)), rule::InvalidSkillDevelopment);
 	}
 
 	TEST(RaceData, RestrictedSkills) {
-		RaceData race("RACE_ID");
+		rule::RaceData race("RACE_ID");
 
-		SkillData sk1("SKILL1_ID");
-		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
+		rule::SkillData sk1("SKILL1_ID");
+		rule::SkillData sk2("SKILL2_ID");
+		rule::SubcategoriedSkillData s1(sk1, "Sub");
+		rule::SubcategoriedSkillData s2(sk2, "Sub");
 
 		race.addRestrictedSkill(std::move(s1));
 		race.addRestrictedSkill(std::move(s2));
 
-		const std::set<SubcategoriedSkillData> eset(race.restrictedSkills());
+		const std::set<rule::SubcategoriedSkillData> eset(race.restrictedSkills());
 		EXPECT_EQ(eset.size(), 2);
 
-		const std::set<SubcategoriedSkillData> eset2(race.restrictedSkills());
+		const std::set<rule::SubcategoriedSkillData> eset2(race.restrictedSkills());
 		EXPECT_EQ(eset2.size(), 2);
 
 		int count{ 0 };
@@ -141,37 +141,37 @@ namespace {
 		}
 		EXPECT_EQ(count, 2);
 
-		SkillData sk2b("SKILL2_ID");
-		SubcategoriedSkillData s2b(sk2b, "Sub");
+		rule::SkillData sk2b("SKILL2_ID");
+		rule::SubcategoriedSkillData s2b(sk2b, "Sub");
 		EXPECT_FALSE(race.isRestrictedSkill(sk2b));
 		EXPECT_TRUE(race.isRestrictedSkill(sk2b, "Sub"));
-		EXPECT_THROW(race.addRestrictedSkill(std::move(s2b)), InvalidSkillDevelopment);
+		EXPECT_THROW(race.addRestrictedSkill(std::move(s2b)), rule::InvalidSkillDevelopment);
 
-		SkillData sk3("SKILL3_ID");
+		rule::SkillData sk3("SKILL3_ID");
 		EXPECT_FALSE(race.isRestrictedSkill(sk3));
 
-		SkillData sk4("SKILL4_ID");
-		SubcategoriedSkillData s4(sk4, "");
+		rule::SkillData sk4("SKILL4_ID");
+		rule::SubcategoriedSkillData s4(sk4, "");
 		race.addEverymanSkill(std::move(s4));
-		SubcategoriedSkillData s5(sk4, "");
-		EXPECT_THROW(race.addRestrictedSkill(std::move(s5)), InvalidSkillDevelopment);
+		rule::SubcategoriedSkillData s5(sk4, "");
+		EXPECT_THROW(race.addRestrictedSkill(std::move(s5)), rule::InvalidSkillDevelopment);
 	}
 
 	TEST(RaceData, EverymanSkillCategories) {
-		RaceData race("RACE_ID");
+		rule::RaceData race("RACE_ID");
 
-		SkillCategoryData s1("SKILL1_ID");
-		SkillCategoryData s2("SKILL2_ID");
+		rule::SkillCategoryData s1("SKILL1_ID");
+		rule::SkillCategoryData s2("SKILL2_ID");
 
 		race.addEverymanSkillCategory(s1);
 		race.addEverymanSkillCategory(s2);
 
-		std::set<const SkillCategoryData*> eset(race.everymanSkillCategories());
+		std::set<const rule::SkillCategoryData*> eset(race.everymanSkillCategories());
 		EXPECT_EQ(eset.size(), 2);
 		eset.clear();
 		EXPECT_EQ(eset.size(), 0);
 
-		std::set<const SkillCategoryData*> eset2(race.everymanSkillCategories());
+		std::set<const rule::SkillCategoryData*> eset2(race.everymanSkillCategories());
 		EXPECT_EQ(eset2.size(), 2);
 
 		int count{ 0 };
@@ -182,33 +182,33 @@ namespace {
 		}
 		EXPECT_EQ(count, 2);
 
-		SkillCategoryData s2b("SKILL2_ID");
+		rule::SkillCategoryData s2b("SKILL2_ID");
 		EXPECT_TRUE(race.isEverymanSkillCategory(s2b));
-		EXPECT_THROW(race.addEverymanSkillCategory(s2b), InvalidSkillDevelopment);
+		EXPECT_THROW(race.addEverymanSkillCategory(s2b), rule::InvalidSkillDevelopment);
 
-		SkillCategoryData s3("SKILL3_ID");
+		rule::SkillCategoryData s3("SKILL3_ID");
 		EXPECT_FALSE(race.isEverymanSkillCategory(s3));
 
-		SkillCategoryData s4("SKILL4_ID");
+		rule::SkillCategoryData s4("SKILL4_ID");
 		race.addRestrictedSkillCategory(s4);
-		EXPECT_THROW(race.addEverymanSkillCategory(s4), InvalidSkillDevelopment);
+		EXPECT_THROW(race.addEverymanSkillCategory(s4), rule::InvalidSkillDevelopment);
 	}
 
 	TEST(RaceData, RestrictedSkillCategories) {
-		RaceData race("RACE_ID");
+		rule::RaceData race("RACE_ID");
 
-		SkillCategoryData s1("SKILL1_ID");
-		SkillCategoryData s2("SKILL2_ID");
+		rule::SkillCategoryData s1("SKILL1_ID");
+		rule::SkillCategoryData s2("SKILL2_ID");
 
 		race.addRestrictedSkillCategory(s1);
 		race.addRestrictedSkillCategory(s2);
 
-		std::set<const SkillCategoryData*> eset(race.restrictedSkillCategories());
+		std::set<const rule::SkillCategoryData*> eset(race.restrictedSkillCategories());
 		EXPECT_EQ(eset.size(), 2);
 		eset.clear();
 		EXPECT_EQ(eset.size(), 0);
 
-		std::set<const SkillCategoryData*> eset2(race.restrictedSkillCategories());
+		std::set<const rule::SkillCategoryData*> eset2(race.restrictedSkillCategories());
 		EXPECT_EQ(eset2.size(), 2);
 
 		int count{ 0 };
@@ -219,28 +219,28 @@ namespace {
 		}
 		EXPECT_EQ(count, 2);
 
-		SkillCategoryData s2b("SKILL2_ID");
+		rule::SkillCategoryData s2b("SKILL2_ID");
 		EXPECT_TRUE(race.isRestrictedSkillCategory(s2b));
-		EXPECT_THROW(race.addRestrictedSkillCategory(s2b), InvalidSkillDevelopment);
+		EXPECT_THROW(race.addRestrictedSkillCategory(s2b), rule::InvalidSkillDevelopment);
 
-		SkillCategoryData s3("SKILL3_ID");
+		rule::SkillCategoryData s3("SKILL3_ID");
 		EXPECT_FALSE(race.isRestrictedSkillCategory(s3));
 
-		SkillCategoryData s4("SKILL4_ID");
+		rule::SkillCategoryData s4("SKILL4_ID");
 		race.addEverymanSkillCategory(s4);
-		EXPECT_THROW(race.addRestrictedSkillCategory(s4), InvalidSkillDevelopment);
+		EXPECT_THROW(race.addRestrictedSkillCategory(s4), rule::InvalidSkillDevelopment);
 	}
 
 	TEST(RaceData, SkillBonus) {
-		RaceData race("RACE_ID");
+		rule::RaceData race("RACE_ID");
 
-		SkillData sk1("SKILL1_ID");
-		SkillData sk1a("SKILL1_ID");
-		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s1a(sk1a, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
-		SubcategoriedSkillData s2a(sk2, "Sub");
+		rule::SkillData sk1("SKILL1_ID");
+		rule::SkillData sk1a("SKILL1_ID");
+		rule::SkillData sk2("SKILL2_ID");
+		rule::SubcategoriedSkillData s1(sk1, "Sub");
+		rule::SubcategoriedSkillData s1a(sk1a, "Sub");
+		rule::SubcategoriedSkillData s2(sk2, "Sub");
+		rule::SubcategoriedSkillData s2a(sk2, "Sub");
 
 		race.setSkillBonus(std::move(s1), 5);
 		race.setSkillBonus(std::move(s2), 10);
@@ -252,7 +252,7 @@ namespace {
 		EXPECT_FALSE(race.isBonusSkill(sk1, "Invalid"));
 		EXPECT_TRUE(race.isBonusSkill(sk1, "Sub"));
 
-		EXPECT_THROW(race.setSkillBonus(std::move(s1a), 15), InvalidSkillBonus);
+		EXPECT_THROW(race.setSkillBonus(std::move(s1a), 15), rule::InvalidSkillBonus);
 		EXPECT_EQ(race.skillBonus(s2a), 10);
 
 		EXPECT_EQ(race.skillBonus(sk2, "Sub"), 10);
@@ -269,8 +269,8 @@ namespace {
 	}
 
 	TEST(RaceData, Book) {
-		RaceData race("RACE_ID");
-		BookData book("TEST_BOOK");
+		rule::RaceData race("RACE_ID");
+		rule::BookData book("TEST_BOOK");
 
 		EXPECT_FALSE(race.book());
 		race.setBook(book);
@@ -279,16 +279,16 @@ namespace {
 	}
 
 	TEST(ProfessionData, EverymanSkillCategoryChoices) {
-		RaceData race("RACE_ID");
+		rule::RaceData race("RACE_ID");
 
 		// Putting the choice in a block means that we are testing an object has gone out of scope
 		{
-			GameRuleDataChoice<SkillCategoryData> choice1{};
+			rule::GameRuleDataChoice<rule::SkillCategoryData> choice1{};
 			choice1.setNumChoices(1);
 
-			SkillCategoryData s1("SKILL1_ID");
-			SkillCategoryData s2("SKILL2_ID");
-			SkillCategoryData s3("SKILL3_ID");
+			rule::SkillCategoryData s1("SKILL1_ID");
+			rule::SkillCategoryData s2("SKILL2_ID");
+			rule::SkillCategoryData s3("SKILL3_ID");
 			choice1.addOption(s1);
 			choice1.addOption(s2);
 			choice1.addOption(s3);
@@ -302,11 +302,11 @@ namespace {
 			EXPECT_EQ(choice.numOptions(), 3);
 		}
 
-		GameRuleDataChoice<SkillCategoryData> choice2{};
+		rule::GameRuleDataChoice<rule::SkillCategoryData> choice2{};
 		choice2.setNumChoices(2);
 
-		SkillCategoryData s1a("SKILL1a_ID");
-		SkillCategoryData s2a("SKILL2a_ID");
+		rule::SkillCategoryData s1a("SKILL1a_ID");
+		rule::SkillCategoryData s2a("SKILL2a_ID");
 		choice2.addOption(s1a);
 		choice2.addOption(s2a);
 		race.addCategoryEverymanSkillChoice(choice2);

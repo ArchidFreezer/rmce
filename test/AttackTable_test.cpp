@@ -7,8 +7,8 @@ using namespace rm;
 
 namespace {
 
-	TableRow<std::string> buildATRow(std::string prefix, int row_num) {
-		TableRow<std::string> tr{};
+	rule::TableRow<std::string> buildATRow(std::string prefix, int row_num) {
+		rule::TableRow<std::string> tr{};
 		for (int i{ 1 }; i < 21; i++) {
 			tr.addCell(prefix + std::to_string(row_num) + ", kAT" + std::to_string(i));
 		}
@@ -17,10 +17,10 @@ namespace {
 
 	TEST(AttackTable, General) {
 
-		NumberMatcherFactory matchers;
+		rm::NumberMatcherFactory matchers;
 
 		// Populate a table with 6 rows
-		AttackTable at{"TestGeneral"};
+		rule::AttackTable at{"TestGeneral"};
 		for (int i{ 1 }; i < 6; i++) {
 			at.addRow(matchers.matcher(i, i), buildATRow("Row ", i));
 		}
@@ -35,8 +35,8 @@ namespace {
 	/*
 	* This only populates the first 10 columns 
 	*/
-	TableRow<std::string> buildBrokenATRow(std::string prefix, int row_num) {
-		TableRow<std::string> tr{};
+	rule::TableRow<std::string> buildBrokenATRow(std::string prefix, int row_num) {
+		rule::TableRow<std::string> tr{};
 		for (int i{ 1 }; i < 11; i++) {
 			tr.addCell(prefix + std::to_string(row_num) + ", kAT" + std::to_string(i));
 		}
@@ -45,16 +45,16 @@ namespace {
 
 	TEST(AttackTable, Exception) {
 
-		NumberMatcherFactory matchers;
+		rm::NumberMatcherFactory matchers;
 
 		// Populate a table with 6 rows, but only 10 columns
-		AttackTable at{"TestException"};
+		rule::AttackTable at{"TestException"};
 		for (int i{ 1 }; i < 6; i++) {
 			at.addRow(matchers.matcher(i, i), buildBrokenATRow("Row ", i));
 		}
 
-		EXPECT_THROW(at.cell(rule::enums::ArmourType::kAT12, 0), RowNotFoundException);
-		EXPECT_THROW(at.cell(rule::enums::ArmourType::kAT12, 1), ColNotFoundException);
+		EXPECT_THROW(at.cell(rule::enums::ArmourType::kAT12, 0), rule::RowNotFoundException);
+		EXPECT_THROW(at.cell(rule::enums::ArmourType::kAT12, 1), rule::ColNotFoundException);
 	}
 
 

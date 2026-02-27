@@ -1,7 +1,7 @@
 #pragma once
 #include <ArmourType.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class TableColumnArmourTypeMatcher
@@ -43,4 +43,4 @@ namespace rm {
 		}
 	};
 
-} // namespace rm
+} // namespace rm::rule

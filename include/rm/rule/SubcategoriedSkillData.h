@@ -6,7 +6,7 @@
 #include <GameRuleData.h>
 #include <SkillData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class SubcategoriedSkillData
@@ -54,4 +54,4 @@ namespace rm {
 		std::optional<std::string> subcategory_{}; /**< Optional subcategory name */
 	};
 
-} // namespace rm
+} // namespace rm::rule

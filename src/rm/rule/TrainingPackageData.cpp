@@ -1,6 +1,6 @@
 #include <TrainingPackageData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	int TrainingPackageData::startingMoneyChange() const {
 
@@ -128,4 +128,4 @@ namespace rm {
 		return (this_hash < that_hash);
 	}
 
-} // namespace rm
+} // namespace rm::rule

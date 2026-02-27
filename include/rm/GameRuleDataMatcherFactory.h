@@ -23,10 +23,10 @@ namespace rm {
 		 * @param game_data GameRuleData object to get a matcher for
 		 * @return const TableRowGameRuleDataMatcher* Matcher for the given GameRuleData object
 		 */
-		const TableRowGameRuleDataMatcher* matcher(const GameRuleData* game_data);
+		const rule::TableRowGameRuleDataMatcher* matcher(const rule::GameRuleData* game_data);
 
 	private:
-		inline static std::map<std::string, TableRowGameRuleDataMatcher> matchers_{};
+		inline static std::map<std::string, rule::TableRowGameRuleDataMatcher> matchers_{};
 		std::mutex mutex_{};
 	};
 

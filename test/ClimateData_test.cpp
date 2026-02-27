@@ -6,7 +6,7 @@ using namespace rm;
 
 namespace {
 	TEST(ClimateData, General) {
-		ClimateData c1("CLIM1_ID");
+		rule::ClimateData c1("CLIM1_ID");
 		c1.setName("Cold and temperate");
 		c1.setTemperature(rule::enums::HabitatType::Temperature::kCold);
 		c1.addPrecipitation(rule::enums::HabitatType::Precipitation::kTemperate);

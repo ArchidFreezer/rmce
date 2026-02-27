@@ -7,20 +7,20 @@ using namespace rm;
 namespace {
 	TEST(TrainingPackageData, General) {
 		std::string id{ "TP1_ID" };
-		TrainingPackageData tp1(id);
+		rule::TrainingPackageData tp1(id);
 		EXPECT_STREQ(tp1.id().c_str(), id.c_str());
 
 		std::string name{ "TP1 Name" };
 		tp1.setName(name);
 		EXPECT_STREQ(tp1.name().c_str(), name.c_str());
 
-		BookData book("BOOK_ID");
+		rule::BookData book("BOOK_ID");
 		tp1.setBook(book);
 		EXPECT_STREQ(tp1.book().id().c_str(), book.id().c_str());
 
 		// Races
-		RaceData r1("RACE1_ID");
-		RaceData r2("RACE2_ID");
+		rule::RaceData r1("RACE1_ID");
+		rule::RaceData r2("RACE2_ID");
 		EXPECT_TRUE(tp1.available(r1));
 		EXPECT_TRUE(tp1.available(r2));
 		tp1.addRace(r1);
@@ -73,7 +73,7 @@ namespace {
 			min = std::min(min, change);
 			EXPECT_LT(change, 0);
 		}
-		EXPECT_LT(min, -10);
+		EXPECT_LT(min, -11);
 
 		// Stat gains
 		EXPECT_TRUE(tp1.statGains().empty());
@@ -89,10 +89,10 @@ namespace {
 	}
 
 	TEST(TrainingPackageData, SkillRanks) {
-		TrainingPackageData tp("TP_ID");
+		rule::TrainingPackageData tp("TP_ID");
 
-		SkillData s1("SKILL1_ID");
-		SubcategoriedSkillData sd1(s1);
+		rule::SkillData s1("SKILL1_ID");
+		rule::SubcategoriedSkillData sd1(s1);
 		std::string sd1_id = sd1.id();
 
 		EXPECT_EQ(tp.skillRank(sd1), 0);
@@ -100,8 +100,8 @@ namespace {
 		EXPECT_EQ(tp.skillRank(s1), 10);
 		EXPECT_EQ(tp.skillRank(sd1), 10);
 
-		SkillData s2("SKILL2_ID");
-		SubcategoriedSkillData sd2(s2, "Sub2");
+		rule::SkillData s2("SKILL2_ID");
+		rule::SubcategoriedSkillData sd2(s2, "Sub2");
 		std::string sd2_id = sd2.id();
 		EXPECT_FALSE(tp.isRankSkill(s2));
 		tp.addSkillRank(sd2, 15);

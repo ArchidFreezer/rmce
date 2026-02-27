@@ -6,7 +6,7 @@
 #include <LevelVarianceType.h>
 #include <DiseaseTypeData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class DiseaseData
@@ -97,4 +97,4 @@ namespace rm {
 		rule::enums::LevelVarianceType::Type level_variance_type_{}; /**< The type of level variance to determine tha actual level of an instance of this disease. */
 	};
 
-} // namespace rm
+} // namespace rm::rule

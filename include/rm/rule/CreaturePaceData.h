@@ -4,7 +4,7 @@
 #include <ManoeuvreDifficultyType.h>
 #include <GameRuleData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class CreaturePaceData
@@ -84,4 +84,4 @@ namespace rm {
 		rule::enums::ManoeuvreDifficultyType::Type manoeuvre_difficulty_type_{}; /** The difficulty type of any manoeuvres attempted by the creature when using this pace */
 	};
 
-} // namespace rm
+} // namespace rm::rule

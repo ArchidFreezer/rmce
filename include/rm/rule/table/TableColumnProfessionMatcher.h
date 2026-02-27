@@ -1,7 +1,7 @@
 #pragma once
 #include <ProfessionData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class TableColumnProfessionMatcher
@@ -132,4 +132,4 @@ namespace rm {
 		}
 	};
 
-} // namespace rm
+} // namespace rm::rule

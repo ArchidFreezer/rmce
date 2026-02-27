@@ -8,16 +8,16 @@ using namespace rm;
 
 namespace {
 	TEST(SkillCategoryData, Constructor) {
-		SkillProgressionTypeData spd_sk_std("SKILLPROGRESSIONTYPE_STANDARD");
+		rule::SkillProgressionTypeData spd_sk_std("SKILLPROGRESSIONTYPE_STANDARD");
 		spd_sk_std.setName("Standard");
 
-		SkillProgressionTypeData spd_c_std("SKILLPROGRESSIONTYPE_CATEGORY_STANDARD");
+		rule::SkillProgressionTypeData spd_c_std("SKILLPROGRESSIONTYPE_CATEGORY_STANDARD");
 		spd_c_std.setName("Category Standard");
 
-		SkillGroupData sg("GROUP1_ID");
+		rule::SkillGroupData sg("GROUP1_ID");
 		sg.setName("Artistic");
 
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
+		rule::SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		scd.setUseRealmStats(false);
 
 		scd.setGroup(sg);
@@ -35,20 +35,20 @@ namespace {
 		EXPECT_STREQ(scd.skillCategoryProgression().name().c_str(), spd_c_std.name().c_str());
 
 
-		SkillProgressionTypeData spd_ltd("SKILLPROGRESSIONTYPE_LIMITED");
+		rule::SkillProgressionTypeData spd_ltd("SKILLPROGRESSIONTYPE_LIMITED");
 		spd_ltd.setName("Limited");
-		SkillProgressionTypeData spd_none("SKILLPROGRESSIONTYPE_NONE");
+		rule::SkillProgressionTypeData spd_none("SKILLPROGRESSIONTYPE_NONE");
 		spd_none.setName("None");
-		SkillCategoryData scd2("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
+		rule::SkillCategoryData scd2("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		scd2.setSkillProgressions(spd_ltd, spd_none);
 		EXPECT_STREQ(scd2.defaultSkillProgression().name().c_str(), spd_ltd.name().c_str());
 		EXPECT_STREQ(scd2.skillCategoryProgression().name().c_str(), spd_none.name().c_str());
 	}
 
 	TEST(SkillCategoryData, Stats) {
-		SkillProgressionTypeData spd_std("SKILLPROGRESSIONTYPE_STANDARD");
-		SkillGroupData sg("Artistic");
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
+		rule::SkillProgressionTypeData spd_std("SKILLPROGRESSIONTYPE_STANDARD");
+		rule::SkillGroupData sg("Artistic");
+		rule::SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		int i{};
 		i = scd.addStat(rule::enums::StatType::Type::kAgility);
 		EXPECT_EQ(scd.numberOfStats(), 1);
@@ -80,9 +80,9 @@ namespace {
 	}
 	
 	TEST(SkillCategoryData, CharStats) {
-		SkillProgressionTypeData spd_std("SKILLPROGRESSIONTYPE_STANDARD");
-		SkillGroupData sg("Artistic");
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
+		rule::SkillProgressionTypeData spd_std("SKILLPROGRESSIONTYPE_STANDARD");
+		rule::SkillGroupData sg("Artistic");
+		rule::SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		int i{};
 		i = scd.addStat(rule::enums::StatType::Type::kAgility);
 		EXPECT_EQ(scd.numberOfStats(), 1);
@@ -99,7 +99,7 @@ namespace {
 		scd.setUseRealmStats(true);
 		EXPECT_EQ(scd.numberOfStats(), 0);
 
-		EXPECT_THROW(scd.addStat(rule::enums::StatType::Type::kStrength), SkillCategoryData::UsingCharacterRealmStatsException);
+		EXPECT_THROW(scd.addStat(rule::enums::StatType::Type::kStrength), rule::SkillCategoryData::UsingCharacterRealmStatsException);
 
 		scd.setUseRealmStats(false);
 		EXPECT_NO_THROW(scd.addStat(rule::enums::StatType::Type::kStrength));
@@ -107,33 +107,33 @@ namespace {
 	}
 
 	TEST(SkillCategoryData, SkillProgression) {
-		SkillProgressionTypeData spd_cmb("SKILLPROGRESSIONTYPE_COMBINED");
+		rule::SkillProgressionTypeData spd_cmb("SKILLPROGRESSIONTYPE_COMBINED");
 		spd_cmb.setName("Combined");
-		SkillProgressionTypeData spd_ltd("SKILLPROGRESSIONTYPE_LIMITED");
+		rule::SkillProgressionTypeData spd_ltd("SKILLPROGRESSIONTYPE_LIMITED");
 		spd_ltd.setName("Limited");
-		SkillProgressionTypeData spd_none("SKILLPROGRESSIONTYPE_NONE");
+		rule::SkillProgressionTypeData spd_none("SKILLPROGRESSIONTYPE_NONE");
 		spd_none.setName("None");
-		SkillProgressionTypeData spd_spc("SKILLPROGRESSIONTYPE_SPECIAL");
+		rule::SkillProgressionTypeData spd_spc("SKILLPROGRESSIONTYPE_SPECIAL");
 		spd_spc.setName("Special");
-		SkillProgressionTypeData spd_std("SKILLPROGRESSIONTYPE_STANDARD");
+		rule::SkillProgressionTypeData spd_std("SKILLPROGRESSIONTYPE_STANDARD");
 		spd_std.setName("Standard");
-		SkillProgressionTypeData spd_cstd("SKILLPROGRESSIONTYPE_CATEGORY_STANDARD");
+		rule::SkillProgressionTypeData spd_cstd("SKILLPROGRESSIONTYPE_CATEGORY_STANDARD");
 		spd_cstd.setName("Category Standard");
-		SkillGroupData sg("Artistic");
-		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
+		rule::SkillGroupData sg("Artistic");
+		rule::SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		scd.setName("TestCategory");
 		scd.setGroup(sg);
 
 		// Invalid category type
-		EXPECT_THROW(scd.setSkillProgressions(spd_std, spd_cmb), InvalidSkillProgression);
-		EXPECT_THROW(scd.setSkillProgressions(spd_std, spd_ltd), InvalidSkillProgression);
-		EXPECT_THROW(scd.setSkillProgressions(spd_std, spd_spc), InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_std, spd_cmb), rule::InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_std, spd_ltd), rule::InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_std, spd_spc), rule::InvalidSkillProgression);
 
 		// Invalid combinations
-		EXPECT_THROW(scd.setSkillProgressions(spd_cmb, spd_cstd), InvalidSkillProgression);
-		EXPECT_THROW(scd.setSkillProgressions(spd_ltd, spd_cstd), InvalidSkillProgression);
-		EXPECT_THROW(scd.setSkillProgressions(spd_none, spd_cstd), InvalidSkillProgression);
-		EXPECT_THROW(scd.setSkillProgressions(spd_spc, spd_cstd), InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_cmb, spd_cstd), rule::InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_ltd, spd_cstd), rule::InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_none, spd_cstd), rule::InvalidSkillProgression);
+		EXPECT_THROW(scd.setSkillProgressions(spd_spc, spd_cstd), rule::InvalidSkillProgression);
 
 		scd.setSkillProgressions(spd_std, spd_cstd);
 		EXPECT_STREQ(scd.defaultSkillProgression().name().c_str(), "Standard");

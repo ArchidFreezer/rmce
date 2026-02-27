@@ -6,7 +6,7 @@
 #include <GameRuleData.h>
 #include <HabitatType.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class ClimateData
@@ -94,4 +94,4 @@ namespace rm {
 		rule::enums::HabitatType::Temperature temperature_{}; /**< General temperature of the climate */
 	};
 
-} // namespace rm
+} // namespace rm::rule

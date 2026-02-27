@@ -1,6 +1,6 @@
 #include <SkillProgressionTypeData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	int SkillProgressionTypeData::bonus(int ranks) const {
 		return bonus(ranks, zero_, ten_, twenty_, thirty_, remaining_);

@@ -6,8 +6,8 @@
 using namespace rm;
 
 namespace {
-	LanguageData getLanguage(std::string id, std::string name, bool somantic, bool spoken, bool written) {
-		LanguageData lang(id);
+	rule::LanguageData getLanguage(std::string id, std::string name, bool somantic, bool spoken, bool written) {
+		rule::LanguageData lang(id);
 		lang.setName(name);
 		lang.setIsSomantic(somantic);
 		lang.setIsSpoken(spoken);
@@ -16,7 +16,7 @@ namespace {
 	}
 
 	TEST(LanguageAbility, construct) {
-		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", false, true, true);
+		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", false, true, true);
 
 		LanguageAbility laspw(lspw);
 		EXPECT_EQ(laspw.isSomantic(), false);
@@ -28,7 +28,7 @@ namespace {
 	}
 
 	TEST(LanguageAbility, InvalidSomantic) {
-		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", false, true, true);
+		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", false, true, true);
 
 		LanguageAbility laspw(lspw, 1, 1, 1);
 		EXPECT_EQ(laspw.somantic(), 0);
@@ -46,7 +46,7 @@ namespace {
 	}
 
 	TEST(LanguageAbility, NegativeSomantic) {
-		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
+		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
 
 		LanguageAbility laspw(lspw);
 		EXPECT_NO_THROW(laspw.updateSomanticRanks(1));
@@ -56,7 +56,7 @@ namespace {
 	}
 
 	TEST(LanguageAbility, InvalidSpoken) {
-		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, false, true);
+		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, false, true);
 
 		LanguageAbility laspw(lspw, 1, 1, 1);
 		EXPECT_EQ(laspw.somantic(), 1);
@@ -74,7 +74,7 @@ namespace {
 	}
 
 	TEST(LanguageAbility, NegativeSpoken) {
-		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
+		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
 
 		LanguageAbility laspw(lspw);
 		EXPECT_NO_THROW(laspw.updateSpokenRanks(1));
@@ -84,7 +84,7 @@ namespace {
 	}
 
 	TEST(LanguageAbility, InvalidWritten) {
-		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, false);
+		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, false);
 
 		LanguageAbility laspw(lspw, 1, 1, 1);
 		EXPECT_EQ(laspw.somantic(), 1);
@@ -102,7 +102,7 @@ namespace {
 	}
 
 	TEST(LanguageAbility, NegativeWritten) {
-		LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
+		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
 
 		LanguageAbility laspw(lspw);
 		EXPECT_NO_THROW(laspw.updateWrittenRanks(1));

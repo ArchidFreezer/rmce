@@ -13,7 +13,7 @@
 #include <SkillCategoryData.h>
 #include <WeaponTypeData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class CultureTypeData
@@ -597,4 +597,4 @@ namespace rm {
 		std::set<rule::enums::EnvironmentType::Water> required_water_sources_{}; /**< Set of environment water sources, one of which the culture will live on or next to */
 	};
 
-} // namespace rm
+} // namespace rm::rule

@@ -3,7 +3,7 @@
 #include <GameRuleData.h>
 #include <TreasureValueType.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @brief Class to represent the data for a treasure code
@@ -52,4 +52,4 @@ namespace rm {
 		rule::enums::TreasureValueType::Type wealth_value_type_{}; /**< Relative value of wealth in a treasure pile */
 	};
 
-} // namespace rm
+} // namespace rm::rule

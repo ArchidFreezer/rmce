@@ -10,7 +10,7 @@
 #include <SkillActionType.h>
 #include <SkillCategoryData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class SkillData
@@ -340,4 +340,4 @@ namespace rm {
 		float distance_multiplier_{}; /** Multiplier for the distance moved when using this skill */
 	};
 
-} // namespace rm
+} // namespace rm::rule

@@ -16,7 +16,7 @@
 #include <GameRuleDataChoice.h>
 #include <StatType.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @brief Thrown when there is an attempt to set a skill as everymen when it is already set as resticted or vise-versa
@@ -956,4 +956,4 @@ namespace rm {
 		std::set<GameRuleDataChoice<SkillCategoryData>> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skill from to become everyman */
 	};
 
-} // namespace data
+} // namespace data::rule

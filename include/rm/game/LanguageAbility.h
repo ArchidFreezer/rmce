@@ -42,7 +42,7 @@ namespace rm {
 		 * @brief Constructor setting the language the ability is in
 		 * @param language LanguageData reference to the language
 		 */
-		LanguageAbility(const LanguageData& language) : LanguageAbility(language, 0, 0, 0) {}
+		LanguageAbility(const rule::LanguageData& language) : LanguageAbility(language, 0, 0, 0) {}
 
 		/**
 		 * @brief Constructor
@@ -51,13 +51,13 @@ namespace rm {
 		 * @param written number of written ranks the character has
 		 * @param somantic number of somantic ranks the character has
 		 */
-		LanguageAbility(const LanguageData& language, int spoken, int written, int somantic) : language_{ &language }, spoken_{ std::max(0,spoken) }, written_{ std::max(0,written) }, somantic_{ std::max(0,somantic) } {}
+		LanguageAbility(const rule::LanguageData& language, int spoken, int written, int somantic) : language_{ &language }, spoken_{ std::max(0,spoken) }, written_{ std::max(0,written) }, somantic_{ std::max(0,somantic) } {}
 
 		/**
 		 * @brief Set the language the ability is in
 		 * @param language LanguageData reference to the language
 		 */
-		void setLanguage(const LanguageData& language) { language_ = &language; }
+		void setLanguage(const rule::LanguageData& language) { language_ = &language; }
 
 		/**
 		 * @brief Get the name of the language
@@ -144,7 +144,7 @@ namespace rm {
 		bool isWritten() const { return language_->isWritten(); }
 
 	private:
-		const LanguageData* language_{}; /**< Language the character has any ability in */
+		const rule::LanguageData* language_{}; /**< Language the character has any ability in */
 		int somantic_{ 0 }; /** Ability in somantic component of the languiage */
 		int spoken_{ 0 }; /** Ability in spoken component of the languiage */
 		int written_{ 0 }; /** Ability in written component of the languiage */

@@ -4,7 +4,7 @@
 #include <typeinfo>
 #include <GameRuleData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class GameRuleDataChoice
@@ -97,4 +97,4 @@ namespace rm {
 		std::set<const T*> options_{}; /**< The container of options */
 	};
 
-} // namespace rm
+} // namespace rm::rule

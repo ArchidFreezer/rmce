@@ -12,7 +12,7 @@
 #include <SpellListData.h>
 #include <SkillCategoryData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @brief Represents a set of skill rank choices from a category available in a package, including constraints on selection and rank allocation.
@@ -663,4 +663,4 @@ namespace rm {
 		std::map<GameRuleDataChoice<LanguageData>, int> language_choices_{}; /**< A set of language choices that the player may select from to gain ranks in languages */
 	};
 
-} // namespace rm
+} // namespace rm::rule

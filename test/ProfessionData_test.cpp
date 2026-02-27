@@ -10,7 +10,7 @@ using namespace rm;
 
 namespace {
 	TEST(ProfessionData, Realms) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
 		prof.addRealm(rule::enums::RealmType::kArms);
 		prof.addRealm(rule::enums::RealmType::kChanneling);
@@ -26,7 +26,7 @@ namespace {
 	}
 
 	TEST(ProfessionData, Stats) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
 		prof.addStat(rule::enums::StatType::kAgility);
 		prof.addStat(rule::enums::StatType::kReasoning);
@@ -45,15 +45,15 @@ namespace {
 	}
 
 	TEST(ProfessionData, BaseLists) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
 		// Putting the choice in a block means that we are testing an object has gone out of scope
 		{
-			GameRuleDataChoice<SpellListData> choice1{};
-			SpellListData sl1("List1");
-			SpellListData sl2("List2");
-			SpellListData sl3("List3");
-			SpellListData sl4("List4");
+			rule::GameRuleDataChoice<rule::SpellListData> choice1{};
+			rule::SpellListData sl1("List1");
+			rule::SpellListData sl2("List2");
+			rule::SpellListData sl3("List3");
+			rule::SpellListData sl4("List4");
 			choice1.setNumChoices(1);
 			choice1.addOption(sl1);
 			choice1.addOption(sl2);
@@ -68,10 +68,10 @@ namespace {
 			EXPECT_EQ(choice.numOptions(), 4);
 		}
 
-		GameRuleDataChoice<SpellListData> choice2{};
+		rule::GameRuleDataChoice<rule::SpellListData> choice2{};
 		choice2.setNumChoices(2);
-		SpellListData sl1a("List1a");
-		SpellListData sl2a("List2a");
+		rule::SpellListData sl1a("List1a");
+		rule::SpellListData sl2a("List2a");
 		choice2.addOption(sl1a);
 		choice2.addOption(sl2a);
 		prof.addBaseSpellListChoice(std::move(choice2));
@@ -93,21 +93,21 @@ namespace {
 	}
 
 	TEST(ProfessionData, SkillDevelopmentTypes) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
-		SkillData sk1("SKILL1_ID");
-		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
+		rule::SkillData sk1("SKILL1_ID");
+		rule::SkillData sk2("SKILL2_ID");
+		rule::SubcategoriedSkillData s1(sk1, "Sub");
+		rule::SubcategoriedSkillData s2(sk2, "Sub");
 		EXPECT_STREQ(s1.id().c_str(), "SKILL1_ID_Sub");
 
 		prof.setSkillDevelopmentType(std::move(s1), rule::enums::SkillDevelopmentType::kEveryman);
 		prof.setSkillDevelopmentType(std::move(s2), rule::enums::SkillDevelopmentType::kEveryman);
 
-		const std::set<SubcategoriedSkillData> eset(prof.skillsWithSkillDevelopmentType());
+		const std::set<rule::SubcategoriedSkillData> eset(prof.skillsWithSkillDevelopmentType());
 		EXPECT_EQ(eset.size(), 2);
 
-		const std::set<SubcategoriedSkillData> eset2(prof.skillsWithSkillDevelopmentType());
+		const std::set<rule::SubcategoriedSkillData> eset2(prof.skillsWithSkillDevelopmentType());
 		EXPECT_EQ(eset2.size(), 2);
 
 		int count{ 0 };
@@ -118,21 +118,21 @@ namespace {
 		}
 		EXPECT_EQ(count, 2);
 
-		SubcategoriedSkillData s2b(sk2, "Sub"); // Duplicate of above
+		rule::SubcategoriedSkillData s2b(sk2, "Sub"); // Duplicate of above
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSet(sk2));
 		EXPECT_TRUE(prof.isSkillDevelopmentTypeSet(sk2, "Sub"));
-		EXPECT_THROW(prof.setSkillDevelopmentType(std::move(s2b), rule::enums::SkillDevelopmentType::kOccupational), ProfessionData::InvalidSkillDevelopment);
+		EXPECT_THROW(prof.setSkillDevelopmentType(std::move(s2b), rule::enums::SkillDevelopmentType::kOccupational), rule::ProfessionData::InvalidSkillDevelopment);
 
-		SkillData sk3("SKILL3_ID");
+		rule::SkillData sk3("SKILL3_ID");
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSet(sk3));
 
 	}
 
 	TEST(ProfessionData, SkillcategorySkillDevelopmentType) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
-		SkillCategoryData s1("SKILL1_ID");
-		SkillCategoryData s2("SKILL2_ID");
+		rule::SkillCategoryData s1("SKILL1_ID");
+		rule::SkillCategoryData s2("SKILL2_ID");
 
 		EXPECT_EQ(prof.skillCategoriesWithSkillDevelopmentType().size(), 0);
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillCategory(s1));
@@ -153,19 +153,19 @@ namespace {
 	}
 
 	TEST(ProfessionData, SkillDevelopmentTypeChoices) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
 		// Putting the choice in a block means that we are testing an object has gone out of scope
 		{
-			GameRuleDataChoice<SubcategoriedSkillData> choice1{};
+			rule::GameRuleDataChoice<rule::SubcategoriedSkillData> choice1{};
 			choice1.setNumChoices(1);
 
-			SkillData s1("SKILL1_ID");
-			SkillData s2("SKILL2_ID");
-			SkillData s3("SKILL3_ID");
-			SubcategoriedSkillData sc1(s1);
-			SubcategoriedSkillData sc2(s2);
-			SubcategoriedSkillData sc3(s3);
+			rule::SkillData s1("SKILL1_ID");
+			rule::SkillData s2("SKILL2_ID");
+			rule::SkillData s3("SKILL3_ID");
+			rule::SubcategoriedSkillData sc1(s1);
+			rule::SubcategoriedSkillData sc2(s2);
+			rule::SubcategoriedSkillData sc3(s3);
 			choice1.addOption(sc1);
 			choice1.addOption(sc2);
 			choice1.addOption(sc3);
@@ -180,13 +180,13 @@ namespace {
 			EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kEveryman);
 		}
 
-		GameRuleDataChoice<SubcategoriedSkillData> choice2{};
+		rule::GameRuleDataChoice<rule::SubcategoriedSkillData> choice2{};
 		choice2.setNumChoices(2);
 
-		SkillData s1a("SKILL1a_ID");
-		SkillData s2a("SKILL2a_ID");
-		SubcategoriedSkillData sc1a(s1a);
-		SubcategoriedSkillData sc2a(s2a);
+		rule::SkillData s1a("SKILL1a_ID");
+		rule::SkillData s2a("SKILL2a_ID");
+		rule::SubcategoriedSkillData sc1a(s1a);
+		rule::SubcategoriedSkillData sc2a(s2a);
 		choice2.addOption(sc1a);
 		choice2.addOption(sc2a);
 		prof.addSkillDevelopmentTypeChoice(choice2, rule::enums::SkillDevelopmentType::kOccupational);
@@ -211,16 +211,16 @@ namespace {
 	}
 
 	TEST(ProfessionData, SkillCategoryDevelopmentTypeChoices) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
 		// Putting the choice in a block means that we are testing an object has gone out of scope
 		{
-			GameRuleDataChoice<SkillCategoryData> choice1{};
+			rule::GameRuleDataChoice<rule::SkillCategoryData> choice1{};
 			choice1.setNumChoices(1);
 
-			SkillCategoryData s1("SKILL1_ID");
-			SkillCategoryData s2("SKILL2_ID");
-			SkillCategoryData s3("SKILL3_ID");
+			rule::SkillCategoryData s1("SKILL1_ID");
+			rule::SkillCategoryData s2("SKILL2_ID");
+			rule::SkillCategoryData s3("SKILL3_ID");
 			choice1.addOption(s1);
 			choice1.addOption(s2);
 			choice1.addOption(s3);
@@ -235,11 +235,11 @@ namespace {
 			EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kEveryman);
 		}
 
-		GameRuleDataChoice<SkillCategoryData> choice2{};
+		rule::GameRuleDataChoice<rule::SkillCategoryData> choice2{};
 		choice2.setNumChoices(2);
 
-		SkillCategoryData s1a("SKILL1a_ID");
-		SkillCategoryData s2a("SKILL2a_ID");
+		rule::SkillCategoryData s1a("SKILL1a_ID");
+		rule::SkillCategoryData s2a("SKILL2a_ID");
 		choice2.addOption(s1a);
 		choice2.addOption(s2a);
 		prof.addSkillCategorySkillDevelopmentTypeChoice(choice2, rule::enums::SkillDevelopmentType::kOccupational);
@@ -264,16 +264,16 @@ namespace {
 	}
 
 	TEST(ProfessionData, SkillGroupDevelopmentTypeChoices) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
 		// Putting the choice in a block means that we are testing an object has gone out of scope
 		{
-			GameRuleDataChoice<SkillGroupData> choice1{};
+			rule::GameRuleDataChoice<rule::SkillGroupData> choice1{};
 			choice1.setNumChoices(1);
 
-			SkillGroupData s1("SKILL1_ID");
-			SkillGroupData s2("SKILL2_ID");
-			SkillGroupData s3("SKILL3_ID");
+			rule::SkillGroupData s1("SKILL1_ID");
+			rule::SkillGroupData s2("SKILL2_ID");
+			rule::SkillGroupData s3("SKILL3_ID");
 			choice1.addOption(s1);
 			choice1.addOption(s2);
 			choice1.addOption(s3);
@@ -288,11 +288,11 @@ namespace {
 			EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kEveryman);
 		}
 
-		GameRuleDataChoice<SkillGroupData> choice2{};
+		rule::GameRuleDataChoice<rule::SkillGroupData> choice2{};
 		choice2.setNumChoices(2);
 
-		SkillGroupData s1a("SKILL1a_ID");
-		SkillGroupData s2a("SKILL2a_ID");
+		rule::SkillGroupData s1a("SKILL1a_ID");
+		rule::SkillGroupData s2a("SKILL2a_ID");
 		choice2.addOption(s1a);
 		choice2.addOption(s2a);
 		prof.addSkillGroupSkillDevelopmentTypeChoice(choice2, rule::enums::SkillDevelopmentType::kOccupational);
@@ -317,10 +317,10 @@ namespace {
 	}
 
 	TEST(ProfessionData, GroupProfessionBonus) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
-		SkillGroupData g1("GROUP1_ID");
-		SkillGroupData g2("GROUP2_ID");
+		rule::SkillGroupData g1("GROUP1_ID");
+		rule::SkillGroupData g2("GROUP2_ID");
 
 		EXPECT_EQ(prof.skillGroupsWithProfessionBonus().size(), 0);
 		EXPECT_FALSE(prof.isProfessionBonusSkillGroup(g2));
@@ -342,10 +342,10 @@ namespace {
 
 
 	TEST(ProfessionData, GroupSpecialBonus) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
-		SkillGroupData g1("GROUP1_ID");
-		SkillGroupData g2("GROUP2_ID");
+		rule::SkillGroupData g1("GROUP1_ID");
+		rule::SkillGroupData g2("GROUP2_ID");
 
 		EXPECT_EQ(prof.skillGroupsWithSpecialBonus().size(), 0);
 		EXPECT_FALSE(prof.isSpecialBonusSkillGroup(g2));
@@ -366,10 +366,10 @@ namespace {
 	}
 
 	TEST(ProfessionData, GroupSkillDevelopmentType) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
-		SkillGroupData g1("GROUP1_ID");
-		SkillGroupData g2("GROUP2_ID");
+		rule::SkillGroupData g1("GROUP1_ID");
+		rule::SkillGroupData g2("GROUP2_ID");
 
 		EXPECT_EQ(prof.skillGroupsWithSkillDevelopmentType().size(), 0);
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillGroup(g2));
@@ -390,9 +390,9 @@ namespace {
 	}
 
 	TEST(ProfessionData, CategoryProfessionBonus) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
-		SkillCategoryData c1("CAT1_ID");
+		rule::SkillCategoryData c1("CAT1_ID");
 		EXPECT_EQ(prof.skillCategoriesWithProfessionBonus().size(), 0);
 		EXPECT_FALSE(prof.isProfessionBonusSkillCategory(c1));
 		EXPECT_EQ(prof.skillCategoryProfessionBonus(c1), 0);
@@ -400,15 +400,15 @@ namespace {
 		prof.addSkillCategoryProfessionBonus(c1, 10);
 		EXPECT_TRUE(prof.isProfessionBonusSkillCategory(c1));
 		
-		SkillCategoryData c1a("CAT1_ID");
+		rule::SkillCategoryData c1a("CAT1_ID");
 		EXPECT_TRUE(prof.isProfessionBonusSkillCategory(c1a));
 
 	}
 
 	TEST(ProfessionData, CategorySpecialBonus) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
-		SkillCategoryData c1("CAT1_ID");
+		rule::SkillCategoryData c1("CAT1_ID");
 		EXPECT_EQ(prof.skillCategoriesWithSpecialBonus().size(), 0);
 		EXPECT_FALSE(prof.isSpecialBonusSkillCategory(c1));
 		EXPECT_EQ(prof.skillCategorySpecialBonus(c1), 0);
@@ -416,21 +416,21 @@ namespace {
 		prof.addSkillCategorySpecialBonus(c1, 10);
 		EXPECT_TRUE(prof.isSpecialBonusSkillCategory(c1));
 
-		SkillCategoryData c1a("CAT1_ID");
+		rule::SkillCategoryData c1a("CAT1_ID");
 		EXPECT_TRUE(prof.isSpecialBonusSkillCategory(c1a));
 
 	}
 
 	TEST(ProfessionData, SkillBonus) {
-		ProfessionData prof("PROF_ID");
+		rule::ProfessionData prof("PROF_ID");
 
-		SkillData sk1("SKILL1_ID");
-		SkillData sk1a("SKILL1_ID");
-		SkillData sk2("SKILL2_ID");
-		SubcategoriedSkillData s1(sk1, "Sub");
-		SubcategoriedSkillData s1a(sk1a, "Sub");
-		SubcategoriedSkillData s2(sk2, "Sub");
-		SubcategoriedSkillData s2a(sk2, "Sub");
+		rule::SkillData sk1("SKILL1_ID");
+		rule::SkillData sk1a("SKILL1_ID");
+		rule::SkillData sk2("SKILL2_ID");
+		rule::SubcategoriedSkillData s1(sk1, "Sub");
+		rule::SubcategoriedSkillData s1a(sk1a, "Sub");
+		rule::SubcategoriedSkillData s2(sk2, "Sub");
+		rule::SubcategoriedSkillData s2a(sk2, "Sub");
 
 		prof.setSkillBonus(std::move(s1), 5);
 		prof.setSkillBonus(std::move(s2), 10);
@@ -442,7 +442,7 @@ namespace {
 		EXPECT_FALSE(prof.isBonusSkill(sk1, "Invalid"));
 		EXPECT_TRUE(prof.isBonusSkill(sk1, "Sub"));
 
-		EXPECT_THROW(prof.setSkillBonus(std::move(s1a), 15), ProfessionData::InvalidSkillBonus);
+		EXPECT_THROW(prof.setSkillBonus(std::move(s1a), 15), rule::ProfessionData::InvalidSkillBonus);
 		EXPECT_EQ(prof.skillBonus(s2a), 10);
 
 		EXPECT_EQ(prof.skillBonus(sk2, "Sub"), 10);
@@ -458,16 +458,16 @@ namespace {
 	}
 
 	TEST(ProfessionData, CategoryCosts) {
-		ProfessionData prof("PROF_ID");
-		SkillCategoryData c1("CAT1_ID");
-		EXPECT_THROW(prof.skillCategoryDevelopmentCost(c1), ProfessionData::InvalidCategoryDevelopmentCost);
+		rule::ProfessionData prof("PROF_ID");
+		rule::SkillCategoryData c1("CAT1_ID");
+		EXPECT_THROW(prof.skillCategoryDevelopmentCost(c1), rule::ProfessionData::InvalidCategoryDevelopmentCost);
 
 		prof.addSkillCategoryDevelopmentCost(c1, SkillDevelopmentCost("3:4"));
 		EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).first(), 3);
 		EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).second(), 4);
 		EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).third(), std::nullopt);
 
-		SkillCategoryData c2("CAT2_ID");
+		rule::SkillCategoryData c2("CAT2_ID");
 		{
 			SkillDevelopmentCost dc1("12");
 			prof.addSkillCategoryDevelopmentCost(c2, dc1);

@@ -19,7 +19,7 @@
 #include <SubcategoriedSkillData.h>
 #include <SpellUserType.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class ProfessionData
@@ -907,4 +907,4 @@ namespace rm {
 		std::map<const SkillCategoryData*, SkillDevelopmentCost> skill_category_development_costs_{}; /** Cost to purchase ranks for a skill category */
 	};
 
-} // namespace rm
+} // namespace rm::rule

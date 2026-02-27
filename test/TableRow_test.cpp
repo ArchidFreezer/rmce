@@ -14,13 +14,13 @@ public:
 
 namespace {
 	TEST(TableRow, FindCell) {
-		TableRow<Cell> tr = TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
+		rule::TableRow<Cell> tr = rule::TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
 		EXPECT_STREQ(tr.cell(0).getVal().c_str(), "A");
 		EXPECT_STREQ(tr.cell(1).getVal().c_str(), "B");
 	}
 
 	TEST(TableRow, Exception) {
-		TableRow<Cell> tr = TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
-		EXPECT_THROW(tr.cell(2), ColNotFoundException);
+		rule::TableRow<Cell> tr = rule::TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
+		EXPECT_THROW(tr.cell(2), rule::ColNotFoundException);
 	}
 }

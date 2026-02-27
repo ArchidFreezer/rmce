@@ -7,7 +7,7 @@
 #include <RealmType.h>
 #include <SpellListType.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class SpellListData
@@ -130,4 +130,4 @@ namespace rm {
 		bool summoning_{}; /** Whether spells on the list summon entities */
 	};
 
-} // namespace rm
+} // namespace rm::rule

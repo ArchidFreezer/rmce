@@ -8,7 +8,7 @@
 #include <NumberRange.h>
 #include <DiseaseType.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class DiseaseTypeData
@@ -114,4 +114,4 @@ namespace rm {
 		std::map<rule::enums::DiseasePoisonSeverityType::Type, std::string> symptomsBySeverity_{}; /**< Map of the symptoms caused by the disease based on the severity of the symptoms. */
 	};
 
-} // namespace rm
+} // namespace rm::rule

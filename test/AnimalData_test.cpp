@@ -5,7 +5,7 @@ using namespace rm;
 
 namespace {
 	TEST(AnimalDataTest, HuntingModifier) {
-		AnimalData animal("TEST_ANIMAL");
+		rule::AnimalData animal("TEST_ANIMAL");
 		animal.setFrequencyFactor(1);
 		EXPECT_EQ(animal.huntingModifier(), 30);
 		animal.setFrequencyFactor(5);
@@ -15,7 +15,7 @@ namespace {
 	}
 
 	TEST(AnimalDataTest, ExistencePercentageChance) {
-		AnimalData animal("TEST_ANIMAL");
+		rule::AnimalData animal("TEST_ANIMAL");
 		animal.setFrequencyFactor(1);
 		EXPECT_EQ(animal.existencePercentageChance(), 100);
 		animal.setFrequencyFactor(5);

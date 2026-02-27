@@ -2,7 +2,7 @@
 #include <LevelVarianceType.h>
 #include <table/BoundIntRowLookupTable.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class TableColumnLevelVarianceCodeMatcher
@@ -55,4 +55,4 @@ namespace rm {
 
 	};
 
-} // namespace rm
+} // namespace rm::rule

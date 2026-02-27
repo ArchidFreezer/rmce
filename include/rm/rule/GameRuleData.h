@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace rm {
+namespace rm::rule {
 
 	class GameRuleData;
 
@@ -89,4 +89,4 @@ namespace rm {
 
 	};
 
-} // namespace rm
+} // namespace rm::rule

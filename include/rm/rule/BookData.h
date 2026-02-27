@@ -4,7 +4,7 @@
 
 #include <GameRuleData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class BookData
@@ -73,4 +73,4 @@ namespace rm {
 		std::string isbn_{}; /**< ISBN book number */
 	};
 
-} // namespace rm
+} // namespace rm::rule

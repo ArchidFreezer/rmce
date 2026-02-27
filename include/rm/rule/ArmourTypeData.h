@@ -4,7 +4,7 @@
 #include <GameRuleData.h>
 #include <ArmourType.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class ArmourTypeData
@@ -214,4 +214,4 @@ namespace rm {
 		bool includes_greaves_{}; /** Whether the armour type is considered to have greaves */
 	};
 
-} // namespace rm
+} // namespace rm::rule

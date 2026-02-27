@@ -8,7 +8,7 @@
 #include <NumberRange.h>
 #include <PoisonType.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class PoisonTypeData
@@ -145,4 +145,4 @@ namespace rm {
 		std::string areasAffected_{}; /**< String describing the areas of the body that are affected by the poison if not specified. */
 	};
 
-} // namespace rm
+} // namespace rm::rule

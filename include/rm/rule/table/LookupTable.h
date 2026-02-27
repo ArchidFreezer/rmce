@@ -8,7 +8,7 @@
 #include <table/TableRowMatcher.h>
 #include <table/TableRow.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class RowNotFoundException
@@ -43,7 +43,7 @@ namespace rm {
 	 */
 	template<typename RowMatcherClass, typename RowDatatype, typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype>
 		requires table_row_matcher<RowMatcherClass, RowDatatype>&& table_column_matcher< ColumnMatcherClass, ColumnDataType>
-	class LookupTable : public GameRuleData {
+	class LookupTable : public rule::GameRuleData {
 	public:
 		/**
 		 * @brief Constructor with id
@@ -166,4 +166,4 @@ namespace rm {
 		throw RowNotFoundException(msg);
 	}
 
-} // namespace rm
+} // namespace rmrm::rule

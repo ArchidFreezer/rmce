@@ -28,7 +28,7 @@ namespace {
 	}
 
 	template<typename MatcherClass, typename MatcherDatatype>
-		requires table_row_matcher<MatcherClass, MatcherDatatype>
+		requires rule::table_row_matcher<MatcherClass, MatcherDatatype>
 	class NumberRangeTest {
 	public:
 		NumberRangeTest(MatcherClass matcher, MatcherDatatype val) {};

@@ -137,13 +137,13 @@ namespace rm {
 		 * @brief Add a climate to those that may be found in the location
 		 * @param climate ClimateData* to add
 		 */
-		void addClimate(const ClimateData* climate) { if (!hasClimate(climate)) climates_.emplace(climate); }
+		void addClimate(const rule::ClimateData* climate) { if (!hasClimate(climate)) climates_.emplace(climate); }
 
 		/**
 		 * @brief Set the climates that may be found in the location
 		 * @param climates Set of ClimateData* to set
 		 */
-		void setClimates(std::set<const ClimateData*> climates) { climates_ = std::move(climates); }
+		void setClimates(std::set<const rule::ClimateData*> climates) { climates_ = std::move(climates); }
 
 		/**
 		 * @brief Check if a climate may be found in the location
@@ -151,7 +151,7 @@ namespace rm {
 		 * @return `true` if the location may have the climate
 		 * @return `false` if the location may not have the climate
 		 */
-		bool hasClimate(const ClimateData* climate) const {
+		bool hasClimate(const rule::ClimateData* climate) const {
 			for (const auto& c : climates_) {
 				if (c->id() == climate->id()) return true;
 			}
@@ -162,7 +162,7 @@ namespace rm {
 		 * @brief Get the climates that may be found in the location
 		 * @return std::set<const ClimateData*> climates
 		 */
-		const std::set<const ClimateData*> climates() const { return climates_; }
+		const std::set<const rule::ClimateData*> climates() const { return climates_; }
 
 		/**
 		* @brief Check if a specific location matches the criteria defined in this object
@@ -182,7 +182,7 @@ namespace rm {
 		std::set<rule::enums::EnvironmentType::Terrain> terrains_{}; /**< Set of terrain types that are found in the location */
 		std::set<rule::enums::EnvironmentType::Vegetation> vegetation_{}; /**< Set of vegetation types that are found in the location */
 		std::set<rule::enums::EnvironmentType::Water> water_{}; /**< Set of water types that are found in the location */
-		std::set<const ClimateData*> climates_{}; /**< Set of climates that are found in the location */
+		std::set<const rule::ClimateData*> climates_{}; /**< Set of climates that are found in the location */
 
 	};
 

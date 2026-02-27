@@ -12,27 +12,27 @@ namespace {
 	/**
 	 * @brief Dummy class to test LookupTable abstract class
 	 */
-	class DummyLookupTable : public LookupTable<archid::NumberRange<int>, int, TableColumnCreatureSizeMatcher, rule::enums::CreatureSizeType::Type, std::string> {
+	class DummyLookupTable : public rule::LookupTable<archid::NumberRange<int>, int, rule::TableColumnCreatureSizeMatcher, rule::enums::CreatureSizeType::Type, std::string> {
 	public:
 		DummyLookupTable(std::string_view id) : LookupTable(id) {}
 	};
 
 	TEST(LookupTable, General) {
 		DummyLookupTable lut("DummyTable");
-		std::unique_ptr<TableColumnCreatureSizeMatcher> matcher = std::make_unique<TableColumnCreatureSizeMatcher>(TableColumnCreatureSizeMatcher());
+		std::unique_ptr<rule::TableColumnCreatureSizeMatcher> matcher = std::make_unique<rule::TableColumnCreatureSizeMatcher>(rule::TableColumnCreatureSizeMatcher());
 		lut.setColumnMatcher(std::move(matcher));
 
 		NumberMatcherFactory matchers;
 
-		TableRow<std::string> tr1 = TableRow<std::string>().addCell("Row 1, kTiny").addCell("Row 1, kSmall").addCell("Row 1, kMedium").addCell("Row 1, kLarge").addCell("Row 1, kHuge");
+		rule::TableRow<std::string> tr1 = rule::TableRow<std::string>().addCell("Row 1, kTiny").addCell("Row 1, kSmall").addCell("Row 1, kMedium").addCell("Row 1, kLarge").addCell("Row 1, kHuge");
 		lut.addRow(matchers.matcher(1, 3), tr1);
-		TableRow<std::string> tr2 = TableRow<std::string>().addCell("Row 2, kTiny").addCell("Row 2, kSmall").addCell("Row 2, kMedium").addCell("Row 2, kLarge").addCell("Row 2, kHuge");
+		rule::TableRow<std::string> tr2 = rule::TableRow<std::string>().addCell("Row 2, kTiny").addCell("Row 2, kSmall").addCell("Row 2, kMedium").addCell("Row 2, kLarge").addCell("Row 2, kHuge");
 		lut.addRow(matchers.matcher(4, 6), tr2);
 
 		// We add unmodified rows that overlap the normal rows
-		TableRow<std::string> utr1 = TableRow<std::string>().addCell("URow 1, kTiny").addCell("URow 1, kSmall").addCell("URow 1, kMedium").addCell("URow 1, kLarge").addCell("URow 1, kHuge");
+		rule::TableRow<std::string> utr1 = rule::TableRow<std::string>().addCell("URow 1, kTiny").addCell("URow 1, kSmall").addCell("URow 1, kMedium").addCell("URow 1, kLarge").addCell("URow 1, kHuge");
 		lut.addUnmodifiedRow(matchers.matcher(1, 1), utr1);
-		TableRow<std::string> utr2 = TableRow<std::string>().addCell("URow 2, kTiny").addCell("URow 2, kSmall").addCell("URow 2, kMedium").addCell("URow 2, kLarge").addCell("URow 2, kHuge");
+		rule::TableRow<std::string> utr2 = rule::TableRow<std::string>().addCell("URow 2, kTiny").addCell("URow 2, kSmall").addCell("URow 2, kMedium").addCell("URow 2, kLarge").addCell("URow 2, kHuge");
 		lut.addUnmodifiedRow(matchers.matcher(6, 6), utr2);
 
 		// We are not testing the matchers here so we don't need to test too many combinations

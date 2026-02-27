@@ -2,7 +2,7 @@
 
 #include <GameRuleData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class SkillGroupData
@@ -40,4 +40,4 @@ namespace rm {
 		std::string name_{}; /**< Name of the game as seen in-game */
 	};
 
-} // namespace rm
+} // namespace rm::rule

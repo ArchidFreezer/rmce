@@ -2,7 +2,7 @@
 #include <Dice.h>
 #include <NumberMatcherFactory.h>
 
-namespace rm {
+namespace rm::rule {
 
 	void AnimalData::setFrequencyFactor(int frequency_factor) {
 		if (frequency_factor < 1) frequency_factor_ = 1;
@@ -291,4 +291,4 @@ namespace rm {
 		return std::nullopt;
 	}
 
-} // namespace rm
+} // namespace rm::rule

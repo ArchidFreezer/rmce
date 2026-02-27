@@ -6,7 +6,7 @@ using namespace rm;
 
 namespace {
 	TEST(TableColumnCreatureSizeMatcher, All) {
-		TableColumnCreatureSizeMatcher matcher = TableColumnCreatureSizeMatcher();
+		rule::TableColumnCreatureSizeMatcher matcher = rule::TableColumnCreatureSizeMatcher();
 		// Check the default
 		EXPECT_EQ(matcher.column(rule::enums::CreatureSizeType::kTiny), 0);
 		EXPECT_EQ(matcher.column(rule::enums::CreatureSizeType::kSmall), 1);

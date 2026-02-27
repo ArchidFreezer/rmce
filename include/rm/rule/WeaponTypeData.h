@@ -8,7 +8,7 @@
 #include <GameRuleData.h>
 #include <SkillData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class WeaponTypeData
@@ -377,4 +377,4 @@ namespace rm {
 		std::map<const archid::NumberRange<int>*, int> ranges_;
 	};
 
-} // namespace rm
+} // namespace rm::rule

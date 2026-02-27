@@ -4,7 +4,7 @@
 
 #include <GameRuleData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class LanguageCategoryData
@@ -50,4 +50,4 @@ namespace rm {
 
 	};
 
-} // namespace rm
+} // namespace rm::rule

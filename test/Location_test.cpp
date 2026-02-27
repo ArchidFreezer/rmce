@@ -43,9 +43,9 @@ namespace {
 
 	TEST(LocationTest, TestClimate) {
 		Location location;
-		ClimateData climate1("CLIMATE_ID_1");
-		ClimateData climate2("CLIMATE_ID_2");
-		ClimateData climate3("CLIMATE_ID_3");
+		rule::ClimateData climate1("CLIMATE_ID_1");
+		rule::ClimateData climate2("CLIMATE_ID_2");
+		rule::ClimateData climate3("CLIMATE_ID_3");
 		location.addClimate(&climate1);
 		location.addClimate(&climate2);
 		EXPECT_TRUE(location.hasClimate(&climate1));

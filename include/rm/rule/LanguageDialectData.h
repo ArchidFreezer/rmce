@@ -6,7 +6,7 @@
 #include <GameRuleData.h>
 #include <LanguageData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class LanguageDialectData
@@ -98,4 +98,4 @@ namespace rm {
 		std::set<const LanguageData*> dialects_{};
 	};
 
-} // namespace rm
+} // namespace rm::rule

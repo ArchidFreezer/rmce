@@ -6,7 +6,7 @@
 #include <ProfessionData.h>
 #include <TrainingPackageData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class CultureData
@@ -303,4 +303,4 @@ namespace rm {
 		std::map<const TrainingPackageData*, float> training_package_modifiers_{}; /**< Modifiers to training package development point cost that members of the culture receive */
 	};
 
-} // namespace rm
+} // namespace rm::rule

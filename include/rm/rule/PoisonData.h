@@ -6,7 +6,7 @@
 #include <LevelVarianceType.h>
 #include <PoisonTypeData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class PoisonData
@@ -97,4 +97,4 @@ namespace rm {
 		rule::enums::LevelVarianceType::Type level_variance_type_{}; /**< The type of level variance to determine tha actual level of an instance of this poison. */
 	};
 
-} // namespace rm
+} // namespace rm::rule

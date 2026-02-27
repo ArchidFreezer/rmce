@@ -1,6 +1,6 @@
 #include <SkillCategoryData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	int SkillCategoryData::addStat(rule::enums::StatType::Type stat) {
 		if (useRealmStats()) throw UsingCharacterRealmStatsException("Cannot add category stat when also using character realm stats");
@@ -43,4 +43,4 @@ namespace rm {
 		if (use_realm_stats_) clearStats();
 	}
 
-} // namespace rm
+} // namespace rm::rule

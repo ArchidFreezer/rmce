@@ -4,7 +4,7 @@
 
 #include <GameRuleData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class LanguageData
@@ -112,4 +112,4 @@ namespace rm {
 		bool is_somantic_{ false }; /**< Whether the language has a somantic form */
 	};
 
-} // namespace rm
+} // namespace rm::rule

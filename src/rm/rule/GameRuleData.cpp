@@ -2,7 +2,7 @@
 #include <string>
 #include <GameRuleData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	const std::string GameRuleData::generateId(std::string_view type, std::string_view val) {
 		std::stringstream ss;
@@ -44,4 +44,4 @@ namespace rm {
 		return ret;
 	}
 
-} // namespace rm
+} // namespace rm::rule

@@ -5,7 +5,7 @@
 #include <GameRuleData.h>
 #include <SkillProgressionData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class SkillProgressionTypeData
@@ -124,4 +124,4 @@ namespace rm {
 		int bonus(int ranks, float zero, float ten, float twenty, float thirty, float remaining) const;
 	};
 
-} // namespace rm
+} // namespace rm::rule

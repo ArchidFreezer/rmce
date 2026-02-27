@@ -1,6 +1,6 @@
 #include <ProfessionData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	int ProfessionData::addStat(rule::enums::StatType::Type stat) {
 		if (stats_.size() < 4) {
@@ -22,4 +22,4 @@ namespace rm {
 		return false;
 	}
 
-} // namespace rm
+} // namespace rm::rule

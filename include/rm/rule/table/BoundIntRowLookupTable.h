@@ -3,7 +3,7 @@
 #include <NumberRange.h>
 #include <table/LookupTable.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class  BoundIntRowLookupTable
@@ -102,4 +102,4 @@ namespace rm {
 		int min_row_{ INTMAX_MIN }; /**< Minimum number for which a modified row value is defined */
 	};
 
-} // namespace rm
+} // namespace rm::rule

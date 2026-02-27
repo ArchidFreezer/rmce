@@ -22,7 +22,7 @@
 #include <TreasureCodeData.h>
 #include <table/CreatureBonusXpTable.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class AnimalData
@@ -613,4 +613,4 @@ namespace rm {
 
 	};
 
-} // namespace rm
+} // namespace rm::rule

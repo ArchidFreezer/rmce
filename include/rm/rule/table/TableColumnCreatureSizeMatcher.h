@@ -1,7 +1,7 @@
 #pragma once
 #include <CreatureSizeType.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class TableColumnCreatureSizeMatcher
@@ -28,4 +28,4 @@ namespace rm {
 		}
 	};
 
-} // namespace rm
+} // namespace rm::rule

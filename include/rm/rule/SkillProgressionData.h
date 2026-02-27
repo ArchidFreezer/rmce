@@ -1,6 +1,6 @@
 #pragma once
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class SkillProgressionData
@@ -22,4 +22,4 @@ namespace rm {
 		virtual int bonus(int ranks) const = 0;
 	};
 
-} // namespace rm
+} // namespace rm::rule

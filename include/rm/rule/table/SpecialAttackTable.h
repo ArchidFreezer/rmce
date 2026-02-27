@@ -3,7 +3,7 @@
 #include <table/BoundIntRowLookupTable.h>
 #include <table/TableColumnArmourTypeMatcher.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class SpecialAttackTable
@@ -143,4 +143,4 @@ namespace rm {
 		std::map<rule::enums::AttackSizeType::Type, int> limits_{}; /**< The maximum row index that each attack size may use */
 	};
 
-} // namespace rm
+} // namespace rm::rule

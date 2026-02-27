@@ -2,7 +2,7 @@
 #include <CreatureBonusXpType.h>
 #include <table/BoundIntRowLookupTable.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class TableColumnBonusXpCodeMatcher
@@ -60,4 +60,4 @@ namespace rm {
 
 	};
 
-} // namespace rm
+} // namespace rm::rule

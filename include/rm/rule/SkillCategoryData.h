@@ -9,7 +9,7 @@
 #include <StatType.h>
 #include <SkillProgressionTypeData.h>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @brief Thrown when there is an attempt to set either the skill progression or category progression in an invalad combination
@@ -226,4 +226,4 @@ namespace rm {
 
 	};
 
-} // namespace rm
+} // namespace rm::rule

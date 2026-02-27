@@ -121,13 +121,13 @@ namespace rm {
 		 * @brief Set the SpecialAttackTable for non-weapon attacks
 		 * @param non_weapon_table SpecialAttackTable for non-weapon attacks
 		 */
-		void setNonWeaponTable(const SpecialAttackTable& non_weapon_table) { non_weapon_table_ = &non_weapon_table; }
+		void setNonWeaponTable(const rule::SpecialAttackTable& non_weapon_table) { non_weapon_table_ = &non_weapon_table; }
 
 		/**
 		 * @brief Get the SpecialAttackTable for non-weapon attacks
 		 * @return SpecialAttackTable for non-weapon attacks
 		 */
-		const SpecialAttackTable* nonWeaponTable() const { return non_weapon_table_; }
+		const rule::SpecialAttackTable* nonWeaponTable() const { return non_weapon_table_; }
 
 		/**
 		 * @brief Check if the attack has a weapon or elemental ball/bolt attack
@@ -139,13 +139,13 @@ namespace rm {
 		 * @brief Set the AttackTable for weapon or elemental ball/bolt attacks, used to determine the attack result for weapon or elemental ball/bolt attacks
 		 * @param weapon_table AttackTable for weapon or elemental ball/bolt attacks, used to determine the attack result for weapon or elemental ball/bolt attacks
 		 */
-		void setWeaponTable(const AttackTable& weapon_table) { weapon_table_ = &weapon_table; }
+		void setWeaponTable(const rule::AttackTable& weapon_table) { weapon_table_ = &weapon_table; }
 
 		/**
 		 * @brief Get the AttackTable for weapon or elemental ball/bolt attacks, used to determine the attack result for weapon or elemental ball/bolt attacks
 		 * @return AttackTable for weapon or elemental ball/bolt attacks, used to determine the attack result for weapon or elemental ball/bolt attacks
 		 */
-		const AttackTable* weaponTable() const { return weapon_table_; }
+		const rule::AttackTable* weaponTable() const { return weapon_table_; }
 
 		/**
 		 * @brief Set the minimum number of attackers that use this attack in a round, used to indicate that there should be multiple rolls to represent multiple animals such as ants
@@ -202,25 +202,25 @@ namespace rm {
 		 * @brief Set the poison applied by the attack, if any. If not set then the attack does not apply any poison.
 		 * @param poison Poison applied by the attack, if any. If not set then the attack does not apply any poison.
 		 */
-		void setPoison(const PoisonData& poison) { poison_ = &poison; }
+		void setPoison(const rule::PoisonData& poison) { poison_ = &poison; }
 
 		/**
 		 * @brief Get the poison applied by the attack, if any. If not set then the attack does not apply any poison.
 		 * @return PoisonData* Poison applied by the attack, if any. If not set then the attack does not apply any poison.
 		 */
-		std::optional<const PoisonData*> poison() const { return poison_; }
+		std::optional<const rule::PoisonData*> poison() const { return poison_; }
 
 		/**
 		 * @brief Set the disease applied by the attack, if any. If not set then the attack does not apply any disease.
 		 * @param disease Disease applied by the attack, if any. If not set then the attack does not apply any disease.
 		 */
-		void setDisease(const DiseaseData& disease) { disease_ = &disease; }
+		void setDisease(const rule::DiseaseData& disease) { disease_ = &disease; }
 
 		/**
 		 * @brief Get the disease applied by the attack, if any. If not set then the attack does not apply any disease.
 		 * @return DiseaseData* Disease applied by the attack, if any. If not set then the attack does not apply any disease.
 		 */
-		std::optional<const DiseaseData*> disease() const { return disease_; }
+		std::optional<const rule::DiseaseData*> disease() const { return disease_; }
 
 		/**
 		 * @brief Set the range of the attack, used to determine how far away the target can be for the attack to be used. This is used for attacks like a Spitting Cobra that spits venom to blind it's targets.
@@ -317,14 +317,14 @@ namespace rm {
 		std::optional<int> conditional_attack_ref_{}; /**< If this is set, the attack is a conditional attack that is used if another attack results in a non-tiny crit, the ID of the attack to use if the condition is met */
 		int offensive_bonus_{}; /**< Offensive bonus for the attack, used to determine how difficult it is to hit with the attack. */
 		rule::enums::AttackSizeType::Type non_weapon_size_{}; /**< Size of a non-weapon attack. */
-		const SpecialAttackTable* non_weapon_table_{}; /**< SpecialAttackTable for non-weapon attacks. */
-		const AttackTable* weapon_table_{}; /**< AttackTable for weapon or elemental ball/bolt attacks that use standard attack tables, used to determine the attack result for special attacks. */
+		const rule::SpecialAttackTable* non_weapon_table_{}; /**< SpecialAttackTable for non-weapon attacks. */
+		const rule::AttackTable* weapon_table_{}; /**< AttackTable for weapon or elemental ball/bolt attacks that use standard attack tables, used to determine the attack result for special attacks. */
 		int num_attacks_{ 1 }; /**< Number of attacks that the creature makes with this attack in a round, used to indicate that there should be multiple rolls to represent multiple attacks such as a bear's two claws and one bite. */
 		bool use_all_attacks_{ false }; /**< If true, the creature will use all of the other available standard attacks in a round. */
 		int min_group_size_{}; /**< If this number of creatures attack as a group, this attack may be used. For example, (10) indicates that if 10 of these creatures attack as a group they may use the given attack. */
 		int concussion_multiplier_{ 1 }; /**< Multiplier for concussion damage, used to determine how much concussion damage is dealt by the attack. */
-		std::optional<const PoisonData*> poison_{}; /**< Poison applied by the attack, if any. If not set then the attack does not apply any poison. */
-		std::optional<const DiseaseData*> disease_{}; /**< Disease applied by the attack, if any. If not set then the attack does not apply any disease. */
+		std::optional<const rule::PoisonData*> poison_{}; /**< Poison applied by the attack, if any. If not set then the attack does not apply any poison. */
+		std::optional<const rule::DiseaseData*> disease_{}; /**< Disease applied by the attack, if any. If not set then the attack does not apply any disease. */
 		int range_{}; /**< Range of the attack, used to determine how far away the target can be for the attack to be used. This is used for attacks like a Spitting Cobra that spits venom to blind it's targets. */
 		std::optional<std::string> special_{}; /**< Special attacks that are not specifically defined above. */
 		int same_round_attack_id_{}; /**< If this is set and the current attack results in a non-tiny crit the conditional attack with the given ID will also be used this round */
