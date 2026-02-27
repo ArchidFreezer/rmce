@@ -2,53 +2,57 @@
 #include <LevelVarianceType.h>
 #include <table/BoundIntRowLookupTable.h>
 
-/**
- * @class TableColumnLevelVarianceCodeMatcher
- * @brief Class to match the level variance code to a table column index
- *
- * This is used as the column matcher for the LevelVarianceType class.It takes a LevelVarianceType and returns the corresponding column index for that code.
- */
-class TableColumnLevelVarianceCodeMatcher {
-public:
-	/**
-	 * @brief Get the index of the table column
-	 * @return int table column index
-	 */
-	int column(LevelVarianceType::Type match) const {
-		switch (match) {
-		case LevelVarianceType::Type::kNone: return 0;
-		case LevelVarianceType::Type::kA: return 1;
-		case LevelVarianceType::Type::kB: return 2;
-		case LevelVarianceType::Type::kC: return 3;
-		case LevelVarianceType::Type::kD: return 4;
-		case LevelVarianceType::Type::kE: return 5;
-		case LevelVarianceType::Type::kF: return 6;
-		case LevelVarianceType::Type::kG: return 7;
-		case LevelVarianceType::Type::kH: return 8;
-		}
-		return 0;
-	}
-};
-
-/**
- * @class LevelVarianceTable
- * @brief Class to contain the creature level variance table
- *
- * This is a simple lookup table that takes a bonus XP code and a character level, returning the difference from the average level for a creature of this type.
- */
-class LevelVarianceTable : public BoundIntRowLookupTable<TableColumnLevelVarianceCodeMatcher, LevelVarianceType::Type, int> {
-public:
+namespace rm {
 
 	/**
-	 * @brief Constructor defining the name of the table
+	 * @class TableColumnLevelVarianceCodeMatcher
+	 * @brief Class to match the level variance code to a table column index
 	 *
+	 * This is used as the column matcher for the LevelVarianceType class.It takes a LevelVarianceType and returns the corresponding column index for that code.
 	 */
-	LevelVarianceTable(std::string_view id) : BoundIntRowLookupTable(id, -100, 500) {}
+	class TableColumnLevelVarianceCodeMatcher {
+	public:
+		/**
+		 * @brief Get the index of the table column
+		 * @return int table column index
+		 */
+		int column(LevelVarianceType::Type match) const {
+			switch (match) {
+			case LevelVarianceType::Type::kNone: return 0;
+			case LevelVarianceType::Type::kA: return 1;
+			case LevelVarianceType::Type::kB: return 2;
+			case LevelVarianceType::Type::kC: return 3;
+			case LevelVarianceType::Type::kD: return 4;
+			case LevelVarianceType::Type::kE: return 5;
+			case LevelVarianceType::Type::kF: return 6;
+			case LevelVarianceType::Type::kG: return 7;
+			case LevelVarianceType::Type::kH: return 8;
+			}
+			return 0;
+		}
+	};
 
 	/**
-	 * @brief In-game name of the table as used by players and NPCs
-	 * @return Name of the table
+	 * @class LevelVarianceTable
+	 * @brief Class to contain the creature level variance table
+	 *
+	 * This is a simple lookup table that takes a bonus XP code and a character level, returning the difference from the average level for a creature of this type.
 	 */
-	const std::string& name() const { return "Creature Level Variance Table"; }
+	class LevelVarianceTable : public BoundIntRowLookupTable<TableColumnLevelVarianceCodeMatcher, LevelVarianceType::Type, int> {
+	public:
 
-};
+		/**
+		 * @brief Constructor defining the name of the table
+		 *
+		 */
+		LevelVarianceTable(std::string_view id) : BoundIntRowLookupTable(id, -100, 500) {}
+
+		/**
+		 * @brief In-game name of the table as used by players and NPCs
+		 * @return Name of the table
+		 */
+		const std::string& name() const { return "Creature Level Variance Table"; }
+
+	};
+
+} // namespace rm

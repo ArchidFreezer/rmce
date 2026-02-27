@@ -5,59 +5,63 @@
 #include <optional>
 #include <string_view>
 
-#include "StringUtils.h"
+#include <StringUtils.h>
 
-/**
- * @brief Represents the relative wealth of a treasure, used to randomly generate treasure.
- */
-namespace TreasureValueType {
+namespace rm {
 
 	/**
-	 * @brief Represents relative wealth of a treasure, used to randomly generate treasure.
+	 * @brief Represents the relative wealth of a treasure, used to randomly generate treasure.
 	 */
-	enum class Type { kVeryPoor, kPoor, kNormal, kRich, kVeryRich, kSpecial };
+	namespace TreasureValueType {
 
-	using enum Type;
+		/**
+		 * @brief Represents relative wealth of a treasure, used to randomly generate treasure.
+		 */
+		enum class Type { kVeryPoor, kPoor, kNormal, kRich, kVeryRich, kSpecial };
 
-	/**
-	 * @brief Get the string representation of the given enum
-	 * @param size The TreasureValueType::Type to get the string of
-	 * @return Game display form of the enum value as a string
-	 */
-	const std::string toString(Type size);
+		using enum Type;
 
-	/**
-	 * @brief Teach operator<< how to print a TreasureValueType::Type
-	 * @param out Output stream that the enum should be printed to
-	 * @param size Enum value to output
-	 * @return Output stream reference containing the output enum value
-	 */
-	inline std::ostream& operator<<(std::ostream& out, Type size) {
-		return out << toString(size);
-	}
+		/**
+		 * @brief Get the string representation of the given enum
+		 * @param size The TreasureValueType::Type to get the string of
+		 * @return Game display form of the enum value as a string
+		 */
+		const std::string toString(Type size);
 
-	/**
-	 * @brief Get the enumeration value based on a string
+		/**
+		 * @brief Teach operator<< how to print a TreasureValueType::Type
+		 * @param out Output stream that the enum should be printed to
+		 * @param size Enum value to output
+		 * @return Output stream reference containing the output enum value
+		 */
+		inline std::ostream& operator<<(std::ostream& out, Type size) {
+			return out << toString(size);
+		}
+
+		/**
+		 * @brief Get the enumeration value based on a string
+		 *
+		 * Accepts values that are returned by toString() in a case insensitive manner.
+		 *
+		 * @param sv string_view to get the enumeration for
+		 * @return TreasureValueType::Type represented by the string
+		 *
+		 * @see toString()
+		 */
+		const std::optional<Type> fromString(std::string_view sv);
+
+		/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
 	 *
 	 * Accepts values that are returned by toString() in a case insensitive manner.
 	 *
 	 * @param sv string_view to get the enumeration for
-	 * @return TreasureValueType::Type represented by the string
+	 * @param type reference to set the TreasureValueType::Type represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid TreasureValueType::Type
 	 *
 	 * @see toString()
 	 */
-	const std::optional<Type> fromString(std::string_view sv);
+		void fromString(std::string_view sv, TreasureValueType::Type& type);
+	}
 
-	/**
- * @brief Get the enumeration value based on a string and set it to the provided reference
- *
- * Accepts values that are returned by toString() in a case insensitive manner.
- *
- * @param sv string_view to get the enumeration for
- * @param type reference to set the TreasureValueType::Type represented by the string to
- * @throws std::invalid_argument if the string does not represent a valid TreasureValueType::Type
- *
- * @see toString()
- */
-	void fromString(std::string_view sv, TreasureValueType::Type& type);
-}
+} // namespace rm

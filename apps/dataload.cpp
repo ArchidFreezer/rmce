@@ -29,6 +29,8 @@
 #include <TreasureCodeDatafileParserJson.h>
 #include <WeaponTypeDatafileParserJson.h>
 
+using namespace rm;
+
 int main() {
 	std::cout << "Current path is " << std::filesystem::current_path() << '\n';
 

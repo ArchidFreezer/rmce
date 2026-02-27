@@ -2,26 +2,30 @@
 #include <SkillProgressionTypeData.h>
 #include <StatType.h>
 
-void SkillGroupDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
-	SkillGroupData& game_data = factory().get<SkillGroupData>(id);
+namespace rm {
 
-	datum.put("id", game_data.id());
-	datum.put("name", game_data.name());
-}
+	void SkillGroupDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
+		SkillGroupData& game_data = factory().get<SkillGroupData>(id);
 
-void SkillGroupDatafileParserJson::parse() {
-	std::cout << "Loading SkillGroup data ... " << std::endl;
+		datum.put("id", game_data.id());
+		datum.put("name", game_data.name());
+	}
 
-	// Loop through the groups
-	const pt::ptree& tree = ptree().get_child(rootNode());
-	for (const auto& v : tree) {
-		std::string name = v.second.get<std::string>("name");
-		std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
+	void SkillGroupDatafileParserJson::parse() {
+		std::cout << "Loading SkillGroup data ... " << std::endl;
 
-		SkillGroupData& datum = factory().get<SkillGroupData>(id);
-		datum.setName(name);
+		// Loop through the groups
+		const pt::ptree& tree = ptree().get_child(rootNode());
+		for (const auto& v : tree) {
+			std::string name = v.second.get<std::string>("name");
+			std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
 
-		std::cout << "\tSkillGroup name: " << datum.name() << std::endl;
+			SkillGroupData& datum = factory().get<SkillGroupData>(id);
+			datum.setName(name);
+
+			std::cout << "\tSkillGroup name: " << datum.name() << std::endl;
 
 		}
-}
+	}
+
+} // namespace rm

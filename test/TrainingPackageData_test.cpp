@@ -2,6 +2,8 @@
 
 #include <TrainingPackageData.h>
 
+using namespace rm;
+
 namespace {
 	TEST(TrainingPackageData, General) {
 		std::string id{ "TP1_ID" };

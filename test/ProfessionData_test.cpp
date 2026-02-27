@@ -6,6 +6,8 @@
 #include <SpellListData.h>
 #include <StatType.h>
 
+using namespace rm;
+
 namespace {
 	TEST(ProfessionData, Realms) {
 		ProfessionData prof("PROF_ID");

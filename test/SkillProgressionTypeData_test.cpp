@@ -2,6 +2,8 @@
 
 #include "SkillProgressionTypeData.h"
 
+using namespace rm;
+
 namespace {
 
 	// Demonstrate some basic assertions.

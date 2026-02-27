@@ -3,6 +3,8 @@
 #include <LanguageAbility.h>
 #include <LanguageData.h>
 
+using namespace rm;
+
 namespace {
 	LanguageData getLanguage(std::string id, std::string name, bool somantic, bool spoken, bool written) {
 		LanguageData lang(id);

@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include <AnimalData.h>
 
+using namespace rm;
+
 namespace {
 	TEST(AnimalDataTest, HuntingModifier) {
 		AnimalData animal("TEST_ANIMAL");

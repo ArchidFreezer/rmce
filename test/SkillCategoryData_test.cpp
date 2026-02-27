@@ -4,6 +4,8 @@
 #include <SkillGroupData.h>
 #include <StatType.h>
 
+using namespace rm;
+
 namespace {
 	TEST(SkillCategoryData, Constructor) {
 		SkillProgressionTypeData spd_sk_std("SKILLPROGRESSIONTYPE_STANDARD");

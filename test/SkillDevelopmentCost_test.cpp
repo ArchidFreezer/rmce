@@ -2,6 +2,8 @@
 
 #include <SkillDevelopmentCost.h>
 
+using namespace rm;
+
 namespace {
 	TEST(SkillDevelopmentCost, General) {
 		SkillDevelopmentCost c0{};

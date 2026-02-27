@@ -2,6 +2,8 @@
 
 #include <Location.h>
 
+using namespace rm;
+
 namespace {
 	TEST(LocationTest, TestFeatures) {
 		Location location;

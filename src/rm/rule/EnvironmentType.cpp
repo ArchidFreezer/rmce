@@ -1,218 +1,221 @@
 #include <EnvironmentType.h>
 
-const std::string EnvironmentType::toString(EnvironmentType::Feature feature) {
-	using enum EnvironmentType::Feature;
+namespace rm {
 
-	switch (feature) {
-	case kBattlefield: return "Battlefield";
-	case kBurial: return "Burial";
-	case kCave: return "Cave";
-	case kCavern: return "Cavern";
-	case kDimention: return "Dimention";
-	case kEnchanted: return "Enchanted";
-	case kHabitation: return "Habitation";
-	case kRuins: return "Ruins";
-	case kRural: return "Rural";
-	case kVolcanic: return "Volcanic";
-	default: return "";
+	const std::string EnvironmentType::toString(EnvironmentType::Feature feature) {
+		using enum EnvironmentType::Feature;
+
+		switch (feature) {
+		case kBattlefield: return "Battlefield";
+		case kBurial: return "Burial";
+		case kCave: return "Cave";
+		case kCavern: return "Cavern";
+		case kDimention: return "Dimention";
+		case kEnchanted: return "Enchanted";
+		case kHabitation: return "Habitation";
+		case kRuins: return "Ruins";
+		case kRural: return "Rural";
+		case kVolcanic: return "Volcanic";
+		default: return "";
+		}
 	}
-}
 
-const std::string EnvironmentType::description(EnvironmentType::Feature feature) {
-	using enum EnvironmentType::Feature;
+	const std::string EnvironmentType::description(EnvironmentType::Feature feature) {
+		using enum EnvironmentType::Feature;
 
-	switch (feature) {
-	case kBattlefield: return "Battlefields and/or shipwrecks";
-	case kBurial: return "Burial sites";
-	case kCave: return "Cave entrances, overhangs and/or lairs";
-	case kCavern: return "Cavern complexes";
-	case kDimention: return "Cross-over points for dimentions";
-	case kEnchanted: return "Enchanted or magical places";
-	case kHabitation: return "Villages, towns, cities and/or castles";
-	case kRuins: return "Ruins of any habitation or building";
-	case kRural: return "Rural inhabited and/or cultivated areas";
-	case kVolcanic: return "Volcanic areas";
-	default: return "";
+		switch (feature) {
+		case kBattlefield: return "Battlefields and/or shipwrecks";
+		case kBurial: return "Burial sites";
+		case kCave: return "Cave entrances, overhangs and/or lairs";
+		case kCavern: return "Cavern complexes";
+		case kDimention: return "Cross-over points for dimentions";
+		case kEnchanted: return "Enchanted or magical places";
+		case kHabitation: return "Villages, towns, cities and/or castles";
+		case kRuins: return "Ruins of any habitation or building";
+		case kRural: return "Rural inhabited and/or cultivated areas";
+		case kVolcanic: return "Volcanic areas";
+		default: return "";
+		}
 	}
-}
 
-const std::optional<EnvironmentType::Feature> EnvironmentType::feature(std::string_view sv) {
-	using enum EnvironmentType::Feature;
+	const std::optional<EnvironmentType::Feature> EnvironmentType::feature(std::string_view sv) {
+		using enum EnvironmentType::Feature;
 
-	const std::string val = archid::lcaseconcat(sv);
-	if (val == "battlefield") return kBattlefield;
-	if (val == "burial") return kBurial;
-	if (val == "cave") return kCave;
-	if (val == "cavern") return kCavern;
-	if (val == "dimention") return kDimention;
-	if (val == "enchanted") return kEnchanted;
-	if (val == "habitation") return kHabitation;
-	if (val == "ruins") return kRuins;
-	if (val == "rural") return kRural;
-	if (val == "volcanic") return kVolcanic;
+		const std::string val = archid::lcaseconcat(sv);
+		if (val == "battlefield") return kBattlefield;
+		if (val == "burial") return kBurial;
+		if (val == "cave") return kCave;
+		if (val == "cavern") return kCavern;
+		if (val == "dimention") return kDimention;
+		if (val == "enchanted") return kEnchanted;
+		if (val == "habitation") return kHabitation;
+		if (val == "ruins") return kRuins;
+		if (val == "rural") return kRural;
+		if (val == "volcanic") return kVolcanic;
 
-	return {};
-}
-
-void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Feature& type) {
-	std::optional<Feature> opt_type = feature(sv);
-	if (opt_type) type = opt_type.value();
-	else throw std::invalid_argument("Invalid string value for EnvironmentType::Feature: " + std::string(sv));
-}
-
-const std::string EnvironmentType::toString(EnvironmentType::Terrain terrain) {
-	using enum EnvironmentType::Terrain;
-
-	switch (terrain) {
-	case kAlpine: return "Alpine";
-	case kRough: return "Rough";
-	case kUnderground: return "Underground";
-	case kWaste: return "Waste";
-	default: return "";
+		return {};
 	}
-}
 
-const std::string EnvironmentType::description(EnvironmentType::Terrain terrain) {
-	using enum EnvironmentType::Terrain;
-
-	switch (terrain) {
-	case kAlpine: return "Alpine, high altitude or mountainous";
-	case kRough: return "Rough, rugged or rocky hills";
-	case kUnderground: return "Underground";
-	case kWaste: return "Waste, barren";
-	default: return "";
+	void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Feature& type) {
+		std::optional<Feature> opt_type = feature(sv);
+		if (opt_type) type = opt_type.value();
+		else throw std::invalid_argument("Invalid string value for EnvironmentType::Feature: " + std::string(sv));
 	}
-}
 
-const std::optional<EnvironmentType::Terrain> EnvironmentType::terrain(std::string_view sv) {
-	using enum EnvironmentType::Terrain;
+	const std::string EnvironmentType::toString(EnvironmentType::Terrain terrain) {
+		using enum EnvironmentType::Terrain;
 
-	const std::string val = archid::lcaseconcat(sv);
-	if (val == "alpine") return kAlpine;
-	if (val == "rough") return kRough;
-	if (val == "underground") return kUnderground;
-	if (val == "waste") return kWaste;
-	
-	return {};
-}
-
-void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Terrain& type) {
-	std::optional<Terrain> opt_type = terrain(sv);
-	if (opt_type) type = opt_type.value();
-	else throw std::invalid_argument("Invalid string value for EnvironmentType::Terrain: " + std::string(sv));
-}
-
-const std::string EnvironmentType::toString(EnvironmentType::Vegetation vegetation) {
-	using enum EnvironmentType::Vegetation;
-
-	switch (vegetation) {
-	case kBarren: return "Barren";
-	case kConiferous: return "Coniferous";
-	case kDeciduous: return "Deciduous";
-	case kGrasslands: return "Grasslands";
-	case kHeath: return "Heath";
-	case kJungle: return "Jungle";
-	case kPlains: return "Plains";
-	case kTundra: return "Tundra";
-	default: return "";
+		switch (terrain) {
+		case kAlpine: return "Alpine";
+		case kRough: return "Rough";
+		case kUnderground: return "Underground";
+		case kWaste: return "Waste";
+		default: return "";
+		}
 	}
-}
 
-const std::string EnvironmentType::description(EnvironmentType::Vegetation vegetation) {
-	using enum EnvironmentType::Vegetation;
+	const std::string EnvironmentType::description(EnvironmentType::Terrain terrain) {
+		using enum EnvironmentType::Terrain;
 
-	switch (vegetation) {
-	case kBarren: return "Barren, without vegetation";
-	case kConiferous: return "Coniferous forest and/or taiga";
-	case kDeciduous: return "Deciduous and mixed forest";
-	case kGrasslands: return "Grasslands with long grass";
-	case kHeath: return "Heath, scrub or moor";
-	case kJungle: return "Jungle or rainforest";
-	case kPlains: return "Grasslands with short grass";
-	case kTundra: return "Tundra";
-	default: return "";
+		switch (terrain) {
+		case kAlpine: return "Alpine, high altitude or mountainous";
+		case kRough: return "Rough, rugged or rocky hills";
+		case kUnderground: return "Underground";
+		case kWaste: return "Waste, barren";
+		default: return "";
+		}
 	}
-}
 
-const std::optional<EnvironmentType::Vegetation> EnvironmentType::vegetation(std::string_view sv) {
-	using enum EnvironmentType::Vegetation;
+	const std::optional<EnvironmentType::Terrain> EnvironmentType::terrain(std::string_view sv) {
+		using enum EnvironmentType::Terrain;
 
-	const std::string val = archid::lcaseconcat(sv);
-	if (val == "barren") return kBarren;
-	if (val == "coniferous") return kConiferous;
-	if (val == "deciduous") return kDeciduous;
-	if (val == "grasslands") return kGrasslands;
-	if (val == "heath") return kHeath;
-	if (val == "jungle") return kJungle;
-	if (val == "plains") return kPlains;
-	if (val == "tundra") return kTundra;
+		const std::string val = archid::lcaseconcat(sv);
+		if (val == "alpine") return kAlpine;
+		if (val == "rough") return kRough;
+		if (val == "underground") return kUnderground;
+		if (val == "waste") return kWaste;
 
-	return {};
-}
-
-void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Vegetation& type) {
-	std::optional<Vegetation> opt_type = vegetation(sv);
-	if (opt_type) type = opt_type.value();
-	else throw std::invalid_argument("Invalid string value for EnvironmentType::Vegetation: " + std::string(sv));
-}
-
-const std::string EnvironmentType::toString(EnvironmentType::Water water) {
-	using enum EnvironmentType::Water;
-
-	switch (water) {
-	case kBreaks: return "Breaks";
-	case kDesert: return "Desert";
-	case kFreshCoast: return "Freshwater Coast";
-	case kGlacier: return "Glacier";
-	case kIslet: return "Islet";
-	case kLake: return "Lake";
-	case kMarsh: return "Marsh";
-	case kOasis: return "Oasis";
-	case kOcean: return "Ocean";
-	case kSaltCoast: return "Saltwater Coast";
-	default: return "";
+		return {};
 	}
-}
 
-const std::string EnvironmentType::description(EnvironmentType::Water water) {
-	using enum EnvironmentType::Water;
-
-	switch (water) {
-	case kBreaks: return "Breaks and/or wadis";
-	case kDesert: return "Deserts";
-	case kFreshCoast: return "Freshwater coasts or banks";
-	case kGlacier: return "Glaciers or snowfields";
-	case kIslet: return "Tropical islets, reefs or atolls";
-	case kLake: return "Lakes or rivers";
-	case kMarsh: return "Marshes or swamps";
-	case kOasis: return "Oasis or isolated water source";
-	case kOcean: return "Oceans";
-	case kSaltCoast: return "Saltwater shores or shallows";
-	default: return "";
+	void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Terrain& type) {
+		std::optional<Terrain> opt_type = terrain(sv);
+		if (opt_type) type = opt_type.value();
+		else throw std::invalid_argument("Invalid string value for EnvironmentType::Terrain: " + std::string(sv));
 	}
-}
 
-const std::optional<EnvironmentType::Water> EnvironmentType::water(std::string_view sv) {
-	using enum EnvironmentType::Water;
+	const std::string EnvironmentType::toString(EnvironmentType::Vegetation vegetation) {
+		using enum EnvironmentType::Vegetation;
 
-	const std::string val = archid::lcaseconcat(sv);
-	if (val == "breaks") return kBreaks;
-	if (val == "desert") return kDesert;
-	if (val == "freshwatercoast") return kFreshCoast;
-	if (val == "glacier") return kGlacier;
-	if (val == "islet") return kIslet;
-	if (val == "lake") return kLake;
-	if (val == "marsh") return kMarsh;
-	if (val == "oasis") return kOasis;
-	if (val == "ocean") return kOcean;
-	if (val == "saltwatercoast") return kSaltCoast;
+		switch (vegetation) {
+		case kBarren: return "Barren";
+		case kConiferous: return "Coniferous";
+		case kDeciduous: return "Deciduous";
+		case kGrasslands: return "Grasslands";
+		case kHeath: return "Heath";
+		case kJungle: return "Jungle";
+		case kPlains: return "Plains";
+		case kTundra: return "Tundra";
+		default: return "";
+		}
+	}
 
-	return {};
-}
+	const std::string EnvironmentType::description(EnvironmentType::Vegetation vegetation) {
+		using enum EnvironmentType::Vegetation;
 
-void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Water& type) {
-	std::optional<Water> opt_type = water(sv);
-	if (opt_type) type = opt_type.value();
-	else throw std::invalid_argument("Invalid string value for EnvironmentType::Water: " + std::string(sv));
-}
+		switch (vegetation) {
+		case kBarren: return "Barren, without vegetation";
+		case kConiferous: return "Coniferous forest and/or taiga";
+		case kDeciduous: return "Deciduous and mixed forest";
+		case kGrasslands: return "Grasslands with long grass";
+		case kHeath: return "Heath, scrub or moor";
+		case kJungle: return "Jungle or rainforest";
+		case kPlains: return "Grasslands with short grass";
+		case kTundra: return "Tundra";
+		default: return "";
+		}
+	}
 
+	const std::optional<EnvironmentType::Vegetation> EnvironmentType::vegetation(std::string_view sv) {
+		using enum EnvironmentType::Vegetation;
+
+		const std::string val = archid::lcaseconcat(sv);
+		if (val == "barren") return kBarren;
+		if (val == "coniferous") return kConiferous;
+		if (val == "deciduous") return kDeciduous;
+		if (val == "grasslands") return kGrasslands;
+		if (val == "heath") return kHeath;
+		if (val == "jungle") return kJungle;
+		if (val == "plains") return kPlains;
+		if (val == "tundra") return kTundra;
+
+		return {};
+	}
+
+	void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Vegetation& type) {
+		std::optional<Vegetation> opt_type = vegetation(sv);
+		if (opt_type) type = opt_type.value();
+		else throw std::invalid_argument("Invalid string value for EnvironmentType::Vegetation: " + std::string(sv));
+	}
+
+	const std::string EnvironmentType::toString(EnvironmentType::Water water) {
+		using enum EnvironmentType::Water;
+
+		switch (water) {
+		case kBreaks: return "Breaks";
+		case kDesert: return "Desert";
+		case kFreshCoast: return "Freshwater Coast";
+		case kGlacier: return "Glacier";
+		case kIslet: return "Islet";
+		case kLake: return "Lake";
+		case kMarsh: return "Marsh";
+		case kOasis: return "Oasis";
+		case kOcean: return "Ocean";
+		case kSaltCoast: return "Saltwater Coast";
+		default: return "";
+		}
+	}
+
+	const std::string EnvironmentType::description(EnvironmentType::Water water) {
+		using enum EnvironmentType::Water;
+
+		switch (water) {
+		case kBreaks: return "Breaks and/or wadis";
+		case kDesert: return "Deserts";
+		case kFreshCoast: return "Freshwater coasts or banks";
+		case kGlacier: return "Glaciers or snowfields";
+		case kIslet: return "Tropical islets, reefs or atolls";
+		case kLake: return "Lakes or rivers";
+		case kMarsh: return "Marshes or swamps";
+		case kOasis: return "Oasis or isolated water source";
+		case kOcean: return "Oceans";
+		case kSaltCoast: return "Saltwater shores or shallows";
+		default: return "";
+		}
+	}
+
+	const std::optional<EnvironmentType::Water> EnvironmentType::water(std::string_view sv) {
+		using enum EnvironmentType::Water;
+
+		const std::string val = archid::lcaseconcat(sv);
+		if (val == "breaks") return kBreaks;
+		if (val == "desert") return kDesert;
+		if (val == "freshwatercoast") return kFreshCoast;
+		if (val == "glacier") return kGlacier;
+		if (val == "islet") return kIslet;
+		if (val == "lake") return kLake;
+		if (val == "marsh") return kMarsh;
+		if (val == "oasis") return kOasis;
+		if (val == "ocean") return kOcean;
+		if (val == "saltwatercoast") return kSaltCoast;
+
+		return {};
+	}
+
+	void EnvironmentType::fromString(std::string_view sv, EnvironmentType::Water& type) {
+		std::optional<Water> opt_type = water(sv);
+		if (opt_type) type = opt_type.value();
+		else throw std::invalid_argument("Invalid string value for EnvironmentType::Water: " + std::string(sv));
+	}
+
+} // namespace rm

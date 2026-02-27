@@ -2,6 +2,8 @@
 
 #include <table/TableColumnCreatureSizeMatcher.h>
 
+using namespace rm;
+
 namespace {
 	TEST(TableColumnCreatureSizeMatcher, All) {
 		TableColumnCreatureSizeMatcher matcher = TableColumnCreatureSizeMatcher();

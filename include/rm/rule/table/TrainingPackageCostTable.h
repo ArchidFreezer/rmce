@@ -6,21 +6,25 @@
 #include <TrainingPackageData.h>
 #include <string_view>
 
-/**
- * @class TrainingPackageCostTable
- * @brief Table for training package costs, using LookupTable as base
- */
-class TrainingPackageCostTable : public LookupTable<TableRowGameRuleDataMatcher, const TrainingPackageData*, TableColumnProfessionMatcher, const ProfessionData*, int> {
-public:
-	/**
-	 * @brief Default constructor deleted
-	 */
-	TrainingPackageCostTable() = delete;
+namespace rm {
 
 	/**
-	 * @brief Constructor defining bounds
-	 * @param id Unique identifier for the table
+	 * @class TrainingPackageCostTable
+	 * @brief Table for training package costs, using LookupTable as base
 	 */
-	explicit TrainingPackageCostTable(std::string_view id)
-		: LookupTable<TableRowGameRuleDataMatcher, const TrainingPackageData*, TableColumnProfessionMatcher, const ProfessionData*, int>(id) {}
-};
+	class TrainingPackageCostTable : public LookupTable<TableRowGameRuleDataMatcher, const TrainingPackageData*, TableColumnProfessionMatcher, const ProfessionData*, int> {
+	public:
+		/**
+		 * @brief Default constructor deleted
+		 */
+		TrainingPackageCostTable() = delete;
+
+		/**
+		 * @brief Constructor defining bounds
+		 * @param id Unique identifier for the table
+		 */
+		explicit TrainingPackageCostTable(std::string_view id)
+			: LookupTable<TableRowGameRuleDataMatcher, const TrainingPackageData*, TableColumnProfessionMatcher, const ProfessionData*, int>(id) {}
+	};
+
+} // namespace rm

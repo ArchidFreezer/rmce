@@ -3,6 +3,8 @@
 #include <table/SpecialAttackTable.h>
 #include <NumberMatcherFactory.h>
 
+using namespace rm;
+
 namespace {
 
 	TableRow<std::string> buildATRow(std::string prefix, int row_num) {

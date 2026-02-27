@@ -2,14 +2,16 @@
 #include <ProfessionDatafileParserXml.h>
 #include <SkillDevelopmentType.h>
 
-void ProfessionDatafileParserXml::parse() {
-	std::cout << "Loading Profession data ... ";
+namespace rm {
 
-	// Get the lists to parse and loop through them
-	const pt::ptree& tree = ptree().get_child(rootNode());
-	for (const auto& v : tree) {
-		std::string name = v.second.get<std::string>("name");
-		std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
+	void ProfessionDatafileParserXml::parse() {
+		std::cout << "Loading Profession data ... ";
+
+		// Get the lists to parse and loop through them
+		const pt::ptree& tree = ptree().get_child(rootNode());
+		for (const auto& v : tree) {
+			std::string name = v.second.get<std::string>("name");
+			std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
 
 			ProfessionData& ref = factory().get<ProfessionData>(id);
 			ref.setName(name);
@@ -22,7 +24,7 @@ void ProfessionDatafileParserXml::parse() {
 			// Spell user type
 			std::string spell_user_type = v.second.get<std::string>("spell-user-type");
 			ref.setSpellUserType(SpellUserType::fromString(spell_user_type).value());
-			
+
 			// Get the power realms
 			for (const auto& realms_tree : v.second.get_child("realms")) {
 				std::string realm_name = realms_tree.second.get_value<std::string>();
@@ -75,7 +77,7 @@ void ProfessionDatafileParserXml::parse() {
 			if (boost::optional<const pt::ptree&> skill_modifiers = v.second.get_child_optional("skill-modifiers")) {
 				for (const auto& skill_modifier : skill_modifiers.get()) {
 					// The tag hold multiple types of modifiers so ignore any we are not interested in
-					if( skill_modifier.second.get <int> ("num-choices") != -1) continue;
+					if (skill_modifier.second.get <int>("num-choices") != -1) continue;
 					std::string skill_type_id = skill_modifier.second.get<std::string>("skill-type");
 					if (SkillDevelopmentType::fromString(skill_type_id)) {
 						for (const auto& skill_tree : skill_modifier.second.get_child("skills")) {
@@ -205,7 +207,7 @@ void ProfessionDatafileParserXml::parse() {
 			if (boost::optional<const pt::ptree&> skill_group_bonuses = v.second.get_child_optional("skill-group-bonuses")) {
 				for (const auto& skill_group_bonus : skill_group_bonuses.get()) {
 					int bonus = skill_group_bonus.second.get_value<int>();
-					std::string group_id{ GameRuleData::generateId("SkillGroup", skill_group_bonus.second.get<std::string>("<xmlattr>.group"))};
+					std::string group_id{ GameRuleData::generateId("SkillGroup", skill_group_bonus.second.get<std::string>("<xmlattr>.group")) };
 					if (bonus) ref.addSkillGroupProfessionBonus(factory().get<SkillGroupData>(group_id), bonus);
 				}
 			}
@@ -231,5 +233,7 @@ void ProfessionDatafileParserXml::parse() {
 			}
 
 			std::cout << "\tProfession name: " << ref.name() << std::endl;
+		}
 	}
-}
+
+} // namespace rm

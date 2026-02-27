@@ -2,6 +2,8 @@
 #include <table/TableRowMatcher.h>
 #include <NumberRange.h>
 
+using namespace rm;
+
 namespace {
 	TEST(NumberRange, IntRange) {
 		archid::NumberRange nr(1, 10);

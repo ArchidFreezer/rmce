@@ -2,6 +2,8 @@
 
 #include <ClimateData.h>
 
+using namespace rm;
+
 namespace {
 	TEST(ClimateData, General) {
 		ClimateData c1("CLIM1_ID");

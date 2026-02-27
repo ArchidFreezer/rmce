@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include <RaceData.h>
 
+using namespace rm;
+
 namespace {
 	TEST(RaceData, AdolescentLanguageAbility) {
 		RaceData race("RACE_ID");
