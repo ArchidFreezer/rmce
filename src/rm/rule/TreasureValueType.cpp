@@ -1,6 +1,6 @@
 #include <TreasureValueType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string TreasureValueType::toString(Type type) {
 		using enum Type;
@@ -36,4 +36,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for TreasureValueType::Type: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

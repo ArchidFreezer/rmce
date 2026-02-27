@@ -38,13 +38,13 @@ namespace rm {
 		 * @brief Set the ArmourType::Type enumeration value of armour
 		 * @param type ArmourType::Type type of armour
 		 */
-		void setType(ArmourType::Type type) { type_ = type; }
+		void setType(rule::enums::ArmourType::Type type) { type_ = type; }
 
 		/**
 		 * @brief Get the ArmourType::Type enumeration value of armour
 		 * @return ArmourType::Type type of armour
 		 */
-		ArmourType::Type type() const { return type_; }
+		rule::enums::ArmourType::Type type() const { return type_; }
 
 		/**
 	 * @brief Set the name of the armour type as seen in-game
@@ -203,7 +203,7 @@ namespace rm {
 		bool includesGreaves() const { return includes_greaves_; }
 
 	private:
-		ArmourType::Type type_{}; /**< Actual ArmourType that the data represents */
+		rule::enums::ArmourType::Type type_{}; /**< Actual ArmourType that the data represents */
 		std::string name_{}; /** Name of the armour type as seen in-game */
 		std::string description_{}; /** Description of what the armour type consists of */
 		int min_manoeuvre_mod_{}; /** The minimum modification applied to manoeuvres that the armour applies */

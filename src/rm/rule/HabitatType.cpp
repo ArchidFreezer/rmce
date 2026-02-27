@@ -1,6 +1,6 @@
 #include <HabitatType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string HabitatType::toString(HabitatType::Temperature temperature) {
 		using enum HabitatType::Temperature;
@@ -66,4 +66,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for HabitatType::Precipitation: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

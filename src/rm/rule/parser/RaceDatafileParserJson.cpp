@@ -34,12 +34,12 @@ namespace rm::rule::parser {
 			ref.setBook(factory().get<BookData>(book_id));
 
 			// Get the creature size
-			CreatureSizeType::Type size{};
+			rule::enums::CreatureSizeType::Type size{};
 			fromString(v.second.get<std::string>("creature-size"), size);
 			ref.setSize(size);
 
 			// get the critical type
-			CriticalTableType::Type crit_table_type{};
+			rule::enums::CriticalTableType::Type crit_table_type{};
 			fromString(v.second.get<std::string>("critical-table"), crit_table_type);
 			ref.setCriticalTableType(crit_table_type);
 
@@ -62,7 +62,7 @@ namespace rm::rule::parser {
 			ref.setAdolescentLanguageAbilities(parseLanguageAbilityMapTree(v.second.get_child_optional("adolescent-languages")));
 
 			// Get Stat bonuses
-			ref.setStatBonuses(parseEnumPairTree<StatType::Type, int>(v.second.get_child_optional("stat-bonuses")));
+			ref.setStatBonuses(parseEnumPairTree<rule::enums::StatType::Type, int>(v.second.get_child_optional("stat-bonuses")));
 
 			// Get everyman skills
 			ref.setEverymanSkills(parseSkillSetTree(v.second.get_child_optional("everyman-skills")));
@@ -94,8 +94,8 @@ namespace rm::rule::parser {
 		datum.put("description", game_data.description());
 		datum.put("book", game_data.book().value()->id());
 		datum.put("high-culture", game_data.highCulture());
-		datum.put("creature-size", CreatureSizeType::toString(game_data.size()));
-		datum.put("critical-table", CriticalTableType::toString(game_data.criticalTableType()));
+		datum.put("creature-size", rule::enums::CreatureSizeType::toString(game_data.size()));
+		datum.put("critical-table", rule::enums::CriticalTableType::toString(game_data.criticalTableType()));
 		datum.put("recovery-multiplier", game_data.recoveryMultipler());
 		datum.put("background-options", game_data.numBackgroundOption());
 		datum.put("exhaustion-bonus", game_data.exhaustionBonus());
@@ -129,7 +129,7 @@ namespace rm::rule::parser {
 
 		// Stat bonus
 		{
-			pt::ptree tree{ getEnumPairTree<StatType::Type, int>(game_data.statBonuses()) };
+			pt::ptree tree{ getEnumPairTree<rule::enums::StatType::Type, int>(game_data.statBonuses()) };
 			if (tree.size()) datum.push_back(std::make_pair("stat-bonuses", tree));
 		}
 

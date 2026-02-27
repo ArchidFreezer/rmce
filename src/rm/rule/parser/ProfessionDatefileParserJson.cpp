@@ -14,17 +14,17 @@ namespace rm::rule::parser {
 			ProfessionData& ref = factory().get<ProfessionData>(id);
 			ref.setName(name);
 			ref.setDescription(v.second.get<std::string>("description"));
-			ref.setSpellUserType(SpellUserType::fromString(v.second.get<std::string>("spell-user-type")).value());
+			ref.setSpellUserType(rule::enums::SpellUserType::fromString(v.second.get<std::string>("spell-user-type")).value());
 
 			// Get the book from the cache
 			std::string book_id = v.second.get<std::string>("book");
 			ref.setBook(factory().get<BookData>(book_id));
 
 			// Get the spell power realms
-			ref.setRealms(parseEnumSetTree<RealmType::Type>(v.second.get_child("realms")));
+			ref.setRealms(parseEnumSetTree<rule::enums::RealmType::Type>(v.second.get_child("realms")));
 
 			// Get the primary stats
-			ref.setStats(parseEnumVectorTree<StatType::Type>(v.second.get_child("stats")));
+			ref.setStats(parseEnumVectorTree<rule::enums::StatType::Type>(v.second.get_child("stats")));
 
 			// Get the base spell list choices
 			ref.setBaseSpellListChoices(parseGameDataChoiceSetTree<SpellListData>(v.second.get_child_optional("base-spell-list-choices")));
@@ -33,13 +33,13 @@ namespace rm::rule::parser {
 			ref.setSkillBonuses(parseSkillPairTree<int>(v.second.get_child_optional("skill-bonuses")));
 
 			// Skill development types
-			ref.setSkillDevelopmentTypes(parseSkillPairEnumTree<SkillDevelopmentType::Type>(v.second.get_child_optional("skill-development-types")));
+			ref.setSkillDevelopmentTypes(parseSkillPairEnumTree<rule::enums::SkillDevelopmentType::Type>(v.second.get_child_optional("skill-development-types")));
 
 			// Skill development type choices
-			ref.setSkillDevelopmentTypeChoices(parseSkillChoicePairEnumTree<SkillDevelopmentType::Type>(v.second.get_child_optional("skill-development-type-choices")));
+			ref.setSkillDevelopmentTypeChoices(parseSkillChoicePairEnumTree<rule::enums::SkillDevelopmentType::Type>(v.second.get_child_optional("skill-development-type-choices")));
 
 			// Skill subcategory development type choices
-			ref.setSkillSubcategoryDevelopmentTypeChoices(parseGameDataChoicePairEnumTree<SkillData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-subcategory-development-type-choices")));
+			ref.setSkillSubcategoryDevelopmentTypeChoices(parseGameDataChoicePairEnumTree<SkillData, rule::enums::SkillDevelopmentType::Type>(v.second.get_child_optional("skill-subcategory-development-type-choices")));
 
 			// Skill category profession bonus
 			ref.setSkillCategoryProfessionBonuses(parseGameDataPairTree<SkillCategoryData, int>(v.second.get_child_optional("skill-category-profession-bonuses")));
@@ -48,10 +48,10 @@ namespace rm::rule::parser {
 			ref.setSkillCategorySpecialBonuses(parseGameDataPairTree<SkillCategoryData, int>(v.second.get_child_optional("skill-category-special-bonuses")));
 
 			// Skill category development types
-			ref.setSkillCategorySkillDevelopmentTypes(parseGameDataPairEnumTree<SkillCategoryData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-category-skill-development-types")));
+			ref.setSkillCategorySkillDevelopmentTypes(parseGameDataPairEnumTree<SkillCategoryData, rule::enums::SkillDevelopmentType::Type>(v.second.get_child_optional("skill-category-skill-development-types")));
 
 			// Skill category development type choices
-			ref.setSkillCategorySkillDevelopmentTypeChoices(parseGameDataChoicePairEnumTree<SkillCategoryData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-category-skill-development-type-choices")));
+			ref.setSkillCategorySkillDevelopmentTypeChoices(parseGameDataChoicePairEnumTree<SkillCategoryData, rule::enums::SkillDevelopmentType::Type>(v.second.get_child_optional("skill-category-skill-development-type-choices")));
 
 			// Skill category costs
 			if (boost::optional<const pt::ptree&> category_costs = v.second.get_child_optional("skill-category-costs")) {
@@ -69,10 +69,10 @@ namespace rm::rule::parser {
 			ref.setSkillGroupSpecialBonuses(parseGameDataPairTree<SkillGroupData, int>(v.second.get_child_optional("skill-group-special-bonuses")));
 
 			// Skill group skill development types
-			ref.setSkillGroupSkillDevelopmentTypes(parseGameDataPairEnumTree<SkillGroupData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-group-skill-development-types")));
+			ref.setSkillGroupSkillDevelopmentTypes(parseGameDataPairEnumTree<SkillGroupData, rule::enums::SkillDevelopmentType::Type>(v.second.get_child_optional("skill-group-skill-development-types")));
 
 			// Skill group development type choices
-			ref.setSkillGroupSkillDevelopmentTypeChoices(parseGameDataChoicePairEnumTree<SkillGroupData, SkillDevelopmentType::Type>(v.second.get_child_optional("skill-group-skill-development-type-choices")));
+			ref.setSkillGroupSkillDevelopmentTypeChoices(parseGameDataChoicePairEnumTree<SkillGroupData, rule::enums::SkillDevelopmentType::Type>(v.second.get_child_optional("skill-group-skill-development-type-choices")));
 
 			std::cout << "\tProfession name: " << ref.name() << std::endl;
 		}
@@ -85,17 +85,17 @@ namespace rm::rule::parser {
 		datum.put("name", game_data.name());
 		datum.put("description", game_data.description());
 		datum.put("book", game_data.book().value()->id());
-		datum.put("spell-user-type", SpellUserType::toString(game_data.spellUserType()));
+		datum.put("spell-user-type", rule::enums::SpellUserType::toString(game_data.spellUserType()));
 
 		// Realms
 		{
-			pt::ptree tree{ getEnumSetTree <RealmType::Type>(game_data.realms()) };
+			pt::ptree tree{ getEnumSetTree <rule::enums::RealmType::Type>(game_data.realms()) };
 			if (tree.size()) datum.push_back(std::make_pair("realms", tree));
 		}
 
 		// Stats
 		{
-			pt::ptree tree{ getEnumVectorTree<StatType::Type>(game_data.stats()) };
+			pt::ptree tree{ getEnumVectorTree<rule::enums::StatType::Type>(game_data.stats()) };
 			if (tree.size()) datum.push_back(std::make_pair("stats", tree));
 		}
 
@@ -113,19 +113,19 @@ namespace rm::rule::parser {
 
 		// Skill development types
 		{
-			pt::ptree tree{ getSkillPairEnumTree<SkillDevelopmentType::Type>(game_data.skillDevelopmentTypes()) };
+			pt::ptree tree{ getSkillPairEnumTree<rule::enums::SkillDevelopmentType::Type>(game_data.skillDevelopmentTypes()) };
 			if (tree.size()) datum.push_back(std::make_pair("skill-development-types", tree));
 		}
 
 		// Skill development type choices
 		{
-			pt::ptree tree{ getSkillChoicePairEnumTree <SkillDevelopmentType::Type>(game_data.skillDevelopmentTypeChoices()) };
+			pt::ptree tree{ getSkillChoicePairEnumTree <rule::enums::SkillDevelopmentType::Type>(game_data.skillDevelopmentTypeChoices()) };
 			if (tree.size()) datum.push_back(std::make_pair("skill-development-type-choices", tree));
 		}
 
 		// Skill subcategory development type choices
 		{
-			pt::ptree tree{ getGameDataChoicePairEnumTree <SkillData, SkillDevelopmentType::Type>(game_data.skillSubcategoryDevelopmentTypeChoices()) };
+			pt::ptree tree{ getGameDataChoicePairEnumTree <SkillData, rule::enums::SkillDevelopmentType::Type>(game_data.skillSubcategoryDevelopmentTypeChoices()) };
 			if (tree.size()) datum.push_back(std::make_pair("skill-subcategory-development-type-choices", tree));
 		}
 
@@ -143,13 +143,13 @@ namespace rm::rule::parser {
 
 		// Skill category development types
 		{
-			pt::ptree tree{ getGameDataPairEnumTree<SkillCategoryData,SkillDevelopmentType::Type>(game_data.skillCategorySkillDevelopmentTypes()) };
+			pt::ptree tree{ getGameDataPairEnumTree<SkillCategoryData, rule::enums::SkillDevelopmentType::Type>(game_data.skillCategorySkillDevelopmentTypes()) };
 			if (tree.size()) datum.push_back(std::make_pair("skill-category-skill-development-types", tree));
 		}
 
 		// Skill category development type choices
 		{
-			pt::ptree tree{ getGameDataChoicePairEnumTree <SkillCategoryData, SkillDevelopmentType::Type>(game_data.skillCategorySkillDevelopmentTypeChoices()) };
+			pt::ptree tree{ getGameDataChoicePairEnumTree <SkillCategoryData, rule::enums::SkillDevelopmentType::Type>(game_data.skillCategorySkillDevelopmentTypeChoices()) };
 			if (tree.size()) datum.push_back(std::make_pair("skill-category-skill-development-type-choices", tree));
 		}
 
@@ -183,13 +183,13 @@ namespace rm::rule::parser {
 
 		// Skill group skill development types
 		{
-			pt::ptree tree{ getGameDataPairEnumTree<SkillGroupData,SkillDevelopmentType::Type>(game_data.skillGroupSkillDevelopmentTypes()) };
+			pt::ptree tree{ getGameDataPairEnumTree<SkillGroupData, rule::enums::SkillDevelopmentType::Type>(game_data.skillGroupSkillDevelopmentTypes()) };
 			if (tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-types", tree));
 		}
 
 		// Skill group development type choices
 		{
-			pt::ptree tree{ getGameDataChoicePairEnumTree <SkillGroupData, SkillDevelopmentType::Type>(game_data.skillGroupSkillDevelopmentTypeChoices()) };
+			pt::ptree tree{ getGameDataChoicePairEnumTree <SkillGroupData, rule::enums::SkillDevelopmentType::Type>(game_data.skillGroupSkillDevelopmentTypeChoices()) };
 			if (tree.size()) datum.push_back(std::make_pair("skill-group-skill-development-type-choices", tree));
 		}
 

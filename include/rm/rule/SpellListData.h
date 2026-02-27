@@ -65,7 +65,7 @@ namespace rm {
 		 * @brief Add a realm to those the spell draws power from
 		 * @param realm RealmType::Type spell power realm
 		 */
-		void addRealm(RealmType::Type realm) {
+		void addRealm(rule::enums::RealmType::Type realm) {
 			realms_.emplace(realm);
 		}
 
@@ -75,25 +75,25 @@ namespace rm {
 		 * @return `true` if the list draws power from the realm
 		 * @return `false` if the list does not draw power from the realm
 		 */
-		bool isRealm(RealmType::Type realm) const { return (realms_.find(realm) != realms_.end()); }
+		bool isRealm(rule::enums::RealmType::Type realm) const { return (realms_.find(realm) != realms_.end()); }
 
 		/**
 		 * @brief Get the realms that the spell list draws power from
 		 * @return td::set<RealmType::Type> spell power realms
 		 */
-		const std::set<RealmType::Type> realms() { return realms_; }
+		const std::set<rule::enums::RealmType::Type> realms() { return realms_; }
 
 		/**
 		 * @brief Set the type of spell list
 		 * @param type SpellListType::Type of list
 		 */
-		void setType(SpellListType::Type type) { type_ = type; }
+		void setType(rule::enums::SpellListType::Type type) { type_ = type; }
 
 		/**
 		 * @brief Get the type of spell list
 		 * @return SpellListType::Type of spell list
 		 */
-		const SpellListType::Type type() const { return type_; }
+		const rule::enums::SpellListType::Type type() const { return type_; }
 
 		/**
 		 * @brief Set whether the spell list is considered to be evil
@@ -123,9 +123,9 @@ namespace rm {
 
 	private:
 		std::string name_{}; /**< Name of teh spell list */
-		std::set< RealmType::Type> realms_{};/**< Realm(s) that the spells on the list draw power from */
+		std::set<rule::enums::RealmType::Type> realms_{};/**< Realm(s) that the spells on the list draw power from */
 		std::optional<const BookData*> book_{ std::nullopt }; /**< Book that the spell list is described in */
-		SpellListType::Type type_{ SpellListType::Type::kOpen }; /**< Type of spell list */
+		rule::enums::SpellListType::Type type_{ rule::enums::SpellListType::Type::kOpen }; /**< Type of spell list */
 		bool evil_{}; /** Whether the list is considered evil */
 		bool summoning_{}; /** Whether spells on the list summon entities */
 	};

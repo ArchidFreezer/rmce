@@ -23,18 +23,18 @@ namespace rm::rule::parser {
 
 			// Spell user type
 			std::string spell_user_type = v.second.get<std::string>("spell-user-type");
-			ref.setSpellUserType(SpellUserType::fromString(spell_user_type).value());
+			ref.setSpellUserType(rule::enums::SpellUserType::fromString(spell_user_type).value());
 
 			// Get the power realms
 			for (const auto& realms_tree : v.second.get_child("realms")) {
 				std::string realm_name = realms_tree.second.get_value<std::string>();
-				ref.addRealm(RealmType::fromString(realm_name).value());
+				ref.addRealm(rule::enums::RealmType::fromString(realm_name).value());
 			}
 
 			// Get the prime stats
 			for (const auto& stats_tree : v.second.get_child("stats")) {
 				std::string stat_name = stats_tree.second.get_value<std::string>();
-				ref.addStat(StatType::fromString(stat_name).value());
+				ref.addStat(rule::enums::StatType::fromString(stat_name).value());
 			}
 
 			// Get base spell lists if any exist
@@ -79,10 +79,10 @@ namespace rm::rule::parser {
 					// The tag hold multiple types of modifiers so ignore any we are not interested in
 					if (skill_modifier.second.get <int>("num-choices") != -1) continue;
 					std::string skill_type_id = skill_modifier.second.get<std::string>("skill-type");
-					if (SkillDevelopmentType::fromString(skill_type_id)) {
+					if (rule::enums::SkillDevelopmentType::fromString(skill_type_id)) {
 						for (const auto& skill_tree : skill_modifier.second.get_child("skills")) {
 							std::string skill_id = GameRuleData::generateId("Skill", skill_tree.second.get_value<std::string>());
-							ref.setSkillDevelopmentType(factory().subcategoriedSkillData(skill_id), SkillDevelopmentType::fromString(skill_type_id).value());
+							ref.setSkillDevelopmentType(factory().subcategoriedSkillData(skill_id), rule::enums::SkillDevelopmentType::fromString(skill_type_id).value());
 						}
 					}
 				}
@@ -95,7 +95,7 @@ namespace rm::rule::parser {
 
 					// make sure we have a valid development type first
 					std::string skill_type_id = skill_development_type_choice.second.get<std::string>("skill-type");
-					if (SkillDevelopmentType::fromString(skill_type_id)) {
+					if (rule::enums::SkillDevelopmentType::fromString(skill_type_id)) {
 						choice.setNumChoices(skill_development_type_choice.second.get<int>("num-choices"));
 						for (const auto& skill_name_tree : skill_development_type_choice.second.get_child("skills")) {
 							std::string skill_id = GameRuleData::generateId("Skill", skill_name_tree.second.get_value<std::string>());
@@ -104,7 +104,7 @@ namespace rm::rule::parser {
 							SubcategoriedSkillData& sub_skill = (subcategory ? factory().subcategoriedSkillData(skill_id, subcategory.value()) : factory().subcategoriedSkillData(skill_id));
 							choice.addOption(sub_skill);
 						}
-						ref.addSkillDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
+						ref.addSkillDevelopmentTypeChoice(std::move(choice), rule::enums::SkillDevelopmentType::fromString(skill_type_id).value());
 					}
 				}
 			}
@@ -116,13 +116,13 @@ namespace rm::rule::parser {
 
 					// make sure we have a valid development type first
 					std::string skill_type_id = skill_subcategory_development_type_choice.second.get<std::string>("skill-type");
-					if (SkillDevelopmentType::fromString(skill_type_id)) {
+					if (rule::enums::SkillDevelopmentType::fromString(skill_type_id)) {
 						choice.setNumChoices(skill_subcategory_development_type_choice.second.get<int>("num-choices"));
 						for (const auto& skill_name_tree : skill_subcategory_development_type_choice.second.get_child("skills")) {
 							std::string skill_id = GameRuleData::generateId("Skill", skill_name_tree.second.get_value<std::string>());
 							choice.addOption(factory().get<SkillData>(skill_id));
 						}
-						ref.addSkillSubcategoryDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
+						ref.addSkillSubcategoryDevelopmentTypeChoice(std::move(choice), rule::enums::SkillDevelopmentType::fromString(skill_type_id).value());
 					}
 				}
 			}
@@ -150,8 +150,8 @@ namespace rm::rule::parser {
 				for (const auto& skill_category_development_type : skill_category_development_types.get()) {
 					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_development_type.second.get<std::string>("<xmlattr>.category")) };
 					std::string skill_type_id = skill_category_development_type.second.get_value<std::string>();
-					if (SkillDevelopmentType::fromString(skill_type_id)) {
-						ref.addSkillCategorySkillDevelopmentType(factory().get<SkillCategoryData>(skill_category_id), SkillDevelopmentType::fromString(skill_type_id).value());
+					if (rule::enums::SkillDevelopmentType::fromString(skill_type_id)) {
+						ref.addSkillCategorySkillDevelopmentType(factory().get<SkillCategoryData>(skill_category_id), rule::enums::SkillDevelopmentType::fromString(skill_type_id).value());
 					}
 				}
 			}
@@ -172,14 +172,14 @@ namespace rm::rule::parser {
 
 					// make sure we have a valid development type first
 					std::string skill_type_id = skill_category_development_type_choice.second.get<std::string>("skill-type");
-					if (SkillDevelopmentType::fromString(skill_type_id)) {
+					if (rule::enums::SkillDevelopmentType::fromString(skill_type_id)) {
 						choice.setNumChoices(skill_category_development_type_choice.second.get<int>("num-choices"));
 						for (const auto& category_name_tree : skill_category_development_type_choice.second.get_child("categories")) {
 							std::string category_name = category_name_tree.second.get_value<std::string>();
 							std::string category_id = GameRuleData::generateId("SkillCategory", category_name);
 							choice.addOption(factory().get<SkillCategoryData>(category_id));
 						}
-						ref.addSkillCategorySkillDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
+						ref.addSkillCategorySkillDevelopmentTypeChoice(std::move(choice), rule::enums::SkillDevelopmentType::fromString(skill_type_id).value());
 					}
 				}
 			}
@@ -191,14 +191,14 @@ namespace rm::rule::parser {
 
 					// make sure we have a valid development type first
 					std::string skill_type_id = skill_group_development_type_choice.second.get<std::string>("skill-type");
-					if (SkillDevelopmentType::fromString(skill_type_id)) {
+					if (rule::enums::SkillDevelopmentType::fromString(skill_type_id)) {
 						choice.setNumChoices(skill_group_development_type_choice.second.get<int>("num-choices"));
 						for (const auto& group_name_tree : skill_group_development_type_choice.second.get_child("groups")) {
 							std::string group_name = group_name_tree.second.get_value<std::string>();
 							std::string group_id = GameRuleData::generateId("SkillGroup", group_name);
 							choice.addOption(factory().get<SkillGroupData>(group_id));
 						}
-						ref.addSkillGroupSkillDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
+						ref.addSkillGroupSkillDevelopmentTypeChoice(std::move(choice), rule::enums::SkillDevelopmentType::fromString(skill_type_id).value());
 					}
 				}
 			}
@@ -225,9 +225,9 @@ namespace rm::rule::parser {
 			if (boost::optional<const pt::ptree&> skill_group_skill_modifiers = v.second.get_child_optional("skill-group-skill-modifiers")) {
 				for (const auto& skill_group_skill_modifier : skill_group_skill_modifiers.get()) {
 					std::string skill_type_id = skill_group_skill_modifier.second.get_value<std::string>();
-					if (SkillDevelopmentType::fromString(skill_type_id)) {
+					if (rule::enums::SkillDevelopmentType::fromString(skill_type_id)) {
 						std::string group_id{ GameRuleData::generateId("SkillGroup", skill_group_skill_modifier.second.get<std::string>("<xmlattr>.group")) };
-						ref.addSkillGroupSkillDevelopmentType(factory().get<SkillGroupData>(group_id), SkillDevelopmentType::fromString(skill_type_id).value());
+						ref.addSkillGroupSkillDevelopmentType(factory().get<SkillGroupData>(group_id), rule::enums::SkillDevelopmentType::fromString(skill_type_id).value());
 					}
 				}
 			}

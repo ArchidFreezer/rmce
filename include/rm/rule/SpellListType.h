@@ -6,7 +6,7 @@
 
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	/**
 	 * @brief Contains the SpellListType::Type enum and associated functions
@@ -61,4 +61,4 @@ namespace rm {
 		const std::optional<Type> fromString(std::string_view sv);
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

@@ -1,6 +1,6 @@
 #include <SkillActionType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string SkillActionType::toString(Type action) {
 		using enum Type;
@@ -33,4 +33,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for SkillActionType::Type: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

@@ -1,6 +1,6 @@
 #include <DiseasePoisonSeverityType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string DiseasePoisonSeverityType::toString(Type type) {
 		switch (type) {
@@ -29,4 +29,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for DiseasePoisonSeverityType::Type: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

@@ -15,11 +15,11 @@ namespace rm::rule::parser {
 			ClimateData& ref = factory().get<ClimateData>(id);
 			ref.setName(name);
 
-			std::optional<HabitatType::Temperature> temperature = HabitatType::temperature(v.second.get<std::string>("temperature"));
+			std::optional<rule::enums::HabitatType::Temperature> temperature = rule::enums::HabitatType::temperature(v.second.get<std::string>("temperature"));
 			if (temperature) ref.setTemperature(temperature.value());
 
 			// Get the precipitations
-			ref.setPrecipitations(parseEnumSetTree<HabitatType::Precipitation>(v.second.get_child("precipitations")));
+			ref.setPrecipitations(parseEnumSetTree<rule::enums::HabitatType::Precipitation>(v.second.get_child("precipitations")));
 
 			std::cout << "\tClimate name: " << ref.name() << std::endl;
 
@@ -31,11 +31,11 @@ namespace rm::rule::parser {
 		ClimateData& game_data = factory().get<ClimateData>(id);
 		datum.put("id", game_data.id());
 		datum.put("name", game_data.name());
-		datum.put("temperature", HabitatType::toString(game_data.temperature()));
+		datum.put("temperature", rule::enums::HabitatType::toString(game_data.temperature()));
 
 		// Precipitations
 		{
-			pt::ptree tree{ getEnumSetTree<HabitatType::Precipitation>(game_data.precipitations()) };
+			pt::ptree tree{ getEnumSetTree<rule::enums::HabitatType::Precipitation>(game_data.precipitations()) };
 			if (tree.size())datum.push_back(std::make_pair("precipitations", tree));
 		}
 	}

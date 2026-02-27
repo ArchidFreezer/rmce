@@ -50,28 +50,28 @@ namespace {
 		SkillGroupData sg("Artistic");
 		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		int i{};
-		i = scd.addStat(StatType::Type::kAgility);
+		i = scd.addStat(rule::enums::StatType::Type::kAgility);
 		EXPECT_EQ(scd.numberOfStats(), 1);
 		EXPECT_EQ(i, 1);
 
-		i = scd.addStat(StatType::Type::kAgility);
+		i = scd.addStat(rule::enums::StatType::Type::kAgility);
 		EXPECT_EQ(scd.numberOfStats(), 2);
 		EXPECT_EQ(i, 2);
 		
-		i = scd.addStat(StatType::Type::kStrength);
+		i = scd.addStat(rule::enums::StatType::Type::kStrength);
 		EXPECT_EQ(scd.numberOfStats(), 3);
 		EXPECT_EQ(i, 3);
 
-		EXPECT_THROW(scd.addStat(StatType::Type::kStrength), StatType::TooManyStatsException);
+		EXPECT_THROW(scd.addStat(rule::enums::StatType::Type::kStrength), rule::enums::StatType::TooManyStatsException);
 
 		EXPECT_EQ(scd.numberOfStats(), 3);
 
 		bool removed{};
-		removed = scd.removeStat(StatType::Type::kAgility);
+		removed = scd.removeStat(rule::enums::StatType::Type::kAgility);
 		EXPECT_EQ(removed, true);
 		EXPECT_EQ(scd.numberOfStats(), 2);
 
-		removed = scd.removeStat(StatType::Type::kMemory);
+		removed = scd.removeStat(rule::enums::StatType::Type::kMemory);
 		EXPECT_EQ(removed, false);
 		EXPECT_EQ(scd.numberOfStats(), 2);
 
@@ -84,25 +84,25 @@ namespace {
 		SkillGroupData sg("Artistic");
 		SkillCategoryData scd("SKILLCATEGORY_ARTISTIC_TESTCATEGORY");
 		int i{};
-		i = scd.addStat(StatType::Type::kAgility);
+		i = scd.addStat(rule::enums::StatType::Type::kAgility);
 		EXPECT_EQ(scd.numberOfStats(), 1);
 		EXPECT_EQ(i, 1);
 
-		i = scd.addStat(StatType::Type::kAgility);
+		i = scd.addStat(rule::enums::StatType::Type::kAgility);
 		EXPECT_EQ(scd.numberOfStats(), 2);
 		EXPECT_EQ(i, 2);
 
-		i = scd.addStat(StatType::Type::kStrength);
+		i = scd.addStat(rule::enums::StatType::Type::kStrength);
 		EXPECT_EQ(scd.numberOfStats(), 3);
 		EXPECT_EQ(i, 3);
 
 		scd.setUseRealmStats(true);
 		EXPECT_EQ(scd.numberOfStats(), 0);
 
-		EXPECT_THROW(scd.addStat(StatType::Type::kStrength), SkillCategoryData::UsingCharacterRealmStatsException);
+		EXPECT_THROW(scd.addStat(rule::enums::StatType::Type::kStrength), SkillCategoryData::UsingCharacterRealmStatsException);
 
 		scd.setUseRealmStats(false);
-		EXPECT_NO_THROW(scd.addStat(StatType::Type::kStrength));
+		EXPECT_NO_THROW(scd.addStat(rule::enums::StatType::Type::kStrength));
 		EXPECT_EQ(scd.numberOfStats(), 1);
 	}
 

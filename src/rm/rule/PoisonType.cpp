@@ -1,6 +1,6 @@
 #include <PoisonType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string PoisonType::toString(Type type) {
 		switch (type) {
@@ -32,4 +32,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for PoisonType::Type: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

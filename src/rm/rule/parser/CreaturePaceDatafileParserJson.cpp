@@ -19,7 +19,7 @@ namespace rm::rule::parser {
 			ref.setExhaustionCostMultiplier(v.second.get<float>("exhaustion-multiplier"));
 			ref.setMovementRateMultiplier(v.second.get<float>("movement-multiplier"));
 
-			ManoeuvreDifficultyType::Type manoeuvre_difficulty{};
+			rule::enums::ManoeuvreDifficultyType::Type manoeuvre_difficulty{};
 			fromString(v.second.get<std::string>("manoeuvre-difficulty"), manoeuvre_difficulty);
 			ref.setManoeuvreDifficultyType(manoeuvre_difficulty);
 
@@ -36,7 +36,7 @@ namespace rm::rule::parser {
 		datum.put("name", game_data.name());
 		datum.put("exhaustion-multiplier", game_data.exhaustionCostMultiplier());
 		datum.put("movement-multiplier", game_data.movementRateMultiplier());
-		datum.put("manoeuvre-difficulty", toString(game_data.manoeuvreDifficultyType()));
+		datum.put("manoeuvre-difficulty", rule::enums::ManoeuvreDifficultyType::toString(game_data.manoeuvreDifficultyType()));
 	}
 
 } // namespace rm::rule::parser

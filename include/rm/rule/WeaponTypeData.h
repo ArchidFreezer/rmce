@@ -268,7 +268,7 @@ namespace rm {
 		 * @param type CriticalType::Type critical being applied
 		 * @param modifier int modifier to the critical table roll
 		 */
-		void addCriticalModifier(CriticalType::Type type, int modifier) { criticals_.insert(std::make_pair(type, modifier)); }
+		void addCriticalModifier(rule::enums::CriticalType::Type type, int modifier) { criticals_.insert(std::make_pair(type, modifier)); }
 
 		/**
 		 * @brief Get a container with the critical types that the weapon can inflict
@@ -280,7 +280,7 @@ namespace rm {
 		 * @return std::vector<CriticalType::Type> containing the available criticals
 		 * @see critical()
 		 */
-		const std::vector<CriticalType::Type> criticals() const {
+		const std::vector<rule::enums::CriticalType::Type> criticals() const {
 			auto keys = std::views::keys(criticals_);
 			return { keys.begin(), keys.end() };
 		}
@@ -293,8 +293,8 @@ namespace rm {
 		 *
 		 * @return CriticalType::Type primary critical type
 		 */
-		const CriticalType::Type primaryCritical() const {
-			CriticalType::Type primary{};
+		const rule::enums::CriticalType::Type primaryCritical() const {
+			rule::enums::CriticalType::Type primary{};
 			int max{ -500 };
 			for (auto crit : std::views::keys(criticals_)) {
 				if (criticals_.at(crit) > max) primary = crit;
@@ -308,7 +308,7 @@ namespace rm {
 		 * @param critical CriticalType::Type type of critical to get the modifier for
 		 * @return int modifier
 		 */
-		int criticalModifier(CriticalType::Type critical) const { return criticals_.at(critical); }
+		int criticalModifier(rule::enums::CriticalType::Type critical) const { return criticals_.at(critical); }
 
 		/**
 		 * @brief Add the weap[on attack modifier for a range of distances
@@ -373,7 +373,7 @@ namespace rm {
 		float min_weight_{};
 		float max_weight_{};
 		bool wooden_haft_{};
-		std::map<CriticalType::Type, int> criticals_{};
+		std::map<rule::enums::CriticalType::Type, int> criticals_{};
 		std::map<const archid::NumberRange<int>*, int> ranges_;
 	};
 

@@ -1,6 +1,6 @@
 #include <AttackSizeType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string AttackSizeType::toString(Type size) {
 		using enum Type;
@@ -32,4 +32,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for AttackSizeType::Type: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

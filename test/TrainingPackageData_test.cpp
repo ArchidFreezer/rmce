@@ -77,13 +77,13 @@ namespace {
 
 		// Stat gains
 		EXPECT_TRUE(tp1.statGains().empty());
-		tp1.addStatGain(StatType::kAgility);
+		tp1.addStatGain(rule::enums::StatType::kAgility);
 		EXPECT_EQ(tp1.statGains().size(), 1);
-		tp1.addStatGain(StatType::kConstitution);
+		tp1.addStatGain(rule::enums::StatType::kConstitution);
 		EXPECT_EQ(tp1.statGains().size(), 2);
 		for (const auto& stat : tp1.statGains()) {
-			if (stat == StatType::kAgility) SUCCEED();
-			else if (stat == StatType::kConstitution) SUCCEED();
+			if (stat == rule::enums::StatType::kAgility) SUCCEED();
+			else if (stat == rule::enums::StatType::kConstitution) SUCCEED();
 			else FAIL();
 		}
 	}

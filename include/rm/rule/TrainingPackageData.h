@@ -362,19 +362,19 @@ namespace rm {
 		 * @brief Add a stat that receives a stat gain roll as part of the package
 		 * @param stat StatType::Type stat to gain roll
 		 */
-		void addStatGain(StatType::Type stat) { stat_gains_.emplace(stat); }
+		void addStatGain(rule::enums::StatType::Type stat) { stat_gains_.emplace(stat); }
 
 		/**
 		 * @brief Set a collection of stats that receive a stat gain roll as part of the package
 		 * @param stat_gains Set of StatType::Type stats to gain rolls for
 		 */
-		void setStatGains(std::set<StatType::Type> stat_gains) { stat_gains_ = std::move(stat_gains); }
+		void setStatGains(std::set<rule::enums::StatType::Type> stat_gains) { stat_gains_ = std::move(stat_gains); }
 
 		/**
 		 * @brief Get set of stats that receive a stat gain roll
 		 * @return Set of StatType::Type stats that recieve a stat gain roll
 		 */
-		const std::set< StatType::Type>& statGains() const { return stat_gains_; }
+		const std::set<rule::enums::StatType::Type>& statGains() const { return stat_gains_; }
 
 		/**
 		 * @brief Set whether the package provides a stat gain roll for realm stats
@@ -393,13 +393,13 @@ namespace rm {
 		 * @brief Set the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from
 		 * @param choices Pair of number of stats that may be chosen to receive a stat gain roll and set of StatType::Type stats to choose from
 		 */
-		void setStatGainChoices(EnumChoice<StatType::Type> choices) { stat_gain_choices_ = choices; }
+		void setStatGainChoices(EnumChoice<rule::enums::StatType::Type> choices) { stat_gain_choices_ = choices; }
 
 		/**
 		 * @brief Get the number of stats that may be chosen to receive a stat gain roll and the set of stats to choose from
 		 * @return Pair of number of stats that may be chosen to receive a stat gain roll and set of StatType::Type stats to choose from
 		 */
-		const EnumChoice<StatType::Type> statGainChoices() const { return stat_gain_choices_; }
+		const EnumChoice<rule::enums::StatType::Type> statGainChoices() const { return stat_gain_choices_; }
 
 		/**
 		 * @brief Set the number of ranks for a skill the package provides
@@ -645,9 +645,9 @@ namespace rm {
 		int time_to_acquire_{}; /**< Time, in months, to acquire the package */
 		std::string starting_money_modifier_dice_{}; /**< Change in starting money a character gains during apprenticeship */
 		std::vector<std::pair<std::string, int>> specials_{}; /**< Special benefits or maluses that may be gained by the package */
-		std::set<StatType::Type> stat_gains_{}; /**< Stats that receive a stat gain roll */
+		std::set<rule::enums::StatType::Type> stat_gains_{}; /**< Stats that receive a stat gain roll */
 		bool realmStatGain_{}; /**< Whether the package provides a stat gain roll for realm stats */
-		EnumChoice<StatType::Type> stat_gain_choices_{}; /**< A set of stats from which the player may select one or more from to receive a stat gain roll */
+		EnumChoice<rule::enums::StatType::Type> stat_gain_choices_{}; /**< A set of stats from which the player may select one or more from to receive a stat gain roll */
 		std::map<SubcategoriedSkillData, int> skill_ranks_{}; /** Number of skill ranks gained */
 		std::map<GameRuleDataChoice<SubcategoriedSkillData>, int> skill_rank_choices_{}; /**< A set of skills with ranks from which the player may select one or more from to receive the skill ranks */
 		std::map<const SkillCategoryData*, int> skill_category_ranks_{}; /** Number of skill category ranks gained */

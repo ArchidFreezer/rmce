@@ -1,6 +1,6 @@
 #include <CreatureBonusXpType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string CreatureBonusXpType::toString(Type size) {
 		using enum Type;
@@ -37,4 +37,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for CreatureBonusXpType::Type: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

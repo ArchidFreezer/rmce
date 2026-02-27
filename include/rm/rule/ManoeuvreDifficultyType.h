@@ -7,7 +7,7 @@
 
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	/**
 	 * @brief Contains the ManoeuvreDifficultyType::Type enum and associated functions
@@ -80,4 +80,4 @@ namespace rm {
 
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

@@ -15,8 +15,8 @@ namespace rm {
 		 * @brief Get the index of the table column
 		 * @return int table column index
 		 */
-		int column(ArmourType::Type match) const {
-			using ArmourType::Type;
+		int column(rule::enums::ArmourType::Type match) const {
+			using rule::enums::ArmourType::Type;
 			switch (match) {
 			case Type::kAT1: return 0;
 			case Type::kAT2: return 1;

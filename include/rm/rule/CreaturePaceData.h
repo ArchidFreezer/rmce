@@ -69,19 +69,19 @@ namespace rm {
 		 * @brief Set the difficulty type of any manoeuvres attempted by the creature when using this pace
 		 * @param manoeuvre_difficulty_type The difficulty type of any manoeuvres attempted by the creature when using this pace
 		 */
-		void setManoeuvreDifficultyType(ManoeuvreDifficultyType::Type manoeuvre_difficulty_type) { manoeuvre_difficulty_type_ = manoeuvre_difficulty_type; }
+		void setManoeuvreDifficultyType(rule::enums::ManoeuvreDifficultyType::Type manoeuvre_difficulty_type) { manoeuvre_difficulty_type_ = manoeuvre_difficulty_type; }
 
 		/**
 		 * @brief Get the difficulty type of any manoeuvres attempted by the creature when using this pace
 		 * @return The difficulty type of any manoeuvres attempted by the creature when using this pace
 		 */
-		ManoeuvreDifficultyType::Type manoeuvreDifficultyType() const { return manoeuvre_difficulty_type_; }
+		rule::enums::ManoeuvreDifficultyType::Type manoeuvreDifficultyType() const { return manoeuvre_difficulty_type_; }
 
 	private:
 		std::string name_{}; /** Name of the creaturepace as seen in-game */
 		float movement_rate_multiplier_{}; /** Multiplier to the base movement rate of the creature when using this pace */
 		float exhaustion_cost_multiplier_{}; /** Multiplier to the exhaustion cost of the creature when using this pace */
-		ManoeuvreDifficultyType::Type manoeuvre_difficulty_type_{}; /** The difficulty type of any manoeuvres attempted by the creature when using this pace */
+		rule::enums::ManoeuvreDifficultyType::Type manoeuvre_difficulty_type_{}; /** The difficulty type of any manoeuvres attempted by the creature when using this pace */
 	};
 
 } // namespace rm

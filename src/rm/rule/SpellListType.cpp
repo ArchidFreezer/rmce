@@ -1,6 +1,6 @@
 #include <SpellListType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string SpellListType::toString(Type type) {
 		using enum Type;
@@ -28,4 +28,4 @@ namespace rm {
 		return {};
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

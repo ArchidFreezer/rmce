@@ -1,6 +1,6 @@
 #include <StatType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string StatType::toString(Type stat) {
 		using enum Type;
@@ -71,4 +71,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for StatType::Type: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

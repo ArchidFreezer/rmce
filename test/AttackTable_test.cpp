@@ -27,9 +27,9 @@ namespace {
 		at.addUnmodifiedRow(matchers.matcher(1, 1), buildATRow("URow ", 1));
 		at.addUnmodifiedRow(matchers.matcher(6, 6), buildATRow("URow ", 6));
 
-		EXPECT_STREQ(at.cell(ArmourType::kAT12, 3).c_str(), "Row 3, kAT12");     // No unmodifier
-		EXPECT_STREQ(at.cell(ArmourType::kAT12, 3, 1).c_str(), "URow 1, kAT12"); // Unmodified match
-		EXPECT_STREQ(at.cell(ArmourType::kAT12, 3, 2).c_str(), "Row 3, kAT12");  // No unmodified match
+		EXPECT_STREQ(at.cell(rule::enums::ArmourType::kAT12, 3).c_str(), "Row 3, kAT12");     // No unmodifier
+		EXPECT_STREQ(at.cell(rule::enums::ArmourType::kAT12, 3, 1).c_str(), "URow 1, kAT12"); // Unmodified match
+		EXPECT_STREQ(at.cell(rule::enums::ArmourType::kAT12, 3, 2).c_str(), "Row 3, kAT12");  // No unmodified match
 	}
 
 	/*
@@ -53,8 +53,8 @@ namespace {
 			at.addRow(matchers.matcher(i, i), buildBrokenATRow("Row ", i));
 		}
 
-		EXPECT_THROW(at.cell(ArmourType::kAT12, 0), RowNotFoundException);
-		EXPECT_THROW(at.cell(ArmourType::kAT12, 1), ColNotFoundException);		
+		EXPECT_THROW(at.cell(rule::enums::ArmourType::kAT12, 0), RowNotFoundException);
+		EXPECT_THROW(at.cell(rule::enums::ArmourType::kAT12, 1), ColNotFoundException);
 	}
 
 

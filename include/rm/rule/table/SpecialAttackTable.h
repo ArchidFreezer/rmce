@@ -24,7 +24,7 @@ namespace rm {
 	 * Defines the type of game data object and the creation of an instance is used to set the unique element of the id. The
 	 * implication of this is that any class that derives from this cannot set its own subtype.
 	 */
-	class SpecialAttackTable : public BoundIntRowLookupTable<TableColumnArmourTypeMatcher, ArmourType::Type, std::string> {
+	class SpecialAttackTable : public BoundIntRowLookupTable<TableColumnArmourTypeMatcher, rule::enums::ArmourType::Type, std::string> {
 	public:
 		/**
 		 * @brief Default constructor deleted to enforce setting the id
@@ -42,10 +42,10 @@ namespace rm {
 		 * @param huge Maximum roll that AttackSizeType::Type.kHuge attacks may make
 		 */
 		SpecialAttackTable(std::string_view id, int small, int medium, int large, int huge) : SpecialAttackTable(id) {
-			limits_.emplace(AttackSizeType::kSmall, small);
-			limits_.emplace(AttackSizeType::kMedium, medium);
-			limits_.emplace(AttackSizeType::kLarge, large);
-			limits_.emplace(AttackSizeType::kHuge, huge);
+			limits_.emplace(rule::enums::AttackSizeType::kSmall, small);
+			limits_.emplace(rule::enums::AttackSizeType::kMedium, medium);
+			limits_.emplace(rule::enums::AttackSizeType::kLarge, large);
+			limits_.emplace(rule::enums::AttackSizeType::kHuge, huge);
 		}
 
 		/**
@@ -55,7 +55,7 @@ namespace rm {
 		 * @param id std::string Unique identifier of the table, typically the table name
 		 * @param limits Map containing the attack size limits
 		 */
-		SpecialAttackTable(std::string_view id, std::map<AttackSizeType::Type, int>& limits) : SpecialAttackTable(id) {
+		SpecialAttackTable(std::string_view id, std::map<rule::enums::AttackSizeType::Type, int>& limits) : SpecialAttackTable(id) {
 			for (auto& limit : limits) {
 				limits_.emplace(limit.first, limit.second);
 			}
@@ -83,9 +83,9 @@ namespace rm {
 		 * @throw RowNotFoundException if \a row_index does not match any matchers
 		 * @throw ColNotFoundException if \a col_index is an invalid column
 		 */
-		const std::string& cell(ArmourType::Type armour, AttackSizeType::Type size, int row_index) const {
+		const std::string& cell(rule::enums::ArmourType::Type armour, rule::enums::AttackSizeType::Type size, int row_index) const {
 			row_index = std::min(limits_.find(size)->second, row_index);
-			return LookupTable<archid::NumberRange<int>, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string>::cell(armour, row_index);
+			return LookupTable<archid::NumberRange<int>, int, TableColumnArmourTypeMatcher, rule::enums::ArmourType::Type, std::string>::cell(armour, row_index);
 		}
 
 		/**
@@ -104,10 +104,10 @@ namespace rm {
 	 * @throw RowNotFoundException if neither \a row_index nor \a unmodified_row_index are matched
 	 * @throw ColNotFoundException if \a col_index is an invalid column
 	 */
-		const std::string& cell(ArmourType::Type armour, AttackSizeType::Type size, int row_index, int unmodified_row_index) const {
+		const std::string& cell(rule::enums::ArmourType::Type armour, rule::enums::AttackSizeType::Type size, int row_index, int unmodified_row_index) const {
 			row_index = std::min(limits_.find(size)->second, row_index);
 			unmodified_row_index = std::min(limits_.find(size)->second, unmodified_row_index);
-			return LookupTable<archid::NumberRange<int>, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string>::cell(armour, row_index, unmodified_row_index);
+			return LookupTable<archid::NumberRange<int>, int, TableColumnArmourTypeMatcher, rule::enums::ArmourType::Type, std::string>::cell(armour, row_index, unmodified_row_index);
 		}
 
 		/**
@@ -126,21 +126,21 @@ namespace rm {
 		 * @param type AttackSizeType to get the limit for
 		 * @return int Maximum roll allowed
 		 */
-		const int limit(AttackSizeType::Type type) const { return limits_.at(type); }
+		const int limit(rule::enums::AttackSizeType::Type type) const { return limits_.at(type); }
 
 		/**
 		 * @brief Set the maximum roll allowed for an attack size
 		 * @param type AttackSizeType to set the limit for
 		 * @param limit Maximum roll allowed
 		 */
-		void setLimit(AttackSizeType::Type type, int limit) {
+		void setLimit(rule::enums::AttackSizeType::Type type, int limit) {
 			limits_.emplace(type, limit);
 		}
 
 	private:
 		std::string name_{}; /**< Name of the attack table */
 
-		std::map<AttackSizeType::Type, int> limits_{}; /**< The maximum row index that each attack size may use */
+		std::map<rule::enums::AttackSizeType::Type, int> limits_{}; /**< The maximum row index that each attack size may use */
 	};
 
 } // namespace rm

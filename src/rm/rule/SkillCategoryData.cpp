@@ -2,19 +2,19 @@
 
 namespace rm {
 
-	int SkillCategoryData::addStat(StatType::Type stat) {
+	int SkillCategoryData::addStat(rule::enums::StatType::Type stat) {
 		if (useRealmStats()) throw UsingCharacterRealmStatsException("Cannot add category stat when also using character realm stats");
 		if (stats_.size() < 3) {
 			stats_.push_back(stat);
 		} else {
-			throw StatType::TooManyStatsException("You attempted to add more than 3 stat bonuses to a skill category.");
+			throw rule::enums::StatType::TooManyStatsException("You attempted to add more than 3 stat bonuses to a skill category.");
 		}
 
 		return stats_.size();
 	}
 
-	bool SkillCategoryData::removeStat(StatType::Type stat) {
-		std::vector<StatType::Type>::iterator it;
+	bool SkillCategoryData::removeStat(rule::enums::StatType::Type stat) {
+		std::vector<rule::enums::StatType::Type>::iterator it;
 		it = std::find(stats_.begin(), stats_.end(), stat);
 		if (it != stats_.end()) {
 			stats_.erase(it);

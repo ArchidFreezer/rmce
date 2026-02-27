@@ -1,6 +1,6 @@
 #include <ResistanceType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string ResistanceType::toString(Type resistance) {
 		using enum Type;
@@ -55,4 +55,4 @@ namespace rm {
 		}
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

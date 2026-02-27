@@ -1,6 +1,6 @@
 #include <SpellUserType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string SpellUserType::toString(Type size) {
 		using enum Type;
@@ -28,4 +28,4 @@ namespace rm {
 		return {};
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

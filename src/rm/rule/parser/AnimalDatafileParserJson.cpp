@@ -39,27 +39,27 @@ namespace rm::rule::parser {
 
 			boost::optional<std::string> bonus_xp_code_str = v.second.get_optional<std::string>("bonus-xp-code");
 			if (bonus_xp_code_str) {
-				CreatureBonusXpType::Type xp_code{};
-				CreatureBonusXpType::fromString(bonus_xp_code_str.value(), xp_code);
+				rule::enums::CreatureBonusXpType::Type xp_code{};
+				rule::enums::CreatureBonusXpType::fromString(bonus_xp_code_str.value(), xp_code);
 				ref.setBonusXpCode(xp_code);
 			} else {
 				// If the bonus XP code is not provided, set it to kNone
-				ref.setBonusXpCode(CreatureBonusXpType::Type::kNone);
+				ref.setBonusXpCode(rule::enums::CreatureBonusXpType::Type::kNone);
 			}
 
 			boost::optional<std::string> bonus_con_code_str = v.second.get_optional<std::string>("constitution-variance-type");
 			if (bonus_con_code_str) {
-				CreatureConstitutionVarianceType::Type constitution_code{};
-				CreatureConstitutionVarianceType::fromString(bonus_con_code_str.value(), constitution_code);
+				rule::enums::CreatureConstitutionVarianceType::Type constitution_code{};
+				rule::enums::CreatureConstitutionVarianceType::fromString(bonus_con_code_str.value(), constitution_code);
 				ref.setConstitutionVarianceType(constitution_code);
 			} else {
 				// If the bonus constitution code is not provided, set it to kNone
-				ref.setConstitutionVarianceType(CreatureConstitutionVarianceType::Type::kNone);
+				ref.setConstitutionVarianceType(rule::enums::CreatureConstitutionVarianceType::Type::kNone);
 			}
 
 			std::string level_code_str = v.second.get<std::string>("level-variance-type");
-			LevelVarianceType::Type level_code{};
-			LevelVarianceType::fromString(level_code_str, level_code);
+			rule::enums::LevelVarianceType::Type level_code{};
+			rule::enums::LevelVarianceType::fromString(level_code_str, level_code);
 			ref.setLevelVarianceType(level_code);
 
 			ref.setAverageLevel(v.second.get<int>("average-level"));
@@ -67,37 +67,37 @@ namespace rm::rule::parser {
 			boost::optional<std::string> treasure_code_id = v.second.get_optional<std::string>("treasure-code");
 			if (treasure_code_id) ref.setTreasureCode(factory().get<TreasureCodeData>(treasure_code_id.value()));
 
-			CreatureSizeType::Type size_code{};
-			CreatureSizeType::fromString(v.second.get<std::string>("size"), size_code);
+			rule::enums::CreatureSizeType::Type size_code{};
+			rule::enums::CreatureSizeType::fromString(v.second.get<std::string>("size"), size_code);
 			ref.setSize(size_code);
 
-			ArmourType::Type armour_code{};
-			ArmourType::fromString(v.second.get<std::string>("armour-type"), armour_code);
+			rule::enums::ArmourType::Type armour_code{};
+			rule::enums::ArmourType::fromString(v.second.get<std::string>("armour-type"), armour_code);
 			ref.setArmourType(armour_code);
 
-			CreatureMovementSpeedType::Type movement_speed_code{};
-			CreatureMovementSpeedType::fromString(v.second.get<std::string>("movement-speed"), movement_speed_code);
+			rule::enums::CreatureMovementSpeedType::Type movement_speed_code{};
+			rule::enums::CreatureMovementSpeedType::fromString(v.second.get<std::string>("movement-speed"), movement_speed_code);
 			ref.setMovementSpeed(movement_speed_code);
 
-			CreatureMovementSpeedType::Type attack_quickness_code{};
-			CreatureMovementSpeedType::fromString(v.second.get<std::string>("attack-quickness"), attack_quickness_code);
+			rule::enums::CreatureMovementSpeedType::Type attack_quickness_code{};
+			rule::enums::CreatureMovementSpeedType::fromString(v.second.get<std::string>("attack-quickness"), attack_quickness_code);
 			ref.setAttackQuickness(attack_quickness_code);
 
 			std::string max_pace_id{ v.second.get<std::string>("max-pace") };
 			ref.setMaxPace(factory().get<CreaturePaceData>(max_pace_id));
 
-			AnimalOutlookType::Type outlook_code{};
-			AnimalOutlookType::fromString(v.second.get<std::string>("outlook"), outlook_code);
+			rm::rule::enums::AnimalOutlookType::Type outlook_code{};
+			rm::rule::enums::AnimalOutlookType::fromString(v.second.get<std::string>("outlook"), outlook_code);
 			ref.setOutlook(outlook_code);
 
-			CriticalSizeTableType::Type critical_table_code{};
-			CriticalSizeTableType::fromString(v.second.get<std::string>("critical-table"), critical_table_code);
+			rule::enums::CriticalSizeTableType::Type critical_table_code{};
+			rule::enums::CriticalSizeTableType::fromString(v.second.get<std::string>("critical-table"), critical_table_code);
 			ref.setCriticalTableType(critical_table_code);
 
 			// Critical modifiers are optional
 			// TODO: The data in the legacy XML file is incorrect and the json file needs to be manually updated.
 			boost::optional<const pt::ptree&> critical_modifiers = v.second.get_child_optional("critical_modifiers");
-			if (critical_modifiers) ref.setCriticalModifiers(parseEnumSetTree<CriticalModifierType::Type>(critical_modifiers));
+			if (critical_modifiers) ref.setCriticalModifiers(parseEnumSetTree<rule::enums::CriticalModifierType::Type>(critical_modifiers));
 
 			// Encounter range
 			{
@@ -125,13 +125,13 @@ namespace rm::rule::parser {
 				if (location_tree) {
 					Location location{};
 					boost::optional<const pt::ptree&> features_tree = location_tree->get_child_optional("features");
-					if (features_tree) location.setFeatures(parseEnumSetTree<EnvironmentType::Feature>(features_tree));
+					if (features_tree) location.setFeatures(parseEnumSetTree<rule::enums::EnvironmentType::Feature>(features_tree));
 					boost::optional<const pt::ptree&> terrains_tree = location_tree->get_child_optional("terrains");
-					if (terrains_tree) location.setTerrains(parseEnumSetTree<EnvironmentType::Terrain>(terrains_tree));
+					if (terrains_tree) location.setTerrains(parseEnumSetTree<rule::enums::EnvironmentType::Terrain>(terrains_tree));
 					boost::optional<const pt::ptree&> vegetation_tree = location_tree->get_child_optional("vegetation");
-					if (vegetation_tree) location.setVegetation(parseEnumSetTree<EnvironmentType::Vegetation>(vegetation_tree));
+					if (vegetation_tree) location.setVegetation(parseEnumSetTree<rule::enums::EnvironmentType::Vegetation>(vegetation_tree));
 					boost::optional<const pt::ptree&> water_sources_tree = location_tree->get_child_optional("water-sources");
-					if (water_sources_tree) location.setWater(parseEnumSetTree<EnvironmentType::Water>(water_sources_tree));
+					if (water_sources_tree) location.setWater(parseEnumSetTree<rule::enums::EnvironmentType::Water>(water_sources_tree));
 					boost::optional<const pt::ptree&> climates_tree = location_tree->get_child_optional("climates");
 					if (climates_tree) location.setClimates(parseGameDataSetTree<ClimateData>(climates_tree));
 					ref.setLocation(location);
@@ -207,25 +207,25 @@ namespace rm::rule::parser {
 		datum.put("base-movement", game_data.baseMovement());
 		datum.put("defensive-bonus", game_data.defensiveBonus());
 		datum.put("frequency-code", game_data.frequencyFactor());
-		if (game_data.bonusXpCode() != CreatureBonusXpType::Type::kNone) datum.put("bonus-xp-code", CreatureBonusXpType::toString(game_data.bonusXpCode()));
-		if (game_data.constitutionVarianceType() != CreatureConstitutionVarianceType::Type::kNone) datum.put("constitution-variance-type", CreatureConstitutionVarianceType::toString(game_data.constitutionVarianceType()));
-		datum.put("level-variance-type", LevelVarianceType::toString(game_data.levelVarianceType()));
+		if (game_data.bonusXpCode() != rule::enums::CreatureBonusXpType::Type::kNone) datum.put("bonus-xp-code", rule::enums::CreatureBonusXpType::toString(game_data.bonusXpCode()));
+		if (game_data.constitutionVarianceType() != rule::enums::CreatureConstitutionVarianceType::Type::kNone) datum.put("constitution-variance-type", rule::enums::CreatureConstitutionVarianceType::toString(game_data.constitutionVarianceType()));
+		datum.put("level-variance-type", rule::enums::LevelVarianceType::toString(game_data.levelVarianceType()));
 		datum.put("average-level", game_data.averageLevel());
 		if (game_data.treasureCode()) datum.put("treasure-code", game_data.treasureCode().value()->id());
-		datum.put("size", CreatureSizeType::toString(game_data.size()));
-		datum.put("armour-type", ArmourType::toString(game_data.armourType()));
-		datum.put("movement-speed", CreatureMovementSpeedType::toString(game_data.movementSpeed()));
-		datum.put("attack-quickness", CreatureMovementSpeedType::toString(game_data.attackQuickness()));
+		datum.put("size", rule::enums::CreatureSizeType::toString(game_data.size()));
+		datum.put("armour-type", rule::enums::ArmourType::toString(game_data.armourType()));
+		datum.put("movement-speed", rule::enums::CreatureMovementSpeedType::toString(game_data.movementSpeed()));
+		datum.put("attack-quickness", rule::enums::CreatureMovementSpeedType::toString(game_data.attackQuickness()));
 		datum.put("max-pace", game_data.maxPace()->id());
-		datum.put("outlook", AnimalOutlookType::toString(game_data.outlook()));
-		datum.put("critical-table", CriticalSizeTableType::toString(game_data.criticalTableType()));
+		datum.put("outlook", rm::rule::enums::AnimalOutlookType::toString(game_data.outlook()));
+		datum.put("critical-table", rule::enums::CriticalSizeTableType::toString(game_data.criticalTableType()));
 
 		if (game_data.carryCapacity()) datum.put("carry_capacity", game_data.carryCapacity());
 		if (game_data.ridingBonus()) datum.put("riding-bonus", game_data.ridingBonus());
 
 		// Critical modifiers are optional, only add to the tree if there are any
 		{
-			pt::ptree tree{ getEnumSetTree<CriticalModifierType::Type>(game_data.criticalModifiers()) };
+			pt::ptree tree{ getEnumSetTree<rule::enums::CriticalModifierType::Type>(game_data.criticalModifiers()) };
 			if (tree.size()) datum.push_back(std::make_pair("critical_modifiers", tree));
 		}
 
@@ -255,22 +255,22 @@ namespace rm::rule::parser {
 
 			// required features
 			{
-				pt::ptree tree{ getEnumSetTree<EnvironmentType::Feature>(location.features()) };
+				pt::ptree tree{ getEnumSetTree<rule::enums::EnvironmentType::Feature>(location.features()) };
 				if (tree.size()) location_tree.push_back(std::make_pair("features", tree));
 			}
 			// required terrains
 			{
-				pt::ptree tree{ getEnumSetTree<EnvironmentType::Terrain>(location.terrains()) };
+				pt::ptree tree{ getEnumSetTree<rule::enums::EnvironmentType::Terrain>(location.terrains()) };
 				if (tree.size()) location_tree.push_back(std::make_pair("terrains", tree));
 			}
 			// required vegetation
 			{
-				pt::ptree tree{ getEnumSetTree<EnvironmentType::Vegetation>(location.vegetation()) };
+				pt::ptree tree{ getEnumSetTree<rule::enums::EnvironmentType::Vegetation>(location.vegetation()) };
 				if (tree.size()) location_tree.push_back(std::make_pair("vegetation", tree));
 			}
 			// required water sources
 			{
-				pt::ptree tree{ getEnumSetTree<EnvironmentType::Water>(location.water()) };
+				pt::ptree tree{ getEnumSetTree<rule::enums::EnvironmentType::Water>(location.water()) };
 				if (tree.size()) location_tree.push_back(std::make_pair("water-sources", tree));
 			}
 			// required climates
@@ -369,8 +369,8 @@ namespace rm::rule::parser {
 			std::string attack_table_id = non_weapon_attack_tree->get<std::string>("table");
 			attack.setNonWeaponTable(factory().get<SpecialAttackTable>(attack_table_id));
 			std::string size_str = non_weapon_attack_tree->get<std::string>("size");
-			AttackSizeType::Type size{};
-			AttackSizeType::fromString(size_str, size);
+			rule::enums::AttackSizeType::Type size{};
+			rule::enums::AttackSizeType::fromString(size_str, size);
 			attack.setNonWeaponSize(size);
 		}
 		if (tree.get_optional<bool>("use-all-attacks")) attack.setUseAllAttacks(tree.get<bool>("use-all-attacks"));
@@ -386,8 +386,8 @@ namespace rm::rule::parser {
 		}
 		if (tree.get_optional<std::string>("auto-critical-type")) {
 			std::string auto_critical_type_str = tree.get<std::string>("auto-critical-type");
-			CriticalType::Type auto_critical_type{};
-			CriticalType::fromString(auto_critical_type_str, auto_critical_type);
+			rule::enums::CriticalType::Type auto_critical_type{};
+			rule::enums::CriticalType::fromString(auto_critical_type_str, auto_critical_type);
 			attack.setAutoCriticalType(auto_critical_type);
 		}
 		if (tree.get_optional<std::string>("auto-critical-size")) attack.setAutoCriticalSize(tree.get<std::string>("auto-critical-size"));
@@ -411,7 +411,7 @@ namespace rm::rule::parser {
 		if (attack.hasNonWeaponAttack()) {
 			pt::ptree non_weapon_tree{};
 			non_weapon_tree.put("table", attack.nonWeaponTable()->id());
-			non_weapon_tree.put("size", AttackSizeType::toString(attack.nonWeaponSize()));
+			non_weapon_tree.put("size", rule::enums::AttackSizeType::toString(attack.nonWeaponSize()));
 			tree.push_back(std::make_pair("non-weapon-attack", non_weapon_tree));
 		}
 		if (attack.useAllAttacks()) tree.put("use-all-attacks", attack.useAllAttacks());
@@ -420,7 +420,7 @@ namespace rm::rule::parser {
 
 		if (attack.poison()) tree.put("poison", attack.poison().value()->id());
 		if (attack.disease()) tree.put("disease", attack.disease().value()->id());
-		if (attack.autoCriticalType()) tree.put("auto-critical-type", CriticalType::toString(attack.autoCriticalType().value()));
+		if (attack.autoCriticalType()) tree.put("auto-critical-type", rule::enums::CriticalType::toString(attack.autoCriticalType().value()));
 		if (attack.autoCriticalSize()) tree.put("auto-critical-size", attack.autoCriticalSize().value());
 
 		if (attack.sameRoundAttackId()) tree.put("same-round-conditional-attack-id", attack.sameRoundAttackId());

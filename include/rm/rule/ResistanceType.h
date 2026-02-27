@@ -6,7 +6,7 @@
 
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	/**
 	 * @brief Contains the ResistanceType::Type enum and associated functions
@@ -78,4 +78,4 @@ namespace rm {
 		constexpr bool isMagical(Type resistance);
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

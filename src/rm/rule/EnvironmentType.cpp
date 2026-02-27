@@ -1,6 +1,6 @@
 #include <EnvironmentType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string EnvironmentType::toString(EnvironmentType::Feature feature) {
 		using enum EnvironmentType::Feature;
@@ -218,4 +218,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for EnvironmentType::Water: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

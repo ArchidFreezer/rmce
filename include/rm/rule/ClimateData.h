@@ -41,25 +41,25 @@ namespace rm {
 		 * @brief Set the climate temperature
 		 * @param temperature HabitatType::Temperature to set
 		 */
-		void setTemperature(HabitatType::Temperature temperature) { temperature_ = temperature; }
+		void setTemperature(rule::enums::HabitatType::Temperature temperature) { temperature_ = temperature; }
 
 		/**
 		 * @brief Get the tempretaure of the climate
 		 * @return HabitatType::Temperature temperature
 		 */
-		HabitatType::Temperature temperature() const { return temperature_; }
+		rule::enums::HabitatType::Temperature temperature() const { return temperature_; }
 
 		/**
 		 * @brief Add a precipitation to those that the climate may have
 		 * @param precipitation HabitatType::Precipitation to add
 		 */
-		void addPrecipitation(HabitatType::Precipitation precipitation) { if (!hasPrecipitaton(precipitation)) precipitations_.emplace(precipitation); }
+		void addPrecipitation(rule::enums::HabitatType::Precipitation precipitation) { if (!hasPrecipitaton(precipitation)) precipitations_.emplace(precipitation); }
 
 		/**
 		 * @brief Set the precipitations that may be found in the climate
 		 * @param precipitations Set of HabitatType::Precipitation to set
 		 */
-		void setPrecipitations(std::set<HabitatType::Precipitation> precipitations) { precipitations_ = std::move(precipitations); }
+		void setPrecipitations(std::set<rule::enums::HabitatType::Precipitation> precipitations) { precipitations_ = std::move(precipitations); }
 
 		/**
 		 * @brief Check if a precipitation may be found in the cliamte
@@ -67,7 +67,7 @@ namespace rm {
 		 * @return `true` if the climate may have the precipitation
 		 * @return `false` if the climate may not have the precipitation
 		 */
-		bool hasPrecipitaton(HabitatType::Precipitation precipitation) const {
+		bool hasPrecipitaton(rule::enums::HabitatType::Precipitation precipitation) const {
 			return (precipitations_.find(precipitation) != precipitations_.end());
 		}
 
@@ -75,7 +75,7 @@ namespace rm {
 		 * @brief Get the precipitations that may be found in the climate
 		 * @return std::set<HabitatType::Precipitation> precipitations
 		 */
-		const std::set<HabitatType::Precipitation> precipitations() const { return precipitations_; }
+		const std::set<rule::enums::HabitatType::Precipitation> precipitations() const { return precipitations_; }
 
 		/**
 		 * @brief Checks if a tempretaure and precipitation cobination may be found in the climate
@@ -84,14 +84,14 @@ namespace rm {
 		 * @return `true` if the combination are valid for the climate
 		 * @return `false` if the combination are not valid for the climate
 		 */
-		bool isValid(HabitatType::Temperature temperature, HabitatType::Precipitation precipitation) const {
+		bool isValid(rule::enums::HabitatType::Temperature temperature, rule::enums::HabitatType::Precipitation precipitation) const {
 			return (temperature == temperature_) && hasPrecipitaton(precipitation);
 		}
 
 	private:
 		std::string name_{}; /**< In game name of the climate */
-		std::set<HabitatType::Precipitation> precipitations_{}; /**< Set of possible precipitations that define the climate */
-		HabitatType::Temperature temperature_{}; /**< General temperature of the climate */
+		std::set<rule::enums::HabitatType::Precipitation> precipitations_{}; /**< Set of possible precipitations that define the climate */
+		rule::enums::HabitatType::Temperature temperature_{}; /**< General temperature of the climate */
 	};
 
 } // namespace rm

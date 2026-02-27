@@ -21,7 +21,7 @@ namespace rm {
 	 * Defines the type of game data object and the creation of an instance is used to set the unique element of the id. The
 	 * implication of this is that any class that derives from this cannot set its own subtype.
 	 */
-	class AttackTable : public BoundIntRowLookupTable<TableColumnArmourTypeMatcher, ArmourType::Type, std::string> {
+	class AttackTable : public BoundIntRowLookupTable<TableColumnArmourTypeMatcher, rule::enums::ArmourType::Type, std::string> {
 	public:
 		/**
 		 * @brief Constructor defining the name of the table

@@ -7,7 +7,7 @@
 
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	/**
 	 * @brief Contains the CreatureMovementSpeedType::Type enum and associated functions
@@ -78,4 +78,4 @@ namespace rm {
 
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

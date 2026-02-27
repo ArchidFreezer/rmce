@@ -188,13 +188,13 @@ namespace rm {
 		 * @brief Set the bonus XP code for the animal
 		 * @param bonus_xp_code Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal.
 		 */
-		void setBonusXpCode(CreatureBonusXpType::Type bonus_xp_code) { bonus_xp_code_ = bonus_xp_code; }
+		void setBonusXpCode(rule::enums::CreatureBonusXpType::Type bonus_xp_code) { bonus_xp_code_ = bonus_xp_code; }
 
 		/**
 		 * @brief Get the bonus XP code for the animal
 		 * @return Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal.
 		 */
-		CreatureBonusXpType::Type bonusXpCode() const { return bonus_xp_code_; }
+		rule::enums::CreatureBonusXpType::Type bonusXpCode() const { return bonus_xp_code_; }
 
 		/**
 		 * @brief Set the bonus constitution code for the animal
@@ -203,7 +203,7 @@ namespace rm {
 		 *
 		 * @param constitution_variance_type Bonus constitution code for the animal, used to determine how much constitution variance a creature has.
 		 */
-		void setConstitutionVarianceType(CreatureConstitutionVarianceType::Type constitution_variance_type) { constitution_variance_type_ = constitution_variance_type; }
+		void setConstitutionVarianceType(rule::enums::CreatureConstitutionVarianceType::Type constitution_variance_type) { constitution_variance_type_ = constitution_variance_type; }
 
 		/**
 		 * @brief Get the bonus constitution code for the animal
@@ -212,7 +212,7 @@ namespace rm {
 		 *
 		 * @return Bonus constitution code for the animal, used to determine how much constitution variance a creature has.
 		 */
-		CreatureConstitutionVarianceType::Type constitutionVarianceType() const { return constitution_variance_type_; }
+		rule::enums::CreatureConstitutionVarianceType::Type constitutionVarianceType() const { return constitution_variance_type_; }
 
 		/**
 		 * @brief Set the  level variance code for the animal
@@ -233,7 +233,7 @@ namespace rm {
 		 * @param level_variance_type Level variance code for the animal, used to determine how much level variance a creature has.
 		 * @see LevelVarianceTable for how the level variance code is used to determine the level variance of a creature.
 		 */
-		void setLevelVarianceType(LevelVarianceType::Type level_variance_type) { level_variance_type_ = level_variance_type; }
+		void setLevelVarianceType(rule::enums::LevelVarianceType::Type level_variance_type) { level_variance_type_ = level_variance_type; }
 
 		/**
 		 * @brief Get the level varaince code for the animal
@@ -254,7 +254,7 @@ namespace rm {
 		 * @return Level variance code for the animal, used to determine how much level variance a creature has.
 		 * @see LevelVarianceTable for how the level variance code is used to determine the level variance of a creature.
 		 */
-		LevelVarianceType::Type levelVarianceType() const { return level_variance_type_; }
+		rule::enums::LevelVarianceType::Type levelVarianceType() const { return level_variance_type_; }
 
 		/**
 		 * @brief Set the average level of the animal
@@ -316,49 +316,49 @@ namespace rm {
 		 * @brief Set the size of the animal
 		 * @param size Size of the animal, used as a relative guide with Medium being approximately man sized
 		 */
-		void setSize(CreatureSizeType::Type size) { size_ = size; }
+		void setSize(rule::enums::CreatureSizeType::Type size) { size_ = size; }
 
 		/**
 		 * @brief Get the size of the animal
 		 * @return Size of the animal, used as a relative guide with Medium being approximately man sized
 		 */
-		CreatureSizeType::Type size() const { return size_; }
+		rule::enums::CreatureSizeType::Type size() const { return size_; }
 
 		/**
 		 * @brief Set the armour type of the animal
 		 * @param armour_type Armour type of the animal, used to determine how much damage it takes when attacked.
 		 */
-		void setArmourType(ArmourType::Type armour_type) { armour_type_ = armour_type; }
+		void setArmourType(rule::enums::ArmourType::Type armour_type) { armour_type_ = armour_type; }
 
 		/**
 		 * @brief Get the armour type of the animal
 		 * @return Armour type of the animal, used to determine how much damage it takes when attacked.
 		 */
-		ArmourType::Type armourType() const { return armour_type_; }
+		rule::enums::ArmourType::Type armourType() const { return armour_type_; }
 
 		/**
 		 * @brief Set the movement speed of the animal
 		 * @param movement_speed Movement speed of the animal, used to determine how far it can move in a turn.
 		 */
-		void setMovementSpeed(CreatureMovementSpeedType::Type movement_speed) { movement_speed_ = movement_speed; }
+		void setMovementSpeed(rule::enums::CreatureMovementSpeedType::Type movement_speed) { movement_speed_ = movement_speed; }
 
 		/**
 		 * @brief Get the movement speed of the animal
 		 * @return Movement speed of the animal, used to determine how far it can move in a turn.
 		 */
-		CreatureMovementSpeedType::Type movementSpeed() const { return movement_speed_; }
+		rule::enums::CreatureMovementSpeedType::Type movementSpeed() const { return movement_speed_; }
 
 		/**
 		 * @brief Set the attack quickness of the animal
 		 * @param attack_quickness The speed that the creature attacks at, impacting initiative and DB
 		 */
-		void setAttackQuickness(CreatureMovementSpeedType::Type attack_quickness) { attack_quickness_ = attack_quickness; }
+		void setAttackQuickness(rule::enums::CreatureMovementSpeedType::Type attack_quickness) { attack_quickness_ = attack_quickness; }
 
 		/**
 		 * @brief Get the attack quickness of the animal
 		 * @return The speed that the creature attacks at, impacting initiative and DB
 		 */
-		CreatureMovementSpeedType::Type attackQuickness() const { return attack_quickness_; }
+		rule::enums::CreatureMovementSpeedType::Type attackQuickness() const { return attack_quickness_; }
 
 		/**
 		 * @brief Set the maximum pace of the animal
@@ -376,43 +376,43 @@ namespace rm {
 		 * @brief Set the outlook of the animal
 		 * @param outlook Outlook of the animal, used to determine how it behaves in combat and how it reacts to the world around it.
 		 */
-		void setOutlook(AnimalOutlookType::Type outlook) { outlook_ = outlook; }
+		void setOutlook(rm::rule::enums::AnimalOutlookType::Type outlook) { outlook_ = outlook; }
 
 		/**
 		 * @brief Get the outlook of the animal
 		 * @return Outlook of the animal, used to determine how it behaves in combat and how it reacts to the world around it.
 		 */
-		AnimalOutlookType::Type outlook() const { return outlook_; }
+		rm::rule::enums::AnimalOutlookType::Type outlook() const { return outlook_; }
 
 		/**
 		 * @brief Set the critical table type for the animal
 		 * @param critical_table_type Critical table type for the animal, used to determine which critical table to use when the animal is hit with a critical hit.
 		 */
-		void setCriticalTableType(CriticalSizeTableType::Type critical_table_type) { critical_table_type_ = critical_table_type; }
+		void setCriticalTableType(rule::enums::CriticalSizeTableType::Type critical_table_type) { critical_table_type_ = critical_table_type; }
 
 		/**
 		 * @brief Get the critical table type for the animal
 		 * @return Critical table type for the animal, used to determine which critical table to use when the animal is hit with a critical hit.
 		 */
-		CriticalSizeTableType::Type criticalTableType() const { return critical_table_type_; }
+		rule::enums::CriticalSizeTableType::Type criticalTableType() const { return critical_table_type_; }
 
 		/**
 		 * @brief Add a critical modifier to the animal
 		 * @param critical_modifier Critical modifier for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit.
 		 */
-		void addCriticalModifier(CriticalModifierType::Type critical_modifier) { critical_modifiers_.emplace(critical_modifier); }
+		void addCriticalModifier(rule::enums::CriticalModifierType::Type critical_modifier) { critical_modifiers_.emplace(critical_modifier); }
 
 		/**
 		 * @brief Set the critical modifiers for the animal
 		 * @param critical_modifiers Set of critical modifiers for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit.
 		 */
-		void setCriticalModifiers(std::set<CriticalModifierType::Type> critical_modifiers) { critical_modifiers_ = std::move(critical_modifiers); }
+		void setCriticalModifiers(std::set<rule::enums::CriticalModifierType::Type> critical_modifiers) { critical_modifiers_ = std::move(critical_modifiers); }
 
 		/**
 		 * @brief Get the set of critical modifiers for the animal
 		 * @return Set of critical modifiers for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit.
 		 */
-		const std::set<CriticalModifierType::Type>& criticalModifiers() const { return critical_modifiers_; }
+		const std::set<rule::enums::CriticalModifierType::Type>& criticalModifiers() const { return critical_modifiers_; }
 
 		/**
 		 * @brief Set the encounter range for the animal
@@ -566,19 +566,19 @@ namespace rm {
 		int moving_manoeuvre_bonus_{}; /**< Bonus to Manoeuvre rolls when the animal is moving, used to determine how difficult it is to hit the animal when it is moving. */
 		int carry_capacity_{}; /**< Carrying capacity of the animal, used to determine how much weight it can carry when used as a mount or pack animal. This is not used for animals that are not meant to be used as mounts or pack animals. */
 		int riding_bonus_{}; /**< Riding bonus for the animal, used to determine the bonus to riding skill rolls when using the animal as a mount. This is not used for animals that are not meant to be used as mounts. */
-		CreatureBonusXpType::Type bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
-		CreatureConstitutionVarianceType::Type constitution_variance_type_{}; /**< Bonus constitution code for the animal, used to determine how much constitution variance a creature has. */
-		LevelVarianceType::Type level_variance_type_{}; /**< Bonus level code for the animal, used to determine how much level variance a creature has. */
+		rule::enums::CreatureBonusXpType::Type bonus_xp_code_{}; /**< Bonus XP code for the animal, used to determine how much bonus XP is awarded for killing the animal. */
+		rule::enums::CreatureConstitutionVarianceType::Type constitution_variance_type_{}; /**< Bonus constitution code for the animal, used to determine how much constitution variance a creature has. */
+		rule::enums::LevelVarianceType::Type level_variance_type_{}; /**< Bonus level code for the animal, used to determine how much level variance a creature has. */
 		int average_level_{}; /**< Average level of the animal, used to determine how much damage it can take before it dies. */
 		std::optional<const TreasureCodeData*> treasure_code_{}; /**< Optional pointer to a TreasureCodeData object that represents the treasure that can be found on the animal or in it's lair when it is killed. This is optional as not all animals will have treasure. */
-		CreatureSizeType::Type size_{}; /**< Size of the animal, used as a relative guide with Medium being approximately man-sized */
-		ArmourType::Type armour_type_{}; /**< Armour type of the animal, used to determine how much damage it takes when attacked. */
-		CreatureMovementSpeedType::Type movement_speed_{}; /**< Movement speed of the animal, used to determine how far it can move in a turn. */
-		CreatureMovementSpeedType::Type attack_quickness_{}; /**< The speed that the creature attacks at, impacting initiative and DB */
+		rule::enums::CreatureSizeType::Type size_{}; /**< Size of the animal, used as a relative guide with Medium being approximately man-sized */
+		rule::enums::ArmourType::Type armour_type_{}; /**< Armour type of the animal, used to determine how much damage it takes when attacked. */
+		rule::enums::CreatureMovementSpeedType::Type movement_speed_{}; /**< Movement speed of the animal, used to determine how far it can move in a turn. */
+		rule::enums::CreatureMovementSpeedType::Type attack_quickness_{}; /**< The speed that the creature attacks at, impacting initiative and DB */
 		const CreaturePaceData* max_pace_{}; /**< Pointer to the maximum pace of the animal, used to determine how far it can move in a turn based on its movement speed. This is stored as a pointer to avoid having to copy the pace data for each animal and instead just reference the same data for all animals with the same movement speed. */
-		AnimalOutlookType::Type outlook_{}; /**< Outlook of the animal, used to determine how it behaves in combat and how it reacts to the world around it. */
-		CriticalSizeTableType::Type critical_table_type_{}; /**< Critical table type for the animal, used to determine which critical table to use when the animal is hit with a critical hit. */
-		std::set<CriticalModifierType::Type> critical_modifiers_{}; /**< Set of critical modifiers for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit. */
+		rm::rule::enums::AnimalOutlookType::Type outlook_{}; /**< Outlook of the animal, used to determine how it behaves in combat and how it reacts to the world around it. */
+		rule::enums::CriticalSizeTableType::Type critical_table_type_{}; /**< Critical table type for the animal, used to determine which critical table to use when the animal is hit with a critical hit. */
+		std::set<rule::enums::CriticalModifierType::Type> critical_modifiers_{}; /**< Set of critical modifiers for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit. */
 		std::pair<int, int> encounter_range_{}; /**< A pair containing the minimum and maximum number of animals typically enountered in a single encounter, used to determine how many animals are encountered when an encounter with the animal is generated. */
 		std::pair<int, int> number_young_range_{}; /**< A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal. */
 		std::unique_ptr<Location> location_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */

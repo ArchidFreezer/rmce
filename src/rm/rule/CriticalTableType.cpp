@@ -1,6 +1,6 @@
 #include <CriticalTableType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string CriticalTableType::toString(Type type) {
 		using enum Type;
@@ -34,4 +34,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for CriticalTableType::Type: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

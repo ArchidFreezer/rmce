@@ -7,7 +7,7 @@
 
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	/**
 	 * @brief Represents the relative wealth of a treasure, used to randomly generate treasure.
@@ -64,4 +64,4 @@ namespace rm {
 		void fromString(std::string_view sv, TreasureValueType::Type& type);
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

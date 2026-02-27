@@ -15,8 +15,8 @@ namespace rm {
 		 * @brief Get the index of the table column
 		 * @return int table column index
 		 */
-		int column(CreatureSizeType::Type match) const {
-			using CreatureSizeType::Type;
+		int column(rule::enums::CreatureSizeType::Type match) const {
+			using rule::enums::CreatureSizeType::Type;
 			switch (match) {
 			case Type::kTiny: return 0;
 			case Type::kSmall: return 1;

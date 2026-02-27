@@ -7,7 +7,7 @@
 
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	/**
 	 * @brief The habitats that fauna and flora may be found in the world.
@@ -142,4 +142,4 @@ namespace rm {
 
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

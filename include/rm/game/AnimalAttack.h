@@ -103,13 +103,13 @@ namespace rm {
 		 * @brief Set the size of a non-weapon attack
 		 * @param non_weapon_size Size of a non-weapon attack
 		 */
-		void setNonWeaponSize(AttackSizeType::Type non_weapon_size) { non_weapon_size_ = non_weapon_size; }
+		void setNonWeaponSize(rule::enums::AttackSizeType::Type non_weapon_size) { non_weapon_size_ = non_weapon_size; }
 
 		/**
 		 * @brief Get the size of a non-weapon attack
 		 * @return AttackSizeType::Type Size of a non-weapon attack
 		 */
-		AttackSizeType::Type nonWeaponSize() const { return non_weapon_size_; }
+		rule::enums::AttackSizeType::Type nonWeaponSize() const { return non_weapon_size_; }
 
 		/**
 		 * @brief Check if the attack has a non-weapon attack
@@ -292,13 +292,13 @@ namespace rm {
 		 * @brief Set the type of critical that this attack always results in
 		 * @param auto_critical_type Type of critical that this attack always results in
 		 */
-		void setAutoCriticalType(CriticalType::Type auto_critical_type) { auto_critical_type_ = auto_critical_type; }
+		void setAutoCriticalType(rule::enums::CriticalType::Type auto_critical_type) { auto_critical_type_ = auto_critical_type; }
 
 		/**
 		 * @brief Get the type of critical that this attack always results in
 		 * @return CriticalType::Type Type of critical that this attack always results in
 		 */
-		std::optional <CriticalType::Type> autoCriticalType() const { return auto_critical_type_; }
+		std::optional <rule::enums::CriticalType::Type> autoCriticalType() const { return auto_critical_type_; }
 
 		/**
 		 * @brief Set the size of the auto critical, used for attacks that always result in a non-tiny crit to determine the size of the crit
@@ -316,7 +316,7 @@ namespace rm {
 		std::optional <const archid::NumberRange<int>*> chance_{}; /**< Percentage chance that this attack will be used */
 		std::optional<int> conditional_attack_ref_{}; /**< If this is set, the attack is a conditional attack that is used if another attack results in a non-tiny crit, the ID of the attack to use if the condition is met */
 		int offensive_bonus_{}; /**< Offensive bonus for the attack, used to determine how difficult it is to hit with the attack. */
-		AttackSizeType::Type non_weapon_size_{}; /**< Size of a non-weapon attack. */
+		rule::enums::AttackSizeType::Type non_weapon_size_{}; /**< Size of a non-weapon attack. */
 		const SpecialAttackTable* non_weapon_table_{}; /**< SpecialAttackTable for non-weapon attacks. */
 		const AttackTable* weapon_table_{}; /**< AttackTable for weapon or elemental ball/bolt attacks that use standard attack tables, used to determine the attack result for special attacks. */
 		int num_attacks_{ 1 }; /**< Number of attacks that the creature makes with this attack in a round, used to indicate that there should be multiple rolls to represent multiple attacks such as a bear's two claws and one bite. */
@@ -329,7 +329,7 @@ namespace rm {
 		std::optional<std::string> special_{}; /**< Special attacks that are not specifically defined above. */
 		int same_round_attack_id_{}; /**< If this is set and the current attack results in a non-tiny crit the conditional attack with the given ID will also be used this round */
 		int next_round_attack_id_{}; /**< If this is set and the current attack results in a non-tiny crit the conditional attack with the given ID will be used next round */
-		std::optional <CriticalType::Type> auto_critical_type_{}; /**< Type of critical that this attack always results in. */
+		std::optional <rule::enums::CriticalType::Type> auto_critical_type_{}; /**< Type of critical that this attack always results in. */
 		std::optional <std::string> auto_critical_size_{}; /**< Size of the auto critical, used for attacks that always result in a non-tiny crit to determine the size of the crit. */
 	};
 

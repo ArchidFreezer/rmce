@@ -115,7 +115,7 @@ namespace rm::rule::parser {
 		 * @param stat_gain_choices An optional reference to a property tree containing the stat gain choices to parse. If not present, an empty vector is returned.
 		 * @return A vector of pairs, where each pair contains a string key and an integer value representing the parsed stat gain choices.
 		 */
-		EnumChoice<StatType::Type> parseStatGainChoices(boost::optional<const pt::ptree&> stat_gain_choices);
+		EnumChoice<rule::enums::StatType::Type> parseStatGainChoices(boost::optional<const pt::ptree&> stat_gain_choices);
 
 		/**
 		 * @brief Converts a vector of string-integer pairs representing stat gain choices into a property tree.

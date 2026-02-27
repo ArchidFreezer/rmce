@@ -7,7 +7,7 @@
 
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	/**
 	 * @brief Specific environmental area or features.
@@ -313,4 +313,4 @@ namespace rm {
 
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

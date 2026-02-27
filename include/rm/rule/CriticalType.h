@@ -6,7 +6,7 @@
 
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	/**
 	 * @brief Contains the CriticalType::Type enum and associated functions
@@ -30,7 +30,7 @@ namespace rm {
 			kPuncture, /**< Weapons that use a point to pierce the target such as arrows or animal teeth/horns */
 			kSlash, /**< Weapons that use an edge to attack */
 			kSubdual, /**< The point is immobilize or render a target unconscious */
-			kTiny, /**< Creatures of #rm::CreatureSizeType::kTiny or other irritants */
+			kTiny, /**< Creatures of #rm::rule::enums::CreatureSizeType::kTiny or other irritants */
 			kUnbalance, /**< Attempt to knock the target over or off-balance them */
 			kAether, /**< Elemental force of creation */
 			kCold, /**< Elemental cold damage */
@@ -86,4 +86,4 @@ namespace rm {
 
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

@@ -12,14 +12,14 @@ namespace {
 	TEST(ProfessionData, Realms) {
 		ProfessionData prof("PROF_ID");
 
-		prof.addRealm(RealmType::kArms);
-		prof.addRealm(RealmType::kChanneling);
+		prof.addRealm(rule::enums::RealmType::kArms);
+		prof.addRealm(rule::enums::RealmType::kChanneling);
 
-		EXPECT_TRUE(prof.isRealm(RealmType::kArms));
-		EXPECT_TRUE(prof.isRealm(RealmType::kChanneling));
-		EXPECT_FALSE(prof.isRealm(RealmType::kArcane));
-		EXPECT_FALSE(prof.isRealm(RealmType::kEssence));
-		EXPECT_FALSE(prof.isRealm(RealmType::kMentalism));
+		EXPECT_TRUE(prof.isRealm(rule::enums::RealmType::kArms));
+		EXPECT_TRUE(prof.isRealm(rule::enums::RealmType::kChanneling));
+		EXPECT_FALSE(prof.isRealm(rule::enums::RealmType::kArcane));
+		EXPECT_FALSE(prof.isRealm(rule::enums::RealmType::kEssence));
+		EXPECT_FALSE(prof.isRealm(rule::enums::RealmType::kMentalism));
 
 		EXPECT_EQ(prof.realms().size(), 2);
 
@@ -28,18 +28,18 @@ namespace {
 	TEST(ProfessionData, Stats) {
 		ProfessionData prof("PROF_ID");
 
-		prof.addStat(StatType::kAgility);
-		prof.addStat(StatType::kReasoning);
+		prof.addStat(rule::enums::StatType::kAgility);
+		prof.addStat(rule::enums::StatType::kReasoning);
 
 		EXPECT_EQ(prof.stats().size(), 2);
 		prof.clearStats();
 		EXPECT_EQ(prof.stats().size(), 0);
 
-		prof.addStat(StatType::kAgility);
-		prof.addStat(StatType::kReasoning);
+		prof.addStat(rule::enums::StatType::kAgility);
+		prof.addStat(rule::enums::StatType::kReasoning);
 
-		for (StatType::Type stat : prof.stats()) {
-			if (stat != StatType::kAgility && stat != StatType::kReasoning) FAIL();
+		for (rule::enums::StatType::Type stat : prof.stats()) {
+			if (stat != rule::enums::StatType::kAgility && stat != rule::enums::StatType::kReasoning) FAIL();
 		}
 
 	}
@@ -101,8 +101,8 @@ namespace {
 		SubcategoriedSkillData s2(sk2, "Sub");
 		EXPECT_STREQ(s1.id().c_str(), "SKILL1_ID_Sub");
 
-		prof.setSkillDevelopmentType(std::move(s1), SkillDevelopmentType::kEveryman);
-		prof.setSkillDevelopmentType(std::move(s2), SkillDevelopmentType::kEveryman);
+		prof.setSkillDevelopmentType(std::move(s1), rule::enums::SkillDevelopmentType::kEveryman);
+		prof.setSkillDevelopmentType(std::move(s2), rule::enums::SkillDevelopmentType::kEveryman);
 
 		const std::set<SubcategoriedSkillData> eset(prof.skillsWithSkillDevelopmentType());
 		EXPECT_EQ(eset.size(), 2);
@@ -121,7 +121,7 @@ namespace {
 		SubcategoriedSkillData s2b(sk2, "Sub"); // Duplicate of above
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSet(sk2));
 		EXPECT_TRUE(prof.isSkillDevelopmentTypeSet(sk2, "Sub"));
-		EXPECT_THROW(prof.setSkillDevelopmentType(std::move(s2b), SkillDevelopmentType::kOccupational), ProfessionData::InvalidSkillDevelopment);
+		EXPECT_THROW(prof.setSkillDevelopmentType(std::move(s2b), rule::enums::SkillDevelopmentType::kOccupational), ProfessionData::InvalidSkillDevelopment);
 
 		SkillData sk3("SKILL3_ID");
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSet(sk3));
@@ -136,20 +136,20 @@ namespace {
 
 		EXPECT_EQ(prof.skillCategoriesWithSkillDevelopmentType().size(), 0);
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillCategory(s1));
-		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s1), SkillDevelopmentType::kStandard);
+		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s1), rule::enums::SkillDevelopmentType::kStandard);
 
-		prof.addSkillCategorySkillDevelopmentType(s1, SkillDevelopmentType::kEveryman);
+		prof.addSkillCategorySkillDevelopmentType(s1, rule::enums::SkillDevelopmentType::kEveryman);
 		EXPECT_EQ(prof.skillCategoriesWithSkillDevelopmentType().size(), 1);
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillCategory(s2));
 		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillCategory(s1));
-		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s1), SkillDevelopmentType::kEveryman);
+		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s1), rule::enums::SkillDevelopmentType::kEveryman);
 
-		prof.addSkillCategorySkillDevelopmentType(s2, SkillDevelopmentType::kOccupational);
+		prof.addSkillCategorySkillDevelopmentType(s2, rule::enums::SkillDevelopmentType::kOccupational);
 		EXPECT_EQ(prof.skillCategoriesWithSkillDevelopmentType().size(), 2);
 		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillCategory(s1));
-		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s1), SkillDevelopmentType::kEveryman);
+		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s1), rule::enums::SkillDevelopmentType::kEveryman);
 		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillCategory(s2));
-		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s2), SkillDevelopmentType::kOccupational);
+		EXPECT_EQ(prof.skillCategorySkillDevelopmentType(s2), rule::enums::SkillDevelopmentType::kOccupational);
 	}
 
 	TEST(ProfessionData, SkillDevelopmentTypeChoices) {
@@ -170,14 +170,14 @@ namespace {
 			choice1.addOption(sc2);
 			choice1.addOption(sc3);
 
-			prof.addSkillDevelopmentTypeChoice(choice1, SkillDevelopmentType::kEveryman);
+			prof.addSkillDevelopmentTypeChoice(choice1, rule::enums::SkillDevelopmentType::kEveryman);
 		}
 
 		// choice1 is out of scope here
 		for (auto& choice : prof.skillDevelopmentTypeChoices()) {
 			EXPECT_EQ(choice.first.numChoices(), 1);
 			EXPECT_EQ(choice.first.numOptions(), 3);
-			EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
+			EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kEveryman);
 		}
 
 		GameRuleDataChoice<SubcategoriedSkillData> choice2{};
@@ -189,7 +189,7 @@ namespace {
 		SubcategoriedSkillData sc2a(s2a);
 		choice2.addOption(sc1a);
 		choice2.addOption(sc2a);
-		prof.addSkillDevelopmentTypeChoice(choice2, SkillDevelopmentType::kOccupational);
+		prof.addSkillDevelopmentTypeChoice(choice2, rule::enums::SkillDevelopmentType::kOccupational);
 
 		EXPECT_EQ(prof.numSkillDevelopmentTypeChoices(), 2);
 		EXPECT_EQ(prof.skillDevelopmentTypeChoices().size(), 2);
@@ -199,10 +199,10 @@ namespace {
 			count++;
 			if (choice.first.numChoices() == 1) {
 				EXPECT_EQ(choice.first.numOptions(), 3);
-				EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
+				EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kEveryman);
 			} else if (choice.first.numChoices() == 2) {
 				EXPECT_EQ(choice.first.numOptions(), 2);
-				EXPECT_EQ(choice.second, SkillDevelopmentType::kOccupational);
+				EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kOccupational);
 			} else {
 				FAIL();
 			}
@@ -225,14 +225,14 @@ namespace {
 			choice1.addOption(s2);
 			choice1.addOption(s3);
 
-			prof.addSkillCategorySkillDevelopmentTypeChoice(choice1, SkillDevelopmentType::kEveryman);
+			prof.addSkillCategorySkillDevelopmentTypeChoice(choice1, rule::enums::SkillDevelopmentType::kEveryman);
 		}
 
 		// choice1 is out of scope here
 		for (auto& choice : prof.skillCategorySkillDevelopmentTypeChoices()) {
 			EXPECT_EQ(choice.first.numChoices(), 1);
 			EXPECT_EQ(choice.first.numOptions(), 3);
-			EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
+			EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kEveryman);
 		}
 
 		GameRuleDataChoice<SkillCategoryData> choice2{};
@@ -242,7 +242,7 @@ namespace {
 		SkillCategoryData s2a("SKILL2a_ID");
 		choice2.addOption(s1a);
 		choice2.addOption(s2a);
-		prof.addSkillCategorySkillDevelopmentTypeChoice(choice2, SkillDevelopmentType::kOccupational);
+		prof.addSkillCategorySkillDevelopmentTypeChoice(choice2, rule::enums::SkillDevelopmentType::kOccupational);
 
 		EXPECT_EQ(prof.numSkillCategorySkillDevelopmentTypeChoices(), 2);
 		EXPECT_EQ(prof.skillCategorySkillDevelopmentTypeChoices().size(), 2);
@@ -252,10 +252,10 @@ namespace {
 			count++;
 			if (choice.first.numChoices() == 1) {
 				EXPECT_EQ(choice.first.numOptions(), 3);
-				EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
+				EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kEveryman);
 			} else if (choice.first.numChoices() == 2) {
 				EXPECT_EQ(choice.first.numOptions(), 2);
-				EXPECT_EQ(choice.second, SkillDevelopmentType::kOccupational);
+				EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kOccupational);
 			} else {
 				FAIL();
 			}
@@ -278,14 +278,14 @@ namespace {
 			choice1.addOption(s2);
 			choice1.addOption(s3);
 
-			prof.addSkillGroupSkillDevelopmentTypeChoice(choice1, SkillDevelopmentType::kEveryman);
+			prof.addSkillGroupSkillDevelopmentTypeChoice(choice1, rule::enums::SkillDevelopmentType::kEveryman);
 		}
 
 		// choice1 is out of scope here
 		for (auto& choice : prof.skillGroupSkillDevelopmentTypeChoices()) {
 			EXPECT_EQ(choice.first.numChoices(), 1);
 			EXPECT_EQ(choice.first.numOptions(), 3);
-			EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
+			EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kEveryman);
 		}
 
 		GameRuleDataChoice<SkillGroupData> choice2{};
@@ -295,7 +295,7 @@ namespace {
 		SkillGroupData s2a("SKILL2a_ID");
 		choice2.addOption(s1a);
 		choice2.addOption(s2a);
-		prof.addSkillGroupSkillDevelopmentTypeChoice(choice2, SkillDevelopmentType::kOccupational);
+		prof.addSkillGroupSkillDevelopmentTypeChoice(choice2, rule::enums::SkillDevelopmentType::kOccupational);
 
 		EXPECT_EQ(prof.numSkillGroupSkillDevelopmentTypeChoices(), 2);
 		EXPECT_EQ(prof.skillGroupSkillDevelopmentTypeChoices().size(), 2);
@@ -305,10 +305,10 @@ namespace {
 			count++;
 			if (choice.first.numChoices() == 1) {
 				EXPECT_EQ(choice.first.numOptions(), 3);
-				EXPECT_EQ(choice.second, SkillDevelopmentType::kEveryman);
+				EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kEveryman);
 			} else if (choice.first.numChoices() == 2) {
 				EXPECT_EQ(choice.first.numOptions(), 2);
-				EXPECT_EQ(choice.second, SkillDevelopmentType::kOccupational);
+				EXPECT_EQ(choice.second, rule::enums::SkillDevelopmentType::kOccupational);
 			} else {
 				FAIL();
 			}
@@ -373,20 +373,20 @@ namespace {
 
 		EXPECT_EQ(prof.skillGroupsWithSkillDevelopmentType().size(), 0);
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillGroup(g2));
-		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g2), SkillDevelopmentType::kStandard);
+		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g2), rule::enums::SkillDevelopmentType::kStandard);
 
-		prof.addSkillGroupSkillDevelopmentType(g1, SkillDevelopmentType::kEveryman);
+		prof.addSkillGroupSkillDevelopmentType(g1, rule::enums::SkillDevelopmentType::kEveryman);
 		EXPECT_EQ(prof.skillGroupsWithSkillDevelopmentType().size(), 1);
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSkillGroup(g2));
 		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillGroup(g1));
-		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g1), SkillDevelopmentType::kEveryman);
+		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g1), rule::enums::SkillDevelopmentType::kEveryman);
 
-		prof.addSkillGroupSkillDevelopmentType(g2, SkillDevelopmentType::kOccupational);
+		prof.addSkillGroupSkillDevelopmentType(g2, rule::enums::SkillDevelopmentType::kOccupational);
 		EXPECT_EQ(prof.skillGroupsWithSkillDevelopmentType().size(), 2);
 		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillGroup(g1));
-		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g1), SkillDevelopmentType::kEveryman);
+		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g1), rule::enums::SkillDevelopmentType::kEveryman);
 		EXPECT_TRUE(prof.isSkillDevelopmentTypeSkillGroup(g2));
-		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g2), SkillDevelopmentType::kOccupational);
+		EXPECT_EQ(prof.skillGroupSkillDevelopmentType(g2), rule::enums::SkillDevelopmentType::kOccupational);
 	}
 
 	TEST(ProfessionData, CategoryProfessionBonus) {

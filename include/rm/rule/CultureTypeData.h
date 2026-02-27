@@ -200,19 +200,19 @@ namespace rm {
 		 * @brief Add an armour type to the set of those preferred by the culture
 		 * @param armour_type ArmourType::Type to add
 		 */
-		void addPreferredArmour(ArmourType::Type armour_type) { preferred_armour_.emplace(armour_type); }
+		void addPreferredArmour(rule::enums::ArmourType::Type armour_type) { preferred_armour_.emplace(armour_type); }
 
 		/**
 		 * @brief Set the set of armour types preferred by the culture
 		 * @param armours std::set of ArmourType::Type to set as preferred armours
 		 */
-		void setPreferredArmours(std::set<ArmourType::Type> armours) { preferred_armour_ = std::move(armours); }
+		void setPreferredArmours(std::set<rule::enums::ArmourType::Type> armours) { preferred_armour_ = std::move(armours); }
 
 		/**
 		 * @brief Get a container with the armour types preferred by the culture
 		 * @return std::set<ArmourType::Type> armour types
 		 */
-		const std::set<ArmourType::Type> preferredArmour() const { return preferred_armour_; }
+		const std::set<rule::enums::ArmourType::Type> preferredArmour() const { return preferred_armour_; }
 
 		/**
 		 * @brief Get whether an armour type is amongst those prefereed by the culture
@@ -220,7 +220,7 @@ namespace rm {
 		 * @return `true` if the armour type is preferred by the culture
 		 * @return `true` if the armour type is not preferred by the culture
 		 */
-		bool isPreferredArmour(ArmourType::Type armour_type) const { return (preferred_armour_.find(armour_type) != preferred_armour_.end()); }
+		bool isPreferredArmour(rule::enums::ArmourType::Type armour_type) const { return (preferred_armour_.find(armour_type) != preferred_armour_.end()); }
 
 		/**
 		 * @brief Add an weapon type to the set of those preferred by the culture
@@ -470,19 +470,19 @@ namespace rm {
 		 * @brief Add an environment feature to the set of those required by the culture
 		 * @param feature EnvironmentType::Feature to add
 		 */
-		void addRequiredFeature(EnvironmentType::Feature feature) { required_features_.emplace(feature); }
+		void addRequiredFeature(rule::enums::EnvironmentType::Feature feature) { required_features_.emplace(feature); }
 
 		/**
 		 * @brief Set the set of environment features required by the culture
 		 * @param features std::set of EnvironmentType::Feature to set as required features
 		 */
-		void setRequiredFeatures(std::set<EnvironmentType::Feature> features) { required_features_ = std::move(features); }
+		void setRequiredFeatures(std::set<rule::enums::EnvironmentType::Feature> features) { required_features_ = std::move(features); }
 
 		/**
 		 * @brief Get a container with the environment features required by the culture
 		 * @return std::set<EnvironmentType::Feature> environment features
 		 */
-		const std::set<EnvironmentType::Feature> requiredFeatures() const { return required_features_; }
+		const std::set<rule::enums::EnvironmentType::Feature> requiredFeatures() const { return required_features_; }
 
 		/**
 		 * @brief Get whether an environment feature type is amongst those required by the culture
@@ -490,26 +490,26 @@ namespace rm {
 		 * @return `true` if the environment feature is required by the culture
 		 * @return `true` if the environment feature is not required by the culture
 		 */
-		bool isRequiredFeature(EnvironmentType::Feature feature) const { return (required_features_.find(feature) != required_features_.end()); }
+		bool isRequiredFeature(rule::enums::EnvironmentType::Feature feature) const { return (required_features_.find(feature) != required_features_.end()); }
 
 
 		/**
 		 * @brief Add an environment terrain to the set of those required by the culture
 		 * @param terrain EnvironmentType::Terrain to add
 		 */
-		void addRequiredTerrain(EnvironmentType::Terrain terrain) { required_terrains_.emplace(terrain); }
+		void addRequiredTerrain(rule::enums::EnvironmentType::Terrain terrain) { required_terrains_.emplace(terrain); }
 
 		/**
 		 * @brief Set the set of environment terrains required by the culture
 		 * @param terrains std::set of EnvironmentType::Terrain to set as required terrains
 		 */
-		void setRequiredTerrains(std::set<EnvironmentType::Terrain> terrains) { required_terrains_ = std::move(terrains); }
+		void setRequiredTerrains(std::set<rule::enums::EnvironmentType::Terrain> terrains) { required_terrains_ = std::move(terrains); }
 
 		/**
 		 * @brief Get a container with the environment terrains required by the culture
 		 * @return std::set<EnvironmentType::Terrain> environment terrains
 		 */
-		const std::set<EnvironmentType::Terrain> requiredTerrains() const { return required_terrains_; }
+		const std::set<rule::enums::EnvironmentType::Terrain> requiredTerrains() const { return required_terrains_; }
 
 		/**
 		 * @brief Get whether an environment terrain type is amongst those required by the culture
@@ -517,26 +517,26 @@ namespace rm {
 		 * @return `true` if the environment terrain is required by the culture
 		 * @return `true` if the environment terrain is not required by the culture
 		 */
-		bool isRequiredTerrain(EnvironmentType::Terrain terrain) const { return (required_terrains_.find(terrain) != required_terrains_.end()); }
+		bool isRequiredTerrain(rule::enums::EnvironmentType::Terrain terrain) const { return (required_terrains_.find(terrain) != required_terrains_.end()); }
 
 
 		/**
 		 * @brief Add an environment vegetation to the set of those required by the culture
 		 * @param vegetation EnvironmentType::Vegetation to add
 		 */
-		void addRequiredVegetation(EnvironmentType::Vegetation vegetation) { required_vegetations_.emplace(vegetation); }
+		void addRequiredVegetation(rule::enums::EnvironmentType::Vegetation vegetation) { required_vegetations_.emplace(vegetation); }
 
 		/**
 		 * @brief Set the set of environment vegetations required by the culture
 		 * @param vegetations std::set of EnvironmentType::Vegetation to set as required vegetations
 		 */
-		void setRequiredVegetations(std::set<EnvironmentType::Vegetation> vegetations) { required_vegetations_ = std::move(vegetations); }
+		void setRequiredVegetations(std::set<rule::enums::EnvironmentType::Vegetation> vegetations) { required_vegetations_ = std::move(vegetations); }
 
 		/**
 		 * @brief Get a container with the environment vegetations required by the culture
 		 * @return std::set<EnvironmentType::Vegetation> environment vegetations
 		 */
-		const std::set<EnvironmentType::Vegetation> requiredVegetations() const { return required_vegetations_; }
+		const std::set<rule::enums::EnvironmentType::Vegetation> requiredVegetations() const { return required_vegetations_; }
 
 		/**
 		 * @brief Get whether an environment vegetation type is amongst those required by the culture
@@ -544,26 +544,26 @@ namespace rm {
 		 * @return `true` if the environment vegetation is required by the culture
 		 * @return `true` if the environment vegetation is not required by the culture
 		 */
-		bool isRequiredVegetation(EnvironmentType::Vegetation vegetation) const { return (required_vegetations_.find(vegetation) != required_vegetations_.end()); }
+		bool isRequiredVegetation(rule::enums::EnvironmentType::Vegetation vegetation) const { return (required_vegetations_.find(vegetation) != required_vegetations_.end()); }
 
 
 		/**
 		 * @brief Add an environment water source to the set of those required by the culture
 		 * @param water EnvironmentType::Water source to add
 		 */
-		void addRequiredWaterSource(EnvironmentType::Water water) { required_water_sources_.emplace(water); }
+		void addRequiredWaterSource(rule::enums::EnvironmentType::Water water) { required_water_sources_.emplace(water); }
 
 		/**
 		 * @brief Set the set of environment water sources required by the culture
 		 * @param water_sources std::set of EnvironmentType::Water to set as required water sources
 		 */
-		void setRequiredWaterSources(std::set<EnvironmentType::Water> water_sources) { required_water_sources_ = std::move(water_sources); }
+		void setRequiredWaterSources(std::set<rule::enums::EnvironmentType::Water> water_sources) { required_water_sources_ = std::move(water_sources); }
 
 		/**
 		 * @brief Get a container with the environment water sources required by the culture
 		 * @return std::set<EnvironmentType::Water> environment water sources
 		 */
-		const std::set<EnvironmentType::Water> requiredWaterSources() const { return required_water_sources_; }
+		const std::set<rule::enums::EnvironmentType::Water> requiredWaterSources() const { return required_water_sources_; }
 
 		/**
 		 * @brief Get whether an environment water source is amongst those required by the culture
@@ -571,7 +571,7 @@ namespace rm {
 		 * @return `true` if the environment water source is required by the culture
 		 * @return `true` if the environment water source is not required by the culture
 		 */
-		bool isRequiredWaterSource(EnvironmentType::Water water) const { return (required_water_sources_.find(water) != required_water_sources_.end()); }
+		bool isRequiredWaterSource(rule::enums::EnvironmentType::Water water) const { return (required_water_sources_.find(water) != required_water_sources_.end()); }
 
 	private:
 		std::string name_{}; /**< Name of the culture type */
@@ -585,16 +585,16 @@ namespace rm {
 		std::string religion_{}; /** Typical religious beliefs practiced by members of the culture */
 		int hobby_skill_ranks_{}; /**< Number of hobby skill ranks available during adolescence */
 		int spell_list_ranks_{}; /**< Number of ranks in an open spell list members of the culture receive */
-		std::set<ArmourType::Type> preferred_armour_{}; /**< Armour type typically preferred by members of the culture */
+		std::set<rule::enums::ArmourType::Type> preferred_armour_{}; /**< Armour type typically preferred by members of the culture */
 		std::set<const WeaponTypeData*> preferred_weapons_{}; /**< Weapon type typically preferred by members of the culture */
 		std::map<SubcategoriedSkillData, int> skill_ranks_{}; /** Number of skill ranks gained during adolescence */
 		std::map<const SkillCategoryData*, int> skill_category_ranks_{}; /** Number of skill category ranks gained during adolescence */
 		std::map<const SkillCategoryData*, int> skill_category_skill_ranks_{}; /** Number of skill ranks from a category gained during adolescence */
 		std::set<const ClimateData*> required_climates_{}; /**< Set of climates, one of which the culture will live in  */
-		std::set<EnvironmentType::Feature> required_features_{}; /**< Set of environment features, one of which the culture will live in  */
-		std::set<EnvironmentType::Terrain> required_terrains_{}; /**< Set of environment terrains, one of which the culture will live in  */
-		std::set<EnvironmentType::Vegetation> required_vegetations_{}; /**< Set of environment vegetations, one of which the culture will live in  */
-		std::set<EnvironmentType::Water> required_water_sources_{}; /**< Set of environment water sources, one of which the culture will live on or next to */
+		std::set<rule::enums::EnvironmentType::Feature> required_features_{}; /**< Set of environment features, one of which the culture will live in  */
+		std::set<rule::enums::EnvironmentType::Terrain> required_terrains_{}; /**< Set of environment terrains, one of which the culture will live in  */
+		std::set<rule::enums::EnvironmentType::Vegetation> required_vegetations_{}; /**< Set of environment vegetations, one of which the culture will live in  */
+		std::set<rule::enums::EnvironmentType::Water> required_water_sources_{}; /**< Set of environment water sources, one of which the culture will live on or next to */
 	};
 
 } // namespace rm

@@ -24,7 +24,7 @@
 #include <StatType.h>
 #include <TreasureValueType.h>
 
-using namespace rm;
+using namespace rm::rule::enums;
 
 namespace {
 	TEST(RuleDataEnums, StatType) {

@@ -27,29 +27,29 @@ namespace rm {
 		 * @brief Set the relative value of items in a treasure pile
 		 * @param items_value_type Relative value of items in a treasure pile
 		 */
-		void setItemsValueType(TreasureValueType::Type items_value_type) { items_value_type_ = items_value_type; }
+		void setItemsValueType(rule::enums::TreasureValueType::Type items_value_type) { items_value_type_ = items_value_type; }
 
 		/**
 		 * @brief Get the relative value of items in a treasure pile
 		 * @return Relative value of items in a treasure pile
 		 */
-		TreasureValueType::Type itemsValueType() const { return items_value_type_; }
+		rule::enums::TreasureValueType::Type itemsValueType() const { return items_value_type_; }
 
 		/**
 		 * @brief Set the relative value of wealth in a treasure pile
 		 * @param wealth_value_type Relative value of wealth in a treasure pile
 		 */
-		void setWealthValueType(TreasureValueType::Type wealth_value_type) { wealth_value_type_ = wealth_value_type; }
+		void setWealthValueType(rule::enums::TreasureValueType::Type wealth_value_type) { wealth_value_type_ = wealth_value_type; }
 
 		/**
 		 * @brief Get the relative value of wealth in a treasure pile
 		 * @return Relative value of wealth in a treasure pile
 		 */
-		TreasureValueType::Type wealthValueType() const { return wealth_value_type_; }
+		rule::enums::TreasureValueType::Type wealthValueType() const { return wealth_value_type_; }
 
 	private:
-		TreasureValueType::Type items_value_type_{}; /**< Relative value of items in a treasure pile */
-		TreasureValueType::Type wealth_value_type_{}; /**< Relative value of wealth in a treasure pile */
+		rule::enums::TreasureValueType::Type items_value_type_{}; /**< Relative value of items in a treasure pile */
+		rule::enums::TreasureValueType::Type wealth_value_type_{}; /**< Relative value of wealth in a treasure pile */
 	};
 
 } // namespace rm

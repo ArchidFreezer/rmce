@@ -16,17 +16,17 @@ namespace rm {
 		 * @brief Get the index of the table column
 		 * @return int table column index
 		 */
-		int column(LevelVarianceType::Type match) const {
+		int column(rule::enums::LevelVarianceType::Type match) const {
 			switch (match) {
-			case LevelVarianceType::Type::kNone: return 0;
-			case LevelVarianceType::Type::kA: return 1;
-			case LevelVarianceType::Type::kB: return 2;
-			case LevelVarianceType::Type::kC: return 3;
-			case LevelVarianceType::Type::kD: return 4;
-			case LevelVarianceType::Type::kE: return 5;
-			case LevelVarianceType::Type::kF: return 6;
-			case LevelVarianceType::Type::kG: return 7;
-			case LevelVarianceType::Type::kH: return 8;
+			case rule::enums::LevelVarianceType::Type::kNone: return 0;
+			case rule::enums::LevelVarianceType::Type::kA: return 1;
+			case rule::enums::LevelVarianceType::Type::kB: return 2;
+			case rule::enums::LevelVarianceType::Type::kC: return 3;
+			case rule::enums::LevelVarianceType::Type::kD: return 4;
+			case rule::enums::LevelVarianceType::Type::kE: return 5;
+			case rule::enums::LevelVarianceType::Type::kF: return 6;
+			case rule::enums::LevelVarianceType::Type::kG: return 7;
+			case rule::enums::LevelVarianceType::Type::kH: return 8;
 			}
 			return 0;
 		}
@@ -38,7 +38,7 @@ namespace rm {
 	 *
 	 * This is a simple lookup table that takes a bonus XP code and a character level, returning the difference from the average level for a creature of this type.
 	 */
-	class LevelVarianceTable : public BoundIntRowLookupTable<TableColumnLevelVarianceCodeMatcher, LevelVarianceType::Type, int> {
+	class LevelVarianceTable : public BoundIntRowLookupTable<TableColumnLevelVarianceCodeMatcher, rule::enums::LevelVarianceType::Type, int> {
 	public:
 
 		/**

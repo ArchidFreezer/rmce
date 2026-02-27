@@ -28,7 +28,7 @@ namespace rm::rule::parser {
 			ref.setBook(factory().get<BookData>(book));
 
 			// Get the skill action type
-			SkillActionType::Type action_type{};
+			rule::enums::SkillActionType::Type action_type{};
 			fromString(v.second.get<std::string>("action"), action_type);
 			ref.setActionType(action_type);
 
@@ -37,7 +37,7 @@ namespace rm::rule::parser {
 			ref.setCategory(factory().get<SkillCategoryData>(category));
 
 			// Get the stats if any are defined
-			ref.setStats(parseEnumVectorTree<StatType::Type>(v.second.get_child_optional("stats")));
+			ref.setStats(parseEnumVectorTree<rule::enums::StatType::Type>(v.second.get_child_optional("stats")));
 
 			// Get the Subcategories if any are defined
 			ref.setSubcategories(parseSetTree<std::string>(v.second.get_child_optional("subcategories")));
@@ -69,7 +69,7 @@ namespace rm::rule::parser {
 
 		// Stats
 		{
-			pt::ptree tree{ getEnumVectorTree<StatType::Type>(game_data.stats()) };
+			pt::ptree tree{ getEnumVectorTree<rule::enums::StatType::Type>(game_data.stats()) };
 			if (tree.size()) datum.push_back(std::make_pair("stats", tree));
 		}
 

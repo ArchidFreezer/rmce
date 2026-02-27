@@ -38,42 +38,42 @@ namespace rm {
 		 * @brief Set the type of poison
 		 * @param type PoisonType::Type to set
 		 */
-		void setType(PoisonType::Type type) {
+		void setType(rule::enums::PoisonType::Type type) {
 			type_ = type;
-			name_ = PoisonType::toString(type);
+			name_ = rule::enums::PoisonType::toString(type);
 		}
 
 		/**
 		 * @brief Get the type of poison
 		 * @return PoisonType::Type type of poison
 		 */
-		PoisonType::Type type() const { return type_; }
+		rule::enums::PoisonType::Type type() const { return type_; }
 
 		/**
 		 * @brief Set the number of rounds before the symptoms of the poison start to take effect, based on the severity of the symptoms.
 		 * @param severity DiseasePoisonSeverityType::Type representing the severity of the symptoms caused by the poison.
 		 * @param effectOnset NumberRange<int> representing the number of rounds before the symptoms of the poison start to take effect, based on the severity of the symptoms.
 		 */
-		void addEffectOnset(DiseasePoisonSeverityType::Type severity, const archid::NumberRange<int>* effectOnset) { effectOnsetBySeverity_[severity] = effectOnset; }
+		void addEffectOnset(rule::enums::DiseasePoisonSeverityType::Type severity, const archid::NumberRange<int>* effectOnset) { effectOnsetBySeverity_[severity] = effectOnset; }
 
 		/**
 		 * @brief Sets the effect onset ranges for each severity level.
 		 * @param effectOnsetBySeverity A map associating each severity level with a range of effect onset values.
 		 */
-		void setEffectOnsets(std::map<DiseasePoisonSeverityType::Type, const archid::NumberRange<int>*> effectOnsetBySeverity) { effectOnsetBySeverity_ = std::move(effectOnsetBySeverity); }
+		void setEffectOnsets(std::map<rule::enums::DiseasePoisonSeverityType::Type, const archid::NumberRange<int>*> effectOnsetBySeverity) { effectOnsetBySeverity_ = std::move(effectOnsetBySeverity); }
 
 		/**
 		 * @brief Get the number of rounds before the symptoms of the poison start to take effect, based on the severity of the symptoms.
 		 * @return Map associating each severity level with a range of effect onset values.
 		 */
-		const std::map<DiseasePoisonSeverityType::Type, const archid::NumberRange<int>*>& effectOnsets() const { return effectOnsetBySeverity_; }
+		const std::map<rule::enums::DiseasePoisonSeverityType::Type, const archid::NumberRange<int>*>& effectOnsets() const { return effectOnsetBySeverity_; }
 
 		/**
 		 * @brief How long, in rounds before the symptoms of the poison start to take effect, based on the severity of the symptoms.
 		 * @param severity DiseasePoisonSeverityType::Type representing the severity of the symptoms caused by the poison.
 		 * @return NumberRange<int> representing the number of rounds before the symptoms of the poison start to take effect, based on the severity of the symptoms.
 		 */
-		const archid::NumberRange<int> effectOnset(DiseasePoisonSeverityType::Type severity) const {
+		const archid::NumberRange<int> effectOnset(rule::enums::DiseasePoisonSeverityType::Type severity) const {
 			auto it = effectOnsetBySeverity_.find(severity);
 			if (it != effectOnsetBySeverity_.end()) {
 				return *(it->second);
@@ -87,26 +87,26 @@ namespace rm {
 		 * @param severity PoisonTypeData::Severity representing the severity of the symptoms caused by the poison.
 		 * @param symptoms String describing the symptoms caused by the poison based on the severity of the symptoms.
 		 */
-		void addSymptom(DiseasePoisonSeverityType::Type severity, std::string symptoms) { symptomsBySeverity_[severity] = std::move(symptoms); }
+		void addSymptom(rule::enums::DiseasePoisonSeverityType::Type severity, std::string symptoms) { symptomsBySeverity_[severity] = std::move(symptoms); }
 
 		/**
 		 * @brief Sets the symptoms for each severity level.
 		 * @param symptomsBySeverity A map associating each severity level with a string describing the symptoms caused by the poison based on the severity of the symptoms.
 		 */
-		void setSymptoms(std::map<DiseasePoisonSeverityType::Type, std::string> symptomsBySeverity) { symptomsBySeverity_ = std::move(symptomsBySeverity); }
+		void setSymptoms(std::map<rule::enums::DiseasePoisonSeverityType::Type, std::string> symptomsBySeverity) { symptomsBySeverity_ = std::move(symptomsBySeverity); }
 
 		/**
 		 * @brief Get the symptoms caused by the poison based on the severity of the symptoms.
 		 * @return Map associating each severity level with a string describing the symptoms caused by the poison based on the severity of the symptoms.
 		 */
-		const std::map<DiseasePoisonSeverityType::Type, std::string>& symptoms() const { return symptomsBySeverity_; }
+		const std::map<rule::enums::DiseasePoisonSeverityType::Type, std::string>& symptoms() const { return symptomsBySeverity_; }
 
 		/**
 		 * @brief Get the symptoms caused by the poison based on the severity of the symptoms.
 		 * @param severity DiseasePoisonSeverityType::Type representing the severity of the symptoms caused by the poison.
 		 * @return String describing the symptoms caused by the poison based on the severity of the symptoms.
 		 */
-		std::string symptoms(DiseasePoisonSeverityType::Type severity) const {
+		std::string symptoms(rule::enums::DiseasePoisonSeverityType::Type severity) const {
 			auto it = symptomsBySeverity_.find(severity);
 			if (it != symptomsBySeverity_.end()) {
 				return it->second;
@@ -138,10 +138,10 @@ namespace rm {
 		const std::string& areasAffected() const { return areasAffected_; }
 
 	private:
-		PoisonType::Type type_{}; /**< The type of poison, used to determine where in the body the poison affects and the symptoms it causes. */
+		rule::enums::PoisonType::Type type_{}; /**< The type of poison, used to determine where in the body the poison affects and the symptoms it causes. */
 		std::string name_{}; /**< The name of the poison type, used for flavour purposes. */
-		std::map<DiseasePoisonSeverityType::Type, const archid::NumberRange<int>*> effectOnsetBySeverity_{}; /**< Map of the number of rounds before the symptoms of the poison start to take effect based on the severity of the symptoms. */
-		std::map<DiseasePoisonSeverityType::Type, std::string> symptomsBySeverity_{}; /**< Map of the symptoms caused by the poison based on the severity of the symptoms. */
+		std::map<rule::enums::DiseasePoisonSeverityType::Type, const archid::NumberRange<int>*> effectOnsetBySeverity_{}; /**< Map of the number of rounds before the symptoms of the poison start to take effect based on the severity of the symptoms. */
+		std::map<rule::enums::DiseasePoisonSeverityType::Type, std::string> symptomsBySeverity_{}; /**< Map of the symptoms caused by the poison based on the severity of the symptoms. */
 		std::string areasAffected_{}; /**< String describing the areas of the body that are affected by the poison if not specified. */
 	};
 

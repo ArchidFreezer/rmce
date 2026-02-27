@@ -1,6 +1,6 @@
 #include <ManoeuvreDifficultyType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string ManoeuvreDifficultyType::toString(Type size) {
 		using enum Type;
@@ -44,4 +44,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for ManoeuvreDifficultyType::Type: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

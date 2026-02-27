@@ -61,16 +61,16 @@ namespace {
 	TEST(RaceData, StatBonus) {
 		RaceData race("RACE_ID");
 
-		race.setStatBonus(StatType::kAgility, 5);
-		race.setStatBonus(StatType::kStrength, 10);
-		EXPECT_EQ(race.statBonus(StatType::kAgility), 5);
-		EXPECT_EQ(race.statBonus(StatType::kStrength), 10);
-		EXPECT_EQ(race.statBonus(StatType::kConstitution), 0);
+		race.setStatBonus(rule::enums::StatType::kAgility, 5);
+		race.setStatBonus(rule::enums::StatType::kStrength, 10);
+		EXPECT_EQ(race.statBonus(rule::enums::StatType::kAgility), 5);
+		EXPECT_EQ(race.statBonus(rule::enums::StatType::kStrength), 10);
+		EXPECT_EQ(race.statBonus(rule::enums::StatType::kConstitution), 0);
 
 		EXPECT_EQ(race.statsWithBonus().size(), 2);
 
 		for (auto& stat : race.statsWithBonus()) {
-			if (stat == StatType::kAgility || stat == StatType::kStrength) continue;
+			if (stat == rule::enums::StatType::kAgility || stat == rule::enums::StatType::kStrength) continue;
 			FAIL();
 		}
 	}

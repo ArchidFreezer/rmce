@@ -6,7 +6,7 @@
 
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	/**
 	 * @brief Contains the StatType::Type enum and associated functions
@@ -112,4 +112,4 @@ namespace rm {
 		constexpr bool isDevelopment(Type stat);
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

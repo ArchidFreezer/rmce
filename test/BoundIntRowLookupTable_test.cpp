@@ -12,7 +12,7 @@ namespace {
 	/**
 	 * @brief Dummy class to test LookupTable abstract class
 	 */
-	class DummyBoundIntTable : public BoundIntRowLookupTable<TableColumnCreatureSizeMatcher, CreatureSizeType::Type, std::string> {
+	class DummyBoundIntTable : public BoundIntRowLookupTable<TableColumnCreatureSizeMatcher, rule::enums::CreatureSizeType::Type, std::string> {
 	public:
 		DummyBoundIntTable() : BoundIntRowLookupTable("DummyTable", 1, 6) {}
 	};
@@ -37,20 +37,20 @@ namespace {
 
 		// We are not testing the matchers here so we don't need to test too many combinations
 		// Test basic operation without unmodifiers
-		EXPECT_STREQ(lut.cell(CreatureSizeType::kLarge, 2).c_str(), "Row 1, kLarge");
-		EXPECT_STREQ(lut.cell(CreatureSizeType::kSmall, 4).c_str(), "Row 2, kSmall");
+		EXPECT_STREQ(lut.cell(rule::enums::CreatureSizeType::kLarge, 2).c_str(), "Row 1, kLarge");
+		EXPECT_STREQ(lut.cell(rule::enums::CreatureSizeType::kSmall, 4).c_str(), "Row 2, kSmall");
 
 		// Test that the unmodified row is never selected if the method call without the unmodified value is used
-		EXPECT_STREQ(lut.cell(CreatureSizeType::kLarge, 1).c_str(), "Row 1, kLarge");
-		EXPECT_STREQ(lut.cell(CreatureSizeType::kSmall, 6).c_str(), "Row 2, kSmall");
+		EXPECT_STREQ(lut.cell(rule::enums::CreatureSizeType::kLarge, 1).c_str(), "Row 1, kLarge");
+		EXPECT_STREQ(lut.cell(rule::enums::CreatureSizeType::kSmall, 6).c_str(), "Row 2, kSmall");
 
 		// Test that the unmodified row is always selected when it matches
-		EXPECT_STREQ(lut.cell(CreatureSizeType::kLarge, 1, 2).c_str(), "Row 1, kLarge"); // No match for unmodified, use modified
-		EXPECT_STREQ(lut.cell(CreatureSizeType::kSmall, 6, 4).c_str(), "Row 2, kSmall"); // No match for unmodified, use modified
-		EXPECT_STREQ(lut.cell(CreatureSizeType::kLarge, 1, 1).c_str(), "URow 1, kLarge"); // Match both, use unmodified
-		EXPECT_STREQ(lut.cell(CreatureSizeType::kSmall, 6, 6).c_str(), "URow 2, kSmall"); // Match both, use unmodified
-		EXPECT_STREQ(lut.cell(CreatureSizeType::kLarge, 2, 1).c_str(), "URow 1, kLarge"); // Match both, use unmodified
-		EXPECT_STREQ(lut.cell(CreatureSizeType::kSmall, 5, 6).c_str(), "URow 2, kSmall"); // Match both, use unmodified
+		EXPECT_STREQ(lut.cell(rule::enums::CreatureSizeType::kLarge, 1, 2).c_str(), "Row 1, kLarge"); // No match for unmodified, use modified
+		EXPECT_STREQ(lut.cell(rule::enums::CreatureSizeType::kSmall, 6, 4).c_str(), "Row 2, kSmall"); // No match for unmodified, use modified
+		EXPECT_STREQ(lut.cell(rule::enums::CreatureSizeType::kLarge, 1, 1).c_str(), "URow 1, kLarge"); // Match both, use unmodified
+		EXPECT_STREQ(lut.cell(rule::enums::CreatureSizeType::kSmall, 6, 6).c_str(), "URow 2, kSmall"); // Match both, use unmodified
+		EXPECT_STREQ(lut.cell(rule::enums::CreatureSizeType::kLarge, 2, 1).c_str(), "URow 1, kLarge"); // Match both, use unmodified
+		EXPECT_STREQ(lut.cell(rule::enums::CreatureSizeType::kSmall, 5, 6).c_str(), "URow 2, kSmall"); // Match both, use unmodified
 	}
 
 }

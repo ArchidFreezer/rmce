@@ -1,6 +1,6 @@
 #include <LevelVarianceType.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	const std::string LevelVarianceType::toString(Type size) {
 		using enum Type;
@@ -33,4 +33,4 @@ namespace rm {
 		else throw std::invalid_argument("Invalid string value for LevelVarianceType::Type: " + std::string(sv));
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums

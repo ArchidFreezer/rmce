@@ -139,19 +139,19 @@ namespace rm {
 		 * @brief Set the type of spell user the profession is
 		 * @param spell_user_type SpellUserType::Type spell user type
 		 */
-		void setSpellUserType(SpellUserType::Type spell_user_type) { spell_user_type_ = spell_user_type; }
+		void setSpellUserType(rule::enums::SpellUserType::Type spell_user_type) { spell_user_type_ = spell_user_type; }
 
 		/**
 		 * @brief Get the type of spell user the profession is
 		 * @return SpellUserType::Type spell user type
 		 */
-		SpellUserType::Type spellUserType() const { return spell_user_type_; }
+		rule::enums::SpellUserType::Type spellUserType() const { return spell_user_type_; }
 
 		/**
 		 * @brief Add a realm to those the profession draws power from
 		 * @param realm RealmType::Type profession power realm
 		 */
-		void addRealm(RealmType::Type realm) {
+		void addRealm(rule::enums::RealmType::Type realm) {
 			realms_.emplace(realm);
 		}
 
@@ -159,7 +159,7 @@ namespace rm {
 		 * @brief Add realms to those the profession draws power from
 		 * @param realms Set of RealmType::Type profession power realms
 		 */
-		void setRealms(std::set<RealmType::Type> realms) { realms_ = std::move(realms); }
+		void setRealms(std::set<rule::enums::RealmType::Type> realms) { realms_ = std::move(realms); }
 
 		/**
 		 * @brief Get whether the profession draws power from a power realm
@@ -167,13 +167,13 @@ namespace rm {
 		 * @return `true` if the profession draws power from the realm
 		 * @return `false` if the profession does not draw power from the realm
 		 */
-		bool isRealm(RealmType::Type realm) const { return (realms_.find(realm) != realms_.end()); }
+		bool isRealm(rule::enums::RealmType::Type realm) const { return (realms_.find(realm) != realms_.end()); }
 
 		/**
 		 * @brief Get the realms that the profession draws power from
 		 * @return td::set<RealmType::Type> power realms
 		 */
-		const std::set<RealmType::Type> realms() { return realms_; }
+		const std::set<rule::enums::RealmType::Type> realms() { return realms_; }
 
 		/**
 		 * @brief Add stat that applies stat bonus to the profession
@@ -185,7 +185,7 @@ namespace rm {
 		 * @throws TooManyStatsException if attempting to add a stat when 3 already have been applied
 		 * @see setUseRealmStats()
 		 */
-		int addStat(StatType::Type stat);
+		int addStat(rule::enums::StatType::Type stat);
 
 		/**
 		 * @brief Set the stats that apply stat bonuses to the profession
@@ -196,7 +196,7 @@ namespace rm {
 		 * @throws TooManyStatsException if attempting to set more than 3 stats
 		 * @see setUseRealmStats()
 		 */
-		void setStats(std::vector<StatType::Type> stats) { stats_ = std::move(stats); }
+		void setStats(std::vector<rule::enums::StatType::Type> stats) { stats_ = std::move(stats); }
 
 		/**
 		 * @brief Gets the number of stats currently associated with the profession
@@ -216,7 +216,7 @@ namespace rm {
 		 * @return `true` if the stat was removed
 		 * @return `false` if the stat was not found or not removed
 		 */
-		bool removeStat(StatType::Type stat);
+		bool removeStat(rule::enums::StatType::Type stat);
 
 		/**
 		 * @brief Empties the list of stats associated with the profession
@@ -230,7 +230,7 @@ namespace rm {
 		 *
 		 * @return std::vector of stats
 		 */
-		const std::vector<StatType::Type>& stats() const { return stats_; }
+		const std::vector<rule::enums::StatType::Type>& stats() const { return stats_; }
 
 		/**
 	 * @brief Add a choice that defines base spell lists that the character has to choose from
@@ -266,13 +266,13 @@ namespace rm {
 		 * @param choice GameRuleDataChoice choice definition
 		 * @param type SkillDevelopmentType::Type type choices will have
 		 */
-		void addSkillDevelopmentTypeChoice(GameRuleDataChoice<SubcategoriedSkillData> choice, SkillDevelopmentType::Type type) { skill_development_type_choices_.emplace(std::move(choice), type); }
+		void addSkillDevelopmentTypeChoice(GameRuleDataChoice<SubcategoriedSkillData> choice, rule::enums::SkillDevelopmentType::Type type) { skill_development_type_choices_.emplace(std::move(choice), type); }
 
 		/**
 		 * @brief Sets the skill development type choices for skills.
 		 * @param choices A map associating subcategoried skill data choices with their corresponding skill development types.
 		 */
-		void setSkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SubcategoriedSkillData>, SkillDevelopmentType::Type> choices) { skill_development_type_choices_ = std::move(choices); }
+		void setSkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SubcategoriedSkillData>, rule::enums::SkillDevelopmentType::Type> choices) { skill_development_type_choices_ = std::move(choices); }
 
 		/**
 		 * @brief Get the number of choices a character has to make regarding everyman skills
@@ -289,20 +289,20 @@ namespace rm {
 		 * @brief Get a container with the choices the character needs to make to select one or more skills that may have their development type changed
 		 * @return map of GameRuleDataChoice objects with the choices to be made
 		 */
-		const std::map<GameRuleDataChoice<SubcategoriedSkillData>, SkillDevelopmentType::Type>& skillDevelopmentTypeChoices() const { return skill_development_type_choices_; }
+		const std::map<GameRuleDataChoice<SubcategoriedSkillData>, rule::enums::SkillDevelopmentType::Type>& skillDevelopmentTypeChoices() const { return skill_development_type_choices_; }
 
 		/**
 		 * @brief Add a choice that defines the skill that a character may select one or more subcategories from to become everyman
 		 * @param choice GameRuleDataChoice choice definition
 		 * @param type SkillDevelopmentType::Type type choices will have
 		 */
-		void addSkillSubcategoryDevelopmentTypeChoice(GameRuleDataChoice<SkillData> choice, SkillDevelopmentType::Type type) { skill_subcategory_skill_development_type_choices_.emplace(std::move(choice), type); }
+		void addSkillSubcategoryDevelopmentTypeChoice(GameRuleDataChoice<SkillData> choice, rule::enums::SkillDevelopmentType::Type type) { skill_subcategory_skill_development_type_choices_.emplace(std::move(choice), type); }
 
 		/**
 		 * @brief Sets the skill development type choices for skill subcategories.
 		 * @param choices A map associating skill data choices with their corresponding skill development types.
 		 */
-		void setSkillSubcategoryDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillData>, SkillDevelopmentType::Type> choices) { skill_subcategory_skill_development_type_choices_ = std::move(choices); }
+		void setSkillSubcategoryDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillData>, rule::enums::SkillDevelopmentType::Type> choices) { skill_subcategory_skill_development_type_choices_ = std::move(choices); }
 
 		/**
 		 * @brief Get the number of choices a character has to make regarding skill subcategoryeveryman skills
@@ -319,20 +319,20 @@ namespace rm {
 		 * @brief Get a container with the choices the character needs to make to select one or more skill subcategories that may have their development type changed
 		 * @return map of GameRuleDataChoice objects with the choices to be made
 		 */
-		const std::map<GameRuleDataChoice<SkillData>, SkillDevelopmentType::Type>& skillSubcategoryDevelopmentTypeChoices() const { return skill_subcategory_skill_development_type_choices_; }
+		const std::map<GameRuleDataChoice<SkillData>, rule::enums::SkillDevelopmentType::Type>& skillSubcategoryDevelopmentTypeChoices() const { return skill_subcategory_skill_development_type_choices_; }
 
 		/**
 		 * @brief Add a choice that defines the skill categories that a character may select one or more skills from to change their development type
 		 * @param choice GameRuleDataChoice choice definition
 		 * @param type SkillDevelopmentType::Type type choices will have
 		 */
-		void addSkillCategorySkillDevelopmentTypeChoice(GameRuleDataChoice<SkillCategoryData> choice, SkillDevelopmentType::Type type) { skill_category_skill_development_type_choices_.emplace(std::move(choice), type); }
+		void addSkillCategorySkillDevelopmentTypeChoice(GameRuleDataChoice<SkillCategoryData> choice, rule::enums::SkillDevelopmentType::Type type) { skill_category_skill_development_type_choices_.emplace(std::move(choice), type); }
 
 		/**
 		 * @brief Sets the skill development type choices for skill categories.
 		 * @param choices A map associating skill category data choices with their corresponding skill development types.
 		 */
-		void setSkillCategorySkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillCategoryData>, SkillDevelopmentType::Type> choices) { skill_category_skill_development_type_choices_ = std::move(choices); }
+		void setSkillCategorySkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillCategoryData>, rule::enums::SkillDevelopmentType::Type> choices) { skill_category_skill_development_type_choices_ = std::move(choices); }
 
 		/**
 		 * @brief Get the number of choices a character has to make regarding development types skills in skill categories
@@ -350,20 +350,20 @@ namespace rm {
 		 * @return vector of GameRuleDataChoice objects with the choices to be made
 		 * @see SkillDevelopmentType
 		 */
-		const std::map<GameRuleDataChoice<SkillCategoryData>, SkillDevelopmentType::Type>& skillCategorySkillDevelopmentTypeChoices() const { return skill_category_skill_development_type_choices_; }
+		const std::map<GameRuleDataChoice<SkillCategoryData>, rule::enums::SkillDevelopmentType::Type>& skillCategorySkillDevelopmentTypeChoices() const { return skill_category_skill_development_type_choices_; }
 
 		/**
 		 * @brief Add a choice that defines the skill groups that a character may select one or more skills from to change their development type
 		 * @param choice GameRuleDataChoice choice definition
 		 * @param type SkillDevelopmentType::Type type choices will have
 		 */
-		void addSkillGroupSkillDevelopmentTypeChoice(GameRuleDataChoice<SkillGroupData> choice, SkillDevelopmentType::Type type) { skill_group_skill_development_type_choices_.emplace(std::move(choice), type); }
+		void addSkillGroupSkillDevelopmentTypeChoice(GameRuleDataChoice<SkillGroupData> choice, rule::enums::SkillDevelopmentType::Type type) { skill_group_skill_development_type_choices_.emplace(std::move(choice), type); }
 
 		/**
 		 * @brief Sets the skill development type choices for skill groups.
 		 * @param choices A map associating skill group data choices with their corresponding skill development types.
 		 */
-		void setSkillGroupSkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type> choices) { skill_group_skill_development_type_choices_ = std::move(choices); }
+		void setSkillGroupSkillDevelopmentTypeChoices(std::map<GameRuleDataChoice<SkillGroupData>, rule::enums::SkillDevelopmentType::Type> choices) { skill_group_skill_development_type_choices_ = std::move(choices); }
 
 		/**
 		 * @brief Get the number of choices a character has to make regarding development types skills in skill groups
@@ -381,7 +381,7 @@ namespace rm {
 		 * @return vector of GameRuleDataChoice objects with the choices to be made
 		 * @see SkillDevelopmentType
 		 */
-		const std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type>& skillGroupSkillDevelopmentTypeChoices() const { return skill_group_skill_development_type_choices_; }
+		const std::map<GameRuleDataChoice<SkillGroupData>, rule::enums::SkillDevelopmentType::Type>& skillGroupSkillDevelopmentTypeChoices() const { return skill_group_skill_development_type_choices_; }
 
 		/**
 		 * @brief Add a special bonus to all skills in a group
@@ -492,7 +492,7 @@ namespace rm {
 		 * @param skill SubcategoriedSkillData to set the development type for
 		 * @param type SkillDevelopmentType::Type value to set
 		 */
-		void setSkillDevelopmentType(SubcategoriedSkillData skill, SkillDevelopmentType::Type type) {
+		void setSkillDevelopmentType(SubcategoriedSkillData skill, rule::enums::SkillDevelopmentType::Type type) {
 			if (isSkillDevelopmentTypeSet(skill.skillData(), skill.subcategory())) {
 				throw InvalidSkillDevelopment("There is already a development set for skill " + skill.id());
 			}
@@ -503,24 +503,24 @@ namespace rm {
 		 * @brief Sets the skill development types mapping.
 		 * @param types A map associating subcategorized skill data with their corresponding skill development types.
 		 */
-		void setSkillDevelopmentTypes(std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> types) { skill_development_types_ = std::move(types); }
+		void setSkillDevelopmentTypes(std::map<SubcategoriedSkillData, rule::enums::SkillDevelopmentType::Type> types) { skill_development_types_ = std::move(types); }
 
 		/**
 		 * @brief Gets a reference to the map of skill development types indexed by subcategorized skill data.
 		 * @return A reference to the map containing skill development types.
 		 */
-		std::map<SubcategoriedSkillData, SkillDevelopmentType::Type>& skillDevelopmentTypes() { return skill_development_types_; }
+		std::map<SubcategoriedSkillData, rule::enums::SkillDevelopmentType::Type>& skillDevelopmentTypes() { return skill_development_types_; }
 
 		/**
 		 * @brief Get the development type for a skill
 		 * @param skill SubcategoriedSkillData to get the development type for
 		 * @return SkillDevelopmentType::Type value
 		 */
-		SkillDevelopmentType::Type skillDevelopmentType(const SubcategoriedSkillData& skill) const {
+		rule::enums::SkillDevelopmentType::Type skillDevelopmentType(const SubcategoriedSkillData& skill) const {
 			for (auto& key : skill_development_types_) {
 				if (key.first.id() == skill.id()) return key.second;
 			}
-			return SkillDevelopmentType::kStandard;
+			return rule::enums::SkillDevelopmentType::kStandard;
 		}
 
 		/**
@@ -529,7 +529,7 @@ namespace rm {
 		 * @param subcategory optional subcategory of @a skill
 		 * @return SkillDevelopmentType::Type value
 		 */
-		SkillDevelopmentType::Type skillDevelopmentType(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
+		rule::enums::SkillDevelopmentType::Type skillDevelopmentType(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
 			return skillDevelopmentType(SubcategoriedSkillData(skill, subcategory));
 		}
 
@@ -565,7 +565,7 @@ namespace rm {
 		 * @param category SkillCategoryData to add a skill development type for
 		 * @param type SkillDevelopmentType::Type value to set
 		 */
-		void addSkillCategorySkillDevelopmentType(const SkillCategoryData& category, SkillDevelopmentType::Type type) { skill_category_skill_development_types_.emplace(&category, type); }
+		void addSkillCategorySkillDevelopmentType(const SkillCategoryData& category, rule::enums::SkillDevelopmentType::Type type) { skill_category_skill_development_types_.emplace(&category, type); }
 
 		/**
 		 * @brief Sets the internal mapping from skill categories to their corresponding skill development types by assigning the provided map.
@@ -573,13 +573,13 @@ namespace rm {
 		 * The function stores this mapping in the object's internal state (the map will be assigned from the provided argument).
 		 * @param types A map that associates pointers to SkillCategoryData (keys) with SkillDevelopmentType::Type values.
 		 */
-		void setSkillCategorySkillDevelopmentTypes(std::map<const SkillCategoryData*, SkillDevelopmentType::Type> types) { skill_category_skill_development_types_ = std::move(types); }
+		void setSkillCategorySkillDevelopmentTypes(std::map<const SkillCategoryData*, rule::enums::SkillDevelopmentType::Type> types) { skill_category_skill_development_types_ = std::move(types); }
 
 		/**
 		 * @brief Get a container with the skill categories that the profession has a skill development type for
 		 * @return std::map of const SkillCategoryData* and SkillDevelopmentType::Type
 		 */
-		const std::map<const SkillCategoryData*, SkillDevelopmentType::Type>& skillCategorySkillDevelopmentTypes() const { return skill_category_skill_development_types_; }
+		const std::map<const SkillCategoryData*, rule::enums::SkillDevelopmentType::Type>& skillCategorySkillDevelopmentTypes() const { return skill_category_skill_development_types_; }
 
 		/**
 		 * @brief Get a container of all the skill categories with a SkillDevelopmentType
@@ -608,11 +608,11 @@ namespace rm {
 		 * @param category SkillCategoryData to check
 		 * @return SkillDevelopmentType type @a category has
 		 */
-		SkillDevelopmentType::Type skillCategorySkillDevelopmentType(const SkillCategoryData& category) {
+		rule::enums::SkillDevelopmentType::Type skillCategorySkillDevelopmentType(const SkillCategoryData& category) {
 			for (auto& cat : std::views::keys(skill_category_skill_development_types_)) {
 				if (cat->id() == category.id()) return skill_category_skill_development_types_.at(cat);
 			}
-			return SkillDevelopmentType::kStandard;
+			return rule::enums::SkillDevelopmentType::kStandard;
 		}
 
 		/**
@@ -620,19 +620,19 @@ namespace rm {
 		 * @param group SkillGroupData group to add
 		 * @param type SkillDevelopmentType::Type to set
 		 */
-		void addSkillGroupSkillDevelopmentType(const SkillGroupData& group, SkillDevelopmentType::Type type) { skill_group_skill_development_types_.emplace(&group, type); }
+		void addSkillGroupSkillDevelopmentType(const SkillGroupData& group, rule::enums::SkillDevelopmentType::Type type) { skill_group_skill_development_types_.emplace(&group, type); }
 
 		/**
 		 * @brief Sets the internal mapping from skill groups to their corresponding skill development types by assigning the provided map.
 		 * @param types A map that associates pointers to SkillGroupData (keys) with SkillDevelopmentType::Type values. The function stores this mapping in the object's internal state (the map will be assigned from the provided argument).
 		 */
-		void setSkillGroupSkillDevelopmentTypes(std::map<const SkillGroupData*, SkillDevelopmentType::Type> types) { skill_group_skill_development_types_ = std::move(types); }
+		void setSkillGroupSkillDevelopmentTypes(std::map<const SkillGroupData*, rule::enums::SkillDevelopmentType::Type> types) { skill_group_skill_development_types_ = std::move(types); }
 
 		/**
 		 * @brief Gets a reference to container with the skill group skill development types
 		 * @return A map that associates pointers to SkillGroupData (keys) with SkillDevelopmentType::Type values.
 		 */
-		const std::map<const SkillGroupData*, SkillDevelopmentType::Type>& skillGroupSkillDevelopmentTypes() { return skill_group_skill_development_types_; }
+		const std::map<const SkillGroupData*, rule::enums::SkillDevelopmentType::Type>& skillGroupSkillDevelopmentTypes() { return skill_group_skill_development_types_; }
 
 		/**
 		 * @brief Get a container with the names of groups that have skill development type changes
@@ -661,11 +661,11 @@ namespace rm {
 		 * @param group SkillGroupData group to get the skill development type for
 		 * @return SkillDevelopmentType::Type for skill in the group
 		 */
-		SkillDevelopmentType::Type skillGroupSkillDevelopmentType(const SkillGroupData& group) const {
+		rule::enums::SkillDevelopmentType::Type skillGroupSkillDevelopmentType(const SkillGroupData& group) const {
 			for (auto& key : std::views::keys(skill_group_skill_development_types_)) {
 				if (key->id() == group.id()) return skill_group_skill_development_types_.at(key);
 			}
-			return SkillDevelopmentType::kStandard;
+			return rule::enums::SkillDevelopmentType::kStandard;
 		}
 
 		/**
@@ -881,9 +881,9 @@ namespace rm {
 		std::string name_{}; /**< Name of the profession */
 		std::string description_{}; /**< General description of the profession */
 		std::optional<const BookData*> book_{ std::nullopt }; /**< Book that the profession is described in */
-		SpellUserType::Type spell_user_type_{ SpellUserType::kNone }; /**< Spell user type */
-		std::set< RealmType::Type> realms_{};/**< Realm(s) that the profession draws power from */
-		std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the profession */
+		rule::enums::SpellUserType::Type spell_user_type_{ rule::enums::SpellUserType::kNone }; /**< Spell user type */
+		std::set< rule::enums::RealmType::Type> realms_{};/**< Realm(s) that the profession draws power from */
+		std::vector<rule::enums::StatType::Type> stats_{}; /**< Stats providing a bonus to the profession */
 		std::set<GameRuleDataChoice<SpellListData>> base_spell_list_choices_{}; /**< Set of spell lists that the profession base lists should be chosen from */
 
 		// Skill bonuses
@@ -894,15 +894,15 @@ namespace rm {
 		std::map<const SkillGroupData*, int> skill_group_special_bonuses_{}; /** special bonus to skills in a group */
 
 		// Skill development types
-		std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */
-		std::map<const SkillCategoryData*, SkillDevelopmentType::Type> skill_category_skill_development_types_{}; /** Skill categories that all skills within have their development type changed */
-		std::map<const SkillGroupData*, SkillDevelopmentType::Type> skill_group_skill_development_types_{}; /** Skill groups that all skills within have their development type changed */
+		std::map<SubcategoriedSkillData, rule::enums::SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */
+		std::map<const SkillCategoryData*, rule::enums::SkillDevelopmentType::Type> skill_category_skill_development_types_{}; /** Skill categories that all skills within have their development type changed */
+		std::map<const SkillGroupData*, rule::enums::SkillDevelopmentType::Type> skill_group_skill_development_types_{}; /** Skill groups that all skills within have their development type changed */
 
 		// Skill development type choices
-		std::map<GameRuleDataChoice<SkillData>, SkillDevelopmentType::Type> skill_subcategory_skill_development_type_choices_{}; /** Set of skills the character may select one or more subategories from to change their development type */
-		std::map<GameRuleDataChoice<SubcategoriedSkillData>, SkillDevelopmentType::Type> skill_development_type_choices_{}; /** Set of skills that the character may select one or more from to change their development type */
-		std::map<GameRuleDataChoice<SkillCategoryData>, SkillDevelopmentType::Type> skill_category_skill_development_type_choices_{}; /** Set of skill categories the character may select one or more skills from to change their development type */
-		std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type> skill_group_skill_development_type_choices_{}; /** Set of skill groups the character may select one or more skills from to change their development type */
+		std::map<GameRuleDataChoice<SkillData>, rule::enums::SkillDevelopmentType::Type> skill_subcategory_skill_development_type_choices_{}; /** Set of skills the character may select one or more subategories from to change their development type */
+		std::map<GameRuleDataChoice<SubcategoriedSkillData>, rule::enums::SkillDevelopmentType::Type> skill_development_type_choices_{}; /** Set of skills that the character may select one or more from to change their development type */
+		std::map<GameRuleDataChoice<SkillCategoryData>, rule::enums::SkillDevelopmentType::Type> skill_category_skill_development_type_choices_{}; /** Set of skill categories the character may select one or more skills from to change their development type */
+		std::map<GameRuleDataChoice<SkillGroupData>, rule::enums::SkillDevelopmentType::Type> skill_group_skill_development_type_choices_{}; /** Set of skill groups the character may select one or more skills from to change their development type */
 
 		std::map<const SkillCategoryData*, SkillDevelopmentCost> skill_category_development_costs_{}; /** Cost to purchase ranks for a skill category */
 	};

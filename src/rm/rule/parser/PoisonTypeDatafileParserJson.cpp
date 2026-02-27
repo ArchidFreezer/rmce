@@ -18,8 +18,8 @@ namespace rm::rule::parser {
 			PoisonTypeData& ref = factory().get<PoisonTypeData>(id);
 
 			// Set the type of poson based on the string value in the json file
-			PoisonType::Type type;
-			PoisonType::fromString(type_str, type);
+			rule::enums::PoisonType::Type type;
+			rule::enums::PoisonType::fromString(type_str, type);
 			ref.setType(type);
 
 			ref.setAreasAffected(v.second.get<std::string>("areas-affected"));
@@ -27,8 +27,8 @@ namespace rm::rule::parser {
 			// Effect onset times
 			for (auto& severity_effect_onset : v.second.get_child("severity-effect-onsets")) {
 				std::string severity_str = severity_effect_onset.second.get<std::string>("severity");
-				DiseasePoisonSeverityType::Type severity;
-				DiseasePoisonSeverityType::fromString(severity_str, severity);
+				rule::enums::DiseasePoisonSeverityType::Type severity;
+				rule::enums::DiseasePoisonSeverityType::fromString(severity_str, severity);
 				int min = severity_effect_onset.second.get<int>("min");
 				int max = severity_effect_onset.second.get<int>("max");
 				ref.addEffectOnset(severity, numberMatcherFactory.matcher(min, max));
@@ -37,8 +37,8 @@ namespace rm::rule::parser {
 			// Severity symptoms
 			for (auto& severity_symptoms : v.second.get_child("severity-symptoms")) {
 				std::string severity_str = severity_symptoms.second.get<std::string>("severity");
-				DiseasePoisonSeverityType::Type severity;
-				DiseasePoisonSeverityType::fromString(severity_str, severity);
+				rule::enums::DiseasePoisonSeverityType::Type severity;
+				rule::enums::DiseasePoisonSeverityType::fromString(severity_str, severity);
 				std::string symptoms = severity_symptoms.second.get<std::string>("symptoms");
 				ref.addSymptom(severity, symptoms);
 			}
@@ -52,7 +52,7 @@ namespace rm::rule::parser {
 	void PoisonTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 		PoisonTypeData& game_data = factory().get<PoisonTypeData>(id);
 		datum.put("id", game_data.id());
-		datum.put("type", PoisonType::toString(game_data.type()));
+		datum.put("type", rule::enums::PoisonType::toString(game_data.type()));
 		datum.put("areas-affected", game_data.areasAffected());
 
 		// Effect onset times
@@ -61,7 +61,7 @@ namespace rm::rule::parser {
 
 			for (const auto& severity_effect_onset : game_data.effectOnsets()) {
 				pt::ptree severity_effect_onset_node;
-				severity_effect_onset_node.put("severity", DiseasePoisonSeverityType::toString(severity_effect_onset.first));
+				severity_effect_onset_node.put("severity", rule::enums::DiseasePoisonSeverityType::toString(severity_effect_onset.first));
 				severity_effect_onset_node.put("min", severity_effect_onset.second->min());
 				severity_effect_onset_node.put("max", severity_effect_onset.second->max());
 				tree.push_back(std::make_pair("", severity_effect_onset_node));
@@ -75,7 +75,7 @@ namespace rm::rule::parser {
 			pt::ptree tree{};
 			for (const auto& severity_symptoms : game_data.symptoms()) {
 				pt::ptree severity_symptoms_node;
-				severity_symptoms_node.put("severity", DiseasePoisonSeverityType::toString(severity_symptoms.first));
+				severity_symptoms_node.put("severity", rule::enums::DiseasePoisonSeverityType::toString(severity_symptoms.first));
 				severity_symptoms_node.put("symptoms", severity_symptoms.second);
 				tree.push_back(std::make_pair("", severity_symptoms_node));
 			}

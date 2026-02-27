@@ -25,13 +25,13 @@ namespace rm {
 		 * @brief Add an environmental feature to those that may be found in the location
 		 * @param feature EnvironmentType::Feature to add
 		 */
-		void addFeature(EnvironmentType::Feature feature) { if (!hasFeature(feature)) features_.emplace(feature); }
+		void addFeature(rule::enums::EnvironmentType::Feature feature) { if (!hasFeature(feature)) features_.emplace(feature); }
 
 		/**
 		 * @brief Set the environmental features that may be found in the location
 		 * @param features Set of EnvironmentType::Feature to set
 		 */
-		void setFeatures(std::set<EnvironmentType::Feature> features) { features_ = std::move(features); }
+		void setFeatures(std::set<rule::enums::EnvironmentType::Feature> features) { features_ = std::move(features); }
 
 		/**
 		 * @brief Check if an environmental feature may be found in the location
@@ -39,7 +39,7 @@ namespace rm {
 		 * @return `true` if the location may have the feature
 		 * @return `false` if the location may not have the feature
 		 */
-		bool hasFeature(EnvironmentType::Feature feature) const {
+		bool hasFeature(rule::enums::EnvironmentType::Feature feature) const {
 			return (features_.find(feature) != features_.end());
 		}
 
@@ -47,19 +47,19 @@ namespace rm {
 		 * @brief Get the environmental features that may be found in the location
 		 * @return std::set<EnvironmentType::Feature> features
 		 */
-		const std::set<EnvironmentType::Feature> features() const { return features_; }
+		const std::set<rule::enums::EnvironmentType::Feature> features() const { return features_; }
 
 		/**
 		 * @brief Add a terrain type to those that may be found in the location
 		 * @param terrain EnvironmentType::Terrain to add
 		 */
-		void addTerrain(EnvironmentType::Terrain terrain) { if (!hasTerrain(terrain)) terrains_.emplace(terrain); }
+		void addTerrain(rule::enums::EnvironmentType::Terrain terrain) { if (!hasTerrain(terrain)) terrains_.emplace(terrain); }
 
 		/**
 		 * @brief Set the terrain types that may be found in the location
 		 * @param terrains Set of EnvironmentType::Terrain to set
 		 */
-		void setTerrains(std::set<EnvironmentType::Terrain> terrains) { terrains_ = std::move(terrains); }
+		void setTerrains(std::set<rule::enums::EnvironmentType::Terrain> terrains) { terrains_ = std::move(terrains); }
 
 		/**
 		 * @brief Check if a terrain type may be found in the location
@@ -67,7 +67,7 @@ namespace rm {
 		 * @return `true` if the location may have the terrain
 		 * @return `false` if the location may not have the terrain
 		 */
-		bool hasTerrain(EnvironmentType::Terrain terrain) const {
+		bool hasTerrain(rule::enums::EnvironmentType::Terrain terrain) const {
 			return (terrains_.find(terrain) != terrains_.end());
 		}
 
@@ -75,19 +75,19 @@ namespace rm {
 		 * @brief Get the terrain types that may be found in the location
 		 * @return std::set<EnvironmentType::Terrain> terrains
 		 */
-		const std::set<EnvironmentType::Terrain> terrains() const { return terrains_; }
+		const std::set<rule::enums::EnvironmentType::Terrain> terrains() const { return terrains_; }
 
 		/**
 		 * @brief Add a vegetation type to those that may be found in the location
 		 * @param vegetation EnvironmentType::Vegetation to add
 		 */
-		void addVegetation(EnvironmentType::Vegetation vegetation) { if (!hasVegetation(vegetation)) vegetation_.emplace(vegetation); }
+		void addVegetation(rule::enums::EnvironmentType::Vegetation vegetation) { if (!hasVegetation(vegetation)) vegetation_.emplace(vegetation); }
 
 		/**
 		 * @brief Set the vegetation types that may be found in the location
 		 * @param vegetation Set of EnvironmentType::Vegetation to set
 		 */
-		void setVegetation(std::set<EnvironmentType::Vegetation> vegetation) { vegetation_ = std::move(vegetation); }
+		void setVegetation(std::set<rule::enums::EnvironmentType::Vegetation> vegetation) { vegetation_ = std::move(vegetation); }
 
 		/**
 		 * @brief Check if a vegetation type may be found in the location
@@ -95,7 +95,7 @@ namespace rm {
 		 * @return `true` if the location may have the vegetation
 		 * @return `false` if the location may not have the vegetation
 		 */
-		bool hasVegetation(EnvironmentType::Vegetation vegetation) const {
+		bool hasVegetation(rule::enums::EnvironmentType::Vegetation vegetation) const {
 			return (vegetation_.find(vegetation) != vegetation_.end());
 		}
 
@@ -103,19 +103,19 @@ namespace rm {
 		 * @brief Get the vegetation types that may be found in the location
 		 * @return std::set<EnvironmentType::Vegetation> vegetation
 		 */
-		const std::set<EnvironmentType::Vegetation> vegetation() const { return vegetation_; }
+		const std::set<rule::enums::EnvironmentType::Vegetation> vegetation() const { return vegetation_; }
 
 		/**
 		 * @brief Add a water type to those that may be found in the location
 		 * @param water EnvironmentType::Water to add
 		 */
-		void addWater(EnvironmentType::Water water) { if (!hasWater(water)) water_.emplace(water); }
+		void addWater(rule::enums::EnvironmentType::Water water) { if (!hasWater(water)) water_.emplace(water); }
 
 		/**
 		 * @brief Set the water types that may be found in the location
 		 * @param water Set of EnvironmentType::Water to set
 		 */
-		void setWater(std::set<EnvironmentType::Water> water) { water_ = std::move(water); }
+		void setWater(std::set<rule::enums::EnvironmentType::Water> water) { water_ = std::move(water); }
 
 		/**
 		 * @brief Check if a water type may be found in the location
@@ -123,7 +123,7 @@ namespace rm {
 		 * @return `true` if the location may have the water
 		 * @return `false` if the location may not have the water
 		 */
-		bool hasWater(EnvironmentType::Water water) const {
+		bool hasWater(rule::enums::EnvironmentType::Water water) const {
 			return (water_.find(water) != water_.end());
 		}
 
@@ -131,7 +131,7 @@ namespace rm {
 		 * @brief Get the water types that may be found in the location
 		 * @return std::set<EnvironmentType::Water> water
 		 */
-		const std::set<EnvironmentType::Water> water() const { return water_; }
+		const std::set<rule::enums::EnvironmentType::Water> water() const { return water_; }
 
 		/**
 		 * @brief Add a climate to those that may be found in the location
@@ -178,10 +178,10 @@ namespace rm {
 		bool matches(const Location& specific_location) const;
 
 	private:
-		std::set<EnvironmentType::Feature> features_{}; /**< Set of environmental features that are found in the location */
-		std::set<EnvironmentType::Terrain> terrains_{}; /**< Set of terrain types that are found in the location */
-		std::set<EnvironmentType::Vegetation> vegetation_{}; /**< Set of vegetation types that are found in the location */
-		std::set<EnvironmentType::Water> water_{}; /**< Set of water types that are found in the location */
+		std::set<rule::enums::EnvironmentType::Feature> features_{}; /**< Set of environmental features that are found in the location */
+		std::set<rule::enums::EnvironmentType::Terrain> terrains_{}; /**< Set of terrain types that are found in the location */
+		std::set<rule::enums::EnvironmentType::Vegetation> vegetation_{}; /**< Set of vegetation types that are found in the location */
+		std::set<rule::enums::EnvironmentType::Water> water_{}; /**< Set of water types that are found in the location */
 		std::set<const ClimateData*> climates_{}; /**< Set of climates that are found in the location */
 
 	};

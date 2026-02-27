@@ -7,7 +7,7 @@
 
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::rule::enums {
 
 	/**
 	 * @brief Contains the SkillActionType::Type enum and associated functions
@@ -86,4 +86,4 @@ namespace rm {
 		void fromString(std::string_view sv, SkillActionType::Type& type);
 	}
 
-} // namespace rm
+} // namespace rm::rule::enums
