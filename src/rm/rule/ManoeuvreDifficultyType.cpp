@@ -21,7 +21,7 @@ const std::string ManoeuvreDifficultyType::toString(Type size) {
 const std::optional<ManoeuvreDifficultyType::Type> ManoeuvreDifficultyType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "normal") return kNormal;
 	if (val == "routine") return kRoutine;
 	if (val == "easy") return kEasy;

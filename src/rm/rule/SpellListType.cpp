@@ -16,7 +16,7 @@ const std::string SpellListType::toString(Type type) {
 const std::optional<SpellListType::Type> SpellListType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcaseconcat(sv);
+	const std::string& val = archid::lcaseconcat(sv);
 	if (val == "base") return kBase;
 	if (val == "closed") return kClosed;
 	if (val == "open") return kOpen;

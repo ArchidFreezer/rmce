@@ -12,7 +12,7 @@ const std::string DiseasePoisonSeverityType::toString(Type type) {
 }
 
 const std::optional<DiseasePoisonSeverityType::Type> DiseasePoisonSeverityType::fromString(std::string_view sv) {
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "mild") return Type::kMild;
 	if (val == "moderate") return Type::kModerate;
 	if (val == "severe") return Type::kSevere;

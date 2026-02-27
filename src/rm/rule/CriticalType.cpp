@@ -27,7 +27,7 @@ const std::string CriticalType::toString(Type type) {
 const std::optional<CriticalType::Type> CriticalType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcaseconcat(sv);
+	const std::string& val = archid::lcaseconcat(sv);
 	if (val == "brawling") return kBrawling;
 	if (val == "grapple") return kGrapple;
 	if (val == "impact") return kImpact;

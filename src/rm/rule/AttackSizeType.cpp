@@ -15,7 +15,7 @@ const std::string AttackSizeType::toString(Type size) {
 const std::optional<AttackSizeType::Type> AttackSizeType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "small") return kSmall;
 	if (val == "medium") return kMedium;
 	if (val == "large") return kLarge;

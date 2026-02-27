@@ -23,7 +23,7 @@ void TrainingPackageCostTableDatafileParser::read(const std::string& filename) {
 		if(line.empty()) { continue; }
 
 		// Split the row by tabs to get the individual cells
-		std::vector<std::string> tokens{ tokenise(line, "\t")};
+		std::vector<std::string> tokens{ archid::tokenise(line, "\t")};
 
 		// The first cell is the training package name, the rest are the costs for each profession
 		// Grab the name and remove it from the vector so we can iterate through the costs in order

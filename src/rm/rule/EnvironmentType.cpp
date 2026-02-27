@@ -39,7 +39,7 @@ const std::string EnvironmentType::description(EnvironmentType::Feature feature)
 const std::optional<EnvironmentType::Feature> EnvironmentType::feature(std::string_view sv) {
 	using enum EnvironmentType::Feature;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "battlefield") return kBattlefield;
 	if (val == "burial") return kBurial;
 	if (val == "cave") return kCave;
@@ -87,7 +87,7 @@ const std::string EnvironmentType::description(EnvironmentType::Terrain terrain)
 const std::optional<EnvironmentType::Terrain> EnvironmentType::terrain(std::string_view sv) {
 	using enum EnvironmentType::Terrain;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "alpine") return kAlpine;
 	if (val == "rough") return kRough;
 	if (val == "underground") return kUnderground;
@@ -137,7 +137,7 @@ const std::string EnvironmentType::description(EnvironmentType::Vegetation veget
 const std::optional<EnvironmentType::Vegetation> EnvironmentType::vegetation(std::string_view sv) {
 	using enum EnvironmentType::Vegetation;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "barren") return kBarren;
 	if (val == "coniferous") return kConiferous;
 	if (val == "deciduous") return kDeciduous;
@@ -195,7 +195,7 @@ const std::string EnvironmentType::description(EnvironmentType::Water water) {
 const std::optional<EnvironmentType::Water> EnvironmentType::water(std::string_view sv) {
 	using enum EnvironmentType::Water;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "breaks") return kBreaks;
 	if (val == "desert") return kDesert;
 	if (val == "freshwatercoast") return kFreshCoast;

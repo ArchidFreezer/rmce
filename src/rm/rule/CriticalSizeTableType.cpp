@@ -14,7 +14,7 @@ const std::string CriticalSizeTableType::toString(Type type) {
 const std::optional<CriticalSizeTableType::Type> CriticalSizeTableType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcaseconcat(sv);
+	const std::string& val = archid::lcaseconcat(sv);
 	if (val == "normal") return kNormal;
 	if (val == "large") return kLarge;
 	if (val == "superlarge") return kHuge;

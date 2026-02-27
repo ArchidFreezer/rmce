@@ -17,7 +17,7 @@ const std::string TreasureValueType::toString(Type type) {
 const std::optional<TreasureValueType::Type> TreasureValueType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "verypoor") return kVeryPoor;
 	if (val == "poor") return kPoor;
 	if (val == "normal") return kNormal;

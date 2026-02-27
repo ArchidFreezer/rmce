@@ -16,7 +16,7 @@ const std::string StatLossType::toString(Type type) {
 const std::optional<StatLossType::Type> StatLossType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcaseconcat(sv);
+	const std::string& val = archid::lcaseconcat(sv);
 	if (val == "slow") return kSlow;
 	if (val == "normal") return kNormal;
 	if (val == "fast") return kFast;

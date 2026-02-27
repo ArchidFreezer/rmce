@@ -16,7 +16,7 @@ int TrainingPackageData::startingMoneyChange() const {
 	}
 
 	// Get the number of dice and the number of sides on the dice from the string. The format is expected to be [number of dice]d[number of sides]
-	std::vector<std::string> dice_parts = tokenise(starting_money_modifier_dice, "d");
+	std::vector<std::string> dice_parts = archid::tokenise(starting_money_modifier_dice, "d");
 
 	int num_dice = 1;
 	int num_sides = 10;

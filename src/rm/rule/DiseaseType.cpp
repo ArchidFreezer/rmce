@@ -13,7 +13,7 @@ const std::string DiseaseType::toString(Type type) {
 }
 
 const std::optional<DiseaseType::Type> DiseaseType::fromString(std::string_view sv) {
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "bubonic") return kBubonic;
 	if (val == "chemical") return kChemical;
 	if (val == "genetic") return kGenetic;

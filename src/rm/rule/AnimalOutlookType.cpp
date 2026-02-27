@@ -30,7 +30,7 @@ const std::string AnimalOutlookType::toString(Type size) {
 const std::optional<AnimalOutlookType::Type> AnimalOutlookType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "aggressive") return kAggressive;
 	if (val == "aloof") return kAloof;
 	if (val == "altruistic") return kAltruistic;

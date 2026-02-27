@@ -31,7 +31,7 @@ const std::string ArmourType::toString(Type size) {
 const std::optional<ArmourType::Type> ArmourType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "at1") return kAT1;
 	if (val == "at2") return kAT2;
 	if (val == "at3") return kAT3;
@@ -87,7 +87,7 @@ const std::string ArmourType::description(Type size) {
 const std::optional<ArmourType::Type> ArmourType::fromDescription(std::string_view sv) {
 	using enum Type;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "skin") return kAT1;
 	if (val == "robes") return kAT2;
 	if (val == "lighthide") return kAT3;

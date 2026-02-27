@@ -15,7 +15,7 @@ const std::string SkillActionType::toString(Type action) {
 const std::optional<SkillActionType::Type> SkillActionType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcaseconcat(sv);
+	const std::string& val = archid::lcaseconcat(sv);
 	if (val == "moving") return kMoving;
 	if (val == "ob") return kOB;
 	if (val == "special") return kSpecial;

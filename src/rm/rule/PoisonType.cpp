@@ -14,7 +14,7 @@ const std::string PoisonType::toString(Type type) {
 }
 
 const std::optional<PoisonType::Type> PoisonType::fromString(std::string_view sv) {
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "circulatory") return kCirculatory;
 	if (val == "conversion") return kConversion;
 	if (val == "muscle") return kMuscle;

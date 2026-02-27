@@ -79,7 +79,7 @@ public:
 	 * @param cost string containing he costs
 	 */
 	SkillDevelopmentCost(const std::string& cost) {
-		std::vector<std::string> tokens = tokenise(cost, ":");
+		std::vector<std::string> tokens = archid::tokenise(cost, ":");
 		if (tokens.size() > 0) one_ = stoi(tokens[0]);
 		if (tokens.size() > 1) two_ = stoi(tokens[1]);
 		if (tokens.size() > 2) three_ = stoi(tokens[2]);

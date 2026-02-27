@@ -16,7 +16,7 @@ const std::string CreatureSizeType::toString(Type size) {
 const std::optional<CreatureSizeType::Type> CreatureSizeType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "tiny") return kTiny;
 	if (val == "small") return kSmall;
 	if (val == "medium") return kMedium;

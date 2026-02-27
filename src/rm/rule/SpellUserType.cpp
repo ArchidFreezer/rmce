@@ -16,7 +16,7 @@ const std::string SpellUserType::toString(Type size) {
 const std::optional<SpellUserType::Type> SpellUserType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "pure") return kPure;
 	if (val == "hybrid") return kHybrid;
 	if (val == "semi") return kSemi;

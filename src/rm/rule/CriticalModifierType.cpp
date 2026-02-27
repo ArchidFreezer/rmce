@@ -15,7 +15,7 @@ const std::string CriticalModifierType::toString(Type size) {
 const std::optional<CriticalModifierType::Type> CriticalModifierType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "decreaseseverityi") return kDecreaseSeverityI;
 	if (val == "decreaseseverityii") return kDecreaseSeverityII;
 	if (val == "nobleed") return kNoBleed;

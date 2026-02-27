@@ -16,7 +16,7 @@ const std::string CriticalTableType::toString(Type type) {
 const std::optional<CriticalTableType::Type> CriticalTableType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcaseconcat(sv);
+	const std::string& val = archid::lcaseconcat(sv);
 	if (val == "normal") return kNormal;
 	if (val == "largecreaturephysical") return kLargeCreaturePhysical;
 	if (val == "superlargecreaturephysical") return kHugeCreaturePhysical;

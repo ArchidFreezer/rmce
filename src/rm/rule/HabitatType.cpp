@@ -16,7 +16,7 @@ const std::string HabitatType::toString(HabitatType::Temperature temperature) {
 const std::optional<HabitatType::Temperature> HabitatType::temperature(std::string_view sv) {
 	using enum HabitatType::Temperature;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "hot") return kHot;
 	if (val == "warm") return kWarm;
 	if (val == "temperate") return kTemperate;
@@ -48,7 +48,7 @@ const std::string HabitatType::toString(HabitatType::Precipitation precipitation
 const std::optional<HabitatType::Precipitation> HabitatType::precipitation(std::string_view sv) {
 	using enum HabitatType::Precipitation;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "rainy") return kRainy;
 	if (val == "humid") return kHumid;
 	if (val == "temperate") return kTemperate;

@@ -21,7 +21,7 @@ const std::string CreatureMovementSpeedType::toString(Type size) {
 const std::optional<CreatureMovementSpeedType::Type> CreatureMovementSpeedType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string val = lcaseconcat(sv);
+	const std::string val = archid::lcaseconcat(sv);
 	if (val == "immobile") return kImmobile;
 	if (val == "inching") return kInching;
 	if (val == "creeping") return kCreeping;

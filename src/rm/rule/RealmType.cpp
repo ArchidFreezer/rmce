@@ -19,7 +19,7 @@ const std::string RealmType::toString(Type realm) {
 const std::optional<RealmType::Type> RealmType::fromString(std::string_view sv) {
 	using enum Type;
 
-	const std::string& val = lcaseconcat(sv);
+	const std::string& val = archid::lcaseconcat(sv);
 	if (val == "arcane") return kArcane;
 	if (val == "arms") return kArms;
 	if (val == "channeling") return kChanneling;
