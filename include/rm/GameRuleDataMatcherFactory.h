@@ -4,7 +4,7 @@
 #include <table/TableRowGameRuleDataMatcher.h>
 
 using rm::rule::GameRuleData;
-using rm::rule::TableRowGameRuleDataMatcher;
+using rm::rule::table::TableRowGameRuleDataMatcher;
 
 namespace rm {
 

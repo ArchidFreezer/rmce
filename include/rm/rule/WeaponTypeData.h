@@ -8,6 +8,8 @@
 #include <GameRuleData.h>
 #include <SkillData.h>
 
+using rm::rule::table::AttackTable;
+
 namespace rm::rule {
 
 	/**

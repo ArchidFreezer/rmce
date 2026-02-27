@@ -3,6 +3,9 @@
 
 #include <table/TableRow.h>
 
+using rm::rule::table::ColNotFoundException;
+using rm::rule::table::TableRow;	
+
 using namespace rm;
 
 class Cell {
@@ -14,13 +17,13 @@ public:
 
 namespace {
 	TEST(TableRow, FindCell) {
-		rule::TableRow<Cell> tr = rule::TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
+		TableRow<Cell> tr = TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
 		EXPECT_STREQ(tr.cell(0).getVal().c_str(), "A");
 		EXPECT_STREQ(tr.cell(1).getVal().c_str(), "B");
 	}
 
 	TEST(TableRow, Exception) {
-		rule::TableRow<Cell> tr = rule::TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
-		EXPECT_THROW(tr.cell(2), rule::ColNotFoundException);
+		TableRow<Cell> tr = TableRow<Cell>().addCell(Cell("A")).addCell(Cell("B"));
+		EXPECT_THROW(tr.cell(2), ColNotFoundException);
 	}
 }

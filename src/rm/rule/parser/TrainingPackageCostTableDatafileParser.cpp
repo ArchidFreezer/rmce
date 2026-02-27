@@ -7,6 +7,10 @@
 #include <table/TableRowGameRuleDataMatcher.h>
 #include <table/TrainingPackageCostTable.h>
 
+using rm::rule::table::TableRow;
+using rm::rule::table::TableRowGameRuleDataMatcher;
+using rm::rule::table::TrainingPackageCostTable;
+
 namespace rm::rule::parser {
 
 	void TrainingPackageCostTableDatafileParser::read(const std::string& filename) {

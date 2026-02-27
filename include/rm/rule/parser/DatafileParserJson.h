@@ -804,6 +804,11 @@ namespace rm::rule::parser {
 		return tree;
 	}
 
+	/**
+	 * @brief Converts a set of std::string values into a property tree.
+	 * @param set The set of std::string values to convert.
+	 * @return A constant property tree representation of the set.
+	 */
 	template<>
 	inline const pt::ptree DatafileParserJson::getSetTree<std::string>(std::set<std::string> set) {
 		pt::ptree tree{};

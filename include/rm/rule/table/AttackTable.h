@@ -2,7 +2,7 @@
 #include <table/BoundIntRowLookupTable.h>
 #include <table/TableColumnArmourTypeMatcher.h>
 
-namespace rm::rule {
+namespace rm::rule::table {
 
 	/**
 	 * @class AttackTable
@@ -55,4 +55,4 @@ namespace rm::rule {
 		std::string name_{}; /**< Name of the attack table */
 	};
 
-} // namespace rmrm::rule
+} // namespace rmrm::rule::table

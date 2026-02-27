@@ -4,6 +4,7 @@
 #include <NumberMatcherFactory.h>
 
 using namespace rm::rule::enums;
+using namespace rm::rule::table;
 
 namespace rm::rule::parser {
 

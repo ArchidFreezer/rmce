@@ -2,6 +2,7 @@
 #include <WeaponTypeDatafileParserJson.h>
 
 using namespace rm::rule::enums;
+using rm::rule::table::AttackTable;
 
 namespace rm::rule::parser {
 

@@ -4,7 +4,7 @@
 
 using namespace rm::rule::enums;
 
-namespace rm::rule {
+namespace rm::rule::table {
 
 	/**
 	 * @class TableColumnBonusXpCodeMatcher
@@ -62,4 +62,4 @@ namespace rm::rule {
 
 	};
 
-} // namespace rm::rule
+} // namespace rm::rule::table

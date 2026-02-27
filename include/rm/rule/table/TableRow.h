@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include <vector>
 
-namespace rm::rule {
+namespace rm::rule::table {
 
 	/**
 	 * @class ColNotFoundException
@@ -56,4 +56,4 @@ namespace rm::rule {
 		std::vector<CellDataType> cells_; /**< Container storing the cells in the row */
 	};
 
-} // namespace rm::rule
+} // namespace rm::rule::table

@@ -6,7 +6,7 @@
 #include <TrainingPackageData.h>
 #include <string_view>
 
-namespace rm::rule {
+namespace rm::rule::table {
 
 	/**
 	 * @class TrainingPackageCostTable
@@ -27,4 +27,4 @@ namespace rm::rule {
 			: LookupTable<TableRowGameRuleDataMatcher, const TrainingPackageData*, TableColumnProfessionMatcher, const ProfessionData*, int>(id) {}
 	};
 
-} // namespace rm::rule
+} // namespace rm::rule::table

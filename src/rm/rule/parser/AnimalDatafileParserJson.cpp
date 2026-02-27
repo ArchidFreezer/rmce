@@ -6,6 +6,10 @@
 
 using namespace rm::rule::enums;
 
+using rm::rule::table::CreatureBonusXpTable;
+using rm::rule::table::LevelVarianceTable;
+using rm::rule::table::TableRow;
+
 using rm::game::AnimalAttack;
 using rm::game::Location;
 

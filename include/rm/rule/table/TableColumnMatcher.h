@@ -2,7 +2,7 @@
 
 #include <concepts>
 
-namespace rm::rule {
+namespace rm::rule::table {
 
 	/**
 	 * @brief Concept that defines the requirements for a table column matcher class
@@ -17,4 +17,4 @@ namespace rm::rule {
 			{ c.column(d) } -> std::convertible_to<int>;
 	};
 
-} // namespace rm::rule
+} // namespace rm::rule::table

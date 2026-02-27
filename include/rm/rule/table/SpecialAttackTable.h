@@ -5,7 +5,7 @@
 
 using namespace rm::rule::enums;
 
-namespace rm::rule {
+namespace rm::rule::table {
 
 	/**
 	 * @class SpecialAttackTable
@@ -145,4 +145,4 @@ namespace rm::rule {
 		std::map<AttackSizeType::Type, int> limits_{}; /**< The maximum row index that each attack size may use */
 	};
 
-} // namespace rm::rule
+} // namespace rm::rule::table

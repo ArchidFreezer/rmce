@@ -2,16 +2,18 @@
 
 #include <table/TableColumnCreatureSizeMatcher.h>
 
-using namespace rm;
+using rm::rule::table::TableColumnCreatureSizeMatcher;
+
+using namespace rm::rule::enums;
 
 namespace {
 	TEST(TableColumnCreatureSizeMatcher, All) {
-		rule::TableColumnCreatureSizeMatcher matcher = rule::TableColumnCreatureSizeMatcher();
+		TableColumnCreatureSizeMatcher matcher = TableColumnCreatureSizeMatcher();
 		// Check the default
-		EXPECT_EQ(matcher.column(rule::enums::CreatureSizeType::kTiny), 0);
-		EXPECT_EQ(matcher.column(rule::enums::CreatureSizeType::kSmall), 1);
-		EXPECT_EQ(matcher.column(rule::enums::CreatureSizeType::kMedium), 2);
-		EXPECT_EQ(matcher.column(rule::enums::CreatureSizeType::kLarge), 3);
-		EXPECT_EQ(matcher.column(rule::enums::CreatureSizeType::kHuge), 4);
+		EXPECT_EQ(matcher.column(CreatureSizeType::kTiny), 0);
+		EXPECT_EQ(matcher.column(CreatureSizeType::kSmall), 1);
+		EXPECT_EQ(matcher.column(CreatureSizeType::kMedium), 2);
+		EXPECT_EQ(matcher.column(CreatureSizeType::kLarge), 3);
+		EXPECT_EQ(matcher.column(CreatureSizeType::kHuge), 4);
 	}
 }

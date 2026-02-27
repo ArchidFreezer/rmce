@@ -13,6 +13,9 @@
 #include <table/AttackTable.h>
 #include <table/SpecialAttackTable.h>
 
+using rm::rule::table::AttackTable;
+using rm::rule::table::SpecialAttackTable;
+
 namespace rm::game {
 
 	/**
@@ -121,13 +124,13 @@ namespace rm::game {
 		 * @brief Set the SpecialAttackTable for non-weapon attacks
 		 * @param non_weapon_table SpecialAttackTable for non-weapon attacks
 		 */
-		void setNonWeaponTable(const rule::SpecialAttackTable& non_weapon_table) { non_weapon_table_ = &non_weapon_table; }
+		void setNonWeaponTable(const SpecialAttackTable& non_weapon_table) { non_weapon_table_ = &non_weapon_table; }
 
 		/**
 		 * @brief Get the SpecialAttackTable for non-weapon attacks
 		 * @return SpecialAttackTable for non-weapon attacks
 		 */
-		const rule::SpecialAttackTable* nonWeaponTable() const { return non_weapon_table_; }
+		const SpecialAttackTable* nonWeaponTable() const { return non_weapon_table_; }
 
 		/**
 		 * @brief Check if the attack has a weapon or elemental ball/bolt attack
@@ -139,13 +142,13 @@ namespace rm::game {
 		 * @brief Set the AttackTable for weapon or elemental ball/bolt attacks, used to determine the attack result for weapon or elemental ball/bolt attacks
 		 * @param weapon_table AttackTable for weapon or elemental ball/bolt attacks, used to determine the attack result for weapon or elemental ball/bolt attacks
 		 */
-		void setWeaponTable(const rule::AttackTable& weapon_table) { weapon_table_ = &weapon_table; }
+		void setWeaponTable(const AttackTable& weapon_table) { weapon_table_ = &weapon_table; }
 
 		/**
 		 * @brief Get the AttackTable for weapon or elemental ball/bolt attacks, used to determine the attack result for weapon or elemental ball/bolt attacks
 		 * @return AttackTable for weapon or elemental ball/bolt attacks, used to determine the attack result for weapon or elemental ball/bolt attacks
 		 */
-		const rule::AttackTable* weaponTable() const { return weapon_table_; }
+		const AttackTable* weaponTable() const { return weapon_table_; }
 
 		/**
 		 * @brief Set the minimum number of attackers that use this attack in a round, used to indicate that there should be multiple rolls to represent multiple animals such as ants
@@ -317,8 +320,8 @@ namespace rm::game {
 		std::optional<int> conditional_attack_ref_{}; /**< If this is set, the attack is a conditional attack that is used if another attack results in a non-tiny crit, the ID of the attack to use if the condition is met */
 		int offensive_bonus_{}; /**< Offensive bonus for the attack, used to determine how difficult it is to hit with the attack. */
 		rule::enums::AttackSizeType::Type non_weapon_size_{}; /**< Size of a non-weapon attack. */
-		const rule::SpecialAttackTable* non_weapon_table_{}; /**< SpecialAttackTable for non-weapon attacks. */
-		const rule::AttackTable* weapon_table_{}; /**< AttackTable for weapon or elemental ball/bolt attacks that use standard attack tables, used to determine the attack result for special attacks. */
+		const SpecialAttackTable* non_weapon_table_{}; /**< SpecialAttackTable for non-weapon attacks. */
+		const AttackTable* weapon_table_{}; /**< AttackTable for weapon or elemental ball/bolt attacks that use standard attack tables, used to determine the attack result for special attacks. */
 		int num_attacks_{ 1 }; /**< Number of attacks that the creature makes with this attack in a round, used to indicate that there should be multiple rolls to represent multiple attacks such as a bear's two claws and one bite. */
 		bool use_all_attacks_{ false }; /**< If true, the creature will use all of the other available standard attacks in a round. */
 		int min_group_size_{}; /**< If this number of creatures attack as a group, this attack may be used. For example, (10) indicates that if 10 of these creatures attack as a group they may use the given attack. */

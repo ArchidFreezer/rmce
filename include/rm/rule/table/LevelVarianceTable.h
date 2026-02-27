@@ -4,7 +4,7 @@
 
 using namespace rm::rule::enums;
 
-namespace rm::rule {
+namespace rm::rule::table {
 
 	/**
 	 * @class TableColumnLevelVarianceCodeMatcher
@@ -57,4 +57,4 @@ namespace rm::rule {
 
 	};
 
-} // namespace rm::rule
+} // namespace rm::rule::table

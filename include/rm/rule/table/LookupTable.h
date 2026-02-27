@@ -8,7 +8,14 @@
 #include <table/TableRowMatcher.h>
 #include <table/TableRow.h>
 
-namespace rm::rule {
+/**
+ * @namespace rm::rule::table
+ * 
+ * This namespace contains the classes that are used to represent lookup tables that are indexed by row and column.
+ * The main class is the LookupTable class which is a base class that can be used to create specific tables for different game rules. The LookupTable class uses matcher classes to identify the rows and columns to retrieve the cell data from.
+ * The matcher classes must adhere to the is_matcher concept and are used to match against the row and column index values provided when retrieving cell data from the table.
+ */
+namespace rm::rule::table {
 
 	/**
 	 * @class RowNotFoundException
@@ -166,4 +173,4 @@ namespace rm::rule {
 		throw RowNotFoundException(msg);
 	}
 
-} // namespace rmrm::rule
+} // namespace rmrm::rule::table

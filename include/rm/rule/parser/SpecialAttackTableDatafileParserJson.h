@@ -44,7 +44,7 @@ namespace rm::rule::parser {
 		 * @brief Write attack tables from the cache to a json file
 		 * @param filename Path to the json file to write
 		 */
-		void save(const std::string& filename) override { saveData<SpecialAttackTable>(filename); }
+		void save(const std::string& filename) override { saveData<table::SpecialAttackTable>(filename); }
 
 		/**
 		 * @brief Populate the given boost tree with the data from a special attack table

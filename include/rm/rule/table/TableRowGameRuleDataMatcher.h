@@ -1,7 +1,7 @@
 #pragma once
 #include <GameRuleData.h>
 
-namespace rm::rule {
+namespace rm::rule::table {
 
 	/**
 	 * @class TableRowGameRuleDataMatcher
@@ -52,4 +52,4 @@ namespace rm::rule {
 		const GameRuleData* game_data_{ nullptr }; /**< GameRuleData object that this row matches */
 	};
 
-} // namespace rm::rule
+} // namespace rm::rule::table

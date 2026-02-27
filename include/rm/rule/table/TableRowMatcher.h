@@ -2,7 +2,7 @@
 
 #include <concepts>
 
-namespace rm::rule {
+namespace rm::rule::table {
 
 	/**
 	 * @brief Concept that defines the requirements for a matcher class
@@ -21,4 +21,4 @@ namespace rm::rule {
 			{ v.matches(n) } -> std::convertible_to<bool>;
 	};
 
-} // namespace rm::rule
+} // namespace rm::rule::table
