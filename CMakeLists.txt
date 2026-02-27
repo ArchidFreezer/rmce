@@ -26,9 +26,7 @@ endif()
 
 # Build the libraries
 add_subdirectory("src/archidutils")
-add_subdirectory("src/dataparsers")
-add_subdirectory("src/ruledata")
-add_subdirectory("src/gameobject")
+add_subdirectory("src/rm")
 
 # Build the main executables
 add_subdirectory("apps")
