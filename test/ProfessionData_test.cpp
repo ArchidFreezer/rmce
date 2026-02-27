@@ -458,6 +458,8 @@ namespace {
 	}
 
 	TEST(ProfessionData, CategoryCosts) {
+		using game::character::SkillDevelopmentCost;
+
 		rule::ProfessionData prof("PROF_ID");
 		rule::SkillCategoryData c1("CAT1_ID");
 		EXPECT_THROW(prof.skillCategoryDevelopmentCost(c1), rule::ProfessionData::InvalidCategoryDevelopmentCost);

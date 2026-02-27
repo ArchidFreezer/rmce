@@ -5,6 +5,8 @@
 #include <Dice.h>
 #include <GameObject.h>
 
+using rm::game::GameObject;
+
 namespace rm {
 	namespace character {
 

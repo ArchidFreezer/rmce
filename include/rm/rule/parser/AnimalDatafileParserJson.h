@@ -4,6 +4,8 @@
 #include <GameRuleDataCache.h>
 #include <AnimalData.h>
 
+using rm::game::AnimalAttack;
+
 namespace rm::rule::parser {
 
 	/**

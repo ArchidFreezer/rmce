@@ -3,6 +3,7 @@
 #include <Location.h>
 
 using namespace rm;
+using game::Location;
 
 namespace {
 	TEST(LocationTest, TestFeatures) {

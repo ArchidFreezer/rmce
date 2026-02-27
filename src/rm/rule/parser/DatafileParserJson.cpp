@@ -1,5 +1,7 @@
 #include <DatafileParserJson.h>
 
+using rm::game::character::LanguageAbility;
+
 namespace rm::rule::parser {
 
 	void DatafileParserJson::read(const std::string& filename) {

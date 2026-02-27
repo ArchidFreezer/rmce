@@ -2,6 +2,8 @@
 #include <Dice.h>
 #include <NumberMatcherFactory.h>
 
+using rm::game::AnimalAttack;
+
 namespace rm::rule {
 
 	void AnimalData::setFrequencyFactor(int frequency_factor) {

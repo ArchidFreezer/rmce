@@ -19,6 +19,8 @@
 #include <SubcategoriedSkillData.h>
 #include <SpellUserType.h>
 
+using rm::game::character::SkillDevelopmentCost;
+
 namespace rm::rule {
 
 	/**

@@ -4,7 +4,7 @@
 #include <string>
 #include <LanguageData.h>
 
-namespace rm {
+namespace rm::game::character {
 	/**
 	 * @brief Thrown when there is an attempt to modify the number of ranks in a language and the result would be invlaid
 	 *
@@ -150,4 +150,4 @@ namespace rm {
 		int written_{ 0 }; /** Ability in written component of the languiage */
 	};
 
-} // namespace rm
+} // namespace rm::game::character

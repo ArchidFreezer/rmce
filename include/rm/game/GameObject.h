@@ -3,7 +3,7 @@
 #include <boost/uuid.hpp>
 
 #include <string>
-namespace rm {
+namespace rm::game {
 
 	// Forward declaration of GameObject to avoid circular dependency in the concept definition
 	class GameObject;
@@ -108,4 +108,4 @@ namespace rm {
 		void setId(const std::string& id) { id_ = boost::uuids::string_generator()(id); }
 	};
 
-}
+} // namespace rm::game

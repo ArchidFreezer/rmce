@@ -13,7 +13,7 @@
 #include <table/AttackTable.h>
 #include <table/SpecialAttackTable.h>
 
-namespace rm {
+namespace rm::game {
 
 	/**
 	 * @brief Represents the characteristics of an animal attack.
@@ -333,4 +333,4 @@ namespace rm {
 		std::optional <std::string> auto_critical_size_{}; /**< Size of the auto critical, used for attacks that always result in a non-tiny crit to determine the size of the crit. */
 	};
 
-} // namespace rm
+} // namespace rm::game

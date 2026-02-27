@@ -4,6 +4,9 @@
 #include <LanguageData.h>
 
 using namespace rm;
+using rm::game::character::LanguageAbility;
+using rm::game::character::InvalidLanguageRank;
+
 
 namespace {
 	rule::LanguageData getLanguage(std::string id, std::string name, bool somantic, bool spoken, bool written) {

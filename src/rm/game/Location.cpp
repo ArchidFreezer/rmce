@@ -1,6 +1,6 @@
 #include <Location.h>
 
-namespace rm {
+namespace rm::game {
 
 	bool Location::matches(const Location& specific_location) const {
 		// If there are any features make sure one is present in the location, if there are no features then this is not a criteria and does not impact the matching

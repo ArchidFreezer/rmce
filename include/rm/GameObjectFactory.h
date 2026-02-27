@@ -2,6 +2,8 @@
 
 #include <GameObjectCache.h>
 
+using rm::game::game_object;
+
 namespace rm {
 
 	/**

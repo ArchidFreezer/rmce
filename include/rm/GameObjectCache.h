@@ -9,6 +9,9 @@
 
 #include <GameObject.h>
 
+using rm::game::game_object;
+using rm::game::GameObject;
+
 namespace rm {
 
 	/**

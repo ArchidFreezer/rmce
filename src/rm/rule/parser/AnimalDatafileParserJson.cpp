@@ -4,6 +4,9 @@
 #include <table/CreatureBonusXpTable.h>
 #include <table/LevelVarianceTable.h>
 
+using rm::game::AnimalAttack;
+using rm::game::Location;
+
 namespace rm::rule::parser {
 
 	void AnimalDatafileParserJson::parse() {

@@ -11,10 +11,14 @@
 #include <GameRuleData.h>
 #include <LanguageAbility.h>
 #include <SkillCategoryData.h>
+#include <SkillDevelopmentCost.h>
 #include <SubcategoriedSkillData.h>
 #include <SkillProgressionTypeData.h>
 #include <GameRuleDataChoice.h>
 #include <StatType.h>
+
+using rm::game::character::LanguageAbility;
+using rm::game::character::SkillDevelopmentCost;
 
 namespace rm::rule {
 

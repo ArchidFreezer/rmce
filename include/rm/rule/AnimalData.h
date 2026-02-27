@@ -22,6 +22,9 @@
 #include <TreasureCodeData.h>
 #include <table/CreatureBonusXpTable.h>
 
+using rm::game::AnimalAttack;
+using rm::game::Location;
+
 namespace rm::rule {
 
 	/**

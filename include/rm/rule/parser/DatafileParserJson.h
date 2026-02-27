@@ -7,6 +7,8 @@
 #include <SkillDevelopmentType.h>
 #include <StatType.h>
 
+using rm::game::character::LanguageAbility;
+
 namespace rm::rule::parser {
 
 	/**

@@ -2,6 +2,7 @@
 #include <RaceData.h>
 
 using namespace rm;
+using rm::game::character::LanguageAbility;
 
 namespace {
 	TEST(RaceData, AdolescentLanguageAbility) {

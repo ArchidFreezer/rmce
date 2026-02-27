@@ -6,6 +6,8 @@
 #include <ProfessionData.h>
 #include <TrainingPackageData.h>
 
+using rm::game::character::LanguageAbility;
+
 namespace rm::rule {
 
 	/**

@@ -1,6 +1,6 @@
 #include <LanguageAbility.h>
 
-namespace rm {
+namespace rm::game::character {
 
 	void LanguageAbility::updateSomanticRanks(int ranks) {
 		if (!language_->isSomantic()) throw InvalidLanguageRank("Cannot update ranks as language " + language_->name() + " has no somantic form.");
@@ -20,4 +20,4 @@ namespace rm {
 		written_ += ranks;
 	}
 
-} // namespace rm
+} // namespace rm::game

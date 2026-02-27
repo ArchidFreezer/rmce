@@ -5,7 +5,7 @@
 #include <ClimateData.h>
 #include <EnvironmentType.h>
 
-namespace rm {
+namespace rm::game {
 
 	/**
 	 * @class Location
@@ -186,4 +186,4 @@ namespace rm {
 
 	};
 
-} // namespace rm
+} // namespace rm::game

@@ -3,7 +3,7 @@
 #include <string>
 #include <StringUtils.h>
 
-namespace rm {
+namespace rm::game::character {
 
 	/**
 	 * @class SkillDevelopmentCost
@@ -171,4 +171,4 @@ namespace rm {
 		int four_{}; /**< Development point cost for fourth rank; 0 if unavailable */
 	};
 
-} // namespace rm
+} // namespace rm::game::character

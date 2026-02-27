@@ -1,5 +1,7 @@
 #include <ProfessionDatefileParserJson.h>
 
+using rm::game::character::SkillDevelopmentCost;
+
 namespace rm::rule::parser {
 
 	void ProfessionDatafileParserJson::parse() {
