@@ -31,7 +31,7 @@ void WeaponTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& dat
 	pt::ptree pranges;
 	// The game data stores the ranges as pointers, which is essentially a random sort. We want them ordered so derefence
 	// the pointers and place them into a set which will order them as we want
-	std::set<NumberRange<int>> ranges{};
+	std::set<archid::NumberRange<int>> ranges{};
 	for (auto& range : game_data.ranges()) {
 		ranges.insert(*range);
 	}

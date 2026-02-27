@@ -83,7 +83,7 @@ public:
 	 */
 	const std::string& cell(ArmourType::Type armour, AttackSizeType::Type size, int row_index) const {
 		row_index = std::min(limits_.find(size)->second, row_index);
-		return LookupTable<NumberRange<int>, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string>::cell(armour, row_index);
+		return LookupTable<archid::NumberRange<int>, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string>::cell(armour, row_index);
 	}
 
 	/**
@@ -105,7 +105,7 @@ public:
 	const std::string& cell(ArmourType::Type armour, AttackSizeType::Type size, int row_index, int unmodified_row_index) const {
 		row_index = std::min(limits_.find(size)->second, row_index);
 		unmodified_row_index = std::min(limits_.find(size)->second, unmodified_row_index);
-		return LookupTable<NumberRange<int>, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string>::cell(armour, row_index, unmodified_row_index);
+		return LookupTable<archid::NumberRange<int>, int, TableColumnArmourTypeMatcher, ArmourType::Type, std::string>::cell(armour, row_index, unmodified_row_index);
 	}
 
 	/**

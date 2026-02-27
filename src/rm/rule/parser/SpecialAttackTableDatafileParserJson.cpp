@@ -18,7 +18,7 @@ void SpecialAttackTableDatafileParserJson::populateDatum(std::string& id, pt::pt
 	pt::ptree mrows; // Modified rows
 	// The game data stores the ranges as pointers, which is essentially a random sort. We want them ordered so derefence
 	// the pointers and place them into a set which will order them as we want
-	std::set<NumberRange<int>> ranges{};
+	std::set<archid::NumberRange<int>> ranges{};
 	for (auto& m : game_data.modified()) {
 		ranges.insert(*m.first);
 		max_row = std::max(max_row, m.first->max());

@@ -4,7 +4,7 @@
 
 namespace {
 	TEST(NumberRange, IntRange) {
-		NumberRange nr(1, 10);
+		archid::NumberRange nr(1, 10);
 		EXPECT_TRUE(nr.matches(1));
 		EXPECT_TRUE(nr.matches(7));
 		EXPECT_TRUE(nr.matches(8.9));
@@ -15,7 +15,7 @@ namespace {
 	}
 
 	TEST(NumberRange, FloatRange) {
-		NumberRange nr(1.0f, 10.8f);
+		archid::NumberRange nr(1.0f, 10.8f);
 		EXPECT_TRUE(nr.matches(1.0f));
 		EXPECT_TRUE(nr.matches(7.3f));
 		EXPECT_TRUE(nr.matches(10.8f));
@@ -33,9 +33,9 @@ namespace {
 	};
 
 	TEST(NumberRange, table_row_matcher) {
-		NumberRange nr(1, 10);
+		archid::NumberRange nr(1, 10);
 		// The line below will fail to compile if NumberRange does not adhere to table_row_matcher concept
-		NumberRangeTest<NumberRange<int>, int>(nr, 1);
+		NumberRangeTest<archid::NumberRange<int>, int>(nr, 1);
 	}
 
 }

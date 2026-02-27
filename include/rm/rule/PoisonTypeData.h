@@ -52,26 +52,26 @@ public:
 	 * @param severity DiseasePoisonSeverityType::Type representing the severity of the symptoms caused by the poison.
 	 * @param effectOnset NumberRange<int> representing the number of rounds before the symptoms of the poison start to take effect, based on the severity of the symptoms.
 	 */
-	void addEffectOnset(DiseasePoisonSeverityType::Type severity, const NumberRange<int>* effectOnset) { effectOnsetBySeverity_[severity] = effectOnset; }
+	void addEffectOnset(DiseasePoisonSeverityType::Type severity, const archid::NumberRange<int>* effectOnset) { effectOnsetBySeverity_[severity] = effectOnset; }
 
 	/**
 	 * @brief Sets the effect onset ranges for each severity level.
 	 * @param effectOnsetBySeverity A map associating each severity level with a range of effect onset values.
 	 */
-	void setEffectOnsets(std::map<DiseasePoisonSeverityType::Type, const NumberRange<int>*> effectOnsetBySeverity) { effectOnsetBySeverity_ = std::move(effectOnsetBySeverity); }
+	void setEffectOnsets(std::map<DiseasePoisonSeverityType::Type, const archid::NumberRange<int>*> effectOnsetBySeverity) { effectOnsetBySeverity_ = std::move(effectOnsetBySeverity); }
 	
 	/**
 	 * @brief Get the number of rounds before the symptoms of the poison start to take effect, based on the severity of the symptoms.
 	 * @return Map associating each severity level with a range of effect onset values.
 	 */
-	const std::map<DiseasePoisonSeverityType::Type, const NumberRange<int>*>& effectOnsets() const { return effectOnsetBySeverity_; }
+	const std::map<DiseasePoisonSeverityType::Type, const archid::NumberRange<int>*>& effectOnsets() const { return effectOnsetBySeverity_; }
 
 	/**
 	 * @brief How long, in rounds before the symptoms of the poison start to take effect, based on the severity of the symptoms.
 	 * @param severity DiseasePoisonSeverityType::Type representing the severity of the symptoms caused by the poison.
 	 * @return NumberRange<int> representing the number of rounds before the symptoms of the poison start to take effect, based on the severity of the symptoms.
 	 */
-	const NumberRange<int> effectOnset(DiseasePoisonSeverityType::Type severity) const {
+	const archid::NumberRange<int> effectOnset(DiseasePoisonSeverityType::Type severity) const {
 		auto it = effectOnsetBySeverity_.find(severity);
 		if (it != effectOnsetBySeverity_.end()) {
 			return *(it->second);
@@ -138,7 +138,7 @@ public:
 private:
 	PoisonType::Type type_{}; /**< The type of poison, used to determine where in the body the poison affects and the symptoms it causes. */
 	std::string name_{}; /**< The name of the poison type, used for flavour purposes. */
-	std::map<DiseasePoisonSeverityType::Type, const NumberRange<int>*> effectOnsetBySeverity_{}; /**< Map of the number of rounds before the symptoms of the poison start to take effect based on the severity of the symptoms. */
+	std::map<DiseasePoisonSeverityType::Type, const archid::NumberRange<int>*> effectOnsetBySeverity_{}; /**< Map of the number of rounds before the symptoms of the poison start to take effect based on the severity of the symptoms. */
 	std::map<DiseasePoisonSeverityType::Type, std::string> symptomsBySeverity_{}; /**< Map of the symptoms caused by the poison based on the severity of the symptoms. */
 	std::string areasAffected_{}; /**< String describing the areas of the body that are affected by the poison if not specified. */
 };

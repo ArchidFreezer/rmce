@@ -9,7 +9,7 @@
 /**
  * @brief Dummy class to test LookupTable abstract class
  */
-class DummyLookupTable : public LookupTable<NumberRange<int>, int, TableColumnCreatureSizeMatcher, CreatureSizeType::Type, std::string> {
+class DummyLookupTable : public LookupTable<archid::NumberRange<int>, int, TableColumnCreatureSizeMatcher, CreatureSizeType::Type, std::string> {
 public:
 	DummyLookupTable(std::string_view id) : LookupTable(id) {}
 };

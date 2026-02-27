@@ -453,13 +453,13 @@ public:
 	 * @param chance_range Pointer to a NumberRange<int> that represents the chance of the attack being used in a round, used as the key for the attack in the attacks map.
 	 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the attacks map.
 	 */
-	void addAttack(const NumberRange<int>* chance_range, AnimalAttack attack) { attacks_.emplace(chance_range, std::move(attack)); }
+	void addAttack(const archid::NumberRange<int>* chance_range, AnimalAttack attack) { attacks_.emplace(chance_range, std::move(attack)); }
 
 	/**
 	 * @brief Get the map of attacks for the animal
 	 * @return Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances.
 	 */
-	const std::map<const NumberRange<int>*, AnimalAttack>& attacks() const { return attacks_; }
+	const std::map<const archid::NumberRange<int>*, AnimalAttack>& attacks() const { return attacks_; }
 
 	/**
 	 * @brief Get the attack for a given d100 roll
@@ -580,7 +580,7 @@ private:
 	std::pair<int, int> encounter_range_{}; /**< A pair containing the minimum and maximum number of animals typically enountered in a single encounter, used to determine how many animals are encountered when an encounter with the animal is generated. */
 	std::pair<int, int> number_young_range_{}; /**< A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal. */
 	std::unique_ptr<Location> location_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */
-	std::map<const NumberRange<int>*, AnimalAttack> attacks_{}; /**< Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances. */
+	std::map<const archid::NumberRange<int>*, AnimalAttack> attacks_{}; /**< Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances. */
 	std::map<int, AnimalAttack> group_attacks_{}; /**< Map of attack data for the animal, keyed by the number of attackers in the round. This is used to determine if the attack should be used based on the number of attackers in the round. For example, an attack may only be used if there are 2 or more attackers in the round. */
 	std::vector<AnimalAttack> ranged_attacks_{}; /**< Vector of ranged attack data for the animal, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks. */
 	std::map<int, AnimalAttack> conditional_attacks_{}; /**< Map of attack data for the animal where the attack is conditional. These may be called by other attacks the produce a non-tiny ciritcal result when they are resolved. */

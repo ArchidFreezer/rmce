@@ -20,10 +20,10 @@ public:
 	 * @param max int Upper bound to match
 	 * @return NumberRange<int>* Pointer to matcher
 	 */
-	const NumberRange<int>* matcher(int min, int max);
+	const archid::NumberRange<int>* matcher(int min, int max);
 
 private:
-	static std::map<std::pair<int, int>, NumberRange<int>> matchers_;
+	static std::map<std::pair<int, int>, archid::NumberRange<int>> matchers_;
 	std::mutex mutex_{};
 };
 

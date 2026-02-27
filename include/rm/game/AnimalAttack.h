@@ -35,7 +35,7 @@ public:
 	 * 
 	 * @param chance Percentage chance that this attack will be used
 	 */
-	void setChance(const NumberRange<int>* chance) { chance_ = chance; }
+	void setChance(const archid::NumberRange<int>* chance) { chance_ = chance; }
 
 	/**
 	 * @brief Get the percentage chance that this attack will be used
@@ -47,7 +47,7 @@ public:
 	 *
 	 * @return NumberRange<int> Percentage chance that this attack will be used
 	 */
-	std::optional<const NumberRange<int>*> chance() const { return chance_; }
+	std::optional<const archid::NumberRange<int>*> chance() const { return chance_; }
 
 	/**
 	 * @brief Set the reference integer for the conditional attack that this attack may trigger
@@ -311,7 +311,7 @@ public:
 	std::optional <std::string> autoCriticalSize() const { return auto_critical_size_; }
 
 private:
-	std::optional <const NumberRange<int>*> chance_{}; /**< Percentage chance that this attack will be used */
+	std::optional <const archid::NumberRange<int>*> chance_{}; /**< Percentage chance that this attack will be used */
 	std::optional<int> conditional_attack_ref_{}; /**< If this is set, the attack is a conditional attack that is used if another attack results in a non-tiny crit, the ID of the attack to use if the condition is met */
 	int offensive_bonus_{}; /**< Offensive bonus for the attack, used to determine how difficult it is to hit with the attack. */
 	AttackSizeType::Type non_weapon_size_{}; /**< Size of a non-weapon attack. */

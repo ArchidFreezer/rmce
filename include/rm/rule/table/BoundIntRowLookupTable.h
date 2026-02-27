@@ -17,7 +17,7 @@
  */
 template<typename ColumnMatcherClass, typename ColumnDataType, typename CellDatatype>
 	requires table_column_matcher< ColumnMatcherClass, ColumnDataType>
-class BoundIntRowLookupTable : public LookupTable <NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype> {
+class BoundIntRowLookupTable : public LookupTable <archid::NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype> {
 public:
 
 	/**
@@ -32,7 +32,7 @@ public:
 	 * @param max_row Maximum number for which a modified row value is defined
 	 */
 	BoundIntRowLookupTable(std::string_view id, int min_row, int max_row) : 
-		LookupTable<NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>(id), 
+		LookupTable<archid::NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>(id),
 		max_row_{ max_row }, 
 		min_row_{ min_row } {}
 
@@ -71,7 +71,7 @@ public:
 	const CellDatatype& cell(ColumnDataType col_index, int row_index) const {
 		row_index = std::min(row_index, max_row_);
 		row_index = std::max(row_index, min_row_);
-		return LookupTable<NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>::cell(col_index, row_index);
+		return LookupTable<archid::NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>::cell(col_index, row_index);
 	}
 
 	/**
@@ -92,7 +92,7 @@ public:
 	const CellDatatype& cell(ColumnDataType col_index, int row_index, int unmodified_row_index) const {
 		row_index = std::min(row_index, max_row_);
 		row_index = std::max(row_index, min_row_);
-		return LookupTable<NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>::cell(col_index, row_index, unmodified_row_index);
+		return LookupTable<archid::NumberRange<int>, int, ColumnMatcherClass, ColumnDataType, CellDatatype>::cell(col_index, row_index, unmodified_row_index);
 	}
 
 private:

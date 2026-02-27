@@ -142,7 +142,7 @@ void AnimalDatafileParserJson::parse() {
 			if (tree_opt) {
 				for (const auto& attack_tree : tree_opt.value()) {
 					const pt::ptree& tree = attack_tree.second;
-					const NumberRange<int>* range = number_matcher.matcher(tree.get<int>("chance-min"), tree.get<int>("chance-max"));
+					const archid::NumberRange<int>* range = number_matcher.matcher(tree.get<int>("chance-min"), tree.get<int>("chance-max"));
 					AnimalAttack attack{};
 					parseAnimalAttack(attack, tree);
 					ref.addAttack(range, attack);
@@ -282,11 +282,11 @@ void AnimalDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) 
 	// Standard Attacks
 	{
 		// Get the map of attacks from the game data
-		std::map<const NumberRange<int>*, AnimalAttack> attacks = game_data.attacks();
+		std::map<const archid::NumberRange<int>*, AnimalAttack> attacks = game_data.attacks();
 
 		// Start but sorting the attacks by their number range pointer value so that they are output in a consistent order in the json file.
 		// We use a map to do this and store the pointer value as the key and the pointer itself as the value so that we can access the attack data when populating the boost ptree for each attack.
-		std::map<const NumberRange<int>, const NumberRange<int>*> ordered_attacks{};
+		std::map<const archid::NumberRange<int>, const archid::NumberRange<int>*> ordered_attacks{};
 		for (auto& attack : game_data.attacks()) {
 			for (auto& attack : game_data.attacks()) {
 				ordered_attacks.insert(std::make_pair(*attack.first, attack.first));
@@ -397,7 +397,7 @@ void AnimalDatafileParserJson::parseAnimalAttack(AnimalAttack& attack, const pt:
 void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const AnimalAttack& attack) {
 	if (attack.chance().has_value()) {
 		// Copy the pointer value, not the pointed-to object
-		const NumberRange<int>* chance_range = attack.chance().value();
+		const archid::NumberRange<int>* chance_range = attack.chance().value();
 		tree.put("chance-min", chance_range->min());
 		tree.put("chance-max", chance_range->max());
 	}
