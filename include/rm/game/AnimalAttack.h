@@ -84,7 +84,7 @@ public:
 	 * 
 	 * @return `true` if the attack should be used, `false` otherwise
 	 */
-	bool shouldUseAttack() const { return shouldUseAttack(Dice(100).roll(false).result()); }
+	bool shouldUseAttack() const { return shouldUseAttack(archid::Dice(100).roll(false).result()); }
 
 	/**
 	 * @brief set the offensive bonus for the attack

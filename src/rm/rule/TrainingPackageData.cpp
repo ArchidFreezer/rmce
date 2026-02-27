@@ -24,10 +24,10 @@ int TrainingPackageData::startingMoneyChange() const {
 	if (dice_parts.size() > 1) { // We have multiple dice so no open ended rolls
 		num_dice = std::stoi(dice_parts[0]);
 		num_sides = std::stoi(dice_parts[1]);
-		val = Dice(num_sides, 0, 0).roll(num_dice).result();
+		val = archid::Dice(num_sides, 0, 0).roll(num_dice).result();
 	} else { // Single die with open ended rolls
 		num_sides = std::stoi(dice_parts[0]);
-		val = Dice(num_sides, 1, 0).roll(true).result();
+		val = archid::Dice(num_sides, 1, 0).roll(true).result();
 	}
 
 	return (neg ? val * -1 : val);

@@ -68,7 +68,7 @@ int AnimalData::staminaBonus() const {
 
 	NumberMatcherFactory number_matcher{};
 
-	int d100_roll = Dice(100).roll(false).result();
+	int d100_roll = archid::Dice(100).roll(false).result();
 	switch(constitutionVarianceType()) {
 	case CreatureConstitutionVarianceType::Type::kNone: return 0;
 	case CreatureConstitutionVarianceType::Type::kA: {

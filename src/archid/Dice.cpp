@@ -1,6 +1,8 @@
 #include <cassert>
 #include <Dice.h>
 
+using namespace archid;
+
 Dice::Dice(int sides) : Dice(sides, 0, 0) {}
 Dice::Dice(int sides, int open_ended_range) : Dice(sides, open_ended_range, open_ended_range) {}
 Dice::Dice(int sides, int open_ended_high_range, int open_ended_low_range) : sides_{sides}, min_open_high_{ sides - open_ended_high_range + 1 }, max_open_low_{ open_ended_low_range } {
