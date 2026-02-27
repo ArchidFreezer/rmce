@@ -1,6 +1,8 @@
 #include <NumberMatcherFactory.h>
 #include <WeaponTypeDatafileParserJson.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule::parser {
 
 	void WeaponTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
@@ -91,8 +93,8 @@ namespace rm::rule::parser {
 			for (const auto& crit : v.second.get_child("criticals")) {
 				int mod = crit.second.get<int>("modifier");
 				std::string crit_name = crit.second.get<std::string>("critical");
-				if (rule::enums::CriticalType::fromString(crit_name)) {
-					ref.addCriticalModifier(rule::enums::CriticalType::fromString(crit_name).value(), mod);
+				if (CriticalType::fromString(crit_name)) {
+					ref.addCriticalModifier(CriticalType::fromString(crit_name).value(), mod);
 				}
 			}
 

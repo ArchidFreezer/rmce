@@ -1,5 +1,7 @@
 #include <CultureTypeDatafileParserJson.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule::parser {
 
 	void CultureTypeDatafileParserJson::parse() {
@@ -26,7 +28,7 @@ namespace rm::rule::parser {
 			if (spell_ranks) ref.setSpellListRanks(spell_ranks.value());
 
 			// Get the preferred armour
-			ref.setPreferredArmours(parseEnumSetTree<rule::enums::ArmourType::Type>(v.second.get_child_optional("preferred-armours")));
+			ref.setPreferredArmours(parseEnumSetTree<ArmourType::Type>(v.second.get_child_optional("preferred-armours")));
 
 			// Get the preferred weapons
 			ref.setPreferredWeapons(parseGameDataSetTree<WeaponTypeData>(v.second.get_child_optional("preferred-weapons")));
@@ -44,16 +46,16 @@ namespace rm::rule::parser {
 			ref.setRequiredClimates(parseGameDataSetTree<ClimateData>(v.second.get_child_optional("required-climates")));
 
 			// Get required environmental special features
-			ref.setRequiredFeatures(parseEnumSetTree<rule::enums::EnvironmentType::Feature>(v.second.get_child_optional("required-features")));
+			ref.setRequiredFeatures(parseEnumSetTree<EnvironmentType::Feature>(v.second.get_child_optional("required-features")));
 
 			// Get required environmental terrains
-			ref.setRequiredTerrains(parseEnumSetTree<rule::enums::EnvironmentType::Terrain>(v.second.get_child_optional("required-terrains")));
+			ref.setRequiredTerrains(parseEnumSetTree<EnvironmentType::Terrain>(v.second.get_child_optional("required-terrains")));
 
 			// Get required environmental vegetations
-			ref.setRequiredVegetations(parseEnumSetTree<rule::enums::EnvironmentType::Vegetation>(v.second.get_child_optional("required-vegetations")));
+			ref.setRequiredVegetations(parseEnumSetTree<EnvironmentType::Vegetation>(v.second.get_child_optional("required-vegetations")));
 
 			// Get required environmental water sources
-			ref.setRequiredWaterSources(parseEnumSetTree<rule::enums::EnvironmentType::Water>(v.second.get_child_optional("required-water-sources")));
+			ref.setRequiredWaterSources(parseEnumSetTree<EnvironmentType::Water>(v.second.get_child_optional("required-water-sources")));
 
 			std::cout << "\tCultureType name: " << ref.name() << std::endl;
 		}
@@ -77,7 +79,7 @@ namespace rm::rule::parser {
 
 		// Get the container tree for the preferred armour
 		{
-			pt::ptree tree{ getEnumSetTree<rule::enums::ArmourType::Type>(game_data.preferredArmour()) };
+			pt::ptree tree{ getEnumSetTree<ArmourType::Type>(game_data.preferredArmour()) };
 			if (tree.size()) datum.push_back(std::make_pair("preferred-armours", tree));
 		}
 
@@ -114,25 +116,25 @@ namespace rm::rule::parser {
 
 		// Required environmental special features
 		{
-			pt::ptree tree{ getEnumSetTree<rule::enums::EnvironmentType::Feature>(game_data.requiredFeatures()) };
+			pt::ptree tree{ getEnumSetTree<EnvironmentType::Feature>(game_data.requiredFeatures()) };
 			if (tree.size()) datum.push_back(std::make_pair("required-features", tree));
 		}
 
 		// Required environmental terrains
 		{
-			pt::ptree tree{ getEnumSetTree<rule::enums::EnvironmentType::Terrain>(game_data.requiredTerrains()) };
+			pt::ptree tree{ getEnumSetTree<EnvironmentType::Terrain>(game_data.requiredTerrains()) };
 			if (tree.size()) datum.push_back(std::make_pair("required-terrains", tree));
 		}
 
 		// Required environmental vegetation
 		{
-			pt::ptree tree{ getEnumSetTree<rule::enums::EnvironmentType::Vegetation>(game_data.requiredVegetations()) };
+			pt::ptree tree{ getEnumSetTree<EnvironmentType::Vegetation>(game_data.requiredVegetations()) };
 			if (tree.size()) datum.push_back(std::make_pair("required-vegetations", tree));
 		}
 
 		// Required environmental water sources
 		{
-			pt::ptree tree{ getEnumSetTree<rule::enums::EnvironmentType::Water>(game_data.requiredWaterSources()) };
+			pt::ptree tree{ getEnumSetTree<EnvironmentType::Water>(game_data.requiredWaterSources()) };
 			if (tree.size()) datum.push_back(std::make_pair("required-water-sources", tree));
 		}
 

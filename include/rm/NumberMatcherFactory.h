@@ -6,7 +6,7 @@
 namespace rm {
 
 	/**
-	 * @brief Thread safe factory class for NumberRange objects that can be used for matching dice rolls
+	 * @brief Thread safe factory class for archid::NumberRange objects that can be used for matching dice rolls
 	 *
 	 * The factory stores all matchers that have been created previously and only creates a new matcher if one does not exist.
 	 * This works because the only state that the matcher has are the upper and lower bounds and these are constant for the

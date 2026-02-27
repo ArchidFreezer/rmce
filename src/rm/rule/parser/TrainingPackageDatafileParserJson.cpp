@@ -1,6 +1,8 @@
 #include <EnumChoice.h>
 #include <TrainingPackageDatafileParserJson.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule::parser {
 
 	void TrainingPackageDatafileParserJson::parse() {
@@ -52,7 +54,7 @@ namespace rm::rule::parser {
 
 			// Stat gains
 			boost::optional<const pt::ptree&> stat_gains = v.second.get_child_optional("stat-gains");
-			if (stat_gains) ref.setStatGains(parseEnumSetTree<rule::enums::StatType::Type>(stat_gains));
+			if (stat_gains) ref.setStatGains(parseEnumSetTree<StatType::Type>(stat_gains));
 
 			// Realm stat gain
 			boost::optional<const pt::ptree&> realm_stat_gain_tree = v.second.get_child_optional("realm-stat-gain");
@@ -165,7 +167,7 @@ namespace rm::rule::parser {
 
 		// Stat gains
 		{
-			pt::ptree tree{ getEnumSetTree<rule::enums::StatType::Type>(game_data.statGains()) };
+			pt::ptree tree{ getEnumSetTree<StatType::Type>(game_data.statGains()) };
 			if (tree.size()) datum.push_back(std::make_pair("stat-gains", tree));
 		}
 
@@ -305,13 +307,13 @@ namespace rm::rule::parser {
 		return tree;
 	}
 
-	EnumChoice<rule::enums::StatType::Type> TrainingPackageDatafileParserJson::parseStatGainChoices(boost::optional<const pt::ptree&> stat_gain_choices) {
-		EnumChoice<rule::enums::StatType::Type> choices{};
+	EnumChoice<StatType::Type> TrainingPackageDatafileParserJson::parseStatGainChoices(boost::optional<const pt::ptree&> stat_gain_choices) {
+		EnumChoice<StatType::Type> choices{};
 		if (!stat_gain_choices) return choices;
 
 		choices.setNumChoices(stat_gain_choices.value().get<int>("num-choices"));
 		for (const auto& option : stat_gain_choices.value().get_child("options")) {
-			rule::enums::StatType::Type stat_gain_option_enum{};
+			StatType::Type stat_gain_option_enum{};
 			fromString(option.second.get_value<std::string>(), stat_gain_option_enum);
 			choices.addOption(stat_gain_option_enum);
 		}
@@ -321,13 +323,13 @@ namespace rm::rule::parser {
 
 	const pt::ptree TrainingPackageDatafileParserJson::getStatGainChoicesTree(TrainingPackageData& game_data) {
 		pt::ptree choice_tree{};
-		EnumChoice<rule::enums::StatType::Type> stat_gain_choices = game_data.statGainChoices();
+		EnumChoice<StatType::Type> stat_gain_choices = game_data.statGainChoices();
 		if (!stat_gain_choices.numChoices()) return choice_tree;
 
 		choice_tree.put("num-choices", stat_gain_choices.numChoices());
 		pt::ptree options_tree{};
-		std::map<std::string, rule::enums::StatType::Type> sorted_options{};
-		for (const rule::enums::StatType::Type option : stat_gain_choices.options<rule::enums::StatType::Type>()) {
+		std::map<std::string, StatType::Type> sorted_options{};
+		for (const StatType::Type option : stat_gain_choices.options<StatType::Type>()) {
 			sorted_options.emplace(toString(option), option);
 		}
 		for (const auto& option_pair : sorted_options) {

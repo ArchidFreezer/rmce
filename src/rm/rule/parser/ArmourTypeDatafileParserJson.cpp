@@ -2,6 +2,8 @@
 #include <ArmourTypeData.h>
 #include <ArmourTypeDatafileParserJson.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule::parser {
 
 	void ArmourTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
@@ -43,11 +45,11 @@ namespace rm::rule::parser {
 
 			// Attempt to find the ArmourType
 			std::string type_name = v.second.get<std::string>("type");
-			rule::enums::ArmourType::Type type;
-			if (rule::enums::ArmourType::fromString(type_name)) {
-				datum.setType(rule::enums::ArmourType::fromString(type_name).value());
+			ArmourType::Type type;
+			if (ArmourType::fromString(type_name)) {
+				datum.setType(ArmourType::fromString(type_name).value());
 			} else {
-				throw rule::enums::ArmourType::ArmourTypeNotFoundException("Could not find a skill group for: " + type_name);
+				throw ArmourType::ArmourTypeNotFoundException("Could not find a skill group for: " + type_name);
 			}
 
 			std::cout << "\tArmourType name: " << datum.name() << std::endl;

@@ -2,6 +2,8 @@
 #include <SkillProgressionTypeData.h>
 #include <StatType.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule::parser {
 
 	void SkillCategoryDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
@@ -16,7 +18,7 @@ namespace rm::rule::parser {
 
 		// Stats
 		{
-			pt::ptree tree{ getEnumVectorTree<rule::enums::StatType::Type>(game_data.stats()) };
+			pt::ptree tree{ getEnumVectorTree<StatType::Type>(game_data.stats()) };
 			if (!tree.empty()) { datum.push_back(std::make_pair("stats", tree)); }
 		}
 	}
@@ -50,7 +52,7 @@ namespace rm::rule::parser {
 			ref.setUseRealmStats(v.second.get<bool>("use-realm-stats"));
 
 			// Check for any stats
-			ref.setStats(parseEnumVectorTree<rule::enums::StatType::Type>(v.second.get_child_optional("stats")));
+			ref.setStats(parseEnumVectorTree<StatType::Type>(v.second.get_child_optional("stats")));
 
 			std::cout << "\tSkillCategory name: " << ref.name() << std::endl;
 

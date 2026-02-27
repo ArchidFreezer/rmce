@@ -1,5 +1,7 @@
 #include <TreasureCodeDatafileParserJson.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule::parser {
 
 
@@ -7,8 +9,8 @@ namespace rm::rule::parser {
 		TreasureCodeData& game_data = factory().get<TreasureCodeData>(id);
 
 		datum.put("id", game_data.id());
-		datum.put("items-value-type", rule::enums::TreasureValueType::toString(game_data.itemsValueType()));
-		datum.put("wealth-value-type", rule::enums::TreasureValueType::toString(game_data.wealthValueType()));
+		datum.put("items-value-type", TreasureValueType::toString(game_data.itemsValueType()));
+		datum.put("wealth-value-type", TreasureValueType::toString(game_data.wealthValueType()));
 	}
 
 	void TreasureCodeDatafileParserJson::parse() {
@@ -21,11 +23,11 @@ namespace rm::rule::parser {
 
 			TreasureCodeData& ref = factory().get<TreasureCodeData>(id);
 
-			rule::enums::TreasureValueType::Type items_value_type{};
+			TreasureValueType::Type items_value_type{};
 			fromString(v.second.get<std::string>("items-value-type"), items_value_type);
 			ref.setItemsValueType(items_value_type);
 
-			rule::enums::TreasureValueType::Type wealth_value_type{};
+			TreasureValueType::Type wealth_value_type{};
 			fromString(v.second.get<std::string>("wealth-value-type"), wealth_value_type);
 			ref.setWealthValueType(wealth_value_type);
 

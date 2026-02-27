@@ -1,6 +1,12 @@
 #pragma once
 #include <string>
 
+/**
+ * @namespace rm::rule
+ * @brief Rules of the game represented by classes and data structures
+ * 
+ * The rules are the objects that are used as lookups or references when creating game objects such as races or professions and lookup tables for things such as skills, languages, etc.
+ */
 namespace rm::rule {
 
 	class GameRuleData;

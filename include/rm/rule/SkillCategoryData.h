@@ -9,6 +9,8 @@
 #include <StatType.h>
 #include <SkillProgressionTypeData.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule {
 
 	/**
@@ -89,13 +91,13 @@ namespace rm::rule {
 		 * @throws UsingCharacterRealmStatsException if attempting to add a stat when using character realm stats
 		 * @see setUseRealmStats()
 		 */
-		int addStat(rule::enums::StatType::Type stat);
+		int addStat(StatType::Type stat);
 
 		/**
 		 * @brief Set the stats that apply stat bonus to skills in the category
 		 * @param stats vector of stats whose bonus should be applied to skills category
 		 */
-		void setStats(std::vector<rule::enums::StatType::Type> stats) { stats_ = std::move(stats); }
+		void setStats(std::vector<StatType::Type> stats) { stats_ = std::move(stats); }
 
 		/**
 		 * @brief Gets the number of stats currently associated with the category
@@ -115,7 +117,7 @@ namespace rm::rule {
 		 * @return `true` if the stat was removed
 		 * @return `false` if the stat was not found or not removed
 		 */
-		bool removeStat(rule::enums::StatType::Type stat);
+		bool removeStat(StatType::Type stat);
 
 		/**
 		 * @brief Empties the list of stats associated with the category
@@ -129,7 +131,7 @@ namespace rm::rule {
 		 *
 		 * @return std::vector of stats
 		 */
-		const std::vector<rule::enums::StatType::Type>& stats() { return stats_; }
+		const std::vector<StatType::Type>& stats() { return stats_; }
 
 		/**
 		 * @brief Set whether to use the characters realm stats for determining the bonus
@@ -221,7 +223,7 @@ namespace rm::rule {
 		const SkillProgressionTypeData* skill_progression_{}; /**< How many bonus points each skill rank provides by default in skills in the category */
 		const SkillProgressionTypeData* skill_category_progression_{}; /**< How many bonus points each skill rank provides to the category */
 		std::string name_{}; /**< Name of the category as seen in-game */
-		std::vector<rule::enums::StatType::Type> stats_{}; /**< Stats providing a bonus to the category */
+		std::vector<StatType::Type> stats_{}; /**< Stats providing a bonus to the category */
 		bool use_realm_stats_{}; /**< Whether the realm stat of the character should determine the applicable stats */
 
 	};

@@ -2,6 +2,8 @@
 #include <CreatureBonusXpType.h>
 #include <table/BoundIntRowLookupTable.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule {
 
 	/**
@@ -16,21 +18,21 @@ namespace rm::rule {
 		 * @brief Get the index of the table column
 		 * @return int table column index
 		 */
-		int column(rule::enums::CreatureBonusXpType::Type match) const {
+		int column(CreatureBonusXpType::Type match) const {
 			switch (match) {
-			case rule::enums::CreatureBonusXpType::Type::kNone: return 0;
-			case rule::enums::CreatureBonusXpType::Type::kA: return 1;
-			case rule::enums::CreatureBonusXpType::Type::kB: return 2;
-			case rule::enums::CreatureBonusXpType::Type::kC: return 3;
-			case rule::enums::CreatureBonusXpType::Type::kD: return 4;
-			case rule::enums::CreatureBonusXpType::Type::kE: return 5;
-			case rule::enums::CreatureBonusXpType::Type::kF: return 6;
-			case rule::enums::CreatureBonusXpType::Type::kG: return 7;
-			case rule::enums::CreatureBonusXpType::Type::kH: return 8;
-			case rule::enums::CreatureBonusXpType::Type::kI: return 9;
-			case rule::enums::CreatureBonusXpType::Type::kJ: return 10;
-			case rule::enums::CreatureBonusXpType::Type::kK: return 11;
-			case rule::enums::CreatureBonusXpType::Type::kL: return 12;
+			case CreatureBonusXpType::Type::kNone: return 0;
+			case CreatureBonusXpType::Type::kA: return 1;
+			case CreatureBonusXpType::Type::kB: return 2;
+			case CreatureBonusXpType::Type::kC: return 3;
+			case CreatureBonusXpType::Type::kD: return 4;
+			case CreatureBonusXpType::Type::kE: return 5;
+			case CreatureBonusXpType::Type::kF: return 6;
+			case CreatureBonusXpType::Type::kG: return 7;
+			case CreatureBonusXpType::Type::kH: return 8;
+			case CreatureBonusXpType::Type::kI: return 9;
+			case CreatureBonusXpType::Type::kJ: return 10;
+			case CreatureBonusXpType::Type::kK: return 11;
+			case CreatureBonusXpType::Type::kL: return 12;
 			}
 			return 0;
 		}
@@ -43,7 +45,7 @@ namespace rm::rule {
 	 * This is a simple lookup table that takes a bonus XP code and a character level, returning the bonus XP awarded for killing or subduing an animal.
 	 * The bonus XP code is defined in the AnimalData class
 	 */
-	class CreatureBonusXpTable : public BoundIntRowLookupTable<TableColumnBonusXpCodeMatcher, rule::enums::CreatureBonusXpType::Type, int> {
+	class CreatureBonusXpTable : public BoundIntRowLookupTable<TableColumnBonusXpCodeMatcher, CreatureBonusXpType::Type, int> {
 	public:
 
 		/**

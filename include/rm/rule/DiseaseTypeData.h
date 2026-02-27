@@ -8,6 +8,8 @@
 #include <NumberRange.h>
 #include <DiseaseType.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule {
 
 	/**
@@ -38,16 +40,16 @@ namespace rm::rule {
 		 * @brief Set the type of disease
 		 * @param type DiseaseType::Type to set
 		 */
-		void setType(rule::enums::DiseaseType::Type type) {
+		void setType(DiseaseType::Type type) {
 			type_ = type;
-			name_ = rule::enums::DiseaseType::toString(type);
+			name_ = DiseaseType::toString(type);
 		}
 
 		/**
 		 * @brief Get the type of disease
 		 * @return DiseaseType::Type type of disease
 		 */
-		rule::enums::DiseaseType::Type type() const { return type_; }
+		DiseaseType::Type type() const { return type_; }
 
 		/**
 		 * @brief Set the transmission of the disease
@@ -78,26 +80,26 @@ namespace rm::rule {
 		 * @param severity DiseaseTypeData::Severity representing the severity of the symptoms caused by the disease.
 		 * @param symptoms String describing the symptoms caused by the disease based on the severity of the symptoms.
 		 */
-		void addSymptom(rule::enums::DiseasePoisonSeverityType::Type severity, std::string symptoms) { symptomsBySeverity_[severity] = std::move(symptoms); }
+		void addSymptom(DiseasePoisonSeverityType::Type severity, std::string symptoms) { symptomsBySeverity_[severity] = std::move(symptoms); }
 
 		/**
 		 * @brief Sets the symptoms for each severity level.
 		 * @param symptomsBySeverity A map associating each severity level with a string describing the symptoms caused by the disease based on the severity of the symptoms.
 		 */
-		void setSymptoms(std::map<rule::enums::DiseasePoisonSeverityType::Type, std::string> symptomsBySeverity) { symptomsBySeverity_ = std::move(symptomsBySeverity); }
+		void setSymptoms(std::map<DiseasePoisonSeverityType::Type, std::string> symptomsBySeverity) { symptomsBySeverity_ = std::move(symptomsBySeverity); }
 
 		/**
 		 * @brief Get the symptoms caused by the disease based on the severity of the symptoms.
 		 * @return Map associating each severity level with a string describing the symptoms caused by the disease based on the severity of the symptoms.
 		 */
-		const std::map<rule::enums::DiseasePoisonSeverityType::Type, std::string>& symptoms() const { return symptomsBySeverity_; }
+		const std::map<DiseasePoisonSeverityType::Type, std::string>& symptoms() const { return symptomsBySeverity_; }
 
 		/**
 		 * @brief Get the symptoms caused by the disease based on the severity of the symptoms.
 		 * @param severity DiseasePoisonSeverityType::Type representing the severity of the symptoms caused by the disease.
 		 * @return String describing the symptoms caused by the disease based on the severity of the symptoms.
 		 */
-		std::string symptoms(rule::enums::DiseasePoisonSeverityType::Type severity) const {
+		std::string symptoms(DiseasePoisonSeverityType::Type severity) const {
 			auto it = symptomsBySeverity_.find(severity);
 			if (it != symptomsBySeverity_.end()) {
 				return it->second;
@@ -107,11 +109,11 @@ namespace rm::rule {
 		}
 
 	private:
-		rule::enums::DiseaseType::Type type_{}; /**< The type of disease, used to determine where in the body the disease affects and the symptoms it causes. */
+		DiseaseType::Type type_{}; /**< The type of disease, used to determine where in the body the disease affects and the symptoms it causes. */
 		std::string name_{}; /**< The name of the disease type, used for flavour purposes. */
 		std::string transmission_{}; /**< String describing how the disease is transmitted, used for flavour purposes. */
 		std::string description_{}; /**< String describing how disease strikes. */
-		std::map<rule::enums::DiseasePoisonSeverityType::Type, std::string> symptomsBySeverity_{}; /**< Map of the symptoms caused by the disease based on the severity of the symptoms. */
+		std::map<DiseasePoisonSeverityType::Type, std::string> symptomsBySeverity_{}; /**< Map of the symptoms caused by the disease based on the severity of the symptoms. */
 	};
 
 } // namespace rm::rule

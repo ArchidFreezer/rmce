@@ -3,6 +3,8 @@
 #include <table/SpecialAttackTable.h>
 #include <NumberMatcherFactory.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule::parser {
 
 	void SpecialAttackTableDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
@@ -10,10 +12,10 @@ namespace rm::rule::parser {
 
 		datum.put("id", game_data.id());
 		datum.put("name", game_data.name());
-		datum.put("small", game_data.limit(rule::enums::AttackSizeType::kSmall));
-		datum.put("medium", game_data.limit(rule::enums::AttackSizeType::kMedium));
-		datum.put("large", game_data.limit(rule::enums::AttackSizeType::kLarge));
-		datum.put("huge", game_data.limit(rule::enums::AttackSizeType::kHuge));
+		datum.put("small", game_data.limit(AttackSizeType::kSmall));
+		datum.put("medium", game_data.limit(AttackSizeType::kMedium));
+		datum.put("large", game_data.limit(AttackSizeType::kLarge));
+		datum.put("huge", game_data.limit(AttackSizeType::kHuge));
 
 		int max_row{ 0 };
 
@@ -32,26 +34,26 @@ namespace rm::rule::parser {
 
 			prow.put("min", min);
 			prow.put("max", range.max());
-			prow.put("at1", game_data.cell(rule::enums::ArmourType::kAT1, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at2", game_data.cell(rule::enums::ArmourType::kAT2, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at3", game_data.cell(rule::enums::ArmourType::kAT3, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at4", game_data.cell(rule::enums::ArmourType::kAT4, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at5", game_data.cell(rule::enums::ArmourType::kAT5, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at6", game_data.cell(rule::enums::ArmourType::kAT6, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at7", game_data.cell(rule::enums::ArmourType::kAT7, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at8", game_data.cell(rule::enums::ArmourType::kAT8, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at9", game_data.cell(rule::enums::ArmourType::kAT9, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at10", game_data.cell(rule::enums::ArmourType::kAT10, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at11", game_data.cell(rule::enums::ArmourType::kAT11, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at12", game_data.cell(rule::enums::ArmourType::kAT12, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at13", game_data.cell(rule::enums::ArmourType::kAT13, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at14", game_data.cell(rule::enums::ArmourType::kAT14, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at15", game_data.cell(rule::enums::ArmourType::kAT15, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at16", game_data.cell(rule::enums::ArmourType::kAT16, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at17", game_data.cell(rule::enums::ArmourType::kAT17, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at18", game_data.cell(rule::enums::ArmourType::kAT18, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at19", game_data.cell(rule::enums::ArmourType::kAT19, rule::enums::AttackSizeType::kHuge, min));
-			prow.put("at20", game_data.cell(rule::enums::ArmourType::kAT20, rule::enums::AttackSizeType::kHuge, min));
+			prow.put("at1", game_data.cell(ArmourType::kAT1, AttackSizeType::kHuge, min));
+			prow.put("at2", game_data.cell(ArmourType::kAT2, AttackSizeType::kHuge, min));
+			prow.put("at3", game_data.cell(ArmourType::kAT3, AttackSizeType::kHuge, min));
+			prow.put("at4", game_data.cell(ArmourType::kAT4, AttackSizeType::kHuge, min));
+			prow.put("at5", game_data.cell(ArmourType::kAT5, AttackSizeType::kHuge, min));
+			prow.put("at6", game_data.cell(ArmourType::kAT6, AttackSizeType::kHuge, min));
+			prow.put("at7", game_data.cell(ArmourType::kAT7, AttackSizeType::kHuge, min));
+			prow.put("at8", game_data.cell(ArmourType::kAT8, AttackSizeType::kHuge, min));
+			prow.put("at9", game_data.cell(ArmourType::kAT9, AttackSizeType::kHuge, min));
+			prow.put("at10", game_data.cell(ArmourType::kAT10, AttackSizeType::kHuge, min));
+			prow.put("at11", game_data.cell(ArmourType::kAT11, AttackSizeType::kHuge, min));
+			prow.put("at12", game_data.cell(ArmourType::kAT12, AttackSizeType::kHuge, min));
+			prow.put("at13", game_data.cell(ArmourType::kAT13, AttackSizeType::kHuge, min));
+			prow.put("at14", game_data.cell(ArmourType::kAT14, AttackSizeType::kHuge, min));
+			prow.put("at15", game_data.cell(ArmourType::kAT15, AttackSizeType::kHuge, min));
+			prow.put("at16", game_data.cell(ArmourType::kAT16, AttackSizeType::kHuge, min));
+			prow.put("at17", game_data.cell(ArmourType::kAT17, AttackSizeType::kHuge, min));
+			prow.put("at18", game_data.cell(ArmourType::kAT18, AttackSizeType::kHuge, min));
+			prow.put("at19", game_data.cell(ArmourType::kAT19, AttackSizeType::kHuge, min));
+			prow.put("at20", game_data.cell(ArmourType::kAT20, AttackSizeType::kHuge, min));
 			mrows.push_back(std::make_pair("", prow));
 		}
 
@@ -69,26 +71,26 @@ namespace rm::rule::parser {
 
 			prow.put("min", min);
 			prow.put("max", range.max());
-			prow.put("at1", game_data.cell(rule::enums::ArmourType::kAT1, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at2", game_data.cell(rule::enums::ArmourType::kAT2, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at3", game_data.cell(rule::enums::ArmourType::kAT3, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at4", game_data.cell(rule::enums::ArmourType::kAT4, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at5", game_data.cell(rule::enums::ArmourType::kAT5, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at6", game_data.cell(rule::enums::ArmourType::kAT6, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at7", game_data.cell(rule::enums::ArmourType::kAT7, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at8", game_data.cell(rule::enums::ArmourType::kAT8, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at9", game_data.cell(rule::enums::ArmourType::kAT9, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at10", game_data.cell(rule::enums::ArmourType::kAT10, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at11", game_data.cell(rule::enums::ArmourType::kAT11, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at12", game_data.cell(rule::enums::ArmourType::kAT12, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at13", game_data.cell(rule::enums::ArmourType::kAT13, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at14", game_data.cell(rule::enums::ArmourType::kAT14, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at15", game_data.cell(rule::enums::ArmourType::kAT15, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at16", game_data.cell(rule::enums::ArmourType::kAT16, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at17", game_data.cell(rule::enums::ArmourType::kAT17, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at18", game_data.cell(rule::enums::ArmourType::kAT18, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at19", game_data.cell(rule::enums::ArmourType::kAT19, rule::enums::AttackSizeType::kHuge, min, min));
-			prow.put("at20", game_data.cell(rule::enums::ArmourType::kAT20, rule::enums::AttackSizeType::kHuge, min, min));
+			prow.put("at1", game_data.cell(ArmourType::kAT1, AttackSizeType::kHuge, min, min));
+			prow.put("at2", game_data.cell(ArmourType::kAT2, AttackSizeType::kHuge, min, min));
+			prow.put("at3", game_data.cell(ArmourType::kAT3, AttackSizeType::kHuge, min, min));
+			prow.put("at4", game_data.cell(ArmourType::kAT4, AttackSizeType::kHuge, min, min));
+			prow.put("at5", game_data.cell(ArmourType::kAT5, AttackSizeType::kHuge, min, min));
+			prow.put("at6", game_data.cell(ArmourType::kAT6, AttackSizeType::kHuge, min, min));
+			prow.put("at7", game_data.cell(ArmourType::kAT7, AttackSizeType::kHuge, min, min));
+			prow.put("at8", game_data.cell(ArmourType::kAT8, AttackSizeType::kHuge, min, min));
+			prow.put("at9", game_data.cell(ArmourType::kAT9, AttackSizeType::kHuge, min, min));
+			prow.put("at10", game_data.cell(ArmourType::kAT10, AttackSizeType::kHuge, min, min));
+			prow.put("at11", game_data.cell(ArmourType::kAT11, AttackSizeType::kHuge, min, min));
+			prow.put("at12", game_data.cell(ArmourType::kAT12, AttackSizeType::kHuge, min, min));
+			prow.put("at13", game_data.cell(ArmourType::kAT13, AttackSizeType::kHuge, min, min));
+			prow.put("at14", game_data.cell(ArmourType::kAT14, AttackSizeType::kHuge, min, min));
+			prow.put("at15", game_data.cell(ArmourType::kAT15, AttackSizeType::kHuge, min, min));
+			prow.put("at16", game_data.cell(ArmourType::kAT16, AttackSizeType::kHuge, min, min));
+			prow.put("at17", game_data.cell(ArmourType::kAT17, AttackSizeType::kHuge, min, min));
+			prow.put("at18", game_data.cell(ArmourType::kAT18, AttackSizeType::kHuge, min, min));
+			prow.put("at19", game_data.cell(ArmourType::kAT19, AttackSizeType::kHuge, min, min));
+			prow.put("at20", game_data.cell(ArmourType::kAT20, AttackSizeType::kHuge, min, min));
 			umrows.push_back(std::make_pair("", prow));
 		}
 
@@ -108,10 +110,10 @@ namespace rm::rule::parser {
 
 			SpecialAttackTable& table = factory().get<SpecialAttackTable>(id);
 			table.setName(name);
-			table.setLimit(rule::enums::AttackSizeType::kSmall, ptable.second.get<int>("small"));
-			table.setLimit(rule::enums::AttackSizeType::kMedium, ptable.second.get<int>("medium"));
-			table.setLimit(rule::enums::AttackSizeType::kLarge, ptable.second.get<int>("large"));
-			table.setLimit(rule::enums::AttackSizeType::kHuge, ptable.second.get<int>("huge"));
+			table.setLimit(AttackSizeType::kSmall, ptable.second.get<int>("small"));
+			table.setLimit(AttackSizeType::kMedium, ptable.second.get<int>("medium"));
+			table.setLimit(AttackSizeType::kLarge, ptable.second.get<int>("large"));
+			table.setLimit(AttackSizeType::kHuge, ptable.second.get<int>("huge"));
 
 			NumberMatcherFactory matchers;
 

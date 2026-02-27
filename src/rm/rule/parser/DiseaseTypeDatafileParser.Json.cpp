@@ -1,6 +1,8 @@
 #include <DiseaseTypeData.h>
 #include <DiseaseTypeDatafileParserJson.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule::parser {
 
 	void DiseaseTypeDatafileParserJson::parse() {
@@ -15,8 +17,8 @@ namespace rm::rule::parser {
 			DiseaseTypeData& ref = factory().get<DiseaseTypeData>(id);
 
 			// Set the type of poson based on the string value in the json file
-			rule::enums::DiseaseType::Type type;
-			rule::enums::DiseaseType::fromString(type_str, type);
+			DiseaseType::Type type;
+			DiseaseType::fromString(type_str, type);
 			ref.setType(type);
 
 			ref.setTransmission(v.second.get<std::string>("transmission"));
@@ -25,8 +27,8 @@ namespace rm::rule::parser {
 			// Severity symptoms
 			for (auto& severity_symptoms : v.second.get_child("severity-symptoms")) {
 				std::string severity_str = severity_symptoms.second.get<std::string>("severity");
-				rule::enums::DiseasePoisonSeverityType::Type severity;
-				rule::enums::DiseasePoisonSeverityType::fromString(severity_str, severity);
+				DiseasePoisonSeverityType::Type severity;
+				DiseasePoisonSeverityType::fromString(severity_str, severity);
 				std::string symptoms = severity_symptoms.second.get<std::string>("symptoms");
 				ref.addSymptom(severity, symptoms);
 			}
@@ -40,7 +42,7 @@ namespace rm::rule::parser {
 	void DiseaseTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 		DiseaseTypeData& game_data = factory().get<DiseaseTypeData>(id);
 		datum.put("id", game_data.id());
-		datum.put("type", rule::enums::DiseaseType::toString(game_data.type()));
+		datum.put("type", DiseaseType::toString(game_data.type()));
 		datum.put("transmission", game_data.transmission());
 		datum.put("description", game_data.description());
 
@@ -49,7 +51,7 @@ namespace rm::rule::parser {
 			pt::ptree tree{};
 			for (const auto& severity_symptoms : game_data.symptoms()) {
 				pt::ptree severity_symptoms_node;
-				severity_symptoms_node.put("severity", rule::enums::DiseasePoisonSeverityType::toString(severity_symptoms.first));
+				severity_symptoms_node.put("severity", DiseasePoisonSeverityType::toString(severity_symptoms.first));
 				severity_symptoms_node.put("symptoms", severity_symptoms.second);
 				tree.push_back(std::make_pair("", severity_symptoms_node));
 			}

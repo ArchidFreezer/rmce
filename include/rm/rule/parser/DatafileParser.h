@@ -5,6 +5,10 @@
 #include <GameRuleDataChoice.h>
 #include <GameRuleDataFactory.h>
 
+/**
+ * @namespace rm::rule::parser
+ * @brief Datafile parsers to (de)serialise game data to and from files
+ */
 namespace rm::rule::parser {
 
 	/**

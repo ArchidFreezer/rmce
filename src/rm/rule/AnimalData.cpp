@@ -2,6 +2,7 @@
 #include <Dice.h>
 #include <NumberMatcherFactory.h>
 
+using namespace rm::rule::enums;
 using rm::game::AnimalAttack;
 
 namespace rm::rule {
@@ -40,30 +41,30 @@ namespace rm::rule {
 
 	int AnimalData::hitsPerLevelDifference() const {
 		switch (constitutionVarianceType()) {
-		case rule::enums::CreatureConstitutionVarianceType::Type::kNone: return 0;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kA: return 1;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kB: return 2;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kC: return 3;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kD: return 5;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kE: return 8;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kF: return 10;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kG: return 12;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kH: return 15;
+		case CreatureConstitutionVarianceType::Type::kNone: return 0;
+		case CreatureConstitutionVarianceType::Type::kA: return 1;
+		case CreatureConstitutionVarianceType::Type::kB: return 2;
+		case CreatureConstitutionVarianceType::Type::kC: return 3;
+		case CreatureConstitutionVarianceType::Type::kD: return 5;
+		case CreatureConstitutionVarianceType::Type::kE: return 8;
+		case CreatureConstitutionVarianceType::Type::kF: return 10;
+		case CreatureConstitutionVarianceType::Type::kG: return 12;
+		case CreatureConstitutionVarianceType::Type::kH: return 15;
 		default: return 0;
 		}
 	}
 
 	int AnimalData::bonusExhaustionPoints() const {
 		switch (constitutionVarianceType()) {
-		case rule::enums::CreatureConstitutionVarianceType::Type::kNone:
-		case rule::enums::CreatureConstitutionVarianceType::Type::kA:
-		case rule::enums::CreatureConstitutionVarianceType::Type::kB:
-		case rule::enums::CreatureConstitutionVarianceType::Type::kC:
-		case rule::enums::CreatureConstitutionVarianceType::Type::kD: return 0;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kE: return 50;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kF: return 100;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kG: return 150;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kH: return 200;
+		case CreatureConstitutionVarianceType::Type::kNone:
+		case CreatureConstitutionVarianceType::Type::kA:
+		case CreatureConstitutionVarianceType::Type::kB:
+		case CreatureConstitutionVarianceType::Type::kC:
+		case CreatureConstitutionVarianceType::Type::kD: return 0;
+		case CreatureConstitutionVarianceType::Type::kE: return 50;
+		case CreatureConstitutionVarianceType::Type::kF: return 100;
+		case CreatureConstitutionVarianceType::Type::kG: return 150;
+		case CreatureConstitutionVarianceType::Type::kH: return 200;
 		default: return 0;
 		}
 	}
@@ -74,8 +75,8 @@ namespace rm::rule {
 
 		int d100_roll = archid::Dice(100).roll(false).result();
 		switch (constitutionVarianceType()) {
-		case rule::enums::CreatureConstitutionVarianceType::Type::kNone: return 0;
-		case rule::enums::CreatureConstitutionVarianceType::Type::kA: {
+		case CreatureConstitutionVarianceType::Type::kNone: return 0;
+		case CreatureConstitutionVarianceType::Type::kA: {
 			if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -5;
 			else if (number_matcher.matcher(2, 5)->matches(d100_roll)) return -4;
 			else if (number_matcher.matcher(6, 9)->matches(d100_roll)) return -3;
@@ -89,7 +90,7 @@ namespace rm::rule {
 			else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 5;
 			else return 0; // Should never be hit
 		}
-		case rule::enums::CreatureConstitutionVarianceType::Type::kB: {
+		case CreatureConstitutionVarianceType::Type::kB: {
 			if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -7;
 			else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -6;
 			else if (number_matcher.matcher(3, 4)->matches(d100_roll)) return -5;
@@ -107,7 +108,7 @@ namespace rm::rule {
 			else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 7;
 			else return 0; // Should never be hit
 		}
-		case rule::enums::CreatureConstitutionVarianceType::Type::kC: {
+		case CreatureConstitutionVarianceType::Type::kC: {
 			if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 			else if (number_matcher.matcher(2, 3)->matches(d100_roll)) return -7;
 			else if (number_matcher.matcher(4, 5)->matches(d100_roll)) return -6;
@@ -124,7 +125,7 @@ namespace rm::rule {
 			else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 5;
 			else return 0; // Should never be hit
 		}
-		case rule::enums::CreatureConstitutionVarianceType::Type::kD: {
+		case CreatureConstitutionVarianceType::Type::kD: {
 			if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 			else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -7;
 			else if (number_matcher.matcher(3, 3)->matches(d100_roll)) return -6;
@@ -144,7 +145,7 @@ namespace rm::rule {
 			else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 8;
 			else return 0; // Should never be hit
 		}
-		case rule::enums::CreatureConstitutionVarianceType::Type::kE: {
+		case CreatureConstitutionVarianceType::Type::kE: {
 			if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 			else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -7;
 			else if (number_matcher.matcher(3, 3)->matches(d100_roll)) return -6;
@@ -168,7 +169,7 @@ namespace rm::rule {
 			else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 12;
 			else return 0; // Should never be hit
 		}
-		case rule::enums::CreatureConstitutionVarianceType::Type::kF: {
+		case CreatureConstitutionVarianceType::Type::kF: {
 			if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 			else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -7;
 			else if (number_matcher.matcher(3, 3)->matches(d100_roll)) return -6;
@@ -193,7 +194,7 @@ namespace rm::rule {
 			else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 15;
 			else return 0; // Should never be hit
 		}
-		case rule::enums::CreatureConstitutionVarianceType::Type::kG: {
+		case CreatureConstitutionVarianceType::Type::kG: {
 			if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 			else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -7;
 			else if (number_matcher.matcher(3, 3)->matches(d100_roll)) return -6;
@@ -219,7 +220,7 @@ namespace rm::rule {
 			else if (number_matcher.matcher(100, 100)->matches(d100_roll)) return 20;
 			else return 0; // Should never be hit
 		}
-		case rule::enums::CreatureConstitutionVarianceType::Type::kH: {
+		case CreatureConstitutionVarianceType::Type::kH: {
 			if (number_matcher.matcher(0, 1)->matches(d100_roll)) return -8;
 			else if (number_matcher.matcher(2, 2)->matches(d100_roll)) return -7;
 			else if (number_matcher.matcher(3, 3)->matches(d100_roll)) return -6;

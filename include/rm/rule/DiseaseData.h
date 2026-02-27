@@ -6,6 +6,8 @@
 #include <LevelVarianceType.h>
 #include <DiseaseTypeData.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule {
 
 	/**
@@ -82,19 +84,19 @@ namespace rm::rule {
 		 * @brief Set the type of level variance to determine the actual level of an instance of this disease.
 		 * @param level_variance_type The type of level variance to determine the actual level of an instance of this disease.
 		 */
-		void setLevelVarianceType(rule::enums::LevelVarianceType::Type level_variance_type) { level_variance_type_ = level_variance_type; }
+		void setLevelVarianceType(LevelVarianceType::Type level_variance_type) { level_variance_type_ = level_variance_type; }
 
 		/**
 		 * @brief Get the type of level variance to determine the actual level of an instance of this disease.
 		 * @return The type of level variance to determine the actual level of an instance of this disease.
 		 */
-		rule::enums::LevelVarianceType::Type levelVarianceType() const { return level_variance_type_; }
+		LevelVarianceType::Type levelVarianceType() const { return level_variance_type_; }
 
 	private:
 		std::string name_{}; /**< The name of the disease type, used for flavour purposes. */
 		int average_level_{}; /**< The average level of the disease, used for determining the severity of the symptoms caused by the disease. */
 		const DiseaseTypeData* disease_type_data_{}; /**< Pointer to the DiseaseTypeData object that represents the type of disease. This is used to determine where in the body the disease affects and the symptoms it causes. */
-		rule::enums::LevelVarianceType::Type level_variance_type_{}; /**< The type of level variance to determine tha actual level of an instance of this disease. */
+		LevelVarianceType::Type level_variance_type_{}; /**< The type of level variance to determine tha actual level of an instance of this disease. */
 	};
 
 } // namespace rm::rule

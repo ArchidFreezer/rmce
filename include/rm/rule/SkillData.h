@@ -10,6 +10,8 @@
 #include <SkillActionType.h>
 #include <SkillCategoryData.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule {
 
 	/**
@@ -66,13 +68,13 @@ namespace rm::rule {
 		 * @brief Set the type of action type used when performing the skill
 		 * @param action_type SkillActionType::Type of the skill
 		 */
-		void setActionType(rule::enums::SkillActionType::Type action_type) { action_type_ = action_type; }
+		void setActionType(::SkillActionType::Type action_type) { action_type_ = action_type; }
 
 		/**
 		 * @brief Get the action type used when performign the skill
 		 * @return SkillActionType::Type of the skill
 		 */
-		rule::enums::SkillActionType::Type actionType() const { return action_type_; }
+		::SkillActionType::Type actionType() const { return action_type_; }
 
 		/**
 		 * @brief Example manoeuvres of various difficulties to aid the GM
@@ -222,7 +224,7 @@ namespace rm::rule {
 		 * @throws UsingCharacterRealmStatsException if attempting to add a stat when using character realm stats
 		 * @see setUseRealmStats()
 		 */
-		int addStat(rule::enums::StatType::Type stat);
+		int addStat(::StatType::Type stat);
 
 		/**
 		 * @brief Set the stats that apply a bonus to the skill
@@ -234,7 +236,7 @@ namespace rm::rule {
 		 * @throws UsingCharacterRealmStatsException if attempting to add a stat when using character realm stats
 		 * @see setUseRealmStats()
 		 */
-		void setStats(std::vector<rule::enums::StatType::Type> stats) { stats_ = std::move(stats); }
+		void setStats(std::vector<::StatType::Type> stats) { stats_ = std::move(stats); }
 
 		/**
 		 * @brief Gets the number of stats currently associated with the category
@@ -254,7 +256,7 @@ namespace rm::rule {
 		 * @return `true` if the stat was removed
 		 * @return `false` if the stat was not found or not removed
 		 */
-		bool removeStat(rule::enums::StatType::Type stat);
+		bool removeStat(::StatType::Type stat);
 
 		/**
 		 * @brief Empties the list of stats associated with the category
@@ -268,7 +270,7 @@ namespace rm::rule {
 		 *
 		 * @return std::vector of stats
 		 */
-		const std::vector<rule::enums::StatType::Type>& stats() { return stats_; }
+		const std::vector<::StatType::Type>& stats() { return stats_; }
 
 		/**
 		 * @brief Number of exhaustion points expended when the skill is used at a normal pace
@@ -327,7 +329,7 @@ namespace rm::rule {
 		std::string name_{}; /**< Name of the skill as seen in-game */
 		std::string description_{}; /**< What the skill is used for */
 		const BookData* book_{}; /** Game rule book that the skill appears in */
-		rule::enums::SkillActionType::Type action_type_{}; /**< Type of skill action performed when usng the skill */
+		::SkillActionType::Type action_type_{}; /**< Type of skill action performed when usng the skill */
 		std::string difficulty_summary_{}; /**< Description of the difficulties of some use cases using the skill */
 		std::string notes_{}; /**< Additional informatio on the skill and its usage */
 		bool restricted_{}; /**< Is the SkillDevelopmentType normally kRestricted */
@@ -335,7 +337,7 @@ namespace rm::rule {
 		bool can_specialise_{}; /** Whether the character can select a speciality for the skill */
 		bool mandatory_subcategory_{}; /**< Whether the character must select a specific type of the this skills focus */
 		std::set<std::string> subcategories_{}; /**< Definition of the types of subcategories the skill has */
-		std::vector<rule::enums::StatType::Type> stats_{}; /**< Stats providing a bonus to the skill */
+		std::vector<::StatType::Type> stats_{}; /**< Stats providing a bonus to the skill */
 		float exhaustion_cost_{}; /** The number of exhaution points expended per round when using the skill at normal pace */
 		float distance_multiplier_{}; /** Multiplier for the distance moved when using this skill */
 	};

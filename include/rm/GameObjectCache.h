@@ -12,6 +12,13 @@
 using rm::game::game_object;
 using rm::game::GameObject;
 
+/**
+ * @namespace rm
+ * @brief All elements in the rm library are contained within this namespace
+ * 
+ * The namespace is used for all classes and elemnts in the rm library and is uses to avoid naming collisions with other libraries and to group related classes and functions together.
+ * The namespace is named after the library to make it clear that the classes and functions belong to the rm library.
+ */
 namespace rm {
 
 	/**

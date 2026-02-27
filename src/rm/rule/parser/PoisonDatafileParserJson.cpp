@@ -2,6 +2,8 @@
 #include <PoisonDatafileParserJson.h>
 #include <PoisonTypeData.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule::parser {
 
 	void PoisonDatafileParserJson::parse() {
@@ -25,8 +27,8 @@ namespace rm::rule::parser {
 			ref.setAverageLevel(v.second.get<int>("level"));
 
 			// Get the level variance type based on the string value in the json file and set it
-			rule::enums::LevelVarianceType::Type level_variance_type{};
-			rule::enums::LevelVarianceType::fromString(v.second.get<std::string>("level-variance"), level_variance_type);
+			LevelVarianceType::Type level_variance_type{};
+			LevelVarianceType::fromString(v.second.get<std::string>("level-variance"), level_variance_type);
 			ref.setLevelVarianceType(level_variance_type);
 
 
@@ -42,7 +44,7 @@ namespace rm::rule::parser {
 		datum.put("name", game_data.name());
 		datum.put("type", game_data.type().id());
 		datum.put("level", game_data.averageLevel());
-		datum.put("level-variance", rule::enums::LevelVarianceType::toString(game_data.levelVarianceType()));
+		datum.put("level-variance", LevelVarianceType::toString(game_data.levelVarianceType()));
 	}
 
 } // namespace rm::rule::parser

@@ -17,6 +17,8 @@
 #include <GameRuleDataChoice.h>
 #include <StatType.h>
 
+using namespace rm::rule::enums;
+
 using rm::game::character::LanguageAbility;
 using rm::game::character::SkillDevelopmentCost;
 
@@ -144,7 +146,7 @@ namespace rm::rule {
 		 *
 		 * @param size CreatureSizeType::Type of the race
 		 */
-		void setSize(rule::enums::CreatureSizeType::Type size) { size_ = size; }
+		void setSize(CreatureSizeType::Type size) { size_ = size; }
 
 		/**
 		 * @brief Get the size of the race
@@ -154,19 +156,19 @@ namespace rm::rule {
 		 *
 		 * @return CreatureSizeType::Type of the race
 		 */
-		rule::enums::CreatureSizeType::Type size() const { return size_; }
+		CreatureSizeType::Type size() const { return size_; }
 
 		/**
 		 * @brief Set the critical table type used for attacks against this race
 		 * @param critical_table_type CriticalTableType::Type to resolve critical rolls against
 		 */
-		void setCriticalTableType(rule::enums::CriticalTableType::Type critical_table_type) { critical_table_type_ = critical_table_type; }
+		void setCriticalTableType(CriticalTableType::Type critical_table_type) { critical_table_type_ = critical_table_type; }
 
 		/**
 		 * @brief Set the critical table type used for attacks against this race
 		 * @return CriticalTableType::Type to resolve critical rolls against
 		 */
-		rule::enums::CriticalTableType::Type criticalTableType() const { return critical_table_type_; }
+		CriticalTableType::Type criticalTableType() const { return critical_table_type_; }
 
 		/**
 		 * @brief Sets the relative rate that this race recovers from injuries
@@ -619,32 +621,32 @@ namespace rm::rule {
 		 * @param stat StatType::Type to set the bonus for
 		 * @param bonus value of bonus
 		 */
-		void setStatBonus(rule::enums::StatType::Type stat, int bonus) { stat_bonuses_.emplace(stat, bonus); }
+		void setStatBonus(StatType::Type stat, int bonus) { stat_bonuses_.emplace(stat, bonus); }
 
 		/**
 		 * @brief Sets the stat bonuses by replacing the current stat bonuses with the provided map.
 		 * @param stat_bonuses A map containing stat types and their corresponding bonus values to be set.
 		 */
-		void setStatBonuses(std::map<rule::enums::StatType::Type, int> stat_bonuses) { stat_bonuses_ = std::move(stat_bonuses); }
+		void setStatBonuses(std::map<StatType::Type, int> stat_bonuses) { stat_bonuses_ = std::move(stat_bonuses); }
 
 		/**
 		 * @brief Gets a reference to the map of stat bonuses.
 		 * @return A reference to the map containing stat type keys and their corresponding integer bonus values.
 		 */
-		std::map<rule::enums::StatType::Type, int>& statBonuses() { return stat_bonuses_; }
+		std::map<StatType::Type, int>& statBonuses() { return stat_bonuses_; }
 
 		/**
 		 * @brief Get the bonus that the race provides to a stat
 		 * @param stat StatType::Type to get the bonus for
 		 * @return bonus value
 		 */
-		int statBonus(rule::enums::StatType::Type stat) const { return stat_bonuses_.count(stat) ? stat_bonuses_.at(stat) : 0; }
+		int statBonus(StatType::Type stat) const { return stat_bonuses_.count(stat) ? stat_bonuses_.at(stat) : 0; }
 
 		/**
 		 * @brief Gets a container with the stats that the race has a bonus for
 		 * @return std::set of StatType::Type with bonuses
 		 */
-		const std::set<rule::enums::StatType::Type> statsWithBonus() const {
+		const std::set<StatType::Type> statsWithBonus() const {
 			auto keys = std::views::keys(stat_bonuses_);
 			return { keys.begin(), keys.end() };
 		}
@@ -929,8 +931,8 @@ namespace rm::rule {
 		std::string description_{}; /**< General description of the race */
 		std::optional<const BookData*> book_{ std::nullopt }; /**< Book that the race is described in */
 		bool high_culture_{ true }; /**< Whether the race has developed artistic and intellectual pursuits */
-		rule::enums::CreatureSizeType::Type size_{ rule::enums::CreatureSizeType::Type::kMedium }; /**< Size of unarmed attacks made by the race */
-		rule::enums::CriticalTableType::Type critical_table_type_{ rule::enums::CriticalTableType::Type::kNormal }; /**< The type of critical table attacks on this race are rolled against */
+		CreatureSizeType::Type size_{ CreatureSizeType::Type::kMedium }; /**< Size of unarmed attacks made by the race */
+		CriticalTableType::Type critical_table_type_{ CriticalTableType::Type::kNormal }; /**< The type of critical table attacks on this race are rolled against */
 		float recovery_multipler_{ 1.0f }; /**< Multiplier to standard healing recovery rates */
 		int num_background_options_{}; /**< Number of background options members of this race have */
 		int exhaustion_bonus_{ 0 }; /**< Bonus exhaustion points the race has */
@@ -951,7 +953,7 @@ namespace rm::rule {
 		const SkillProgressionTypeData* mentalism_progression_{}; /**< Skill progression for mentalism power point ranks */
 		std::map<std::string, const LanguageAbility> starting_languages_{}; /**< Language ranks that members of the race learn prior to their adolescence */
 		std::map<std::string, const LanguageAbility> adolescent_languages_{}; /**< Language ranks available to members of the race during adolescence */
-		std::map<rule::enums::StatType::Type, int> stat_bonuses_{}; /**< Racial stats bonuses */
+		std::map<StatType::Type, int> stat_bonuses_{}; /**< Racial stats bonuses */
 		std::set<SubcategoriedSkillData> everyman_skills_{}; /**< Skills that are considered everyman for the race */
 		std::set<SubcategoriedSkillData> restricted_skills_{}; /**< Skills that are considered restricted for the race */
 		std::set<const SkillCategoryData*> everyman_skill_categories_{}; /**< Skill categories that are considered everyman for the race */

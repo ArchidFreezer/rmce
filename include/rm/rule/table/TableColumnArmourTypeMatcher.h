@@ -1,6 +1,8 @@
 #pragma once
 #include <ArmourType.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule {
 
 	/**
@@ -15,8 +17,8 @@ namespace rm::rule {
 		 * @brief Get the index of the table column
 		 * @return int table column index
 		 */
-		int column(rule::enums::ArmourType::Type match) const {
-			using rule::enums::ArmourType::Type;
+		int column(ArmourType::Type match) const {
+			using ArmourType::Type;
 			switch (match) {
 			case Type::kAT1: return 0;
 			case Type::kAT2: return 1;

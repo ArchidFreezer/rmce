@@ -3,6 +3,11 @@
 #include "Random.h"
 #include <stdexcept>
 
+/**
+ * @namespace archid
+ * 
+ * Contains utility classes and functions related to dice rolling, string manipulation and random number generation.
+ */
 namespace archid {
 
 	/**

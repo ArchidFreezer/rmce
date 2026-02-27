@@ -3,6 +3,8 @@
 #include <SpellListDatafileParserJson.h>
 #include <SpellListType.h>
 
+using namespace rm::rule::enums;
+
 namespace rm::rule::parser {
 
 	void SpellListDatafileParserJson::parse() {
@@ -23,12 +25,12 @@ namespace rm::rule::parser {
 			datum.setIsSummoning(v.second.get<bool>("summoning"));
 
 			// Get the spell list type
-			std::optional<rule::enums::SpellListType::Type> type = rule::enums::SpellListType::fromString(v.second.get<std::string>("type"));
+			std::optional<SpellListType::Type> type = SpellListType::fromString(v.second.get<std::string>("type"));
 			if (type) datum.setType(type.value());
 
 			// Get the spell power realms
 			for (const auto& realm_tree : v.second.get_child("realms")) {
-				std::optional<rule::enums::RealmType::Type> realm = rule::enums::RealmType::fromString(realm_tree.second.get_value<std::string>());
+				std::optional<RealmType::Type> realm = RealmType::fromString(realm_tree.second.get_value<std::string>());
 				if (realm) datum.addRealm(realm.value());
 			}
 
@@ -44,16 +46,16 @@ namespace rm::rule::parser {
 		datum.put("id", game_data.id());
 		datum.put("name", game_data.name());
 		datum.put("book", game_data.book().value()->id());
-		datum.put("type", rule::enums::SpellListType::toString(game_data.type()));
+		datum.put("type", SpellListType::toString(game_data.type()));
 		datum.put("evil", game_data.isEvil());
 		datum.put("summoning", game_data.isSummoning());
 
 		// Get the container tree for the realms
 		pt::ptree realms_tree{};
-		for (rule::enums::RealmType::Type realm : game_data.realms()) {
+		for (RealmType::Type realm : game_data.realms()) {
 			// Get the realm container
 			pt::ptree realm_tree{};
-			realm_tree.put("", rule::enums::RealmType::toString(realm));
+			realm_tree.put("", RealmType::toString(realm));
 			realms_tree.push_back(std::make_pair("", realm_tree));
 		}
 		datum.push_back(std::make_pair("realms", realms_tree));
