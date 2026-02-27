@@ -77,18 +77,18 @@ public:
 	 */
 	bool operator==(const GameObject& other) const { return (id_ == other.id_); }
 
-
-private:
-	boost::uuids::uuid id_; // Unique tag to ensure that each object has a unique identifier
-
+protected:
 	/**
 	 * @brief Default constructor
-	 * 
+	 *
 	 * This is private to ensure that the factory class is used to create objects
-	 * 
+	 *
 	 * Sets the unique identifier for the object to a randomly generated UUID. This ensures that each object has a unique identifier without requiring the caller to provide one.
 	 */
 	GameObject() : id_{ boost::uuids::random_generator()() } {};
+
+private:
+	boost::uuids::uuid id_; // Unique tag to ensure that each object has a unique identifier
 
 	/**
 	 * @brief Default copy constructor for GameObject.
