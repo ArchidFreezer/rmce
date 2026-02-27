@@ -25,7 +25,7 @@ else()
 endif()
 
 # Build the libraries
-add_subdirectory("src/archidutils")
+add_subdirectory("src/archid")
 add_subdirectory("src/rm")
 
 # Build the main executables
