@@ -1,6 +1,6 @@
 #include <RaceDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void RaceDatafileParserJson::parse() {
 		std::cout << "Loading Race data ... ";
@@ -171,4 +171,4 @@ namespace rm {
 
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

@@ -4,7 +4,7 @@
 #include <GameRuleDataCache.h>
 #include <BookData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class BookDatafileParserJson
@@ -62,4 +62,4 @@ namespace rm {
 		void parse() override;
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

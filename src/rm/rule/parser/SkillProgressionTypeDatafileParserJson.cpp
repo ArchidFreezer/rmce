@@ -1,7 +1,7 @@
 #include <SkillProgressionTypeData.h>
 #include <SkillProgressionTypeDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void SkillProgressionTypeDatafileParserJson::parse() {
 		std::cout << "Loading SkillProgressionTypeData data ..." << std::endl;
@@ -36,4 +36,4 @@ namespace rm {
 		datum.put("remaining", game_data.remaining());
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

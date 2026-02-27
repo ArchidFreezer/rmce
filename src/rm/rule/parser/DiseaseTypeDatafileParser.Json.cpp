@@ -1,7 +1,7 @@
 #include <DiseaseTypeData.h>
 #include <DiseaseTypeDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void DiseaseTypeDatafileParserJson::parse() {
 		std::cout << "Loading DiseaseType data ..." << std::endl;
@@ -57,4 +57,4 @@ namespace rm {
 		}
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

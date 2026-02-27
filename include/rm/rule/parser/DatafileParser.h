@@ -5,7 +5,7 @@
 #include <GameRuleDataChoice.h>
 #include <GameRuleDataFactory.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @brief Exception thrown if a call is made to read from a file when the filename has not been set
@@ -118,4 +118,4 @@ namespace rm {
 
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

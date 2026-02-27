@@ -2,7 +2,7 @@
 #include <PoisonDatafileParserJson.h>
 #include <PoisonTypeData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void PoisonDatafileParserJson::parse() {
 		std::cout << "Loading Poison data ..." << std::endl;
@@ -45,4 +45,4 @@ namespace rm {
 		datum.put("level-variance", LevelVarianceType::toString(game_data.levelVarianceType()));
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

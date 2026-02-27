@@ -2,7 +2,7 @@
 #include <CultureData.h>
 #include <CultureDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void CultureDatafileParserJson::parse() {
 		std::cout << "Loading Culture data ..." << std::endl;
@@ -97,4 +97,4 @@ namespace rm {
 		}
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

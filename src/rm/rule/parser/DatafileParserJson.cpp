@@ -1,6 +1,6 @@
 #include <DatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void DatafileParserJson::read(const std::string& filename) {
 
@@ -122,4 +122,4 @@ namespace rm {
 		return tree;
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

@@ -2,7 +2,7 @@
 #include <CreaturePaceData.h>
 #include <CreaturePaceDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void CreaturePaceDatafileParserJson::parse() {
 		std::cout << "Loading CreaturePace data ..." << std::endl;
@@ -39,4 +39,4 @@ namespace rm {
 		datum.put("manoeuvre-difficulty", toString(game_data.manoeuvreDifficultyType()));
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

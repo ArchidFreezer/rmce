@@ -2,7 +2,7 @@
 #include <PoisonTypeData.h>
 #include <PoisonTypeDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void PoisonTypeDatafileParserJson::parse() {
 		std::cout << "Loading PoisonType data ..." << std::endl;
@@ -83,4 +83,4 @@ namespace rm {
 		}
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

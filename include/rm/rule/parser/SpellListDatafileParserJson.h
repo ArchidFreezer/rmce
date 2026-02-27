@@ -4,7 +4,7 @@
 #include <GameRuleDataCache.h>
 #include <SpellListData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class SpellListDatafileParserJson
@@ -61,4 +61,4 @@ namespace rm {
 		void parse() override;
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

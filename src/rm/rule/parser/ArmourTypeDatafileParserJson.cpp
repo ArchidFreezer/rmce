@@ -2,7 +2,7 @@
 #include <ArmourTypeData.h>
 #include <ArmourTypeDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void ArmourTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 		ArmourTypeData& game_data = factory().get<ArmourTypeData>(id);
@@ -56,4 +56,4 @@ namespace rm {
 		std::cout << " done" << std::endl;
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

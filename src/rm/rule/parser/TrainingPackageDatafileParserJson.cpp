@@ -1,7 +1,7 @@
 #include <EnumChoice.h>
 #include <TrainingPackageDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void TrainingPackageDatafileParserJson::parse() {
 		std::cout << "Loading TrainingPackage data ... ";
@@ -524,4 +524,4 @@ namespace rm {
 		return choice_tree;
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

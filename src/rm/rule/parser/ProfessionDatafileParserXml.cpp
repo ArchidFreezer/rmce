@@ -2,7 +2,7 @@
 #include <ProfessionDatafileParserXml.h>
 #include <SkillDevelopmentType.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void ProfessionDatafileParserXml::parse() {
 		std::cout << "Loading Profession data ... ";
@@ -236,4 +236,4 @@ namespace rm {
 		}
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

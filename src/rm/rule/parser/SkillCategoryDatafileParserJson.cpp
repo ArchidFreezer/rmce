@@ -2,7 +2,7 @@
 #include <SkillProgressionTypeData.h>
 #include <StatType.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void SkillCategoryDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 		SkillCategoryData& game_data = factory().get<SkillCategoryData>(id);
@@ -57,4 +57,4 @@ namespace rm {
 		}
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

@@ -4,7 +4,7 @@
 #include <GameRuleDataCache.h>
 #include <ProfessionData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class ProfessionDatafileParserJson
@@ -61,4 +61,4 @@ namespace rm {
 		void parse() override;
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

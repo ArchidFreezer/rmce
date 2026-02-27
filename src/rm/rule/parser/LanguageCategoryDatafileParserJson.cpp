@@ -1,7 +1,7 @@
 #include <LanguageCategoryData.h>
 #include <LanguageCategoryDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void LanguageCategoryDatafileParserJson::parse() {
 		std::cout << "Loading Language category data ..." << std::endl;
@@ -25,4 +25,4 @@ namespace rm {
 		datum.put("name", game_data.name());
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

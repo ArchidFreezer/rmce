@@ -2,7 +2,7 @@
 #include <iostream>
 #include <DatafileParserBoost.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class DatafileParserXml
@@ -61,4 +61,4 @@ namespace rm {
 		std::string root_node_{}; /**< Key of the root node of the json file */
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

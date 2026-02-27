@@ -1,6 +1,6 @@
 #include <DatafileParserXml.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void DatafileParserXml::read(const std::string& filename) {
 
@@ -18,4 +18,4 @@ namespace rm {
 
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

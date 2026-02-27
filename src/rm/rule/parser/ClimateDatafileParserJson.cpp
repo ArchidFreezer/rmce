@@ -1,7 +1,7 @@
 #include <ClimateData.h>
 #include <ClimateDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void ClimateDatafileParserJson::parse() {
 		std::cout << "Loading Climate data ..." << std::endl;
@@ -40,4 +40,4 @@ namespace rm {
 		}
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

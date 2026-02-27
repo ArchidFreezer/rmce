@@ -5,7 +5,7 @@
 #include <boost/property_tree/json_parser.hpp>
 #include <DatafileParser.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	namespace pt = boost::property_tree;
 
@@ -110,4 +110,4 @@ namespace rm {
 		tree.push_back(std::make_pair("options", options_tree));
 	}
 
-}
+} // namespace rm::rule::parser

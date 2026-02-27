@@ -1,7 +1,7 @@
 #include <SkillDatafileParserJson.h>
 #include <StatType.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void SkillDatafileParserJson::parse() {
 		std::cout << "Loading Skill data ... ";
@@ -77,4 +77,4 @@ namespace rm {
 		datum.put("distance-multiplier", game_data.distanceMultiplier());
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

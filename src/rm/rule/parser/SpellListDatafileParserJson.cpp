@@ -3,7 +3,7 @@
 #include <SpellListDatafileParserJson.h>
 #include <SpellListType.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void SpellListDatafileParserJson::parse() {
 		std::cout << "Loading Spell List data ..." << std::endl;
@@ -59,4 +59,4 @@ namespace rm {
 		datum.push_back(std::make_pair("realms", realms_tree));
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

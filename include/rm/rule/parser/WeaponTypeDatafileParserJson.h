@@ -4,7 +4,7 @@
 #include <GameRuleDataCache.h>
 #include <WeaponTypeData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class WeaponTypeDatafileParserJson
@@ -61,4 +61,4 @@ namespace rm {
 		void parse() override;
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

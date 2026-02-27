@@ -7,7 +7,7 @@
 #include <SkillDevelopmentType.h>
 #include <StatType.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class DatafileParserJson
@@ -1120,4 +1120,4 @@ namespace rm {
 		return datum;
 	}
 
-} // namespace parser
+} // namespace rm::rule::parser

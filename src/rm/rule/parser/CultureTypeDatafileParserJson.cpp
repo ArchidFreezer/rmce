@@ -1,6 +1,6 @@
 #include <CultureTypeDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void CultureTypeDatafileParserJson::parse() {
 		std::cout << "Loading CultureType data ... " << std::endl;
@@ -138,4 +138,4 @@ namespace rm {
 
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

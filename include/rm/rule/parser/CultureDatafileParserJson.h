@@ -4,7 +4,7 @@
 #include <GameRuleDataCache.h>
 #include <CultureData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class CultureDatafileParserJson
@@ -60,4 +60,4 @@ namespace rm {
 		void parse() override;
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

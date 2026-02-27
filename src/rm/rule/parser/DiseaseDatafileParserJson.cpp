@@ -2,7 +2,7 @@
 #include <DiseaseDatafileParserJson.h>
 #include <DiseaseTypeData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void DiseaseDatafileParserJson::parse() {
 		std::cout << "Loading Disease data ..." << std::endl;
@@ -45,4 +45,4 @@ namespace rm {
 		datum.put("level-variance", LevelVarianceType::toString(game_data.levelVarianceType()));
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

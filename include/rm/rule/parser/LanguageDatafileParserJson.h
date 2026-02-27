@@ -4,7 +4,7 @@
 #include <GameRuleDataCache.h>
 #include <LanguageData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class LanguageDatafileParserJson
@@ -60,4 +60,4 @@ namespace rm {
 		void parse() override;
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

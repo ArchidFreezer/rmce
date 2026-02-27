@@ -7,7 +7,7 @@
 #include <table/TableRowGameRuleDataMatcher.h>
 #include <table/TrainingPackageCostTable.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void TrainingPackageCostTableDatafileParser::read(const std::string& filename) {
 		// Read the file and store the data in the cache
@@ -83,4 +83,4 @@ namespace rm {
 		}
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

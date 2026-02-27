@@ -1,6 +1,6 @@
 #include <ProfessionDatefileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void ProfessionDatafileParserJson::parse() {
 		std::cout << "Loading Profession data ... ";
@@ -195,4 +195,4 @@ namespace rm {
 
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

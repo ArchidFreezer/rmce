@@ -4,7 +4,7 @@
 #include <GameRuleDataCache.h>
 #include <TrainingPackageData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class TrainingPackageDatafileParserJson
@@ -195,4 +195,4 @@ namespace rm {
 		const pt::ptree getSkillGroupCategoryAndSkillRankChoicesTree(TrainingPackageData& game_data);
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

@@ -3,7 +3,7 @@
 #include <table/SpecialAttackTable.h>
 #include <NumberMatcherFactory.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void SpecialAttackTableDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 		SpecialAttackTable& game_data = factory().get<SpecialAttackTable>(id);
@@ -141,4 +141,4 @@ namespace rm {
 		}
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

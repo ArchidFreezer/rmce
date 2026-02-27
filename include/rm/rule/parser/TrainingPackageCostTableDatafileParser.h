@@ -3,7 +3,7 @@
 #include <string_view>
 #include <DatafileParser.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class TrainingPackageCostTableDatafileParser
@@ -42,4 +42,4 @@ namespace rm {
 
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

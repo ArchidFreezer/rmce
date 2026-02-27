@@ -2,7 +2,7 @@
 #include <LanguageDatafileParserJson.h>
 #include <LanguageDialectData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void LanguageDatafileParserJson::parse() {
 		std::cout << "Loading Language data ..." << std::endl;
@@ -44,4 +44,4 @@ namespace rm {
 		datum.put("isSomantic", game_data.isSomantic());
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

@@ -4,7 +4,7 @@
 #include <GameRuleDataCache.h>
 #include <DiseaseData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class DiseaseDatafileParserJson
@@ -60,4 +60,4 @@ namespace rm {
 		void parse() override;
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

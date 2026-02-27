@@ -1,7 +1,7 @@
 #include <NumberMatcherFactory.h>
 #include <WeaponTypeDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void WeaponTypeDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
 		WeaponTypeData& game_data = factory().get<WeaponTypeData>(id);
@@ -110,4 +110,4 @@ namespace rm {
 
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

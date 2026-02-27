@@ -1,7 +1,7 @@
 #include <BookData.h>
 #include <BookDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void BookDatafileParserJson::parse() {
 		std::cout << "Loading Book data ..." << std::endl;
@@ -37,4 +37,4 @@ namespace rm {
 		datum.put("isbn", game_data.isbn());
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

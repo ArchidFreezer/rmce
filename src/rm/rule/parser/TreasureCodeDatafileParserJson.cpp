@@ -1,6 +1,6 @@
 #include <TreasureCodeDatafileParserJson.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 
 	void TreasureCodeDatafileParserJson::populateDatum(std::string& id, pt::ptree& datum) {
@@ -34,4 +34,4 @@ namespace rm {
 		}
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser

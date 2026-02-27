@@ -4,7 +4,7 @@
 #include <GameRuleDataCache.h>
 #include <AnimalData.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	/**
 	 * @class AnimalDatafileParserJson
@@ -95,4 +95,4 @@ namespace rm {
 
 	};
 
-} // namespace rm
+} // namespace rm::rule::parser

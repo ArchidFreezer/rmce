@@ -4,7 +4,7 @@
 #include <table/CreatureBonusXpTable.h>
 #include <table/LevelVarianceTable.h>
 
-namespace rm {
+namespace rm::rule::parser {
 
 	void AnimalDatafileParserJson::parse() {
 		std::cout << "Loading Animal data ..." << std::endl;
@@ -472,4 +472,4 @@ namespace rm {
 		table.addRow(number_matcher.matcher(301, 350), TableRow<int>().addCell(0).addCell(4).addCell(6).addCell(8).addCell(11).addCell(12).addCell(13).addCell(17).addCell(4));
 	}
 
-} // namespace rm
+} // namespace rm::rule::parser
