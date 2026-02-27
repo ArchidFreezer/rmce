@@ -3,7 +3,7 @@
 
 #include <StringUtils.h>
 #include <TrainingPackageCostTableDatafileParser.h>
-#include <table/GameRuleDataMatcherFactory.h>
+#include <GameRuleDataMatcherFactory.h>
 #include <table/TableRowGameRuleDataMatcher.h>
 #include <table/TrainingPackageCostTable.h>
 

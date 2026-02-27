@@ -1,4 +1,4 @@
-#include <table/GameRuleDataMatcherFactory.h>
+#include <GameRuleDataMatcherFactory.h>
 
 const TableRowGameRuleDataMatcher* GameRuleDataMatcherFactory::matcher(const GameRuleData* game_data) {
 	std::lock_guard<std::mutex> lock(mutex_);

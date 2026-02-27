@@ -12,7 +12,7 @@ target_compile_features(dataload_test PRIVATE cxx_std_20)
 target_include_directories(dataload_test PUBLIC "${PROJECT_SOURCE_DIR}/src")
 target_link_libraries(
   dataload_test
-  archidutils ruledata dataparsers gameobject
+  archid rm
   GTest::gtest_main
 )
 
