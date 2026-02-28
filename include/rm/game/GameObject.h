@@ -15,24 +15,6 @@
  */
 namespace rm::game {
 
-	// Forward declaration of GameObject to avoid circular dependency in the concept definition
-	class GameObject;
-
-	/**
-	 * @brief Concept that ensures that a templated type is derived from the GameObject class
-	 *
-	 * It is used when templating a class or method where it may be used as follows
-	 *
-	 * @code
-	 * template <game_object T>
-	 * void someFunction(T obj) {
-	 *   // do something with obj
-	 * }
-	 * @endcode
-	 */
-	template<class T>
-	concept game_object = std::is_base_of<GameObject, T>::value;
-
 	/**
 	 * @class GameObject
 	 *
@@ -43,7 +25,7 @@ namespace rm::game {
 	 * Creation of these objects is through a factory class that has members to create both persistent objects that will be serialised and transient objects that will not be serialised.
 	 * @see GameObjectFactory
 	 */
-	class GameObject : rm::Persistent {
+	class GameObject : public rm::Persistent {
 		friend class GameObjectFactory; // Allow the factory to access the private members of the class to set the unique identifier when creating objects
 
 	public:
@@ -117,5 +99,20 @@ namespace rm::game {
 		 */
 		void setId(const std::string& id) { id_ = id; }
 	};
+
+	/**
+	 * @brief Concept that ensures that a templated type is derived from the GameObject class
+	 *
+	 * It is used when templating a class or method where it may be used as follows
+	 *
+	 * @code
+	 * template <game_object T>
+	 * void someFunction(T obj) {
+	 *   // do something with obj
+	 * }
+	 * @endcode
+	 */
+	template<class T>
+	concept game_object = std::is_base_of<GameObject, T>::value;
 
 } // namespace rm::game

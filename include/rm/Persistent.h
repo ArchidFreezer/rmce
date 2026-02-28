@@ -18,4 +18,20 @@ namespace rm {
 		virtual ~Persistent() = default; /**< Default destructor for polymorphism */
 		virtual const std::string& id() const = 0; /**< Pure virtual method to get the unique identifier of the object */
 	};
+
+	/**
+	 * @brief Concept that ensures that a templated type is derived from the Persistent class
+	 *
+	 * It is used when templating a class or method where it may be used as follows
+	 *
+	 * @code
+	 * template <persistent_object T>
+	 * void someFunction(T obj) {
+	 *   // do something with obj
+	 * }
+	 * @endcode
+	 */
+	template<class T>
+	concept persistent_object = std::is_base_of<Persistent, T>::value;
+
 }
