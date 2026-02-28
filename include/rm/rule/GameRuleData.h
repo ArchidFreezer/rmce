@@ -16,10 +16,13 @@ namespace rm::rule {
 	 *
 	 * @brief Polymorphic class that is the base for objects that store data on the rules of the game
 	 *
-	 * This class is used as the base for all classes that contain objects with data for the game rules, e.g. Professions,
-	 * Languages, Skills, etc.
+	 * This class is used as the base for all classes that contain objects with data for the game rules, e.g. Professions, Languages, Skills, etc.
+	 * 
+	 * All the copy and move constructors and assignment operators ar deleted to ensure that the unique identifier is not accidentally copied or moved, which would lead to multiple
+	 * objects having the same unique identifier, which would break the uniqueness requirement of the identifier and cause issues with serialisation and deserialisation.
 	 */
 	class GameRuleData : public rm::Persistent {
+		friend class GameRuleDataFactory; /**< Factory class is a friend to allow it to set the unique identifier of the object when it is created */
 
 	public:
 		/**
@@ -77,6 +80,15 @@ namespace rm::rule {
 
 	private:
 		std::string id_{}; /**< Unique identifier for the object */
+
+		/*
+	 * Make all the copy and move constructors and assignment operators private to ensure that the unique identifier is not accidentally copied or moved, which would lead to multiple
+	 * objects having the same unique identifier, which would break the uniqueness requirement of the identifier
+	 */
+		GameRuleData(const GameRuleData& other) = default; /**< Default copy constructor */
+		GameRuleData& operator=(const GameRuleData& other) = default; /**< Default assignment operator */
+		GameRuleData(GameRuleData&& other) = default; /**< Default move constructor */
+		GameRuleData& operator=(GameRuleData&& other) = default; /**< Default move assignment operator */
 
 	};
 
