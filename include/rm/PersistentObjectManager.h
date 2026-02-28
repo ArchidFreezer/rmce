@@ -5,7 +5,7 @@
 namespace rm {
 
 	/**
-	 * @class PersistentObjectFactory
+	 * @class PersistentObjectManager
 	 * @brief Factory class to manage the creation and retrieval of PersistentObject objects
 	 *
 	 * Persistent objects that need to be serialised should be managed through the #get methods.
@@ -16,19 +16,19 @@ namespace rm {
 	 *
 	* Transient objects should use the #create method which does not use the cache and the objects will not be serialised.
 		*/
-	class PersistentObjectFactory {
+	class PersistentObjectManager {
 	public:
 
 		/**
 		 * @brief Deleted default constructor to ensure the cache is initiated
 		 */
-		PersistentObjectFactory() = delete;
+		PersistentObjectManager() = delete;
 
 		/**
 		 * @brief Constructor to initiate the cache
 		 * @param cache PersistentObjectCache cache to move the created objects into
 		 */
-		PersistentObjectFactory(PersistentCache& cache) : cache_{ cache } {}
+		PersistentObjectManager(PersistentCache& cache) : cache_{ cache } {}
 
 		/**
 	 * @brief Populates a set with all the game object ids for a specific rule type
@@ -41,7 +41,7 @@ namespace rm {
 	 */
 		template <persistent_object T>
 		void keys(std::set<std::string>& keys) {
-			return cache_.keys<T>(keys);
+			cache_.keys<T>(keys);
 		}
 
 		/**
@@ -96,8 +96,7 @@ namespace rm {
 		}
 
 	private:
-		PersistentCache& cache_; /**< Reference to a cache object to store the data objects */
-
+		PersistentCache& cache_; /**< Reference to a cache to store the objects. */
 	};
 
 } // namespace rm
