@@ -1,12 +1,12 @@
 #pragma once
 
-#include <GameObjectCache.h>
+#include <PersistentCache.h>
 
 namespace rm {
 
 	/**
-	 * @class GameObjectFactory
-	 * @brief Factory class to manage the creation and retrieval of GameObject objects
+	 * @class PersistentObjectFactory
+	 * @brief Factory class to manage the creation and retrieval of PersistentObject objects
 	 *
 	 * Persistent objects that need to be serialised should be managed through the #get methods.
 	 *
@@ -16,19 +16,19 @@ namespace rm {
 	 *
 	* Transient objects should use the #create method which does not use the cache and the objects will not be serialised.
 		*/
-	class GameObjectFactory {
+	class PersistentObjectFactory {
 	public:
 
 		/**
 		 * @brief Deleted default constructor to ensure the cache is initiated
 		 */
-		GameObjectFactory() = delete;
+		PersistentObjectFactory() = delete;
 
 		/**
 		 * @brief Constructor to initiate the cache
-		 * @param cache GameObjectCache cache to move the created objects into
+		 * @param cache PersistentObjectCache cache to move the created objects into
 		 */
-		GameObjectFactory(GameObjectCache& cache) : cache_{ cache } {}
+		PersistentObjectFactory(PersistentCache& cache) : cache_{ cache } {}
 
 		/**
 	 * @brief Populates a set with all the game object ids for a specific rule type
@@ -36,36 +36,36 @@ namespace rm {
 	 * The parameter is first erased and then populated with the key data so following the call it will only contain the ids
 	 *
 	 * @tparam T Class of the data object to be retrieved
-	 *           Must be derived from GameObject
+	 *           Must be derived from PersistentObject
 	 * @param keys Set of strings to populate with the ids of the game objects
 	 */
-		template <rm::game::game_object T>
+		template <persistent_object T>
 		void keys(std::set<std::string>& keys) {
 			return cache_.keys<T>(keys);
 		}
 
 		/**
-		 * @brief Get a new GameObject object with a randomly generated UUID as its ID
+		 * @brief Get a new PersistentObject object with a randomly generated UUID as its ID
 		 *
 		 * The object is not added to the cache and is suitable for temporary objects that do not need to be referenced by ID, e.g. objects that are only used in the context of a single function call.
 		 *
 		 * Objects created with this method will not be serialised.
 		 *
-		 * @tparam T type of GameObject object to create
-		 * @return Uniqur pointer to GameObject object of type @a T
+		 * @tparam T type of PersistentObject object to create
+		 * @return Uniqur pointer to PersistentObject object of type @a T
 		 */
-		template <rm::game::game_object T>
+		template <persistent_object T>
 		std::unique_ptr<T> create() { return std::unique_ptr<T>(new T()); }
 
 		/**
-		 * @brief Get a new GameObject object with a randomly generated UUID as its ID and add it to the cache
+		 * @brief Get a new PersistentObject object with a randomly generated UUID as its ID and add it to the cache
 		 *
 		 * Objects created with this method will be serialised.
 		 *
-		 * @tparam T type of GameObject object to create
-		 * @return GameObject object from the cache of type @a T
+		 * @tparam T type of PersistentObject object to create
+		 * @return PersistentObject object from the cache of type @a T
 		 */
-		template<rm::game::game_object T>
+		template<persistent_object T>
 		T& get() {
 			// Create a new object and add it to the cache.
 			std::unique_ptr<T> obj(new T());
@@ -75,15 +75,15 @@ namespace rm {
 		}
 
 		/**
-		 * @brief Get standard GameObject objects that may be created with an ID only
+		 * @brief Get standard PersistentObject objects that may be created with an ID only
 		 *
 		 * Objects created with this method will be serialised.
 		 *
-		 * @tparam T type of GameObject object to create
+		 * @tparam T type of PersistentObject object to create
 		 * @param id Unique ID of the object
-		 * @return GameObject object from the cache of type @a T
+		 * @return PersistentObject object from the cache of type @a T
 		 */
-		template<rm::game::game_object T>
+		template<persistent_object T>
 		T& get(std::string id) {
 			// If the object already exists in the cache then we can return it without creating a new one
 			if (cache_.exists<T>(id)) return cache_.get<T>(id);
@@ -96,7 +96,7 @@ namespace rm {
 		}
 
 	private:
-		GameObjectCache& cache_; /**< Reference to a cache object to store the data objects */
+		PersistentCache& cache_; /**< Reference to a cache object to store the data objects */
 
 	};
 
