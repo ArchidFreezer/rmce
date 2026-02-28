@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+#include <Persistent.h>
+
 /**
  * @namespace rm::rule
  * @brief Rules of the game represented by classes and data structures
@@ -8,23 +10,6 @@
  * The rules are the objects that are used as lookups or references when creating game objects such as races or professions and lookup tables for things such as skills, languages, etc.
  */
 namespace rm::rule {
-
-	class GameRuleData;
-
-	/**
-	 * @brief Concept that ensures that a templated type is derived from the GameRuleData class
-	 *
-	 * It is used when templating a class or method where it may be used as follows
-	 *
-	 * @code
-	 * template <GameRuleDataObject T>
-	 * void someFunction(T obj) {
-	 *   // do something with obj
-	 * }
-	 * @endcode
-	 */
-	template<class T>
-	concept GameRuleDataObject = std::is_base_of<GameRuleData, T>::value;
 
 	/**
 	 * @class GameRuleData
@@ -34,7 +19,7 @@ namespace rm::rule {
 	 * This class is used as the base for all classes that contain objects with data for the game rules, e.g. Professions,
 	 * Languages, Skills, etc.
 	 */
-	class GameRuleData {
+	class GameRuleData : public rm::Persistent {
 
 	public:
 		/**
@@ -94,5 +79,21 @@ namespace rm::rule {
 		std::string id_{}; /**< Unique identifier for the object */
 
 	};
+
+	/**
+	 * @brief Concept that ensures that a templated type is derived from the GameRuleData class
+	 *
+	 * It is used when templating a class or method where it may be used as follows
+	 *
+	 * @code
+	 * template <GameRuleDataObject T>
+	 * void someFunction(T obj) {
+	 *   // do something with obj
+	 * }
+	 * @endcode
+	 */
+	template<class T>
+	concept GameRuleDataObject = std::is_base_of<GameRuleData, T>::value;
+
 
 } // namespace rm::rule
