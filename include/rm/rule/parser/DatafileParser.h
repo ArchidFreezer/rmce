@@ -47,7 +47,7 @@ namespace rm::rule::parser {
 			cache_{ cache },
 			rule_datatype_{ datatype },
 			filename_{ filename },
-			factory_{ GameRuleDataFactory(cache) } {}
+			factory_{ rm::GameRuleDataFactory(cache) } {}
 
 		/**
 		 * @brief Consructor
@@ -100,7 +100,7 @@ namespace rm::rule::parser {
 		/**
 		 * @brief Get the game rule factoryfactorydata cache
 		 */
-		GameRuleDataFactory& factory() { return factory_; };
+		rm::GameRuleDataFactory& factory() { return factory_; };
 
 		/**
 		 * @brief Get the file to parse
@@ -116,7 +116,7 @@ namespace rm::rule::parser {
 
 	private:
 		GameRuleDataCache& cache_; /**< Reference to a cache object to store the data objects */
-		GameRuleDataFactory factory_; /**< Factory to act as wrapper to cache, creating objects if required */
+		rm::GameRuleDataFactory factory_; /**< Factory to act as wrapper to cache, creating objects if required */
 		std::string rule_datatype_{}; /**< Name of the type of data being processed */
 		std::string filename_{}; /**< Path to the file to parse */
 

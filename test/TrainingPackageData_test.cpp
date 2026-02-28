@@ -114,8 +114,8 @@ namespace {
 		EXPECT_EQ(tp.skillsWithRanks().size(), 2);
 
 		for (const auto& sc : tp.skillsWithRanks()) {
-			if (sc.id() == sd1_id) SUCCEED();
-			else if (sc.id() == sd2_id) SUCCEED();
+			if (sc->id() == sd1_id) SUCCEED();
+			else if (sc->id() == sd2_id) SUCCEED();
 			else FAIL();
 		}
 	}

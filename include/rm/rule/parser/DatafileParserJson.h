@@ -223,7 +223,7 @@ namespace rm::rule::parser {
 		 * @return Map of SubcategoriedSkillData and the values, with the skills retrieved from the cache using their ids and optional subcategories
 		 */
 		template<typename Primitive>
-		std::map<SubcategoriedSkillData, Primitive> parseSkillPairTree(boost::optional<const pt::ptree&> tree);
+		std::map<const SubcategoriedSkillData*, Primitive> parseSkillPairTree(boost::optional<const pt::ptree&> tree);
 
 		/**
 		 * @brief Parse a std::map of SubcategoriedSkillData and values into a boost ptree containing a map of skills and primitive type values
@@ -244,7 +244,7 @@ namespace rm::rule::parser {
 		 * @return Boost ptree containing the map of skills and values, with the skills represented by their ids and optional subcategories
 		 */
 		template<typename Primitive>
-		const pt::ptree getSkillPairTree(std::map<SubcategoriedSkillData, Primitive> map);
+		const pt::ptree getSkillPairTree(std::map<const SubcategoriedSkillData*, Primitive> map);
 
 		/**
 	 * @brief Parse a boost ptree containing a map of skills and enums into a std::map of SubcategoriedSkillData and enum type values
@@ -265,7 +265,7 @@ namespace rm::rule::parser {
 	 * @return Map of pointers to the game data objects and the enum, with the game data objects retrieved from the cache using their ids
 	 */
 		template<typename EnumType>
-		std::map<SubcategoriedSkillData, EnumType> parseSkillPairEnumTree(boost::optional<const pt::ptree&> tree);
+		std::map<const SubcategoriedSkillData*, EnumType> parseSkillPairEnumTree(boost::optional<const pt::ptree&> tree);
 
 		/**
 		 * @brief Parse a std::map of SubcategoriedSkillData and values into a boost ptree containing a map of skills and enum type values
@@ -286,7 +286,7 @@ namespace rm::rule::parser {
 		 * @return Boost ptree containing the map of skills and enum values, with the skills represented by their ids and optional subcategories
 		 */
 		template<typename EnumType>
-		const pt::ptree getSkillPairEnumTree(std::map<SubcategoriedSkillData, EnumType> map);
+		const pt::ptree getSkillPairEnumTree(std::map<const SubcategoriedSkillData*, EnumType> map);
 
 		/**
 		 * @brief Parse a boost ptree containing a set of game data objects into a std::set of the game data objects
@@ -383,14 +383,14 @@ namespace rm::rule::parser {
 		 * @param tree Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories
 		 * @return Set of SubcategoriedSkillData, with the skills retrieved from the cache using their ids and optional subcategories
 		 */
-		std::set<SubcategoriedSkillData> parseSkillSetTree(boost::optional<const pt::ptree&> tree);
+		std::set<const SubcategoriedSkillData*> parseSkillSetTree(boost::optional<const pt::ptree&> tree);
 
 		/**
 		 * @brief Parse a std::set of SubcategoriedSkillData into a boost ptree containing a set of skills
 		 * @param set Set of SubcategoriedSkillData, with the skills retrieved from the cache using their ids and optional subcategories
 		 * @return Boost ptree containing the set of skills, with the skills represented by their ids and optional subcategories
 		 */
-		const pt::ptree getSkillSetTree(std::set<SubcategoriedSkillData> set);
+		const pt::ptree getSkillSetTree(std::set<const SubcategoriedSkillData*> set);
 
 		/**
 		 * @brief Parse a boost ptree containing a map of language abilities into a std::map of LanguageAbility
@@ -666,16 +666,16 @@ namespace rm::rule::parser {
 	}
 
 	template<typename Primitive>
-	inline std::map<SubcategoriedSkillData, Primitive> DatafileParserJson::parseSkillPairTree(boost::optional<const pt::ptree&> tree) {
-		std::map<SubcategoriedSkillData, Primitive> datum{};
+	inline std::map<const SubcategoriedSkillData*, Primitive> DatafileParserJson::parseSkillPairTree(boost::optional<const pt::ptree&> tree) {
+		std::map<const SubcategoriedSkillData*, Primitive> datum{};
 		if (tree) {
 			for (const auto& items : tree.get()) {
 				std::string id{ items.second.get<std::string>("id") };
 				boost::optional<std::string> subcategory = items.second.get_optional<std::string>("subcategory");
 				if (subcategory) {
-					datum.emplace(factory().subcategoriedSkillData(id, subcategory.get()), items.second.get<Primitive>("value"));
+					datum.emplace(&factory().subcategoriedSkillData(id, subcategory.get()), items.second.get<Primitive>("value"));
 				} else {
-					datum.emplace(factory().subcategoriedSkillData(id), items.second.get<Primitive>("value"));
+					datum.emplace(&factory().subcategoriedSkillData(id), items.second.get<Primitive>("value"));
 				}
 			}
 		}
@@ -683,22 +683,28 @@ namespace rm::rule::parser {
 	}
 
 	template<typename Primitive>
-	inline const pt::ptree DatafileParserJson::getSkillPairTree(std::map<SubcategoriedSkillData, Primitive> map) {
+	inline const pt::ptree DatafileParserJson::getSkillPairTree(std::map<const SubcategoriedSkillData*, Primitive> map) {
 		pt::ptree tree{};
 
+		std::map<std::string, const SubcategoriedSkillData*> sorted_map{};
 		for (const auto& pair : map) {
+			std::string key = pair.first->skillData().id() + (pair.first->subcategory() ? pair.first->subcategory().value() : "");
+			sorted_map.emplace(key, pair.first);
+		}
+
+		for (const auto& pair : sorted_map) {
 			pt::ptree value_tree{};
-			value_tree.put("id", pair.first.skillData().id());
-			if (pair.first.subcategory()) value_tree.put("subcategory", pair.first.subcategory().value());
-			value_tree.put("value", map[pair.first]);
+			value_tree.put("id", pair.second->skillData().id());
+			if (pair.second->subcategory()) value_tree.put("subcategory", pair.second->subcategory().value());
+			value_tree.put("value", map[pair.second]);
 			tree.push_back(std::make_pair("", value_tree));
 		}
 		return tree;
 	}
 
 	template<typename EnumType>
-	inline std::map<SubcategoriedSkillData, EnumType> DatafileParserJson::parseSkillPairEnumTree(boost::optional<const pt::ptree&> tree) {
-		std::map<SubcategoriedSkillData, EnumType> datum{};
+	inline std::map<const SubcategoriedSkillData*, EnumType> DatafileParserJson::parseSkillPairEnumTree(boost::optional<const pt::ptree&> tree) {
+		std::map<const SubcategoriedSkillData*, EnumType> datum{};
 		if (tree) {
 			for (const auto& items : tree.get()) {
 				std::string id{ items.second.get<std::string>("id") };
@@ -706,9 +712,9 @@ namespace rm::rule::parser {
 				EnumType enum_val{};
 				fromString(items.second.get<std::string>("value"), enum_val);
 				if (subcategory) {
-					datum.emplace(factory().subcategoriedSkillData(id, subcategory.get()), enum_val);
+					datum.emplace(&factory().subcategoriedSkillData(id, subcategory.get()), enum_val);
 				} else {
-					datum.emplace(factory().subcategoriedSkillData(id), enum_val);
+					datum.emplace(&factory().subcategoriedSkillData(id), enum_val);
 				}
 			}
 		}
@@ -716,14 +722,20 @@ namespace rm::rule::parser {
 	}
 
 	template<typename EnumType>
-	inline const pt::ptree DatafileParserJson::getSkillPairEnumTree(std::map<SubcategoriedSkillData, EnumType> map) {
+	inline const pt::ptree DatafileParserJson::getSkillPairEnumTree(std::map<const SubcategoriedSkillData*, EnumType> map) {
 		pt::ptree tree{};
 
+		std::map<std::string, const SubcategoriedSkillData*> sorted_map{};
 		for (const auto& pair : map) {
+			std::string key = pair.first->skillData().id() + (pair.first->subcategory() ? pair.first->subcategory().value() : "");
+			sorted_map.emplace(key, pair.first);
+		}
+
+		for (const auto& pair : sorted_map) {
 			pt::ptree value_tree{};
-			value_tree.put("id", pair.first.skillData().id());
-			if (pair.first.subcategory()) value_tree.put("subcategory", pair.first.subcategory().value());
-			value_tree.put("value", toString(map[pair.first]));
+			value_tree.put("id", pair.second->skillData().id());
+			if (pair.second->subcategory()) value_tree.put("subcategory", pair.second->subcategory().value());
+			value_tree.put("value", toString(map[pair.second]));
 			tree.push_back(std::make_pair("", value_tree));
 		}
 		return tree;

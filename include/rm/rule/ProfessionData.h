@@ -494,24 +494,24 @@ namespace rm::rule {
 		 * @param skill SubcategoriedSkillData to set the development type for
 		 * @param type SkillDevelopmentType::Type value to set
 		 */
-		void setSkillDevelopmentType(SubcategoriedSkillData skill, SkillDevelopmentType::Type type) {
+		void setSkillDevelopmentType(SubcategoriedSkillData& skill, SkillDevelopmentType::Type type) {
 			if (isSkillDevelopmentTypeSet(skill.skillData(), skill.subcategory())) {
 				throw InvalidSkillDevelopment("There is already a development set for skill " + skill.id());
 			}
-			skill_development_types_.emplace(std::move(skill), type);
+			skill_development_types_.emplace(&skill, type);
 		}
 
 		/**
 		 * @brief Sets the skill development types mapping.
 		 * @param types A map associating subcategorized skill data with their corresponding skill development types.
 		 */
-		void setSkillDevelopmentTypes(std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> types) { skill_development_types_ = std::move(types); }
+		void setSkillDevelopmentTypes(std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> types) { skill_development_types_ = std::move(types); }
 
 		/**
 		 * @brief Gets a reference to the map of skill development types indexed by subcategorized skill data.
 		 * @return A reference to the map containing skill development types.
 		 */
-		std::map<SubcategoriedSkillData, SkillDevelopmentType::Type>& skillDevelopmentTypes() { return skill_development_types_; }
+		std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type>& skillDevelopmentTypes() { return skill_development_types_; }
 
 		/**
 		 * @brief Get the development type for a skill
@@ -520,7 +520,7 @@ namespace rm::rule {
 		 */
 		SkillDevelopmentType::Type skillDevelopmentType(const SubcategoriedSkillData& skill) const {
 			for (auto& key : skill_development_types_) {
-				if (key.first.id() == skill.id()) return key.second;
+				if (key.first->id() == skill.id()) return key.second;
 			}
 			return SkillDevelopmentType::kStandard;
 		}
@@ -539,13 +539,9 @@ namespace rm::rule {
 		 * @brief Gets a container with the skill that the profession has a development type set for
 		 * @return std::set of SubcategoriedSkillData with the development type set
 		 */
-		const std::set<SubcategoriedSkillData> skillsWithSkillDevelopmentType() const {
-			std::set<SubcategoriedSkillData> ret{};
-			for (auto& key : skill_development_types_) {
-				const SubcategoriedSkillData data(key.first.skillData(), key.first.subcategory());
-				ret.insert(data);
-			}
-			return ret;
+		const std::set<const SubcategoriedSkillData*> skillsWithSkillDevelopmentType() const {
+			auto keys = std::views::keys(skill_development_types_);
+			return { keys.begin(), keys.end() };
 		}
 
 		/**
@@ -557,7 +553,7 @@ namespace rm::rule {
 		 */
 		bool isSkillDevelopmentTypeSet(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
 			for (auto& key : std::views::keys(skill_development_types_)) {
-				if (key.skillData().id() == skill.id() && (subcategory ? subcategory.value() == key.subcategory().value() : !key.subcategory())) return true;
+				if (key->skillData().id() == skill.id() && (subcategory ? subcategory.value() == key->subcategory().value() : !key->subcategory())) return true;
 			}
 			return false;
 		}
@@ -781,16 +777,16 @@ namespace rm::rule {
 		 * @param skill SubcategoriedSkillData to set the bonus for
 		 * @param bonus int bonus value
 		 */
-		void setSkillBonus(SubcategoriedSkillData skill, int bonus) {
+		void setSkillBonus(SubcategoriedSkillData& skill, int bonus) {
 			if (isBonusSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillBonus("There is already a bonus set for skill " + skill.id());
-			skill_bonuses_.emplace(std::move(skill), bonus);
+			skill_bonuses_.emplace(&skill, bonus);
 		}
 
 		/**
 		 * @brief Sets the object's skill bonuses from the provided map, replacing any existing bonuses.
 		 * @param bonuses A map from SubcategoriedSkillData to int containing skill bonuses. The map is assigned to the object's internal skill_bonuses_ member, replacing its previous contents.
 		 */
-		void setSkillBonuses(std::map<SubcategoriedSkillData, int> bonuses) { skill_bonuses_ = std::move(bonuses); }
+		void setSkillBonuses(std::map<const SubcategoriedSkillData*, int> bonuses) { skill_bonuses_ = std::move(bonuses); }
 
 		/**
 		 * @brief Get the bonus that the profession provides to a skill
@@ -799,7 +795,7 @@ namespace rm::rule {
 		 */
 		int skillBonus(const SubcategoriedSkillData& skill) const {
 			for (auto& key : skill_bonuses_) {
-				if (key.first.id() == skill.id()) return key.second;
+				if (key.first->id() == skill.id()) return key.second;
 			}
 			return 0;
 		}
@@ -818,20 +814,16 @@ namespace rm::rule {
 		 * @brief Gets a container with the skill that the profession has a bonus for
 		 * @return std::set of SkillData with bonuses
 		 */
-		const std::set<SubcategoriedSkillData> skillsWithBonus() const {
-			std::set<SubcategoriedSkillData> ret;
-			for (auto& key : skill_bonuses_) {
-				const SubcategoriedSkillData data(key.first.skillData(), key.first.subcategory());
-				ret.insert(data);
-			}
-			return ret;
+		const std::set<const SubcategoriedSkillData*> skillsWithBonus() const {
+			auto keys = std::views::keys(skill_bonuses_);
+			return { keys.begin(), keys.end() };
 		}
 
 		/**
 		 * @brief Get a container with the skills that the profession has a bonus for
 		 * @return std::map of SubcategoriedSkillData and bonus value
 		 */
-		const std::map<SubcategoriedSkillData, int>& skillBonuses() const { return skill_bonuses_; }
+		const std::map<const SubcategoriedSkillData*, int>& skillBonuses() const { return skill_bonuses_; }
 
 		/**
 		 * @brief Check if there is a professional bonus for a skill
@@ -842,7 +834,7 @@ namespace rm::rule {
 		 */
 		bool isBonusSkill(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
 			for (auto& key : std::views::keys(skill_bonuses_)) {
-				if (key.skillData().id() == skill.id() && (subcategory ? subcategory.value() == key.subcategory().value() : !key.subcategory())) return true;
+				if (key->skillData().id() == skill.id() && (subcategory ? subcategory.value() == key->subcategory().value() : !key->subcategory())) return true;
 			}
 			return false;
 		}
@@ -889,14 +881,14 @@ namespace rm::rule {
 		std::set<GameRuleDataChoice<SpellListData>> base_spell_list_choices_{}; /**< Set of spell lists that the profession base lists should be chosen from */
 
 		// Skill bonuses
-		std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** bonus to individual skills */
+		std::map<const SubcategoriedSkillData*, int> skill_bonuses_{}; /** bonus to individual skills */
 		std::map<const SkillCategoryData*, int> skill_category_profession_bonuses_{}; /** profession bonus to skill categories */
 		std::map<const SkillCategoryData*, int> skill_category_special_bonuses_{}; /** special bonus to skills in a category */
 		std::map<const SkillGroupData*, int> skill_group_profession_bonuses_{}; /** profession bonus to skills in a group */
 		std::map<const SkillGroupData*, int> skill_group_special_bonuses_{}; /** special bonus to skills in a group */
 
 		// Skill development types
-		std::map<SubcategoriedSkillData, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */
+		std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> skill_development_types_{}; /** Skill with their development type changed */
 		std::map<const SkillCategoryData*, SkillDevelopmentType::Type> skill_category_skill_development_types_{}; /** Skill categories that all skills within have their development type changed */
 		std::map<const SkillGroupData*, SkillDevelopmentType::Type> skill_group_skill_development_types_{}; /** Skill groups that all skills within have their development type changed */
 

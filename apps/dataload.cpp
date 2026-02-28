@@ -126,6 +126,35 @@ int main() {
 		//training_package_parser.save("../../../../data/TrainingPackages2.json");
 		//treasure_code_parser.save("../../../../data/TreasureCodes2.json");
 		//weapon_type_parser.save("../../../../data/WeaponTypes2.json");
+
+
+		//animal_parser.save("../../../../data2/Animals.json");
+		//armour_type_parser.save("../../../../data2/ArmourTypes.json");
+		//attack_table_parser.save("../../../../data2/AttackTables.json");
+		//book_parser.save("../../../../data2/Books.json");
+		//climate_parser.save("../../../../data2/Climates.json");
+		//creature_pace_parser.save("../../../../data2/CreaturePaces.json");
+		//culture_parser.save("../../../../data2/Cultures.json");
+		//culture_type_parser.save("../../../../data2/CultureTypes.json");
+		//disease_parser.save("../../../../data2/Diseases.json");
+		//disease_type_parser.save("../../../../data2/DiseaseTypes.json");
+		//language_category_parser.save("../../../../data2/LanguageCategories.json");
+		//language_parser.save("../../../../data2/Languages.json");
+		//poison_parser.save("../../../../data2/Poisons.json");
+		//poison_type_parser.save("../../../../data2/PoisonTypes.json");
+		//profession_parser.save("../../../../data2/Professions.json");
+		//race_parser.save("../../../../data2/Races.json");
+		//skill_category_parser.save("../../../../data2/SkillCategories.json");
+		//skill_group_parser.save("../../../../data2/SkillGroups.json");
+		//skill_parser.save("../../../../data2/Skills.json");
+		//skill_progression_parser.save("../../../../data2/SkillProgressionTypes.json");
+		//special_attack_table_parser.save("../../../../data2/SpecialAttackTables.json");
+		//spell_list_parser.save("../../../../data2/SpellLists.json");
+		//training_package_cost_table_parser.save("../../../../data2/TrainingPackageCosts.tsv");
+		//training_package_parser.save("../../../../data2/TrainingPackages.json");
+		//treasure_code_parser.save("../../../../data2/TreasureCodes.json");
+		//weapon_type_parser.save("../../../../data2/WeaponTypes.json");
+
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
 	}

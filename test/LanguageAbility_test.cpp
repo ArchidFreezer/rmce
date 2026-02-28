@@ -8,17 +8,12 @@ using namespace rm::game::character;
 
 
 namespace {
-	rule::LanguageData getLanguage(std::string id, std::string name, bool somantic, bool spoken, bool written) {
-		rule::LanguageData lang(id);
-		lang.setName(name);
-		lang.setIsSomantic(somantic);
-		lang.setIsSpoken(spoken);
-		lang.setIsWritten(written);
-		return lang;
-	}
-
 	TEST(LanguageAbility, construct) {
-		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", false, true, true);
+		rule::LanguageData lspw("LSPW_ID");
+		lspw.setName("LSPW");
+		lspw.setIsSomantic(false);
+		lspw.setIsSpoken(true);
+		lspw.setIsWritten(true);
 
 		LanguageAbility laspw(lspw);
 		EXPECT_EQ(laspw.isSomantic(), false);
@@ -30,7 +25,11 @@ namespace {
 	}
 
 	TEST(LanguageAbility, InvalidSomantic) {
-		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", false, true, true);
+		rule::LanguageData lspw("LSPW_ID");
+		lspw.setName("LSPW");
+		lspw.setIsSomantic(false);
+		lspw.setIsSpoken(true);
+		lspw.setIsWritten(true);
 
 		LanguageAbility laspw(lspw, 1, 1, 1);
 		EXPECT_EQ(laspw.somantic(), 0);
@@ -48,7 +47,11 @@ namespace {
 	}
 
 	TEST(LanguageAbility, NegativeSomantic) {
-		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
+		rule::LanguageData lspw("LSPW_ID");
+		lspw.setName("LSPW");
+		lspw.setIsSomantic(true);
+		lspw.setIsSpoken(true);
+		lspw.setIsWritten(true);
 
 		LanguageAbility laspw(lspw);
 		EXPECT_NO_THROW(laspw.updateSomanticRanks(1));
@@ -58,7 +61,11 @@ namespace {
 	}
 
 	TEST(LanguageAbility, InvalidSpoken) {
-		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, false, true);
+		rule::LanguageData lspw("LSPW_ID");
+		lspw.setName("LSPW");
+		lspw.setIsSomantic(true);
+		lspw.setIsSpoken(false);
+		lspw.setIsWritten(true);
 
 		LanguageAbility laspw(lspw, 1, 1, 1);
 		EXPECT_EQ(laspw.somantic(), 1);
@@ -76,7 +83,11 @@ namespace {
 	}
 
 	TEST(LanguageAbility, NegativeSpoken) {
-		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
+		rule::LanguageData lspw("LSPW_ID");
+		lspw.setName("LSPW");
+		lspw.setIsSomantic(true);
+		lspw.setIsSpoken(true);
+		lspw.setIsWritten(true);
 
 		LanguageAbility laspw(lspw);
 		EXPECT_NO_THROW(laspw.updateSpokenRanks(1));
@@ -86,7 +97,11 @@ namespace {
 	}
 
 	TEST(LanguageAbility, InvalidWritten) {
-		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, false);
+		rule::LanguageData lspw("LSPW_ID");
+		lspw.setName("LSPW");
+		lspw.setIsSomantic(true);
+		lspw.setIsSpoken(true);
+		lspw.setIsWritten(false);
 
 		LanguageAbility laspw(lspw, 1, 1, 1);
 		EXPECT_EQ(laspw.somantic(), 1);
@@ -104,7 +119,11 @@ namespace {
 	}
 
 	TEST(LanguageAbility, NegativeWritten) {
-		rule::LanguageData lspw = getLanguage("LSPW_ID", "LSPW", true, true, true);
+		rule::LanguageData lspw("LSPW_ID");
+		lspw.setName("LSPW");
+		lspw.setIsSomantic(true);
+		lspw.setIsSpoken(true);
+		lspw.setIsWritten(true);
 
 		LanguageAbility laspw(lspw);
 		EXPECT_NO_THROW(laspw.updateWrittenRanks(1));

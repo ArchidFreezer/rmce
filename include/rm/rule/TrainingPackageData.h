@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>
+#include <ranges>
 #include <set>
 #include <stdexcept>
 #include <string_view>
@@ -408,16 +409,16 @@ namespace rm::rule {
 		 * @param skill SubcategoriedSkillData to add the ranks to
 		 * @param ranks int number of ranks
 		 */
-		void addSkillRank(SubcategoriedSkillData skill, int ranks) {
+		void addSkillRank(SubcategoriedSkillData& skill, int ranks) {
 			if (isRankSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + skill.id());
-			skill_ranks_.emplace(std::move(skill), ranks);
+			skill_ranks_.emplace(&skill, ranks);
 		}
 
 		/**
 		 * @brief Set a collection of skills and ranks the package provides
 		 * @param skill_ranks Map of SubcategoriedSkillData and associated number of ranks these will overwrite any existing skill ranks
 		 */
-		void setSkillRanks(std::map<SubcategoriedSkillData, int> skill_ranks) { skill_ranks_ = std::move(skill_ranks); }
+		void setSkillRanks(std::map<const SubcategoriedSkillData*, int> skill_ranks) { skill_ranks_ = std::move(skill_ranks); }
 
 		/**
 		 * @brief Get the number of ranks for a skill the package provides
@@ -426,7 +427,7 @@ namespace rm::rule {
 		 */
 		int skillRank(const SubcategoriedSkillData& skill) const {
 			for (auto& key : skill_ranks_) {
-				if (key.first.id() == skill.id()) return key.second;
+				if (key.first->id() == skill.id()) return key.second;
 			}
 			return 0;
 		}
@@ -445,7 +446,10 @@ namespace rm::rule {
 		 * @brief Gets a container with the skills that the package provides
 		 * @return std::set of SkillData with ranks
 		 */
-		const std::set<SubcategoriedSkillData> skillsWithRanks() const;
+		const std::set<const SubcategoriedSkillData*> skillsWithRanks() const {
+			auto keys = std::views::keys(skill_ranks_);
+			return { keys.begin(), keys.end() };
+		}
 
 		/**
 		 * @brief Check if the package provides skill ranks for the skill
@@ -460,7 +464,7 @@ namespace rm::rule {
 		 * @brief Get a collection of skills and ranks the package provides
 		 * @return Map of SubcategoriedSkillData and associated number of ranks
 		 */
-		const std::map<SubcategoriedSkillData, int>& skillRanks() const { return skill_ranks_; }
+		const std::map<const SubcategoriedSkillData*, int>& skillRanks() const { return skill_ranks_; }
 
 		/**
 		 * @brief Set the skill rank choices for this package.
@@ -573,13 +577,13 @@ namespace rm::rule {
 		 * @brief Sets the lifestyle skills for this package.
 		 * @param lifestyle_skills A set of SubcategoriedSkillData representing the lifestyle skills that may gain up to 15 ranks via the package rather than the usual cap of 10.
 		 */
-		void setLifestyleSkills(std::set<SubcategoriedSkillData> lifestyle_skills) { lifestyle_skills_ = std::move(lifestyle_skills); }
+		void setLifestyleSkills(std::set<const SubcategoriedSkillData*> lifestyle_skills) { lifestyle_skills_ = std::move(lifestyle_skills); }
 
 		/**
 		 * @brief Get the lifestyle skills for this package.
 		 * @return A set of SubcategoriedSkillData representing the lifestyle skills that may gain up to 15 ranks via the package rather than the usual cap of 10.
 		 */
-		const std::set<SubcategoriedSkillData>& lifestyleSkills() const { return lifestyle_skills_; }
+		const std::set<const SubcategoriedSkillData*>& lifestyleSkills() const { return lifestyle_skills_; }
 
 		/**
 		 * @brief Sets the lifestyle skill categories for this package.
@@ -650,7 +654,7 @@ namespace rm::rule {
 		std::set<StatType::Type> stat_gains_{}; /**< Stats that receive a stat gain roll */
 		bool realmStatGain_{}; /**< Whether the package provides a stat gain roll for realm stats */
 		EnumChoice<StatType::Type> stat_gain_choices_{}; /**< A set of stats from which the player may select one or more from to receive a stat gain roll */
-		std::map<SubcategoriedSkillData, int> skill_ranks_{}; /** Number of skill ranks gained */
+		std::map<const SubcategoriedSkillData*, int> skill_ranks_{}; /** Number of skill ranks gained */
 		std::map<GameRuleDataChoice<SubcategoriedSkillData>, int> skill_rank_choices_{}; /**< A set of skills with ranks from which the player may select one or more from to receive the skill ranks */
 		std::map<const SkillCategoryData*, int> skill_category_ranks_{}; /** Number of skill category ranks gained */
 		std::set<CategoryMultiSkillRankChoice> skill_category_multi_skill_rank_choices_{}; /**< A set of skill categories from which the player may select one or more to receive the skill ranks */
@@ -658,7 +662,7 @@ namespace rm::rule {
 		std::vector<SkillGroupCategoryAndSkillRankChoice> skill_group_category_and_skill_ranks_{}; /** A number fo ranks that may be set on a single caltegory within the group and also a single skill within that category */
 		std::set<SpellListChoices> spell_list_choices_{}; /**< A set of spell list choices that the player may select from to gain spell lists and ranks in those spell lists */
 		std::set<SpellListCategoryChoices> spell_list_category_choices_{}; /**< A set of spell list category choices that the player may select from to gain ranks in spell lists within those categories */
-		std::set<SubcategoriedSkillData> lifestyle_skills_{}; /**< A set of skills that may gain up to 15 ranks via the package rather than the usual cap of 10 */
+		std::set<const SubcategoriedSkillData*> lifestyle_skills_{}; /**< A set of skills that may gain up to 15 ranks via the package rather than the usual cap of 10 */
 		std::set<const SkillCategoryData*> lifestyle_skill_categories_{}; /**< A set of skill categories for which all skills within the category may gain up to 15 ranks via the package rather than the usual cap of 10 */
 		std::set<const SkillGroupData*> lifestyle_skill_groups_{}; /**< A set of skill groups for which all skills within the group may gain up to 15 ranks via the package rather than the usual cap of 10 */
 		std::set<GameRuleDataChoice<SkillCategoryData>> lifestyle_category_skill_choices_{}; /**< A set of choices of skill categories from which the player may select one or more skill to gain up to 15 ranks from the package rather than the usual cap of 10 */
