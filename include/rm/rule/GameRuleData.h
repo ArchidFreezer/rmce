@@ -25,23 +25,10 @@ namespace rm::rule {
 		friend class PersistentObjectManager; /**< PersistentObjectManager is a friend to allow it access to the private copy/maove constructores and assignment operators */
 
 	public:
-		/**
-		 * @brief Default constructor
-		 */
-		GameRuleData() = delete;
 
-		/**
-		 * @brief Constructor
-		 * @param id Unique identifier for the object
-		 */
-		GameRuleData(std::string_view id) : id_{ id } {}
+		GameRuleData() = delete; /** < Delete the default constructor to ensure that an id is always provided when creating an object */
 
-		/**
-		 * @brief Default destructor
-		 *
-		 * This is made virtual to define the class as polymorphic as a standard best practice.
-		 */
-		virtual ~GameRuleData() = default;
+		virtual ~GameRuleData() = default; /**< Default destructor for polymorphism */
 
 		/**
 		 * @brief Get the unique id of the game data object
@@ -77,6 +64,14 @@ namespace rm::rule {
 		 * @return String containing an id in standard format
 		 */
 		static const std::string generateId(std::string_view type, std::string_view val);
+
+	protected:
+
+		/**
+		 * @brief Constructor
+		 * @param id Unique identifier for the object
+		 */
+		GameRuleData(std::string_view id) : id_{ id } {}
 
 	private:
 		std::string id_{}; /**< Unique identifier for the object */
