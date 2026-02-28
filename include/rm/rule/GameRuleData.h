@@ -22,7 +22,7 @@ namespace rm::rule {
 	 * objects having the same unique identifier, which would break the uniqueness requirement of the identifier and cause issues with serialisation and deserialisation.
 	 */
 	class GameRuleData : public rm::Persistent {
-		friend class GameRuleDataFactory; /**< Factory class is a friend to allow it to set the unique identifier of the object when it is created */
+		friend class PersistentObjectManager; /**< PersistentObjectManager is a friend to allow it access to the private copy/maove constructores and assignment operators */
 
 	public:
 		/**

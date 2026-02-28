@@ -25,7 +25,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		CreaturePaceDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "CreaturePace", filename) {
+		CreaturePaceDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "CreaturePace", filename) {
 			setRootNode("creature-paces");
 		}
 
@@ -33,7 +33,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		CreaturePaceDatafileParserJson(rm::GameRuleDataFactory& object_manager) : CreaturePaceDatafileParserJson(object_manager, "") {}
+		CreaturePaceDatafileParserJson(rm::PersistentObjectManager& object_manager) : CreaturePaceDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write creaturepace game rule data from the cache to a json file

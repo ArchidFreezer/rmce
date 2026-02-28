@@ -23,7 +23,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		CultureTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "CultureType", filename) {
+		CultureTypeDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "CultureType", filename) {
 			setRootNode("culture-types");
 		}
 
@@ -31,7 +31,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		CultureTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager) : CultureTypeDatafileParserJson(object_manager, "") {}
+		CultureTypeDatafileParserJson(rm::PersistentObjectManager& object_manager) : CultureTypeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write culturetype game rule data from the cache to a json file

@@ -24,7 +24,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		RaceDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Race", filename) {
+		RaceDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Race", filename) {
 			setRootNode("races");
 		}
 
@@ -32,7 +32,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		RaceDatafileParserJson(rm::GameRuleDataFactory& object_manager) : RaceDatafileParserJson(object_manager, "") {}
+		RaceDatafileParserJson(rm::PersistentObjectManager& object_manager) : RaceDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write race game rule data from the cache to a json file

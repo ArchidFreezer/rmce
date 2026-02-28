@@ -24,7 +24,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		SkillProgressionTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "SkillProgressionType", filename) {
+		SkillProgressionTypeDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "SkillProgressionType", filename) {
 			setRootNode("skillProgressions");
 		}
 
@@ -32,7 +32,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		SkillProgressionTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager) : SkillProgressionTypeDatafileParserJson(object_manager, "") {}
+		SkillProgressionTypeDatafileParserJson(rm::PersistentObjectManager& object_manager) : SkillProgressionTypeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write book game rule data from the cache to a json file

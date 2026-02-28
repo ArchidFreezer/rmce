@@ -26,7 +26,7 @@ namespace rm::game {
 	 * @see GameObjectFactory
 	 */
 	class GameObject : public rm::Persistent {
-		friend class GameObjectFactory; // Allow the factory to access the private members of the class to set the unique identifier when creating objects
+		friend class PersistentObjectManager; /**< PersistentObjectManager is a friend to allow it access to the private copy/maove constructores and assignment operators */
 
 	public:
 

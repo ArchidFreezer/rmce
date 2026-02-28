@@ -23,14 +23,14 @@ namespace rm::rule::parser {
 		 * @param datatype String containing the type of data to parse
 		 * @param filename Path to the datafile to parse
 		 */
-		DatafileParserXml(rm::GameRuleDataFactory& object_manager, std::string_view datatype, std::string_view filename) : DatafileParserBoost(object_manager, datatype, filename) {}
+		DatafileParserXml(rm::PersistentObjectManager& object_manager, std::string_view datatype, std::string_view filename) : DatafileParserBoost(object_manager, datatype, filename) {}
 
 		/**
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param datatype String containing the type of data to parse
 		 */
-		DatafileParserXml(rm::GameRuleDataFactory& object_manager, std::string_view datatype) : DatafileParserBoost(object_manager, datatype) {}
+		DatafileParserXml(rm::PersistentObjectManager& object_manager, std::string_view datatype) : DatafileParserBoost(object_manager, datatype) {}
 
 		/**
 		 * @brief Read game rule data from file, convert to objects and store in the game rule data cache

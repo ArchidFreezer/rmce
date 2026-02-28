@@ -9,8 +9,7 @@ namespace rm::rule::parser {
 	 * @class CultureDatafileParserJson
 	 * @brief Process CultureData objects for json files
 	 *
-	 * This class can read a well-formed json file creating CultureData objects from the contents, adding them to a
-	 * #GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating CultureData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
@@ -26,7 +25,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		CultureDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Culture", filename) {
+		CultureDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Culture", filename) {
 			setRootNode("cultures");
 		}
 
@@ -34,7 +33,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		CultureDatafileParserJson(rm::GameRuleDataFactory& object_manager) : CultureDatafileParserJson(object_manager, "") {}
+		CultureDatafileParserJson(rm::PersistentObjectManager& object_manager) : CultureDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write culture game rule data from the cache to a json file

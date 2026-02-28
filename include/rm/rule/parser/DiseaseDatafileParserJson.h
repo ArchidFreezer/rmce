@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <DiseaseData.h>
 
 namespace rm::rule::parser {
@@ -26,7 +25,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		DiseaseDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Disease", filename) {
+		DiseaseDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Disease", filename) {
 			setRootNode("diseases");
 		}
 
@@ -34,7 +33,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		DiseaseDatafileParserJson(rm::GameRuleDataFactory& object_manager) : DiseaseDatafileParserJson(object_manager, "") {}
+		DiseaseDatafileParserJson(rm::PersistentObjectManager& object_manager) : DiseaseDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write disease game rule data from the cache to a json file

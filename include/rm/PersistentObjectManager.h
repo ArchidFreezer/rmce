@@ -1,6 +1,8 @@
 #pragma once
 
+#include <optional>
 #include <PersistentCache.h>
+#include <rule/SubcategoriedSkillData.h>
 
 namespace rm {
 
@@ -101,11 +103,41 @@ namespace rm {
 			// If the object already exists in the cache then we can return it without creating a new one
 			if (cache_.exists<T>(id)) return cache_.get<T>(id);
 
-			// Create a new object and add it to the cache. We need to store the id as adding the object to the cache moves it, invalidating the object we have created
-			std::unique_ptr<T> obj(new T());
-			obj->setId(id);
+			// Create a new object and add it to the cache.
+			std::unique_ptr<T> obj(new T(id));
 			cache_.add<T>(std::move(obj));
 			return cache_.get<T>(id);
+		}
+
+		/**
+		 * @brief Get SubcategoriedSkillData objects
+		 *
+		 * SubcategoriedSkillData cannot be created with ID only as the ID is derived from optional arguments. In order to
+		 * allow these to be safely created and cached a custom factory method has been created
+		 * @param skill_data SkillData that is being wrapped
+		 * @param subcategory optional subcategory of @a skill_data
+		 * @return
+		 */
+		rm::rule::SubcategoriedSkillData& subcategoriedSkillData(const rm::rule::SkillData& skill_data, std::optional<std::string_view> subcategory = std::nullopt) {
+			std::string id{ skill_data.id() + (subcategory ? "_" + std::string(subcategory.value()) : "") };
+			if (cache_.exists<rm::rule::SubcategoriedSkillData>(id)) return cache_.get<rm::rule::SubcategoriedSkillData>(id);
+			if (subcategory) cache_.add<rm::rule::SubcategoriedSkillData>(std::move(std::make_unique<rm::rule::SubcategoriedSkillData>(skill_data, subcategory)));
+			else cache_.add<rm::rule::SubcategoriedSkillData>(std::move(std::make_unique<rm::rule::SubcategoriedSkillData>(skill_data)));
+			return cache_.get<rm::rule::SubcategoriedSkillData>(id);
+		}
+
+		/**
+		 * @brief Get SubcategoriedSkillData objects
+		 *
+		 * SubcategoriedSkillData cannot be created with ID only as the ID is derived from optional arguments. In order to
+		 * allow these to be safely created and cached a custom factory method has been created
+		 * @param skill_id Unique identifier of the skill that is being wrapped
+		 * @param subcategory optional subcategory of @a skill_data
+		 * @return
+		 */
+		rm::rule::SubcategoriedSkillData& subcategoriedSkillData(std::string& skill_id, std::optional<std::string_view> subcategory = std::nullopt) {
+			rm::rule::SkillData& skill = get<rm::rule::SkillData>(skill_id);
+			return (subcategory ? subcategoriedSkillData(skill, subcategory) : subcategoriedSkillData(skill));
 		}
 
 	private:

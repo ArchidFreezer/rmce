@@ -25,7 +25,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		PoisonTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "PoisonType", filename) {
+		PoisonTypeDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "PoisonType", filename) {
 			setRootNode("poison-types");
 		}
 
@@ -33,7 +33,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		PoisonTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager) : PoisonTypeDatafileParserJson(object_manager, "") {}
+		PoisonTypeDatafileParserJson(rm::PersistentObjectManager& object_manager) : PoisonTypeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write poisontype game rule data from the cache to a json file

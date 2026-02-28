@@ -26,7 +26,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		AttackTableDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "AttackTable", filename) {
+		AttackTableDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "AttackTable", filename) {
 			setRootNode("attack-tables");
 		}
 
@@ -35,7 +35,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		AttackTableDatafileParserJson(rm::GameRuleDataFactory& object_manager) : AttackTableDatafileParserJson(object_manager, "") {}
+		AttackTableDatafileParserJson(rm::PersistentObjectManager& object_manager) : AttackTableDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write attack tables from the cache to a json file

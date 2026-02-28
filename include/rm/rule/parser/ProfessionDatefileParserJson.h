@@ -26,7 +26,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		ProfessionDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Profession", filename) {
+		ProfessionDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Profession", filename) {
 			setRootNode("professions");
 		}
 
@@ -34,7 +34,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		ProfessionDatafileParserJson(rm::GameRuleDataFactory& object_manager) : ProfessionDatafileParserJson(object_manager, "") {}
+		ProfessionDatafileParserJson(rm::PersistentObjectManager& object_manager) : ProfessionDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write profession game rule data from the cache to a json file

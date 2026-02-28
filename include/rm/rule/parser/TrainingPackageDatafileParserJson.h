@@ -24,7 +24,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		TrainingPackageDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Trainingpackage", filename) {
+		TrainingPackageDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Trainingpackage", filename) {
 			setRootNode("training-packages");
 		}
 
@@ -32,7 +32,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		TrainingPackageDatafileParserJson(rm::GameRuleDataFactory& object_manager) : TrainingPackageDatafileParserJson(object_manager, "") {}
+		TrainingPackageDatafileParserJson(rm::PersistentObjectManager& object_manager) : TrainingPackageDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write trainingpackage game rule data from the cache to a json file

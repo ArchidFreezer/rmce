@@ -26,7 +26,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		ClimateDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Climate", filename) {
+		ClimateDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Climate", filename) {
 			setRootNode("climates");
 		}
 
@@ -34,7 +34,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		ClimateDatafileParserJson(rm::GameRuleDataFactory& object_manager) : ClimateDatafileParserJson(object_manager, "") {}
+		ClimateDatafileParserJson(rm::PersistentObjectManager& object_manager) : ClimateDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write climate game rule data from the cache to a json file

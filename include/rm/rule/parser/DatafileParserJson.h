@@ -1,11 +1,13 @@
 #pragma once
 
 #include <iostream>
+#include <map>
 #include <DatafileParserBoost.h>
 #include <EnumChoice.h>
 #include <LanguageAbility.h>
 #include <SkillDevelopmentType.h>
 #include <StatType.h>
+#include <SubcategoriedSkillData.h>
 
 namespace rm::rule::parser {
 
@@ -28,14 +30,14 @@ namespace rm::rule::parser {
 		 * @param datatype String containing the type of data to parse
 		 * @param filename Path to the datafile to parse
 		 */
-		DatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view datatype, std::string_view filename) : DatafileParserBoost(object_manager, datatype, filename) {}
+		DatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view datatype, std::string_view filename) : DatafileParserBoost(object_manager, datatype, filename) {}
 
 		/**
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param datatype String containing the type of data to parse
 		 */
-		DatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view datatype) : DatafileParserBoost(object_manager, datatype) {}
+		DatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view datatype) : DatafileParserBoost(object_manager, datatype) {}
 
 		/**
 		 * @brief Default destructor

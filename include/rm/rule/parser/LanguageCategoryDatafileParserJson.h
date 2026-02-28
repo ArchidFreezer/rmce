@@ -25,7 +25,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		LanguageCategoryDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "LanguageCategory", filename) {
+		LanguageCategoryDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "LanguageCategory", filename) {
 			setRootNode("languageCategories");
 		}
 
@@ -33,7 +33,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		LanguageCategoryDatafileParserJson(rm::GameRuleDataFactory& object_manager) : LanguageCategoryDatafileParserJson(object_manager, "") {}
+		LanguageCategoryDatafileParserJson(rm::PersistentObjectManager& object_manager) : LanguageCategoryDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write language category game rule data from the cache to a json file

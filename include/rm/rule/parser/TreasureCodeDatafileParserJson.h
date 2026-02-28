@@ -24,7 +24,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		TreasureCodeDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "TreasureCode", filename) {
+		TreasureCodeDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "TreasureCode", filename) {
 			setRootNode("treasure-codes");
 		}
 
@@ -32,7 +32,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		TreasureCodeDatafileParserJson(rm::GameRuleDataFactory& object_manager) : TreasureCodeDatafileParserJson(object_manager, "") {}
+		TreasureCodeDatafileParserJson(rm::PersistentObjectManager& object_manager) : TreasureCodeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write skill category game rule data from the cache to a json file

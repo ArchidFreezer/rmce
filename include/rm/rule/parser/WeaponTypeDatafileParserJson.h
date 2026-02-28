@@ -26,7 +26,7 @@ namespace rm::rule::parser {
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		WeaponTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "WeaponType", filename) {
+		WeaponTypeDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "WeaponType", filename) {
 			setRootNode("weapon-types");
 		}
 
@@ -34,7 +34,7 @@ namespace rm::rule::parser {
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		WeaponTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager) : WeaponTypeDatafileParserJson(object_manager, "") {}
+		WeaponTypeDatafileParserJson(rm::PersistentObjectManager& object_manager) : WeaponTypeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write weapon type game rule data from the cache to a json file

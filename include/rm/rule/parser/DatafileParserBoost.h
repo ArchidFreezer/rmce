@@ -28,14 +28,14 @@ namespace rm::rule::parser {
 		 * @param datatype String containing the name of the type of data being processed
 		 * @param filename Path to the datafile to parse
 		 */
-		DatafileParserBoost(rm::GameRuleDataFactory& object_manager, std::string_view datatype, std::string_view filename) : DatafileParser(object_manager, datatype, filename) {}
+		DatafileParserBoost(rm::PersistentObjectManager& object_manager, std::string_view datatype, std::string_view filename) : DatafileParser(object_manager, datatype, filename) {}
 
 		/**
 		 * @brief Consructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param datatype String containing the name of the type of data being processed
 		 */
-		DatafileParserBoost(rm::GameRuleDataFactory& object_manager, std::string_view datatype) : DatafileParserBoost(object_manager, datatype, "") {}
+		DatafileParserBoost(rm::PersistentObjectManager& object_manager, std::string_view datatype) : DatafileParserBoost(object_manager, datatype, "") {}
 
 		/**
 		 * @brief Default destructor
