@@ -1,6 +1,8 @@
 #pragma once
 
 #include <optional>
+#include <string>
+
 #include <PersistentCache.h>
 #include <rule/SubcategoriedSkillData.h>
 
@@ -139,6 +141,20 @@ namespace rm {
 			rm::rule::SkillData& skill = get<rm::rule::SkillData>(skill_id);
 			return (subcategory ? subcategoriedSkillData(skill, subcategory) : subcategoriedSkillData(skill));
 		}
+
+		/**
+		 * @brief Creates a string that can be used as a unique identifier for an object
+		 *
+		 * Each object requires a unique identifier and this is a helper function that can create one in a standard format. The
+		 * output is a string that is a combination of the type and val parameters that only contain ucase letters, numbers and
+		 * the underscore character. Any character that is not an alphanum will be converted to an underscore with consecutive
+		 * underscores being discarded.
+		 *
+		 * @param type The type of data object
+		 * @param val The unique name of the data object
+		 * @return String containing an id in standard format
+		 */
+		const std::string generateId(std::string_view type, std::string_view val);
 
 	private:
 		PersistentCache& cache_; /**< Reference to a cache to store the objects. */

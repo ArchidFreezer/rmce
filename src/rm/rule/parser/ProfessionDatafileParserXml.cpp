@@ -13,14 +13,14 @@ namespace rm::rule::parser {
 		const pt::ptree& tree = ptree().get_child(rootNode());
 		for (const auto& v : tree) {
 			std::string name = v.second.get<std::string>("name");
-			std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
+			std::string id = v.second.get("id", factory().generateId(ruleDatatype(), name));
 
 			ProfessionData& ref = factory().get<ProfessionData>(id);
 			ref.setName(name);
 			ref.setDescription(v.second.get<std::string>("description"));
 
 			// Get the book from the cache
-			std::string book_id = GameRuleData::generateId("Book", v.second.get<std::string>("book"));
+			std::string book_id = factory().generateId("Book", v.second.get<std::string>("book"));
 			ref.setBook(factory().get<BookData>(book_id));
 
 			// Spell user type
@@ -52,7 +52,7 @@ namespace rm::rule::parser {
 							if (num_choices != -1) base_lists.setNumChoices(num_choices);
 						}
 						if (key == "spell-list") {
-							std::string list_id = GameRuleData::generateId("SpellList", element.second.get_value<std::string>());
+							std::string list_id = factory().generateId("SpellList", element.second.get_value<std::string>());
 							base_lists.addOption(factory().get<SpellListData>(list_id));
 						}
 					}
@@ -65,7 +65,7 @@ namespace rm::rule::parser {
 				for (const auto& skill_bonus : skill_bonuses.get()) {
 					// Get development type to set the skill as and then add the skills to the appropriate container
 					int bonus = skill_bonus.second.get_value<int>();
-					std::string skill_id = GameRuleData::generateId("Skill", skill_bonus.second.get<std::string>("<xmlattr>.skill"));
+					std::string skill_id = factory().generateId("Skill", skill_bonus.second.get<std::string>("<xmlattr>.skill"));
 					boost::optional<std::string> subcategory = skill_bonus.second.get_optional<std::string>("<xmlattr>.subcategory");
 					if (subcategory) {
 						ref.setSkillBonus(factory().subcategoriedSkillData(skill_id, subcategory.value()), bonus);
@@ -83,7 +83,7 @@ namespace rm::rule::parser {
 					std::string skill_type_id = skill_modifier.second.get<std::string>("skill-type");
 					if (SkillDevelopmentType::fromString(skill_type_id)) {
 						for (const auto& skill_tree : skill_modifier.second.get_child("skills")) {
-							std::string skill_id = GameRuleData::generateId("Skill", skill_tree.second.get_value<std::string>());
+							std::string skill_id = factory().generateId("Skill", skill_tree.second.get_value<std::string>());
 							ref.setSkillDevelopmentType(factory().subcategoriedSkillData(skill_id), SkillDevelopmentType::fromString(skill_type_id).value());
 						}
 					}
@@ -100,7 +100,7 @@ namespace rm::rule::parser {
 					if (SkillDevelopmentType::fromString(skill_type_id)) {
 						choice.setNumChoices(skill_development_type_choice.second.get<int>("num-choices"));
 						for (const auto& skill_name_tree : skill_development_type_choice.second.get_child("skills")) {
-							std::string skill_id = GameRuleData::generateId("Skill", skill_name_tree.second.get_value<std::string>());
+							std::string skill_id = factory().generateId("Skill", skill_name_tree.second.get_value<std::string>());
 							boost::optional<std::string> subcategory = skill_name_tree.second.get_optional<std::string>("<xmlattr>.subcategory");
 
 							SubcategoriedSkillData& sub_skill = (subcategory ? factory().subcategoriedSkillData(skill_id, subcategory.value()) : factory().subcategoriedSkillData(skill_id));
@@ -121,7 +121,7 @@ namespace rm::rule::parser {
 					if (SkillDevelopmentType::fromString(skill_type_id)) {
 						choice.setNumChoices(skill_subcategory_development_type_choice.second.get<int>("num-choices"));
 						for (const auto& skill_name_tree : skill_subcategory_development_type_choice.second.get_child("skills")) {
-							std::string skill_id = GameRuleData::generateId("Skill", skill_name_tree.second.get_value<std::string>());
+							std::string skill_id = factory().generateId("Skill", skill_name_tree.second.get_value<std::string>());
 							choice.addOption(factory().get<SkillData>(skill_id));
 						}
 						ref.addSkillSubcategoryDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
@@ -132,7 +132,7 @@ namespace rm::rule::parser {
 			// Get skill category profession bonuses
 			if (boost::optional<const pt::ptree&> skill_category_bonuses = v.second.get_child_optional("skill-category-bonuses")) {
 				for (const auto& skill_category_bonus : skill_category_bonuses.get()) {
-					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_bonus.second.get<std::string>("<xmlattr>.category")) };
+					std::string skill_category_id{ factory().generateId("SkillCategory", skill_category_bonus.second.get<std::string>("<xmlattr>.category")) };
 					int bonus = skill_category_bonus.second.get_value<int>();
 					if (bonus) ref.addSkillCategoryProfessionBonus(factory().get<SkillCategoryData>(skill_category_id), bonus);
 				}
@@ -141,7 +141,7 @@ namespace rm::rule::parser {
 			// Get skill category special bonuses
 			if (boost::optional<const pt::ptree&> skill_category_bonuses = v.second.get_child_optional("skill-category-skill-bonuses")) {
 				for (const auto& skill_category_bonus : skill_category_bonuses.get()) {
-					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_bonus.second.get<std::string>("<xmlattr>.category")) };
+					std::string skill_category_id{ factory().generateId("SkillCategory", skill_category_bonus.second.get<std::string>("<xmlattr>.category")) };
 					int bonus = skill_category_bonus.second.get_value<int>();
 					if (bonus) ref.addSkillCategorySpecialBonus(factory().get<SkillCategoryData>(skill_category_id), bonus);
 				}
@@ -150,7 +150,7 @@ namespace rm::rule::parser {
 			// Get skill category development types
 			if (boost::optional<const pt::ptree&> skill_category_development_types = v.second.get_child_optional("skill-category-skill-modifiers")) {
 				for (const auto& skill_category_development_type : skill_category_development_types.get()) {
-					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_development_type.second.get<std::string>("<xmlattr>.category")) };
+					std::string skill_category_id{ factory().generateId("SkillCategory", skill_category_development_type.second.get<std::string>("<xmlattr>.category")) };
 					std::string skill_type_id = skill_category_development_type.second.get_value<std::string>();
 					if (SkillDevelopmentType::fromString(skill_type_id)) {
 						ref.addSkillCategorySkillDevelopmentType(factory().get<SkillCategoryData>(skill_category_id), SkillDevelopmentType::fromString(skill_type_id).value());
@@ -161,7 +161,7 @@ namespace rm::rule::parser {
 			// Get skill category development costs
 			if (boost::optional<const pt::ptree&> skill_category_development_costs = v.second.get_child_optional("skill-category-costs")) {
 				for (const auto& skill_category_development_cost : skill_category_development_costs.get()) {
-					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_development_cost.second.get<std::string>("<xmlattr>.category")) };
+					std::string skill_category_id{ factory().generateId("SkillCategory", skill_category_development_cost.second.get<std::string>("<xmlattr>.category")) };
 					std::string cost = skill_category_development_cost.second.get_value<std::string>();
 					ref.addSkillCategoryDevelopmentCost(factory().get<SkillCategoryData>(skill_category_id), rm::game::character::SkillDevelopmentCost(cost));
 				}
@@ -178,7 +178,7 @@ namespace rm::rule::parser {
 						choice.setNumChoices(skill_category_development_type_choice.second.get<int>("num-choices"));
 						for (const auto& category_name_tree : skill_category_development_type_choice.second.get_child("categories")) {
 							std::string category_name = category_name_tree.second.get_value<std::string>();
-							std::string category_id = GameRuleData::generateId("SkillCategory", category_name);
+							std::string category_id = factory().generateId("SkillCategory", category_name);
 							choice.addOption(factory().get<SkillCategoryData>(category_id));
 						}
 						ref.addSkillCategorySkillDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
@@ -197,7 +197,7 @@ namespace rm::rule::parser {
 						choice.setNumChoices(skill_group_development_type_choice.second.get<int>("num-choices"));
 						for (const auto& group_name_tree : skill_group_development_type_choice.second.get_child("groups")) {
 							std::string group_name = group_name_tree.second.get_value<std::string>();
-							std::string group_id = GameRuleData::generateId("SkillGroup", group_name);
+							std::string group_id = factory().generateId("SkillGroup", group_name);
 							choice.addOption(factory().get<SkillGroupData>(group_id));
 						}
 						ref.addSkillGroupSkillDevelopmentTypeChoice(std::move(choice), SkillDevelopmentType::fromString(skill_type_id).value());
@@ -209,7 +209,7 @@ namespace rm::rule::parser {
 			if (boost::optional<const pt::ptree&> skill_group_bonuses = v.second.get_child_optional("skill-group-bonuses")) {
 				for (const auto& skill_group_bonus : skill_group_bonuses.get()) {
 					int bonus = skill_group_bonus.second.get_value<int>();
-					std::string group_id{ GameRuleData::generateId("SkillGroup", skill_group_bonus.second.get<std::string>("<xmlattr>.group")) };
+					std::string group_id{ factory().generateId("SkillGroup", skill_group_bonus.second.get<std::string>("<xmlattr>.group")) };
 					if (bonus) ref.addSkillGroupProfessionBonus(factory().get<SkillGroupData>(group_id), bonus);
 				}
 			}
@@ -218,7 +218,7 @@ namespace rm::rule::parser {
 			if (boost::optional<const pt::ptree&> skill_group_bonuses = v.second.get_child_optional("skill-group-skill-bonuses")) {
 				for (const auto& skill_group_bonus : skill_group_bonuses.get()) {
 					int bonus = skill_group_bonus.second.get_value<int>();
-					std::string group_id{ GameRuleData::generateId("SkillGroup", skill_group_bonus.second.get<std::string>("<xmlattr>.group")) };
+					std::string group_id{ factory().generateId("SkillGroup", skill_group_bonus.second.get<std::string>("<xmlattr>.group")) };
 					if (bonus) ref.addSkillGroupSpecialBonus(factory().get<SkillGroupData>(group_id), bonus);
 				}
 			}
@@ -228,7 +228,7 @@ namespace rm::rule::parser {
 				for (const auto& skill_group_skill_modifier : skill_group_skill_modifiers.get()) {
 					std::string skill_type_id = skill_group_skill_modifier.second.get_value<std::string>();
 					if (SkillDevelopmentType::fromString(skill_type_id)) {
-						std::string group_id{ GameRuleData::generateId("SkillGroup", skill_group_skill_modifier.second.get<std::string>("<xmlattr>.group")) };
+						std::string group_id{ factory().generateId("SkillGroup", skill_group_skill_modifier.second.get<std::string>("<xmlattr>.group")) };
 						ref.addSkillGroupSkillDevelopmentType(factory().get<SkillGroupData>(group_id), SkillDevelopmentType::fromString(skill_type_id).value());
 					}
 				}

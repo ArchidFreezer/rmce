@@ -15,7 +15,7 @@ namespace rm::rule::parser {
 		const pt::ptree& tree = ptree().get_child(rootNode());
 		for (const auto& v : tree) {
 			std::string type_str = v.second.get<std::string>("type");
-			std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), type_str));
+			std::string id = v.second.get("id", factory().generateId(ruleDatatype(), type_str));
 
 			PoisonTypeData& ref = factory().get<PoisonTypeData>(id);
 

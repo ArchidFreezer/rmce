@@ -12,7 +12,7 @@ namespace rm::rule::parser {
 		const pt::ptree& tree = ptree().get_child(rootNode());
 		for (const auto& v : tree) {
 			std::string name = v.second.get<std::string>("name");
-			std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
+			std::string id = v.second.get("id", factory().generateId(ruleDatatype(), name));
 
 			SkillData& ref = factory().get<SkillData>(id);
 			ref.setName(name);
