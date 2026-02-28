@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+#include <Persistent.h>
+
 /**
  * @namespace rm::rule
  * @brief Rules of the game represented by classes and data structures
@@ -34,7 +36,7 @@ namespace rm::rule {
 	 * This class is used as the base for all classes that contain objects with data for the game rules, e.g. Professions,
 	 * Languages, Skills, etc.
 	 */
-	class GameRuleData {
+	class GameRuleData : rm::Persistent {
 
 	public:
 		/**

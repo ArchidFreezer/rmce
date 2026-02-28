@@ -3,6 +3,7 @@
 #include <boost/uuid.hpp>
 
 #include <string>
+#include <Persistent.h>
 
 /**
  * @namespace rm::game
@@ -42,7 +43,7 @@ namespace rm::game {
 	 * Creation of these objects is through a factory class that has members to create both persistent objects that will be serialised and transient objects that will not be serialised.
 	 * @see GameObjectFactory
 	 */
-	class GameObject {
+	class GameObject : rm::Persistent {
 		friend class GameObjectFactory; // Allow the factory to access the private members of the class to set the unique identifier when creating objects
 
 	public:
@@ -63,7 +64,7 @@ namespace rm::game {
 		 *
 		 * @return Identifier as a string reference.
 		 */
-		std::string id() const { return to_string(id_); }
+		const std::string& id() const { return id_; }
 
 		/**
 		 * @brief Override the less than operator
@@ -95,10 +96,10 @@ namespace rm::game {
 		 *
 		 * Sets the unique identifier for the object to a randomly generated UUID. This ensures that each object has a unique identifier without requiring the caller to provide one.
 		 */
-		GameObject() : id_{ boost::uuids::random_generator()() } {};
+		GameObject() : id_{ to_string(boost::uuids::random_generator()()) } {};
 
 	private:
-		boost::uuids::uuid id_; // Unique tag to ensure that each object has a unique identifier
+		std::string id_; // Unique tag to ensure that each object has a unique identifier
 
 		/**
 		 * @brief Default copy constructor for GameObject.
@@ -114,7 +115,7 @@ namespace rm::game {
 		 *
 		 * @param id Unique identifier for the object as a string reference.
 		 */
-		void setId(const std::string& id) { id_ = boost::uuids::string_generator()(id); }
+		void setId(const std::string& id) { id_ = id; }
 	};
 
 } // namespace rm::game
