@@ -95,13 +95,15 @@ namespace rm::game {
 
 
 		/*
-		 * Delete all the copy and move constructors and assignment operators to ensure that the unique identifier is not accidentally copied or moved, which would lead to multiple
+		 * Make all the copy and move constructors and assignment operators private to ensure that the unique identifier is not accidentally copied or moved, which would lead to multiple
 		 * objects having the same unique identifier, which would break the uniqueness requirement of the identifier and cause issues with serialisation and deserialisation.
+		 * 
+		 * The GameObjectFactory class is responsible for creating objects and setting their unique identifiers, so it should be the only class that can copy or move objects of this class.
 		 */
-		GameObject(const GameObject& other) = delete; // Default copy constructor
-		GameObject& operator=(const GameObject& other) = delete; // Default copy assignment operator
-		GameObject(GameObject&& other) = delete; // Default move constructor
-		GameObject& operator=(GameObject&& other) = delete; // Default move assignment operator
+		GameObject(const GameObject& other) = default; // Default copy constructor
+		GameObject& operator=(const GameObject& other) = default; // Default copy assignment operator
+		GameObject(GameObject&& other) = default; // Default move constructor
+		GameObject& operator=(GameObject&& other) = default; // Default move assignment operator
 
 	};
 
