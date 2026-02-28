@@ -84,12 +84,6 @@ namespace rm::game {
 		std::string id_; // Unique tag to ensure that each object has a unique identifier
 
 		/**
-		 * @brief Default copy constructor for GameObject.
-		 * @param other The GameObject instance to copy from.
-		 */
-		GameObject(const GameObject& other) = default; // Default copy constructor
-
-		/**
 		 * @brief Set the unique id of the game data object
 		 *
 		 * Each object containing game rule data requires a unique identifier to allow it to be referenced.
@@ -98,6 +92,17 @@ namespace rm::game {
 		 * @param id Unique identifier for the object as a string reference.
 		 */
 		void setId(const std::string& id) { id_ = id; }
+
+
+		/*
+		 * Delete all the copy and move constructors and assignment operators to ensure that the unique identifier is not accidentally copied or moved, which would lead to multiple
+		 * objects having the same unique identifier, which would break the uniqueness requirement of the identifier and cause issues with serialisation and deserialisation.
+		 */
+		GameObject(const GameObject& other) = delete; // Default copy constructor
+		GameObject& operator=(const GameObject& other) = delete; // Default copy assignment operator
+		GameObject(GameObject&& other) = delete; // Default move constructor
+		GameObject& operator=(GameObject&& other) = delete; // Default move assignment operator
+
 	};
 
 	/**
