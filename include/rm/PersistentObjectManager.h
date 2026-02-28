@@ -54,18 +54,31 @@ namespace rm {
 		 * @tparam T type of PersistentObject object to create
 		 * @return Uniqur pointer to PersistentObject object of type @a T
 		 */
-		template <persistent_object T>
+		template <default_persistent_object T>
 		std::unique_ptr<T> create() { return std::unique_ptr<T>(new T()); }
 
 		/**
-		 * @brief Get a new PersistentObject object with a randomly generated UUID as its ID and add it to the cache
+		 * @brief Get a PersistentObject object that may be created with an ID only
+		 *
+		 * The object is not added to the cache and is suitable for temporary objects that do not need to be referenced by ID, e.g. objects that are only used in the context of a single function call.
+		 *
+		 * Objects created with this method will not be serialised.
+		 *
+		 * @tparam T type of PersistentObject object to create
+		 * @return Uniqur pointer to PersistentObject object of type @a T
+		 */
+		template <id_persistent_object T>
+		std::unique_ptr<T> create(std::string id) { return std::unique_ptr<T>(new T(id)); }
+
+		/**
+		 * @brief Get a PersistentObject object with a randomly generated UUID as its ID and add it to the cache
 		 *
 		 * Objects created with this method will be serialised.
 		 *
 		 * @tparam T type of PersistentObject object to create
 		 * @return PersistentObject object from the cache of type @a T
 		 */
-		template<persistent_object T>
+		template<default_persistent_object T>
 		T& get() {
 			// Create a new object and add it to the cache.
 			std::unique_ptr<T> obj(new T());
@@ -75,7 +88,7 @@ namespace rm {
 		}
 
 		/**
-		 * @brief Get standard PersistentObject objects that may be created with an ID only
+		 * @brief Get a PersistentObject object that may be created with an ID only
 		 *
 		 * Objects created with this method will be serialised.
 		 *
@@ -83,7 +96,7 @@ namespace rm {
 		 * @param id Unique ID of the object
 		 * @return PersistentObject object from the cache of type @a T
 		 */
-		template<persistent_object T>
+		template<id_persistent_object T>
 		T& get(std::string id) {
 			// If the object already exists in the cache then we can return it without creating a new one
 			if (cache_.exists<T>(id)) return cache_.get<T>(id);
