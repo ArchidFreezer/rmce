@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <SkillProgressionTypeData.h>
 
 namespace rm::rule::parser {
@@ -10,34 +9,30 @@ namespace rm::rule::parser {
 	 * @class SkillProgressionTypeDatafileParserJson
 	 * @brief Process SkillProgressionTypeData objects from json files
 	 *
-	 * This class can read a well-formed json file creating SkillProgressionTypeData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating SkillProgressionTypeData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see SkillProgressionTypeData
-	 * @see GameRuleDataCache
 	 */
 
 	class SkillProgressionTypeDatafileParserJson : public DatafileParserJson {
 	public:
-		// We need this to prevent name hiding as we have a method with the same name defined in this class
-		using DatafileParserBoost::save;
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for SkillProgressionTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		SkillProgressionTypeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "SkillProgressionType", filename) {
+		SkillProgressionTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "SkillProgressionType", filename) {
 			setRootNode("skillProgressions");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for SkillProgressionTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		SkillProgressionTypeDatafileParserJson(GameRuleDataCache& cache) : SkillProgressionTypeDatafileParserJson(cache, "") {}
+		SkillProgressionTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager) : SkillProgressionTypeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write book game rule data from the cache to a json file

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <table/AttackTable.h>
 
 namespace rm::rule::parser {
@@ -10,13 +9,11 @@ namespace rm::rule::parser {
 	 * @class AttackTableDatafileParserJson
 	 * @brief Process AttackTable objects for json files
 	 *
-	 * This class can read a well-formed json file creating AttackTable objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating AttackTable objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see AttackTable
-	 * @see GameRuleDataCache
 	 */
 
 	class AttackTableDatafileParserJson : public DatafileParserJson {
@@ -26,19 +23,19 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for AttackTable objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		AttackTableDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "AttackTable", filename) {
+		AttackTableDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "AttackTable", filename) {
 			setRootNode("attack-tables");
 		}
 
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for AttackTable objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		AttackTableDatafileParserJson(GameRuleDataCache& cache) : AttackTableDatafileParserJson(cache, "") {}
+		AttackTableDatafileParserJson(rm::GameRuleDataFactory& object_manager) : AttackTableDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write attack tables from the cache to a json file

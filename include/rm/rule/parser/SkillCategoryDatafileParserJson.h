@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <SkillCategoryData.h>
 
 namespace rm::rule::parser {
@@ -10,34 +9,30 @@ namespace rm::rule::parser {
 	 * @class SkillCategoryDatafileParserJson
 	 * @brief Process SkillCategoryData objects for json files
 	 *
-	 * This class can read a well-formed json file creating SkillCategoryData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating SkillCategoryData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see SkillCategoryData
-	 * @see GameRuleDataCache
 	 */
 
 	class SkillCategoryDatafileParserJson : public DatafileParserJson {
 	public:
-		// We need this to prevent name hiding as we have a method with the same name defined in this class
-		using DatafileParserBoost::save;
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for SkillCategoryData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		SkillCategoryDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "SkillCategory", filename) {
+		SkillCategoryDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "SkillCategory", filename) {
 			setRootNode("skill-categories");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for SkillCategoryData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		SkillCategoryDatafileParserJson(GameRuleDataCache& cache) : SkillCategoryDatafileParserJson(cache, "") {}
+		SkillCategoryDatafileParserJson(rm::GameRuleDataFactory& object_manager) : SkillCategoryDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write skill category game rule data from the cache to a json file

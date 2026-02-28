@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserXml.h>
-#include <GameRuleDataCache.h>
 #include <ProfessionData.h>
 
 namespace rm::rule::parser {
@@ -10,11 +9,9 @@ namespace rm::rule::parser {
 	 * @class ProfessionDatafileParserXml
 	 * @brief Process ProfessionData objects for xml files
 	 *
-	 * This class can read a well-formed xml file creating ProfessionData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed xml file creating ProfessionData objects from the contents, adding them to a cache.
 	 *
 	 * @see ProfessionData
-	 * @see GameRuleDataCache
 	 */
 
 	class ProfessionDatafileParserXml : public DatafileParserXml {
@@ -24,18 +21,18 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for ProfessionData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		ProfessionDatafileParserXml(GameRuleDataCache& cache, std::string_view filename) : DatafileParserXml(cache, "Profession", filename) {
+		ProfessionDatafileParserXml(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserXml(object_manager, "Profession", filename) {
 			setRootNode("ProfessionData.professions");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for ProfessionData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		ProfessionDatafileParserXml(GameRuleDataCache& cache) : ProfessionDatafileParserXml(cache, "") {}
+		ProfessionDatafileParserXml(rm::GameRuleDataFactory& object_manager) : ProfessionDatafileParserXml(object_manager, "") {}
 
 	private:
 		/**

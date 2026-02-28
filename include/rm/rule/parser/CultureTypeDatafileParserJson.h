@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <CultureTypeData.h>
 
 namespace rm::rule::parser {
@@ -10,31 +9,29 @@ namespace rm::rule::parser {
 	 * @class CultureTypeDatafileParserJson
 	 * @brief Process CultureTypeData objects for json files
 	 *
-	 * This class can read a well-formed json file creating CultureTypeData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating CultureTypeData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see CultureTypeData
-	 * @see GameRuleDataCache
 	 */
 
 	class CultureTypeDatafileParserJson : public DatafileParserJson {
 	public:
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for CultureTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		CultureTypeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "CultureType", filename) {
+		CultureTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "CultureType", filename) {
 			setRootNode("culture-types");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for CultureTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		CultureTypeDatafileParserJson(GameRuleDataCache& cache) : CultureTypeDatafileParserJson(cache, "") {}
+		CultureTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager) : CultureTypeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write culturetype game rule data from the cache to a json file

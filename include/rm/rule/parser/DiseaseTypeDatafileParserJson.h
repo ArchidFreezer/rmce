@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <DiseaseTypeData.h>
 
 namespace rm::rule::parser {
@@ -10,13 +9,11 @@ namespace rm::rule::parser {
 	 * @class DiseaseTypeDatafileParserJson
 	 * @brief Process DiseaseTypeData objects for json files
 	 *
-	 * This class can read a well-formed json file creating DiseaseTypeData objects from the contents, adding them to a
-	 * #GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating DiseaseTypeData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see DiseaseTypeData
-	 * @see #GameRuleDataCache
 	 */
 	class DiseaseTypeDatafileParserJson : public DatafileParserJson {
 	public:
@@ -25,18 +22,18 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for DiseaseTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		DiseaseTypeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "DiseaseType", filename) {
+		DiseaseTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "DiseaseType", filename) {
 			setRootNode("disease-types");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for DiseaseTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		DiseaseTypeDatafileParserJson(GameRuleDataCache& cache) : DiseaseTypeDatafileParserJson(cache, "") {}
+		DiseaseTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager) : DiseaseTypeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write diseasetype game rule data from the cache to a json file

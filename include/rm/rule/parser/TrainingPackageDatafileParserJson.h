@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <TrainingPackageData.h>
 
 namespace rm::rule::parser {
@@ -10,34 +9,30 @@ namespace rm::rule::parser {
 	 * @class TrainingPackageDatafileParserJson
 	 * @brief Process TrainingPackageData objects for json files
 	 *
-	 * This class can read a well-formed json file creating TrainingPackageData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating TrainingPackageData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see TrainingPackageData
-	 * @see GameRuleDataCache
 	 */
 
 	class TrainingPackageDatafileParserJson : public DatafileParserJson {
 	public:
-		// We need this to prevent name hiding as we have a method with the same name defined in this class
-	//	using DatafileParserBoost::save;
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for TrainingPackageData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		TrainingPackageDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Trainingpackage", filename) {
+		TrainingPackageDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Trainingpackage", filename) {
 			setRootNode("training-packages");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for TrainingPackageData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		TrainingPackageDatafileParserJson(GameRuleDataCache& cache) : TrainingPackageDatafileParserJson(cache, "") {}
+		TrainingPackageDatafileParserJson(rm::GameRuleDataFactory& object_manager) : TrainingPackageDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write trainingpackage game rule data from the cache to a json file

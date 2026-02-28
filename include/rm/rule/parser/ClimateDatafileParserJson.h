@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <ClimateData.h>
 
 namespace rm::rule::parser {
@@ -10,13 +9,11 @@ namespace rm::rule::parser {
 	 * @class ClimateDatafileParserJson
 	 * @brief Process ClimateData objects for json files
 	 *
-	 * This class can read a well-formed json file creating ClimateData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating ClimateData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see ClimateData
-	 * @see GameRuleDataCache
 	 */
 
 	class ClimateDatafileParserJson : public DatafileParserJson {
@@ -26,18 +23,18 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for ClimateData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		ClimateDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Climate", filename) {
+		ClimateDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Climate", filename) {
 			setRootNode("climates");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for ClimateData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		ClimateDatafileParserJson(GameRuleDataCache& cache) : ClimateDatafileParserJson(cache, "") {}
+		ClimateDatafileParserJson(rm::GameRuleDataFactory& object_manager) : ClimateDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write climate game rule data from the cache to a json file

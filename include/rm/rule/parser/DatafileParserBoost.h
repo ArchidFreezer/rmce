@@ -24,18 +24,18 @@ namespace rm::rule::parser {
 	public:
 		/**
 		 * @brief Consructor
-		 * @param cache Reference to a cache object to store the data objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param datatype String containing the name of the type of data being processed
 		 * @param filename Path to the datafile to parse
 		 */
-		DatafileParserBoost(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) : DatafileParser(cache, datatype, filename) {}
+		DatafileParserBoost(rm::GameRuleDataFactory& object_manager, std::string_view datatype, std::string_view filename) : DatafileParser(object_manager, datatype, filename) {}
 
 		/**
 		 * @brief Consructor
-		 * @param cache Reference to a cache object to store the data objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param datatype String containing the name of the type of data being processed
 		 */
-		DatafileParserBoost(GameRuleDataCache& cache, std::string_view datatype) : DatafileParserBoost(cache, datatype, "") {}
+		DatafileParserBoost(rm::GameRuleDataFactory& object_manager, std::string_view datatype) : DatafileParserBoost(object_manager, datatype, "") {}
 
 		/**
 		 * @brief Default destructor

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <LanguageData.h>
 
 namespace rm::rule::parser {
@@ -10,13 +9,11 @@ namespace rm::rule::parser {
 	 * @class LanguageDatafileParserJson
 	 * @brief Process LanguageData objects for json files
 	 *
-	 * This class can read a well-formed json file creating LanguageData objects from the contents, adding them to a
-	 * #GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating LanguageData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see LanguageData
-	 * @see #GameRuleDataCache
 	 */
 	class LanguageDatafileParserJson : public DatafileParserJson {
 	public:
@@ -25,18 +22,18 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for #LanguageCategoryData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		LanguageDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Language", filename) {
+		LanguageDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Language", filename) {
 			setRootNode("languages");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for #LanguageCategoryData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		LanguageDatafileParserJson(GameRuleDataCache& cache) : LanguageDatafileParserJson(cache, "") {}
+		LanguageDatafileParserJson(rm::GameRuleDataFactory& object_manager) : LanguageDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write language game rule data from the cache to a json file

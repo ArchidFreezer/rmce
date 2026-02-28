@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <TreasureCodeData.h>
 
 namespace rm::rule::parser {
@@ -10,34 +9,30 @@ namespace rm::rule::parser {
 	 * @class TreasureCodeDatafileParserJson
 	 * @brief Process TreasureCodeData objects for json files
 	 *
-	 * This class can read a well-formed json file creating TreasureCodeData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating TreasureCodeData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see TreasureCodeData
-	 * @see GameRuleDataCache
 	 */
 
 	class TreasureCodeDatafileParserJson : public DatafileParserJson {
 	public:
-		// We need this to prevent name hiding as we have a method with the same name defined in this class
-		using DatafileParserBoost::save;
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for TreasureCodeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		TreasureCodeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "TreasureCode", filename) {
+		TreasureCodeDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "TreasureCode", filename) {
 			setRootNode("treasure-codes");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for TreasureCodeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		TreasureCodeDatafileParserJson(GameRuleDataCache& cache) : TreasureCodeDatafileParserJson(cache, "") {}
+		TreasureCodeDatafileParserJson(rm::GameRuleDataFactory& object_manager) : TreasureCodeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write skill category game rule data from the cache to a json file

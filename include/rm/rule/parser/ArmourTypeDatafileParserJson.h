@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <ArmourTypeData.h>
 
 namespace rm::rule::parser {
@@ -10,13 +9,11 @@ namespace rm::rule::parser {
 	 * @class ArmourTypeDatafileParserJson
 	 * @brief Process ArmourTypeData objects for json files
 	 *
-	 * This class can read a well-formed json file creating ArmourTypeData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating ArmourTypeData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see ArmourTypeData
-	 * @see GameRuleDataCache
 	 */
 
 	class ArmourTypeDatafileParserJson : public DatafileParserJson {
@@ -26,18 +23,18 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for ArmourTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		ArmourTypeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "ArmourType", filename) {
+		ArmourTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "ArmourType", filename) {
 			setRootNode("armour-types");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for ArmourTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		ArmourTypeDatafileParserJson(GameRuleDataCache& cache) : ArmourTypeDatafileParserJson(cache, "") {}
+		ArmourTypeDatafileParserJson(rm::GameRuleDataFactory& object_manager) : ArmourTypeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write the game rule data from the cache to a json file
