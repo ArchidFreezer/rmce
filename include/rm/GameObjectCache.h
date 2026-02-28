@@ -9,9 +9,6 @@
 
 #include <GameObject.h>
 
-using rm::game::game_object;
-using rm::game::GameObject;
-
 /**
  * @namespace rm
  * @brief All elements in the rm library are contained within this namespace
@@ -87,7 +84,7 @@ namespace rm {
 		 * @return Reference to the data object
 		 * @throws out_of_range if there is no object for the id with the given type
 		 */
-		template <game_object T>
+		template <game::game_object T>
 		T& get(std::string id);
 
 		/**
@@ -99,7 +96,7 @@ namespace rm {
 		 *           Must be derived from GameObject
 		 * @param datum Object to move to the cache
 		 */
-		template <game_object T>
+		template <game::game_object T>
 		void add(std::unique_ptr <T> datum);
 
 		/**
@@ -109,7 +106,7 @@ namespace rm {
 		 * @param id Identifier of the game object
 		 * @return Reference to the game object
 		 */
-		template <game_object T>
+		template <game::game_object T>
 		bool exists(std::string id);
 
 		/**
@@ -121,7 +118,7 @@ namespace rm {
 		 *           Must be derived from GameObject
 		 * @param keys Set of strings to populate with the ids of the game objects
 		 */
-		template <game_object T>
+		template <game::game_object T>
 		void keys(std::set<std::string>& keys);
 
 		/**
@@ -130,21 +127,21 @@ namespace rm {
 		 *           Must be derived from GameObject
 		 * @return Number of game objects of the specified type in the cache
 		 */
-		template <game_object T>
+		template <game::game_object T>
 		int size();
 
 	private:
 		/**
 		 * @brief Stores the state of the cache
 		 */
-		std::unordered_map<std::type_index, std::unordered_map<std::string, std::unique_ptr<GameObject>>> state;
+		std::unordered_map<std::type_index, std::unordered_map<std::string, std::unique_ptr<game::GameObject>>> state;
 		/**
 		 * @brief Stores mutexes to make the class threads safe
 		 */
 		std::unordered_map<std::type_index, std::mutex> mutexes;
 	};
 
-	template<game_object T>
+	template<game::game_object T>
 	inline T& GameObjectCache::get(std::string id) {
 		// Grab a mutex for thread safety
 		auto& mutex = mutexes[typeid(T)];
@@ -164,7 +161,7 @@ namespace rm {
 		}
 	}
 
-	template<game_object T>
+	template<game::game_object T>
 	inline void GameObjectCache::add(std::unique_ptr <T> datum) {
 		// Grab a mutex for thread safety
 		auto& mutex = mutexes[typeid(T)];
@@ -177,7 +174,7 @@ namespace rm {
 		ruledata_hash_map.insert_or_assign(datum.get()->id(), std::move(datum));
 	}
 
-	template<game_object T>
+	template<game::game_object T>
 	inline bool GameObjectCache::exists(std::string id) {
 		// Grab a mutex for thread safety
 		auto& mutex = mutexes[typeid(T)];
@@ -193,7 +190,7 @@ namespace rm {
 		return ruledata_it != ruledata_hash_map.end();
 	}
 
-	template<game_object T>
+	template<game::game_object T>
 	inline void GameObjectCache::keys(std::set<std::string>& keys) {
 		// Grab a mutex for thread safety
 		auto& mutex = mutexes[typeid(T)];
@@ -211,7 +208,7 @@ namespace rm {
 		}
 	}
 
-	template<game_object T>
+	template<game::game_object T>
 	inline int GameObjectCache::size() {
 		// Grab a mutex for thread safety
 		auto& mutex = mutexes[typeid(T)];

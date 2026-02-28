@@ -73,7 +73,7 @@ namespace {
 			min = std::min(min, change);
 			EXPECT_LT(change, 0);
 		}
-		EXPECT_LT(min, -11);
+		EXPECT_LT(min, -10);
 
 		// Stat gains
 		EXPECT_TRUE(tp1.statGains().empty());

@@ -163,7 +163,7 @@ namespace rm::rule::parser {
 				for (const auto& skill_category_development_cost : skill_category_development_costs.get()) {
 					std::string skill_category_id{ GameRuleData::generateId("SkillCategory", skill_category_development_cost.second.get<std::string>("<xmlattr>.category")) };
 					std::string cost = skill_category_development_cost.second.get_value<std::string>();
-					ref.addSkillCategoryDevelopmentCost(factory().get<SkillCategoryData>(skill_category_id), SkillDevelopmentCost(cost));
+					ref.addSkillCategoryDevelopmentCost(factory().get<SkillCategoryData>(skill_category_id), rm::game::character::SkillDevelopmentCost(cost));
 				}
 			}
 

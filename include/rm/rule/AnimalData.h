@@ -24,9 +24,6 @@
 
 using namespace rm::rule::enums;
 
-using rm::game::AnimalAttack;
-using rm::game::Location;
-
 namespace rm::rule {
 
 	/**
@@ -447,33 +444,33 @@ namespace rm::rule {
 		 * @brief Set the location definition for the animal
 		 * @param location Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there.
 		 */
-		void setLocation(Location location) { location_ = std::make_unique<Location>(std::move(location)); }
+		void setLocation(rm::game::Location location) { location_ = std::make_unique<rm::game::Location>(std::move(location)); }
 
 		/**
 		 * @brief Get the location for the animal
 		 * @return Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there.
 		 */
-		const Location& location() const { return *location_; }
+		const rm::game::Location& location() const { return *location_; }
 
 		/**
 		 * @brief Add an attack to the animal
 		 * @param chance_range Pointer to a NumberRange<int> that represents the chance of the attack being used in a round, used as the key for the attack in the attacks map.
 		 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the attacks map.
 		 */
-		void addAttack(const archid::NumberRange<int>* chance_range, AnimalAttack attack) { attacks_.emplace(chance_range, std::move(attack)); }
+		void addAttack(const archid::NumberRange<int>* chance_range, rm::game::AnimalAttack attack) { attacks_.emplace(chance_range, std::move(attack)); }
 
 		/**
 		 * @brief Get the map of attacks for the animal
 		 * @return Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances.
 		 */
-		const std::map<const archid::NumberRange<int>*, AnimalAttack>& attacks() const { return attacks_; }
+		const std::map<const archid::NumberRange<int>*, rm::game::AnimalAttack>& attacks() const { return attacks_; }
 
 		/**
 		 * @brief Get the attack for a given d100 roll
 		 * @param d100_roll The result of a d100 roll, used to determine which attack is used in a round based on the chance ranges defined for each attack.
 		 * @return The attack for the given d100 roll, determined by finding the first attack in the attacks map where the d100 roll falls within the chance range key. If no such attack is found, a default constructed AnimalAttack is returned.
 		 */
-		AnimalAttack getAttack(int d100_roll) const { return getAttack(1, d100_roll); };
+		rm::game::AnimalAttack getAttack(int d100_roll) const { return getAttack(1, d100_roll); };
 
 		/**
 		 * @brief Get the attack for a given d100 roll
@@ -481,7 +478,7 @@ namespace rm::rule {
 		 * @param d100_roll The result of a d100 roll, used to determine which attack is used in a round based on the chance ranges defined for each attack.
 		 * @return The attack for the given d100 roll, determined by finding the first attack in the attacks map where the d100 roll falls within the chance range key. If no such attack is found, a default constructed AnimalAttack is returned.
 		 */
-		AnimalAttack getAttack(int num_attackers, int d100_roll) const;
+		rm::game::AnimalAttack getAttack(int num_attackers, int d100_roll) const;
 
 		/**
 		 * @brief Add an attack to be used based on the number of attackers in the round
@@ -492,7 +489,7 @@ namespace rm::rule {
 		 * @param num_attackers The number of attackers in the round, used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
 		 * @param attack AnimalAttack object that represents the attack, used as the value for the attack in the attacks_by_num_attackers map with the key being the number of attackers required for the attack to be used.
 		 */
-		void addGroupAttack(int num_attackers, AnimalAttack attack) { group_attacks_.emplace(num_attackers, std::move(attack)); }
+		void addGroupAttack(int num_attackers, rm::game::AnimalAttack attack) { group_attacks_.emplace(num_attackers, std::move(attack)); }
 
 		/**
 		 * @brief Get the map of attacks for the animal based on the number of attackers in the round
@@ -502,7 +499,7 @@ namespace rm::rule {
 		 *
 		 * @return Map of attack data for the animal, keyed by the number of attackers in the round. This is used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
 		 */
-		const std::map<int, AnimalAttack>& groupAttacks() const { return group_attacks_; }
+		const std::map<int, rm::game::AnimalAttack>& groupAttacks() const { return group_attacks_; }
 
 		/**
 		 * @brief Get the attack for a given number of attackers in the round
@@ -515,19 +512,19 @@ namespace rm::rule {
 		 * @param num_attackers The number of attackers in the round, used to determine if the attack should be used based on the number of attackers in the round and the chance range for the attack. For example, an attack may only be used if there are 2 or more attackers in the round, so if there is only 1 attacker then that attack would not be used regardless of the d100 roll.
 		 * @return The attack for the given number of attackers in the round, determined by finding the attack in the attacks_by_num_attackers map with the largest key that is less than or equal to the number of attackers in the round. If no such attack is found, a default constructed AnimalAttack is returned.
 		 */
-		std::optional<AnimalAttack> getAttackByNumAttackers(int num_attackers) const;
+		std::optional<rm::game::AnimalAttack> getAttackByNumAttackers(int num_attackers) const;
 
 		/**
 		 * @brief Add a ranged attack to the animal
 		 * @param attack AnimalAttack object that represents the ranged attack, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks.
 		 */
-		void addRangedAttack(AnimalAttack attack) { ranged_attacks_.emplace_back(std::move(attack)); }
+		void addRangedAttack(rm::game::AnimalAttack attack) { ranged_attacks_.emplace_back(std::move(attack)); }
 
 		/**
 		 * @brief Get the vector of ranged attacks for the animal
 		 * @return Vector of ranged attack data for the animal, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks.
 		 */
-		const std::vector<AnimalAttack>& rangedAttacks() const { return ranged_attacks_; }
+		const std::vector<rm::game::AnimalAttack>& rangedAttacks() const { return ranged_attacks_; }
 
 		/**
 		 * @brief Add a conditional attack to the animal
@@ -537,7 +534,7 @@ namespace rm::rule {
 		 * @param ref The reference integer for the conditional attack, used to determine the condition under which the attack is used.
 		 * @param attack AnimalAttack object that represents the conditional attack, used to determine the details of the attack and as the value for the conditional attack in the conditional_attacks map with the key being the reference integer for the condition under which the attack is used.
 		 */
-		void addConditionalAttack(int ref, AnimalAttack attack) { conditional_attacks_.emplace(ref, std::move(attack)); }
+		void addConditionalAttack(int ref, rm::game::AnimalAttack attack) { conditional_attacks_.emplace(ref, std::move(attack)); }
 
 		/**
 		 * @brief Get the conditional attack for a given reference integer
@@ -549,7 +546,7 @@ namespace rm::rule {
 		 * @param ref The reference integer for the conditional attack, used to determine the condition under which the attack is used.
 		 * @return The conditional attack for the given reference integer, determined by looking up the reference integer in the conditional_attacks map. If no such attack is found, a default constructed AnimalAttack is returned.
 		 */
-		std::optional<AnimalAttack> getConditionalAttack(int ref) const;
+		std::optional<rm::game::AnimalAttack> getConditionalAttack(int ref) const;
 
 		/**
 		 * @brief Get the map of conditional attacks for the animal
@@ -558,7 +555,7 @@ namespace rm::rule {
 		 *
 		 * @return Map of conditional attack data for the animal, keyed by the reference integer for the condition under which the attack is used. This is used to determine which attacks are conditional attacks and to look up the details of the conditional attacks based on the reference integer for the condition under which they are used.
 		 */
-		const std::map<int, AnimalAttack>& conditionalAttacks() const { return conditional_attacks_; }
+		const std::map<int, rm::game::AnimalAttack>& conditionalAttacks() const { return conditional_attacks_; }
 
 
 	private:
@@ -586,11 +583,11 @@ namespace rm::rule {
 		std::set<CriticalModifierType::Type> critical_modifiers_{}; /**< Set of critical modifiers for the animal, used to determine which critical modifiers apply when the animal is hit with a critical hit. */
 		std::pair<int, int> encounter_range_{}; /**< A pair containing the minimum and maximum number of animals typically enountered in a single encounter, used to determine how many animals are encountered when an encounter with the animal is generated. */
 		std::pair<int, int> number_young_range_{}; /**< A pair containing the minimum and maximum number of young typically born in a single birth, used to determine how many young are born when a birth event is generated for the animal. */
-		std::unique_ptr<Location> location_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */
-		std::map<const archid::NumberRange<int>*, AnimalAttack> attacks_{}; /**< Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances. */
-		std::map<int, AnimalAttack> group_attacks_{}; /**< Map of attack data for the animal, keyed by the number of attackers in the round. This is used to determine if the attack should be used based on the number of attackers in the round. For example, an attack may only be used if there are 2 or more attackers in the round. */
-		std::vector<AnimalAttack> ranged_attacks_{}; /**< Vector of ranged attack data for the animal, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks. */
-		std::map<int, AnimalAttack> conditional_attacks_{}; /**< Map of attack data for the animal where the attack is conditional. These may be called by other attacks the produce a non-tiny ciritcal result when they are resolved. */
+		std::unique_ptr<rm::game::Location> location_{}; /**< Location definition for the animal, used to determine where the animal can be found in the game world. This is used to match against specific locations to determine if the animal can be found there. */
+		std::map<const archid::NumberRange<int>*, rm::game::AnimalAttack> attacks_{}; /**< Map of attack data for the animal, keyed by a pointer to a NumberRange<int> that represents the chance of the attack being used in a round. This is stored as a pointer to avoid having to copy the attack data for each animal and instead just reference the same data for all animals with the same attack chances. */
+		std::map<int, rm::game::AnimalAttack> group_attacks_{}; /**< Map of attack data for the animal, keyed by the number of attackers in the round. This is used to determine if the attack should be used based on the number of attackers in the round. For example, an attack may only be used if there are 2 or more attackers in the round. */
+		std::vector<rm::game::AnimalAttack> ranged_attacks_{}; /**< Vector of ranged attack data for the animal, used to determine which attacks are ranged attacks. This is used to determine if the animal can make ranged attacks and which attacks are ranged attacks. */
+		std::map<int, rm::game::AnimalAttack> conditional_attacks_{}; /**< Map of attack data for the animal where the attack is conditional. These may be called by other attacks the produce a non-tiny ciritcal result when they are resolved. */
 
 		/**
 		 * @brief Gets the number of hits per level difference based on the constitution code.

@@ -6,11 +6,8 @@
 #include <table/TableColumnCreatureSizeMatcher.h>
 #include <NumberMatcherFactory.h>
 
-using rm::rule::table::LookupTable;
-using rm::rule::table::TableColumnCreatureSizeMatcher;
-using rm::rule::table::TableRow;
-
 using namespace rm::rule::enums;
+using namespace rm::rule::table;
 
 namespace {
 	/**

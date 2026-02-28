@@ -13,8 +13,7 @@
 #include <table/AttackTable.h>
 #include <table/SpecialAttackTable.h>
 
-using rm::rule::table::AttackTable;
-using rm::rule::table::SpecialAttackTable;
+using namespace rm::rule::table;
 
 namespace rm::game {
 

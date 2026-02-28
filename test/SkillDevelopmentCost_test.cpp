@@ -2,7 +2,7 @@
 
 #include <SkillDevelopmentCost.h>
 
-using rm::game::character::SkillDevelopmentCost;
+using namespace rm::game::character;
 
 namespace {
 	TEST(SkillDevelopmentCost, General) {

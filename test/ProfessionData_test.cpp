@@ -458,20 +458,18 @@ namespace {
 	}
 
 	TEST(ProfessionData, CategoryCosts) {
-		using game::character::SkillDevelopmentCost;
-
 		rule::ProfessionData prof("PROF_ID");
 		rule::SkillCategoryData c1("CAT1_ID");
 		EXPECT_THROW(prof.skillCategoryDevelopmentCost(c1), rule::ProfessionData::InvalidCategoryDevelopmentCost);
 
-		prof.addSkillCategoryDevelopmentCost(c1, SkillDevelopmentCost("3:4"));
+		prof.addSkillCategoryDevelopmentCost(c1, game::character::SkillDevelopmentCost("3:4"));
 		EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).first(), 3);
 		EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).second(), 4);
 		EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).third(), std::nullopt);
 
 		rule::SkillCategoryData c2("CAT2_ID");
 		{
-			SkillDevelopmentCost dc1("12");
+			game::character::SkillDevelopmentCost dc1("12");
 			prof.addSkillCategoryDevelopmentCost(c2, dc1);
 			EXPECT_EQ(prof.skillCategoryDevelopmentCost(c1).first(), 3);
 			EXPECT_EQ(prof.skillCategoryDevelopmentCost(c2).first(), 12);

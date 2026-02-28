@@ -8,8 +8,6 @@
 #include <GameRuleData.h>
 #include <SkillData.h>
 
-using rm::rule::table::AttackTable;
-
 namespace rm::rule {
 
 	/**
@@ -80,13 +78,13 @@ namespace rm::rule {
 		 * @brief Set the attack table the weapon type uses
 		 * @param table AttackTable reference used
 		 */
-		void setAttackTable(const AttackTable& table) { table_ = &table; }
+		void setAttackTable(const rm::rule::table::AttackTable& table) { table_ = &table; }
 
 		/**
 		 * @brief Set the attack table the weapon type uses
 		 * @return AttackTable reference used
 		 */
-		const AttackTable& attackTable() const { return *table_; }
+		const rm::rule::table::AttackTable& attackTable() const { return *table_; }
 
 		/**
 		 * @brief Set the fumble range for the weapon
@@ -365,7 +363,7 @@ namespace rm::rule {
 		std::string notes_{};
 		const SkillData* skill_{};
 		const BookData* book_{};
-		const AttackTable* table_{};
+		const rm::rule::table::AttackTable* table_{};
 		int fumble_{};
 		int breakage_{};
 		float min_strength_{};

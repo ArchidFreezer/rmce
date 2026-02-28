@@ -5,8 +5,6 @@
 #include <Dice.h>
 #include <GameObject.h>
 
-using rm::game::GameObject;
-
 namespace rm::game::character {
 
 	/**
@@ -49,7 +47,7 @@ namespace rm::game::character {
 		* Each character will have 10 stats, each of which is represented by this class.
 		*
 		*/
-	class Stat : public GameObject {
+	class Stat : public rm::game::GameObject {
 		friend class GameObjectFactory; // Allow the factory to access the private members of the class to set the unique identifier when creating objects
 	public:
 

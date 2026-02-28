@@ -3,8 +3,7 @@
 
 #include <table/TableRow.h>
 
-using rm::rule::table::ColNotFoundException;
-using rm::rule::table::TableRow;	
+using namespace rm::rule::table;
 
 using namespace rm;
 

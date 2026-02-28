@@ -3,7 +3,6 @@
 #include <NumberMatcherFactory.h>
 
 using namespace rm::rule::enums;
-using rm::game::AnimalAttack;
 
 namespace rm::rule {
 
@@ -259,8 +258,8 @@ namespace rm::rule {
 		return bonusExhaustionPoints() + (staminaBonus() * 3) + 40;
 	}
 
-	AnimalAttack AnimalData::getAttack(int num_attackers, int d100_roll) const {
-		AnimalAttack curr_attack{};
+	rm::game::AnimalAttack AnimalData::getAttack(int num_attackers, int d100_roll) const {
+		rm::game::AnimalAttack curr_attack{};
 		for (const auto& attack : attacks_) {
 			if (attack.second.usesMultipleAttackers() && num_attackers > attack.second.minGroupSize()) return attack.second; // Always use the attack that requires multiple attackers if the number of attackers is sufficient, regardless of the d100 roll
 			if (attack.first->matches(d100_roll)) {
@@ -270,8 +269,8 @@ namespace rm::rule {
 		return curr_attack;
 	}
 
-	std::optional<AnimalAttack> AnimalData::getAttackByNumAttackers(int num_attackers) const {
-		AnimalAttack curr_attack{};
+	std::optional<rm::game::AnimalAttack> AnimalData::getAttackByNumAttackers(int num_attackers) const {
+		rm::game::AnimalAttack curr_attack{};
 		int curr_number{ 0 };
 		for (const auto& attack : attacks_) {
 			if (attack.second.usesMultipleAttackers()) {
@@ -287,7 +286,7 @@ namespace rm::rule {
 		return curr_attack;
 	}
 
-	std::optional<AnimalAttack> AnimalData::getConditionalAttack(int ref) const {
+	std::optional<rm::game::AnimalAttack> AnimalData::getConditionalAttack(int ref) const {
 		for (const auto& attack : conditional_attacks_) {
 			if (attack.first == ref) return attack.second; // Return the attack that matches the reference value
 		}

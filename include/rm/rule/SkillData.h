@@ -15,6 +15,24 @@ using namespace rm::rule::enums;
 namespace rm::rule {
 
 	/**
+	 * @brief Thrown when attempting to add a skill category stats when the category is set to use character realm stats
+	 *
+	 * It is invalid to have both skill category stats and also to use the characters realm stats as these are mutually
+	 * exclusive options.
+	 */
+	class UsingCharacterRealmStatsException : public std::runtime_error {
+	public:
+		/**
+		 * @brief Exception constructor
+		 *
+		 * std::runtime_error will handle the string
+		 *
+		 * @param error String to display for the error
+		 */
+		UsingCharacterRealmStatsException(const std::string& error) : std::runtime_error{ error }{}
+	};
+
+	/**
 	 * @class SkillData
 	 * @brief Class representing the definition of a skill that a character may develop
 	 */
@@ -306,24 +324,6 @@ namespace rm::rule {
 		 * @return 0.0f the character cannot normally move using this skill
 		 */
 		float distanceMultiplier() const { return distance_multiplier_; }
-
-		/**
-		 * @brief Thrown when attempting to add a skill category stats when the category is set to use character realm stats
-		 *
-		 * It is invalid to have both skill category stats and also to use the characters realm stats as these are mutually
-		 * exclusive options.
-		 */
-		class UsingCharacterRealmStatsException : public std::runtime_error {
-		public:
-			/**
-			 * @brief Exception constructor
-			 *
-			 * std::runtime_error will handle the string
-			 *
-			 * @param error String to display for the error
-			 */
-			UsingCharacterRealmStatsException(const std::string& error) : std::runtime_error{ error }{}
-		};
 
 	private:
 		std::string name_{}; /**< Name of the skill as seen in-game */

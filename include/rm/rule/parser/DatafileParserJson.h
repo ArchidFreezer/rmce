@@ -7,8 +7,6 @@
 #include <SkillDevelopmentType.h>
 #include <StatType.h>
 
-using rm::game::character::LanguageAbility;
-
 namespace rm::rule::parser {
 
 	/**
@@ -399,14 +397,14 @@ namespace rm::rule::parser {
 		 * @param tree Boost ptree containing the map of language abilities, with the languages represented by their ids
 		 * @return Map of LanguageAbility, with the languages retrieved from the cache using their ids
 		 */
-		std::map<std::string, const LanguageAbility> parseLanguageAbilityMapTree(boost::optional<const pt::ptree&> tree);
+		std::map<std::string, const rm::game::character::LanguageAbility> parseLanguageAbilityMapTree(boost::optional<const pt::ptree&> tree);
 
 		/**
 		 * @brief Parse a std::map of LanguageAbility into a boost ptree containing a map of language abilities
 		 * @param map Map of LanguageAbility, with the languages retrieved from the cache using their ids
 		 * @return Boost ptree containing the map of language abilities, with the languages represented by their ids
 		 */
-		const pt::ptree getLanguageAbilityMapTree(std::map<std::string, const LanguageAbility> map);
+		const pt::ptree getLanguageAbilityMapTree(std::map<std::string, const rm::game::character::LanguageAbility> map);
 
 		/**
 		 * @brief Parses a property tree into a vector of game rule data choices.

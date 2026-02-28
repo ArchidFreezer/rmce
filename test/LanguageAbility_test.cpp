@@ -4,8 +4,7 @@
 #include <LanguageData.h>
 
 using namespace rm;
-using rm::game::character::LanguageAbility;
-using rm::game::character::InvalidLanguageRank;
+using namespace rm::game::character;
 
 
 namespace {

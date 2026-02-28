@@ -1,7 +1,5 @@
 #include <DatafileParserJson.h>
 
-using rm::game::character::LanguageAbility;
-
 namespace rm::rule::parser {
 
 	void DatafileParserJson::read(const std::string& filename) {
@@ -47,12 +45,12 @@ namespace rm::rule::parser {
 		return tree;
 	}
 
-	std::map<std::string, const LanguageAbility> DatafileParserJson::parseLanguageAbilityMapTree(boost::optional<const pt::ptree&> tree) {
-		std::map<std::string, const LanguageAbility> datum{};
+	std::map<std::string, const rm::game::character::LanguageAbility> DatafileParserJson::parseLanguageAbilityMapTree(boost::optional<const pt::ptree&> tree) {
+		std::map<std::string, const rm::game::character::LanguageAbility> datum{};
 		if (tree) {
 			for (const auto& items : tree.get()) {
 				std::string language_name{ items.second.get<std::string>("language") };
-				LanguageAbility ability(factory().get<LanguageData>(language_name));
+				rm::game::character::LanguageAbility ability(factory().get<LanguageData>(language_name));
 				boost::optional<int> somantic = items.second.get_optional<int>("somantic");
 				if (somantic) { ability.updateSomanticRanks(somantic.get()); }
 				boost::optional<int> spoken = items.second.get_optional<int>("spoken");
@@ -65,7 +63,7 @@ namespace rm::rule::parser {
 		return datum;
 	}
 
-	const pt::ptree DatafileParserJson::getLanguageAbilityMapTree(std::map<std::string, const LanguageAbility> map) {
+	const pt::ptree DatafileParserJson::getLanguageAbilityMapTree(std::map<std::string, const rm::game::character::LanguageAbility> map) {
 		pt::ptree tree{};
 		for (const auto& pair : map) {
 			pt::ptree value_tree{};

@@ -5,13 +5,7 @@
 #include <table/LevelVarianceTable.h>
 
 using namespace rm::rule::enums;
-
-using rm::rule::table::CreatureBonusXpTable;
-using rm::rule::table::LevelVarianceTable;
-using rm::rule::table::TableRow;
-
-using rm::game::AnimalAttack;
-using rm::game::Location;
+using namespace rm::rule::table;
 
 namespace rm::rule::parser {
 
@@ -132,7 +126,7 @@ namespace rm::rule::parser {
 			{
 				boost::optional<const pt::ptree&> location_tree = v.second.get_child_optional("location");
 				if (location_tree) {
-					Location location{};
+					rm::game::Location location{};
 					boost::optional<const pt::ptree&> features_tree = location_tree->get_child_optional("features");
 					if (features_tree) location.setFeatures(parseEnumSetTree<EnvironmentType::Feature>(features_tree));
 					boost::optional<const pt::ptree&> terrains_tree = location_tree->get_child_optional("terrains");
@@ -154,7 +148,7 @@ namespace rm::rule::parser {
 					for (const auto& attack_tree : tree_opt.value()) {
 						const pt::ptree& tree = attack_tree.second;
 						const archid::NumberRange<int>* range = number_matcher.matcher(tree.get<int>("chance-min"), tree.get<int>("chance-max"));
-						AnimalAttack attack{};
+						rm::game::AnimalAttack attack{};
 						parseAnimalAttack(attack, tree);
 						ref.addAttack(range, attack);
 					}
@@ -167,7 +161,7 @@ namespace rm::rule::parser {
 				if (tree_opt) {
 					for (const auto& attack_tree : tree_opt.value()) {
 						const pt::ptree& tree = attack_tree.second;
-						AnimalAttack attack{};
+						rm::game::AnimalAttack attack{};
 						parseAnimalAttack(attack, tree, false);
 						ref.addRangedAttack(attack);
 					}
@@ -180,7 +174,7 @@ namespace rm::rule::parser {
 				if (tree_opt) {
 					for (const auto& attack_tree : tree_opt.value()) {
 						const pt::ptree& tree = attack_tree.second;
-						AnimalAttack attack{};
+						rm::game::AnimalAttack attack{};
 						parseAnimalAttack(attack, tree);
 						ref.addConditionalAttack(attack.conditionalAttackRef().value(), attack);
 					}
@@ -193,7 +187,7 @@ namespace rm::rule::parser {
 				if (tree_opt) {
 					for (const auto& attack_tree : tree_opt.value()) {
 						const pt::ptree& tree = attack_tree.second;
-						AnimalAttack attack{};
+						rm::game::AnimalAttack attack{};
 						parseAnimalAttack(attack, tree, false);
 						ref.addGroupAttack(attack.minGroupSize(), attack);
 					}
@@ -260,7 +254,7 @@ namespace rm::rule::parser {
 		// Location
 		{
 			pt::ptree location_tree{};
-			Location location = game_data.location();
+			rm::game::Location location = game_data.location();
 
 			// required features
 			{
@@ -293,7 +287,7 @@ namespace rm::rule::parser {
 		// Standard Attacks
 		{
 			// Get the map of attacks from the game data
-			std::map<const archid::NumberRange<int>*, AnimalAttack> attacks = game_data.attacks();
+			std::map<const archid::NumberRange<int>*, rm::game::AnimalAttack> attacks = game_data.attacks();
 
 			// Start but sorting the attacks by their number range pointer value so that they are output in a consistent order in the json file.
 			// We use a map to do this and store the pointer value as the key and the pointer itself as the value so that we can access the attack data when populating the boost ptree for each attack.
@@ -357,7 +351,7 @@ namespace rm::rule::parser {
 	}
 
 	// Write boost ptree data for an AnimalAttack into an AnimalAttack object
-	void AnimalDatafileParserJson::parseAnimalAttack(AnimalAttack& attack, const pt::ptree& tree, bool parse_chance) {
+	void AnimalDatafileParserJson::parseAnimalAttack(rm::game::AnimalAttack& attack, const pt::ptree& tree, bool parse_chance) {
 		NumberMatcherFactory number_matcher{};
 
 		if (parse_chance) {
@@ -405,7 +399,7 @@ namespace rm::rule::parser {
 	}
 
 	// Write AnimalAttack to boost ptree
-	void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const AnimalAttack& attack) {
+	void AnimalDatafileParserJson::populateAnimalAttack(pt::ptree& tree, const rm::game::AnimalAttack& attack) {
 		if (attack.chance().has_value()) {
 			// Store a copy of the NumberRange, not a pointer to a temporary
 			const archid::NumberRange<int>& chance_range = *(attack.chance().value());

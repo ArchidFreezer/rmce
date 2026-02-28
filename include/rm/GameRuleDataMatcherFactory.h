@@ -3,9 +3,6 @@
 #include <map>
 #include <table/TableRowGameRuleDataMatcher.h>
 
-using rm::rule::GameRuleData;
-using rm::rule::table::TableRowGameRuleDataMatcher;
-
 namespace rm {
 
 	/**
@@ -26,10 +23,10 @@ namespace rm {
 		 * @param game_data GameRuleData object to get a matcher for
 		 * @return const TableRowGameRuleDataMatcher* Matcher for the given GameRuleData object
 		 */
-		const TableRowGameRuleDataMatcher* matcher(const GameRuleData* game_data);
+		const rule::table::TableRowGameRuleDataMatcher* matcher(const rule::GameRuleData* game_data);
 
 	private:
-		inline static std::map<std::string, TableRowGameRuleDataMatcher> matchers_{};
+		inline static std::map<std::string, rule::table::TableRowGameRuleDataMatcher> matchers_{};
 		std::mutex mutex_{};
 	};
 

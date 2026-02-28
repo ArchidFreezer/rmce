@@ -7,9 +7,7 @@
 #include <table/TableRowGameRuleDataMatcher.h>
 #include <table/TrainingPackageCostTable.h>
 
-using rm::rule::table::TableRow;
-using rm::rule::table::TableRowGameRuleDataMatcher;
-using rm::rule::table::TrainingPackageCostTable;
+using namespace rm::rule::table;
 
 namespace rm::rule::parser {
 

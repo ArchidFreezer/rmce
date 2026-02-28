@@ -20,7 +20,6 @@
 #include <SpellUserType.h>
 
 using namespace rm::rule::enums;
-using rm::game::character::SkillDevelopmentCost;
 
 namespace rm::rule {
 
@@ -856,7 +855,7 @@ namespace rm::rule {
 		 * @param category SkillCategoryData category to add the costs for
 		 * @param cost SkillDevelopmentCost cost to develop ranks
 		 */
-		void addSkillCategoryDevelopmentCost(const SkillCategoryData& category, SkillDevelopmentCost cost) { skill_category_development_costs_.emplace(&category, std::move(cost)); }
+		void addSkillCategoryDevelopmentCost(const SkillCategoryData& category, rm::game::character::SkillDevelopmentCost cost) { skill_category_development_costs_.emplace(&category, std::move(cost)); }
 
 		/**
 		 * @brief Get a container of all the skill categories with a development cost
@@ -873,7 +872,7 @@ namespace rm::rule {
 		 * @return SkillDevelopmentCost costs to develop ranks
 		 * @throws InvalidCategoryDevelopmentCost if there are no costs for the category
 		 */
-		const SkillDevelopmentCost& skillCategoryDevelopmentCost(const SkillCategoryData& category) {
+		const rm::game::character::SkillDevelopmentCost& skillCategoryDevelopmentCost(const SkillCategoryData& category) {
 			for (auto& cat : std::views::keys(skill_category_development_costs_)) {
 				if (cat->id() == category.id()) return skill_category_development_costs_.at(cat);
 			}
@@ -907,7 +906,7 @@ namespace rm::rule {
 		std::map<GameRuleDataChoice<SkillCategoryData>, SkillDevelopmentType::Type> skill_category_skill_development_type_choices_{}; /** Set of skill categories the character may select one or more skills from to change their development type */
 		std::map<GameRuleDataChoice<SkillGroupData>, SkillDevelopmentType::Type> skill_group_skill_development_type_choices_{}; /** Set of skill groups the character may select one or more skills from to change their development type */
 
-		std::map<const SkillCategoryData*, SkillDevelopmentCost> skill_category_development_costs_{}; /** Cost to purchase ranks for a skill category */
+		std::map<const SkillCategoryData*, rm::game::character::SkillDevelopmentCost> skill_category_development_costs_{}; /** Cost to purchase ranks for a skill category */
 	};
 
 } // namespace rm::rule

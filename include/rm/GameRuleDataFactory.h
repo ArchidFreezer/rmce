@@ -6,10 +6,6 @@
 #include <table/AttackTable.h>
 #include <table/SpecialAttackTable.h>
 
-using rm::rule::GameRuleDataObject;
-using rm::rule::SkillData;
-using rm::rule::SubcategoriedSkillData;
-
 namespace rm {
 	/**
 	 * @class GameRuleDataFactory
@@ -42,7 +38,7 @@ namespace rm {
 	 *           Must be derived from GameRuleData
 	 * @param keys Set of strings to populate with the ids of the data objects
 	 */
-		template <GameRuleDataObject T>
+		template <rm::rule::GameRuleDataObject T>
 		void keys(std::set<std::string>& keys) {
 			return cache_.keys<T>(keys);
 		}
@@ -54,7 +50,7 @@ namespace rm {
 		 * @param id Unique ID of the object
 		 * @return GameRuleData object from the cache of type @a T
 		 */
-		template<GameRuleDataObject T>
+		template<rm::rule::GameRuleDataObject T>
 		T& get(std::string& id) {
 			if (cache_.exists<T>(id)) return cache_.get<T>(id);
 			cache_.add<T>(std::move(std::make_unique<T>(id)), id);
@@ -70,12 +66,12 @@ namespace rm {
 		 * @param subcategory optional subcategory of @a skill_data
 		 * @return
 		 */
-		SubcategoriedSkillData& subcategoriedSkillData(const SkillData& skill_data, std::optional<std::string_view> subcategory = std::nullopt) {
+		rm::rule::SubcategoriedSkillData& subcategoriedSkillData(const rm::rule::SkillData& skill_data, std::optional<std::string_view> subcategory = std::nullopt) {
 			std::string id{ skill_data.id() + (subcategory ? "_" + std::string(subcategory.value()) : "") };
-			if (cache_.exists<SubcategoriedSkillData>(id)) return cache_.get<SubcategoriedSkillData>(id);
-			if (subcategory) cache_.add<SubcategoriedSkillData>(std::move(std::make_unique<SubcategoriedSkillData>(skill_data, subcategory)), id);
-			else cache_.add<SubcategoriedSkillData>(std::move(std::make_unique<SubcategoriedSkillData>(skill_data)), id);
-			return cache_.get<SubcategoriedSkillData>(id);
+			if (cache_.exists<rm::rule::SubcategoriedSkillData>(id)) return cache_.get<rm::rule::SubcategoriedSkillData>(id);
+			if (subcategory) cache_.add<rm::rule::SubcategoriedSkillData>(std::move(std::make_unique<rm::rule::SubcategoriedSkillData>(skill_data, subcategory)), id);
+			else cache_.add<rm::rule::SubcategoriedSkillData>(std::move(std::make_unique<rm::rule::SubcategoriedSkillData>(skill_data)), id);
+			return cache_.get<rm::rule::SubcategoriedSkillData>(id);
 		}
 
 		/**
@@ -87,8 +83,8 @@ namespace rm {
 		 * @param subcategory optional subcategory of @a skill_data
 		 * @return
 		 */
-		SubcategoriedSkillData& subcategoriedSkillData(std::string& skill_id, std::optional<std::string_view> subcategory = std::nullopt) {
-			SkillData& skill = get<SkillData>(skill_id);
+		rm::rule::SubcategoriedSkillData& subcategoriedSkillData(std::string& skill_id, std::optional<std::string_view> subcategory = std::nullopt) {
+			rm::rule::SkillData& skill = get<rm::rule::SkillData>(skill_id);
 			return (subcategory ? subcategoriedSkillData(skill, subcategory) : subcategoriedSkillData(skill));
 		}
 

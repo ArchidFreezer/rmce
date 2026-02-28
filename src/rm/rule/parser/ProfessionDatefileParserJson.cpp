@@ -2,8 +2,6 @@
 
 using namespace rm::rule::enums;
 
-using rm::game::character::SkillDevelopmentCost;
-
 namespace rm::rule::parser {
 
 	void ProfessionDatafileParserJson::parse() {
@@ -62,7 +60,7 @@ namespace rm::rule::parser {
 				for (const auto& category_cost : category_costs.get()) {
 					std::string category_id{ category_cost.second.get<std::string>("category") };
 					std::string cost{ category_cost.second.get<std::string>("cost") };
-					ref.addSkillCategoryDevelopmentCost(factory().get<SkillCategoryData>(category_id), std::move(SkillDevelopmentCost(cost)));
+					ref.addSkillCategoryDevelopmentCost(factory().get<SkillCategoryData>(category_id), std::move(rm::game::character::SkillDevelopmentCost(cost)));
 				}
 			}
 

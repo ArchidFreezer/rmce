@@ -2,7 +2,6 @@
 #include <WeaponTypeDatafileParserJson.h>
 
 using namespace rm::rule::enums;
-using rm::rule::table::AttackTable;
 
 namespace rm::rule::parser {
 
@@ -88,7 +87,7 @@ namespace rm::rule::parser {
 
 			// attack table
 			std::string attack_table_id = v.second.get<std::string>("attack-table");
-			ref.setAttackTable(factory().get<AttackTable>(attack_table_id));
+			ref.setAttackTable(factory().get<rm::rule::table::AttackTable>(attack_table_id));
 
 			// crits
 			for (const auto& crit : v.second.get_child("criticals")) {

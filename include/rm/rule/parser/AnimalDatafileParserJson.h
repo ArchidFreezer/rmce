@@ -4,8 +4,6 @@
 #include <GameRuleDataCache.h>
 #include <AnimalData.h>
 
-using rm::game::AnimalAttack;
-
 namespace rm::rule::parser {
 
 	/**
@@ -82,7 +80,7 @@ namespace rm::rule::parser {
 		 * @param tree Boost ptree to populate with the data from the object
 		 * @param ref Reference to the AnimalAttack object containing the data for the animal attack
 		 */
-		void populateAnimalAttack(pt::ptree& tree, const AnimalAttack& attack);
+		void populateAnimalAttack(pt::ptree& tree, const rm::game::AnimalAttack& attack);
 
 		/**
 		 * @brief Parse a ptree into an AnimalAttack object
@@ -93,7 +91,7 @@ namespace rm::rule::parser {
 		 * @param ref Reference to the AnimalAttack object to populate with the data from the boost ptree
 		 * @param parse_chance Whether to parse the chance value for the attack, this is used to allow parsing of attacks that are used in a context where the chance value is not relevant such as conditional attacks.
 		 */
-		void parseAnimalAttack(AnimalAttack& attack, const pt::ptree& tree, bool parse_chance = true);
+		void parseAnimalAttack(rm::game::AnimalAttack& attack, const pt::ptree& tree, bool parse_chance = true);
 
 	};
 

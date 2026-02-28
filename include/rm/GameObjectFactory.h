@@ -2,8 +2,6 @@
 
 #include <GameObjectCache.h>
 
-using rm::game::game_object;
-
 namespace rm {
 
 	/**
@@ -41,7 +39,7 @@ namespace rm {
 	 *           Must be derived from GameObject
 	 * @param keys Set of strings to populate with the ids of the game objects
 	 */
-		template <game_object T>
+		template <rm::game::game_object T>
 		void keys(std::set<std::string>& keys) {
 			return cache_.keys<T>(keys);
 		}
@@ -56,7 +54,7 @@ namespace rm {
 		 * @tparam T type of GameObject object to create
 		 * @return Uniqur pointer to GameObject object of type @a T
 		 */
-		template <game_object T>
+		template <rm::game::game_object T>
 		std::unique_ptr<T> create() { return std::unique_ptr<T>(new T()); }
 
 		/**
@@ -67,7 +65,7 @@ namespace rm {
 		 * @tparam T type of GameObject object to create
 		 * @return GameObject object from the cache of type @a T
 		 */
-		template<game_object T>
+		template<rm::game::game_object T>
 		T& get() {
 			// Create a new object and add it to the cache.
 			std::unique_ptr<T> obj(new T());
@@ -85,7 +83,7 @@ namespace rm {
 		 * @param id Unique ID of the object
 		 * @return GameObject object from the cache of type @a T
 		 */
-		template<game_object T>
+		template<rm::game::game_object T>
 		T& get(std::string id) {
 			// If the object already exists in the cache then we can return it without creating a new one
 			if (cache_.exists<T>(id)) return cache_.get<T>(id);

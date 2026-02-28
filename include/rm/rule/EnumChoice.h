@@ -4,7 +4,7 @@
 #include <string>
 #include <typeinfo>
 
-namespace rm {
+namespace rm::rule {
 
 	/**
 	 * @class EnumChoice

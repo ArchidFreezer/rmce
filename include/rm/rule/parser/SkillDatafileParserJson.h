@@ -15,7 +15,7 @@ namespace rm::rule::parser {
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
-	 * @see SkillData
+	 * @see rm::rule::SkillData
 	 * @see GameRuleDataCache
 	 */
 

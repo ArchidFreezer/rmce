@@ -3,12 +3,8 @@
 #include <table/SpecialAttackTable.h>
 #include <NumberMatcherFactory.h>
 
-using rm::rule::table::SpecialAttackTable;
-using rm::rule::table::ColNotFoundException;
-using rm::rule::table::RowNotFoundException;
-using rm::rule::table::TableRow;
-
 using namespace rm::rule::enums;
+using namespace rm::rule::table;
 
 using namespace rm;
 

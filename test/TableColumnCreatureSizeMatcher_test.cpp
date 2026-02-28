@@ -2,9 +2,8 @@
 
 #include <table/TableColumnCreatureSizeMatcher.h>
 
-using rm::rule::table::TableColumnCreatureSizeMatcher;
-
 using namespace rm::rule::enums;
+using namespace rm::rule::table;
 
 namespace {
 	TEST(TableColumnCreatureSizeMatcher, All) {
