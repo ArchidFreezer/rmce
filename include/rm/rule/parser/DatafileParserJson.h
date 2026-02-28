@@ -63,7 +63,7 @@ namespace rm::rule::parser {
 	 * @brief Write game rule data from the cache to a file
 	 * @param filename Path to the file to write the output to
 	 */
-		template<GameRuleDataObject GameRuleData>
+		template<game_rule_data_object GameRuleData>
 		void saveData(const std::string& filename);
 
 		/**
@@ -98,7 +98,7 @@ namespace rm::rule::parser {
 		 * @param tree Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids
 		 * @return Map of pointers to the game data objects and the values, with the game data objects retrieved from the cache using their ids
 		 */
-		template<GameRuleDataObject GameRuleData, typename Primitive>
+		template<game_rule_data_object GameRuleData, typename Primitive>
 		std::map<const GameRuleData*, Primitive> parseGameDataPairTree(boost::optional<const pt::ptree&> tree);
 
 		/**
@@ -119,7 +119,7 @@ namespace rm::rule::parser {
 		 * @param map Map of pointers to game data objects and values, with the game data objects retrieved from the cache using their ids
 		 * @return Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids
 		 */
-		template<GameRuleDataObject GameRuleData, typename Primitive>
+		template<game_rule_data_object GameRuleData, typename Primitive>
 		const pt::ptree getGameDataPairTree(std::map<const GameRuleData*, Primitive> map);
 
 		/**
@@ -182,7 +182,7 @@ namespace rm::rule::parser {
 		 * @param tree Boost ptree containing the map of game data objects and enum, with the game data objects represented by their ids
 		 * @return Map of pointers to the game data objects and the enum, with the game data objects retrieved from the cache using their ids
 		 */
-		template<GameRuleDataObject GameRuleData, typename EnumType>
+		template<game_rule_data_object GameRuleData, typename EnumType>
 		std::map<const GameRuleData*, EnumType> parseGameDataPairEnumTree(boost::optional<const pt::ptree&> tree);
 
 		/**
@@ -203,7 +203,7 @@ namespace rm::rule::parser {
 		 * @param map Map of pointers to game data objects and values, with the game data objects retrieved from the cache using their ids
 		 * @return Boost ptree containing the map of game data objects and values, with the game data objects represented by their ids
 		 */
-		template<GameRuleDataObject GameRuleData, typename EnumType>
+		template<game_rule_data_object GameRuleData, typename EnumType>
 		const pt::ptree getGameDataPairEnumTree(std::map<const GameRuleData*, EnumType> map);
 
 		/**
@@ -305,7 +305,7 @@ namespace rm::rule::parser {
 		 * @param tree Boost ptree containing the set of game data objects, with the game data objects represented by their ids
 		 * @return Set of the game data objects, with the game data objects retrieved from the cache using their ids
 		 */
-		template<GameRuleDataObject GameRuleData>
+		template<game_rule_data_object GameRuleData>
 		std::set<const GameRuleData*> parseGameDataSetTree(boost::optional<const pt::ptree&> tree);
 
 		/**
@@ -323,7 +323,7 @@ namespace rm::rule::parser {
 		 * @param set Set of game data objects, with the game data objects retrieved from the cache using their ids
 		 * @return Boost ptree containing the set of game data objects, with the game data objects represented by their ids
 		 */
-		template<GameRuleDataObject GameRuleData>
+		template<game_rule_data_object GameRuleData>
 		const pt::ptree getGameDataSetTree(std::set<const GameRuleData*> set);
 
 		/**
@@ -410,38 +410,38 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Parses a property tree into a vector of game rule data choices.
-		 * @tparam GameRuleData The game rule data object type that satisfies the GameRuleDataObject concept.
+		 * @tparam GameRuleData The game rule data object type that satisfies the game_rule_data_object concept.
 		 * @param tree An optional reference to a property tree containing the game data choice vector to parse.
 		 * @return A vector of GameRuleDataChoice objects templated on the specified GameRuleData type.
 		 */
-		template<GameRuleDataObject GameRuleData>
+		template<game_rule_data_object GameRuleData>
 		std::vector<GameRuleDataChoice<GameRuleData>> parseGameDataChoiceVectorTree(boost::optional<const pt::ptree&> tree);
 
 		/**
 		 * @brief Converts a vector of game rule data choices into a property tree representation.
-		 * @tparam GameRuleData The type of game rule data object that satisfies the GameRuleDataObject concept.
+		 * @tparam GameRuleData The type of game rule data object that satisfies the game_rule_data_object concept.
 		 * @param vector The vector of game rule data choices to convert.
 		 * @return A property tree (ptree) containing the serialized game data choice vector.
 		 */
-		template<GameRuleDataObject GameRuleData>
+		template<game_rule_data_object GameRuleData>
 		const pt::ptree getGameDataChoiceVectorTree(std::vector<GameRuleDataChoice<GameRuleData>> vector);
 
 		/**
 		 * @brief Parses a property tree into a set of game rule data choices.
-		 * @tparam GameRuleData The game rule data object type that satisfies the GameRuleDataObject concept.
+		 * @tparam GameRuleData The game rule data object type that satisfies the game_rule_data_object concept.
 		 * @param tree An optional reference to a property tree containing the game data choice set to parse.
 		 * @return A set of GameRuleDataChoice objects templated on the specified GameRuleData type.
 		 */
-		template<GameRuleDataObject GameRuleData>
+		template<game_rule_data_object GameRuleData>
 		std::set<GameRuleDataChoice<GameRuleData>> parseGameDataChoiceSetTree(boost::optional<const pt::ptree&> tree);
 
 		/**
 		 * @brief Converts a set of game rule data choices into a property tree representation.
-		 * @tparam GameRuleData The type of game rule data object that satisfies the GameRuleDataObject concept.
+		 * @tparam GameRuleData The type of game rule data object that satisfies the game_rule_data_object concept.
 		 * @param set The set of game rule data choices to convert.
 		 * @return A property tree (ptree) containing the serialized game data choice set.
 		 */
-		template<GameRuleDataObject GameRuleData>
+		template<game_rule_data_object GameRuleData>
 		const pt::ptree getGameDataChoiceSetTree(std::set<GameRuleDataChoice<GameRuleData>> set);
 
 		/**
@@ -465,17 +465,17 @@ namespace rm::rule::parser {
 		 * @param tree An optional reference to a property tree containing the game data choice-enum pairs to parse.
 		 * @return A map where keys are game rule data choices of the specified type and values are the corresponding enumeration values.
 		 */
-		template<GameRuleDataObject GameRuleData, typename EnumType>
+		template<game_rule_data_object GameRuleData, typename EnumType>
 		std::map<GameRuleDataChoice<GameRuleData>, EnumType> parseGameDataChoicePairEnumTree(boost::optional<const pt::ptree&> tree);
 
 		/**
 		 * @brief Converts a map of game rule data choices to enum values into a property tree structure.
 		 * @tparam EnumType The enum type used as values in the map.
-		 * @tparam GameRuleData A type that satisfies the GameRuleDataObject concept, representing the game rule data structure.
+		 * @tparam GameRuleData A type that satisfies the game_rule_data_object concept, representing the game rule data structure.
 		 * @param map A map associating game rule data choices with their corresponding enum values.
 		 * @return A property tree (ptree) representation of the game data choice-to-enum mappings.
 		 */
-		template<GameRuleDataObject GameRuleData, typename EnumType>
+		template<game_rule_data_object GameRuleData, typename EnumType>
 		const pt::ptree getGameDataChoicePairEnumTree(std::map<GameRuleDataChoice<GameRuleData>, EnumType> map);
 
 		/**
@@ -485,17 +485,17 @@ namespace rm::rule::parser {
 		 * @param tree An optional reference to a property tree containing the game data choice-primitive pairs to parse.
 		 * @return A map where keys are game rule data choices and values are the associated primitive values parsed from the tree.
 		 */
-		template<GameRuleDataObject GameRuleData, typename Primitive>
+		template<game_rule_data_object GameRuleData, typename Primitive>
 		std::map<GameRuleDataChoice<GameRuleData>, Primitive> parseGameDataChoicePairTree(boost::optional<const pt::ptree&> tree);
 
 		/**
 		 * @brief Converts a map of game rule data choices to a property tree.
 		 * @tparam Primitive The primitive type used as the value in the map.
-		 * @tparam GameRuleData The game rule data object type that satisfies the GameRuleDataObject concept.
+		 * @tparam GameRuleData The game rule data object type that satisfies the game_rule_data_object concept.
 		 * @param map A map containing game rule data choices as keys and primitive values as values.
 		 * @return A property tree (ptree) representation of the game data choice-primitive pairs.
 		 */
-		template<GameRuleDataObject GameRuleData, typename Primitive>
+		template<game_rule_data_object GameRuleData, typename Primitive>
 		const pt::ptree getGameDataChoicePairTree(std::map<GameRuleDataChoice<GameRuleData>, Primitive> map);
 
 		/**
@@ -548,7 +548,7 @@ namespace rm::rule::parser {
 		std::string root_node_{}; /**< Key of the root node of the json file */
 	};
 
-	template<GameRuleDataObject GameRuleData>
+	template<game_rule_data_object GameRuleData>
 	inline void DatafileParserJson::saveData(const std::string& filename) {
 		if (filename.empty()) return;
 
@@ -576,7 +576,7 @@ namespace rm::rule::parser {
 		pt::write_json(filename, tree);
 	}
 
-	template<GameRuleDataObject GameRuleData, typename Primitive>
+	template<game_rule_data_object GameRuleData, typename Primitive>
 	inline std::map<const GameRuleData*, Primitive> DatafileParserJson::parseGameDataPairTree(boost::optional<const pt::ptree&> tree) {
 		std::map<const GameRuleData*, Primitive> datum{};
 
@@ -589,7 +589,7 @@ namespace rm::rule::parser {
 		return datum;
 	}
 
-	template<GameRuleDataObject GameRuleData, typename Primitive>
+	template<game_rule_data_object GameRuleData, typename Primitive>
 	inline const pt::ptree DatafileParserJson::getGameDataPairTree(std::map<const GameRuleData*, Primitive> map) {
 		pt::ptree tree{};
 
@@ -634,7 +634,7 @@ namespace rm::rule::parser {
 		return tree;
 	}
 
-	template<GameRuleDataObject GameRuleData, typename EnumType>
+	template<game_rule_data_object GameRuleData, typename EnumType>
 	inline std::map<const GameRuleData*, EnumType> DatafileParserJson::parseGameDataPairEnumTree(boost::optional<const pt::ptree&> tree) {
 		std::map<const GameRuleData*, EnumType> datum{};
 
@@ -649,7 +649,7 @@ namespace rm::rule::parser {
 		return datum;
 	}
 
-	template<GameRuleDataObject GameRuleData, typename EnumType>
+	template<game_rule_data_object GameRuleData, typename EnumType>
 	inline const pt::ptree DatafileParserJson::getGameDataPairEnumTree(std::map<const GameRuleData*, EnumType> map) {
 		pt::ptree tree{};
 
@@ -743,7 +743,7 @@ namespace rm::rule::parser {
 		return tree;
 	}
 
-	template<GameRuleDataObject GameRuleData>
+	template<game_rule_data_object GameRuleData>
 	inline std::set<const GameRuleData*> DatafileParserJson::parseGameDataSetTree(boost::optional<const pt::ptree&> tree) {
 		std::set<const GameRuleData*> datum{};
 		if (tree) {
@@ -755,7 +755,7 @@ namespace rm::rule::parser {
 		return datum;
 	}
 
-	template<GameRuleDataObject GameRuleData>
+	template<game_rule_data_object GameRuleData>
 	inline const pt::ptree DatafileParserJson::getGameDataSetTree(std::set<const GameRuleData*> set) {
 		pt::ptree tree{};
 		std::set<std::string> sorted_set{};
@@ -856,7 +856,7 @@ namespace rm::rule::parser {
 		return tree;
 	}
 
-	template<GameRuleDataObject GameRuleData>
+	template<game_rule_data_object GameRuleData>
 	inline std::vector<GameRuleDataChoice<GameRuleData>> DatafileParserJson::parseGameDataChoiceVectorTree(boost::optional<const pt::ptree&> tree) {
 		std::vector<GameRuleDataChoice<GameRuleData>> datum{};
 		if (tree) {
@@ -874,7 +874,7 @@ namespace rm::rule::parser {
 		return datum;
 	}
 
-	template<GameRuleDataObject GameRuleData>
+	template<game_rule_data_object GameRuleData>
 	inline const pt::ptree DatafileParserJson::getGameDataChoiceVectorTree(std::vector<GameRuleDataChoice<GameRuleData>> vector) {
 		pt::ptree tree{};
 		for (const GameRuleDataChoice<GameRuleData>& item : vector) {
@@ -898,7 +898,7 @@ namespace rm::rule::parser {
 		return tree;
 	}
 
-	template<GameRuleDataObject GameRuleData>
+	template<game_rule_data_object GameRuleData>
 	inline std::set<GameRuleDataChoice<GameRuleData>> DatafileParserJson::parseGameDataChoiceSetTree(boost::optional<const pt::ptree&> tree) {
 		std::set<GameRuleDataChoice<GameRuleData>> datum{};
 		if (tree) {
@@ -916,7 +916,7 @@ namespace rm::rule::parser {
 		return datum;
 	}
 
-	template<GameRuleDataObject GameRuleData>
+	template<game_rule_data_object GameRuleData>
 	inline const pt::ptree DatafileParserJson::getGameDataChoiceSetTree(std::set<GameRuleDataChoice<GameRuleData>> set) {
 		pt::ptree tree{};
 		for (const GameRuleDataChoice<GameRuleData>& item : set) {
@@ -940,7 +940,7 @@ namespace rm::rule::parser {
 		return tree;
 	}
 
-	template<GameRuleDataObject GameRuleData, typename EnumType>
+	template<game_rule_data_object GameRuleData, typename EnumType>
 	inline std::map<GameRuleDataChoice<GameRuleData>, EnumType> DatafileParserJson::parseGameDataChoicePairEnumTree(boost::optional<const pt::ptree&> tree) {
 		std::map<GameRuleDataChoice<GameRuleData>, EnumType> datum{};
 		if (tree) {
@@ -959,7 +959,7 @@ namespace rm::rule::parser {
 		return datum;
 	}
 
-	template<GameRuleDataObject GameRuleData, typename EnumType>
+	template<game_rule_data_object GameRuleData, typename EnumType>
 	inline const pt::ptree DatafileParserJson::getGameDataChoicePairEnumTree(std::map<GameRuleDataChoice<GameRuleData>, EnumType> map) {
 		pt::ptree tree{};
 		for (const auto& pair : map) {
@@ -982,7 +982,7 @@ namespace rm::rule::parser {
 		return tree;
 	}
 
-	template<GameRuleDataObject GameRuleData, typename Primitive>
+	template<game_rule_data_object GameRuleData, typename Primitive>
 	inline std::map<GameRuleDataChoice<GameRuleData>, Primitive> DatafileParserJson::parseGameDataChoicePairTree(boost::optional<const pt::ptree&> tree) {
 		std::map<GameRuleDataChoice<GameRuleData>, Primitive> datum{};
 		if (tree) {
@@ -999,7 +999,7 @@ namespace rm::rule::parser {
 		return datum;
 	}
 
-	template<GameRuleDataObject GameRuleData, typename Primitive>
+	template<game_rule_data_object GameRuleData, typename Primitive>
 	inline const pt::ptree DatafileParserJson::getGameDataChoicePairTree(std::map<GameRuleDataChoice<GameRuleData>, Primitive> map) {
 		pt::ptree tree{};
 		for (const auto& pair : map) {

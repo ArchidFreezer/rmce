@@ -75,7 +75,7 @@ namespace rm::rule::parser {
 		 * @param game_data_choice A pointer to the choice object to process
 		 * @param[in,out] tree boost pt::ptree to populate
 		 */
-		template<GameRuleDataObject T>
+		template<game_rule_data_object T>
 		void populateGameRuleDataChoice(const GameRuleDataChoice<T>* game_data_choice, pt::ptree& tree);
 
 	private:
@@ -83,7 +83,7 @@ namespace rm::rule::parser {
 
 	};
 
-	template<GameRuleDataObject T>
+	template<game_rule_data_object T>
 	inline void DatafileParserBoost::populateGameRuleDataChoice(const GameRuleDataChoice<T>* game_data_choice, pt::ptree& tree) {
 
 		// We want the same json output each time so we sort the data before we write them

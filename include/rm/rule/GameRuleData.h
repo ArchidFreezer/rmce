@@ -79,14 +79,14 @@ namespace rm::rule {
 	 * It is used when templating a class or method where it may be used as follows
 	 *
 	 * @code
-	 * template <GameRuleDataObject T>
+	 * template <game_rule_data_object T>
 	 * void someFunction(T obj) {
 	 *   // do something with obj
 	 * }
 	 * @endcode
 	 */
 	template<class T>
-	concept GameRuleDataObject = std::is_base_of<GameRuleData, T>::value;
+	concept game_rule_data_object = std::is_base_of<GameRuleData, T>::value;
 
 
 } // namespace rm::rule
