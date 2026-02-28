@@ -1,22 +1,28 @@
 #include <SkillData.h>
 
-int SkillData::addStat(StatType::Type stat) {
-	if (category_->useRealmStats()) throw UsingCharacterRealmStatsException("Cannot add stat when also using realm stats");
-	if (stats_.size() < 3) {
-		stats_.push_back(stat);
-	} else {
-		throw StatType::TooManyStatsException("You attempted to add more than 3 stat bonuses to a skill.");
+using namespace rm::rule::enums;
+
+namespace rm::rule {
+
+	int SkillData::addStat(StatType::Type stat) {
+		if (category_->useRealmStats()) throw UsingCharacterRealmStatsException("Cannot add stat when also using realm stats");
+		if (stats_.size() < 3) {
+			stats_.push_back(stat);
+		} else {
+			throw StatType::TooManyStatsException("You attempted to add more than 3 stat bonuses to a skill.");
+		}
+
+		return stats_.size();
 	}
 
-	return stats_.size();
-}
-
-bool SkillData::removeStat(StatType::Type stat) {
-	std::vector<StatType::Type>::iterator it;
-	it = std::find(stats_.begin(), stats_.end(), stat);
-	if (it != stats_.end()) {
-		stats_.erase(it);
-		return true;
+	bool SkillData::removeStat(StatType::Type stat) {
+		std::vector<StatType::Type>::iterator it;
+		it = std::find(stats_.begin(), stats_.end(), stat);
+		if (it != stats_.end()) {
+			stats_.erase(it);
+			return true;
+		}
+		return false;
 	}
-	return false;
-}
+
+} // namespace rm::rule

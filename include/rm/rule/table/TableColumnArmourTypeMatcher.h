@@ -1,12 +1,16 @@
 #pragma once
 #include <ArmourType.h>
 
-/**
- * @class TableColumnArmourTypeMatcher
- * @brief Class to identify the column index in a table using ArmourType::Type as the header
- *
- * @implements column_row_matcher
- */
+using namespace rm::rule::enums;
+
+namespace rm::rule::table {
+
+	/**
+	 * @class TableColumnArmourTypeMatcher
+	 * @brief Class to identify the column index in a table using ArmourType::Type as the header
+	 *
+	 * @implements column_row_matcher
+	 */
 	class TableColumnArmourTypeMatcher {
 	public:
 		/**
@@ -39,4 +43,6 @@
 			}
 			return 0;
 		}
-};
+	};
+
+} // namespace rm::rule::table

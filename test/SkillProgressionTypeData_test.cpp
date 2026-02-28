@@ -2,11 +2,13 @@
 
 #include "SkillProgressionTypeData.h"
 
+using namespace rm;
+
 namespace {
 
 	// Demonstrate some basic assertions.
 	TEST(SkillProgressionData, Constructor) {
-		SkillProgressionTypeData spd("COMBINED_ID");
+		rule::SkillProgressionTypeData spd("COMBINED_ID");
 		spd.setName("Combined");
 		EXPECT_EQ(0, strcmp(spd.name().c_str(), "Combined"));
 		spd.setZero(-30.0);
@@ -22,7 +24,7 @@ namespace {
 	}
 
 	TEST(SkillProgressionData, GetBonusCombined) {
-		SkillProgressionTypeData spd("COMBINED_ID");
+		rule::SkillProgressionTypeData spd("COMBINED_ID");
 		spd.setName("Combined");
 		spd.setZero(-30.0);
 		spd.setTen(5.0);

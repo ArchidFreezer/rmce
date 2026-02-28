@@ -3,6 +3,9 @@
 #include <table/AttackTable.h>
 #include <NumberMatcherFactory.h>
 
+using namespace rm::rule::enums;
+using namespace rm::rule::table;
+
 namespace {
 
 	TableRow<std::string> buildATRow(std::string prefix, int row_num) {
@@ -15,7 +18,7 @@ namespace {
 
 	TEST(AttackTable, General) {
 
-		NumberMatcherFactory matchers;
+		rm::NumberMatcherFactory matchers;
 
 		// Populate a table with 6 rows
 		AttackTable at{"TestGeneral"};
@@ -43,7 +46,7 @@ namespace {
 
 	TEST(AttackTable, Exception) {
 
-		NumberMatcherFactory matchers;
+		rm::NumberMatcherFactory matchers;
 
 		// Populate a table with 6 rows, but only 10 columns
 		AttackTable at{"TestException"};
@@ -52,7 +55,7 @@ namespace {
 		}
 
 		EXPECT_THROW(at.cell(ArmourType::kAT12, 0), RowNotFoundException);
-		EXPECT_THROW(at.cell(ArmourType::kAT12, 1), ColNotFoundException);		
+		EXPECT_THROW(at.cell(ArmourType::kAT12, 1), ColNotFoundException);
 	}
 
 

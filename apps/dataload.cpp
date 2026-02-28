@@ -29,11 +29,13 @@
 #include <TreasureCodeDatafileParserJson.h>
 #include <WeaponTypeDatafileParserJson.h>
 
+using namespace rm::rule::parser;
+
 int main() {
 	std::cout << "Current path is " << std::filesystem::current_path() << '\n';
 
 	// Create the cache to store the game data
-	GameRuleDataCache cache{};
+	rm::GameRuleDataCache cache{};
 
 	AnimalDatafileParserJson animal_parser(cache, "../../../../data/Animals.json");
 	ArmourTypeDatafileParserJson armour_type_parser(cache, "../../../../data/ArmourTypes.json");

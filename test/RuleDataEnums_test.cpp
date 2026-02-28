@@ -24,6 +24,8 @@
 #include <StatType.h>
 #include <TreasureValueType.h>
 
+using namespace rm::rule::enums;
+
 namespace {
 	TEST(RuleDataEnums, StatType) {
 		EXPECT_EQ(StatType::fromString(toString(StatType::kAgility)), StatType::kAgility);

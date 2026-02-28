@@ -2,6 +2,8 @@
 
 #include <Dice.h>
 
+using namespace archid;
+
 namespace {
 
 	int get_max_roll(Dice& die, int num_rolls, bool open) {

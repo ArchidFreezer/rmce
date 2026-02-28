@@ -3,6 +3,10 @@
 
 #include <table/TableRow.h>
 
+using namespace rm::rule::table;
+
+using namespace rm;
+
 class Cell {
 public:
 	Cell(std::string val) : val_{ val } {}

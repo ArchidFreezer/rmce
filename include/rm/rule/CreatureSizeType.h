@@ -7,67 +7,70 @@
 
 #include <StringUtils.h>
 
-/**
- * @brief Contains the CreatureSizeType::Type enum and associated functions
- *
- * During combat and in other situations the size of a creature determines the lookup table to use. This defines the
- * valid sizes that there are tables for.
- */
-namespace CreatureSizeType {
+namespace rm::rule::enums {
 
 	/**
-	 * @brief Enumeration class representing the size of creatures
+	 * @brief Contains the CreatureSizeType::Type enum and associated functions
+	 *
+	 * During combat and in other situations the size of a creature determines the lookup table to use. This defines the
+	 * valid sizes that there are tables for.
 	 */
-	enum class Type {
-		kTiny, /**< Tiny creatures are insect sized */
-		kSmall, /**< Small creatures are cat or dog sized */
-		kMedium, /**< Medium creatures are approximately human sized such as deer or most sharks */
-		kLarge, /**< Large creatures are buffalo or lions */
-		kHuge /**< Super Large or Huge creatures are elephant or whale sized */
-	};
-	using enum Type;
+	namespace CreatureSizeType {
 
-	/**
-	 * @brief Get the string representation of the given enum
-	 * @param size The CreatureSizeType::Type to get the string of
-	 * @return Game display form of the enum value as a string
-	 */
-	const std::string toString(Type size);
+		/**
+		 * @brief Enumeration class representing the size of creatures
+		 */
+		enum class Type {
+			kTiny, /**< Tiny creatures are insect sized */
+			kSmall, /**< Small creatures are cat or dog sized */
+			kMedium, /**< Medium creatures are approximately human sized such as deer or most sharks */
+			kLarge, /**< Large creatures are buffalo or lions */
+			kHuge /**< Super Large or Huge creatures are elephant or whale sized */
+		};
+		using enum Type;
 
-	/**
-	 * @brief Teach operator<< how to print a CreatureSizeType::Type
-	 * @param out Output stream that the enum should be printed to
-	 * @param size Enum value to output
-	 * @return Output stream reference containing the output enum value
-	 */
-	inline std::ostream& operator<<(std::ostream& out, Type size) {
-		return out << toString(size);
-	}
+		/**
+		 * @brief Get the string representation of the given enum
+		 * @param size The CreatureSizeType::Type to get the string of
+		 * @return Game display form of the enum value as a string
+		 */
+		const std::string toString(Type size);
 
-	/**
-	 * @brief Get the enumeration value based on a string
+		/**
+		 * @brief Teach operator<< how to print a CreatureSizeType::Type
+		 * @param out Output stream that the enum should be printed to
+		 * @param size Enum value to output
+		 * @return Output stream reference containing the output enum value
+		 */
+		inline std::ostream& operator<<(std::ostream& out, Type size) {
+			return out << toString(size);
+		}
+
+		/**
+		 * @brief Get the enumeration value based on a string
+		 *
+		 * Accepts values that are returned by toString() in a case insensitive manner.
+		 *
+		 * @param sv string_view to get the enumeration for
+		 * @return CreatureSizeType::Type represented by the string
+		 *
+		 * @see toString()
+		 */
+		const std::optional<Type> fromString(std::string_view sv);
+
+		/**
+	 * @brief Get the enumeration value based on a string and set it to the provided reference
 	 *
 	 * Accepts values that are returned by toString() in a case insensitive manner.
 	 *
 	 * @param sv string_view to get the enumeration for
-	 * @return CreatureSizeType::Type represented by the string
+	 * @param type reference to set the CreatureSizeType::Type represented by the string to
+	 * @throws std::invalid_argument if the string does not represent a valid CreatureSizeType::Type
 	 *
 	 * @see toString()
 	 */
-	const std::optional<Type> fromString(std::string_view sv);
+		void fromString(std::string_view sv, CreatureSizeType::Type& type);
 
-	/**
- * @brief Get the enumeration value based on a string and set it to the provided reference
- *
- * Accepts values that are returned by toString() in a case insensitive manner.
- *
- * @param sv string_view to get the enumeration for
- * @param type reference to set the CreatureSizeType::Type represented by the string to
- * @throws std::invalid_argument if the string does not represent a valid CreatureSizeType::Type
- *
- * @see toString()
- */
-	void fromString(std::string_view sv, CreatureSizeType::Type& type);
+	}
 
-
-}
+} // namespace rm::rule::enums
