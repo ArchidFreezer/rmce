@@ -1,6 +1,6 @@
 #include <NumberMatcherFactory.h>
 
-namespace rm {
+namespace rm::rule::table {
 
 	// Static members must be initialised outside the header
 	std::map<std::pair<int, int>, archid::NumberRange<int>> NumberMatcherFactory::matchers_{};
@@ -16,4 +16,4 @@ namespace rm {
 		return &matchers_.emplace(key, archid::NumberRange<int>(min, max)).first->second;
 	}
 
-} // namespace rm
+} // namespace rm::rule::table

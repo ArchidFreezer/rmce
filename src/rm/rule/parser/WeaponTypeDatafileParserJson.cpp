@@ -54,7 +54,7 @@ namespace rm::rule::parser {
 		std::cout << "Loading WeaponType data ... ";
 
 		// Get a factory for the matchers
-		NumberMatcherFactory matchers;
+		rm::rule::table::NumberMatcherFactory matchers;
 
 		// Get the lists to parse and loop through them
 		const pt::ptree& tree = ptree().get_child(rootNode());

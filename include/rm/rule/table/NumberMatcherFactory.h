@@ -3,7 +3,7 @@
 #include <map>
 #include <NumberRange.h>
 
-namespace rm {
+namespace rm::rule::table {
 
 	/**
 	 * @brief Thread safe factory class for archid::NumberRange objects that can be used for matching dice rolls
@@ -29,4 +29,4 @@ namespace rm {
 		std::mutex mutex_{};
 	};
 
-} // namespace rm
+} // namespace rm::rule::table

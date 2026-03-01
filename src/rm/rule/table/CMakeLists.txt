@@ -1,1 +1,1 @@
-target_sources(rm PRIVATE "PersistentMatcherFactory.cpp")
+target_sources(rm PRIVATE "PersistentMatcherFactory.cpp" "NumberMatcherFactory.cpp")

@@ -9,7 +9,7 @@ namespace rm::rule::parser {
 	void PoisonTypeDatafileParserJson::parse() {
 		std::cout << "Loading PoisonType data ..." << std::endl;
 
-		NumberMatcherFactory numberMatcherFactory{};
+		rm::rule::table::NumberMatcherFactory numberMatcherFactory{};
 
 		// Get the poisontypes to parse and loop through them
 		const pt::ptree& tree = ptree().get_child(rootNode());
