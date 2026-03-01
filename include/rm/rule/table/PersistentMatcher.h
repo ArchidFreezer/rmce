@@ -4,28 +4,28 @@
 namespace rm::rule::table {
 
 	/**
-	 * @class TableRowGameRuleDataMatcher
+	 * @class PersistentMatcher
 	 * @brief Class to identify the row index in a table using GameRuleData objects as the key
 	 */
-	class TableRowGameRuleDataMatcher {
+	class PersistentMatcher {
 	public:
 
 		/**
 		 * @brief Constructor
 		 * @param game_data GameRuleData object that this row matches
 		 */
-		TableRowGameRuleDataMatcher(const GameRuleData& game_data) : game_data_{ &game_data } {}
+		PersistentMatcher(const GameRuleData& game_data) : game_data_{ &game_data } {}
 
 		/**
 		 * @brief Implement an operator< method for the class
 		 *
 		 * This allows the class to be used in ordered collections such as the key in a `std::map`
 		 *
-		 * @param other TableRowGameRuleDataMatcher to compare against
+		 * @param other PersistentMatcher to compare against
 		 * @return `true` if this object is considered less than \a other
 		 * @return `false` if this object is not considered less than \a other
 		 */
-		bool operator<(const TableRowGameRuleDataMatcher& other) const {
+		bool operator<(const PersistentMatcher& other) const {
 			return game_data_->id() < other.game_data_->id();
 		}
 

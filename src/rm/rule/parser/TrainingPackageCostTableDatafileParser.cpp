@@ -3,8 +3,8 @@
 
 #include <StringUtils.h>
 #include <TrainingPackageCostTableDatafileParser.h>
-#include <GameRuleDataMatcherFactory.h>
-#include <table/TableRowGameRuleDataMatcher.h>
+#include <PersistentMatcherFactory.h>
+#include <table/PersistentMatcher.h>
 #include <table/TrainingPackageCostTable.h>
 
 using namespace rm::rule::table;
@@ -35,8 +35,8 @@ namespace rm::rule::parser {
 			// Get the training package data object for the row
 			const TrainingPackageData* package_data{ &factory().get<TrainingPackageData>(package_name) };
 
-			GameRuleDataMatcherFactory matcher_factory{};
-			const TableRowGameRuleDataMatcher* matcher = matcher_factory.matcher(package_data);
+			PersistentMatcherFactory matcher_factory{};
+			const PersistentMatcher* matcher = matcher_factory.matcher(package_data);
 
 			tokens.erase(tokens.begin());
 
@@ -70,7 +70,7 @@ namespace rm::rule::parser {
 		// Sort the rows by the training package name and write them to the file, with the first column being the training package name and the rest being the costs for each profession
 		int num_cols{ 0 };
 		std::map<std::string, TableRow<int>> sorted_rows{};
-		std::map<const TableRowGameRuleDataMatcher*, TableRow<int>> rows = table.modified();
+		std::map<const PersistentMatcher*, TableRow<int>> rows = table.modified();
 		for (const auto& [matcher, row] : rows) {
 			sorted_rows[matcher->gameData()->id()] = row;
 			if (row.colCount() > num_cols) { num_cols = row.colCount(); }

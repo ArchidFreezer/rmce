@@ -1,8 +1,9 @@
 add_library(rm STATIC)
-target_sources(rm PRIVATE "NumberMatcherFactory.cpp" "GameRuleDataMatcherFactory.cpp" "PersistentObjectManager.cpp")
+target_sources(rm PRIVATE "NumberMatcherFactory.cpp" "PersistentObjectManager.cpp")
 add_subdirectory("game")
 add_subdirectory("rule")
 add_subdirectory("rule/parser")
+add_subdirectory("rule/table")
 target_compile_features(rm PUBLIC cxx_std_20)
 target_include_directories(rm PUBLIC "${PROJECT_SOURCE_DIR}/../Libraries/boost_1_90_0"
                                      "${PROJECT_SOURCE_DIR}/include/archid"
