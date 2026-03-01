@@ -13,6 +13,8 @@
 #include <DiseaseTypeDatafileParserJson.h>
 #include <LanguageCategoryDatafileParserJson.h>
 #include <LanguageDatafileParserJson.h>
+#include <PersistentCache.h>
+#include <PersistentObjectManager.h>
 #include <PoisonDatafileParserJson.h>
 #include <PoisonTypeDatafileParserJson.h>
 #include <ProfessionDatafileParserXml.h>
@@ -35,34 +37,35 @@ int main() {
 	std::cout << "Current path is " << std::filesystem::current_path() << '\n';
 
 	// Create the cache to store the game data
-	rm::GameRuleDataCache cache{};
+	rm::PersistentCache cache{};
+	rm::PersistentObjectManager object_manager{ cache };
 
-	AnimalDatafileParserJson animal_parser(cache, "../../../../data/Animals.json");
-	ArmourTypeDatafileParserJson armour_type_parser(cache, "../../../../data/ArmourTypes.json");
-	AttackTableDatafileParserJson attack_table_parser(cache, "../../../../data/AttackTables.json");
-	BookDatafileParserJson book_parser(cache, "../../../../data/Books.json");
-	ClimateDatafileParserJson climate_parser(cache, "../../../../data/Climates.json");
-	CreaturePaceDatafileParserJson creature_pace_parser(cache, "../../../../data/CreaturePaces.json");
-	CultureDatafileParserJson culture_parser(cache, "../../../../data/Cultures.json");
-	CultureTypeDatafileParserJson culture_type_parser(cache, "../../../../data/CultureTypes.json");
-	DiseaseDatafileParserJson disease_parser(cache, "../../../../data/Diseases.json");
-	DiseaseTypeDatafileParserJson disease_type_parser(cache, "../../../../data/DiseaseTypes.json");
-	LanguageCategoryDatafileParserJson language_category_parser(cache, "../../../../data/LanguageCategories.json");
-	LanguageDatafileParserJson language_parser(cache, "../../../../data/Languages.json");
-	PoisonDatafileParserJson poison_parser(cache, "../../../../data/Poisons.json");
-	PoisonTypeDatafileParserJson poison_type_parser(cache, "../../../../data/PoisonTypes.json");
-	ProfessionDatafileParserJson profession_parser(cache, "../../../../data/Professions.json");
-	RaceDatafileParserJson race_parser(cache, "../../../../data/Races.json");
-	SkillCategoryDatafileParserJson skill_category_parser(cache, "../../../../data/SkillCategories.json");
-	SkillDatafileParserJson skill_parser(cache, "../../../../data/Skills.json");
-	SkillGroupDatafileParserJson skill_group_parser(cache, "../../../../data/SkillGroups.json");
-	SkillProgressionTypeDatafileParserJson skill_progression_parser(cache, "../../../../data/SkillProgressionTypes.json");
-	SpecialAttackTableDatafileParserJson special_attack_table_parser(cache, "../../../../data/SpecialAttackTables.json");
-	SpellListDatafileParserJson spell_list_parser(cache, "../../../../data/SpellLists.json");
-	TrainingPackageCostTableDatafileParser training_package_cost_table_parser(cache, "../../../../data/TrainingPackageCosts.tsv");
-	TrainingPackageDatafileParserJson training_package_parser(cache, "../../../../data/TrainingPackages.json");
-	TreasureCodeDatafileParserJson treasure_code_parser(cache, "../../../../data/TreasureCodes.json");
-	WeaponTypeDatafileParserJson weapon_type_parser(cache, "../../../../data/WeaponTypes.json");
+	AnimalDatafileParserJson animal_parser(object_manager, "../../../../data/Animals.json");
+	ArmourTypeDatafileParserJson armour_type_parser(object_manager, "../../../../data/ArmourTypes.json");
+	AttackTableDatafileParserJson attack_table_parser(object_manager, "../../../../data/AttackTables.json");
+	BookDatafileParserJson book_parser(object_manager, "../../../../data/Books.json");
+	ClimateDatafileParserJson climate_parser(object_manager, "../../../../data/Climates.json");
+	CreaturePaceDatafileParserJson creature_pace_parser(object_manager, "../../../../data/CreaturePaces.json");
+	CultureDatafileParserJson culture_parser(object_manager, "../../../../data/Cultures.json");
+	CultureTypeDatafileParserJson culture_type_parser(object_manager, "../../../../data/CultureTypes.json");
+	DiseaseDatafileParserJson disease_parser(object_manager, "../../../../data/Diseases.json");
+	DiseaseTypeDatafileParserJson disease_type_parser(object_manager, "../../../../data/DiseaseTypes.json");
+	LanguageCategoryDatafileParserJson language_category_parser(object_manager, "../../../../data/LanguageCategories.json");
+	LanguageDatafileParserJson language_parser(object_manager, "../../../../data/Languages.json");
+	PoisonDatafileParserJson poison_parser(object_manager, "../../../../data/Poisons.json");
+	PoisonTypeDatafileParserJson poison_type_parser(object_manager, "../../../../data/PoisonTypes.json");
+	ProfessionDatafileParserJson profession_parser(object_manager, "../../../../data/Professions.json");
+	RaceDatafileParserJson race_parser(object_manager, "../../../../data/Races.json");
+	SkillCategoryDatafileParserJson skill_category_parser(object_manager, "../../../../data/SkillCategories.json");
+	SkillDatafileParserJson skill_parser(object_manager, "../../../../data/Skills.json");
+	SkillGroupDatafileParserJson skill_group_parser(object_manager, "../../../../data/SkillGroups.json");
+	SkillProgressionTypeDatafileParserJson skill_progression_parser(object_manager, "../../../../data/SkillProgressionTypes.json");
+	SpecialAttackTableDatafileParserJson special_attack_table_parser(object_manager, "../../../../data/SpecialAttackTables.json");
+	SpellListDatafileParserJson spell_list_parser(object_manager, "../../../../data/SpellLists.json");
+	TrainingPackageCostTableDatafileParser training_package_cost_table_parser(object_manager, "../../../../data/TrainingPackageCosts.tsv");
+	TrainingPackageDatafileParserJson training_package_parser(object_manager, "../../../../data/TrainingPackages.json");
+	TreasureCodeDatafileParserJson treasure_code_parser(object_manager, "../../../../data/TreasureCodes.json");
+	WeaponTypeDatafileParserJson weapon_type_parser(object_manager, "../../../../data/WeaponTypes.json");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
@@ -128,32 +131,32 @@ int main() {
 		//weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 
 
-		//animal_parser.save("../../../../data2/Animals.json");
-		//armour_type_parser.save("../../../../data2/ArmourTypes.json");
-		//attack_table_parser.save("../../../../data2/AttackTables.json");
-		//book_parser.save("../../../../data2/Books.json");
-		//climate_parser.save("../../../../data2/Climates.json");
-		//creature_pace_parser.save("../../../../data2/CreaturePaces.json");
-		//culture_parser.save("../../../../data2/Cultures.json");
-		//culture_type_parser.save("../../../../data2/CultureTypes.json");
-		//disease_parser.save("../../../../data2/Diseases.json");
-		//disease_type_parser.save("../../../../data2/DiseaseTypes.json");
-		//language_category_parser.save("../../../../data2/LanguageCategories.json");
-		//language_parser.save("../../../../data2/Languages.json");
-		//poison_parser.save("../../../../data2/Poisons.json");
-		//poison_type_parser.save("../../../../data2/PoisonTypes.json");
-		//profession_parser.save("../../../../data2/Professions.json");
-		//race_parser.save("../../../../data2/Races.json");
-		//skill_category_parser.save("../../../../data2/SkillCategories.json");
-		//skill_group_parser.save("../../../../data2/SkillGroups.json");
-		//skill_parser.save("../../../../data2/Skills.json");
-		//skill_progression_parser.save("../../../../data2/SkillProgressionTypes.json");
-		//special_attack_table_parser.save("../../../../data2/SpecialAttackTables.json");
-		//spell_list_parser.save("../../../../data2/SpellLists.json");
-		//training_package_cost_table_parser.save("../../../../data2/TrainingPackageCosts.tsv");
-		//training_package_parser.save("../../../../data2/TrainingPackages.json");
-		//treasure_code_parser.save("../../../../data2/TreasureCodes.json");
-		//weapon_type_parser.save("../../../../data2/WeaponTypes.json");
+		animal_parser.save("../../../../data2/Animals.json");
+		armour_type_parser.save("../../../../data2/ArmourTypes.json");
+		attack_table_parser.save("../../../../data2/AttackTables.json");
+		book_parser.save("../../../../data2/Books.json");
+		climate_parser.save("../../../../data2/Climates.json");
+		creature_pace_parser.save("../../../../data2/CreaturePaces.json");
+		culture_parser.save("../../../../data2/Cultures.json");
+		culture_type_parser.save("../../../../data2/CultureTypes.json");
+		disease_parser.save("../../../../data2/Diseases.json");
+		disease_type_parser.save("../../../../data2/DiseaseTypes.json");
+		language_category_parser.save("../../../../data2/LanguageCategories.json");
+		language_parser.save("../../../../data2/Languages.json");
+		poison_parser.save("../../../../data2/Poisons.json");
+		poison_type_parser.save("../../../../data2/PoisonTypes.json");
+		profession_parser.save("../../../../data2/Professions.json");
+		race_parser.save("../../../../data2/Races.json");
+		skill_category_parser.save("../../../../data2/SkillCategories.json");
+		skill_group_parser.save("../../../../data2/SkillGroups.json");
+		skill_parser.save("../../../../data2/Skills.json");
+		skill_progression_parser.save("../../../../data2/SkillProgressionTypes.json");
+		special_attack_table_parser.save("../../../../data2/SpecialAttackTables.json");
+		spell_list_parser.save("../../../../data2/SpellLists.json");
+		training_package_cost_table_parser.save("../../../../data2/TrainingPackageCosts.tsv");
+		training_package_parser.save("../../../../data2/TrainingPackages.json");
+		treasure_code_parser.save("../../../../data2/TreasureCodes.json");
+		weapon_type_parser.save("../../../../data2/WeaponTypes.json");
 
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
