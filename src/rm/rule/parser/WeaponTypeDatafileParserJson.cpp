@@ -54,13 +54,13 @@ namespace rm::rule::parser {
 		std::cout << "Loading WeaponType data ... ";
 
 		// Get a factory for the matchers
-		NumberMatcherFactory matchers;
+		rm::rule::table::NumberMatcherFactory matchers;
 
 		// Get the lists to parse and loop through them
 		const pt::ptree& tree = ptree().get_child(rootNode());
 		for (const auto& v : tree) {
 			std::string name = v.second.get<std::string>("name");
-			std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), name));
+			std::string id = v.second.get("id", factory().generateId(ruleDatatype(), name));
 
 			WeaponTypeData& ref = factory().get<WeaponTypeData>(id);
 			ref.setName(name);

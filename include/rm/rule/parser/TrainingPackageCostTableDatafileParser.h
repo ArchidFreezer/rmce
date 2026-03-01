@@ -23,10 +23,10 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for the training package cost table data
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		TrainingPackageCostTableDatafileParser(GameRuleDataCache& cache, std::string_view filename) : DatafileParser(cache, "TrainingPackageCostTable", filename) {}
+		TrainingPackageCostTableDatafileParser(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParser(object_manager, "TrainingPackageCostTable", filename) {}
 
 		/**
 		 * @brief Read training package cost table data from file, convert to objects and store in the game rule data cache

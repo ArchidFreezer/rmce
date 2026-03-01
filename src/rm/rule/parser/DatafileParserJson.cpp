@@ -18,28 +18,35 @@ namespace rm::rule::parser {
 
 	}
 
-	std::set<SubcategoriedSkillData> DatafileParserJson::parseSkillSetTree(boost::optional<const pt::ptree&> tree) {
-		std::set<SubcategoriedSkillData> datum{};
+	std::set<const SubcategoriedSkillData*> DatafileParserJson::parseSkillSetTree(boost::optional<const pt::ptree&> tree) {
+		std::set<const SubcategoriedSkillData*> datum{};
 		if (tree) {
 			for (const auto& items : tree.get()) {
 				std::string id{ items.second.get<std::string>("id") };
 				boost::optional<std::string> subcategory = items.second.get_optional<std::string>("subcategory");
 				if (subcategory) {
-					datum.insert(factory().subcategoriedSkillData(id, subcategory.get()));
+					datum.insert(&factory().subcategoriedSkillData(id, subcategory.get()));
 				} else {
-					datum.insert(factory().subcategoriedSkillData(id));
+					datum.insert(&factory().subcategoriedSkillData(id));
 				}
 			}
 		}
 		return datum;
 	}
 
-	const pt::ptree DatafileParserJson::getSkillSetTree(std::set<SubcategoriedSkillData> set) {
+	const pt::ptree DatafileParserJson::getSkillSetTree(std::set<const SubcategoriedSkillData*> set) {
 		pt::ptree tree{};
-		for (const auto& item : set) {
+
+		std::map<std::string, const SubcategoriedSkillData*> sorted_map{};
+		for (const auto& data : set) {
+			std::string key = data->skillData().id() + (data->subcategory() ? data->subcategory().value() : "");
+			sorted_map.emplace(key, data);
+		}
+
+		for (const auto& pair : sorted_map) {
 			pt::ptree value_tree{};
-			value_tree.put("id", item.skillData().id());
-			if (item.subcategory()) value_tree.put("subcategory", item.subcategory().value());
+			value_tree.put("id", pair.second->skillData().id());
+			if (pair.second->subcategory()) value_tree.put("subcategory", pair.second->subcategory().value());
 			tree.push_back(std::make_pair("", value_tree));
 		}
 		return tree;

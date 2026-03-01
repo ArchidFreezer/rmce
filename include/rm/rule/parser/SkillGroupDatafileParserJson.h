@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <SkillGroupData.h>
 
 namespace rm::rule::parser {
@@ -10,13 +9,11 @@ namespace rm::rule::parser {
 	 * @class SkillGroupDatafileParserJson
 	 * @brief Process SkillGroupData objects for json files
 	 *
-	 * This class can read a well-formed json file creating SkillGroupData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating SkillGroupData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see SkillGroupData
-	 * @see GameRuleDataCache
 	 */
 
 	class SkillGroupDatafileParserJson : public DatafileParserJson {
@@ -26,18 +23,18 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for SkillGroupData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		SkillGroupDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "SkillGroup", filename) {
+		SkillGroupDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "SkillGroup", filename) {
 			setRootNode("skill-groups");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for SkillGroupData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		SkillGroupDatafileParserJson(GameRuleDataCache& cache) : SkillGroupDatafileParserJson(cache, "") {}
+		SkillGroupDatafileParserJson(rm::PersistentObjectManager& object_manager) : SkillGroupDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write skill group game rule data from the cache to a json file

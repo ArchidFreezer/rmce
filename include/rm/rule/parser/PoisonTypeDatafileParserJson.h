@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <PoisonTypeData.h>
 
 namespace rm::rule::parser {
@@ -10,13 +9,11 @@ namespace rm::rule::parser {
 	 * @class PoisonTypeDatafileParserJson
 	 * @brief Process PoisonTypeData objects for json files
 	 *
-	 * This class can read a well-formed json file creating PoisonTypeData objects from the contents, adding them to a
-	 * #GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating PoisonTypeData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see PoisonTypeData
-	 * @see #GameRuleDataCache
 	 */
 	class PoisonTypeDatafileParserJson : public DatafileParserJson {
 	public:
@@ -25,18 +22,18 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for PoisonTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		PoisonTypeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "PoisonType", filename) {
+		PoisonTypeDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "PoisonType", filename) {
 			setRootNode("poison-types");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for PoisonTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		PoisonTypeDatafileParserJson(GameRuleDataCache& cache) : PoisonTypeDatafileParserJson(cache, "") {}
+		PoisonTypeDatafileParserJson(rm::PersistentObjectManager& object_manager) : PoisonTypeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write poisontype game rule data from the cache to a json file

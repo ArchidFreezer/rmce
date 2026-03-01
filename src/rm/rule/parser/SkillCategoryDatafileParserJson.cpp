@@ -33,7 +33,7 @@ namespace rm::rule::parser {
 			std::string group_name{ v.second.get<std::string>("group") };
 			// Some skill groups only have s single category and for thoise we dont need the concatenation for the id
 			std::string id_name{ (category_name == group_name ? category_name : group_name + "_" + category_name) };
-			std::string id = v.second.get("id", GameRuleData::generateId(ruleDatatype(), id_name));
+			std::string id = v.second.get("id", factory().generateId(ruleDatatype(), id_name));
 
 			SkillCategoryData& ref = factory().get<SkillCategoryData>(id);
 			ref.setName(category_name);

@@ -36,18 +36,9 @@ namespace rm::rule {
 	}
 
 
-	const std::set<SubcategoriedSkillData> TrainingPackageData::skillsWithRanks() const {
-		std::set<SubcategoriedSkillData> ret;
-		for (auto& key : skill_ranks_) {
-			const SubcategoriedSkillData data(key.first.skillData(), key.first.subcategory());
-			ret.insert(data);
-		}
-		return ret;
-	}
-
 	bool TrainingPackageData::isRankSkill(const SkillData& skill, std::optional<std::string_view> subcategory) const {
 		for (auto& key : std::views::keys(skill_ranks_)) {
-			if (key.skillData().id() == skill.id() && (subcategory ? subcategory.value() == key.subcategory().value() : !key.subcategory())) return true;
+			if (key->skillData().id() == skill.id() && (subcategory ? subcategory.value() == key->subcategory().value() : !key->subcategory())) return true;
 		}
 		return false;
 	}

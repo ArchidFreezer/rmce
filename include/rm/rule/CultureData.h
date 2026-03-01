@@ -130,19 +130,19 @@ namespace rm::rule {
 		 * @brief Add a skill to those typically taken by an adolescent of the culture
 		 * @param skill SubcategoriedSkillData to add
 		 */
-		void addHobbySkill(const SubcategoriedSkillData& skill) { hobby_skills_.emplace(skill); }
+		void addHobbySkill(const SubcategoriedSkillData& skill) { hobby_skills_.emplace(&skill); }
 
 		/**
 		 * @brief Set the skills typically taken by an adolescent of the culture
 		 * @param hobby_skills std::set of SubcategoriedSkillData representing the skills typically taken by an adolescent of the culture
 		 */
-		void setHobbySkills(std::set<SubcategoriedSkillData> hobby_skills) { hobby_skills_ = std::move(hobby_skills); }
+		void setHobbySkills(std::set<const SubcategoriedSkillData*> hobby_skills) { hobby_skills_ = std::move(hobby_skills); }
 
 		/**
 		 * @brief Get a container with the skills typically taken by an adolescent of the culture
 		 * @return std::set<SubcategoriedSkillData> typical hobby skills
 		 */
-		const std::set<SubcategoriedSkillData>& hobbySkills() const { return hobby_skills_; }
+		const std::set<const SubcategoriedSkillData*>& hobbySkills() const { return hobby_skills_; }
 
 		/**
 		 * @brief Get whether a skill is typically taken by an adolescent of the culture
@@ -152,7 +152,7 @@ namespace rm::rule {
 		 */
 		bool isHobbySkill(const SubcategoriedSkillData& skill) const {
 			for (const auto& key : hobby_skills_) {
-				if (skill.id() == key.id()) return true;
+				if (skill.id() == key->id()) return true;
 			}
 			return false;
 		}
@@ -296,7 +296,7 @@ namespace rm::rule {
 		const CultureTypeData* culture_type_{}; /**< Culture type this culture is based on */
 		bool high_culture_{}; /**< Whether the culture has developed */
 		std::map<std::string, const rm::game::character::LanguageAbility> languages_{}; /**< Language ranks that members of the race learn prior during their adolescence */
-		std::set<SubcategoriedSkillData> hobby_skills_{}; /**< Set of skills that would typically be given skill ranks by adolescents of this culture */
+		std::set<const SubcategoriedSkillData*> hobby_skills_{}; /**< Set of skills that would typically be given skill ranks by adolescents of this culture */
 		std::set<const SkillCategoryData*> hobby_skill_categories_{}; /**< Set of skill categories that would typically be given skill ranks by adolescents of this culture */
 		std::set<const ProfessionData*> preferred_professions_{}; /**< Set of preferred professions for members of the culture */
 		std::set<const ProfessionData*> restricted_professions_{}; /**< Set of restricted professions for members of the culture */

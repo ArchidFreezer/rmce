@@ -101,19 +101,19 @@ namespace {
 		rule::SubcategoriedSkillData s2(sk2, "Sub");
 		EXPECT_STREQ(s1.id().c_str(), "SKILL1_ID_Sub");
 
-		prof.setSkillDevelopmentType(std::move(s1), rule::enums::SkillDevelopmentType::kEveryman);
-		prof.setSkillDevelopmentType(std::move(s2), rule::enums::SkillDevelopmentType::kEveryman);
+		prof.setSkillDevelopmentType(s1, rule::enums::SkillDevelopmentType::kEveryman);
+		prof.setSkillDevelopmentType(s2, rule::enums::SkillDevelopmentType::kEveryman);
 
-		const std::set<rule::SubcategoriedSkillData> eset(prof.skillsWithSkillDevelopmentType());
+		const std::set<const rule::SubcategoriedSkillData*> eset(prof.skillsWithSkillDevelopmentType());
 		EXPECT_EQ(eset.size(), 2);
 
-		const std::set<rule::SubcategoriedSkillData> eset2(prof.skillsWithSkillDevelopmentType());
+		const std::set<const rule::SubcategoriedSkillData*> eset2(prof.skillsWithSkillDevelopmentType());
 		EXPECT_EQ(eset2.size(), 2);
 
 		int count{ 0 };
 		for (auto& skill : prof.skillsWithSkillDevelopmentType()) {
 			count++;
-			if (skill.skillData().id() == "SKILL1_ID" || skill.skillData().id() == "SKILL2_ID") continue;
+			if (skill->skillData().id() == "SKILL1_ID" || skill->skillData().id() == "SKILL2_ID") continue;
 			FAIL();
 		}
 		EXPECT_EQ(count, 2);
@@ -121,7 +121,7 @@ namespace {
 		rule::SubcategoriedSkillData s2b(sk2, "Sub"); // Duplicate of above
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSet(sk2));
 		EXPECT_TRUE(prof.isSkillDevelopmentTypeSet(sk2, "Sub"));
-		EXPECT_THROW(prof.setSkillDevelopmentType(std::move(s2b), rule::enums::SkillDevelopmentType::kOccupational), rule::ProfessionData::InvalidSkillDevelopment);
+		EXPECT_THROW(prof.setSkillDevelopmentType(s2b, rule::enums::SkillDevelopmentType::kOccupational), rule::ProfessionData::InvalidSkillDevelopment);
 
 		rule::SkillData sk3("SKILL3_ID");
 		EXPECT_FALSE(prof.isSkillDevelopmentTypeSet(sk3));
@@ -432,8 +432,8 @@ namespace {
 		rule::SubcategoriedSkillData s2(sk2, "Sub");
 		rule::SubcategoriedSkillData s2a(sk2, "Sub");
 
-		prof.setSkillBonus(std::move(s1), 5);
-		prof.setSkillBonus(std::move(s2), 10);
+		prof.setSkillBonus(s1, 5);
+		prof.setSkillBonus(s2, 10);
 
 		EXPECT_TRUE(prof.isBonusSkill(sk1a, "Sub"));
 
@@ -442,7 +442,7 @@ namespace {
 		EXPECT_FALSE(prof.isBonusSkill(sk1, "Invalid"));
 		EXPECT_TRUE(prof.isBonusSkill(sk1, "Sub"));
 
-		EXPECT_THROW(prof.setSkillBonus(std::move(s1a), 15), rule::ProfessionData::InvalidSkillBonus);
+		EXPECT_THROW(prof.setSkillBonus(s1a, 15), rule::ProfessionData::InvalidSkillBonus);
 		EXPECT_EQ(prof.skillBonus(s2a), 10);
 
 		EXPECT_EQ(prof.skillBonus(sk2, "Sub"), 10);
@@ -451,7 +451,7 @@ namespace {
 		int count{ 0 };
 		for (auto& skill : prof.skillsWithBonus()) {
 			count++;
-			if (skill.skillData().id() == "SKILL1_ID" || skill.skillData().id() == "SKILL2_ID") continue;
+			if (skill->skillData().id() == "SKILL1_ID" || skill->skillData().id() == "SKILL2_ID") continue;
 			FAIL();
 		}
 		EXPECT_EQ(count, 2);

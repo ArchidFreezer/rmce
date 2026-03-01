@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <WeaponTypeData.h>
 
 namespace rm::rule::parser {
@@ -10,13 +9,11 @@ namespace rm::rule::parser {
 	 * @class WeaponTypeDatafileParserJson
 	 * @brief Process WeaponTypeData objects for json files
 	 *
-	 * This class can read a well-formed json file creating WeaponTypeData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating WeaponTypeData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see WeaponTypeData
-	 * @see GameRuleDataCache
 	 */
 
 	class WeaponTypeDatafileParserJson : public DatafileParserJson {
@@ -26,18 +23,18 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for WeaponTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		WeaponTypeDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "WeaponType", filename) {
+		WeaponTypeDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "WeaponType", filename) {
 			setRootNode("weapon-types");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for WeaponTypeData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		WeaponTypeDatafileParserJson(GameRuleDataCache& cache) : WeaponTypeDatafileParserJson(cache, "") {}
+		WeaponTypeDatafileParserJson(rm::PersistentObjectManager& object_manager) : WeaponTypeDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write weapon type game rule data from the cache to a json file

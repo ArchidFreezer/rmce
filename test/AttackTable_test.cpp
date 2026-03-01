@@ -18,7 +18,7 @@ namespace {
 
 	TEST(AttackTable, General) {
 
-		rm::NumberMatcherFactory matchers;
+		rm::rule::table::NumberMatcherFactory matchers;
 
 		// Populate a table with 6 rows
 		AttackTable at{"TestGeneral"};
@@ -46,7 +46,7 @@ namespace {
 
 	TEST(AttackTable, Exception) {
 
-		rm::NumberMatcherFactory matchers;
+		rm::rule::table::NumberMatcherFactory matchers;
 
 		// Populate a table with 6 rows, but only 10 columns
 		AttackTable at{"TestException"};

@@ -23,7 +23,7 @@ namespace {
 		std::unique_ptr<TableColumnCreatureSizeMatcher> matcher = std::make_unique<TableColumnCreatureSizeMatcher>(TableColumnCreatureSizeMatcher());
 		lut.setColumnMatcher(std::move(matcher));
 
-		rm::NumberMatcherFactory matchers;
+		rm::rule::table::NumberMatcherFactory matchers;
 
 		TableRow<std::string> tr1 = TableRow<std::string>().addCell("Row 1, kTiny").addCell("Row 1, kSmall").addCell("Row 1, kMedium").addCell("Row 1, kLarge").addCell("Row 1, kHuge");
 		lut.addRow(matchers.matcher(1, 3), tr1);

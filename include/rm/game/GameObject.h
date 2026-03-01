@@ -26,7 +26,7 @@ namespace rm::game {
 	 * @see GameObjectFactory
 	 */
 	class GameObject : public rm::Persistent {
-		friend class GameObjectFactory; // Allow the factory to access the private members of the class to set the unique identifier when creating objects
+		friend class PersistentObjectManager; /**< PersistentObjectManager is a friend to allow it access to the private copy/maove constructores and assignment operators */
 
 	public:
 
@@ -84,12 +84,6 @@ namespace rm::game {
 		std::string id_; // Unique tag to ensure that each object has a unique identifier
 
 		/**
-		 * @brief Default copy constructor for GameObject.
-		 * @param other The GameObject instance to copy from.
-		 */
-		GameObject(const GameObject& other) = default; // Default copy constructor
-
-		/**
 		 * @brief Set the unique id of the game data object
 		 *
 		 * Each object containing game rule data requires a unique identifier to allow it to be referenced.
@@ -98,6 +92,19 @@ namespace rm::game {
 		 * @param id Unique identifier for the object as a string reference.
 		 */
 		void setId(const std::string& id) { id_ = id; }
+
+
+		/*
+		 * Make all the copy and move constructors and assignment operators private to ensure that the unique identifier is not accidentally copied or moved, which would lead to multiple
+		 * objects having the same unique identifier, which would break the uniqueness requirement of the identifier and cause issues with serialisation and deserialisation.
+		 * 
+		 * The GameObjectFactory class is responsible for creating objects and setting their unique identifiers, so it should be the only class that can copy or move objects of this class.
+		 */
+		GameObject(const GameObject& other) = default; // Default copy constructor
+		GameObject& operator=(const GameObject& other) = default; // Default copy assignment operator
+		GameObject(GameObject&& other) = default; // Default move constructor
+		GameObject& operator=(GameObject&& other) = default; // Default move assignment operator
+
 	};
 
 	/**

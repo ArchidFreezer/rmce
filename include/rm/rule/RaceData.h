@@ -654,31 +654,24 @@ namespace rm::rule {
 		 * @throw InvalidSkillDevelopment If the skill is set as restricted
 		 * @see SkillDevelopmentType
 		 */
-		void addEverymanSkill(SubcategoriedSkillData skill) {
+		void addEverymanSkill(const SubcategoriedSkillData& skill) {
 			if (isRestrictedSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as everyman as it is already set as restricted");
 			if (isEverymanSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as everyman as it is already defined");
-			everyman_skills_.insert(std::move(skill));
+			everyman_skills_.insert(&skill);
 		}
 
 		/**
 		 * @brief Sets the everyman skills collection.
 		 * @param skills A set of subcategorized skill data to assign as everyman skills.
 		 */
-		void setEverymanSkills(std::set<SubcategoriedSkillData> skills) { everyman_skills_ = std::move(skills); }
+		void setEverymanSkills(std::set<const SubcategoriedSkillData*> skills) { everyman_skills_ = std::move(skills); }
 
 		/**
 		 * @brief Get a container of the skills that are considered everyman
 		 * @return std::set container of everyman skills
 		 * @see SkillDevelopmentType
 		 */
-		const std::set<SubcategoriedSkillData> everymanSkills() const {
-			std::set<SubcategoriedSkillData> ret;
-			for (auto& skill : everyman_skills_) {
-				const SubcategoriedSkillData data(skill.skillData(), skill.subcategory());
-				ret.insert(data);
-			}
-			return ret;
-		}
+		const std::set<const SubcategoriedSkillData*> everymanSkills() const { return everyman_skills_;	}
 
 		/**
 		 * @brief Check if a skill is everyman for the race
@@ -690,7 +683,7 @@ namespace rm::rule {
 		 */
 		bool isEverymanSkill(const SkillData& other, std::optional<std::string_view> subcategory = std::nullopt) const {
 			for (auto& skill : everyman_skills_) {
-				if (skill.skillData().id() == other.id() && (subcategory ? subcategory.value() == skill.subcategory() : !skill.subcategory())) return true;
+				if (skill->skillData().id() == other.id() && (subcategory ? subcategory.value() == skill->subcategory() : !skill->subcategory())) return true;
 			}
 			return false;
 		}
@@ -701,30 +694,23 @@ namespace rm::rule {
 		 * @throw InvalidSkillDevelopment If the skill is set as restricted
 		 * @see SkillDevelopmentType
 		 */
-		void addRestrictedSkill(SubcategoriedSkillData skill) {
+		void addRestrictedSkill(const SubcategoriedSkillData& skill) {
 			if (isEverymanSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as restricted as it is already set as everyman");
 			if (isRestrictedSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillDevelopment("Cannot set " + skill.id() + " as restricted as it is already defined");
-			restricted_skills_.insert(std::move(skill));
+			restricted_skills_.insert(&skill);
 		}
 
 		/**
 		 * @brief Get a container of the skills that are considered restricted
 		 * @return std::set container of restricted skills
 		 */
-		const std::set<SubcategoriedSkillData> restrictedSkills() const {
-			std::set<SubcategoriedSkillData> ret;
-			for (auto& skill : restricted_skills_) {
-				const SubcategoriedSkillData data(skill.skillData(), skill.subcategory());
-				ret.insert(data);
-			}
-			return ret;
-		}
+		const std::set<const SubcategoriedSkillData*> restrictedSkills() const { return restricted_skills_; }
 
 		/**
 		 * @brief Sets the restricted skills to the specified set.
 		 * @param skills A set of subcategorized skill data to be set as restricted skills.
 		 */
-		void setRestrictedSkills(std::set<SubcategoriedSkillData> skills) { restricted_skills_ = std::move(skills); }
+		void setRestrictedSkills(std::set<const SubcategoriedSkillData*> skills) { restricted_skills_ = std::move(skills); }
 
 		/**
 		 * @brief Check if a skill is restricted for the race
@@ -736,7 +722,7 @@ namespace rm::rule {
 		 */
 		bool isRestrictedSkill(const SkillData& other, std::optional<std::string_view> subcategory = std::nullopt) const {
 			for (auto& skill : restricted_skills_) {
-				if (skill.skillData().id() == other.id() && (subcategory ? subcategory.value() == skill.subcategory() : !skill.subcategory())) return true;
+				if (skill->skillData().id() == other.id() && (subcategory ? subcategory.value() == skill->subcategory() : !skill->subcategory())) return true;
 			}
 			return false;
 		}
@@ -825,22 +811,22 @@ namespace rm::rule {
 		 * @param skill SubcategoriedSkillData to set the bonus for
 		 * @param bonus int bonus value
 		 */
-		void setSkillBonus(SubcategoriedSkillData skill, int bonus) {
+		void setSkillBonus(SubcategoriedSkillData& skill, int bonus) {
 			if (isBonusSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillBonus("There is already a bonus set for skill " + skill.id());
-			skill_bonuses_.emplace(std::move(skill), bonus);
+			skill_bonuses_.emplace(&skill, bonus);
 		}
 
 		/**
 		 * @brief Sets the skill bonuses to the specified map.
 		 * @param bonuses A map of SubcategoriedSkillData to int representing the skill bonuses. The map is copied into the object's skill_bonuses_ member.
 		 */
-		void setSkillBonuses(std::map<SubcategoriedSkillData, int> bonuses) { skill_bonuses_ = std::move(bonuses); }
+		void setSkillBonuses(std::map<const SubcategoriedSkillData*, int> bonuses) { skill_bonuses_ = std::move(bonuses); }
 
 		/**
 		 * @brief Returns a read-only reference to the map of skill bonuses.
 		 * @return A const reference to the internal std::map<SubcategoriedSkillData, int> that maps each SubcategoriedSkillData to its integer bonus.
 		 */
-		const std::map<SubcategoriedSkillData, int>& skillBonuses() const { return skill_bonuses_; }
+		const std::map<const SubcategoriedSkillData*, int>& skillBonuses() const { return skill_bonuses_; }
 
 		/**
 		 * @brief Get the bonus that the race provides to a skill
@@ -849,7 +835,7 @@ namespace rm::rule {
 		 */
 		int skillBonus(const SubcategoriedSkillData& skill) const {
 			for (auto& key : skill_bonuses_) {
-				if (key.first.id() == skill.id()) return key.second;
+				if (key.first->id() == skill.id()) return key.second;
 			}
 			return 0;
 		}
@@ -868,13 +854,9 @@ namespace rm::rule {
 		 * @brief Gets a container with the skill that the race has a bonus for
 		 * @return std::set of SkillData with bonuses
 		 */
-		const std::set<SubcategoriedSkillData> skillsWithBonus() const {
-			std::set<SubcategoriedSkillData> ret;
-			for (auto& key : skill_bonuses_) {
-				const SubcategoriedSkillData data(key.first.skillData(), key.first.subcategory());
-				ret.insert(data);
-			}
-			return ret;
+		const std::set<const SubcategoriedSkillData*> skillsWithBonus() const {
+			auto keys = std::views::keys(skill_bonuses_);
+			return { keys.begin(), keys.end() };
 		}
 
 		/**
@@ -886,7 +868,7 @@ namespace rm::rule {
 		 */
 		bool isBonusSkill(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
 			for (auto& key : std::views::keys(skill_bonuses_)) {
-				if (key.skillData().id() == skill.id() && (subcategory ? subcategory.value() == key.subcategory().value() : !key.subcategory())) return true;
+				if (key->skillData().id() == skill.id() && (subcategory ? subcategory.value() == key->subcategory().value() : !key->subcategory())) return true;
 			}
 			return false;
 		}
@@ -951,11 +933,11 @@ namespace rm::rule {
 		std::map<std::string, const rm::game::character::LanguageAbility> starting_languages_{}; /**< Language ranks that members of the race learn prior to their adolescence */
 		std::map<std::string, const rm::game::character::LanguageAbility> adolescent_languages_{}; /**< Language ranks available to members of the race during adolescence */
 		std::map<StatType::Type, int> stat_bonuses_{}; /**< Racial stats bonuses */
-		std::set<SubcategoriedSkillData> everyman_skills_{}; /**< Skills that are considered everyman for the race */
-		std::set<SubcategoriedSkillData> restricted_skills_{}; /**< Skills that are considered restricted for the race */
+		std::set<const SubcategoriedSkillData*> everyman_skills_{}; /**< Skills that are considered everyman for the race */
+		std::set<const SubcategoriedSkillData*> restricted_skills_{}; /**< Skills that are considered restricted for the race */
 		std::set<const SkillCategoryData*> everyman_skill_categories_{}; /**< Skill categories that are considered everyman for the race */
 		std::set<const SkillCategoryData*> restricted_skill_categories_{}; /**< Skill categories that are considered restricted for the race */
-		std::map<SubcategoriedSkillData, int> skill_bonuses_{}; /** Racial skill bonuses */
+		std::map<const SubcategoriedSkillData*, int> skill_bonuses_{}; /** Racial skill bonuses */
 		std::set<GameRuleDataChoice<SkillCategoryData>> category_everyman_skill_choices_{}; /** Set of skill categories that the character may select one or more skill from to become everyman */
 	};
 

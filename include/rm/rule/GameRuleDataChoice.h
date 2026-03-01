@@ -20,7 +20,7 @@ namespace rm::rule {
 	 *
 	 * @tparam T GameRuleData object of the options
 	 */
-	template <GameRuleDataObject T>
+	template <game_rule_data_object T>
 	class GameRuleDataChoice {
 	public:
 

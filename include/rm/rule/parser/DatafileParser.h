@@ -1,9 +1,8 @@
 #pragma once
 #include <string>
 
-#include <GameRuleDataCache.h>
 #include <GameRuleDataChoice.h>
-#include <GameRuleDataFactory.h>
+#include <PersistentObjectManager.h>
 
 /**
  * @namespace rm::rule::parser
@@ -39,22 +38,21 @@ namespace rm::rule::parser {
 	public:
 		/**
 		 * @brief Consructor
-		 * @param cache Reference to a cache object to store the data objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param datatype String containing the name of the type of data being processed
 		 * @param filename Path to the datafile to parse
 		 */
-		DatafileParser(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) :
-			cache_{ cache },
+		DatafileParser(rm::PersistentObjectManager& object_manager, std::string_view datatype, std::string_view filename) :
 			rule_datatype_{ datatype },
 			filename_{ filename },
-			factory_{ GameRuleDataFactory(cache) } {}
+			object_manager_{ object_manager } {}
 
 		/**
 		 * @brief Consructor
-		 * @param cache Reference to a cache object to store the data objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param datatype String containing the name of the type of data being processed
 		 */
-		DatafileParser(GameRuleDataCache& cache, std::string_view datatype) : DatafileParser(cache, datatype, "") {}
+		DatafileParser(rm::PersistentObjectManager& object_manager, std::string_view datatype) : DatafileParser(object_manager, datatype, "") {}
 
 		/**
 		 * @brief Default destructor
@@ -98,9 +96,9 @@ namespace rm::rule::parser {
 		void save() { save(filename()); }
 
 		/**
-		 * @brief Get the game rule factoryfactorydata cache
+		 * @brief Get the object manager cache
 		 */
-		GameRuleDataFactory& factory() { return factory_; };
+		rm::PersistentObjectManager& factory() { return object_manager_; };
 
 		/**
 		 * @brief Get the file to parse
@@ -115,8 +113,7 @@ namespace rm::rule::parser {
 		void setFilename(const std::string& filename) { filename_ = filename; };
 
 	private:
-		GameRuleDataCache& cache_; /**< Reference to a cache object to store the data objects */
-		GameRuleDataFactory factory_; /**< Factory to act as wrapper to cache, creating objects if required */
+		rm::PersistentObjectManager object_manager_; /**< Factory to act as wrapper to cache, creating objects if required */
 		std::string rule_datatype_{}; /**< Name of the type of data being processed */
 		std::string filename_{}; /**< Path to the file to parse */
 

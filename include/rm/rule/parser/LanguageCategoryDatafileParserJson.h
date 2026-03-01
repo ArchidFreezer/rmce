@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <LanguageCategoryData.h>
 
 namespace rm::rule::parser {
@@ -10,13 +9,11 @@ namespace rm::rule::parser {
 	 * @class LanguageCategoryDatafileParserJson
 	 * @brief Process LanguageCategoryData objects for json files
 	 *
-	 * This class can read a well-formed json file creating LanguageCategoryData objects from the contents, adding them to a
-	 * #GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating LanguageCategoryData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see LanguageCategoryData
-	 * @see #GameRuleDataCache
 	 */
 	class LanguageCategoryDatafileParserJson : public DatafileParserJson {
 		// We need this to prevent name hiding as we have a method with the same name defined in this class
@@ -25,18 +22,18 @@ namespace rm::rule::parser {
 	public:
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for LanguageCategoryData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		LanguageCategoryDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "LanguageCategory", filename) {
+		LanguageCategoryDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "LanguageCategory", filename) {
 			setRootNode("languageCategories");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for LanguageCategoryData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		LanguageCategoryDatafileParserJson(GameRuleDataCache& cache) : LanguageCategoryDatafileParserJson(cache, "") {}
+		LanguageCategoryDatafileParserJson(rm::PersistentObjectManager& object_manager) : LanguageCategoryDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write language category game rule data from the cache to a json file

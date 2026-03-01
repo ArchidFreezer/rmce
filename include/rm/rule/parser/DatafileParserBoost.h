@@ -24,18 +24,18 @@ namespace rm::rule::parser {
 	public:
 		/**
 		 * @brief Consructor
-		 * @param cache Reference to a cache object to store the data objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param datatype String containing the name of the type of data being processed
 		 * @param filename Path to the datafile to parse
 		 */
-		DatafileParserBoost(GameRuleDataCache& cache, std::string_view datatype, std::string_view filename) : DatafileParser(cache, datatype, filename) {}
+		DatafileParserBoost(rm::PersistentObjectManager& object_manager, std::string_view datatype, std::string_view filename) : DatafileParser(object_manager, datatype, filename) {}
 
 		/**
 		 * @brief Consructor
-		 * @param cache Reference to a cache object to store the data objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param datatype String containing the name of the type of data being processed
 		 */
-		DatafileParserBoost(GameRuleDataCache& cache, std::string_view datatype) : DatafileParserBoost(cache, datatype, "") {}
+		DatafileParserBoost(rm::PersistentObjectManager& object_manager, std::string_view datatype) : DatafileParserBoost(object_manager, datatype, "") {}
 
 		/**
 		 * @brief Default destructor
@@ -75,7 +75,7 @@ namespace rm::rule::parser {
 		 * @param game_data_choice A pointer to the choice object to process
 		 * @param[in,out] tree boost pt::ptree to populate
 		 */
-		template<GameRuleDataObject T>
+		template<game_rule_data_object T>
 		void populateGameRuleDataChoice(const GameRuleDataChoice<T>* game_data_choice, pt::ptree& tree);
 
 	private:
@@ -83,7 +83,7 @@ namespace rm::rule::parser {
 
 	};
 
-	template<GameRuleDataObject T>
+	template<game_rule_data_object T>
 	inline void DatafileParserBoost::populateGameRuleDataChoice(const GameRuleDataChoice<T>* game_data_choice, pt::ptree& tree) {
 
 		// We want the same json output each time so we sort the data before we write them

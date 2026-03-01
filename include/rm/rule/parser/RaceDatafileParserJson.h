@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <RaceData.h>
 
 namespace rm::rule::parser {
@@ -10,34 +9,30 @@ namespace rm::rule::parser {
 	 * @class RaceDatafileParserJson
 	 * @brief Process RaceData objects for json files
 	 *
-	 * This class can read a well-formed json file creating RaceData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating RaceData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see RaceData
-	 * @see GameRuleDataCache
 	 */
 
 	class RaceDatafileParserJson : public DatafileParserJson {
 	public:
-		// We need this to prevent name hiding as we have a method with the same name defined in this class
-	//	using DatafileParserBoost::save;
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for RaceData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		RaceDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Race", filename) {
+		RaceDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Race", filename) {
 			setRootNode("races");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for RaceData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		RaceDatafileParserJson(GameRuleDataCache& cache) : RaceDatafileParserJson(cache, "") {}
+		RaceDatafileParserJson(rm::PersistentObjectManager& object_manager) : RaceDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write race game rule data from the cache to a json file

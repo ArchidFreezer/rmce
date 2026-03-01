@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <ProfessionData.h>
 
 namespace rm::rule::parser {
@@ -10,13 +9,11 @@ namespace rm::rule::parser {
 	 * @class ProfessionDatafileParserJson
 	 * @brief Process ProfessionData objects for json files
 	 *
-	 * This class can read a well-formed json file creating ProfessionData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating ProfessionData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see ProfessionData
-	 * @see GameRuleDataCache
 	 */
 
 	class ProfessionDatafileParserJson : public DatafileParserJson {
@@ -26,18 +23,18 @@ namespace rm::rule::parser {
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for ProfessionData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		ProfessionDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Profession", filename) {
+		ProfessionDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Profession", filename) {
 			setRootNode("professions");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for ProfessionData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		ProfessionDatafileParserJson(GameRuleDataCache& cache) : ProfessionDatafileParserJson(cache, "") {}
+		ProfessionDatafileParserJson(rm::PersistentObjectManager& object_manager) : ProfessionDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write profession game rule data from the cache to a json file

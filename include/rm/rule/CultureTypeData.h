@@ -260,18 +260,18 @@ namespace rm::rule {
 		 * @param skill SubcategoriedSkillData to add the ranks to
 		 * @param ranks int number of ranks
 		 */
-		void addSkillRank(SubcategoriedSkillData skill, int ranks) {
+		void addSkillRank(SubcategoriedSkillData& skill, int ranks) {
 			if (isRankSkill(skill.skillData(), skill.subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + skill.id());
-			skill_ranks_.emplace(std::move(skill), ranks);
+			skill_ranks_.emplace(&skill, ranks);
 		}
 
 		/**
 		 * @brief Set the map of skills and ranks the culture provides during adolescence
 		 * @param map Map of SubcategoriedSkillData and int number of ranks for each skill to set
 		 */
-		void setSkillRanks(std::map<SubcategoriedSkillData, int> map) {
+		void setSkillRanks(std::map<const SubcategoriedSkillData*, int> map) {
 			for (auto& key : std::views::keys(map)) {
-				if (isRankSkill(key.skillData(), key.subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + key.id());
+				if (isRankSkill(key->skillData(), key->subcategory())) throw InvalidSkillRank("There is already a rank set for skill " + key->id());
 			}
 			skill_ranks_ = std::move(map);
 		}
@@ -280,7 +280,7 @@ namespace rm::rule {
 		 * @brief Get the map of skills and ranks the culture provides during adolescence
 		 * @return Map of SubcategoriedSkillData and int number of ranks for each skill
 		 */
-		const std::map<SubcategoriedSkillData, int>& skillRanks() const { return skill_ranks_; }
+		const std::map<const SubcategoriedSkillData*, int>& skillRanks() const { return skill_ranks_; }
 
 		/**
 		 * @brief Get the number of ranks for a skill the culture provides during adolescence
@@ -289,7 +289,7 @@ namespace rm::rule {
 		 */
 		int skillRank(const SubcategoriedSkillData& skill) const {
 			for (auto& key : skill_ranks_) {
-				if (key.first.id() == skill.id()) return key.second;
+				if (key.first->id() == skill.id()) return key.second;
 			}
 			return 0;
 		}
@@ -308,13 +308,9 @@ namespace rm::rule {
 		 * @brief Gets a container with the skills that the culture provides adolescent ranks for
 		 * @return std::set of SkillData with adolescent ranks
 		 */
-		const std::set<SubcategoriedSkillData> skillsWithRanks() const {
-			std::set<SubcategoriedSkillData> ret;
-			for (auto& key : skill_ranks_) {
-				const SubcategoriedSkillData data(key.first.skillData(), key.first.subcategory());
-				ret.insert(data);
-			}
-			return ret;
+		const std::set<const SubcategoriedSkillData*> skillsWithRanks() const {
+			auto keys = std::views::keys(skill_ranks_);
+			return { keys.begin(), keys.end() };
 		}
 
 		/**
@@ -326,7 +322,7 @@ namespace rm::rule {
 		 */
 		bool isRankSkill(const SkillData& skill, std::optional<std::string_view> subcategory = std::nullopt) const {
 			for (auto& key : std::views::keys(skill_ranks_)) {
-				if (key.skillData().id() == skill.id() && (subcategory ? subcategory.value() == key.subcategory().value() : !key.subcategory())) return true;
+				if (key->skillData().id() == skill.id() && (subcategory ? subcategory.value() == key->subcategory().value() : !key->subcategory())) return true;
 			}
 			return false;
 		}
@@ -589,7 +585,7 @@ namespace rm::rule {
 		int spell_list_ranks_{}; /**< Number of ranks in an open spell list members of the culture receive */
 		std::set<ArmourType::Type> preferred_armour_{}; /**< Armour type typically preferred by members of the culture */
 		std::set<const WeaponTypeData*> preferred_weapons_{}; /**< Weapon type typically preferred by members of the culture */
-		std::map<SubcategoriedSkillData, int> skill_ranks_{}; /** Number of skill ranks gained during adolescence */
+		std::map<const SubcategoriedSkillData*, int> skill_ranks_{}; /** Number of skill ranks gained during adolescence */
 		std::map<const SkillCategoryData*, int> skill_category_ranks_{}; /** Number of skill category ranks gained during adolescence */
 		std::map<const SkillCategoryData*, int> skill_category_skill_ranks_{}; /** Number of skill ranks from a category gained during adolescence */
 		std::set<const ClimateData*> required_climates_{}; /**< Set of climates, one of which the culture will live in  */

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <SpellListData.h>
 
 namespace rm::rule::parser {
@@ -10,34 +9,30 @@ namespace rm::rule::parser {
 	 * @class SpellListDatafileParserJson
 	 * @brief Process SpellListData objects for json files
 	 *
-	 * This class can read a well-formed json file creating SpellListData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating SpellListData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see SpellListData
-	 * @see GameRuleDataCache
 	 */
 
 	class SpellListDatafileParserJson : public DatafileParserJson {
 	public:
-		// We need this to prevent name hiding as we have a method with the same name defined in this class
-	//	using DatafileParserBoost::save;
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for SpellListData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		SpellListDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "SpellList", filename) {
+		SpellListDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "SpellList", filename) {
 			setRootNode("spell-lists");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for SpellListData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		SpellListDatafileParserJson(GameRuleDataCache& cache) : SpellListDatafileParserJson(cache, "") {}
+		SpellListDatafileParserJson(rm::PersistentObjectManager& object_manager) : SpellListDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write spell list game rule data from the cache to a json file

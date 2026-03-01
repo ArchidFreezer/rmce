@@ -1,7 +1,6 @@
 #pragma once
 
 #include <DatafileParserJson.h>
-#include <GameRuleDataCache.h>
 #include <SkillData.h>
 
 namespace rm::rule::parser {
@@ -10,34 +9,30 @@ namespace rm::rule::parser {
 	 * @class SkillDatafileParserJson
 	 * @brief Process SkillData objects for json files
 	 *
-	 * This class can read a well-formed json file creating SkillData objects from the contents, adding them to a
-	 * GameRuleDataCache cache.
+	 * This class can read a well-formed json file creating SkillData objects from the contents, adding them to a cache.
 	 *
 	 * The reverse operation is also available where the objects from the cache may be written out to a json file.
 	 *
 	 * @see rm::rule::SkillData
-	 * @see GameRuleDataCache
 	 */
 
 	class SkillDatafileParserJson : public DatafileParserJson {
 	public:
-		// We need this to prevent name hiding as we have a method with the same name defined in this class
-		//using DatafileParserBoost::save;
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for SkillData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		SkillDatafileParserJson(GameRuleDataCache& cache, std::string_view filename) : DatafileParserJson(cache, "Skill", filename) {
+		SkillDatafileParserJson(rm::PersistentObjectManager& object_manager, std::string_view filename) : DatafileParserJson(object_manager, "Skill", filename) {
 			setRootNode("skills");
 		}
 
 		/**
 		 * @brief Constructor
-		 * @param cache Cache to use for SkillData objects
+		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		SkillDatafileParserJson(GameRuleDataCache& cache) : SkillDatafileParserJson(cache, "") {}
+		SkillDatafileParserJson(rm::PersistentObjectManager& object_manager) : SkillDatafileParserJson(object_manager, "") {}
 
 		/**
 		 * @brief Write skill game rule data from the cache to a json file
