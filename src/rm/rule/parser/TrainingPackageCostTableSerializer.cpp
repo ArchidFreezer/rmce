@@ -15,7 +15,7 @@ namespace rm::rule::parser {
 		std::cout << "Loading Training Package cost data ..." << std::endl;
 
 		std::string id = "TRAINING_PACKAGE_COST_TABLE";
-		TrainingPackageCostTable& table = factory().get<TrainingPackageCostTable>(id);
+		TrainingPackageCostTable& table = manager().get<TrainingPackageCostTable>(id);
 
 		std::string line{};
 		while (std::getline(is, line)) {
@@ -28,7 +28,7 @@ namespace rm::rule::parser {
 			// Grab the name and remove it from the vector so we can iterate through the costs in order
 			std::string package_name{ tokens[0] };
 			// Get the training package data object for the row
-			const TrainingPackageData* package_data{ &factory().get<TrainingPackageData>(package_name) };
+			const TrainingPackageData* package_data{ &manager().get<TrainingPackageData>(package_name) };
 
 			PersistentMatcherFactory matcher_factory{};
 			const PersistentMatcher* matcher = matcher_factory.matcher(package_data);
@@ -53,7 +53,7 @@ namespace rm::rule::parser {
 
 	void TrainingPackageCostTableSerializer::save(std::ostream& os) {
 		std::string id = "TRAINING_PACKAGE_COST_TABLE";
-		TrainingPackageCostTable& table = factory().get<TrainingPackageCostTable>(id);
+		TrainingPackageCostTable& table = manager().get<TrainingPackageCostTable>(id);
 
 		// Sort the rows by the training package name and write them to the file, with the first column being the training package name and the rest being the costs for each profession
 		int num_cols{ 0 };

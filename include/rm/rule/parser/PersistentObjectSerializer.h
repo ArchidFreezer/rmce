@@ -7,6 +7,10 @@
 /**
  * @namespace rm::rule::parser
  * @brief Datafile parsers to (de)serialise game data to and from iostreams
+ * 
+ * The Assignment copy and move constructores have been deleted to prevent issues with any streams that may be used in the (de)serialization process, as copying or moving a stream can lead to
+ * issues with the stream state and can cause unexpected behaviour.
+ * By deleting these operations, we ensure that the class cannot be copied or moved, which helps to prevent potential bugs and ensures that the (de)serialization process is handled correctly.
  */
 namespace rm::rule::parser {
 
@@ -36,10 +40,10 @@ namespace rm::rule::parser {
 		 */
 		virtual ~PersistentObjectSerializer() = default;
 
-		PersistentObjectSerializer(const PersistentObjectSerializer&) = default; /**< Default copy constructor */
-		PersistentObjectSerializer& operator=(const PersistentObjectSerializer&) = default; /**< Default copy assignment operator */
-		PersistentObjectSerializer(PersistentObjectSerializer&&) noexcept = default; /**< Default move constructor */
-		PersistentObjectSerializer& operator=(PersistentObjectSerializer&&) noexcept = default; /**< Default move assignment operator */
+		PersistentObjectSerializer(const PersistentObjectSerializer&) = delete; /**< Delete copy constructor */
+		PersistentObjectSerializer& operator=(const PersistentObjectSerializer&) = delete; /**< Delete copy assignment operator */
+		PersistentObjectSerializer(PersistentObjectSerializer&&) noexcept = delete; /**< Delete move constructor */
+		PersistentObjectSerializer& operator=(PersistentObjectSerializer&&) noexcept = delete; /**< Delete move assignment operator */
 
 		/**
 		 * @brief Getter for the type of data being processed
@@ -60,7 +64,7 @@ namespace rm::rule::parser {
 		/**
 		 * @brief Get the object manager cache
 		 */
-		rm::PersistentObjectManager& factory() { return object_manager_; };
+		rm::PersistentObjectManager& manager() { return object_manager_; };
 
 	private:
 		rm::PersistentObjectManager object_manager_; /**< Factory to act as wrapper to cache, creating objects if required */
