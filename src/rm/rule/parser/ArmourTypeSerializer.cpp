@@ -11,8 +11,7 @@ void ArmourTypeSerializer::parse(pt::ptree& ptree) {
 		std::string name = v.second.get<std::string>("name");
 		std::string id = v.second.get("id", manager().generateId(ruleDatatype(), name));
 
-		// We create a ArmourTypeData object and reference it with as a unique_ptr to allow us to use move semantics to transfer ownership
-		// to the cache when we add it
+		// Get an ArmourTypeData object from the object manager
 		ArmourTypeData& datum = manager().get<ArmourTypeData>(id);
 		datum.setName(name);
 		datum.setDescription(v.second.get<std::string>("description"));
