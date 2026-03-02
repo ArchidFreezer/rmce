@@ -22,10 +22,10 @@
 #include <ProfessionDatafileParserXml.h>
 #include <ProfessionSerializer.h>
 #include <RaceSerializer.h>
-#include <SkillCategoryDatafileParserJson.h>
-#include <SkillDatafileParserJson.h>
-#include <SkillGroupDatafileParserJson.h>
-#include <SkillProgressionTypeDatafileParserJson.h>
+#include <SkillCategorySerializer.h>
+#include <SkillGroupSerializer.h>
+#include <SkillProgressionTypeSerializer.h>
+#include <SkillSerializer.h>
 #include <SpecialAttackTableDatafileParserJson.h>
 #include <SpellListDatafileParserJson.h>
 #include <TrainingPackageCostTableFileSerializer.h>
@@ -58,10 +58,10 @@ int main() {
 	PersistentObjectFileSerializer<PoisonTypeSerializer> poison_type_serializer(object_manager, "../../../../data/PoisonTypes.json");	
 	PersistentObjectFileSerializer<ProfessionSerializer> profession_serializer(object_manager, "../../../../data/Professions.json");
 	PersistentObjectFileSerializer<RaceSerializer> race_serializer(object_manager, "../../../../data/Races.json");
-	SkillCategoryDatafileParserJson skill_category_parser(object_manager, "../../../../data/SkillCategories.json");
-	SkillDatafileParserJson skill_parser(object_manager, "../../../../data/Skills.json");
-	SkillGroupDatafileParserJson skill_group_parser(object_manager, "../../../../data/SkillGroups.json");
-	SkillProgressionTypeDatafileParserJson skill_progression_parser(object_manager, "../../../../data/SkillProgressionTypes.json");
+	PersistentObjectFileSerializer<SkillCategorySerializer> skill_category_serializer(object_manager, "../../../../data/SkillCategories.json");
+	PersistentObjectFileSerializer<SkillGroupSerializer> skill_group_serializer(object_manager, "../../../../data/SkillGroups.json");
+	PersistentObjectFileSerializer<SkillProgressionTypeSerializer> skill_progression_serializer(object_manager, "../../../../data/SkillProgressionTypes.json");
+	PersistentObjectFileSerializer<SkillSerializer> skill_serializer(object_manager, "../../../../data/Skills.json");
 	SpecialAttackTableDatafileParserJson special_attack_table_parser(object_manager, "../../../../data/SpecialAttackTables.json");
 	SpellListDatafileParserJson spell_list_parser(object_manager, "../../../../data/SpellLists.json");
 	TrainingPackageCostTableFileSerializer training_package_cost_table(object_manager, "../../../../data/TrainingPackageCosts.tsv");
@@ -71,10 +71,6 @@ int main() {
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
-	parsers.push_back(&skill_category_parser);
-	parsers.push_back(&skill_group_parser);
-	parsers.push_back(&skill_parser);
-	parsers.push_back(&skill_progression_parser);
 	parsers.push_back(&special_attack_table_parser);
 	parsers.push_back(&spell_list_parser);
 	parsers.push_back(&training_package_parser);
@@ -98,6 +94,10 @@ int main() {
 	serializers.push_back(&poison_type_serializer);
 	serializers.push_back(&profession_serializer);
 	serializers.push_back(&race_serializer);
+	serializers.push_back(&skill_category_serializer);
+	serializers.push_back(&skill_group_serializer);
+	serializers.push_back(&skill_progression_serializer);
+	serializers.push_back(&skill_serializer);
 	serializers.push_back(&training_package_cost_table);
 
 
@@ -115,10 +115,6 @@ int main() {
 			serializer->read();
 		}
 
-		// skill_category_parser.save("../../../../data/SkillCategories2.json");
-		// skill_group_parser.save("../../../../data/SkillGroups2.json");
-		// skill_parser.save("../../../../data/Skills2.json");
-		// skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
 		// special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
 		// spell_list_parser.save("../../../../data/SpellLists2.json");
 		// training_package_parser.save("../../../../data/TrainingPackages2.json");
@@ -141,10 +137,10 @@ int main() {
 		poison_type_serializer.save("../../../../data2/PoisonTypes.json");
 		profession_serializer.save("../../../../data2/Professions.json");
 		race_serializer.save("../../../../data2/Races.json");
-		skill_category_parser.save("../../../../data2/SkillCategories.json");
-		skill_group_parser.save("../../../../data2/SkillGroups.json");
-		skill_parser.save("../../../../data2/Skills.json");
-		skill_progression_parser.save("../../../../data2/SkillProgressionTypes.json");
+		skill_category_serializer.save("../../../../data2/SkillCategories.json");
+		skill_group_serializer.save("../../../../data2/SkillGroups.json");
+		skill_serializer.save("../../../../data2/Skills.json");
+		skill_progression_serializer.save("../../../../data2/SkillProgressionTypes.json");
 		special_attack_table_parser.save("../../../../data2/SpecialAttackTables.json");
 		spell_list_parser.save("../../../../data2/SpellLists.json");
 		training_package_cost_table.save("../../../../data2/TrainingPackageCosts.tsv");
