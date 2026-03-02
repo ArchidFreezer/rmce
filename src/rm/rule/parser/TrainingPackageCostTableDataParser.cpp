@@ -2,7 +2,7 @@
 #include <sstream>
 
 #include <StringUtils.h>
-#include <TrainingPackageCostTableDatafileParser.h>
+#include <TrainingPackageCostTableDataParser.h>
 #include <PersistentMatcherFactory.h>
 #include <table/PersistentMatcher.h>
 #include <table/TrainingPackageCostTable.h>
@@ -11,19 +11,14 @@ using namespace rm::rule::table;
 
 namespace rm::rule::parser {
 
-	void TrainingPackageCostTableDatafileParser::read(const std::string& filename) {
-		// Read the file and store the data in the cache
-		std::ifstream file(filename);
-
-		if (!file.is_open()) {
-			throw std::runtime_error("Could not open file: " + filename);
-		}
+	void TrainingPackageCostTableDataParser::read(std::istream& is) {
+		std::cout << "Loading Training Package cost data ..." << std::endl;
 
 		std::string id = "TRAINING_PACKAGE_COST_TABLE";
 		TrainingPackageCostTable& table = factory().get<TrainingPackageCostTable>(id);
 
 		std::string line{};
-		while (std::getline(file, line)) {
+		while (std::getline(is, line)) {
 			if (line.empty()) { continue; }
 
 			// Split the row by tabs to get the individual cells
@@ -52,18 +47,11 @@ namespace rm::rule::parser {
 
 			table.addRow(matcher, row);
 
-			std::cout << "Adding training package cost table row for package: " << package_name << "\n";
+			std::cout << "\tTraining package: " << package_name << "\n";
 		}
 	}
 
-	void TrainingPackageCostTableDatafileParser::save(const std::string& filename) {
-		// Read the file and store the data in the cache
-		std::ofstream file(filename);
-
-		if (!file.is_open()) {
-			throw std::runtime_error("Could not open file: " + filename);
-		}
-
+	void TrainingPackageCostTableDataParser::save(std::ostream& os) {
 		std::string id = "TRAINING_PACKAGE_COST_TABLE";
 		TrainingPackageCostTable& table = factory().get<TrainingPackageCostTable>(id);
 
@@ -77,11 +65,11 @@ namespace rm::rule::parser {
 		}
 
 		for (const auto& [package_name, row] : sorted_rows) {
-			file << package_name;
+			os << package_name;
 			for (int i{ 0 }; i < num_cols; i++) {
-				file << "\t" << row.cell(i);
+				os << "\t" << row.cell(i);
 			}
-			file << "\n";
+			os << "\n";
 		}
 	}
 

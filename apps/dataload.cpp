@@ -91,15 +91,21 @@ int main() {
 	parsers.push_back(&skill_progression_parser);
 	parsers.push_back(&special_attack_table_parser);
 	parsers.push_back(&spell_list_parser);
-	parsers.push_back(&training_package_cost_table_parser);
 	parsers.push_back(&training_package_parser);
 	parsers.push_back(&treasure_code_parser);
 	parsers.push_back(&weapon_type_parser);
+
+	std::vector<DataParser*> data_parsers;
+	data_parsers.push_back(&training_package_cost_table_parser);
 
 	try {
 		// Iterate through the parsers populating the cache with game data objects from the datafiles
 		for (auto& parser : parsers) {
 			parser->read();
+		}
+
+		for (auto& data_parser : data_parsers) {
+			data_parser->read();
 		}
 
 
