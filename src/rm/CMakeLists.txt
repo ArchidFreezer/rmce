@@ -1,5 +1,5 @@
 add_library(rm STATIC)
-target_sources(rm PRIVATE "PersistentObjectManager.cpp")
+target_sources(rm PRIVATE "PersistentObjectManager.cpp" "rule/parser/FixedTableCreator.cpp")
 add_subdirectory("game")
 add_subdirectory("rule")
 add_subdirectory("rule/parser")
