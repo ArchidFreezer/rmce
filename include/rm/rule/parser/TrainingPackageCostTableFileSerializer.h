@@ -1,38 +1,38 @@
 #pragma once
 
 #include <string>
-#include <TrainingPackageCostTableDataParser.h>
+#include <TrainingPackageCostTableSerializer.h>
 
 namespace rm::rule::parser {
 
 	/**
-	 * @class TrainingPackageCostTableDatafileParser
+	 * @class TrainingPackageCostTableFileSerializer
 	 * @brief Class to parse files containing training package cost table data
 	 *
 	 * This class implements the DatafileParser::read function to read the file into the lookup table in the data cache.
 	 *
 	 * @see DatafileParser
 	 */
-	class TrainingPackageCostTableDatafileParser : public TrainingPackageCostTableDataParser {
+	class TrainingPackageCostTableFileSerializer : public TrainingPackageCostTableSerializer {
 	public:
 
 		/**
 		 * @brief Deleted default constructor to ensure initialisation of the base class.
 		 */
-		TrainingPackageCostTableDatafileParser() = delete;
+		TrainingPackageCostTableFileSerializer() = delete;
 
 		/**
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param filename Path to the datafile to parse
 		 */
-		TrainingPackageCostTableDatafileParser(rm::PersistentObjectManager& object_manager, const std::string_view filename) : TrainingPackageCostTableDataParser(object_manager), filename_{ filename } {}
+		TrainingPackageCostTableFileSerializer(rm::PersistentObjectManager& object_manager, const std::string_view filename) : TrainingPackageCostTableSerializer(object_manager), filename_{ filename } {}
 
-		~TrainingPackageCostTableDatafileParser() = default; /** Default destructor for polymorphism */
-		TrainingPackageCostTableDatafileParser(const TrainingPackageCostTableDatafileParser&) = default; /** Default copy constructor */
-		TrainingPackageCostTableDatafileParser& operator=(const TrainingPackageCostTableDatafileParser&) noexcept = default; /** Default copy assignment operator */
-		TrainingPackageCostTableDatafileParser(TrainingPackageCostTableDatafileParser&&) = default; /** Default move constructor */
-		TrainingPackageCostTableDatafileParser& operator=(TrainingPackageCostTableDatafileParser&& other) noexcept = default; /** Default move assignment operator */
+		~TrainingPackageCostTableFileSerializer() = default; /** Default destructor for polymorphism */
+		TrainingPackageCostTableFileSerializer(const TrainingPackageCostTableFileSerializer&) = default; /** Default copy constructor */
+		TrainingPackageCostTableFileSerializer& operator=(const TrainingPackageCostTableFileSerializer&) noexcept = default; /** Default copy assignment operator */
+		TrainingPackageCostTableFileSerializer(TrainingPackageCostTableFileSerializer&&) = default; /** Default move constructor */
+		TrainingPackageCostTableFileSerializer& operator=(TrainingPackageCostTableFileSerializer&& other) noexcept = default; /** Default move assignment operator */
 
 		/**
 		 * @brief Read training package cost table data from file, convert to objects and store in the game rule data cache
@@ -44,7 +44,7 @@ namespace rm::rule::parser {
 				std::cerr << "Error opening file " << filename << " for reading.\n";
 				return;
 			}
-			TrainingPackageCostTableDataParser::read(is);
+			TrainingPackageCostTableSerializer::read(is);
 		}
 
 		/**
@@ -64,7 +64,7 @@ namespace rm::rule::parser {
 				std::cerr << "Error opening file " << filename << " for writing.\n";
 				return;
 			}
-			TrainingPackageCostTableDataParser::save(os);
+			TrainingPackageCostTableSerializer::save(os);
 		}
 
 		/**

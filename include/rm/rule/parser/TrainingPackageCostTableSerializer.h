@@ -1,12 +1,12 @@
 #pragma once
 
 #include <string_view>
-#include <DataParser.h>
+#include <PersistentObjectSerializer.h>
 
 namespace rm::rule::parser {
 
 	/**
-	 * @class TrainingPackageCostTableDataParser
+	 * @class TrainingPackageCostTableSerializer
 	 * @brief Class to parse training package cost table data
 	 *
 	 * This abstract class implements the read(istream) and save(ostream) functions to perform the actual parsing of the game data.
@@ -15,24 +15,24 @@ namespace rm::rule::parser {
 	 *
 	 * @see DatafileParser
 	 */
-	class TrainingPackageCostTableDataParser : public DataParser {
+	class TrainingPackageCostTableSerializer : public PersistentObjectSerializer {
 	public:
 		/**
 		 * @brief Deleted default constructor to ensure initialisation of the base class.
 		 */
-		TrainingPackageCostTableDataParser() = delete;
+		TrainingPackageCostTableSerializer() = delete;
 
 		/**
 		 * @brief Constructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 */
-		TrainingPackageCostTableDataParser(rm::PersistentObjectManager& object_manager) : DataParser(object_manager, "TrainingPackageCostTable") {}
+		TrainingPackageCostTableSerializer(rm::PersistentObjectManager& object_manager) : PersistentObjectSerializer(object_manager, "TrainingPackageCostTable") {}
 
-		~TrainingPackageCostTableDataParser() = default; /** Default destructor for polymorphism */
-		TrainingPackageCostTableDataParser(const TrainingPackageCostTableDataParser&) = default; /** Default copy constructor */
-		TrainingPackageCostTableDataParser& operator=(const TrainingPackageCostTableDataParser&) = default; /** Default copy assignment operator */
-		TrainingPackageCostTableDataParser(TrainingPackageCostTableDataParser&&) noexcept = default; /** Default move constructor */
-		TrainingPackageCostTableDataParser& operator=(TrainingPackageCostTableDataParser&&) noexcept = default; /** Default move assignment operator */
+		~TrainingPackageCostTableSerializer() = default; /** Default destructor for polymorphism */
+		TrainingPackageCostTableSerializer(const TrainingPackageCostTableSerializer&) = default; /** Default copy constructor */
+		TrainingPackageCostTableSerializer& operator=(const TrainingPackageCostTableSerializer&) = default; /** Default copy assignment operator */
+		TrainingPackageCostTableSerializer(TrainingPackageCostTableSerializer&&) noexcept = default; /** Default move constructor */
+		TrainingPackageCostTableSerializer& operator=(TrainingPackageCostTableSerializer&&) noexcept = default; /** Default move assignment operator */
 
 		/**
 		 * @brief Read training package cost table data from file, convert to objects and store in the game rule data cache

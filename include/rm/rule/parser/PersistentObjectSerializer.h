@@ -11,21 +11,21 @@
 namespace rm::rule::parser {
 
 	/**
-	 * @class DataParser
-	 * @brief Abstract class to facilitate reading and writing of game rule data to and from an iostream.
+	 * @class PersistentObjectSerializer
+	 * @brief Abstract class to facilitate serialising persistent objects to and from an iostream.
 	 *
 	 * This base class has the tools to assist in the processing of game rule data, such as skills, professions, etc., from persistent storage.
 	 *
 	 * The class also contains a reference to a data cache where the data objects read from the stream should be stored.
 	 */
-	class DataParser {
+	class PersistentObjectSerializer {
 	public:
 		/**
 		 * @brief Consructor
 		 * @param object_manager Reference to an object manager to handle the data objects
 		 * @param datatype String containing the name of the type of data being processed
 		 */
-		DataParser(rm::PersistentObjectManager& object_manager, std::string_view datatype) :
+		PersistentObjectSerializer(rm::PersistentObjectManager& object_manager, std::string_view datatype) :
 			rule_datatype_{ datatype },
 			object_manager_{ object_manager } {}
 
@@ -34,12 +34,12 @@ namespace rm::rule::parser {
 		 *
 		 * This is made virtual to define the class as polymorphic as a standard practice, even though there is another virtial method.
 		 */
-		virtual ~DataParser() = default;
+		virtual ~PersistentObjectSerializer() = default;
 
-		DataParser(const DataParser&) = default; /**< Default copy constructor */
-		DataParser& operator=(const DataParser&) = default; /**< Default copy assignment operator */
-		DataParser(DataParser&&) noexcept = default; /**< Default move constructor */
-		DataParser& operator=(DataParser&&) noexcept = default; /**< Default move assignment operator */
+		PersistentObjectSerializer(const PersistentObjectSerializer&) = default; /**< Default copy constructor */
+		PersistentObjectSerializer& operator=(const PersistentObjectSerializer&) = default; /**< Default copy assignment operator */
+		PersistentObjectSerializer(PersistentObjectSerializer&&) noexcept = default; /**< Default move constructor */
+		PersistentObjectSerializer& operator=(PersistentObjectSerializer&&) noexcept = default; /**< Default move assignment operator */
 
 		/**
 		 * @brief Getter for the type of data being processed

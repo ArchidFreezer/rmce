@@ -26,7 +26,7 @@
 #include <SkillProgressionTypeDatafileParserJson.h>
 #include <SpecialAttackTableDatafileParserJson.h>
 #include <SpellListDatafileParserJson.h>
-#include <TrainingPackageCostTableDatafileParser.h>
+#include <TrainingPackageCostTableFileSerializer.h>
 #include <TrainingPackageDatafileParserJson.h>
 #include <TreasureCodeDatafileParserJson.h>
 #include <WeaponTypeDatafileParserJson.h>
@@ -62,7 +62,7 @@ int main() {
 	SkillProgressionTypeDatafileParserJson skill_progression_parser(object_manager, "../../../../data/SkillProgressionTypes.json");
 	SpecialAttackTableDatafileParserJson special_attack_table_parser(object_manager, "../../../../data/SpecialAttackTables.json");
 	SpellListDatafileParserJson spell_list_parser(object_manager, "../../../../data/SpellLists.json");
-	TrainingPackageCostTableDatafileParser training_package_cost_table_parser(object_manager, "../../../../data/TrainingPackageCosts.tsv");
+	TrainingPackageCostTableFileSerializer training_package_cost_table(object_manager, "../../../../data/TrainingPackageCosts.tsv");
 	TrainingPackageDatafileParserJson training_package_parser(object_manager, "../../../../data/TrainingPackages.json");
 	TreasureCodeDatafileParserJson treasure_code_parser(object_manager, "../../../../data/TreasureCodes.json");
 	WeaponTypeDatafileParserJson weapon_type_parser(object_manager, "../../../../data/WeaponTypes.json");
@@ -95,8 +95,8 @@ int main() {
 	parsers.push_back(&treasure_code_parser);
 	parsers.push_back(&weapon_type_parser);
 
-	std::vector<DataParser*> data_parsers;
-	data_parsers.push_back(&training_package_cost_table_parser);
+	std::vector<PersistentObjectSerializer*> serializers;
+	serializers.push_back(&training_package_cost_table);
 
 	try {
 		// Iterate through the parsers populating the cache with game data objects from the datafiles
@@ -104,8 +104,8 @@ int main() {
 			parser->read();
 		}
 
-		for (auto& data_parser : data_parsers) {
-			data_parser->read();
+		for (auto& serializer : serializers) {
+			serializer->read();
 		}
 
 
@@ -159,7 +159,7 @@ int main() {
 		skill_progression_parser.save("../../../../data2/SkillProgressionTypes.json");
 		special_attack_table_parser.save("../../../../data2/SpecialAttackTables.json");
 		spell_list_parser.save("../../../../data2/SpellLists.json");
-		training_package_cost_table_parser.save("../../../../data2/TrainingPackageCosts.tsv");
+		training_package_cost_table.save("../../../../data2/TrainingPackageCosts.tsv");
 		training_package_parser.save("../../../../data2/TrainingPackages.json");
 		treasure_code_parser.save("../../../../data2/TreasureCodes.json");
 		weapon_type_parser.save("../../../../data2/WeaponTypes.json");

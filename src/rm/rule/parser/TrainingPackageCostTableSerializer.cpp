@@ -2,7 +2,7 @@
 #include <sstream>
 
 #include <StringUtils.h>
-#include <TrainingPackageCostTableDataParser.h>
+#include <TrainingPackageCostTableSerializer.h>
 #include <PersistentMatcherFactory.h>
 #include <table/PersistentMatcher.h>
 #include <table/TrainingPackageCostTable.h>
@@ -11,7 +11,7 @@ using namespace rm::rule::table;
 
 namespace rm::rule::parser {
 
-	void TrainingPackageCostTableDataParser::read(std::istream& is) {
+	void TrainingPackageCostTableSerializer::read(std::istream& is) {
 		std::cout << "Loading Training Package cost data ..." << std::endl;
 
 		std::string id = "TRAINING_PACKAGE_COST_TABLE";
@@ -51,7 +51,7 @@ namespace rm::rule::parser {
 		}
 	}
 
-	void TrainingPackageCostTableDataParser::save(std::ostream& os) {
+	void TrainingPackageCostTableSerializer::save(std::ostream& os) {
 		std::string id = "TRAINING_PACKAGE_COST_TABLE";
 		TrainingPackageCostTable& table = factory().get<TrainingPackageCostTable>(id);
 
