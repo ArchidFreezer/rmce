@@ -2,6 +2,8 @@
 
 #include <PersistentObjectJsonSerializer.h>
 #include <BookData.h>
+#include <typeinfo>
+#include <type_traits>
 
 namespace rm::rule::parser {
 
@@ -18,6 +20,10 @@ namespace rm::rule::parser {
 
 class BookSerializer : public PersistentObjectJsonSerializer {
 public:
+	/**
+	 * @brief Type alias for the data class handled by this serializer
+	 */
+	using DataClass = BookData;
 
 	/**
 	 * @brief Constructor

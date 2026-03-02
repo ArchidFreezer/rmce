@@ -19,6 +19,11 @@ namespace rm::rule::parser {
 class ArmourTypeSerializer : public PersistentObjectJsonSerializer {
 public:
 	/**
+	 * @brief Type alias for the data class handled by this serializer
+	 */
+	using DataClass = ArmourTypeData;
+
+	/**
 	 * @brief Constructor
 	 * @param object_manager Reference to an object manager to handle the data objects
 	 */

@@ -71,4 +71,19 @@ private:
 	std::string rule_datatype_{};                /**< Name of the type of data being processed */
 };
 
+	/**
+ * @brief Concept that ensures that a templated type is derived from the PersistentObjectSerializer class
+ *
+ * It is used when templating a class or method where it may be used as follows
+ *
+ * @code
+ * template <persistent_object_serializer T>
+ * void someFunction(T obj) {
+ *   // do something with obj
+ * }
+ * @endcode
+ */
+template<class T>
+concept persistent_object_serializer = std::is_base_of<PersistentObjectSerializer, T>::value;
+
 } // namespace rm::rule::parser

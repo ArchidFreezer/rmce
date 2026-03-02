@@ -1,10 +1,10 @@
 ﻿#include <filesystem>
 #include <iostream>
 
-#include <AnimalFileSerializer.h>
-#include <ArmourTypeFileSerializer.h>
+#include <AnimalSerializer.h>
+#include <ArmourTypeSerializer.h>
 #include <AttackTableDatafileParserJson.h>
-#include <BookFileSerializer.h>
+#include <BookSerializer.h>
 #include <ClimateDatafileParserJson.h>
 #include <CreaturePaceDatafileParserJson.h>
 #include <CultureDatafileParserJson.h>
@@ -15,6 +15,7 @@
 #include <LanguageCategoryDatafileParserJson.h>
 #include <LanguageDatafileParserJson.h>
 #include <PersistentCache.h>
+#include <PersistentObjectFileSerializer.h>
 #include <PersistentObjectManager.h>
 #include <PoisonDatafileParserJson.h>
 #include <PoisonTypeDatafileParserJson.h>
@@ -41,10 +42,10 @@ int main() {
 	rm::PersistentCache cache{};
 	rm::PersistentObjectManager object_manager{cache};
 
-	AnimalFileSerializer animal_serializer(object_manager, "../../../../data/Animals.json");
-	ArmourTypeFileSerializer armour_type_serializer(object_manager, "../../../../data/ArmourTypes.json");
+	PersistentObjectFileSerializer<AnimalSerializer> animal_serializer(object_manager, "../../../../data/Animals.json");
+	PersistentObjectFileSerializer<ArmourTypeSerializer> armour_type_serializer(object_manager, "../../../../data/ArmourTypes.json");
 	AttackTableDatafileParserJson attack_table_parser(object_manager, "../../../../data/AttackTables.json");
-	BookFileSerializer book_serializer(object_manager, "../../../../data/Books.json");
+	PersistentObjectFileSerializer<BookSerializer> book_serializer(object_manager, "../../../../data/Books.json");
 	ClimateDatafileParserJson climate_parser(object_manager, "../../../../data/Climates.json");
 	CreaturePaceDatafileParserJson creature_pace_parser(object_manager, "../../../../data/CreaturePaces.json");
 	CultureDatafileParserJson culture_parser(object_manager, "../../../../data/Cultures.json");
@@ -98,6 +99,7 @@ int main() {
 	serializers.push_back(&armour_type_serializer);
 	serializers.push_back(&book_serializer);
 	serializers.push_back(&training_package_cost_table);
+
 
 	try {
 
