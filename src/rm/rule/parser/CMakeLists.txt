@@ -2,5 +2,5 @@ target_sources(rm PRIVATE   "DatafileParserJson.cpp" "DatafileParserXml.cpp" "La
                 "SpecialAttackTableDatafileParserJson.cpp"  "SpellListDatafileParserJson.cpp"  "SkillCategoryDatafileParserJson.cpp"    "SkillDatafileParserJson.cpp"  "FixedTableCreator.cpp"
                "WeaponTypeDatafileParserJson.cpp"  "RaceDatafileParserJson.cpp" "ProfessionDatafileParserXml.cpp" "ProfessionDatefileParserJson.cpp" "SkillGroupDatafileParserJson.cpp"
                 "TrainingPackageDatafileParserJson.cpp"    "TreasureCodeDatafileParserJson.cpp"
-               "PoisonTypeDatafileParserJson.cpp" "PoisonDatafileParserJson.cpp" "DiseaseTypeDatafileParser.Json.cpp"  "TrainingPackageCostTableSerializer.cpp" "PersistentObjectJsonSerializer.cpp"
-               "AnimalSerializer.cpp" "ArmourTypeSerializer.cpp" "AttackTableSerializer.cpp" "BookSerializer.cpp" "ClimateSerializer.cpp" "CreaturePaceSerializer.cpp" "CultureSerializer.cpp" "GameRuleBoostConverter.cpp" "CultureTypeSerializer.cpp" "DiseaseSerializer.cpp")
+               "PoisonTypeDatafileParserJson.cpp" "PoisonDatafileParserJson.cpp"   "TrainingPackageCostTableSerializer.cpp" "PersistentObjectJsonSerializer.cpp"
+               "AnimalSerializer.cpp" "ArmourTypeSerializer.cpp" "AttackTableSerializer.cpp" "BookSerializer.cpp" "ClimateSerializer.cpp" "CreaturePaceSerializer.cpp" "CultureSerializer.cpp" "GameRuleBoostConverter.cpp" "CultureTypeSerializer.cpp" "DiseaseSerializer.cpp" "DiseaseTypeSerializer.cpp")

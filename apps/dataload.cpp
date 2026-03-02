@@ -10,7 +10,7 @@
 #include <CultureSerializer.h>
 #include <CultureTypeSerializer.h>
 #include <DiseaseSerializer.h>
-#include <DiseaseTypeDatafileParserJson.h>
+#include <DiseaseTypeSerializer.h>
 #include <FixedTableCreator.h>
 #include <LanguageCategoryDatafileParserJson.h>
 #include <LanguageDatafileParserJson.h>
@@ -51,7 +51,7 @@ int main() {
 	PersistentObjectFileSerializer<CultureSerializer> culture_serializer(object_manager, "../../../../data/Cultures.json");
 	PersistentObjectFileSerializer<CultureTypeSerializer> culture_type_serializer(object_manager, "../../../../data/CultureTypes.json");
 	PersistentObjectFileSerializer<DiseaseSerializer> disease_serializer(object_manager, "../../../../data/Diseases.json");
-	DiseaseTypeDatafileParserJson disease_type_parser(object_manager, "../../../../data/DiseaseTypes.json");
+	PersistentObjectFileSerializer<DiseaseTypeSerializer> disease_type_serializer(object_manager, "../../../../data/DiseaseTypes.json");
 	LanguageCategoryDatafileParserJson language_category_parser(object_manager, "../../../../data/LanguageCategories.json");
 	LanguageDatafileParserJson language_parser(object_manager, "../../../../data/Languages.json");
 	PoisonDatafileParserJson poison_parser(object_manager, "../../../../data/Poisons.json");
@@ -71,7 +71,6 @@ int main() {
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
-	parsers.push_back(&disease_type_parser);
 	parsers.push_back(&language_category_parser);
 	parsers.push_back(&language_parser);
 	parsers.push_back(&poison_parser);
@@ -98,6 +97,7 @@ int main() {
 	serializers.push_back(&culture_serializer);
 	serializers.push_back(&culture_type_serializer);
 	serializers.push_back(&disease_serializer);
+	serializers.push_back(&disease_type_serializer);
 	serializers.push_back(&training_package_cost_table);
 
 
@@ -115,7 +115,6 @@ int main() {
 			serializer->read();
 		}
 
-		// disease_type_parser.save("../../../../data/DiseaseTypes2.json");
 		// language_category_parser.save("../../../../data/LanguageCategories2.json");
 		// language_parser.save("../../../../data/Languages2.json");
 		// poison_parser.save("../../../../data/Poisons2.json");
@@ -141,7 +140,7 @@ int main() {
 		culture_serializer.save("../../../../data2/Cultures.json");
 		culture_type_serializer.save("../../../../data2/CultureTypes.json");
 		disease_serializer.save("../../../../data2/Diseases.json");
-		disease_type_parser.save("../../../../data2/DiseaseTypes.json");
+		disease_type_serializer.save("../../../../data2/DiseaseTypes.json");
 		language_category_parser.save("../../../../data2/LanguageCategories.json");
 		language_parser.save("../../../../data2/Languages.json");
 		poison_parser.save("../../../../data2/Poisons.json");
