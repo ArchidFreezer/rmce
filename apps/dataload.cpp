@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include <AnimalFileSerializer.h>
-#include <ArmourTypeDatafileParserJson.h>
+#include <ArmourTypeFileSerializer.h>
 #include <AttackTableDatafileParserJson.h>
 #include <BookFileSerializer.h>
 #include <ClimateDatafileParserJson.h>
@@ -42,7 +42,7 @@ int main() {
 	rm::PersistentObjectManager object_manager{cache};
 
 	AnimalFileSerializer animal_serializer(object_manager, "../../../../data/Animals.json");
-	ArmourTypeDatafileParserJson armour_type_parser(object_manager, "../../../../data/ArmourTypes.json");
+	ArmourTypeFileSerializer armour_type_serializer(object_manager, "../../../../data/ArmourTypes.json");
 	AttackTableDatafileParserJson attack_table_parser(object_manager, "../../../../data/AttackTables.json");
 	BookFileSerializer book_serializer(object_manager, "../../../../data/Books.json");
 	ClimateDatafileParserJson climate_parser(object_manager, "../../../../data/Climates.json");
@@ -70,7 +70,6 @@ int main() {
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
-	parsers.push_back(&armour_type_parser);
 	parsers.push_back(&attack_table_parser);
 	parsers.push_back(&climate_parser);
 	parsers.push_back(&creature_pace_parser);
@@ -96,6 +95,7 @@ int main() {
 
 	std::vector<PersistentObjectSerializer*> serializers;
 	serializers.push_back(&animal_serializer);
+	serializers.push_back(&armour_type_serializer);
 	serializers.push_back(&book_serializer);
 	serializers.push_back(&training_package_cost_table);
 
@@ -113,7 +113,6 @@ int main() {
 			serializer->read();
 		}
 
-		// armour_type_parser.save("../../../../data/ArmourTypes2.json");
 		// attack_table_parser.save("../../../../data/AttackTables2.json");
 		// climate_parser.save("../../../../data/Climates2.json");
 		// creature_pace_parser.save("../../../../data/CreaturePaces2.json");
@@ -139,7 +138,7 @@ int main() {
 		// weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 
 		animal_serializer.save("../../../../data2/Animals.json");
-		armour_type_parser.save("../../../../data2/ArmourTypes.json");
+		armour_type_serializer.save("../../../../data2/ArmourTypes.json");
 		attack_table_parser.save("../../../../data2/AttackTables.json");
 		book_serializer.save("../../../../data2/Books.json");
 		climate_parser.save("../../../../data2/Climates.json");

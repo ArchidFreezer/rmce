@@ -1,6 +1,6 @@
 target_sources(rm PRIVATE   "DatafileParserJson.cpp" "DatafileParserXml.cpp" "LanguageCategoryDatafileParserJson.cpp" "LanguageDatafileParserJson.cpp" "SkillProgressionTypeDatafileParserJson.cpp"
-               "AttackTableDatafileParserJson.cpp" "SpecialAttackTableDatafileParserJson.cpp"  "SpellListDatafileParserJson.cpp"  "SkillCategoryDatafileParserJson.cpp"  "ArmourTypeDatafileParserJson.cpp"  "SkillDatafileParserJson.cpp"
+               "AttackTableDatafileParserJson.cpp" "SpecialAttackTableDatafileParserJson.cpp"  "SpellListDatafileParserJson.cpp"  "SkillCategoryDatafileParserJson.cpp"    "SkillDatafileParserJson.cpp"
                "WeaponTypeDatafileParserJson.cpp"  "RaceDatafileParserJson.cpp" "ProfessionDatafileParserXml.cpp" "ProfessionDatefileParserJson.cpp" "SkillGroupDatafileParserJson.cpp" "ClimateDatafileParserJson.cpp"
                "CultureTypeDatafileParserJson.cpp" "TrainingPackageDatafileParserJson.cpp"   "CultureDatafileParserJson.cpp" "CreaturePaceDatafileParserJson.cpp"  "TreasureCodeDatafileParserJson.cpp"
                "PoisonTypeDatafileParserJson.cpp" "PoisonDatafileParserJson.cpp" "DiseaseTypeDatafileParser.Json.cpp" "DiseaseDatafileParserJson.cpp" "TrainingPackageCostTableSerializer.cpp" "PersistentObjectJsonSerializer.cpp"
-               "BookSerializer.cpp" "AnimalSerializer.cpp")
+               "BookSerializer.cpp" "AnimalSerializer.cpp" "ArmourTypeSerializer.cpp")
