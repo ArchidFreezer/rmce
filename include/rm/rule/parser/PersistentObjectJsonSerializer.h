@@ -79,4 +79,30 @@ protected:
 	virtual std::string rootNode() const = 0; /**< Get the name of the root node to write the data to in the json file */
 };
 
+template<persistent_object PersistentObject>
+inline void PersistentObjectJsonSerializer::save(std::ostream& os) {
+	// Root tree that will contain the array of persistent objects
+	pt::ptree tree;
+
+	// Tree of persistent objects
+	pt::ptree data;
+
+	std::set<std::string> keys{};
+	manager().keys<PersistentObject>(keys);
+
+	for (std::string key : keys) {
+		try {
+			pt::ptree datum;
+			populateDatum(key, datum);
+			data.push_back(std::make_pair("", datum));
+		} catch (const std::out_of_range& e) {
+			std::cout << "Error: " << e.what() << std::endl;
+		}
+	}
+
+	tree.add_child(rootNode(), data);
+
+	pt::write_json(os, tree);
+}
+
 } // namespace rm::rule::parser

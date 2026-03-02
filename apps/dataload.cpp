@@ -4,7 +4,7 @@
 #include <AnimalDatafileParserJson.h>
 #include <ArmourTypeDatafileParserJson.h>
 #include <AttackTableDatafileParserJson.h>
-#include <BookDatafileParserJson.h>
+#include <BookFileSerializer.h>
 #include <ClimateDatafileParserJson.h>
 #include <CreaturePaceDatafileParserJson.h>
 #include <CultureDatafileParserJson.h>
@@ -38,12 +38,12 @@ int main() {
 
 	// Create the cache to store the game data
 	rm::PersistentCache cache{};
-	rm::PersistentObjectManager object_manager{ cache };
+	rm::PersistentObjectManager object_manager{cache};
 
 	AnimalDatafileParserJson animal_parser(object_manager, "../../../../data/Animals.json");
 	ArmourTypeDatafileParserJson armour_type_parser(object_manager, "../../../../data/ArmourTypes.json");
 	AttackTableDatafileParserJson attack_table_parser(object_manager, "../../../../data/AttackTables.json");
-	BookDatafileParserJson book_parser(object_manager, "../../../../data/Books.json");
+	BookFileSerializer book_serializer(object_manager, "../../../../data/Books.json");
 	ClimateDatafileParserJson climate_parser(object_manager, "../../../../data/Climates.json");
 	CreaturePaceDatafileParserJson creature_pace_parser(object_manager, "../../../../data/CreaturePaces.json");
 	CultureDatafileParserJson culture_parser(object_manager, "../../../../data/Cultures.json");
@@ -72,7 +72,6 @@ int main() {
 	parsers.push_back(&animal_parser);
 	parsers.push_back(&armour_type_parser);
 	parsers.push_back(&attack_table_parser);
-	parsers.push_back(&book_parser);
 	parsers.push_back(&climate_parser);
 	parsers.push_back(&creature_pace_parser);
 	parsers.push_back(&culture_parser);
@@ -97,6 +96,7 @@ int main() {
 
 	std::vector<PersistentObjectSerializer*> serializers;
 	serializers.push_back(&training_package_cost_table);
+	serializers.push_back(&book_serializer);
 
 	try {
 		// Iterate through the parsers populating the cache with game data objects from the datafiles
@@ -108,39 +108,37 @@ int main() {
 			serializer->read();
 		}
 
-
-		//animal_parser.save("../../../../data/Animals2.json");
-		//armour_type_parser.save("../../../../data/ArmourTypes2.json");
-		//attack_table_parser.save("../../../../data/AttackTables2.json");
-		//book_parser.save("../../../../data/Books2.json");
-		//climate_parser.save("../../../../data/Climates2.json");
-		//creature_pace_parser.save("../../../../data/CreaturePaces2.json");
-		//culture_parser.save("../../../../data/Cultures2.json");
-		//culture_type_parser.save("../../../../data/CultureTypes2.json");
-		//disease_parser.save("../../../../data/Diseases2.json");
-		//disease_type_parser.save("../../../../data/DiseaseTypes2.json");
-		//language_category_parser.save("../../../../data/LanguageCategories2.json");
-		//language_parser.save("../../../../data/Languages2.json");
-		//poison_parser.save("../../../../data/Poisons2.json");
-		//poison_type_parser.save("../../../../data/PoisonTypes2.json");
-		//profession_parser.save("../../../../data/Professions2.json");
-		//race_parser.save("../../../../data/Races2.json");
-		//skill_category_parser.save("../../../../data/SkillCategories2.json");
-		//skill_group_parser.save("../../../../data/SkillGroups2.json");
-		//skill_parser.save("../../../../data/Skills2.json");
-		//skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
-		//special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
-		//spell_list_parser.save("../../../../data/SpellLists2.json");
-		//training_package_cost_table_parser.save("../../../../data/TrainingPackageCosts2.tsv");
-		//training_package_parser.save("../../../../data/TrainingPackages2.json");
-		//treasure_code_parser.save("../../../../data/TreasureCodes2.json");
-		//weapon_type_parser.save("../../../../data/WeaponTypes2.json");
-
+		// animal_parser.save("../../../../data/Animals2.json");
+		// armour_type_parser.save("../../../../data/ArmourTypes2.json");
+		// attack_table_parser.save("../../../../data/AttackTables2.json");
+		// book_parser.save("../../../../data/Books2.json");
+		// climate_parser.save("../../../../data/Climates2.json");
+		// creature_pace_parser.save("../../../../data/CreaturePaces2.json");
+		// culture_parser.save("../../../../data/Cultures2.json");
+		// culture_type_parser.save("../../../../data/CultureTypes2.json");
+		// disease_parser.save("../../../../data/Diseases2.json");
+		// disease_type_parser.save("../../../../data/DiseaseTypes2.json");
+		// language_category_parser.save("../../../../data/LanguageCategories2.json");
+		// language_parser.save("../../../../data/Languages2.json");
+		// poison_parser.save("../../../../data/Poisons2.json");
+		// poison_type_parser.save("../../../../data/PoisonTypes2.json");
+		// profession_parser.save("../../../../data/Professions2.json");
+		// race_parser.save("../../../../data/Races2.json");
+		// skill_category_parser.save("../../../../data/SkillCategories2.json");
+		// skill_group_parser.save("../../../../data/SkillGroups2.json");
+		// skill_parser.save("../../../../data/Skills2.json");
+		// skill_progression_parser.save("../../../../data/SkillProgressionTypes2.json");
+		// special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
+		// spell_list_parser.save("../../../../data/SpellLists2.json");
+		// training_package_cost_table_parser.save("../../../../data/TrainingPackageCosts2.tsv");
+		// training_package_parser.save("../../../../data/TrainingPackages2.json");
+		// treasure_code_parser.save("../../../../data/TreasureCodes2.json");
+		// weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 
 		animal_parser.save("../../../../data2/Animals.json");
 		armour_type_parser.save("../../../../data2/ArmourTypes.json");
 		attack_table_parser.save("../../../../data2/AttackTables.json");
-		book_parser.save("../../../../data2/Books.json");
+		book_serializer.save("../../../../data2/Books.json");
 		climate_parser.save("../../../../data2/Climates.json");
 		creature_pace_parser.save("../../../../data2/CreaturePaces.json");
 		culture_parser.save("../../../../data2/Cultures.json");

@@ -4,14 +4,6 @@
 
 #include <PersistentObjectManager.h>
 
-/**
- * @namespace rm::rule::parser
- * @brief Datafile parsers to (de)serialise persistent data to and from iostreams
- *
- * The Assignment copy and move constructores have been deleted to prevent issues with any streams that may be used in the (de)serialization process, as copying
- * or moving a stream can lead to issues with the stream state and can cause unexpected behaviour. By deleting these operations, we ensure that the class cannot
- * be copied or moved, which helps to prevent potential bugs and ensures that the (de)serialization process is handled correctly.
- */
 namespace rm::rule::parser {
 
 /**
@@ -21,6 +13,10 @@ namespace rm::rule::parser {
  * This base class has the tools to assist in the processing of persistent data, such as skills, professions, etc., from persistent storage.
  *
  * The class also contains a reference to a data cache where the data objects read from the stream should be stored.
+ * 
+ * The Assignment copy and move constructores have been deleted to prevent issues with any streams that may be used in the (de)serialization process, as copying
+ * or moving a stream can lead to issues with the stream state and can cause unexpected behaviour. By deleting these operations, we ensure that the class cannot
+ * be copied or moved, which helps to prevent potential bugs and ensures that the (de)serialization process is handled correctly.
  */
 class PersistentObjectSerializer {
 public:
