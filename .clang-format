@@ -24,7 +24,7 @@ IndentWrappedFunctionNames: false
 NamespaceIndentation: None
 
 # Line Length
-ColumnLimit: 160
+ColumnLimit: 240
 
 # Braces
 BreakBeforeBraces: Custom
