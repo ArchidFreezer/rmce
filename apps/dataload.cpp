@@ -26,10 +26,10 @@
 #include <SkillGroupSerializer.h>
 #include <SkillProgressionTypeSerializer.h>
 #include <SkillSerializer.h>
-#include <SpecialAttackTableDatafileParserJson.h>
-#include <SpellListDatafileParserJson.h>
+#include <SpecialAttackTableSerializer.h>
+#include <SpellListSerializer.h>
 #include <TrainingPackageCostTableFileSerializer.h>
-#include <TrainingPackageDatafileParserJson.h>
+#include <TrainingPackageSerializer.h>
 #include <TreasureCodeDatafileParserJson.h>
 #include <WeaponTypeDatafileParserJson.h>
 
@@ -62,18 +62,15 @@ int main() {
 	PersistentObjectFileSerializer<SkillGroupSerializer> skill_group_serializer(object_manager, "../../../../data/SkillGroups.json");
 	PersistentObjectFileSerializer<SkillProgressionTypeSerializer> skill_progression_serializer(object_manager, "../../../../data/SkillProgressionTypes.json");
 	PersistentObjectFileSerializer<SkillSerializer> skill_serializer(object_manager, "../../../../data/Skills.json");
-	SpecialAttackTableDatafileParserJson special_attack_table_parser(object_manager, "../../../../data/SpecialAttackTables.json");
-	SpellListDatafileParserJson spell_list_parser(object_manager, "../../../../data/SpellLists.json");
+	PersistentObjectFileSerializer<SpecialAttackTableSerializer> special_attack_table_serializer(object_manager, "../../../../data/SpecialAttackTables.json");
+	PersistentObjectFileSerializer<SpellListSerializer> spell_list_serializer(object_manager, "../../../../data/SpellLists.json");
 	TrainingPackageCostTableFileSerializer training_package_cost_table(object_manager, "../../../../data/TrainingPackageCosts.tsv");
-	TrainingPackageDatafileParserJson training_package_parser(object_manager, "../../../../data/TrainingPackages.json");
+	PersistentObjectFileSerializer<TrainingPackageSerializer> training_package_serializer(object_manager, "../../../../data/TrainingPackages.json");
 	TreasureCodeDatafileParserJson treasure_code_parser(object_manager, "../../../../data/TreasureCodes.json");
 	WeaponTypeDatafileParserJson weapon_type_parser(object_manager, "../../../../data/WeaponTypes.json");
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
-	parsers.push_back(&special_attack_table_parser);
-	parsers.push_back(&spell_list_parser);
-	parsers.push_back(&training_package_parser);
 	parsers.push_back(&treasure_code_parser);
 	parsers.push_back(&weapon_type_parser);
 
@@ -98,7 +95,10 @@ int main() {
 	serializers.push_back(&skill_group_serializer);
 	serializers.push_back(&skill_progression_serializer);
 	serializers.push_back(&skill_serializer);
+	serializers.push_back(&special_attack_table_serializer);
+	serializers.push_back(&spell_list_serializer);
 	serializers.push_back(&training_package_cost_table);
+	serializers.push_back(&training_package_serializer);
 
 
 	try {
@@ -115,8 +115,6 @@ int main() {
 			serializer->read();
 		}
 
-		// special_attack_table_parser.save("../../../../data/SpecialAttackTables2.json");
-		// spell_list_parser.save("../../../../data/SpellLists2.json");
 		// training_package_parser.save("../../../../data/TrainingPackages2.json");
 		// treasure_code_parser.save("../../../../data/TreasureCodes2.json");
 		// weapon_type_parser.save("../../../../data/WeaponTypes2.json");
@@ -141,10 +139,10 @@ int main() {
 		skill_group_serializer.save("../../../../data2/SkillGroups.json");
 		skill_serializer.save("../../../../data2/Skills.json");
 		skill_progression_serializer.save("../../../../data2/SkillProgressionTypes.json");
-		special_attack_table_parser.save("../../../../data2/SpecialAttackTables.json");
-		spell_list_parser.save("../../../../data2/SpellLists.json");
+		special_attack_table_serializer.save("../../../../data2/SpecialAttackTables.json");
+		spell_list_serializer.save("../../../../data2/SpellLists.json");
 		training_package_cost_table.save("../../../../data2/TrainingPackageCosts.tsv");
-		training_package_parser.save("../../../../data2/TrainingPackages.json");
+		training_package_serializer.save("../../../../data2/TrainingPackages.json");
 		treasure_code_parser.save("../../../../data2/TreasureCodes.json");
 		weapon_type_parser.save("../../../../data2/WeaponTypes.json");
 
