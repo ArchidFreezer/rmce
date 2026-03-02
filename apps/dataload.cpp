@@ -17,8 +17,8 @@
 #include <PersistentCache.h>
 #include <PersistentObjectFileSerializer.h>
 #include <PersistentObjectManager.h>
-#include <PoisonDatafileParserJson.h>
-#include <PoisonTypeDatafileParserJson.h>
+#include <PoisonSerializer.h>
+#include <PoisonTypeSerializer.h>
 #include <ProfessionDatafileParserXml.h>
 #include <ProfessionDatefileParserJson.h>
 #include <RaceDatafileParserJson.h>
@@ -54,8 +54,8 @@ int main() {
 	PersistentObjectFileSerializer<DiseaseTypeSerializer> disease_type_serializer(object_manager, "../../../../data/DiseaseTypes.json");
 	PersistentObjectFileSerializer<LanguageCategorySerializer> language_category_serializer(object_manager, "../../../../data/LanguageCategories.json");
 	PersistentObjectFileSerializer<LanguageSerializer> language_serializer(object_manager, "../../../../data/Languages.json");
-	PoisonDatafileParserJson poison_parser(object_manager, "../../../../data/Poisons.json");
-	PoisonTypeDatafileParserJson poison_type_parser(object_manager, "../../../../data/PoisonTypes.json");
+	PersistentObjectFileSerializer<PoisonSerializer> poison_serializer(object_manager, "../../../../data/Poisons.json");
+	PersistentObjectFileSerializer<PoisonTypeSerializer> poison_type_serializer(object_manager, "../../../../data/PoisonTypes.json");	
 	ProfessionDatafileParserJson profession_parser(object_manager, "../../../../data/Professions.json");
 	RaceDatafileParserJson race_parser(object_manager, "../../../../data/Races.json");
 	SkillCategoryDatafileParserJson skill_category_parser(object_manager, "../../../../data/SkillCategories.json");
@@ -71,8 +71,6 @@ int main() {
 
 	// Store the parsers in a vector so we can iterate through them
 	std::vector<DatafileParser*> parsers;
-	parsers.push_back(&poison_parser);
-	parsers.push_back(&poison_type_parser);
 	parsers.push_back(&profession_parser);
 	parsers.push_back(&race_parser);
 	parsers.push_back(&skill_category_parser);
@@ -98,6 +96,8 @@ int main() {
 	serializers.push_back(&disease_type_serializer);
 	serializers.push_back(&language_category_serializer);
 	serializers.push_back(&language_serializer);
+	serializers.push_back(&poison_serializer);
+	serializers.push_back(&poison_type_serializer);
 	serializers.push_back(&training_package_cost_table);
 
 
@@ -115,8 +115,6 @@ int main() {
 			serializer->read();
 		}
 
-		// poison_parser.save("../../../../data/Poisons2.json");
-		// poison_type_parser.save("../../../../data/PoisonTypes2.json");
 		// profession_parser.save("../../../../data/Professions2.json");
 		// race_parser.save("../../../../data/Races2.json");
 		// skill_category_parser.save("../../../../data/SkillCategories2.json");
@@ -141,8 +139,8 @@ int main() {
 		disease_type_serializer.save("../../../../data2/DiseaseTypes.json");
 		language_category_serializer.save("../../../../data2/LanguageCategories.json");
 		language_serializer.save("../../../../data2/Languages.json");
-		poison_parser.save("../../../../data2/Poisons.json");
-		poison_type_parser.save("../../../../data2/PoisonTypes.json");
+		poison_serializer.save("../../../../data2/Poisons.json");
+		poison_type_serializer.save("../../../../data2/PoisonTypes.json");
 		profession_parser.save("../../../../data2/Professions.json");
 		race_parser.save("../../../../data2/Races.json");
 		skill_category_parser.save("../../../../data2/SkillCategories.json");
