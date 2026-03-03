@@ -10,6 +10,11 @@
 #include <thread>
 #include <vector>
 
+// Forward declarations
+namespace rm {
+class PersistentObjectManager;
+} // namespace rm
+
 namespace beast = boost::beast;
 namespace http = beast::http;
 namespace net = boost::asio;
@@ -30,8 +35,9 @@ public:
 	 * @param address IP address to bind to (e.g., "0.0.0.0")
 	 * @param port Port number to listen on
 	 * @param num_threads Number of worker threads
+	 * @param object_manager Pointer to PersistentObjectManager for data queries
 	 */
-	RestServer(const std::string& address, unsigned short port, int num_threads = 1);
+	RestServer(const std::string& address, unsigned short port, int num_threads = 1, PersistentObjectManager* object_manager = nullptr);
 
 	/**
 	 * @brief Destructor - stops the server
@@ -56,6 +62,22 @@ public:
 		return running_;
 	}
 
+	/**
+	 * @brief Set the PersistentObjectManager
+	 * @param object_manager Pointer to PersistentObjectManager
+	 */
+	void setObjectManager(PersistentObjectManager* object_manager) {
+		object_manager_ = object_manager;
+	}
+
+	/**
+	 * @brief Get the PersistentObjectManager
+	 * @return Pointer to PersistentObjectManager (may be nullptr)
+	 */
+	PersistentObjectManager* getObjectManager() const {
+		return object_manager_;
+	}
+
 private:
 	void doAccept();
 	void onAccept(beast::error_code ec, tcp::socket socket);
@@ -65,6 +87,7 @@ private:
 	std::vector<std::thread> threads_;
 	bool running_;
 	int num_threads_;
+	PersistentObjectManager* object_manager_;
 };
 
 /**
@@ -74,13 +97,14 @@ private:
 class Session : public std::enable_shared_from_this<Session> {
 public:
 	/**
-	 * @brief Constructs a Session object with the specified TCP socket.
-	 * @param socket The TCP socket to be used for this session.
+	 * @brief Constructor
+	 * @param socket TCP socket for the session
+	 * @param object_manager Pointer to PersistentObjectManager for data queries
 	 */
-	explicit Session(tcp::socket socket);
+	explicit Session(tcp::socket socket, PersistentObjectManager* object_manager);
 
 	/**
-	 * @brief Starts the asynchronous operation to read an HTTP request from the client.
+	 * @brief Start the session
 	 */
 	void run();
 
@@ -92,10 +116,11 @@ private:
 	void onWrite(beast::error_code ec, std::size_t bytes_transferred);
 	void doClose();
 
-	beast::tcp_stream stream_; // Only need tcp_stream, not both socket and stream
+	beast::tcp_stream stream_;
 	beast::flat_buffer buffer_;
 	http::request<http::string_body> request_;
 	http::response<http::string_body> response_;
+	PersistentObjectManager* object_manager_;
 };
 
 } // namespace rm::rest

@@ -31,10 +31,13 @@ add_subdirectory("rest")
 target_include_directories(rmce_rest
     PUBLIC
         ${Boost_INCLUDE_DIRS}
+        "${PROJECT_SOURCE_DIR}/include/archid"
+        "${PROJECT_SOURCE_DIR}/include/rm"
+        "${PROJECT_SOURCE_DIR}/include/rm/game"
         "${PROJECT_SOURCE_DIR}/include/rm/rest"
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:include>
-)
+        "${PROJECT_SOURCE_DIR}/include/rm/rule"
+        "${PROJECT_SOURCE_DIR}/include/rm/rule/parser"
+        "${PROJECT_SOURCE_DIR}/include/rm/rule/table")
 
 target_link_libraries(rmce_rest PRIVATE
     Boost::beast
