@@ -1,37 +1,7 @@
 ﻿#include <filesystem>
 #include <iostream>
 
-#include <AnimalSerializer.h>
-#include <ArmourTypeSerializer.h>
-#include <AttackTableSerializer.h>
-#include <BookSerializer.h>
-#include <ClimateSerializer.h>
-#include <CreaturePaceSerializer.h>
-#include <CultureSerializer.h>
-#include <CultureTypeSerializer.h>
-#include <DiseaseSerializer.h>
-#include <DiseaseTypeSerializer.h>
-#include <FixedTableCreator.h>
-#include <LanguageCategorySerializer.h>
-#include <LanguageSerializer.h>
-#include <PersistentCache.h>
-#include <PersistentObjectFileSerializer.h>
-#include <PersistentObjectManager.h>
-#include <PoisonSerializer.h>
-#include <PoisonTypeSerializer.h>
-#include <ProfessionDatafileParserXml.h>
-#include <ProfessionSerializer.h>
-#include <RaceSerializer.h>
-#include <SkillCategorySerializer.h>
-#include <SkillGroupSerializer.h>
-#include <SkillProgressionTypeSerializer.h>
-#include <SkillSerializer.h>
-#include <SpecialAttackTableSerializer.h>
-#include <SpellListSerializer.h>
-#include <TrainingPackageCostTableFileSerializer.h>
-#include <TrainingPackageSerializer.h>
-#include <TreasureCodeSerializer.h>
-#include <WeaponTypeSerializer.h>
+#include <DataLoaders.h>
 
 using namespace rm::rule::parser;
 
@@ -101,6 +71,8 @@ int main() {
 
 	try {
 
+		// Load the fixed tables where the data is not stored in datafiles but is instead hardcoded in the classes. These are core game rules that are not expected to be changed by modders and so are not stored in datafiles, but they still
+		// need to be loaded into the cache.
 		FixedTableCreator fixed_table_creator{object_manager};
 		fixed_table_creator.createFixedTables();
 
