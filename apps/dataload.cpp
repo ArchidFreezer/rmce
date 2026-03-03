@@ -109,8 +109,6 @@ int main() {
 			serializer->read();
 		}
 
-		// weapon_type_parser.save("../../../../data/WeaponTypes2.json");
-
 		animal_serializer.save("../../../../data2/Animals.json");
 		armour_type_serializer.save("../../../../data2/ArmourTypes.json");
 		attack_table_serializer.save("../../../../data2/AttackTables.json");
