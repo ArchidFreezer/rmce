@@ -1,6 +1,10 @@
 #Visual Studio files
 /.vs/
 
+# vcpkg
+vcpkg_local/
+vcpkg_installed/
+
 #CMake files and output
 /CMakeFiles/
 /out/

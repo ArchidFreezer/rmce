@@ -3,6 +3,12 @@
 #
 cmake_minimum_required (VERSION 3.20...4.1)
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Enable vcpkg integration
+set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/vcpkg_local/scripts/buildsystems/vcpkg.cmake" CACHE STRING "Vcpkg toolchain file")
+
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)
   cmake_policy(SET CMP0141 NEW)
@@ -17,6 +23,8 @@ enable_testing()
 include(CTest)
 
 find_package(Doxygen REQUIRED COMPONENTS dot)
+
+find_package(Boost 1.84 REQUIRED COMPONENTS system)
 
 if (Doxygen_FOUND)
   add_subdirectory(docs)
