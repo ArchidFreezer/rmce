@@ -73,8 +73,15 @@ private:
  */
 class Session : public std::enable_shared_from_this<Session> {
 public:
+	/**
+	 * @brief Constructs a Session object with the specified TCP socket.
+	 * @param socket The TCP socket to be used for this session.
+	 */
 	explicit Session(tcp::socket socket);
 
+	/**
+	 * @brief Starts the asynchronous operation to read an HTTP request from the client.
+	 */
 	void run();
 
 private:

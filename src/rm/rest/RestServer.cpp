@@ -102,6 +102,14 @@ void Session::doClose() {
 RestServer::RestServer(const std::string& address, unsigned short port, int num_threads) : ioc_(num_threads), acceptor_(net::make_strand(ioc_)), running_(false), num_threads_(num_threads) {
 	beast::error_code ec;
 
+	if (num_threads_ <= 0) {
+		throw std::runtime_error("Number of threads must be greater than 0");
+	}
+
+	if (port <= 0) {
+		throw std::runtime_error("Port number must be greater than 0");
+	}
+
 	tcp::endpoint endpoint{net::ip::make_address(address), port};
 
 	acceptor_.open(endpoint.protocol(), ec);
