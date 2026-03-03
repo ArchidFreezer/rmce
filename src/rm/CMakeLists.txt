@@ -22,6 +22,8 @@ target_link_libraries(rm PUBLIC
 find_package(boost_beast REQUIRED CONFIG)
 find_package(boost_system REQUIRED CONFIG)
 find_package(boost_thread REQUIRED CONFIG)
+find_package(boost_url REQUIRED CONFIG)
+
 add_library(rmce_rest)
 
 add_subdirectory("rest")
@@ -38,6 +40,7 @@ target_link_libraries(rmce_rest PRIVATE
     Boost::beast
     Boost::system
     Boost::thread
+    Boost::url
 )
 
 target_compile_features(rmce_rest PUBLIC cxx_std_20)
