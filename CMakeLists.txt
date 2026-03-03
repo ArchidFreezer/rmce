@@ -15,6 +15,11 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
+if(WIN32)
+    add_compile_definitions(_WIN32_WINNT=0x0A00)  # Windows 10
+    # Or for Windows 7: _WIN32_WINNT=0x0601
+endif()
+
 project (RoleMasterCharacterEditor VERSION 0.1
                   DESCRIPTION "Rolemaster Character Editor"
                   LANGUAGES CXX)
@@ -24,7 +29,8 @@ include(CTest)
 
 find_package(Doxygen REQUIRED COMPONENTS dot)
 
-find_package(Boost 1.84 REQUIRED COMPONENTS system)
+find_package(Boost REQUIRED COMPONENTS system)
+find_package(Boost REQUIRED COMPONENTS thread)
 
 if (Doxygen_FOUND)
   add_subdirectory(docs)
