@@ -1,0 +1,1 @@
+target_sources(rm PRIVATE "JsonConverter.cpp" "BookJsonSerializer.cpp")
