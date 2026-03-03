@@ -30,8 +30,8 @@
 #include <SpellListSerializer.h>
 #include <TrainingPackageCostTableFileSerializer.h>
 #include <TrainingPackageSerializer.h>
-#include <TreasureCodeDatafileParserJson.h>
-#include <WeaponTypeDatafileParserJson.h>
+#include <TreasureCodeSerializer.h>
+#include <WeaponTypeSerializer.h>
 
 using namespace rm::rule::parser;
 
@@ -66,14 +66,10 @@ int main() {
 	PersistentObjectFileSerializer<SpellListSerializer> spell_list_serializer(object_manager, "../../../../data/SpellLists.json");
 	TrainingPackageCostTableFileSerializer training_package_cost_table(object_manager, "../../../../data/TrainingPackageCosts.tsv");
 	PersistentObjectFileSerializer<TrainingPackageSerializer> training_package_serializer(object_manager, "../../../../data/TrainingPackages.json");
-	TreasureCodeDatafileParserJson treasure_code_parser(object_manager, "../../../../data/TreasureCodes.json");
-	WeaponTypeDatafileParserJson weapon_type_parser(object_manager, "../../../../data/WeaponTypes.json");
+	PersistentObjectFileSerializer<TreasureCodeSerializer> treasure_code_serializer(object_manager, "../../../../data/TreasureCodes.json");
+	PersistentObjectFileSerializer<WeaponTypeSerializer> weapon_type_serializer(object_manager, "../../../../data/WeaponTypes.json");
 
-	// Store the parsers in a vector so we can iterate through them
-	std::vector<DatafileParser*> parsers;
-	parsers.push_back(&treasure_code_parser);
-	parsers.push_back(&weapon_type_parser);
-
+	// Store the serializers in a vector so we can iterate through them
 	std::vector<PersistentObjectSerializer*> serializers;
 	serializers.push_back(&animal_serializer);
 	serializers.push_back(&armour_type_serializer);
@@ -99,6 +95,8 @@ int main() {
 	serializers.push_back(&spell_list_serializer);
 	serializers.push_back(&training_package_cost_table);
 	serializers.push_back(&training_package_serializer);
+	serializers.push_back(&treasure_code_serializer);
+	serializers.push_back(&weapon_type_serializer);
 
 
 	try {
@@ -106,17 +104,11 @@ int main() {
 		FixedTableCreator fixed_table_creator{object_manager};
 		fixed_table_creator.createFixedTables();
 
-		// Iterate through the parsers populating the cache with game data objects from the datafiles
-		for (auto& parser : parsers) {
-			parser->read();
-		}
-
+		// Iterate through the serializers populating the cache with game data objects from the datafiles
 		for (auto& serializer : serializers) {
 			serializer->read();
 		}
 
-		// training_package_parser.save("../../../../data/TrainingPackages2.json");
-		// treasure_code_parser.save("../../../../data/TreasureCodes2.json");
 		// weapon_type_parser.save("../../../../data/WeaponTypes2.json");
 
 		animal_serializer.save("../../../../data2/Animals.json");
@@ -143,8 +135,8 @@ int main() {
 		spell_list_serializer.save("../../../../data2/SpellLists.json");
 		training_package_cost_table.save("../../../../data2/TrainingPackageCosts.tsv");
 		training_package_serializer.save("../../../../data2/TrainingPackages.json");
-		treasure_code_parser.save("../../../../data2/TreasureCodes.json");
-		weapon_type_parser.save("../../../../data2/WeaponTypes.json");
+		treasure_code_serializer.save("../../../../data2/TreasureCodes.json");
+		weapon_type_serializer.save("../../../../data2/WeaponTypes.json");
 
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
