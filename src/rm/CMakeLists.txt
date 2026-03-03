@@ -1,3 +1,4 @@
+
 add_library(rm STATIC)
 target_sources(rm PRIVATE "PersistentObjectManager.cpp" "rule/parser/GameRuleBoostConverter.cpp")
 add_subdirectory("game")
@@ -16,3 +17,33 @@ target_include_directories(rm PUBLIC ${Boost_INCLUDE_DIRS}
 target_link_libraries(rm PUBLIC 
     Boost::boost  # Header-only Boost libraries
 )
+
+# REST API Library
+find_package(boost_beast REQUIRED CONFIG)
+find_package(boost_system REQUIRED CONFIG)
+find_package(boost_thread REQUIRED CONFIG)
+find_package(boost_url REQUIRED CONFIG)
+
+add_library(rmce_rest)
+
+add_subdirectory("rest")
+
+target_include_directories(rmce_rest
+    PUBLIC
+        ${Boost_INCLUDE_DIRS}
+        "${PROJECT_SOURCE_DIR}/include/archid"
+        "${PROJECT_SOURCE_DIR}/include/rm"
+        "${PROJECT_SOURCE_DIR}/include/rm/game"
+        "${PROJECT_SOURCE_DIR}/include/rm/rest"
+        "${PROJECT_SOURCE_DIR}/include/rm/rule"
+        "${PROJECT_SOURCE_DIR}/include/rm/rule/parser"
+        "${PROJECT_SOURCE_DIR}/include/rm/rule/table")
+
+target_link_libraries(rmce_rest PRIVATE
+    Boost::beast
+    Boost::system
+    Boost::thread
+    Boost::url
+)
+
+target_compile_features(rmce_rest PUBLIC cxx_std_20)
