@@ -10,7 +10,7 @@ namespace json = boost::json;
 /**
  * @class PersistentObjectSerializerJson
  * @brief Abstract class for serializing and deserializing persistent objects to and from JSON format.
- * 
+ *
  * The copy and move constructors and assignment operators are deleted to prevent slicing and ensure that the class is only used as a base class for specific serializers.
  */
 template<persistent_object PersistentObject>
@@ -43,7 +43,7 @@ public:
 	 * @param obj Reference to the object to serialize
 	 * @return json::value containing the serialized object
 	 */
-	virtual json::value serializeObject(const PersistentObject& obj) = 0;
+	virtual json::value serializeObject(const PersistentObject& obj) const = 0;
 
 	/**
 	 * @brief Serialize a single object to a JSON value by its ID
@@ -51,7 +51,9 @@ public:
 	 * @param id Unique ID of the object to serialize
 	 * @return json::value containing the serialized object
 	 */
-	virtual json::value serializeObject(const std::string& id) = 0;
+	json::value serializeObject(const std::string& id) const {
+		return serializeObject(manager_.get<PersistentObject>(id));
+	}
 
 	/**
 	 * @brief Deserialize a single object from a JSON value
@@ -59,7 +61,16 @@ public:
 	 * @param jsonObj JSON object containing the data to deserialize
 	 * @return Reference to the deserialized object
 	 */
-	virtual const PersistentObject& deserializeObject(json::object& jsonObj) = 0;
+	virtual const PersistentObject& deserializeObject(json::object& jsonObj) const = 0;
+
+	/**
+	 * @brief Get the PersistentObjectManager used by this serializer
+	 *
+	 * @return Reference to the PersistentObjectManager
+	 */
+	rm::PersistentObjectManager& manager() const {
+		return manager_;
+	}
 
 protected:
 	rm::PersistentObjectManager& manager_; /**< Object manager to retrive persistent objects from or add to */
