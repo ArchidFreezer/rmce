@@ -139,19 +139,19 @@ void JsonFileSerializer<DataType>::load(std::istream& is) {
 		throw std::runtime_error("Expected JSON object at root level in stream");
 	}
 	json::object& root_obj = json_value.as_object();
-	// Check if there's a "books" array in the root object
-	auto books_it = root_obj.find(root_key_);
-	if (books_it != root_obj.end() && books_it->value().is_array()) {
-		const json::array& books_array = books_it->value().as_array();
-		// Deserialize each book from the array
-		for (const auto& book_value : books_array) {
-			if (book_value.is_object()) {
-				json::object book_obj = book_value.as_object();
-				serializer_->deserializeObject(book_obj);
+	// Check if there's a "root_key_" array in the root object
+	auto objects_it = root_obj.find(root_key_);
+	if (objects_it != root_obj.end() && objects_it->value().is_array()) {
+		const json::array& objects_array = objects_it->value().as_array();
+		// Deserialize each obect from the array
+		for (const auto& object_value : objects_array) {
+			if (object_value.is_object()) {
+				json::object obj = object_value.as_object();
+				serializer_->deserializeObject(obj);
 			}
 		}
 	} else {
-		// If no "root_key" array, try to deserialize the root object as a single book
+		// If no "root_key" array, try to deserialize the root object as a single object
 		serializer_->deserializeObject(root_obj);
 	}
 }
