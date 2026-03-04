@@ -6,10 +6,10 @@ namespace rm::rule::serial {
 
 /**
  * @brief Pretty prints a JSON value to an output stream with optional additional indentation.
- * 
+ *
  * All elements are indented using 4 spaces per level of nesting. If the optional indent parameter is provided, it will be used as the base indentation for the entire JSON output, allowing for additional indentation to be added on top of
  * the default indentation. If the indent parameter is not provided, the JSON output will be indented starting from the leftmost column.
- * 
+ *
  * @param os The output stream to write the formatted JSON to.
  * @param jv The JSON value to be pretty printed.
  * @param indent Optional pointer to a string used for indentation. If null, default indentation is used.
@@ -76,6 +76,13 @@ public:
 	 * @brief Save the book data from the object manager to a JSON file
 	 */
 	void save() const;
+
+	/**
+	 * @brief Get the JSON representation of the book data from the object manager
+	 *
+	 * @return A JSON value representing the book data, with an array of objects under the specified root key.
+	 */
+	json::value json() const;
 
 	/**
 	 * @brief Set whether to pretty print the JSON output when saving
@@ -166,6 +173,17 @@ void JsonFileSerializer<DataType>::save(const std::string& filename) const {
 
 template<persistent_object DataType>
 void JsonFileSerializer<DataType>::save(std::ostream& os) const {
+	json::value root_obj = json();
+
+	if (pretty_print_) {
+		pretty_print(os, root_obj);
+	} else {
+		os << json::serialize(root_obj) << "\n";
+	}
+}
+
+template<persistent_object DataType>
+json::value JsonFileSerializer<DataType>::json() const {
 	// Create a JSON array to hold the serialized objects
 	json::array json_array;
 	// Iterate over all objects of type DataType in the manager and serialize them
@@ -175,12 +193,7 @@ void JsonFileSerializer<DataType>::save(std::ostream& os) const {
 	// Create a root JSON object and add the array under the specified root key
 	json::object root_obj;
 	root_obj[root_key_] = json_array;
-
-	if (pretty_print_) {
-		pretty_print(os, root_obj);
-	} else {
-		os << json::serialize(root_obj) << "\n";
-	}
+	return root_obj;
 }
 
 void pretty_print(std::ostream& os, json::value const& jv, std::string* indent) {
