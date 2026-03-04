@@ -10,6 +10,8 @@ namespace rm::rule::serial {
  */
 class BookJsonSerializer : public PersistentObjectSerializerJson<BookData> {
 public:
+	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a BookData object */
+	using PersistentObjectSerializerJson<BookData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the BookJsonSerializer class.
@@ -24,17 +26,7 @@ public:
 	 * @param book Reference to the BookData object to serialize
 	 * @return json::value containing the serialized BookData object
 	 */
-	json::value serializeObject(const BookData& book) override;
-
-	/**
-	 * @brief Serialize a BookData object to a JSON value by its ID
-	 *
-	 * @param id Unique ID of the BookData object to serialize
-	 * @return json::value containing the serialized BookData object
-	 */
-	json::value serializeObject(const std::string& id) override {
-		return serializeObject(manager_.get<BookData>(id));
-	}
+	json::value serializeObject(const BookData& book) const override;
 
 	/**
 	 * @brief Deserialize a BookData object from a JSON value
@@ -42,6 +34,6 @@ public:
 	 * @param jsonObj JSON object containing the data to deserialize
 	 * @return Reference to the deserialized BookData object
 	 */
-	const BookData& deserializeObject(json::object& jsonObj) override;
+	const BookData& deserializeObject(json::object& jsonObj) const override;
 };
 } // namespace rm::rule::serial
