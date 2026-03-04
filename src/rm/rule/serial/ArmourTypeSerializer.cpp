@@ -3,7 +3,7 @@
 
 namespace rm::rule::serial {
 
-json::value ArmourTypeJsonSerializer::serializeObject(const ArmourTypeData& armourtype) const {
+json::value ArmourTypeSerializer::serializeObject(const ArmourTypeData& armourtype) const {
 	json::object obj;
 
 	JsonConverter::setString(obj, "id", armourtype.id());
@@ -20,7 +20,7 @@ json::value ArmourTypeJsonSerializer::serializeObject(const ArmourTypeData& armo
 	return obj;
 }
 
-const ArmourTypeData& ArmourTypeJsonSerializer::deserializeObject(json::object& jsonObj) const {
+const ArmourTypeData& ArmourTypeSerializer::deserializeObject(json::object& jsonObj) const {
 	std::string id = JsonConverter::getString(jsonObj, "id");
 	ArmourTypeData& ref = manager_.get<ArmourTypeData>(id);
 	ref.setName(JsonConverter::getString(jsonObj, "name"));

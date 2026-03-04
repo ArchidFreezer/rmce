@@ -1,1 +1,1 @@
-target_sources(rm PRIVATE "JsonConverter.cpp" "BookJsonSerializer.cpp"  "ArmourTypeJsonSerializer.cpp")
+target_sources(rm PRIVATE "JsonConverter.cpp" "BookSerializer.cpp"  "ArmourTypeSerializer.cpp")

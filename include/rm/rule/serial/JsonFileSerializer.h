@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializerJson.h>
+#include <PersistentObjectSerializer.h>
 
 namespace rm::rule::serial {
 
@@ -18,12 +18,12 @@ void pretty_print(std::ostream& os, json::value const& jv, std::string* indent =
 
 /**
  * @class JsonFileSerializer
- * @brief Class for loading persistent objects from a JSON file using a PersistentObjectSerializerJson to handle the deserialization of individual objects. The class is designed to be used with any type of persistent object as long as a
- * corresponding PersistentObjectSerializerJson is provided.
+ * @brief Class for loading persistent objects from a JSON file using a PersistentObjectSerializer to handle the deserialization of individual objects. The class is designed to be used with any type of persistent object as long as a
+ * corresponding PersistentObjectSerializer is provided.
  *
  * The copy and move constructors and assignment operators are deleted to prevent slicing and ensure that the class is only used as a base class for specific serializers.
  *
- * @tparam DataType Type of persistent object to load from the JSON file. This must be a type that satisfies the persistent_object concept and for which a PersistentObjectSerializerJson specialization exists.
+ * @tparam DataType Type of persistent object to load from the JSON file. This must be a type that satisfies the persistent_object concept and for which a PersistentObjectSerializer specialization exists.
  */
 template<persistent_object DataType>
 class JsonFileSerializer {
@@ -31,12 +31,12 @@ public:
 	/**
 	 * @brief Constructor for the JsonFileSerializer class.
 	 *
-	 * @param serialiser Reference to a PersistentObjectSerializerJson that will be used to deserialize individual objects to and from the JSON file. This should be a serializer that is compatible with the DataType template parameter.
+	 * @param serialiser Reference to a PersistentObjectSerializer that will be used to deserialize individual objects to and from the JSON file. This should be a serializer that is compatible with the DataType template parameter.
 	 * @param root_key The key in the JSON file that contains the array of objects to deserialize. If the JSON file contains a single object instead of an array, this parameter can be set to an empty string or any value that does not match
 	 * @param file_path Path to the JSON file that contains the data to load. This file should contain a JSON object with a "books" array or a single object that can be deserialized into a DataType object.
 	 * a key in the JSON file.
 	 */
-	JsonFileSerializer(PersistentObjectSerializerJson<DataType>& serialiser, const std::string& root_key, const std::string& file_path) : serializer_{&serialiser}, root_key_{root_key}, file_path_{file_path} {
+	JsonFileSerializer(PersistentObjectSerializer<DataType>& serialiser, const std::string& root_key, const std::string& file_path) : serializer_{&serialiser}, root_key_{root_key}, file_path_{file_path} {
 	}
 
 	/**
@@ -94,7 +94,7 @@ public:
 	}
 
 private:
-	const PersistentObjectSerializerJson<DataType>* serializer_{};
+	const PersistentObjectSerializer<DataType>* serializer_{};
 	std::string file_path_{};
 	std::string root_key_{};  // The key in the JSON file that contains the array of objects to deserialize.
 	bool pretty_print_{true}; // Whether to pretty print the JSON output when saving

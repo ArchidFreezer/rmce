@@ -1,9 +1,9 @@
-#include <BookJsonSerializer.h>
+#include <BookSerializer.h>
 #include <JsonConverter.h>
 
 namespace rm::rule::serial {
 
-json::value BookJsonSerializer::serializeObject(const BookData& book) const {
+json::value BookSerializer::serializeObject(const BookData& book) const {
 	json::object obj;
 
 	JsonConverter::setString(obj, "id", book.id());
@@ -15,7 +15,7 @@ json::value BookJsonSerializer::serializeObject(const BookData& book) const {
 	return obj;
 }
 
-const BookData& BookJsonSerializer::deserializeObject(json::object& jsonObj) const {
+const BookData& BookSerializer::deserializeObject(json::object& jsonObj) const {
 	std::string id = JsonConverter::getString(jsonObj, "id");
 	BookData& ref = manager_.get<BookData>(id);
 	ref.setName(JsonConverter::getString(jsonObj, "name"));

@@ -1,23 +1,23 @@
 #pragma once
 
-#include <PersistentObjectSerializerJson.h>
+#include <PersistentObjectSerializer.h>
 #include <BookData.h>
 
 namespace rm::rule::serial {
 /**
- * @class BookJsonSerializer
+ * @class BookSerializer
  * @brief JSON serializer for BookData objects
  */
-class BookJsonSerializer : public PersistentObjectSerializerJson<BookData> {
+class BookSerializer : public PersistentObjectSerializer<BookData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a BookData object */
-	using PersistentObjectSerializerJson<BookData>::serializeObject;
+	using PersistentObjectSerializer<BookData>::serializeObject;
 
 	/**
-	 * @brief Constructor for the BookJsonSerializer class.
+	 * @brief Constructor for the BookSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	BookJsonSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializerJson<BookData>(manager) {
+	BookSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<BookData>(manager) {
 	}
 
 	/**
