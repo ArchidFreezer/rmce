@@ -33,6 +33,18 @@ int JsonConverter::getInt(const json::object& obj, const std::string& key, int d
 	return default_value;
 }
 
+float JsonConverter::getFloat(const json::object& obj, const std::string& key, float default_value) {
+	auto it = obj.find(key);
+	if (it != obj.end()) {
+		if (it->value().is_string()) {
+			return static_cast<float>(atof(it->value().as_string().c_str()));
+		} else if (it->value().is_double()) {
+			return static_cast<float>(it->value().as_double());
+		}
+	}
+	return default_value;
+}
+
 double JsonConverter::getDouble(const json::object& obj, const std::string& key, double default_value) {
 	auto it = obj.find(key);
 	if (it != obj.end()) {
@@ -110,6 +122,10 @@ void JsonConverter::setInt(json::object& obj, const std::string& key, int value)
 	obj[key] = value;
 }
 
+void JsonConverter::setFloat(json::object& obj, const std::string& key, float value) {
+	obj[key] = value;
+}
+
 void JsonConverter::setDouble(json::object& obj, const std::string& key, double value) {
 	obj[key] = value;
 }
@@ -119,19 +135,19 @@ void JsonConverter::setBool(json::object& obj, const std::string& key, bool valu
 }
 
 void JsonConverter::setStringArray(json::object& obj, const std::string& key, const std::vector<std::string>& values) {
-    json::array arr;
-    for (const auto& value : values) {
-        arr.push_back(json::value(value));
-    }
-    obj[key] = arr;
+	json::array arr;
+	for (const auto& value : values) {
+		arr.push_back(json::value(value));
+	}
+	obj[key] = arr;
 }
 
 void JsonConverter::setIntArray(json::object& obj, const std::string& key, const std::vector<int>& values) {
-    json::array arr;
-    for (int value : values) {
-        arr.push_back(json::value(value));
-    }
-    obj[key] = arr;
+	json::array arr;
+	for (int value : values) {
+		arr.push_back(json::value(value));
+	}
+	obj[key] = arr;
 }
 
 void JsonConverter::setOptionalString(json::object& obj, const std::string& key, const std::optional<std::string>& value) {
@@ -139,7 +155,6 @@ void JsonConverter::setOptionalString(json::object& obj, const std::string& key,
 		obj[key] = value.value();
 	}
 }
-
 
 json::object* JsonConverter::getNestedObject(json::object& obj, const std::string& path) {
 	std::vector<std::string> parts;
@@ -202,6 +217,17 @@ int JsonConverter::getNestedInt(json::object& obj, const std::string& path, int 
 			return atoi(val->as_string().c_str());
 		} else if (val->is_int64()) {
 			return static_cast<int>(val->as_int64());
+		}
+	}
+	return defaultValue;
+}
+
+float JsonConverter::getNestedFloat(json::object& obj, const std::string& path, float defaultValue) {
+	if (auto* val = getNestedValue(obj, path)) {
+		if (val->is_string()) {
+			return static_cast<float>(atof(val->as_string().c_str()));
+		} else if (val->is_double()) {
+			return static_cast<float>(val->as_double());
 		}
 	}
 	return defaultValue;

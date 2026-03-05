@@ -495,6 +495,34 @@ public:
 	static int getNestedInt(json::object& obj, const std::string& path, int defaultValue = 0);
 
 	/**
+	 * @brief Retrieves a float value from a nested JSON object using a path string.
+	 *
+	 * The path string should use '/' as a delimiter to specify the hierarchy of nested objects. For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "level1": {
+	 *         "level2": {
+	 *             "SomeFloat": 3.14
+	 *         }
+	 *     }
+	 * }
+	 * @endcode
+	 * You can retrieve the nested float value at "level1/level2/SomeFloat" using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::string path = "level1/level2/SomeFloat";
+	 * float value = JsonConverter::getNestedFloat(obj, path, 0.0);
+	 * // value would be 3.14, or 0.0 if the path is not found or the value is not a float
+	 * @endcode
+	 *
+	 * @param obj The JSON object to search within.
+	 * @param path The path string specifying the location of the nested float value.
+	 * @param defaultValue The default value to return if the path is not found or the value is not a float. Defaults to 0.0.
+	 * @return The float value at the specified path, or the default value if not found.
+	 */
+	static float getNestedFloat(json::object& obj, const std::string& path, float defaultValue = 0.0);
+
+	/**
 	 * @brief Retrieves a double value from a nested JSON object using a path string.
 	 *
 	 * The path string should use '/' as a delimiter to specify the hierarchy of nested objects. For example, if you have a JSON object like:
@@ -507,10 +535,10 @@ public:
 	 *     }
 	 * }
 	 * @endcode
-	 * You can retrieve the nested integer value at "level1/level2/SomeInt" using this method:
+	 * You can retrieve the nested double value at "level1/level2/SomeDouble" using this method:
 	 * @code
 	 * json::object obj = ...; // Assume this is your JSON object
-	 * std::string path = "level1/level2/SomeInt";
+	 * std::string path = "level1/level2/SomeDouble";
 	 * double value = JsonConverter::getNestedDouble(obj, path, 0.0);
 	 * // value would be 3.14, or 0.0 if the path is not found or the value is not a double
 	 * @endcode
@@ -602,6 +630,14 @@ public:
 	 * @return The integer value associated with the key, or the default value if the key is not found.
 	 */
 	static int getInt(const json::object& obj, const std::string& key, int default_value = 0);
+	/**
+	 * @brief Retrieves a float value from a JSON object by key, returning a default value if the key is not found.
+	 * @param obj The JSON object to search.
+	 * @param key The key to look up in the JSON object.
+	 * @param default_value The default value to return if the key is not found or the value cannot be converted to a float. Defaults to 0.0.
+	 * @return The float value associated with the key, or the default value if the key is not found.
+	 */
+	static float getFloat(const json::object& obj, const std::string& key, float default_value = 0.0);
 	/**
 	 * @brief Retrieves a double value from a JSON object by key, returning a default value if the key is not found.
 	 * @param obj The JSON object to retrieve the value from.
@@ -713,6 +749,13 @@ public:
 	 * @param value The integer value to set.
 	 */
 	static void setInt(json::object& obj, const std::string& key, int value);
+	/**
+	 * @brief Sets a single-precision floating-point value in a JSON object for the specified key.
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the float value.
+	 * @param value The single-precision floating-point value to set.
+	 */
+	static void setFloat(json::object& obj, const std::string& key, float value);
 	/**
 	 * @brief Sets a double-precision floating-point value in a JSON object.
 	 * @param obj The JSON object to modify.
