@@ -308,14 +308,25 @@ public:
 		}
 
 		/**
-		 * @brief Sets an array of enum values converted to strings in the current JSON object.
-		 * @tparam EnumType The enum type to be converted to strings.
+		 * @brief Sets an array of enum values from any iterable container in the current JSON object.
+		 * This function accepts any iterable container (e.g., std::vector, std::set, std::list) containing enum values and converts each enum value to its string representation using the `toString` function before storing them as a JSON
+		 * array in the specified key of the JSON object.
+		 * @code
+		 * // With std::vector
+		 * std::vector<MyEnum> enumVec = {MyEnum::Value1, MyEnum::Value2, MyEnum::Value3};
+		 * NestedBuilder::setEnumArray(obj, "enums", enumVec);
+		 *
+		 * // With std::list
+		 * std::list<MyEnum> enumList = {MyEnum::Value1, MyEnum::Value2};
+		 * NestedBuilder::setEnumArray(obj, "enums", enumList);
+		 * @endcode
+		 * @tparam Container The type of the iterable container.
 		 * @param key The key under which to store the array in the JSON object.
-		 * @param values A set of enum values to convert to strings and store as a JSON array.
+		 * @param values The container of enum values to convert to strings and store as a JSON array.
 		 * @return A reference to this NestedBuilder for method chaining.
 		 */
-		template<typename EnumType>
-		NestedBuilder& setEnumArray(const std::string& key, const std::set<EnumType>& values) {
+		template<typename Container>
+		NestedBuilder& setEnumArray(const std::string& key, const Container& values) {
 			json::array arr;
 			for (const auto& value : values) {
 				arr.push_back(toString(value));
@@ -599,7 +610,7 @@ public:
 	 * std::set<std::string> values = JsonConverter::getNestedStringArray(obj, path);
 	 * // Do something with the set of strings, which would contain "SomeValue1", "SomeValue2", and "SomeValue3"
 	 * @endcode
-	 * 
+	 *
 	 * @param obj The JSON object to traverse.
 	 * @param path The path string specifying the location of the nested string array within the object.
 	 * @return A set containing the strings from the nested array.
@@ -665,10 +676,10 @@ public:
 
 	/**
 	 * @brief Retrieves a JSON array from a JSON object using the specified key.
-	 * 
+	 *
 	 * Given a JSON object and a key, this method attempts to retrieve the value associated with the key and checks if it is a JSON array. If the key exists and the value is an array, it returns that array. If the key does not exist or the
 	 * value is not an array, it returns an empty JSON array.
-	 * 
+	 *
 	 * For the following JSON object:
 	 * @code
 	 * {
@@ -688,7 +699,7 @@ public:
 	 *     int age = JsonConverter::getInt(item.as_object(), "age");
 	 * }
 	 * @endcode
-	 * 
+	 *
 	 * @param obj The JSON object to retrieve the array from.
 	 * @param key The key associated with the array in the JSON object.
 	 * @return A JSON array if the key exists and is an array, otherwise an empty JSON array.
@@ -715,7 +726,7 @@ public:
 
 	/**
 	 * @brief Retrieves a map of strings from a JSON object using the specified key.
-	 * 
+	 *
 	 * For a JSON object like:
 	 * @code
 	 * {
@@ -795,23 +806,66 @@ public:
 	static void setOptionalString(json::object& obj, const std::string& key, const std::optional<std::string>& value);
 
 	/**
-	 * @brief Sets an array of enum values in a JSON object with the specified key.
-	 * @tparam EnumType The type of the enum values.
+	 * @brief Sets an array of enum values from any iterable container in a JSON object.
+	 * 
+	 * This function is for use with C-style arrays or any container that provides iterators. It takes a range defined by two iterators (begin and end) and converts each enum value in that range to its string representation using the
+	 * `toString` function before storing them as a JSON array
+	 * 
+	 * For example, if you have a C-style array of enum values:
+	 * @code
+	 * MyEnum enumArray[] = {MyEnum::Value1, MyEnum::Value
+	 * JsonConverter::setEnumArrayFromIterators(obj, "enums", std::begin(enumArray), std::end(enumArray));
+	 * @endcode
+	 * 
+	 * For C++ containers the setEnumArray function is more convenient, but this function allows for more flexibility with different types of containers that may not be directly supported by setEnumArray.
+	 * 
+	 * @tparam Iterator The iterator type for the container.
 	 * @param obj The JSON object to modify.
 	 * @param key The key under which to store the enum array.
-	 * @param enumValues The set of enum values to store as an array in the JSON object. Each enum value will be converted to its string representation using a hypothetical `toString` function.
+	 * @param begin Iterator to the beginning of the container.
+	 * @param end Iterator to the end of the container.
+	 * @see setEnumArray for a more convenient function that accepts any iterable container directly.
 	 */
-	template<typename EnumType>
-	static void setEnumArray(json::object& obj, const std::string& key, const std::set<EnumType>& enumValues);
+	template<typename Iterator>
+	static void setEnumArrayFromIterators(json::object& obj, const std::string& key, Iterator begin, Iterator end);
+
+	/**
+	 * @brief Sets an array of enum values in a JSON object with the specified key, accepting any iterable container.
+	 *
+	 * This function accepts any iterable container (e.g., std::vector, std::set, std::list) containing enum values and converts each enum value to its string representation using the `toString` function before storing them as a JSON array
+	 * in the specified key of the JSON object.
+	 * @code
+	 * // With std::vector
+	 * std::vector<MyEnum> enumVec = {MyEnum::Value1, MyEnum::Value2, MyEnum::Value3};
+	 * JsonConverter::setEnumArray(obj, "enums", enumVec);
+	 *
+	 * // With std::list
+	 * std::list<MyEnum> enumList = {MyEnum::Value1, MyEnum::Value2};
+	 * JsonConverter::setEnumArray(obj, "enums", enumList);
+	 * @endcode
+	 * @tparam Container The type of the iterable container (e.g., std::vector, std::set, std::list).
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the enum array.
+	 * @param enumValues The container of enum values to store as an array in the JSON object. Each enum value will be converted to its string representation using the `toString` function.
+	 */
+	template<typename Container>
+	static void setEnumArray(json::object& obj, const std::string& key, const Container& enumValues);
 };
 
-template<typename EnumType>
-void JsonConverter::setEnumArray(json::object& obj, const std::string& key, const std::set<EnumType>& enumValues) {
+// Template implementations
+
+template<typename Iterator>
+void JsonConverter::setEnumArrayFromIterators(json::object& obj, const std::string& key, Iterator begin, Iterator end) {
 	json::array arr;
-	for (const auto& enumValue : enumValues) {
-		arr.push_back(json::value(toString(enumValue)));
+	for (auto it = begin; it != end; ++it) {
+		arr.push_back(json::value(toString(*it)));
 	}
 	obj[key] = arr;
+}
+
+template<typename Container>
+void JsonConverter::setEnumArray(json::object& obj, const std::string& key, const Container& enumValues) {
+	setEnumArrayFromIterators(obj, key, std::begin(enumValues), std::end(enumValues));
 }
 
 template<typename EnumType>
