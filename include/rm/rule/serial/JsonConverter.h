@@ -7,6 +7,9 @@
 #include <map>
 #include <set>
 #include <sstream>
+#include <LanguageAbility.h>
+#include <SubcategoriedSkillData.h>
+#include <PersistentObjectManager.h>
 
 namespace rm::rule::serial {
 
@@ -424,8 +427,7 @@ public:
 	}
 
 	/**
-	 * @brief Retrieves a nested JSON object from within another JSON object using a path string.
-	 *
+	 * @brief Retrieves a nested JSON object from within another JSON object using a path string.*
 	 * The path string should use '/' as a delimiter to specify the hierarchy of nested objects. For example, if you have a JSON object like:
 	 * @code
 	 * {
@@ -739,7 +741,7 @@ public:
 	 * std::map<std::string, std::string> myMap = JsonConverter::getStringMap(obj, "myMap");
 	 * // myMap would contain { "key1": "value1", "key2": "value2", "key3": "value3" }
 	 * @endcode
-	 * 
+	 *
 	 * @param obj The JSON object to retrieve the string map from.
 	 * @param key The key associated with the string map in the JSON object.
 	 * @return A map containing the key-value pairs of strings from the JSON object.
@@ -807,18 +809,18 @@ public:
 
 	/**
 	 * @brief Sets an array of enum values from any iterable container in a JSON object.
-	 * 
+	 *
 	 * This function is for use with C-style arrays or any container that provides iterators. It takes a range defined by two iterators (begin and end) and converts each enum value in that range to its string representation using the
 	 * `toString` function before storing them as a JSON array
-	 * 
+	 *
 	 * For example, if you have a C-style array of enum values:
 	 * @code
 	 * MyEnum enumArray[] = {MyEnum::Value1, MyEnum::Value
 	 * JsonConverter::setEnumArrayFromIterators(obj, "enums", std::begin(enumArray), std::end(enumArray));
 	 * @endcode
-	 * 
+	 *
 	 * For C++ containers the setEnumArray function is more convenient, but this function allows for more flexibility with different types of containers that may not be directly supported by setEnumArray.
-	 * 
+	 *
 	 * @tparam Iterator The iterator type for the container.
 	 * @param obj The JSON object to modify.
 	 * @param key The key under which to store the enum array.
@@ -850,6 +852,234 @@ public:
 	 */
 	template<typename Container>
 	static void setEnumArray(json::object& obj, const std::string& key, const Container& enumValues);
+
+	/**
+	 * @brief Retrieves a set of SubcategoriedSkillData from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array associated with the given key and converts it into a set of SubcategoriedSkillData objects. Each element in the JSON array is expected to be an object with an "id" field and an optional
+	 * "subcategory" field. The "id" field is used to look up the corresponding SkillData object using the provided PersistentObjectManager, and the "subcategory" field is used to create a SubcategoriedSkillData object that combines the
+	 * skill data with its subcategory.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "skills": [
+	 *         { "id": "SKILL_SWORDSMANSHIP", "subcategory": "SUBCATEGORY_MELEE" },
+	 *         { "id": "SKILL_ARCHERY" }
+	 *     ]
+	 * }
+	 * @endcode
+	 * You can retrieve the set of SubcategoriedSkillData using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::set<SubcategoriedSkillData> skillSet = JsonConverter::getSkillSet(obj, "skills", manager);
+	 * // skillSet would contain SubcategoriedSkillData objects for SKILL_SWORDSMANSHIP with SUBCATEGORY_MELEE and SKILL_ARCHERY with no subcategory
+	 * @endcode
+	 *
+	 * @param obj The JSON object to retrieve the skill set from.
+	 * @param key The key associated with the skill array in the JSON object.
+	 * @param manager A PersistentObjectManager used to look up SkillData objects based on their IDs when constructing SubcategoriedSkillData objects.
+	 * @return A set of pointers to SubcategoriedSkillData objects constructed from the entries in the JSON array associated with the specified key.
+	 */
+	static std::set<const SubcategoriedSkillData*> getSkillSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+
+	/**
+	 * @brief Sets an array of skill values in a JSON object with the specified key, accepting any iterable container.
+	 *
+	 * This function accepts any iterable container (e.g., std::vector, std::set, std::list) containing pointers to SubcategoriedSkillData objects. It converts each skill data object into a JSON object with "id" and optional "subcategory"
+	 * fields, and stores them as a JSON array in the specified key of the JSON object. The skills are sorted by their combined id and subcategory for consistent ordering in the JSON output.
+	 * @code
+	 * // With std::vector
+	 * std::vector<const rm::rule::SubcategoriedSkillData*> skillVec = {skillData1, skillData2, skillData3};
+	 * JsonConverter::setSkillArray(obj, "skills", skillVec);
+	 *
+	 * // With std::list
+	 * std::list<const rm::rule::SubcategoriedSkillData*> skillList = {skillData1, skillData2};
+	 * JsonConverter::setSkillArray(obj, "skills", skillList);
+	 * @endcode
+	 * @tparam Container The type of the iterable container (e.g., std::vector, std::set, std::list).
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the skill array.
+	 * @param skillValues The container of pointers to SubcategoriedSkillData objects to store as an array in the JSON object. Each skill will be converted to a JSON object with "id" and optional "subcategory" fields.
+	 */
+	template<typename Container>
+	static void setSkillArray(json::object& obj, const std::string& key, const Container& skillValues);
+
+	/**
+	 * @brief Retrieves a map of language abilities from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array object associated with the given key and converts it into a map where the keys are strings and the values are LanguageAbility objects. It assumes that the JSON object has a structure where each
+	 *key is a string and each value can be converted to a LanguageAbility using a hypothetical `fromJson` function.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "languageAbilities": [
+	 *         {
+	 *             "language": "LANGUAGE_COMMON_SPEECH",
+	 *             "somantic": 4
+	 *             "spoken": 8,
+	 *             "written": 8
+	 *         },
+	 *         {
+	 *             "language": "LANGUAGE_HIGH_SPEECH",
+	 *             "spoken": 6,
+	 *             "written": 6
+	 *         }
+	 *		]
+	 * }
+	 * @endcode
+	 * You can retrieve the map of language abilities using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::map<std::string, const rm::game::character::LanguageAbility> languageMap = JsonConverter::getLanguageAbilityMap(obj, "languageAbilities");
+	 * // languageMap would contain entries for "LANGUAGE_COMMON_SPEECH" and "LANGUAGE_HIGH_SPEECH" with their corresponding LanguageAbility objects
+	 * @endcode
+	 *
+	 * @param obj The JSON object to retrieve the language ability map from.
+	 * @param key The key associated with the language ability map in the JSON object.
+	 * @param manager A PersistentObjectManager used to look up language data when constructing LanguageAbility objects.
+	 * @return A map where each key is a string and each value is a LanguageAbility object, constructed from the corresponding entries in the JSON object.
+	 */
+	static std::map<std::string, const rm::game::character::LanguageAbility> getLanguageAbilityMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+
+	/**
+	 * @brief Converts a map of language abilities into a JSON array.
+	 *
+	 * This function takes a map where the keys are strings and the values are LanguageAbility objects, and converts it into a JSON array. Each entry in the map is converted into a JSON object with fields corresponding to the properties of
+	 * the LanguageAbility, such as "language", "somantic", "spoken", and "written". The resulting JSON array can be used to store or transmit the language abilities in a structured format.
+	 *
+	 * For example, if you have a map like:
+	 * @code
+	 * std::map<std::string, const rm::game::character::LanguageAbility> languageMap = {
+	 *     {"LANGUAGE_COMMON_SPEECH", LanguageAbility{...}},
+	 *     {"LANGUAGE_HIGH_SPEECH", LanguageAbility{...}}
+	 * };
+	 * @endcode
+	 * You can convert this map into a JSON array using this method:
+	 * @code
+	 * JsonConverter::getLanguageAbilityArray(jsonObj, "languages", language_map);
+	 * // languageArray would contain JSON objects representing each language ability in the map
+	 * @endcode
+	 *
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the language ability array in the JSON object
+	 * @param language_map A map where each key is a string and each value is a LanguageAbility object to be converted into a JSON object.
+	 */
+	static void setLanguageAbilities(json::object& obj, const std::string& key, const std::map<std::string, const rm::game::character::LanguageAbility>& language_map);
+
+	/**
+	 * @brief Retrieves a set of data objects of type GameRuleData from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array associated with the given key and converts it into a set of pointers to data objects of type T. Each element in the JSON array is expected to be a string that represents the ID of a data object.
+	 * The function uses the provided PersistentObjectManager to look up each data object by its ID and adds it to the resulting set if it exists.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "items": ["ITEM_SWORD", "ITEM_SHIELD", "ITEM_POTION"]
+	 * }
+	 * @endcode
+	 * You can retrieve the set of item data objects using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::set<const ItemData*> itemSet = JsonConverter::getDataObjectSet<ItemData>(obj, "items", manager);
+	 * // itemSet would contain pointers to ItemData objects for ITEM_SWORD, ITEM_SHIELD, and ITEM_POTION if they exist in the manager
+	 * @endcode
+	 *
+	 * @tparam GameRuleData The type of the data objects to retrieve. This type must satisfy the game_rule_data_object concept.
+	 * @param obj The JSON object to retrieve the data object set from.
+	 * @param key The key associated with the data object array in the JSON object.
+	 * @param manager A PersistentObjectManager used to look up data objects based on their IDs when constructing the set.
+	 * @return A set of pointers to data objects of type T constructed from the entries in the JSON array associated with the specified key.
+	 */
+	template<game_rule_data_object GameRuleData>
+	static std::set<const GameRuleData*> getDataObjectSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+
+	/**
+	 * @brief Sets an array of data objects of type GameRuleData in a JSON object with the specified key.
+	 *
+	 * This function takes a set of pointers to data objects of type T and converts it into a JSON array. Each data object is represented as a string in the JSON array, which corresponds to the ID of the data object. The function uses the
+	 * `id()` method of each data object to retrieve its ID and stores it as a string in the JSON array under the specified key in the JSON object.
+	 *
+	 * For example, if you have a set of item data objects:
+	 * @code
+	 * std::set<const ItemData*> itemSet = {itemData1, itemData2, itemData3};
+	 * @endcode
+	 * You can convert this set into a JSON array using this method:
+	 * @code
+	 * JsonConverter::setDataObjectSet(obj, "items", itemSet);
+	 * // The JSON object would now contain an array under "items" with the IDs of the item data objects as strings
+	 * @endcode
+	 *
+	 * @tparam GameRuleData The type of the data objects to set. This type must satisfy the game_rule_data_object concept.
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the data object array in the JSON object.
+	 * @param data_objects A set of pointers to data objects of type T to be converted into strings and stored as an array in the JSON object.
+	 */
+	template<game_rule_data_object GameRuleData>
+	static void setDataObjectArray(json::object& obj, const std::string& key, const std::set<const GameRuleData*>& data_objects);
+
+	/**
+	 * @brief Retrieves a map of data objects of type GameRuleData to primitive values from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array associated with the given key and converts it into a map where the keys are pointers to data objects of type GameRuleData and the values are of a primitive type specified by the template parameter
+	 * Primitive. Each element in the JSON array is expected to be an object with an "id" field that represents the ID of a data object, and a "value" field that represents the primitive value associated with that data object. The function
+	 * uses the provided PersistentObjectManager to look up each data object by its ID and constructs the resulting map accordingly.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "itemQuantities": [
+	 *         { "id": "ITEM_SWORD", "value": 10 },
+	 *         { "id": "ITEM_SHIELD", "value": 5 }
+	 *     ]
+	 * }
+	 * @endcode
+	 * You can retrieve the map of item data objects to their quantities using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::map<const ItemData*, int> itemQuantityMap = JsonConverter::getDataObjectPrimitiveMap<ItemData, int>(obj, "itemQuantities", manager);
+	 * // itemQuantityMap would contain entries mapping ITEM_SWORD to 10 and ITEM_SHIELD to 5 if those items exist in the manager
+	 * @endcode
+	 *
+	 * @tparam GameRuleData The type of the data objects used as keys in the resulting map. This type must satisfy the game_rule_data_object concept.
+	 * @tparam Primitive The type of the primitive values used as values in the resulting map (e.g., int, float, double, bool).
+	 * @param obj The JSON object to retrieve the data object primitive map from.
+	 * @param key The key associated with the data object primitive array in the JSON object.
+	 * @param manager A PersistentObjectManager used to look up data objects based on their IDs when constructing the map.
+	 * @return A map where each key is a pointer to a data object of type GameRuleData and each value is a primitive value
+	 */
+	template<game_rule_data_object GameRuleData, typename Primitive>
+	static std::map<const GameRuleData*, Primitive> getDataObjectPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+
+	/**
+	 * @brief Sets an array of data objects of type GameRuleData mapped to primitive values in a JSON object with the specified key.
+	 *
+	 * This function takes a map where the keys are pointers to data objects of type GameRuleData and the values are of a primitive type specified by the template parameter Primitive. It converts this map into a JSON array, where each entry is
+	 * represented as an object with an "id" field corresponding to the ID of the data object and a "value" field corresponding to the primitive value. The resulting JSON array is stored under the specified key in the JSON object.
+	 *
+	 * For example, if you have a map of item data objects to their quantities:
+	 * @code
+	 * std::map<const ItemData*, int> itemQuantityMap = {
+	 *     {itemData1, 10},
+	 *     {itemData2, 5}
+	 * };
+	 * @endcode
+	 * You can convert this map into a JSON array using this method:
+	 * @code
+	 * JsonConverter::setDataObjectPrimitiveMap<ItemData, int>(obj, "itemQuantities", itemQuantityMap);
+	 * // The JSON object would now contain an array under "itemQuantities" with objects representing each item and its quantity
+	 * @endcode
+	 *
+	 * @tparam GameRuleData The type of the data objects used as keys in the input map. This type must satisfy the game_rule_data_object concept.
+	 * @tparam Primitive The type of the primitive values used as values in the input map (e.g., int, float, double, bool).
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the data object primitive array in the JSON object.
+	 * @param map A map where each key is a pointer to a data object of type GameRuleData and each value is a primitive value to be converted into an object in the JSON array.
+	 */
+	template<game_rule_data_object GameRuleData, typename Primitive>
+	static void setDataObjectPrimitiveMap(json::object& obj, const std::string& key, const std::map<const GameRuleData*, Primitive>& map);
 };
 
 // Template implementations
@@ -882,6 +1112,113 @@ std::set<EnumType> JsonConverter::getEnumArray(const json::object& obj, const st
 		}
 	}
 	return result;
+}
+
+template<typename Container>
+void JsonConverter::setSkillArray(json::object& obj, const std::string& key, const Container& skillValues) {
+	json::array arr;
+	std::map<std::string, const rm::rule::SubcategoriedSkillData*> sorted_map{};
+	for (const auto& data : skillValues) {
+		std::string key = data->skillData().id() + (data->subcategory() ? data->subcategory().value() : "");
+		sorted_map.emplace(key, data);
+	}
+
+	for (const auto& [key, data] : sorted_map) {
+		json::object skill_obj;
+		skill_obj["id"] = data->skillData().id();
+		if (data->subcategory()) {
+			skill_obj["subcategory"] = data->subcategory().value();
+		}
+		arr.push_back(skill_obj);
+	}
+	if (arr.size())
+		obj[key] = arr;
+}
+
+template<game_rule_data_object GameRuleData>
+std::set<const GameRuleData*> JsonConverter::getDataObjectSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+	std::set<const GameRuleData*> result;
+	auto it = obj.find(key);
+	if (it != obj.end() && it->value().is_array()) {
+		for (const auto& item : it->value().as_array()) {
+			if (item.is_string()) {
+				const GameRuleData* data_object = &manager.get<GameRuleData>(std::string(item.as_string()));
+				if (data_object) {
+					result.insert(data_object);
+				}
+			}
+		}
+	}
+	return result;
+}
+
+template<game_rule_data_object GameRuleData>
+void JsonConverter::setDataObjectArray(json::object& obj, const std::string& key, const std::set<const GameRuleData*>& data_objects) {
+	json::array arr;
+	std::map<std::string, const GameRuleData*> sorted_map{};
+	for (const GameRuleData* data_object : data_objects) {
+		sorted_map.emplace(data_object->id(), data_object);
+	}
+
+	for (const auto& [key, data] : sorted_map) {
+		arr.push_back(json::value(data->id()));
+	}
+	if (arr.size())
+		obj[key] = arr;
+}
+
+template<game_rule_data_object GameRuleData, typename Primitive>
+std::map<const GameRuleData*, Primitive> JsonConverter::getDataObjectPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+	std::map<const GameRuleData*, Primitive> result;
+	auto it = obj.find(key);
+	if (it != obj.end() && it->value().is_array()) {
+		for (const auto& item : it->value().as_array()) {
+			if (item.is_object()) {
+				json::object obj = item.as_object();
+				auto id_it = obj.find("id");
+				if (id_it != obj.end() && id_it->value().is_string()) {
+					const GameRuleData* data_object = &manager.get<GameRuleData>(std::string(id_it->value().as_string()));
+					if (data_object) {
+						Primitive primitive_value{};
+						// Assuming the primitive value is stored under a key called "value" in the JSON object
+						auto value_it = obj.find("value");
+						if (value_it != obj.end()) {
+							if constexpr (std::is_same_v<Primitive, int>) {
+								primitive_value = getInt(obj, "value", 0);
+							} else if constexpr (std::is_same_v<Primitive, float>) {
+								primitive_value = getFloat(obj, "value", 0.0f);
+							} else if constexpr (std::is_same_v<Primitive, double>) {
+								primitive_value = getDouble(obj, "value", 0.0);
+							} else if constexpr (std::is_same_v<Primitive, bool>) {
+								primitive_value = getBool(obj, "value", false);
+							} else if constexpr (std::is_same_v<Primitive, std::string>) {
+								primitive_value = getString(obj, "value", "");
+							}
+						}
+						result.emplace(data_object, primitive_value);
+					}
+				}
+			}
+		}
+	}
+	return result;
+}
+
+template<game_rule_data_object GameRuleData, typename Primitive>
+void JsonConverter::setDataObjectPrimitiveMap(json::object& obj, const std::string& key, const std::map<const GameRuleData*, Primitive>& map) {
+	json::array arr;
+	std::map<std::string, Primitive> sorted_map{};
+	for (const auto& [data_object, primitive_value] : map) {
+		sorted_map.emplace(data_object->id(), primitive_value);
+	}
+	for (const auto& [id, primitive_value] : sorted_map) {
+		json::object entry_obj;
+		entry_obj["id"] = id;
+		entry_obj["value"] = primitive_value;
+		arr.push_back(entry_obj);
+	}
+	if (arr.size())
+		obj[key] = arr;
 }
 
 } // namespace rm::rule::serial

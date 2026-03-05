@@ -275,4 +275,67 @@ json::array JsonConverter::getJsonArray(const json::object& obj, const std::stri
 	return json::array();
 }
 
+std::set<const SubcategoriedSkillData*> JsonConverter::getSkillSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+	std::set<const SubcategoriedSkillData*> skill_set;
+	json::array skillArray = getJsonArray(obj, key);
+	for (const auto& skill_val : skillArray) {
+		if (!skill_val.is_object())
+			continue;
+		json::object skillObj = skill_val.as_object();
+		std::string id = getString(skillObj, "id");
+		std::optional<std::string> subcategory = getOptionalString(skillObj, "subcategory");
+		if (subcategory)
+			skill_set.emplace(&manager.subcategoriedSkillData(id, subcategory.value()));
+		else
+			skill_set.emplace(&manager.subcategoriedSkillData(id));
+	}
+	return skill_set;
+}
+
+std::map<std::string, const rm::game::character::LanguageAbility> JsonConverter::getLanguageAbilityMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+	std::map<std::string, const rm::game::character::LanguageAbility> map;
+	json::array abilityArray = getJsonArray(obj, key);
+	for (const auto& ability_val : abilityArray) {
+		if (!ability_val.is_object())
+			continue;
+		json::object abilityObj = ability_val.as_object();
+		std::string language_id = getString(abilityObj, "language");
+		rm::game::character::LanguageAbility ability(manager.get<LanguageData>(language_id));
+		if (abilityObj.find("spoken") != abilityObj.end()) {
+			int spoken = getInt(abilityObj, "spoken");
+			ability.updateSpokenRanks(spoken);
+		}
+		if (abilityObj.find("written") != abilityObj.end()) {
+			int written = getInt(abilityObj, "written");
+			ability.updateWrittenRanks(written);
+		}
+		if (abilityObj.find("somantic") != abilityObj.end()) {
+			int somantic = getInt(abilityObj, "somantic");
+			ability.updateSomanticRanks(somantic);
+		}
+		map.emplace(language_id, ability);
+	}
+	return map;
+}
+
+void JsonConverter::setLanguageAbilities(json::object& obj, const std::string& key, const std::map<std::string, const rm::game::character::LanguageAbility>& language_map) {
+	json::array arr;
+	for (const auto& [language_id, ability] : language_map) {
+		json::object abilityObj;
+		abilityObj["language"] = language_id;
+		if (ability.somantic() > 0) {
+			abilityObj["somantic"] = ability.somantic();
+		}
+		if (ability.spoken() > 0) {
+			abilityObj["spoken"] = ability.spoken();
+		}
+		if (ability.written() > 0) {
+			abilityObj["written"] = ability.written();
+		}
+		arr.push_back(abilityObj);
+	}
+	if (!arr.empty())
+		obj[key] = arr;
+}
+
 } // namespace rm::rule::serial
