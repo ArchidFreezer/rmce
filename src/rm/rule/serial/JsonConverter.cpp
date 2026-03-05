@@ -207,6 +207,17 @@ int JsonConverter::getNestedInt(json::object& obj, const std::string& path, int 
 	return defaultValue;
 }
 
+double JsonConverter::getNestedDouble(json::object& obj, const std::string& path, double defaultValue) {
+	if (auto* val = getNestedValue(obj, path)) {
+		if (val->is_string()) {
+			return atof(val->as_string().c_str());
+		} else if (val->is_double()) {
+			return static_cast<double>(val->as_double());
+		}
+	}
+	return defaultValue;
+}
+
 std::string JsonConverter::getNestedString(json::object& obj, const std::string& path, const std::string& defaultValue) {
 	if (auto* val = getNestedValue(obj, path)) {
 		if (val->is_string()) {
