@@ -23,10 +23,10 @@ public:
 	/**
 	 * @brief Serialize a BookData object to a JSON value
 	 *
-	 * @param book Reference to the BookData object to serialize
+	 * @param ref Reference to the BookData object to serialize
 	 * @return json::value containing the serialized BookData object
 	 */
-	json::value serializeObject(const BookData& book) const override;
+	json::value serializeObject(const BookData& ref) const override;
 
 	/**
 	 * @brief Deserialize a BookData object from a JSON value

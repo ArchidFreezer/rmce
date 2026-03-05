@@ -1,21 +1,21 @@
-#include <ArmourTypeJsonSerializer.h>
+#include <ArmourTypeSerializer.h>
 #include <JsonConverter.h>
 
 namespace rm::rule::serial {
 
-json::value ArmourTypeSerializer::serializeObject(const ArmourTypeData& armourtype) const {
+json::value ArmourTypeSerializer::serializeObject(const ArmourTypeData& ref) const {
 	json::object obj;
 
-	JsonConverter::setString(obj, "id", armourtype.id());
-	JsonConverter::setString(obj, "name", armourtype.name());
-	JsonConverter::setString(obj, "type", toString(armourtype.type()));
-	JsonConverter::setString(obj, "description", armourtype.description());
-	JsonConverter::setInt(obj, "min-manoeuvre-mod", armourtype.minManoeuvreMod());
-	JsonConverter::setInt(obj, "max-manoeuvre-mod", armourtype.maxManoeuvreMod());
-	JsonConverter::setInt(obj, "missile-attack-penalty", armourtype.missileAttackPenalty());
-	JsonConverter::setInt(obj, "quickness-penalty", armourtype.quicknessPenalty());
-	JsonConverter::setBool(obj, "animal-only", armourtype.animalOnly());
-	JsonConverter::setBool(obj, "includes-greaves", armourtype.includesGreaves());
+	JsonConverter::setString(obj, "id", ref.id());
+	JsonConverter::setString(obj, "name", ref.name());
+	JsonConverter::setString(obj, "type", toString(ref.type()));
+	JsonConverter::setString(obj, "description", ref.description());
+	JsonConverter::setInt(obj, "min-manoeuvre-mod", ref.minManoeuvreMod());
+	JsonConverter::setInt(obj, "max-manoeuvre-mod", ref.maxManoeuvreMod());
+	JsonConverter::setInt(obj, "missile-attack-penalty", ref.missileAttackPenalty());
+	JsonConverter::setInt(obj, "quickness-penalty", ref.quicknessPenalty());
+	JsonConverter::setBool(obj, "animal-only", ref.animalOnly());
+	JsonConverter::setBool(obj, "includes-greaves", ref.includesGreaves());
 
 	return obj;
 }

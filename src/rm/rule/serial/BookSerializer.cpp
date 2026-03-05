@@ -3,14 +3,14 @@
 
 namespace rm::rule::serial {
 
-json::value BookSerializer::serializeObject(const BookData& book) const {
+json::value BookSerializer::serializeObject(const BookData& ref) const {
 	json::object obj;
 
-	JsonConverter::setString(obj, "id", book.id());
-	JsonConverter::setString(obj, "code", book.code());
-	JsonConverter::setString(obj, "name", book.name());
-	JsonConverter::setString(obj, "abbreviation", book.abbreviation());
-	JsonConverter::setString(obj, "isbn", book.isbn());
+	JsonConverter::setString(obj, "id", ref.id());
+	JsonConverter::setString(obj, "code", ref.code());
+	JsonConverter::setString(obj, "name", ref.name());
+	JsonConverter::setString(obj, "abbreviation", ref.abbreviation());
+	JsonConverter::setString(obj, "isbn", ref.isbn());
 
 	return obj;
 }

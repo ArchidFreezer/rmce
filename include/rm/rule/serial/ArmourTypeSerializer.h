@@ -23,10 +23,10 @@ public:
 	/**
 	 * @brief Serialize a ArmourTypeData object to a JSON value
 	 *
-	 * @param armourtype Reference to the ArmourTypeData object to serialize
+	 * @param ref Reference to the ArmourTypeData object to serialize
 	 * @return json::value containing the serialized ArmourTypeData object
 	 */
-	json::value serializeObject(const ArmourTypeData& armourtype) const override;
+	json::value serializeObject(const ArmourTypeData& ref) const override;
 
 	/**
 	 * @brief Deserialize a ArmourTypeData object from a JSON value
