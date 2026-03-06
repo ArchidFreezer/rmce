@@ -256,7 +256,7 @@ const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) con
 	ref.setCriticalTableType(CriticalSizeTableType::fromString(critical_table_type_str).value());
 
 	if (jsonObj.contains("critical-modifiers"))
-		ref.setCriticalModifiers(JsonConverter::getEnumArray<CriticalModifierType::Type>(jsonObj, "critical-modifiers"));
+		ref.setCriticalModifiers(JsonConverter::getEnumSet<CriticalModifierType::Type>(jsonObj, "critical-modifiers"));
 
 	{
 		int min = JsonConverter::getNestedInt(jsonObj, "encounter-range/min", 0);

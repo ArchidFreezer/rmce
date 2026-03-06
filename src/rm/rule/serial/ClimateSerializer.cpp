@@ -29,7 +29,7 @@ const ClimateData& ClimateSerializer::deserializeObject(json::object& jsonObj) c
 	if (temperature)
 		ref.setTemperature(temperature.value());
 
-	std::set<HabitatType::Precipitation> precipitations = JsonConverter::getEnumArray<HabitatType::Precipitation>(jsonObj, "precipitations");
+	std::set<HabitatType::Precipitation> precipitations = JsonConverter::getEnumSet<HabitatType::Precipitation>(jsonObj, "precipitations");
 	if (!precipitations.empty())
 		ref.setPrecipitations(precipitations);
 

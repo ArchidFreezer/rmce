@@ -724,7 +724,7 @@ public:
 	 * @return A set containing the enum values retrieved from the JSON array. Each string in the JSON array will be converted to its corresponding enum value using a hypothetical `fromString` function.
 	 */
 	template<typename EnumType>
-	static std::set<EnumType> getEnumArray(const json::object& obj, const std::string& key);
+	static std::set<EnumType> getEnumSet(const json::object& obj, const std::string& key);
 
 	/**
 	 * @brief Retrieves a map of strings from a JSON object using the specified key.
@@ -1099,7 +1099,7 @@ void JsonConverter::setEnumArray(json::object& obj, const std::string& key, cons
 }
 
 template<typename EnumType>
-std::set<EnumType> JsonConverter::getEnumArray(const json::object& obj, const std::string& key) {
+std::set<EnumType> JsonConverter::getEnumSet(const json::object& obj, const std::string& key) {
 	std::set<EnumType> result;
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {
