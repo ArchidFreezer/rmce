@@ -1081,9 +1081,63 @@ public:
 	template<game_rule_data_object GameRuleData, typename Primitive>
 	static void setDataObjectPrimitiveMap(json::object& obj, const std::string& key, const std::map<const GameRuleData*, Primitive>& map);
 
+	/**
+	 * @brief Retrieves a map of SubcategoriedSkillData pointers to primitive values from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array associated with the given key and converts it into a map where the keys are pointers to SubcategoriedSkillData objects and the values are of a primitive type specified by the template parameter
+	 * Primitive. Each element in the JSON array is expected to be an object with an "id" field that represents the ID of a skill, an optional "subcategory" field that represents the subcategory of the skill, and a "value" field that
+	 * represents the primitive value associated with that skill. The function uses the provided PersistentObjectManager to look up each skill data object by its ID and subcategory when constructing the resulting map.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "skillLevels": [
+	 *         { "id": "SKILL_SWORDSMANSHIP", "subcategory": "SUBCATEGORY_MELEE", "value": 5 },
+	 *         { "id": "SKILL_ARCHERY", "value": 3 }
+	 *     ]
+	 * }
+	 * @endcode
+	 * You can retrieve the map of skills to their levels using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::map<const SubcategoriedSkillData*, int> skillLevelMap = JsonConverter::getSkillPrimitiveMap<int>(obj, "skillLevels", manager);
+	 * // skillLevelMap would contain entries mapping SKILL_SWORDSMANSHIP with SUBCATEGORY_MELEE to 5 and SKILL_ARCHERY with no subcategory to 3 if those skills exist in the manager
+	 * @endcode
+	 *
+	 * @tparam Primitive The type of the primitive values used as values in the resulting map (e.g., int, float, double, bool).
+	 * @param obj The JSON object to retrieve the skill primitive map from.
+	 * @param key The key associated with the skill primitive array in the JSON object.
+	 * @param manager A PersistentObjectManager used to look up skill data objects based on their IDs and subcategories when constructing the map.
+	 * @return A map where each key is a pointer to a SubcategoriedSkillData object and each value is a primitive value associated with that skill, constructed from the corresponding entries in the JSON object associated with the specified key.
+	 */
 	template<typename Primitive>
 	static std::map<const SubcategoriedSkillData*, Primitive> getSkillPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
 
+	/**
+	 * @brief Sets an array of SubcategoriedSkillData pointers mapped to primitive values in a JSON object with the specified key.
+	 *
+	 * This function takes a map where the keys are pointers to SubcategoriedSkillData objects and the values are of a primitive type specified by the template parameter Primitive. It converts this map into a JSON array, where each entry
+	 * is represented as an object with an "id" field corresponding to the ID of the skill, an optional "subcategory" field corresponding to the subcategory of the skill, and a "value" field corresponding to the primitive value. The
+	 * resulting JSON array is stored under the specified key in the JSON object.
+	 *
+	 * For example, if you have a map of skills to their levels:
+	 * @code
+	 * std::map<const SubcategoriedSkillData*, int> skillLevelMap = {
+	 *     {skillData1, 5},
+	 *     {skillData2, 3}
+	 * };
+	 * @endcode
+	 * You can convert this map into a JSON array using this method:
+	 * @code
+	 * JsonConverter::setSkillPrimitiveMap<int>(obj, "skillLevels", skillLevelMap);
+	 * // The JSON object would now contain an array under "skillLevels" with objects representing each skill and its level
+	 * @endcode
+	 *
+	 * @tparam Primitive The type of the primitive values used as values in the input map (e.g., int, float, double, bool).
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the skill primitive array in the JSON object.
+	 * @param map A map where each key is a pointer to a SubcategoriedSkillData object and each value is a primitive value to be converted into an object in the JSON array.
+	 */
 	template<typename Primitive>
 	static void setSkillPrimitiveMap(json::object& obj, const std::string& key, const std::map<const SubcategoriedSkillData*, Primitive>& map);
 };
