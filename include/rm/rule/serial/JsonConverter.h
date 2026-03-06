@@ -1438,9 +1438,65 @@ public:
 	template<game_rule_data_object GameRuleData, typename EnumType>
 	static void setDataChoiceEnumMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<GameRuleData>, EnumType>& map);
 
+	/**
+	 * @brief Retrieves a map of GameRuleData objects to enum values from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array associated with the given key and converts it into a map where the keys are pointers to GameRuleData objects and the values are of an enum type specified by the template parameter EnumType. Each
+	 * element in the JSON array is expected to be an object with an "id" field that represents the ID of a data object, and a "value" field that represents the enum value associated with that data object as a string. The function uses
+	 * the provided PersistentObjectManager to look up each data object by its ID, and converts the string representation of the enum value to its corresponding enum value using a hypothetical `fromString` function when constructing the
+	 * resulting map.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "itemCategories": [
+	 *         { "id": "ITEM_SWORD", "value": "EnumWeapon" },
+	 *         { "id": "ITEM_SHIELD", "value": "EnumArmour" }
+	 *     ]
+	 * }
+	 * @endcode
+	 * You can retrieve the map of items to their categories using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::map<const ItemData*, ItemCategory> itemCategoryMap = JsonConverter::getDataEnumMap<ItemData, ItemCategory>(obj, "itemCategories", manager);
+	 * // itemCategoryMap would contain entries mapping ITEM_SWORD to Weapon and ITEM_SHIELD to Armor if those items exist in the manager and the enum values are valid
+	 * @endcode
+	 *
+	 * @tparam GameRuleData The type of the data objects used as keys in the resulting map. This type must satisfy the game_rule_data_object concept.
+	 * @tparam EnumType The type of the enum values used as values in the resulting map.
+	 * @param obj The JSON object to retrieve the data enum map from.
+	 * @param key The key associated with the data enum array in the JSON object.
+	 * @param manager A PersistentObjectManager used to look up data objects based on their IDs when constructing the map.
+	 */
 	template<game_rule_data_object GameRuleData, typename EnumType>
 	static std::map<const GameRuleData*, EnumType> getDataEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
 
+	/**
+	 * @brief Sets an array of GameRuleData objects mapped to enum values in a JSON object with the specified key.
+	 *
+	 * This function takes a map where the keys are pointers to GameRuleData objects and the values are of an enum type specified by the template parameter EnumType. It converts this map into a JSON array, where each entry is represented
+	 * as an object with an "id" field corresponding to the ID of the data object and a "value" field corresponding to the string representation of the enum value. The resulting JSON array is stored under the specified key in the JSON
+	 * object.
+	 *
+	 * For example, if you have a map of items to their categories:
+	 * @code
+	 * std::map<const ItemData*, ItemEnum> itemCategoryMap = {
+	 *     {itemData1, EnumWeapon},
+	 *     {itemData2, EnumArmour}
+	 * };
+	 * @endcode
+	 * You can convert this map into a JSON array using this method:
+	 * @code
+	 * JsonConverter::setDataEnumMap<ItemData, ItemCategory>(obj, "itemCategories", itemCategoryMap);
+	 * // The JSON object would now contain an array under "itemCategories" with objects representing each item and its category as a string
+	 * @endcode
+	 *
+	 * @tparam GameRuleData The type of the data objects used as keys in the input map. This type must satisfy the game_rule_data_object concept.
+	 * @tparam EnumType The type of the enum values used as values in the input map.
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the data enum array in the JSON object.
+	 * @param map A map where each key is a pointer to a data object of type GameRuleData and each value is an enum value to be converted into a string in the JSON array.
+	 */
 	template<game_rule_data_object GameRuleData, typename EnumType>
 	static void setDataEnumMap(json::object& obj, const std::string& key, const std::map<const GameRuleData*, EnumType>& map);
 };
