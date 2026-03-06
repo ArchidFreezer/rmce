@@ -1360,6 +1360,82 @@ public:
 	 */
 	template<typename EnumType>
 	static void setSkillChoiceEnumMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType>& map);
+
+	/**
+	 * @brief Retrieves a map of GameRuleDataChoice objects to enum values from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array associated with the given key and converts it into a map where the keys are GameRuleDataChoice objects and the values are of an enum type specified by the template parameter EnumType. Each
+	 * element in the JSON array is expected to be an object with fields that correspond to the properties of a GameRuleDataChoice, as well as a "value" field that represents the enum value associated with that choice as a string. The
+	 * function uses the provided PersistentObjectManager to look up any necessary data objects when constructing the GameRuleDataChoice objects, and converts the string representation of the enum value to its corresponding enum value
+	 * using a hypothetical `fromString` function when constructing the resulting map.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "spell-list-choices": [
+	 *         {
+	 *             "num-choices": 1,
+	 *             "value": "Everyman"
+	 *             "options": [
+	 *                 "SPELLLIST_ANIMAL_MASTERY",
+	 *                 "SPELLLIST_HERB_MASTERY",
+	 *                 "SPELLLIST_PLANT_MASTERY"
+	 *             ],
+	 *         },
+	 *         {
+	 *             "num-choices": 1,
+	 *             "value": "Occupational"
+	 *             "options": [
+	 *                 "SPELLLIST_FIRE_MASTERY",
+	 *                 "SPELLLIST_ICE_MASTERY"
+	 *             ],
+	 *         }
+	 *     ]
+	 * }
+	 * @endcode
+	 * You can retrieve the map of choices to their categories using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::map<GameRuleDataChoice<ItemData>, SpellCategory> choiceCategoryMap = JsonConverter::getDataChoiceEnumMap<SpellCategory>(obj, "spell-list-choices", manager);
+	 * // choiceCategoryMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding SpellCategory enum values if those choices exist in the manager and the enum values are valid
+	 * @endcode
+	 *
+	 * @tparam EnumType The type of the enum values used as values in the resulting map.
+	 * @param obj The JSON object to retrieve the skill choice enum map from.
+	 * @param key The key associated with the skill choice enum array in the JSON object.
+	 * @param manager A PersistentObject Manager used to look up any necessary data objects based on their IDs when constructing the GameRuleDataChoice objects for the keys in the resulting map.
+	 * @return A map where each key is a GameRuleDataChoice object constructed from the corresponding entries in the JSON array associated with the specified key, and each value is an enum value associated with that choice constructed from the "value" field in the JSON object.
+	 */
+	template<game_rule_data_object GameRuleData, typename EnumType>
+	static std::map<GameRuleDataChoice<GameRuleData>, EnumType> getDataChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+
+	/**
+	 * @brief Sets an array of GameRuleDataChoice objects mapped to enum values in a JSON object with the specified key.
+	 *
+	 * This function takes a map where the keys are GameRuleDataChoice objects and the values are of an enum type specified by the template parameter EnumType. It converts this map into a JSON array, where each entry is represented as
+	 * an object with fields corresponding to the properties of the GameRuleDataChoice, as well as a "value" field corresponding to the string representation of the enum value. The resulting JSON array is stored under the specified
+	 * key in the JSON object.
+	 *
+	 * For example, if you have a map of choices to their categories:
+	 * @code
+	 * std::map<GameRuleDataChoice<ItemData>, SpellCategory> choiceCategoryMap = {
+	 *     {GameRuleDataChoice<ItemData>{1, {"ITEM_SWORD", "ITEM_SHIELD"}}, ENUM_VALUE},
+	 *     {GameRuleDataChoice<ItemData>{2, {"ITEM_POTION", "ITEM_RUNE", "ITEM_WAND"}}, ENUM_VALUE}
+	 * };
+	 * @endcode
+	 * You can convert this map into a JSON array using this method:
+	 * @code
+	 * JsonConverter::setDataChoiceEnumMap<SpellCategory>(obj, "spell-list-choices", choiceCategoryMap);
+	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated SpellCategory as a string
+	 * @endcode
+	 *
+	 * @tparam EnumType The type of the enum values used as values in the input map.
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the skill choice enum array in the JSON object.
+	 * @param map A map where each key is a GameRuleDataChoice object and each value is an enum value to be converted into a string in the JSON array.
+	 */
+	template<game_rule_data_object GameRuleData, typename EnumType>
+	static void setDataChoiceEnumMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<GameRuleData>, EnumType>& map);
 };
 
 // Template implementations
@@ -1733,6 +1809,60 @@ void JsonConverter::setSkillChoiceEnumMap(json::object& obj, const std::string& 
 				skill_obj["subcategory"] = pair.second->subcategory().value();
 			}
 			option_array.push_back(skill_obj);
+		}
+		choice_obj["type"] = toString(enum_value);
+		choice_obj["options"] = option_array;
+		arr.push_back(choice_obj);
+	}
+	if (arr.size())
+		obj[key] = arr;
+}
+
+template<game_rule_data_object GameRuleData, typename EnumType>
+std::map<GameRuleDataChoice<GameRuleData>, EnumType> JsonConverter::getDataChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+	std::map<GameRuleDataChoice<GameRuleData>, EnumType> result;
+	auto it = obj.find(key);
+	if (it != obj.end() && it->value().is_array()) {
+		for (const auto& item : it->value().as_array()) {
+			if (item.is_object()) {
+				// Grab the choice object and create a GameRuleDataChoice from it
+				json::object choice_obj = item.as_object();
+				GameRuleDataChoice<GameRuleData> choice_data{};
+				choice_data.setNumChoices(getInt(choice_obj, "num-choices", 1));
+				// Loop through the options array and add each option to the GameRuleDataChoice
+				json::array option_array = getJsonArray(choice_obj, "options");
+				for (const auto& option_val : option_array) {
+					if (option_val.is_string()) {
+						const GameRuleData* data_option = &manager.get<GameRuleData>(std::string(option_val.as_string()));
+						if (data_option)
+							choice_data.addOption(*data_option);
+					}
+				}
+				// Get the enum value associated with this choice
+				EnumType enum_value{};
+				std::string enum_str = getString(choice_obj, "type");
+				fromString(enum_str, enum_value);
+				// Add the constructed GameRuleDataChoice and its associated enum value to the result map
+				result.emplace(choice_data, enum_value);
+			}
+		}
+	}
+	return result;
+}
+
+template<game_rule_data_object GameRuleData, typename EnumType>
+void JsonConverter::setDataChoiceEnumMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<GameRuleData>, EnumType>& map) {
+	json::array arr;
+	for (const auto& [choice, enum_value] : map) {
+		json::object choice_obj;
+		choice_obj["num-choices"] = choice.numChoices();
+		std::map<std::string, const GameRuleData*> sorted_options{};
+		for (const GameRuleData* option : choice.options()) {
+			sorted_options.emplace(option->id(), option);
+		}
+		json::array option_array;
+		for (const auto& pair : sorted_options) {
+			option_array.emplace_back(pair.second->id());
 		}
 		choice_obj["type"] = toString(enum_value);
 		choice_obj["options"] = option_array;
