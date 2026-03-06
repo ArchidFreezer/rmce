@@ -1056,8 +1056,8 @@ public:
 	/**
 	 * @brief Sets an array of data objects of type GameRuleData mapped to primitive values in a JSON object with the specified key.
 	 *
-	 * This function takes a map where the keys are pointers to data objects of type GameRuleData and the values are of a primitive type specified by the template parameter Primitive. It converts this map into a JSON array, where each entry is
-	 * represented as an object with an "id" field corresponding to the ID of the data object and a "value" field corresponding to the primitive value. The resulting JSON array is stored under the specified key in the JSON object.
+	 * This function takes a map where the keys are pointers to data objects of type GameRuleData and the values are of a primitive type specified by the template parameter Primitive. It converts this map into a JSON array, where each entry
+	 * is represented as an object with an "id" field corresponding to the ID of the data object and a "value" field corresponding to the primitive value. The resulting JSON array is stored under the specified key in the JSON object.
 	 *
 	 * For example, if you have a map of item data objects to their quantities:
 	 * @code
@@ -1080,6 +1080,12 @@ public:
 	 */
 	template<game_rule_data_object GameRuleData, typename Primitive>
 	static void setDataObjectPrimitiveMap(json::object& obj, const std::string& key, const std::map<const GameRuleData*, Primitive>& map);
+
+	template<typename Primitive>
+	static std::map<const SubcategoriedSkillData*, Primitive> getSkillPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+
+	template<typename Primitive>
+	static void setSkillPrimitiveMap(json::object& obj, const std::string& key, const std::map<const SubcategoriedSkillData*, Primitive>& map);
 };
 
 // Template implementations
@@ -1090,7 +1096,7 @@ void JsonConverter::setEnumArrayFromIterators(json::object& obj, const std::stri
 	for (auto it = begin; it != end; ++it) {
 		arr.push_back(json::value(toString(*it)));
 	}
-	obj[key] = arr;
+	if(arr.size()) obj[key] = arr;
 }
 
 template<typename Container>
@@ -1216,6 +1222,65 @@ void JsonConverter::setDataObjectPrimitiveMap(json::object& obj, const std::stri
 		entry_obj["id"] = id;
 		entry_obj["value"] = primitive_value;
 		arr.push_back(entry_obj);
+	}
+	if (arr.size())
+		obj[key] = arr;
+}
+
+template<typename Primitive>
+std::map<const SubcategoriedSkillData*, Primitive> JsonConverter::getSkillPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+	std::map<const SubcategoriedSkillData*, Primitive> result;
+	json::array skill_array = getJsonArray(obj, key);
+	for (const auto& skill_val : skill_array) {
+		if (!skill_val.is_object())
+			continue;
+
+		json::object skillObj = skill_val.as_object();
+		std::string id = getString(skillObj, "id");
+		std::optional<std::string> subcategory = getOptionalString(skillObj, "subcategory");
+		const SubcategoriedSkillData* skill;
+		if (subcategory)
+			skill = &manager.subcategoriedSkillData(id, subcategory.value());
+		else
+			skill = &manager.subcategoriedSkillData(id);
+
+		Primitive primitive_value{};
+		// Assuming the primitive value is stored under a key called "value" in the JSON object
+		auto value_it = skillObj.find("value");
+		if (value_it != skillObj.end()) {
+			if constexpr (std::is_same_v<Primitive, int>) {
+				primitive_value = getInt(skillObj, "value", 0);
+			} else if constexpr (std::is_same_v<Primitive, float>) {
+				primitive_value = getFloat(skillObj, "value", 0.0f);
+			} else if constexpr (std::is_same_v<Primitive, double>) {
+				primitive_value = getDouble(skillObj, "value", 0.0);
+			} else if constexpr (std::is_same_v<Primitive, bool>) {
+				primitive_value = getBool(skillObj, "value", false);
+			} else if constexpr (std::is_same_v<Primitive, std::string>) {
+				primitive_value = getString(skillObj, "value", "");
+			}
+		}
+		result.emplace(skill, primitive_value);
+	}
+	return result;
+}
+
+template<typename Primitive>
+void JsonConverter::setSkillPrimitiveMap(json::object& obj, const std::string& key, const std::map<const SubcategoriedSkillData*, Primitive>& map) {
+	json::array arr;
+	std::map<std::string, const rm::rule::SubcategoriedSkillData*> sorted_map{};
+	for (const auto& [data, primitive_value] : map) {
+		std::string key = data->skillData().id() + (data->subcategory() ? data->subcategory().value() : "");
+		sorted_map.emplace(key, data);
+	}
+	for (const auto& [key, data] : sorted_map) {
+		json::object skill_obj;
+		skill_obj["id"] = data->skillData().id();
+		if (data->subcategory()) {
+			skill_obj["subcategory"] = data->subcategory().value();
+		}
+		skill_obj["value"] = map.at(data);
+		arr.push_back(skill_obj);
 	}
 	if (arr.size())
 		obj[key] = arr;
