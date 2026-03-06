@@ -20,16 +20,16 @@ json::value CultureSerializer::serializeObject(const CultureData& ref) const {
 	JsonConverter::setSkillArray(obj, "hobby-skills", ref.hobbySkills());
 
 	// Hobby category skills
-	JsonConverter::setDataObjectArray(obj, "hobby-categories", ref.hobbySkillCategories());
+	JsonConverter::setDataSet(obj, "hobby-categories", ref.hobbySkillCategories());
 
 	// Preferred professions
-	JsonConverter::setDataObjectArray(obj, "preferred-professions", ref.preferredProfessions());
+	JsonConverter::setDataSet(obj, "preferred-professions", ref.preferredProfessions());
 
 	// Restricted professions
-	JsonConverter::setDataObjectArray(obj, "restricted-professions", ref.restrictedProfessions());
+	JsonConverter::setDataSet(obj, "restricted-professions", ref.restrictedProfessions());
 
 	// Training package cost modifiers
-	JsonConverter::setDataObjectPrimitiveMap(obj, "training-package-modifiers", ref.trainingPackageModifiers());
+	JsonConverter::setDataPrimitiveMap(obj, "training-package-modifiers", ref.trainingPackageModifiers());
 
 	return obj;
 }
@@ -55,16 +55,16 @@ const CultureData& CultureSerializer::deserializeObject(json::object& jsonObj) c
 	ref.setHobbySkills(JsonConverter::getSkillSet(jsonObj, "hobby-skills", manager_));
 
 	// Hobby category skills
-	ref.setHobbySkillCategories(JsonConverter::getDataObjectSet<SkillCategoryData>(jsonObj, "hobby-categories", manager_));
+	ref.setHobbySkillCategories(JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "hobby-categories", manager_));
 
 	// Preferred professions
-	ref.setPreferredProfessions(JsonConverter::getDataObjectSet<ProfessionData>(jsonObj, "preferred-professions", manager_));
+	ref.setPreferredProfessions(JsonConverter::getDataSet<ProfessionData>(jsonObj, "preferred-professions", manager_));
 
 	// Restricted professions
-	ref.setRestrictedProfessions(JsonConverter::getDataObjectSet<ProfessionData>(jsonObj, "restricted-professions", manager_));
+	ref.setRestrictedProfessions(JsonConverter::getDataSet<ProfessionData>(jsonObj, "restricted-professions", manager_));
 
 	// Training package cost modifiers
-	ref.setTrainingPackageModifiers(JsonConverter::getDataObjectPrimitiveMap<TrainingPackageData, float>(jsonObj, "training-package-modifiers", manager_));
+	ref.setTrainingPackageModifiers(JsonConverter::getDataPrimitiveMap<TrainingPackageData, float>(jsonObj, "training-package-modifiers", manager_));
 
 	return ref;
 }

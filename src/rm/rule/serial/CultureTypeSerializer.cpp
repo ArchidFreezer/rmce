@@ -20,11 +20,11 @@ json::value CultureTypeSerializer::serializeObject(const CultureTypeData& ref) c
 	if (ref.spellListRanks())
 		JsonConverter::setInt(obj, "spell-list-ranks", ref.spellListRanks());
 	JsonConverter::setEnumArray(obj, "preferred-armours", ref.preferredArmour());
-	JsonConverter::setDataObjectArray(obj, "preferred-weapons", ref.preferredWeapons());
+	JsonConverter::setDataSet(obj, "preferred-weapons", ref.preferredWeapons());
 	JsonConverter::setSkillPrimitiveMap(obj, "skill-ranks", ref.skillRanks());
-	JsonConverter::setDataObjectPrimitiveMap(obj, "skill-category-ranks", ref.skillCategoryRanks());
-	JsonConverter::setDataObjectPrimitiveMap(obj, "skill-category-skill-ranks", ref.skillCategorySkillRanks());
-	JsonConverter::setDataObjectArray(obj, "required-climates", ref.requiredClimates());
+	JsonConverter::setDataPrimitiveMap(obj, "skill-category-ranks", ref.skillCategoryRanks());
+	JsonConverter::setDataPrimitiveMap(obj, "skill-category-skill-ranks", ref.skillCategorySkillRanks());
+	JsonConverter::setDataSet(obj, "required-climates", ref.requiredClimates());
 	JsonConverter::setEnumArray(obj, "required-features", ref.requiredFeatures());
 	JsonConverter::setEnumArray(obj, "required-terrains", ref.requiredTerrains());
 	JsonConverter::setEnumArray(obj, "required-vegetations", ref.requiredVegetations());
@@ -50,11 +50,11 @@ const CultureTypeData& CultureTypeSerializer::deserializeObject(json::object& js
 	if (jsonObj.find("spell-list-ranks") != jsonObj.end())
 		ref.setSpellListRanks(JsonConverter::getInt(jsonObj, "spell-list-ranks", 0));
 	ref.setPreferredArmours(JsonConverter::getEnumSet<ArmourType::Type>(jsonObj, "preferred-armours"));
-	ref.setPreferredWeapons(JsonConverter::getDataObjectSet<WeaponTypeData>(jsonObj, "preferred-weapons", manager_));
+	ref.setPreferredWeapons(JsonConverter::getDataSet<WeaponTypeData>(jsonObj, "preferred-weapons", manager_));
 	ref.setSkillRanks(JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skill-ranks", manager_));
-	ref.setSkillCategoryRanks(JsonConverter::getDataObjectPrimitiveMap<SkillCategoryData, int>(jsonObj, "skill-category-ranks", manager_));
-	ref.setSkillCategorySkillRanks(JsonConverter::getDataObjectPrimitiveMap<SkillCategoryData, int>(jsonObj, "skill-category-skill-ranks", manager_));
-	ref.setRequiredClimates(JsonConverter::getDataObjectSet<ClimateData>(jsonObj, "required-climates", manager_));
+	ref.setSkillCategoryRanks(JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "skill-category-ranks", manager_));
+	ref.setSkillCategorySkillRanks(JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "skill-category-skill-ranks", manager_));
+	ref.setRequiredClimates(JsonConverter::getDataSet<ClimateData>(jsonObj, "required-climates", manager_));
 	ref.setRequiredFeatures(JsonConverter::getEnumSet<EnvironmentType::Feature>(jsonObj, "required-features"));
 	ref.setRequiredTerrains(JsonConverter::getEnumSet<EnvironmentType::Terrain>(jsonObj, "required-terrains"));
 	ref.setRequiredVegetations(JsonConverter::getEnumSet<EnvironmentType::Vegetation>(jsonObj, "required-vegetations"));
