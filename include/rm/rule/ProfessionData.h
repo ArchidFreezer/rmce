@@ -511,7 +511,7 @@ namespace rm::rule {
 		 * @brief Gets a reference to the map of skill development types indexed by subcategorized skill data.
 		 * @return A reference to the map containing skill development types.
 		 */
-		std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type>& skillDevelopmentTypes() { return skill_development_types_; }
+		const std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type>& skillDevelopmentTypes() const { return skill_development_types_; }
 
 		/**
 		 * @brief Get the development type for a skill
