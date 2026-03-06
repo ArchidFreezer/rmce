@@ -1404,7 +1404,8 @@ public:
 	 * @param obj The JSON object to retrieve the skill choice enum map from.
 	 * @param key The key associated with the skill choice enum array in the JSON object.
 	 * @param manager A PersistentObject Manager used to look up any necessary data objects based on their IDs when constructing the GameRuleDataChoice objects for the keys in the resulting map.
-	 * @return A map where each key is a GameRuleDataChoice object constructed from the corresponding entries in the JSON array associated with the specified key, and each value is an enum value associated with that choice constructed from the "value" field in the JSON object.
+	 * @return A map where each key is a GameRuleDataChoice object constructed from the corresponding entries in the JSON array associated with the specified key, and each value is an enum value associated with that choice constructed from
+	 * the "value" field in the JSON object.
 	 */
 	template<game_rule_data_object GameRuleData, typename EnumType>
 	static std::map<GameRuleDataChoice<GameRuleData>, EnumType> getDataChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
@@ -1436,6 +1437,12 @@ public:
 	 */
 	template<game_rule_data_object GameRuleData, typename EnumType>
 	static void setDataChoiceEnumMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<GameRuleData>, EnumType>& map);
+
+	template<game_rule_data_object GameRuleData, typename EnumType>
+	static std::map<const GameRuleData*, EnumType> getDataEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+
+	template<game_rule_data_object GameRuleData, typename EnumType>
+	static void setDataEnumMap(json::object& obj, const std::string& key, const std::map<const GameRuleData*, EnumType>& map);
 };
 
 // Template implementations
@@ -1867,6 +1874,43 @@ void JsonConverter::setDataChoiceEnumMap(json::object& obj, const std::string& k
 		choice_obj["type"] = toString(enum_value);
 		choice_obj["options"] = option_array;
 		arr.push_back(choice_obj);
+	}
+	if (arr.size())
+		obj[key] = arr;
+}
+
+template<game_rule_data_object GameRuleData, typename EnumType>
+std::map<const GameRuleData*, EnumType> JsonConverter::getDataEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+	std::map<const GameRuleData*, EnumType> result;
+	json::array skill_array = getJsonArray(obj, key);
+	for (const auto& skill_val : skill_array) {
+		if (!skill_val.is_object())
+			continue;
+
+		json::object skill_obj = skill_val.as_object();
+		std::string id = getString(skill_obj, "id");
+
+		EnumType enum_value{};
+		std::string enum_str = getString(skill_obj, "value");
+		fromString(enum_str, enum_value);
+		result.emplace(&manager.get<GameRuleData>(id), enum_value);
+	}
+	return result;
+}
+
+template<game_rule_data_object GameRuleData, typename EnumType>
+void JsonConverter::setDataEnumMap(json::object& obj, const std::string& key, const std::map<const GameRuleData*, EnumType>& map) {
+	json::array arr;
+	std::map<std::string, EnumType> sorted_map{};
+	for (const auto& [data, enum_value] : map) {
+		std::string key = data->id();
+		sorted_map.emplace(key, enum_value);
+	}
+	for (const auto& [key, enum_value] : sorted_map) {
+		json::object skill_obj;
+		skill_obj["id"] = key;
+		skill_obj["value"] = toString(enum_value);
+		arr.push_back(skill_obj);
 	}
 	if (arr.size())
 		obj[key] = arr;
