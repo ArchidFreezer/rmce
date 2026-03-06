@@ -175,7 +175,7 @@ namespace rm::rule {
 		 * @brief Get the realms that the profession draws power from
 		 * @return td::set<RealmType::Type> power realms
 		 */
-		const std::set<RealmType::Type> realms() { return realms_; }
+		const std::set<RealmType::Type> realms() const { return realms_; }
 
 		/**
 		 * @brief Add stat that applies stat bonus to the profession
