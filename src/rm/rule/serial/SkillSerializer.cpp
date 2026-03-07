@@ -17,7 +17,7 @@ json::value SkillSerializer::serializeObject(const SkillData& ref) const {
 	JsonConverter::setBool(obj, "is-restricted", ref.restricted());
 	JsonConverter::setBool(obj, "can-specialise", ref.canSpecialise());
 	JsonConverter::setBool(obj, "mandatory-subcategory", ref.mandatorySubcategory());
-	JsonConverter::setStringArray(obj, "subcategories", ref.subcategories());
+	JsonConverter::setStringSet(obj, "subcategories", ref.subcategories());
 	JsonConverter::setEnumSet(obj, "stats", ref.stats());
 	JsonConverter::setFloat(obj, "exhaustion", ref.exhaustionCost());
 	JsonConverter::setFloat(obj, "distance-multiplier", ref.distanceMultiplier());

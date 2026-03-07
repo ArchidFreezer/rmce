@@ -803,7 +803,7 @@ public:
 	 * @param values The vector of strings to store as an array in the JSON object.
 	 */
 	template<typename Container>
-	static void setStringArray(json::object& obj, const std::string& key, const Container& values);
+	static void setStringSet(json::object& obj, const std::string& key, const Container& values);
 	/**
 	 * @brief Sets an integer array value in a JSON object with the specified key.
 	 * @param obj The JSON object to modify.
@@ -1505,8 +1505,8 @@ public:
 	/**
 	 * @brief Retrieves a map of Enumerated objects to primitive values from a JSON object using the specified key.
 	 *
-	 * This function retrieves a JSON array associated with the given key and converts it into a map where the keys are pointers to Enumerated objects and the values are of a primitive type specified by the template parameter Primitive. Each
-	 * element in the JSON array is expected to be an object with an "id" field that represents the ID of an enumeration, and a "value" field that represents the primitive value associated with that enumeration. The function uses the
+	 * This function retrieves a JSON array associated with the given key and converts it into a map where the keys are pointers to Enumerated objects and the values are of a primitive type specified by the template parameter Primitive.
+	 * Each element in the JSON array is expected to be an object with an "id" field that represents the ID of an enumeration, and a "value" field that represents the primitive value associated with that enumeration. The function uses the
 	 * theoretical toString to look up each enumeration by its string when constructing the resulting map.
 	 *
 	 * For example, if you have a JSON object like:
@@ -1590,6 +1590,12 @@ public:
 	 * @return A set of strings in the JSON array.
 	 */
 	static std::set<std::string> getStringSet(const json::object& obj, const std::string& key);
+
+	template<typename Primitive>
+	static std::map<std::string, Primitive> getStringPrimitiveMap(const json::object& obj, const std::string& key, const std::string& string_key = "id", const std::string& primitive_key = "value");
+
+	template<typename Primitive>
+	static void setStringPrimitiveMap(json::object& obj, const std::string& key, const std::map<std::string, Primitive>& map, const std::string& string_key = "id", const std::string& primitive_key = "value");
 };
 
 // Template implementations
@@ -2116,10 +2122,56 @@ void JsonConverter::setEnumPrimitiveMap(json::object& obj, const std::string& ke
 }
 
 template<typename Container>
-void JsonConverter::setStringArray(json::object& obj, const std::string& key, const Container& values) {
+void JsonConverter::setStringSet(json::object& obj, const std::string& key, const Container& values) {
 	json::array arr;
 	for (const auto& value : values) {
 		arr.push_back(json::value(value));
+	}
+	if (arr.size())
+		obj[key] = arr;
+}
+
+template<typename Primitive>
+std::map<std::string, Primitive> JsonConverter::getStringPrimitiveMap(const json::object& obj, const std::string& key, const std::string& string_key, const std::string& primitive_key) {
+	std::map<std::string, Primitive> result;
+	auto it = obj.find(key);
+	if (it != obj.end() && it->value().is_array()) {
+		for (const auto& item : it->value().as_array()) {
+			if (item.is_object()) {
+				json::object entry_obj = item.as_object();
+				std::string str_key = getString(entry_obj, string_key);
+				Primitive primitive_value{};
+				// Assuming the primitive value is stored under a key called "value" in the JSON object
+				auto value_it = entry_obj.find(primitive_key);
+				if (value_it != entry_obj.end()) {
+					if constexpr (std::is_same_v<Primitive, int>) {
+						primitive_value = getInt(entry_obj, primitive_key, 0);
+					} else if constexpr (std::is_same_v<Primitive, float>) {
+						primitive_value = getFloat(entry_obj, primitive_key, 0.0f);
+					} else if constexpr (std::is_same_v<Primitive, double>) {
+						primitive_value = getDouble(entry_obj, primitive_key, 0.0);
+					} else if constexpr (std::is_same_v<Primitive, bool>) {
+						primitive_value = getBool(entry_obj, primitive_key, false);
+					} else if constexpr (std::is_same_v<Primitive, std::string>) {
+						primitive_value = getString(entry_obj, primitive_key, "");
+					}
+				}
+				result.emplace(str_key, primitive_value);
+			}
+		}
+	}
+	return result;
+}
+
+template<typename Primitive>
+void JsonConverter::setStringPrimitiveMap(json::object& obj, const std::string& key, const std::map<std::string, Primitive>& map, const std::string& string_key, const std::string& primitive_key) {
+	json::array arr;
+	std::map<std::string, Primitive> sorted_map(map); // Sort the map by key
+	for (const auto& [str_key, primitive_value] : sorted_map) {
+		json::object entry_obj;
+		entry_obj[string_key] = str_key;
+		entry_obj[primitive_key] = primitive_value;
+		arr.push_back(entry_obj);
 	}
 	if (arr.size())
 		obj[key] = arr;
