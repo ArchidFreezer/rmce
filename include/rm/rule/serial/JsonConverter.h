@@ -1499,6 +1499,12 @@ public:
 	 */
 	template<game_rule_data_object GameRuleData, typename EnumType>
 	static void setDataEnumMap(json::object& obj, const std::string& key, const std::map<const GameRuleData*, EnumType>& map);
+
+	template<typename EnumType, typename Primitive>
+	static std::map<EnumType, Primitive> getEnumPrimitiveMap(const json::object& obj, const std::string& key);
+
+	template<typename EnumType, typename Primitive>
+	static void setEnumPrimitiveMap(json::object& obj, const std::string& key, const std::map<EnumType, Primitive>& map);
 };
 
 // Template implementations
@@ -1967,6 +1973,58 @@ void JsonConverter::setDataEnumMap(json::object& obj, const std::string& key, co
 		skill_obj["id"] = key;
 		skill_obj["value"] = toString(enum_value);
 		arr.push_back(skill_obj);
+	}
+	if (arr.size())
+		obj[key] = arr;
+}
+
+template<typename EnumType, typename Primitive>
+std::map<EnumType, Primitive> JsonConverter::getEnumPrimitiveMap(const json::object& obj, const std::string& key) {
+	std::map<EnumType, Primitive> result;
+	auto it = obj.find(key);
+	if (it != obj.end() && it->value().is_array()) {
+		for (const auto& item : it->value().as_array()) {
+			if (item.is_object()) {
+				json::object entry_obj = item.as_object();
+				std::string enum_str = getString(entry_obj, "id");
+				EnumType enum_value{};
+				fromString(enum_str, enum_value);
+				Primitive primitive_value{};
+				// Assuming the primitive value is stored under a key called "value" in the JSON object
+				auto value_it = entry_obj.find("value");
+				if (value_it != entry_obj.end()) {
+					if constexpr (std::is_same_v<Primitive, int>) {
+						primitive_value = getInt(entry_obj, "value", 0);
+					} else if constexpr (std::is_same_v<Primitive, float>) {
+						primitive_value = getFloat(entry_obj, "value", 0.0f);
+					} else if constexpr (std::is_same_v<Primitive, double>) {
+						primitive_value = getDouble(entry_obj, "value", 0.0);
+					} else if constexpr (std::is_same_v<Primitive, bool>) {
+						primitive_value = getBool(entry_obj, "value", false);
+					} else if constexpr (std::is_same_v<Primitive, std::string>) {
+						primitive_value = getString(entry_obj, "value", "");
+					}
+				}
+				result.emplace(enum_value, primitive_value);
+			}
+		}
+	}
+	return result;
+}
+
+template<typename EnumType, typename Primitive>
+void JsonConverter::setEnumPrimitiveMap(json::object& obj, const std::string& key, const std::map<EnumType, Primitive>& map) {
+	json::array arr;
+	std::map<std::string, Primitive> sorted_map{};
+	for (const auto& [enum_value, primitive_value] : map) {
+		std::string key = toString(enum_value);
+		sorted_map.emplace(key, primitive_value);
+	}
+	for (const auto& [key, primitive_value] : sorted_map) {
+		json::object entry_obj;
+		entry_obj["id"] = key;
+		entry_obj["value"] = primitive_value;
+		arr.push_back(entry_obj);
 	}
 	if (arr.size())
 		obj[key] = arr;
