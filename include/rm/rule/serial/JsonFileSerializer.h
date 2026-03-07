@@ -33,54 +33,54 @@ public:
 	 *
 	 * @param serialiser Reference to a PersistentObjectSerializer that will be used to deserialize individual objects to and from the JSON file. This should be a serializer that is compatible with the DataType template parameter.
 	 * @param root_key The key in the JSON file that contains the array of objects to deserialize. If the JSON file contains a single object instead of an array, this parameter can be set to an empty string or any value that does not match
-	 * @param file_path Path to the JSON file that contains the data to load. This file should contain a JSON object with a "books" array or a single object that can be deserialized into a DataType object.
+	 * @param file_path Path to the JSON file that contains the data to load. This file should contain a JSON object with a "root_key" array or a single object that can be deserialized into a DataType object.
 	 * a key in the JSON file.
 	 */
 	JsonFileSerializer(PersistentObjectSerializer<DataType>& serialiser, const std::string& root_key, const std::string& file_path) : serializer_{&serialiser}, root_key_{root_key}, file_path_{file_path} {
 	}
 
 	/**
-	 * @brief Load the book data from the JSON file and add it to the object manager
+	 * @brief Load the data from the JSON file and add it to the object manager
 	 *
 	 * @param is Input stream to read from
 	 */
 	void load(std::istream& is);
 
 	/**
-	 * @brief Load the book data from the JSON file and add it to the object manager
+	 * @brief Load the data from the JSON file and add it to the object manager
 	 *
 	 * @param filename Path to the JSON file to read from
 	 */
 	void load(const std::string& filename);
 
 	/**
-	 * @brief Load the book data from the JSON file and add it to the object manager
+	 * @brief Load the data from the JSON file and add it to the object manager
 	 */
 	void load();
 
 	/**
-	 * @brief Save the book data from the object manager to a JSON file
+	 * @brief Save the data from the object manager to a JSON file
 	 *
 	 * @param os Output stream to write to
 	 */
 	void save(std::ostream& os) const;
 
 	/**
-	 * @brief Save the book data from the object manager to a JSON file
+	 * @brief Save the data from the object manager to a JSON file
 	 *
 	 * @param filename Path to the JSON file to write to
 	 */
 	void save(const std::string& filename) const;
 
 	/**
-	 * @brief Save the book data from the object manager to a JSON file
+	 * @brief Save the data from the object manager to a JSON file
 	 */
 	void save() const;
 
 	/**
-	 * @brief Get the JSON representation of the book data from the object manager
+	 * @brief Get the JSON representation of the data from the object manager
 	 *
-	 * @return A JSON value representing the book data, with an array of objects under the specified root key.
+	 * @return A JSON value representing the data, with an array of objects under the specified root key.
 	 */
 	json::value json() const;
 
