@@ -318,11 +318,11 @@ public:
 		 * @code
 		 * // With std::vector
 		 * std::vector<MyEnum> enumVec = {MyEnum::Value1, MyEnum::Value2, MyEnum::Value3};
-		 * NestedBuilder::setEnumArray(obj, "enums", enumVec);
+		 * NestedBuilder::setEnumSet(obj, "enums", enumVec);
 		 *
 		 * // With std::list
 		 * std::list<MyEnum> enumList = {MyEnum::Value1, MyEnum::Value2};
-		 * NestedBuilder::setEnumArray(obj, "enums", enumList);
+		 * NestedBuilder::setEnumSet(obj, "enums", enumList);
 		 * @endcode
 		 * @tparam Container The type of the iterable container.
 		 * @param key The key under which to store the array in the JSON object.
@@ -830,14 +830,14 @@ public:
 	 * JsonConverter::setEnumArrayFromIterators(obj, "enums", std::begin(enumArray), std::end(enumArray));
 	 * @endcode
 	 *
-	 * For C++ containers the setEnumArray function is more convenient, but this function allows for more flexibility with different types of containers that may not be directly supported by setEnumArray.
+	 * For C++ containers the setEnumSet function is more convenient, but this function allows for more flexibility with different types of containers that may not be directly supported by setEnumSet.
 	 *
 	 * @tparam Iterator The iterator type for the container.
 	 * @param obj The JSON object to modify.
 	 * @param key The key under which to store the enum array.
 	 * @param begin Iterator to the beginning of the container.
 	 * @param end Iterator to the end of the container.
-	 * @see setEnumArray for a more convenient function that accepts any iterable container directly.
+	 * @see setEnumSet for a more convenient function that accepts any iterable container directly.
 	 */
 	template<typename Iterator>
 	static void setEnumArrayFromIterators(json::object& obj, const std::string& key, Iterator begin, Iterator end);
@@ -850,11 +850,11 @@ public:
 	 * @code
 	 * // With std::vector
 	 * std::vector<MyEnum> enumVec = {MyEnum::Value1, MyEnum::Value2, MyEnum::Value3};
-	 * JsonConverter::setEnumArray(obj, "enums", enumVec);
+	 * JsonConverter::setEnumSet(obj, "enums", enumVec);
 	 *
 	 * // With std::list
 	 * std::list<MyEnum> enumList = {MyEnum::Value1, MyEnum::Value2};
-	 * JsonConverter::setEnumArray(obj, "enums", enumList);
+	 * JsonConverter::setEnumSet(obj, "enums", enumList);
 	 * @endcode
 	 * @tparam Container The type of the iterable container (e.g., std::vector, std::set, std::list).
 	 * @param obj The JSON object to modify.
@@ -862,7 +862,7 @@ public:
 	 * @param enumValues The container of enum values to store as an array in the JSON object. Each enum value will be converted to its string representation using the `toString` function.
 	 */
 	template<typename Container>
-	static void setEnumArray(json::object& obj, const std::string& key, const Container& enumValues);
+	static void setEnumSet(json::object& obj, const std::string& key, const Container& enumValues);
 
 	/**
 	 * @brief Retrieves a set of SubcategoriedSkillData from a JSON object using the specified key.
@@ -1520,7 +1520,7 @@ void JsonConverter::setEnumArrayFromIterators(json::object& obj, const std::stri
 }
 
 template<typename Container>
-void JsonConverter::setEnumArray(json::object& obj, const std::string& key, const Container& enumValues) {
+void JsonConverter::setEnumSet(json::object& obj, const std::string& key, const Container& enumValues) {
 	setEnumArrayFromIterators(obj, key, std::begin(enumValues), std::end(enumValues));
 }
 

@@ -19,16 +19,16 @@ json::value CultureTypeSerializer::serializeObject(const CultureTypeData& ref) c
 	JsonConverter::setInt(obj, "hobby-skill-ranks", ref.hobbySkillRanks());
 	if (ref.spellListRanks())
 		JsonConverter::setInt(obj, "spell-list-ranks", ref.spellListRanks());
-	JsonConverter::setEnumArray(obj, "preferred-armours", ref.preferredArmour());
+	JsonConverter::setEnumSet(obj, "preferred-armours", ref.preferredArmour());
 	JsonConverter::setDataSet(obj, "preferred-weapons", ref.preferredWeapons());
 	JsonConverter::setSkillPrimitiveMap(obj, "skill-ranks", ref.skillRanks());
 	JsonConverter::setDataPrimitiveMap(obj, "skill-category-ranks", ref.skillCategoryRanks());
 	JsonConverter::setDataPrimitiveMap(obj, "skill-category-skill-ranks", ref.skillCategorySkillRanks());
 	JsonConverter::setDataSet(obj, "required-climates", ref.requiredClimates());
-	JsonConverter::setEnumArray(obj, "required-features", ref.requiredFeatures());
-	JsonConverter::setEnumArray(obj, "required-terrains", ref.requiredTerrains());
-	JsonConverter::setEnumArray(obj, "required-vegetations", ref.requiredVegetations());
-	JsonConverter::setEnumArray(obj, "required-water-sources", ref.requiredWaterSources());
+	JsonConverter::setEnumSet(obj, "required-features", ref.requiredFeatures());
+	JsonConverter::setEnumSet(obj, "required-terrains", ref.requiredTerrains());
+	JsonConverter::setEnumSet(obj, "required-vegetations", ref.requiredVegetations());
+	JsonConverter::setEnumSet(obj, "required-water-sources", ref.requiredWaterSources());
 
 
 	return obj;

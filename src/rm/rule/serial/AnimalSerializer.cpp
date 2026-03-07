@@ -36,7 +36,7 @@ json::value AnimalSerializer::serializeObject(const AnimalData& ref) const {
 	if (ref.ridingBonus() != 0)
 		JsonConverter::setInt(obj, "riding-bonus", ref.ridingBonus());
 	if (ref.criticalModifiers().size() > 0)
-		JsonConverter::setEnumArray(obj, "critical-modifiers", ref.criticalModifiers());
+		JsonConverter::setEnumSet(obj, "critical-modifiers", ref.criticalModifiers());
 
 	std::pair<int, int> encounter_range = ref.encounterRange();
 	if (encounter_range.first != 0 || encounter_range.second != 0) {

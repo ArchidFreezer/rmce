@@ -11,8 +11,8 @@ json::value ProfessionSerializer::serializeObject(const ProfessionData& ref) con
 	JsonConverter::setString(obj, "description", ref.description());
 	JsonConverter::setString(obj, "book", ref.book().value()->id());
 	JsonConverter::setString(obj, "spell-user-type", SpellUserType::toString(ref.spellUserType()));
-	JsonConverter::setEnumArray(obj, "realms", ref.realms());
-	JsonConverter::setEnumArray(obj, "stats", ref.stats());
+	JsonConverter::setEnumSet(obj, "realms", ref.realms());
+	JsonConverter::setEnumSet(obj, "stats", ref.stats());
 	JsonConverter::setDataChoiceSet(obj, "base-spell-list-choices", ref.baseSpellListChoices());
 	JsonConverter::setSkillPrimitiveMap(obj, "skill-bonuses", ref.skillBonuses());
 	JsonConverter::setSkillEnumMap(obj, "skill-development-types", ref.skillDevelopmentTypes());
