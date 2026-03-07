@@ -1,1527 +1,1527 @@
 {
-    "races": [
+    "races" : [
         {
-            "id": "RACE_DWARVES",
-            "name": "Dwarves",
-            "description": "Although Dwarves are spread across the world, they are close to one another and have spawned a universal reputation for ruggedness, practicality and unwavering loyalty. Most groups favour the rocky highlands and deep caverns of the mountains. They are superior craftsmen and they love to mine the earth for precious gems and metals to forge into weapons of strength and artifacts of beauty and power.",
-            "book": "BOOK_FANTASY_ROLE_PLAYING",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "5",
-            "exhaustion-bonus": "21",
-            "stat-loss-racial-type": "1",
-            "required-sleep": "8",
-            "required-sleep-frequency": "2",
-            "soul-departure": "21",
-            "build-modifier": "2",
-            "average-male-height": "57",
-            "average-female-height": "53",
-            "average-lifespan": "300",
-            "male-weight-modifier": "1",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_HIGH",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "starting-languages": [
+            "id" : "RACE_DWARVES",
+            "name" : "Dwarves",
+            "description" : "Although Dwarves are spread across the world, they are close to one another and have spawned a universal reputation for ruggedness, practicality and unwavering loyalty. Most groups favour the rocky highlands and deep caverns of the mountains. They are superior craftsmen and they love to mine the earth for precious gems and metals to forge into weapons of strength and artifacts of beauty and power.",
+            "book" : "BOOK_FANTASY_ROLE_PLAYING",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 5,
+            "exhaustion-bonus" : 21,
+            "stat-loss-racial-type" : 1,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 2,
+            "soul-departure" : 21,
+            "build-modifier" : 2,
+            "average-male-height" : 57,
+            "average-female-height" : 53,
+            "average-lifespan" : 300,
+            "male-weight-modifier" : 1,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_HIGH",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "5",
-                    "written": "5"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 5,
+                    "written" : 5
                 },
                 {
-                    "language": "LANGUAGE_DWARVISH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_DWARVISH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_ELVISH",
-                    "spoken": "4",
-                    "written": "4"
+                    "language" : "LANGUAGE_ELVISH",
+                    "spoken" : 4,
+                    "written" : 4
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_DWARVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_DWARVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "2",
-                    "written": "2"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 2,
+                    "written" : 2
                 },
                 {
-                    "language": "LANGUAGE_PLAINS_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_PLAINS_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_WOOD_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_WOOD_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "-2"
+                    "id" : "Agility",
+                    "value" : -2
                 },
                 {
-                    "id": "Constitution",
-                    "value": "6"
+                    "id" : "Constitution",
+                    "value" : 6
                 },
                 {
-                    "id": "Empathy",
-                    "value": "-4"
+                    "id" : "Empathy",
+                    "value" : -4
                 },
                 {
-                    "id": "Presence",
-                    "value": "-4"
+                    "id" : "Presence",
+                    "value" : -4
                 },
                 {
-                    "id": "Quickness",
-                    "value": "-2"
+                    "id" : "Quickness",
+                    "value" : -2
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "2"
+                    "id" : "Self Discipline",
+                    "value" : 2
                 },
                 {
-                    "id": "Strength",
-                    "value": "2"
+                    "id" : "Strength",
+                    "value" : 2
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_CAVING"
+                    "id" : "SKILL_CAVING"
                 },
                 {
-                    "id": "SKILL_LEATHER_CRAFTS"
+                    "id" : "SKILL_LEATHER_CRAFTS"
                 },
                 {
-                    "id": "SKILL_METAL_CRAFTS"
+                    "id" : "SKILL_METAL_CRAFTS"
                 },
                 {
-                    "id": "SKILL_STONE_CRAFTS"
+                    "id" : "SKILL_STONE_CRAFTS"
                 },
                 {
-                    "id": "SKILL_SURVIVAL",
-                    "subcategory": "underground"
+                    "id" : "SKILL_SURVIVAL",
+                    "subcategory" : "underground"
                 }
             ],
-            "restricted-skills": [
+            "restricted-skills" : [
                 {
-                    "id": "SKILL_SWIMMING"
+                    "id" : "SKILL_SWIMMING"
                 }
             ]
         },
         {
-            "id": "RACE_ELVES_GREY",
-            "name": "Elves, Grey",
-            "description": "Grey elves are stockier than woodland elves, though still more slender than humans and live in cities and large towns. They are the most likely to travel outside their own community.",
-            "book": "BOOK_CHARACTER_LAW",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "2",
-            "background-options": "3",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "4",
-            "required-sleep": "2",
-            "required-sleep-frequency": "4",
-            "soul-departure": "2",
-            "build-modifier": "-2",
-            "average-male-height": "77",
-            "average-female-height": "73",
-            "average-lifespan": "99999",
-            "male-weight-modifier": "0",
-            "female-weight-modifier": "0",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "starting-languages": [
+            "id" : "RACE_ELVES_GREY",
+            "name" : "Elves, Grey",
+            "description" : "Grey elves are stockier than woodland elves, though still more slender than humans and live in cities and large towns. They are the most likely to travel outside their own community.",
+            "book" : "BOOK_CHARACTER_LAW",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 2E0,
+            "background-options" : 3,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 4,
+            "required-sleep" : 2,
+            "required-sleep-frequency" : 4,
+            "soul-departure" : 2,
+            "build-modifier" : -2,
+            "average-male-height" : 77,
+            "average-female-height" : 73,
+            "average-lifespan" : 99999,
+            "male-weight-modifier" : 0,
+            "female-weight-modifier" : 0,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_ELVISH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_ELVISH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_GREY_ELVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_GREY_ELVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HIGH_ELVISH",
-                    "spoken": "6",
-                    "written": "4"
+                    "language" : "LANGUAGE_HIGH_ELVISH",
+                    "spoken" : 6,
+                    "written" : 4
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_ELVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_ELVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HIGH_ELVISH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_HIGH_ELVISH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_PLAINS_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_PLAINS_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_WOOD_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_WOOD_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "2"
+                    "id" : "Agility",
+                    "value" : 2
                 },
                 {
-                    "id": "Empathy",
-                    "value": "2"
+                    "id" : "Empathy",
+                    "value" : 2
                 },
                 {
-                    "id": "Memory",
-                    "value": "2"
+                    "id" : "Memory",
+                    "value" : 2
                 },
                 {
-                    "id": "Presence",
-                    "value": "4"
+                    "id" : "Presence",
+                    "value" : 4
                 },
                 {
-                    "id": "Quickness",
-                    "value": "4"
+                    "id" : "Quickness",
+                    "value" : 4
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-5"
+                    "id" : "Self Discipline",
+                    "value" : -5
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_PUBLIC_SPEAKING"
+                    "id" : "SKILL_PUBLIC_SPEAKING"
                 },
                 {
-                    "id": "SKILL_RESEARCH"
+                    "id" : "SKILL_RESEARCH"
                 },
                 {
-                    "id": "SKILL_SAILING"
+                    "id" : "SKILL_SAILING"
                 }
             ]
         },
         {
-            "id": "RACE_ELVES_HIGH",
-            "name": "Elves, High",
-            "description": "High elves are tall and graceful, living in cities with a high culture, they tend to disdain other races.",
-            "book": "BOOK_CHARACTER_LAW",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "3",
-            "background-options": "2",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "5",
-            "required-sleep": "2",
-            "required-sleep-frequency": "4",
-            "soul-departure": "1",
-            "build-modifier": "-1",
-            "average-male-height": "79",
-            "average-female-height": "75",
-            "average-lifespan": "99999",
-            "male-weight-modifier": "0",
-            "female-weight-modifier": "0",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "starting-languages": [
+            "id" : "RACE_ELVES_HIGH",
+            "name" : "Elves, High",
+            "description" : "High elves are tall and graceful, living in cities with a high culture, they tend to disdain other races.",
+            "book" : "BOOK_CHARACTER_LAW",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 3E0,
+            "background-options" : 2,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 5,
+            "required-sleep" : 2,
+            "required-sleep-frequency" : 4,
+            "soul-departure" : 1,
+            "build-modifier" : -1,
+            "average-male-height" : 79,
+            "average-female-height" : 75,
+            "average-lifespan" : 99999,
+            "male-weight-modifier" : 0,
+            "female-weight-modifier" : 0,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_GREY_ELVISH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_GREY_ELVISH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_HIGH_ELVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_HIGH_ELVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_ELVISH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_ELVISH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_GREY_ELVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_GREY_ELVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_NORTH_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_NORTH_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "2"
+                    "id" : "Agility",
+                    "value" : 2
                 },
                 {
-                    "id": "Empathy",
-                    "value": "2"
+                    "id" : "Empathy",
+                    "value" : 2
                 },
                 {
-                    "id": "Memory",
-                    "value": "2"
+                    "id" : "Memory",
+                    "value" : 2
                 },
                 {
-                    "id": "Presence",
-                    "value": "6"
+                    "id" : "Presence",
+                    "value" : 6
                 },
                 {
-                    "id": "Quickness",
-                    "value": "6"
+                    "id" : "Quickness",
+                    "value" : 6
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-5"
+                    "id" : "Self Discipline",
+                    "value" : -5
                 }
             ],
-            "everyman-categories": [
+            "everyman-categories" : [
                 "SKILLCATEGORY_CRAFTS"
             ]
         },
         {
-            "id": "RACE_ELVES_WOOD",
-            "name": "Elves, Wood",
-            "description": "Wood elves are slender preferring to live in woodland and have a rustic society compared to other elves.",
-            "book": "BOOK_FANTASY_ROLE_PLAYING",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "1.5",
-            "background-options": "4",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "3",
-            "required-sleep": "2",
-            "required-sleep-frequency": "4",
-            "soul-departure": "3",
-            "build-modifier": "-1",
-            "average-male-height": "72",
-            "average-female-height": "69",
-            "average-lifespan": "99999",
-            "male-weight-modifier": "0",
-            "female-weight-modifier": "0",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "starting-languages": [
+            "id" : "RACE_ELVES_WOOD",
+            "name" : "Elves, Wood",
+            "description" : "Wood elves are slender preferring to live in woodland and have a rustic society compared to other elves.",
+            "book" : "BOOK_FANTASY_ROLE_PLAYING",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 1.5E0,
+            "background-options" : 4,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 3,
+            "required-sleep" : 2,
+            "required-sleep-frequency" : 4,
+            "soul-departure" : 3,
+            "build-modifier" : -1,
+            "average-male-height" : 72,
+            "average-female-height" : 69,
+            "average-lifespan" : 99999,
+            "male-weight-modifier" : 0,
+            "female-weight-modifier" : 0,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_ELVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_ELVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_GREY_ELVISH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_GREY_ELVISH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_HIGH_ELVISH",
-                    "spoken": "4",
-                    "written": "4"
+                    "language" : "LANGUAGE_HIGH_ELVISH",
+                    "spoken" : 4,
+                    "written" : 4
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_GREY_ELVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_GREY_ELVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HIGH_ELVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_HIGH_ELVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "4",
-                    "written": "4"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 4,
+                    "written" : 4
                 },
                 {
-                    "language": "LANGUAGE_PLAINS_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_PLAINS_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_WOOD_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_WOOD_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "4"
+                    "id" : "Agility",
+                    "value" : 4
                 },
                 {
-                    "id": "Empathy",
-                    "value": "2"
+                    "id" : "Empathy",
+                    "value" : 2
                 },
                 {
-                    "id": "Memory",
-                    "value": "2"
+                    "id" : "Memory",
+                    "value" : 2
                 },
                 {
-                    "id": "Presence",
-                    "value": "2"
+                    "id" : "Presence",
+                    "value" : 2
                 },
                 {
-                    "id": "Quickness",
-                    "value": "2"
+                    "id" : "Quickness",
+                    "value" : 2
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-5"
+                    "id" : "Self Discipline",
+                    "value" : -5
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_MUSIC"
+                    "id" : "SKILL_MUSIC"
                 },
                 {
-                    "id": "SKILL_PLAY_INSTRUMENT"
+                    "id" : "SKILL_PLAY_INSTRUMENT"
                 },
                 {
-                    "id": "SKILL_TRICKERY"
+                    "id" : "SKILL_TRICKERY"
                 },
                 {
-                    "id": "SKILL_WOOD_CRAFTS"
+                    "id" : "SKILL_WOOD_CRAFTS"
                 }
             ]
         },
         {
-            "id": "RACE_GNOLLS",
-            "name": "Gnolls",
-            "description": "While Gnolls generally inhabit the upper highlands, they seldom seek homes far from the surface. They are not an unfriendly folk, but it does take time before they warm to strangers. Most Gnolls persue magical studies and arts, but every tribe has its warriors. It is curious to noet hthat both males and females have the same physical builds.",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "5",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "1",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "16",
-            "build-modifier": "-1",
-            "average-male-height": "39",
-            "average-female-height": "39",
-            "average-lifespan": "150",
-            "male-weight-modifier": "2",
-            "female-weight-modifier": "2",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_VERY_LOW",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_MINOR",
-            "starting-languages": [
+            "id" : "RACE_GNOLLS",
+            "name" : "Gnolls",
+            "description" : "While Gnolls generally inhabit the upper highlands, they seldom seek homes far from the surface. They are not an unfriendly folk, but it does take time before they warm to strangers. Most Gnolls persue magical studies and arts, but every tribe has its warriors. It is curious to noet hthat both males and females have the same physical builds.",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 5,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 1,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 16,
+            "build-modifier" : -1,
+            "average-male-height" : 39,
+            "average-female-height" : 39,
+            "average-lifespan" : 150,
+            "male-weight-modifier" : 2,
+            "female-weight-modifier" : 2,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_VERY_LOW",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_MINOR",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "7",
-                    "written": "5"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 7,
+                    "written" : 5
                 },
                 {
-                    "language": "LANGUAGE_GNOLL",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_GNOLL",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_PLAINS_SPEECH",
-                    "spoken": "7",
-                    "written": "5"
+                    "language" : "LANGUAGE_PLAINS_SPEECH",
+                    "spoken" : 7,
+                    "written" : 5
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "6",
-                    "written": "4"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 6,
+                    "written" : 4
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_DWARVISH",
-                    "spoken": "5",
-                    "written": "4"
+                    "language" : "LANGUAGE_DWARVISH",
+                    "spoken" : 5,
+                    "written" : 4
                 },
                 {
-                    "language": "LANGUAGE_ELVISH",
-                    "spoken": "6",
-                    "written": "5"
+                    "language" : "LANGUAGE_ELVISH",
+                    "spoken" : 6,
+                    "written" : 5
                 },
                 {
-                    "language": "LANGUAGE_GNOLL",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_GNOLL",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_GNOMISH",
-                    "spoken": "5",
-                    "written": "4"
+                    "language" : "LANGUAGE_GNOMISH",
+                    "spoken" : 5,
+                    "written" : 4
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_PLAINS_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_PLAINS_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "4"
+                    "id" : "Agility",
+                    "value" : 4
                 },
                 {
-                    "id": "Empathy",
-                    "value": "4"
+                    "id" : "Empathy",
+                    "value" : 4
                 },
                 {
-                    "id": "Intuition",
-                    "value": "2"
+                    "id" : "Intuition",
+                    "value" : 2
                 },
                 {
-                    "id": "Presence",
-                    "value": "-2"
+                    "id" : "Presence",
+                    "value" : -2
                 },
                 {
-                    "id": "Quickness",
-                    "value": "2"
+                    "id" : "Quickness",
+                    "value" : 2
                 },
                 {
-                    "id": "Reasoning",
-                    "value": "1"
+                    "id" : "Reasoning",
+                    "value" : 1
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "2"
+                    "id" : "Self Discipline",
+                    "value" : 2
                 }
             ],
-            "everyman-categories": [
+            "everyman-categories" : [
                 "SKILLCATEGORY_SUBTERFUGE_STEALTH"
             ],
-            "restricted-categories": [
+            "restricted-categories" : [
                 "SKILLCATEGORY_URBAN"
             ]
         },
         {
-            "id": "RACE_GNOMES",
-            "name": "Gnomes",
-            "description": "Gnomes are a highly reclusive folk who spend a lifetime collecting enchantments of various types. They have a keen sense of intellect and will sometimes spend years solving some archaic puzzle or mystery. Both the males and females in Gnomish society have similar builds.",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "4",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "5",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "10",
-            "build-modifier": "-1",
-            "average-male-height": "53",
-            "average-female-height": "53",
-            "average-lifespan": "600",
-            "male-weight-modifier": "1",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_HIGH",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_ABOVE_AVERAGE",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
-            "starting-languages": [
+            "id" : "RACE_GNOMES",
+            "name" : "Gnomes",
+            "description" : "Gnomes are a highly reclusive folk who spend a lifetime collecting enchantments of various types. They have a keen sense of intellect and will sometimes spend years solving some archaic puzzle or mystery. Both the males and females in Gnomish society have similar builds.",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 4,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 5,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 10,
+            "build-modifier" : -1,
+            "average-male-height" : 53,
+            "average-female-height" : 53,
+            "average-lifespan" : 600,
+            "male-weight-modifier" : 1,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_HIGH",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_ABOVE_AVERAGE",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "9",
-                    "written": "9"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 9,
+                    "written" : 9
                 },
                 {
-                    "language": "LANGUAGE_ELVISH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_ELVISH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_GNOMISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_GNOMISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "7",
-                    "written": "7"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 7,
+                    "written" : 7
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "12",
-                    "written": "12"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 12,
+                    "written" : 12
                 },
                 {
-                    "language": "LANGUAGE_GNOMISH",
-                    "spoken": "15",
-                    "written": "15"
+                    "language" : "LANGUAGE_GNOMISH",
+                    "spoken" : 15,
+                    "written" : 15
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_NORTH_SPEECH",
-                    "spoken": "7",
-                    "written": "7"
+                    "language" : "LANGUAGE_NORTH_SPEECH",
+                    "spoken" : 7,
+                    "written" : 7
                 },
                 {
-                    "language": "LANGUAGE_PLAINS_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_PLAINS_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_SEA_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_SEA_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Constitution",
-                    "value": "1"
+                    "id" : "Constitution",
+                    "value" : 1
                 },
                 {
-                    "id": "Empathy",
-                    "value": "5"
+                    "id" : "Empathy",
+                    "value" : 5
                 },
                 {
-                    "id": "Intuition",
-                    "value": "-4"
+                    "id" : "Intuition",
+                    "value" : -4
                 },
                 {
-                    "id": "Memory",
-                    "value": "6"
+                    "id" : "Memory",
+                    "value" : 6
                 },
                 {
-                    "id": "Presence",
-                    "value": "-2"
+                    "id" : "Presence",
+                    "value" : -2
                 },
                 {
-                    "id": "Quickness",
-                    "value": "-2"
+                    "id" : "Quickness",
+                    "value" : -2
                 },
                 {
-                    "id": "Reasoning",
-                    "value": "3"
+                    "id" : "Reasoning",
+                    "value" : 3
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "3"
+                    "id" : "Self Discipline",
+                    "value" : 3
                 },
                 {
-                    "id": "Strength",
-                    "value": "-3"
+                    "id" : "Strength",
+                    "value" : -3
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_BASIC_MATH"
+                    "id" : "SKILL_BASIC_MATH"
                 },
                 {
-                    "id": "SKILL_COOKING"
+                    "id" : "SKILL_COOKING"
                 },
                 {
-                    "id": "SKILL_DRAFTING"
+                    "id" : "SKILL_DRAFTING"
                 },
                 {
-                    "id": "SKILL_MNEMONICS"
+                    "id" : "SKILL_MNEMONICS"
                 },
                 {
-                    "id": "SKILL_RESEARCH"
+                    "id" : "SKILL_RESEARCH"
                 },
                 {
-                    "id": "SKILL_SCRIBING"
+                    "id" : "SKILL_SCRIBING"
                 }
             ]
         },
         {
-            "id": "RACE_GOBLINS",
-            "name": "Goblins",
-            "description": "While Goblins live underground, they are often found raiding the countryside during the night. Goblins are a small wicked race, full of cleverness, deceit, and mechanical ingenuity. Goblins live in clans and tend to be very loyal to their clan. Both the males and females of this race have similar physical stature.",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "6",
-            "exhaustion-bonus": "20",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "6",
-            "build-modifier": "0",
-            "average-male-height": "53",
-            "average-female-height": "53",
-            "average-lifespan": "80",
-            "male-weight-modifier": "0",
-            "female-weight-modifier": "0",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "starting-languages": [
+            "id" : "RACE_GOBLINS",
+            "name" : "Goblins",
+            "description" : "While Goblins live underground, they are often found raiding the countryside during the night. Goblins are a small wicked race, full of cleverness, deceit, and mechanical ingenuity. Goblins live in clans and tend to be very loyal to their clan. Both the males and females of this race have similar physical stature.",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 6,
+            "exhaustion-bonus" : 20,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 6,
+            "build-modifier" : 0,
+            "average-male-height" : 53,
+            "average-female-height" : 53,
+            "average-lifespan" : 80,
+            "male-weight-modifier" : 0,
+            "female-weight-modifier" : 0,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "6"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 6
                 },
                 {
-                    "language": "LANGUAGE_GOBLIN",
-                    "spoken": "8",
-                    "written": "4"
+                    "language" : "LANGUAGE_GOBLIN",
+                    "spoken" : 8,
+                    "written" : 4
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "5"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 5
                 },
                 {
-                    "language": "LANGUAGE_GOBLIN",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_GOBLIN",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "6",
-                    "written": "2"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 2
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Constitution",
-                    "value": "3"
+                    "id" : "Constitution",
+                    "value" : 3
                 },
                 {
-                    "id": "Empathy",
-                    "value": "-2"
+                    "id" : "Empathy",
+                    "value" : -2
                 },
                 {
-                    "id": "Memory",
-                    "value": "-2"
+                    "id" : "Memory",
+                    "value" : -2
                 },
                 {
-                    "id": "Presence",
-                    "value": "-2"
+                    "id" : "Presence",
+                    "value" : -2
                 },
                 {
-                    "id": "Quickness",
-                    "value": "1"
+                    "id" : "Quickness",
+                    "value" : 1
                 },
                 {
-                    "id": "Reasoning",
-                    "value": "1"
+                    "id" : "Reasoning",
+                    "value" : 1
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-2"
+                    "id" : "Self Discipline",
+                    "value" : -2
                 },
                 {
-                    "id": "Strength",
-                    "value": "2"
+                    "id" : "Strength",
+                    "value" : 2
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_METAL_CRAFTS"
+                    "id" : "SKILL_METAL_CRAFTS"
                 },
                 {
-                    "id": "SKILL_MINING"
+                    "id" : "SKILL_MINING"
                 }
             ]
         },
         {
-            "id": "RACE_HALFLINGS_HAERFEAT",
-            "name": "Halflings, Haerfeat",
-            "description": "Halflings have an unclear origin, although they arose about the same time as Men. Indeed, they are said to be related to Men. The most common of the Halflings, the Haerfeat are the smallest in stature and most darkly complected. Their height rarely exceeds three feet and they have deeply tanned skin and dark hair colours; browns, auburns and blacks. Males tend to wear their hair short and do not cultivate any facial hair. Tidy and neat the Haerfeat are often thought of as the typical example of the Halfling race.",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "5",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "1",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "18",
-            "build-modifier": "2",
-            "average-male-height": "39",
-            "average-female-height": "27",
-            "average-lifespan": "100",
-            "male-weight-modifier": "1",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "starting-languages": [
+            "id" : "RACE_HALFLINGS_HAERFEAT",
+            "name" : "Halflings, Haerfeat",
+            "description" : "Halflings have an unclear origin, although they arose about the same time as Men. Indeed, they are said to be related to Men. The most common of the Halflings, the Haerfeat are the smallest in stature and most darkly complected. Their height rarely exceeds three feet and they have deeply tanned skin and dark hair colours; browns, auburns and blacks. Males tend to wear their hair short and do not cultivate any facial hair. Tidy and neat the Haerfeat are often thought of as the typical example of the Halfling race.",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 5,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 1,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 18,
+            "build-modifier" : 2,
+            "average-male-height" : 39,
+            "average-female-height" : 27,
+            "average-lifespan" : 100,
+            "male-weight-modifier" : 1,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "6"
+                    "id" : "Agility",
+                    "value" : 6
                 },
                 {
-                    "id": "Constitution",
-                    "value": "6"
+                    "id" : "Constitution",
+                    "value" : 6
                 },
                 {
-                    "id": "Empathy",
-                    "value": "-2"
+                    "id" : "Empathy",
+                    "value" : -2
                 },
                 {
-                    "id": "Presence",
-                    "value": "-6"
+                    "id" : "Presence",
+                    "value" : -6
                 },
                 {
-                    "id": "Quickness",
-                    "value": "4"
+                    "id" : "Quickness",
+                    "value" : 4
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-4"
+                    "id" : "Self Discipline",
+                    "value" : -4
                 },
                 {
-                    "id": "Strength",
-                    "value": "-8"
+                    "id" : "Strength",
+                    "value" : -8
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_CAVING"
+                    "id" : "SKILL_CAVING"
                 }
             ],
-            "skill-category-choices-everyman": [
+            "skill-category-choices-everyman" : [
                 {
-                    "num-choices": "5",
-                    "options": [
+                    "num-choices" : 5,
+                    "options" : [
                         "SKILLCATEGORY_CRAFTS"
                     ]
                 }
             ]
         },
         {
-            "id": "RACE_HALFLINGS_STAEKNIL",
-            "name": "Halflings, Staeknil",
-            "description": "Halflings have an unclear origin, although they arose about the same time as Men. Indeed, they are said to be related to Men. Stockiest of the Halfling folk, the Staeknil often appear shorter than their cousin Haerfeat due to a sturdier and somewhat wider profile. They are in fact the taller of the two strains, but not as tall as the Waenfal. their tastes and styles are also somewhat of a compromise, as are their physical features, being more subdued than the Waenfal in dress, but possessing the dark curly locks of their Haerfeat kin. A trait common only to males of Staeknil blood, however is the ability to sustain beard growth, which makes them somewhat more endearing to Dwarven-kind. Thus are the Staeknil on better terms with the Drawf peoples than others of their kind in matters of commerce and social interaction.",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "5",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "1",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "18",
-            "build-modifier": "3",
-            "average-male-height": "40",
-            "average-female-height": "38",
-            "average-lifespan": "100",
-            "male-weight-modifier": "1",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "starting-languages": [
+            "id" : "RACE_HALFLINGS_STAEKNIL",
+            "name" : "Halflings, Staeknil",
+            "description" : "Halflings have an unclear origin, although they arose about the same time as Men. Indeed, they are said to be related to Men. Stockiest of the Halfling folk, the Staeknil often appear shorter than their cousin Haerfeat due to a sturdier and somewhat wider profile. They are in fact the taller of the two strains, but not as tall as the Waenfal. their tastes and styles are also somewhat of a compromise, as are their physical features, being more subdued than the Waenfal in dress, but possessing the dark curly locks of their Haerfeat kin. A trait common only to males of Staeknil blood, however is the ability to sustain beard growth, which makes them somewhat more endearing to Dwarven-kind. Thus are the Staeknil on better terms with the Drawf peoples than others of their kind in matters of commerce and social interaction.",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 5,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 1,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 18,
+            "build-modifier" : 3,
+            "average-male-height" : 40,
+            "average-female-height" : 38,
+            "average-lifespan" : 100,
+            "male-weight-modifier" : 1,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_DWARVISH",
-                    "spoken": "2"
+                    "language" : "LANGUAGE_DWARVISH",
+                    "spoken" : 2
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "5"
+                    "id" : "Agility",
+                    "value" : 5
                 },
                 {
-                    "id": "Constitution",
-                    "value": "6"
+                    "id" : "Constitution",
+                    "value" : 6
                 },
                 {
-                    "id": "Empathy",
-                    "value": "-2"
+                    "id" : "Empathy",
+                    "value" : -2
                 },
                 {
-                    "id": "Memory",
-                    "value": "1"
+                    "id" : "Memory",
+                    "value" : 1
                 },
                 {
-                    "id": "Presence",
-                    "value": "-5"
+                    "id" : "Presence",
+                    "value" : -5
                 },
                 {
-                    "id": "Quickness",
-                    "value": "3"
+                    "id" : "Quickness",
+                    "value" : 3
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-3"
+                    "id" : "Self Discipline",
+                    "value" : -3
                 },
                 {
-                    "id": "Strength",
-                    "value": "-7"
+                    "id" : "Strength",
+                    "value" : -7
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_CAVING"
+                    "id" : "SKILL_CAVING"
                 }
             ],
-            "skill-category-choices-everyman": [
+            "skill-category-choices-everyman" : [
                 {
-                    "num-choices": "5",
-                    "options": [
+                    "num-choices" : 5,
+                    "options" : [
                         "SKILLCATEGORY_CRAFTS"
                     ]
                 }
             ]
         },
         {
-            "id": "RACE_HALFLINGS_WAENFEL",
-            "name": "Halflings, Waenfel",
-            "description": "Halflings have an unclear origin, although they arose about the same time as Men. Indeed, they are said to be related to Men. Tallest of the folk, the Waenfal stand closer to 4 feet in height upon reaching adulthood. Fairer of skin and colouration, they of all the Halfling strains resemble the Mannish races the most. They have lighter hair colourations, with blondes, reds, and light browns being the norm. While they are fewer than their brethren, the Waenfal interact on a more basic level with Men-folk than do others of their kind, openly trading and exchanging items and ideas with the Mannish cultures of the outer world.",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "5",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "1",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "18",
-            "build-modifier": "2",
-            "average-male-height": "46",
-            "average-female-height": "42",
-            "average-lifespan": "100",
-            "male-weight-modifier": "1",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "starting-languages": [
+            "id" : "RACE_HALFLINGS_WAENFEL",
+            "name" : "Halflings, Waenfel",
+            "description" : "Halflings have an unclear origin, although they arose about the same time as Men. Indeed, they are said to be related to Men. Tallest of the folk, the Waenfal stand closer to 4 feet in height upon reaching adulthood. Fairer of skin and colouration, they of all the Halfling strains resemble the Mannish races the most. They have lighter hair colourations, with blondes, reds, and light browns being the norm. While they are fewer than their brethren, the Waenfal interact on a more basic level with Men-folk than do others of their kind, openly trading and exchanging items and ideas with the Mannish cultures of the outer world.",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 5,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 1,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 18,
+            "build-modifier" : 2,
+            "average-male-height" : 46,
+            "average-female-height" : 42,
+            "average-lifespan" : 100,
+            "male-weight-modifier" : 1,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "6"
+                    "id" : "Agility",
+                    "value" : 6
                 },
                 {
-                    "id": "Constitution",
-                    "value": "5"
+                    "id" : "Constitution",
+                    "value" : 5
                 },
                 {
-                    "id": "Empathy",
-                    "value": "1"
+                    "id" : "Empathy",
+                    "value" : 1
                 },
                 {
-                    "id": "Presence",
-                    "value": "-6"
+                    "id" : "Presence",
+                    "value" : -6
                 },
                 {
-                    "id": "Quickness",
-                    "value": "4"
+                    "id" : "Quickness",
+                    "value" : 4
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-4"
+                    "id" : "Self Discipline",
+                    "value" : -4
                 },
                 {
-                    "id": "Strength",
-                    "value": "-8"
+                    "id" : "Strength",
+                    "value" : -8
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_CAVING"
+                    "id" : "SKILL_CAVING"
                 }
             ],
-            "skill-category-choices-everyman": [
+            "skill-category-choices-everyman" : [
                 {
-                    "num-choices": "5",
-                    "options": [
+                    "num-choices" : 5,
+                    "options" : [
                         "SKILLCATEGORY_CRAFTS"
                     ]
                 }
             ]
         },
         {
-            "id": "RACE_HALFLINGS_WAERLIN",
-            "name": "Halflings, Waerlin",
-            "description": "Halflings have an unclear origin, although they arose about the same time as Men. Indeed, they are said to be related to Men. Rarest of teh Halflings are the Waerlin, who differ from their cousins in a number of ways. Standing an average three and a half feet in height, they are the second tallest strain of Halfling, falling short only to the Waenfal. They are oft suspected to have had soem Elvish blood intermingled in their ancestral line once upon a time, for their eyes are slightly canted and their ears have a gentle upsweeping to them, rising to a point. Likewise they are slimmer as a rule than other Halflings, but do share their cousins' tremendous appetites. Though lighter iin complexion than other strains, their hair colours range the broad spectrum of the Mannish races. Their eye colours, however, are extraordinary, exhibiting brightly jeweled hues of greens, blues, ambers, and violets. The Waerlin also favour waering boots as another contrast, and their feet tend to be more in proportion with the rest of their bodies. they keep close ties with the Elvish peoples, and their ideas and inclinations are also slightly broader than others of their kind, allowing more of an acceptance of things in the outside world.",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "4",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "1",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "18",
-            "build-modifier": "2",
-            "average-male-height": "44",
-            "average-female-height": "40",
-            "average-lifespan": "100",
-            "male-weight-modifier": "1",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_STUNTED",
-            "starting-languages": [
+            "id" : "RACE_HALFLINGS_WAERLIN",
+            "name" : "Halflings, Waerlin",
+            "description" : "Halflings have an unclear origin, although they arose about the same time as Men. Indeed, they are said to be related to Men. Rarest of teh Halflings are the Waerlin, who differ from their cousins in a number of ways. Standing an average three and a half feet in height, they are the second tallest strain of Halfling, falling short only to the Waenfal. They are oft suspected to have had soem Elvish blood intermingled in their ancestral line once upon a time, for their eyes are slightly canted and their ears have a gentle upsweeping to them, rising to a point. Likewise they are slimmer as a rule than other Halflings, but do share their cousins' tremendous appetites. Though lighter iin complexion than other strains, their hair colours range the broad spectrum of the Mannish races. Their eye colours, however, are extraordinary, exhibiting brightly jeweled hues of greens, blues, ambers, and violets. The Waerlin also favour waering boots as another contrast, and their feet tend to be more in proportion with the rest of their bodies. they keep close ties with the Elvish peoples, and their ideas and inclinations are also slightly broader than others of their kind, allowing more of an acceptance of things in the outside world.",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 4,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 1,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 18,
+            "build-modifier" : 2,
+            "average-male-height" : 44,
+            "average-female-height" : 40,
+            "average-lifespan" : 100,
+            "male-weight-modifier" : 1,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_ELVISH",
-                    "spoken": "7",
-                    "written": "6"
+                    "language" : "LANGUAGE_ELVISH",
+                    "spoken" : 7,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "6"
+                    "id" : "Agility",
+                    "value" : 6
                 },
                 {
-                    "id": "Constitution",
-                    "value": "6"
+                    "id" : "Constitution",
+                    "value" : 6
                 },
                 {
-                    "id": "Empathy",
-                    "value": "-2"
+                    "id" : "Empathy",
+                    "value" : -2
                 },
                 {
-                    "id": "Intuition",
-                    "value": "1"
+                    "id" : "Intuition",
+                    "value" : 1
                 },
                 {
-                    "id": "Presence",
-                    "value": "-6"
+                    "id" : "Presence",
+                    "value" : -6
                 },
                 {
-                    "id": "Quickness",
-                    "value": "4"
+                    "id" : "Quickness",
+                    "value" : 4
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-3"
+                    "id" : "Self Discipline",
+                    "value" : -3
                 },
                 {
-                    "id": "Strength",
-                    "value": "-8"
+                    "id" : "Strength",
+                    "value" : -8
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_CAVING"
+                    "id" : "SKILL_CAVING"
                 }
             ],
-            "skill-category-choices-everyman": [
+            "skill-category-choices-everyman" : [
                 {
-                    "num-choices": "5",
-                    "options": [
+                    "num-choices" : 5,
+                    "options" : [
                         "SKILLCATEGORY_CRAFTS"
                     ]
                 }
             ]
         },
         {
-            "id": "RACE_HALF_ELVES",
-            "name": "Half-elves",
-            "description": "Half-elves are a rare breed with one parent human and the other elvish.",
-            "book": "BOOK_CHARACTER_LAW",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "1.5",
-            "background-options": "4",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "3",
-            "required-sleep": "4",
-            "required-sleep-frequency": "1",
-            "soul-departure": "6",
-            "build-modifier": "0",
-            "average-male-height": "75",
-            "average-female-height": "71",
-            "average-lifespan": "400",
-            "male-weight-modifier": "0",
-            "female-weight-modifier": "0",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_VERY_HIGH",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_ABOVE_AVERAGE",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_HIGH",
-            "starting-languages": [
+            "id" : "RACE_HALF_ELVES",
+            "name" : "Half-elves",
+            "description" : "Half-elves are a rare breed with one parent human and the other elvish.",
+            "book" : "BOOK_CHARACTER_LAW",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 1.5E0,
+            "background-options" : 4,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 3,
+            "required-sleep" : 4,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 6,
+            "build-modifier" : 0,
+            "average-male-height" : 75,
+            "average-female-height" : 71,
+            "average-lifespan" : 400,
+            "male-weight-modifier" : 0,
+            "female-weight-modifier" : 0,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_VERY_HIGH",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_ABOVE_AVERAGE",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_HIGH",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_GREY_ELVISH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_GREY_ELVISH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_HIGH_ELVISH",
-                    "spoken": "6",
-                    "written": "5"
+                    "language" : "LANGUAGE_HIGH_ELVISH",
+                    "spoken" : 6,
+                    "written" : 5
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_ELVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_ELVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_GREY_ELVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_GREY_ELVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HIGH_ELVISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_HIGH_ELVISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "2"
+                    "id" : "Agility",
+                    "value" : 2
                 },
                 {
-                    "id": "Constitution",
-                    "value": "2"
+                    "id" : "Constitution",
+                    "value" : 2
                 },
                 {
-                    "id": "Presence",
-                    "value": "4"
+                    "id" : "Presence",
+                    "value" : 4
                 },
                 {
-                    "id": "Quickness",
-                    "value": "4"
+                    "id" : "Quickness",
+                    "value" : 4
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-3"
+                    "id" : "Self Discipline",
+                    "value" : -3
                 },
                 {
-                    "id": "Strength",
-                    "value": "2"
+                    "id" : "Strength",
+                    "value" : 2
                 }
             ]
         },
         {
-            "id": "RACE_HALF_ORCS",
-            "name": "Half-orcs",
-            "description": "Half-orcs are the result of breeding men with orcs, usually by rape",
-            "book": "BOOK_CHARACTER_LAW",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "1",
-            "background-options": "5",
-            "exhaustion-bonus": "10",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "2",
-            "soul-departure": "1",
-            "build-modifier": "0",
-            "average-male-height": "68",
-            "average-female-height": "65",
-            "average-lifespan": "300",
-            "male-weight-modifier": "0",
-            "female-weight-modifier": "0",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_HIGH",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
-            "starting-languages": [
+            "id" : "RACE_HALF_ORCS",
+            "name" : "Half-orcs",
+            "description" : "Half-orcs are the result of breeding men with orcs, usually by rape",
+            "book" : "BOOK_CHARACTER_LAW",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 1E0,
+            "background-options" : 5,
+            "exhaustion-bonus" : 10,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 2,
+            "soul-departure" : 1,
+            "build-modifier" : 0,
+            "average-male-height" : 68,
+            "average-female-height" : 65,
+            "average-lifespan" : 300,
+            "male-weight-modifier" : 0,
+            "female-weight-modifier" : 0,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_HIGH",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "4",
-                    "written": "3"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 4,
+                    "written" : 3
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "4"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 4
                 },
                 {
-                    "language": "LANGUAGE_ORCISH",
-                    "spoken": "8",
-                    "written": "4"
+                    "language" : "LANGUAGE_ORCISH",
+                    "spoken" : 8,
+                    "written" : 4
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "8"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_ORCISH",
-                    "spoken": "10",
-                    "written": "8"
+                    "language" : "LANGUAGE_ORCISH",
+                    "spoken" : 10,
+                    "written" : 8
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Constitution",
-                    "value": "2"
+                    "id" : "Constitution",
+                    "value" : 2
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "2"
+                    "id" : "Self Discipline",
+                    "value" : 2
                 },
                 {
-                    "id": "Strength",
-                    "value": "2"
+                    "id" : "Strength",
+                    "value" : 2
                 }
             ]
         },
         {
-            "id": "RACE_HOBGOBLINS",
-            "name": "Hobgoblins",
-            "description": "Hobgoblins are a soldier race, male and female alike. They are usually unforgiving in their conquering and will rarely forget a defeat (until they have their revenge). Fighting and war are the entire lifestyle for Hobgoblins.",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "6",
-            "exhaustion-bonus": "20",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "6",
-            "build-modifier": "1",
-            "average-male-height": "54",
-            "average-female-height": "52",
-            "average-lifespan": "100",
-            "male-weight-modifier": "1",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "starting-languages": [
+            "id" : "RACE_HOBGOBLINS",
+            "name" : "Hobgoblins",
+            "description" : "Hobgoblins are a soldier race, male and female alike. They are usually unforgiving in their conquering and will rarely forget a defeat (until they have their revenge). Fighting and war are the entire lifestyle for Hobgoblins.",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 6,
+            "exhaustion-bonus" : 20,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 6,
+            "build-modifier" : 1,
+            "average-male-height" : 54,
+            "average-female-height" : 52,
+            "average-lifespan" : 100,
+            "male-weight-modifier" : 1,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "7",
-                    "written": "2"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 7,
+                    "written" : 2
                 },
                 {
-                    "language": "LANGUAGE_HOBGOBLIN",
-                    "spoken": "8",
-                    "written": "4"
+                    "language" : "LANGUAGE_HOBGOBLIN",
+                    "spoken" : 8,
+                    "written" : 4
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "6",
-                    "written": "2"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 6,
+                    "written" : 2
                 },
                 {
-                    "language": "LANGUAGE_HOBGOBLIN",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_HOBGOBLIN",
+                    "spoken" : 8,
+                    "written" : 8
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "-2"
+                    "id" : "Agility",
+                    "value" : -2
                 },
                 {
-                    "id": "Constitution",
-                    "value": "6"
+                    "id" : "Constitution",
+                    "value" : 6
                 },
                 {
-                    "id": "Empathy",
-                    "value": "-2"
+                    "id" : "Empathy",
+                    "value" : -2
                 },
                 {
-                    "id": "Intuition",
-                    "value": "-2"
+                    "id" : "Intuition",
+                    "value" : -2
                 },
                 {
-                    "id": "Memory",
-                    "value": "-2"
+                    "id" : "Memory",
+                    "value" : -2
                 },
                 {
-                    "id": "Presence",
-                    "value": "-2"
+                    "id" : "Presence",
+                    "value" : -2
                 },
                 {
-                    "id": "Quickness",
-                    "value": "-2"
+                    "id" : "Quickness",
+                    "value" : -2
                 },
                 {
-                    "id": "Reasoning",
-                    "value": "-2"
+                    "id" : "Reasoning",
+                    "value" : -2
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-2"
+                    "id" : "Self Discipline",
+                    "value" : -2
                 },
                 {
-                    "id": "Strength",
-                    "value": "4"
+                    "id" : "Strength",
+                    "value" : 4
                 }
             ],
-            "skill-category-choices-everyman": [
+            "skill-category-choices-everyman" : [
                 {
-                    "num-choices": "1",
-                    "options": [
+                    "num-choices" : 1,
+                    "options" : [
                         "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                         "SKILLCATEGORY_WEAPON_1_H_EDGED"
                     ]
@@ -1529,486 +1529,486 @@
             ]
         },
         {
-            "id": "RACE_KOBOLDS",
-            "name": "Kobolds",
-            "description": "Kobolds are the smallest of the small races. They are viewed with disdain by all races; good and evil alike. However, they have a penchant for flattery and clever speech (and knives in the shadows). Kobolds have made it their life to survive in a world that views them as useless and worthless",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "1.5",
-            "background-options": "6",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "6",
-            "build-modifier": "-1",
-            "average-male-height": "32",
-            "average-female-height": "32",
-            "average-lifespan": "65",
-            "male-weight-modifier": "2",
-            "female-weight-modifier": "2",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_MINIMAL",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "starting-languages": [
+            "id" : "RACE_KOBOLDS",
+            "name" : "Kobolds",
+            "description" : "Kobolds are the smallest of the small races. They are viewed with disdain by all races; good and evil alike. However, they have a penchant for flattery and clever speech (and knives in the shadows). Kobolds have made it their life to survive in a world that views them as useless and worthless",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 1.5E0,
+            "background-options" : 6,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 6,
+            "build-modifier" : -1,
+            "average-male-height" : 32,
+            "average-female-height" : 32,
+            "average-lifespan" : 65,
+            "male-weight-modifier" : 2,
+            "female-weight-modifier" : 2,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_MINIMAL",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_GOBLIN",
-                    "spoken": "7",
-                    "written": "7"
+                    "language" : "LANGUAGE_GOBLIN",
+                    "spoken" : 7,
+                    "written" : 7
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "7",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 7,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "6",
-                    "written": "4"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 4
                 },
                 {
-                    "language": "LANGUAGE_HOBGOBLIN",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_HOBGOBLIN",
+                    "spoken" : 6,
+                    "written" : 6
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "2"
+                    "id" : "Agility",
+                    "value" : 2
                 },
                 {
-                    "id": "Constitution",
-                    "value": "4"
+                    "id" : "Constitution",
+                    "value" : 4
                 },
                 {
-                    "id": "Empathy",
-                    "value": "-2"
+                    "id" : "Empathy",
+                    "value" : -2
                 },
                 {
-                    "id": "Intuition",
-                    "value": "2"
+                    "id" : "Intuition",
+                    "value" : 2
                 },
                 {
-                    "id": "Presence",
-                    "value": "-4"
+                    "id" : "Presence",
+                    "value" : -4
                 },
                 {
-                    "id": "Quickness",
-                    "value": "6"
+                    "id" : "Quickness",
+                    "value" : 6
                 },
                 {
-                    "id": "Strength",
-                    "value": "-5"
+                    "id" : "Strength",
+                    "value" : -5
                 }
             ]
         },
         {
-            "id": "RACE_MEN_COMMON",
-            "name": "Men, Common",
-            "description": "Common men live throughout the continents in many environments.",
-            "book": "BOOK_FANTASY_ROLE_PLAYING",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "1",
-            "background-options": "6",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "12",
-            "build-modifier": "0",
-            "average-male-height": "70",
-            "average-female-height": "64",
-            "average-lifespan": "70",
-            "male-weight-modifier": "0",
-            "female-weight-modifier": "0",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_BELOW_AVERAGE",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
-            "starting-languages": [
+            "id" : "RACE_MEN_COMMON",
+            "name" : "Men, Common",
+            "description" : "Common men live throughout the continents in many environments.",
+            "book" : "BOOK_FANTASY_ROLE_PLAYING",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 1E0,
+            "background-options" : 6,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 12,
+            "build-modifier" : 0,
+            "average-male-height" : 70,
+            "average-female-height" : 64,
+            "average-lifespan" : 70,
+            "male-weight-modifier" : 0,
+            "female-weight-modifier" : 0,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_BELOW_AVERAGE",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Self Discipline",
-                    "value": "2"
+                    "id" : "Self Discipline",
+                    "value" : 2
                 },
                 {
-                    "id": "Strength",
-                    "value": "2"
+                    "id" : "Strength",
+                    "value" : 2
                 }
             ]
         },
         {
-            "id": "RACE_MEN_HIGH",
-            "name": "Men, High",
-            "description": "High men are descended from the first men born and live longer and are sturdier than other men.",
-            "book": "BOOK_FANTASY_ROLE_PLAYING",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.75",
-            "background-options": "4",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "10",
-            "build-modifier": "1",
-            "average-male-height": "77",
-            "average-female-height": "70",
-            "average-lifespan": "200",
-            "male-weight-modifier": "0",
-            "female-weight-modifier": "0",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_VERY_HIGH",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
-            "starting-languages": [
+            "id" : "RACE_MEN_HIGH",
+            "name" : "Men, High",
+            "description" : "High men are descended from the first men born and live longer and are sturdier than other men.",
+            "book" : "BOOK_FANTASY_ROLE_PLAYING",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 7.5E-1,
+            "background-options" : 4,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 10,
+            "build-modifier" : 1,
+            "average-male-height" : 77,
+            "average-female-height" : 70,
+            "average-lifespan" : 200,
+            "male-weight-modifier" : 0,
+            "female-weight-modifier" : 0,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_VERY_HIGH",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_GREY_ELVISH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_GREY_ELVISH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_HIGH_ELVISH",
-                    "spoken": "2",
-                    "written": "2"
+                    "language" : "LANGUAGE_HIGH_ELVISH",
+                    "spoken" : 2,
+                    "written" : 2
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_GREY_ELVISH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_GREY_ELVISH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_HIGH_ELVISH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_HIGH_ELVISH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_PLAINS_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_PLAINS_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_SEA_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_SEA_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Agility",
-                    "value": "-2"
+                    "id" : "Agility",
+                    "value" : -2
                 },
                 {
-                    "id": "Constitution",
-                    "value": "4"
+                    "id" : "Constitution",
+                    "value" : 4
                 },
                 {
-                    "id": "Presence",
-                    "value": "4"
+                    "id" : "Presence",
+                    "value" : 4
                 },
                 {
-                    "id": "Quickness",
-                    "value": "-2"
+                    "id" : "Quickness",
+                    "value" : -2
                 },
                 {
-                    "id": "Strength",
-                    "value": "4"
+                    "id" : "Strength",
+                    "value" : 4
                 }
             ]
         },
         {
-            "id": "RACE_MEN_MIXED",
-            "name": "Men, Mixed",
-            "description": "Mixed men have some High blood, but have interbred with common men.",
-            "book": "BOOK_CHARACTER_LAW",
-            "high-culture": "true",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.800000012",
-            "background-options": "5",
-            "exhaustion-bonus": "0",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "10",
-            "build-modifier": "0",
-            "average-male-height": "73",
-            "average-female-height": "67",
-            "average-lifespan": "125",
-            "male-weight-modifier": "0",
-            "female-weight-modifier": "0",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_AVERAGE",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
-            "starting-languages": [
+            "id" : "RACE_MEN_MIXED",
+            "name" : "Men, Mixed",
+            "description" : "Mixed men have some High blood, but have interbred with common men.",
+            "book" : "BOOK_CHARACTER_LAW",
+            "high-culture" : true,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 8.00000011920929E-1,
+            "background-options" : 5,
+            "exhaustion-bonus" : 0,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 10,
+            "build-modifier" : 0,
+            "average-male-height" : 73,
+            "average-female-height" : 67,
+            "average-lifespan" : 125,
+            "male-weight-modifier" : 0,
+            "female-weight-modifier" : 0,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_AVERAGE",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_GREY_ELVISH",
-                    "spoken": "4",
-                    "written": "4"
+                    "language" : "LANGUAGE_GREY_ELVISH",
+                    "spoken" : 4,
+                    "written" : 4
                 },
                 {
-                    "language": "LANGUAGE_HIGH_ELVISH",
-                    "spoken": "2",
-                    "written": "2"
+                    "language" : "LANGUAGE_HIGH_ELVISH",
+                    "spoken" : 2,
+                    "written" : 2
                 },
                 {
-                    "language": "LANGUAGE_HIGH_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_HIGH_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_PLAINS_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_PLAINS_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_SEA_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_SEA_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_SMALL_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_SMALL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Constitution",
-                    "value": "2"
+                    "id" : "Constitution",
+                    "value" : 2
                 },
                 {
-                    "id": "Presence",
-                    "value": "2"
+                    "id" : "Presence",
+                    "value" : 2
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "2"
+                    "id" : "Self Discipline",
+                    "value" : 2
                 },
                 {
-                    "id": "Strength",
-                    "value": "2"
+                    "id" : "Strength",
+                    "value" : 2
                 }
             ]
         },
         {
-            "id": "RACE_ORCS_COMMON",
-            "name": "Orcs, Common",
-            "description": "Orcs, Scrug",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "false",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "2",
-            "exhaustion-bonus": "20",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "3",
-            "soul-departure": "1",
-            "build-modifier": "1",
-            "average-male-height": "48",
-            "average-female-height": "48",
-            "average-lifespan": "60",
-            "male-weight-modifier": "1",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
-            "starting-languages": [
+            "id" : "RACE_ORCS_COMMON",
+            "name" : "Orcs, Common",
+            "description" : "Orcs, Scrug",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : false,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 2,
+            "exhaustion-bonus" : 20,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 3,
+            "soul-departure" : 1,
+            "build-modifier" : 1,
+            "average-male-height" : 48,
+            "average-female-height" : 48,
+            "average-lifespan" : 60,
+            "male-weight-modifier" : 1,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "4"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 4
                 },
                 {
-                    "language": "LANGUAGE_ORCISH",
-                    "spoken": "8",
-                    "written": "2"
+                    "language" : "LANGUAGE_ORCISH",
+                    "spoken" : 8,
+                    "written" : 2
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_ORCISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_ORCISH",
+                    "spoken" : 10,
+                    "written" : 10
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Constitution",
-                    "value": "2"
+                    "id" : "Constitution",
+                    "value" : 2
                 },
                 {
-                    "id": "Empathy",
-                    "value": "-2"
+                    "id" : "Empathy",
+                    "value" : -2
                 },
                 {
-                    "id": "Intuition",
-                    "value": "-4"
+                    "id" : "Intuition",
+                    "value" : -4
                 },
                 {
-                    "id": "Memory",
-                    "value": "-4"
+                    "id" : "Memory",
+                    "value" : -4
                 },
                 {
-                    "id": "Presence",
-                    "value": "-2"
+                    "id" : "Presence",
+                    "value" : -2
                 },
                 {
-                    "id": "Reasoning",
-                    "value": "-2"
+                    "id" : "Reasoning",
+                    "value" : -2
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-4"
+                    "id" : "Self Discipline",
+                    "value" : -4
                 },
                 {
-                    "id": "Strength",
-                    "value": "2"
+                    "id" : "Strength",
+                    "value" : 2
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_ATHLETIC_GAMES_BRAWN"
+                    "id" : "SKILL_ATHLETIC_GAMES_BRAWN"
                 },
                 {
-                    "id": "SKILL_POWER_STRIKING"
+                    "id" : "SKILL_POWER_STRIKING"
                 },
                 {
-                    "id": "SKILL_POWER_THROWING"
+                    "id" : "SKILL_POWER_THROWING"
                 },
                 {
-                    "id": "SKILL_WEIGHT_LIFTING"
+                    "id" : "SKILL_WEIGHT_LIFTING"
                 }
             ],
-            "restricted-skills": [
+            "restricted-skills" : [
                 {
-                    "id": "SKILL_PUBLIC_SPEAKING"
+                    "id" : "SKILL_PUBLIC_SPEAKING"
                 },
                 {
-                    "id": "SKILL_SEDUCTION"
+                    "id" : "SKILL_SEDUCTION"
                 },
                 {
-                    "id": "SKILL_TRADING"
+                    "id" : "SKILL_TRADING"
                 }
             ],
-            "skill-category-choices-everyman": [
+            "skill-category-choices-everyman" : [
                 {
-                    "num-choices": "1",
-                    "options": [
+                    "num-choices" : 1,
+                    "options" : [
                         "SKILLCATEGORY_WEAPON_2_HANDED",
                         "SKILLCATEGORY_WEAPON_POLE_ARMS"
                     ]
@@ -2016,113 +2016,113 @@
             ]
         },
         {
-            "id": "RACE_ORCS_GREATER",
-            "name": "Orcs, Greater",
-            "description": "Orcs, Greater",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "false",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "4",
-            "exhaustion-bonus": "30",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "3",
-            "soul-departure": "1",
-            "build-modifier": "0",
-            "average-male-height": "66",
-            "average-female-height": "66",
-            "average-lifespan": "80",
-            "male-weight-modifier": "1",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_LOW",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
-            "starting-languages": [
+            "id" : "RACE_ORCS_GREATER",
+            "name" : "Orcs, Greater",
+            "description" : "Orcs, Greater",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : false,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 4,
+            "exhaustion-bonus" : 30,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 3,
+            "soul-departure" : 1,
+            "build-modifier" : 0,
+            "average-male-height" : 66,
+            "average-female-height" : 66,
+            "average-lifespan" : 80,
+            "male-weight-modifier" : 1,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_LOW",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "8",
-                    "written": "2"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 8,
+                    "written" : 2
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "5",
-                    "written": "2"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 5,
+                    "written" : 2
                 },
                 {
-                    "language": "LANGUAGE_ORCISH",
-                    "spoken": "8",
-                    "written": "3"
+                    "language" : "LANGUAGE_ORCISH",
+                    "spoken" : 8,
+                    "written" : 3
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "6",
-                    "written": "3"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 3
                 },
                 {
-                    "language": "LANGUAGE_ORCISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_ORCISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_WOOD_SPEECH",
-                    "spoken": "6",
-                    "written": "3"
+                    "language" : "LANGUAGE_WOOD_SPEECH",
+                    "spoken" : 6,
+                    "written" : 3
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Constitution",
-                    "value": "4"
+                    "id" : "Constitution",
+                    "value" : 4
                 },
                 {
-                    "id": "Empathy",
-                    "value": "-2"
+                    "id" : "Empathy",
+                    "value" : -2
                 },
                 {
-                    "id": "Intuition",
-                    "value": "-2"
+                    "id" : "Intuition",
+                    "value" : -2
                 },
                 {
-                    "id": "Memory",
-                    "value": "-2"
+                    "id" : "Memory",
+                    "value" : -2
                 },
                 {
-                    "id": "Presence",
-                    "value": "-2"
+                    "id" : "Presence",
+                    "value" : -2
                 },
                 {
-                    "id": "Reasoning",
-                    "value": "-2"
+                    "id" : "Reasoning",
+                    "value" : -2
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-2"
+                    "id" : "Self Discipline",
+                    "value" : -2
                 },
                 {
-                    "id": "Strength",
-                    "value": "4"
+                    "id" : "Strength",
+                    "value" : 4
                 }
             ],
-            "skill-category-choices-everyman": [
+            "skill-category-choices-everyman" : [
                 {
-                    "num-choices": "1",
-                    "options": [
+                    "num-choices" : 1,
+                    "options" : [
                         "SKILLCATEGORY_WEAPON_2_HANDED",
                         "SKILLCATEGORY_WEAPON_POLE_ARMS"
                     ]
@@ -2130,105 +2130,105 @@
             ]
         },
         {
-            "id": "RACE_ORCS_GREY",
-            "name": "Orcs, Grey",
-            "description": "Orcs, Grey",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "false",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "4",
-            "exhaustion-bonus": "25",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "3",
-            "soul-departure": "1",
-            "build-modifier": "1",
-            "average-male-height": "60",
-            "average-female-height": "60",
-            "average-lifespan": "1000",
-            "male-weight-modifier": "1",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_LOW",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "starting-languages": [
+            "id" : "RACE_ORCS_GREY",
+            "name" : "Orcs, Grey",
+            "description" : "Orcs, Grey",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : false,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 4,
+            "exhaustion-bonus" : 25,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 3,
+            "soul-departure" : 1,
+            "build-modifier" : 1,
+            "average-male-height" : 60,
+            "average-female-height" : 60,
+            "average-lifespan" : 1000,
+            "male-weight-modifier" : 1,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_LOW",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "8",
-                    "written": "3"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 8,
+                    "written" : 3
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "5",
-                    "written": "2"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 5,
+                    "written" : 2
                 },
                 {
-                    "language": "LANGUAGE_ORCISH",
-                    "spoken": "8",
-                    "written": "4"
+                    "language" : "LANGUAGE_ORCISH",
+                    "spoken" : 8,
+                    "written" : 4
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_COMMON_SPEECH",
-                    "spoken": "8",
-                    "written": "8"
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 8,
+                    "written" : 8
                 },
                 {
-                    "language": "LANGUAGE_HILL_SPEECH",
-                    "spoken": "6",
-                    "written": "4"
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 6,
+                    "written" : 4
                 },
                 {
-                    "language": "LANGUAGE_ORCISH",
-                    "spoken": "10",
-                    "written": "10"
+                    "language" : "LANGUAGE_ORCISH",
+                    "spoken" : 10,
+                    "written" : 10
                 },
                 {
-                    "language": "LANGUAGE_WOOD_SPEECH",
-                    "spoken": "6",
-                    "written": "4"
+                    "language" : "LANGUAGE_WOOD_SPEECH",
+                    "spoken" : 6,
+                    "written" : 4
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Constitution",
-                    "value": "4"
+                    "id" : "Constitution",
+                    "value" : 4
                 },
                 {
-                    "id": "Empathy",
-                    "value": "2"
+                    "id" : "Empathy",
+                    "value" : 2
                 },
                 {
-                    "id": "Intuition",
-                    "value": "2"
+                    "id" : "Intuition",
+                    "value" : 2
                 },
                 {
-                    "id": "Memory",
-                    "value": "2"
+                    "id" : "Memory",
+                    "value" : 2
                 },
                 {
-                    "id": "Self Discipline",
-                    "value": "-1"
+                    "id" : "Self Discipline",
+                    "value" : -1
                 },
                 {
-                    "id": "Strength",
-                    "value": "1"
+                    "id" : "Strength",
+                    "value" : 1
                 }
             ],
-            "skill-category-choices-everyman": [
+            "skill-category-choices-everyman" : [
                 {
-                    "num-choices": "1",
-                    "options": [
+                    "num-choices" : 1,
+                    "options" : [
                         "SKILLCATEGORY_WEAPON_1_H_EDGED",
                         "SKILLCATEGORY_WEAPON_2_HANDED"
                     ]
@@ -2236,107 +2236,107 @@
             ]
         },
         {
-            "id": "RACE_TROGLODYTES",
-            "name": "Troglodytes",
-            "description": "Troglodytes",
-            "book": "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "high-culture": "false",
-            "creature-size": "Medium",
-            "critical-table": "Normal",
-            "recovery-multiplier": "0.5",
-            "background-options": "5",
-            "exhaustion-bonus": "20",
-            "stat-loss-racial-type": "2",
-            "required-sleep": "8",
-            "required-sleep-frequency": "1",
-            "soul-departure": "12",
-            "build-modifier": "2",
-            "average-male-height": "65",
-            "average-female-height": "60",
-            "average-lifespan": "50",
-            "male-weight-modifier": "0",
-            "female-weight-modifier": "1",
-            "arcane-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "arms-progression": "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
-            "channeling-progression": "SKILLPROGRESSIONTYPE_PP_STANDARD",
-            "essence-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "mentalism-progression": "SKILLPROGRESSIONTYPE_PP_MINIMAL",
-            "starting-languages": [
+            "id" : "RACE_TROGLODYTES",
+            "name" : "Troglodytes",
+            "description" : "Troglodytes",
+            "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
+            "high-culture" : false,
+            "creature-size" : "Medium",
+            "critical-table" : "Normal",
+            "recovery-multiplier" : 5E-1,
+            "background-options" : 5,
+            "exhaustion-bonus" : 20,
+            "stat-loss-racial-type" : 2,
+            "required-sleep" : 8,
+            "required-sleep-frequency" : 1,
+            "soul-departure" : 12,
+            "build-modifier" : 2,
+            "average-male-height" : 65,
+            "average-female-height" : 60,
+            "average-lifespan" : 50,
+            "male-weight-modifier" : 0,
+            "female-weight-modifier" : 1,
+            "arcane-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "arms-progression" : "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
+            "channeling-progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "essence-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "mentalism-progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "starting-languages" : [
                 {
-                    "language": "LANGUAGE_TROGLODYTE",
-                    "spoken": "8",
-                    "written": "2"
+                    "language" : "LANGUAGE_TROGLODYTE",
+                    "spoken" : 8,
+                    "written" : 2
                 }
             ],
-            "adolescent-languages": [
+            "adolescent-languages" : [
                 {
-                    "language": "LANGUAGE_BLACK_SPEECH",
-                    "spoken": "6",
-                    "written": "6"
+                    "language" : "LANGUAGE_BLACK_SPEECH",
+                    "spoken" : 6,
+                    "written" : 6
                 },
                 {
-                    "language": "LANGUAGE_ORCISH",
-                    "spoken": "5",
-                    "written": "4"
+                    "language" : "LANGUAGE_ORCISH",
+                    "spoken" : 5,
+                    "written" : 4
                 },
                 {
-                    "language": "LANGUAGE_TROGLODYTE",
-                    "spoken": "10",
-                    "written": "3"
+                    "language" : "LANGUAGE_TROGLODYTE",
+                    "spoken" : 10,
+                    "written" : 3
                 }
             ],
-            "stat-bonuses": [
+            "stat-bonuses" : [
                 {
-                    "id": "Constitution",
-                    "value": "4"
+                    "id" : "Constitution",
+                    "value" : 4
                 },
                 {
-                    "id": "Empathy",
-                    "value": "-4"
+                    "id" : "Empathy",
+                    "value" : -4
                 },
                 {
-                    "id": "Presence",
-                    "value": "-2"
+                    "id" : "Presence",
+                    "value" : -2
                 },
                 {
-                    "id": "Quickness",
-                    "value": "2"
+                    "id" : "Quickness",
+                    "value" : 2
                 },
                 {
-                    "id": "Reasoning",
-                    "value": "-2"
+                    "id" : "Reasoning",
+                    "value" : -2
                 },
                 {
-                    "id": "Strength",
-                    "value": "4"
+                    "id" : "Strength",
+                    "value" : 4
                 }
             ],
-            "everyman-skills": [
+            "everyman-skills" : [
                 {
-                    "id": "SKILL_CAVING"
+                    "id" : "SKILL_CAVING"
                 },
                 {
-                    "id": "SKILL_DIRECTION_SENSE"
+                    "id" : "SKILL_DIRECTION_SENSE"
                 },
                 {
-                    "id": "SKILL_SCALING"
+                    "id" : "SKILL_SCALING"
                 },
                 {
-                    "id": "SKILL_SURVIVAL",
-                    "subcategory": "underground"
+                    "id" : "SKILL_SURVIVAL",
+                    "subcategory" : "underground"
                 }
             ],
-            "everyman-categories": [
+            "everyman-categories" : [
                 "SKILLCATEGORY_WEAPON_1_H_CONCUSSION"
             ],
-            "restricted-categories": [
+            "restricted-categories" : [
                 "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
                 "SKILLCATEGORY_SCIENCE_ANALYTIC_SPECIALISED"
             ],
-            "skill-bonuses": [
+            "skill-bonuses" : [
                 {
-                    "id": "SKILL_CAVING",
-                    "value": "20"
+                    "id" : "SKILL_CAVING",
+                    "value" : 20
                 }
             ]
         }
