@@ -675,7 +675,7 @@ public:
 	 * @param key The key associated with the string array in the JSON object.
 	 * @return A vector containing the strings from the JSON array.
 	 */
-	static std::vector<std::string> getStringArray(const json::object& obj, const std::string& key);
+	static std::vector<std::string> getStringVector(const json::object& obj, const std::string& key);
 
 	/**
 	 * @brief Retrieves a JSON array from a JSON object using the specified key.
@@ -797,11 +797,13 @@ public:
 
 	/**
 	 * @brief Sets a string array value in a JSON object with the specified key.
+	 * @tparam Container The type of the iterable container (e.g., std::vector, std::set, std::list).
 	 * @param obj The JSON object to modify.
 	 * @param key The key under which to store the string array.
 	 * @param values The vector of strings to store as an array in the JSON object.
 	 */
-	static void setStringArray(json::object& obj, const std::string& key, const std::vector<std::string>& values);
+	template<typename Container>
+	static void setStringArray(json::object& obj, const std::string& key, const Container& values);
 	/**
 	 * @brief Sets an integer array value in a JSON object with the specified key.
 	 * @param obj The JSON object to modify.
@@ -1500,11 +1502,94 @@ public:
 	template<game_rule_data_object GameRuleData, typename EnumType>
 	static void setDataEnumMap(json::object& obj, const std::string& key, const std::map<const GameRuleData*, EnumType>& map);
 
+	/**
+	 * @brief Retrieves a map of Enumerated objects to primitive values from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array associated with the given key and converts it into a map where the keys are pointers to Enumerated objects and the values are of a primitive type specified by the template parameter Primitive. Each
+	 * element in the JSON array is expected to be an object with an "id" field that represents the ID of an enumeration, and a "value" field that represents the primitive value associated with that enumeration. The function uses the
+	 * theoretical toString to look up each enumeration by its string when constructing the resulting map.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "itemQuantities": [
+	 *         { "id": "ENUM_VAL1", "value": 5 },
+	 *         { "id": "ENUM_VAL2", "value": 3 }
+	 *     ]
+	 * }
+	 * @endcode
+	 * You can retrieve the map of enums to their quantities using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::map<const ItemData*, int> itemQuantityMap = JsonConverter::getDataPrimitiveMap<ItemData, int>(obj, "itemQuantities", manager);
+	 * // itemQuantityMap would contain entries mapping ITEM_SWORD to 5 and ITEM_SHIELD to 3 if those items exist in the manager
+	 * @endcode
+	 *
+	 * @tparam EnumType The type of the enumeration used as keys in the resulting map.
+	 * @tparam Primitive The type of the primitive values used as values in the resulting map (e.g., int, float, double, bool).
+	 * @param obj The JSON object to retrieve the data primitive map from.
+	 * @param key The key associated with the data primitive array in the JSON object.
+	 * @return A map where each key an Enumerated object corresponding to the "id" field in the JSON array, and each value is a primitive value associated with that enumeration constructed from the "value" field in the JSON
+	 */
 	template<typename EnumType, typename Primitive>
 	static std::map<EnumType, Primitive> getEnumPrimitiveMap(const json::object& obj, const std::string& key);
 
+	/**
+	 * @brief Sets an array of Enumerated objects mapped to primitive values in a JSON object with the specified key.
+	 *
+	 * This function takes a map where the keys are of an enumeration type specified by the template parameter EnumType and the values are of a primitive type specified by the template parameter Primitive. It converts this map into a JSON
+	 * array, where each entry is represented as an object with an "id" field corresponding to the string representation of the enumeration and a "value" field corresponding to the primitive value. The resulting JSON array is stored
+	 * under the specified key in the JSON object.
+	 *
+	 * For example, if you have a map of enums to their quantities:
+	 * @code
+	 * std::map<ItemEnum, int> itemQuantityMap = {
+	 *     {ENUM_VAL1, 5},
+	 *     {ENUM_VAL2, 3}
+	 * };
+	 * @endcode
+	 * You can convert this map into a JSON array using this method:
+	 * @code
+	 * JsonConverter::setDataPrimitiveMap<ItemEnum, int>(obj, "itemQuantities", itemQuantityMap);
+	 * // The JSON object would now contain an array under "itemQuantities" with objects representing each enum and its quantity
+	 * @endcode
+	 *
+	 * @tparam EnumType The type of the enumeration used as keys in the input map.
+	 * @tparam Primitive The type of the primitive values used as values in the input map (e.g., int, float, double, bool).
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the data primitive array in the JSON object.
+	 * @param map A map where each key is an enum value of type EnumType and each value is a primitive value to be converted into an object in the JSON array.
+	 */
 	template<typename EnumType, typename Primitive>
 	static void setEnumPrimitiveMap(json::object& obj, const std::string& key, const std::map<EnumType, Primitive>& map);
+
+	/**
+	 * @brief Retrieves a set of strings from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array associated with the given key and converts it into a set of strings.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "SetOfStuff": [
+	 *         "Value 1",
+	 *         "Value 2",
+	 *         "Value 3"
+	 *     ]
+	 * }
+	 * @endcode
+	 * You can retrieve the set of item IDs using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::set<std::string> itemIds = JsonConverter::getStringSet<ItemData>(obj, "itemIds", manager);
+	 * // itemIds would contain "Value 1", "Value 2", and "Value 3"
+	 * @endcode
+	 *
+	 * @param obj The JSON object to retrieve the string set from.
+	 * @param key The key associated with the string array in the JSON object.
+	 * @return A set of strings in the JSON array.
+	 */
+	static std::set<std::string> getStringSet(const json::object& obj, const std::string& key);
 };
 
 // Template implementations
@@ -2025,6 +2110,16 @@ void JsonConverter::setEnumPrimitiveMap(json::object& obj, const std::string& ke
 		entry_obj["id"] = key;
 		entry_obj["value"] = primitive_value;
 		arr.push_back(entry_obj);
+	}
+	if (arr.size())
+		obj[key] = arr;
+}
+
+template<typename Container>
+void JsonConverter::setStringArray(json::object& obj, const std::string& key, const Container& values) {
+	json::array arr;
+	for (const auto& value : values) {
+		arr.push_back(json::value(value));
 	}
 	if (arr.size())
 		obj[key] = arr;

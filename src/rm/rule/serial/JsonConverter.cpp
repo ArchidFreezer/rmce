@@ -75,13 +75,26 @@ bool JsonConverter::getBool(const json::object& obj, const std::string& key, boo
 	return default_value;
 }
 
-std::vector<std::string> JsonConverter::getStringArray(const json::object& obj, const std::string& key) {
+std::vector<std::string> JsonConverter::getStringVector(const json::object& obj, const std::string& key) {
 	std::vector<std::string> result;
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {
 		for (const auto& item : it->value().as_array()) {
 			if (item.is_string()) {
 				result.push_back(std::string(item.as_string().c_str()));
+			}
+		}
+	}
+	return result;
+}
+
+std::set<std::string> JsonConverter::getStringSet(const json::object& obj, const std::string& key) {
+	std::set<std::string> result;
+	auto it = obj.find(key);
+	if (it != obj.end() && it->value().is_array()) {
+		for (const auto& item : it->value().as_array()) {
+			if (item.is_string()) {
+				result.emplace(std::string(item.as_string().c_str()));
 			}
 		}
 	}
@@ -132,14 +145,6 @@ void JsonConverter::setDouble(json::object& obj, const std::string& key, double 
 
 void JsonConverter::setBool(json::object& obj, const std::string& key, bool value) {
 	obj[key] = value;
-}
-
-void JsonConverter::setStringArray(json::object& obj, const std::string& key, const std::vector<std::string>& values) {
-	json::array arr;
-	for (const auto& value : values) {
-		arr.push_back(json::value(value));
-	}
-	obj[key] = arr;
 }
 
 void JsonConverter::setIntArray(json::object& obj, const std::string& key, const std::vector<int>& values) {
