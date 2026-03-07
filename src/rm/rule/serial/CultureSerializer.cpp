@@ -17,7 +17,7 @@ json::value CultureSerializer::serializeObject(const CultureData& ref) const {
 	JsonConverter::setLanguageAbilities(obj, "background-languages", ref.languageAbilities());
 
 	// Hobby skills
-	JsonConverter::setSkillArray(obj, "hobby-skills", ref.hobbySkills());
+	JsonConverter::setSkillSet(obj, "hobby-skills", ref.hobbySkills());
 
 	// Hobby category skills
 	JsonConverter::setDataSet(obj, "hobby-categories", ref.hobbySkillCategories());

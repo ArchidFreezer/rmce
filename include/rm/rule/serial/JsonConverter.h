@@ -902,11 +902,11 @@ public:
 	 * @code
 	 * // With std::vector
 	 * std::vector<const rm::rule::SubcategoriedSkillData*> skillVec = {skillData1, skillData2, skillData3};
-	 * JsonConverter::setSkillArray(obj, "skills", skillVec);
+	 * JsonConverter::setSkillSet(obj, "skills", skillVec);
 	 *
 	 * // With std::list
 	 * std::list<const rm::rule::SubcategoriedSkillData*> skillList = {skillData1, skillData2};
-	 * JsonConverter::setSkillArray(obj, "skills", skillList);
+	 * JsonConverter::setSkillSet(obj, "skills", skillList);
 	 * @endcode
 	 * @tparam Container The type of the iterable container (e.g., std::vector, std::set, std::list).
 	 * @param obj The JSON object to modify.
@@ -914,7 +914,7 @@ public:
 	 * @param skillValues The container of pointers to SubcategoriedSkillData objects to store as an array in the JSON object. Each skill will be converted to a JSON object with "id" and optional "subcategory" fields.
 	 */
 	template<typename Container>
-	static void setSkillArray(json::object& obj, const std::string& key, const Container& skillValues);
+	static void setSkillSet(json::object& obj, const std::string& key, const Container& skillValues);
 
 	/**
 	 * @brief Retrieves a map of language abilities from a JSON object using the specified key.
@@ -1557,7 +1557,7 @@ std::vector<EnumType> JsonConverter::getEnumVector(const json::object& obj, cons
 }
 
 template<typename Container>
-void JsonConverter::setSkillArray(json::object& obj, const std::string& key, const Container& skillValues) {
+void JsonConverter::setSkillSet(json::object& obj, const std::string& key, const Container& skillValues) {
 	json::array arr;
 	std::map<std::string, const rm::rule::SubcategoriedSkillData*> sorted_map{};
 	for (const auto& data : skillValues) {
