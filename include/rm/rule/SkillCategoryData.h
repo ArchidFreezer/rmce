@@ -131,7 +131,7 @@ namespace rm::rule {
 		 *
 		 * @return std::vector of stats
 		 */
-		const std::vector<StatType::Type>& stats() { return stats_; }
+		const std::vector<StatType::Type>& stats() const { return stats_; }
 
 		/**
 		 * @brief Set whether to use the characters realm stats for determining the bonus
