@@ -1,6 +1,7 @@
 #pragma once
 
 #include <sstream>
+#include <FileSerializer.h>
 #include <PersistentJsonSerializer.h>
 
 namespace rm::rule::serial {
@@ -27,7 +28,7 @@ void pretty_print(std::ostream& os, json::value const& jv, std::string* indent =
  * @tparam DataType Type of persistent object to load from the JSON file. This must be a type that satisfies the persistent_object concept and for which a PersistentJsonSerializer specialization exists.
  */
 template<persistent_object DataType>
-class JsonFileSerializer {
+class JsonFileSerializer : public FileSerializer {
 public:
 	/**
 	 * @brief Constructor for the JsonFileSerializer class.
@@ -45,38 +46,38 @@ public:
 	 *
 	 * @param is Input stream to read from
 	 */
-	void load(std::istream& is);
+	void load(std::istream& is) override;
 
 	/**
 	 * @brief Load the data from the JSON file and add it to the object manager
 	 *
 	 * @param filename Path to the JSON file to read from
 	 */
-	void load(const std::string& filename);
+	void load(const std::string& filename) override;
 
 	/**
 	 * @brief Load the data from the JSON file and add it to the object manager
 	 */
-	void load();
+	void load() override;
 
 	/**
 	 * @brief Save the data from the object manager to a JSON file
 	 *
 	 * @param os Output stream to write to
 	 */
-	void save(std::ostream& os) const;
+	void save(std::ostream& os) const override;
 
 	/**
 	 * @brief Save the data from the object manager to a JSON file
 	 *
 	 * @param filename Path to the JSON file to write to
 	 */
-	void save(const std::string& filename) const;
+	void save(const std::string& filename) const override;
 
 	/**
 	 * @brief Save the data from the object manager to a JSON file
 	 */
-	void save() const;
+	void save() const override;
 
 	/**
 	 * @brief Get the JSON representation of the data from the object manager
