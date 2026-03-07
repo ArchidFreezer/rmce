@@ -80,11 +80,11 @@ public:
 	void save() const override;
 
 	/**
-	 * @brief Get the JSON representation of the data from the object manager
+	 * @brief Get the JSON representation of all the data object of the class template DataType from the object manager
 	 *
 	 * @return A JSON value representing the data, with an array of objects under the specified root key.
 	 */
-	json::value json() const;
+	const json::value json() const;
 
 	/**
 	 * @brief Set whether to pretty print the JSON output when saving
@@ -185,7 +185,7 @@ void JsonFileSerializer<DataType>::save(std::ostream& os) const {
 }
 
 template<persistent_object DataType>
-json::value JsonFileSerializer<DataType>::json() const {
+const json::value JsonFileSerializer<DataType>::json() const {
 	// Create a JSON array to hold the serialized objects
 	json::array json_array;
 	// Iterate over all objects of type DataType in the manager and serialize them
