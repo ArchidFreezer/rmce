@@ -185,7 +185,7 @@ namespace rm::rule {
 		 *
 		 * @return float multiplier to standard recovery times
 		 */
-		float recoveryMultipler() const { return recovery_multipler_; }
+		float recoveryMultiplier() const { return recovery_multipler_; }
 
 		/**
 		 * @brief Sets the number of background options members of this race have
@@ -205,7 +205,7 @@ namespace rm::rule {
 		 *
 		 * @return int Number of background option points
 		 */
-		int numBackgroundOption() const { return num_background_options_; }
+		int numBackgroundOptions() const { return num_background_options_; }
 
 		/**
 		 * @brief Sets any bonus the race has to exhaustion points
@@ -630,7 +630,7 @@ namespace rm::rule {
 		 * @brief Gets a reference to the map of stat bonuses.
 		 * @return A reference to the map containing stat type keys and their corresponding integer bonus values.
 		 */
-		std::map<StatType::Type, int>& statBonuses() { return stat_bonuses_; }
+		const std::map<StatType::Type, int>& statBonuses() const { return stat_bonuses_; }
 
 		/**
 		 * @brief Get the bonus that the race provides to a stat
