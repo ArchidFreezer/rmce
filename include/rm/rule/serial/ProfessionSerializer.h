@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <ProfessionData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class ProfessionSerializer
  * @brief JSON serializer for ProfessionData objects
  */
-class ProfessionSerializer : public PersistentObjectSerializer<ProfessionData> {
+class ProfessionSerializer : public PersistentJsonSerializer<ProfessionData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a ProfessionData object */
-	using PersistentObjectSerializer<ProfessionData>::serializeObject;
+	using PersistentJsonSerializer<ProfessionData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the ProfessionSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	ProfessionSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<ProfessionData>(manager) {
+	ProfessionSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<ProfessionData>(manager) {
 	}
 
 	/**

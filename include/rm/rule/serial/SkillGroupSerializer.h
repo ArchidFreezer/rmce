@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <SkillGroupData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class SkillGroupSerializer
  * @brief JSON serializer for SkillGroupData objects
  */
-class SkillGroupSerializer : public PersistentObjectSerializer<SkillGroupData> {
+class SkillGroupSerializer : public PersistentJsonSerializer<SkillGroupData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a SkillGroupData object */
-	using PersistentObjectSerializer<SkillGroupData>::serializeObject;
+	using PersistentJsonSerializer<SkillGroupData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the SkillGroupSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	SkillGroupSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<SkillGroupData>(manager) {
+	SkillGroupSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<SkillGroupData>(manager) {
 	}
 
 	/**

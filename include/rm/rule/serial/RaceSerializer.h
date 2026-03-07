@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <RaceData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class RaceSerializer
  * @brief JSON serializer for RaceData objects
  */
-class RaceSerializer : public PersistentObjectSerializer<RaceData> {
+class RaceSerializer : public PersistentJsonSerializer<RaceData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a RaceData object */
-	using PersistentObjectSerializer<RaceData>::serializeObject;
+	using PersistentJsonSerializer<RaceData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the RaceSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	RaceSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<RaceData>(manager) {
+	RaceSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<RaceData>(manager) {
 	}
 
 	/**

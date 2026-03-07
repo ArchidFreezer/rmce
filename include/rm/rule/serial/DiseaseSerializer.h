@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <DiseaseData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class DiseaseSerializer
  * @brief JSON serializer for DiseaseData objects
  */
-class DiseaseSerializer : public PersistentObjectSerializer<DiseaseData> {
+class DiseaseSerializer : public PersistentJsonSerializer<DiseaseData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a DiseaseData object */
-	using PersistentObjectSerializer<DiseaseData>::serializeObject;
+	using PersistentJsonSerializer<DiseaseData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the DiseaseSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	DiseaseSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<DiseaseData>(manager) {
+	DiseaseSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<DiseaseData>(manager) {
 	}
 
 	/**

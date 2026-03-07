@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <PoisonData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class PoisonSerializer
  * @brief JSON serializer for PoisonData objects
  */
-class PoisonSerializer : public PersistentObjectSerializer<PoisonData> {
+class PoisonSerializer : public PersistentJsonSerializer<PoisonData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a PoisonData object */
-	using PersistentObjectSerializer<PoisonData>::serializeObject;
+	using PersistentJsonSerializer<PoisonData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the PoisonSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	PoisonSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<PoisonData>(manager) {
+	PoisonSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<PoisonData>(manager) {
 	}
 
 	/**

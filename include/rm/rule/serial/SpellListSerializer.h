@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <SpellListData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class SpellListSerializer
  * @brief JSON serializer for SpellListData objects
  */
-class SpellListSerializer : public PersistentObjectSerializer<SpellListData> {
+class SpellListSerializer : public PersistentJsonSerializer<SpellListData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a SpellListData object */
-	using PersistentObjectSerializer<SpellListData>::serializeObject;
+	using PersistentJsonSerializer<SpellListData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the SpellListSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	SpellListSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<SpellListData>(manager) {
+	SpellListSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<SpellListData>(manager) {
 	}
 
 	/**

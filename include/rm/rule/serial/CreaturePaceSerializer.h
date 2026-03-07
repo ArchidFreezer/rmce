@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <CreaturePaceData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class CreaturePaceSerializer
  * @brief JSON serializer for CreaturePaceData objects
  */
-class CreaturePaceSerializer : public PersistentObjectSerializer<CreaturePaceData> {
+class CreaturePaceSerializer : public PersistentJsonSerializer<CreaturePaceData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a CreaturePaceData object */
-	using PersistentObjectSerializer<CreaturePaceData>::serializeObject;
+	using PersistentJsonSerializer<CreaturePaceData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the CreaturePaceSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	CreaturePaceSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<CreaturePaceData>(manager) {
+	CreaturePaceSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<CreaturePaceData>(manager) {
 	}
 
 	/**

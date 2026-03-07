@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <table/AttackTable.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class AttackTableSerializer
  * @brief JSON serializer for AttackTableData objects
  */
-class AttackTableSerializer : public PersistentObjectSerializer<rm::rule::table::AttackTable> {
+class AttackTableSerializer : public PersistentJsonSerializer<rm::rule::table::AttackTable> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a BookData object */
-	using PersistentObjectSerializer<rm::rule::table::AttackTable>::serializeObject;
+	using PersistentJsonSerializer<rm::rule::table::AttackTable>::serializeObject;
 
 	/**
 	 * @brief Constructs an AttackTableSerializer with the specified PersistentObjectManager.
 	 * @param manager The PersistentObjectManager used to manage persistent objects during serialization and deserialization.
 	 */
-	AttackTableSerializer(rm::PersistentObjectManager& manager)	: PersistentObjectSerializer<rm::rule::table::AttackTable>(manager) {}
+	AttackTableSerializer(rm::PersistentObjectManager& manager)	: PersistentJsonSerializer<rm::rule::table::AttackTable>(manager) {}
 
 	/**
 	 * @brief Serializes an AttackTable object to a JSON value. 

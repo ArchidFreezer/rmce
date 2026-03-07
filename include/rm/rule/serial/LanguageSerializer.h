@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <LanguageData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class LanguageSerializer
  * @brief JSON serializer for LanguageData objects
  */
-class LanguageSerializer : public PersistentObjectSerializer<LanguageData> {
+class LanguageSerializer : public PersistentJsonSerializer<LanguageData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a LanguageData object */
-	using PersistentObjectSerializer<LanguageData>::serializeObject;
+	using PersistentJsonSerializer<LanguageData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the LanguageSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	LanguageSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<LanguageData>(manager) {
+	LanguageSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<LanguageData>(manager) {
 	}
 
 	/**

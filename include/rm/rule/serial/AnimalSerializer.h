@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <AnimalData.h>
 #include <JsonConverter.h>
 
@@ -9,16 +9,16 @@ namespace rm::rule::serial {
  * @class AnimalSerializer
  * @brief JSON serializer for AnimalData objects
  */
-class AnimalSerializer : public PersistentObjectSerializer<AnimalData> {
+class AnimalSerializer : public PersistentJsonSerializer<AnimalData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a AnimalData object */
-	using PersistentObjectSerializer<AnimalData>::serializeObject;
+	using PersistentJsonSerializer<AnimalData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the AnimalSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	AnimalSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<AnimalData>(manager) {
+	AnimalSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<AnimalData>(manager) {
 	}
 
 	/**

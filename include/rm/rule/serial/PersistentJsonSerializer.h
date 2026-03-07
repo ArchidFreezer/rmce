@@ -8,34 +8,34 @@ namespace rm::rule::serial {
 namespace json = boost::json;
 
 /**
- * @class PersistentObjectSerializer
+ * @class PersistentJsonSerializer
  * @brief Abstract class for serializing and deserializing persistent objects to and from JSON format.
  *
  * The copy and move constructors and assignment operators are deleted to prevent slicing and ensure that the class is only used as a base class for specific serializers.
  */
 template<persistent_object PersistentObject>
-class PersistentObjectSerializer {
+class PersistentJsonSerializer {
 public:
 	/**
-	 * @brief Constructor for the PersistentObjectSerializer class.
+	 * @brief Constructor for the PersistentJsonSerializer class.
 	 *
 	 * @param manager Reference to the PersistentObjectManager used for managing persistent objects during serialization and deserialization.
 	 */
-	PersistentObjectSerializer(rm::PersistentObjectManager& manager) : manager_(manager) {
+	PersistentJsonSerializer(rm::PersistentObjectManager& manager) : manager_(manager) {
 	}
 
 	/**
-	 * @brief Virtual destructor for the PersistentObjectSerializer class.
+	 * @brief Virtual destructor for the PersistentJsonSerializer class.
 	 */
-	virtual ~PersistentObjectSerializer() = default;
+	virtual ~PersistentJsonSerializer() = default;
 
 	/*
 	 * We delete all the copy/move constructors and assignment operators to prevent slicing and ensure that the class is only used as a base class for specific serializers.
 	 */
-	PersistentObjectSerializer(const PersistentObjectSerializer&) = delete;            /**< Delete the copy constructor */
-	PersistentObjectSerializer& operator=(const PersistentObjectSerializer&) = delete; /**< Delete the copy assignment operator */
-	PersistentObjectSerializer(PersistentObjectSerializer&&) = delete;                 /**< Delete the move constructor */
-	PersistentObjectSerializer& operator=(PersistentObjectSerializer&&) = delete;      /**< Delete the move assignment operator */
+	PersistentJsonSerializer(const PersistentJsonSerializer&) = delete;            /**< Delete the copy constructor */
+	PersistentJsonSerializer& operator=(const PersistentJsonSerializer&) = delete; /**< Delete the copy assignment operator */
+	PersistentJsonSerializer(PersistentJsonSerializer&&) = delete;                 /**< Delete the move constructor */
+	PersistentJsonSerializer& operator=(PersistentJsonSerializer&&) = delete;      /**< Delete the move assignment operator */
 
 	/**
 	 * @brief Serialize a single object to a JSON value

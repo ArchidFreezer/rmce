@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <CultureData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class CultureSerializer
  * @brief JSON serializer for CultureData objects
  */
-class CultureSerializer : public PersistentObjectSerializer<CultureData> {
+class CultureSerializer : public PersistentJsonSerializer<CultureData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a CultureData object */
-	using PersistentObjectSerializer<CultureData>::serializeObject;
+	using PersistentJsonSerializer<CultureData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the CultureSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	CultureSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<CultureData>(manager) {
+	CultureSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<CultureData>(manager) {
 	}
 
 	/**

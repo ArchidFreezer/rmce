@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <ArmourTypeData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class ArmourTypeSerializer
  * @brief JSON serializer for ArmourTypeData objects
  */
-class ArmourTypeSerializer : public PersistentObjectSerializer<ArmourTypeData> {
+class ArmourTypeSerializer : public PersistentJsonSerializer<ArmourTypeData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a ArmourTypeData object */
-	using PersistentObjectSerializer<ArmourTypeData>::serializeObject;
+	using PersistentJsonSerializer<ArmourTypeData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the ArmourTypeSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	ArmourTypeSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<ArmourTypeData>(manager) {
+	ArmourTypeSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<ArmourTypeData>(manager) {
 	}
 
 	/**

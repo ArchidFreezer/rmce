@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PersistentObjectSerializer.h>
+#include <PersistentJsonSerializer.h>
 #include <ClimateData.h>
 
 namespace rm::rule::serial {
@@ -8,16 +8,16 @@ namespace rm::rule::serial {
  * @class ClimateSerializer
  * @brief JSON serializer for ClimateData objects
  */
-class ClimateSerializer : public PersistentObjectSerializer<ClimateData> {
+class ClimateSerializer : public PersistentJsonSerializer<ClimateData> {
 public:
 	/* We need to bring the base class serializeObject method into scope to allow us to use the overload that takes an ID as well as the one that takes a ClimateData object */
-	using PersistentObjectSerializer<ClimateData>::serializeObject;
+	using PersistentJsonSerializer<ClimateData>::serializeObject;
 
 	/**
 	 * @brief Constructor for the ClimateSerializer class.
 	 * @param manager Object manager to retrive persistent objects from or add to
 	 */
-	ClimateSerializer(rm::PersistentObjectManager& manager) : PersistentObjectSerializer<ClimateData>(manager) {
+	ClimateSerializer(rm::PersistentObjectManager& manager) : PersistentJsonSerializer<ClimateData>(manager) {
 	}
 
 	/**
