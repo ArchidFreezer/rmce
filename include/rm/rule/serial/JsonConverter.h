@@ -1744,6 +1744,8 @@ public:
 private:
 	template<typename Primitive>
 	static Primitive getPrimitive(const json::object& obj, const std::string& key);
+
+	static const SubcategoriedSkillData* getSkillData(const json::object& obj, rm::PersistentObjectManager manager);
 };
 
 // Template implementations
@@ -1895,16 +1897,8 @@ std::map<const SubcategoriedSkillData*, Primitive> JsonConverter::getSkillPrimit
 		if (!skill_val.is_object())
 			continue;
 
-		json::object skill_obj = skill_val.as_object();
-		std::string id = getString(skill_obj, "id");
-		std::optional<std::string> subcategory = getOptionalString(skill_obj, "subcategory");
-		const SubcategoriedSkillData* skill;
-		if (subcategory)
-			skill = &manager.subcategoriedSkillData(id, subcategory.value());
-		else
-			skill = &manager.subcategoriedSkillData(id);
-
-		Primitive primitive_value{getPrimitive<Primitive>(skill_obj, "value")};
+		const SubcategoriedSkillData* skill = getSkillData(skill_val.as_object(), manager);
+		Primitive primitive_value{getPrimitive<Primitive>(skill_val.as_object(), "value")};
 
 		result.emplace(skill, primitive_value);
 	}
@@ -1941,13 +1935,7 @@ std::map<const SubcategoriedSkillData*, EnumType> JsonConverter::getSkillEnumMap
 			continue;
 
 		json::object skill_obj = skill_val.as_object();
-		std::string id = getString(skill_obj, "id");
-		std::optional<std::string> subcategory = getOptionalString(skill_obj, "subcategory");
-		const SubcategoriedSkillData* skill;
-		if (subcategory)
-			skill = &manager.subcategoriedSkillData(id, subcategory.value());
-		else
-			skill = &manager.subcategoriedSkillData(id);
+		const SubcategoriedSkillData* skill = getSkillData(skill_obj, manager);
 
 		EnumType enum_value{};
 		std::string enum_str = getString(skill_obj, "value");
@@ -2046,15 +2034,7 @@ std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> JsonConverter::ge
 				json::array option_array = getJsonArray(choice_obj, "options");
 				for (const auto& option_val : option_array) {
 					if (option_val.is_object()) {
-						json::object skill_obj = option_val.as_object();
-						std::string id = getString(skill_obj, "id");
-						std::optional<std::string> subcategory = getOptionalString(skill_obj, "subcategory");
-						const SubcategoriedSkillData* skill;
-						if (subcategory)
-							skill = &manager.subcategoriedSkillData(id, subcategory.value());
-						else
-							skill = &manager.subcategoriedSkillData(id);
-						choice_data.addOption(*skill);
+						choice_data.addOption(*getSkillData(option_val.as_object(), manager));
 					}
 				}
 				// Get the enum value associated with this choice
@@ -2250,15 +2230,7 @@ std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> JsonConverter::g
 				json::array option_array = getJsonArray(choice_obj, "options");
 				for (const auto& option_val : option_array) {
 					if (option_val.is_object()) {
-						json::object skill_obj = option_val.as_object();
-						std::string id = getString(skill_obj, "id");
-						std::optional<std::string> subcategory = getOptionalString(skill_obj, "subcategory");
-						const SubcategoriedSkillData* skill;
-						if (subcategory)
-							skill = &manager.subcategoriedSkillData(id, subcategory.value());
-						else
-							skill = &manager.subcategoriedSkillData(id);
-						choice_data.addOption(*skill);
+						choice_data.addOption(*getSkillData(option_val.as_object(), manager));
 					}
 				}
 				// Get the primitive value associated with this choice
