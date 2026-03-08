@@ -1,0 +1,29 @@
+#pragma once
+
+#include <AnimalSerializer.h>
+#include <ArmourTypeSerializer.h>
+#include <AttackTableSerializer.h>
+#include <BookSerializer.h>
+#include <ClimateSerializer.h>
+#include <CreaturePaceSerializer.h>
+#include <CultureSerializer.h>
+#include <CultureTypeSerializer.h>
+#include <DiseaseSerializer.h>
+#include <DiseaseTypeSerializer.h>
+#include <LanguageCategorySerializer.h>
+#include <LanguageSerializer.h>
+#include <PoisonSerializer.h>
+#include <PoisonTypeSerializer.h>
+#include <ProfessionSerializer.h>
+#include <RaceSerializer.h>
+#include <SkillCategorySerializer.h>
+#include <SkillGroupSerializer.h>
+#include <SkillProgressionTypeSerializer.h>
+#include <SkillSerializer.h>
+#include <SpecialAttackTableSerializer.h>
+#include <SpellListSerializer.h>
+#include <TrainingPackageCostTableSerializer.h>
+#include <TrainingPackageSerializer.h>
+#include <TreasureCodeSerializer.h>
+#include <WeaponTypeSerializer.h>
+
