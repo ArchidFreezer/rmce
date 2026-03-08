@@ -1860,22 +1860,7 @@ std::map<const GameRuleData*, Primitive> JsonConverter::getDataPrimitiveMap(cons
 				if (id_it != obj.end() && id_it->value().is_string()) {
 					const GameRuleData* data_object = &manager.get<GameRuleData>(std::string(id_it->value().as_string()));
 					if (data_object) {
-						Primitive primitive_value{};
-						// Assuming the primitive value is stored under a key called "value" in the JSON object
-						auto value_it = obj.find("value");
-						if (value_it != obj.end()) {
-							if constexpr (std::is_same_v<Primitive, int>) {
-								primitive_value = getInt(obj, "value", 0);
-							} else if constexpr (std::is_same_v<Primitive, float>) {
-								primitive_value = getFloat(obj, "value", 0.0f);
-							} else if constexpr (std::is_same_v<Primitive, double>) {
-								primitive_value = getDouble(obj, "value", 0.0);
-							} else if constexpr (std::is_same_v<Primitive, bool>) {
-								primitive_value = getBool(obj, "value", false);
-							} else if constexpr (std::is_same_v<Primitive, std::string>) {
-								primitive_value = getString(obj, "value", "");
-							}
-						}
+						Primitive primitive_value{getPrimitive<Primitive>(obj, "value")};
 						result.emplace(data_object, primitive_value);
 					}
 				}
@@ -1910,31 +1895,17 @@ std::map<const SubcategoriedSkillData*, Primitive> JsonConverter::getSkillPrimit
 		if (!skill_val.is_object())
 			continue;
 
-		json::object skillObj = skill_val.as_object();
-		std::string id = getString(skillObj, "id");
-		std::optional<std::string> subcategory = getOptionalString(skillObj, "subcategory");
+		json::object skill_obj = skill_val.as_object();
+		std::string id = getString(skill_obj, "id");
+		std::optional<std::string> subcategory = getOptionalString(skill_obj, "subcategory");
 		const SubcategoriedSkillData* skill;
 		if (subcategory)
 			skill = &manager.subcategoriedSkillData(id, subcategory.value());
 		else
 			skill = &manager.subcategoriedSkillData(id);
 
-		Primitive primitive_value{};
-		// Assuming the primitive value is stored under a key called "value" in the JSON object
-		auto value_it = skillObj.find("value");
-		if (value_it != skillObj.end()) {
-			if constexpr (std::is_same_v<Primitive, int>) {
-				primitive_value = getInt(skillObj, "value", 0);
-			} else if constexpr (std::is_same_v<Primitive, float>) {
-				primitive_value = getFloat(skillObj, "value", 0.0f);
-			} else if constexpr (std::is_same_v<Primitive, double>) {
-				primitive_value = getDouble(skillObj, "value", 0.0);
-			} else if constexpr (std::is_same_v<Primitive, bool>) {
-				primitive_value = getBool(skillObj, "value", false);
-			} else if constexpr (std::is_same_v<Primitive, std::string>) {
-				primitive_value = getString(skillObj, "value", "");
-			}
-		}
+		Primitive primitive_value{getPrimitive<Primitive>(skill_obj, "value")};
+
 		result.emplace(skill, primitive_value);
 	}
 	return result;
@@ -2228,22 +2199,7 @@ std::map<EnumType, Primitive> JsonConverter::getEnumPrimitiveMap(const json::obj
 				std::string enum_str = getString(entry_obj, "id");
 				EnumType enum_value{};
 				fromString(enum_str, enum_value);
-				Primitive primitive_value{};
-				// Assuming the primitive value is stored under a key called "value" in the JSON object
-				auto value_it = entry_obj.find("value");
-				if (value_it != entry_obj.end()) {
-					if constexpr (std::is_same_v<Primitive, int>) {
-						primitive_value = getInt(entry_obj, "value", 0);
-					} else if constexpr (std::is_same_v<Primitive, float>) {
-						primitive_value = getFloat(entry_obj, "value", 0.0f);
-					} else if constexpr (std::is_same_v<Primitive, double>) {
-						primitive_value = getDouble(entry_obj, "value", 0.0);
-					} else if constexpr (std::is_same_v<Primitive, bool>) {
-						primitive_value = getBool(entry_obj, "value", false);
-					} else if constexpr (std::is_same_v<Primitive, std::string>) {
-						primitive_value = getString(entry_obj, "value", "");
-					}
-				}
+				Primitive primitive_value{getPrimitive<Primitive>(entry_obj, "value")};
 				result.emplace(enum_value, primitive_value);
 			}
 		}
@@ -2306,22 +2262,8 @@ std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> JsonConverter::g
 					}
 				}
 				// Get the primitive value associated with this choice
-				Primitive primitive_value{};
-				// Assuming the primitive value is stored under a key called "value" in the JSON object
-				auto value_it = choice_obj.find("value");
-				if (value_it != choice_obj.end()) {
-					if constexpr (std::is_same_v<Primitive, int>) {
-						primitive_value = getInt(choice_obj, "value", 0);
-					} else if constexpr (std::is_same_v<Primitive, float>) {
-						primitive_value = getFloat(choice_obj, "value", 0.0f);
-					} else if constexpr (std::is_same_v<Primitive, double>) {
-						primitive_value = getDouble(choice_obj, "value", 0.0);
-					} else if constexpr (std::is_same_v<Primitive, bool>) {
-						primitive_value = getBool(choice_obj, "value", false);
-					} else if constexpr (std::is_same_v<Primitive, std::string>) {
-						primitive_value = getString(choice_obj, "value", "");
-					}
-				}
+				Primitive primitive_value{getPrimitive<Primitive>(choice_obj, "value")};
+
 				// Add the constructed GameRuleDataChoice and its associated primitive value to the result map
 				result.emplace(choice_data, primitive_value);
 			}
@@ -2380,21 +2322,7 @@ std::map<GameRuleDataChoice<GameRuleData>, Primitive> JsonConverter::getDataChoi
 				}
 				// Get the primitive value associated with this choice
 				Primitive primitive_value{ getPrimitive<Primitive>(choice_obj, "value") };
-				//// Assuming the primitive value is stored under a key called "value" in the JSON object
-				//auto value_it = choice_obj.find("value");
-				//if (value_it != choice_obj.end()) {
-				//	if constexpr (std::is_same_v<Primitive, int>) {
-				//		primitive_value = getInt(choice_obj, "value", 0);
-				//	} else if constexpr (std::is_same_v<Primitive, float>) {
-				//		primitive_value = getFloat(choice_obj, "value", 0.0f);
-				//	} else if constexpr (std::is_same_v<Primitive, double>) {
-				//		primitive_value = getDouble(choice_obj, "value", 0.0);
-				//	} else if constexpr (std::is_same_v<Primitive, bool>) {
-				//		primitive_value = getBool(choice_obj, "value", false);
-				//	} else if constexpr (std::is_same_v<Primitive, std::string>) {
-				//		primitive_value = getString(choice_obj, "value", "");
-				//	}
-				//}
+
 				// Add the constructed GameRuleDataChoice and its associated primitive value to the result map
 				result.emplace(choice_data, primitive_value);
 			}
