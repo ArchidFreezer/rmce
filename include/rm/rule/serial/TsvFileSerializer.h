@@ -1,6 +1,7 @@
 #pragma once
 
 #include <sstream>
+#include <fstream>
 #include <FileSerializer.h>
 #include <PersistentTsvSerializer.h>
 
