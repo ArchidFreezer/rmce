@@ -286,7 +286,7 @@ std::set<const SubcategoriedSkillData*> JsonConverter::getSkillSet(const json::o
 	for (const auto& skill_val : skillArray) {
 		if (!skill_val.is_object())
 			continue;
-		skill_set.emplace(getSkillData(skill_val.as_object(), manager));
+		skill_set.emplace(getSkill(skill_val.as_object(), manager));
 	}
 	return skill_set;
 }
@@ -337,13 +337,22 @@ void JsonConverter::setLanguageAbilities(json::object& obj, const std::string& k
 		obj[key] = arr;
 }
 
-const SubcategoriedSkillData* JsonConverter::getSkillData(const json::object& obj, rm::PersistentObjectManager manager) {
+const SubcategoriedSkillData* JsonConverter::getSkill(const json::object& obj, rm::PersistentObjectManager manager) {
 	std::string id = getString(obj, "id");
 	std::optional<std::string> subcategory = getOptionalString(obj, "subcategory");
 	if (subcategory)
 		return &manager.subcategoriedSkillData(id, subcategory.value());
 	else
 		return &manager.subcategoriedSkillData(id);
+}
+
+const json::object JsonConverter::setSkill(const SubcategoriedSkillData& skillData) {
+	json::object obj;
+	setString(obj, "id", skillData.skillData().id());
+	if (skillData.subcategory()) {
+		setString(obj, "subcategory", skillData.subcategory().value());
+	}
+	return obj;
 }
 
 } // namespace rm::rule::serial

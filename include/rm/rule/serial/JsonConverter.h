@@ -1745,7 +1745,9 @@ private:
 	template<typename Primitive>
 	static Primitive getPrimitive(const json::object& obj, const std::string& key);
 
-	static const SubcategoriedSkillData* getSkillData(const json::object& obj, rm::PersistentObjectManager manager);
+	static const SubcategoriedSkillData* getSkill(const json::object& obj, rm::PersistentObjectManager manager);
+
+	static const json::object setSkill(const SubcategoriedSkillData& skillData);
 };
 
 // Template implementations
@@ -1807,12 +1809,7 @@ void JsonConverter::setSkillSet(json::object& obj, const std::string& key, const
 	}
 
 	for (const auto& [key, data] : sorted_map) {
-		json::object skill_obj;
-		skill_obj["id"] = data->skillData().id();
-		if (data->subcategory()) {
-			skill_obj["subcategory"] = data->subcategory().value();
-		}
-		arr.push_back(skill_obj);
+		arr.push_back(setSkill(*data));
 	}
 	if (arr.size())
 		obj[key] = arr;
@@ -1897,7 +1894,7 @@ std::map<const SubcategoriedSkillData*, Primitive> JsonConverter::getSkillPrimit
 		if (!skill_val.is_object())
 			continue;
 
-		const SubcategoriedSkillData* skill = getSkillData(skill_val.as_object(), manager);
+		const SubcategoriedSkillData* skill = getSkill(skill_val.as_object(), manager);
 		Primitive primitive_value{getPrimitive<Primitive>(skill_val.as_object(), "value")};
 
 		result.emplace(skill, primitive_value);
@@ -1914,11 +1911,7 @@ void JsonConverter::setSkillPrimitiveMap(json::object& obj, const std::string& k
 		sorted_map.emplace(key, data);
 	}
 	for (const auto& [key, data] : sorted_map) {
-		json::object skill_obj;
-		skill_obj["id"] = data->skillData().id();
-		if (data->subcategory()) {
-			skill_obj["subcategory"] = data->subcategory().value();
-		}
+		json::object skill_obj = setSkill(*data);
 		skill_obj["value"] = map.at(data);
 		arr.push_back(skill_obj);
 	}
@@ -1935,7 +1928,7 @@ std::map<const SubcategoriedSkillData*, EnumType> JsonConverter::getSkillEnumMap
 			continue;
 
 		json::object skill_obj = skill_val.as_object();
-		const SubcategoriedSkillData* skill = getSkillData(skill_obj, manager);
+		const SubcategoriedSkillData* skill = getSkill(skill_obj, manager);
 
 		EnumType enum_value{};
 		std::string enum_str = getString(skill_obj, "value");
@@ -1954,11 +1947,7 @@ void JsonConverter::setSkillEnumMap(json::object& obj, const std::string& key, c
 		sorted_map.emplace(key, data);
 	}
 	for (const auto& [key, data] : sorted_map) {
-		json::object skill_obj;
-		skill_obj["id"] = data->skillData().id();
-		if (data->subcategory()) {
-			skill_obj["subcategory"] = data->subcategory().value();
-		}
+		json::object skill_obj = setSkill(*data);
 		skill_obj["value"] = toString(map.at(data));
 		arr.push_back(skill_obj);
 	}
@@ -2034,7 +2023,7 @@ std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> JsonConverter::ge
 				json::array option_array = getJsonArray(choice_obj, "options");
 				for (const auto& option_val : option_array) {
 					if (option_val.is_object()) {
-						choice_data.addOption(*getSkillData(option_val.as_object(), manager));
+						choice_data.addOption(*getSkill(option_val.as_object(), manager));
 					}
 				}
 				// Get the enum value associated with this choice
@@ -2060,16 +2049,12 @@ void JsonConverter::setSkillChoiceEnumMap(json::object& obj, const std::string& 
 			std::string option_key = option->skillData().id() + (option->subcategory() ? option->subcategory().value() : "");
 			sorted_options.emplace(option_key, option);
 		}
+		choice_obj["type"] = toString(enum_value);
+
 		json::array option_array;
 		for (const auto& pair : sorted_options) {
-			json::object skill_obj;
-			skill_obj["id"] = pair.second->skillData().id();
-			if (pair.second->subcategory()) {
-				skill_obj["subcategory"] = pair.second->subcategory().value();
-			}
-			option_array.push_back(skill_obj);
+			option_array.push_back(setSkill(*pair.second));
 		}
-		choice_obj["type"] = toString(enum_value);
 		choice_obj["options"] = option_array;
 		arr.push_back(choice_obj);
 	}
@@ -2230,7 +2215,7 @@ std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> JsonConverter::g
 				json::array option_array = getJsonArray(choice_obj, "options");
 				for (const auto& option_val : option_array) {
 					if (option_val.is_object()) {
-						choice_data.addOption(*getSkillData(option_val.as_object(), manager));
+						choice_data.addOption(*getSkill(option_val.as_object(), manager));
 					}
 				}
 				// Get the primitive value associated with this choice
@@ -2257,12 +2242,7 @@ void JsonConverter::setSkillChoicePrimitiveMap(json::object& obj, const std::str
 		}
 		json::array option_array;
 		for (const auto& pair : sorted_options) {
-			json::object skill_obj;
-			skill_obj["id"] = pair.second->skillData().id();
-			if (pair.second->subcategory()) {
-				skill_obj["subcategory"] = pair.second->subcategory().value();
-			}
-			option_array.push_back(skill_obj);
+			option_array.push_back(setSkill(*pair.second));
 		}
 		choice_obj["value"] = primitive_value;
 		choice_obj["options"] = option_array;
