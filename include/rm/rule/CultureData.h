@@ -89,7 +89,7 @@ namespace rm::rule {
 		 * @brief Add the number of ranks a member of the race gets in a language during adolescence
 		 * @param language LanguageAbility containing the ranks for a language
 		 */
-		void addLanguageAbility(rm::game::character::LanguageAbility language) { languages_.emplace(language.language(), language); }
+		void addLanguageAbility(rm::game::character::LanguageAbility language) { languages_.emplace(language.languageId(), language); }
 
 		/**
 		 * @brief Sets the language abilities map for this object.

@@ -288,7 +288,7 @@ namespace rm::rule {
 		 *
 		 * @return std::vector of stats
 		 */
-		const std::vector<::StatType::Type>& stats() { return stats_; }
+		const std::vector<::StatType::Type>& stats() const { return stats_; }
 
 		/**
 		 * @brief Number of exhaustion points expended when the skill is used at a normal pace

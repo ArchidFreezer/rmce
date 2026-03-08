@@ -8,6 +8,7 @@
     "boost-property-tree",
     "boost-beast",
     "boost-asio",
-    "boost-url"
+    "boost-url",
+    "boost-json"
   ]
 }

@@ -175,7 +175,7 @@ namespace rm::rule {
 		 * @brief Get the realms that the profession draws power from
 		 * @return td::set<RealmType::Type> power realms
 		 */
-		const std::set<RealmType::Type> realms() { return realms_; }
+		const std::set<RealmType::Type> realms() const { return realms_; }
 
 		/**
 		 * @brief Add stat that applies stat bonus to the profession
@@ -511,7 +511,7 @@ namespace rm::rule {
 		 * @brief Gets a reference to the map of skill development types indexed by subcategorized skill data.
 		 * @return A reference to the map containing skill development types.
 		 */
-		std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type>& skillDevelopmentTypes() { return skill_development_types_; }
+		const std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type>& skillDevelopmentTypes() const { return skill_development_types_; }
 
 		/**
 		 * @brief Get the development type for a skill
@@ -630,7 +630,7 @@ namespace rm::rule {
 		 * @brief Gets a reference to container with the skill group skill development types
 		 * @return A map that associates pointers to SkillGroupData (keys) with SkillDevelopmentType::Type values.
 		 */
-		const std::map<const SkillGroupData*, SkillDevelopmentType::Type>& skillGroupSkillDevelopmentTypes() { return skill_group_skill_development_types_; }
+		const std::map<const SkillGroupData*, SkillDevelopmentType::Type>& skillGroupSkillDevelopmentTypes() const { return skill_group_skill_development_types_; }
 
 		/**
 		 * @brief Get a container with the names of groups that have skill development type changes
@@ -864,7 +864,7 @@ namespace rm::rule {
 		 * @return SkillDevelopmentCost costs to develop ranks
 		 * @throws InvalidCategoryDevelopmentCost if there are no costs for the category
 		 */
-		const rm::game::character::SkillDevelopmentCost& skillCategoryDevelopmentCost(const SkillCategoryData& category) {
+		const rm::game::character::SkillDevelopmentCost& skillCategoryDevelopmentCost(const SkillCategoryData& category) const {
 			for (auto& cat : std::views::keys(skill_category_development_costs_)) {
 				if (cat->id() == category.id()) return skill_category_development_costs_.at(cat);
 			}

@@ -123,13 +123,13 @@ namespace rm::rule::table {
 		 * @brief Get the map with the rows that may be returned by any row index value
 		 * @return std::map<std::unique_ptr<RowMatcherClass>, TableRow<CellDatatype>> Map of rows
 		 */
-		const std::map<const RowMatcherClass*, TableRow<CellDatatype>>& modified() { return modified_rows_; }
+		const std::map<const RowMatcherClass*, TableRow<CellDatatype>>& modified() const { return modified_rows_; }
 
 		/**
 		 * @brief Get the map with the rows that may be only returned by unmodified row index values
 		 * @return std::map<std::unique_ptr<RowMatcherClass>, TableRow<CellDatatype>> Map of rows
 		 */
-		const std::map<const RowMatcherClass*, TableRow<CellDatatype>>& unmodified() { return unmodified_rows_; }
+		const std::map<const RowMatcherClass*, TableRow<CellDatatype>>& unmodified() const { return unmodified_rows_; }
 
 	private:
 		/**
