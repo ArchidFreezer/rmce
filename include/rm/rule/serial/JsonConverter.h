@@ -1364,6 +1364,81 @@ public:
 	static void setSkillChoiceEnumMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType>& map);
 
 	/**
+	 * @brief Retrieves a map of GameRuleDataChoice objects to primitive values from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array associated with the given key and converts it into a map where the keys are GameRuleDataChoice objects and the values are of a primitive type specified by the template parameter Primitive. Each
+	 * element in the JSON array is expected to be an object with fields that correspond to the properties of a GameRuleDataChoice, as well as a "value" field that represents the primitive value associated with that choice. The function
+	 * uses the provided PersistentObjectManager to look up any necessary data objects when constructing the GameRuleDataChoice objects, and constructs the resulting map accordingly.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "spell-list-choices": [
+	 *         {
+	 *             "num-choices": 1,
+	 *             "value": 5
+	 *             "options": [
+	 *                 "SPELLLIST_ANIMAL_MASTERY",
+	 *                 "SPELLLIST_HERB_MASTERY",
+	 *                 "SPELLLIST_PLANT_MASTERY"
+	 *             ],
+	 *         },
+	 *         {
+	 *             "num-choices": 1,
+	 *             "value": 3
+	 *             "options": [
+	 *                 "SPELLLIST_FIRE_MASTERY",
+	 *                 "SPELLLIST_ICE_MASTERY"
+	 *             ],
+	 *         }
+	 *     ]
+	 * }
+	 * @endcode
+	 * You can retrieve the map of choices to their values using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = JsonConverter::getSkillChoicePrimitiveMap<int>(obj, "spell-list-choices", manager);
+	 * // choiceValueMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding integer values if those choices exist in the manager and the values are valid
+	 * @endcode
+	 *
+	 * @tparam Primitive The type of the primitive values used as values in the resulting map (e.g., int, float, double, bool).
+	 * @param obj The JSON object to retrieve
+	 * @param key The key associated with the skill choice primitive array in the JSON object.
+	 * @param manager A PersistentObjectManager used to look up any necessary data objects based on
+	 * @return A map where each key is a GameRuleDataChoice object constructed from the corresponding entries in the JSON array associated with the specified key, and each value is a primitive value associated with that choice, constructed
+	 * from the "value" field in the JSON object.
+	 */
+	template<typename Primitive>
+	static std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> getSkillChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+
+	/**
+	 * @brief Sets an array of GameRuleDataChoice objects mapped to primitive values in a JSON object with the specified key.
+	 *
+	 * This function takes a map where the keys are GameRuleDataChoice objects and the values are of a primitive type specified by the template parameter Primitive. It converts this map into a JSON array, where each entry is represented as
+	 * an object with fields corresponding to the properties of the GameRuleDataChoice, as well as a "value" field corresponding to the primitive value. The resulting JSON array is stored under the specified key in the JSON object.
+	 *
+	 * For example, if you have a map of choices to their values:
+	 * @code
+	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = {
+	 *     {GameRuleDataChoice<ItemData>{1, {"ITEM_SWORD", "ITEM_SHIELD"}}, 5},
+	 *     {GameRuleDataChoice<ItemData>{2, {"ITEM_POTION", "ITEM_RUNE", "ITEM_WAND"}}, 3}
+	 * };
+	 * @endcode
+	 * You can convert this map into a JSON array using this method:
+	 * @code
+	 * JsonConverter::setSkillChoicePrimitiveMap<int>(obj, "spell-list-choices", choiceValueMap);
+	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated integer value
+	 * @endcode
+	 *
+	 * @tparam Primitive The type of the primitive values used as values in the input map (e.g., int, float, double, bool).
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the skill choice primitive array in the JSON object.
+	 * @param map A map where each key is a GameRuleDataChoice object and each value is a primitive value to be converted into an object in the JSON array.
+	 */
+	template<typename Primitive>
+	static void setSkillChoicePrimitiveMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive>& map);
+
+	/**
 	 * @brief Retrieves a map of GameRuleDataChoice objects to enum values from a JSON object using the specified key.
 	 *
 	 * This function retrieves a JSON array associated with the given key and converts it into a map where the keys are GameRuleDataChoice objects and the values are of an enum type specified by the template parameter EnumType. Each
@@ -1439,6 +1514,81 @@ public:
 	 */
 	template<game_rule_data_object GameRuleData, typename EnumType>
 	static void setDataChoiceEnumMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<GameRuleData>, EnumType>& map);
+
+	/**
+	 * @brief Retrieves a map of GameRuleDataChoice objects to primitive values from a JSON object using the specified key.
+	 *
+	 * This function retrieves a JSON array associated with the given key and converts it into a map where the keys are GameRuleDataChoice objects and the values are of a primitive type specified by the template parameter Primitive. Each
+	 * element in the JSON array is expected to be an object with fields that correspond to the properties of a GameRuleDataChoice, as well as a "value" field that represents the primitive value associated with that choice. The function
+	 * uses the provided PersistentObjectManager to look up any necessary data objects when constructing the GameRuleDataChoice objects, and constructs the resulting map accordingly.
+	 *
+	 * For example, if you have a JSON object like:
+	 * @code
+	 * {
+	 *     "spell-list-choices": [
+	 *         {
+	 *             "num-choices": 1,
+	 *             "value": 5
+	 *             "options": [
+	 *                 "SPELLLIST_ANIMAL_MASTERY",
+	 *                 "SPELLLIST_HERB_MASTERY",
+	 *                 "SPELLLIST_PLANT_MASTERY"
+	 *             ],
+	 *         },
+	 *         {
+	 *             "num-choices": 1,
+	 *             "value": 3
+	 *             "options": [
+	 *                 "SPELLLIST_FIRE_MASTERY",
+	 *                 "SPELLLIST_ICE_MASTERY"
+	 *             ],
+	 *         }
+	 *     ]
+	 * }
+	 * @endcode
+	 * You can retrieve the map of choices to their values using this method:
+	 * @code
+	 * json::object obj = ...; // Assume this is your JSON object
+	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = JsonConverter::getDataChoicePrimitiveMap<int>(obj, "spell-list-choices", manager);
+	 * // choiceValueMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding integer values if those choices exist in the manager and the values are valid
+	 * @endcode
+	 *
+	 * @tparam Primitive The type of the primitive values used as values in the resulting map (e.g., int, float, double, bool).
+	 * @param obj The JSON object to retrieve
+	 * @param key The key associated with the skill choice primitive array in the JSON object.
+	 * @param manager A PersistentObject Manager used to look up any necessary data objects based on
+	 * @return A map where each key is a GameRuleDataChoice object constructed from the corresponding entries in the JSON array associated with the specified key, and each value is a primitive value associated with that choice, constructed
+	 * from the "value" field in the JSON object.
+	 */
+	template<game_rule_data_object GameRuleData, typename Primitive>
+	static std::map<GameRuleDataChoice<GameRuleData>, Primitive> getDataChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+
+	/**
+	 * @brief Sets an array of GameRuleDataChoice objects mapped to primitive values in a JSON object with the specified key.
+	 *
+	 * This function takes a map where the keys are GameRuleDataChoice objects and the values are of a primitive type specified by the template parameter Primitive. It converts this map into a JSON array, where each entry is represented as
+	 * an object with fields corresponding to the properties of the GameRuleDataChoice, as well as a "value" field corresponding to the primitive value. The resulting JSON array is stored under the specified key in the JSON object.
+	 *
+	 * For example, if you have a map of choices to their values:
+	 * @code
+	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = {
+	 *     {GameRuleDataChoice<ItemData>{1, {"ITEM_SWORD", "ITEM_SHIELD"}}, 5},
+	 *     {GameRuleDataChoice<ItemData>{2, {"ITEM_POTION", "ITEM_RUNE", "ITEM_WAND"}}, 3}
+	 * };
+	 * @endcode
+	 * You can convert this map into a JSON array using this method:
+	 * @code
+	 * JsonConverter::setDataChoicePrimitiveMap<int>(obj, "spell-list-choices", choiceValueMap);
+	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated integer value
+	 * @endcode
+	 *
+	 * @tparam Primitive The type of the primitive values used as values in the input map (e.g., int, float, double, bool).
+	 * @param obj The JSON object to modify.
+	 * @param key The key under which to store the skill choice primitive array in the JSON object.
+	 * @param map A map where each key is a GameRuleDataChoice object and each value is a primitive value to be converted into an object in the JSON array.
+	 */
+	template<game_rule_data_object GameRuleData, typename Primitive>
+	static void setDataChoicePrimitiveMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<GameRuleData>, Primitive>& map);
 
 	/**
 	 * @brief Retrieves a map of GameRuleData objects to enum values from a JSON object using the specified key.
@@ -1591,11 +1741,9 @@ public:
 	 */
 	static std::set<std::string> getStringSet(const json::object& obj, const std::string& key);
 
+private:
 	template<typename Primitive>
-	static std::map<std::string, Primitive> getStringPrimitiveMap(const json::object& obj, const std::string& key, const std::string& string_key = "id", const std::string& primitive_key = "value");
-
-	template<typename Primitive>
-	static void setStringPrimitiveMap(json::object& obj, const std::string& key, const std::map<std::string, Primitive>& map, const std::string& string_key = "id", const std::string& primitive_key = "value");
+	static Primitive getPrimitive(const json::object& obj, const std::string& key);
 };
 
 // Template implementations
@@ -2132,31 +2280,50 @@ void JsonConverter::setStringSet(json::object& obj, const std::string& key, cons
 }
 
 template<typename Primitive>
-std::map<std::string, Primitive> JsonConverter::getStringPrimitiveMap(const json::object& obj, const std::string& key, const std::string& string_key, const std::string& primitive_key) {
-	std::map<std::string, Primitive> result;
+std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> JsonConverter::getSkillChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+	std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> result;
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {
 		for (const auto& item : it->value().as_array()) {
 			if (item.is_object()) {
-				json::object entry_obj = item.as_object();
-				std::string str_key = getString(entry_obj, string_key);
-				Primitive primitive_value{};
-				// Assuming the primitive value is stored under a key called "value" in the JSON object
-				auto value_it = entry_obj.find(primitive_key);
-				if (value_it != entry_obj.end()) {
-					if constexpr (std::is_same_v<Primitive, int>) {
-						primitive_value = getInt(entry_obj, primitive_key, 0);
-					} else if constexpr (std::is_same_v<Primitive, float>) {
-						primitive_value = getFloat(entry_obj, primitive_key, 0.0f);
-					} else if constexpr (std::is_same_v<Primitive, double>) {
-						primitive_value = getDouble(entry_obj, primitive_key, 0.0);
-					} else if constexpr (std::is_same_v<Primitive, bool>) {
-						primitive_value = getBool(entry_obj, primitive_key, false);
-					} else if constexpr (std::is_same_v<Primitive, std::string>) {
-						primitive_value = getString(entry_obj, primitive_key, "");
+				// Grab the choice object and create a GameRuleDataChoice from it
+				json::object choice_obj = item.as_object();
+				GameRuleDataChoice<SubcategoriedSkillData> choice_data{};
+				choice_data.setNumChoices(getInt(choice_obj, "num-choices", 1));
+				// Loop through the options array and add each option to the GameRuleDataChoice
+				json::array option_array = getJsonArray(choice_obj, "options");
+				for (const auto& option_val : option_array) {
+					if (option_val.is_object()) {
+						json::object skill_obj = option_val.as_object();
+						std::string id = getString(skill_obj, "id");
+						std::optional<std::string> subcategory = getOptionalString(skill_obj, "subcategory");
+						const SubcategoriedSkillData* skill;
+						if (subcategory)
+							skill = &manager.subcategoriedSkillData(id, subcategory.value());
+						else
+							skill = &manager.subcategoriedSkillData(id);
+						choice_data.addOption(*skill);
 					}
 				}
-				result.emplace(str_key, primitive_value);
+				// Get the primitive value associated with this choice
+				Primitive primitive_value{};
+				// Assuming the primitive value is stored under a key called "value" in the JSON object
+				auto value_it = choice_obj.find("value");
+				if (value_it != choice_obj.end()) {
+					if constexpr (std::is_same_v<Primitive, int>) {
+						primitive_value = getInt(choice_obj, "value", 0);
+					} else if constexpr (std::is_same_v<Primitive, float>) {
+						primitive_value = getFloat(choice_obj, "value", 0.0f);
+					} else if constexpr (std::is_same_v<Primitive, double>) {
+						primitive_value = getDouble(choice_obj, "value", 0.0);
+					} else if constexpr (std::is_same_v<Primitive, bool>) {
+						primitive_value = getBool(choice_obj, "value", false);
+					} else if constexpr (std::is_same_v<Primitive, std::string>) {
+						primitive_value = getString(choice_obj, "value", "");
+					}
+				}
+				// Add the constructed GameRuleDataChoice and its associated primitive value to the result map
+				result.emplace(choice_data, primitive_value);
 			}
 		}
 	}
@@ -2164,17 +2331,123 @@ std::map<std::string, Primitive> JsonConverter::getStringPrimitiveMap(const json
 }
 
 template<typename Primitive>
-void JsonConverter::setStringPrimitiveMap(json::object& obj, const std::string& key, const std::map<std::string, Primitive>& map, const std::string& string_key, const std::string& primitive_key) {
+void JsonConverter::setSkillChoicePrimitiveMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive>& map) {
 	json::array arr;
-	std::map<std::string, Primitive> sorted_map(map); // Sort the map by key
-	for (const auto& [str_key, primitive_value] : sorted_map) {
-		json::object entry_obj;
-		entry_obj[string_key] = str_key;
-		entry_obj[primitive_key] = primitive_value;
-		arr.push_back(entry_obj);
+	for (const auto& [choice, primitive_value] : map) {
+		json::object choice_obj;
+		choice_obj["num-choices"] = choice.numChoices();
+		std::map<std::string, const SubcategoriedSkillData*> sorted_options{};
+		for (const SubcategoriedSkillData* option : choice.options()) {
+			std::string option_key = option->skillData().id() + (option->subcategory() ? option->subcategory().value() : "");
+			sorted_options.emplace(option_key, option);
+		}
+		json::array option_array;
+		for (const auto& pair : sorted_options) {
+			json::object skill_obj;
+			skill_obj["id"] = pair.second->skillData().id();
+			if (pair.second->subcategory()) {
+				skill_obj["subcategory"] = pair.second->subcategory().value();
+			}
+			option_array.push_back(skill_obj);
+		}
+		choice_obj["value"] = primitive_value;
+		choice_obj["options"] = option_array;
+		arr.push_back(choice_obj);
 	}
 	if (arr.size())
 		obj[key] = arr;
+}
+
+template<game_rule_data_object GameRuleData, typename Primitive>
+std::map<GameRuleDataChoice<GameRuleData>, Primitive> JsonConverter::getDataChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+	std::map<GameRuleDataChoice<GameRuleData>, Primitive> result;
+	auto it = obj.find(key);
+	if (it != obj.end() && it->value().is_array()) {
+		for (const auto& item : it->value().as_array()) {
+			if (item.is_object()) {
+				// Grab the choice object and create a GameRuleDataChoice from it
+				json::object choice_obj = item.as_object();
+				GameRuleDataChoice<GameRuleData> choice_data{};
+				choice_data.setNumChoices(getInt(choice_obj, "num-choices", 1));
+				// Loop through the options array and add each option to the GameRuleDataChoice
+				json::array option_array = getJsonArray(choice_obj, "options");
+				for (const auto& option_val : option_array) {
+					if (option_val.is_string()) {
+						const GameRuleData* data_option = &manager.get<GameRuleData>(std::string(option_val.as_string()));
+						if (data_option)
+							choice_data.addOption(*data_option);
+					}
+				}
+				// Get the primitive value associated with this choice
+				Primitive primitive_value{ getPrimitive<Primitive>(choice_obj, "value") };
+				//// Assuming the primitive value is stored under a key called "value" in the JSON object
+				//auto value_it = choice_obj.find("value");
+				//if (value_it != choice_obj.end()) {
+				//	if constexpr (std::is_same_v<Primitive, int>) {
+				//		primitive_value = getInt(choice_obj, "value", 0);
+				//	} else if constexpr (std::is_same_v<Primitive, float>) {
+				//		primitive_value = getFloat(choice_obj, "value", 0.0f);
+				//	} else if constexpr (std::is_same_v<Primitive, double>) {
+				//		primitive_value = getDouble(choice_obj, "value", 0.0);
+				//	} else if constexpr (std::is_same_v<Primitive, bool>) {
+				//		primitive_value = getBool(choice_obj, "value", false);
+				//	} else if constexpr (std::is_same_v<Primitive, std::string>) {
+				//		primitive_value = getString(choice_obj, "value", "");
+				//	}
+				//}
+				// Add the constructed GameRuleDataChoice and its associated primitive value to the result map
+				result.emplace(choice_data, primitive_value);
+			}
+		}
+	}
+	return result;
+}
+
+template<game_rule_data_object GameRuleData, typename Primitive>
+void JsonConverter::setDataChoicePrimitiveMap(json::object& obj, const std::string& key, const std::map<GameRuleDataChoice<GameRuleData>, Primitive>& map) {
+	json::array arr;
+	for (const auto& [choice, primitive_value] : map) {
+		json::object choice_obj;
+		choice_obj["num-choices"] = choice.numChoices();
+		std::map<std::string, const GameRuleData*> sorted_options{};
+		for (const GameRuleData* option : choice.options()) {
+			sorted_options.emplace(option->id(), option);
+		}
+		json::array option_array;
+		for (const auto& pair : sorted_options) {
+			option_array.emplace_back(pair.second->id());
+		}
+		choice_obj["value"] = primitive_value;
+		choice_obj["options"] = option_array;
+		arr.push_back(choice_obj);
+	}
+	if (arr.size())
+		obj[key] = arr;
+}
+
+template<typename Primitive>
+Primitive JsonConverter::getPrimitive(const json::object& obj, const std::string& key) {
+	auto it = obj.find(key);
+	if (it != obj.end()) {
+		const json::value& val = it->value();
+		if constexpr (std::is_same_v<Primitive, int>) {
+			if (val.is_int64())
+				return static_cast<Primitive>(val.as_int64());
+		} else if constexpr (std::is_same_v<Primitive, float>) {
+			if (val.is_double())
+				return static_cast<Primitive>(val.as_double());
+		} else if constexpr (std::is_same_v<Primitive, double>) {
+			if (val.is_double())
+				return val.as_double();
+		} else if constexpr (std::is_same_v<Primitive, bool>) {
+			if (val.is_bool())
+				return val.as_bool();
+		} else if constexpr (std::is_same_v<Primitive, std::string>) {
+			if (val.is_string())
+				return std::string(val.as_string());
+		}
+	}
+	return NULL;
 }
 
 } // namespace rm::rule::serial

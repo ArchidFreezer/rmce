@@ -311,7 +311,7 @@ namespace rm::rule {
 		 *
 		 * @param max Maximum difference in starting money
 		 */
-		void setStaringMoneyModifierDice(std::string_view max) { starting_money_modifier_dice_ = max; }
+		void setStartingMoneyModifierDice(std::string_view max) { starting_money_modifier_dice_ = max; }
 
 		/**
 		 * @brief Get the change in starting money for a character if the package is taken during apprenticeship as a dice string
@@ -503,7 +503,7 @@ namespace rm::rule {
 		 * @brief Get the skill category from which the player can choose to gain the skill ranks, the number of skill ranks that can be gained, and the number of skills that can be chosen to gain the skill ranks.
 		 * @return Tuple containing a SkillCategoryData pointer representing the skill category from which the player can choose to gain the skill ranks, an integer representing the number of skill ranks that can be gained, and an integer representing the number of skills that can be chosen to gain the skill ranks.
 		 */
-		const std::set<CategoryMultiSkillRankChoice>& skillCategoryMultiSkillRankChoices() { return skill_category_multi_skill_rank_choices_; }
+		const std::set<CategoryMultiSkillRankChoice>& skillCategoryMultiSkillRankChoices() const { return skill_category_multi_skill_rank_choices_; }
 
 		/**
 		 * @brief Sets the skill group from which the player can choose to gain the skill ranks, the number of skill ranks that can be gained, and the number of skills that can be chosen to gain the skill ranks.
@@ -521,7 +521,7 @@ namespace rm::rule {
 		 *
 		 * @return Set containing GroupMultiSkillRankChoice structs, each representing a skill group from which the player can choose to gain skill ranks, along with the number of skill ranks that can be gained and the number of skills that can be chosen to gain those ranks.
 		 */
-		const std::vector<GroupMultiSkillRankChoice>& skillGroupMultiSkillRankChoices() { return skill_group_multi_skill_rank_choices_; }
+		const std::vector<GroupMultiSkillRankChoice>& skillGroupMultiSkillRankChoices() const { return skill_group_multi_skill_rank_choices_; }
 
 		/**
 		 * @brief Sets the skill group category and skill ranks for this package.

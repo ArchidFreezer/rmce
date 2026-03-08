@@ -56,7 +56,7 @@ namespace {
 		EXPECT_EQ(tp1.timeToAcquire(), 15);
 
 		// Starting money positive
-		tp1.setStaringMoneyModifierDice("2d10");
+		tp1.setStartingMoneyModifierDice("2d10");
 		int max{ 0 };
 		for (int x{ 0 }; x < 25; x++) {
 			int change = tp1.startingMoneyChange();
@@ -66,7 +66,7 @@ namespace {
 		EXPECT_GT(max, 10);
 
 		// Starting money negative
-		tp1.setStaringMoneyModifierDice("-d10");
+		tp1.setStartingMoneyModifierDice("-d10");
 		int min{ 0 };
 		for (int x{ 0 }; x < 25; x++) {
 			int change = tp1.startingMoneyChange();
