@@ -62,4 +62,63 @@ void PersistentObjectSerializationManager::save() {
 	serializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 }
 
+std::string PersistentObjectSerializationManager::serializeAnyObject(const std::string& id) {
+	using namespace rm::rule::serial;
+	// Get the object from the manager and determine its type, then call the appropriate serializer
+	auto obj = object_manager_.getAny(id);
+	if (auto animal = dynamic_cast<const rule::AnimalData*>(obj)) {
+		return serializeObject(*animal);
+	} else if (auto armour_type = dynamic_cast<const rule::ArmourTypeData*>(obj)) {
+		return serializeObject(*armour_type);
+	} else if (auto attack_table = dynamic_cast<const rule::table::AttackTable*>(obj)) {
+		return serializeObject(*attack_table);
+	} else if (auto book = dynamic_cast<const rule::BookData*>(obj)) {
+		return serializeObject(*book);
+	} else if (auto climate = dynamic_cast<const rule::ClimateData*>(obj)) {
+		return serializeObject(*climate);
+	} else if (auto creature_pace = dynamic_cast<const rule::CreaturePaceData*>(obj)) {
+		return serializeObject(*creature_pace);
+	} else if (auto culture = dynamic_cast<const rule::CultureData*>(obj)) {
+		return serializeObject(*culture);
+	} else if (auto culture_type = dynamic_cast<const rule::CultureTypeData*>(obj)) {
+		return serializeObject(*culture_type);
+	} else if (auto disease = dynamic_cast<const rule::DiseaseData*>(obj)) {
+		return serializeObject(*disease);
+	} else if (auto disease_type = dynamic_cast<const rule::DiseaseTypeData*>(obj)) {
+		return serializeObject(*disease_type);
+	} else if (auto language = dynamic_cast<const rule::LanguageData*>(obj)) {
+		return serializeObject(*language);
+	} else if (auto language_category = dynamic_cast<const rule::LanguageCategoryData*>(obj)) {
+		return serializeObject(*language_category);
+	} else if (auto poison = dynamic_cast<const rule::PoisonData*>(obj)) {
+		return serializeObject(*poison);
+	} else if (auto poison_type = dynamic_cast<const rule::PoisonTypeData*>(obj)) {
+		return serializeObject(*poison_type);
+	} else if (auto profession = dynamic_cast<const rule::ProfessionData*>(obj)) {
+		return serializeObject(*profession);
+	} else if (auto race = dynamic_cast<const rule::RaceData*>(obj)) {
+		return serializeObject(*race);
+	} else if (auto skill = dynamic_cast<const rule::SkillData*>(obj)) {
+		return serializeObject(*skill);
+	} else if (auto skill_category = dynamic_cast<const rule::SkillCategoryData*>(obj)) {
+		return serializeObject(*skill_category);
+	} else if (auto skill_group = dynamic_cast<const rule::SkillGroupData*>(obj)) {
+		return serializeObject(*skill_group);
+	} else if (auto skill_progression_type = dynamic_cast<const rule::SkillProgressionTypeData*>(obj)) {
+		return serializeObject(*skill_progression_type);
+	} else if (auto special_attack_table = dynamic_cast<const rule::table::SpecialAttackTable*>(obj)) {
+		return serializeObject(*special_attack_table);
+	} else if (auto spell_list = dynamic_cast<const rule::SpellListData*>(obj)) {
+		return serializeObject(*spell_list);
+	} else if (auto training_package = dynamic_cast<const rule::TrainingPackageData*>(obj)) {
+		return serializeObject(*training_package);
+	} else if (auto treasure_code = dynamic_cast<const rule::TreasureCodeData*>(obj)) {
+		return serializeObject(*treasure_code);
+	} else if (auto weapon_type = dynamic_cast<const rule::WeaponTypeData*>(obj)) {
+		return serializeObject(*weapon_type);
+	} else {
+		throw std::runtime_error("Unknown object type for ID: " + id);
+	}
+}
+
 } // namespace rm

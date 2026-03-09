@@ -178,6 +178,21 @@ public:
 	std::string serializeObject(std::string_view id);
 
 	/**
+	 * @brief Get the JSON representation of a single object of any game rule type by ID
+	 *
+	 * This function gets the JSON representation of a single object of any game rule type using the appropriate serializer for that type. The type of the object is determined by its ID prefix.
+	 *
+	 * @param id The ID of the object to serialize
+	 * @return A string containing the JSON representation of the object
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * std::string json = manager.serializeAnyObject("BOOK_MAGIC");
+	 * @endcode
+	 */
+	std::string serializeAnyObject(const std::string& id);
+
+	/**
 	 * @brief Deserialize a single object of a specific persistent type from a JSON string
 	 *
 	 * This template function deserializes a single object of type T from the specified JSON string using the appropriate serializer for that type. The deserialized object is added to the cache and a reference to it is returned.
