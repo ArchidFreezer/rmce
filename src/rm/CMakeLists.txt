@@ -37,9 +37,12 @@ target_include_directories(rmce_rest
         "${PROJECT_SOURCE_DIR}/include/rm/game"
         "${PROJECT_SOURCE_DIR}/include/rm/rest"
         "${PROJECT_SOURCE_DIR}/include/rm/rule"
+        "${PROJECT_SOURCE_DIR}/include/rm/rule/serial"
         "${PROJECT_SOURCE_DIR}/include/rm/rule/table")
 
 target_link_libraries(rmce_rest PRIVATE
+    archid
+    rm
     Boost::beast
     Boost::system
     Boost::thread

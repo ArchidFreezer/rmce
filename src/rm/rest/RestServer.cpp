@@ -100,7 +100,7 @@ std::string escapeJson(const std::string& str) {
 }
 
 // Session Implementation
-Session::Session(tcp::socket socket, PersistentObjectManager* object_manager) : stream_(std::move(socket)), object_manager_(object_manager) {
+Session::Session(tcp::socket socket, PersistentObjectSerializationManager* object_manager) : stream_(std::move(socket)), object_manager_(object_manager) {
 }
 
 void Session::run() {
@@ -216,27 +216,18 @@ void Session::handleRequest() {
 			} else {
 				try {
 					const std::string& id = id_it->second;
-
-					// Check if object exists
-					// TODO: Implement actual retrieval logic based on your PersistentObjectManager API
-					//if (object_manager_->has(id)) {
-					//	// Get object (adjust based on your actual implementation)
-					//	auto obj = object_manager_->get(id);
-
-					//	std::ostringstream json;
-					//	json << "{";
-					//	json << "\"id\": \"" << escapeJson(id) << "\",";
-					//	json << "\"exists\": true";
-					//	// Add more object details here based on your object structure
-					//	json << "}";
-
-					//	response_.result(http::status::ok);
-					//	response_.body() = json.str();
-					//} else {
-					//	response_.result(http::status::not_found);
-					//	response_.body() = R"({"error": "Object not found", "id": ")" + escapeJson(id) + R"("})";
-					//}
+					// Get the JSON representation of the object by ID
+					auto obj_json_str = object_manager_->serializeAnyObject(id);
+					if (obj_json_str.empty()) {
+						// Wew should never get here if the object manager is implemented correctly, but just in case
+						response_.result(http::status::not_found);
+						response_.body() = R"({"error": "Object not found", "id": ")" + escapeJson(id) + R"("})";
+					} else {
+						response_.result(http::status::ok);
+						response_.body() = obj_json_str;
+					}
 				} catch (const std::exception& e) {
+					// This could be as simple as an incorrect prefix in the ID (e.g. "SKILLS_" instead of "SKILL_") or a more serious issue with the object manager
 					response_.result(http::status::internal_server_error);
 					response_.body() = R"({"error": "Failed to retrieve object", "message": ")" + escapeJson(e.what()) + R"("})";
 				}
@@ -442,7 +433,7 @@ void Session::doClose() {
 }
 
 // RestServer Implementation
-RestServer::RestServer(const std::string& address, unsigned short port, int num_threads, PersistentObjectManager* object_manager)
+RestServer::RestServer(const std::string& address, unsigned short port, int num_threads, PersistentObjectSerializationManager* object_manager)
     : ioc_(num_threads), acceptor_(net::make_strand(ioc_)), running_(false), num_threads_(num_threads), object_manager_(object_manager) {
 	beast::error_code ec;
 

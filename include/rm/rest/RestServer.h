@@ -9,10 +9,11 @@
 #include <string>
 #include <thread>
 #include <vector>
+#include <PersistentObjectSerializationManager.h>
 
 // Forward declarations
 namespace rm {
-class PersistentObjectManager;
+class PersistentObjectSerializationManager;
 } // namespace rm
 
 namespace beast = boost::beast;
@@ -37,7 +38,7 @@ public:
 	 * @param num_threads Number of worker threads
 	 * @param object_manager Pointer to PersistentObjectManager for data queries
 	 */
-	RestServer(const std::string& address, unsigned short port, int num_threads = 1, PersistentObjectManager* object_manager = nullptr);
+	RestServer(const std::string& address, unsigned short port, int num_threads = 1, PersistentObjectSerializationManager* object_manager = nullptr);
 
 	/**
 	 * @brief Destructor - stops the server
@@ -63,18 +64,18 @@ public:
 	}
 
 	/**
-	 * @brief Set the PersistentObjectManager
-	 * @param object_manager Pointer to PersistentObjectManager
+	 * @brief Set the PersistentObjectSerializationManager
+	 * @param object_manager Pointer to PersistentObjectSerializationManager
 	 */
-	void setObjectManager(PersistentObjectManager* object_manager) {
+	void setObjectManager(PersistentObjectSerializationManager* object_manager) {
 		object_manager_ = object_manager;
 	}
 
 	/**
-	 * @brief Get the PersistentObjectManager
-	 * @return Pointer to PersistentObjectManager (may be nullptr)
+	 * @brief Get the PersistentObjectSerializationManager
+	 * @return Pointer to PersistentObjectSerializationManager (may be nullptr)
 	 */
-	PersistentObjectManager* getObjectManager() const {
+	PersistentObjectSerializationManager* getObjectManager() const {
 		return object_manager_;
 	}
 
@@ -87,7 +88,7 @@ private:
 	std::vector<std::thread> threads_;
 	bool running_;
 	int num_threads_;
-	PersistentObjectManager* object_manager_;
+	PersistentObjectSerializationManager* object_manager_;
 };
 
 /**
@@ -99,9 +100,9 @@ public:
 	/**
 	 * @brief Constructor
 	 * @param socket TCP socket for the session
-	 * @param object_manager Pointer to PersistentObjectManager for data queries
+	 * @param object_manager Pointer to PersistentObjectSerializationManager for data queries
 	 */
-	explicit Session(tcp::socket socket, PersistentObjectManager* object_manager);
+	explicit Session(tcp::socket socket, PersistentObjectSerializationManager* object_manager);
 
 	/**
 	 * @brief Start the session
@@ -120,7 +121,7 @@ private:
 	beast::flat_buffer buffer_;
 	http::request<http::string_body> request_;
 	http::response<http::string_body> response_;
-	PersistentObjectManager* object_manager_;
+	PersistentObjectSerializationManager* object_manager_;
 };
 
 } // namespace rm::rest
