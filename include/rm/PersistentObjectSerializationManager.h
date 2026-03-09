@@ -177,6 +177,24 @@ public:
 	template<persistent_object T>
 	std::string serializeObject(std::string_view id);
 
+	/**
+	 * @brief Deserialize a single object of a specific persistent type from a JSON string
+	 *
+	 * This template function deserializes a single object of type T from the specified JSON string using the appropriate serializer for that type. The deserialized object is added to the cache and a reference to it is returned.
+	 *
+	 * @tparam T The persistent object type to deserialize (must satisfy persistent_object concept)
+	 * @param json_str A string containing the JSON representation of the object
+	 * @return A reference to the deserialized object in the cache
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * std::string json = R"({"id": "BOOK_MAGIC", "name": "Magic Book", "description": "A book of magic spells."})";
+	 * const auto& book = manager.deserializeObject<rm::rule::BookData>(json);
+	 * @endcode
+	 */
+	template<persistent_object T>
+	const T& deserializeObject(const std::string& json_str);
+
 private:
 	PersistentObjectManager& object_manager_;
 	std::string data_directory_{"../../../../data/"};
@@ -337,6 +355,17 @@ template<persistent_object T>
 std::string PersistentObjectSerializationManager::serializeObject(std::string_view id) {
 	auto& obj = object_manager_.get<T>(std::string{id});
 	return serializeObject(obj);
+}
+
+template<persistent_object T>
+const T& PersistentObjectSerializationManager::deserializeObject(const std::string& json_str) {
+	using namespace rm::rule::serial;
+	// Create the appropriate JSON serializer for type T
+	auto serializer = createJsonSerializer<T>();
+	// Parse the JSON string into a JSON value
+	json::value json_value = json::parse(json_str);
+	// Deserialize the object from the JSON value
+	return serializer->deserializeObject(json_value.as_object());
 }
 
 } // namespace rm
