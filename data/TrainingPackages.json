@@ -4838,8 +4838,8 @@
                     "num-choices" : 2,
                     "value" : 2,
                     "options" : [
-                        "Demonic I",
-                        "Demonic II"
+                        "LANGUAGE_DEMONIC_I",
+                        "LANGUAGE_DEMONIC_II"
                     ]
                 }
             ]
