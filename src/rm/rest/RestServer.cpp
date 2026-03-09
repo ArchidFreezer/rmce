@@ -283,32 +283,6 @@ void Session::handleRequest() {
 
 		json << "]}";
 		response_.body() = json.str();
-	} else if (request_.method() == http::verb::get && path == "/api/data") {
-		// Legacy endpoint
-		response_.result(http::status::ok);
-		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
-		response_.set(http::field::content_type, "application/json");
-
-		std::ostringstream json;
-		json << "{";
-
-		auto id_it = params.find("id");
-		auto format_it = params.find("format");
-
-		if (id_it != params.end()) {
-			json << "\"id\": \"" << escapeJson(id_it->second) << "\"";
-
-			if (format_it != params.end()) {
-				json << ", \"format\": \"" << escapeJson(format_it->second) << "\"";
-			}
-
-			json << ", \"data\": \"Sample data for ID " << escapeJson(id_it->second) << "\"";
-		} else {
-			json << "\"error\": \"Missing id parameter\"";
-		}
-
-		json << "}";
-		response_.body() = json.str();
 	} else if (request_.method() == http::verb::get && path == "/api/echo") {
 		// Echo endpoint for testing
 		response_.result(http::status::ok);
