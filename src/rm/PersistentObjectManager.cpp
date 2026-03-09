@@ -103,4 +103,62 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 	return result;
 }
 
+const std::set<std::string> PersistentObjectManager::getAllIds(std::string prefix) {
+	using namespace rm::rule;
+
+	std::set<std::string> result;
+	if (prefix == "ANIMAL") {
+		cache_.keys<AnimalData>(result);
+	} else if (prefix == "ARMOURTYPE") {
+		cache_.keys<ArmourTypeData>(result);
+	} else if (prefix == "ATTACKTABLE") {
+		cache_.keys<AttackTable>(result);
+	} else if (prefix == "BOOK") {
+		cache_.keys<BookData>(result);
+	} else if (prefix == "CLIMATE") {
+		cache_.keys<ClimateData>(result);
+	} else if (prefix == "CREATUREPACE") {
+		cache_.keys<CreaturePaceData>(result);
+	} else if (prefix == "CULTURE") {
+		cache_.keys<CultureData>(result);
+	} else if (prefix == "CULTURETYPE") {
+		cache_.keys<CultureTypeData>(result);
+	} else if (prefix == "DISEASE") {
+		cache_.keys<DiseaseData>(result);
+	} else if (prefix == "DISEASETYPE") {
+		cache_.keys<DiseaseTypeData>(result);
+	} else if (prefix == "LANGUAGECATEGORY") {
+		cache_.keys<LanguageCategoryData>(result);
+	} else if (prefix == "LANGUAGE") {
+		cache_.keys<LanguageData>(result);
+	} else if (prefix == "POISON") {
+		cache_.keys<PoisonData>(result);
+	} else if (prefix == "POISONTYPE") {
+		cache_.keys<PoisonTypeData>(result);
+	} else if (prefix == "PROFESSION") {
+		cache_.keys<ProfessionData>(result);
+	} else if (prefix == "RACE") {
+		cache_.keys<RaceData>(result);
+	} else if (prefix == "SKILLCATEGORY") {
+		cache_.keys<SkillCategoryData>(result);
+	} else if (prefix == "SKILLGROUP") {
+		cache_.keys<SkillGroupData>(result);
+	} else if (prefix == "SKILL") {
+		cache_.keys<SkillData>(result);
+	} else if (prefix == "SPECIALATTACKTABLE") {
+		cache_.keys<SpecialAttackTable>(result);
+	} else if (prefix == "SPELLLIST") {
+		cache_.keys<SpellListData>(result);
+	} else if (prefix == "TRAININGPACKAGE") {
+		cache_.keys<TrainingPackageData>(result);
+	} else if (prefix == "TREASURECODE") {
+		cache_.keys<TreasureCodeData>(result);
+	} else if (prefix == "WEAPONTYPE") {
+		cache_.keys<WeaponTypeData>(result);
+	} else {
+		throw std::out_of_range("Could not determine the object type for objects with prefix " + prefix);
+	}
+	return result;
+}
+
 } // namespace rm
