@@ -233,69 +233,6 @@ void Session::handleRequest() {
 				}
 			}
 		}
-	} else if (request_.method() == http::verb::get && path == "/api/objects/search") {
-		// Search objects by criteria
-		// Example: /api/objects/search?query=weapon&limit=10
-		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
-		response_.set(http::field::content_type, "application/json");
-
-		if (!object_manager_) {
-			response_.result(http::status::service_unavailable);
-			response_.body() = R"({"error": "Object manager not available"})";
-		} else {
-			auto query_it = params.find("query");
-			if (query_it == params.end()) {
-				response_.result(http::status::bad_request);
-				response_.body() = R"({"error": "Missing 'query' parameter"})";
-			} else {
-				try {
-					const std::string& query = query_it->second;
-					int limit = 50; // Default limit
-
-					auto limit_it = params.find("limit");
-					if (limit_it != params.end()) {
-						try {
-							limit = std::stoi(limit_it->second);
-							if (limit <= 0 || limit > 1000)
-								limit = 50;
-						} catch (...) {
-							limit = 50;
-						}
-					}
-
-					std::ostringstream json;
-					json << "{\"results\": [";
-
-					// Search implementation (placeholder)
-					// TODO: Implement actual search logic based on your PersistentObjectManager API
-					//auto all_ids = object_manager_->getAllObjectIds();
-					//bool first = true;
-					//int count = 0;
-
-					//for (const auto& id : all_ids) {
-					//	if (count >= limit)
-					//		break;
-
-					//	// Simple substring search
-					//	if (id.find(query) != std::string::npos) {
-					//		if (!first)
-					//			json << ", ";
-					//		json << "{\"id\": \"" << escapeJson(id) << "\"}";
-					//		first = false;
-					//		count++;
-					//	}
-					//}
-
-					//json << "], \"count\": " << count << ", \"limit\": " << limit << "}";
-
-					response_.result(http::status::ok);
-					response_.body() = json.str();
-				} catch (const std::exception& e) {
-					response_.result(http::status::internal_server_error);
-					response_.body() = R"({"error": "Search failed", "message": ")" + escapeJson(e.what()) + R"("})";
-				}
-			}
-		}
 	} else if (request_.method() == http::verb::get && path == "/api/objects/count") {
 		// Get count of objects
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
