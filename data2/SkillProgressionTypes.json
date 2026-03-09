@@ -1,0 +1,220 @@
+{
+    "skill-progression-types" : [
+        {
+            "id" : "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
+            "name" : "BD Above Average",
+            "zero" : 0E0,
+            "ten" : 7E0,
+            "twenty" : 3E0,
+            "thirty" : 2E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_BD_AVERAGE",
+            "name" : "BD Average",
+            "zero" : 0E0,
+            "ten" : 6E0,
+            "twenty" : 5E0,
+            "thirty" : 2E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_BD_BELOW_AVERAGE",
+            "name" : "BD Below Average",
+            "zero" : 0E0,
+            "ten" : 6E0,
+            "twenty" : 4E0,
+            "thirty" : 2E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_BD_HIGH",
+            "name" : "BD High",
+            "zero" : 0E0,
+            "ten" : 7E0,
+            "twenty" : 4E0,
+            "thirty" : 2E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_BD_LOW",
+            "name" : "BD Low",
+            "zero" : 0E0,
+            "ten" : 6E0,
+            "twenty" : 3E0,
+            "thirty" : 2E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_BD_MINIMAL",
+            "name" : "BD Minimal",
+            "zero" : 0E0,
+            "ten" : 5E0,
+            "twenty" : 3E0,
+            "thirty" : 2E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_BD_VERY_HIGH",
+            "name" : "BD Very High",
+            "zero" : 0E0,
+            "ten" : 7E0,
+            "twenty" : 5E0,
+            "thirty" : 3E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_BD_VERY_LOW",
+            "name" : "BD Very Low",
+            "zero" : 0E0,
+            "ten" : 6E0,
+            "twenty" : 2E0,
+            "thirty" : 2E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+            "name" : "Category Standard",
+            "zero" : -1.5E1,
+            "ten" : 2E0,
+            "twenty" : 1E0,
+            "thirty" : 5E-1,
+            "remaining" : 0E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_COMBINED",
+            "name" : "Combined",
+            "zero" : -3E1,
+            "ten" : 5E0,
+            "twenty" : 3E0,
+            "thirty" : 1.5E0,
+            "remaining" : 5E-1
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_LIMITED",
+            "name" : "Limited",
+            "zero" : 0E0,
+            "ten" : 1E0,
+            "twenty" : 1E0,
+            "thirty" : 5E-1,
+            "remaining" : 0E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_NONE",
+            "name" : "None",
+            "zero" : 0E0,
+            "ten" : 0E0,
+            "twenty" : 0E0,
+            "thirty" : 0E0,
+            "remaining" : 0E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_PP_ABOVE_AVERAGE",
+            "name" : "PP Above Average",
+            "zero" : 0E0,
+            "ten" : 6E0,
+            "twenty" : 6E0,
+            "thirty" : 4E0,
+            "remaining" : 4E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_PP_BELOW_AVERAGE",
+            "name" : "PP Below Average",
+            "zero" : 0E0,
+            "ten" : 6E0,
+            "twenty" : 4E0,
+            "thirty" : 3E0,
+            "remaining" : 2E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_PP_HIGH",
+            "name" : "PP High",
+            "zero" : 0E0,
+            "ten" : 7E0,
+            "twenty" : 5E0,
+            "thirty" : 4E0,
+            "remaining" : 3E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_PP_LOW",
+            "name" : "PP Low",
+            "zero" : 0E0,
+            "ten" : 5E0,
+            "twenty" : 3E0,
+            "thirty" : 2E0,
+            "remaining" : 2E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
+            "name" : "PP Minimal",
+            "zero" : 0E0,
+            "ten" : 3E0,
+            "twenty" : 2E0,
+            "thirty" : 1E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_PP_MINOR",
+            "name" : "PP Minor",
+            "zero" : 0E0,
+            "ten" : 4E0,
+            "twenty" : 3E0,
+            "thirty" : 1E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+            "name" : "PP Standard",
+            "zero" : 0E0,
+            "ten" : 6E0,
+            "twenty" : 5E0,
+            "thirty" : 4E0,
+            "remaining" : 3E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_PP_STUNTED",
+            "name" : "PP Stunted",
+            "zero" : 0E0,
+            "ten" : 2E0,
+            "twenty" : 1E0,
+            "thirty" : 1E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_PP_VERY_HIGH",
+            "name" : "PP Very High",
+            "zero" : 0E0,
+            "ten" : 7E0,
+            "twenty" : 6E0,
+            "thirty" : 5E0,
+            "remaining" : 4E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_PP_VERY_LOW",
+            "name" : "PP Very Low",
+            "zero" : 0E0,
+            "ten" : 5E0,
+            "twenty" : 3E0,
+            "thirty" : 1E0,
+            "remaining" : 1E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_SPECIAL",
+            "name" : "Special",
+            "zero" : 0E0,
+            "ten" : 6E0,
+            "twenty" : 5E0,
+            "thirty" : 4E0,
+            "remaining" : 3E0
+        },
+        {
+            "id" : "SKILLPROGRESSIONTYPE_STANDARD",
+            "name" : "Standard",
+            "zero" : -1.5E1,
+            "ten" : 3E0,
+            "twenty" : 2E0,
+            "thirty" : 1E0,
+            "remaining" : 5E-1
+        }
+    ]
+}

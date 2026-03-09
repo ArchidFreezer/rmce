@@ -1,0 +1,122 @@
+{
+    "climates" : [
+        {
+            "id" : "CLIMATE_COLD_DRY",
+            "name" : "Cold and dry",
+            "temperature" : "Cold",
+            "precipitations" : [
+                "Dry",
+                "Arid"
+            ]
+        },
+        {
+            "id" : "CLIMATE_COLD_TEMPERATE",
+            "name" : "Cold and temperate",
+            "temperature" : "Cold",
+            "precipitations" : [
+                "Temperate"
+            ]
+        },
+        {
+            "id" : "CLIMATE_COLD_WET",
+            "name" : "Cold and snowy",
+            "temperature" : "Cold",
+            "precipitations" : [
+                "Rainy"
+            ]
+        },
+        {
+            "id" : "CLIMATE_COOL_DRY",
+            "name" : "Cool and dry",
+            "temperature" : "Cool",
+            "precipitations" : [
+                "Dry",
+                "Arid"
+            ]
+        },
+        {
+            "id" : "CLIMATE_COOL_TEMPERATE",
+            "name" : "Cool and temperate",
+            "temperature" : "Cool",
+            "precipitations" : [
+                "Temperate"
+            ]
+        },
+        {
+            "id" : "CLIMATE_COOL_WET",
+            "name" : "Cool and wet",
+            "temperature" : "Cool",
+            "precipitations" : [
+                "Rainy"
+            ]
+        },
+        {
+            "id" : "CLIMATE_FRIGID",
+            "name" : "Severe cold and arid",
+            "temperature" : "Cold",
+            "precipitations" : [
+                "Arid"
+            ]
+        },
+        {
+            "id" : "CLIMATE_HOT_DRY",
+            "name" : "Hot and dry",
+            "temperature" : "Hot",
+            "precipitations" : [
+                "Dry",
+                "Arid"
+            ]
+        },
+        {
+            "id" : "CLIMATE_HOT_HUMID",
+            "name" : "Hot, humid and wet",
+            "temperature" : "Hot",
+            "precipitations" : [
+                "Rainy",
+                "Humid"
+            ]
+        },
+        {
+            "id" : "CLIMATE_HOT_TEMPERATE",
+            "name" : "Hot and temperate",
+            "temperature" : "Hot",
+            "precipitations" : [
+                "Temperate"
+            ]
+        },
+        {
+            "id" : "CLIMATE_WARM_DRY",
+            "name" : "Warm and dry",
+            "temperature" : "Warm",
+            "precipitations" : [
+                "Dry",
+                "Arid"
+            ]
+        },
+        {
+            "id" : "CLIMATE_WARM_HUMID",
+            "name" : "Warm and humid",
+            "temperature" : "Warm",
+            "precipitations" : [
+                "Rainy",
+                "Humid"
+            ]
+        },
+        {
+            "id" : "CLIMATE_WARM_TEMPERATE",
+            "name" : "Warm and temperate",
+            "temperature" : "Warm",
+            "precipitations" : [
+                "Temperate"
+            ]
+        },
+        {
+            "id" : "CLIMATE_WARM_WET",
+            "name" : "Warm and wet",
+            "temperature" : "Warm",
+            "precipitations" : [
+                "Rainy"
+            ]
+        }
+    ]
+}

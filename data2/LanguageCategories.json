@@ -1,0 +1,40 @@
+{
+    "language-categories" : [
+        {
+            "id" : "LANGUAGECATEGORY_DWARVEN",
+            "name" : "Dwarven"
+        },
+        {
+            "id" : "LANGUAGECATEGORY_ELVEN",
+            "name" : "Elven"
+        },
+        {
+            "id" : "LANGUAGECATEGORY_GNOLL",
+            "name" : "Gnoll"
+        },
+        {
+            "id" : "LANGUAGECATEGORY_GNOMISH",
+            "name" : "Gnonish"
+        },
+        {
+            "id" : "LANGUAGECATEGORY_GOBLIN",
+            "name" : "Goblin"
+        },
+        {
+            "id" : "LANGUAGECATEGORY_HOBGOBLIN",
+            "name" : "Hobgoblin"
+        },
+        {
+            "id" : "LANGUAGECATEGORY_HUMAN",
+            "name" : "Human"
+        },
+        {
+            "id" : "LANGUAGECATEGORY_SMALL",
+            "name" : "Small"
+        },
+        {
+            "id" : "LANGUAGECATEGORY_TROGLODYTE",
+            "name" : "Troglodyte"
+        }
+    ]
+}

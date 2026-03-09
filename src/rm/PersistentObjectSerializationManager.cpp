@@ -1,5 +1,4 @@
 #include <PersistentObjectSerializationManager.h>
-#include <TrainingPackageCostTableSerializer.h>
 
 namespace rm {
 
@@ -30,10 +29,7 @@ void PersistentObjectSerializationManager::load() {
 	deserializeAllObjects<rm::rule::TrainingPackageData>("TrainingPackages.json", "training-packages");
 	deserializeAllObjects<rm::rule::TreasureCodeData>("TreasureCodes.json", "treasure-codes");
 	deserializeAllObjects<rm::rule::WeaponTypeData>("WeaponTypes.json", "weapon-types");
-
-	TrainingPackageCostTableSerializer tsv_serializer(object_manager_);
-	TsvFileSerializer<rm::rule::table::TrainingPackageCostTable> tp_cost_file_serializer(tsv_serializer, (data_directory_ + "TrainingPackageCosts.tsv"));
-	tp_cost_file_serializer.load();
+	deserializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 }
 
 void PersistentObjectSerializationManager::save() {
@@ -63,10 +59,7 @@ void PersistentObjectSerializationManager::save() {
 	serializeAllObjects<rm::rule::TrainingPackageData>("TrainingPackages.json", "training-packages");
 	serializeAllObjects<rm::rule::TreasureCodeData>("TreasureCodes.json", "treasure-codes");
 	serializeAllObjects<rm::rule::WeaponTypeData>("WeaponTypes.json", "weapon-types");
-
-	TrainingPackageCostTableSerializer tsv_serializer(object_manager_);
-	TsvFileSerializer<rm::rule::table::TrainingPackageCostTable> tp_cost_file_serializer(tsv_serializer, (data_directory_ + "TrainingPackageCosts.tsv"));
-	tp_cost_file_serializer.save();
+	serializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 }
 
 } // namespace rm
