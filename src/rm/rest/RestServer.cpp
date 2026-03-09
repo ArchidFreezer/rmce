@@ -242,19 +242,24 @@ void Session::handleRequest() {
 			response_.result(http::status::service_unavailable);
 			response_.body() = R"({"error": "Object manager not available"})";
 		} else {
-			try {
-				// TODO: Implement actual count retrieval based on your PersistentObjectManager API
-				//size_t count = object_manager_->size();
-				size_t count = 0; // Placeholder
+			auto prefix_it = params.find("prefix");
+			if (prefix_it == params.end()) {
+				response_.result(http::status::bad_request);
+				response_.body() = R"({"error": "Missing 'prefix' parameter"})";
+			} else {
+				try {
+					const std::string& prefix = prefix_it->second;
+					const size_t count = object_manager_->objectManager().getAllIds(prefix).size(); // Placeholder
 
-				std::ostringstream json;
-				json << "{\"count\": " << count << "}";
+					std::ostringstream json;
+					json << "{\"count\": " << count << "}";
 
-				response_.result(http::status::ok);
-				response_.body() = json.str();
-			} catch (const std::exception& e) {
-				response_.result(http::status::internal_server_error);
-				response_.body() = R"({"error": "Failed to get count", "message": ")" + escapeJson(e.what()) + R"("})";
+					response_.result(http::status::ok);
+					response_.body() = json.str();
+				} catch (const std::exception& e) {
+					response_.result(http::status::internal_server_error);
+					response_.body() = R"({"error": "Failed to get count", "message": ")" + escapeJson(e.what()) + R"("})";
+				}
 			}
 		}
 	} else if (request_.method() == http::verb::get && path == "/api/search") {

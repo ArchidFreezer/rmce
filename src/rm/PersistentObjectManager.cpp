@@ -103,7 +103,7 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 	return result;
 }
 
-const std::set<std::string> PersistentObjectManager::getAllIds(std::string prefix) {
+const std::set<std::string> PersistentObjectManager::getAllIds(std::string prefix) const {
 	using namespace rm::rule;
 
 	std::set<std::string> result;
