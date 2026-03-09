@@ -142,6 +142,41 @@ public:
 	 */
 	void save();
 
+	/**
+	 * @brief Get the JSON representation of a single object of a specific persistent type
+	 *
+	 * This template function gets the JSON representation of a single object of type T using the appropriate serializer for that type.
+	 *
+	 * @tparam T The persistent object type to serialize (must satisfy persistent_object concept)
+	 * @param obj The object to serialize
+	 * @return A string containing the JSON representation of the object
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * auto& book = object_manager.get<rm::rule::BookData>("BOOK_MAGIC");
+	 * std::string json = manager.serializeObject(book);
+	 * @endcode
+	 */
+	template<persistent_object T>
+	std::string serializeObject(const T& obj);
+
+	/**
+	 * @brief Get the JSON representation of a single object of a specific persistent type by ID
+	 *
+	 * This template function gets the JSON representation of a single object of type T using the appropriate serializer for that type.
+	 *
+	 * @tparam T The persistent object type to serialize (must satisfy persistent_object concept)
+	 * @param id The ID of the object to serialize
+	 * @return A string containing the JSON representation of the object
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * std::string json = manager.serializeObject<rm::rule::BookData>("BOOK_MAGIC");
+	 * @endcode
+	 */
+	template<persistent_object T>
+	std::string serializeObject(std::string_view id);
+
 private:
 	PersistentObjectManager& object_manager_;
 	std::string data_directory_{"../../../../data/"};
@@ -285,6 +320,23 @@ std::unique_ptr<rule::serial::PersistentTsvSerializer<T>> PersistentObjectSerial
 	} else {
 		static_assert(sizeof(T) == 0, "No TSV serializer defined for this persistent object type");
 	}
+}
+
+template<persistent_object T>
+std::string PersistentObjectSerializationManager::serializeObject(const T& obj) {
+	using namespace rm::rule::serial;
+	// Create the appropriate JSON serializer for type T
+	auto serializer = createJsonSerializer<T>();
+	// Serialize the object to a JSON value
+	json::value json_value = serializer->serializeObject(obj);
+	// use the json library to convert the JSON value to a string
+	return json::serialize(json_value);
+}
+
+template<persistent_object T>
+std::string PersistentObjectSerializationManager::serializeObject(std::string_view id) {
+	auto& obj = object_manager_.get<T>(std::string{id});
+	return serializeObject(obj);
 }
 
 } // namespace rm
