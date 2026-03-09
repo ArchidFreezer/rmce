@@ -8,60 +8,6 @@
 
 namespace rm::rest {
 
-// Helper function to parse query parameters
-std::map<std::string, std::string> parseQueryParams(std::string_view target) {
-	std::map<std::string, std::string> params;
-
-	// Find the query string start
-	auto query_pos = target.find('?');
-	if (query_pos == std::string_view::npos) {
-		return params;
-	}
-
-	// Extract query string
-	std::string_view query = target.substr(query_pos + 1);
-
-	// Parse key=value pairs
-	size_t start = 0;
-	while (start < query.length()) {
-		// Find next parameter separator
-		auto amp_pos = query.find('&', start);
-		auto param = query.substr(start, amp_pos - start);
-
-		// Split on '='
-		auto eq_pos = param.find('=');
-		if (eq_pos != std::string_view::npos) {
-			std::string key(param.substr(0, eq_pos));
-			std::string value(param.substr(eq_pos + 1));
-
-			// URL decode (basic implementation)
-			// Replace '+' with space and handle %XX encoding
-			for (size_t i = 0; i < value.length(); ++i) {
-				if (value[i] == '+') {
-					value[i] = ' ';
-				}
-			}
-
-			params[key] = value;
-		}
-
-		if (amp_pos == std::string_view::npos)
-			break;
-		start = amp_pos + 1;
-	}
-
-	return params;
-}
-
-// Helper function to extract path without query string
-std::string_view getPath(std::string_view target) {
-	auto query_pos = target.find('?');
-	if (query_pos == std::string_view::npos) {
-		return target;
-	}
-	return target.substr(0, query_pos);
-}
-
 // Helper function to escape JSON strings
 std::string escapeJson(const std::string& str) {
 	std::ostringstream escaped;
@@ -137,27 +83,35 @@ void Session::handleRequest() {
 	response_.keep_alive(request_.keep_alive());
 
 	// Extract path and query parameters
-	std::string_view target = request_.target();
-	std::string_view path = getPath(target);
-	auto params = parseQueryParams(target);
+	const PathParser path(request_.target());
 
 	// Route handling
-	if (request_.method() == http::verb::get && path == "/") {
+	if (request_.method() == http::verb::get && path.matchExact("/")) {
 		response_.result(http::status::ok);
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 		response_.body() = R"({"message": "REST API Server", "status": "running"})";
-	} else if (request_.method() == http::verb::get && path == "/health") {
+	} else if (request_.method() == http::verb::get && path.matchExact("/health")) {
 		response_.result(http::status::ok);
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 		response_.body() = R"({"status": "healthy"})";
-	} else if (request_.method() == http::verb::get && path == "/api/version") {
+	} else if (request_.method() == http::verb::get && path.matchExact("/api/version")) {
 		response_.result(http::status::ok);
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 		response_.body() = R"({"version": "1.0.0", "api": "v1"})";
-	} else if (request_.method() == http::verb::get && path == "/api/objects/list") {
+	} else if (request_.method() == http::verb::get && path.match("/api/objects/DELETEME_TO_TEST")) {
+		// This is a test endpoint that checks the path parsing logic for object retrieval endpoints. It will simply return the parsed type, operation, and ID (if present) in the response body. This is not meant to be a real endpoint, just
+		// a way to verify that the path parsing is working as expected.
+		response_.result(http::status::ok);
+		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
+		response_.set(http::field::content_type, "application/json");
+		std::string type{path.type()};
+		std::string operation{path.op()};
+		std::string obj_id = path.params().count("id") > 0 ? path.params().at("id") : "";
+		response_.body() = R"({"type": ")" + escapeJson(type) + R"(", "op": ")" + escapeJson(operation) + R"(", "id": ")" + escapeJson(obj_id) + R"("})";
+	} else if (request_.method() == http::verb::get && path.match("/api/objects/list")) {
 		// List all object IDs
 		// Example: /api/objects/list?type=SkillData
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
@@ -171,15 +125,15 @@ void Session::handleRequest() {
 				std::ostringstream json;
 				json << "{\"objects\": [";
 
-				auto type_it = params.find("type");
-				std::string type_filter = type_it != params.end() ? type_it->second : "";
+				auto type_it = path.params().find("type");
+				std::string type_filter = type_it != path.params().end() ? type_it->second : "";
 
 				// Get all objects (you'll need to implement iterator/collection access in PersistentObjectManager)
 				// TODO: This is a placeholder - adjust based on your actual API
-				//auto objects = object_manager_->getAllObjectIds();
+				// auto objects = object_manager_->getAllObjectIds();
 
-				//bool first = true;
-				//for (const auto& id : objects) {
+				// bool first = true;
+				// for (const auto& id : objects) {
 				//	if (!type_filter.empty() && id.find(type_filter) == std::string::npos) {
 				//		continue;
 				//	}
@@ -190,7 +144,7 @@ void Session::handleRequest() {
 				//	first = false;
 				//}
 
-				//json << "], \"count\": " << objects.size() << "}";
+				// json << "], \"count\": " << objects.size() << "}";
 
 				response_.result(http::status::ok);
 				response_.body() = json.str();
@@ -199,7 +153,7 @@ void Session::handleRequest() {
 				response_.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
 			}
 		}
-	} else if (request_.method() == http::verb::get && path == "/api/objects/get") {
+	} else if (request_.method() == http::verb::get && path.matchExact("/api/objects/get")) {
 		// Get object by ID
 		// Example: /api/objects/get?id=SKILL_ID_123
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
@@ -209,8 +163,8 @@ void Session::handleRequest() {
 			response_.result(http::status::service_unavailable);
 			response_.body() = R"({"error": "Object manager not available"})";
 		} else {
-			auto id_it = params.find("id");
-			if (id_it == params.end()) {
+			auto id_it = path.params().find("id");
+			if (id_it == path.params().end()) {
 				response_.result(http::status::bad_request);
 				response_.body() = R"({"error": "Missing 'id' parameter"})";
 			} else {
@@ -233,7 +187,7 @@ void Session::handleRequest() {
 				}
 			}
 		}
-	} else if (request_.method() == http::verb::get && path == "/api/objects/count") {
+	} else if (request_.method() == http::verb::get && path.matchExact("/api/objects/count")) {
 		// Get count of objects
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
@@ -242,8 +196,8 @@ void Session::handleRequest() {
 			response_.result(http::status::service_unavailable);
 			response_.body() = R"({"error": "Object manager not available"})";
 		} else {
-			auto prefix_it = params.find("prefix");
-			if (prefix_it == params.end()) {
+			auto prefix_it = path.params().find("prefix");
+			if (prefix_it == path.params().end()) {
 				response_.result(http::status::bad_request);
 				response_.body() = R"({"error": "Missing 'prefix' parameter"})";
 			} else {
@@ -262,7 +216,7 @@ void Session::handleRequest() {
 				}
 			}
 		}
-	} else if (request_.method() == http::verb::get && path == "/api/echo") {
+	} else if (request_.method() == http::verb::get && path.matchExact("/api/echo")) {
 		// Echo endpoint for testing
 		response_.result(http::status::ok);
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
@@ -272,7 +226,7 @@ void Session::handleRequest() {
 		json << "{\"query_params\": {";
 
 		bool first = true;
-		for (const auto& [key, value] : params) {
+		for (const auto& [key, value] : path.params()) {
 			if (!first)
 				json << ", ";
 			json << "\"" << escapeJson(key) << "\": \"" << escapeJson(value) << "\"";
