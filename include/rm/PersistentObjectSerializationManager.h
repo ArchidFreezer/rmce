@@ -210,6 +210,13 @@ public:
 	template<persistent_object T>
 	const T& deserializeObject(const std::string& json_str);
 
+	/**
+	 * @brief Get a reference to the PersistentObjectManager used by this serialization manager
+	 *
+	 * @return Reference to the PersistentObjectManager
+	 */
+	const PersistentObjectManager& objectManager() const { return object_manager_; }
+
 private:
 	PersistentObjectManager& object_manager_;
 	std::string data_directory_{"../../../../data/"};
