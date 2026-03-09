@@ -262,32 +262,6 @@ void Session::handleRequest() {
 				}
 			}
 		}
-	} else if (request_.method() == http::verb::get && path == "/api/search") {
-		// Legacy endpoint - kept for backward compatibility
-		response_.result(http::status::ok);
-		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
-		response_.set(http::field::content_type, "application/json");
-
-		std::ostringstream json;
-		json << "{\"results\": [";
-
-		auto query_it = params.find("query");
-		auto limit_it = params.find("limit");
-
-		if (query_it != params.end()) {
-			json << "{\"query\": \"" << escapeJson(query_it->second) << "\"";
-
-			if (limit_it != params.end()) {
-				json << ", \"limit\": " << limit_it->second;
-			}
-
-			json << ", \"message\": \"Search functionality\"}";
-		} else {
-			json << "{\"error\": \"Missing query parameter\"}";
-		}
-
-		json << "]}";
-		response_.body() = json.str();
 	} else if (request_.method() == http::verb::get && path == "/api/echo") {
 		// Echo endpoint for testing
 		response_.result(http::status::ok);
