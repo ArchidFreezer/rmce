@@ -1,6 +1,6 @@
 find_package(boost_json REQUIRED CONFIG)
 add_library(rm STATIC)
-target_sources(rm PRIVATE "PersistentObjectManager.cpp")
+target_sources(rm PRIVATE "PersistentObjectManager.cpp" "PersistentObjectSerializationManager.cpp")
 add_subdirectory("game")
 add_subdirectory("rule")
 add_subdirectory("rule/serial")

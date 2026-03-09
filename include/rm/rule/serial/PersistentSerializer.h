@@ -42,6 +42,9 @@ public:
 
 	/**
 	 * @brief Deserialize a DeserializeObject to a PersistentObject
+	 * 
+	 * The returned PersistentObject is not necessarily a new object, but may be a reference to an existing object in the PersistentObjectManager if the DeserializeObject contains an ID that matches an existing object. This allows for the
+	 * deserialization of objects that reference other objects by ID, e.g. a BookData object that references a SkillData object by ID.
 	 *
 	 * @param obj The DeserializeObject to deserialize
 	 * @return A reference to the deserialized PersistentObject

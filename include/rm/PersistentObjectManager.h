@@ -4,7 +4,7 @@
 #include <string>
 
 #include <PersistentCache.h>
-#include <rule/SubcategoriedSkillData.h>
+#include <SubcategoriedSkillData.h>
 
 namespace rm {
 
@@ -135,6 +135,17 @@ public:
 		}
 		return objects;
 	}
+
+	/**
+	 * @brief Get a GameRuleData object with a specific ID without knowing the type
+	 *
+	 * This is useful for deserialisation when we want to get an object by its ID but we do not know the type of the object. The method will search through all types of GameRuleData objects in the cache and return the one with the matching
+	 * ID. If there are multiple objects with the same ID then it is undefined which one will be returned.
+	 *
+	 * @param id Unique ID of the object
+	 * @return Pointer to the GameRuleData object with the matching ID or nullptr if no such object exists
+	 */
+	const rm::rule::GameRuleData* getAny(std::string id);
 
 	/**
 	 * @brief Get SubcategoriedSkillData objects

@@ -1,22 +1,6 @@
 {
     "languages" : [
         {
-            "id" : "Demonic I",
-            "name" : "Demonic I",
-            "category" : "LANGUAGECATEGORY_DEMONIC",
-            "is-spoken" : true,
-            "is-written" : true,
-            "is-somantic" : false
-        },
-        {
-            "id" : "Demonic II",
-            "name" : "Demonic II",
-            "category" : "LANGUAGECATEGORY_DEMONIC",
-            "is-spoken" : true,
-            "is-written" : true,
-            "is-somantic" : false
-        },
-        {
             "id" : "LANGUAGE_BLACK_SPEECH",
             "name" : "Black-Speech",
             "category" : "LANGUAGECATEGORY_HUMAN",
@@ -30,6 +14,22 @@
             "name" : "Common-Speech",
             "category" : "LANGUAGECATEGORY_HUMAN",
             "base-language" : "Common",
+            "is-spoken" : true,
+            "is-written" : true,
+            "is-somantic" : false
+        },
+        {
+            "id" : "LANGUAGE_DEMONIC_I",
+            "name" : "Demonic I",
+            "category" : "LANGUAGECATEGORY_DEMONIC",
+            "is-spoken" : true,
+            "is-written" : true,
+            "is-somantic" : false
+        },
+        {
+            "id" : "LANGUAGE_DEMONIC_II",
+            "name" : "Demonic II",
+            "category" : "LANGUAGECATEGORY_DEMONIC",
             "is-spoken" : true,
             "is-written" : true,
             "is-somantic" : false
