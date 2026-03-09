@@ -15,13 +15,13 @@ namespace rm {
  * This class is intended to be used as a utility class to enable the (de)serialization of PersistentObject objects to and from JSON data. It is not intended to be used as a base class for serializers, but rather as a utility class that can
  * be used by serializers to manage the creation of PersistentObject objects from JSON data and the conversion of PersistentObject objects to JSON data and loading and saving to file.
  */
-class PersistentObjectJsonManager {
+class PersistentObjectSerializationManager {
 public:
 	/**
 	 * @brief Constructor to initiate the object manager reference
 	 * @param object_manager PersistentObjectManager reference to use for creating objects
 	 */
-	PersistentObjectJsonManager(PersistentObjectManager& object_manager) : object_manager_{object_manager} {
+	PersistentObjectSerializationManager(PersistentObjectManager& object_manager) : object_manager_{object_manager} {
 	}
 
 	/**
@@ -120,7 +120,7 @@ private:
 // Template implementation - must be in header for template instantiation
 
 template<persistent_object T>
-void PersistentObjectJsonManager::deserializeAllObjects(const std::string& filename, const std::string& root_key) {
+void PersistentObjectSerializationManager::deserializeAllObjects(const std::string& filename, const std::string& root_key) {
 	using namespace rm::rule::serial;
 
 	// Create the appropriate serializer for type T
@@ -135,7 +135,7 @@ void PersistentObjectJsonManager::deserializeAllObjects(const std::string& filen
 }
 
 template<persistent_object T>
-void PersistentObjectJsonManager::serializeAllObjects(const std::string& filename, const std::string& root_key) {
+void PersistentObjectSerializationManager::serializeAllObjects(const std::string& filename, const std::string& root_key) {
 	using namespace rm::rule::serial;
 
 	// Create the appropriate serializer for type T
@@ -150,7 +150,7 @@ void PersistentObjectJsonManager::serializeAllObjects(const std::string& filenam
 }
 
 template<persistent_object T>
-std::unique_ptr<rule::serial::PersistentJsonSerializer<T>> PersistentObjectJsonManager::createSerializer() {
+std::unique_ptr<rule::serial::PersistentJsonSerializer<T>> PersistentObjectSerializationManager::createSerializer() {
 	using namespace rm::rule;
 	using namespace rm::rule::serial;
 

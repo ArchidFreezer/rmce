@@ -1,9 +1,9 @@
-#include <PersistentObjectJsonManager.h>
+#include <PersistentObjectSerializationManager.h>
 #include <TrainingPackageCostTableSerializer.h>
 
 namespace rm {
 
-void PersistentObjectJsonManager::load() {
+void PersistentObjectSerializationManager::load() {
 	using namespace rm::rule::serial;
 	deserializeAllObjects<rm::rule::AnimalData>("Animals.json", "animals");
 	deserializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armour-types");
@@ -36,7 +36,7 @@ void PersistentObjectJsonManager::load() {
 	tp_cost_file_serializer.load();
 }
 
-void PersistentObjectJsonManager::save() {
+void PersistentObjectSerializationManager::save() {
 	using namespace rm::rule::serial;
 	serializeAllObjects<rm::rule::AnimalData>("Animals.json", "animals");
 	serializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armour-types");
