@@ -83,7 +83,7 @@ void Session::handleRequest() {
 	response_.keep_alive(request_.keep_alive());
 
 	// Extract path and query parameters
-	const PathParser path(request_.target());
+	const PathParser path(request_.target(), "/api/objects/");
 
 	// Route handling
 	if (request_.method() == http::verb::get && path.matchExact("/")) {

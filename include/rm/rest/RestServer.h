@@ -132,7 +132,7 @@ private:
  */
 class PathParser {
 public:
-	explicit PathParser(std::string_view path) : path_(path), type_{extractVariable("/api/objects/")}, op_{extractOp("/api/objects/")}, pre_param_path_{extractPreParamPath()} {
+	explicit PathParser(std::string_view path, std::string_view prefix) : path_(path), type_{extractVariable(prefix)}, op_{extractOp(prefix)}, pre_param_path_{extractPreParamPath()} {
 		parseQueryParams(path);
 	}
 
