@@ -1,4 +1,5 @@
-#include "RestServer.h"
+#include <RestServer.h>
+#include <GameRuleDatas.h>
 #include <PersistentObjectManager.h>
 #include <iostream>
 #include <boost/asio/dispatch.hpp>
@@ -111,9 +112,9 @@ void Session::handleRequest() {
 		std::string operation{path.op()};
 		std::string obj_id = path.params().count("id") > 0 ? path.params().at("id") : "";
 		response_.body() = R"({"type": ")" + escapeJson(type) + R"(", "op": ")" + escapeJson(operation) + R"(", "id": ")" + escapeJson(obj_id) + R"("})";
-	} else if (request_.method() == http::verb::get && path.match("/api/objects/list")) {
+	} else if (request_.method() == http::verb::get && path.match("/api/objects/") && !path.type().empty() && (path.op() == "list")) {
 		// List all object IDs
-		// Example: /api/objects/list?type=SkillData
+		// Example: /api/objects/skill/list
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 
@@ -123,28 +124,10 @@ void Session::handleRequest() {
 		} else {
 			try {
 				std::ostringstream json;
-				json << "{\"objects\": [";
-
-				auto type_it = path.params().find("type");
-				std::string type_filter = type_it != path.params().end() ? type_it->second : "";
-
-				// Get all objects (you'll need to implement iterator/collection access in PersistentObjectManager)
-				// TODO: This is a placeholder - adjust based on your actual API
-				// auto objects = object_manager_->getAllObjectIds();
-
-				// bool first = true;
-				// for (const auto& id : objects) {
-				//	if (!type_filter.empty() && id.find(type_filter) == std::string::npos) {
-				//		continue;
-				//	}
-
-				//	if (!first)
-				//		json << ", ";
-				//	json << "\"" << escapeJson(id) << "\"";
-				//	first = false;
-				//}
-
-				// json << "], \"count\": " << objects.size() << "}";
+				//json << "{\"objects\": [";
+				std::string json_str = object_manager_->serializeAllObjects(path.type());
+				json << json_str;
+				//json << "], \"count\": " << objects.size() << "}";
 
 				response_.result(http::status::ok);
 				response_.body() = json.str();
@@ -153,9 +136,9 @@ void Session::handleRequest() {
 				response_.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
 			}
 		}
-	} else if (request_.method() == http::verb::get && path.matchExact("/api/objects/get")) {
+	} else if (request_.method() == http::verb::get && path.matchExact("/api/objects")) {
 		// Get object by ID
-		// Example: /api/objects/get?id=SKILL_ID_123
+		// Example: /api/objects?id=SKILL_123
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 
@@ -278,7 +261,7 @@ void Session::doClose() {
 
 // RestServer Implementation
 RestServer::RestServer(const std::string& address, unsigned short port, int num_threads, PersistentObjectSerializationManager* object_manager)
-    : ioc_(num_threads), acceptor_(net::make_strand(ioc_)), running_(false), num_threads_(num_threads), object_manager_(object_manager) {
+		: ioc_(num_threads), acceptor_(net::make_strand(ioc_)), running_(false), num_threads_(num_threads), object_manager_(object_manager) {
 	beast::error_code ec;
 
 	if (num_threads_ <= 0) {

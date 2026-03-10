@@ -130,7 +130,22 @@ public:
 	 * @endcode
 	 */
 	template<persistent_object T>
-	std::string serializeAllObjects(std::string_view root_key);
+	std::string serializeAllObjects_Impl(std::string_view root_key);
+
+	/**
+	 * @brief Get the JSON representation of all objects of any game rule type with a specific prefix in their ID
+	 *
+	 * This function gets the JSON representation of all objects of any game rule type that have IDs starting with the specified prefix using the appropriate serializer for each type.
+	 *
+	 * @param prefix Lowercase string of the prefix to match in the IDs of the objects to serialize
+	 * @return A string containing the JSON representation of all matching objects
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * std::string json = manager.serializeAllObject("SKILL_");
+	 * @endcode
+	 */
+	std::string serializeAllObjects(std::string_view prefix);
 
 	/**
 	 * @brief Deserialize all known data objects from file to preload the cache
@@ -409,7 +424,7 @@ const T& PersistentObjectSerializationManager::deserializeObject(const std::stri
 }
 
 template<persistent_object T>
-std::string PersistentObjectSerializationManager::serializeAllObjects(std::string_view root_key) {
+std::string PersistentObjectSerializationManager::serializeAllObjects_Impl(std::string_view root_key) {
 	using namespace rm::rule::serial;
 	// Create the appropriate JSON serializer for type T
 	auto serializer = createJsonSerializer<T>();

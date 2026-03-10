@@ -132,27 +132,53 @@ private:
  */
 class PathParser {
 public:
+	/**
+	 * @brief Constructs a PathParser object to parse a path with a given prefix.
+	 * @param path The path string to be parsed.
+	 * @param prefix The prefix string used to extract variable, operation, and pre-parameter path information.
+	 */
 	explicit PathParser(std::string_view path, std::string_view prefix) : path_(path), type_{extractVariable(prefix)}, op_{extractOp(prefix)}, pre_param_path_{extractPreParamPath()} {
 		parseQueryParams(path);
 	}
 
+	/**
+	 * @brief Checks if the pre-parameter path exactly matches the given pattern.
+	 * @param pattern The string pattern to compare against the pre-parameter path.
+	 * @return True if the pre-parameter path exactly matches the pattern, false otherwise.
+	 */
 	bool matchExact(std::string_view pattern) const {
 		return pre_param_path_ == pattern;
 	}
 
+	/**
+	 * @brief Checks if the pre-parameter path starts with the given pattern.
+	 * @param pattern The string pattern to check as a prefix of the pre-parameter path.
+	 * @return True if the pre-parameter path starts with the pattern, false otherwise.
+	 */
 	bool match(std::string_view pattern) const {
-
 		return path_.starts_with(pattern);
 	}
 
+	/**
+	 * @brief Gets the parameters map.
+	 * @return A constant reference to the map containing string key-value pairs of parameters.
+	 */
 	const std::map<std::string, std::string>& params() const {
 		return params_;
 	}
 
+	/**
+	 * @brief Gets the type of the object to be processed.
+	 * @return A string view representing the type.
+	 */
 	std::string_view type() const {
 		return type_;
 	}
 
+	/**
+	 * @brief Gets the operation to be performed on the object.
+	 * @return A string view representing the operation.
+	 */
 	std::string_view op() const {
 		return op_;
 	}

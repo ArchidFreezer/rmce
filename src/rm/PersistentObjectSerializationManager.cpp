@@ -2,6 +2,17 @@
 
 namespace rm {
 
+// Helper function to determine the root key for a given type T based on its name
+std::string getRootKeyForType(std::string_view type) {
+	if (type.ends_with("y")) {
+		return std::string(type.substr(0, type.size() - 1)) + "ies";
+	} else {
+		return std::string(type) + "s";
+	}
+}
+
+
+
 void PersistentObjectSerializationManager::load() {
 	using namespace rm::rule::serial;
 	deserializeAllObjects<rm::rule::AnimalData>("Animals.json", "animals");
@@ -118,6 +129,70 @@ std::string PersistentObjectSerializationManager::serializeAnyObject(const std::
 		return serializeObject(*weapon_type);
 	} else {
 		throw std::runtime_error("Unknown object type for ID: " + id);
+	}
+}
+
+std::string PersistentObjectSerializationManager::serializeAllObjects(std::string_view prefix) {
+	using namespace rm::rule::serial;
+
+	std::string lower_prefix = archid::lcase(prefix);
+	std::string root_key = getRootKeyForType(lower_prefix);
+	if (root_key.empty()) {
+		throw std::runtime_error("Unknown type for serialization: " + std::string(prefix));
+	}
+
+	if (lower_prefix == "animal") {
+		return serializeAllObjects_Impl<rm::rule::AnimalData>(root_key);
+	} else if (lower_prefix == "armourtype") {
+		return serializeAllObjects_Impl<rm::rule::ArmourTypeData>(root_key);
+	} else if (lower_prefix == "attacktable") {
+		return serializeAllObjects_Impl<rm::rule::table::AttackTable>(root_key);
+	} else if (lower_prefix == "book") {
+		return serializeAllObjects_Impl<rm::rule::BookData>(root_key);
+	} else if (lower_prefix == "climate") {
+		return serializeAllObjects_Impl<rm::rule::ClimateData>(root_key);
+	} else if (lower_prefix == "creaturepace") {
+		return serializeAllObjects_Impl<rm::rule::CreaturePaceData>(root_key);
+	} else if (lower_prefix == "culture") {
+		return serializeAllObjects_Impl<rm::rule::CultureData>(root_key);
+	} else if (lower_prefix == "culturetype") {
+		return serializeAllObjects_Impl<rm::rule::CultureTypeData>(root_key);
+	} else if (lower_prefix == "disease") {
+		return serializeAllObjects_Impl<rm::rule::DiseaseData>(root_key);
+	} else if (lower_prefix == "diseasetype") {
+		return serializeAllObjects_Impl<rm::rule::DiseaseTypeData>(root_key);
+	} else if (lower_prefix == "language") {
+		return serializeAllObjects_Impl<rm::rule::LanguageData>(root_key);
+	} else if (lower_prefix == "languagecategory") {
+		return serializeAllObjects_Impl<rm::rule::LanguageCategoryData>(root_key);
+	} else if (lower_prefix == "poison") {
+		return serializeAllObjects_Impl<rm::rule::PoisonData>(root_key);
+	} else if (lower_prefix == "poisontype") {
+		return serializeAllObjects_Impl<rm::rule::PoisonTypeData>(root_key);
+	} else if (lower_prefix == "profession") {
+		return serializeAllObjects_Impl<rm::rule::ProfessionData>(root_key);
+	} else if (lower_prefix == "race") {
+		return serializeAllObjects_Impl<rm::rule::RaceData>(root_key);
+	} else if (lower_prefix == "skill") {
+		return serializeAllObjects_Impl<rm::rule::SkillData>(root_key);
+	} else if (lower_prefix == "skillcategory") {
+		return serializeAllObjects_Impl<rm::rule::SkillCategoryData>(root_key);
+	} else if (lower_prefix == "skillgroup") {
+		return serializeAllObjects_Impl<rm::rule::SkillGroupData>(root_key);
+	} else if (lower_prefix == "skillprogressiontype") {
+		return serializeAllObjects_Impl<rm::rule::SkillProgressionTypeData>(root_key);
+	} else if (lower_prefix == "specialattacktable") {
+		return serializeAllObjects_Impl<rm::rule::table::SpecialAttackTable>(root_key);
+	} else if (lower_prefix == "spelllist") {
+		return serializeAllObjects_Impl<rm::rule::SpellListData>(root_key);
+	} else if (lower_prefix == "trainingpackage") {
+		return serializeAllObjects_Impl<rm::rule::TrainingPackageData>(root_key);
+	} else if (lower_prefix == "treasurecode") {
+		return serializeAllObjects_Impl<rm::rule::TreasureCodeData>(root_key);
+	} else if (lower_prefix == "weapontype") {
+		return serializeAllObjects_Impl<rm::rule::WeaponTypeData>(root_key);
+	} else {
+		throw std::runtime_error("Unknown type for serialization: " + std::string(prefix));
 	}
 }
 
