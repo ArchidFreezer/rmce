@@ -244,6 +244,24 @@ public:
 	const T& deserializeObject(const std::string& json_str);
 
 	/**
+	 * @brief Deserialize a single object of a specific persistent type from a JSON object
+	 *
+	 * This template function deserializes a single object of type T from the specified JSON object using the appropriate serializer for that type. The deserialized object is added to the cache and a reference to it is returned.
+	 *
+	 * @tparam T The persistent object type to deserialize (must satisfy persistent_object concept)
+	 * @param obj A JSON object containing the representation of the object
+	 * @return A reference to the deserialized object in the cache
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * json::object obj = {{"id", "BOOK_MAGIC"}, {"name", "Magic Book"}, {"description", "A book of magic spells."}};
+	 * const auto& book = manager.deserializeObject<rm::rule::BookData>(obj);
+	 * @endcode
+	 */
+	template<persistent_object T>
+	const T& deserializeObject(json::object& obj);
+
+	/**
 	 * @brief Get the JSON representation of a container of objects
 	 *
 	 * This template function gets the JSON representation of a container of objects, typically std::strings representing the IDs of the objects to serialize.
@@ -281,6 +299,22 @@ public:
 	 * @return The root key to use in the JSON file for the given type
 	 */
 	const std::string getRootKeyForType(std::string_view prefix);
+
+	/**
+	 * @brief Get the JSON representation of a single object of any game rule type by ID
+	 *
+	 * This function gets the JSON representation of a single object of any game rule type using the appropriate serializer for that type. The type of the object is determined by its ID prefix.
+	 *
+	 * @param obj A JSON object containing the representation of the object
+	 * @param prefix The type prefix to determine the type of the object (e.g. "book", "skillcategory", etc.)
+	 * @return The ID of the deserialized object in the cache
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * const std::string book_id = manager.deserializeAnyObject(json_obj, "book");
+	 * @endcode
+	 */
+	const std::string deserializeObject(json::object& obj, std::string_view prefix);
 
 private:
 	PersistentObjectManager& object_manager_;
@@ -446,13 +480,18 @@ std::string PersistentObjectSerializationManager::serializeObject(std::string_vi
 
 template<persistent_object T>
 const T& PersistentObjectSerializationManager::deserializeObject(const std::string& json_str) {
+	json::value json_value = json::parse(json_str);
+	// Deserialize the object from the JSON value
+	return deserializeObject(json_value.as_object());
+}
+
+template<persistent_object T>
+const T& PersistentObjectSerializationManager::deserializeObject(json::object& obj) {
 	using namespace rm::rule::serial;
 	// Create the appropriate JSON serializer for type T
 	auto serializer = createJsonSerializer<T>();
-	// Parse the JSON string into a JSON value
-	json::value json_value = json::parse(json_str);
 	// Deserialize the object from the JSON value
-	return serializer->deserializeObject(json_value.as_object());
+	return serializer->deserializeObject(obj);
 }
 
 template<persistent_object T>
@@ -479,7 +518,6 @@ std::string PersistentObjectSerializationManager::serializeAllObjects_Impl(std::
 
 template<typename Container>
 std::string PersistentObjectSerializationManager::serializeContainer(const Container& container, std::string_view key) {
-
 	std::ostringstream json_stream;
 	json_stream << "{ \"" << key << "\": [";
 	if (!container.empty()) {

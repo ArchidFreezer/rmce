@@ -196,4 +196,67 @@ std::string PersistentObjectSerializationManager::serializeAllObjects(std::strin
 	}
 }
 
+const std::string PersistentObjectSerializationManager::deserializeObject(json::object& obj, std::string_view prefix) {
+	using namespace rm::rule::serial;
+
+	std::string lower_prefix = archid::lcase(prefix);
+
+	const rm::rule::GameRuleData* obj_ptr = nullptr;
+
+	if (lower_prefix == "animal") {
+		obj_ptr = &deserializeObject<rm::rule::AnimalData>(obj);
+	} else if (lower_prefix == "armourtype") {
+		obj_ptr = &deserializeObject<rm::rule::ArmourTypeData>(obj);
+	} else if (lower_prefix == "attacktable") {
+		obj_ptr = &deserializeObject<rm::rule::table::AttackTable>(obj);
+	} else if (lower_prefix == "book") {
+		obj_ptr = &deserializeObject<rm::rule::BookData>(obj);
+	} else if (lower_prefix == "climate") {
+		obj_ptr = &deserializeObject<rm::rule::ClimateData>(obj);
+	} else if (lower_prefix == "creaturepace") {
+		obj_ptr = &deserializeObject<rm::rule::CreaturePaceData>(obj);
+	} else if (lower_prefix == "culture") {
+		obj_ptr = &deserializeObject<rm::rule::CultureData>(obj);
+	} else if (lower_prefix == "culturetype") {
+		obj_ptr = &deserializeObject<rm::rule::CultureTypeData>(obj);
+	} else if (lower_prefix == "disease") {
+		obj_ptr = &deserializeObject<rm::rule::DiseaseData>(obj);
+	} else if (lower_prefix == "diseasetype") {
+		obj_ptr = &deserializeObject<rm::rule::DiseaseTypeData>(obj);
+	} else if (lower_prefix == "language") {
+		obj_ptr = &deserializeObject<rm::rule::LanguageData>(obj);
+	} else if (lower_prefix == "languagecategory") {
+		obj_ptr = &deserializeObject<rm::rule::LanguageCategoryData>(obj);
+	} else if (lower_prefix == "poison") {
+		obj_ptr = &deserializeObject<rm::rule::PoisonData>(obj);
+	} else if (lower_prefix == "poisontype") {
+		obj_ptr = &deserializeObject<rm::rule::PoisonTypeData>(obj);
+	} else if (lower_prefix == "profession") {
+		obj_ptr = &deserializeObject<rm::rule::ProfessionData>(obj);
+	} else if (lower_prefix == "race") {
+		obj_ptr = &deserializeObject<rm::rule::RaceData>(obj);
+	} else if (lower_prefix == "skill") {
+		obj_ptr = &deserializeObject<rm::rule::SkillData>(obj);
+	} else if (lower_prefix == "skillcategory") {
+		obj_ptr = &deserializeObject<rm::rule::SkillCategoryData>(obj);
+	} else if (lower_prefix == "skillgroup") {
+		obj_ptr = &deserializeObject<rm::rule::SkillGroupData>(obj);
+	} else if (lower_prefix == "skillprogressiontype") {
+		obj_ptr = &deserializeObject<rm::rule::SkillProgressionTypeData>(obj);
+	} else if (lower_prefix == "specialattacktable") {
+		obj_ptr = &deserializeObject<rm::rule::table::SpecialAttackTable>(obj);
+	} else if (lower_prefix == "spelllist") {
+		obj_ptr = &deserializeObject<rm::rule::SpellListData>(obj);
+	} else if (lower_prefix == "trainingpackage") {
+		obj_ptr = &deserializeObject<rm::rule::TrainingPackageData>(obj);
+	} else if (lower_prefix == "treasurecode") {
+		obj_ptr = &deserializeObject<rm::rule::TreasureCodeData>(obj);
+	} else if (lower_prefix == "weapontype") {
+		obj_ptr = &deserializeObject<rm::rule::WeaponTypeData>(obj);
+	} else {
+		throw std::runtime_error("Unknown type for serialization: " + std::string(prefix));
+	}
+	return obj_ptr->id();
+}
+
 } // namespace rm

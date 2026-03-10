@@ -81,6 +81,10 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		// Get object by ID
 		// Example: /api/objects/skill/SKILL_ACTING
 		requestObjectById(response, path.type(), path.id());
+	} else if (request.method() == http::verb::post && path.match("/rmce/objects") && !path.type().empty() && path.id().empty()) {
+		// Create new object of a certain type (e.g. /api/objects/skill)
+		// We can use the request body to get the data for the new object, and we can use the type from the path to determine what type of object to create.
+		requestCreateObject(response, path.type(), request);
 	} else {
 		response.result(http::status::not_found);
 		response.set(http::field::content_type, "application/json");
@@ -168,4 +172,23 @@ void HttpRequestHandler::requestObjectById(http::response<http::string_body>& re
 	}
 }
 
+void HttpRequestHandler::requestCreateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request) {
+	try {
+		json::value json_body = json::parse(request.body());
+		if (!json_body.is_object()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON object"})";
+			return;
+		}
+		std::string new_obj_id = serial_manager_.deserializeObject(json_body.as_object(), type);
+		response.result(http::status::created);
+		response.set(http::field::content_type, "application/json");
+		response.body() = R"({"message": "Object created/updated successfully", "id": ")" + escapeJson(new_obj_id) + R"("})";
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to create object", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
+
+}
 } // namespace rm::rest
