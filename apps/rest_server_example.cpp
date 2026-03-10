@@ -41,6 +41,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "  GET  /           - Root endpoint" << std::endl;
 		std::cout << "  GET  /health     - Health check" << std::endl;
 		std::cout << "  GET  /api/version - API version" << std::endl;
+		std::cout << "  GET  /api/objects?id=OBJECT_ID - Game object" << std::endl;
 		std::cout << "\nPress Ctrl+C to stop the server..." << std::endl;
 
 		// Create the cache to store the game data and load it from file
