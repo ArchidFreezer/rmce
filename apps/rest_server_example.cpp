@@ -3,6 +3,8 @@
 #include <csignal>
 #include <atomic>
 
+#include <PersistentObjectSerializationManager.h>
+
 std::atomic<bool> stop_requested{false};
 
 void signalHandler(int signum) {
@@ -36,12 +38,24 @@ int main(int argc, char* argv[]) {
 		std::cout << "Port: " << port << std::endl;
 		std::cout << "Threads: " << num_threads << std::endl;
 		std::cout << "\nAvailable endpoints:" << std::endl;
-		std::cout << "  GET  /           - Root endpoint" << std::endl;
-		std::cout << "  GET  /health     - Health check" << std::endl;
-		std::cout << "  GET  /api/version - API version" << std::endl;
+		std::cout << "  GET  /                           - Root endpoint" << std::endl;
+		std::cout << "  GET  /health                     - Health check" << std::endl;
+		std::cout << "  GET  /api/version                - API version" << std::endl;
+		std::cout << "  GET  /api/objects?id=OBJECT_ID   - Get game object JSON" << std::endl;
+		std::cout << "  GET  /api/objects/prefixes       - Get game object prefixes JSON" << std::endl;
+		std::cout << "  GET  /api/objects/{prefix}/count - Get game object count JSON" << std::endl;
+		std::cout << "  GET  /api/objects/{prefix}/list  - Get all game objects JSON" << std::endl;
+		std::cout << "  GET  /api/objects/{prefix}/ids   - Get all game object ids JSON" << std::endl;
 		std::cout << "\nPress Ctrl+C to stop the server..." << std::endl;
 
+		// Create the cache to store the game data and load it from file
+		rm::PersistentCache cache{};
+		rm::PersistentObjectManager object_factory{cache};
+		rm::PersistentObjectSerializationManager json_manager{object_factory};
+		json_manager.load();
+
 		rm::rest::RestServer server(address, port, num_threads);
+		server.setObjectManager(&json_manager);
 		server.start();
 
 		// Wait for stop signal

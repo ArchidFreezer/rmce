@@ -1,5 +1,5 @@
 {
-    "attack-tables" : [
+    "attacktables" : [
         {
             "id" : "SPECIALATTACKTABLE_BEAK",
             "name" : "Beak",

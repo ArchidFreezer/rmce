@@ -1,4 +1,5 @@
-#include "RestServer.h"
+#include <RestServer.h>
+#include <GameRuleDatas.h>
 #include <PersistentObjectManager.h>
 #include <iostream>
 #include <boost/asio/dispatch.hpp>
@@ -7,60 +8,6 @@
 #include <map>
 
 namespace rm::rest {
-
-// Helper function to parse query parameters
-std::map<std::string, std::string> parseQueryParams(std::string_view target) {
-	std::map<std::string, std::string> params;
-
-	// Find the query string start
-	auto query_pos = target.find('?');
-	if (query_pos == std::string_view::npos) {
-		return params;
-	}
-
-	// Extract query string
-	std::string_view query = target.substr(query_pos + 1);
-
-	// Parse key=value pairs
-	size_t start = 0;
-	while (start < query.length()) {
-		// Find next parameter separator
-		auto amp_pos = query.find('&', start);
-		auto param = query.substr(start, amp_pos - start);
-
-		// Split on '='
-		auto eq_pos = param.find('=');
-		if (eq_pos != std::string_view::npos) {
-			std::string key(param.substr(0, eq_pos));
-			std::string value(param.substr(eq_pos + 1));
-
-			// URL decode (basic implementation)
-			// Replace '+' with space and handle %XX encoding
-			for (size_t i = 0; i < value.length(); ++i) {
-				if (value[i] == '+') {
-					value[i] = ' ';
-				}
-			}
-
-			params[key] = value;
-		}
-
-		if (amp_pos == std::string_view::npos)
-			break;
-		start = amp_pos + 1;
-	}
-
-	return params;
-}
-
-// Helper function to extract path without query string
-std::string_view getPath(std::string_view target) {
-	auto query_pos = target.find('?');
-	if (query_pos == std::string_view::npos) {
-		return target;
-	}
-	return target.substr(0, query_pos);
-}
 
 // Helper function to escape JSON strings
 std::string escapeJson(const std::string& str) {
@@ -100,7 +47,7 @@ std::string escapeJson(const std::string& str) {
 }
 
 // Session Implementation
-Session::Session(tcp::socket socket, PersistentObjectManager* object_manager) : stream_(std::move(socket)), object_manager_(object_manager) {
+Session::Session(tcp::socket socket, PersistentObjectSerializationManager* object_manager) : stream_(std::move(socket)), object_manager_(object_manager) {
 }
 
 void Session::run() {
@@ -137,29 +84,50 @@ void Session::handleRequest() {
 	response_.keep_alive(request_.keep_alive());
 
 	// Extract path and query parameters
-	std::string_view target = request_.target();
-	std::string_view path = getPath(target);
-	auto params = parseQueryParams(target);
+	const PathParser path(request_.target(), "/api/objects/");
 
 	// Route handling
-	if (request_.method() == http::verb::get && path == "/") {
+	if (request_.method() == http::verb::get && path.matchExact("/")) {
 		response_.result(http::status::ok);
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 		response_.body() = R"({"message": "REST API Server", "status": "running"})";
-	} else if (request_.method() == http::verb::get && path == "/health") {
+	} else if (request_.method() == http::verb::get && path.matchExact("/health")) {
 		response_.result(http::status::ok);
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 		response_.body() = R"({"status": "healthy"})";
-	} else if (request_.method() == http::verb::get && path == "/api/version") {
+	} else if (request_.method() == http::verb::get && path.matchExact("/api/version")) {
 		response_.result(http::status::ok);
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 		response_.body() = R"({"version": "1.0.0", "api": "v1"})";
-	} else if (request_.method() == http::verb::get && path == "/api/objects/list") {
+	} else if (request_.method() == http::verb::get && path.matchExact("/api/objects/prefixes")) {
+		response_.result(http::status::ok);
+		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
+		response_.set(http::field::content_type, "application/json");
+
+		if (!object_manager_) {
+			response_.result(http::status::service_unavailable);
+			response_.body() = R"({"error": "Object manager not available"})";
+		} else {
+			try {
+				std::set<std::string> prefixes = object_manager_->objectManager().getAllPrefixes();
+
+				std::ostringstream json;
+				std::string json_str = object_manager_->serializeContainer(prefixes, "prefixes");
+				json << json_str;
+
+				response_.result(http::status::ok);
+				response_.body() = json.str();
+			} catch (const std::exception& e) {
+				response_.result(http::status::internal_server_error);
+				response_.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
+			}
+		}
+	} else if (request_.method() == http::verb::get && path.match("/api/objects/") && !path.type().empty() && (path.op() == "list")) {
 		// List all object IDs
-		// Example: /api/objects/list?type=SkillData
+		// Example: /api/objects/skill/list
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 
@@ -169,28 +137,10 @@ void Session::handleRequest() {
 		} else {
 			try {
 				std::ostringstream json;
-				json << "{\"objects\": [";
-
-				auto type_it = params.find("type");
-				std::string type_filter = type_it != params.end() ? type_it->second : "";
-
-				// Get all objects (you'll need to implement iterator/collection access in PersistentObjectManager)
-				// TODO: This is a placeholder - adjust based on your actual API
-				//auto objects = object_manager_->getAllObjectIds();
-
-				//bool first = true;
-				//for (const auto& id : objects) {
-				//	if (!type_filter.empty() && id.find(type_filter) == std::string::npos) {
-				//		continue;
-				//	}
-
-				//	if (!first)
-				//		json << ", ";
-				//	json << "\"" << escapeJson(id) << "\"";
-				//	first = false;
-				//}
-
-				//json << "], \"count\": " << objects.size() << "}";
+				// json << "{\"objects\": [";
+				std::string json_str = object_manager_->serializeAllObjects(path.type());
+				json << json_str;
+				// json << "], \"count\": " << objects.size() << "}";
 
 				response_.result(http::status::ok);
 				response_.body() = json.str();
@@ -199,9 +149,9 @@ void Session::handleRequest() {
 				response_.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
 			}
 		}
-	} else if (request_.method() == http::verb::get && path == "/api/objects/get") {
+	} else if (request_.method() == http::verb::get && path.matchExact("/api/objects")) {
 		// Get object by ID
-		// Example: /api/objects/get?id=SKILL_ID_123
+		// Example: /api/objects?id=SKILL_123
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 
@@ -209,103 +159,31 @@ void Session::handleRequest() {
 			response_.result(http::status::service_unavailable);
 			response_.body() = R"({"error": "Object manager not available"})";
 		} else {
-			auto id_it = params.find("id");
-			if (id_it == params.end()) {
+			auto id_it = path.params().find("id");
+			if (id_it == path.params().end()) {
 				response_.result(http::status::bad_request);
 				response_.body() = R"({"error": "Missing 'id' parameter"})";
 			} else {
 				try {
 					const std::string& id = id_it->second;
-
-					// Check if object exists
-					// TODO: Implement actual retrieval logic based on your PersistentObjectManager API
-					//if (object_manager_->has(id)) {
-					//	// Get object (adjust based on your actual implementation)
-					//	auto obj = object_manager_->get(id);
-
-					//	std::ostringstream json;
-					//	json << "{";
-					//	json << "\"id\": \"" << escapeJson(id) << "\",";
-					//	json << "\"exists\": true";
-					//	// Add more object details here based on your object structure
-					//	json << "}";
-
-					//	response_.result(http::status::ok);
-					//	response_.body() = json.str();
-					//} else {
-					//	response_.result(http::status::not_found);
-					//	response_.body() = R"({"error": "Object not found", "id": ")" + escapeJson(id) + R"("})";
-					//}
+					// Get the JSON representation of the object by ID
+					auto obj_json_str = object_manager_->serializeAnyObject(id);
+					if (obj_json_str.empty()) {
+						// Wew should never get here if the object manager is implemented correctly, but just in case
+						response_.result(http::status::not_found);
+						response_.body() = R"({"error": "Object not found", "id": ")" + escapeJson(id) + R"("})";
+					} else {
+						response_.result(http::status::ok);
+						response_.body() = obj_json_str;
+					}
 				} catch (const std::exception& e) {
+					// This could be as simple as an incorrect prefix in the ID (e.g. "SKILLS_" instead of "SKILL_") or a more serious issue with the object manager
 					response_.result(http::status::internal_server_error);
 					response_.body() = R"({"error": "Failed to retrieve object", "message": ")" + escapeJson(e.what()) + R"("})";
 				}
 			}
 		}
-	} else if (request_.method() == http::verb::get && path == "/api/objects/search") {
-		// Search objects by criteria
-		// Example: /api/objects/search?query=weapon&limit=10
-		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
-		response_.set(http::field::content_type, "application/json");
-
-		if (!object_manager_) {
-			response_.result(http::status::service_unavailable);
-			response_.body() = R"({"error": "Object manager not available"})";
-		} else {
-			auto query_it = params.find("query");
-			if (query_it == params.end()) {
-				response_.result(http::status::bad_request);
-				response_.body() = R"({"error": "Missing 'query' parameter"})";
-			} else {
-				try {
-					const std::string& query = query_it->second;
-					int limit = 50; // Default limit
-
-					auto limit_it = params.find("limit");
-					if (limit_it != params.end()) {
-						try {
-							limit = std::stoi(limit_it->second);
-							if (limit <= 0 || limit > 1000)
-								limit = 50;
-						} catch (...) {
-							limit = 50;
-						}
-					}
-
-					std::ostringstream json;
-					json << "{\"results\": [";
-
-					// Search implementation (placeholder)
-					// TODO: Implement actual search logic based on your PersistentObjectManager API
-					//auto all_ids = object_manager_->getAllObjectIds();
-					//bool first = true;
-					//int count = 0;
-
-					//for (const auto& id : all_ids) {
-					//	if (count >= limit)
-					//		break;
-
-					//	// Simple substring search
-					//	if (id.find(query) != std::string::npos) {
-					//		if (!first)
-					//			json << ", ";
-					//		json << "{\"id\": \"" << escapeJson(id) << "\"}";
-					//		first = false;
-					//		count++;
-					//	}
-					//}
-
-					//json << "], \"count\": " << count << ", \"limit\": " << limit << "}";
-
-					response_.result(http::status::ok);
-					response_.body() = json.str();
-				} catch (const std::exception& e) {
-					response_.result(http::status::internal_server_error);
-					response_.body() = R"({"error": "Search failed", "message": ")" + escapeJson(e.what()) + R"("})";
-				}
-			}
-		}
-	} else if (request_.method() == http::verb::get && path == "/api/objects/count") {
+	} else if (request_.method() == http::verb::get && path.match("/api/objects/") && !path.type().empty() && (path.op() == "count")) {
 		// Get count of objects
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
@@ -315,9 +193,7 @@ void Session::handleRequest() {
 			response_.body() = R"({"error": "Object manager not available"})";
 		} else {
 			try {
-				// TODO: Implement actual count retrieval based on your PersistentObjectManager API
-				//size_t count = object_manager_->size();
-				size_t count = 0; // Placeholder
+				const size_t count = object_manager_->objectManager().getAllIds(path.type()).size(); // Placeholder
 
 				std::ostringstream json;
 				json << "{\"count\": " << count << "}";
@@ -329,59 +205,30 @@ void Session::handleRequest() {
 				response_.body() = R"({"error": "Failed to get count", "message": ")" + escapeJson(e.what()) + R"("})";
 			}
 		}
-	} else if (request_.method() == http::verb::get && path == "/api/search") {
-		// Legacy endpoint - kept for backward compatibility
-		response_.result(http::status::ok);
+	} else if (request_.method() == http::verb::get && path.match("/api/objects/") && !path.type().empty() && (path.op() == "ids")) {
+		// Get count of objects
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 
-		std::ostringstream json;
-		json << "{\"results\": [";
-
-		auto query_it = params.find("query");
-		auto limit_it = params.find("limit");
-
-		if (query_it != params.end()) {
-			json << "{\"query\": \"" << escapeJson(query_it->second) << "\"";
-
-			if (limit_it != params.end()) {
-				json << ", \"limit\": " << limit_it->second;
-			}
-
-			json << ", \"message\": \"Search functionality\"}";
+		if (!object_manager_) {
+			response_.result(http::status::service_unavailable);
+			response_.body() = R"({"error": "Object manager not available"})";
 		} else {
-			json << "{\"error\": \"Missing query parameter\"}";
-		}
+			try {
+				const std::set<std::string> ids = object_manager_->objectManager().getAllIds(path.type());
+				std::string key = object_manager_->getRootKeyForType(path.type());
 
-		json << "]}";
-		response_.body() = json.str();
-	} else if (request_.method() == http::verb::get && path == "/api/data") {
-		// Legacy endpoint
-		response_.result(http::status::ok);
-		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
-		response_.set(http::field::content_type, "application/json");
+				std::ostringstream json;
+				json << object_manager_->serializeContainer(ids, key);
 
-		std::ostringstream json;
-		json << "{";
-
-		auto id_it = params.find("id");
-		auto format_it = params.find("format");
-
-		if (id_it != params.end()) {
-			json << "\"id\": \"" << escapeJson(id_it->second) << "\"";
-
-			if (format_it != params.end()) {
-				json << ", \"format\": \"" << escapeJson(format_it->second) << "\"";
+				response_.result(http::status::ok);
+				response_.body() = json.str();
+			} catch (const std::exception& e) {
+				response_.result(http::status::internal_server_error);
+				response_.body() = R"({"error": "Failed to get ids", "message": ")" + escapeJson(e.what()) + R"("})";
 			}
-
-			json << ", \"data\": \"Sample data for ID " << escapeJson(id_it->second) << "\"";
-		} else {
-			json << "\"error\": \"Missing id parameter\"";
 		}
-
-		json << "}";
-		response_.body() = json.str();
-	} else if (request_.method() == http::verb::get && path == "/api/echo") {
+	} else if (request_.method() == http::verb::get && path.matchExact("/api/echo")) {
 		// Echo endpoint for testing
 		response_.result(http::status::ok);
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
@@ -391,7 +238,7 @@ void Session::handleRequest() {
 		json << "{\"query_params\": {";
 
 		bool first = true;
-		for (const auto& [key, value] : params) {
+		for (const auto& [key, value] : path.params()) {
 			if (!first)
 				json << ", ";
 			json << "\"" << escapeJson(key) << "\": \"" << escapeJson(value) << "\"";
@@ -442,7 +289,7 @@ void Session::doClose() {
 }
 
 // RestServer Implementation
-RestServer::RestServer(const std::string& address, unsigned short port, int num_threads, PersistentObjectManager* object_manager)
+RestServer::RestServer(const std::string& address, unsigned short port, int num_threads, PersistentObjectSerializationManager* object_manager)
     : ioc_(num_threads), acceptor_(net::make_strand(ioc_)), running_(false), num_threads_(num_threads), object_manager_(object_manager) {
 	beast::error_code ec;
 

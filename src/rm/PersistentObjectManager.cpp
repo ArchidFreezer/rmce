@@ -3,6 +3,39 @@
 #include <GameRuleDatas.h>
 
 namespace rm {
+
+const std::set<std::string> PersistentObjectManager::getAllPrefixes() const {
+	std::set<std::string> result;
+	// Much as we would ike to use the type information in the cache to get the prefixes, this is not possible as some objects, e.g. SubcategoriedSkillData, are stored in the cache with the same type as other objects, e.g. SkillData This
+	// means we need to generate and maintain this list manually.
+	result.insert("animal");
+	result.insert("armourtype");
+	result.insert("attacktable");
+	result.insert("book");
+	result.insert("climate");
+	result.insert("creaturepace");
+	result.insert("culture");
+	result.insert("culturetype");
+	result.insert("disease");
+	result.insert("diseasetype");
+	result.insert("languagecategory");
+	result.insert("language");
+	result.insert("poison");
+	result.insert("poisontype");
+	result.insert("profession");
+	result.insert("race");
+	result.insert("skillcategory");
+	result.insert("skillgroup");
+	result.insert("skillprogressiontype");
+	result.insert("skill");
+	result.insert("specialattacktable");
+	result.insert("spelllist");
+	result.insert("trainingpackage");
+	result.insert("treasurecode");
+	result.insert("weapontype");
+	return result;
+}
+
 const std::string PersistentObjectManager::generateId(std::string_view type, std::string_view val) {
 	std::stringstream ss;
 	// Add the characters from the type, replacing non alphanum characters with an underscore
@@ -44,7 +77,7 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 	using namespace rm::rule;
 
 	const GameRuleData* result{nullptr};
-	
+
 	// We first need to determine the type of the object which is done be checking the prefix of the id.
 	std::string prefix{id.substr(0, id.find('_'))};
 	if (prefix == "ANIMAL") {
@@ -99,7 +132,66 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 		throw std::out_of_range("Could not determine the object type for object with id " + id);
 	}
 
+	return result;
+}
 
+const std::set<std::string> PersistentObjectManager::getAllIds(std::string_view prefix) const {
+	using namespace rm::rule;
+
+	std::string lprefix = archid::lcase(std::string(prefix));
+
+	std::set<std::string> result;
+	if (lprefix == "animal") {
+		cache_.keys<AnimalData>(result);
+	} else if (lprefix == "armourtype") {
+		cache_.keys<ArmourTypeData>(result);
+	} else if (lprefix == "attacktable") {
+		cache_.keys<AttackTable>(result);
+	} else if (lprefix == "book") {
+		cache_.keys<BookData>(result);
+	} else if (lprefix == "climate") {
+		cache_.keys<ClimateData>(result);
+	} else if (lprefix == "creaturepace") {
+		cache_.keys<CreaturePaceData>(result);
+	} else if (lprefix == "culture") {
+		cache_.keys<CultureData>(result);
+	} else if (lprefix == "culturetype") {
+		cache_.keys<CultureTypeData>(result);
+	} else if (lprefix == "disease") {
+		cache_.keys<DiseaseData>(result);
+	} else if (lprefix == "diseasetype") {
+		cache_.keys<DiseaseTypeData>(result);
+	} else if (lprefix == "languagecategory") {
+		cache_.keys<LanguageCategoryData>(result);
+	} else if (lprefix == "language") {
+		cache_.keys<LanguageData>(result);
+	} else if (lprefix == "poison") {
+		cache_.keys<PoisonData>(result);
+	} else if (lprefix == "poisontype") {
+		cache_.keys<PoisonTypeData>(result);
+	} else if (lprefix == "profession") {
+		cache_.keys<ProfessionData>(result);
+	} else if (lprefix == "race") {
+		cache_.keys<RaceData>(result);
+	} else if (lprefix == "skillcategory") {
+		cache_.keys<SkillCategoryData>(result);
+	} else if (lprefix == "skillgroup") {
+		cache_.keys<SkillGroupData>(result);
+	} else if (lprefix == "skill") {
+		cache_.keys<SkillData>(result);
+	} else if (lprefix == "specialattacktable") {
+		cache_.keys<SpecialAttackTable>(result);
+	} else if (lprefix == "spelllist") {
+		cache_.keys<SpellListData>(result);
+	} else if (lprefix == "trainingpackage") {
+		cache_.keys<TrainingPackageData>(result);
+	} else if (lprefix == "treasurecode") {
+		cache_.keys<TreasureCodeData>(result);
+	} else if (lprefix == "weapontype") {
+		cache_.keys<WeaponTypeData>(result);
+	} else {
+		throw std::out_of_range("Could not determine the object type for objects with prefix " + std::string(prefix));
+	}
 	return result;
 }
 

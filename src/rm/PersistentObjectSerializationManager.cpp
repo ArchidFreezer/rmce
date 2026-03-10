@@ -2,64 +2,75 @@
 
 namespace rm {
 
+// Helper function to determine the root key for a given type T based on its name
+const std::string PersistentObjectSerializationManager::getRootKeyForType(std::string_view prefix) {
+	if (prefix.ends_with("y")) {
+		return std::string(prefix.substr(0, prefix.size() - 1)) + "ies";
+	} else {
+		return std::string(prefix) + "s";
+	}
+}
+
+
+
 void PersistentObjectSerializationManager::load() {
 	using namespace rm::rule::serial;
 	deserializeAllObjects<rm::rule::AnimalData>("Animals.json", "animals");
-	deserializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armour-types");
-	deserializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attack-tables");
+	deserializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armourtypes");
+	deserializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attacktables");
 	deserializeAllObjects<rm::rule::BookData>("Books.json", "books");
 	deserializeAllObjects<rm::rule::ClimateData>("Climates.json", "climates");
-	deserializeAllObjects<rm::rule::CreaturePaceData>("CreaturePaces.json", "creature-paces");
+	deserializeAllObjects<rm::rule::CreaturePaceData>("CreaturePaces.json", "creaturepaces");
 	deserializeAllObjects<rm::rule::CultureData>("Cultures.json", "cultures");
-	deserializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culture-types");
+	deserializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culturetypes");
 	deserializeAllObjects<rm::rule::DiseaseData>("Diseases.json", "diseases");
-	deserializeAllObjects<rm::rule::DiseaseTypeData>("DiseaseTypes.json", "disease-types");
+	deserializeAllObjects<rm::rule::DiseaseTypeData>("DiseaseTypes.json", "diseasetypes");
 	deserializeAllObjects<rm::rule::LanguageData>("Languages.json", "languages");
-	deserializeAllObjects<rm::rule::LanguageCategoryData>("LanguageCategories.json", "language-categories");
+	deserializeAllObjects<rm::rule::LanguageCategoryData>("LanguageCategories.json", "languagecategories");
 	deserializeAllObjects<rm::rule::PoisonData>("Poisons.json", "poisons");
-	deserializeAllObjects<rm::rule::PoisonTypeData>("PoisonTypes.json", "poison-types");
+	deserializeAllObjects<rm::rule::PoisonTypeData>("PoisonTypes.json", "poisontypes");
 	deserializeAllObjects<rm::rule::ProfessionData>("Professions.json", "professions");
 	deserializeAllObjects<rm::rule::RaceData>("Races.json", "races");
 	deserializeAllObjects<rm::rule::SkillData>("Skills.json", "skills");
-	deserializeAllObjects<rm::rule::SkillCategoryData>("SkillCategories.json", "skill-categories");
-	deserializeAllObjects<rm::rule::SkillGroupData>("SkillGroups.json", "skill-groups");
-	deserializeAllObjects<rm::rule::SkillProgressionTypeData>("SkillProgressionTypes.json", "skill-progression-types");
-	deserializeAllObjects<rm::rule::table::SpecialAttackTable>("SpecialAttackTables.json", "attack-tables");
-	deserializeAllObjects<rm::rule::SpellListData>("SpellLists.json", "spell-lists");
-	deserializeAllObjects<rm::rule::TrainingPackageData>("TrainingPackages.json", "training-packages");
-	deserializeAllObjects<rm::rule::TreasureCodeData>("TreasureCodes.json", "treasure-codes");
-	deserializeAllObjects<rm::rule::WeaponTypeData>("WeaponTypes.json", "weapon-types");
-	deserializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
+	deserializeAllObjects<rm::rule::SkillCategoryData>("SkillCategories.json", "skillcategories");
+	deserializeAllObjects<rm::rule::SkillGroupData>("SkillGroups.json", "skillgroups");
+	deserializeAllObjects<rm::rule::SkillProgressionTypeData>("SkillProgressionTypes.json", "skillprogressiontypes");
+	deserializeAllObjects<rm::rule::table::SpecialAttackTable>("SpecialAttackTables.json", "attacktables");
+	deserializeAllObjects<rm::rule::SpellListData>("SpellLists.json", "spelllists");
+	deserializeAllObjects<rm::rule::TrainingPackageData>("TrainingPackages.json", "trainingpackages");
+	deserializeAllObjects<rm::rule::TreasureCodeData>("TreasureCodes.json", "treasurecodes");
+	deserializeAllObjects<rm::rule::WeaponTypeData>("WeaponTypes.json", "weapontypes");
+	deserializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 }
 
 void PersistentObjectSerializationManager::save() {
 	using namespace rm::rule::serial;
 	serializeAllObjects<rm::rule::AnimalData>("Animals.json", "animals");
-	serializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armour-types");
-	serializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attack-tables");
+	serializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armourtypes");
+	serializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attacktables");
 	serializeAllObjects<rm::rule::BookData>("Books.json", "books");
 	serializeAllObjects<rm::rule::ClimateData>("Climates.json", "climates");
-	serializeAllObjects<rm::rule::CreaturePaceData>("CreaturePaces.json", "creature-paces");
+	serializeAllObjects<rm::rule::CreaturePaceData>("CreaturePaces.json", "creaturepaces");
 	serializeAllObjects<rm::rule::CultureData>("Cultures.json", "cultures");
-	serializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culture-types");
+	serializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culturetypes");
 	serializeAllObjects<rm::rule::DiseaseData>("Diseases.json", "diseases");
-	serializeAllObjects<rm::rule::DiseaseTypeData>("DiseaseTypes.json", "disease-types");
+	serializeAllObjects<rm::rule::DiseaseTypeData>("DiseaseTypes.json", "diseasetypes");
 	serializeAllObjects<rm::rule::LanguageData>("Languages.json", "languages");
-	serializeAllObjects<rm::rule::LanguageCategoryData>("LanguageCategories.json", "language-categories");
+	serializeAllObjects<rm::rule::LanguageCategoryData>("LanguageCategories.json", "languagecategories");
 	serializeAllObjects<rm::rule::PoisonData>("Poisons.json", "poisons");
-	serializeAllObjects<rm::rule::PoisonTypeData>("PoisonTypes.json", "poison-types");
+	serializeAllObjects<rm::rule::PoisonTypeData>("PoisonTypes.json", "poisontypes");
 	serializeAllObjects<rm::rule::ProfessionData>("Professions.json", "professions");
 	serializeAllObjects<rm::rule::RaceData>("Races.json", "races");
 	serializeAllObjects<rm::rule::SkillData>("Skills.json", "skills");
-	serializeAllObjects<rm::rule::SkillCategoryData>("SkillCategories.json", "skill-categories");
-	serializeAllObjects<rm::rule::SkillGroupData>("SkillGroups.json", "skill-groups");
-	serializeAllObjects<rm::rule::SkillProgressionTypeData>("SkillProgressionTypes.json", "skill-progression-types");
-	serializeAllObjects<rm::rule::table::SpecialAttackTable>("SpecialAttackTables.json", "attack-tables");
-	serializeAllObjects<rm::rule::SpellListData>("SpellLists.json", "spell-lists");
-	serializeAllObjects<rm::rule::TrainingPackageData>("TrainingPackages.json", "training-packages");
-	serializeAllObjects<rm::rule::TreasureCodeData>("TreasureCodes.json", "treasure-codes");
-	serializeAllObjects<rm::rule::WeaponTypeData>("WeaponTypes.json", "weapon-types");
-	serializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
+	serializeAllObjects<rm::rule::SkillCategoryData>("SkillCategories.json", "skillcategories");
+	serializeAllObjects<rm::rule::SkillGroupData>("SkillGroups.json", "skillgroups");
+	serializeAllObjects<rm::rule::SkillProgressionTypeData>("SkillProgressionTypes.json", "skillprogressiontypes");
+	serializeAllObjects<rm::rule::table::SpecialAttackTable>("SpecialAttackTables.json", "attacktables");
+	serializeAllObjects<rm::rule::SpellListData>("SpellLists.json", "spelllists");
+	serializeAllObjects<rm::rule::TrainingPackageData>("TrainingPackages.json", "trainingpackages");
+	serializeAllObjects<rm::rule::TreasureCodeData>("TreasureCodes.json", "treasurecodes");
+	serializeAllObjects<rm::rule::WeaponTypeData>("WeaponTypes.json", "weapontypes");
+	serializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 }
 
 std::string PersistentObjectSerializationManager::serializeAnyObject(const std::string& id) {
@@ -118,6 +129,70 @@ std::string PersistentObjectSerializationManager::serializeAnyObject(const std::
 		return serializeObject(*weapon_type);
 	} else {
 		throw std::runtime_error("Unknown object type for ID: " + id);
+	}
+}
+
+std::string PersistentObjectSerializationManager::serializeAllObjects(std::string_view prefix) {
+	using namespace rm::rule::serial;
+
+	std::string lower_prefix = archid::lcase(prefix);
+	std::string root_key = getRootKeyForType(lower_prefix);
+	if (root_key.empty()) {
+		throw std::runtime_error("Unknown type for serialization: " + std::string(prefix));
+	}
+
+	if (lower_prefix == "animal") {
+		return serializeAllObjects_Impl<rm::rule::AnimalData>(root_key);
+	} else if (lower_prefix == "armourtype") {
+		return serializeAllObjects_Impl<rm::rule::ArmourTypeData>(root_key);
+	} else if (lower_prefix == "attacktable") {
+		return serializeAllObjects_Impl<rm::rule::table::AttackTable>(root_key);
+	} else if (lower_prefix == "book") {
+		return serializeAllObjects_Impl<rm::rule::BookData>(root_key);
+	} else if (lower_prefix == "climate") {
+		return serializeAllObjects_Impl<rm::rule::ClimateData>(root_key);
+	} else if (lower_prefix == "creaturepace") {
+		return serializeAllObjects_Impl<rm::rule::CreaturePaceData>(root_key);
+	} else if (lower_prefix == "culture") {
+		return serializeAllObjects_Impl<rm::rule::CultureData>(root_key);
+	} else if (lower_prefix == "culturetype") {
+		return serializeAllObjects_Impl<rm::rule::CultureTypeData>(root_key);
+	} else if (lower_prefix == "disease") {
+		return serializeAllObjects_Impl<rm::rule::DiseaseData>(root_key);
+	} else if (lower_prefix == "diseasetype") {
+		return serializeAllObjects_Impl<rm::rule::DiseaseTypeData>(root_key);
+	} else if (lower_prefix == "language") {
+		return serializeAllObjects_Impl<rm::rule::LanguageData>(root_key);
+	} else if (lower_prefix == "languagecategory") {
+		return serializeAllObjects_Impl<rm::rule::LanguageCategoryData>(root_key);
+	} else if (lower_prefix == "poison") {
+		return serializeAllObjects_Impl<rm::rule::PoisonData>(root_key);
+	} else if (lower_prefix == "poisontype") {
+		return serializeAllObjects_Impl<rm::rule::PoisonTypeData>(root_key);
+	} else if (lower_prefix == "profession") {
+		return serializeAllObjects_Impl<rm::rule::ProfessionData>(root_key);
+	} else if (lower_prefix == "race") {
+		return serializeAllObjects_Impl<rm::rule::RaceData>(root_key);
+	} else if (lower_prefix == "skill") {
+		return serializeAllObjects_Impl<rm::rule::SkillData>(root_key);
+	} else if (lower_prefix == "skillcategory") {
+		return serializeAllObjects_Impl<rm::rule::SkillCategoryData>(root_key);
+	} else if (lower_prefix == "skillgroup") {
+		return serializeAllObjects_Impl<rm::rule::SkillGroupData>(root_key);
+	} else if (lower_prefix == "skillprogressiontype") {
+		return serializeAllObjects_Impl<rm::rule::SkillProgressionTypeData>(root_key);
+	} else if (lower_prefix == "specialattacktable") {
+		return serializeAllObjects_Impl<rm::rule::table::SpecialAttackTable>(root_key);
+	} else if (lower_prefix == "spelllist") {
+		return serializeAllObjects_Impl<rm::rule::SpellListData>(root_key);
+	} else if (lower_prefix == "trainingpackage") {
+		return serializeAllObjects_Impl<rm::rule::TrainingPackageData>(root_key);
+	} else if (lower_prefix == "treasurecode") {
+		return serializeAllObjects_Impl<rm::rule::TreasureCodeData>(root_key);
+	} else if (lower_prefix == "weapontype") {
+		return serializeAllObjects_Impl<rm::rule::WeaponTypeData>(root_key);
+	} else {
+		throw std::runtime_error("Unknown type for serialization: " + std::string(prefix));
 	}
 }
 

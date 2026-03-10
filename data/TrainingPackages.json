@@ -1,5 +1,5 @@
 {
-    "training-packages" : [
+    "trainingpackages" : [
         {
             "id" : "TRAININGPACKAGE_ADVENTURER",
             "name" : "Adventurer",

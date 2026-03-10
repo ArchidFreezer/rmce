@@ -1,5 +1,5 @@
 {
-    "weapon-types" : [
+    "weapontypes" : [
         {
             "id" : "WEAPONTYPE_AKLYS",
             "name" : "Aklys",

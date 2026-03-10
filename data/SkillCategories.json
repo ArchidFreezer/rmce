@@ -1,5 +1,5 @@
 {
-    "skill-categories" : [
+    "skillcategories" : [
         {
             "id" : "SKILLCATEGORY_ARMOUR_HEAVY",
             "group" : "SKILLGROUP_ARMOUR",

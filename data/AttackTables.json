@@ -1,5 +1,5 @@
 {
-    "attack-tables" : [
+    "attacktables" : [
         {
             "id" : "ATTACKTABLE_AKLYS",
             "name" : "Aklys",

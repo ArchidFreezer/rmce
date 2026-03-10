@@ -9,6 +9,8 @@
 
 namespace rm {
 
+namespace json = boost::json;
+
 /**
  * @brief Class to manage the (de)serialization of PersistentObject objects to and from JSON data
  *
@@ -68,11 +70,11 @@ public:
 	 *
 	 * @code
 	 * PersistentObjectSerializationManager manager(object_manager);
-	 * manager.deserializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
+	 * manager.deserializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 	 * @endcode
 	 */
 	template<persistent_object T>
-	void deserializeAllObjects(const std::string& filename);
+	void deserializeTsv(const std::string& filename);
 
 	/**
 	 * @brief Save all objects of a specific persistent type to a JSON file
@@ -108,11 +110,42 @@ public:
 	 *
 	 * @code
 	 * PersistentObjectSerializationManager manager(object_manager);
-	 * manager.serializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
+	 * manager.serializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 	 * @endcode
 	 */
 	template<persistent_object T>
-	void serializeAllObjects(const std::string& filename);
+	void serializeTsv(const std::string& filename);
+
+	/**
+	 * @brief Get the JSON representation of all objects of a specific persistent type
+	 *
+	 * This template function gets the JSON representation of all objects of type T using the appropriate serializer for that type. The function automatically selects the correct serializer and root key based on the type T.
+	 *
+	 * @tparam T The persistent object type to serialize (must satisfy persistent_object concept)
+	 * @return A string containing the JSON representation of all objects of type T
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * std::string json = manager.serializeAllObjects<rm::rule::BookData>();
+	 * @endcode
+	 */
+	template<persistent_object T>
+	std::string serializeAllObjects_Impl(std::string_view root_key);
+
+	/**
+	 * @brief Get the JSON representation of all objects of any game rule type with a specific prefix in their ID
+	 *
+	 * This function gets the JSON representation of all objects of any game rule type that have IDs starting with the specified prefix using the appropriate serializer for each type.
+	 *
+	 * @param prefix Lowercase string of the prefix to match in the IDs of the objects to serialize
+	 * @return A string containing the JSON representation of all matching objects
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * std::string json = manager.serializeAllObject("SKILL_");
+	 * @endcode
+	 */
+	std::string serializeAllObjects(std::string_view prefix);
 
 	/**
 	 * @brief Deserialize all known data objects from file to preload the cache
@@ -210,6 +243,45 @@ public:
 	template<persistent_object T>
 	const T& deserializeObject(const std::string& json_str);
 
+	/**
+	 * @brief Get the JSON representation of a container of objects
+	 *
+	 * This template function gets the JSON representation of a container of objects, typically std::strings representing the IDs of the objects to serialize.
+	 *
+	 * @tparam Container The type of the container (e.g. std::vector<std::string>, std::set<std::string>, etc.)
+	 * @param container The container of objects to serialize
+	 * @param key The key to use in the JSON output for each object (e.g. "books" for a container of BookData object IDs)
+	 * @return A string containing the JSON representation of the container of objects
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * const std::set<std::string> ids = manager->objectManager().getAllIds("book");
+	 * std::string json = manager.serializeContainer(books, "books");
+	 * @endcode
+	 */
+	template<typename Container>
+	std::string serializeContainer(const Container& container, std::string_view key);
+
+	/**
+	 * @brief Get a reference to the PersistentObjectManager used by this serialization manager
+	 *
+	 * @return Reference to the PersistentObjectManager
+	 */
+	const PersistentObjectManager& objectManager() const {
+		return object_manager_;
+	}
+
+	/**
+	 * @brief Get the root key to use in the JSON file for a given type
+	 *
+	 * This function returns the root key to use in the JSON file for a given type. The root key is used to identify the array of objects in the JSON file that corresponds to the given type.
+	 * The value returned is the natural plural of the type name, e.g. "books" for "book", "skillcategories" for "skillcategory", etc.
+	 *
+	 * @param prefix The type prefix to get the root key for (e.g. "book", "skillcategory", etc.)
+	 * @return The root key to use in the JSON file for the given type
+	 */
+	const std::string getRootKeyForType(std::string_view prefix);
+
 private:
 	PersistentObjectManager& object_manager_;
 	std::string data_directory_{"../../../../data/"};
@@ -246,7 +318,7 @@ void PersistentObjectSerializationManager::deserializeAllObjects(const std::stri
 }
 
 template<persistent_object T>
-void PersistentObjectSerializationManager::deserializeAllObjects(const std::string& filename) {
+void PersistentObjectSerializationManager::deserializeTsv(const std::string& filename) {
 	using namespace rm::rule::serial;
 
 	// Create the appropriate TSV serializer for type T
@@ -270,7 +342,7 @@ void PersistentObjectSerializationManager::serializeAllObjects(const std::string
 }
 
 template<persistent_object T>
-void PersistentObjectSerializationManager::serializeAllObjects(const std::string& filename) {
+void PersistentObjectSerializationManager::serializeTsv(const std::string& filename) {
 	using namespace rm::rule::serial;
 
 	// Create the appropriate TSV serializer for type T
@@ -381,6 +453,44 @@ const T& PersistentObjectSerializationManager::deserializeObject(const std::stri
 	json::value json_value = json::parse(json_str);
 	// Deserialize the object from the JSON value
 	return serializer->deserializeObject(json_value.as_object());
+}
+
+template<persistent_object T>
+std::string PersistentObjectSerializationManager::serializeAllObjects_Impl(std::string_view root_key) {
+	using namespace rm::rule::serial;
+	// Create the appropriate JSON serializer for type T
+	auto serializer = createJsonSerializer<T>();
+
+	std::ostringstream json_stream;
+	std::vector<std::reference_wrapper<T>>{object_manager_.getAll<T>()}; // We need to create a vector of reference wrappers to avoid copying the objects when we iterate over them, as they may not be copyable
+
+	json_stream << "{ \"" << root_key << "\": [";
+	if (!object_manager_.getAll<T>().empty()) {
+		for (const auto& obj : object_manager_.getAll<T>()) {
+			json_stream << json::serialize(serializer->serializeObject(obj)) + ",";
+		}
+		// Remove the trailing comma if there was at least one object, we can do this as we know that the stream is not empty and we will be appeneding a closing bracket after this
+		json_stream.seekp(-1, std::ios_base::end);
+	}
+	json_stream << "]}";
+
+	return json_stream.str();
+}
+
+template<typename Container>
+std::string PersistentObjectSerializationManager::serializeContainer(const Container& container, std::string_view key) {
+
+	std::ostringstream json_stream;
+	json_stream << "{ \"" << key << "\": [";
+	if (!container.empty()) {
+		for (const auto& obj : container) {
+			json_stream << json::serialize(json::value(obj)) + ",";
+		}
+		// Remove the trailing comma if there was at least one object, we can do this as we know that the stream is not empty and we will be appeneding a closing bracket after this
+		json_stream.seekp(-1, std::ios_base::end);
+	}
+	json_stream << "]}";
+	return json_stream.str();
 }
 
 } // namespace rm

@@ -1,5 +1,5 @@
 {
-    "poison-types" : [
+    "poisontypes" : [
         {
             "id" : "POISONTYPE_CIRCULATORY",
             "type" : "Circulatory",

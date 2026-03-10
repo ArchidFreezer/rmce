@@ -148,6 +148,17 @@ public:
 	const rm::rule::GameRuleData* getAny(std::string id);
 
 	/**
+	 * @brief Get all IDs of GameRuleData objects with a specific prefix
+	 *
+	 * This is useful for deserialisation when we want to get all objects with a specific prefix in their ID, e.g. all skills that have IDs starting with "SKILL_". The method will search through all types of GameRuleData objects in the
+	 * cache and return the IDs of those with the matching prefix.
+	 *
+	 * @param prefix Prefix to match in the IDs
+	 * @return Set of strings containing the IDs of the matching GameRuleData objects
+	 */
+	const std::set<std::string> getAllIds(std::string_view prefix) const;
+
+	/**
 	 * @brief Get SubcategoriedSkillData objects
 	 *
 	 * SubcategoriedSkillData cannot be created with ID only as the ID is derived from optional arguments. In order to
@@ -194,6 +205,16 @@ public:
 	 * @return String containing an id in standard format
 	 */
 	const std::string generateId(std::string_view type, std::string_view val);
+
+	/**
+	 * @brief Get all prefixes of GameRuleData objects in the cache
+	 *
+	 * This is useful for deserialisation when we want to get all objects with a specific prefix in their ID, e.g. all skills that have IDs starting with "SKILL_". This method will return all the prefixes, without the underscore, as
+	 * lowercase values.
+	 *
+	 * @return Set of strings containing the unique prefixes of the GameRuleData objects in the cache
+	 */
+	const std::set<std::string> getAllPrefixes() const;
 
 private:
 	PersistentCache& cache_; /**< Reference to a cache to store the objects. */
