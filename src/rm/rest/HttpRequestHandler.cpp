@@ -42,7 +42,7 @@ std::string escapeJson(const std::string& str) {
 
 void HttpRequestHandler::handleRequest(const http::request<http::string_body>& request, http::response<http::string_body>& response) {
 	// Extract path and query parameters
-	const PathParser path(request.target(), "/api/objects/");
+	const PathParser path(request.target(), "/rmce/objects/");
 
 	// Route handling
 	if (request.method() == http::verb::get && path.matchExact("/")) {
@@ -58,123 +58,113 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		response.set(http::field::content_type, "application/json");
 		response.body() = R"({"version": "1.0.0", "api": "v1"})";
 	} else if (request.method() == http::verb::get && path.matchExact("/rmce/prefixes")) {
-		response.result(http::status::ok);
-		response.set(http::field::content_type, "application/json");
+		requestPrefixes(response);
+	} else if (request.method() == http::verb::get && path.match("/rmce/objects") && !path.type().empty() && path.id().empty()) {
+		// We have 3 operations for this endpoint: list, count, and ids. We need to check the operation first before we can determine how to handle the request.
 
-		try {
-			std::set<std::string> prefixes = serial_manager_.objectManager().getAllPrefixes();
-
-			std::ostringstream json;
-			std::string json_str = serial_manager_.serializeContainer(prefixes, "prefixes");
-			json << json_str;
-
-			response.result(http::status::ok);
-			response.body() = json.str();
-		} catch (const std::exception& e) {
-			response.result(http::status::internal_server_error);
-			response.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
-		}
-	} else if (request.method() == http::verb::get && path.match("/api/objects/") && !path.type().empty() && (path.op() == "list")) {
-		// List all object IDs
-		// Example: /api/objects/skill/list
-		response.set(http::field::content_type, "application/json");
-
-		try {
-			std::ostringstream json;
-			// json << "{\"objects\": [";
-			std::string json_str = serial_manager_.serializeAllObjects(path.type());
-			json << json_str;
-			// json << "], \"count\": " << objects.size() << "}";
-
-			response.result(http::status::ok);
-			response.body() = json.str();
-		} catch (const std::exception& e) {
-			response.result(http::status::internal_server_error);
-			response.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
-		}
-	} else if (request.method() == http::verb::get && path.matchExact("/api/objects")) {
-		// Get object by ID
-		// Example: /api/objects?id=SKILL_123
-		response.set(http::field::content_type, "application/json");
-
-		auto id_it = path.params().find("id");
-		if (id_it == path.params().end()) {
-			response.result(http::status::bad_request);
-			response.body() = R"({"error": "Missing 'id' parameter"})";
+		// First case is with no parameters, which means we want to list all objects of a certain type (e.g. /api/objects/skill)
+		if (path.params().empty()) {
+			requestListObjects(response, path.type());
 		} else {
-			try {
-				const std::string& id = id_it->second;
-				// Get the JSON representation of the object by ID
-				auto obj_json_str = serial_manager_.serializeAnyObject(id);
-				if (obj_json_str.empty()) {
-					// Wew should never get here if the object manager is implemented correctly, but just in case
-					response.result(http::status::not_found);
-					response.body() = R"({"error": "Object not found", "id": ")" + escapeJson(id) + R"("})";
-				} else {
-					response.result(http::status::ok);
-					response.body() = obj_json_str;
-				}
-			} catch (const std::exception& e) {
-				// This could be as simple as an incorrect prefix in the ID (e.g. "SKILLS_" instead of "SKILL_") or a more serious issue with the object manager
-				response.result(http::status::internal_server_error);
-				response.body() = R"({"error": "Failed to retrieve object", "message": ")" + escapeJson(e.what()) + R"("})";
+			// Check what the query parameter is for. We support "count" and "ids" for now, but we can easily add more in the future if needed.
+			if (path.params().find("ids") != path.params().end()) {
+				requestListObjectIds(response, path.type());
+			} else if (path.params().find("count") != path.params().end()) {
+				requestCountObjects(response, path.type());
+			} else {
+				response.result(http::status::bad_request);
+				response.set(http::field::content_type, "application/json");
+				response.body() = R"({"error": "Invalid query parameter", "message": "Supported parameters are 'ids' and 'count'"})";
 			}
 		}
-	} else if (request.method() == http::verb::get && path.match("/api/objects/") && !path.type().empty() && (path.op() == "count")) {
-		// Get count of objects
-		response.set(http::field::content_type, "application/json");
-
-		try {
-			const size_t count = serial_manager_.objectManager().getAllIds(path.type()).size(); // Placeholder
-
-			std::ostringstream json;
-			json << "{\"count\": " << count << "}";
-
-			response.result(http::status::ok);
-			response.body() = json.str();
-		} catch (const std::exception& e) {
-			response.result(http::status::internal_server_error);
-			response.body() = R"({"error": "Failed to get count", "message": ")" + escapeJson(e.what()) + R"("})";
-		}
-	} else if (request.method() == http::verb::get && path.match("/api/objects/") && !path.type().empty() && (path.op() == "ids")) {
-		// Get count of objects
-		response.set(http::field::content_type, "application/json");
-
-		try {
-			const std::set<std::string> ids = serial_manager_.objectManager().getAllIds(path.type());
-			std::string key = serial_manager_.getRootKeyForType(path.type());
-
-			std::ostringstream json;
-			json << serial_manager_.serializeContainer(ids, key);
-
-			response.result(http::status::ok);
-			response.body() = json.str();
-		} catch (const std::exception& e) {
-			response.result(http::status::internal_server_error);
-			response.body() = R"({"error": "Failed to get ids", "message": ")" + escapeJson(e.what()) + R"("})";
-		}
-	} else if (request.method() == http::verb::get && path.matchExact("/api/echo")) {
-		// Echo endpoint for testing
-		response.result(http::status::ok);
-		response.set(http::field::content_type, "application/json");
-
-		std::ostringstream json;
-		json << "{\"query_params\": {";
-
-		bool first = true;
-		for (const auto& [key, value] : path.params()) {
-			if (!first)
-				json << ", ";
-			json << "\"" << escapeJson(key) << "\": \"" << escapeJson(value) << "\"";
-			first = false;
-		}
-
-		json << "}}";
-		response.body() = json.str();
+	} else if (request.method() == http::verb::get && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
+		// Get object by ID
+		// Example: /api/objects/skill/SKILL_ACTING
+		requestObjectById(response, path.type(), path.id());
 	} else {
 		response.result(http::status::not_found);
 		response.set(http::field::content_type, "application/json");
 		response.body() = R"({"error": "Not Found", "message": "The requested resource was not found"})";
+	}
+}
+
+void HttpRequestHandler::requestPrefixes(http::response<http::string_body>& response) {
+	response.result(http::status::ok);
+	response.set(http::field::content_type, "application/json");
+
+	try {
+		std::set<std::string> prefixes = serial_manager_.objectManager().getAllPrefixes();
+
+		std::ostringstream json;
+		std::string json_str = serial_manager_.serializeContainer(prefixes, "prefixes");
+		json << json_str;
+
+		response.result(http::status::ok);
+		response.body() = json.str();
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
+}
+
+void HttpRequestHandler::requestListObjects(http::response<http::string_body>& response, std::string_view type) {
+	response.set(http::field::content_type, "application/json");
+	try {
+		std::ostringstream json;
+		std::string json_str = serial_manager_.serializeAllObjects(type);
+		json << json_str;
+		response.result(http::status::ok);
+		response.body() = json.str();
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
+}
+
+void HttpRequestHandler::requestListObjectIds(http::response<http::string_body>& response, std::string_view type) {
+	response.set(http::field::content_type, "application/json");
+	try {
+		std::set<std::string> ids = serial_manager_.objectManager().getAllIds(type);
+		std::string key = serial_manager_.getRootKeyForType(type);
+		std::ostringstream json;
+		std::string json_str = serial_manager_.serializeContainer(ids, key);
+		json << json_str;
+		response.result(http::status::ok);
+		response.body() = json.str();
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
+}
+
+void HttpRequestHandler::requestCountObjects(http::response<http::string_body>& response, std::string_view type) {
+	response.set(http::field::content_type, "application/json");
+	try {
+		size_t count = serial_manager_.objectManager().getAllIds(type).size(); // Placeholder
+		std::ostringstream json;
+		json << "{\"count\": " << count << "}";
+		response.result(http::status::ok);
+		response.body() = json.str();
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
+}
+
+void HttpRequestHandler::requestObjectById(http::response<http::string_body>& response, std::string_view type, std::string_view id) {
+	response.set(http::field::content_type, "application/json");
+	try {
+		std::string obj_json_str = serial_manager_.serializeAnyObject(std::string(id));
+		if (obj_json_str.empty()) {
+			response.result(http::status::not_found);
+			response.body() = R"({"error": "Object not found", "id": ")" + escapeJson(std::string(id)) + R"("})";
+		} else {
+			response.result(http::status::ok);
+			response.body() = obj_json_str;
+		}
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to retrieve object", "message": ")" + escapeJson(e.what()) + R"("})";
 	}
 }
 

@@ -39,6 +39,16 @@ public:
 
 private:
 	PersistentObjectSerializationManager& serial_manager_;
+
+	void requestPrefixes(http::response<http::string_body>& response);
+
+	void requestListObjects(http::response<http::string_body>& response, std::string_view type);
+
+	void requestListObjectIds(http::response<http::string_body>& response, std::string_view type);
+
+	void requestCountObjects(http::response<http::string_body>& response, std::string_view type);
+
+	void requestObjectById(http::response<http::string_body>& response, std::string_view type, std::string_view id);
 };
 
 /**
@@ -54,7 +64,7 @@ public:
 	 * @param path The path string to be parsed.
 	 * @param prefix The prefix string used to extract variable, operation, and pre-parameter path information.
 	 */
-	explicit PathParser(std::string_view path, std::string_view prefix) : path_(path), type_{extractVariable(prefix)}, op_{extractOp(prefix)}, pre_param_path_{extractPreParamPath()} {
+	explicit PathParser(std::string_view path, std::string_view prefix) : path_(path), type_{extractVariable(prefix)}, id_{extractId(prefix)}, pre_param_path_{extractPreParamPath()} {
 		parseQueryParams(path);
 	}
 
@@ -96,14 +106,14 @@ public:
 	 * @brief Gets the operation to be performed on the object.
 	 * @return A string view representing the operation.
 	 */
-	std::string_view op() const {
-		return op_;
+	std::string_view id() const {
+		return id_;
 	}
 
 private:
 	std::string_view path_{};
 	std::string_view type_{};
-	std::string_view op_{};
+	std::string_view id_{};
 	std::string_view pre_param_path_{};
 	std::map<std::string, std::string> params_{};
 
@@ -142,6 +152,10 @@ private:
 				}
 
 				params[key] = value;
+			} else {
+				// Handle case where there is a key with no value (e.g., "flag" instead of "flag=true")
+				std::string key(param);
+				params[key] = "";
 			}
 
 			if (amp_pos == std::string_view::npos)
@@ -165,7 +179,7 @@ private:
 				if (queryPos != std::string_view::npos) {
 					return postfix.substr(0, queryPos); // Return the variable segment without query parameters
 				} else {
-					return {}; // No variable segment found
+					return postfix; // Return the variable segment
 				}
 			} else {
 				return postfix.substr(0, nextSlash); // Return the variable segment
@@ -174,7 +188,7 @@ private:
 		return {};
 	}
 
-	std::string_view extractOp(std::string_view pattern) const {
+	std::string_view extractId(std::string_view pattern) const {
 		if (match(pattern)) {
 			// First get the part of the path after the pattern
 			std::string_view postfix = path_.substr(pattern.size());
