@@ -42,6 +42,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "  GET  /health                     - Health check" << std::endl;
 		std::cout << "  GET  /api/version                - API version" << std::endl;
 		std::cout << "  GET  /api/objects?id=OBJECT_ID   - Get game object JSON" << std::endl;
+		std::cout << "  GET  /api/objects/prefixes       - Get game object prefixes JSON" << std::endl;
 		std::cout << "  GET  /api/objects/{prefix}/count - Get game object count JSON" << std::endl;
 		std::cout << "  GET  /api/objects/{prefix}/list  - Get all game objects JSON" << std::endl;
 		std::cout << "  GET  /api/objects/{prefix}/ids   - Get all game object ids JSON" << std::endl;

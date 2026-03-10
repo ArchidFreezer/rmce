@@ -102,16 +102,29 @@ void Session::handleRequest() {
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
 		response_.body() = R"({"version": "1.0.0", "api": "v1"})";
-	} else if (request_.method() == http::verb::get && path.match("/api/objects/DELETEME_TO_TEST")) {
-		// This is a test endpoint that checks the path parsing logic for object retrieval endpoints. It will simply return the parsed type, operation, and ID (if present) in the response body. This is not meant to be a real endpoint, just
-		// a way to verify that the path parsing is working as expected.
+	} else if (request_.method() == http::verb::get && path.matchExact("/api/objects/prefixes")) {
 		response_.result(http::status::ok);
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
-		std::string type{path.type()};
-		std::string operation{path.op()};
-		std::string obj_id = path.params().count("id") > 0 ? path.params().at("id") : "";
-		response_.body() = R"({"type": ")" + escapeJson(type) + R"(", "op": ")" + escapeJson(operation) + R"(", "id": ")" + escapeJson(obj_id) + R"("})";
+
+		if (!object_manager_) {
+			response_.result(http::status::service_unavailable);
+			response_.body() = R"({"error": "Object manager not available"})";
+		} else {
+			try {
+				std::set<std::string> prefixes = object_manager_->objectManager().getAllPrefixes();
+
+				std::ostringstream json;
+				std::string json_str = object_manager_->serializeContainer(prefixes, "prefixes");
+				json << json_str;
+
+				response_.result(http::status::ok);
+				response_.body() = json.str();
+			} catch (const std::exception& e) {
+				response_.result(http::status::internal_server_error);
+				response_.body() = R"({"error": "Failed to retrieve objects", "message": ")" + escapeJson(e.what()) + R"("})";
+			}
+		}
 	} else if (request_.method() == http::verb::get && path.match("/api/objects/") && !path.type().empty() && (path.op() == "list")) {
 		// List all object IDs
 		// Example: /api/objects/skill/list

@@ -206,6 +206,16 @@ public:
 	 */
 	const std::string generateId(std::string_view type, std::string_view val);
 
+	/**
+	 * @brief Get all prefixes of GameRuleData objects in the cache
+	 *
+	 * This is useful for deserialisation when we want to get all objects with a specific prefix in their ID, e.g. all skills that have IDs starting with "SKILL_". This method will return all the prefixes, without the underscore, as
+	 * lowercase values.
+	 *
+	 * @return Set of strings containing the unique prefixes of the GameRuleData objects in the cache
+	 */
+	const std::set<std::string> getAllPrefixes() const;
+
 private:
 	PersistentCache& cache_; /**< Reference to a cache to store the objects. */
 };

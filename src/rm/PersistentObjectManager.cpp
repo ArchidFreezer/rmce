@@ -3,6 +3,39 @@
 #include <GameRuleDatas.h>
 
 namespace rm {
+
+const std::set<std::string> PersistentObjectManager::getAllPrefixes() const {
+	std::set<std::string> result;
+	// Much as we would ike to use the type information in the cache to get the prefixes, this is not possible as some objects, e.g. SubcategoriedSkillData, are stored in the cache with the same type as other objects, e.g. SkillData This
+	// means we need to generate and maintain this list manually.
+	result.insert("animal");
+	result.insert("armourtype");
+	result.insert("attacktable");
+	result.insert("book");
+	result.insert("climate");
+	result.insert("creaturepace");
+	result.insert("culture");
+	result.insert("culturetype");
+	result.insert("disease");
+	result.insert("diseasetype");
+	result.insert("languagecategory");
+	result.insert("language");
+	result.insert("poison");
+	result.insert("poisontype");
+	result.insert("profession");
+	result.insert("race");
+	result.insert("skillcategory");
+	result.insert("skillgroup");
+	result.insert("skillprogressiontype");
+	result.insert("skill");
+	result.insert("specialattacktable");
+	result.insert("spelllist");
+	result.insert("trainingpackage");
+	result.insert("treasurecode");
+	result.insert("weapontype");
+	return result;
+}
+
 const std::string PersistentObjectManager::generateId(std::string_view type, std::string_view val) {
 	std::stringstream ss;
 	// Add the characters from the type, replacing non alphanum characters with an underscore
@@ -44,7 +77,7 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 	using namespace rm::rule;
 
 	const GameRuleData* result{nullptr};
-	
+
 	// We first need to determine the type of the object which is done be checking the prefix of the id.
 	std::string prefix{id.substr(0, id.find('_'))};
 	if (prefix == "ANIMAL") {
@@ -98,7 +131,6 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 	} else {
 		throw std::out_of_range("Could not determine the object type for object with id " + id);
 	}
-
 
 	return result;
 }
