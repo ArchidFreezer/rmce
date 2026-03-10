@@ -29,7 +29,7 @@ void PersistentObjectSerializationManager::load() {
 	deserializeAllObjects<rm::rule::TrainingPackageData>("TrainingPackages.json", "training-packages");
 	deserializeAllObjects<rm::rule::TreasureCodeData>("TreasureCodes.json", "treasure-codes");
 	deserializeAllObjects<rm::rule::WeaponTypeData>("WeaponTypes.json", "weapon-types");
-	deserializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
+	deserializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 }
 
 void PersistentObjectSerializationManager::save() {
@@ -59,7 +59,7 @@ void PersistentObjectSerializationManager::save() {
 	serializeAllObjects<rm::rule::TrainingPackageData>("TrainingPackages.json", "training-packages");
 	serializeAllObjects<rm::rule::TreasureCodeData>("TreasureCodes.json", "treasure-codes");
 	serializeAllObjects<rm::rule::WeaponTypeData>("WeaponTypes.json", "weapon-types");
-	serializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
+	serializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 }
 
 std::string PersistentObjectSerializationManager::serializeAnyObject(const std::string& id) {

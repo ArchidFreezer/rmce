@@ -9,6 +9,8 @@
 
 namespace rm {
 
+	namespace json = boost::json;
+
 /**
  * @brief Class to manage the (de)serialization of PersistentObject objects to and from JSON data
  *
@@ -68,11 +70,11 @@ public:
 	 *
 	 * @code
 	 * PersistentObjectSerializationManager manager(object_manager);
-	 * manager.deserializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
+	 * manager.deserializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 	 * @endcode
 	 */
 	template<persistent_object T>
-	void deserializeAllObjects(const std::string& filename);
+	void deserializeTsv(const std::string& filename);
 
 	/**
 	 * @brief Save all objects of a specific persistent type to a JSON file
@@ -108,11 +110,27 @@ public:
 	 *
 	 * @code
 	 * PersistentObjectSerializationManager manager(object_manager);
-	 * manager.serializeAllObjects<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
+	 * manager.serializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 	 * @endcode
 	 */
 	template<persistent_object T>
-	void serializeAllObjects(const std::string& filename);
+	void serializeTsv(const std::string& filename);
+
+	/**
+	 * @brief Get the JSON representation of all objects of a specific persistent type
+	 *
+	 * This template function gets the JSON representation of all objects of type T using the appropriate serializer for that type. The function automatically selects the correct serializer and root key based on the type T.
+	 *
+	 * @tparam T The persistent object type to serialize (must satisfy persistent_object concept)
+	 * @return A string containing the JSON representation of all objects of type T
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * std::string json = manager.serializeAllObjects<rm::rule::BookData>();
+	 * @endcode
+	 */
+	template<persistent_object T>
+	std::string serializeAllObjects(std::string_view root_key);
 
 	/**
 	 * @brief Deserialize all known data objects from file to preload the cache
@@ -253,7 +271,7 @@ void PersistentObjectSerializationManager::deserializeAllObjects(const std::stri
 }
 
 template<persistent_object T>
-void PersistentObjectSerializationManager::deserializeAllObjects(const std::string& filename) {
+void PersistentObjectSerializationManager::deserializeTsv(const std::string& filename) {
 	using namespace rm::rule::serial;
 
 	// Create the appropriate TSV serializer for type T
@@ -277,7 +295,7 @@ void PersistentObjectSerializationManager::serializeAllObjects(const std::string
 }
 
 template<persistent_object T>
-void PersistentObjectSerializationManager::serializeAllObjects(const std::string& filename) {
+void PersistentObjectSerializationManager::serializeTsv(const std::string& filename) {
 	using namespace rm::rule::serial;
 
 	// Create the appropriate TSV serializer for type T
@@ -388,6 +406,28 @@ const T& PersistentObjectSerializationManager::deserializeObject(const std::stri
 	json::value json_value = json::parse(json_str);
 	// Deserialize the object from the JSON value
 	return serializer->deserializeObject(json_value.as_object());
+}
+
+template<persistent_object T>
+std::string PersistentObjectSerializationManager::serializeAllObjects(std::string_view root_key) {
+	using namespace rm::rule::serial;
+	// Create the appropriate JSON serializer for type T
+	auto serializer = createJsonSerializer<T>();
+
+	std::ostringstream json_stream;
+	std::vector<std::reference_wrapper<T>>{object_manager_.getAll<T>()}; // We need to create a vector of reference wrappers to avoid copying the objects when we iterate over them, as they may not be copyable
+
+	json_stream << "{ \"" << root_key << "\": [";
+	if (!object_manager_.getAll<T>().empty()) {
+		for (const auto& obj : object_manager_.getAll<T>()) {
+			json_stream << json::serialize(serializer->serializeObject(obj)) + ",";
+		}
+		// Remove the trailing comma if there was at least one object, we can do this as we know that the stream is not empty and we will be appeneding a closing bracket after this
+		json_stream.seekp(-1, std::ios_base::end);
+	}
+	json_stream << "]}";
+		
+	return json_stream.str();
 }
 
 } // namespace rm
