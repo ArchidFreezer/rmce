@@ -3,11 +3,11 @@
 namespace rm {
 
 // Helper function to determine the root key for a given type T based on its name
-std::string getRootKeyForType(std::string_view type) {
-	if (type.ends_with("y")) {
-		return std::string(type.substr(0, type.size() - 1)) + "ies";
+const std::string PersistentObjectSerializationManager::getRootKeyForType(std::string_view prefix) {
+	if (prefix.ends_with("y")) {
+		return std::string(prefix.substr(0, prefix.size() - 1)) + "ies";
 	} else {
-		return std::string(type) + "s";
+		return std::string(prefix) + "s";
 	}
 }
 

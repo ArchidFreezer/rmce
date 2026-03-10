@@ -192,6 +192,29 @@ void Session::handleRequest() {
 				response_.body() = R"({"error": "Failed to get count", "message": ")" + escapeJson(e.what()) + R"("})";
 			}
 		}
+	} else if (request_.method() == http::verb::get && path.match("/api/objects/") && !path.type().empty() && (path.op() == "ids")) {
+		// Get count of objects
+		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
+		response_.set(http::field::content_type, "application/json");
+
+		if (!object_manager_) {
+			response_.result(http::status::service_unavailable);
+			response_.body() = R"({"error": "Object manager not available"})";
+		} else {
+			try {
+				const std::set<std::string> ids = object_manager_->objectManager().getAllIds(path.type());
+				std::string key = object_manager_->getRootKeyForType(path.type());
+
+				std::ostringstream json;
+				json << object_manager_->serializeContainer(ids, key);
+
+				response_.result(http::status::ok);
+				response_.body() = json.str();
+			} catch (const std::exception& e) {
+				response_.result(http::status::internal_server_error);
+				response_.body() = R"({"error": "Failed to get ids", "message": ")" + escapeJson(e.what()) + R"("})";
+			}
+		}
 	} else if (request_.method() == http::verb::get && path.matchExact("/api/echo")) {
 		// Echo endpoint for testing
 		response_.result(http::status::ok);

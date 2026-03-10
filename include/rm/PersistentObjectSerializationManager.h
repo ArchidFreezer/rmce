@@ -9,7 +9,7 @@
 
 namespace rm {
 
-	namespace json = boost::json;
+namespace json = boost::json;
 
 /**
  * @brief Class to manage the (de)serialization of PersistentObject objects to and from JSON data
@@ -244,11 +244,43 @@ public:
 	const T& deserializeObject(const std::string& json_str);
 
 	/**
+	 * @brief Get the JSON representation of a container of objects
+	 *
+	 * This template function gets the JSON representation of a container of objects, typically std::strings representing the IDs of the objects to serialize.
+	 *
+	 * @tparam Container The type of the container (e.g. std::vector<std::string>, std::set<std::string>, etc.)
+	 * @param container The container of objects to serialize
+	 * @param key The key to use in the JSON output for each object (e.g. "books" for a container of BookData object IDs)
+	 * @return A string containing the JSON representation of the container of objects
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * const std::set<std::string> ids = manager->objectManager().getAllIds("book");
+	 * std::string json = manager.serializeContainer(books, "books");
+	 * @endcode
+	 */
+	template<typename Container>
+	std::string serializeContainer(const Container& container, std::string_view key);
+
+	/**
 	 * @brief Get a reference to the PersistentObjectManager used by this serialization manager
 	 *
 	 * @return Reference to the PersistentObjectManager
 	 */
-	const PersistentObjectManager& objectManager() const { return object_manager_; }
+	const PersistentObjectManager& objectManager() const {
+		return object_manager_;
+	}
+
+	/**
+	 * @brief Get the root key to use in the JSON file for a given type
+	 *
+	 * This function returns the root key to use in the JSON file for a given type. The root key is used to identify the array of objects in the JSON file that corresponds to the given type.
+	 * The value returned is the natural plural of the type name, e.g. "books" for "book", "skillcategories" for "skillcategory", etc.
+	 *
+	 * @param prefix The type prefix to get the root key for (e.g. "book", "skillcategory", etc.)
+	 * @return The root key to use in the JSON file for the given type
+	 */
+	const std::string getRootKeyForType(std::string_view prefix);
 
 private:
 	PersistentObjectManager& object_manager_;
@@ -441,7 +473,23 @@ std::string PersistentObjectSerializationManager::serializeAllObjects_Impl(std::
 		json_stream.seekp(-1, std::ios_base::end);
 	}
 	json_stream << "]}";
-		
+
+	return json_stream.str();
+}
+
+template<typename Container>
+std::string PersistentObjectSerializationManager::serializeContainer(const Container& container, std::string_view key) {
+
+	std::ostringstream json_stream;
+	json_stream << "{ \"" << key << "\": [";
+	if (!container.empty()) {
+		for (const auto& obj : container) {
+			json_stream << json::serialize(json::value(obj)) + ",";
+		}
+		// Remove the trailing comma if there was at least one object, we can do this as we know that the stream is not empty and we will be appeneding a closing bracket after this
+		json_stream.seekp(-1, std::ios_base::end);
+	}
+	json_stream << "]}";
 	return json_stream.str();
 }
 
