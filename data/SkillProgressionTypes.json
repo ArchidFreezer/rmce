@@ -1,5 +1,5 @@
 {
-    "skill-progression-types" : [
+    "skillprogressiontypes" : [
         {
             "id" : "SKILLPROGRESSIONTYPE_BD_ABOVE_AVERAGE",
             "name" : "BD Above Average",

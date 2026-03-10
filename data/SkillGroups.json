@@ -1,104 +1,104 @@
 {
-    "skill-groups": [
+    "skillgroups" : [
         {
-            "id": "SKILLGROUP_ARMOUR",
-            "name": "Armour"
+            "id" : "SKILLGROUP_ARMOUR",
+            "name" : "Armour"
         },
         {
-            "id": "SKILLGROUP_ARTISTIC",
-            "name": "Artistic"
+            "id" : "SKILLGROUP_ARTISTIC",
+            "name" : "Artistic"
         },
         {
-            "id": "SKILLGROUP_ATHLETIC",
-            "name": "Athletic"
+            "id" : "SKILLGROUP_ATHLETIC",
+            "name" : "Athletic"
         },
         {
-            "id": "SKILLGROUP_AWARENESS",
-            "name": "Awareness"
+            "id" : "SKILLGROUP_AWARENESS",
+            "name" : "Awareness"
         },
         {
-            "id": "SKILLGROUP_BODY_DEVELOPMENT",
-            "name": "Body Development"
+            "id" : "SKILLGROUP_BODY_DEVELOPMENT",
+            "name" : "Body Development"
         },
         {
-            "id": "SKILLGROUP_COMBAT_MANOEUVRES",
-            "name": "Combat Manoeuvres"
+            "id" : "SKILLGROUP_COMBAT_MANOEUVRES",
+            "name" : "Combat Manoeuvres"
         },
         {
-            "id": "SKILLGROUP_COMMUNICATION",
-            "name": "Communications"
+            "id" : "SKILLGROUP_COMMUNICATION",
+            "name" : "Communications"
         },
         {
-            "id": "SKILLGROUP_CRAFTS",
-            "name": "Crafts"
+            "id" : "SKILLGROUP_CRAFTS",
+            "name" : "Crafts"
         },
         {
-            "id": "SKILLGROUP_DIRECTED_SPELLS",
-            "name": "Directed Spells"
+            "id" : "SKILLGROUP_DIRECTED_SPELLS",
+            "name" : "Directed Spells"
         },
         {
-            "id": "SKILLGROUP_INFLUENCE",
-            "name": "Influence"
+            "id" : "SKILLGROUP_INFLUENCE",
+            "name" : "Influence"
         },
         {
-            "id": "SKILLGROUP_LORE",
-            "name": "Lore"
+            "id" : "SKILLGROUP_LORE",
+            "name" : "Lore"
         },
         {
-            "id": "SKILLGROUP_MARTIAL_ARTS",
-            "name": "Martial Arts"
+            "id" : "SKILLGROUP_MARTIAL_ARTS",
+            "name" : "Martial Arts"
         },
         {
-            "id": "SKILLGROUP_OUTDOOR",
-            "name": "Outdoor"
+            "id" : "SKILLGROUP_OUTDOOR",
+            "name" : "Outdoor"
         },
         {
-            "id": "SKILLGROUP_POWER_AWARENESS",
-            "name": "Power Awareness"
+            "id" : "SKILLGROUP_POWER_AWARENESS",
+            "name" : "Power Awareness"
         },
         {
-            "id": "SKILLGROUP_POWER_MANIPULATION",
-            "name": "Power Manipulation"
+            "id" : "SKILLGROUP_POWER_MANIPULATION",
+            "name" : "Power Manipulation"
         },
         {
-            "id": "SKILLGROUP_POWER_POINT_DEVELOPMENT",
-            "name": "Power Point Development"
+            "id" : "SKILLGROUP_POWER_POINT_DEVELOPMENT",
+            "name" : "Power Point Development"
         },
         {
-            "id": "SKILLGROUP_SCIENCE_ANALYTIC",
-            "name": "Science\/Analytic"
+            "id" : "SKILLGROUP_SCIENCE_ANALYTIC",
+            "name" : "Science/Analytic"
         },
         {
-            "id": "SKILLGROUP_SELF_CONTROL",
-            "name": "Self Control"
+            "id" : "SKILLGROUP_SELF_CONTROL",
+            "name" : "Self Control"
         },
         {
-            "id": "SKILLGROUP_SPECIAL_ATTACKS",
-            "name": "Special Attacks"
+            "id" : "SKILLGROUP_SPECIAL_ATTACKS",
+            "name" : "Special Attacks"
         },
         {
-            "id": "SKILLGROUP_SPECIAL_DEFENCES",
-            "name": "Special Defences"
+            "id" : "SKILLGROUP_SPECIAL_DEFENCES",
+            "name" : "Special Defences"
         },
         {
-            "id": "SKILLGROUP_SPELLS",
-            "name": "Spells"
+            "id" : "SKILLGROUP_SPELLS",
+            "name" : "Spells"
         },
         {
-            "id": "SKILLGROUP_SUBTERFUGE",
-            "name": "Subterfuge"
+            "id" : "SKILLGROUP_SUBTERFUGE",
+            "name" : "Subterfuge"
         },
         {
-            "id": "SKILLGROUP_TECHNICAL_TRADE",
-            "name": "Technical\/Trade"
+            "id" : "SKILLGROUP_TECHNICAL_TRADE",
+            "name" : "Technical/Trade"
         },
         {
-            "id": "SKILLGROUP_URBAN",
-            "name": "Urban"
+            "id" : "SKILLGROUP_URBAN",
+            "name" : "Urban"
         },
         {
-            "id": "SKILLGROUP_WEAPON",
-            "name": "Weapon"
+            "id" : "SKILLGROUP_WEAPON",
+            "name" : "Weapon"
         }
     ]
 }
