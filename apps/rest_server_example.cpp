@@ -38,14 +38,17 @@ int main(int argc, char* argv[]) {
 		std::cout << "Port: " << port << std::endl;
 		std::cout << "Threads: " << num_threads << std::endl;
 		std::cout << "\nAvailable endpoints:" << std::endl;
-		std::cout << "  GET  /                           - Root endpoint" << std::endl;
-		std::cout << "  GET  /health                     - Health check" << std::endl;
-		std::cout << "  GET  /api/version                - API version" << std::endl;
-		std::cout << "  GET  /api/objects?id=OBJECT_ID   - Get game object JSON" << std::endl;
-		std::cout << "  GET  /api/objects/prefixes       - Get game object prefixes JSON" << std::endl;
-		std::cout << "  GET  /api/objects/{prefix}/count - Get game object count JSON" << std::endl;
-		std::cout << "  GET  /api/objects/{prefix}/list  - Get all game objects JSON" << std::endl;
-		std::cout << "  GET  /api/objects/{prefix}/ids   - Get all game object ids JSON" << std::endl;
+		std::cout << "  GET     /                            - Root endpoint" << std::endl;
+		std::cout << "  GET     /health                      - Health check" << std::endl;
+		std::cout << "  GET     /rmce/version                - API version" << std::endl;
+		std::cout << "  GET     /rmce/prefixes               - Get game object prefixes" << std::endl;
+		std::cout << "  GET     /rmce/objects/{prefix}       - Get all game objects" << std::endl;
+		std::cout << "  GET     /rmce/objects/{prefix}?count - Count of game objects" << std::endl;
+		std::cout << "  GET     /rmce/objects/{prefix}?ids   - List of game object IDs" << std::endl;
+		std::cout << "  POST    /rmce/objects/{prefix}       - Create new object [Unimplemented]" << std::endl;
+		std::cout << "  GET     /rmce/objects/{prefix}/{id}  - Get game object" << std::endl;
+		std::cout << "  PUT     /rmce/objects/{prefix}/{id}  - Update game object [Unimplemented]" << std::endl;
+		std::cout << "  DELETE  /rmce/objects/{prefix}/{id}  - Delete game object [Unimplemented]" << std::endl;
 		std::cout << "\nPress Ctrl+C to stop the server..." << std::endl;
 
 		// Create the cache to store the game data and load it from file
