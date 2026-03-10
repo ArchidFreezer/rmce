@@ -38,11 +38,12 @@ int main(int argc, char* argv[]) {
 		std::cout << "Port: " << port << std::endl;
 		std::cout << "Threads: " << num_threads << std::endl;
 		std::cout << "\nAvailable endpoints:" << std::endl;
-		std::cout << "  GET  /                          - Root endpoint" << std::endl;
-		std::cout << "  GET  /health                    - Health check" << std::endl;
-		std::cout << "  GET  /api/version               - API version" << std::endl;
-		std::cout << "  GET  /api/objects?id=OBJECT_ID  - Get JSON of a game object" << std::endl;
-		std::cout << "  GET  /api/objects/{prefix}/list - Get JSON of all game objects of type" << std::endl;
+		std::cout << "  GET  /                           - Root endpoint" << std::endl;
+		std::cout << "  GET  /health                     - Health check" << std::endl;
+		std::cout << "  GET  /api/version                - API version" << std::endl;
+		std::cout << "  GET  /api/objects?id=OBJECT_ID   - Get game object JSON" << std::endl;
+		std::cout << "  GET  /api/objects/{prefix}/count - Get game object count JSON" << std::endl;
+		std::cout << "  GET  /api/objects/{prefix}/list  - Get all game objects JSON" << std::endl;
 		std::cout << "\nPress Ctrl+C to stop the server..." << std::endl;
 
 		// Create the cache to store the game data and load it from file

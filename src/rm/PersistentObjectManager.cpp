@@ -103,60 +103,62 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 	return result;
 }
 
-const std::set<std::string> PersistentObjectManager::getAllIds(std::string prefix) const {
+const std::set<std::string> PersistentObjectManager::getAllIds(std::string_view prefix) const {
 	using namespace rm::rule;
 
+	std::string lprefix = archid::lcase(std::string(prefix));
+
 	std::set<std::string> result;
-	if (prefix == "ANIMAL") {
+	if (lprefix == "animal") {
 		cache_.keys<AnimalData>(result);
-	} else if (prefix == "ARMOURTYPE") {
+	} else if (lprefix == "armourtype") {
 		cache_.keys<ArmourTypeData>(result);
-	} else if (prefix == "ATTACKTABLE") {
+	} else if (lprefix == "attacktable") {
 		cache_.keys<AttackTable>(result);
-	} else if (prefix == "BOOK") {
+	} else if (lprefix == "book") {
 		cache_.keys<BookData>(result);
-	} else if (prefix == "CLIMATE") {
+	} else if (lprefix == "climate") {
 		cache_.keys<ClimateData>(result);
-	} else if (prefix == "CREATUREPACE") {
+	} else if (lprefix == "creaturepace") {
 		cache_.keys<CreaturePaceData>(result);
-	} else if (prefix == "CULTURE") {
+	} else if (lprefix == "culture") {
 		cache_.keys<CultureData>(result);
-	} else if (prefix == "CULTURETYPE") {
+	} else if (lprefix == "culturetype") {
 		cache_.keys<CultureTypeData>(result);
-	} else if (prefix == "DISEASE") {
+	} else if (lprefix == "disease") {
 		cache_.keys<DiseaseData>(result);
-	} else if (prefix == "DISEASETYPE") {
+	} else if (lprefix == "diseasetype") {
 		cache_.keys<DiseaseTypeData>(result);
-	} else if (prefix == "LANGUAGECATEGORY") {
+	} else if (lprefix == "languagecategory") {
 		cache_.keys<LanguageCategoryData>(result);
-	} else if (prefix == "LANGUAGE") {
+	} else if (lprefix == "language") {
 		cache_.keys<LanguageData>(result);
-	} else if (prefix == "POISON") {
+	} else if (lprefix == "poison") {
 		cache_.keys<PoisonData>(result);
-	} else if (prefix == "POISONTYPE") {
+	} else if (lprefix == "poisontype") {
 		cache_.keys<PoisonTypeData>(result);
-	} else if (prefix == "PROFESSION") {
+	} else if (lprefix == "profession") {
 		cache_.keys<ProfessionData>(result);
-	} else if (prefix == "RACE") {
+	} else if (lprefix == "race") {
 		cache_.keys<RaceData>(result);
-	} else if (prefix == "SKILLCATEGORY") {
+	} else if (lprefix == "skillcategory") {
 		cache_.keys<SkillCategoryData>(result);
-	} else if (prefix == "SKILLGROUP") {
+	} else if (lprefix == "skillgroup") {
 		cache_.keys<SkillGroupData>(result);
-	} else if (prefix == "SKILL") {
+	} else if (lprefix == "skill") {
 		cache_.keys<SkillData>(result);
-	} else if (prefix == "SPECIALATTACKTABLE") {
+	} else if (lprefix == "specialattacktable") {
 		cache_.keys<SpecialAttackTable>(result);
-	} else if (prefix == "SPELLLIST") {
+	} else if (lprefix == "spelllist") {
 		cache_.keys<SpellListData>(result);
-	} else if (prefix == "TRAININGPACKAGE") {
+	} else if (lprefix == "trainingpackage") {
 		cache_.keys<TrainingPackageData>(result);
-	} else if (prefix == "TREASURECODE") {
+	} else if (lprefix == "treasurecode") {
 		cache_.keys<TreasureCodeData>(result);
-	} else if (prefix == "WEAPONTYPE") {
+	} else if (lprefix == "weapontype") {
 		cache_.keys<WeaponTypeData>(result);
 	} else {
-		throw std::out_of_range("Could not determine the object type for objects with prefix " + prefix);
+		throw std::out_of_range("Could not determine the object type for objects with prefix " + std::string(prefix));
 	}
 	return result;
 }

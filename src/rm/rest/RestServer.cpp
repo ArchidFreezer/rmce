@@ -124,10 +124,10 @@ void Session::handleRequest() {
 		} else {
 			try {
 				std::ostringstream json;
-				//json << "{\"objects\": [";
+				// json << "{\"objects\": [";
 				std::string json_str = object_manager_->serializeAllObjects(path.type());
 				json << json_str;
-				//json << "], \"count\": " << objects.size() << "}";
+				// json << "], \"count\": " << objects.size() << "}";
 
 				response_.result(http::status::ok);
 				response_.body() = json.str();
@@ -170,7 +170,7 @@ void Session::handleRequest() {
 				}
 			}
 		}
-	} else if (request_.method() == http::verb::get && path.matchExact("/api/objects/count")) {
+	} else if (request_.method() == http::verb::get && path.match("/api/objects/") && !path.type().empty() && (path.op() == "count")) {
 		// Get count of objects
 		response_.set(http::field::server, BOOST_BEAST_VERSION_STRING);
 		response_.set(http::field::content_type, "application/json");
@@ -179,24 +179,17 @@ void Session::handleRequest() {
 			response_.result(http::status::service_unavailable);
 			response_.body() = R"({"error": "Object manager not available"})";
 		} else {
-			auto prefix_it = path.params().find("prefix");
-			if (prefix_it == path.params().end()) {
-				response_.result(http::status::bad_request);
-				response_.body() = R"({"error": "Missing 'prefix' parameter"})";
-			} else {
-				try {
-					const std::string& prefix = prefix_it->second;
-					const size_t count = object_manager_->objectManager().getAllIds(prefix).size(); // Placeholder
+			try {
+				const size_t count = object_manager_->objectManager().getAllIds(path.type()).size(); // Placeholder
 
-					std::ostringstream json;
-					json << "{\"count\": " << count << "}";
+				std::ostringstream json;
+				json << "{\"count\": " << count << "}";
 
-					response_.result(http::status::ok);
-					response_.body() = json.str();
-				} catch (const std::exception& e) {
-					response_.result(http::status::internal_server_error);
-					response_.body() = R"({"error": "Failed to get count", "message": ")" + escapeJson(e.what()) + R"("})";
-				}
+				response_.result(http::status::ok);
+				response_.body() = json.str();
+			} catch (const std::exception& e) {
+				response_.result(http::status::internal_server_error);
+				response_.body() = R"({"error": "Failed to get count", "message": ")" + escapeJson(e.what()) + R"("})";
 			}
 		}
 	} else if (request_.method() == http::verb::get && path.matchExact("/api/echo")) {
@@ -261,7 +254,7 @@ void Session::doClose() {
 
 // RestServer Implementation
 RestServer::RestServer(const std::string& address, unsigned short port, int num_threads, PersistentObjectSerializationManager* object_manager)
-		: ioc_(num_threads), acceptor_(net::make_strand(ioc_)), running_(false), num_threads_(num_threads), object_manager_(object_manager) {
+    : ioc_(num_threads), acceptor_(net::make_strand(ioc_)), running_(false), num_threads_(num_threads), object_manager_(object_manager) {
 	beast::error_code ec;
 
 	if (num_threads_ <= 0) {

@@ -156,7 +156,7 @@ public:
 	 * @param prefix Prefix to match in the IDs
 	 * @return Set of strings containing the IDs of the matching GameRuleData objects
 	 */
-	const std::set<std::string> getAllIds(std::string prefix) const;
+	const std::set<std::string> getAllIds(std::string_view prefix) const;
 
 	/**
 	 * @brief Get SubcategoriedSkillData objects
