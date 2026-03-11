@@ -82,6 +82,14 @@ private:
 	 * @param request The HTTP request containing the data for the new object in its body.
 	 */
 	void requestCreateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request);
+
+	/**
+	 * @brief Requests the deletion of an object by its type and ID, and populates the HTTP response.
+	 * @param response The HTTP response object to populate with the result of the delete operation.
+	 * @param type The type of the object to delete.
+	 * @param id The ID of the object to delete.
+	 */
+	void requestDeleteObject(http::response<http::string_body>& response, std::string_view type, std::string_view id);
 };
 
 /**
