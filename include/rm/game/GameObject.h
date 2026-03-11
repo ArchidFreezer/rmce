@@ -25,10 +25,12 @@ namespace rm::game {
 	 * Creation of these objects is through a factory class that has members to create both persistent objects that will be serialised and transient objects that will not be serialised.
 	 * @see GameObjectFactory
 	 */
-	class GameObject : public rm::Persistent {
+	class GameObject : public rm::PersistentId {
 		friend class PersistentObjectManager; /**< PersistentObjectManager is a friend to allow it access to the private copy/maove constructores and assignment operators */
 
 	public:
+
+		GameObject() = default; /**< Default constructor */
 
 		/**
 		 * @brief Default destructor
@@ -36,17 +38,6 @@ namespace rm::game {
 		 * This is made virtual to define the class as polymorphic as a standard best practice.
 		 */
 		virtual ~GameObject() = default;
-
-
-		/**
-		 * @brief Get the unique id of the game data object
-		 *
-		 * Each object containing game rule data requires a unique identifier to allow it to be referenced. This method allows for the unique identifier to be retrieved as a string reference, which is necessary for serialisation where the unique
-		 * identifier needs to be stored as a string in the data file.
-		 *
-		 * @return Identifier as a string reference.
-		 */
-		const std::string& id() const { return id_; }
 
 		/**
 		 * @brief Override the less than operator
@@ -70,18 +61,7 @@ namespace rm::game {
 		 */
 		bool operator==(const GameObject& other) const { return (id_ == other.id_); }
 
-	protected:
-		/**
-		 * @brief Default constructor
-		 *
-		 * This is private to ensure that the factory class is used to create objects
-		 *
-		 * Sets the unique identifier for the object to a randomly generated UUID. This ensures that each object has a unique identifier without requiring the caller to provide one.
-		 */
-		GameObject() : id_{ to_string(boost::uuids::random_generator()()) } {};
-
 	private:
-		std::string id_; // Unique tag to ensure that each object has a unique identifier
 
 		/**
 		 * @brief Set the unique id of the game data object
