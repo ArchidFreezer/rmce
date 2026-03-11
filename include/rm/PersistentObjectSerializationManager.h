@@ -285,7 +285,7 @@ public:
 	 *
 	 * @return Reference to the PersistentObjectManager
 	 */
-	const PersistentObjectManager& objectManager() const {
+	 PersistentObjectManager& objectManager() const {
 		return object_manager_;
 	}
 

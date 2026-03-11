@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "  GET     /rmce/objects/{prefix}?ids   - List of game object IDs" << std::endl;
 		std::cout << "  POST    /rmce/objects/{prefix}       - Create/update object" << std::endl;
 		std::cout << "  GET     /rmce/objects/{prefix}/{id}  - Get game object" << std::endl;
-		std::cout << "  DELETE  /rmce/objects/{prefix}/{id}  - Delete game object [Unimplemented]" << std::endl;
+		std::cout << "  DELETE  /rmce/objects/{prefix}/{id}  - Delete game object" << std::endl;
 		std::cout << "\nPress Ctrl+C to stop the server..." << std::endl;
 
 		// Create the cache to store the game data and load it from file

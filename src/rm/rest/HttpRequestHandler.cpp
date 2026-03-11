@@ -85,6 +85,8 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		// Create new object of a certain type (e.g. /api/objects/skill)
 		// We can use the request body to get the data for the new object, and we can use the type from the path to determine what type of object to create.
 		requestCreateObject(response, path.type(), request);
+	} else if (request.method() == http::verb::delete_ && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
+		requestDeleteObject(response, path.type(), path.id());
 	} else {
 		response.result(http::status::not_found);
 		response.set(http::field::content_type, "application/json");
@@ -191,4 +193,17 @@ void HttpRequestHandler::requestCreateObject(http::response<http::string_body>& 
 	}
 
 }
+
+void HttpRequestHandler::requestDeleteObject(http::response<http::string_body>& response, std::string_view type, std::string_view id) {
+	response.set(http::field::content_type, "application/json");
+	try {
+		serial_manager_.objectManager().deleteObject(std::string(id));
+		response.result(http::status::ok);
+		response.body() = R"({"result": "Object flagged as deleted", "object": ")" + std::string(id) + R"("})";
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to delete object", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
+}
+
 } // namespace rm::rest
