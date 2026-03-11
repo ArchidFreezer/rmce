@@ -9,6 +9,7 @@
     "boost-beast",
     "boost-asio",
     "boost-url",
-    "boost-json"
+    "boost-json",
+    "boost-uuid"
   ]
 }
