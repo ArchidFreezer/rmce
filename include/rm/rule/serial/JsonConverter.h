@@ -894,7 +894,7 @@ public:
 	 * @param manager A PersistentObjectManager used to look up SkillData objects based on their IDs when constructing SubcategoriedSkillData objects.
 	 * @return A set of pointers to SubcategoriedSkillData objects constructed from the entries in the JSON array associated with the specified key.
 	 */
-	static std::set<const SubcategoriedSkillData*> getSkillSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::set<const SubcategoriedSkillData*> getSkillSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of skill values in a JSON object with the specified key, accepting any iterable container.
@@ -954,7 +954,7 @@ public:
 	 * @param manager A PersistentObjectManager used to look up language data when constructing LanguageAbility objects.
 	 * @return A map where each key is a string and each value is a LanguageAbility object, constructed from the corresponding entries in the JSON object.
 	 */
-	static std::map<std::string, const rm::game::character::LanguageAbility> getLanguageAbilityMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::map<std::string, const rm::game::character::LanguageAbility> getLanguageAbilityMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Converts a map of language abilities into a JSON array.
@@ -1007,7 +1007,7 @@ public:
 	 * @return A set of pointers to data objects of type T constructed from the entries in the JSON array associated with the specified key.
 	 */
 	template<game_rule_data_object GameRuleData>
-	static std::set<const GameRuleData*> getDataSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::set<const GameRuleData*> getDataSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of data objects of type GameRuleData in a JSON object with the specified key.
@@ -1064,7 +1064,7 @@ public:
 	 * @return A map where each key is a pointer to a data object of type GameRuleData and each value is a primitive value
 	 */
 	template<game_rule_data_object GameRuleData, typename Primitive>
-	static std::map<const GameRuleData*, Primitive> getDataPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::map<const GameRuleData*, Primitive> getDataPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of data objects of type GameRuleData mapped to primitive values in a JSON object with the specified key.
@@ -1125,7 +1125,7 @@ public:
 	 * key.
 	 */
 	template<typename Primitive>
-	static std::map<const SubcategoriedSkillData*, Primitive> getSkillPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::map<const SubcategoriedSkillData*, Primitive> getSkillPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of SubcategoriedSkillData pointers mapped to primitive values in a JSON object with the specified key.
@@ -1186,7 +1186,7 @@ public:
 	 * @param manager A PersistentObjectManager used to look up skill data objects based on their IDs and subcategories when constructing the map.
 	 */
 	template<typename EnumType>
-	static std::map<const SubcategoriedSkillData*, EnumType> getSkillEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::map<const SubcategoriedSkillData*, EnumType> getSkillEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of SubcategoriedSkillData pointers mapped to enum values in a JSON object with the specified key.
@@ -1257,7 +1257,7 @@ public:
 	 * @return A set of GameRuleDataChoice objects constructed from the entries in the JSON array associated with the specified key.
 	 */
 	template<game_rule_data_object GameRuleData>
-	static std::set<GameRuleDataChoice<GameRuleData>> getDataChoiceSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::set<GameRuleDataChoice<GameRuleData>> getDataChoiceSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of GameRuleDataChoice objects in a JSON object with the specified key.
@@ -1333,7 +1333,7 @@ public:
 	 * the "value" field in the JSON object.
 	 */
 	template<typename EnumType>
-	static std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> getSkillChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> getSkillChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of GameRuleDataChoice objects mapped to enum values in a JSON object with the specified key.
@@ -1409,7 +1409,7 @@ public:
 	 * from the "value" field in the JSON object.
 	 */
 	template<typename Primitive>
-	static std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> getSkillChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> getSkillChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of GameRuleDataChoice objects mapped to primitive values in a JSON object with the specified key.
@@ -1485,7 +1485,7 @@ public:
 	 * the "value" field in the JSON object.
 	 */
 	template<game_rule_data_object GameRuleData, typename EnumType>
-	static std::map<GameRuleDataChoice<GameRuleData>, EnumType> getDataChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::map<GameRuleDataChoice<GameRuleData>, EnumType> getDataChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of GameRuleDataChoice objects mapped to enum values in a JSON object with the specified key.
@@ -1561,7 +1561,7 @@ public:
 	 * from the "value" field in the JSON object.
 	 */
 	template<game_rule_data_object GameRuleData, typename Primitive>
-	static std::map<GameRuleDataChoice<GameRuleData>, Primitive> getDataChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::map<GameRuleDataChoice<GameRuleData>, Primitive> getDataChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of GameRuleDataChoice objects mapped to primitive values in a JSON object with the specified key.
@@ -1621,7 +1621,7 @@ public:
 	 * @param manager A PersistentObjectManager used to look up data objects based on their IDs when constructing the map.
 	 */
 	template<game_rule_data_object GameRuleData, typename EnumType>
-	static std::map<const GameRuleData*, EnumType> getDataEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager);
+	static std::map<const GameRuleData*, EnumType> getDataEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Sets an array of GameRuleData objects mapped to enum values in a JSON object with the specified key.
@@ -1745,7 +1745,7 @@ private:
 	template<typename Primitive>
 	static Primitive getPrimitive(const json::object& obj, const std::string& key);
 
-	static const SubcategoriedSkillData* getSkill(const json::object& obj, rm::PersistentObjectManager manager);
+	static const SubcategoriedSkillData* getSkill(const json::object& obj, rm::PersistentObjectManager& manager);
 
 	static const json::object setSkill(const SubcategoriedSkillData& skillData);
 };
@@ -1816,7 +1816,7 @@ void JsonConverter::setSkillSet(json::object& obj, const std::string& key, const
 }
 
 template<game_rule_data_object GameRuleData>
-std::set<const GameRuleData*> JsonConverter::getDataSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::set<const GameRuleData*> JsonConverter::getDataSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::set<const GameRuleData*> result;
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {
@@ -1848,7 +1848,7 @@ void JsonConverter::setDataSet(json::object& obj, const std::string& key, const 
 }
 
 template<game_rule_data_object GameRuleData, typename Primitive>
-std::map<const GameRuleData*, Primitive> JsonConverter::getDataPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::map<const GameRuleData*, Primitive> JsonConverter::getDataPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::map<const GameRuleData*, Primitive> result;
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {
@@ -1887,7 +1887,7 @@ void JsonConverter::setDataPrimitiveMap(json::object& obj, const std::string& ke
 }
 
 template<typename Primitive>
-std::map<const SubcategoriedSkillData*, Primitive> JsonConverter::getSkillPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::map<const SubcategoriedSkillData*, Primitive> JsonConverter::getSkillPrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::map<const SubcategoriedSkillData*, Primitive> result;
 	json::array skill_array = getJsonArray(obj, key);
 	for (const auto& skill_val : skill_array) {
@@ -1920,7 +1920,7 @@ void JsonConverter::setSkillPrimitiveMap(json::object& obj, const std::string& k
 }
 
 template<typename EnumType>
-std::map<const SubcategoriedSkillData*, EnumType> JsonConverter::getSkillEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::map<const SubcategoriedSkillData*, EnumType> JsonConverter::getSkillEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::map<const SubcategoriedSkillData*, EnumType> result;
 	json::array skill_array = getJsonArray(obj, key);
 	for (const auto& skill_val : skill_array) {
@@ -1956,7 +1956,7 @@ void JsonConverter::setSkillEnumMap(json::object& obj, const std::string& key, c
 }
 
 template<game_rule_data_object GameRuleData>
-std::set<GameRuleDataChoice<GameRuleData>> JsonConverter::getDataChoiceSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::set<GameRuleDataChoice<GameRuleData>> JsonConverter::getDataChoiceSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::set<GameRuleDataChoice<GameRuleData>> result;
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {
@@ -2009,7 +2009,7 @@ void JsonConverter::setDataChoiceSet(json::object& obj, const std::string& key, 
 }
 
 template<typename EnumType>
-std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> JsonConverter::getSkillChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> JsonConverter::getSkillChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> result;
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {
@@ -2063,7 +2063,7 @@ void JsonConverter::setSkillChoiceEnumMap(json::object& obj, const std::string& 
 }
 
 template<game_rule_data_object GameRuleData, typename EnumType>
-std::map<GameRuleDataChoice<GameRuleData>, EnumType> JsonConverter::getDataChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::map<GameRuleDataChoice<GameRuleData>, EnumType> JsonConverter::getDataChoiceEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::map<GameRuleDataChoice<GameRuleData>, EnumType> result;
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {
@@ -2117,7 +2117,7 @@ void JsonConverter::setDataChoiceEnumMap(json::object& obj, const std::string& k
 }
 
 template<game_rule_data_object GameRuleData, typename EnumType>
-std::map<const GameRuleData*, EnumType> JsonConverter::getDataEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::map<const GameRuleData*, EnumType> JsonConverter::getDataEnumMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::map<const GameRuleData*, EnumType> result;
 	json::array skill_array = getJsonArray(obj, key);
 	for (const auto& skill_val : skill_array) {
@@ -2201,7 +2201,7 @@ void JsonConverter::setStringSet(json::object& obj, const std::string& key, cons
 }
 
 template<typename Primitive>
-std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> JsonConverter::getSkillChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> JsonConverter::getSkillChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> result;
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {
@@ -2253,7 +2253,7 @@ void JsonConverter::setSkillChoicePrimitiveMap(json::object& obj, const std::str
 }
 
 template<game_rule_data_object GameRuleData, typename Primitive>
-std::map<GameRuleDataChoice<GameRuleData>, Primitive> JsonConverter::getDataChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::map<GameRuleDataChoice<GameRuleData>, Primitive> JsonConverter::getDataChoicePrimitiveMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::map<GameRuleDataChoice<GameRuleData>, Primitive> result;
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {

@@ -280,7 +280,7 @@ json::array JsonConverter::getJsonArray(const json::object& obj, const std::stri
 	return json::array();
 }
 
-std::set<const SubcategoriedSkillData*> JsonConverter::getSkillSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::set<const SubcategoriedSkillData*> JsonConverter::getSkillSet(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::set<const SubcategoriedSkillData*> skill_set;
 	json::array skillArray = getJsonArray(obj, key);
 	for (const auto& skill_val : skillArray) {
@@ -291,7 +291,7 @@ std::set<const SubcategoriedSkillData*> JsonConverter::getSkillSet(const json::o
 	return skill_set;
 }
 
-std::map<std::string, const rm::game::character::LanguageAbility> JsonConverter::getLanguageAbilityMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager manager) {
+std::map<std::string, const rm::game::character::LanguageAbility> JsonConverter::getLanguageAbilityMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
 	std::map<std::string, const rm::game::character::LanguageAbility> map;
 	json::array abilityArray = getJsonArray(obj, key);
 	for (const auto& ability_val : abilityArray) {
@@ -337,7 +337,7 @@ void JsonConverter::setLanguageAbilities(json::object& obj, const std::string& k
 		obj[key] = arr;
 }
 
-const SubcategoriedSkillData* JsonConverter::getSkill(const json::object& obj, rm::PersistentObjectManager manager) {
+const SubcategoriedSkillData* JsonConverter::getSkill(const json::object& obj, rm::PersistentObjectManager& manager) {
 	std::string id = getString(obj, "id");
 	std::optional<std::string> subcategory = getOptionalString(obj, "subcategory");
 	if (subcategory)
