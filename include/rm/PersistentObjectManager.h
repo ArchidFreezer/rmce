@@ -44,9 +44,7 @@ public:
 	 * @param keys Set of strings to populate with the ids of the game objects
 	 */
 	template<persistent_object T>
-	void keys(std::set<std::string>& keys) {
-		cache_.keys<T>(keys);
-	}
+	void keys(std::set<std::string>& keys);
 
 	/**
 	 * @brief Get a new PersistentObject object with a randomly generated UUID as its ID
@@ -87,13 +85,7 @@ public:
 	 * @return PersistentObject object from the cache of type @a T
 	 */
 	template<default_persistent_object T>
-	T& get() {
-		// Create a new object and add it to the cache.
-		std::unique_ptr<T> obj(new T());
-		std::string id = obj->id(); // We need to store this as adding the object to the cache moves it, invalidating the object we have created
-		cache_.add<T>(std::move(obj));
-		return cache_.get<T>(id);
-	}
+	T& get();
 
 	/**
 	 * @brief Get a PersistentObject object that may be created with an ID only
@@ -103,18 +95,10 @@ public:
 	 * @tparam T type of PersistentObject object to create
 	 * @param id Unique ID of the object
 	 * @return PersistentObject object from the cache of type @a T
+	 * @throws out_of_range if the object id has been flagged as deleted
 	 */
 	template<id_persistent_object T>
-	T& get(std::string id) {
-		// If the object already exists in the cache then we can return it without creating a new one
-		if (cache_.exists<T>(id))
-			return cache_.get<T>(id);
-
-		// Create a new object and add it to the cache.
-		std::unique_ptr<T> obj(new T(id));
-		cache_.add<T>(std::move(obj));
-		return cache_.get<T>(id);
-	}
+	T& get(std::string id);
 
 	/**
 	 * @brief Get all PersistentObject objects of a specific type from the cache
@@ -125,16 +109,7 @@ public:
 	 * @return Vector of references to PersistentObject objects of type @a T from the cache
 	 */
 	template<persistent_object T>
-	std::vector<std::reference_wrapper<T>> getAll() {
-		std::vector<std::reference_wrapper<T>> objects;
-
-		std::set<std::string> keySet;
-		cache_.keys<T>(keySet); // Populate the set
-		for (const auto& id : keySet) {
-			objects.push_back(std::ref(cache_.get<T>(id)));
-		}
-		return objects;
-	}
+	std::vector<std::reference_wrapper<T>> getAll();
 
 	/**
 	 * @brief Get a GameRuleData object with a specific ID without knowing the type
@@ -165,18 +140,10 @@ public:
 	 * allow these to be safely created and cached a custom factory method has been created
 	 * @param skill_data SkillData that is being wrapped
 	 * @param subcategory optional subcategory of @a skill_data
-	 * @return
+	 * @return Reference to the SubcategoriedSkillData object with the matching skill and subcategory. If the object does not exist it will be created and added to the cache before being returned.
+	 * @throws out_of_range if a SubcategoriedSkillData with the given id has been flagged as deleted
 	 */
-	rm::rule::SubcategoriedSkillData& subcategoriedSkillData(const rm::rule::SkillData& skill_data, std::optional<std::string_view> subcategory = std::nullopt) {
-		std::string id{skill_data.id() + (subcategory ? "_" + std::string(subcategory.value()) : "")};
-		if (cache_.exists<rm::rule::SubcategoriedSkillData>(id))
-			return cache_.get<rm::rule::SubcategoriedSkillData>(id);
-		if (subcategory)
-			cache_.add<rm::rule::SubcategoriedSkillData>(std::move(std::make_unique<rm::rule::SubcategoriedSkillData>(skill_data, subcategory)));
-		else
-			cache_.add<rm::rule::SubcategoriedSkillData>(std::move(std::make_unique<rm::rule::SubcategoriedSkillData>(skill_data)));
-		return cache_.get<rm::rule::SubcategoriedSkillData>(id);
-	}
+	rm::rule::SubcategoriedSkillData& subcategoriedSkillData(const rm::rule::SkillData& skill_data, std::optional<std::string_view> subcategory = std::nullopt);
 
 	/**
 	 * @brief Get SubcategoriedSkillData objects
@@ -185,7 +152,8 @@ public:
 	 * allow these to be safely created and cached a custom factory method has been created
 	 * @param skill_id Unique identifier of the skill that is being wrapped
 	 * @param subcategory optional subcategory of @a skill_data
-	 * @return
+	 * @return Reference to the SubcategoriedSkillData object with the matching skill and subcategory. If the object does not exist it will be created and added to the cache before being returned.
+	 * @throws out_of_range if a SubcategoriedSkillData with the given id has been flagged as deleted
 	 */
 	rm::rule::SubcategoriedSkillData& subcategoriedSkillData(std::string& skill_id, std::optional<std::string_view> subcategory = std::nullopt) {
 		rm::rule::SkillData& skill = get<rm::rule::SkillData>(skill_id);
@@ -216,8 +184,101 @@ public:
 	 */
 	const std::set<std::string> getAllPrefixes() const;
 
+	/**
+	 * @brief Get whether an object has been flagged as deleted
+	 *
+	 * This is used to check if an object has been flagged as deleted without invalidating existing references. This is necessary as the cache does not return references to the objects it stores, but instead returns references to copies of
+	 * the objects, so if an object is deleted from the cache then any existing references to that object will still be valid, which can lead to bugs if those references are used after the object has been deleted.
+	 *
+	 * @param id Unique identifier of the object to check
+	 */
+	bool isDeleted(std::string id) const {
+		return deleted_objects_.find(id) != deleted_objects_.end();
+	}
+
+	/**
+	 * @brief Flag an object as deleted
+	 *
+	 * This is used to flag an object as deleted without invalidating existing references. This is necessary as the cache does not return references to the objects it stores, but instead returns references to copies of the objects, so if an
+	 * object is deleted from the cache then any existing references to that object will still be valid, which can lead to bugs if those references are used after the object has been deleted.
+	 *
+	 * @param id Unique identifier of the object to flag as deleted
+	 */
+	void deleteObject(std::string id) {
+		deleted_objects_.insert(id);
+	}
+
+	/**
+	 * @brief Unflag an object as deleted
+	 *
+	 * This is used to unflag an object as deleted without invalidating existing references. This is necessary as the cache does not return references to the objects it stores, but instead returns references to copies of the objects, so if an
+	 * object is deleted from the cache then any existing references to that object will still be valid, which can lead to bugs if those references are used after the object has been deleted.
+	 *
+	 * @param id Unique identifier of the object to unflag as deleted
+	 */
+	void undeleteObject(std::string id) {
+		deleted_objects_.erase(id);
+	}
+
 private:
-	PersistentCache& cache_; /**< Reference to a cache to store the objects. */
+	PersistentCache& cache_;                  /**< Reference to a cache to store the objects. */
+	std::set<std::string> deleted_objects_{}; /**< Set of IDs of objects that have been deleted. This is used to flag an object as delted without invalidating existing references. */
 };
+
+template<persistent_object T>
+inline void PersistentObjectManager::keys(std::set<std::string>& keys) {
+	// First populate the set with the keys from the cache and then remove those that have been flagged as deleted
+	cache_.keys<T>(keys);
+	for (auto it = keys.begin(); it != keys.end();) {
+		if (isDeleted(*it))
+			it = keys.erase(it);
+		else
+			++it;
+	}
+}
+
+template<default_persistent_object T>
+inline T& PersistentObjectManager::get() {
+	// Create a new object and add it to the cache.
+	std::unique_ptr<T> obj(new T());
+	std::string id = obj->id(); // We need to store this as adding the object to the cache moves it, invalidating the object we have created
+	cache_.add<T>(std::move(obj));
+
+	// If an object with his id has been flagged as deleted then we need to unflag it as it will not be retrievable otherwise.
+	if (isDeleted(id)) {
+		undeleteObject(id);
+	}
+
+	return cache_.get<T>(id);
+}
+
+template<id_persistent_object T>
+inline T& PersistentObjectManager::get(std::string id) {
+	// If the object has been deleted then throw an exception as it should not be retrievable without first undeleting it
+	if (isDeleted(id))
+		throw std::out_of_range("Object with id " + id + " has been deleted and cannot be retrieved.");
+
+	// If the object already exists in the cache then we can return it without creating a new one
+	if (cache_.exists<T>(id))
+		return cache_.get<T>(id);
+
+	// Create a new object and add it to the cache.
+	std::unique_ptr<T> obj(new T(id));
+	cache_.add<T>(std::move(obj));
+	return cache_.get<T>(id);
+}
+
+template<persistent_object T>
+inline std::vector<std::reference_wrapper<T>> PersistentObjectManager::getAll() {
+	std::vector<std::reference_wrapper<T>> objects;
+
+	std::set<std::string> keySet;
+	cache_.keys<T>(keySet); // Populate the set
+	for (const auto& id : keySet) {
+		if (!isDeleted(id))
+			objects.push_back(std::ref(cache_.get<T>(id)));
+	}
+	return objects;
+}
 
 } // namespace rm

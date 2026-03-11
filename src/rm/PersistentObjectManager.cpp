@@ -192,7 +192,30 @@ const std::set<std::string> PersistentObjectManager::getAllIds(std::string_view 
 	} else {
 		throw std::out_of_range("Could not determine the object type for objects with prefix " + std::string(prefix));
 	}
+
+	// Remove any deleted objects from the result
+	for (auto it = result.begin(); it != result.end();) {
+		if (isDeleted(*it))
+			it = result.erase(it);
+		else
+			++it;
+	}
 	return result;
+	
+}
+
+rm::rule::SubcategoriedSkillData& PersistentObjectManager::subcategoriedSkillData(const rm::rule::SkillData& skill_data, std::optional<std::string_view> subcategory) {
+	std::string id{skill_data.id() + (subcategory ? "_" + std::string(subcategory.value()) : "")};
+	if (isDeleted(id))
+		throw std::out_of_range("Object with id " + id + " has been deleted and cannot be retrieved.");
+
+	if (cache_.exists<rm::rule::SubcategoriedSkillData>(id))
+		return cache_.get<rm::rule::SubcategoriedSkillData>(id);
+	if (subcategory)
+		cache_.add<rm::rule::SubcategoriedSkillData>(std::move(std::make_unique<rm::rule::SubcategoriedSkillData>(skill_data, subcategory)));
+	else
+		cache_.add<rm::rule::SubcategoriedSkillData>(std::move(std::make_unique<rm::rule::SubcategoriedSkillData>(skill_data)));
+	return cache_.get<rm::rule::SubcategoriedSkillData>(id);
 }
 
 } // namespace rm
