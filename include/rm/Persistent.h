@@ -90,8 +90,9 @@ concept default_persistent_object = persistent_object<T> && std::default_initial
 /**
  * @brief Concept that ensures a templated type is derived from Persistent, is NOT default constructible, and has a constructor taking a std::string parameter
  *
- * This concept is used for persistent objects that require an ID to be provided at construction time,
- * such as GameRuleData objects. It ensures the type cannot be default constructed and must be initialized with an ID.
+ * This concept is used for persistent objects that require an ID to be provided at construction time, such as GameRuleData objects. It ensures the type cannot be default constructed and must be initialized with a unique identifier, plus
+ * have a generateId method that returns void. This method is expected to set the id of the object based on the provided identifier and a prefix derived from the type of the object, ensuring that all objects of this type have unique
+ * identifiers in a standard format.
  *
  * @code
  * template <id_persistent_object T>
@@ -102,6 +103,8 @@ concept default_persistent_object = persistent_object<T> && std::default_initial
  * @endcode
  */
 template<class T>
-concept id_persistent_object = persistent_object<T> && (!std::default_initializable<T>) && std::constructible_from<T, std::string>;
+concept id_persistent_object = persistent_object<T> && (!std::default_initializable<T>) && std::constructible_from<T, std::string> && requires(T v) {
+	{ v.generateId() } -> std::same_as<void>;
+};
 
 } // namespace rm

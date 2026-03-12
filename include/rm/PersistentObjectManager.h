@@ -73,7 +73,9 @@ public:
 	 */
 	template<id_persistent_object T>
 	std::unique_ptr<T> create(std::string id) {
-		return std::unique_ptr<T>(new T(id));
+		std::unique_ptr<T> obj(new T(id));
+		obj.get()->generateId(); // We need to generate the id as the constructor only sets the base id and does not generate the full id in the standard format, which is required for the object to be usable
+		return obj;
 	}
 
 	/**
@@ -264,6 +266,7 @@ inline T& PersistentObjectManager::get(std::string id) {
 
 	// Create a new object and add it to the cache.
 	std::unique_ptr<T> obj(new T(id));
+	obj.get()->generateId(); // We need to generate the id as the constructor only sets the base id and does not generate the full id in the standard format, which is required for the object to be usable
 	cache_.add<T>(std::move(obj));
 	return cache_.get<T>(id);
 }
