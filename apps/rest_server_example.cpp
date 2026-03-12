@@ -68,6 +68,9 @@ int main(int argc, char* argv[]) {
 		std::cout << "\nShutting down..." << std::endl;
 		server.stop();
 
+		//json_manager.setDataDirectory("../../../../data2/"); // Set the data directory for saving (optional if already set)
+		//json_manager.save();
+
 		std::cout << "Server shutdown complete." << std::endl;
 		return 0;
 
