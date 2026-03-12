@@ -16,7 +16,16 @@ namespace {
 	class DummyBoundIntTable : public BoundIntRowLookupTable<TableColumnCreatureSizeMatcher, CreatureSizeType::Type, std::string> {
 	public:
 		DummyBoundIntTable() : BoundIntRowLookupTable("DummyTable", 1, 6) {}
-	};
+	    inline static std::string prefix_{"DERIVED"}; /**< Prefix for the ID of the data objects */
+
+	    /**
+	     * @brief Get the prefix for the ID of the data objects
+	     * @return Prefix for the ID of the data objects as a string view
+	     */
+	    std::string_view prefix() const override {
+		    return DummyBoundIntTable::prefix_;
+	    }
+    };
 
 	TEST(BoundIntRowLookupTable, General) {
 		DummyBoundIntTable lut;
