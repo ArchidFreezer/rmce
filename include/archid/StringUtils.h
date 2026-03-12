@@ -22,6 +22,16 @@ namespace archid {
 	const std::string lcase(std::string_view sv);
 
 	/**
+	 * @brief Gets an upper case std::string from a std::string_view
+	 *
+	 * Only 1:1 character mapping can be performed by this function
+	 *
+	 * @param sv std::string_view to transform
+	 * @return std::string of the parameter in uppercase
+     */
+	const std::string ucase(std::string_view sv);
+
+	/**
 	 * @brief Creates a lowercase string, removing all non alphanum characters
 	 *
 	 * @param sv string_view to transform

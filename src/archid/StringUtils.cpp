@@ -15,6 +15,15 @@ namespace archid {
     return lower;
   }
 
+  const std::string ucase(std::string_view sv) {
+    std::string upper{};
+    std::transform(sv.begin(), sv.end(), std::back_inserter(upper),
+      [](char c) {
+        return static_cast<char>(std::toupper(static_cast<unsigned char>(c)));
+      });
+    return upper;
+  }
+
   const std::string lcaseconcat(std::string_view sv) {
     std::stringstream ss{};
 
