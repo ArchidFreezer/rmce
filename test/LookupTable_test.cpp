@@ -16,7 +16,16 @@ namespace {
 	class DummyLookupTable : public LookupTable<archid::NumberRange<int>, int, TableColumnCreatureSizeMatcher, CreatureSizeType::Type, std::string> {
 	public:
 		DummyLookupTable(std::string_view id) : LookupTable(id) {}
-	};
+	    inline static std::string prefix_{"DERIVED"}; /**< Prefix for the ID of the data objects */
+
+	    /**
+	     * @brief Get the prefix for the ID of the data objects
+	     * @return Prefix for the ID of the data objects as a string view
+	     */
+	    std::string_view prefix() const override {
+		    return DummyLookupTable::prefix_;
+	    }
+    };
 
 	TEST(LookupTable, General) {
 		DummyLookupTable lut("DummyTable");

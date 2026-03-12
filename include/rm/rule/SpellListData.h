@@ -26,6 +26,16 @@ public:
 	SpellListData(std::string_view id) : GameRuleData(id) {
 	}
 
+	inline static std::string prefix_{"SPELLLIST"}; /**< Prefix for the ID of the data objects */
+
+	/**
+	 * @brief Get the prefix for the ID of the data objects
+	 * @return Prefix for the ID of the data objects as a string view
+	 */
+	std::string_view prefix() const override {
+		return SpellListData::prefix_;
+	}
+
 	/**
 	 * @brief Set the name of the spell list
 	 * @param name Spell list name
@@ -53,8 +63,7 @@ public:
 	/**
 	 * @brief Get the book that the profession is defined in
 	 *
-	 * The book is stored as a pointer and may not have been initialised so it is considered optional. A check should be made
-	 * before using the value to determine if the book has been set yet:
+	 * The book is stored as a pointer and may not have been initialised so it is considered optional. A check should be made before using the value to determine if the book has been set yet:
 	 * @code
 	 * if (profession.book()) {                              // Check if the book has been set
 	 *   const BookData* book = profession.book().value();   // Get the book pointer
@@ -83,7 +92,9 @@ public:
 	 * @brief Set the realms the spell draws power from
 	 * @param realms Set of RealmType::Type spell power realms
 	 */
-	void setRealms(std::set<RealmType::Type> realms) { realms_ = std::move(realms);	}
+	void setRealms(std::set<RealmType::Type> realms) {
+		realms_ = std::move(realms);
+	}
 
 	/**
 	 * @brief Get whether the spell list draws power from a spell realm

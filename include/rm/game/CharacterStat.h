@@ -37,7 +37,7 @@ namespace rm::game::character {
 	class Modifier {
 	public:
 		virtual ~Modifier() = default; /** Virtual destructor to make the class polymorphic */
-		virtual int modification(); /** Virtual method to calculate the modification value based on the type of modifier. This can be overridden by derived classes to provide specific logic for different types of modifiers. */
+		virtual int modification() = 0; /** Virtual method to calculate the modification value based on the type of modifier. This can be overridden by derived classes to provide specific logic for different types of modifiers. */
 	};
 
 	/**

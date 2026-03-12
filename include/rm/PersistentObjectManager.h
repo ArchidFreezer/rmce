@@ -73,7 +73,9 @@ public:
 	 */
 	template<id_persistent_object T>
 	std::unique_ptr<T> create(std::string id) {
-		return std::unique_ptr<T>(new T(id));
+		std::unique_ptr<T> obj(new T(id));
+		obj.get()->generateId(); // We need to generate the id as the constructor only sets the base id and does not generate the full id in the standard format, which is required for the object to be usable
+		return obj;
 	}
 
 	/**
@@ -161,20 +163,6 @@ public:
 	}
 
 	/**
-	 * @brief Creates a string that can be used as a unique identifier for an object
-	 *
-	 * Each object requires a unique identifier and this is a helper function that can create one in a standard format. The
-	 * output is a string that is a combination of the type and val parameters that only contain ucase letters, numbers and
-	 * the underscore character. Any character that is not an alphanum will be converted to an underscore with consecutive
-	 * underscores being discarded.
-	 *
-	 * @param type The type of data object
-	 * @param val The unique name of the data object
-	 * @return String containing an id in standard format
-	 */
-	const std::string generateId(std::string_view type, std::string_view val);
-
-	/**
 	 * @brief Get all prefixes of GameRuleData objects in the cache
 	 *
 	 * This is useful for deserialisation when we want to get all objects with a specific prefix in their ID, e.g. all skills that have IDs starting with "SKILL_". This method will return all the prefixes, without the underscore, as
@@ -211,8 +199,8 @@ public:
 	/**
 	 * @brief Unflag an object as deleted
 	 *
-	 * This is used to unflag an object as deleted without invalidating existing references. This is necessary as the cache does not return references to the objects it stores, but instead returns references to copies of the objects, so if an
-	 * object is deleted from the cache then any existing references to that object will still be valid, which can lead to bugs if those references are used after the object has been deleted.
+	 * This is used to unflag an object as deleted without invalidating existing references. This is necessary as the cache does not return references to the objects it stores, but instead returns references to copies of the objects, so if
+	 * an object is deleted from the cache then any existing references to that object will still be valid, which can lead to bugs if those references are used after the object has been deleted.
 	 *
 	 * @param id Unique identifier of the object to unflag as deleted
 	 */
@@ -263,9 +251,18 @@ inline T& PersistentObjectManager::get(std::string id) {
 		return cache_.get<T>(id);
 
 	// Create a new object and add it to the cache.
+	// 
+	// We need to check if the id parameter already contains the prefix or not as the constructor will add the prefix to the id if it is not already present, but if the id parameter already contains the prefix then we do not want to add it
+	// again as this will result in an incorrect id being generated and the object not being retrievable from the cache.
+	std::string prefix = T::prefix_ + "_";
+	if (id.starts_with(prefix)) {
+		id = id.substr(prefix.size()); // Remove the prefix from the id as the constructor will add it back in
+	}
+
 	std::unique_ptr<T> obj(new T(id));
+	std::string new_id = std::string(obj.get()->generateId()); // We need to generate the id as the constructor only sets the base id and does not generate the full id in the standard format, which is required for the object to be usable
 	cache_.add<T>(std::move(obj));
-	return cache_.get<T>(id);
+	return cache_.get<T>(new_id);
 }
 
 template<persistent_object T>

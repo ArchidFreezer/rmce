@@ -181,7 +181,7 @@ TEST_F(RestServerTest, VersionEndpoint) {
 	std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
 	HttpClient client(test_address, test_port);
-	auto response = client.get("/api/version");
+	auto response = client.get("/rmce/version");
 
 	EXPECT_EQ(response.result(), http::status::ok);
 	EXPECT_EQ(response[http::field::content_type], "application/json");
@@ -256,7 +256,7 @@ TEST_F(RestServerTest, KeepAliveConnections) {
 	auto response1 = client.get("/health");
 	EXPECT_EQ(response1.result(), http::status::ok);
 
-	auto response2 = client.get("/api/version");
+	auto response2 = client.get("/rmce/version");
 	EXPECT_EQ(response2.result(), http::status::ok);
 
 	auto response3 = client.get("/");
