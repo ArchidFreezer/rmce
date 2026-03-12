@@ -104,7 +104,7 @@ concept default_persistent_object = persistent_object<T> && std::default_initial
  */
 template<class T>
 concept id_persistent_object = persistent_object<T> && (!std::default_initializable<T>) && std::constructible_from<T, std::string> && requires(T v) {
-	{ v.generateId() } -> std::same_as<void>;
+	{ v.generateId() } -> std::convertible_to<std::string_view>;
 };
 
 } // namespace rm
