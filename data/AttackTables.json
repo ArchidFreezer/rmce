@@ -3,8 +3,8 @@
         {
             "id" : "ATTACKTABLE_AKLYS",
             "name" : "Aklys",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -1090,8 +1090,8 @@
         {
             "id" : "ATTACKTABLE_ATLATL",
             "name" : "Atlatl",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -2177,8 +2177,8 @@
         {
             "id" : "ATTACKTABLE_BARDICHE",
             "name" : "Bardiche",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -3264,8 +3264,8 @@
         {
             "id" : "ATTACKTABLE_BASTARDAXE",
             "name" : "BastardAxe",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -4351,8 +4351,8 @@
         {
             "id" : "ATTACKTABLE_BASTARDSWORD",
             "name" : "BastardSword",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -5438,8 +5438,8 @@
         {
             "id" : "ATTACKTABLE_BATTLEAXE",
             "name" : "BattleAxe",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -6525,8 +6525,8 @@
         {
             "id" : "ATTACKTABLE_BEAKEDAXE",
             "name" : "BeakedAxe",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -7612,8 +7612,8 @@
         {
             "id" : "ATTACKTABLE_BECDECORBIN",
             "name" : "BecDeCorbin",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -8699,8 +8699,8 @@
         {
             "id" : "ATTACKTABLE_BLOWPIPE",
             "name" : "Blowpipe",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -9786,8 +9786,8 @@
         {
             "id" : "ATTACKTABLE_BOLA",
             "name" : "Bola",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -10873,8 +10873,8 @@
         {
             "id" : "ATTACKTABLE_BOOMERANG",
             "name" : "Boomerang",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -11960,8 +11960,8 @@
         {
             "id" : "ATTACKTABLE_BROADSWORD",
             "name" : "Broadsword",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -13047,8 +13047,8 @@
         {
             "id" : "ATTACKTABLE_CATONINETAILS",
             "name" : "CatONineTails",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -14134,8 +14134,8 @@
         {
             "id" : "ATTACKTABLE_CATONINETAILSPENAL",
             "name" : "CatONineTailsPenal",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -15221,8 +15221,8 @@
         {
             "id" : "ATTACKTABLE_CLUB",
             "name" : "Club",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -16308,8 +16308,8 @@
         {
             "id" : "ATTACKTABLE_COLD_BALL",
             "name" : "Cold_Ball",
-            "max-row" : 100,
-            "modified-rows" : [
+            "maxRow" : 100,
+            "modifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 8,
@@ -16863,7 +16863,7 @@
                     "at20" : "8|Cold:B"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 4,
@@ -16941,8 +16941,8 @@
         {
             "id" : "ATTACKTABLE_COMETHAMMER",
             "name" : "CometHammer",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -18028,8 +18028,8 @@
         {
             "id" : "ATTACKTABLE_COMPOSITEBOW",
             "name" : "CompositeBow",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -19115,8 +19115,8 @@
         {
             "id" : "ATTACKTABLE_CUTLASS",
             "name" : "Cutlass",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -20202,8 +20202,8 @@
         {
             "id" : "ATTACKTABLE_DAGGER",
             "name" : "Dagger",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -21289,8 +21289,8 @@
         {
             "id" : "ATTACKTABLE_DART",
             "name" : "Dart",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -22376,8 +22376,8 @@
         {
             "id" : "ATTACKTABLE_FALCHION",
             "name" : "Falchion",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -23463,8 +23463,8 @@
         {
             "id" : "ATTACKTABLE_FAUCHARD",
             "name" : "Fauchard",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -24550,8 +24550,8 @@
         {
             "id" : "ATTACKTABLE_FIRE_BALL",
             "name" : "Fire_Ball",
-            "max-row" : 100,
-            "modified-rows" : [
+            "maxRow" : 100,
+            "modifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 8,
@@ -25105,7 +25105,7 @@
                     "at20" : "10|Heat:C"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 4,
@@ -25207,8 +25207,8 @@
         {
             "id" : "ATTACKTABLE_FIRE_BOLT",
             "name" : "Fire_Bolt",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 10,
@@ -25858,7 +25858,7 @@
                     "at20" : "10|Heat:D"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -25912,8 +25912,8 @@
         {
             "id" : "ATTACKTABLE_FLAIL",
             "name" : "Flail",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -26999,8 +26999,8 @@
         {
             "id" : "ATTACKTABLE_FOIL",
             "name" : "Foil",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -28086,8 +28086,8 @@
         {
             "id" : "ATTACKTABLE_GLADIATORSNET",
             "name" : "GladiatorsNet",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -29173,8 +29173,8 @@
         {
             "id" : "ATTACKTABLE_GLAIVE",
             "name" : "Glaive",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -30260,8 +30260,8 @@
         {
             "id" : "ATTACKTABLE_GREATSWORD",
             "name" : "GreatSword",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -31347,8 +31347,8 @@
         {
             "id" : "ATTACKTABLE_GUISARME",
             "name" : "Guisarme",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -32434,8 +32434,8 @@
         {
             "id" : "ATTACKTABLE_HANDAXE",
             "name" : "Handaxe",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -33521,8 +33521,8 @@
         {
             "id" : "ATTACKTABLE_HANDCROSSBOW",
             "name" : "HandCrossbow",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -34608,8 +34608,8 @@
         {
             "id" : "ATTACKTABLE_HARPOON",
             "name" : "Harpoon",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -35695,8 +35695,8 @@
         {
             "id" : "ATTACKTABLE_HEAVYCROSSBOW",
             "name" : "HeavyCrossbow",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -36782,8 +36782,8 @@
         {
             "id" : "ATTACKTABLE_HEAVYSPEAR",
             "name" : "HeavySpear",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -37869,8 +37869,8 @@
         {
             "id" : "ATTACKTABLE_ICE_BOLT",
             "name" : "Ice_Bolt",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 10,
@@ -38520,7 +38520,7 @@
                     "at20" : "10|Impact:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -38574,8 +38574,8 @@
         {
             "id" : "ATTACKTABLE_JAVELIN",
             "name" : "Javelin",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -39661,8 +39661,8 @@
         {
             "id" : "ATTACKTABLE_JITTE",
             "name" : "Jitte",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -40748,8 +40748,8 @@
         {
             "id" : "ATTACKTABLE_KATANA",
             "name" : "Katana",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -41835,8 +41835,8 @@
         {
             "id" : "ATTACKTABLE_KNIFE",
             "name" : "Knife",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -42922,8 +42922,8 @@
         {
             "id" : "ATTACKTABLE_KYOTETSUSHOGE",
             "name" : "KyotetsuShoge",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -44009,8 +44009,8 @@
         {
             "id" : "ATTACKTABLE_LANCE",
             "name" : "Lance",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -45096,8 +45096,8 @@
         {
             "id" : "ATTACKTABLE_LASSO",
             "name" : "Lasso",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -46183,8 +46183,8 @@
         {
             "id" : "ATTACKTABLE_LIGHTCROSSBOW",
             "name" : "LightCrossbow",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -47270,8 +47270,8 @@
         {
             "id" : "ATTACKTABLE_LIGHTNING_BOLT",
             "name" : "Lightning_Bolt",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 10,
@@ -47921,7 +47921,7 @@
                     "at20" : "18|Impact:B|Electrical:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -47975,8 +47975,8 @@
         {
             "id" : "ATTACKTABLE_LONGBOW",
             "name" : "LongBow",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -49062,8 +49062,8 @@
         {
             "id" : "ATTACKTABLE_LONGSCIMITAR",
             "name" : "LongScimitar",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -50149,8 +50149,8 @@
         {
             "id" : "ATTACKTABLE_LONGSWORD",
             "name" : "LongSword",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -51236,8 +51236,8 @@
         {
             "id" : "ATTACKTABLE_LUCERNEHAMMER",
             "name" : "LucerneHammer",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -52323,8 +52323,8 @@
         {
             "id" : "ATTACKTABLE_MACE",
             "name" : "Mace",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -53410,8 +53410,8 @@
         {
             "id" : "ATTACKTABLE_MAINGAUCHE",
             "name" : "MainGauche",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -54497,8 +54497,8 @@
         {
             "id" : "ATTACKTABLE_MANCATCHER",
             "name" : "ManCatcher",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -55584,8 +55584,8 @@
         {
             "id" : "ATTACKTABLE_MILITARYFORK",
             "name" : "MilitaryFork",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -56671,8 +56671,8 @@
         {
             "id" : "ATTACKTABLE_MORNINGSTAR",
             "name" : "MorningStar",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -57758,8 +57758,8 @@
         {
             "id" : "ATTACKTABLE_MULLET",
             "name" : "Mullet",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -58845,8 +58845,8 @@
         {
             "id" : "ATTACKTABLE_NAGAMAKI",
             "name" : "Nagamaki",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -59932,8 +59932,8 @@
         {
             "id" : "ATTACKTABLE_NAGINATA",
             "name" : "Naginata",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -61019,8 +61019,8 @@
         {
             "id" : "ATTACKTABLE_NINJATO",
             "name" : "Ninjato",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -62106,8 +62106,8 @@
         {
             "id" : "ATTACKTABLE_NODACHI",
             "name" : "NoDachi",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -63193,8 +63193,8 @@
         {
             "id" : "ATTACKTABLE_NODWICK",
             "name" : "Nodwick",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -64280,8 +64280,8 @@
         {
             "id" : "ATTACKTABLE_NUNCHAKU",
             "name" : "Nunchaku",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -65367,8 +65367,8 @@
         {
             "id" : "ATTACKTABLE_PARTISAN",
             "name" : "Partisan",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -66454,8 +66454,8 @@
         {
             "id" : "ATTACKTABLE_PIKE",
             "name" : "Pike",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -67541,8 +67541,8 @@
         {
             "id" : "ATTACKTABLE_POLEARM",
             "name" : "Polearm",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -68628,8 +68628,8 @@
         {
             "id" : "ATTACKTABLE_POLEAXE",
             "name" : "PoleAxe",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -69715,8 +69715,8 @@
         {
             "id" : "ATTACKTABLE_QUARTERSTAFF",
             "name" : "Quarterstaff",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -70802,8 +70802,8 @@
         {
             "id" : "ATTACKTABLE_RANSEUR",
             "name" : "Ranseur",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -71889,8 +71889,8 @@
         {
             "id" : "ATTACKTABLE_RAPIER",
             "name" : "Rapier",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -72976,8 +72976,8 @@
         {
             "id" : "ATTACKTABLE_ROPEDART",
             "name" : "RopeDart",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -74063,8 +74063,8 @@
         {
             "id" : "ATTACKTABLE_SAI",
             "name" : "Sai",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -75150,8 +75150,8 @@
         {
             "id" : "ATTACKTABLE_SCIMITAR",
             "name" : "Scimitar",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -76237,8 +76237,8 @@
         {
             "id" : "ATTACKTABLE_SHOCK_BOLT",
             "name" : "Shock_Bolt",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 10,
@@ -76888,7 +76888,7 @@
                     "at20" : "10|Electrical:B"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -76942,8 +76942,8 @@
         {
             "id" : "ATTACKTABLE_SHORTBOW",
             "name" : "ShortBow",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -78029,8 +78029,8 @@
         {
             "id" : "ATTACKTABLE_SHORTSWORD",
             "name" : "ShortSword",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -79116,8 +79116,8 @@
         {
             "id" : "ATTACKTABLE_SHURIKEN",
             "name" : "Shuriken",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -80203,8 +80203,8 @@
         {
             "id" : "ATTACKTABLE_SLING",
             "name" : "Sling",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -81290,8 +81290,8 @@
         {
             "id" : "ATTACKTABLE_SPEAR",
             "name" : "Spear",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -82377,8 +82377,8 @@
         {
             "id" : "ATTACKTABLE_STAFFSLING",
             "name" : "StaffSling",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -83464,8 +83464,8 @@
         {
             "id" : "ATTACKTABLE_STEELWHIP",
             "name" : "SteelWhip",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -84551,8 +84551,8 @@
         {
             "id" : "ATTACKTABLE_THREESECTIONSTAFF",
             "name" : "ThreeSectionStaff",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -85638,8 +85638,8 @@
         {
             "id" : "ATTACKTABLE_TIGERCLAW",
             "name" : "TigerClaw",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -86725,8 +86725,8 @@
         {
             "id" : "ATTACKTABLE_TIGERHOOK",
             "name" : "TigerHook",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -87812,8 +87812,8 @@
         {
             "id" : "ATTACKTABLE_TRIDENT",
             "name" : "Trident",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -88899,8 +88899,8 @@
         {
             "id" : "ATTACKTABLE_TWOHANDEDSWORD",
             "name" : "TwoHandedSword",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -89986,8 +89986,8 @@
         {
             "id" : "ATTACKTABLE_WAKAZASHI",
             "name" : "Wakazashi",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -91073,8 +91073,8 @@
         {
             "id" : "ATTACKTABLE_WARFAN",
             "name" : "WarFan",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -92160,8 +92160,8 @@
         {
             "id" : "ATTACKTABLE_WARHAMMER",
             "name" : "WarHammer",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -93247,8 +93247,8 @@
         {
             "id" : "ATTACKTABLE_WARMATTOCK",
             "name" : "WarMattock",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,
@@ -94334,8 +94334,8 @@
         {
             "id" : "ATTACKTABLE_WATER_BOLT",
             "name" : "Water_Bolt",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 10,
@@ -94985,7 +94985,7 @@
                     "at20" : "7|Impact:B"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -95039,8 +95039,8 @@
         {
             "id" : "ATTACKTABLE_WHIP",
             "name" : "Whip",
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 0,
                     "max" : 18,

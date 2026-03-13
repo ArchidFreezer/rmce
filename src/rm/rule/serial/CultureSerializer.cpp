@@ -10,26 +10,26 @@ json::value CultureSerializer::serializeObject(const CultureData& ref) const {
 	JsonConverter::setString(obj, "name", ref.name());
 	if (!ref.description().empty())
 		JsonConverter::setString(obj, "description", ref.description());
-	JsonConverter::setString(obj, "culture-type", ref.cultureType().id());
-	JsonConverter::setBool(obj, "high-culture", ref.highCulture());
+	JsonConverter::setString(obj, "cultureType", ref.cultureType().id());
+	JsonConverter::setBool(obj, "highCulture", ref.highCulture());
 
 	// Background languages
-	JsonConverter::setLanguageAbilities(obj, "background-languages", ref.languageAbilities());
+	JsonConverter::setLanguageAbilities(obj, "backgroundLanguages", ref.languageAbilities());
 
 	// Hobby skills
-	JsonConverter::setSkillSet(obj, "hobby-skills", ref.hobbySkills());
+	JsonConverter::setSkillSet(obj, "hobbySkills", ref.hobbySkills());
 
 	// Hobby category skills
-	JsonConverter::setDataSet(obj, "hobby-categories", ref.hobbySkillCategories());
+	JsonConverter::setDataSet(obj, "hobbyCategories", ref.hobbySkillCategories());
 
 	// Preferred professions
-	JsonConverter::setDataSet(obj, "preferred-professions", ref.preferredProfessions());
+	JsonConverter::setDataSet(obj, "preferredProfessions", ref.preferredProfessions());
 
 	// Restricted professions
-	JsonConverter::setDataSet(obj, "restricted-professions", ref.restrictedProfessions());
+	JsonConverter::setDataSet(obj, "restrictedProfessions", ref.restrictedProfessions());
 
 	// Training package cost modifiers
-	JsonConverter::setDataPrimitiveMap(obj, "training-package-modifiers", ref.trainingPackageModifiers());
+	JsonConverter::setDataPrimitiveMap(obj, "trainingPackageModifiers", ref.trainingPackageModifiers());
 
 	return obj;
 }
@@ -43,28 +43,28 @@ const CultureData& CultureSerializer::deserializeObject(json::object& jsonObj) c
 	if (jsonObj.contains("description"))
 		ref.setDescription(JsonConverter::getString(jsonObj, "description"));
 
-	std::string culture_type_id = JsonConverter::getString(jsonObj, "culture-type");
+	std::string culture_type_id = JsonConverter::getString(jsonObj, "cultureType");
 	ref.setCultureType(manager_.get<CultureTypeData>(culture_type_id));
 
-	ref.setHighCulture(JsonConverter::getBool(jsonObj, "high-culture"));
+	ref.setHighCulture(JsonConverter::getBool(jsonObj, "highCulture"));
 
 	// Background languages are optional, so we check if they exist before trying to get them
-	ref.setLanguageAbilities(JsonConverter::getLanguageAbilityMap(jsonObj, "background-languages", manager_));
+	ref.setLanguageAbilities(JsonConverter::getLanguageAbilityMap(jsonObj, "backgroundLanguages", manager_));
 
 	// Hobby skills
-	ref.setHobbySkills(JsonConverter::getSkillSet(jsonObj, "hobby-skills", manager_));
+	ref.setHobbySkills(JsonConverter::getSkillSet(jsonObj, "hobbySkills", manager_));
 
 	// Hobby category skills
-	ref.setHobbySkillCategories(JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "hobby-categories", manager_));
+	ref.setHobbySkillCategories(JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "hobbyCategories", manager_));
 
 	// Preferred professions
-	ref.setPreferredProfessions(JsonConverter::getDataSet<ProfessionData>(jsonObj, "preferred-professions", manager_));
+	ref.setPreferredProfessions(JsonConverter::getDataSet<ProfessionData>(jsonObj, "preferredProfessions", manager_));
 
 	// Restricted professions
-	ref.setRestrictedProfessions(JsonConverter::getDataSet<ProfessionData>(jsonObj, "restricted-professions", manager_));
+	ref.setRestrictedProfessions(JsonConverter::getDataSet<ProfessionData>(jsonObj, "restrictedProfessions", manager_));
 
 	// Training package cost modifiers
-	ref.setTrainingPackageModifiers(JsonConverter::getDataPrimitiveMap<TrainingPackageData, float>(jsonObj, "training-package-modifiers", manager_));
+	ref.setTrainingPackageModifiers(JsonConverter::getDataPrimitiveMap<TrainingPackageData, float>(jsonObj, "trainingPackageModifiers", manager_));
 
 	return ref;
 }

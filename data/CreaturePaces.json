@@ -3,44 +3,44 @@
         {
             "id" : "CREATUREPACE_DASH",
             "name" : "Dash",
-            "exhaustion-multiplier" : 5E1,
-            "movement-multiplier" : 5E0,
-            "manoeuvre-difficulty" : "Hard"
+            "exhaustionMultiplier" : 5E1,
+            "movementMultiplier" : 5E0,
+            "manoeuvreDifficulty" : "Hard"
         },
         {
             "id" : "CREATUREPACE_FAST_SPRINT",
             "name" : "Fast Sprint",
-            "exhaustion-multiplier" : 6E0,
-            "movement-multiplier" : 4E0,
-            "manoeuvre-difficulty" : "Medium"
+            "exhaustionMultiplier" : 6E0,
+            "movementMultiplier" : 4E0,
+            "manoeuvreDifficulty" : "Medium"
         },
         {
             "id" : "CREATUREPACE_JOG",
             "name" : "Jog",
-            "exhaustion-multiplier" : 3.333333507180214E-2,
-            "movement-multiplier" : 1.5E0,
-            "manoeuvre-difficulty" : "Routine"
+            "exhaustionMultiplier" : 3.333333507180214E-2,
+            "movementMultiplier" : 1.5E0,
+            "manoeuvreDifficulty" : "Routine"
         },
         {
             "id" : "CREATUREPACE_RUN",
             "name" : "Run",
-            "exhaustion-multiplier" : 8.33333358168602E-2,
-            "movement-multiplier" : 2E0,
-            "manoeuvre-difficulty" : "Easy"
+            "exhaustionMultiplier" : 8.33333358168602E-2,
+            "movementMultiplier" : 2E0,
+            "manoeuvreDifficulty" : "Easy"
         },
         {
             "id" : "CREATUREPACE_SPRINT",
             "name" : "Sprint",
-            "exhaustion-multiplier" : 2E0,
-            "movement-multiplier" : 3E0,
-            "manoeuvre-difficulty" : "Light"
+            "exhaustionMultiplier" : 2E0,
+            "movementMultiplier" : 3E0,
+            "manoeuvreDifficulty" : "Light"
         },
         {
             "id" : "CREATUREPACE_WALK",
             "name" : "Walk",
-            "exhaustion-multiplier" : 1.666666753590107E-2,
-            "movement-multiplier" : 1E0,
-            "manoeuvre-difficulty" : "Normal"
+            "exhaustionMultiplier" : 1.666666753590107E-2,
+            "movementMultiplier" : 1E0,
+            "manoeuvreDifficulty" : "Normal"
         }
     ]
 }

@@ -7,8 +7,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 51,
@@ -826,7 +826,7 @@
                     "at20" : "13|Slash:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -860,8 +860,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 48,
@@ -1703,7 +1703,7 @@
                     "at20" : "16|Puncture:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -1737,8 +1737,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 30,
@@ -2724,7 +2724,7 @@
                     "at20" : "5|Brawling:D"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -2758,8 +2758,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 36,
@@ -3697,7 +3697,7 @@
                     "at20" : "10|Puncture:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -3731,8 +3731,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 30,
@@ -4718,7 +4718,7 @@
                     "at20" : "20|Krush:E|Krush:C"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -4752,8 +4752,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 60,
@@ -5499,7 +5499,7 @@
                     "at20" : "4|Grapple:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -5533,8 +5533,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 46,
                     "max" : 48,
@@ -6376,7 +6376,7 @@
                     "at20" : "18|Unbalance:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -6410,8 +6410,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 39,
@@ -7325,7 +7325,7 @@
                     "at20" : "10|Martial Arts Strikes:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -7359,8 +7359,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 48,
@@ -8202,7 +8202,7 @@
                     "at20" : "4|Martial Arts Sweeps:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -8236,8 +8236,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 45,
@@ -9103,7 +9103,7 @@
                     "at20" : "10|Unbalance:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -9137,8 +9137,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 39,
@@ -10052,7 +10052,7 @@
                     "at20" : "4|Tiny:E"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -10086,8 +10086,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 33,
@@ -11049,7 +11049,7 @@
                     "at20" : "5|Tiny:D"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
@@ -11083,8 +11083,8 @@
             "medium" : 120,
             "large" : 135,
             "huge" : 150,
-            "max-row" : 150,
-            "modified-rows" : [
+            "maxRow" : 150,
+            "modifiedRows" : [
                 {
                     "min" : 3,
                     "max" : 30,
@@ -12070,7 +12070,7 @@
                     "at20" : "14|Krush:E|Krush:C"
                 }
             ],
-            "unmodified-rows" : [
+            "unmodifiedRows" : [
                 {
                     "min" : 1,
                     "max" : 2,
