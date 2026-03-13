@@ -12,15 +12,15 @@ json::value SkillSerializer::serializeObject(const SkillData& ref) const {
 	JsonConverter::setString(obj, "description", ref.description());
 	JsonConverter::setString(obj, "book", ref.book().id());
 	JsonConverter::setString(obj, "action", toString(ref.actionType()));
-	JsonConverter::setString(obj, "difficulties-summary", ref.difficultySummary());
+	JsonConverter::setString(obj, "difficultiesSummary", ref.difficultySummary());
 	JsonConverter::setString(obj, "notes", ref.notes());
-	JsonConverter::setBool(obj, "is-restricted", ref.restricted());
-	JsonConverter::setBool(obj, "can-specialise", ref.canSpecialise());
-	JsonConverter::setBool(obj, "mandatory-subcategory", ref.mandatorySubcategory());
+	JsonConverter::setBool(obj, "isRestricted", ref.restricted());
+	JsonConverter::setBool(obj, "canSpecialise", ref.canSpecialise());
+	JsonConverter::setBool(obj, "mandatorySubcategory", ref.mandatorySubcategory());
 	JsonConverter::setStringSet(obj, "subcategories", ref.subcategories());
 	JsonConverter::setEnumSet(obj, "stats", ref.stats());
 	JsonConverter::setFloat(obj, "exhaustion", ref.exhaustionCost());
-	JsonConverter::setFloat(obj, "distance-multiplier", ref.distanceMultiplier());
+	JsonConverter::setFloat(obj, "distanceMultiplier", ref.distanceMultiplier());
 
 	return obj;
 }
@@ -38,15 +38,15 @@ const SkillData& SkillSerializer::deserializeObject(json::object& jsonObj) const
 	fromString(JsonConverter::getString(jsonObj, "action"), action_type);
 	ref.setActionType(action_type);
 
-	ref.setDifficultySummary(JsonConverter::getString(jsonObj, "difficulties-summary"));
+	ref.setDifficultySummary(JsonConverter::getString(jsonObj, "difficultiesSummary"));
 	ref.setNotes(JsonConverter::getString(jsonObj, "notes"));
-	ref.setIsRestricted(JsonConverter::getBool(jsonObj, "is-restricted", false));
-	ref.setCanSpecialise(JsonConverter::getBool(jsonObj, "can-specialise", false));
-	ref.setMandatorySubcategory(JsonConverter::getBool(jsonObj, "mandatory-subcategory", false));
+	ref.setIsRestricted(JsonConverter::getBool(jsonObj, "isRestricted", false));
+	ref.setCanSpecialise(JsonConverter::getBool(jsonObj, "canSpecialise", false));
+	ref.setMandatorySubcategory(JsonConverter::getBool(jsonObj, "mandatorySubcategory", false));
 	ref.setSubcategories(JsonConverter::getStringSet(jsonObj, "subcategories"));
 	ref.setStats(JsonConverter::getEnumVector<StatType::Type>(jsonObj, "stats"));
 	ref.setExhaustionCost(JsonConverter::getFloat(jsonObj, "exhaustion", 0.0f));
-	ref.setDistanceMultiplier(JsonConverter::getFloat(jsonObj, "distance-multiplier", 1.0f));
+	ref.setDistanceMultiplier(JsonConverter::getFloat(jsonObj, "distanceMultiplier", 1.0f));
 
 	return ref;
 }

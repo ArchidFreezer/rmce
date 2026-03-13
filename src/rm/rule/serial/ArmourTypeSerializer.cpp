@@ -10,12 +10,12 @@ json::value ArmourTypeSerializer::serializeObject(const ArmourTypeData& ref) con
 	JsonConverter::setString(obj, "name", ref.name());
 	JsonConverter::setString(obj, "type", toString(ref.type()));
 	JsonConverter::setString(obj, "description", ref.description());
-	JsonConverter::setInt(obj, "min-manoeuvre-mod", ref.minManoeuvreMod());
-	JsonConverter::setInt(obj, "max-manoeuvre-mod", ref.maxManoeuvreMod());
-	JsonConverter::setInt(obj, "missile-attack-penalty", ref.missileAttackPenalty());
-	JsonConverter::setInt(obj, "quickness-penalty", ref.quicknessPenalty());
-	JsonConverter::setBool(obj, "animal-only", ref.animalOnly());
-	JsonConverter::setBool(obj, "includes-greaves", ref.includesGreaves());
+	JsonConverter::setInt(obj, "minManoeuvreMod", ref.minManoeuvreMod());
+	JsonConverter::setInt(obj, "maxManoeuvreMod", ref.maxManoeuvreMod());
+	JsonConverter::setInt(obj, "missileAttackPenalty", ref.missileAttackPenalty());
+	JsonConverter::setInt(obj, "quicknessPenalty", ref.quicknessPenalty());
+	JsonConverter::setBool(obj, "animalOnly", ref.animalOnly());
+	JsonConverter::setBool(obj, "includesGreaves", ref.includesGreaves());
 
 	return obj;
 }
@@ -31,12 +31,12 @@ const ArmourTypeData& ArmourTypeSerializer::deserializeObject(json::object& json
 		throw ArmourType::ArmourTypeNotFoundException("Could not find an armour type for: " + type_name);
 	}
 	ref.setDescription(JsonConverter::getString(jsonObj, "description"));
-	ref.setMinManoeuvreMod(JsonConverter::getInt(jsonObj, "min-manoeuvre-mod"));
-	ref.setMaxManoeuvreMod(JsonConverter::getInt(jsonObj, "max-manoeuvre-mod"));
-	ref.setMissileAttackPenalty(JsonConverter::getInt(jsonObj, "missile-attack-penalty"));
-	ref.setQuicknessPenalty(JsonConverter::getInt(jsonObj, "quickness-penalty"));
-	ref.setAnimalOnly(JsonConverter::getBool(jsonObj, "animal-only"));
-	ref.setIncludesGreaves(JsonConverter::getBool(jsonObj, "includes-greaves"));
+	ref.setMinManoeuvreMod(JsonConverter::getInt(jsonObj, "minManoeuvreMod"));
+	ref.setMaxManoeuvreMod(JsonConverter::getInt(jsonObj, "maxManoeuvreMod"));
+	ref.setMissileAttackPenalty(JsonConverter::getInt(jsonObj, "missileAttackPenalty"));
+	ref.setQuicknessPenalty(JsonConverter::getInt(jsonObj, "quicknessPenalty"));
+	ref.setAnimalOnly(JsonConverter::getBool(jsonObj, "animalOnly"));
+	ref.setIncludesGreaves(JsonConverter::getBool(jsonObj, "includesGreaves"));
 	return ref;
 }
 

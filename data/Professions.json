@@ -5,7 +5,7 @@
             "name" : "Animist",
             "description" : "Animists are Pure spell users of Channeling specializing in studies and powers concerning living things (e.g., druids, Shinto priests, etc.). Their base spells deal with plants, animals, weather, and nature in general.",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -13,7 +13,7 @@
                 "Intuition",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -26,7 +26,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Everyman"
@@ -52,7 +52,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_LORE_MAGICAL",
                     "value" : 5
@@ -70,7 +70,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -312,7 +312,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -332,7 +332,7 @@
             "name" : "Arcanist",
             "description" : "The Arcanist is a pure Arcane spell user who deals in the manipulation of raw power. Acanist are generally found near Earthnodes, as they have spells that allow then to directly tap into the great power found there.",
             "book" : "BOOK_ARCANE_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Arcane"
             ],
@@ -342,7 +342,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -355,13 +355,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_REALITY_AWARENESS",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_LORE_MAGICAL",
                     "value" : 10
@@ -379,7 +379,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -621,7 +621,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SCIENCE_ANALYTIC",
                     "value" : 5
@@ -637,7 +637,7 @@
             "name" : "Armsmaster",
             "description" : "Armsmasters are semi spell users of the realm of Mentalism. They will be found in many milieux, serving as household knights, mercenary commanders, army or naval officers, or in elite special forces. They will rarely, if ever, be common soldiers or sailors. Their base spells deal with all aspects of military life, improving their personal skill at arms and survival capabilities, and assisting with military organization, on and off the battlefield.",
             "book" : "BOOK_MENTALISM_COMPANION",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Mentalism"
@@ -646,7 +646,7 @@
                 "Agility",
                 "Presence"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -659,7 +659,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -677,7 +677,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 10
@@ -691,7 +691,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "4:4:4"
@@ -933,7 +933,7 @@
                     "cost" : "6"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -953,7 +953,7 @@
             "name" : "Astrologer",
             "description" : "Astrologers are Hybrid spell users who combine the realms of Channeling and Mentalism. They have concentrated on spells which pertain to gathering information, and concentrate on observing the movements of the celestial bodies. Their spells deal with detection, communing, precognition, and communication, and many are only (fully) usable under the light of the stars.",
             "book" : "BOOK_MENTALISM_COMPANION",
-            "spell-user-type" : "Hybrid",
+            "spellUserType" : "Hybrid",
             "realms" : [
                 "Channeling",
                 "Mentalism"
@@ -963,7 +963,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -976,7 +976,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ASTRONOMY",
                     "value" : "Occupational"
@@ -1018,7 +1018,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_LORE_GENERAL",
                     "value" : 5
@@ -1048,7 +1048,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "7:7:7"
@@ -1290,7 +1290,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 10
@@ -1306,7 +1306,7 @@
             "name" : "Barbarian",
             "description" : "Barbarians are non spell users who are uncivilized, outdoor fighters. Their combat skills are narrower than other non spell users, but they are very good at what they do. They shun armour, but are stronger than any other profession. literary examples of Barbarians would include Conan, Fafhrd, and Cerebus.",
             "book" : "BOOK_SCHOOL_OF_HARD_KNOCKS",
-            "spell-user-type" : "None",
+            "spellUserType" : "None",
             "realms" : [
                 "Arms"
             ],
@@ -1314,7 +1314,7 @@
                 "Constitution",
                 "Strength"
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -1328,7 +1328,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-subcategory-development-type-choices" : [
+            "skillSubcategoryDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -1344,7 +1344,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 15
@@ -1354,13 +1354,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_URBAN",
                     "value" : "Restricted"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "10"
@@ -1602,7 +1602,7 @@
                     "cost" : "6"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -1622,7 +1622,7 @@
             "name" : "Bard",
             "description" : "Bards are Semi spell users who combine the realm of Mentalism with the realm of Arms. Their base spells deal with sound, lore, entertaining, and item use.",
             "book" : "BOOK_FANTASY_ROLE_PLAYING",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Mentalism"
@@ -1631,7 +1631,7 @@
                 "Memory",
                 "Presence"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -1644,7 +1644,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -1654,7 +1654,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ARTISTIC_ACTIVE",
                     "value" : 5
@@ -1680,7 +1680,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "5:5:5"
@@ -1922,7 +1922,7 @@
                     "cost" : "15"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -1942,7 +1942,7 @@
             "name" : "Channeling Alchemist",
             "description" : "Channeling-based Alchemists are pure spell users of Channeling, who have concentrated on the creation of items. Their base spells deal with the creation of magical items, holy vestments, holy water, and wards.",
             "book" : "BOOK_TREASURE_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -1950,7 +1950,7 @@
                 "Intuition",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -1966,7 +1966,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Everyman"
@@ -1988,7 +1988,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_CRAFTS",
                     "value" : 15
@@ -2014,7 +2014,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -2256,7 +2256,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
@@ -2272,7 +2272,7 @@
             "name" : "Chaotic",
             "description" : "The Choatic, also referred to as the Wild Mage, is that mage who has learned his craft without the benefit of schooling or guidance (i.e., he is self-taught). The Chaotic wields an ecletic variety of odd powers, which sometime work and sometimes do not!",
             "book" : "BOOK_ARCANE_COMPANION",
-            "spell-user-type" : "Chaotic",
+            "spellUserType" : "Chaotic",
             "realms" : [
                 "Arcane",
                 "Arms"
@@ -2283,7 +2283,7 @@
                 "Intuition",
                 "Presence"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 4,
                     "options" : [
@@ -2294,13 +2294,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ADRENAL_CONCENTRATION",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -2330,7 +2330,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "8:8:8"
@@ -2572,7 +2572,7 @@
                     "cost" : "15"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_WEAPON",
                     "value" : 5
@@ -2584,7 +2584,7 @@
             "name" : "Cleric",
             "description" : "Clerics are pure spell users of Channeling who have concentrated in spells that require direct power from their deities. These spell users are the most powerful of the spell users of Channeling, but they are also the most restricted because of the requirements of their deity.",
             "book" : "BOOK_FANTASY_ROLE_PLAYING",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -2592,7 +2592,7 @@
                 "Intuition",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -2605,7 +2605,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Everyman"
@@ -2627,7 +2627,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -2649,7 +2649,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -2891,7 +2891,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -2915,7 +2915,7 @@
             "name" : "Dabbler",
             "description" : "Dabblers are Semi spell users who combine the realm of Essence with the realm of Arms. Their base spells deal with stealth, detection, perception, movement and manipulating locks and traps.",
             "book" : "BOOK_FANTASY_ROLE_PLAYING",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Essence"
@@ -2924,7 +2924,7 @@
                 "Agility",
                 "Empathy"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -2937,7 +2937,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -2963,7 +2963,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -2989,7 +2989,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -3231,7 +3231,7 @@
                     "cost" : "15"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 10
@@ -3251,7 +3251,7 @@
             "name" : "Dërnakwmün-Khad",
             "description" : "This Dwarven order is a martial order that looks to the protection and warding of Dwarves and their homes.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -3259,7 +3259,7 @@
                 "Intuition",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -3272,7 +3272,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -3294,7 +3294,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -3536,7 +3536,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 10
@@ -3556,7 +3556,7 @@
             "name" : "Dërnakwmün-Pør",
             "description" : "The more martial of the dwarven cleric orders, accompanying Dwarven hosts to war, and found always in the company of soldiery.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -3564,7 +3564,7 @@
                 "Intuition",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -3577,7 +3577,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -3595,7 +3595,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -3837,7 +3837,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -3861,7 +3861,7 @@
             "name" : "Enchanter",
             "description" : "Enchanters are hybrid spell users of the realms of Essence and Mentalism. They have concentrated on spells of misdirection and manipulation which directly affect the minds of humanoids, beasts, animals and other sentients. Their base spells deal with inducing hallucinations (mental illusions), mind control, and memory manipulation.",
             "book" : "BOOK_MENTALISM_COMPANION",
-            "spell-user-type" : "Hybrid",
+            "spellUserType" : "Hybrid",
             "realms" : [
                 "Essence",
                 "Mentalism"
@@ -3871,7 +3871,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -3884,7 +3884,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_HYPNOSIS",
                     "value" : "Everyman"
@@ -3906,7 +3906,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : 5
@@ -3936,7 +3936,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "7:7:7"
@@ -4178,7 +4178,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -4194,7 +4194,7 @@
             "name" : "Essence Alchemist",
             "description" : "Essence-based Alchemists are pure spell users of Essence, who have concentrated on the creation of items. Their base spells deal with the creation of magical items, potions, runes, staves, and wands.",
             "book" : "BOOK_TREASURE_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Essence"
             ],
@@ -4202,7 +4202,7 @@
                 "Empathy",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -4218,7 +4218,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ARTIFACT_LORE",
                     "value" : "Everyman"
@@ -4240,7 +4240,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_CRAFTS",
                     "value" : 15
@@ -4270,7 +4270,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 6,
                     "type" : "Occupational",
@@ -4279,7 +4279,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "5:5:5"
@@ -4521,7 +4521,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
@@ -4533,7 +4533,7 @@
             "name" : "Fighter",
             "description" : "Fighters are non spell users who will find it relatively easy to develop a variety of different weapons and to wear heavier types of armor. They are less skilled in manuevering and manipulating mechanical devices such as locks and traps (though they are still superior to most spell users in these areas). They have the greatest difficulty learning anything connected with spells. Some literary examples of a Fighter might include Conan the Barbarian, Little John, and Gimli the Dwarf.",
             "book" : "BOOK_FANTASY_ROLE_PLAYING",
-            "spell-user-type" : "None",
+            "spellUserType" : "None",
             "realms" : [
                 "Arms"
             ],
@@ -4541,7 +4541,7 @@
                 "Constitution",
                 "Strength"
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_BOXING",
                     "value" : "Everyman"
@@ -4567,7 +4567,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 10
@@ -4577,7 +4577,7 @@
                     "value" : 10
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -4586,7 +4586,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "2:2:2"
@@ -4828,7 +4828,7 @@
                     "cost" : "5"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -4844,7 +4844,7 @@
             "name" : "Healer",
             "description" : "Healers are Hybrid spell users who combine the realms of Channeling and Mentalism; they channel power to take wounds from others and use the enormous recuperative power of their bodies to heal the wounds once taken. Thus, a Healer could heal a person by taking his patient's injury upon himself and then healing this injury gradually.",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "Hybrid",
+            "spellUserType" : "Hybrid",
             "realms" : [
                 "Channeling",
                 "Mentalism"
@@ -4854,7 +4854,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -4867,7 +4867,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ADRENAL_STABILIZATION",
                     "value" : "Everyman"
@@ -4909,7 +4909,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 10
@@ -4935,7 +4935,7 @@
                     "value" : 10
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "7:7:7"
@@ -5177,7 +5177,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -5193,7 +5193,7 @@
             "name" : "Illusionist",
             "description" : "Illusionists are Pure spell users who have concentrated in spells of misdirection and illusion. Their base spells deal mainly with the manipulation of elements that affect the human senses. Illusionists have advantages in specific skills (senses, Stalking, Hiding, etc.) over other spell users.",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Essence"
             ],
@@ -5201,7 +5201,7 @@
                 "Empathy",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -5214,7 +5214,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -5232,7 +5232,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_DIRECTED_SPELLS",
                     "value" : 5
@@ -5254,7 +5254,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -5496,7 +5496,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -5512,7 +5512,7 @@
             "name" : "Layman",
             "description" : "Normally each character has an 'adventuring' profession, reflecting how his early training and life have moulded his thought patterns. However, the Layman profession represents characters who do not have a standard adventuring profession. Most non-adventuring NPCs will have the Layman profession.",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "None",
+            "spellUserType" : "None",
             "realms" : [
                 "Arms"
             ],
@@ -5521,13 +5521,13 @@
                 "Constitution",
                 "Reasoning"
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -5549,7 +5549,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Occupational",
@@ -5558,7 +5558,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "4:4:4"
@@ -5800,7 +5800,7 @@
                     "cost" : "7"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ATHLETIC",
                     "value" : 5
@@ -5828,7 +5828,7 @@
             "name" : "Lay Healer",
             "description" : "Lay Healers can aid the recuperative powers of others. Lay Healers are Pure spell users of Mentalism who have concentrated on spells that heal people and animals. Their base spells deal with the specific healing of certain diseases and injuries: organs, blood, muscles, bones, and concussion hits.",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Mentalism"
             ],
@@ -5836,7 +5836,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -5849,7 +5849,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ADRENAL_STABILIZATION",
                     "value" : "Everyman"
@@ -5891,7 +5891,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 10
@@ -5917,7 +5917,7 @@
                     "value" : 10
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "5:5:5"
@@ -6159,7 +6159,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -6175,7 +6175,7 @@
             "name" : "Magehunter",
             "description" : "The Magehunter is a semi spell user who incorporates the realm of Arms with Arcane magic. He has dedicated himself to hunting down rogue mages and those who must be brought to some kind of justice.",
             "book" : "BOOK_ARCANE_COMPANION",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arcane",
                 "Arms"
@@ -6186,7 +6186,7 @@
                 "Intuition",
                 "Presence"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -6199,13 +6199,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_POWER_PERCEPTION",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -6223,7 +6223,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "7:7:7"
@@ -6465,7 +6465,7 @@
                     "cost" : "9"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -6493,7 +6493,7 @@
             "name" : "Magent",
             "description" : "Magents are Semi spell users who combine the realm of Mentalism with the realm of Arms. Their base spells deal with information gathering, subterfuge, and performing stealthy missions.",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Mentalism"
@@ -6502,7 +6502,7 @@
                 "Presence",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -6515,13 +6515,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -6543,7 +6543,7 @@
                     "value" : 10
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "6:6:6"
@@ -6785,7 +6785,7 @@
                     "cost" : "10"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 10
@@ -6805,7 +6805,7 @@
             "name" : "Magician",
             "description" : "Magicians are Pure spell users of Essence who have concentrated on elemental spells. Their base spells deal with the elements of earth, water, air, heat, cold, and light.",
             "book" : "BOOK_FANTASY_ROLE_PLAYING",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Essence"
             ],
@@ -6813,7 +6813,7 @@
                 "Empathy",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -6826,7 +6826,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -6848,7 +6848,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_DIRECTED_SPELLS",
                     "value" : 10
@@ -6870,7 +6870,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -7112,7 +7112,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
@@ -7124,7 +7124,7 @@
             "name" : "Mana Molder",
             "description" : "Mana Molders are Pure Spells users of Essence who concentrate on Mana Forms. mana forms are solid manifestations of the Essence. Mana molders employe their spells to create temporary items, force fields, and even mana creatures. Mana creatures can either be servants capable of simple tasks or warriors capable of following simple orders.",
             "book" : "BOOK_ESSENCE_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Essence"
             ],
@@ -7132,7 +7132,7 @@
                 "Agility",
                 "Empathy"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -7145,7 +7145,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -7163,7 +7163,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_LORE_MAGICAL",
                     "value" : 10
@@ -7181,7 +7181,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -7423,7 +7423,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
@@ -7439,7 +7439,7 @@
             "name" : "Mentalism Alchemist",
             "description" : "Mentalism-based Alchemists are pure spell users of Mentalism, who have concentrated on the creation of items. Their base spells deal with the creation of magical items through concentration of magical energies through the power of their minds. As a byproduct, many of their lists give them great control over their own bodies.",
             "book" : "BOOK_TREASURE_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Mentalism"
             ],
@@ -7447,7 +7447,7 @@
                 "Presence",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -7463,7 +7463,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -7485,7 +7485,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -7515,7 +7515,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 6,
                     "type" : "Occupational",
@@ -7524,7 +7524,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "5:5:5"
@@ -7766,7 +7766,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
@@ -7778,7 +7778,7 @@
             "name" : "Mentalist",
             "description" : "Mentalists are the basic spell users of Mentalism who have concentrated on spells that deal with the interaction of minds. Their base spells deal with the detection of mental Presence, mental communication, mind control, mind attack, mind merging, and sense control.",
             "book" : "BOOK_FANTASY_ROLE_PLAYING",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Mentalism"
             ],
@@ -7786,7 +7786,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -7799,7 +7799,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -7817,7 +7817,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -7847,7 +7847,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "7:7:7"
@@ -8089,7 +8089,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -8105,7 +8105,7 @@
             "name" : "Monk",
             "description" : "Monks are Semi spell users who combine the realm of Essence with the realm of Arms. Their base spells deal with personal movement and the control of their own body and mind, while their arms capabilities are concentrated in unarmored, unarmed combat.",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Essence"
@@ -8114,7 +8114,7 @@
                 "Empathy",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -8127,7 +8127,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -8141,7 +8141,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "value" : 5
@@ -8163,7 +8163,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -8405,7 +8405,7 @@
                     "cost" : "15"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -8425,7 +8425,7 @@
             "name" : "Mystic",
             "description" : "Mystics are Hybrid spell users who combine the realms of Essence and Mentalism; they have concentrated on subtle spells of misdirection and modification. Their base spells deal with personal illusion as well as the modification of matter.",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "Hybrid",
+            "spellUserType" : "Hybrid",
             "realms" : [
                 "Essence",
                 "Mentalism"
@@ -8435,7 +8435,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -8448,7 +8448,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ADRENAL_STABILIZATION",
                     "value" : "Everyman"
@@ -8474,7 +8474,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -8504,7 +8504,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "7:7:7"
@@ -8746,7 +8746,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -8762,7 +8762,7 @@
             "name" : "Mythic",
             "description" : "Mythics are semi spell users who combine the realm of Subterfuge with the realm of Channeling. Their base spells deal with detection, stealth, protection and impersonating members or other faiths. Often standing outside normal church hierarchy they perfrom secret missions for their religion and their deity.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Channeling"
@@ -8771,7 +8771,7 @@
                 "Agility",
                 "Intuition"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -8784,13 +8784,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_RELIGION",
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -8812,7 +8812,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "7:7:7"
@@ -9054,7 +9054,7 @@
                     "cost" : "9"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ATHLETIC",
                     "value" : 5
@@ -9074,7 +9074,7 @@
             "name" : "Outrider",
             "description" : "The Outrider is a non spell user who concentrates on stealth and awareness. He is the point man for any military force. It is his job to scout ahead of the main group, looking for traps and signs of the enemy.",
             "book" : "BOOK_SCHOOL_OF_HARD_KNOCKS",
-            "spell-user-type" : "None",
+            "spellUserType" : "None",
             "realms" : [
                 "Arms"
             ],
@@ -9082,7 +9082,7 @@
                 "Agility",
                 "Intuition"
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -9092,7 +9092,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-subcategory-development-type-choices" : [
+            "skillSubcategoryDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -9108,7 +9108,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : 5
@@ -9118,7 +9118,7 @@
                     "value" : 10
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "4:4:4"
@@ -9360,7 +9360,7 @@
                     "cost" : "6"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -9384,7 +9384,7 @@
             "name" : "Paladin",
             "description" : "Paladins are Semi spell users who combine the realm of Arms with the realm of Channeling. Their base spells primarily deal with combat and protection. An example of a Paladin (from literature) might be Lancelot or Percival (from King Arthur's knights).",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Channeling"
@@ -9393,7 +9393,7 @@
                 "Intuition",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -9406,13 +9406,13 @@
                     ]
                 }
             ],
-            "skill-bonuses" : [
+            "skillBonuses" : [
                 {
                     "id" : "SKILL_TRANSCEND_ARMOR",
                     "value" : 20
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_JOUSTING",
                     "value" : "Everyman"
@@ -9422,7 +9422,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 10
@@ -9436,7 +9436,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "3:3:3"
@@ -9678,7 +9678,7 @@
                     "cost" : "6"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -9702,7 +9702,7 @@
             "name" : "Priest of Agriculture",
             "description" : "Priests of Agriculture help those who wortk the land cultivating food.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -9710,7 +9710,7 @@
                 "Constitution",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -9723,7 +9723,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_HISTORY",
                     "value" : "Everyman"
@@ -9733,7 +9733,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -9755,13 +9755,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -10003,7 +10003,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_LORE",
                     "value" : 10
@@ -10019,14 +10019,14 @@
             "name" : "Priest of Ancestors",
             "description" : "Priests of Ancestors believe that a persons ancestors can influence the current world and should be revered.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -10039,7 +10039,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_HERALDRY",
                     "value" : "Everyman"
@@ -10053,7 +10053,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-subcategory-development-type-choices" : [
+            "skillSubcategoryDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -10062,7 +10062,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : 10
@@ -10084,7 +10084,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -10326,7 +10326,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_LORE",
                     "value" : 15
@@ -10342,7 +10342,7 @@
             "name" : "Priest of Animals",
             "description" : "Priests of Animals specialise in both the care and treatment of animals, with their faith often focussing on a specifc kind of animal.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -10350,7 +10350,7 @@
                 "Memory",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 5,
                     "options" : [
@@ -10372,13 +10372,13 @@
                     ]
                 }
             ],
-            "skill-bonuses" : [
+            "skillBonuses" : [
                 {
                     "id" : "SKILL_ANIMAL_MASTERY",
                     "value" : 25
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ANIMAL_HANDLING",
                     "value" : "Occupational"
@@ -10400,7 +10400,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_CRAFTS",
                     "value" : 5
@@ -10422,13 +10422,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -10670,7 +10670,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
@@ -10686,7 +10686,7 @@
             "name" : "Priest of Arts",
             "description" : "Priests of Arts value aesthetics and focus on both artistic and crafting.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -10694,7 +10694,7 @@
                 "Memory",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -10707,13 +10707,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_RELIGION",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "value" : 5
@@ -10731,7 +10731,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -10740,7 +10740,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -10982,7 +10982,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARTISTIC",
                     "value" : 15
@@ -10992,13 +10992,13 @@
                     "value" : 5
                 }
             ],
-            "skill-group-skill-development-types" : [
+            "skillGroupSkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLGROUP_ARTISTIC",
                     "value" : "Everyman"
                 }
             ],
-            "skill-group-skill-development-type-choices" : [
+            "skillGroupSkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Occupational",
@@ -11013,14 +11013,14 @@
             "name" : "Priest of Birth, Children",
             "description" : "Priests of Birth, Children are natural midwives and nursery attendants revelling in the joy and innocence of early life.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -11033,7 +11033,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_FIRST_AID",
                     "value" : "Everyman"
@@ -11055,7 +11055,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -11069,7 +11069,7 @@
                     "value" : 10
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -11311,7 +11311,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_LORE",
                     "value" : 5
@@ -11331,7 +11331,7 @@
             "name" : "Priest of Community",
             "description" : "Priests of Community understand both the history and trappings of a community and are typically great orators when talking to members of it.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -11339,7 +11339,7 @@
                 "Memory",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -11352,7 +11352,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_HERALDRY",
                     "value" : "Everyman"
@@ -11370,7 +11370,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -11384,7 +11384,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -11626,7 +11626,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -11650,7 +11650,7 @@
             "name" : "Priest of Competition",
             "description" : "Priests of Competition spent their time not only training for physical competive activities, but also discerning if anyone is cheating during a competition.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -11658,7 +11658,7 @@
                 "Memory",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -11671,7 +11671,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ATHLETIC_GAMES_BRAWN",
                     "value" : "Everyman"
@@ -11689,7 +11689,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -11703,7 +11703,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Occupational",
@@ -11712,7 +11712,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -11954,7 +11954,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -11972,7 +11972,7 @@
                     "value" : 10
                 }
             ],
-            "skill-group-skill-development-type-choices" : [
+            "skillGroupSkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -11987,7 +11987,7 @@
             "name" : "Priest of Crafts",
             "description" : "Priests of Crafts focus on both crafting items and also identifying or evaluating them. A priest often has a craft at which they are especially gifted. They also have a bonus to locating hidden objects that are crafted such as secret doors.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -11995,7 +11995,7 @@
                 "Agility",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -12008,13 +12008,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_RELIGION",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ARTISTIC_PASSIVE",
                     "value" : 10
@@ -12024,7 +12024,7 @@
                     "value" : 15
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_ARTISTIC_PASSIVE",
                     "value" : "Everyman"
@@ -12034,7 +12034,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Occupational",
@@ -12043,7 +12043,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -12285,7 +12285,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -12309,7 +12309,7 @@
             "name" : "Priest of Darkness, Night",
             "description" : "Priests of Darkness, Night are masters of subterfuge and stealth being able to both perform and detect activities that occur in the dark.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -12317,7 +12317,7 @@
                 "Memory",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -12330,7 +12330,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ASTRONOMY",
                     "value" : "Occupational"
@@ -12348,25 +12348,25 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "value" : 10
                 }
             ],
-            "skill-category-special-bonuses" : [
+            "skillCategorySpecialBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "value" : 15
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -12608,7 +12608,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 10
@@ -12626,7 +12626,7 @@
                     "value" : 5
                 }
             ],
-            "skill-group-special-bonuses" : [
+            "skillGroupSpecialBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -12638,7 +12638,7 @@
             "name" : "Priest of Dawn",
             "description" : "Priests of Dawn work against the undead, having enhanced resistances to the effects of the undead.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -12646,7 +12646,7 @@
                 "Memory",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -12659,7 +12659,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_DIRECTION_SENSE",
                     "value" : "Occupational"
@@ -12669,7 +12669,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_POWER_AWARENESS",
                     "value" : 5
@@ -12687,13 +12687,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_LORE_MAGICAL",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -12935,7 +12935,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 10
@@ -12955,14 +12955,14 @@
             "name" : "Priest of Death",
             "description" : "Priests of Death are often feareded characters though they are not necessarily evil. Their reputation comes form their ability to age and debilitate others in the name of their god.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -12975,13 +12975,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_RELIGION",
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -13003,13 +13003,13 @@
                     "value" : 10
                 }
             ],
-            "skill-category-special-bonuses" : [
+            "skillCategorySpecialBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 15
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -13251,7 +13251,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 10
@@ -13267,7 +13267,7 @@
             "name" : "Priest of Disease",
             "description" : "Priests of Disease specialise in both the spreading and production of diseases, having knowledge of disease bearing insects and an innate resistance to the dieases they carry.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -13275,7 +13275,7 @@
                 "Constitution",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -13288,7 +13288,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_HERB_LORE",
                     "value" : "Occupational"
@@ -13302,7 +13302,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_POWER_AWARENESS",
                     "value" : 5
@@ -13320,13 +13320,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -13568,7 +13568,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -13592,14 +13592,14 @@
             "name" : "Priest of Earth",
             "description" : "Priests of Earth focus on both earth as a substance and stone and have a bonus to any Awareness manoeuvre that involves earth or stone, such as detecting sloping passages or secret doors, identifying underground depth, etc.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -13612,7 +13612,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_COOKING",
                     "value" : "Occupational"
@@ -13638,7 +13638,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-subcategory-development-type-choices" : [
+            "skillSubcategoryDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -13647,7 +13647,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -13661,7 +13661,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -13903,7 +13903,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -13931,14 +13931,14 @@
             "name" : "Priest of Fate, Destiny",
             "description" : "Priests of Fate, destiny look to the future to see what is holds.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -13951,7 +13951,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ASTRONOMY",
                     "value" : "Occupational"
@@ -13973,7 +13973,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -13987,13 +13987,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-special-bonuses" : [
+            "skillCategorySpecialBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 15
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -14235,7 +14235,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -14255,7 +14255,7 @@
             "name" : "Priest of Fertility",
             "description" : "Priests of Fertility focus on the growth of both fauna and flora and are especially good at handling animals.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -14263,7 +14263,7 @@
                 "Memory",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -14276,7 +14276,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ANIMAL_HANDLING",
                     "value" : "Everyman"
@@ -14314,7 +14314,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ARMOUR_LIGHT",
                     "value" : 10
@@ -14336,13 +14336,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-special-bonuses" : [
+            "skillCategorySpecialBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 15
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -14584,7 +14584,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
@@ -14600,7 +14600,7 @@
             "name" : "Priest of Fire",
             "description" : "Priests of Fire worship the base element and the forms it takes.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -14608,7 +14608,7 @@
                 "Memory",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -14621,7 +14621,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_FORAGING",
                     "value" : "Occupational"
@@ -14635,7 +14635,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -14653,7 +14653,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -14895,7 +14895,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -14919,7 +14919,7 @@
             "name" : "Priest of Fortune, Luck",
             "description" : "Priests of Luck place themselves in the hands of their gods as well as havign teh ability to read portends in the stars.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -14927,7 +14927,7 @@
                 "Memory",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -14940,7 +14940,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ASTRONOMY",
                     "value" : "Occupational"
@@ -14958,7 +14958,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -14976,7 +14976,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -15218,7 +15218,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -15242,7 +15242,7 @@
             "name" : "Priest of Guardianship",
             "description" : "Priests of Guardianship devote their energies to learning how to protect and guard others.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -15250,7 +15250,7 @@
                 "Constitution",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -15263,7 +15263,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_FIRST_AID",
                     "value" : "Everyman"
@@ -15285,7 +15285,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -15303,7 +15303,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -15312,7 +15312,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -15554,7 +15554,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -15578,7 +15578,7 @@
             "name" : "Priest of Healing",
             "description" : "Priests of Healing follow gogs that tend to the health of their flock.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -15586,7 +15586,7 @@
                 "Memory",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -15599,7 +15599,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_FIRST_AID",
                     "value" : "Occupational"
@@ -15621,7 +15621,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -15635,7 +15635,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -15877,7 +15877,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -15901,7 +15901,7 @@
             "name" : "Priest of Hunting",
             "description" : "Priests of Hunting are found wherever their is game or other quarry tp be found and excel in tracking and trapping game.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -15909,7 +15909,7 @@
                 "Agility",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -15922,7 +15922,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_DIRECTION_SENSE",
                     "value" : "Everyman"
@@ -15960,7 +15960,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
                     "value" : 10
@@ -15986,7 +15986,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -16228,7 +16228,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_LORE",
                     "value" : 5
@@ -16238,7 +16238,7 @@
                     "value" : 5
                 }
             ],
-            "skill-group-skill-development-types" : [
+            "skillGroupSkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLGROUP_OUTDOOR",
                     "value" : "Everyman"
@@ -16250,7 +16250,7 @@
             "name" : "Priest of Justice, Revenge",
             "description" : "Priests of Justice and Revenge are petitioned by people who believe that they have suffered injustice and have the ability to identify lies and track perpetrators.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -16258,7 +16258,7 @@
                 "Constitution",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -16271,7 +16271,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_LIE_PERCEPTION",
                     "value" : "Everyman"
@@ -16289,7 +16289,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -16299,13 +16299,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-special-bonuses" : [
+            "skillCategorySpecialBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 15
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -16547,7 +16547,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -16575,7 +16575,7 @@
             "name" : "Priest of Light",
             "description" : "Priests of Light fight at the forefront against enemies of their faith and are granted nightvision to seek them out even in the dark.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -16583,7 +16583,7 @@
                 "Memory",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -16596,7 +16596,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_DIRECTION_SENSE",
                     "value" : "Occupational"
@@ -16618,7 +16618,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -16636,7 +16636,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -16878,7 +16878,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -16898,7 +16898,7 @@
             "name" : "Priest of Lightning",
             "description" : "Priests of Lightning harness the power of weather and storms to smite the enemies of thier faith, often enhancing their weapons.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -16906,7 +16906,7 @@
                 "Constitution",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -16919,7 +16919,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_RELIGION",
                     "value" : "Everyman"
@@ -16929,7 +16929,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_DIRECTED_SPELLS",
                     "value" : 5
@@ -16943,13 +16943,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-special-bonuses" : [
+            "skillCategorySpecialBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 15
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -17191,7 +17191,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -17215,7 +17215,7 @@
             "name" : "Priest of Literature, Poetry",
             "description" : "Priests of Literature and Poetry are most often found with their noses in a book spending time both reading and discussing the merits of literary style.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -17223,7 +17223,7 @@
                 "Memory",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -17236,7 +17236,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_RELIGION",
                     "value" : "Everyman"
@@ -17246,7 +17246,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : 10
@@ -17260,19 +17260,19 @@
                     "value" : 5
                 }
             ],
-            "skill-category-special-bonuses" : [
+            "skillCategorySpecialBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 15
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -17514,7 +17514,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARTISTIC",
                     "value" : 10
@@ -17534,7 +17534,7 @@
             "name" : "Priest of Love",
             "description" : "Priests of Love are masters of influencing the emotions of others through activities such as dancing, having a good knowledge of herbs.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -17542,7 +17542,7 @@
                 "Memory",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -17555,7 +17555,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_BODY_DEVELOPMENT",
                     "value" : "Restricted"
@@ -17577,7 +17577,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 20
@@ -17591,19 +17591,19 @@
                     "value" : 5
                 }
             ],
-            "skill-category-special-bonuses" : [
+            "skillCategorySpecialBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 15
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -17845,7 +17845,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -17865,7 +17865,7 @@
             "name" : "Priest of Magic",
             "description" : "Priests of Magic study all forms of magic and its sources.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -17873,7 +17873,7 @@
                 "Memory",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -17886,7 +17886,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_BODY_DEVELOPMENT",
                     "value" : "Restricted"
@@ -17900,7 +17900,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -17922,13 +17922,13 @@
                     "value" : 10
                 }
             ],
-            "skill-category-special-bonuses" : [
+            "skillCategorySpecialBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 15
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -17944,7 +17944,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -18186,19 +18186,19 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 10
                 }
             ],
-            "skill-group-skill-development-types" : [
+            "skillGroupSkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : "Restricted"
                 }
             ],
-            "skill-group-skill-development-type-choices" : [
+            "skillGroupSkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -18213,14 +18213,14 @@
             "name" : "Priest of Marriage",
             "description" : "Priests of Marriage look to encourage the permanent joining of couples and take a dim view of those who break their vows.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -18233,7 +18233,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_HISTORY",
                     "value" : "Everyman"
@@ -18243,7 +18243,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -18261,13 +18261,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -18509,7 +18509,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -18533,7 +18533,7 @@
             "name" : "Priest of Messengers",
             "description" : "Priests of Messengers look after those who use communication to convey information.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -18541,7 +18541,7 @@
                 "Memory",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -18554,13 +18554,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_HERALDRY",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ARMOUR_LIGHT",
                     "value" : 10
@@ -18578,7 +18578,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : "Everyman"
@@ -18588,7 +18588,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -18830,7 +18830,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_LORE",
                     "value" : 5
@@ -18850,7 +18850,7 @@
             "name" : "Priest of Metalwork",
             "description" : "Priests of Metalwork are expect craftsmen when working metal and have the ability to assess ores and worked metal.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -18858,7 +18858,7 @@
                 "Constitution",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -18871,14 +18871,14 @@
                     ]
                 }
             ],
-            "skill-bonuses" : [
+            "skillBonuses" : [
                 {
                     "id" : "SKILL_WEAPON_1_H_CONCUSSION",
                     "subcategory" : "War Hammer",
                     "value" : 10
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_FORAGING",
                     "value" : "Everyman"
@@ -18888,7 +18888,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-subcategory-development-type-choices" : [
+            "skillSubcategoryDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -18897,7 +18897,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_CRAFTS",
                     "value" : 10
@@ -18911,7 +18911,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -19153,7 +19153,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -19177,7 +19177,7 @@
             "name" : "Priest of Mischief, Trickery",
             "description" : "Priests of Trickery are masters of subterfuge and disguise using their skills to dupe enemies of their faith.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -19185,7 +19185,7 @@
                 "Memory",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -19198,7 +19198,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_DISGUISE",
                     "value" : "Occupational"
@@ -19208,7 +19208,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -19218,7 +19218,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : "Everyman"
@@ -19228,7 +19228,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -19470,7 +19470,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 10
@@ -19498,14 +19498,14 @@
             "name" : "Priest of Moon",
             "description" : "Priests of Moon work at night be specialists in nocturnal navigation and star gazing.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -19518,7 +19518,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ASTRONOMY",
                     "value" : "Everyman"
@@ -19540,7 +19540,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -19558,7 +19558,7 @@
                     "value" : 10
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -19800,7 +19800,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -19820,7 +19820,7 @@
             "name" : "Priest of Music, Dance",
             "description" : "Priests of Music, Dance are experts at both perfoming and influencing other through the ir performances.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -19828,7 +19828,7 @@
                 "Agility",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -19841,7 +19841,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_HISTORY",
                     "value" : "Everyman"
@@ -19859,7 +19859,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : 10
@@ -19873,7 +19873,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -20115,7 +20115,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -20133,13 +20133,13 @@
                     "value" : 5
                 }
             ],
-            "skill-group-skill-development-types" : [
+            "skillGroupSkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLGROUP_ARTISTIC",
                     "value" : "Everyman"
                 }
             ],
-            "skill-group-skill-development-type-choices" : [
+            "skillGroupSkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Occupational",
@@ -20154,14 +20154,14 @@
             "name" : "Priest of Nature",
             "description" : "Priests of Nature are to be found outdoors and are often stewards of the wilderness, opposing those who destroy the balance of nature. They may be outcasts or the protector of a sacred grove.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -20174,7 +20174,7 @@
                     ]
                 }
             ],
-            "skill-bonuses" : [
+            "skillBonuses" : [
                 {
                     "id" : "SKILL_FAUNA_LORE",
                     "value" : 25
@@ -20184,7 +20184,7 @@
                     "value" : 25
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_FAUNA_LORE",
                     "value" : "Occupational"
@@ -20206,7 +20206,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -20216,7 +20216,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -20458,7 +20458,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -20480,7 +20480,7 @@
                     "value" : 5
                 }
             ],
-            "skill-group-skill-development-types" : [
+            "skillGroupSkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLGROUP_OUTDOOR",
                     "value" : "Everyman"
@@ -20492,14 +20492,14 @@
             "name" : "Priest of Oceans, Rivers",
             "description" : "Priests of Oceans, Rivers are found next to bodies of water in any of its forms.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -20512,7 +20512,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_BOAT_PILOT",
                     "value" : "Everyman"
@@ -20534,7 +20534,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -20548,13 +20548,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -20796,7 +20796,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -20824,7 +20824,7 @@
             "name" : "Priest of Oracles, Prophecy",
             "description" : "Priests of Oracles, Prophecy spend their time both communing with their source of prohecy, but also tending to the rituals that surround it.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -20832,7 +20832,7 @@
                 "Memory",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -20845,7 +20845,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ASTRONOMY",
                     "value" : "Everyman"
@@ -20871,7 +20871,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : 10
@@ -20893,7 +20893,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -21135,7 +21135,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_LORE",
                     "value" : 5
@@ -21151,7 +21151,7 @@
             "name" : "Priest of Sky, Weather",
             "description" : "Priests of Sky and Weather are often much in demand in coastal areas and on ships where knowledge of the weather is at a premium.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -21159,7 +21159,7 @@
                 "Constitution",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -21172,7 +21172,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_RELIGION",
                     "value" : "Everyman"
@@ -21182,7 +21182,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -21196,13 +21196,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -21444,7 +21444,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -21464,7 +21464,7 @@
             "name" : "Priest of Strength",
             "description" : "Priests of Strength focus on physical development and athleticism, bt are also very effective against forms of undead.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -21472,7 +21472,7 @@
                 "Constitution",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -21485,13 +21485,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_RELIGION",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_BRAWN",
                     "value" : 10
@@ -21509,7 +21509,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_BRAWN",
                     "value" : "Occupational"
@@ -21519,7 +21519,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Occupational",
@@ -21535,7 +21535,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -21777,7 +21777,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -21797,7 +21797,7 @@
             "name" : "Priest of Sun",
             "description" : "Priests of Sun devote their energies to life and exposing things in dark places.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -21805,7 +21805,7 @@
                 "Memory",
                 "Reasoning"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -21818,7 +21818,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_FIRST_AID",
                     "value" : "Occupational"
@@ -21844,7 +21844,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -21858,19 +21858,19 @@
                     "value" : 5
                 }
             ],
-            "skill-category-special-bonuses" : [
+            "skillCategorySpecialBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
                     "value" : 15
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -22112,7 +22112,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -22140,7 +22140,7 @@
             "name" : "Priest of Thunder",
             "description" : "Priests of Thunder look to the skies for their gods and tend to be wrathful when crossed.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -22148,7 +22148,7 @@
                 "Constitution",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -22161,7 +22161,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_RELIGION",
                     "value" : "Everyman"
@@ -22171,7 +22171,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_BRAWN",
                     "value" : 5
@@ -22189,13 +22189,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -22437,7 +22437,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -22457,14 +22457,14 @@
             "name" : "Priest of Vegetation",
             "description" : "Priests of Vegetation are often found outdoors, though not exclusively, wworking with plants of all kinds and are experts at identifying any plants or herbs found. They are can move through heavy vegetaion better than any other class.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -22477,7 +22477,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_FLORA_LORE",
                     "value" : "Occupational"
@@ -22503,7 +22503,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -22525,13 +22525,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -22773,7 +22773,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 10
@@ -22789,7 +22789,7 @@
             "name" : "Priest of War",
             "description" : "Priests of War can be found at the forefront of any military campaign, smiting enemies of their faith.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -22797,7 +22797,7 @@
                 "Constitution",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -22810,7 +22810,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ANIMAL_HANDLING",
                     "value" : "Everyman"
@@ -22848,7 +22848,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -22858,7 +22858,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Occupational",
@@ -22867,7 +22867,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -23109,7 +23109,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -23127,7 +23127,7 @@
                     "value" : 15
                 }
             ],
-            "skill-group-skill-development-type-choices" : [
+            "skillGroupSkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -23149,7 +23149,7 @@
             "name" : "Priest of Wind",
             "description" : "Priests of Wind are in demand in may locations as a breath of wind in te desert can be as welcome as a steady wind on the oceans.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
@@ -23157,7 +23157,7 @@
                 "Agility",
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -23170,7 +23170,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_FLYING_GLIDING",
                     "value" : "Everyman"
@@ -23184,7 +23184,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -23206,13 +23206,13 @@
                     "value" : 10
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -23454,7 +23454,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -23470,14 +23470,14 @@
             "name" : "Priest of Wisdom",
             "description" : "Priests of Wisdom spend their time in the study of scientific and other academic subjects. They are expect communicators and are especially adept at resisting mental spells.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Channeling"
             ],
             "stats" : [
                 "Memory"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -23490,7 +23490,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_HISTORY",
                     "value" : "Everyman"
@@ -23500,7 +23500,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 10
@@ -23510,13 +23510,13 @@
                     "value" : 5
                 }
             ],
-            "skill-category-skill-development-types" : [
+            "skillCategorySkillDevelopmentTypes" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -23758,7 +23758,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 10
@@ -23776,7 +23776,7 @@
                     "value" : 10
                 }
             ],
-            "skill-group-skill-development-type-choices" : [
+            "skillGroupSkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 2,
                     "type" : "Everyman",
@@ -23791,7 +23791,7 @@
             "name" : "Ranger",
             "description" : "Rangers are Semi spell users who combine the realm of Channeling with the realm of Arms. Their base spells deal with operating in the outdoors and manipulating the weather.",
             "book" : "BOOK_FANTASY_ROLE_PLAYING",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Channeling"
@@ -23800,7 +23800,7 @@
                 "Constitution",
                 "Intuition"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -23813,7 +23813,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -23823,7 +23823,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "5:5:5"
@@ -24065,7 +24065,7 @@
                     "cost" : "9"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ATHLETIC",
                     "value" : 5
@@ -24089,7 +24089,7 @@
             "name" : "Rogue",
             "description" : "Rogues are non spell users with some expertise in thiefly abilities and a more specialized knowledge of arms than that possessed by Fighters. Normally, a Rogue will be almost as good as a Fighter with one weapon of his choice. The cost, in development points, of developing his thiefly skills will generally not allow him to be as good in these areas as a Thief, but his flexibility is unmatched by either profession. Some literary examples of Rogues might include Fahfard and the Grey Mouser, Robin Hood.",
             "book" : "BOOK_FANTASY_ROLE_PLAYING",
-            "spell-user-type" : "None",
+            "spellUserType" : "None",
             "realms" : [
                 "Arms"
             ],
@@ -24097,7 +24097,7 @@
                 "Agility",
                 "Strength"
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_DUPING",
                     "value" : "Everyman"
@@ -24107,7 +24107,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-development-type-choices" : [
+            "skillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -24121,7 +24121,7 @@
                     ]
                 }
             ],
-            "skill-subcategory-development-type-choices" : [
+            "skillSubcategoryDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -24130,7 +24130,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "value" : 5
@@ -24144,7 +24144,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "3:3:3"
@@ -24386,7 +24386,7 @@
                     "cost" : "6"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -24410,7 +24410,7 @@
             "name" : "Runemage",
             "description" : "Runemages are Hybrid spell users of Essence and Channelling who concentrate on the power written and spoken language have over the reality. Runemages use their power of language to create variable enchantments such as wards, symbols and runes, while using their knowledge of the Primal Tongue to manipulate the physical world and the creatures within it.",
             "book" : "BOOK_ESSENCE_COMPANION",
-            "spell-user-type" : "Hybrid",
+            "spellUserType" : "Hybrid",
             "realms" : [
                 "Channeling",
                 "Essence"
@@ -24419,7 +24419,7 @@
                 "Empathy",
                 "Intuition"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -24432,7 +24432,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -24458,7 +24458,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : 5
@@ -24480,7 +24480,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -24722,7 +24722,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
@@ -24734,7 +24734,7 @@
             "name" : "Sage",
             "description" : "The Sage is a non spell user who specializes in knowledge. He can survive a fight, but that's not where he wants to be. He wants to be out learning new languages, finding old tomes, and discovering forgotten knowledge.",
             "book" : "BOOK_SCHOOL_OF_HARD_KNOCKS",
-            "spell-user-type" : "None",
+            "spellUserType" : "None",
             "realms" : [
                 "Arms"
             ],
@@ -24742,19 +24742,19 @@
                 "Reasoning",
                 "Memory"
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "value" : 10
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -24996,7 +24996,7 @@
                     "cost" : "15"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -25014,7 +25014,7 @@
                     "value" : 5
                 }
             ],
-            "skill-group-skill-development-type-choices" : [
+            "skillGroupSkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 3,
                     "type" : "Everyman",
@@ -25029,7 +25029,7 @@
             "name" : "Seer",
             "description" : "Seers are the information gathering specialists. Seers are Pure spell users of Mentalism who have concentrated on spells which gain information through the use of mental spells. Their spells deal with evoking the past, scrying the present and divining the future, and the control and modification of the senses of themselves and others.",
             "book" : "BOOK_MENTALISM_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Mentalism"
             ],
@@ -25037,7 +25037,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -25050,7 +25050,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_ARTIFACT_LORE",
                     "value" : "Everyman"
@@ -25088,7 +25088,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_POWER_AWARENESS",
                     "value" : 5
@@ -25106,7 +25106,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "7:7:7"
@@ -25348,7 +25348,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 15
@@ -25368,7 +25368,7 @@
             "name" : "Sorcerer",
             "description" : "Sorcerers are Hybrid spell users who combine the realms of Essence and Channeling, concentrating on spells of destruction. Their base spells deal with the specific destruction of animate and inanimate material.",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "Hybrid",
+            "spellUserType" : "Hybrid",
             "realms" : [
                 "Channeling",
                 "Essence"
@@ -25378,7 +25378,7 @@
                 "Intuition",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -25391,7 +25391,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Everyman"
@@ -25417,7 +25417,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_DIRECTED_SPELLS",
                     "value" : 5
@@ -25439,7 +25439,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -25681,7 +25681,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
@@ -25693,7 +25693,7 @@
             "name" : "Summoner",
             "description" : "Hybrid spell users who combine the realms of Channeling and Essence. their base spells deal with the communication with and summoning of various creatures ranging from animals to extra-planar beings to their friends. He can also enhance the creatures he has summoned.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Hybrid",
+            "spellUserType" : "Hybrid",
             "realms" : [
                 "Channeling",
                 "Essence"
@@ -25703,7 +25703,7 @@
                 "Intuition",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -25716,7 +25716,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Everyman"
@@ -25742,7 +25742,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_LORE_MAGICAL",
                     "value" : 10
@@ -25764,7 +25764,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -26006,7 +26006,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SPELLS",
                     "value" : 5
@@ -26018,7 +26018,7 @@
             "name" : "Swashbuckler",
             "description" : "The Swashbuckler is a non spell user with style. He's well traveled, cultured, and has all sorts of odd bits of knowledge. More to the point, he has studied every form of fighting he can come across. He may not be the best at anything, but he can do it all reasonably well. Literary examples include Porthos and Mad Mardigan",
             "book" : "BOOK_SCHOOL_OF_HARD_KNOCKS",
-            "spell-user-type" : "None",
+            "spellUserType" : "None",
             "realms" : [
                 "Arms"
             ],
@@ -26026,7 +26026,7 @@
                 "Agility",
                 "Self Discipline"
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_DIPLOMACY",
                     "value" : "Everyman"
@@ -26036,7 +26036,7 @@
                     "value" : "Occupational"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 5
@@ -26050,7 +26050,7 @@
                     "value" : 15
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -26066,7 +26066,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "6:6:6"
@@ -26308,7 +26308,7 @@
                     "cost" : "3:8"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ARMOUR",
                     "value" : 5
@@ -26332,7 +26332,7 @@
             "name" : "Taoist Monk",
             "description" : "Taoist Monk",
             "book" : "BOOK_MARTIAL_ARTS_COMPANION",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Essence"
@@ -26341,7 +26341,7 @@
                 "Empathy",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -26354,7 +26354,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "value" : 5
@@ -26372,7 +26372,7 @@
                     "value" : 10
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -26614,7 +26614,7 @@
                     "cost" : "15"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -26638,7 +26638,7 @@
             "name" : "Thief",
             "description" : "Thieves are non spell users who are specialists at maneuvering and manipulating. They have the easiest time learning mechanical skills (such as picking locks and disarming traps) and are fairly good at picking up weapon skills. Thieves are also unusually adept at subterfuge skills (Stalking, Hiding, etc.). They rarely wear heavy armor, although armor does not especially hinder the exercising of their professional abilities (other than limiting their superb maneuvering abilities). Some literary examples of Thieves might include Will Scarlet and Bilbo Baggins.",
             "book" : "BOOK_FANTASY_ROLE_PLAYING",
-            "spell-user-type" : "None",
+            "spellUserType" : "None",
             "realms" : [
                 "Arms"
             ],
@@ -26646,7 +26646,7 @@
                 "Agility",
                 "Quickness"
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
@@ -26668,7 +26668,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-subcategory-development-type-choices" : [
+            "skillSubcategoryDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -26677,7 +26677,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "value" : 5
@@ -26691,7 +26691,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "4:4:4"
@@ -26933,7 +26933,7 @@
                     "cost" : "6"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 10
@@ -26953,7 +26953,7 @@
             "name" : "Warlock",
             "description" : "The Warlock is a hybrid spell user who combines the realms of Channeling and Mentalism. The Warlock is a manipulator of people and of their fates. His base spell deal with inflicting harm on others, toying with their fate, ruining their faith, instilling fear and doubt and transforming himself.",
             "book" : "BOOK_CHANNELING_COMPANION",
-            "spell-user-type" : "Hybrid",
+            "spellUserType" : "Hybrid",
             "realms" : [
                 "Channeling",
                 "Mentalism"
@@ -26963,7 +26963,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -26976,7 +26976,7 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Everyman"
@@ -26998,7 +26998,7 @@
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "value" : 5
@@ -27024,7 +27024,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "7:7:7"
@@ -27266,7 +27266,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -27282,7 +27282,7 @@
             "name" : "Warrior Mage",
             "description" : "Warrior Mages are Semi spell users who combine the realm of Arms with the realm of Essence. Their base spells primarily deal with the adaptation of Essence spell casting to combat and survival in hostile environments. The Warrior Mage is viewed by many as an elite type of fighter, specialized in attacking enemy spell casters on their own terms",
             "book" : "BOOK_ESSENCE_COMPANION",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Essence"
@@ -27291,7 +27291,7 @@
                 "Constitution",
                 "Empathy"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -27304,13 +27304,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_CHANNELING",
                     "value" : "Restricted"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "value" : 10
@@ -27328,7 +27328,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "10"
@@ -27570,7 +27570,7 @@
                     "cost" : "15"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_ATHLETIC",
                     "value" : 10
@@ -27590,7 +27590,7 @@
             "name" : "Warrior Monk",
             "description" : "Warrior Monks are non spell users who are experts at maneuvering and martial arts. Warrior Monks may learn to use normal weapons, although not as easily as others in the realm of Arms. They prefer to utilize unarmed combat. Some literary examples of a Warrior Monk might include Kwi Chang Kane.",
             "book" : "BOOK_CHARACTER_LAW",
-            "spell-user-type" : "None",
+            "spellUserType" : "None",
             "realms" : [
                 "Arms"
             ],
@@ -27598,7 +27598,7 @@
                 "Quickness",
                 "Self Discipline"
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_BOXING",
                     "value" : "Restricted"
@@ -27616,7 +27616,7 @@
                     "value" : "Restricted"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "value" : 5
@@ -27630,7 +27630,7 @@
                     "value" : 15
                 }
             ],
-            "skill-category-skill-development-type-choices" : [
+            "skillCategorySkillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
@@ -27639,7 +27639,7 @@
                     ]
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "10"
@@ -27881,7 +27881,7 @@
                     "cost" : "15"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5
@@ -27897,7 +27897,7 @@
             "name" : "Wizard",
             "description" : "The Wizard is a pure Arcane spell user who has a much more practical approach to his use of power. His spells deal with affecting other people's spells. Thus, he is a formidable foe against spell users, but does not have much of a defense against non-spell using foes.",
             "book" : "BOOK_ARCANE_COMPANION",
-            "spell-user-type" : "Pure",
+            "spellUserType" : "Pure",
             "realms" : [
                 "Arcane"
             ],
@@ -27907,7 +27907,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -27920,13 +27920,13 @@
                     ]
                 }
             ],
-            "skill-development-types" : [
+            "skillDevelopmentTypes" : [
                 {
                     "id" : "SKILL_SPELL_MASTERY",
                     "value" : "Everyman"
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_LORE_MAGICAL",
                     "value" : 10
@@ -27944,7 +27944,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -28186,7 +28186,7 @@
                     "cost" : "20"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_SCIENCE_ANALYTIC",
                     "value" : 5
@@ -28202,7 +28202,7 @@
             "name" : "Zen Monk",
             "description" : "Zen Monk",
             "book" : "BOOK_MARTIAL_ARTS_COMPANION",
-            "spell-user-type" : "Semi",
+            "spellUserType" : "Semi",
             "realms" : [
                 "Arms",
                 "Mentalism"
@@ -28211,7 +28211,7 @@
                 "Presence",
                 "Self Discipline"
             ],
-            "base-spell-list-choices" : [
+            "baseSpellListChoices" : [
                 {
                     "num-choices" : 6,
                     "options" : [
@@ -28224,7 +28224,7 @@
                     ]
                 }
             ],
-            "skill-category-profession-bonuses" : [
+            "skillCategoryProfessionBonuses" : [
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "value" : 5
@@ -28246,7 +28246,7 @@
                     "value" : 5
                 }
             ],
-            "skill-category-costs" : [
+            "skillCategoryCosts" : [
                 {
                     "category" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "cost" : "11"
@@ -28488,7 +28488,7 @@
                     "cost" : "15"
                 }
             ],
-            "skill-group-profession-bonuses" : [
+            "skillGroupProfessionBonuses" : [
                 {
                     "id" : "SKILLGROUP_AWARENESS",
                     "value" : 5

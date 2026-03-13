@@ -3,8 +3,8 @@
         {
             "id" : "POISONTYPE_CIRCULATORY",
             "type" : "Circulatory",
-            "areas-affected" : "feet, legs, hands, arms, abdomen, chest, neck, head",
-            "severity-effect-onsets" : [
+            "areasAffected" : "feet, legs, hands, arms, abdomen, chest, neck, head",
+            "severityEffectOnsets" : [
                 {
                     "severity" : "Mild",
                     "min" : 1,
@@ -26,7 +26,7 @@
                     "max" : 100
                 }
             ],
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "Lasting 1-50 hours with swelling around the point of injection or ingestion; drowsiness (-15); slightly blurred vision (-25)"
@@ -48,8 +48,8 @@
         {
             "id" : "POISONTYPE_CONVERSION",
             "type" : "Conversion",
-            "areas-affected" : "kidneys, bowels, intestines, stomach, liver, lungs, heart, throat, brain, legs, arms",
-            "severity-effect-onsets" : [
+            "areasAffected" : "kidneys, bowels, intestines, stomach, liver, lungs, heart, throat, brain, legs, arms",
+            "severityEffectOnsets" : [
                 {
                     "severity" : "Mild",
                     "min" : 5,
@@ -71,7 +71,7 @@
                     "max" : 200
                 }
             ],
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "Lasting 5-50 hours; queasiness and an upset stomach (2-20 hits; -20)"
@@ -93,8 +93,8 @@
         {
             "id" : "POISONTYPE_MUSCLE",
             "type" : "Muscle",
-            "areas-affected" : "hands, arms, shoulders, feet, legs, hips, jaw, nose, ears, eyes, bowels, heart",
-            "severity-effect-onsets" : [
+            "areasAffected" : "hands, arms, shoulders, feet, legs, hips, jaw, nose, ears, eyes, bowels, heart",
+            "severityEffectOnsets" : [
                 {
                     "severity" : "Mild",
                     "min" : 3,
@@ -116,7 +116,7 @@
                     "max" : 18000
                 }
             ],
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "Lasting 3-30 hours; light-headedness and swelling (-10); pain (1-5 hits/round)"
@@ -138,8 +138,8 @@
         {
             "id" : "POISONTYPE_NERVE",
             "type" : "Nerve",
-            "areas-affected" : "extremities, eyes, mouth, brain",
-            "severity-effect-onsets" : [
+            "areasAffected" : "extremities, eyes, mouth, brain",
+            "severityEffectOnsets" : [
                 {
                     "severity" : "Mild",
                     "min" : 1,
@@ -161,7 +161,7 @@
                     "max" : 50
                 }
             ],
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "Lasting 1-10 hours; mild loss of thought and motor coordination (-30)"
@@ -183,8 +183,8 @@
         {
             "id" : "POISONTYPE_REDUCTION",
             "type" : "Reduction",
-            "areas-affected" : "kidneys, bowels, intestines, stomach, liver, lungs, heart, throat, brain, legs, arms",
-            "severity-effect-onsets" : [
+            "areasAffected" : "kidneys, bowels, intestines, stomach, liver, lungs, heart, throat, brain, legs, arms",
+            "severityEffectOnsets" : [
                 {
                     "severity" : "Mild",
                     "min" : 10,
@@ -206,7 +206,7 @@
                     "max" : 3600
                 }
             ],
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "Lasting 10-100 hours; great pain (4 hits/round until unconscious)"
@@ -228,8 +228,8 @@
         {
             "id" : "POISONTYPE_RESPIRATORY",
             "type" : "Respiratory",
-            "areas-affected" : "lungs, throat, brain",
-            "severity-effect-onsets" : [
+            "areasAffected" : "lungs, throat, brain",
+            "severityEffectOnsets" : [
                 {
                     "severity" : "Mild",
                     "min" : 1,
@@ -251,7 +251,7 @@
                     "max" : 200
                 }
             ],
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "Lasting 1-20 hours; mild euphoria (-20)"

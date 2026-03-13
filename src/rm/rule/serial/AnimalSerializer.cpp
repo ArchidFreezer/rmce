@@ -12,40 +12,40 @@ json::value AnimalSerializer::serializeObject(const AnimalData& ref) const {
 	if (!ref.description().empty()) {
 		JsonConverter::setString(obj, "description", ref.description());
 	}
-	JsonConverter::setInt(obj, "base-hits", ref.baseHits());
-	JsonConverter::setInt(obj, "base-movement", ref.baseMovement());
-	JsonConverter::setInt(obj, "defensive-bonus", ref.defensiveBonus());
-	JsonConverter::setInt(obj, "frequency-code", ref.frequencyFactor());
+	JsonConverter::setInt(obj, "baseHits", ref.baseHits());
+	JsonConverter::setInt(obj, "baseMovement", ref.baseMovement());
+	JsonConverter::setInt(obj, "defensiveBonus", ref.defensiveBonus());
+	JsonConverter::setInt(obj, "frequencyCode", ref.frequencyFactor());
 	if (ref.bonusXpCode() != CreatureBonusXpType::Type::kNone)
-		JsonConverter::setString(obj, "bonus-xp-code", CreatureBonusXpType::toString(ref.bonusXpCode()));
+		JsonConverter::setString(obj, "bonusXpCode", CreatureBonusXpType::toString(ref.bonusXpCode()));
 	if (ref.constitutionVarianceType() != CreatureConstitutionVarianceType::Type::kNone)
-		JsonConverter::setString(obj, "constitution-variance-type", CreatureConstitutionVarianceType::toString(ref.constitutionVarianceType()));
-	JsonConverter::setString(obj, "level-variance-type", LevelVarianceType::toString(ref.levelVarianceType()));
-	JsonConverter::setInt(obj, "average-level", ref.averageLevel());
+		JsonConverter::setString(obj, "constitutionVarianceType", CreatureConstitutionVarianceType::toString(ref.constitutionVarianceType()));
+	JsonConverter::setString(obj, "levelVarianceType", LevelVarianceType::toString(ref.levelVarianceType()));
+	JsonConverter::setInt(obj, "averageLevel", ref.averageLevel());
 	if (ref.treasureCode())
-		JsonConverter::setString(obj, "treasure-code", (ref.treasureCode().value()->id()));
+		JsonConverter::setString(obj, "treasureCode", (ref.treasureCode().value()->id()));
 	JsonConverter::setString(obj, "size", CreatureSizeType::toString(ref.size()));
-	JsonConverter::setString(obj, "armour-type", ArmourType::toString(ref.armourType()));
-	JsonConverter::setString(obj, "movement-speed", CreatureMovementSpeedType::toString(ref.movementSpeed()));
-	JsonConverter::setString(obj, "attack-quickness", CreatureMovementSpeedType::toString(ref.attackQuickness()));
-	JsonConverter::setString(obj, "max-pace", ref.maxPace()->id());
+	JsonConverter::setString(obj, "armourType", ArmourType::toString(ref.armourType()));
+	JsonConverter::setString(obj, "movementSpeed", CreatureMovementSpeedType::toString(ref.movementSpeed()));
+	JsonConverter::setString(obj, "attackQuickness", CreatureMovementSpeedType::toString(ref.attackQuickness()));
+	JsonConverter::setString(obj, "maxPace", ref.maxPace()->id());
 	JsonConverter::setString(obj, "outlook", AnimalOutlookType::toString(ref.outlook()));
-	JsonConverter::setString(obj, "critical-table", CriticalSizeTableType::toString(ref.criticalTableType()));
+	JsonConverter::setString(obj, "criticalTable", CriticalSizeTableType::toString(ref.criticalTableType()));
 	if (ref.carryCapacity() != 0)
-		JsonConverter::setInt(obj, "carry-capacity", ref.carryCapacity());
+		JsonConverter::setInt(obj, "carryCapacity", ref.carryCapacity());
 	if (ref.ridingBonus() != 0)
-		JsonConverter::setInt(obj, "riding-bonus", ref.ridingBonus());
+		JsonConverter::setInt(obj, "ridingBonus", ref.ridingBonus());
 	if (ref.criticalModifiers().size() > 0)
-		JsonConverter::setEnumSet(obj, "critical-modifiers", ref.criticalModifiers());
+		JsonConverter::setEnumSet(obj, "criticalModifiers", ref.criticalModifiers());
 
 	std::pair<int, int> encounter_range = ref.encounterRange();
 	if (encounter_range.first != 0 || encounter_range.second != 0) {
-		JsonConverter::createNested(obj).beginObject("encounter-range").setInt("min", encounter_range.first).setInt("max", encounter_range.second).endObject();
+		JsonConverter::createNested(obj).beginObject("encounterRange").setInt("min", encounter_range.first).setInt("max", encounter_range.second).endObject();
 	}
 
 	std::pair<int, int> number_young_range = ref.numberYoungRange();
 	if (number_young_range.first != 0 || number_young_range.second != 0) {
-		JsonConverter::createNested(obj).beginObject("number-young-range").setInt("min", number_young_range.first).setInt("max", number_young_range.second).endObject();
+		JsonConverter::createNested(obj).beginObject("numberYoungRange").setInt("min", number_young_range.first).setInt("max", number_young_range.second).endObject();
 	}
 
 	// Location data
@@ -82,7 +82,7 @@ json::value AnimalSerializer::serializeObject(const AnimalData& ref) const {
 				water_str.emplace(EnvironmentType::toString(water));
 			}
 			if (water_str.size())
-				location_builder.setStringArray("water-sources", water_str);
+				location_builder.setStringArray("waterSources", water_str);
 		}
 		if (location.climates().size()) {
 			std::set<std::string> climates_str{};
@@ -110,7 +110,7 @@ json::value AnimalSerializer::serializeObject(const AnimalData& ref) const {
 			}
 		}
 
-		JsonConverter::NestedBuilder std_attacks = JsonConverter::createNested(obj).beginArray("standard-attacks");
+		JsonConverter::NestedBuilder std_attacks = JsonConverter::createNested(obj).beginArray("standardAttacks");
 		for (auto& attack : ordered_attacks) {
 			const archid::NumberRange<int>* number_range = attack.second;
 			const rm::game::AnimalAttack& attack_data = attacks[number_range];
@@ -124,7 +124,7 @@ json::value AnimalSerializer::serializeObject(const AnimalData& ref) const {
 	// Group attacks
 	{
 		if (ref.groupAttacks().size()) {
-			JsonConverter::NestedBuilder group_attacks_builder = JsonConverter::createNested(obj).beginArray("group-attacks");
+			JsonConverter::NestedBuilder group_attacks_builder = JsonConverter::createNested(obj).beginArray("groupAttacks");
 			for (const auto& group_attack : ref.groupAttacks()) {
 				JsonConverter::NestedBuilder group_attack_builder = group_attacks_builder.addObject();
 				group_attack_builder.setInt("min-group-size", group_attack.first);
@@ -138,7 +138,7 @@ json::value AnimalSerializer::serializeObject(const AnimalData& ref) const {
 	// Ranged attacks
 	{
 		if (ref.rangedAttacks().size()) {
-			JsonConverter::NestedBuilder ranged_attacks_builder = JsonConverter::createNested(obj).beginArray("ranged-attacks");
+			JsonConverter::NestedBuilder ranged_attacks_builder = JsonConverter::createNested(obj).beginArray("rangedAttacks");
 			for (const auto& ranged_attack : ref.rangedAttacks()) {
 				JsonConverter::NestedBuilder ranged_attack_builder = ranged_attacks_builder.addObject();
 				serializeAnimalAttack(ranged_attack_builder, ranged_attack);
@@ -151,7 +151,7 @@ json::value AnimalSerializer::serializeObject(const AnimalData& ref) const {
 	// Conditional attacks
 	{
 		if (ref.conditionalAttacks().size()) {
-			JsonConverter::NestedBuilder conditional_attacks_builder = JsonConverter::createNested(obj).beginArray("conditional-attacks");
+			JsonConverter::NestedBuilder conditional_attacks_builder = JsonConverter::createNested(obj).beginArray("conditionalAttacks");
 			for (const auto& conditional_attack : ref.conditionalAttacks()) {
 				JsonConverter::NestedBuilder conditional_attack_builder = conditional_attacks_builder.addObject();
 				serializeAnimalAttack(conditional_attack_builder, conditional_attack.second);
@@ -166,23 +166,23 @@ json::value AnimalSerializer::serializeObject(const AnimalData& ref) const {
 
 void AnimalSerializer::serializeAnimalAttack(JsonConverter::NestedBuilder& location_builder, const rm::game::AnimalAttack& attack) const {
 	if (attack.chance())
-		location_builder.setInt("chance-min", attack.chance().value()->min()).setInt("chance-max", attack.chance().value()->max());
+		location_builder.setInt("chanceMin", attack.chance().value()->min()).setInt("chanceMax", attack.chance().value()->max());
 	if (attack.conditionalAttackRef())
 		location_builder.setInt("id", attack.conditionalAttackRef().value());
 	if (attack.minGroupSize() > 1)
-		location_builder.setInt("min-group-size", attack.minGroupSize());
+		location_builder.setInt("minGroupSize", attack.minGroupSize());
 	if (attack.range())
 		location_builder.setInt("range", attack.range());
 	if (attack.hasWeaponAttack() || attack.hasNonWeaponAttack())
-		location_builder.setInt("offensive-bonus", attack.offensiveBonus());
+		location_builder.setInt("offensiveBonus", attack.offensiveBonus());
 	if (attack.hasWeaponAttack())
-		location_builder.setString("weapon-attack", attack.weaponTable()->id());
+		location_builder.setString("weaponAttack", attack.weaponTable()->id());
 	if (attack.hasNonWeaponAttack())
-		location_builder.beginObject("non-weapon-attack").setString("table", attack.nonWeaponTable()->id()).setString("size", AttackSizeType::toString(attack.nonWeaponSize())).endObject();
+		location_builder.beginObject("nonWeaponAttack").setString("table", attack.nonWeaponTable()->id()).setString("size", AttackSizeType::toString(attack.nonWeaponSize())).endObject();
 	if (attack.useAllAttacks())
-		location_builder.setBool("use-all-attacks", attack.useAllAttacks());
+		location_builder.setBool("useAllAttacks", attack.useAllAttacks());
 	if (attack.numAttacks() > 1)
-		location_builder.setInt("attacks-per-round", attack.numAttacks());
+		location_builder.setInt("attacksPerRound", attack.numAttacks());
 	if (attack.special())
 		location_builder.setString("special", attack.special().value());
 
@@ -191,14 +191,14 @@ void AnimalSerializer::serializeAnimalAttack(JsonConverter::NestedBuilder& locat
 	if (attack.disease())
 		location_builder.setString("disease", attack.disease().value()->id());
 	if (attack.autoCriticalType())
-		location_builder.setString("auto-critical-type", CriticalType::toString(attack.autoCriticalType().value()));
+		location_builder.setString("autoCriticalType", CriticalType::toString(attack.autoCriticalType().value()));
 	if (attack.autoCriticalSize())
-		location_builder.setString("auto-critical-size", attack.autoCriticalSize().value());
+		location_builder.setString("autoCriticalSize", attack.autoCriticalSize().value());
 
 	if (attack.sameRoundAttackId())
-		location_builder.setInt("same-round-conditional-attack-id", attack.sameRoundAttackId());
+		location_builder.setInt("sameRoundConditionalAttackId", attack.sameRoundAttackId());
 	if (attack.nextRoundAttackId())
-		location_builder.setInt("next-round-conditional-attack-id", attack.nextRoundAttackId());
+		location_builder.setInt("nextRoundConditionalAttackId", attack.nextRoundAttackId());
 }
 
 const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) const {
@@ -206,69 +206,69 @@ const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) con
 	AnimalData& ref = manager_.get<AnimalData>(id);
 	ref.setName(JsonConverter::getString(jsonObj, "name"));
 	ref.setDescription(JsonConverter::getString(jsonObj, "description"));
-	ref.setBaseHits(JsonConverter::getInt(jsonObj, "base-hits"));
-	ref.setBaseMovement(JsonConverter::getInt(jsonObj, "base-movement"));
-	ref.setDefensiveBonus(JsonConverter::getInt(jsonObj, "defensive-bonus"));
-	ref.setFrequencyFactor(JsonConverter::getInt(jsonObj, "frequency-code"));
-	if (jsonObj.contains("carry-capacity"))
-		ref.setCarryCapacity(JsonConverter::getInt(jsonObj, "carry-capacity"));
-	if (jsonObj.contains("riding-bonus"))
-		ref.setRidingBonus(JsonConverter::getInt(jsonObj, "riding-bonus"));
+	ref.setBaseHits(JsonConverter::getInt(jsonObj, "baseHits"));
+	ref.setBaseMovement(JsonConverter::getInt(jsonObj, "baseMovement"));
+	ref.setDefensiveBonus(JsonConverter::getInt(jsonObj, "defensiveBonus"));
+	ref.setFrequencyFactor(JsonConverter::getInt(jsonObj, "frequencyCode"));
+	if (jsonObj.contains("carryCapacity"))
+		ref.setCarryCapacity(JsonConverter::getInt(jsonObj, "carryCapacity"));
+	if (jsonObj.contains("ridingBonus"))
+		ref.setRidingBonus(JsonConverter::getInt(jsonObj, "ridingBonus"));
 
-	if (jsonObj.contains("bonus-xp-code")) {
-		std::string bonus_xp_code_str = JsonConverter::getString(jsonObj, "bonus-xp-code");
+	if (jsonObj.contains("bonusXpCode")) {
+		std::string bonus_xp_code_str = JsonConverter::getString(jsonObj, "bonusXpCode");
 		ref.setBonusXpCode(CreatureBonusXpType::fromString(bonus_xp_code_str).value_or(CreatureBonusXpType::Type::kNone));
 	}
 
-	if (jsonObj.contains("constitution-variance-type")) {
-		std::string constitution_variance_type_str = JsonConverter::getString(jsonObj, "constitution-variance-type");
+	if (jsonObj.contains("constitutionVarianceType")) {
+		std::string constitution_variance_type_str = JsonConverter::getString(jsonObj, "constitutionVarianceType");
 		ref.setConstitutionVarianceType(CreatureConstitutionVarianceType::fromString(constitution_variance_type_str).value_or(CreatureConstitutionVarianceType::Type::kNone));
 	}
 
-	std::string level_variance_type_str = JsonConverter::getString(jsonObj, "level-variance-type");
+	std::string level_variance_type_str = JsonConverter::getString(jsonObj, "levelVarianceType");
 	ref.setLevelVarianceType(LevelVarianceType::fromString(level_variance_type_str).value_or(LevelVarianceType::Type::kNone));
-	ref.setAverageLevel(JsonConverter::getInt(jsonObj, "average-level"));
+	ref.setAverageLevel(JsonConverter::getInt(jsonObj, "averageLevel"));
 
-	if (jsonObj.contains("treasure-code")) {
-		std::string treasure_code_id = JsonConverter::getString(jsonObj, "treasure-code");
+	if (jsonObj.contains("treasureCode")) {
+		std::string treasure_code_id = JsonConverter::getString(jsonObj, "treasureCode");
 		ref.setTreasureCode(manager_.get<TreasureCodeData>(treasure_code_id));
 	}
 
 	std::string size_str = JsonConverter::getString(jsonObj, "size");
 	ref.setSize(CreatureSizeType::fromString(size_str).value());
 
-	std::string armour_type_str = JsonConverter::getString(jsonObj, "armour-type");
+	std::string armour_type_str = JsonConverter::getString(jsonObj, "armourType");
 	ref.setArmourType(ArmourType::fromString(armour_type_str).value());
 
-	std::string movement_speed_str = JsonConverter::getString(jsonObj, "movement-speed");
+	std::string movement_speed_str = JsonConverter::getString(jsonObj, "movementSpeed");
 	ref.setMovementSpeed(CreatureMovementSpeedType::fromString(movement_speed_str).value());
 
-	std::string attack_quickness_str = JsonConverter::getString(jsonObj, "attack-quickness");
+	std::string attack_quickness_str = JsonConverter::getString(jsonObj, "attackQuickness");
 	ref.setAttackQuickness(CreatureMovementSpeedType::fromString(attack_quickness_str).value());
 
-	std::string max_pace_id = JsonConverter::getString(jsonObj, "max-pace");
+	std::string max_pace_id = JsonConverter::getString(jsonObj, "maxPace");
 	ref.setMaxPace(manager_.get<CreaturePaceData>(max_pace_id));
 
 	std::string outlook_str = JsonConverter::getString(jsonObj, "outlook");
 	ref.setOutlook(AnimalOutlookType::fromString(outlook_str).value());
 
-	std::string critical_table_type_str = JsonConverter::getString(jsonObj, "critical-table");
+	std::string critical_table_type_str = JsonConverter::getString(jsonObj, "criticalTable");
 	ref.setCriticalTableType(CriticalSizeTableType::fromString(critical_table_type_str).value());
 
-	if (jsonObj.contains("critical-modifiers"))
-		ref.setCriticalModifiers(JsonConverter::getEnumSet<CriticalModifierType::Type>(jsonObj, "critical-modifiers"));
+	if (jsonObj.contains("criticalModifiers"))
+		ref.setCriticalModifiers(JsonConverter::getEnumSet<CriticalModifierType::Type>(jsonObj, "criticalModifiers"));
 
 	{
-		int min = JsonConverter::getNestedInt(jsonObj, "encounter-range/min", 0);
-		int max = JsonConverter::getNestedInt(jsonObj, "encounter-range/max", 0);
+		int min = JsonConverter::getNestedInt(jsonObj, "encounterRange/min", 0);
+		int max = JsonConverter::getNestedInt(jsonObj, "encounterRange/max", 0);
 		if (min != 0 || max != 0) {
 			ref.setEncounterRange(std::make_pair(min, max));
 		}
 	}
 
 	{
-		int min = JsonConverter::getNestedInt(jsonObj, "number-young-range/min", 0);
-		int max = JsonConverter::getNestedInt(jsonObj, "number-young-range/max", 0);
+		int min = JsonConverter::getNestedInt(jsonObj, "numberYoungRange/min", 0);
+		int max = JsonConverter::getNestedInt(jsonObj, "numberYoungRange/max", 0);
 		if (min != 0 || max != 0) {
 			ref.setNumberYoungRange(std::make_pair(min, max));
 		}
@@ -294,7 +294,7 @@ const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) con
 			fromString(vegetation_str, vegetation);
 			location.addVegetation(vegetation);
 		}
-		std::set<std::string> water_str = JsonConverter::getNestedStringArray(jsonObj, "location/water-sources");
+		std::set<std::string> water_str = JsonConverter::getNestedStringArray(jsonObj, "location/waterSources");
 		for (const auto& water_str : water_str) {
 			EnvironmentType::Water water{};
 			fromString(water_str, water);
@@ -310,9 +310,9 @@ const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) con
 	NumberMatcherFactory number_matcher{};
 
 	// Standard attacks have a chance range
-	if (jsonObj.contains("standard-attacks")) {
+	if (jsonObj.contains("standardAttacks")) {
 		std::pair<int, int> chance{};
-		json::array attacks_array = JsonConverter::getJsonArray(jsonObj, "standard-attacks");
+		json::array attacks_array = JsonConverter::getJsonArray(jsonObj, "standardAttacks");
 		for (json::value& attack_value : attacks_array) {
 			rm::game::AnimalAttack attack{};
 			deserializeAnimalAttack(attack_value.as_object(), attack, chance, true);
@@ -322,9 +322,9 @@ const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) con
 	}
 
 	// Ranged attacks
-	if (jsonObj.contains("ranged-attacks")) {
+	if (jsonObj.contains("rangedAttacks")) {
 		std::pair<int, int> chance{};
-		json::array attacks_array = JsonConverter::getJsonArray(jsonObj, "ranged-attacks");
+		json::array attacks_array = JsonConverter::getJsonArray(jsonObj, "rangedAttacks");
 		for (json::value& attack_value : attacks_array) {
 			rm::game::AnimalAttack attack{};
 			deserializeAnimalAttack(attack_value.as_object(), attack, chance, false);
@@ -333,9 +333,9 @@ const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) con
 	}
 
 	// Conditional attacks
-	if (jsonObj.contains("conditional-attacks")) {
+	if (jsonObj.contains("conditionalAttacks")) {
 		std::pair<int, int> chance{};
-		json::array attacks_array = JsonConverter::getJsonArray(jsonObj, "conditional-attacks");
+		json::array attacks_array = JsonConverter::getJsonArray(jsonObj, "conditionalAttacks");
 		for (json::value& attack_value : attacks_array) {
 			rm::game::AnimalAttack attack{};
 			deserializeAnimalAttack(attack_value.as_object(), attack, chance, true);
@@ -345,9 +345,9 @@ const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) con
 	}
 
 	// Group attacks
-	if (jsonObj.contains("group-attacks")) {
+	if (jsonObj.contains("groupAttacks")) {
 		std::pair<int, int> chance{};
-		json::array attacks_array = JsonConverter::getJsonArray(jsonObj, "group-attacks");
+		json::array attacks_array = JsonConverter::getJsonArray(jsonObj, "groupAttacks");
 		for (json::value& attack_value : attacks_array) {
 			rm::game::AnimalAttack attack{};
 			deserializeAnimalAttack(attack_value.as_object(), attack, chance, true);
@@ -360,9 +360,9 @@ const AnimalData& AnimalSerializer::deserializeObject(json::object& jsonObj) con
 }
 
 void AnimalSerializer::deserializeAnimalAttack(json::object& jsonObj, rm::game::AnimalAttack& attack, std::pair<int, int>& chance, bool use_chance) const {
-	if (jsonObj.contains("chance-min") && jsonObj.contains("chance-min")) {
-		chance.first = JsonConverter::getInt(jsonObj, "chance-min");
-		chance.second = JsonConverter::getInt(jsonObj, "chance-max");
+	if (jsonObj.contains("chanceMin") && jsonObj.contains("chanceMax")) {
+		chance.first = JsonConverter::getInt(jsonObj, "chanceMin");
+		chance.second = JsonConverter::getInt(jsonObj, "chanceMax");
 		if (use_chance) {
 			NumberMatcherFactory number_matcher{};
 			attack.setChance(number_matcher.matcher(chance.first, chance.second));
@@ -370,28 +370,28 @@ void AnimalSerializer::deserializeAnimalAttack(json::object& jsonObj, rm::game::
 	}
 	if (jsonObj.contains("id"))
 		attack.setConditionalAttackRef(JsonConverter::getInt(jsonObj, "id"));
-	if (jsonObj.contains("min-group-size"))
-		attack.setMinGroupSize(JsonConverter::getInt(jsonObj, "min-group-size"));
+	if (jsonObj.contains("minGroupSize"))
+		attack.setMinGroupSize(JsonConverter::getInt(jsonObj, "minGroupSize"));
 	if (jsonObj.contains("range"))
 		attack.setRange(JsonConverter::getInt(jsonObj, "range"));
-	if (jsonObj.contains("offensive-bonus"))
-		attack.setOffensiveBonus(JsonConverter::getInt(jsonObj, "offensive-bonus"));
-	if (jsonObj.contains("weapon-attack")) {
-		std::string weapon_attack_id = JsonConverter::getString(jsonObj, "weapon-attack");
+	if (jsonObj.contains("offensiveBonus"))
+		attack.setOffensiveBonus(JsonConverter::getInt(jsonObj, "offensiveBonus"));
+	if (jsonObj.contains("weaponAttack")) {
+		std::string weapon_attack_id = JsonConverter::getString(jsonObj, "weaponAttack");
 		attack.setWeaponTable(manager_.get<AttackTable>(weapon_attack_id));
 	}
-	if (jsonObj.contains("non-weapon-attack")) {
-		std::string table_id = JsonConverter::getNestedString(jsonObj, "non-weapon-attack/table");
+	if (jsonObj.contains("nonWeaponAttack")) {
+		std::string table_id = JsonConverter::getNestedString(jsonObj, "nonWeaponAttack/table");
 		attack.setNonWeaponTable(manager_.get<SpecialAttackTable>(table_id));
-		std::string size_str = JsonConverter::getNestedString(jsonObj, "non-weapon-attack/size");
+		std::string size_str = JsonConverter::getNestedString(jsonObj, "nonWeaponAttack/size");
 		AttackSizeType::Type size{};
 		AttackSizeType::fromString(size_str, size);
 		attack.setNonWeaponSize(size);
 	}
-	if (jsonObj.contains("use-all-attacks"))
-		attack.setUseAllAttacks(JsonConverter::getBool(jsonObj, "use-all-attacks"));
-	if (jsonObj.contains("attacks-per-round"))
-		attack.setNumAttacks(JsonConverter::getInt(jsonObj, "attacks-per-round"));
+	if (jsonObj.contains("useAllAttacks"))
+		attack.setUseAllAttacks(JsonConverter::getBool(jsonObj, "useAllAttacks"));
+	if (jsonObj.contains("attacksPerRound"))
+		attack.setNumAttacks(JsonConverter::getInt(jsonObj, "attacksPerRound"));
 	if (jsonObj.contains("special"))
 		attack.setSpecial(JsonConverter::getString(jsonObj, "special"));
 	if (jsonObj.contains("poison")) {
@@ -402,18 +402,18 @@ void AnimalSerializer::deserializeAnimalAttack(json::object& jsonObj, rm::game::
 		std::string disease_id = JsonConverter::getString(jsonObj, "disease");
 		attack.setDisease(manager_.get<DiseaseData>(disease_id));
 	}
-	if (jsonObj.contains("auto-critical-type")) {
-		std::string auto_critical_type_str = JsonConverter::getString(jsonObj, "auto-critical-type");
+	if (jsonObj.contains("autoCriticalType")) {
+		std::string auto_critical_type_str = JsonConverter::getString(jsonObj, "autoCriticalType");
 		CriticalType::Type auto_critical_type{};
 		CriticalType::fromString(auto_critical_type_str, auto_critical_type);
 		attack.setAutoCriticalType(auto_critical_type);
 	}
-	if (jsonObj.contains("auto-critical-size"))
-		attack.setAutoCriticalSize(JsonConverter::getString(jsonObj, "auto-critical-size"));
-	if (jsonObj.contains("same-round-conditional-attack-id"))
-		attack.setSameRoundAttackId(JsonConverter::getInt(jsonObj, "same-round-conditional-attack-id"));
-	if (jsonObj.contains("next-round-conditional-attack-id"))
-		attack.setNextRoundAttackId(JsonConverter::getInt(jsonObj, "next-round-conditional-attack-id"));
+	if (jsonObj.contains("autoCriticalSize"))
+		attack.setAutoCriticalSize(JsonConverter::getString(jsonObj, "autoCriticalSize"));
+	if (jsonObj.contains("sameRoundConditionalAttackId"))
+		attack.setSameRoundAttackId(JsonConverter::getInt(jsonObj, "sameRoundConditionalAttackId"));
+	if (jsonObj.contains("nextRoundConditionalAttackId"))
+		attack.setNextRoundAttackId(JsonConverter::getInt(jsonObj, "nextRoundConditionalAttackId"));
 }
 
 } // namespace rm::rule::serial
