@@ -79,6 +79,31 @@ public:
 	}
 
 	/**
+	 * @brief Check if a PersistentObject object with a specific ID exists in the cache
+	 *
+	 * @tparam T type of PersistentObject object to check
+	 * @param id Unique ID of the object
+	 * @return `true` if an object of type @a T with the specified ID exists in the cache, `false` otherwise
+	 */
+	template<persistent_object T>
+	bool exists(std::string id) {
+		return cache_.exists<T>(id);
+	}
+
+	/**
+	 * @brief Check if a GameRuleData object with a specific ID exists in the cache without knowing the type
+	 *
+	 * This is useful for deserialisation when we want to check if an object with a specific ID exists but we do not know the type of the object. The method will search through all types of GameRuleData objects in the cache and return `true` if one with the matching
+	 * ID is found. If there are multiple objects with the same ID then it is undefined which one will be returned.
+	 *
+	 * @param id Unique ID of the object
+	 * @return `true` if an object with the specified ID exists in the cache, `false` otherwise
+	 */
+	bool existsAny(std::string id) {
+		return (getAny(id) != nullptr);
+	}
+
+	/**
 	 * @brief Get a PersistentObject object with a randomly generated UUID as its ID and add it to the cache
 	 *
 	 * Objects created with this method will be serialised.

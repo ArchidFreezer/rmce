@@ -84,6 +84,14 @@ private:
 	void requestCreateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request);
 
 	/**
+	 * @brief Requests the update of an existing object of a specified type, using data from the HTTP request body, and populates the HTTP response.
+	 * @param response The HTTP response object to populate with the result of the update operation.
+	 * @param type The type of the object to update.
+	 * @param request The HTTP request containing the data for the object to update in its body.
+	 */
+	void requestUpdateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request);
+
+	/**
 	 * @brief Requests the deletion of an object by its type and ID, and populates the HTTP response.
 	 * @param response The HTTP response object to populate with the result of the delete operation.
 	 * @param type The type of the object to delete.

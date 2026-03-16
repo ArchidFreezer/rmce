@@ -62,7 +62,7 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 	} else if (request.method() == http::verb::get && path.match("/rmce/objects") && !path.type().empty() && path.id().empty()) {
 		// We have 3 operations for this endpoint: list, count, and ids. We need to check the operation first before we can determine how to handle the request.
 
-		// First case is with no parameters, which means we want to list all objects of a certain type (e.g. /api/objects/skill)
+		// First case is with no parameters, which means we want to list all objects of a certain type (e.g. /rmce/objects/skill)
 		if (path.params().empty()) {
 			requestListObjects(response, path.type());
 		} else {
@@ -82,9 +82,12 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		// Example: /api/objects/skill/SKILL_ACTING
 		requestObjectById(response, path.type(), path.id());
 	} else if (request.method() == http::verb::post && path.match("/rmce/objects") && !path.type().empty() && path.id().empty()) {
-		// Create new object of a certain type (e.g. /api/objects/skill)
+		// Create new object of a certain type (e.g. /rmce/objects/skill)
 		// We can use the request body to get the data for the new object, and we can use the type from the path to determine what type of object to create.
 		requestCreateObject(response, path.type(), request);
+	} else if (request.method() == http::verb::put && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
+		// Update existing object of a certain type and ID (e.g. /rmce/objects/skill/SKILL_ACTING)
+		requestUpdateObject(response, path.type(), request);
 	} else if (request.method() == http::verb::delete_ && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
 		requestDeleteObject(response, path.type(), path.id());
 	} else {
@@ -186,12 +189,44 @@ void HttpRequestHandler::requestCreateObject(http::response<http::string_body>& 
 		std::string new_obj_id = serial_manager_.deserializeObject(json_body.as_object(), type);
 		response.result(http::status::created);
 		response.set(http::field::content_type, "application/json");
-		response.body() = R"({"message": "Object created/updated successfully", "id": ")" + escapeJson(new_obj_id) + R"("})";
+		response.body() = R"({"message": "Object created successfully", "id": ")" + escapeJson(new_obj_id) + R"("})";
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to create object", "message": ")" + escapeJson(e.what()) + R"("})";
 	}
 
+}
+
+void HttpRequestHandler::requestUpdateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request) {
+	try {
+		json::value json_body = json::parse(request.body());
+		if (!json_body.is_object()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON object"})";
+			return;
+		}
+		std::string id = json_body.as_object().at("id").as_string().c_str();
+		if (id.empty()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Missing object ID", "message": "The JSON object must contain an 'id' field"})";
+			return;
+		}
+		if (!serial_manager_.objectManager().existsAny(id)) {
+			response.result(http::status::not_found);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Object not found", "id": ")" + escapeJson(id) + R"("})";
+			return;
+		}
+		std::string new_obj_id = serial_manager_.deserializeObject(json_body.as_object(), type);
+		response.result(http::status::ok);
+		response.set(http::field::content_type, "application/json");
+		response.body() = R"({"message": "Object updated successfully", "id": ")" + escapeJson(new_obj_id) + R"("})";
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to update object", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
 }
 
 void HttpRequestHandler::requestDeleteObject(http::response<http::string_body>& response, std::string_view type, std::string_view id) {
