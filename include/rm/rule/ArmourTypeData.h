@@ -78,7 +78,7 @@ public:
 	 * @param description std::string_view armour type description
 	 */
 	void setDescription(std::string_view description) {
-		description_ = description_;
+		description_ = description;
 	}
 
 	/**
