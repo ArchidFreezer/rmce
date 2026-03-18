@@ -187,6 +187,7 @@ void HttpRequestHandler::requestCreateObject(http::response<http::string_body>& 
 			return;
 		}
 		std::string new_obj_id = serial_manager_.deserializeObject(json_body.as_object(), type);
+		serial_manager_.save(type); // Save after creation to persist changes
 		response.result(http::status::created);
 		response.set(http::field::content_type, "application/json");
 		response.body() = R"({"message": "Object created successfully", "id": ")" + escapeJson(new_obj_id) + R"("})";
@@ -220,6 +221,7 @@ void HttpRequestHandler::requestUpdateObject(http::response<http::string_body>& 
 			return;
 		}
 		std::string new_obj_id = serial_manager_.deserializeObject(json_body.as_object(), type);
+		serial_manager_.save(type); // Save after update to persist changes
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
 		response.body() = R"({"message": "Object updated successfully", "id": ")" + escapeJson(new_obj_id) + R"("})";
@@ -233,6 +235,7 @@ void HttpRequestHandler::requestDeleteObject(http::response<http::string_body>& 
 	response.set(http::field::content_type, "application/json");
 	try {
 		serial_manager_.objectManager().deleteObject(std::string(id));
+		serial_manager_.save(type); // Save after deletion to persist changes
 		response.result(http::status::ok);
 		response.body() = R"({"result": "Object flagged as deleted", "object": ")" + std::string(id) + R"("})";
 	} catch (const std::exception& e) {

@@ -175,6 +175,24 @@ public:
 	 */
 	void save();
 
+
+	/**
+	 * @brief Serialize all objects of any game rule type with a specific prefix in their ID to file
+	 *
+	 * This function serializes all objects of any game rule type that have IDs starting with the specified prefix to the appropriate JSON files using the appropriate serializer for each type. The function automatically selects the correct
+	 * serializer and root key based on the prefix.
+	 *
+	 * @param prefix Lowercase string of the prefix to match in the IDs of the objects to serialize
+	 *
+	 * @throws std::runtime_error If any of the files cannot be opened or parsed
+	 *
+	 * @code
+	 * PersistentObjectSerializationManager manager(object_manager);
+	 * manager.save("skill");
+	 * @endcode
+	 */
+	void save(std::string_view prefix);
+
 	/**
 	 * @brief Get the JSON representation of a single object of a specific persistent type
 	 *
