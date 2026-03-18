@@ -10,6 +10,7 @@ vcpkg_installed/
 /out/
 /sandbox/
 /docs/html/
+/data2/
 
 # Prerequisites
 *.d
