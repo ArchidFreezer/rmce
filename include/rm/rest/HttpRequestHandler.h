@@ -65,7 +65,14 @@ private:
 	 * @param response The HTTP response object to populate with the count of objects.
 	 * @param type The type of objects for which to count.
 	 */
-	void requestCountObjects(http::response<http::string_body>& response, std::string_view type);
+	void requestCountTypeObjects(http::response<http::string_body>& response, std::string_view type);
+
+	/**
+	 * @brief Requests the count of objects of multiple specified types and populates the HTTP response.
+	 * @param response The HTTP response object to populate with the count of objects.
+	 * @param types The types of objects for which to count as a CSV list (e.g., "skill,book,skillcategory").
+	 */
+	void requestCountMultiTypeObjects(http::response<http::string_body>& response, std::string_view types);
 
 	/**
 	 * @brief Requests a specific object by its type and ID, and populates the HTTP response.

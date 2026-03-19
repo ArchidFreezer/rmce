@@ -1,5 +1,6 @@
 #include <set>
 #include <HttpRequestHandler.h>
+#include <StringUtils.h>
 
 namespace rm::rest {
 
@@ -59,6 +60,10 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		response.body() = R"({"version": "1.0.0", "api": "v1"})";
 	} else if (request.method() == http::verb::get && path.matchExact("/rmce/prefixes")) {
 		requestPrefixes(response);
+	} else if (request.method() == http::verb::get && path.matchExact("/rmce/objects/count") && (path.params().find("types") != path.params().end())) {
+		// Get the count of objects of a specific types (e.g. /rmce/objects/count?type=skill)
+		const std::string& types = path.params().at("types");
+		requestCountMultiTypeObjects(response, types);
 	} else if (request.method() == http::verb::get && path.match("/rmce/objects") && !path.type().empty() && path.id().empty()) {
 		// We have 3 operations for this endpoint: list, count, and ids. We need to check the operation first before we can determine how to handle the request.
 
@@ -70,7 +75,7 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 			if (path.params().find("ids") != path.params().end()) {
 				requestListObjectIds(response, path.type());
 			} else if (path.params().find("count") != path.params().end()) {
-				requestCountObjects(response, path.type());
+				requestCountTypeObjects(response, path.type());
 			} else {
 				response.result(http::status::bad_request);
 				response.set(http::field::content_type, "application/json");
@@ -146,7 +151,7 @@ void HttpRequestHandler::requestListObjectIds(http::response<http::string_body>&
 	}
 }
 
-void HttpRequestHandler::requestCountObjects(http::response<http::string_body>& response, std::string_view type) {
+void HttpRequestHandler::requestCountTypeObjects(http::response<http::string_body>& response, std::string_view type) {
 	response.set(http::field::content_type, "application/json");
 	try {
 		size_t count = serial_manager_.objectManager().getAllIds(type).size(); // Placeholder
@@ -244,4 +249,26 @@ void HttpRequestHandler::requestDeleteObject(http::response<http::string_body>& 
 	}
 }
 
+void HttpRequestHandler::requestCountMultiTypeObjects(http::response<http::string_body>& response, std::string_view types) {
+	response.set(http::field::content_type, "application/json");
+	try {
+		std::vector<std::string> type_list = archid::tokenise(std::string(types), ",");
+		std::ostringstream json;
+		json << "{ \"counts\": [";
+		for (const auto& type : type_list) {
+			std::size_t count = serial_manager_.objectManager().getAllIds(type).size();
+			json << "{\"type\": \"" << type << "\", \"count\": " << count << "}";
+			if (&type != &type_list.back()) {
+				json << ",";
+			}
+		}
+		json << "]}";
+
+		response.result(http::status::ok);
+		response.body() = json.str();
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to retrieve count of objects", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
+}
 } // namespace rm::rest
