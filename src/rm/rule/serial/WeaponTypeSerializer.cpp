@@ -12,16 +12,16 @@ json::value WeaponTypeSerializer::serializeObject(const WeaponTypeData& ref) con
 	JsonConverter::setString(obj, "notes", ref.notes());
 	JsonConverter::setString(obj, "skill", ref.skill().id());
 	JsonConverter::setString(obj, "book", ref.book().id());
-	JsonConverter::setString(obj, "attack-table", ref.attackTable().id());
+	JsonConverter::setString(obj, "attackTable", ref.attackTable().id());
 	JsonConverter::setInt(obj, "fumble", ref.fumble());
 	JsonConverter::setInt(obj, "breakage", ref.breakage());
-	JsonConverter::setInt(obj, "min-length", ref.minLength());
-	JsonConverter::setInt(obj, "max-length", ref.maxLength());
-	JsonConverter::setInt(obj, "min-strength", ref.minStrength());
-	JsonConverter::setInt(obj, "max-strength", ref.maxStrength());
-	JsonConverter::setInt(obj, "min-weight", ref.minWeight());
-	JsonConverter::setInt(obj, "max-weight", ref.maxWeight());
-	JsonConverter::setBool(obj, "wooden-haft", ref.woodenHaft());
+	JsonConverter::setInt(obj, "minLength", ref.minLength());
+	JsonConverter::setInt(obj, "maxLength", ref.maxLength());
+	JsonConverter::setInt(obj, "minStrength", ref.minStrength());
+	JsonConverter::setInt(obj, "maxStrength", ref.maxStrength());
+	JsonConverter::setInt(obj, "minWeight", ref.minWeight());
+	JsonConverter::setInt(obj, "maxWeight", ref.maxWeight());
+	JsonConverter::setBool(obj, "woodenHaft", ref.woodenHaft());
 
 	// Criticals
 	json::array criticals_arr;
@@ -66,18 +66,18 @@ const WeaponTypeData& WeaponTypeSerializer::deserializeObject(json::object& json
 	std::string book_id = JsonConverter::getString(jsonObj, "book");
 	ref.setBook(manager_.get<BookData>(book_id));
 
-	std::string attack_table_id = JsonConverter::getString(jsonObj, "attack-table");
+	std::string attack_table_id = JsonConverter::getString(jsonObj, "attackTable");
 	ref.setAttackTable(manager_.get<rm::rule::table::AttackTable>(attack_table_id));
 
 	ref.setFumble(JsonConverter::getInt(jsonObj, "fumble", 0));
 	ref.setBreakage(JsonConverter::getInt(jsonObj, "breakage", 0));
-	ref.setMinLength(JsonConverter::getInt(jsonObj, "min-length", 0));
-	ref.setMaxLength(JsonConverter::getInt(jsonObj, "max-length", 0));
-	ref.setMinStrength(JsonConverter::getInt(jsonObj, "min-strength", 0));
-	ref.setMaxStrength(JsonConverter::getInt(jsonObj, "max-strength", 0));
-	ref.setMinWeight(JsonConverter::getInt(jsonObj, "min-weight", 0));
-	ref.setMaxWeight(JsonConverter::getInt(jsonObj, "max-weight", 0));
-	ref.setWoodenHaft(JsonConverter::getBool(jsonObj, "wooden-haft", false));
+	ref.setMinLength(JsonConverter::getInt(jsonObj, "minLength", 0));
+	ref.setMaxLength(JsonConverter::getInt(jsonObj, "maxLength", 0));
+	ref.setMinStrength(JsonConverter::getInt(jsonObj, "minStrength", 0));
+	ref.setMaxStrength(JsonConverter::getInt(jsonObj, "maxStrength", 0));
+	ref.setMinWeight(JsonConverter::getInt(jsonObj, "minWeight", 0));
+	ref.setMaxWeight(JsonConverter::getInt(jsonObj, "maxWeight", 0));
+	ref.setWoodenHaft(JsonConverter::getBool(jsonObj, "woodenHaft", false));
 
 	// Criticals
 	auto it = jsonObj.find("criticals");

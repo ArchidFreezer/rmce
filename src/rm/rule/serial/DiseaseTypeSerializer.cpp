@@ -20,7 +20,7 @@ json::value DiseaseTypeSerializer::serializeObject(const DiseaseTypeData& ref) c
 		symptoms_array.push_back(symptom_obj);
 	}
 	if (symptoms_array.size())
-		obj["severity-symptoms"] = symptoms_array;
+		obj["severitySymptoms"] = symptoms_array;
 
 	return obj;
 }
@@ -40,7 +40,7 @@ const DiseaseTypeData& DiseaseTypeSerializer::deserializeObject(json::object& js
 
 	// Severity symptoms are stored in the json as an object with keys corresponding to the severity level and values corresponding to the symptoms for that severity level. We need to loop through the object and add each severity level and
 	// its corresponding symptoms to the DiseaseTypeData object
-	json::array symptoms_array = JsonConverter::getJsonArray(jsonObj, "severity-symptoms");
+	json::array symptoms_array = JsonConverter::getJsonArray(jsonObj, "severitySymptoms");
 	for (const json::value& symptom_entry : symptoms_array) {
 		if (symptom_entry.is_object()) {
 			json::object symptom_obj = symptom_entry.as_object();

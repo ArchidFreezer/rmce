@@ -20,7 +20,7 @@ json::value AttackTableSerializer::serializeObject(const rm::rule::table::Attack
 			ranges.insert(*m.first);
 			max_row = std::max(max_row, m.first->max());
 		}
-		JsonConverter::setInt(obj, "max-row", max_row);
+		JsonConverter::setInt(obj, "maxRow", max_row);
 
 		// Now we have a soted set of the ranges, we can iterate through them and serialize the rows in order
 		json::array modified_rows{};
@@ -52,7 +52,7 @@ json::value AttackTableSerializer::serializeObject(const rm::rule::table::Attack
 			JsonConverter::setString(row_obj, "at20", ref.cell(ArmourType::kAT20, min));
 			modified_rows.emplace_back(row_obj);
 		}
-		obj["modified-rows"] = modified_rows;
+		obj["modifiedRows"] = modified_rows;
 	}
 
 	{
@@ -92,7 +92,7 @@ json::value AttackTableSerializer::serializeObject(const rm::rule::table::Attack
 			JsonConverter::setString(row_obj, "at20", ref.cell(ArmourType::kAT20, min, min));
 			unmodified_rows.emplace_back(row_obj);
 		}
-		if (unmodified_rows.size())	obj["unmodified-rows"] = unmodified_rows;
+		if (unmodified_rows.size())	obj["unmodifiedRows"] = unmodified_rows;
 	}
 
 	return obj;
@@ -102,15 +102,15 @@ const rm::rule::table::AttackTable& AttackTableSerializer::deserializeObject(jso
 	std::string id = JsonConverter::getString(jsonObj, "id");
 	rm::rule::table::AttackTable& ref = manager_.get<rm::rule::table::AttackTable>(id);
 	ref.setName(JsonConverter::getString(jsonObj, "name"));
-	ref.setMaxRow(JsonConverter::getInt(jsonObj, "max-row"));
+	ref.setMaxRow(JsonConverter::getInt(jsonObj, "maxRow"));
 
 	// Get a factory for the matchers
 	rm::rule::table::NumberMatcherFactory matchers;
 
 	{
 		// Deserialize the modified rows
-		if (jsonObj.contains("modified-rows")) {
-			for (const auto& row : JsonConverter::getJsonArray(jsonObj, "modified-rows")) {
+		if (jsonObj.contains("modifiedRows")) {
+			for (const auto& row : JsonConverter::getJsonArray(jsonObj, "modifiedRows")) {
 				int min = JsonConverter::getInt(row.as_object(), "min");
 				int max = JsonConverter::getInt(row.as_object(), "max");
 
@@ -125,8 +125,8 @@ const rm::rule::table::AttackTable& AttackTableSerializer::deserializeObject(jso
 
 	{
 		// Deserialize the unmodified rows
-		if (jsonObj.contains("unmodified-rows")) {
-			for (const auto& row : JsonConverter::getJsonArray(jsonObj, "unmodified-rows")) {
+		if (jsonObj.contains("unmodifiedRows")) {
+			for (const auto& row : JsonConverter::getJsonArray(jsonObj, "unmodifiedRows")) {
 				int min = JsonConverter::getInt(row.as_object(), "min");
 				int max = JsonConverter::getInt(row.as_object(), "max");
 				rm::rule::table::TableRow<std::string> table_row{};

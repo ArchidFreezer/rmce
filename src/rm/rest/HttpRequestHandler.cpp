@@ -1,5 +1,6 @@
 #include <set>
 #include <HttpRequestHandler.h>
+#include <StringUtils.h>
 
 namespace rm::rest {
 
@@ -59,10 +60,14 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		response.body() = R"({"version": "1.0.0", "api": "v1"})";
 	} else if (request.method() == http::verb::get && path.matchExact("/rmce/prefixes")) {
 		requestPrefixes(response);
+	} else if (request.method() == http::verb::get && path.matchExact("/rmce/objects/count") && (path.params().find("types") != path.params().end())) {
+		// Get the count of objects of a specific types (e.g. /rmce/objects/count?type=skill)
+		const std::string& types = path.params().at("types");
+		requestCountMultiTypeObjects(response, types);
 	} else if (request.method() == http::verb::get && path.match("/rmce/objects") && !path.type().empty() && path.id().empty()) {
 		// We have 3 operations for this endpoint: list, count, and ids. We need to check the operation first before we can determine how to handle the request.
 
-		// First case is with no parameters, which means we want to list all objects of a certain type (e.g. /api/objects/skill)
+		// First case is with no parameters, which means we want to list all objects of a certain type (e.g. /rmce/objects/skill)
 		if (path.params().empty()) {
 			requestListObjects(response, path.type());
 		} else {
@@ -70,7 +75,7 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 			if (path.params().find("ids") != path.params().end()) {
 				requestListObjectIds(response, path.type());
 			} else if (path.params().find("count") != path.params().end()) {
-				requestCountObjects(response, path.type());
+				requestCountTypeObjects(response, path.type());
 			} else {
 				response.result(http::status::bad_request);
 				response.set(http::field::content_type, "application/json");
@@ -82,9 +87,12 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		// Example: /api/objects/skill/SKILL_ACTING
 		requestObjectById(response, path.type(), path.id());
 	} else if (request.method() == http::verb::post && path.match("/rmce/objects") && !path.type().empty() && path.id().empty()) {
-		// Create new object of a certain type (e.g. /api/objects/skill)
+		// Create new object of a certain type (e.g. /rmce/objects/skill)
 		// We can use the request body to get the data for the new object, and we can use the type from the path to determine what type of object to create.
 		requestCreateObject(response, path.type(), request);
+	} else if (request.method() == http::verb::put && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
+		// Update existing object of a certain type and ID (e.g. /rmce/objects/skill/SKILL_ACTING)
+		requestUpdateObject(response, path.type(), request);
 	} else if (request.method() == http::verb::delete_ && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
 		requestDeleteObject(response, path.type(), path.id());
 	} else {
@@ -143,7 +151,7 @@ void HttpRequestHandler::requestListObjectIds(http::response<http::string_body>&
 	}
 }
 
-void HttpRequestHandler::requestCountObjects(http::response<http::string_body>& response, std::string_view type) {
+void HttpRequestHandler::requestCountTypeObjects(http::response<http::string_body>& response, std::string_view type) {
 	response.set(http::field::content_type, "application/json");
 	try {
 		size_t count = serial_manager_.objectManager().getAllIds(type).size(); // Placeholder
@@ -184,9 +192,10 @@ void HttpRequestHandler::requestCreateObject(http::response<http::string_body>& 
 			return;
 		}
 		std::string new_obj_id = serial_manager_.deserializeObject(json_body.as_object(), type);
+		serial_manager_.save(type); // Save after creation to persist changes
 		response.result(http::status::created);
 		response.set(http::field::content_type, "application/json");
-		response.body() = R"({"message": "Object created/updated successfully", "id": ")" + escapeJson(new_obj_id) + R"("})";
+		response.body() = R"({"message": "Object created successfully", "id": ")" + escapeJson(new_obj_id) + R"("})";
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to create object", "message": ")" + escapeJson(e.what()) + R"("})";
@@ -194,10 +203,44 @@ void HttpRequestHandler::requestCreateObject(http::response<http::string_body>& 
 
 }
 
+void HttpRequestHandler::requestUpdateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request) {
+	try {
+		json::value json_body = json::parse(request.body());
+		if (!json_body.is_object()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON object"})";
+			return;
+		}
+		std::string id = json_body.as_object().at("id").as_string().c_str();
+		if (id.empty()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Missing object ID", "message": "The JSON object must contain an 'id' field"})";
+			return;
+		}
+		if (!serial_manager_.objectManager().existsAny(id)) {
+			response.result(http::status::not_found);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Object not found", "id": ")" + escapeJson(id) + R"("})";
+			return;
+		}
+		std::string new_obj_id = serial_manager_.deserializeObject(json_body.as_object(), type);
+		serial_manager_.save(type); // Save after update to persist changes
+		response.result(http::status::ok);
+		response.set(http::field::content_type, "application/json");
+		response.body() = R"({"message": "Object updated successfully", "id": ")" + escapeJson(new_obj_id) + R"("})";
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to update object", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
+}
+
 void HttpRequestHandler::requestDeleteObject(http::response<http::string_body>& response, std::string_view type, std::string_view id) {
 	response.set(http::field::content_type, "application/json");
 	try {
 		serial_manager_.objectManager().deleteObject(std::string(id));
+		serial_manager_.save(type); // Save after deletion to persist changes
 		response.result(http::status::ok);
 		response.body() = R"({"result": "Object flagged as deleted", "object": ")" + std::string(id) + R"("})";
 	} catch (const std::exception& e) {
@@ -206,4 +249,26 @@ void HttpRequestHandler::requestDeleteObject(http::response<http::string_body>& 
 	}
 }
 
+void HttpRequestHandler::requestCountMultiTypeObjects(http::response<http::string_body>& response, std::string_view types) {
+	response.set(http::field::content_type, "application/json");
+	try {
+		std::vector<std::string> type_list = archid::tokenise(std::string(types), ",");
+		std::ostringstream json;
+		json << "{ \"counts\": [";
+		for (const auto& type : type_list) {
+			std::size_t count = serial_manager_.objectManager().getAllIds(type).size();
+			json << "{\"type\": \"" << type << "\", \"count\": " << count << "}";
+			if (&type != &type_list.back()) {
+				json << ",";
+			}
+		}
+		json << "]}";
+
+		response.result(http::status::ok);
+		response.body() = json.str();
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to retrieve count of objects", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
+}
 } // namespace rm::rest

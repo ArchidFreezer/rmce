@@ -25,7 +25,7 @@ json::value SpecialAttackTableSerializer::serializeObject(const rm::rule::table:
 			ranges.insert(*m.first);
 			max_row = std::max(max_row, m.first->max());
 		}
-		JsonConverter::setInt(obj, "max-row", max_row);
+		JsonConverter::setInt(obj, "maxRow", max_row);
 
 		// Now we have a soted set of the ranges, we can iterate through them and serialize the rows in order
 		json::array modified_rows{};
@@ -57,7 +57,7 @@ json::value SpecialAttackTableSerializer::serializeObject(const rm::rule::table:
 			JsonConverter::setString(row_obj, "at20", ref.cell(ArmourType::kAT20, AttackSizeType::kHuge, min));
 			modified_rows.emplace_back(row_obj);
 		}
-		obj["modified-rows"] = modified_rows;
+		obj["modifiedRows"] = modified_rows;
 	}
 
 	{
@@ -98,7 +98,7 @@ json::value SpecialAttackTableSerializer::serializeObject(const rm::rule::table:
 			unmodified_rows.emplace_back(row_obj);
 		}
 		if (unmodified_rows.size())
-			obj["unmodified-rows"] = unmodified_rows;
+			obj["unmodifiedRows"] = unmodified_rows;
 	}
 
 	return obj;
@@ -118,8 +118,8 @@ const rm::rule::table::SpecialAttackTable& SpecialAttackTableSerializer::deseria
 
 	{
 		// Deserialize the modified rows
-		if (jsonObj.contains("modified-rows")) {
-			for (const auto& row : JsonConverter::getJsonArray(jsonObj, "modified-rows")) {
+		if (jsonObj.contains("modifiedRows")) {
+			for (const auto& row : JsonConverter::getJsonArray(jsonObj, "modifiedRows")) {
 				int min = JsonConverter::getInt(row.as_object(), "min");
 				int max = JsonConverter::getInt(row.as_object(), "max");
 
@@ -134,8 +134,8 @@ const rm::rule::table::SpecialAttackTable& SpecialAttackTableSerializer::deseria
 
 	{
 		// Deserialize the unmodified rows
-		if (jsonObj.contains("unmodified-rows")) {
-			for (const auto& row : JsonConverter::getJsonArray(jsonObj, "unmodified-rows")) {
+		if (jsonObj.contains("unmodifiedRows")) {
+			for (const auto& row : JsonConverter::getJsonArray(jsonObj, "unmodifiedRows")) {
 				int min = JsonConverter::getInt(row.as_object(), "min");
 				int max = JsonConverter::getInt(row.as_object(), "max");
 				rm::rule::table::TableRow<std::string> table_row{};

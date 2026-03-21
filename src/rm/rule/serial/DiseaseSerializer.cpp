@@ -10,7 +10,7 @@ json::value DiseaseSerializer::serializeObject(const DiseaseData& ref) const {
 	JsonConverter::setString(obj, "name", ref.name());
 	JsonConverter::setString(obj, "type", ref.type().id());
 	JsonConverter::setInt(obj, "level", ref.averageLevel());
-	JsonConverter::setString(obj, "level-variance", LevelVarianceType::toString(ref.levelVarianceType()));
+	JsonConverter::setString(obj, "levelVariance", LevelVarianceType::toString(ref.levelVarianceType()));
 
 	return obj;
 }
@@ -27,7 +27,7 @@ const DiseaseData& DiseaseSerializer::deserializeObject(json::object& jsonObj) c
 
 	// Get the level variance type based on the string value in the json file and set it
 	LevelVarianceType::Type level_variance_type{};
-	LevelVarianceType::fromString(JsonConverter::getString(jsonObj, "level-variance"), level_variance_type);
+	LevelVarianceType::fromString(JsonConverter::getString(jsonObj, "levelVariance"), level_variance_type);
 	ref.setLevelVarianceType(level_variance_type);
 
 	return ref;

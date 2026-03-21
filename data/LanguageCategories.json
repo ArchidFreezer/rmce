@@ -1,6 +1,10 @@
 {
     "languagecategories" : [
         {
+            "id" : "LANGUAGECATEGORY_DEMONIC",
+            "name" : "Demonic"
+        },
+        {
             "id" : "LANGUAGECATEGORY_DWARVEN",
             "name" : "Dwarven"
         },

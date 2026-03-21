@@ -5,7 +5,7 @@
             "type" : "Bubonic",
             "transmission" : "Injection",
             "description" : "Strikes in 1-10 days",
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "rashes; mild glandular swelling; fever (-15)"
@@ -29,7 +29,7 @@
             "type" : "Chemical",
             "transmission" : "Ingestion",
             "description" : "Strikes after continued exposure or use. See rules for addiction",
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "no significant permanent damage; withdrawal results in mild spasms, sweating, and irritability (-15)"
@@ -53,7 +53,7 @@
             "type" : "Genetic",
             "transmission" : "Hereditary",
             "description" : "Strikes prior to outset of character’s entry into game or at a random moment during the game (e.g., whenever he rolls an unmodified 123)",
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "01-80 = an allergy; 81-100 = mild dyslexia (double development cost for written languages and -20 to reading attempts). For allergies, roll 2d10 with the following results: 2-4 = a specific type of herb or medicine; 5-7 = alcohol; 8-9 = dairy products; 10 = ragweed; 11 = pollen; 12 = a specific sweetener; 13-14 = a specific common plant; 15-17 = wheat products; 18-20 = a specific kind of meat"
@@ -77,7 +77,7 @@
             "type" : "Pneumonic",
             "transmission" : "Inhalation",
             "description" : "Strikes in d100 hours after exposure",
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "fever; sweating; dizziness (-20)"
@@ -101,7 +101,7 @@
             "type" : "Psychiatric",
             "transmission" : "Environment",
             "description" : "Strikes randomly, often as a result of trauma",
-            "severity-symptoms" : [
+            "severitySymptoms" : [
                 {
                     "severity" : "Mild",
                     "symptoms" : "mild neuroses. Roll d100 with the following results: 01-10 = communication difficulty (e.g., stuttering); 11-25 = obsession (e.g., cleanliness); 26-40 = anger (e.g., directed grudge); 41-100 = light phobias (e.g., vertigo, claustrophobia, etc.)"

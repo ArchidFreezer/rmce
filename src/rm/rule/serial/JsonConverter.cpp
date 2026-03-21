@@ -40,6 +40,8 @@ float JsonConverter::getFloat(const json::object& obj, const std::string& key, f
 			return static_cast<float>(atof(it->value().as_string().c_str()));
 		} else if (it->value().is_double()) {
 			return static_cast<float>(it->value().as_double());
+		} else if (it->value().is_int64()) {
+			return static_cast<float>(it->value().as_int64());
 		}
 	}
 	return default_value;
@@ -51,7 +53,9 @@ double JsonConverter::getDouble(const json::object& obj, const std::string& key,
 		if (it->value().is_string()) {
 			return atof(it->value().as_string().c_str());
 		} else if (it->value().is_double()) {
-			return static_cast<int>(it->value().as_double());
+			return static_cast<double>(it->value().as_double());
+		} else if (it->value().is_int64()) {
+			return static_cast<double>(it->value().as_int64());
 		}
 	}
 	return default_value;

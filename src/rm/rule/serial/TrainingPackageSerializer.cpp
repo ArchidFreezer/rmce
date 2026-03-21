@@ -10,48 +10,48 @@ json::value TrainingPackageSerializer::serializeObject(const TrainingPackageData
 	JsonConverter::setString(obj, "name", ref.name());
 	JsonConverter::setString(obj, "description", ref.description());
 	if (!ref.flavourText().empty())
-		JsonConverter::setString(obj, "flavour-text", ref.flavourText());
+		JsonConverter::setString(obj, "flavourText", ref.flavourText());
 	JsonConverter::setString(obj, "book", ref.book().id());
 	setQualifiers(obj, "qualifiers", ref.qualifiers());
 	JsonConverter::setStringSet(obj, "notes", ref.notes());
 	JsonConverter::setDataSet(obj, "races", ref.races());
 	JsonConverter::setBool(obj, "lifestyle", ref.lifestyle());
-	JsonConverter::setInt(obj, "time-to-acquire", ref.timeToAcquire());
+	JsonConverter::setInt(obj, "timeToAcquire", ref.timeToAcquire());
 	if (!ref.startingMoneyModifierDice().empty())
-		JsonConverter::setString(obj, "starting-money-modifier-dice", ref.startingMoneyModifierDice());
+		JsonConverter::setString(obj, "startingMoneyModifierDice", ref.startingMoneyModifierDice());
 	setSpecials(obj, "specials", ref.specials());
 	if (!ref.statGains().empty())
-		JsonConverter::setEnumSet(obj, "stat-gains", ref.statGains());
+		JsonConverter::setEnumSet(obj, "statGains", ref.statGains());
 	if (ref.realmStatGain())
-		JsonConverter::setBool(obj, "realm-stat-gain", ref.realmStatGain());
+		JsonConverter::setBool(obj, "realmStatGain", ref.realmStatGain());
 	if (ref.statGainChoices().numChoices())
-		setStatGainChoices(obj, "stat-gain-choices", ref.statGainChoices());
+		setStatGainChoices(obj, "statGainChoices", ref.statGainChoices());
 	if (!ref.skillRanks().empty())
-		JsonConverter::setSkillPrimitiveMap(obj, "skill-ranks", ref.skillRanks());
+		JsonConverter::setSkillPrimitiveMap(obj, "skillRanks", ref.skillRanks());
 	if (!ref.skillRankChoices().empty())
-		JsonConverter::setSkillChoicePrimitiveMap(obj, "skill-rank-choices", ref.skillRankChoices());
+		JsonConverter::setSkillChoicePrimitiveMap(obj, "skillRankChoices", ref.skillRankChoices());
 	if (!ref.skillCategoryRanks().empty())
-		JsonConverter::setDataPrimitiveMap(obj, "category-ranks", ref.skillCategoryRanks());
+		JsonConverter::setDataPrimitiveMap(obj, "categoryRanks", ref.skillCategoryRanks());
 	if (!ref.skillCategoryMultiSkillRankChoices().empty())
-		setCategoryMultiSkillRankChoices(obj, "category-multi-skill-rank-choices", ref.skillCategoryMultiSkillRankChoices());
+		setCategoryMultiSkillRankChoices(obj, "categoryMultiSkillRankChoices", ref.skillCategoryMultiSkillRankChoices());
 	if (!ref.skillGroupMultiSkillRankChoices().empty())
-		setGroupMultiSkillRankChoices(obj, "group-multi-skill-rank-choices", ref.skillGroupMultiSkillRankChoices());
+		setGroupMultiSkillRankChoices(obj, "groupMultiSkillRankChoices", ref.skillGroupMultiSkillRankChoices());
 	if (!ref.skillGroupCategoryAndSkillRanks().empty())
-		setSkillGroupCategoryAndSkillRankChoices(obj, "group-category-and-skill-rank-choices", ref.skillGroupCategoryAndSkillRanks());
+		setSkillGroupCategoryAndSkillRankChoices(obj, "groupCategoryAndSkillRankChoices", ref.skillGroupCategoryAndSkillRanks());
 	if (!ref.spellListChoices().empty())
-		setSpellListChoices(obj, "spell-list-ranks", ref.spellListChoices());
+		setSpellListChoices(obj, "spellListRanks", ref.spellListChoices());
 	if (!ref.spellListCategoryChoices().empty())
-		setSpellListCategoryChoices(obj, "spell-list-category-rank-choices", ref.spellListCategoryChoices());
+		setSpellListCategoryChoices(obj, "spellListCategoryRankChoices", ref.spellListCategoryChoices());
 	if (!ref.lifestyleSkills().empty())
-		JsonConverter::setSkillSet(obj, "lifestyle-skills", ref.lifestyleSkills());
+		JsonConverter::setSkillSet(obj, "lifestyleSkills", ref.lifestyleSkills());
 	if (!ref.lifestyleSkillCategories().empty())
-		JsonConverter::setDataSet(obj, "lifestyle-categories", ref.lifestyleSkillCategories());
+		JsonConverter::setDataSet(obj, "lifestyleCategories", ref.lifestyleSkillCategories());
 	if (!ref.lifestyleSkillGroups().empty())
-		JsonConverter::setDataSet(obj, "lifestyle-groups", ref.lifestyleSkillGroups());
+		JsonConverter::setDataSet(obj, "lifestyleGroups", ref.lifestyleSkillGroups());
 	if (!ref.lifestyleCategorySkillChoices().empty())
-		JsonConverter::setDataChoiceSet<SkillCategoryData>(obj, "lifestyle-category-skill-choices", ref.lifestyleCategorySkillChoices());
+		JsonConverter::setDataChoiceSet<SkillCategoryData>(obj, "lifestyleCategorySkillChoices", ref.lifestyleCategorySkillChoices());
 	if (!ref.languageChoices().empty())
-		JsonConverter::setDataChoicePrimitiveMap<LanguageData, int>(obj, "language-choices", ref.languageChoices());
+		JsonConverter::setDataChoicePrimitiveMap<LanguageData, int>(obj, "languageChoices", ref.languageChoices());
 
 	return obj;
 }
@@ -62,7 +62,7 @@ const TrainingPackageData& TrainingPackageSerializer::deserializeObject(json::ob
 	ref.setName(JsonConverter::getString(jsonObj, "name"));
 	ref.setDescription(JsonConverter::getString(jsonObj, "description"));
 
-	std::optional<std::string> flavour_text = JsonConverter::getOptionalString(jsonObj, "flavour-text");
+	std::optional<std::string> flavour_text = JsonConverter::getOptionalString(jsonObj, "flavourText");
 	if (flavour_text)
 		ref.setFlavourText(*flavour_text);
 
@@ -73,43 +73,43 @@ const TrainingPackageData& TrainingPackageSerializer::deserializeObject(json::ob
 	ref.setNotes(JsonConverter::getStringSet(jsonObj, "notes"));
 	ref.setRaces(JsonConverter::getDataSet<RaceData>(jsonObj, "races", manager_));
 	ref.setLifestyle(JsonConverter::getBool(jsonObj, "lifestyle"));
-	ref.setTimeToAcquire(JsonConverter::getInt(jsonObj, "time-to-acquire", 0));
-	std::optional<std::string> starting_money_dice = JsonConverter::getOptionalString(jsonObj, "starting-money-modifier-dice");
+	ref.setTimeToAcquire(JsonConverter::getInt(jsonObj, "timeToAcquire", 0));
+	std::optional<std::string> starting_money_dice = JsonConverter::getOptionalString(jsonObj, "startingMoneyModifierDice");
 	if (starting_money_dice)
 		ref.setStartingMoneyModifierDice(starting_money_dice.value());
 	ref.setSpecials(getSpecials(jsonObj, "specials"));
-	if (jsonObj.find("stat-gains") != jsonObj.end())
-		ref.setStatGains(JsonConverter::getEnumSet<StatType::Type>(jsonObj, "stat-gains"));
-	if (jsonObj.find("realm-stat-gain") != jsonObj.end())
-		ref.setRealmStatGain(JsonConverter::getBool(jsonObj, "realm-stat-gain"));
-	if (jsonObj.find("stat-gain-choices") != jsonObj.end())
-		ref.setStatGainChoices(getStatGainChoices(jsonObj, "stat-gain-choices"));
-	if (jsonObj.find("skill-ranks") != jsonObj.end())
-		ref.setSkillRanks(JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skill-ranks", manager_));
-	if (jsonObj.find("skill-rank-choices") != jsonObj.end())
-		ref.setSkillRankChoices(JsonConverter::getSkillChoicePrimitiveMap<int>(jsonObj, "skill-rank-choices", manager_));
-	if (jsonObj.find("category-ranks") != jsonObj.end())
-		ref.setSkillCategoryRanks(JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "category-ranks", manager_));
-	if (jsonObj.find("category-multi-skill-rank-choices") != jsonObj.end())
-		ref.setSkillCategoryMultiSkillRankChoices(getCategoryMultiSkillRankChoices(jsonObj, "category-multi-skill-rank-choices"));
-	if (jsonObj.find("group-multi-skill-rank-choices") != jsonObj.end())
-		ref.setSkillGroupMultiSkillRankChoices(getGroupMultiSkillRankChoices(jsonObj, "group-multi-skill-rank-choices"));
-	if (jsonObj.find("group-category-and-skill-rank-choices") != jsonObj.end())
-		ref.setSkillGroupCategoryAndSkillRanks(getSkillGroupCategoryAndSkillRankChoices(jsonObj, "group-category-and-skill-rank-choices"));
-	if (jsonObj.find("spell-list-ranks") != jsonObj.end())
-		ref.setSpellListChoices(getSpellListChoices(jsonObj, "spell-list-ranks"));
-	if (jsonObj.find("spell-list-category-rank-choices") != jsonObj.end())
-		ref.setSpellListCategoryChoices(getSpellListCategoryChoices(jsonObj, "spell-list-category-rank-choices"));
-	if (jsonObj.find("lifestyle-skills") != jsonObj.end())
-		ref.setLifestyleSkills(JsonConverter::getSkillSet(jsonObj, "lifestyle-skills", manager_));
-	if (jsonObj.find("lifestyle-categories") != jsonObj.end())
-		ref.setLifestyleSkillCategories(JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "lifestyle-categories", manager_));
-	if (jsonObj.find("lifestyle-groups") != jsonObj.end())
-		ref.setLifestyleSkillGroups(JsonConverter::getDataSet<SkillGroupData>(jsonObj, "lifestyle-groups", manager_));
-	if (jsonObj.find("lifestyle-category-skill-choices") != jsonObj.end())
-		ref.setLifestyleCategorySkillChoices(JsonConverter::getDataChoiceSet<SkillCategoryData>(jsonObj, "lifestyle-category-skill-choices", manager_));
-	if (jsonObj.find("language-choices") != jsonObj.end())
-		ref.setLanguageChoices(JsonConverter::getDataChoicePrimitiveMap<LanguageData, int>(jsonObj, "language-choices", manager_));
+	if (jsonObj.find("statGains") != jsonObj.end())
+		ref.setStatGains(JsonConverter::getEnumSet<StatType::Type>(jsonObj, "statGains"));
+	if (jsonObj.find("realmStatGain") != jsonObj.end())
+		ref.setRealmStatGain(JsonConverter::getBool(jsonObj, "realmStatGain"));
+	if (jsonObj.find("statGainChoices") != jsonObj.end())
+		ref.setStatGainChoices(getStatGainChoices(jsonObj, "statGainChoices"));
+	if (jsonObj.find("skillRanks") != jsonObj.end())
+		ref.setSkillRanks(JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skillRanks", manager_));
+	if (jsonObj.find("skillRankChoices") != jsonObj.end())
+		ref.setSkillRankChoices(JsonConverter::getSkillChoicePrimitiveMap<int>(jsonObj, "skillRankChoices", manager_));
+	if (jsonObj.find("categoryRanks") != jsonObj.end())
+		ref.setSkillCategoryRanks(JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "categoryRanks", manager_));
+	if (jsonObj.find("categoryMultiSkillRankChoices") != jsonObj.end())
+		ref.setSkillCategoryMultiSkillRankChoices(getCategoryMultiSkillRankChoices(jsonObj, "categoryMultiSkillRankChoices"));
+	if (jsonObj.find("groupMultiSkillRankChoices") != jsonObj.end())
+		ref.setSkillGroupMultiSkillRankChoices(getGroupMultiSkillRankChoices(jsonObj, "groupMultiSkillRankChoices"));
+	if (jsonObj.find("groupCategoryAndSkillRankChoices") != jsonObj.end())
+		ref.setSkillGroupCategoryAndSkillRanks(getSkillGroupCategoryAndSkillRankChoices(jsonObj, "groupCategoryAndSkillRankChoices"));
+	if (jsonObj.find("spellListRanks") != jsonObj.end())
+		ref.setSpellListChoices(getSpellListChoices(jsonObj, "spellListRanks"));
+	if (jsonObj.find("spellListCategoryRankChoices") != jsonObj.end())
+		ref.setSpellListCategoryChoices(getSpellListCategoryChoices(jsonObj, "spellListCategoryRankChoices"));
+	if (jsonObj.find("lifestyleSkills") != jsonObj.end())
+		ref.setLifestyleSkills(JsonConverter::getSkillSet(jsonObj, "lifestyleSkills", manager_));
+	if (jsonObj.find("lifestyleCategories") != jsonObj.end())
+		ref.setLifestyleSkillCategories(JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "lifestyleCategories", manager_));
+	if (jsonObj.find("lifestyleGroups") != jsonObj.end())
+		ref.setLifestyleSkillGroups(JsonConverter::getDataSet<SkillGroupData>(jsonObj, "lifestyleGroups", manager_));
+	if (jsonObj.find("lifestyleCategorySkillChoices") != jsonObj.end())
+		ref.setLifestyleCategorySkillChoices(JsonConverter::getDataChoiceSet<SkillCategoryData>(jsonObj, "lifestyleCategorySkillChoices", manager_));
+	if (jsonObj.find("languageChoices") != jsonObj.end())
+		ref.setLanguageChoices(JsonConverter::getDataChoicePrimitiveMap<LanguageData, int>(jsonObj, "languageChoices", manager_));
 
 	return ref;
 }
@@ -176,7 +176,7 @@ EnumChoice<StatType::Type> TrainingPackageSerializer::getStatGainChoices(const j
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_object()) {
 		json::object choices_obj = it->value().as_object();
-		result.setNumChoices(JsonConverter::getInt(choices_obj, "num-choices", 0));
+		result.setNumChoices(JsonConverter::getInt(choices_obj, "numChoices", 0));
 		if (choices_obj.find("options") != choices_obj.end() && choices_obj["options"].is_array()) {
 			for (const auto& item : choices_obj["options"].as_array()) {
 				if (item.is_string()) {
@@ -194,7 +194,7 @@ EnumChoice<StatType::Type> TrainingPackageSerializer::getStatGainChoices(const j
 
 void TrainingPackageSerializer::setStatGainChoices(json::object& obj, const std::string& key, const EnumChoice<StatType::Type>& stat_gain_choices) const {
 	json::object choices_obj;
-	JsonConverter::setInt(choices_obj, "num-choices", stat_gain_choices.numChoices());
+	JsonConverter::setInt(choices_obj, "numChoices", stat_gain_choices.numChoices());
 
 	std::map<std::string, StatType::Type> sorted_options{};
 	for (const StatType::Type option : stat_gain_choices.options<StatType::Type>()) {
@@ -220,7 +220,7 @@ std::set<CategoryMultiSkillRankChoice> TrainingPackageSerializer::getCategoryMul
 				std::string category_id = JsonConverter::getString(entry_obj, "id");
 				const SkillCategoryData* category = &manager_.get<SkillCategoryData>(category_id);
 				int ranks = JsonConverter::getInt(entry_obj, "value", 0);
-				int num_choices = JsonConverter::getInt(entry_obj, "num-choices", 0);
+				int num_choices = JsonConverter::getInt(entry_obj, "numChoices", 0);
 				result.emplace(CategoryMultiSkillRankChoice{category, ranks, num_choices});
 			}
 		}
@@ -234,7 +234,7 @@ void TrainingPackageSerializer::setCategoryMultiSkillRankChoices(json::object& o
 		json::object entry_obj;
 		entry_obj["id"] = choice.category->id();
 		entry_obj["value"] = choice.ranks;
-		entry_obj["num-choices"] = choice.num_choices;
+		entry_obj["numChoices"] = choice.num_choices;
 		arr.push_back(entry_obj);
 	}
 	if (arr.size())
@@ -251,7 +251,7 @@ std::vector<GroupMultiSkillRankChoice> TrainingPackageSerializer::getGroupMultiS
 				std::string category_id = JsonConverter::getString(entry_obj, "id");
 				const SkillGroupData* group = &manager_.get<SkillGroupData>(category_id);
 				int ranks = JsonConverter::getInt(entry_obj, "value", 0);
-				int num_choices = JsonConverter::getInt(entry_obj, "num-choices", 0);
+				int num_choices = JsonConverter::getInt(entry_obj, "numChoices", 0);
 				result.emplace_back(GroupMultiSkillRankChoice{group, ranks, num_choices});
 			}
 		}
@@ -265,7 +265,7 @@ void TrainingPackageSerializer::setGroupMultiSkillRankChoices(json::object& obj,
 		json::object entry_obj;
 		entry_obj["id"] = choice.group->id();
 		entry_obj["value"] = choice.ranks;
-		entry_obj["num-choices"] = choice.num_choices;
+		entry_obj["numChoices"] = choice.num_choices;
 		arr.push_back(entry_obj);
 	}
 	if (arr.size())
@@ -311,11 +311,11 @@ std::set<SpellListChoices> TrainingPackageSerializer::getSpellListChoices(const 
 				json::object entry_obj = item.as_object();
 				SpellListChoices choice_struct{};
 
-				std::optional<std::string> category_id = JsonConverter::getOptionalString(entry_obj, "optional-category");
+				std::optional<std::string> category_id = JsonConverter::getOptionalString(entry_obj, "optionalCategory");
 				if (category_id)
 					choice_struct.spell_list_category = &manager_.get<SkillCategoryData>(*category_id);
 
-				choice_struct.num_choices = JsonConverter::getInt(entry_obj, "num-choices", 0);
+				choice_struct.num_choices = JsonConverter::getInt(entry_obj, "numChoices", 0);
 				choice_struct.ranks = JsonConverter::getInt(entry_obj, "value", 0);
 
 				if (entry_obj.find("options") != entry_obj.end() && entry_obj["options"].is_array()) {
@@ -340,9 +340,9 @@ void TrainingPackageSerializer::setSpellListChoices(json::object& obj, const std
 	for (const auto& choice : choices) {
 		json::object entry_obj;
 		if (choice.spell_list_category)
-			entry_obj["optional-category"] = choice.spell_list_category.value()->id();
+			entry_obj["optionalCategory"] = choice.spell_list_category.value()->id();
 		entry_obj["value"] = choice.ranks;
-		entry_obj["num-choices"] = choice.num_choices;
+		entry_obj["numChoices"] = choice.num_choices;
 
 		// Sort the spell lists by ID for consistent ordering in the JSON
 		std::map<std::string, const SpellListData*> sorted_spell_lists;
@@ -372,7 +372,7 @@ std::set<SpellListCategoryChoices> TrainingPackageSerializer::getSpellListCatego
 			if (item.is_object()) {
 				json::object entry_obj = item.as_object();
 				SpellListCategoryChoices choice_struct{};
-				choice_struct.num_choices = JsonConverter::getInt(entry_obj, "num-choices", 0);
+				choice_struct.num_choices = JsonConverter::getInt(entry_obj, "numChoices", 0);
 				choice_struct.ranks = JsonConverter::getInt(entry_obj, "value", 0);
 
 				if (entry_obj.find("options") != entry_obj.end() && entry_obj["options"].is_array()) {
@@ -396,7 +396,7 @@ void TrainingPackageSerializer::setSpellListCategoryChoices(json::object& obj, c
 	for (const auto& choice : choices) {
 		json::object entry_obj;
 		entry_obj["value"] = choice.ranks;
-		entry_obj["num-choices"] = choice.num_choices;
+		entry_obj["numChoices"] = choice.num_choices;
 
 		// Sort the categories by ID for consistent ordering in the JSON
 		std::map<std::string, const SkillCategoryData*> sorted_categories;

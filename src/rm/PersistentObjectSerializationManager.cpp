@@ -73,6 +73,42 @@ void PersistentObjectSerializationManager::save() {
 	serializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 }
 
+void PersistentObjectSerializationManager::save(std::string_view prefix) {
+	using namespace rm::rule::serial;
+
+	std::string clean_prefix = archid::lcase(std::string(prefix));
+	// Remove trailing underscore if present
+	if (clean_prefix.ends_with("_")) {
+		clean_prefix.pop_back();
+	}
+	if (clean_prefix == "animal") serializeAllObjects<rm::rule::AnimalData>("Animals.json", "animals");
+	if (clean_prefix == "armourtype") serializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armourtypes");
+	if (clean_prefix == "attacktable") serializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attacktables");
+	if (clean_prefix == "book") serializeAllObjects<rm::rule::BookData>("Books.json", "books");
+	if (clean_prefix == "climate") serializeAllObjects<rm::rule::ClimateData>("Climates.json", "climates");
+	if (clean_prefix == "creaturepace") serializeAllObjects<rm::rule::CreaturePaceData>("CreaturePaces.json", "creaturepaces");
+	if (clean_prefix == "culture") serializeAllObjects<rm::rule::CultureData>("Cultures.json", "cultures");
+	if (clean_prefix == "culturetype") serializeAllObjects<rm::rule::CultureTypeData>("CultureTypes.json", "culturetypes");
+	if (clean_prefix == "disease") serializeAllObjects<rm::rule::DiseaseData>("Diseases.json", "diseases");
+	if (clean_prefix == "diseasetype") serializeAllObjects<rm::rule::DiseaseTypeData>("DiseaseTypes.json", "diseasetypes");
+	if (clean_prefix == "language") serializeAllObjects<rm::rule::LanguageData>("Languages.json", "languages");
+	if (clean_prefix == "languagecategory") serializeAllObjects<rm::rule::LanguageCategoryData>("LanguageCategories.json", "languagecategories");
+	if (clean_prefix == "poison") serializeAllObjects<rm::rule::PoisonData>("Poisons.json", "poisons");
+	if (clean_prefix == "poisontype") serializeAllObjects<rm::rule::PoisonTypeData>("PoisonTypes.json", "poisontypes");
+	if (clean_prefix == "profession") serializeAllObjects<rm::rule::ProfessionData>("Professions.json", "professions");
+	if (clean_prefix == "race") serializeAllObjects<rm::rule::RaceData>("Races.json", "races");
+	if (clean_prefix == "skill") serializeAllObjects<rm::rule::SkillData>("Skills.json", "skills");
+	if (clean_prefix == "skillcategory") serializeAllObjects<rm::rule::SkillCategoryData>("SkillCategories.json", "skillcategories");
+	if (clean_prefix == "skillgroup") serializeAllObjects<rm::rule::SkillGroupData>("SkillGroups.json", "skillgroups");
+	if (clean_prefix == "skillprogressiontype") serializeAllObjects<rm::rule::SkillProgressionTypeData>("SkillProgressionTypes.json", "skillprogressiontypes");
+	if (clean_prefix == "specialattacktable") serializeAllObjects<rm::rule::table::SpecialAttackTable>("SpecialAttackTables.json", "attacktables");
+	if (clean_prefix == "spelllist") serializeAllObjects<rm::rule::SpellListData>("SpellLists.json", "spelllists");
+	if (clean_prefix == "trainingpackage") serializeAllObjects<rm::rule::TrainingPackageData>("TrainingPackages.json", "trainingpackages");
+	if (clean_prefix == "treasurecode") serializeAllObjects<rm::rule::TreasureCodeData>("TreasureCodes.json", "treasurecodes");
+	if (clean_prefix == "weapontype") serializeAllObjects<rm::rule::WeaponTypeData>("WeaponTypes.json", "weapontypes");
+	if (clean_prefix == "trainingpackagecost") serializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
+}
+
 std::string PersistentObjectSerializationManager::serializeAnyObject(const std::string& id) {
 	using namespace rm::rule::serial;
 	// Get the object from the manager and determine its type, then call the appropriate serializer
