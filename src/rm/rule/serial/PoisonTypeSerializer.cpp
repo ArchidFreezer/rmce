@@ -9,7 +9,7 @@ json::value PoisonTypeSerializer::serializeObject(const PoisonTypeData& ref) con
 
 	JsonConverter::setString(obj, "id", ref.id());
 	JsonConverter::setString(obj, "type", PoisonType::toString(ref.type()));
-	JsonConverter::setString(obj, "areas-affected", ref.areasAffected());
+	JsonConverter::setString(obj, "areasAffected", ref.areasAffected());
 
 	// Onset times are stored in the json as an array of objects with keys corresponding to the severity level and values corresponding to the effect onset times for that severity level. We need to loop through the map and add each severity
 	// level and its corresponding effect onset times to the json object
@@ -22,7 +22,7 @@ json::value PoisonTypeSerializer::serializeObject(const PoisonTypeData& ref) con
 		onset_times_array.push_back(onset_time_obj);
 	}
 	if (onset_times_array.size())
-		obj["severity-effect-onsets"] = onset_times_array;
+		obj["severityEffectOnsets"] = onset_times_array;
 
 	// We need to convert the symptoms map into a json array of objects
 	json::array symptoms_array;
@@ -33,7 +33,7 @@ json::value PoisonTypeSerializer::serializeObject(const PoisonTypeData& ref) con
 		symptoms_array.push_back(symptom_obj);
 	}
 	if (symptoms_array.size())
-		obj["severity-symptoms"] = symptoms_array;
+		obj["severitySymptoms"] = symptoms_array;
 
 	return obj;
 }
@@ -48,13 +48,13 @@ const PoisonTypeData& PoisonTypeSerializer::deserializeObject(json::object& json
 	PoisonType::fromString(type_str, type);
 	ref.setType(type);
 
-	ref.setAreasAffected(JsonConverter::getString(jsonObj, "areas-affected"));
+	ref.setAreasAffected(JsonConverter::getString(jsonObj, "areasAffected"));
 
 	rm::rule::table::NumberMatcherFactory number_matcher_factory{};
 
 	// Effact onset times are stored in the json as an object with keys corresponding to the severity level and values corresponding to the effect onset times for that severity level. We need to loop through the object and add each severity
 	// level and its corresponding effect onset times to the PoisonTypeData object
-	json::array onset_times_array = JsonConverter::getJsonArray(jsonObj, "severity-effect-onsets");
+	json::array onset_times_array = JsonConverter::getJsonArray(jsonObj, "severityEffectOnsets");
 	for (const json::value& onset_time_entry : onset_times_array) {
 		if (onset_time_entry.is_object()) {
 			json::object onset_time_obj = onset_time_entry.as_object();
@@ -69,7 +69,7 @@ const PoisonTypeData& PoisonTypeSerializer::deserializeObject(json::object& json
 
 	// Severity symptoms are stored in the json as an object with keys corresponding to the severity level and values corresponding to the symptoms for that severity level. We need to loop through the object and add each severity level and
 	// its corresponding symptoms to the PoisonTypeData object
-	json::array symptoms_array = JsonConverter::getJsonArray(jsonObj, "severity-symptoms");
+	json::array symptoms_array = JsonConverter::getJsonArray(jsonObj, "severitySymptoms");
 	for (const json::value& symptom_entry : symptoms_array) {
 		if (symptom_entry.is_object()) {
 			json::object symptom_obj = symptom_entry.as_object();

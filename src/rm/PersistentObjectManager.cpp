@@ -81,6 +81,8 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 		result = &cache_.get<SkillGroupData>(id);
 	} else if (prefix == "SKILL") {
 		result = &cache_.get<SkillData>(id);
+	} else if (prefix == "SKILLPROGRESSIONTYPE") {
+		result = &cache_.get<SkillProgressionTypeData>(id);
 	} else if (prefix == "SPECIALATTACKTABLE") {
 		result = &cache_.get<SpecialAttackTable>(id);
 	} else if (prefix == "SPELLLIST") {
@@ -142,6 +144,8 @@ const std::set<std::string> PersistentObjectManager::getAllIds(std::string_view 
 		cache_.keys<SkillGroupData>(result);
 	} else if (lprefix == "skill") {
 		cache_.keys<SkillData>(result);
+	} else if (lprefix == "skillprogressiontype") {
+		cache_.keys<SkillProgressionTypeData>(result);
 	} else if (lprefix == "specialattacktable") {
 		cache_.keys<SpecialAttackTable>(result);
 	} else if (lprefix == "spelllist") {

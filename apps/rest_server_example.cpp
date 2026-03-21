@@ -45,8 +45,9 @@ int main(int argc, char* argv[]) {
 		std::cout << "  GET     /rmce/objects/{prefix}       - Get all game objects" << std::endl;
 		std::cout << "  GET     /rmce/objects/{prefix}?count - Count of game objects" << std::endl;
 		std::cout << "  GET     /rmce/objects/{prefix}?ids   - List of game object IDs" << std::endl;
-		std::cout << "  POST    /rmce/objects/{prefix}       - Create/update object" << std::endl;
+		std::cout << "  POST    /rmce/objects/{prefix}       - Create object" << std::endl;
 		std::cout << "  GET     /rmce/objects/{prefix}/{id}  - Get game object" << std::endl;
+		std::cout << "  PUT     /rmce/objects/{prefix}/{id}  - Update game object" << std::endl;
 		std::cout << "  DELETE  /rmce/objects/{prefix}/{id}  - Delete game object" << std::endl;
 		std::cout << "\nPress Ctrl+C to stop the server..." << std::endl;
 
@@ -59,6 +60,7 @@ int main(int argc, char* argv[]) {
 		rm::rest::RestServer server(address, port, num_threads);
 		server.setObjectManager(&json_manager);
 		server.start();
+		json_manager.setDataDirectory("../../../../data2/"); // Set the data directory for saving (optional if already set)
 
 		// Wait for stop signal
 		while (!stop_requested && server.isRunning()) {
@@ -68,8 +70,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "\nShutting down..." << std::endl;
 		server.stop();
 
-		//json_manager.setDataDirectory("../../../../data2/"); // Set the data directory for saving (optional if already set)
-		//json_manager.save();
+		json_manager.save();
 
 		std::cout << "Server shutdown complete." << std::endl;
 		return 0;

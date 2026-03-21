@@ -2,133 +2,133 @@
     "treasurecodes" : [
         {
             "id" : "TREASURECODE_A",
-            "items-value-type" : "Very Poor",
-            "wealth-value-type" : "Very Poor"
+            "itemsValueType" : "Very Poor",
+            "wealthValueType" : "Very Poor"
         },
         {
             "id" : "TREASURECODE_B",
-            "items-value-type" : "Very Poor",
-            "wealth-value-type" : "Poor"
+            "itemsValueType" : "Very Poor",
+            "wealthValueType" : "Poor"
         },
         {
             "id" : "TREASURECODE_C",
-            "items-value-type" : "Very Poor",
-            "wealth-value-type" : "Normal"
+            "itemsValueType" : "Very Poor",
+            "wealthValueType" : "Normal"
         },
         {
             "id" : "TREASURECODE_D",
-            "items-value-type" : "Very Poor",
-            "wealth-value-type" : "Rich"
+            "itemsValueType" : "Very Poor",
+            "wealthValueType" : "Rich"
         },
         {
             "id" : "TREASURECODE_E",
-            "items-value-type" : "Very Poor",
-            "wealth-value-type" : "Very Rich"
+            "itemsValueType" : "Very Poor",
+            "wealthValueType" : "Very Rich"
         },
         {
             "id" : "TREASURECODE_F",
-            "items-value-type" : "Poor",
-            "wealth-value-type" : "Very Poor"
+            "itemsValueType" : "Poor",
+            "wealthValueType" : "Very Poor"
         },
         {
             "id" : "TREASURECODE_G",
-            "items-value-type" : "Poor",
-            "wealth-value-type" : "Poor"
+            "itemsValueType" : "Poor",
+            "wealthValueType" : "Poor"
         },
         {
             "id" : "TREASURECODE_H",
-            "items-value-type" : "Poor",
-            "wealth-value-type" : "Normal"
+            "itemsValueType" : "Poor",
+            "wealthValueType" : "Normal"
         },
         {
             "id" : "TREASURECODE_I",
-            "items-value-type" : "Poor",
-            "wealth-value-type" : "Rich"
+            "itemsValueType" : "Poor",
+            "wealthValueType" : "Rich"
         },
         {
             "id" : "TREASURECODE_J",
-            "items-value-type" : "Poor",
-            "wealth-value-type" : "Very Rich"
+            "itemsValueType" : "Poor",
+            "wealthValueType" : "Very Rich"
         },
         {
             "id" : "TREASURECODE_K",
-            "items-value-type" : "Normal",
-            "wealth-value-type" : "Very Poor"
+            "itemsValueType" : "Normal",
+            "wealthValueType" : "Very Poor"
         },
         {
             "id" : "TREASURECODE_L",
-            "items-value-type" : "Normal",
-            "wealth-value-type" : "Poor"
+            "itemsValueType" : "Normal",
+            "wealthValueType" : "Poor"
         },
         {
             "id" : "TREASURECODE_M",
-            "items-value-type" : "Normal",
-            "wealth-value-type" : "Normal"
+            "itemsValueType" : "Normal",
+            "wealthValueType" : "Normal"
         },
         {
             "id" : "TREASURECODE_N",
-            "items-value-type" : "Normal",
-            "wealth-value-type" : "Rich"
+            "itemsValueType" : "Normal",
+            "wealthValueType" : "Rich"
         },
         {
             "id" : "TREASURECODE_O",
-            "items-value-type" : "Normal",
-            "wealth-value-type" : "Very Rich"
+            "itemsValueType" : "Normal",
+            "wealthValueType" : "Very Rich"
         },
         {
             "id" : "TREASURECODE_P",
-            "items-value-type" : "Rich",
-            "wealth-value-type" : "Very Poor"
+            "itemsValueType" : "Rich",
+            "wealthValueType" : "Very Poor"
         },
         {
             "id" : "TREASURECODE_Q",
-            "items-value-type" : "Rich",
-            "wealth-value-type" : "Poor"
+            "itemsValueType" : "Rich",
+            "wealthValueType" : "Poor"
         },
         {
             "id" : "TREASURECODE_R",
-            "items-value-type" : "Rich",
-            "wealth-value-type" : "Normal"
+            "itemsValueType" : "Rich",
+            "wealthValueType" : "Normal"
         },
         {
             "id" : "TREASURECODE_S",
-            "items-value-type" : "Rich",
-            "wealth-value-type" : "Rich"
+            "itemsValueType" : "Rich",
+            "wealthValueType" : "Rich"
         },
         {
             "id" : "TREASURECODE_T",
-            "items-value-type" : "Rich",
-            "wealth-value-type" : "Very Rich"
+            "itemsValueType" : "Rich",
+            "wealthValueType" : "Very Rich"
         },
         {
             "id" : "TREASURECODE_U",
-            "items-value-type" : "Very Rich",
-            "wealth-value-type" : "Very Poor"
+            "itemsValueType" : "Very Rich",
+            "wealthValueType" : "Very Poor"
         },
         {
             "id" : "TREASURECODE_V",
-            "items-value-type" : "Very Rich",
-            "wealth-value-type" : "Poor"
+            "itemsValueType" : "Very Rich",
+            "wealthValueType" : "Poor"
         },
         {
             "id" : "TREASURECODE_W",
-            "items-value-type" : "Very Rich",
-            "wealth-value-type" : "Normal"
+            "itemsValueType" : "Very Rich",
+            "wealthValueType" : "Normal"
         },
         {
             "id" : "TREASURECODE_X",
-            "items-value-type" : "Very Rich",
-            "wealth-value-type" : "Rich"
+            "itemsValueType" : "Very Rich",
+            "wealthValueType" : "Rich"
         },
         {
             "id" : "TREASURECODE_Y",
-            "items-value-type" : "Poor",
-            "wealth-value-type" : "Very Rich"
+            "itemsValueType" : "Very Rich",
+            "wealthValueType" : "Very Rich"
         },
         {
             "id" : "TREASURECODE_Z",
-            "items-value-type" : "Special",
-            "wealth-value-type" : "Special"
+            "itemsValueType" : "Special",
+            "wealthValueType" : "Special"
         }
     ]
 }
