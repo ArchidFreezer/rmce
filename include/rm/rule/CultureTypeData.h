@@ -342,10 +342,6 @@ public:
 	 * @param map Map of SubcategoriedSkillData and int number of ranks for each skill to set
 	 */
 	void setSkillRanks(std::map<const SubcategoriedSkillData*, int> map) {
-		for (auto& key : std::views::keys(map)) {
-			if (isRankSkill(key->skillData(), key->subcategory()))
-				throw InvalidSkillRank("There is already a rank set for skill " + key->id());
-		}
 		skill_ranks_ = std::move(map);
 	}
 
