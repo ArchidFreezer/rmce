@@ -19,7 +19,7 @@ json::value CultureTypeSerializer::serializeObject(const CultureTypeData& ref) c
 	JsonConverter::setInt(obj, "hobbySkillRanks", ref.hobbySkillRanks());
 	if (ref.spellListRanks())
 		JsonConverter::setInt(obj, "spellListRanks", ref.spellListRanks());
-	JsonConverter::setEnumSet(obj, "preferredArmours", ref.preferredArmour());
+	JsonConverter::setDataSet(obj, "preferredArmours", ref.preferredArmour());
 	JsonConverter::setDataSet(obj, "preferredWeapons", ref.preferredWeapons());
 	JsonConverter::setSkillPrimitiveMap(obj, "skillRanks", ref.skillRanks());
 	JsonConverter::setDataPrimitiveMap(obj, "skillCategoryRanks", ref.skillCategoryRanks());
@@ -49,7 +49,7 @@ const CultureTypeData& CultureTypeSerializer::deserializeObject(json::object& js
 	ref.setHobbySkillRanks(JsonConverter::getInt(jsonObj, "hobbySkillRanks", 0));
 	if (jsonObj.find("spellListRanks") != jsonObj.end())
 		ref.setSpellListRanks(JsonConverter::getInt(jsonObj, "spellListRanks", 0));
-	ref.setPreferredArmours(JsonConverter::getEnumSet<ArmourType::Type>(jsonObj, "preferredArmours"));
+	ref.setPreferredArmours(JsonConverter::getDataSet<ArmourTypeData>(jsonObj, "preferredArmours", manager_));
 	ref.setPreferredWeapons(JsonConverter::getDataSet<WeaponTypeData>(jsonObj, "preferredWeapons", manager_));
 	ref.setSkillRanks(JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skillRanks", manager_));
 	ref.setSkillCategoryRanks(JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "skillCategoryRanks", manager_));

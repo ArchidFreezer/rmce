@@ -4,7 +4,7 @@
 #include <ranges>
 #include <set>
 #include <string_view>
-#include <ArmourType.h>
+#include <ArmourTypeData.h>
 #include <ClimateData.h>
 #include <EnvironmentType.h>
 #include <GameRuleData.h>
@@ -252,36 +252,40 @@ public:
 
 	/**
 	 * @brief Add an armour type to the set of those preferred by the culture
-	 * @param armour_type ArmourType::Type to add
+	 * @param armour ArmourTypeData to add
 	 */
-	void addPreferredArmour(ArmourType::Type armour_type) {
-		preferred_armour_.emplace(armour_type);
+	void addPreferredArmour(ArmourTypeData& armour) {
+		preferred_armour_.emplace(&armour);
 	}
 
 	/**
 	 * @brief Set the set of armour types preferred by the culture
-	 * @param armours std::set of ArmourType::Type to set as preferred armours
+	 * @param armours std::set of ArmourTypeData pointers to set as preferred armours
 	 */
-	void setPreferredArmours(std::set<ArmourType::Type> armours) {
+	void setPreferredArmours(std::set<const ArmourTypeData*> armours) {
 		preferred_armour_ = std::move(armours);
 	}
 
 	/**
 	 * @brief Get a container with the armour types preferred by the culture
-	 * @return std::set<ArmourType::Type> armour types
+	 * @return std::set<const ArmourTypeData*> armour types
 	 */
-	const std::set<ArmourType::Type> preferredArmour() const {
+	const std::set<const ArmourTypeData*> preferredArmour() const {
 		return preferred_armour_;
 	}
 
 	/**
 	 * @brief Get whether an armour type is amongst those prefereed by the culture
-	 * @param armour_type ArmourType::Type to check
+	 * @param armour ArmourTypeData to check
 	 * @return `true` if the armour type is preferred by the culture
 	 * @return `true` if the armour type is not preferred by the culture
 	 */
-	bool isPreferredArmour(ArmourType::Type armour_type) const {
-		return (preferred_armour_.find(armour_type) != preferred_armour_.end());
+	bool isPreferredArmour(ArmourTypeData& armour) const {
+		for (auto& key : preferred_armour_) {
+			if (armour.id() == key->id())
+				return true;
+		}
+		return false;
 	}
 
 	/**
@@ -708,7 +712,7 @@ private:
 	std::string religion_{};                                               /** Typical religious beliefs practiced by members of the culture */
 	int hobby_skill_ranks_{};                                              /**< Number of hobby skill ranks available during adolescence */
 	int spell_list_ranks_{};                                               /**< Number of ranks in an open spell list members of the culture receive */
-	std::set<ArmourType::Type> preferred_armour_{};                        /**< Armour type typically preferred by members of the culture */
+	std::set<const ArmourTypeData*> preferred_armour_{};                   /**< Armour type typically preferred by members of the culture */
 	std::set<const WeaponTypeData*> preferred_weapons_{};                  /**< Weapon type typically preferred by members of the culture */
 	std::map<const SubcategoriedSkillData*, int> skill_ranks_{};           /** Number of skill ranks gained during adolescence */
 	std::map<const SkillCategoryData*, int> skill_category_ranks_{};       /** Number of skill category ranks gained during adolescence */
