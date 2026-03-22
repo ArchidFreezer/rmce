@@ -13,10 +13,10 @@
             "religiousBeliefs" : "Religion in Aerial cultures finds its gods in the elemental— in the towering solidity of a great mountain, in the high ceiling of the vast sky, in the terrifying power of a blizzard. Aerial civilizations entrust their priests with the task of establishing a harmonious relationship with these gods. They attempt to do so through ritual chanting, prayer and meditative trances that, in their view, allow them to communicate directly with the deities. The priests may decide to make ritual sacrifices to the god of the blizzard, but this happens only rarely, and not all groups do so.<p> Some Aerial cultures also worship great birds of prey, like great eagles, that make their nests among mountain crags as gods.",
             "hobbySkillRanks" : 12,
             "preferredArmours" : [
-                "AT 1",
-                "AT 5",
-                "AT 6",
-                "AT 9"
+                "ARMOURTYPE_SKIN",
+                "ARMOURTYPE_LEATHER_JERKIN",
+                "ARMOURTYPE_LEATHER_COAT",
+                "ARMOURTYPE_LEATHER_BREASTPLATE"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_AXE_WOODSMAN_S",
@@ -168,7 +168,7 @@
             "religiousBeliefs" : "Aquatic groups worship tribal gods who will protect them from harm, whether it is destruction of their Aquatic habitat or attack by their neighbors. This deity usually takes a physical form that resembles the race that it is supposed to protect. In some instances, however, it may take an elemental or non-corporeal form. The patron god may appear in the form of a disturbance in the water, such as a tidal wave or a whirlpool.",
             "hobbySkillRanks" : 12,
             "preferredArmours" : [
-                "AT 1"
+                "ARMOURTYPE_SKIN"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_HANDAXE",
@@ -285,7 +285,7 @@
             "religiousBeliefs" : "Arctic societies worship tribal gods who protect them from misfortune and the hazards of their environment. Sometimes, their deities take the form of animals that they hunt for food, and they believe that the god manifests itself through a particular creature that offers itself so that the tribe may survive. In other instances, the deity is a god of fire and warmth, the elemental embodiment of that which preserves life in a frozen climate. Arctic groups have a tribal priest, through whom all interactions with the god are channeled.<p> The vernal equinox is an especially important occasion in Arctic cultures because it marks the beginning of the brief period of the year in which they can experience the warmth of the sun with any regularity. Most Arctic groups mark it with a major religious ceremony.",
             "hobbySkillRanks" : 10,
             "preferredArmours" : [
-                "AT 4"
+                "ARMOURTYPE_HEAVY_HIDE"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_CLUB",
@@ -424,9 +424,9 @@
             "religiousBeliefs" : "Desert cultures worship their own tribal god. This deity takes on the roles of the tribe’s divine protector and law-giver. In many cases, it’s a double-edged role, as far as the tribe itself is concerned. Their deity presents itself as an angry and jealous father who expects his tribe to worship him exclusively and adhere without fail to his ideas of virtue and justice. Only then will protect them from foes and harm, and if his tribe fails him or disobeys him, he may exact a terrible punishment from them.<p> Other Desert groups worship the disk of the sun as a god, and attribute to it any quality that they wish. It may serve as a figure of benevolence, a bringer of light and life, or as a harsh god that inflicts punishment, drought and death to the unwary.<p> Some Desert groups believe that their deity is a universal god, and they take upon themselves the mission of spreading their religion to other groups, whether by the sword or by peaceful evangelism.",
             "hobbySkillRanks" : 12,
             "preferredArmours" : [
-                "AT 1",
-                "AT 13",
-                "AT 14"
+                "ARMOURTYPE_SKIN",
+                "ARMOURTYPE_CHAIN_SHIRT",
+                "ARMOURTYPE_CHAIN_SHIRT_GREAVES"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_BATTLE_AXE",
@@ -555,8 +555,8 @@
             "religiousBeliefs" : "Each Highland tribe has its own mythology, which generally centers around a pantheon of petty tribal gods, whose motives and behavior makes them seem more like ignoble mortals than deities. These gods generally represent forces of nature, or particular emotions or fields of endeavor, like love or war. This mythology is preserved and transmitted through oral story telling, and the older the tribe, the longer and more involved are the tales that tell their myths. Highland religious practice usually involves ritual sacrifice of animals.",
             "hobbySkillRanks" : 12,
             "preferredArmours" : [
-                "AT 1",
-                "AT 5"
+                "ARMOURTYPE_SKIN",
+                "ARMOURTYPE_LEATHER_JERKIN"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_BAW",
@@ -669,9 +669,9 @@
             "hobbySkillRanks" : 12,
             "spellListRanks" : 1,
             "preferredArmours" : [
-                "AT 1",
-                "AT 5",
-                "AT 9"
+                "ARMOURTYPE_SKIN",
+                "ARMOURTYPE_LEATHER_JERKIN",
+                "ARMOURTYPE_LEATHER_BREASTPLATE"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_CAT_O_NINE_TAILS_FIGHTING",
@@ -809,10 +809,10 @@
             "religiousBeliefs" : "Mining cultures worship tribal or elemental gods, or deities that combine aspects of both. Their tribal gods offer them collective protection from the hazards of their way of life, ensure their prosperity and/or shield them from their enemies. Elemental gods also appeal to them, although the mysteries and perils of the Subterranean realm do not consume them as much as they do to Subterranean cultures. Even so, they have enough contact with the elemental powers that lurk deep in the earth to fear them and understand that they must be propitiated. Mining cultures may have pantheons that reflect both of these impulses, having a tribal deity who is “on their side” and intercedes for them against the dark gods who dwell beneath the surface of the earth.<p> To interact with their deities, Mining communities have warrior-priests who perform rituals and who channel their power when the need for heroic action arises. These rituals do not include blood sacrifice of intelligent beings, however. Food or valuable objects are offered instead.",
             "hobbySkillRanks" : 12,
             "preferredArmours" : [
-                "AT 13",
-                "AT 14",
-                "AT 15",
-                "AT 16"
+                "ARMOURTYPE_CHAIN_SHIRT",
+                "ARMOURTYPE_CHAIN_SHIRT_GREAVES",
+                "ARMOURTYPE_FULL_CHAIN",
+                "ARMOURTYPE_CHAIN_HAUBERK"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_BATTLE_AXE",
@@ -946,11 +946,11 @@
             "religiousBeliefs" : "Most commonly, Plains folk worship gods that represent the sky or the weather, or some aspect of agriculture. Animal sacrifices meant to placate their gods are common, although offerings can also take the form of material goods or a fraction of the harvest.",
             "hobbySkillRanks" : 12,
             "preferredArmours" : [
-                "AT 1",
-                "AT 5",
-                "AT 6",
-                "AT 9",
-                "AT 10"
+                "ARMOURTYPE_SKIN",
+                "ARMOURTYPE_LEATHER_JERKIN",
+                "ARMOURTYPE_LEATHER_COAT",
+                "ARMOURTYPE_LEATHER_BREASTPLATE",
+                "ARMOURTYPE_LEATHER_BREASTPLATE_GREAVES"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_CLUB",
@@ -1088,9 +1088,9 @@
             "religiousBeliefs" : "Rural communities worship gods that represent the bounty of the harvest, or the abstract idea of plenty. They stage communal rituals that celebrate the spring and fall solstices (marking the time of sowing and harvesting, respectively), as well as religious ceremonies that ask their patron deity to bestow the blessing of a good harvest and keep them safe from catastrophe.",
             "hobbySkillRanks" : 12,
             "preferredArmours" : [
-                "AT 1",
-                "AT 5",
-                "AT 6"
+                "ARMOURTYPE_SKIN",
+                "ARMOURTYPE_LEATHER_JERKIN",
+                "ARMOURTYPE_LEATHER_COAT"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_CLUB",
@@ -1247,12 +1247,12 @@
             "religiousBeliefs" : "Subterranean cultures worship elemental gods associated with the earth and, sometimes, fire. Their deities represent strength that they draw from the depths of the earth, and the power of these gods sometimes expresses itself as volcanic explosions or earth tremors. Each Subterranean group has at least one spell caster whose duty it is to communicate with these gods and channel their power. Their religious rituals sometimes involve sacrificing animals or even intelligent beings to the deities. In the latter case, members of above ground races are considered the most valuable sacrificial victims, and groups will stage raids just to take prisoners.<p> The religion of some Subterranean cultures also describes light as a hostile deity who constantly threatens the existence of the group. In this formulation, above ground races are servants of that hostile god, especially Sylvan folk. Any Cleric from above ground who serves the god of the sun is also hated and feared.",
             "hobbySkillRanks" : 10,
             "preferredArmours" : [
-                "AT 5",
-                "AT 6",
-                "AT 13",
-                "AT 14",
-                "AT 15",
-                "AT 16"
+                "ARMOURTYPE_LEATHER_JERKIN",
+                "ARMOURTYPE_LEATHER_COAT",
+                "ARMOURTYPE_CHAIN_SHIRT",
+                "ARMOURTYPE_CHAIN_SHIRT_GREAVES",
+                "ARMOURTYPE_FULL_CHAIN",
+                "ARMOURTYPE_CHAIN_HAUBERK"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_BATTLE_AXE",
@@ -1361,9 +1361,9 @@
             "hobbySkillRanks" : 10,
             "spellListRanks" : 2,
             "preferredArmours" : [
-                "AT 1",
-                "AT 5",
-                "AT 6"
+                "ARMOURTYPE_SKIN",
+                "ARMOURTYPE_LEATHER_JERKIN",
+                "ARMOURTYPE_LEATHER_COAT"
             ],
             "preferredWeapons" : [
                 "WEAPONTYPE_BLOW_GUN_SMALL",
