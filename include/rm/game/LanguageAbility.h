@@ -51,7 +51,7 @@ namespace rm::game::character {
 		 * @param written number of written ranks the character has
 		 * @param somantic number of somantic ranks the character has
 		 */
-		LanguageAbility(const rule::LanguageData& language, int spoken, int written, int somantic) : language_{ &language }, spoken_{ std::max(0,spoken) }, written_{ std::max(0,written) }, somantic_{ std::max(0,somantic) } {}
+		LanguageAbility(const rule::LanguageData& language, int spoken, int written, int somantic) : language_{ &language }, spoken_{ std::max(0,spoken) }, written_{ std::max(0,written) }, somatic_{ std::max(0,somantic) } {}
 
 		/**
 		 * @brief Set the language the ability is in
@@ -83,17 +83,17 @@ namespace rm::game::character {
 		void updateSomanticRanks(int ranks);
 
 		/**
-		 * @brief Get the number of somantic ranks
-		 * @return somantic ranks
+		 * @brief Get the number of somatic ranks
+		 * @return somatic ranks
 		 */
-		int somantic() const { return isSomantic() ? std::max(0, somantic_) : 0; }
+		int somatic() const { return isSomatic() ? std::max(0, somatic_) : 0; }
 
 		/**
-		 * @brief Check whether the language has a somantic comnponent
-		 * @return `true` if there is a somantic component
-		 * @return `false` if there is no somantic component
+		 * @brief Check whether the language has a somatic component
+		 * @return `true` if there is a somatic component
+		 * @return `false` if there is no somatic component
 		 */
-		bool isSomantic() const { return language_->isSomantic(); }
+		bool isSomatic() const { return language_->isSomatic(); }
 
 		/**
 		 * @brief Modify the number of ranks in the language the character has
@@ -145,7 +145,7 @@ namespace rm::game::character {
 
 	private:
 		const rule::LanguageData* language_{}; /**< Language the character has any ability in */
-		int somantic_{ 0 }; /** Ability in somantic component of the languiage */
+		int somatic_{ 0 }; /** Ability in somantic component of the languiage */
 		int spoken_{ 0 }; /** Ability in spoken component of the languiage */
 		int written_{ 0 }; /** Ability in written component of the languiage */
 	};

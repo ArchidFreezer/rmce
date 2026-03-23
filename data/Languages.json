@@ -7,7 +7,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_COMMON_SPEECH",
@@ -16,7 +16,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_DEMONIC_I",
@@ -24,7 +24,7 @@
             "category" : "LANGUAGECATEGORY_DEMONIC",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_DEMONIC_II",
@@ -32,7 +32,7 @@
             "category" : "LANGUAGECATEGORY_DEMONIC",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_DWARVISH",
@@ -40,7 +40,7 @@
             "category" : "LANGUAGECATEGORY_DWARVEN",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_ELVISH",
@@ -48,7 +48,7 @@
             "category" : "LANGUAGECATEGORY_ELVEN",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_GNOLL",
@@ -56,7 +56,7 @@
             "category" : "LANGUAGECATEGORY_GNOLL",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_GNOMISH",
@@ -64,7 +64,7 @@
             "category" : "LANGUAGECATEGORY_GNOMISH",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_GOBLIN",
@@ -72,7 +72,7 @@
             "category" : "LANGUAGECATEGORY_GOBLIN",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_GREY_ELVISH",
@@ -81,7 +81,7 @@
             "baseLanguage" : "Elvish",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_HIGH_ELVISH",
@@ -90,7 +90,7 @@
             "baseLanguage" : "Elvish",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_HIGH_SPEECH",
@@ -99,7 +99,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_HILL_SPEECH",
@@ -108,7 +108,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_HOBGOBLIN",
@@ -116,7 +116,7 @@
             "category" : "LANGUAGECATEGORY_HOBGOBLIN",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_NEIGHBOUR",
@@ -124,7 +124,7 @@
             "category" : "LANGUAGECATEGORY_HUMAN",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_NORTH_SPEECH",
@@ -133,7 +133,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_ORCISH",
@@ -141,7 +141,7 @@
             "category" : "LANGUAGECATEGORY_GOBLIN",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_PLAINS_SPEECH",
@@ -150,7 +150,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_SEA_SPEECH",
@@ -159,7 +159,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_SMALL_SPEECH",
@@ -168,7 +168,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_SOUTH_SPEECH",
@@ -177,7 +177,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_TROGLODYTE",
@@ -186,7 +186,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         },
         {
             "id" : "LANGUAGE_WOOD_SPEECH",
@@ -195,7 +195,7 @@
             "baseLanguage" : "Common",
             "isSpoken" : true,
             "isWritten" : true,
-            "isSomantic" : false
+            "isSomatic" : false
         }
     ]
 }

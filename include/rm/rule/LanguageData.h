@@ -120,18 +120,18 @@ public:
 		return is_written_;
 	}
 	/**
-	 * @brief Sets if the language has a somantic component
-	 * @param is_somantic `true` if the langauge is somantic; `false` otherwise
+	 * @brief Sets if the language has a somatic component
+	 * @param is_somatic `true` if the langauge is somatic; `false` otherwise
 	 */
-	void setIsSomantic(bool is_somantic) {
-		is_somantic_ = is_somantic;
+	void setIsSomatic(bool is_somatic) {
+		is_somatic_ = is_somatic;
 	}
 	/**
-	 * @brief Whether the language has a somantic component
-	 * @return `true` if the language is somantic; `false` otherwise
+	 * @brief Whether the language has a somatic component
+	 * @return `true` if the language is somatic; `false` otherwise
 	 */
-	bool isSomantic() const {
-		return is_somantic_;
+	bool isSomatic() const {
+		return is_somatic_;
 	}
 
 private:
@@ -140,7 +140,7 @@ private:
 	std::string base_language_{}; /**< Language this language is a dialect of */
 	bool is_spoken_{true};        /**< Whether the language has a spoken form */
 	bool is_written_{true};       /**< Whether the language has a written form */
-	bool is_somantic_{false};     /**< Whether the language has a somantic form */
+	bool is_somatic_{false};      /**< Whether the language has a somatic form */
 };
 
 } // namespace rm::rule

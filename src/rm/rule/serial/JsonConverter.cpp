@@ -312,9 +312,9 @@ std::map<std::string, const rm::game::character::LanguageAbility> JsonConverter:
 			int written = getInt(abilityObj, "written");
 			ability.updateWrittenRanks(written);
 		}
-		if (abilityObj.find("somantic") != abilityObj.end()) {
-			int somantic = getInt(abilityObj, "somantic");
-			ability.updateSomanticRanks(somantic);
+		if (abilityObj.find("somatic") != abilityObj.end()) {
+			int somatic = getInt(abilityObj, "somatic");
+			ability.updateSomanticRanks(somatic);
 		}
 		map.emplace(language_id, ability);
 	}
@@ -326,8 +326,8 @@ void JsonConverter::setLanguageAbilities(json::object& obj, const std::string& k
 	for (const auto& [language_id, ability] : language_map) {
 		json::object abilityObj;
 		abilityObj["language"] = language_id;
-		if (ability.somantic() > 0) {
-			abilityObj["somantic"] = ability.somantic();
+		if (ability.somatic() > 0) {
+			abilityObj["somatic"] = ability.somatic();
 		}
 		if (ability.spoken() > 0) {
 			abilityObj["spoken"] = ability.spoken();
