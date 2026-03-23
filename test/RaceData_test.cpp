@@ -10,7 +10,7 @@ namespace {
 
 		rule::LanguageData l1("L1_ID");
 		l1.setName("L1_NAME");
-		l1.setIsSomantic(true);
+		l1.setIsSomatic(true);
 		LanguageAbility la1(l1, 6, 4, 2);
 		race.setAdolescentLanguageAbility(la1);
 
@@ -20,13 +20,13 @@ namespace {
 		race.setAdolescentLanguageAbility(la2);
 
 		// Test the language form is passed through to the ability
-		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").isSomantic(), false);
+		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").isSomatic(), false);
 		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").isSpoken(), true);
 		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").isWritten(), true);
 
 		EXPECT_EQ(race.adolescentLanguageAbility("L1_NAME").spoken(), 6);
 		EXPECT_EQ(race.adolescentLanguageAbility("L1_NAME").written(), 4);
-		EXPECT_EQ(race.adolescentLanguageAbility("L1_NAME").somantic(), 2);
+		EXPECT_EQ(race.adolescentLanguageAbility("L1_NAME").somatic(), 2);
 
 		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").written(), 5);
 		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").spoken(), 5);
@@ -37,7 +37,7 @@ namespace {
 
 		rule::LanguageData l1("L1_ID");
 		l1.setName("L1_NAME");
-		l1.setIsSomantic(true);
+		l1.setIsSomatic(true);
 		LanguageAbility la1(l1, 6, 4, 2);
 		race.setStartingLanguageAbility(la1);
 
@@ -47,13 +47,13 @@ namespace {
 		race.setStartingLanguageAbility(la2);
 
 		// Test the language form is passed through to the ability
-		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").isSomantic(), false);
+		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").isSomatic(), false);
 		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").isSpoken(), true);
 		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").isWritten(), true);
 
 		EXPECT_EQ(race.startingLanguageAbility("L1_NAME").spoken(), 6);
 		EXPECT_EQ(race.startingLanguageAbility("L1_NAME").written(), 4);
-		EXPECT_EQ(race.startingLanguageAbility("L1_NAME").somantic(), 2);
+		EXPECT_EQ(race.startingLanguageAbility("L1_NAME").somatic(), 2);
 
 		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").written(), 5);
 		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").spoken(), 5);

@@ -14,7 +14,7 @@ json::value LanguageSerializer::serializeObject(const LanguageData& ref) const {
 		JsonConverter::setString(obj, "baseLanguage", ref.baseLanguage());
 	JsonConverter::setBool(obj, "isSpoken", ref.isSpoken());
 	JsonConverter::setBool(obj, "isWritten", ref.isWritten());
-	JsonConverter::setBool(obj, "isSomantic", ref.isSomantic());
+	JsonConverter::setBool(obj, "isSomatic", ref.isSomatic());
 
 	return obj;
 }
@@ -29,7 +29,7 @@ const LanguageData& LanguageSerializer::deserializeObject(json::object& jsonObj)
 	ref.setCategory(JsonConverter::getString(jsonObj, "category", ""));
 	ref.setIsSpoken(JsonConverter::getBool(jsonObj, "isSpoken", false));
 	ref.setIsWritten(JsonConverter::getBool(jsonObj, "isWritten", false));
-	ref.setIsSomantic(JsonConverter::getBool(jsonObj, "isSomantic", false));
+	ref.setIsSomatic(JsonConverter::getBool(jsonObj, "isSomatic", false));
 
 	return ref;
 }
