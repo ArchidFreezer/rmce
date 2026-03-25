@@ -42,8 +42,12 @@ std::string escapeJson(const std::string& str) {
 }
 
 void HttpRequestHandler::handleRequest(const http::request<http::string_body>& request, http::response<http::string_body>& response) {
+
+	// Decode the request target to handle URL-encoded characters
+	std::string request_string = archid::uriDecode(request.target());
+
 	// Extract path and query parameters
-	const PathParser path(request.target(), "/rmce/objects/");
+	const PathParser path(request_string, "/rmce/objects/");
 
 	// Route handling
 	if (request.method() == http::verb::get && path.matchExact("/")) {
