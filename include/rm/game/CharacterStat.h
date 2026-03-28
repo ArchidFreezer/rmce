@@ -114,6 +114,15 @@ public:
 	 */
 	void performStatGainRoll();
 
+	/**
+	 * @brief Gets the total bonus provided by the stat, which is the sum of the basic bonus and the racial bonus.
+	 *
+	 * The total bonus is calculated by adding the basic bonus, which is determined by the temporary stat value, and the racial bonus, which is typically set at character creation based on the character race.
+	 */
+	int bonus() const {
+		return basic_bonus_ + racial_bonus_;
+	}
+
 private:
 	int temporary_{0};    // Temporary stat value that can be modified by various effects in the game, such as spells or temporary buffs/debuffs. This is the value that is used to calculate the basic bonus and potential stat value.
 	int potential_{0};    // Potential stat value that is calculated at character creation and is very rarely modified in the game.
