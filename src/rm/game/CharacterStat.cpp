@@ -3,7 +3,7 @@
 namespace rm::game::character {
 
 void Stat::performStatGainRoll() {
-	int gain = getStatGain(potential_ - temporary_);
+	int gain = stat::getStatGain(potential_ - temporary_);
 
 	if (gain < 0) {
 		// If the gain is negative then we need to ensure that we don't reduce the temporary stat value below 1.
@@ -12,15 +12,9 @@ void Stat::performStatGainRoll() {
 	updateTemporary(gain);
 }
 
-int Stat::modifierTotal() const {
-	int total{0};
-	for (const auto& modifier : modifiers_) {
-		total += modifier->modification();
-	}
-	return total;
-}
-
-int getBasicBonus(int temp_value) {
+namespace stat {
+	
+	int getBasicBonus(int temp_value) {
 	if (temp_value <= 10)
 		return (temp_value - 21) / 2;
 	if (temp_value <= 30)
@@ -34,7 +28,7 @@ int getBasicBonus(int temp_value) {
 	return (temp_value - 95) * 2;
 };
 
-int getInitialPotentialStatValue(int temp_value) {
+int getInitialPotentialValue(int temp_value) {
 	if (temp_value <= 24)
 		return 20 + archid::Dice(10).roll(8).result();
 	if (temp_value <= 34)
@@ -92,5 +86,7 @@ int getStatGain(int difference) {
 		return high_roll;
 	return high_roll + low_roll;
 };
+
+} // namespace rm::game::character::stat
 
 } // namespace rm::game::character
