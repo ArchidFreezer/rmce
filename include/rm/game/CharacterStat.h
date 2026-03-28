@@ -63,10 +63,25 @@ public:
 
 	/**
 	 * @brief Gets the potential stat value.
+	 * 
+	 * This value is calculated at character creation based on the temporary stat value and is very rarely modified during the game. It represents the maximum potential of the stat and is used to determine stat gains during levelling up and
+	 * training.
+	 * 
 	 * @return The potential stat value.
 	 */
 	int potential() const {
 		return potential_;
+	}
+
+	/**
+	 * @brief Updates the potential stat value.
+	 *
+	 * The stat potential should only be modified in extremely rare circumstances, such as the use of very powerful magic or a life changing event in the game.
+	 *
+	 * @param value The potential stat value to set.
+	 */
+	void updatePotential(int value) {
+		potential_ = std::max(0, potential_ + value);
 	}
 
 	/**
@@ -80,13 +95,17 @@ public:
 	/**
 	 * @brief Sets the temporary stat value and calculates the initial potential stat value based on it.
 	 *
-	 * This method is used to set the temporary stat value, which may be modified by various effects in the game.
+	 * This method is used to set the temporary stat value at character creation time.
 	 * After setting the temporary value, it calls the `getInitialPotentialStatValue` function to calculate the initial potential stat value based on the new temporary stat value.
+	 * 
+	 * To change the value after character creation, the `updateTemporary` method should be used instead, which will also recalculate the basic bonus accordingly.
 	 *
 	 * @param value The temporary stat value to set.
+	 * 
+	 * @see updateTemporary
 	 */
 	void setTemporary(int value) {
-		temporary_ = value;
+		temporary_ = std::max(0,value);
 		potential_ = stat::getInitialPotentialValue(temporary_);
 		basic_bonus_ = stat::getBasicBonus(temporary_);
 	}
@@ -94,13 +113,14 @@ public:
 	/**
 	 * @brief Change the temporary stat value and recalculate the basic bonus accordingly.
 	 *
-	 * This method is used to update the temporary stat value, which may be modified by various effects in the game.
+	 * This method is used to update the temporary stat value, which may be modified by various effects in the game. The `value` parameter is added to the current temporary stat value, and the result is ensured to be non-negative using
+	 * `std::max(0, ...)`.
 	 * After updating the temporary value, it calls the `calculateBasicBonus` method to ensure that the basic bonus is recalculated based on the new temporary stat value.
 	 *
 	 * @param value
 	 */
 	void updateTemporary(int value) {
-		temporary_ += value;
+		temporary_ = std::max(0, temporary_ + value);
 		basic_bonus_ = stat::getBasicBonus(temporary_);
 	}
 
