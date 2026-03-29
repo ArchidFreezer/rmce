@@ -10,8 +10,15 @@ namespace rm::game::character {
 
 using namespace rm::rule::enums;
 
+/**
+ * @class Character
+ * @brief Represents a character in the game, which is a type of GameObject that has various stats and a name.
+ *
+ * Each character has a set of stats, which are represented by the `Stat` class and stored in an unordered map with the stat type as the key. The character also has a name, which is used for display purposes and may not be unique.
+ */
 class Character : public rm::game::GameObject {
-public:
+	friend class CharacterBuilder; /*< CharacterBuilder is a friend to allow it access to the private members of this class for building characters with specific stats and names */
+	public:
 
 	/**
 	 * @brief Get the character's stat for a given stat type (const version).
@@ -23,30 +30,21 @@ public:
 	}
 
 	/**
-	 * @brief Get the potential value of the character's stat for a given stat type.
-	 * @param stat_type The type of stat to retrieve the potential value for (e.g., strength, dexterity, etc.).
-	 * @return The potential value of the character's stat for the specified stat type.
+	 * @brief Sets the stat temp for a specific stat type.
+	 * @param stat_type The type of statistic to set.
+	 * @param stat The statistic temporary value to store.
 	 */
-	int getStatPotential(StatType::Type stat_type) const {
-		return stats_.at(stat_type).potential();
+	void setStat(StatType::Type stat_type, int temp_value) {
+		stats_[stat_type].setTemporary(temp_value);
 	}
 
 	/**
-	 * @brief Get the temporary value of the character's stat for a given stat type.
-	 * @param stat_type The type of stat to retrieve the temporary value for (e.g., strength, dexterity, etc.).
-	 * @return The temporary value of the character's stat for the specified stat type.
+	 * @brief Updates the stat temp for a specific stat type by adding a temporary value to the existing temporary value.
+	 * @param stat_type The type of statistic to update.
+	 * @param difference The temporary value to add to the existing temporary value of the specified statistic.
 	 */
-	int getStatTemporary(StatType::Type stat_type) const {
-		return stats_.at(stat_type).temporary();
-	}
-
-	/**
-	 * @brief Get the total bonus of the character's stat for a given stat type.
-	 * @param stat_type The type of stat to retrieve the total bonus for (e.g., strength, dexterity, etc.).
-	 * @return The total bonus of the character's stat for the specified stat type, which includes the basic bonus, racial bonus, and any modifiers.
-	 */
-	int getStatBonus(StatType::Type stat_type) const {
-		return stats_.at(stat_type).bonus();
+	void updateStat(StatType::Type stat_type, int difference) {
+		stats_[stat_type].updateTemporary(difference);
 	}
 
 	/**

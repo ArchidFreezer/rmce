@@ -1,1 +1,1 @@
-target_sources(rm PRIVATE "LanguageAbility.cpp" "Location.cpp" "CharacterStat.cpp" "Character.cpp")
+target_sources(rm PRIVATE "LanguageAbility.cpp" "Location.cpp" "CharacterStat.cpp" "Character.cpp" "CharacterBuilder.cpp")
