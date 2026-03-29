@@ -93,8 +93,8 @@ public:
 	/**
 	 * @brief Check if a GameRuleData object with a specific ID exists in the cache without knowing the type
 	 *
-	 * This is useful for deserialisation when we want to check if an object with a specific ID exists but we do not know the type of the object. The method will search through all types of GameRuleData objects in the cache and return `true` if one with the matching
-	 * ID is found. If there are multiple objects with the same ID then it is undefined which one will be returned.
+	 * This is useful for deserialisation when we want to check if an object with a specific ID exists but we do not know the type of the object. The method will search through all types of GameRuleData objects in the cache and return
+	 * `true` if one with the matching ID is found. If there are multiple objects with the same ID then it is undefined which one will be returned.
 	 *
 	 * @param id Unique ID of the object
 	 * @return `true` if an object with the specified ID exists in the cache, `false` otherwise
@@ -131,6 +131,8 @@ public:
 	 * @brief Get all PersistentObject objects of a specific type from the cache
 	 *
 	 * This is useful for iterating over all objects of a specific type, e.g. when serialising all objects of a specific type to a JSON file.
+	 * 
+	 * This function excludes objects that have been flagged as deleted or incomplete.
 	 *
 	 * @tparam T type of PersistentObject objects to retrieve
 	 * @return Vector of references to PersistentObject objects of type @a T from the cache
@@ -233,9 +235,53 @@ public:
 		deleted_objects_.erase(id);
 	}
 
+	/**
+	 * @brief Get whether an object is incomplete and should not be serialised
+	 *
+	 * If this flag is set then the object will not be serialised, but it will still be retrievable from the cache and all existing references to the object will still be valid. This is useful for objects that are not created in a valid
+	 * state to be serialised and need to be completed before they can be serialised, e.g. a character object where the end user has to select things such as the race and profession, plus make multiple selections, and only once these have
+	 * been completed is the object 'saved' at which point this flag should be removed using the #unflagIncomplete method.
+	 *
+	 * @param id Unique identifier of the object to check
+	 * @see flagIncomplete
+	 * @see unflagIncomplete
+	 */
+	bool isIncomplete(std::string id) const {
+		return incomplete_objects_.find(id) != incomplete_objects_.end();
+	}
+
+	/**
+	 * @brief Flag an object as incomplete
+	 *
+	 * This is used to flag an object as incomplete without invalidating existing references. It is typically used when creating an object that is not fully contructed when on creation. An example would be a character object where the
+	 * end user has to select things such as teh race  and professionn, plus make multiple selections and only once these ave been completd is the objects 'saved' at which point this flag should be removed using the #unflagIncomplete
+	 * method.
+	 *
+	 * @param id Unique identifier of the object to flag as incomplete
+	 * @see isIncomplete
+	 * @see unflagIncomplete
+	 */
+	void flagIncomplete(std::string id) {
+		incomplete_objects_.insert(id);
+	}
+
+	/**
+	 * @brief Unflag an object as incomplete
+	 *
+	 * This is used to unflag an object as incomplete without invalidating existing references. It is typically used when an object is not created in a valid state to be serialised and needs to be completed. An example would be a
+	 * character object where the end user has to select things such as the race and profession, plus make multiple selections, and only once these have been completed is the object 'saved' at which point this flag should be removed using
+	 * the #unflagIncomplete method.
+	 *
+	 * @param id Unique identifier of the object to unflag as incomplete
+	 */
+	void unflagIncomplete(std::string id) {
+		incomplete_objects_.erase(id);
+	}
+
 private:
-	PersistentCache& cache_;                  /**< Reference to a cache to store the objects. */
-	std::set<std::string> deleted_objects_{}; /**< Set of IDs of objects that have been deleted. This is used to flag an object as delted without invalidating existing references. */
+	PersistentCache& cache_;                         /**< Reference to a cache to store the objects. */
+	std::set<std::string> deleted_objects_{};        /**< Set of IDs of objects that have been deleted. This is used to flag an object as delted without invalidating existing references. */
+	std::set<std::string> incomplete_objects_{}; /**< Set of IDs of objects that should not be serialised. This is used to flag an object as non-serialised without invalidating existing references. */
 };
 
 template<persistent_object T>
@@ -276,7 +322,7 @@ inline T& PersistentObjectManager::get(std::string id) {
 		return cache_.get<T>(id);
 
 	// Create a new object and add it to the cache.
-	// 
+	//
 	// We need to check if the id parameter already contains the prefix or not as the constructor will add the prefix to the id if it is not already present, but if the id parameter already contains the prefix then we do not want to add it
 	// again as this will result in an incorrect id being generated and the object not being retrievable from the cache.
 	std::string prefix = T::prefix_ + "_";
@@ -297,7 +343,7 @@ inline std::vector<std::reference_wrapper<T>> PersistentObjectManager::getAll() 
 	std::set<std::string> keySet;
 	cache_.keys<T>(keySet); // Populate the set
 	for (const auto& id : keySet) {
-		if (!isDeleted(id))
+		if (!isDeleted(id) && !isIncomplete(id))
 			objects.push_back(std::ref(cache_.get<T>(id)));
 	}
 	return objects;
