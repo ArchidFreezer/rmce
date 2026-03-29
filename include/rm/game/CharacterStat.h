@@ -74,6 +74,20 @@ public:
 	}
 
 	/**
+	 * @brief Sets the potential stat value.
+	 *
+	 * This method is used to set the potential stat value at character creation time instead of using the value created automatically when the temporary stat is set. This is to allow customization of the initial potential value or
+	 * importing of characters from other sources where the potential value is already determined.
+	 * 
+	 * @param value The potential stat value to set.
+	 * 
+	 * @see updatePotential
+	 */
+	void setPotential(int value) {
+		potential_ = std::max(0,value);
+	}
+
+	/**
 	 * @brief Updates the potential stat value.
 	 *
 	 * The stat potential should only be modified in extremely rare circumstances, such as the use of very powerful magic or a life changing event in the game.
@@ -104,11 +118,7 @@ public:
 	 * 
 	 * @see updateTemporary
 	 */
-	void setTemporary(int value) {
-		temporary_ = std::max(0,value);
-		potential_ = stat::getInitialPotentialValue(temporary_);
-		basic_bonus_ = stat::getBasicBonus(temporary_);
-	}
+	void setTemporary(int value);
 
 	/**
 	 * @brief Change the temporary stat value and recalculate the basic bonus accordingly.
@@ -119,10 +129,7 @@ public:
 	 *
 	 * @param value
 	 */
-	void updateTemporary(int value) {
-		temporary_ = std::max(0, temporary_ + value);
-		basic_bonus_ = stat::getBasicBonus(temporary_);
-	}
+	void updateTemporary(int value);
 
 	/**
 	 * @brief Make a stat gain roll
