@@ -2,6 +2,17 @@
 
 namespace rm::game::character {
 
+void Stat::setTemporary(int value) {
+	temporary_ = std::max(0, value);
+	potential_ = stat::getInitialPotentialValue(temporary_);
+	basic_bonus_ = stat::getBasicBonus(temporary_);
+}
+
+void Stat::updateTemporary(int value) {
+	temporary_ = std::max(0, temporary_ + value);
+	basic_bonus_ = stat::getBasicBonus(temporary_);
+}
+
 void Stat::performStatGainRoll() {
 	int gain = stat::getStatGain(potential_ - temporary_);
 
@@ -13,8 +24,8 @@ void Stat::performStatGainRoll() {
 }
 
 namespace stat {
-	
-	int getBasicBonus(int temp_value) {
+
+int getBasicBonus(int temp_value) {
 	if (temp_value <= 10)
 		return (temp_value - 21) / 2;
 	if (temp_value <= 30)
@@ -87,6 +98,6 @@ int getStatGain(int difference) {
 	return high_roll + low_roll;
 };
 
-} // namespace rm::game::character::stat
+} // namespace stat
 
 } // namespace rm::game::character
