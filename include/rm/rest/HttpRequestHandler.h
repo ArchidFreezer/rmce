@@ -105,6 +105,17 @@ private:
 	 * @param id The ID of the object to delete.
 	 */
 	void requestDeleteObject(http::response<http::string_body>& response, std::string_view type, std::string_view id);
+
+	/**
+	 * @brief Requests the generation of potential stat values from temporary rolls and the potential roll.
+	 * 
+	 * This operation is specific to character stat rolls and does not follow the standard CRUD pattern. Both the temporary and potential roll values are expected to be provided in the request body as JSON, and the response will contain the
+	 * generated potential stat values based on the rolls. If the value of any field is -1 then it is treated as if the field was not provided and the roll is generated randomly.
+	 * 
+	 * @param response The HTTP response object to populate with the result of the operation.
+	 * @param request The HTTP request containing the data for the operation in its body.
+	 */
+	void requestCharacterStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request);
 };
 
 /**
