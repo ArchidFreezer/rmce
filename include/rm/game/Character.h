@@ -2,6 +2,7 @@
 
 #include <GameObject.h>
 #include <CharacterStat.h>
+#include <LanguageAbility.h>
 #include <RaceData.h>
 #include <StatType.h>
 #include <unordered_map>
@@ -79,6 +80,51 @@ public:
 		race_ = &race;
 	}
 
+	bool hasLanguageAbility(const std::string& language_name) const {
+		return language_abilities_.find(language_name) != language_abilities_.end();
+	}
+
+	/**
+	 * @brief Get the language abilities of the character.
+	 *
+	 * The language abilities are stored in an unordered map with the language name as the key and the corresponding `LanguageAbility` object as the value. Each character can have multiple language abilities, which represent the languages
+	 * they can communicate using.
+	 *
+	 * @return A constant reference to the unordered map of language abilities for the character.
+	 */
+	const std::unordered_map<std::string, LanguageAbility>& languageAbilities() const {
+		return language_abilities_;
+	}
+
+	/**
+	 * @brief Get the language ability for a specific language.
+	 *
+	 * The language abilities are stored in an unordered map with the language name as the key and the corresponding `LanguageAbility` object as the value. Each character can have multiple language abilities, which represent the languages
+	 * they can communicate using.
+	 *
+	 * @param language_name The name of the language to retrieve the ability for.
+	 * @return A constant reference to the `LanguageAbility` object for the specified language.
+	 * @throw std::out_of_range if there is no language ability for the specified language name.
+	 */
+	const LanguageAbility& languageAbility(const std::string& language_name) const {
+		if (!hasLanguageAbility(language_name)) {
+			throw std::out_of_range("There is no language ability for the language " + language_name);
+		}
+		return language_abilities_.at(language_name);
+	}
+
+	/**
+	 * @brief Set a language ability for the character.
+	 *
+	 * The language abilities are stored in an unordered map with the language name as the key and the corresponding `LanguageAbility` object as the value. Each character can have multiple language abilities, which represent the languages
+	 * they can communicate using.
+	 *
+	 * @param language_ability The `LanguageAbility` object to set for the character. The language name from the `LanguageAbility` object will be used as the key in the unordered map.
+	 */
+	void setLanguageAbility(LanguageAbility language_ability) {
+		language_abilities_.emplace(language_ability.language(), language_ability);
+	}
+
 	/**
 	 * @brief Get the race data of the character.
 	 *
@@ -92,6 +138,8 @@ private:
 	std::string name_;                               /**< The name of the character. This is used for display purposes and may not be unique. */
 	const RaceData* race_{nullptr};                  /**< The race data for the character. */
 	std::unordered_map<StatType::Type, Stat> stats_; // Map of stat types to their corresponding Stat objects for the character. Each character will have 10 stats, such as strength, dexterity, etc.
+	std::unordered_map<std::string, LanguageAbility>
+	    language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. Each character can have multiple language abilities, which represent the languages they can communicate using. */
 };
 
 } // namespace rm::game::character
