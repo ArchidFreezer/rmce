@@ -2,12 +2,14 @@
 
 #include <GameObject.h>
 #include <CharacterStat.h>
+#include <RaceData.h>
 #include <StatType.h>
 #include <unordered_map>
 #include <string>
 
 namespace rm::game::character {
 
+using namespace rm::rule;
 using namespace rm::rule::enums;
 
 /**
@@ -18,8 +20,7 @@ using namespace rm::rule::enums;
  */
 class Character : public rm::game::GameObject {
 	friend class CharacterBuilder; /*< CharacterBuilder is a friend to allow it access to the private members of this class for building characters with specific stats and names */
-	public:
-
+public:
 	/**
 	 * @brief Get the character's stat for a given stat type (const version).
 	 * @param stat_type The type of stat to retrieve (e.g., strength, dexterity, etc.).
@@ -32,7 +33,7 @@ class Character : public rm::game::GameObject {
 	/**
 	 * @brief Sets the stat temp for a specific stat type.
 	 * @param stat_type The type of statistic to set.
-	 * @param stat The statistic temporary value to store.
+	 * @param temp_value The statistic temporary value to store.
 	 */
 	void setStat(StatType::Type stat_type, int temp_value) {
 		stats_[stat_type].setTemporary(temp_value);
@@ -69,8 +70,27 @@ class Character : public rm::game::GameObject {
 		return name_;
 	}
 
+	/**
+	 * @brief Set the race of the character.
+	 *
+	 * @param race The race data to set for the character.
+	 */
+	void setRace(const RaceData& race) {
+		race_ = &race;
+	}
+
+	/**
+	 * @brief Get the race data of the character.
+	 *
+	 * @return A pointer to the race data of the character.
+	 */
+	const RaceData* race() const {
+		return race_;
+	}
+
 private:
 	std::string name_;                               /**< The name of the character. This is used for display purposes and may not be unique. */
+	const RaceData* race_{nullptr};                  /**< The race data for the character. */
 	std::unordered_map<StatType::Type, Stat> stats_; // Map of stat types to their corresponding Stat objects for the character. Each character will have 10 stats, such as strength, dexterity, etc.
 };
 

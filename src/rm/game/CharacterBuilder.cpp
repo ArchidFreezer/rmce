@@ -1,15 +1,18 @@
 #include <CharacterBuilder.h>
-#include <Dice.h>
 
 namespace rm::game::character {
 using namespace rm::rule::enums;
 
-void CharacterBuilder::rollStats(Character& character) {
-	// Roll the stats for the character using the standard method of rolling 2d10 for each stat
-	for (int i = 0; i < 10; ++i) {
-		int temp_value = archid::Dice(100).roll().result();
-		character.stats_[static_cast<StatType::Type>(i)].setTemporary(temp_value);
+Character& CharacterBuilder::build(rm::PersistentObjectManager& object_factory) {
+
+	// Do some sanity checking first to make sure that the builder has been properly set up before we start building the character.
+	if (race_ == nullptr) {
+		throw std::runtime_error("CharacterBuilder: Race must be set before building a character.");
 	}
+
+	Character& character = object_factory.get<Character>();
+	
+	return character;
 }
 
 } // namespace rm::game::character
