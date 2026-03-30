@@ -50,15 +50,35 @@ class EnumIterator {
 	int value;
 
 public:
+	/**
+	 * @brief Constructs an EnumIterator with the specified integer value.
+	 * @param v The integer value to initialize the iterator with.
+	 */
 	explicit EnumIterator(int v) : value(v) {
 	}
+
+	/**
+	 * @brief Dereferences the object to retrieve the underlying enumeration value.
+	 * @return The value converted to type E.
+	 */
 	E operator*() const {
 		return static_cast<E>(value);
 	}
+
+	/**
+	 * @brief Prefix increment operator that advances the iterator to the next enumeration value.
+	 * @return A reference to this iterator after incrementing.
+	 */
 	EnumIterator& operator++() {
 		++value;
 		return *this;
 	}
+
+	/**
+	 * @brief Compares two EnumIterator objects for inequality.
+	 * @param other The EnumIterator object to compare against.
+	 * @return True if the iterators point to different enum values, false otherwise.
+	 */
 	bool operator!=(const EnumIterator& other) const {
 		return value != other.value;
 	}
@@ -80,11 +100,26 @@ class EnumRange {
 	int begin_value, end_value;
 
 public:
+	/**
+	 * @brief Constructs an EnumRange with the specified beginning and ending enum values.
+	 * @param begin The starting enum value of the range (inclusive).
+	 * @param end The ending enum value of the range (exclusive).
+	 */
 	EnumRange(E begin, E end) : begin_value(to_underlying(begin)), end_value(to_underlying(end)) {
 	}
+
+	/**
+	 * @brief Returns an iterator pointing to the first element in the enumeration range.
+	 * @return An EnumIterator positioned at the beginning of the enumeration range.
+	 */
 	EnumIterator<E> begin() const {
 		return EnumIterator<E>(begin_value);
 	}
+
+	/**
+	 * @brief Returns an iterator representing the end of the enum range.
+	 * @return An iterator positioned one past the last valid enum value.
+	 */
 	EnumIterator<E> end() const {
 		return EnumIterator<E>(end_value + 1);
 	}

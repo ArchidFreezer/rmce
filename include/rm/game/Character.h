@@ -80,6 +80,15 @@ public:
 		race_ = &race;
 	}
 
+	/**
+	 * @brief Check if the character has a language ability for a specific language.
+	 *
+	 * The language abilities are stored in an unordered map with the language name as the key and the corresponding `LanguageAbility` object as the value. Each character can have multiple language abilities, which represent the languages
+	 * they can communicate using.
+	 *
+	 * @param language_name The name of the language to check for.
+	 * @return `true` if the character has a language ability for the specified language name, `false` otherwise.
+	 */
 	bool hasLanguageAbility(const std::string& language_name) const {
 		return language_abilities_.find(language_name) != language_abilities_.end();
 	}
