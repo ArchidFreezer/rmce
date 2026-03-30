@@ -4,6 +4,8 @@
 #include <CharacterStat.h>
 #include <LanguageAbility.h>
 #include <RaceData.h>
+#include <RealmType.h>
+#include <SkillProgressionTypeData.h>
 #include <StatType.h>
 #include <unordered_map>
 #include <string>
@@ -134,6 +136,12 @@ public:
 		language_abilities_.emplace(language_ability.language(), language_ability);
 	}
 
+	void setRealmProgression(RealmType::Type realm_type, const SkillProgressionTypeData& progression) {
+		if (!RealmType::isPpStat(realm_type) || !(realm_type == RealmType::kArms)) {
+			throw std::invalid_argument("Invalid realm type for realm progression. Realm progressions can only be set for realms that have a Power Point stat and are the Arms realm.");
+		}
+		realm_progressions_[realm_type] = &progression;
+	}
 	/**
 	 * @brief Get the race data of the character.
 	 *
@@ -144,8 +152,10 @@ public:
 	}
 
 private:
-	std::string name_;                               /**< The name of the character. This is used for display purposes and may not be unique. */
-	const RaceData* race_{nullptr};                  /**< The race data for the character. */
+	std::string name_;              /**< The name of the character. This is used for display purposes and may not be unique. */
+	const RaceData* race_{nullptr}; /**< The race data for the character. */
+	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*>
+	    realm_progressions_; /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. These are for Power Point and Body Development progressions. */
 	std::unordered_map<StatType::Type, Stat> stats_; // Map of stat types to their corresponding Stat objects for the character. Each character will have 10 stats, such as strength, dexterity, etc.
 	std::unordered_map<std::string, LanguageAbility>
 	    language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. Each character can have multiple language abilities, which represent the languages they can communicate using. */

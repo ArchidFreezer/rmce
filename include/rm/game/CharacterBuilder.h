@@ -50,6 +50,14 @@ public:
 		race_adolescent_language_choices_ = std::move(race_adolescent_language_choices);
 	}
 
+	/**
+	 * @brief Set the racial realm progressions for the character being built as a map of realm types to their corresponding SkillProgressionTypeData objects.
+	 * @param race_realm_progressions A map of realm types to their corresponding SkillProgressionTypeData objects to set for the character.
+	 */
+	void setRaceRealmProgressions(std::unordered_map<RealmType::Type, const SkillProgressionTypeData*> race_realm_progressions) {
+		race_realm_progressions_ = std::move(race_realm_progressions);
+	}
+
 private:
 	Character character_;           /**< The Character object being built. This is the object that will be constructed and returned by the build() method after all the attributes and stats have been set. */
 	bool built_{false};             /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
@@ -58,6 +66,8 @@ private:
 	std::set<const SkillCategoryData*> everyman_skill_category_choices_{};    /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
 	std::map<std::string, LanguageAbility> race_adolescent_language_choices_; /**< Map of language names to their corresponding LanguageAbility objects for the character being built. Each character can have multiple language abilities,
 	                                                               which represent the languages they can communicate using. */
+	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*>
+	    race_realm_progressions_; /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. These are for Power Point and Body Development progressions. */
 
 	/* ------------------------------------------------------------------ */
 	/* Helper functions                                                   */

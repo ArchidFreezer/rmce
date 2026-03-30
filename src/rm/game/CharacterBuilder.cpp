@@ -3,6 +3,11 @@
 
 namespace rm::game::character {
 
+/*
+ * @brief Build and return a Character object based on the attributes and stats set in the builder.
+ *
+ * This method performs sanity checks to ensure that the builder has been properly set up before building the character.
+ */
 Character& CharacterBuilder::build(rm::PersistentObjectManager& object_factory) {
 	// Do some sanity checking first to make sure that the builder has been properly set up before we start building the character.
 	if (race_ == nullptr) {
@@ -16,18 +21,36 @@ Character& CharacterBuilder::build(rm::PersistentObjectManager& object_factory) 
 	return character_;
 }
 
+/*
+ * @brief Set the name for the character being built.
+ * @param name The name to set for the character.
+ */
 void CharacterBuilder::setName(const std::string& name) {
 	name_ = name;
 }
 
+/*
+ * @brief Set the race for the character being built.
+ *
+ * This can be also be used to reset the race on a character during the building process if the client changes their mind.
+ * @param race The race data to set for the character.
+ */
 void CharacterBuilder::setRace(const RaceData& race) {
 	if (built_) {
 		throw std::runtime_error("CharacterBuilder: Cannot set race after character has been built.");
 	}
 	race_ = &race;
 	race_adolescent_language_choices_.clear();
+	race_realm_progressions_.clear();
 }
 
+/*
+ * @brief Apply the effects of the given race data to the character being built.
+ *
+ * This includes setting the race for the character and applying any racial innate abilities and choices associated with the race.
+ *
+ * @param race The race data to apply to the character.
+ */
 void CharacterBuilder::applyRace(const RaceData& race) {
 	if (built_) {
 		throw std::runtime_error("CharacterBuilder: Cannot apply race after character has been built.");
@@ -50,8 +73,16 @@ void CharacterBuilder::applyRace(const RaceData& race) {
 	for (const auto& [language_name, language_ability] : race_adolescent_language_choices_) {
 		setBestLanguageAbility(language_ability);
 	}
+
+	// realm progressions
+	for (const auto& [realm_type, progression] : race_realm_progressions_) {
+		character_.setRealmProgression(realm_type, *progression);
+	}
 }
 
+/*
+ * @brief Set the best language ability for a given language by comparing the existing ability with the new ability and keeping the highest ranks in each category (spoken, written, somantic).
+ */
 void CharacterBuilder::setBestLanguageAbility(const LanguageAbility& ability) {
 	LanguageAbility best_ability = ability;
 	if (character_.hasLanguageAbility(ability.language())) {
