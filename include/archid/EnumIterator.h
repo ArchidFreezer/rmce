@@ -17,45 +17,133 @@
 
 namespace archid {
 
+/**
+ * @brief Converts an enumeration value to its underlying integral type.
+ * 
+ * This is a helper function and not expected to be used directly by users of the EnumIterator. It is used internally to convert enum values to their underlying integer representation, which is necessary for the iteration process in the
+ * EnumIterator class.
+ * 
+ * @tparam E The enumeration type.
+ * @param e The enumeration value to convert.
+ * @return The underlying integral value of the enumeration.
+ * 
+ * @see enum_range
+ * @see EnumIterator
+ */
 template<typename E>
 constexpr auto to_underlying(E e) noexcept {
 	return static_cast<std::underlying_type_t<E>>(e);
 }
 
+/**
+ * @brief An iterator for iterating over consecutive enum values.
+ * 
+ * Helper class for iterating over consecutive enum values. It assumes that the enum values are contiguous and start from 0. The iterator works by maintaining an integer value that represents the current position in the enum sequence, and
+ * provides the necessary operators for iteration (dereference, increment, and inequality comparison).
+ * 
+ * @tparam E The enum type to iterate over.
+ * 
+ * @see enum_range
+ */
 template<typename E>
 class EnumIterator {
 	int value;
 
 public:
+	/**
+	 * @brief Constructs an EnumIterator with the specified integer value.
+	 * @param v The integer value to initialize the iterator with.
+	 */
 	explicit EnumIterator(int v) : value(v) {
 	}
+
+	/**
+	 * @brief Dereferences the object to retrieve the underlying enumeration value.
+	 * @return The value converted to type E.
+	 */
 	E operator*() const {
 		return static_cast<E>(value);
 	}
+
+	/**
+	 * @brief Prefix increment operator that advances the iterator to the next enumeration value.
+	 * @return A reference to this iterator after incrementing.
+	 */
 	EnumIterator& operator++() {
 		++value;
 		return *this;
 	}
+
+	/**
+	 * @brief Compares two EnumIterator objects for inequality.
+	 * @param other The EnumIterator object to compare against.
+	 * @return True if the iterators point to different enum values, false otherwise.
+	 */
 	bool operator!=(const EnumIterator& other) const {
 		return value != other.value;
 	}
 };
 
+/**
+ * @brief A range for iterating over a sequence of enum values.
+ * 
+ * Helper class for creating a range of enum values to iterate over. It takes a starting and ending enum value and provides begin() and end() methods that return EnumIterator instances for the specified range. The end iterator is set to one past the
+ * last valid enum value to allow for proper iteration in a range-based for loop or any other context where iteration is needed.
+ * 
+ * @tparam E The enum type to create a range for.
+ * 
+ * @see EnumIterator
+ * @see enum_range
+ */
 template<typename E>
 class EnumRange {
 	int begin_value, end_value;
 
 public:
+	/**
+	 * @brief Constructs an EnumRange with the specified beginning and ending enum values.
+	 * @param begin The starting enum value of the range (inclusive).
+	 * @param end The ending enum value of the range (exclusive).
+	 */
 	EnumRange(E begin, E end) : begin_value(to_underlying(begin)), end_value(to_underlying(end)) {
 	}
+
+	/**
+	 * @brief Returns an iterator pointing to the first element in the enumeration range.
+	 * @return An EnumIterator positioned at the beginning of the enumeration range.
+	 */
 	EnumIterator<E> begin() const {
 		return EnumIterator<E>(begin_value);
 	}
+
+	/**
+	 * @brief Returns an iterator representing the end of the enum range.
+	 * @return An iterator positioned one past the last valid enum value.
+	 */
 	EnumIterator<E> end() const {
 		return EnumIterator<E>(end_value + 1);
 	}
 };
 
+/**
+ * @brief Creates a range of enum values for iteration.
+ * 
+ * Function to create an EnumRange for a given range of enum values. It takes a starting and ending enum value and returns an EnumRange that can be used in a range-based for loop or any other context where iteration is needed. The function assumes
+ * that the enum values are contiguous and start from 0, which is common for many enums but may not always be the case. If the enum values are not contiguous or do not start from 0, additional logic would be needed to handle such cases.
+ * 
+ * @code
+ * for (auto value : enum_range(MyEnum::Start, MyEnum::End)) {
+ *     // Use value
+ * }
+ * @endcode
+ * 
+ * @tparam E The enum type to create a range for.
+ * @param begin The starting enum value of the range (inclusive).
+ * @param end The ending enum value of the range (inclusive).
+ * @return An EnumRange object representing the specified range of enum values.
+ * 
+ * @see EnumRange
+ */
 template<typename E>
 EnumRange<E> enum_range(E begin, E end) {
 	return EnumRange<E>(begin, end);

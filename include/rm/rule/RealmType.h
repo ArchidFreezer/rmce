@@ -86,6 +86,14 @@ namespace rm::rule::enums {
 		 * @return `false` if the Type is not magical
 		 */
 		constexpr bool isMagical(Type realm);
+
+		/**
+		 * @brief Checks if the realm is a power point stat realm
+		 * @param realm RealmType::Type to test
+		 * @return `true` if the Type is a power point stat realm
+		 * @return `false` if the Type is not a power point stat realm
+         */
+		constexpr bool isPpStat(Type realm);
 	}
 
 } // namespace rm::rule::enums

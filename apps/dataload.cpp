@@ -1,7 +1,9 @@
 ﻿#include <filesystem>
 #include <iostream>
-#include "PersistentCache.h"
-#include "PersistentObjectManager.h"
+#include <PersistentCache.h>
+#include <PersistentObjectManager.h>
+#include <CharacterBuilder.h>
+
 
 using namespace rm;
 
@@ -13,8 +15,11 @@ int main() {
 	PersistentObjectManager object_manager{cache};
 
 	try {
+		using namespace rm::game::character;
+		
+		CharacterBuilder builder{};
 
-
+		
 	} catch (std::runtime_error e) {
 		std::cout << e.what() << std::endl;
 	}
