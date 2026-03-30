@@ -1,4 +1,6 @@
 #include <set>
+#include <CharacterStat.h>
+#include <Dice.h>
 #include <HttpRequestHandler.h>
 #include <StringUtils.h>
 
@@ -42,7 +44,6 @@ std::string escapeJson(const std::string& str) {
 }
 
 void HttpRequestHandler::handleRequest(const http::request<http::string_body>& request, http::response<http::string_body>& response) {
-
 	// Decode the request target to handle URL-encoded characters
 	std::string request_string = archid::uriDecode(request.target());
 
@@ -99,6 +100,10 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		requestUpdateObject(response, path.type(), request);
 	} else if (request.method() == http::verb::delete_ && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
 		requestDeleteObject(response, path.type(), path.id());
+	} else if (request.method() == http::verb::post && path.match("/rmce/operations/character/stat-rolls")) {
+		// Example: /rmce/operations/character/stat-rolls
+		// This is a custom operation endpoint that doesn't fit the standard CRUD pattern. We can use this to perform specific operations that may involve multiple objects or complex logic.
+		requestCharacterStatRolls(response, request);
 	} else {
 		response.result(http::status::not_found);
 		response.set(http::field::content_type, "application/json");
@@ -204,7 +209,6 @@ void HttpRequestHandler::requestCreateObject(http::response<http::string_body>& 
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to create object", "message": ")" + escapeJson(e.what()) + R"("})";
 	}
-
 }
 
 void HttpRequestHandler::requestUpdateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request) {
@@ -275,4 +279,51 @@ void HttpRequestHandler::requestCountMultiTypeObjects(http::response<http::strin
 		response.body() = R"({"error": "Failed to retrieve count of objects", "message": ")" + escapeJson(e.what()) + R"("})";
 	}
 }
+
+void HttpRequestHandler::requestCharacterStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+	try {
+		json::value json_body = json::parse(request.body());
+		if (!json_body.is_array()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON array"})";
+			return;
+		}
+
+		archid::Dice d100(100);
+		json::array result_array;
+
+		for (const auto& element : json_body.as_array()) {
+			if (!element.is_object()) {
+				response.result(http::status::bad_request);
+				response.set(http::field::content_type, "application/json");
+				response.body() = R"({"error": "Invalid request body", "message": "Each element must be a JSON object"})";
+				return;
+			}
+
+			const auto& obj = element.as_object();
+
+			// Parse temporary: re-roll any result < 25
+			int temporary = static_cast<int>(obj.at("temporary").as_int64());
+			if (temporary < 25) {
+				do {
+					temporary = d100.roll(false).result();
+				} while (temporary < 25);
+			}
+
+			// Calculate potential from temporary and pot_roll
+			int potential = rm::game::character::stat::getInitialPotentialValue(temporary);
+
+			result_array.push_back(json::object({{"temporary", temporary}, {"potential", potential}}));
+		}
+
+		response.result(http::status::ok);
+		response.set(http::field::content_type, "application/json");
+		response.body() = json::serialize(json::value(result_array));
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to perform stat rolls", "message": ")" + escapeJson(e.what()) + R"("})";
+	}
+}
+
 } // namespace rm::rest
