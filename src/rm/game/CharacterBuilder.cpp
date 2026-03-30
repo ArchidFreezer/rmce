@@ -1,4 +1,5 @@
 #include <CharacterBuilder.h>
+#include <EnumIterator.h>
 
 namespace rm::game::character {
 
@@ -33,9 +34,12 @@ void CharacterBuilder::applyRace(const RaceData& race) {
 	}
 
 	character_.setRace(race);
-	// Stat bonuses - we need to reset any existing racial bonuses to ensure that if the race was previously set the character does not end up with the bonuses from both
 
-	for (const auto& [stat_type, bonus] : race.statBonuses()) {
+	// Stat bonuses - we need to reset any bonuses not applied by the race to ensure that if the race was previously set the character does not end up with the bonuses from both
+	for (auto stat_type : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
+		int bonus = 0;
+		if (race.statBonuses().find(stat_type) != race.statBonuses().end())
+			bonus = race.statBonuses().at(stat_type);
 		character_.stats_.at(stat_type).setRacialBonus(bonus);
 	}
 
