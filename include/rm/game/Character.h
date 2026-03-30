@@ -4,6 +4,8 @@
 #include <CharacterStat.h>
 #include <LanguageAbility.h>
 #include <RaceData.h>
+#include <CultureData.h>
+#include <ProfessionData.h>
 #include <RealmType.h>
 #include <SkillProgressionTypeData.h>
 #include <StatType.h>
