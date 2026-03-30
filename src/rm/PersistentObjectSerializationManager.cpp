@@ -14,7 +14,7 @@ const std::string PersistentObjectSerializationManager::getRootKeyForType(std::s
 
 
 void PersistentObjectSerializationManager::load() {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 	deserializeAllObjects<rm::rule::AnimalData>("Animals.json", "animals");
 	deserializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armourtypes");
 	deserializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attacktables");
@@ -44,7 +44,7 @@ void PersistentObjectSerializationManager::load() {
 }
 
 void PersistentObjectSerializationManager::save() {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 	serializeAllObjects<rm::rule::AnimalData>("Animals.json", "animals");
 	serializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armourtypes");
 	serializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attacktables");
@@ -74,7 +74,7 @@ void PersistentObjectSerializationManager::save() {
 }
 
 void PersistentObjectSerializationManager::save(std::string_view prefix) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 
 	std::string clean_prefix = archid::lcase(std::string(prefix));
 	// Remove trailing underscore if present
@@ -110,7 +110,7 @@ void PersistentObjectSerializationManager::save(std::string_view prefix) {
 }
 
 std::string PersistentObjectSerializationManager::serializeAnyObject(const std::string& id) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 	// Get the object from the manager and determine its type, then call the appropriate serializer
 	auto obj = object_manager_.getAny(id);
 	if (auto animal = dynamic_cast<const rule::AnimalData*>(obj)) {
@@ -169,7 +169,7 @@ std::string PersistentObjectSerializationManager::serializeAnyObject(const std::
 }
 
 std::string PersistentObjectSerializationManager::serializeAllObjects(std::string_view prefix) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 
 	std::string lower_prefix = archid::lcase(prefix);
 	std::string root_key = getRootKeyForType(lower_prefix);
@@ -233,7 +233,7 @@ std::string PersistentObjectSerializationManager::serializeAllObjects(std::strin
 }
 
 const std::string PersistentObjectSerializationManager::deserializeObject(json::object& obj, std::string_view prefix) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 
 	std::string lower_prefix = archid::lcase(prefix);
 

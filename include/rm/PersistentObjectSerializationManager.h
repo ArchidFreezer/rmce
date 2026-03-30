@@ -344,7 +344,7 @@ private:
 	 * @return A unique pointer to the appropriate PersistentJsonSerializer
 	 */
 	template<persistent_object T>
-	std::unique_ptr<rule::serial::PersistentJsonSerializer<T>> createJsonSerializer();
+	std::unique_ptr<serial::PersistentJsonSerializer<T>> createJsonSerializer();
 
 	/**
 	 * @brief Helper function to create the appropriate TSV serializer for a given type
@@ -352,14 +352,14 @@ private:
 	 * @return A unique pointer to the appropriate PersistentTsvSerializer
 	 */
 	template<persistent_object T>
-	std::unique_ptr<rule::serial::PersistentTsvSerializer<T>> createTsvSerializer();
+	std::unique_ptr<serial::PersistentTsvSerializer<T>> createTsvSerializer();
 };
 
 // Template implementation - must be in header for template instantiation
 
 template<persistent_object T>
 void PersistentObjectSerializationManager::deserializeAllObjects(const std::string& filename, const std::string& root_key) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 
 	// Create the appropriate JSON serializer for type T
 	auto serializer = createJsonSerializer<T>();
@@ -371,7 +371,7 @@ void PersistentObjectSerializationManager::deserializeAllObjects(const std::stri
 
 template<persistent_object T>
 void PersistentObjectSerializationManager::deserializeTsv(const std::string& filename) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 
 	// Create the appropriate TSV serializer for type T
 	auto serializer = createTsvSerializer<T>();
@@ -383,7 +383,7 @@ void PersistentObjectSerializationManager::deserializeTsv(const std::string& fil
 
 template<persistent_object T>
 void PersistentObjectSerializationManager::serializeAllObjects(const std::string& filename, const std::string& root_key) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 
 	// Create the appropriate JSON serializer for type T
 	auto serializer = createJsonSerializer<T>();
@@ -395,7 +395,7 @@ void PersistentObjectSerializationManager::serializeAllObjects(const std::string
 
 template<persistent_object T>
 void PersistentObjectSerializationManager::serializeTsv(const std::string& filename) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 
 	// Create the appropriate TSV serializer for type T
 	auto serializer = createTsvSerializer<T>();
@@ -406,9 +406,9 @@ void PersistentObjectSerializationManager::serializeTsv(const std::string& filen
 }
 
 template<persistent_object T>
-std::unique_ptr<rule::serial::PersistentJsonSerializer<T>> PersistentObjectSerializationManager::createJsonSerializer() {
+std::unique_ptr<	serial::PersistentJsonSerializer<T>> PersistentObjectSerializationManager::createJsonSerializer() {
 	using namespace rm::rule;
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 
 	// Use if constexpr (C++17) to select the appropriate serializer at compile time
 	if constexpr (std::is_same_v<T, AnimalData>) {
@@ -467,9 +467,9 @@ std::unique_ptr<rule::serial::PersistentJsonSerializer<T>> PersistentObjectSeria
 }
 
 template<persistent_object T>
-std::unique_ptr<rule::serial::PersistentTsvSerializer<T>> PersistentObjectSerializationManager::createTsvSerializer() {
+std::unique_ptr<serial::PersistentTsvSerializer<T>> PersistentObjectSerializationManager::createTsvSerializer() {
 	using namespace rm::rule;
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 
 	// Use if constexpr (C++17) to select the appropriate serializer at compile time
 	if constexpr (std::is_same_v<T, table::TrainingPackageCostTable>) {
@@ -481,7 +481,7 @@ std::unique_ptr<rule::serial::PersistentTsvSerializer<T>> PersistentObjectSerial
 
 template<persistent_object T>
 std::string PersistentObjectSerializationManager::serializeObject(const T& obj) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 	// Create the appropriate JSON serializer for type T
 	auto serializer = createJsonSerializer<T>();
 	// Serialize the object to a JSON value
@@ -505,7 +505,7 @@ const T& PersistentObjectSerializationManager::deserializeObject(const std::stri
 
 template<persistent_object T>
 const T& PersistentObjectSerializationManager::deserializeObject(json::object& obj) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 	// Create the appropriate JSON serializer for type T
 	auto serializer = createJsonSerializer<T>();
 	// Deserialize the object from the JSON value
@@ -514,7 +514,7 @@ const T& PersistentObjectSerializationManager::deserializeObject(json::object& o
 
 template<persistent_object T>
 std::string PersistentObjectSerializationManager::serializeAllObjects_Impl(std::string_view root_key) {
-	using namespace rm::rule::serial;
+	using namespace rm::serial;
 	// Create the appropriate JSON serializer for type T
 	auto serializer = createJsonSerializer<T>();
 
