@@ -1,4 +1,5 @@
-#include "CharacterStat.h"
+#include <CharacterStat.h>
+#include <Dice.h>
 
 namespace rm::game::character {
 
@@ -98,6 +99,6 @@ int getStatGain(int difference) {
 	return high_roll + low_roll;
 };
 
-} // namespace stat
+} // namespace rm::game::character::stat
 
 } // namespace rm::game::character
