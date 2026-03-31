@@ -1,1 +1,1 @@
-target_sources(rmce_rest PRIVATE "RestServer.cpp" "HttpRequestHandler.cpp")
+target_sources(rmce_rest PRIVATE "RestServer.cpp" "HttpRequestHandler.cpp" "CharacterBuilderRequestHandler.cpp")
