@@ -24,7 +24,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setEnumSet(obj, "magical_realms", ref.magical_realms_);
 
 	// Everyman skill category choices — set of rule data pointers
-	JsonConverter::setDataSet(obj, "everyman_skill_category_choices", ref.everyman_skill_category_choices_);
+	JsonConverter::setDataSet(obj, "everyman_skill_category_choices", ref.race_category_everyman_choices_);
 
 	// Race adolescent language choices — map of language id -> LanguageAbility
 	JsonConverter::setLanguageAbilities(obj, "race_adolescent_language_choices", ref.race_adolescent_language_choices_);
@@ -32,7 +32,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	// Race realm progressions — map of RealmType::Type enum -> SkillProgressionTypeData pointer
 	JsonConverter::setEnumPrimitiveMap(obj, "race_realm_progressions", [&]() {
 		std::map<RealmType::Type, std::string> realm_progression_ids;
-		for (const auto& [realm, progression] : ref.race_realm_progressions_) {
+		for (const auto& [realm, progression] : ref.realm_progressions_) {
 			if (progression)
 				realm_progression_ids.emplace(realm, progression->id());
 		}
@@ -78,7 +78,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.magical_realms_ = JsonConverter::getEnumSet<RealmType::Type>(jsonObj, "magical_realms");
 
 	// Everyman skill category choices
-	ref.everyman_skill_category_choices_ = JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "everyman_skill_category_choices", manager_);
+	ref.race_category_everyman_choices_ = JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "everyman_skill_category_choices", manager_);
 
 	// Race adolescent language choices
 	ref.race_adolescent_language_choices_ = JsonConverter::getLanguageAbilityMap(jsonObj, "race_adolescent_language_choices", manager_);
@@ -87,7 +87,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	auto realm_progression_ids = JsonConverter::getEnumPrimitiveMap<RealmType::Type, std::string>(jsonObj, "race_realm_progressions");
 	for (const auto& [realm, progression_id] : realm_progression_ids) {
 		if (!progression_id.empty())
-			ref.race_realm_progressions_.emplace(realm, &manager_.get<SkillProgressionTypeData>(progression_id));
+			ref.realm_progressions_.emplace(realm, &manager_.get<SkillProgressionTypeData>(progression_id));
 	}
 
 	return ref;

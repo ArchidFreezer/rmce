@@ -2,12 +2,16 @@
 
 #include <PersistentObjectManager.h>
 #include <Character.h>
+#include <StatType.h>
 #include <string>
+#include <map>
+#include <set>
+#include <unordered_map>
 
 // Forward declaration to break the circular include with CharacterBuilderSerializer.h
 namespace rm::serial {
 class CharacterBuilderSerializer;
-}
+} // namespace rm::serial
 
 namespace rm::game::character {
 using namespace rm::rule;
@@ -44,49 +48,47 @@ public:
 	 */
 	void setIntialChoices(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id, const std::set<RealmType::Type> magical_realms);
 
-	/**
-	 * @brief Set the everyman skill category choices for the character being built.
-	 * @param everyman_skill_category_choices A set of skill category data pointers to set for the character.
-	 */
-	void setEverymanSkillCategoryChoices(std::set<const SkillCategoryData*> everyman_skill_category_choices) {
-		everyman_skill_category_choices_ = std::move(everyman_skill_category_choices);
-	}
-
-	/**
-	 * @brief Set the race adolescent language choices for the character being built as a map of language names to their corresponding LanguageAbility objects.
-	 * @param race_adolescent_language_choices A map of language names to their corresponding LanguageAbility objects to set for the character.
-	 */
-	void setRaceAdolescentLanguageChoices(std::map<std::string, const LanguageAbility> race_adolescent_language_choices) {
-		race_adolescent_language_choices_ = std::move(race_adolescent_language_choices);
-	}
-
-	/**
-	 * @brief Set the racial realm progressions for the character being built as a map of realm types to their corresponding SkillProgressionTypeData objects.
-	 * @param race_realm_progressions A map of realm types to their corresponding SkillProgressionTypeData objects to set for the character.
-	 */
-	void setRaceRealmProgressions(std::unordered_map<RealmType::Type, const SkillProgressionTypeData*> race_realm_progressions) {
-		race_realm_progressions_ = std::move(race_realm_progressions);
-	}
-
 private:
+	/* ------------------------------------------------------------------ */
+	/* Basic data                                                         */
+	/* ------------------------------------------------------------------ */
 	bool built_{false};             /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
 	std::string name_{};            /**< The name of the character being built. This is used for display purposes and may not be unique. */
 	const RaceData* race_{nullptr}; /**< The race data for the character being built. */
-	const CultureData* culture_{nullptr}; /**< The culture data for the character being built. */
+	const CultureData* culture_{nullptr};          /**< The culture data for the character being built. */
 	const CultureTypeData* culture_type_{nullptr}; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
 	const ProfessionData* profession_{nullptr};    /**< The profession data for the character being built. */
-	std::set<RealmType::Type> magical_realms_{};   /**< A set of realm types representing the magical realm choices for the character being built. This may be fixed by the profession or for non-magical professions decided by the player from
-	                                                 the available realm choices for the character. */
+	std::set<RealmType::Type> magical_realms_{};   /**< A set of realm types representing the magical realm choices for the character being built. */
 
-	std::set<const SkillCategoryData*> everyman_skill_category_choices_{}; /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
-	std::map<std::string, const LanguageAbility> race_adolescent_language_choices_; /**< Map of language names to their corresponding LanguageAbility objects for the character being built. Each character can have multiple language abilities,
-	                                                               which represent the languages they can communicate using. */
-	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*>
-	    race_realm_progressions_; /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. These are for Power Point and Body Development progressions. */
+	/* ------------------------------------------------------------------ */
+	/* Choices made                                                       */
+	/* ------------------------------------------------------------------ */
+
+	/*
+	 * These are stored so that they can be applied to the character being built when the build method is called. They are stored separately from the aggregated state to allow for undoing of choices and to keep track of the specific choices
+	 * made during character creation.
+	 */
+
+	std::set<const SkillCategoryData*> race_category_everyman_choices_{};           /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
+	std::map<std::string, const LanguageAbility> race_adolescent_language_choices_; /**< Map of language names to their corresponding LanguageAbility objects for the character being built. */
+
+	/* ------------------------------------------------------------------ */
+	/* Aggregated state                                                   */
+	/* ------------------------------------------------------------------ */
+	std::map<std::string, LanguageAbility> language_abilities_;                               /**< Aggregated map of language names to their corresponding LanguageAbility objects for the character being built. */
+	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*> realm_progressions_; /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. */
+	std::unordered_map<StatType::Type, Stat> stats_;                                          /**< Map of stat types to their corresponding Stat objects for the character. */
+	std::set<const SubcategoriedSkillData*> everyman_skills_{};                               /**< Skills that are considered everyman */
+	std::set<const SubcategoriedSkillData*> restricted_skills_{};                             /**< Skills that are considered restricted */
+	std::set<const SkillCategoryData*> everyman_skill_categories_{};                          /**< Skill categories that are considered everyman */
+	std::set<const SkillCategoryData*> restricted_skill_categories_{};                        /**< Skill categories that are considered restricted */
+	std::map<const SubcategoriedSkillData*, int> skill_bonuses_{};                            /**< Skill bonuses */
 
 	/* ------------------------------------------------------------------ */
 	/* Helper functions                                                   */
 	/* ------------------------------------------------------------------ */
+
+	void reset(); /**< Resets the builder to its initial state, clearing all choices and aggregated state. This is used to allow for undoing of choices and to start fresh if the character creation process needs to be restarted. */
 
 	/**
 	 * @brief Applies the given language ability to the character being built, ensuring that if the character already has an ability for the same language, the best ranks are retained.
@@ -96,16 +98,15 @@ private:
 	 *
 	 * @param language_ability The language ability to apply.
 	 */
-	void setBestLanguageAbility(Character& character, const LanguageAbility& language_ability);
+	void setBestLanguageAbility(const LanguageAbility& language_ability);
 
 	/**
 	 * @brief Applies the effects of the given race data to the character being built.
 	 *
 	 * This includes setting the race for the character and applying any racial innate abilities and choices associated with the race.
 	 *
-	 * @param character The character to apply the race effects to.
 	 */
-	void applyRace(Character& character);
+	void applyRace();
 };
 
 } // namespace rm::game::character
