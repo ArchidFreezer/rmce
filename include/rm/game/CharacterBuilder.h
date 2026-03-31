@@ -4,6 +4,11 @@
 #include <Character.h>
 #include <string>
 
+// Forward declaration to break the circular include with CharacterBuilderSerializer.h
+namespace rm::serial {
+class CharacterBuilderSerializer;
+}
+
 namespace rm::game::character {
 using namespace rm::rule;
 
@@ -14,7 +19,9 @@ using namespace rm::rule;
  * The CharacterBuilder class provides a convenient interface for setting various attributes and stats of a Character object during its construction. It allows for a step-by-step approach to building a character, ensuring that all necessary
  * attributes are set before the character is used in the game.
  */
-class CharacterBuilder : public rm::game::GameObject {
+class CharacterBuilder : public GameObject {
+	friend class rm::serial::CharacterBuilderSerializer; /**< Serializer class is a friend to allow it access to the private members of this class for serialisation and deserialisation */
+
 public:
 	/**
 	 * @brief Build and return a Character object based on the attributes and stats set in the builder.
@@ -49,7 +56,7 @@ public:
 	 * @brief Set the race adolescent language choices for the character being built as a map of language names to their corresponding LanguageAbility objects.
 	 * @param race_adolescent_language_choices A map of language names to their corresponding LanguageAbility objects to set for the character.
 	 */
-	void setRaceAdolescentLanguageChoices(std::map<std::string, LanguageAbility> race_adolescent_language_choices) {
+	void setRaceAdolescentLanguageChoices(std::map<std::string, const LanguageAbility> race_adolescent_language_choices) {
 		race_adolescent_language_choices_ = std::move(race_adolescent_language_choices);
 	}
 
@@ -65,14 +72,14 @@ private:
 	bool built_{false};             /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
 	std::string name_{};            /**< The name of the character being built. This is used for display purposes and may not be unique. */
 	const RaceData* race_{nullptr}; /**< The race data for the character being built. */
-	const CultureData* culture_{nullptr};          /**< The culture data for the character being built. */
+	const CultureData* culture_{nullptr}; /**< The culture data for the character being built. */
 	const CultureTypeData* culture_type_{nullptr}; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
 	const ProfessionData* profession_{nullptr};    /**< The profession data for the character being built. */
 	std::set<RealmType::Type> magical_realms_{};   /**< A set of realm types representing the magical realm choices for the character being built. This may be fixed by the profession or for non-magical professions decided by the player from
 	                                                 the available realm choices for the character. */
 
-	std::set<const SkillCategoryData*> everyman_skill_category_choices_{};    /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
-	std::map<std::string, LanguageAbility> race_adolescent_language_choices_; /**< Map of language names to their corresponding LanguageAbility objects for the character being built. Each character can have multiple language abilities,
+	std::set<const SkillCategoryData*> everyman_skill_category_choices_{}; /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
+	std::map<std::string, const LanguageAbility> race_adolescent_language_choices_; /**< Map of language names to their corresponding LanguageAbility objects for the character being built. Each character can have multiple language abilities,
 	                                                               which represent the languages they can communicate using. */
 	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*>
 	    race_realm_progressions_; /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. These are for Power Point and Body Development progressions. */
