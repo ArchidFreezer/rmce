@@ -44,8 +44,16 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 
 const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::object& jsonObj) const {
 	std::string id = JsonConverter::getString(jsonObj, "id");
-	CharacterBuilder& ref = manager_.get<CharacterBuilder>();
-	ref.id_ = id; // Set the ID of the object to the value from the JSON data
+
+	// If this object does not have an ID, create a new CharacterBuilder to get a cached object with a generated ID.
+	if (id.empty()) {
+		CharacterBuilder& tmp = manager_.get<CharacterBuilder>();
+		id = tmp.id(); // Generate a new ID for this character builder
+	}
+
+	// Now we know we have an id, we can get the reference to the CharacterBuilder that we will populate with data. This will be either the newly created one (if there was no ID in the JSON) or an existing one (if there was an ID in the
+	// JSON).
+	CharacterBuilder& ref = manager_.get<CharacterBuilder>(id);
 
 	ref.name_ = JsonConverter::getString(jsonObj, "name");
 
