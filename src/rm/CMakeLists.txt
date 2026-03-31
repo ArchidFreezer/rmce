@@ -11,8 +11,8 @@ target_include_directories(rm PUBLIC ${Boost_INCLUDE_DIRS}
                                      "${PROJECT_SOURCE_DIR}/include/rm"
                                      "${PROJECT_SOURCE_DIR}/include/rm/game"
                                      "${PROJECT_SOURCE_DIR}/include/rm/rule"
-                                     "${PROJECT_SOURCE_DIR}/include/rm/serial"
-                                     "${PROJECT_SOURCE_DIR}/include/rm/rule/table")
+                                     "${PROJECT_SOURCE_DIR}/include/rm/rule/table"
+                                     "${PROJECT_SOURCE_DIR}/include/rm/serial")
 
 target_link_libraries(rm PUBLIC 
     Boost::boost  # Header-only Boost libraries
@@ -37,8 +37,8 @@ target_include_directories(rmce_rest
         "${PROJECT_SOURCE_DIR}/include/rm/game"
         "${PROJECT_SOURCE_DIR}/include/rm/rest"
         "${PROJECT_SOURCE_DIR}/include/rm/rule"
-        "${PROJECT_SOURCE_DIR}/include/rm/serial"
-        "${PROJECT_SOURCE_DIR}/include/rm/rule/table")
+        "${PROJECT_SOURCE_DIR}/include/rm/rule/table"
+        "${PROJECT_SOURCE_DIR}/include/rm/serial")
 
 target_link_libraries(rmce_rest PRIVATE
     archid
