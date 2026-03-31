@@ -101,4 +101,40 @@ std::string uriEncode(const std::string& decoded) {
 	return encoded.str();
 }
 
+std::string escapeJson(const std::string& str) {
+	std::ostringstream escaped;
+	for (char c : str) {
+		switch (c) {
+		case '"':
+			escaped << "\\\"";
+			break;
+		case '\\':
+			escaped << "\\\\";
+			break;
+		case '\b':
+			escaped << "\\b";
+			break;
+		case '\f':
+			escaped << "\\f";
+			break;
+		case '\n':
+			escaped << "\\n";
+			break;
+		case '\r':
+			escaped << "\\r";
+			break;
+		case '\t':
+			escaped << "\\t";
+			break;
+		default:
+			if (c < 0x20) {
+				escaped << "\\u" << std::hex << std::setw(4) << std::setfill('0') << static_cast<int>(c);
+			} else {
+				escaped << c;
+			}
+		}
+	}
+	return escaped.str();
+}
+
 } // namespace archid
