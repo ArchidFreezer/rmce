@@ -4,6 +4,10 @@
 #include <Persistent.h>
 #include <StringUtils.h>
 
+namespace rm {
+	class PersistentObjectManager; /**< Forward declaration of PersistentObjectManager to allow it to be a friend of GameRuleData */
+} // namespace rm
+
 /**
  * @namespace rm::rule
  * @brief Rules of the game represented by classes and data structures
@@ -23,7 +27,7 @@ namespace rm::rule {
  * objects having the same unique identifier, which would break the uniqueness requirement of the identifier and cause issues with serialisation and deserialisation.
  */
 class GameRuleData : public rm::Persistent {
-	friend class PersistentObjectManager; /**< PersistentObjectManager is a friend to allow it access to the private copy/maove constructores and assignment operators */
+	friend class PersistentObjectManager; /**< PersistentObjectManager is a friend to allow it access to the private copy/move constructores and assignment operators */
 
 public:
 	GameRuleData() = delete; /** < Delete the default constructor to ensure that an id is always provided when creating an object */
