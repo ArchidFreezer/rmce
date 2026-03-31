@@ -239,52 +239,52 @@ public:
 	}
 
 	/**
-	 * @brief Get whether an object is incomplete and should not be serialised
+	 * @brief Get whether an object is non-serialized and should not be serialised
 	 *
 	 * If this flag is set then the object will not be serialised, but it will still be retrievable from the cache and all existing references to the object will still be valid. This is useful for objects that are not created in a valid
 	 * state to be serialised and need to be completed before they can be serialised, e.g. a character object where the end user has to select things such as the race and profession, plus make multiple selections, and only once these have
-	 * been completed is the object 'saved' at which point this flag should be removed using the #unflagIncomplete method.
+	 * been completed is the object 'saved' at which point this flag should be removed using the #unflagNonSerialized method.
 	 *
 	 * @param id Unique identifier of the object to check
-	 * @see flagIncomplete
-	 * @see unflagIncomplete
+	 * @see flagNonSerialized
+	 * @see unflagNonSerialized
 	 */
-	bool isIncomplete(std::string id) const {
-		return incomplete_objects_.find(id) != incomplete_objects_.end();
+	bool isNonSerialized(std::string id) const {
+		return non_serialized_objects_.find(id) != non_serialized_objects_.end();
 	}
 
 	/**
-	 * @brief Flag an object as incomplete
+	 * @brief Flag an object as non-serialized
 	 *
-	 * This is used to flag an object as incomplete without invalidating existing references. It is typically used when creating an object that is not fully contructed when on creation. An example would be a character object where the
-	 * end user has to select things such as teh race  and professionn, plus make multiple selections and only once these ave been completd is the objects 'saved' at which point this flag should be removed using the #unflagIncomplete
+	 * This is used to flag an object as non-serialized without invalidating existing references. It is typically used when creating an object that is not fully contructed when on creation. An example would be a character object where the
+	 * end user has to select things such as teh race  and professionn, plus make multiple selections and only once these ave been completd is the objects 'saved' at which point this flag should be removed using the #unflagNonSerialized
 	 * method.
 	 *
-	 * @param id Unique identifier of the object to flag as incomplete
-	 * @see isIncomplete
-	 * @see unflagIncomplete
+	 * @param id Unique identifier of the object to flag as non-serialized
+	 * @see isNonSerialized
+	 * @see unflagNonSerialized
 	 */
-	void flagIncomplete(std::string id) {
-		incomplete_objects_.insert(id);
+	void flagNonSerialized(std::string id) {
+		non_serialized_objects_.insert(id);
 	}
 
 	/**
-	 * @brief Unflag an object as incomplete
+	 * @brief Unflag an object as non-serialized
 	 *
-	 * This is used to unflag an object as incomplete without invalidating existing references. It is typically used when an object is not created in a valid state to be serialised and needs to be completed. An example would be a
+	 * This is used to unflag an object as non-serialized without invalidating existing references. It is typically used when an object is not created in a valid state to be serialised and needs to be completed. An example would be a
 	 * character object where the end user has to select things such as the race and profession, plus make multiple selections, and only once these have been completed is the object 'saved' at which point this flag should be removed using
-	 * the #unflagIncomplete method.
+	 * the #unflagNonSerialized method.
 	 *
-	 * @param id Unique identifier of the object to unflag as incomplete
+	 * @param id Unique identifier of the object to unflag as non-serialized
 	 */
-	void unflagIncomplete(std::string id) {
-		incomplete_objects_.erase(id);
+	void unflagNonSerialized(std::string id) {
+		non_serialized_objects_.erase(id);
 	}
 
 private:
 	PersistentCache& cache_;                     /**< Reference to a cache to store the objects. */
 	std::set<std::string> deleted_objects_{};    /**< Set of IDs of objects that have been deleted. This is used to flag an object as delted without invalidating existing references. */
-	std::set<std::string> incomplete_objects_{}; /**< Set of IDs of objects that should not be serialised. This is used to flag an object as non-serialised without invalidating existing references. */
+	std::set<std::string> non_serialized_objects_{}; /**< Set of IDs of objects that should not be serialised. This is used to flag an object as non-serialised without invalidating existing references. */
 };
 
 template<persistent_object T>
@@ -351,7 +351,7 @@ inline std::vector<std::reference_wrapper<T>> PersistentObjectManager::getAll() 
 	std::set<std::string> keySet;
 	cache_.keys<T>(keySet); // Populate the set
 	for (const auto& id : keySet) {
-		if (!isDeleted(id) && !isIncomplete(id))
+		if (!isDeleted(id) && !isNonSerialized(id))
 			objects.push_back(std::ref(cache_.get<T>(id)));
 	}
 	return objects;
