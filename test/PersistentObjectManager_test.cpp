@@ -186,33 +186,33 @@ TEST_F(PersistentObjectManagerTest, UndeleteObject_AllowsGetAfterDeletion) {
 // -----------------------------------------------------------------------
 
 /**
- * @brief isIncomplete() returns false for an object that has not been flagged
+ * @brief isNonSerialized() returns false for an object that has not been flagged
  */
-TEST_F(PersistentObjectManagerTest, IsIncomplete_ReturnsFalseByDefault) {
+TEST_F(PersistentObjectManagerTest, IsNonSerialized_ReturnsFalseByDefault) {
 	BookData& book = manager.get<BookData>("companion");
 
-	EXPECT_FALSE(manager.isIncomplete(book.id()));
+	EXPECT_FALSE(manager.isNonSerialized(book.id()));
 }
 
 /**
- * @brief flagIncomplete() causes isIncomplete() to return true
+ * @brief flagNonSerialized() causes isNonSerialized() to return true
  */
-TEST_F(PersistentObjectManagerTest, FlagIncomplete_SetsFlag) {
+TEST_F(PersistentObjectManagerTest, FlagNonSerialized_SetsFlag) {
 	BookData& book = manager.get<BookData>("companion");
-	manager.flagIncomplete(book.id());
+	manager.flagNonSerialized(book.id());
 
-	EXPECT_TRUE(manager.isIncomplete(book.id()));
+	EXPECT_TRUE(manager.isNonSerialized(book.id()));
 }
 
 /**
- * @brief unflagIncomplete() clears the incomplete flag
+ * @brief unflagNonSerialized() clears the non-serialized flag
  */
-TEST_F(PersistentObjectManagerTest, UnflagIncomplete_ClearsFlag) {
+TEST_F(PersistentObjectManagerTest, UnflagNonSerialized_ClearsFlag) {
 	BookData& book = manager.get<BookData>("companion");
-	manager.flagIncomplete(book.id());
-	manager.unflagIncomplete(book.id());
+	manager.flagNonSerialized(book.id());
+	manager.unflagNonSerialized(book.id());
 
-	EXPECT_FALSE(manager.isIncomplete(book.id()));
+	EXPECT_FALSE(manager.isNonSerialized(book.id()));
 }
 
 // -----------------------------------------------------------------------
@@ -260,7 +260,7 @@ TEST_F(PersistentObjectManagerTest, GetAll_ExcludesDeletedObjects) {
 TEST_F(PersistentObjectManagerTest, GetAll_ExcludesIncompleteObjects) {
 	BookData& book1 = manager.get<BookData>("companion");
 	manager.get<BookData>("core");
-	manager.flagIncomplete(book1.id());
+	manager.flagNonSerialized(book1.id());
 
 	auto books = manager.getAll<BookData>();
 
