@@ -100,9 +100,9 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		requestUpdateObject(response, path.type(), request);
 	} else if (request.method() == http::verb::delete_ && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
 		requestDeleteObject(response, path.type(), path.id());
+	} else if (request.method() == http::verb::post && path.match("/rmce/operations/character/initial-choices")) {
+		requestCharacterInitialChoices(response, request);
 	} else if (request.method() == http::verb::post && path.match("/rmce/operations/character/stat-rolls")) {
-		// Example: /rmce/operations/character/stat-rolls
-		// This is a custom operation endpoint that doesn't fit the standard CRUD pattern. We can use this to perform specific operations that may involve multiple objects or complex logic.
 		requestCharacterStatRolls(response, request);
 	} else {
 		response.result(http::status::not_found);
@@ -278,6 +278,39 @@ void HttpRequestHandler::requestCountMultiTypeObjects(http::response<http::strin
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to retrieve count of objects", "message": ")" + escapeJson(e.what()) + R"("})";
 	}
+}
+
+void HttpRequestHandler::requestCharacterInitialChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+	std::string id{};
+	try {
+		using namespace rm::game::character;
+
+		json::value json_body = json::parse(request.body());
+		if (!json_body.is_object()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON object"})";
+			return;
+		}
+
+		std::string name = json_body.as_object().at("name").as_string().c_str();
+		std::string race_id = json_body.as_object().at("race").as_string().c_str();
+		std::string culture_id = json_body.as_object().at("culture").as_string().c_str();
+		std::string profession_id = json_body.as_object().at("profession").as_string().c_str();
+		const auto& realms = json_body.as_object().at("realms").as_array();
+		std::set<RealmType::Type> magical_realms;
+		for (const auto& realm : realms) {
+			magical_realms.insert(RealmType::fromString(realm.as_string()).value());
+		}
+		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>();
+		builder.setIntialChoices(serial_manager_.objectManager(), name, race_id, culture_id, profession_id, magical_realms);
+		id = builder.id();
+	} catch (const std::exception&) {
+	}
+	// This is a placeholder implementation. You can replace it with your actual logic to generate character initial choices based on the request body.
+	response.result(http::status::ok);
+	response.set(http::field::content_type, "application/json");
+	response.body() = R"({"id": ")" + id + R"("})";
 }
 
 void HttpRequestHandler::requestCharacterStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
