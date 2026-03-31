@@ -4,6 +4,7 @@
 #include <ArmourTypeSerializer.h>
 #include <AttackTableSerializer.h>
 #include <BookSerializer.h>
+#include <CharacterBuilderSerializer.h>
 #include <ClimateSerializer.h>
 #include <CreaturePaceSerializer.h>
 #include <CultureSerializer.h>
