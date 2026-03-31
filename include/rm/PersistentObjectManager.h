@@ -115,23 +115,26 @@ public:
 	T& get();
 
 	/**
-	 * @brief Get a PersistentObject object that may be created with an ID only
+	 * @brief Get a PersistentObject object
 	 *
 	 * Objects created with this method will be serialised.
+	 * 
+	 * If an object with the specified ID already exists in the cache then it will be returned as a reference, but if not then a new object will be created with the specified ID, added to the cache and then returned as a reference. In
+	 * either case the reference returned will be to the object in the cache to ensure that it is a persistent object and can be safely referenced without worrying about invalidating references by deleting objects from the cache.
 	 *
 	 * @tparam T type of PersistentObject object to create
 	 * @param id Unique ID of the object
 	 * @return PersistentObject object from the cache of type @a T
 	 * @throws out_of_range if the object id has been flagged as deleted
 	 */
-	template<id_persistent_object T>
+	template<persistent_object T>
 	T& get(std::string id);
 
 	/**
 	 * @brief Get all PersistentObject objects of a specific type from the cache
 	 *
 	 * This is useful for iterating over all objects of a specific type, e.g. when serialising all objects of a specific type to a JSON file.
-	 * 
+	 *
 	 * This function excludes objects that have been flagged as deleted or incomplete.
 	 *
 	 * @tparam T type of PersistentObject objects to retrieve
@@ -279,8 +282,8 @@ public:
 	}
 
 private:
-	PersistentCache& cache_;                         /**< Reference to a cache to store the objects. */
-	std::set<std::string> deleted_objects_{};        /**< Set of IDs of objects that have been deleted. This is used to flag an object as delted without invalidating existing references. */
+	PersistentCache& cache_;                     /**< Reference to a cache to store the objects. */
+	std::set<std::string> deleted_objects_{};    /**< Set of IDs of objects that have been deleted. This is used to flag an object as delted without invalidating existing references. */
 	std::set<std::string> incomplete_objects_{}; /**< Set of IDs of objects that should not be serialised. This is used to flag an object as non-serialised without invalidating existing references. */
 };
 
@@ -311,7 +314,7 @@ inline T& PersistentObjectManager::get() {
 	return cache_.get<T>(id);
 }
 
-template<id_persistent_object T>
+template<persistent_object T>
 inline T& PersistentObjectManager::get(std::string id) {
 	// If the object has been deleted then throw an exception as it should not be retrievable without first undeleting it
 	if (isDeleted(id))
@@ -321,19 +324,24 @@ inline T& PersistentObjectManager::get(std::string id) {
 	if (cache_.exists<T>(id))
 		return cache_.get<T>(id);
 
-	// Create a new object and add it to the cache.
-	//
-	// We need to check if the id parameter already contains the prefix or not as the constructor will add the prefix to the id if it is not already present, but if the id parameter already contains the prefix then we do not want to add it
-	// again as this will result in an incorrect id being generated and the object not being retrievable from the cache.
-	std::string prefix = T::prefix_ + "_";
-	if (id.starts_with(prefix)) {
-		id = id.substr(prefix.size()); // Remove the prefix from the id as the constructor will add it back in
-	}
+	if constexpr (id_persistent_object<T>) {
+		// Create a new object and add it to the cache.
+		//
+		// We need to check if the id parameter already contains the prefix or not as the constructor will add the prefix to the id if it is not already present, but if the id parameter already contains the prefix then we do not want to add
+		// it again as this will result in an incorrect id being generated and the object not being retrievable from the cache.
+		std::string prefix = T::prefix_ + "_";
+		if (id.starts_with(prefix)) {
+			id = id.substr(prefix.size()); // Remove the prefix from the id as the constructor will add it back in
+		}
 
-	std::unique_ptr<T> obj(new T(id));
-	std::string new_id = std::string(obj.get()->generateId()); // We need to generate the id as the constructor only sets the base id and does not generate the full id in the standard format, which is required for the object to be usable
-	cache_.add<T>(std::move(obj));
-	return cache_.get<T>(new_id);
+		std::unique_ptr<T> obj(new T(id));
+		std::string new_id =
+		    std::string(obj.get()->generateId()); // We need to generate the id as the constructor only sets the base id and does not generate the full id in the standard format, which is required for the object to be usable
+		cache_.add<T>(std::move(obj));
+		return cache_.get<T>(new_id);
+	} else {
+		throw std::out_of_range("Object with id " + id + " does not exist in the cache and cannot be created as it is not an ID persistent object.");
+	}
 }
 
 template<persistent_object T>
