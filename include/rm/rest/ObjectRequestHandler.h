@@ -24,6 +24,21 @@ public:
 
 	/**
 	 * @brief Handle an incoming HTTP request related to game objects and prepare the response
+	 * 
+	 * The following requests are supported:
+	 * 
+	 * | Method | Endpoint | Description |
+	 * |--------|----------|-------------|
+	 * |GET    | /rmce/objects/count?types={types} | Get the count of objects of specific types (e.g. /rmce/objects/count?types=skill,race) |
+	 * |GET    | /rmce/objects/prefixes | Get a list of all known type prefixes for objects (e.g. "skill", "race") |
+	 * |GET    | /rmce/objects/{type} | Get a list of all objects of a specific type (e.g. /rmce/objects/skill) |
+	 * |GET    | /rmce/objects/{type}?count | Get the count of objects of a specific type (e.g. /rmce/objects/skill?count) |
+	 * |GET    | /rmce/objects/{type}?ids | Get a list of all object IDs of a specific type (e.g. /rmce/objects/skill?ids) |
+	 * |GET    | /rmce/objects/{type}/{id} | Get a specific object by its type and ID (e.g. /rmce/objects/skill/SKILL_ACTING) |
+	 * |POST   | /rmce/objects/{type} | Create a new object of a specific type |
+	 * |PUT    | /rmce/objects/{type}/{id} | Update an existing object by its type and ID |
+	 * |DELETE | /rmce/objects/{type}/{id} | Delete an existing object by its type and ID |
+	 * 
 	 * @param request The HTTP request to handle
 	 * @param response The HTTP response to populate based on the request
 	 */

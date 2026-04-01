@@ -24,6 +24,14 @@ public:
 
 		/**
 	 * @brief Handle an incoming HTTP request and prepare the response
+	 * 
+	 * The following requests are supported:
+	 * 
+	 * | Method | Endpoint | Description |
+	 * |--------|----------|-------------|
+	 * |POST	 | /rmce/character-builder/initial-choices | Generate initial character creation choices based on provided parameters |
+	 * |POST	 | /rmce/character-builder/stat-rolls | Generate and return potential stat values from temporary rolls and the potential roll |
+	 * 
 	 * @param request The HTTP request to handle
 	 * @param response The HTTP response to populate based on the request
 	 */
