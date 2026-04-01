@@ -14,63 +14,65 @@ void ObjectRequestHandler::handleRequest(const http::request<http::string_body>&
 	// Get the ID from the path if it exists (e.g. "SKILL_ACTING" from "/rmce/objects/skill/SKILL_ACTING")
 	std::string id = type_prefix.empty() ? "" : std::string(path.extractNextSegment("/rmce/objects/" + type_prefix + "/"));
 
-	/*
+	/***************************
 	 * Handle GET requests
 	 */
-	if (request.method() == http::verb::get) {
-		if (path.matchExact("/rmce/objects/count") && (path.params().find("types") != path.params().end())) {
-			// Get the count of objects of a specific types (e.g. /rmce/objects/count?type=skill,race)
-			const std::string& types = path.params().at("types");
-			requestCountMultiTypeObjects(response, types);
-		} else if (path.matchExact("/rmce/objects/prefixes")) {
-			requestPrefixes(response);
-		} else if (!type_prefix.empty() && id.empty()) {
-			// We have 3 operations for this endpoint: list, count, and ids. We need to check the operation first before we can determine how to handle the request.
-
-			// First case is with no parameters, which means we want to list all objects of a certain type (e.g. /rmce/objects/skill)
-			if (path.params().empty()) {
-				requestListObjects(response, type_prefix);
-			} else {
-				// Check what the query parameter is for. We support "count" and "ids" for now, but we can easily add more in the future if needed.
-				if (path.params().find("ids") != path.params().end()) {
-					requestListObjectIds(response, type_prefix);
-				} else if (path.params().find("count") != path.params().end()) {
-					requestCountTypeObjects(response, type_prefix);
-				} else {
-					response.result(http::status::bad_request);
-					response.set(http::field::content_type, "application/json");
-					response.body() = R"({"error": "Invalid query parameter", "message": "Supported parameters are 'ids' and 'count'"})";
-				}
-			}
-		} else if (!type_prefix.empty() && !id.empty()) {
-			// Get object by ID
-			// Example: /api/objects/skill/SKILL_ACTING
-			requestObjectById(response, type_prefix, id);
-		}
+	// Get the count of objects of a specific types (e.g. /rmce/objects/count?type=skill,race)
+	if (request.method() == http::verb::get && path.matchExact("/rmce/objects/count") && (path.params().find("types") != path.params().end())) {
+		const std::string& types = path.params().at("types");
+		requestCountMultiTypeObjects(response, types);
 	}
 
-	/*
+	// Get a list of all known type prefixes for objects (e.g. /rmce/objects/prefixes)
+	else if (request.method() == http::verb::get && (path.matchExact("/rmce/objects/prefixes"))) {
+		requestPrefixes(response);
+	}
+
+	// Get a list of all objects of a specific type (e.g. /rmce/objects/skill)
+	else if (request.method() == http::verb::get && !type_prefix.empty() && id.empty() && path.params().empty()) {
+		requestListObjects(response, type_prefix);
+	}
+
+	// Get a list of all object IDs of a specific type (e.g. /rmce/objects/skill?ids)
+	else if (request.method() == http::verb::get && !type_prefix.empty() && id.empty() && path.params().find("ids") != path.params().end()) {
+		requestListObjectIds(response, type_prefix);
+	}
+
+	// Get the count of objects of a specific type (e.g. /rmce/objects/skill?count)
+	else if (request.method() == http::verb::get && !type_prefix.empty() && id.empty() && path.params().find("count") != path.params().end()) {
+		requestCountTypeObjects(response, type_prefix);
+	}
+
+	// Get a specific object by ID (e.g. /rmce/objects/skill/SKILL_ACTING)
+	else if (request.method() == http::verb::get && !type_prefix.empty() && !id.empty()) {
+		requestObjectById(response, type_prefix, id);
+	}
+
+	/***************************
 	 * Handle POST requests
 	 */
-	else if (request.method() == http::verb::post && path.match("/rmce/objects") && !type_prefix.empty()) {
+	// Create a new object of a specific type (e.g. POST /rmce/objects/skill with JSON body containing the object data)
+	else if (request.method() == http::verb::post && !type_prefix.empty()) {
 		requestCreateObject(response, type_prefix, request);
 	}
 
-	/*
+	/***************************
 	 * Handle PUT requests
 	 */
-	else if (request.method() == http::verb::put && path.match("/rmce/objects") && !type_prefix.empty() && !id.empty()) {
+	// Update an existing object by ID (e.g. PUT /rmce/objects/skill/SKILL_ACTING with JSON body containing the updated object data)
+	else if (request.method() == http::verb::put && !type_prefix.empty() && !id.empty()) {
 		requestUpdateObject(response, type_prefix, request);
 	}
 
-	/*
+	/***************************
 	 * Handle DELETE requests
 	 */
-	else if (request.method() == http::verb::delete_ && path.match("/rmce/objects") && !type_prefix.empty() && !id.empty()) {
+	// Delete an existing object by ID (e.g. DELETE /rmce/objects/skill/SKILL_ACTING)
+	else if (request.method() == http::verb::delete_ && !type_prefix.empty() && !id.empty()) {
 		requestDeleteObject(response, type_prefix, id);
 	}
 
-	/*
+	/***************************
 	 * Handle unknown requests
 	 */
 	else {
