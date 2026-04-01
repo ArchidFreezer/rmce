@@ -1,5 +1,6 @@
 #include <set>
 #include <CharacterBuilderRequestHandler.h>
+#include <HttpPathParser.h>
 #include <HttpRequestHandler.h>
 #include <StringUtils.h>
 
@@ -10,7 +11,13 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 	std::string request_string = archid::uriDecode(request.target());
 
 	// Extract path and query parameters
-	const PathParser path(request_string, "/rmce/objects/");
+	const HttpPathParser path(request_string);
+
+	// Get the type prefix from the path (e.g. "skill" from "/rmce/objects/skill")
+	std::string type_prefix = std::string(path.extractNextSegment("/rmce/objects/"));
+	// Get the ID from the path if it exists (e.g. "SKILL_ACTING" from "/rmce/objects/skill/SKILL_ACTING")
+	std::string id = type_prefix.empty() ? "" : std::string(path.extractNextSegment("/rmce/objects/" + type_prefix + "/"));
+
 
 	// Route handling
 	if (request.method() == http::verb::get && path.matchExact("/")) {
@@ -31,37 +38,37 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		// Get the count of objects of a specific types (e.g. /rmce/objects/count?type=skill)
 		const std::string& types = path.params().at("types");
 		requestCountMultiTypeObjects(response, types);
-	} else if (request.method() == http::verb::get && path.match("/rmce/objects") && !path.type().empty() && path.id().empty()) {
+	} else if (request.method() == http::verb::get && path.match("/rmce/objects") && !type_prefix.empty() && id.empty()) {
 		// We have 3 operations for this endpoint: list, count, and ids. We need to check the operation first before we can determine how to handle the request.
 
 		// First case is with no parameters, which means we want to list all objects of a certain type (e.g. /rmce/objects/skill)
 		if (path.params().empty()) {
-			requestListObjects(response, path.type());
+			requestListObjects(response, type_prefix);
 		} else {
 			// Check what the query parameter is for. We support "count" and "ids" for now, but we can easily add more in the future if needed.
 			if (path.params().find("ids") != path.params().end()) {
-				requestListObjectIds(response, path.type());
+				requestListObjectIds(response, type_prefix);
 			} else if (path.params().find("count") != path.params().end()) {
-				requestCountTypeObjects(response, path.type());
+				requestCountTypeObjects(response, type_prefix);
 			} else {
 				response.result(http::status::bad_request);
 				response.set(http::field::content_type, "application/json");
 				response.body() = R"({"error": "Invalid query parameter", "message": "Supported parameters are 'ids' and 'count'"})";
 			}
 		}
-	} else if (request.method() == http::verb::get && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
+	} else if (request.method() == http::verb::get && path.match("/rmce/objects") && !type_prefix.empty() && !id.empty()) {
 		// Get object by ID
 		// Example: /api/objects/skill/SKILL_ACTING
-		requestObjectById(response, path.type(), path.id());
-	} else if (request.method() == http::verb::post && path.match("/rmce/objects") && !path.type().empty() && path.id().empty()) {
+		requestObjectById(response, type_prefix, id);
+	} else if (request.method() == http::verb::post && path.match("/rmce/objects") && !type_prefix.empty() && id.empty()) {
 		// Create new object of a certain type (e.g. /rmce/objects/skill)
 		// We can use the request body to get the data for the new object, and we can use the type from the path to determine what type of object to create.
-		requestCreateObject(response, path.type(), request);
-	} else if (request.method() == http::verb::put && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
+		requestCreateObject(response, type_prefix, request);
+	} else if (request.method() == http::verb::put && path.match("/rmce/objects") && !type_prefix.empty() && !id.empty()) {
 		// Update existing object of a certain type and ID (e.g. /rmce/objects/skill/SKILL_ACTING)
-		requestUpdateObject(response, path.type(), request);
-	} else if (request.method() == http::verb::delete_ && path.match("/rmce/objects") && !path.type().empty() && !path.id().empty()) {
-		requestDeleteObject(response, path.type(), path.id());
+		requestUpdateObject(response, type_prefix, request);
+	} else if (request.method() == http::verb::delete_ && path.match("/rmce/objects") && !type_prefix.empty() && !id.empty()) {
+		requestDeleteObject(response, type_prefix, id);
 	} else if (request.method() == http::verb::post && path.match("/rmce/operations/character/initial-choices")) {
 		CharacterBuilderRequestHandler char_builder_handler {serial_manager_.objectManager()};
 		char_builder_handler.requestCharacterInitialChoices(response, request);
