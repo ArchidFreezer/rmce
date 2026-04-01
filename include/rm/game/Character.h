@@ -4,6 +4,8 @@
 #include <CharacterStat.h>
 #include <LanguageAbility.h>
 #include <RaceData.h>
+#include <CultureData.h>
+#include <ProfessionData.h>
 #include <RealmType.h>
 #include <SkillProgressionTypeData.h>
 #include <StatType.h>
@@ -136,6 +138,15 @@ public:
 		language_abilities_.emplace(language_ability.language(), language_ability);
 	}
 
+	/**
+	 * @brief Set the realm progression for a specific realm type.
+	 *
+	 * The realm progressions are stored in an unordered map with the realm type as the key and a pointer to the corresponding `SkillProgressionTypeData` object as the value. These are for Power Point and Body Development progressions.
+	 *
+	 * @param realm_type The type of realm to set the progression for. This should be a realm that has a Power Point stat and is the Arms realm.
+	 * @param progression The `SkillProgressionTypeData` object representing the progression to set for the specified realm type.
+	 * @throw std::invalid_argument if the specified realm type is not valid for realm progressions (i.e., it does not have a Power Point stat or is not the Arms realm).
+	 */
 	void setRealmProgression(RealmType::Type realm_type, const SkillProgressionTypeData& progression) {
 		if (!RealmType::isPpStat(realm_type) || !(realm_type == RealmType::kArms)) {
 			throw std::invalid_argument("Invalid realm type for realm progression. Realm progressions can only be set for realms that have a Power Point stat and are the Arms realm.");

@@ -339,6 +339,11 @@ inline T& PersistentObjectManager::get(std::string id) {
 		    std::string(obj.get()->generateId()); // We need to generate the id as the constructor only sets the base id and does not generate the full id in the standard format, which is required for the object to be usable
 		cache_.add<T>(std::move(obj));
 		return cache_.get<T>(new_id);
+	} else if constexpr (default_persistent_object<T>) {
+		std::unique_ptr<T> obj(new T());
+		obj.get()->setId(id); // We need to set the id after construction as the constructor will generate a random UUID for the id, but we want to use the id that was passed in as a parameter instead
+		cache_.add<T>(std::move(obj));
+		return cache_.get<T>(id);
 	} else {
 		throw std::out_of_range("Object with id " + id + " does not exist in the cache and cannot be created as it is not an ID persistent object.");
 	}

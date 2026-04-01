@@ -38,33 +38,6 @@ namespace rm::rule::enums {
 		return {};
 	}
 
-	constexpr bool StatType::isPrimary(Type stat) {
-		using enum Type;
-
-		switch (stat) {
-		case kEmpathy:
-		case kIntuition:
-		case kPresence:
-		case kQuickness:
-		case kStrength: return true;
-		default: return false;
-		}
-	}
-
-	constexpr bool StatType::isDevelopment(Type stat) {
-		using enum Type;
-
-		switch (stat) {
-		case kAgility:
-		case kConstitution:
-		case kMemory:
-		case kReasoning:
-		case kSelfDiscipline: return true;
-		default: return false;
-		}
-	}
-
-
 	void StatType::fromString(std::string_view sv, StatType::Type& type) {
 		std::optional<Type> opt_type = fromString(sv);
 		if (opt_type) type = opt_type.value();

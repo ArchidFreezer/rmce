@@ -92,4 +92,14 @@ std::string uriDecode(const std::string& encoded);
  */
 std::string uriEncode(const std::string& decoded);
 
+/**
+ * @brief Escapes special characters in a string for safe inclusion in JSON
+ *
+ * This function replaces special characters in the input string with their escaped equivalents, such as replacing double quotes with \" and backslashes with \\. This is necessary to ensure that the string can be safely included in JSON without causing syntax errors.
+ *
+ * @param str The input string to escape
+ * @return The escaped string suitable for JSON inclusion
+ */
+std::string escapeJson(const std::string& str);
+
 } // namespace archid

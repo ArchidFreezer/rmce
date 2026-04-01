@@ -116,6 +116,18 @@ private:
 	 * @param request The HTTP request containing the data for the operation in its body.
 	 */
 	void requestCharacterStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+
+	/**
+	 * @brief Requests the generation of initial character creation choices based on provided parameters.
+	 * 
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with parameters that define the initial choices for character creation.
+	 * The function will create a CharacterBuilder object in the cache and set it with the initial choices, returning the generated ID of the new object in the response. The client can then use this ID to retrieve the CharacterBuilder
+	 * object and make further updates to it as needed during the character creation process.
+	 * 
+	 * @param response The HTTP response object to populate with the result of the operation.
+	 * @param request The HTTP request containing the data for the operation in its body.
+	 */
+	void requestCharacterInitialChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
 };
 
 /**
