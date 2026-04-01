@@ -5,14 +5,6 @@
 #include <string>
 #include <Persistent.h>
 
-/**
- * @namespace rm::game
- *
- * @brief Contains all the game objects that store in-game elements.
- * 
- * These objects are things like characters or locations that are a direct representation of specifics in the game.
- *
- */
 namespace rm::game {
 
 	/**
