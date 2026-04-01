@@ -111,7 +111,8 @@ void CharacterBuilder::applyRace() {
 
 	// Stat bonuses
 	for (const auto& [stat_type, bonus] : race_->statBonuses()) {
-		stats_.at(stat_type).setRacialBonus(bonus);
+		Stat& stat = stats_[stat_type]; // This will default construct a new Stat object if the stat has not been touched yet.
+		stat.setRacialBonus(bonus);
 	}
 
 	// language abilities, both fixed and adolescentchoices
