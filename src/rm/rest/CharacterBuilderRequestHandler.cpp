@@ -1,11 +1,32 @@
 #include <CharacterBuilderRequestHandler.h>
 #include <CharacterStat.h>
 #include <Dice.h>
+#include <HttpPathParser.h>
 #include <StringUtils.h>
 
 namespace rm::rest {
 
-void CharacterBuilderRequestHandler::requestCharacterInitialChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterBuilderRequestHandler::handleRequest(const http::request<http::string_body>& request, http::response<http::string_body>& response) {
+	// Decode the request target to handle URL-encoded characters
+	std::string request_string = archid::uriDecode(request.target());
+
+	// Extract path and query parameters
+	const HttpPathParser path(request_string);
+
+	// Get the operation from the path to determine which specific character builder task to perform
+	std::string_view operation = path.extractNextSegment("/rmce/operations/character/");
+
+	if (request.method() == http::verb::post) {
+		if (operation == "initial-choices") requestInitialChoices(response, request);
+		else if (operation == "stat-rolls") requestStatRolls(response, request);
+	} else {
+		response.result(http::status::not_found);
+		response.set(http::field::content_type, "application/json");
+		response.body() = R"({"error": "Endpoint not found", "message": "The requested endpoint does not exist"})";
+	}
+}
+
+void CharacterBuilderRequestHandler::requestInitialChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	std::string id{};
 	try {
 		using namespace rm::game::character;
@@ -27,8 +48,8 @@ void CharacterBuilderRequestHandler::requestCharacterInitialChoices(http::respon
 		for (const auto& realm : realms) {
 			magical_realms.insert(RealmType::fromString(realm.as_string()).value());
 		}
-		CharacterBuilder& builder = object_manager_.get<CharacterBuilder>();
-		builder.setIntialChoices(object_manager_, name, race_id, culture_id, profession_id, magical_realms);
+		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>();
+		builder.setIntialChoices(serial_manager_.objectManager(), name, race_id, culture_id, profession_id, magical_realms);
 		id = builder.id();
 	} catch (const std::exception&) {
 	}
@@ -38,7 +59,7 @@ void CharacterBuilderRequestHandler::requestCharacterInitialChoices(http::respon
 	response.body() = R"({"id": ")" + id + R"("})";
 }
 
-void CharacterBuilderRequestHandler::requestCharacterStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterBuilderRequestHandler::requestStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	try {
 		json::value json_body = json::parse(request.body());
 		if (!json_body.is_array()) {

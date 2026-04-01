@@ -69,12 +69,9 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		requestUpdateObject(response, type_prefix, request);
 	} else if (request.method() == http::verb::delete_ && path.match("/rmce/objects") && !type_prefix.empty() && !id.empty()) {
 		requestDeleteObject(response, type_prefix, id);
-	} else if (request.method() == http::verb::post && path.match("/rmce/operations/character/initial-choices")) {
-		CharacterBuilderRequestHandler char_builder_handler {serial_manager_.objectManager()};
-		char_builder_handler.requestCharacterInitialChoices(response, request);
-	} else if (request.method() == http::verb::post && path.match("/rmce/operations/character/stat-rolls")) {
-		CharacterBuilderRequestHandler char_builder_handler {serial_manager_.objectManager()};
-		char_builder_handler.requestCharacterStatRolls(response, request);
+	} else if (path.match("/rmce/operations/character/")) {
+		CharacterBuilderRequestHandler char_builder_handler {serial_manager_};
+		char_builder_handler.handleRequest(request, response);
 	} else {
 		response.result(http::status::not_found);
 		response.set(http::field::content_type, "application/json");

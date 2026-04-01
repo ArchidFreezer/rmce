@@ -2,7 +2,6 @@
 
 #include <boost/beast/http.hpp>
 #include <PersistentObjectSerializationManager.h>
-// #include <PersistentObjectManager.h>
 
 namespace http = boost::beast::http;
 
@@ -18,10 +17,21 @@ namespace rm::rest {
 class CharacterBuilderRequestHandler {
 public:
 	/**
-	 * @brief Constructor to initialize the CharacterBuilderRequestHandler with a reference to the PersistentObjectManager
-	 * @param object_manager Reference to PersistentObjectManager for data access during request handling
+	 * @brief Constructor to initialize the CharacterBuilderRequestHandler with a reference to the PersistentObjectSerializationManager
+	 * @param serial_manager Reference to PersistentObjectSerializationManager for data access and JSON serialization during request handling
 	 */
-	CharacterBuilderRequestHandler(rm::PersistentObjectManager& object_manager) : object_manager_{object_manager} {};
+	CharacterBuilderRequestHandler(PersistentObjectSerializationManager& serial_manager) : serial_manager_{serial_manager} {};
+
+		/**
+	 * @brief Handle an incoming HTTP request and prepare the response
+	 * @param request The HTTP request to handle
+	 * @param response The HTTP response to populate based on the request
+	 */
+	void handleRequest(const http::request<http::string_body>& request, http::response<http::string_body>& response);
+
+
+private:
+	PersistentObjectSerializationManager& serial_manager_;
 
 	/**
 	 * @brief Requests the generation of initial character creation choices based on provided parameters.
@@ -33,7 +43,7 @@ public:
 	 * @param response The HTTP response object to populate with the result of the operation.
 	 * @param request The HTTP request containing the data for the operation in its body.
 	 */
-	void requestCharacterInitialChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+	void requestInitialChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
 
 	/**
 	 * @brief Requests the generation of potential stat values from temporary rolls and the potential roll.
@@ -44,9 +54,7 @@ public:
 	 * @param response The HTTP response object to populate with the result of the operation.
 	 * @param request The HTTP request containing the data for the operation in its body.
 	 */
-	void requestCharacterStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request);
-
-private:
-	rm::PersistentObjectManager& object_manager_;
+	void requestStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request);
 };
+
 } // namespace rm::rest
