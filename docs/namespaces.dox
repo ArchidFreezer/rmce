@@ -1,0 +1,34 @@
+/**
+ * @namespace rm
+ * @brief All elements in the rm library are contained within this namespace
+ *
+ * The namespace is used for all classes and elemnts in the rm library and is uses to avoid naming collisions with other libraries and to group related classes and functions together.
+ * The namespace is named after the library to make it clear that the classes and functions belong to the rm library.
+ */
+
+/**
+ * @namespace rm::game
+ *
+ * @brief Contains all the game objects that store in-game elements.
+ * 
+ * These objects are things like characters or locations that are a direct representation of specifics in the game.
+ *
+ */
+
+/**
+ * @namespace rm::rest
+ * @brief Namespace for the REST API of the rm library
+ */
+
+/**
+ * @namespace rm::rule
+ * @brief Rules of the game represented by classes and data structures
+ *
+ * The rules are the objects that are used as lookups or references when creating game objects such as races or professions and lookup tables for things such as skills, languages, etc.
+ */
+
+/**
+ * @namespace rm::serial
+ * @brief Namespace for the all the serialization and deserialization functions of the rm library
+ */
+
