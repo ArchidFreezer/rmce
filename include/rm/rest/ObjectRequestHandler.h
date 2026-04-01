@@ -36,7 +36,7 @@ public:
 	 * |GET    | /rmce/objects/{type}?ids | Get a list of all object IDs of a specific type (e.g. /rmce/objects/skill?ids) |
 	 * |GET    | /rmce/objects/{type}/{id} | Get a specific object by its type and ID (e.g. /rmce/objects/skill/SKILL_ACTING) |
 	 * |POST   | /rmce/objects/{type} | Create a new object of a specific type |
-	 * |PUT    | /rmce/objects/{type}/{id} | Update an existing object by its type and ID |
+	 * |PUT    | /rmce/objects/{type} | Update an existing object by its type using the ID in the JSON payload |
 	 * |DELETE | /rmce/objects/{type}/{id} | Delete an existing object by its type and ID |
 	 * 
 	 * @param request The HTTP request to handle

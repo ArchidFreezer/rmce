@@ -60,7 +60,7 @@ void ObjectRequestHandler::handleRequest(const http::request<http::string_body>&
 	 * Handle PUT requests
 	 */
 	// Update an existing object by ID (e.g. PUT /rmce/objects/skill/SKILL_ACTING with JSON body containing the updated object data)
-	else if (request.method() == http::verb::put && !type_prefix.empty() && !id.empty()) {
+	else if (request.method() == http::verb::put && !type_prefix.empty()) {
 		requestUpdateObject(response, type_prefix, request);
 	}
 
