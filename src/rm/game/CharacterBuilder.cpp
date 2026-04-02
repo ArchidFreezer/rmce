@@ -307,4 +307,10 @@ SkillDevelopmentType::Type CharacterBuilder::getHighestPrecedenceDevelopmentType
 	}
 }
 
+void CharacterBuilder::setStat(StatType::Type stat_type, int temp_value, int potential_value) {
+	Stat& stat = stats_[stat_type]; // This will default construct a new Stat object if the stat has not been touched yet.
+	stat.setTemporary(temp_value);
+	stat.setPotential(potential_value);
+}
+
 } // namespace rm::game::character
