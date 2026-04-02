@@ -235,6 +235,28 @@ public:
 	}
 
 	/**
+	 * @brief Set the number of ranks that the character receives during adolescence for languages related to their culture
+	 * 
+	 * Each type of langauge skill, somatic, spoken & writtent must be developed separately.
+	 * 
+	 * @param adolescent_language_ranks number of language ranks
+	 */
+	void setAdolescentLanguageRanks(int adolescent_language_ranks) {
+		adolescent_language_ranks_ = adolescent_language_ranks;
+	}
+
+	/**
+	 * @brief Get the number of ranks that the character receives during adolescence for languages related to their culture
+	 *
+	 * Each type of langauge skill, somatic, spoken & writtent must be developed separately.
+	 *
+	 * @return number of language ranks
+	 */
+	int adolescentLanguageRanks() const {
+		return adolescent_language_ranks_;
+	}
+
+	/**
 	 * @brief Set the number of ranks that the character receives on one open spell list of their realm
 	 * @param spell_list_ranks number of spell list ranks
 	 */
@@ -707,6 +729,7 @@ private:
 	std::string prejudices_{};                                             /** Any prejudices that are typical to members of the culture */
 	std::string religion_{};                                               /** Typical religious beliefs practiced by members of the culture */
 	int hobby_skill_ranks_{};                                              /**< Number of hobby skill ranks available during adolescence */
+	int adolescent_language_ranks_{};                                      /**< Number of language ranks available during adolescence */
 	int spell_list_ranks_{};                                               /**< Number of ranks in an open spell list members of the culture receive */
 	std::set<const ArmourTypeData*> preferred_armour_{};                   /**< Armour type typically preferred by members of the culture */
 	std::set<const WeaponTypeData*> preferred_weapons_{};                  /**< Weapon type typically preferred by members of the culture */

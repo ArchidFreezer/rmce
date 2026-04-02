@@ -17,6 +17,7 @@ json::value CultureTypeSerializer::serializeObject(const CultureTypeData& ref) c
 	JsonConverter::setString(obj, "prejudices", ref.prejudices());
 	JsonConverter::setString(obj, "religiousBeliefs", ref.religiousBeliefs());
 	JsonConverter::setInt(obj, "hobbySkillRanks", ref.hobbySkillRanks());
+	JsonConverter::setInt(obj, "adolescentLanguageRanks", ref.adolescentLanguageRanks());
 	if (ref.spellListRanks())
 		JsonConverter::setInt(obj, "spellListRanks", ref.spellListRanks());
 	JsonConverter::setDataSet(obj, "preferredArmours", ref.preferredArmour());
@@ -47,6 +48,7 @@ const CultureTypeData& CultureTypeSerializer::deserializeObject(json::object& js
 	ref.setPrejudices(JsonConverter::getString(jsonObj, "prejudices"));
 	ref.setReligiousBeliefs(JsonConverter::getString(jsonObj, "religiousBeliefs"));
 	ref.setHobbySkillRanks(JsonConverter::getInt(jsonObj, "hobbySkillRanks", 0));
+	ref.setAdolescentLanguageRanks(JsonConverter::getInt(jsonObj, "adolescentLanguageRanks", 0));
 	if (jsonObj.find("spellListRanks") != jsonObj.end())
 		ref.setSpellListRanks(JsonConverter::getInt(jsonObj, "spellListRanks", 0));
 	ref.setPreferredArmours(JsonConverter::getDataSet<ArmourTypeData>(jsonObj, "preferredArmours", manager_));
