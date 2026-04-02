@@ -1977,9 +1977,6 @@
                     "id" : "SKILL_LEATHER_CRAFTS"
                 },
                 {
-                    "id" : "SKILL_LIST_OWN_REALM_OPEN_LIST"
-                },
-                {
                     "id" : "SKILL_METAL_CRAFTS"
                 },
                 {
@@ -2111,9 +2108,6 @@
                 },
                 {
                     "id" : "SKILL_LEATHER_CRAFTS"
-                },
-                {
-                    "id" : "SKILL_LIST_OWN_REALM_OPEN_LIST"
                 },
                 {
                     "id" : "SKILL_METAL_CRAFTS"
@@ -2417,9 +2411,6 @@
                     "id" : "SKILL_LEADERSHIP"
                 },
                 {
-                    "id" : "SKILL_LIST_OWN_REALM_OPEN_LIST"
-                },
-                {
                     "id" : "SKILL_METAL_CRAFTS"
                 },
                 {
@@ -2565,9 +2556,6 @@
                 },
                 {
                     "id" : "SKILL_LEATHER_CRAFTS"
-                },
-                {
-                    "id" : "SKILL_LIST_OWN_REALM_OPEN_LIST"
                 },
                 {
                     "id" : "SKILL_METAL_CRAFTS"
@@ -2830,9 +2818,6 @@
                 },
                 {
                     "id" : "SKILL_LEADERSHIP"
-                },
-                {
-                    "id" : "SKILL_LIST_OWN_REALM_OPEN_LIST"
                 },
                 {
                     "id" : "SKILL_NAVIGATION"
