@@ -10,6 +10,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setString(obj, "id", ref.id());
 	JsonConverter::setString(obj, "name", ref.name_);
 	JsonConverter::setBool(obj, "built", ref.built_);
+	JsonConverter::setInt(obj, "num_adolescent_language_ranks", ref.num_adolescent_language_ranks_);
 	JsonConverter::setInt(obj, "num_hobby_skill_ranks", ref.num_hobby_skill_ranks_);
 	JsonConverter::setInt(obj, "num_spell_list_ranks", ref.num_spell_list_ranks_);
 
@@ -118,6 +119,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	// Identity + basic state
 	ref.name_ = JsonConverter::getString(jsonObj, "name");
 	ref.built_ = JsonConverter::getBool(jsonObj, "built", false);
+	ref.num_adolescent_language_ranks_ = JsonConverter::getInt(jsonObj, "num_adolescent_language_ranks", 0);
 	ref.num_hobby_skill_ranks_ = JsonConverter::getInt(jsonObj, "num_hobby_skill_ranks", 0);
 	ref.num_spell_list_ranks_ = JsonConverter::getInt(jsonObj, "num_spell_list_ranks", 0);
 

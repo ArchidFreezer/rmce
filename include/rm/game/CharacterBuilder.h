@@ -52,7 +52,8 @@ public:
 	 * @brief Set the stat values for a specific stat type.
 	 *
 	 * This method is used to set the temporary and potential stat values for a specific stat type during character creation. The temporary value is typically set based on the initial rolls for the character's stats, while the potential
-	 * value is calculated based on the temporary value and any racial bonuses or other modifiers. This method allows for setting both values at once, which can be useful during character creation when both values are determined at the same time.
+	 * value is calculated based on the temporary value and any racial bonuses or other modifiers. This method allows for setting both values at once, which can be useful during character creation when both values are determined at the same
+	 * time.
 	 *
 	 * @param stat_type The type of stat to set (e.g., strength, dexterity, etc.).
 	 * @param temp_value The temporary stat value to set for the specified stat type.
@@ -73,8 +74,9 @@ private:
 	const CultureTypeData* culture_type_{nullptr}; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
 	const ProfessionData* profession_{nullptr};    /**< The profession data for the character being built. */
 	std::set<RealmType::Type> magical_realms_{};   /**< A set of realm types representing the magical realm choices for the character being built. */
-	int num_hobby_skill_ranks_{0};                     /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
-	int num_spell_list_ranks_{0};                      /**< An integer representing the number of spell list ranks for the character being built, which may be determined by the culture type. */
+	int num_adolescent_language_ranks_{0};         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
+	int num_hobby_skill_ranks_{0};                 /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
+	int num_spell_list_ranks_{0};                  /**< An integer representing the number of spell list ranks for the character being built, which may be determined by the culture type. */
 
 	/* ------------------------------------------------------------------ */
 	/* Choices made                                                       */
@@ -92,8 +94,8 @@ private:
 
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_subcategory_development_type_choices_{}; /**< Skill subcategories with their development type changed */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_development_type_choices_{};             /**< Skill (base or subcategory) with their development type changed */
-	std::map<const SkillData*, SkillDevelopmentType::Type> prof_category_development_type_choices_{};          /**< Skills from a category with their development type changed */
-	std::map<const SkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};             /**< Skills from a group with their development type changed */
+	std::map<const SkillData*, SkillDevelopmentType::Type> prof_category_development_type_choices_{};                       /**< Skills from a category with their development type changed */
+	std::map<const SkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};                          /**< Skills from a group with their development type changed */
 
 	std::map<const SubcategoriedSkillData*, int> hobby_skill_ranks_{}; /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
 	std::map<const SkillCategoryData*, int> hobby_category_ranks_{};   /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */

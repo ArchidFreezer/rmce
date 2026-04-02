@@ -157,6 +157,9 @@ void CharacterBuilder::applyCultureType() {
 	if (built_) {
 		throw std::runtime_error("CharacterBuilder: Cannot apply culture type after character has been built.");
 	}
+	num_hobby_skill_ranks_ = culture_type_->hobbySkillRanks();
+	num_adolescent_language_ranks_ = culture_type_->adolescentLanguageRanks();
+	num_spell_list_ranks_ = culture_type_->spellListRanks();
 	skill_ranks_ = culture_type_->skillRanks();
 	category_ranks_ = culture_type_->skillCategoryRanks();
 }
