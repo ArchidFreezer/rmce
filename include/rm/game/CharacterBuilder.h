@@ -48,6 +48,18 @@ public:
 	 */
 	void setIntialChoices(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id, const std::set<RealmType::Type> magical_realms);
 
+	/**
+	 * @brief Set the stat values for a specific stat type.
+	 *
+	 * This method is used to set the temporary and potential stat values for a specific stat type during character creation. The temporary value is typically set based on the initial rolls for the character's stats, while the potential
+	 * value is calculated based on the temporary value and any racial bonuses or other modifiers. This method allows for setting both values at once, which can be useful during character creation when both values are determined at the same time.
+	 *
+	 * @param stat_type The type of stat to set (e.g., strength, dexterity, etc.).
+	 * @param temp_value The temporary stat value to set for the specified stat type.
+	 * @param potential_value The potential stat value to set for the specified stat type.
+	 */
+	void setStat(StatType::Type stat_type, int temp_value, int potential_value);
+
 private:
 	rm::PersistentObjectManager* object_factory_{nullptr};
 

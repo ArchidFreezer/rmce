@@ -16,10 +16,10 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 	// Get the operation from the path to determine which specific character builder task to perform
 	std::string_view operation = path.extractNextSegment("/rmce/operations/character/");
 
-	if (request.method() == http::verb::post) {
-		if (operation == "initial-choices") requestInitialChoices(response, request);
-		else if (operation == "stat-rolls") requestStatRolls(response, request);
-	} else {
+	if (request.method() == http::verb::post && operation == "initial-choices") requestInitialChoices(response, request);
+	else if (request.method() == http::verb::post && operation == "stat-rolls") requestStatRolls(response, request);
+	else if (request.method() == http::verb::post && operation == "set-stats") requestSetStats(response, request);
+	else {
 		response.result(http::status::not_found);
 		response.set(http::field::content_type, "application/json");
 		response.body() = R"({"error": "Endpoint not found", "message": "The requested endpoint does not exist"})";
@@ -102,6 +102,42 @@ void CharacterBuilderRequestHandler::requestStatRolls(http::response<http::strin
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to perform stat rolls", "message": ")" + archid::escapeJson(e.what()) + R"("})";
+	}
+}
+
+void CharacterBuilderRequestHandler::requestSetStats(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+	using namespace rm::game::character;
+
+	try {
+		json::value json_body = json::parse(request.body());
+		if (!json_body.is_object()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON object"})";
+			return;
+		}
+		std::string id = json_body.as_object().at("id").as_string().c_str();
+		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
+
+
+		const auto& stats_json = json_body.as_object().at("stats").as_array();
+		std::map<std::string, int> stats;
+		for (const auto& stat : stats_json) {
+			// Each stat is expected to be an object with "stat", "temporary" and "potential"	fields
+			std::string stat_name = stat.as_object().at("stat").as_string().c_str();
+			StatType::Type stat_type = StatType::fromString(stat_name).value();
+
+			int temporary = static_cast<int>(stat.as_object().at("temporary").as_int64());
+			int potential = static_cast<int>(stat.as_object().at("potential").as_int64());
+			builder.setStat(stat_type, temporary, potential);
+		}
+
+		response.result(http::status::ok);
+		response.set(http::field::content_type, "application/json");
+		response.body() = R"({"message": "Stats updated successfully"})";
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to set stats", "message": ")" + archid::escapeJson(e.what()) + R"("})";
 	}
 }
 
