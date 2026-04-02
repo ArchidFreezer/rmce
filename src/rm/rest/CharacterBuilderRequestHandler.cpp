@@ -134,7 +134,8 @@ void CharacterBuilderRequestHandler::requestSetStats(http::response<http::string
 
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
-		response.body() = R"({"message": "Stats updated successfully"})";
+		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
+		//response.body() = R"({"message": "Stats updated successfully"})";
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to set stats", "message": ")" + archid::escapeJson(e.what()) + R"("})";
