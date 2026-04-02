@@ -11,6 +11,7 @@ json::value ProfessionSerializer::serializeObject(const ProfessionData& ref) con
 	JsonConverter::setString(obj, "description", ref.description());
 	JsonConverter::setString(obj, "book", ref.book().value()->id());
 	JsonConverter::setString(obj, "spellUserType", SpellUserType::toString(ref.spellUserType()));
+	JsonConverter::setDataSet(obj, "allowedRaces", ref.allowedRaces());
 	JsonConverter::setEnumSet(obj, "realms", ref.realms());
 	JsonConverter::setEnumSet(obj, "stats", ref.stats());
 	JsonConverter::setDataChoiceSet(obj, "baseSpellListChoices", ref.baseSpellListChoices());
@@ -58,6 +59,7 @@ const ProfessionData& ProfessionSerializer::deserializeObject(json::object& json
 	ref.setBook(manager_.get<BookData>(book_id));
 
 	ref.setSpellUserType(SpellUserType::fromString(JsonConverter::getString(jsonObj, "spellUserType")).value());
+	ref.setAllowedRaces(JsonConverter::getDataSet<RaceData>(jsonObj, "allowedRaces", manager_));
 	ref.setRealms(JsonConverter::getEnumSet<RealmType::Type>(jsonObj, "realms"));
 	ref.setStats(JsonConverter::getEnumVector<StatType::Type>(jsonObj, "stats"));
 	ref.setBaseSpellListChoices(JsonConverter::getDataChoiceSet<SpellListData>(jsonObj, "baseSpellListChoices", manager_));
