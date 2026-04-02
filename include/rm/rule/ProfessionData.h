@@ -9,6 +9,7 @@
 #include <BookData.h>
 #include <GameRuleData.h>
 #include <GameRuleDataChoice.h>
+#include <RaceData.h>
 #include <RealmType.h>
 #include <SkillCategoryData.h>
 #include <SkillData.h>
@@ -176,6 +177,40 @@ public:
 	 */
 	SpellUserType::Type spellUserType() const {
 		return spell_user_type_;
+	}
+
+	/**
+	 * @brief Add a race to those allowed to take the profession
+	 * @param race RaceData race to add
+	 */
+	void addAllowedRace(const RaceData& race) {
+		allowed_races_.emplace(&race);
+	}
+
+	/**
+	 * @brief Set the races allowed to take the profession
+	 * @param races Set of RaceData races to allow
+	 */
+	void setAllowedRaces(std::set<const RaceData*> races) {
+		allowed_races_ = std::move(races);
+	}
+
+	/**
+	 * @brief Get whether a race is allowed to take the profession
+	 * @param race RaceData race to check
+	 * @return `true` if the race is allowed
+	 * @return `false` if the race is not allowed
+	 */
+	bool isRaceAllowed(const RaceData& race) const {
+		return (allowed_races_.find(&race) != allowed_races_.end());
+	}
+
+	/**
+	 * @brief Get the races allowed to take the profession
+	 * @return Set of RaceData races allowed
+	 */
+	const std::set<const RaceData*> allowedRaces() const {
+		return allowed_races_;
 	}
 
 	/**
@@ -1016,10 +1051,13 @@ public:
 		throw InvalidCategoryDevelopmentCost("There is no skill development cost for the category: " + category.id());
 	}
 
+
+
 private:
 	std::string name_{};                                                    /**< Name of the profession */
 	std::string description_{};                                             /**< General description of the profession */
 	std::optional<const BookData*> book_{std::nullopt};                     /**< Book that the profession is described in */
+	std::set<const RaceData*> allowed_races_{};                                    /**< Set of races allowed to take the profession */
 	SpellUserType::Type spell_user_type_{SpellUserType::kNone};             /**< Spell user type */
 	std::set<RealmType::Type> realms_{};                                    /**< Realm(s) that the profession draws power from */
 	std::vector<StatType::Type> stats_{};                                   /**< Stats providing a bonus to the profession */
