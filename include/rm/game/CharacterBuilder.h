@@ -97,7 +97,7 @@ private:
 	std::map<const SkillData*, SkillDevelopmentType::Type> prof_category_development_type_choices_{};                       /**< Skills from a category with their development type changed */
 	std::map<const SkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};                          /**< Skills from a group with their development type changed */
 
-	std::map<const SubcategoriedSkillData*, int> hobby_skill_ranks_{}; /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
+	std::map<const SubcategoriedSkillData*, int> hobby_skill_ranks_{}; /**< A map of skill data pointers to integers representing the skill ranks for each skill choice made during character creation. */
 	std::map<const SkillCategoryData*, int> hobby_category_ranks_{};   /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
 
 	std::map<std::string, const LanguageAbility> background_language_choices_; /**< Map of language names to their corresponding LanguageAbility objects for the character being built. */
@@ -208,6 +208,38 @@ private:
 	void applyProfession();
 
 	void applyProfessionChoices(); /**< Applies the choices associated with the character's profession. */
+
+	/**
+	 * @brief Gets the maximum number of hobby skill ranks that can be allocated to a given skill based on the character's choices and the rules for hobby skill ranks.
+	 *
+	 * This function calculates the maximum number of hobby skill ranks that can be allocated to a specific skill by considering the character's current choices (e.g., profession, culture type) and the rules governing hobby skill ranks. It
+	 * takes into account any limitations or bonuses that may apply to the skill based on the character's background and choices, ensuring that the allocation of hobby skill ranks adheres to the game's character creation rules.
+	 *
+	 * @param skill The skill for which to calculate the maximum number of hobby skill ranks.
+	 * @return The maximum number of hobby skill ranks that can be allocated to the given skill.
+	 */
+	int getMaxHobbyRanksForSkill(const SubcategoriedSkillData* skill) const;
+
+	/**
+	 * @brief Gets the maximum number of hobby skill ranks that can be allocated to a given skill category based on the character's choices and the rules for hobby skill ranks.
+	 *
+	 * This function calculates the maximum number of hobby skill ranks that can be allocated to a specific skill category by considering the character's current choices (e.g., profession, culture type) and the rules governing hobby skill ranks. It
+	 * takes into account any limitations or bonuses that may apply to the skill category based on the character's background and choices, ensuring that the allocation of hobby skill ranks adheres to the game's character creation rules.
+	 *
+	 * @param category The skill category for which to calculate the maximum number of hobby skill ranks.
+	 * @return The maximum number of hobby skill ranks that can be allocated to the given skill category.
+	 */
+	int getMaxHobbyRanksForCategory(const SkillCategoryData* category) const;
+
+	/**
+	 * @brief Gets the set of spell list choices that are available for the character based on their current realm(s).
+	 *
+	 * During adolescence some cultures allow characters to gain ranks in one open spell list from their own realm as long as the cost of the rank is <= 40 for their profession.
+	 *
+	 * @return A set of spell list data pointers representing the available spell list choices for the character.
+	 */
+	std::set<const SpellListData*> getAdolescentSpellListChoices() const;
+
 };
 
 } // namespace rm::game::character

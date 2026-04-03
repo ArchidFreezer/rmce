@@ -230,4 +230,69 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	return ref;
 }
 
+json::value CharacterBuilderSerializer::serializeHobbyChoices(const CharacterBuilder& ref) const {
+	json::object obj;
+	// Hobby skill choices
+	JsonConverter::setInt(obj, "numHobbyRanks", ref.num_hobby_skill_ranks_);
+	const CultureData* culture = ref.culture_;
+	if (culture) {
+		json::array hobby_skills_array;
+		for (const auto& skill : culture->hobbySkills()) {
+			json::object skill_obj;
+			JsonConverter::setString(skill_obj, "id", skill->id());
+			if (skill->subcategory()) {
+				JsonConverter::setString(skill_obj, "subcategory", skill->subcategory().value());
+			}
+			JsonConverter::setInt(skill_obj, "max", ref.getMaxHobbyRanksForSkill(skill));
+			hobby_skills_array.push_back(skill_obj);
+		}
+		if (hobby_skills_array.size())
+			obj["hobby_skills"] = hobby_skills_array;
+
+		json::array hobby_categories_array;
+		for (const auto& category : culture->hobbySkillCategories()) {
+			json::object category_obj;
+			JsonConverter::setString(category_obj, "id", category->id());
+			JsonConverter::setInt(category_obj, "max", ref.getMaxHobbyRanksForCategory(category));
+			hobby_categories_array.push_back(category_obj);
+		}
+		if (hobby_categories_array.size())
+			obj["hobby_categories"] = hobby_categories_array;
+	}
+
+	// Background language choices
+	const RaceData* race = ref.race_;
+	if (race) {
+		JsonConverter::setInt(obj, "numLanguageRanks", ref.num_adolescent_language_ranks_);
+		json::array background_languages_array;
+		for (const auto& [language_name, ability] : race->adolescentLanguageAbilities()) {
+			json::object language_obj;
+			JsonConverter::setString(language_obj, "id", ability.languageId());
+			if (ability.isSomatic()) JsonConverter::setInt(language_obj, "maxSomatic", ability.somatic());
+			if (ability.isSpoken()) JsonConverter::setInt(language_obj, "maxSpoken", ability.spoken());
+			if (ability.isWritten()) JsonConverter::setInt(language_obj, "maxWritten", ability.written());
+			background_languages_array.push_back(language_obj);
+		}
+		if (background_languages_array.size()) {
+			obj["background_languages"] = background_languages_array;
+		}
+	}
+
+	// Adolescent spell list ranks
+	{
+		JsonConverter::setInt(obj, "numSpellListRanks", ref.num_spell_list_ranks_);
+		json::array adolescent_spell_lists_array;
+		for (const auto& spell_list : ref.getAdolescentSpellListChoices()) {
+			json::object spell_list_obj;
+			JsonConverter::setString(spell_list_obj, "id", spell_list->id());
+			adolescent_spell_lists_array.push_back(spell_list_obj);
+		}
+		if (adolescent_spell_lists_array.size()) {
+			obj["adolescent_spell_lists"] = adolescent_spell_lists_array;
+		}
+	}
+
+	return obj;
+}
+
 } // namespace rm::serial
