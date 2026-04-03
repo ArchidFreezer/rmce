@@ -32,6 +32,7 @@ public:
 	 * |POST	 | /rmce/operations/character/initial-choices | Generate initial character creation choices based on provided parameters |
 	 * |POST	 | /rmce/operations/character/stat-rolls | Generate and return potential stat values from temporary rolls and the potential roll |
 	 * |POST	 | /rmce/operations/character/set-stats | Set the temporary and potential values for each stat of a character being created |
+	 * |GET	 | /rmce/operations/character/hobby-choices?id={id} | Retrieve the available hobby choices for a character being created using the specified character ID |
 	 *
 	 * @param request The HTTP request to handle
 	 * @param response The HTTP response to populate based on the request
@@ -86,6 +87,18 @@ private:
 	 * @param request The HTTP request containing the data for the operation in its body.
 	 */
 	void requestSetStats(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+
+	/**
+	 * @brief Retrieves the available hobby choices for a character being created.
+	 *
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object for which to retrieve hobby choices.
+	 * The function will return the available hobby choices for the specified CharacterBuilder object in the response.
+	 *
+	 * @param response The HTTP response object to populate with the result of the operation.
+	 * @param request The HTTP request containing the data for the operation in its body.
+	 * @param id The ID of the CharacterBuilder object for which to retrieve hobby choices.
+	 */
+	void requestHobbyChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request, std::string id);
 };
 
 } // namespace rm::rest

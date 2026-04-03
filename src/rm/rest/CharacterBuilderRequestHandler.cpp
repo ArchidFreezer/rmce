@@ -19,6 +19,7 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 	if (request.method() == http::verb::post && operation == "initial-choices") requestInitialChoices(response, request);
 	else if (request.method() == http::verb::post && operation == "stat-rolls") requestStatRolls(response, request);
 	else if (request.method() == http::verb::post && operation == "set-stats") requestSetStats(response, request);
+	else if (request.method() == http::verb::get && operation == "hobby-choices" && path.params().contains("id")) requestHobbyChoices(response, request, path.params().at("id"));
 	else {
 		response.result(http::status::not_found);
 		response.set(http::field::content_type, "application/json");
@@ -27,10 +28,11 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 }
 
 void CharacterBuilderRequestHandler::requestInitialChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
-	std::string id{};
-	try {
-		using namespace rm::game::character;
+	using namespace rm::game::character;
 
+	std::string id{};
+	CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>();
+	try {
 		json::value json_body = json::parse(request.body());
 		if (!json_body.is_object()) {
 			response.result(http::status::bad_request);
@@ -48,15 +50,16 @@ void CharacterBuilderRequestHandler::requestInitialChoices(http::response<http::
 		for (const auto& realm : realms) {
 			magical_realms.insert(RealmType::fromString(realm.as_string()).value());
 		}
-		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>();
 		builder.setIntialChoices(serial_manager_.objectManager(), name, race_id, culture_id, profession_id, magical_realms);
 		id = builder.id();
-	} catch (const std::exception&) {
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to set initial choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
 	}
 	// This is a placeholder implementation. You can replace it with your actual logic to generate character initial choices based on the request body.
 	response.result(http::status::ok);
 	response.set(http::field::content_type, "application/json");
-	response.body() = R"({"id": ")" + id + R"("})";
+	response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
 }
 
 void CharacterBuilderRequestHandler::requestStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
@@ -132,14 +135,34 @@ void CharacterBuilderRequestHandler::requestSetStats(http::response<http::string
 			builder.setStat(stat_type, temporary, potential);
 		}
 
-		response.result(http::status::ok);
-		response.set(http::field::content_type, "application/json");
-		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
-		//response.body() = R"({"message": "Stats updated successfully"})";
+		// After setting the stats, we can immediately return the hobby choices. This allows the client to update the UI with the new hobby choices without needing to make a separate request.
+		http::request<http::string_body> hobby_request; // We need a dummy request object to pass to the hobby choices function, but it won't be used in that function so we can just create an empty one.
+		requestHobbyChoices(response, hobby_request, id);
+
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to set stats", "message": ")" + archid::escapeJson(e.what()) + R"("})";
 	}
 }
+
+void CharacterBuilderRequestHandler::requestHobbyChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request, std::string id) {
+	using namespace rm::game::character;
+
+	try {
+		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
+
+		rm::serial::CharacterBuilderSerializer serializer(serial_manager_.objectManager());
+		json::value serialized_hobby_choices = serializer.serializeHobbyChoices(builder);
+
+		response.result(http::status::ok);
+		response.set(http::field::content_type, "application/json");
+		response.body() = json::serialize(serialized_hobby_choices);
+
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to get hobby choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
+	}
+}
+
 
 } // namespace rm::rest
