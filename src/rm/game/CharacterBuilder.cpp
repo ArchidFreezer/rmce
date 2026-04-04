@@ -394,7 +394,7 @@ void CharacterBuilder::addHobbyCategoryRankChoice(const SkillCategoryData& categ
 }
 
 void CharacterBuilder::addAdolescentLanguageChoice(const LanguageAbility language) {
-	adolescent_language_choices_.emplace(std::move(language));
+	adolescent_language_choices_.emplace(language);
 	setBestLanguageAbility(language);
 }
 
