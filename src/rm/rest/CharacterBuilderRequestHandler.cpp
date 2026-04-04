@@ -3,6 +3,18 @@
 #include <Dice.h>
 #include <HttpPathParser.h>
 #include <StringUtils.h>
+#include <boost/json.hpp>
+#include <optional>
+
+
+// Helper function to safely extract a string value from a JSON object, returning std::nullopt if the key is not found or the value is not a string
+std::optional<std::string> get_optional_string(boost::json::object const& obj, std::string_view key) {
+	auto it = obj.find(key);
+	if (it != obj.end() && it->value().is_string()) {
+		return boost::json::value_to<std::string>(it->value());
+	}
+	return std::nullopt;
+}
 
 namespace rm::rest {
 
@@ -20,6 +32,7 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 	else if (request.method() == http::verb::post && operation == "stat-rolls") requestStatRolls(response, request);
 	else if (request.method() == http::verb::post && operation == "set-stats") requestSetStats(response, request);
 	else if (request.method() == http::verb::get && operation == "hobby-choices" && path.params().contains("id")) requestHobbyChoices(response, request, path.params().at("id"));
+	else if (request.method() == http::verb::post && operation == "set-hobby-choices") requestSetHobbyChoices(response, request);
 	else {
 		response.result(http::status::not_found);
 		response.set(http::field::content_type, "application/json");
@@ -56,7 +69,6 @@ void CharacterBuilderRequestHandler::requestInitialChoices(http::response<http::
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to set initial choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
 	}
-	// This is a placeholder implementation. You can replace it with your actual logic to generate character initial choices based on the request body.
 	response.result(http::status::ok);
 	response.set(http::field::content_type, "application/json");
 	response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
@@ -96,7 +108,7 @@ void CharacterBuilderRequestHandler::requestStatRolls(http::response<http::strin
 			// Calculate potential from temporary and pot_roll
 			int potential = rm::game::character::stat::getInitialPotentialValue(temporary);
 
-			result_array.push_back(json::object({{"temporary", temporary}, {"potential", potential}}));
+			result_array.push_back(json::object({ {"temporary", temporary}, {"potential", potential} }));
 		}
 
 		response.result(http::status::ok);
@@ -121,7 +133,6 @@ void CharacterBuilderRequestHandler::requestSetStats(http::response<http::string
 		}
 		std::string id = json_body.as_object().at("id").as_string().c_str();
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
-
 
 		const auto& stats_json = json_body.as_object().at("stats").as_array();
 		std::map<std::string, int> stats;
@@ -164,5 +175,65 @@ void CharacterBuilderRequestHandler::requestHobbyChoices(http::response<http::st
 	}
 }
 
+void CharacterBuilderRequestHandler::requestSetHobbyChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+	using namespace rm::game::character;
+
+	try {
+		json::value json_body = json::parse(request.body());
+		if (!json_body.is_object()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON object"})";
+			return;
+		}
+		std::string id = json_body.as_object().at("id").as_string().c_str();
+		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
+
+		const auto& skills_json = json_body.as_object().at("hobbyRanks").as_array();
+		for (const auto& skill_json : skills_json) {
+			// Each stat is expected to be an object with "id", optional "subcategory" and "value"	fields
+			std::string skill_id = skill_json.as_object().at("id").as_string().c_str();
+			std::optional<std::string> subcategory = skill_json.as_object().contains("subcategory") ? std::optional<std::string>(skill_json.as_object().at("subcategory").as_string().c_str()) : std::nullopt;
+			int value = static_cast<int>(skill_json.as_object().at("value").as_int64());
+
+			SubcategoriedSkillData& skill_data = serial_manager_.objectManager().subcategoriedSkillData(skill_id, subcategory);
+			builder.addHobbySkillRankChoice(skill_data, value);
+		}
+
+		const auto& categories_json = json_body.as_object().at("hobbyCategoryRanks").as_array();
+		for (const auto& category_json : categories_json) {
+			std::string category_id = category_json.as_object().at("id").as_string().c_str();
+			int value = static_cast<int>(category_json.as_object().at("value").as_int64());
+
+			SkillCategoryData& category_data = serial_manager_.objectManager().get<SkillCategoryData>(category_id);
+			builder.addHobbyCategoryRankChoice(category_data, value);
+		}
+
+		const auto& languages_json = json_body.as_object().at("adolescentLanguages").as_array();
+		for (const auto& language_json : languages_json) {
+			std::string language_id = language_json.as_object().at("language").as_string().c_str();
+			int somatic = static_cast<int>(language_json.as_object().at("somatic").as_int64());
+			int spoken = static_cast<int>(language_json.as_object().at("spoken").as_int64());
+			int written = static_cast<int>(language_json.as_object().at("written").as_int64());
+
+			LanguageData& language_data = serial_manager_.objectManager().get<LanguageData>(language_id);
+			LanguageAbility language_ability(language_data, spoken, written, somatic);
+			builder.addAdolescentLanguageChoice(std::move(language_ability));
+		}
+
+		std::optional<std::string> adolescent_spell_list = get_optional_string(json_body.as_object(), "adolescentSpellList");
+		if (adolescent_spell_list.has_value()) {
+			SpellListData& adolescent_spell_data = serial_manager_.objectManager().get<SpellListData>(adolescent_spell_list.value());
+			builder.setAdolescentSpellListChoice(adolescent_spell_data);
+		}
+
+		response.result(http::status::ok);
+		response.set(http::field::content_type, "application/json");
+		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to set hobby choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
+	}
+}
 
 } // namespace rm::rest

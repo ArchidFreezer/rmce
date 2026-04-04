@@ -143,6 +143,18 @@ namespace rm::game::character {
 		 */
 		bool isWritten() const { return language_->isWritten(); }
 
+		/**
+		 * @brief Overload the less than operator to allow for sorting of LanguageAbility objects
+		 *
+		 * The overload is based on the id of the language, as this is a unique identifier for the language and allows for consistent ordering of LanguageAbility objects based on the language they represent.
+		 *
+		 * @param other The other LanguageAbility object to compare against
+		 * @return `true` if this LanguageAbility is considered less than the other; `false` otherwise
+		 */
+		bool operator<(const LanguageAbility& other) const {
+			 return language_->id() < other.language_->id();
+		}
+
 	private:
 		const rule::LanguageData* language_{}; /**< Language the character has any ability in */
 		int somatic_{ 0 }; /** Ability in somantic component of the languiage */
