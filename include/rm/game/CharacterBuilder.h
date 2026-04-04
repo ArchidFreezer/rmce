@@ -5,7 +5,7 @@
 #include <StatType.h>
 #include <string>
 #include <map>
-#include <set>
+#include <vector>
 #include <unordered_map>
 
 // Forward declaration to break the circular include with CharacterBuilderSerializer.h
@@ -61,22 +61,57 @@ public:
 	 */
 	void setStat(StatType::Type stat_type, int temp_value, int potential_value);
 
+	/**
+	 * @brief Add a number of ranks to a skill chosen as a hobby skill during character creation.
+	 *
+	 * @param skill The skill data to add ranks to.
+	 * @param ranks The number of ranks to add to the specified skill.
+	 */
+	void addHobbySkillRankChoice(const SubcategoriedSkillData& skill, int ranks);
+
+	/**
+	 * @brief Add a number of ranks to a skill category chosen as a hobby skill category during character creation.
+	 *
+	 * @param category The skill category data to add ranks to.
+	 * @param ranks The number of ranks to add to the specified skill category.
+	 */
+	void addHobbyCategoryRankChoice(const SkillCategoryData& category, int ranks);
+
+	/**
+	 * @brief Add a language choice for the character during character creation.
+	 *
+	 * This method is used to add a language choice for the character being built. The language choice is represented by a LanguageAbility object, which contains information about the language and the number of ranks in spoken, written,
+	 * and somatic components of the language. This method allows for adding multiple language choices for the character, which can be important for characters with high culture or specific backgrounds.
+	 *
+	 * @param language The LanguageAbility object representing the language choice to add for the character.
+	 */
+	void addAdolescentLanguageChoice(const LanguageAbility language);
+
+	/**
+	 * @ Set the spell list choice for the character during character creation.
+	 *
+	 * This method is used to set an adolescent spell list choice for the character being built. Only some cultures allow for adolescent spell list choices and the ranks all go into a single spell list.
+	 *
+	 * @param spell_list The SpellListData object representing the spell list choice to add for the character.
+	 */
+	void setAdolescentSpellListChoice(const SpellListData& spell_list);
+
 private:
-	rm::PersistentObjectManager* object_factory_{nullptr};
+	rm::PersistentObjectManager* object_factory_{ nullptr };
 
 	/* ------------------------------------------------------------------ */
 	/* Basic data                                                         */
 	/* ------------------------------------------------------------------ */
-	bool built_{false};             /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
+	bool built_{ false };             /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
 	std::string name_{};            /**< The name of the character being built. This is used for display purposes and may not be unique. */
-	const RaceData* race_{nullptr}; /**< The race data for the character being built. */
-	const CultureData* culture_{nullptr};          /**< The culture data for the character being built. */
-	const CultureTypeData* culture_type_{nullptr}; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
-	const ProfessionData* profession_{nullptr};    /**< The profession data for the character being built. */
+	const RaceData* race_{ nullptr }; /**< The race data for the character being built. */
+	const CultureData* culture_{ nullptr };          /**< The culture data for the character being built. */
+	const CultureTypeData* culture_type_{ nullptr }; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
+	const ProfessionData* profession_{ nullptr };    /**< The profession data for the character being built. */
 	std::set<RealmType::Type> magical_realms_{};   /**< A set of realm types representing the magical realm choices for the character being built. */
-	int num_adolescent_language_ranks_{0};         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
-	int num_hobby_skill_ranks_{0};                 /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
-	int num_spell_list_ranks_{0};                  /**< An integer representing the number of spell list ranks for the character being built, which may be determined by the culture type. */
+	int num_adolescent_language_ranks_{ 0 };         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
+	int num_hobby_skill_ranks_{ 0 };                 /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
+	int num_adolescent_spell_list_ranks_{ 0 };                  /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
 
 	/* ------------------------------------------------------------------ */
 	/* Choices made                                                       */
@@ -88,8 +123,9 @@ private:
 	 */
 
 	std::set<const SkillCategoryData*> race_category_everyman_choices_{};              /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
-	std::map<std::string, const LanguageAbility> race_adolescent_language_choices_;    /**< Map of language names to their corresponding LanguageAbility objects for the character being built. */
+	std::map<std::string, const LanguageAbility> race_adolescent_languages_;    /**< Map of language names to their corresponding LanguageAbility objects for the character being built. */
 	std::map<const SubcategoriedSkillData*, int> culture_type_category_skill_ranks_{}; /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
+	const SpellListData* adolescent_spell_list_choice_{};                                                   /**< A pointer to a SpellListData object representing the spell list choice for the character being built, which may be determined by the culture type. */
 	std::set<SpellListData*> base_spell_list_choices_{};                               /**< A set of spell list data pointers representing the spell list choices for the character being built. */
 
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_subcategory_development_type_choices_{}; /**< Skill subcategories with their development type changed */
@@ -99,6 +135,7 @@ private:
 
 	std::map<const SubcategoriedSkillData*, int> hobby_skill_ranks_{}; /**< A map of skill data pointers to integers representing the skill ranks for each skill choice made during character creation. */
 	std::map<const SkillCategoryData*, int> hobby_category_ranks_{};   /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
+	std::set<LanguageAbility> adolescent_language_choices_{};        /**< A set of language ability pointers representing the hobby language choices for the character being built. */
 
 	std::map<std::string, const LanguageAbility> background_language_choices_; /**< Map of language names to their corresponding LanguageAbility objects for the character being built. */
 

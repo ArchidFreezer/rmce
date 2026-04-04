@@ -12,7 +12,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setBool(obj, "built", ref.built_);
 	JsonConverter::setInt(obj, "num_adolescent_language_ranks", ref.num_adolescent_language_ranks_);
 	JsonConverter::setInt(obj, "num_hobby_skill_ranks", ref.num_hobby_skill_ranks_);
-	JsonConverter::setInt(obj, "num_spell_list_ranks", ref.num_spell_list_ranks_);
+	JsonConverter::setInt(obj, "num_spell_list_ranks", ref.num_adolescent_spell_list_ranks_);
 
 	// Core rule data references
 	if (ref.race_)
@@ -27,8 +27,10 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	// Initial choices
 	JsonConverter::setEnumSet(obj, "magical_realms", ref.magical_realms_);
 	JsonConverter::setDataSet<SkillCategoryData>(obj, "race_category_everyman_choices", ref.race_category_everyman_choices_);
-	JsonConverter::setLanguageAbilities(obj, "race_adolescent_language_choices", ref.race_adolescent_language_choices_);
+	JsonConverter::setLanguageAbilities(obj, "race_adolescent_language_choices", ref.race_adolescent_languages_);
 	JsonConverter::setSkillPrimitiveMap<int>(obj, "culture_type_category_skill_ranks", ref.culture_type_category_skill_ranks_);
+	if (ref.adolescent_spell_list_choice_)
+		JsonConverter::setString(obj, "adolescent_spell_list_choice", ref.adolescent_spell_list_choice_->id());
 
 	{
 		std::set<const SpellListData*> base_spell_lists;
@@ -121,7 +123,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.built_ = JsonConverter::getBool(jsonObj, "built", false);
 	ref.num_adolescent_language_ranks_ = JsonConverter::getInt(jsonObj, "num_adolescent_language_ranks", 0);
 	ref.num_hobby_skill_ranks_ = JsonConverter::getInt(jsonObj, "num_hobby_skill_ranks", 0);
-	ref.num_spell_list_ranks_ = JsonConverter::getInt(jsonObj, "num_spell_list_ranks", 0);
+	ref.num_adolescent_spell_list_ranks_ = JsonConverter::getInt(jsonObj, "num_spell_list_ranks", 0);
 
 	// Core rule data references
 	{
@@ -151,8 +153,13 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	// Initial choices
 	ref.magical_realms_ = JsonConverter::getEnumSet<RealmType::Type>(jsonObj, "magical_realms");
 	ref.race_category_everyman_choices_ = JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "race_category_everyman_choices", manager_);
-	ref.race_adolescent_language_choices_ = JsonConverter::getLanguageAbilityMap(jsonObj, "race_adolescent_language_choices", manager_);
+	ref.race_adolescent_languages_ = JsonConverter::getLanguageAbilityMap(jsonObj, "race_adolescent_language_choices", manager_);
 	ref.culture_type_category_skill_ranks_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "culture_type_category_skill_ranks", manager_);
+	{
+		const std::string adolescent_spell_list_choice_id = JsonConverter::getString(jsonObj, "adolescent_spell_list_choice");
+		if (!adolescent_spell_list_choice_id.empty())
+			ref.adolescent_spell_list_choice_ = &manager_.get<SpellListData>(adolescent_spell_list_choice_id);
+	}
 
 	{
 		const std::set<const SpellListData*> base_spell_lists = JsonConverter::getDataSet<SpellListData>(jsonObj, "base_spell_list_choices", manager_);
@@ -280,7 +287,7 @@ json::value CharacterBuilderSerializer::serializeHobbyChoices(const CharacterBui
 
 	// Adolescent spell list ranks
 	{
-		JsonConverter::setInt(obj, "numSpellListRanks", ref.num_spell_list_ranks_);
+		JsonConverter::setInt(obj, "numSpellListRanks", ref.num_adolescent_spell_list_ranks_);
 		JsonConverter::setDataSet(obj, "adolescentSpellLists", ref.getAdolescentSpellListChoices());
 	}
 
