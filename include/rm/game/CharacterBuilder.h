@@ -96,22 +96,96 @@ public:
 	 */
 	void setAdolescentSpellListChoice(const SpellListData& spell_list);
 
+	/**
+	 * @brief Makes a stat gain roll for the character being built for a specific stat type.
+	 * @param stat_type The type of stat for which to make the gain rolls.
+	 */
+	void makeStatGainRoll(StatType::Type stat_type);
+
+	/**
+	 * @brief Makes stat gain rolls for all stats for the character being built.
+	 */
+	void makeAllStatGainRolls();
+
+	/**
+	 * @brief Makes a background money roll for the character being built.
+	 *
+	 * This method is used to make a money roll for the character being built when spending a background option point. The roll parameter can be used to specify a specific roll result for testing purposes, or it can be left as the default
+	 * value of -1 to indicate that a random roll should be made.
+	 *
+	 * @param roll An optional integer representing the result of the background money roll. If left as -1, a random roll will be made.
+	 */
+	void backgroundMoneyRoll(int roll = -1);
+
+	/**
+	 * @brief Add a language choice for the character during character creation.
+	 *
+	 * This method is used to add a language choice for the character being built. The language choice is represented by a LanguageAbility object, which contains information about the language and the number of ranks in spoken, written,
+	 * and somatic components of the language. This method allows for adding multiple language choices for the character, which can be important for characters with high culture or specific backgrounds.
+	 *
+	 * @param language The LanguageAbility object representing the language choice to add for the character.
+	 */
+	void addBackgroundLanguageChoice(const LanguageAbility language);
+
+	/**
+	 * @brief Add a special bonus to a specific skill for the character being built.
+	 *
+	 * This method is used to add a special bonus to a specific skill for the character being built. The bonus is typically determined by the character's background or other choices made during character creation. This method allows for
+	 * adding bonuses to specific skills, which can be important for characters with certain backgrounds or professions.
+	 *
+	 * @param skill The SubcategoriedSkillData object representing the skill to which the bonus should be applied.
+	 * @param bonus An integer representing the amount of the bonus to add to the specified skill.
+	 */
+	void addSkillSpecialBonus(const SubcategoriedSkillData* skill, int bonus);
+
+	/**
+	 * @brief Add a special bonus to a specific skill category for the character being built.
+	 *
+	 * This method is used to add a special bonus to a specific skill category for the character being built. The bonus is typically determined by the character's background or other choices made during character creation. This method
+	 * allows for adding bonuses to specific skill categories, which can be important for characters with certain backgrounds or professions.
+	 *
+	 * @param category The SkillCategoryData object representing the skill category to which the bonus should be applied.
+	 * @param bonus An integer representing the amount of the bonus to add to the specified skill category.
+	 */
+	void addCategorySpecialBonus(const SkillCategoryData* category, int bonus);
+
+	/**
+	 * @brief Add an  item to the character.
+	 *
+	 * This method is used to add an item to the character being built. The item is typically determined by the character's background or other choices made during character creation.
+	 *
+	 * @param item The name of the item to add to the character.
+	 */
+	void addItem(std::string_view item);
+
+	/**
+	 * @brief Generate a number of random items for the character based on their background.
+	 *
+	 * This method is used to generate a number of random items for the character being built based on their background. The number of items to generate is determined by the item_count parameter, and the specific items generated may be
+	 * influenced by the character's background and other choices made during character creation.
+	 *
+	 * @param item_count An integer representing the number of random items to generate for the character.
+	 */
+	void generateBackgroundItems(int item_count);
+
 private:
-	rm::PersistentObjectManager* object_factory_{ nullptr };
+	rm::PersistentObjectManager* object_factory_{nullptr};
 
 	/* ------------------------------------------------------------------ */
 	/* Basic data                                                         */
 	/* ------------------------------------------------------------------ */
-	bool built_{ false };             /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
+	bool built_{false};             /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
 	std::string name_{};            /**< The name of the character being built. This is used for display purposes and may not be unique. */
-	const RaceData* race_{ nullptr }; /**< The race data for the character being built. */
-	const CultureData* culture_{ nullptr };          /**< The culture data for the character being built. */
-	const CultureTypeData* culture_type_{ nullptr }; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
-	const ProfessionData* profession_{ nullptr };    /**< The profession data for the character being built. */
+	const RaceData* race_{nullptr}; /**< The race data for the character being built. */
+	const CultureData* culture_{nullptr};          /**< The culture data for the character being built. */
+	const CultureTypeData* culture_type_{nullptr}; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
+	const ProfessionData* profession_{nullptr};    /**< The profession data for the character being built. */
 	std::set<RealmType::Type> magical_realms_{};   /**< A set of realm types representing the magical realm choices for the character being built. */
-	int num_adolescent_language_ranks_{ 0 };         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
-	int num_hobby_skill_ranks_{ 0 };                 /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
-	int num_adolescent_spell_list_ranks_{ 0 };                  /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
+	int num_adolescent_language_ranks_{0};         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
+	int num_hobby_skill_ranks_{0};                 /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
+	int num_adolescent_spell_list_ranks_{0};       /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
+	int gold_{0};                                  /**< An integer representing the amount of gold the character being built starts with. */
+	int development_points_{0};                    /**< An integer representing the number of development points available for the character to spend during their apprenticeship. */
 
 	/* ------------------------------------------------------------------ */
 	/* Choices made                                                       */
@@ -123,10 +197,10 @@ private:
 	 */
 
 	std::set<const SkillCategoryData*> race_category_everyman_choices_{};              /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
-	std::map<std::string, const LanguageAbility> race_adolescent_languages_;    /**< Map of language names to their corresponding LanguageAbility objects for the character being built. */
+	std::map<std::string, const LanguageAbility> race_adolescent_languages_;           /**< Map of language names to their corresponding LanguageAbility objects for the character being built. */
 	std::map<const SubcategoriedSkillData*, int> culture_type_category_skill_ranks_{}; /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
-	const SpellListData* adolescent_spell_list_choice_{};                                                   /**< A pointer to a SpellListData object representing the spell list choice for the character being built, which may be determined by the culture type. */
-	std::set<SpellListData*> base_spell_list_choices_{};                               /**< A set of spell list data pointers representing the spell list choices for the character being built. */
+	const SpellListData* adolescent_spell_list_choice_{}; /**< A pointer to a SpellListData object representing the spell list choice for the character being built, which may be determined by the culture type. */
+	std::set<SpellListData*> base_spell_list_choices_{};  /**< A set of spell list data pointers representing the spell list choices for the character being built. */
 
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_subcategory_development_type_choices_{}; /**< Skill subcategories with their development type changed */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_development_type_choices_{};             /**< Skill (base or subcategory) with their development type changed */
@@ -135,9 +209,8 @@ private:
 
 	std::map<const SubcategoriedSkillData*, int> hobby_skill_ranks_{}; /**< A map of skill data pointers to integers representing the skill ranks for each skill choice made during character creation. */
 	std::map<const SkillCategoryData*, int> hobby_category_ranks_{};   /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
-	std::set<LanguageAbility> adolescent_language_choices_{};        /**< A set of language ability pointers representing the hobby language choices for the character being built. */
-
-	std::map<std::string, const LanguageAbility> background_language_choices_; /**< Map of language names to their corresponding LanguageAbility objects for the character being built. */
+	std::set<LanguageAbility> adolescent_language_choices_{};          /**< A set of language abilities representing the hobby language choices for the character being built. */
+	std::set<LanguageAbility> background_language_choices_{};          /**< A set of language abilities representing the background language choices for the character being built. */
 
 	/* ------------------------------------------------------------------ */
 	/* Aggregated state                                                   */
@@ -151,6 +224,7 @@ private:
 	std::set<const SkillCategoryData*> restricted_skill_categories_{};                                 /**< Skill categories that are considered restricted */
 	std::map<const SubcategoriedSkillData*, int> skill_ranks_{};                                       /**< Skill ranks */
 	std::map<const SubcategoriedSkillData*, int> skill_professional_bonuses_{};                        /**< Skill professional bonuses */
+	std::map<const SubcategoriedSkillData*, int> skill_special_bonuses_{};                             /**< Skill special bonuses */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> skillsub_development_types_{}; /**< Skill (base or subcategory) with their development type changed */
 	std::map<const SkillData*, SkillDevelopmentType::Type> skill_development_types_{};                 /**< Skill (base) with their development type changed */
 	std::map<const SkillCategoryData*, int> category_ranks_{};                                         /**< Skill category ranks */
@@ -161,6 +235,7 @@ private:
 	std::map<const SkillGroupData*, int> group_special_bonuses_{};                                     /**< Skill group special bonuses */
 	std::map<const SkillGroupData*, SkillDevelopmentType::Type> group_development_types_{};            /**< Skill groups that all skills within have their development type changed */
 	std::map<const SpellListData*, int> spell_list_ranks_{};                                           /**< Spell list ranks */
+	std::vector<std::string> items_{};                                                                 /**< Items the character starts with */
 
 	/* ------------------------------------------------------------------ */
 	/* Helper functions                                                   */
@@ -260,8 +335,9 @@ private:
 	/**
 	 * @brief Gets the maximum number of hobby skill ranks that can be allocated to a given skill category based on the character's choices and the rules for hobby skill ranks.
 	 *
-	 * This function calculates the maximum number of hobby skill ranks that can be allocated to a specific skill category by considering the character's current choices (e.g., profession, culture type) and the rules governing hobby skill ranks. It
-	 * takes into account any limitations or bonuses that may apply to the skill category based on the character's background and choices, ensuring that the allocation of hobby skill ranks adheres to the game's character creation rules.
+	 * This function calculates the maximum number of hobby skill ranks that can be allocated to a specific skill category by considering the character's current choices (e.g., profession, culture type) and the rules governing hobby skill
+	 * ranks. It takes into account any limitations or bonuses that may apply to the skill category based on the character's background and choices, ensuring that the allocation of hobby skill ranks adheres to the game's character creation
+	 * rules.
 	 *
 	 * @param category The skill category for which to calculate the maximum number of hobby skill ranks.
 	 * @return The maximum number of hobby skill ranks that can be allocated to the given skill category.
@@ -277,6 +353,12 @@ private:
 	 */
 	std::set<const SpellListData*> getAdolescentSpellListChoices() const;
 
+	/**
+	 * @brief Calculates the number of development points available for the character to spend during their apprenticeship based on their choices and the rules for development points.
+	 *
+	 * This function calculates the total number of development points available to the character.
+	 */
+	void calculateDevelopmentPoints();
 };
 
 } // namespace rm::game::character

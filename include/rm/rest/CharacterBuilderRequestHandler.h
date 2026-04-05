@@ -29,6 +29,7 @@ public:
 	 *
 	 * | Method | Endpoint | Description |
 	 * |--------|----------|-------------|
+	 * |GET	 | /rmce/operations/character/dump?id={id} | Dump the current state of a character being created using the specified character ID |
 	 * |POST	 | /rmce/operations/character/initial-choices | Generate initial character creation choices based on provided parameters |
 	 * |POST	 | /rmce/operations/character/stat-rolls | Generate and return potential stat values from temporary rolls and the potential roll |
 	 * |POST	 | /rmce/operations/character/set-stats | Set the temporary and potential values for each stat of a character being created |
@@ -111,6 +112,29 @@ private:
 	 * @param request The HTTP request containing the data for the operation in its body.
 	 */
 	void requestSetHobbyChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+
+	/**
+	 * @brief Sets the selected background choices for a character being created.
+	 *
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object and the selected background choices to set for that object.
+	 * The function will update the specified CharacterBuilder object in the cache with the selected background choices and return a success response.
+	 *
+	 * @param response The HTTP response object to be populated with the result of the request.
+	 * @param request The HTTP request object containing the background choices to be set.
+	 */
+	void requestSetBackgroundChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+
+	/**
+	 * @brief Dumps the current state of a CharacterBuilder object for debugging purposes.
+	 *
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request is expected to contain the ID of the CharacterBuilder object to dump in the query parameters. The function will return a JSON representation
+	 * of the current state of the specified CharacterBuilder object in the response, which can be used for debugging purposes to see all the choices that have been made for that character so far.
+	 *
+	 * @param response The HTTP response object to populate with the result of the operation.
+	 * @param request The HTTP request containing the data for the operation in its body.
+	 * @param id The ID of the CharacterBuilder object to dump.
+	 */
+	void requestDump(http::response<http::string_body>& response, const http::request<http::string_body>& request, std::string id);
 };
 
 } // namespace rm::rest

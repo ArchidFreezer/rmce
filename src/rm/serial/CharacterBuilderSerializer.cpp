@@ -13,6 +13,8 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setInt(obj, "num_adolescent_language_ranks", ref.num_adolescent_language_ranks_);
 	JsonConverter::setInt(obj, "num_hobby_skill_ranks", ref.num_hobby_skill_ranks_);
 	JsonConverter::setInt(obj, "num_spell_list_ranks", ref.num_adolescent_spell_list_ranks_);
+	JsonConverter::setInt(obj, "gold", ref.gold_);
+	JsonConverter::setInt(obj, "development_points", ref.development_points_);
 
 	// Core rule data references
 	if (ref.race_)
@@ -47,7 +49,6 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setDataEnumMap<SkillData, SkillDevelopmentType::Type>(obj, "prof_group_development_type_choices", ref.prof_group_development_type_choices_);
 	JsonConverter::setSkillPrimitiveMap<int>(obj, "hobby_skill_ranks", ref.hobby_skill_ranks_);
 	JsonConverter::setDataPrimitiveMap<SkillCategoryData, int>(obj, "hobby_category_ranks", ref.hobby_category_ranks_);
-	JsonConverter::setLanguageAbilities(obj, "background_language_choices", ref.background_language_choices_);
 
 	// Aggregated state
 	{
@@ -87,6 +88,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setDataSet<SkillCategoryData>(obj, "restricted_skill_categories", ref.restricted_skill_categories_);
 	JsonConverter::setSkillPrimitiveMap<int>(obj, "skill_ranks", ref.skill_ranks_);
 	JsonConverter::setSkillPrimitiveMap<int>(obj, "skill_professional_bonuses", ref.skill_professional_bonuses_);
+	JsonConverter::setSkillPrimitiveMap<int>(obj, "skill_special_bonuses", ref.skill_special_bonuses_);
 	JsonConverter::setSkillEnumMap<SkillDevelopmentType::Type>(obj, "skillsub_development_types", ref.skillsub_development_types_);
 	JsonConverter::setDataEnumMap<SkillData, SkillDevelopmentType::Type>(obj, "skill_development_types", ref.skill_development_types_);
 	JsonConverter::setDataPrimitiveMap<SkillCategoryData, int>(obj, "category_ranks", ref.category_ranks_);
@@ -97,6 +99,17 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setDataPrimitiveMap<SkillGroupData, int>(obj, "group_special_bonuses", ref.group_special_bonuses_);
 	JsonConverter::setDataEnumMap<SkillGroupData, SkillDevelopmentType::Type>(obj, "group_development_types", ref.group_development_types_);
 	JsonConverter::setDataPrimitiveMap<SpellListData, int>(obj, "spell_list_ranks", ref.spell_list_ranks_);
+
+	{
+		json::array items_array;
+		for (const auto& item : ref.items_) {
+			json::object item_obj;
+			JsonConverter::setString(item_obj, "item", item);
+			items_array.emplace_back(std::move(item_obj));
+		}
+		if (items_array.size())
+			obj["items"] = std::move(items_array);
+	}
 
 	return obj;
 }
@@ -124,6 +137,8 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.num_adolescent_language_ranks_ = JsonConverter::getInt(jsonObj, "num_adolescent_language_ranks", 0);
 	ref.num_hobby_skill_ranks_ = JsonConverter::getInt(jsonObj, "num_hobby_skill_ranks", 0);
 	ref.num_adolescent_spell_list_ranks_ = JsonConverter::getInt(jsonObj, "num_spell_list_ranks", 0);
+	ref.gold_ = JsonConverter::getInt(jsonObj, "gold", 0);
+	ref.development_points_ = JsonConverter::getInt(jsonObj, "development_points", 0);
 
 	// Core rule data references
 	{
@@ -175,7 +190,6 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.prof_group_development_type_choices_ = JsonConverter::getDataEnumMap<SkillData, SkillDevelopmentType::Type>(jsonObj, "prof_group_development_type_choices", manager_);
 	ref.hobby_skill_ranks_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "hobby_skill_ranks", manager_);
 	ref.hobby_category_ranks_ = JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "hobby_category_ranks", manager_);
-	ref.background_language_choices_ = JsonConverter::getLanguageAbilityMap(jsonObj, "background_language_choices", manager_);
 
 	// Aggregated state
 	{
@@ -223,6 +237,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.restricted_skill_categories_ = JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "restricted_skill_categories", manager_);
 	ref.skill_ranks_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skill_ranks", manager_);
 	ref.skill_professional_bonuses_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skill_professional_bonuses", manager_);
+	ref.skill_special_bonuses_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skill_special_bonuses", manager_);
 	ref.skillsub_development_types_ = JsonConverter::getSkillEnumMap<SkillDevelopmentType::Type>(jsonObj, "skillsub_development_types", manager_);
 	ref.skill_development_types_ = JsonConverter::getDataEnumMap<SkillData, SkillDevelopmentType::Type>(jsonObj, "skill_development_types", manager_);
 	ref.category_ranks_ = JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "category_ranks", manager_);
@@ -233,6 +248,18 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.group_special_bonuses_ = JsonConverter::getDataPrimitiveMap<SkillGroupData, int>(jsonObj, "group_special_bonuses", manager_);
 	ref.group_development_types_ = JsonConverter::getDataEnumMap<SkillGroupData, SkillDevelopmentType::Type>(jsonObj, "group_development_types", manager_);
 	ref.spell_list_ranks_ = JsonConverter::getDataPrimitiveMap<SpellListData, int>(jsonObj, "spell_list_ranks", manager_);
+	
+	{
+		const json::array items_array = JsonConverter::getJsonArray(jsonObj, "items");
+		for (const json::value& item_value : items_array) {
+			if (!item_value.is_object())
+				continue;
+			const json::object item_obj = item_value.as_object();
+			const std::string item = JsonConverter::getString(item_obj, "item");
+			if (!item.empty())
+				ref.items_.emplace_back(item);
+		}
+	}
 
 	return ref;
 }
