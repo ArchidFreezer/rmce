@@ -14,6 +14,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setInt(obj, "num_hobby_skill_ranks", ref.num_hobby_skill_ranks_);
 	JsonConverter::setInt(obj, "num_spell_list_ranks", ref.num_adolescent_spell_list_ranks_);
 	JsonConverter::setInt(obj, "gold", ref.gold_);
+	JsonConverter::setInt(obj, "development_points", ref.development_points_);
 
 	// Core rule data references
 	if (ref.race_)
@@ -137,6 +138,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.num_hobby_skill_ranks_ = JsonConverter::getInt(jsonObj, "num_hobby_skill_ranks", 0);
 	ref.num_adolescent_spell_list_ranks_ = JsonConverter::getInt(jsonObj, "num_spell_list_ranks", 0);
 	ref.gold_ = JsonConverter::getInt(jsonObj, "gold", 0);
+	ref.development_points_ = JsonConverter::getInt(jsonObj, "development_points", 0);
 
 	// Core rule data references
 	{

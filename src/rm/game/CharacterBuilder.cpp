@@ -322,6 +322,7 @@ void CharacterBuilder::setStat(StatType::Type stat_type, int temp_value, int pot
 	Stat& stat = stats_[stat_type]; // This will default construct a new Stat object if the stat has not been touched yet.
 	stat.setTemporary(temp_value);
 	stat.setPotential(potential_value);
+	calculateDevelopmentPoints(); // We need to recalculate the development points after setting a stat as the temporary values may have changed which would affect the total development points.
 }
 
 int CharacterBuilder::getMaxHobbyRanksForSkill(const SubcategoriedSkillData* skill) const {
@@ -410,6 +411,7 @@ void CharacterBuilder::setAdolescentSpellListChoice(const SpellListData& spell_l
 void CharacterBuilder::makeStatGainRoll(StatType::Type stat_type) {
 	Stat& stat = stats_[stat_type];
 	stat.performStatGainRoll();
+	calculateDevelopmentPoints(); // We need to recalculate the development points after each stat gain roll as the temporary values may have changed
 }
 
 void CharacterBuilder::makeAllStatGainRolls() {
@@ -472,8 +474,49 @@ void CharacterBuilder::addItem(std::string_view item) {
 }
 
 void CharacterBuilder::generateBackgroundItems(int item_count) {
-	for (int i = 1; i <= item_count; i++)
-		addItem("Item " + std::to_string(i));
+	for (int i = 1; i <= item_count; i++) {
+		int roll = archid::Dice(100).roll().result();
+		if (roll <= 5)
+			addItem("+1 spell adder or one special bread/poison/herb");
+		else if (roll <= 10)
+			addItem("+1 spell adder or two +5 non-magic items");
+		else if (roll <= 20)
+			addItem("+1 spell adder or one +10 non-magic item");
+		else if (roll <= 30)
+			addItem("+1 spell adder or two +5 magic items");
+		else if (roll <= 65)
+			addItem("+1 spell adder or one +10 magic item");
+		else if (roll == 66)
+			addItem("+3 spell adder or a loyal domesticated animal (e.g., a dog) or one +20 non-magic item");
+		else if (roll <= 75)
+			addItem("a Daily III spell item or a +2 spell adder, or three +5 non-magic items or three doses of a potion (with a level 1-5 spell)");
+		else if (roll <= 80)
+			addItem("Daily III spell item or a +2 spell adder, or one +15 non-magic item or three doses of a potion (with a level 1-5 spell)");
+		else if (roll <= 85)
+			addItem("Daily IV spell item, or a +2 spell adder, or three +5 magic items, or five doses of a potion (with a level 1-5 spell)");
+		else if (roll <= 90)
+			addItem("Daily IV spell item, or a +2 spell adder, or one +15 magic item, or five doses of a potion (with a level 1-5 spell)");
+		else if (roll <= 95)
+			addItem("+3 spell adder or two +10 magic items or two Daily III items.");
+		else if (roll <= 97)
+			addItem("+3 spell adder or one +20 magic item or a Daily IV item");
+		else if (roll <= 98)
+			addItem("+3 spell adder or a Daily VI item or three +10 magic items");
+		else if (roll <= 99)
+			addItem("+3 spell adder or a Daily VII item or two +20 magic items");
+		else
+			addItem("+3 spell adder or a Daily VIII item or a loyal unusual creature (e.g., a monster).");
+	}
+}
+
+void CharacterBuilder::calculateDevelopmentPoints() {
+	int development_points = 0;
+	for (const auto& [stat_type, stat] : stats_) {
+		if (StatType::isDevelopment(stat_type)) {
+			development_points += stat.temporary();
+		}
+	}
+	development_points_ = (development_points / 5);
 }
 
 } // namespace rm::game::character

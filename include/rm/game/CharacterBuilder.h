@@ -117,7 +117,7 @@ public:
 	 */
 	void backgroundMoneyRoll(int roll = -1);
 
-		/**
+	/**
 	 * @brief Add a language choice for the character during character creation.
 	 *
 	 * This method is used to add a language choice for the character being built. The language choice is represented by a LanguageAbility object, which contains information about the language and the number of ranks in spoken, written,
@@ -130,8 +130,8 @@ public:
 	/**
 	 * @brief Add a special bonus to a specific skill for the character being built.
 	 *
-	 * This method is used to add a special bonus to a specific skill for the character being built. The bonus is typically determined by the character's background or other choices made during character creation. This method allows for adding
-	 * bonuses to specific skills, which can be important for characters with certain backgrounds or professions.
+	 * This method is used to add a special bonus to a specific skill for the character being built. The bonus is typically determined by the character's background or other choices made during character creation. This method allows for
+	 * adding bonuses to specific skills, which can be important for characters with certain backgrounds or professions.
 	 *
 	 * @param skill The SubcategoriedSkillData object representing the skill to which the bonus should be applied.
 	 * @param bonus An integer representing the amount of the bonus to add to the specified skill.
@@ -141,8 +141,8 @@ public:
 	/**
 	 * @brief Add a special bonus to a specific skill category for the character being built.
 	 *
-	 * This method is used to add a special bonus to a specific skill category for the character being built. The bonus is typically determined by the character's background or other choices made during character creation. This method allows for
-	 * adding bonuses to specific skill categories, which can be important for characters with certain backgrounds or professions.
+	 * This method is used to add a special bonus to a specific skill category for the character being built. The bonus is typically determined by the character's background or other choices made during character creation. This method
+	 * allows for adding bonuses to specific skill categories, which can be important for characters with certain backgrounds or professions.
 	 *
 	 * @param category The SkillCategoryData object representing the skill category to which the bonus should be applied.
 	 * @param bonus An integer representing the amount of the bonus to add to the specified skill category.
@@ -161,8 +161,8 @@ public:
 	/**
 	 * @brief Generate a number of random items for the character based on their background.
 	 *
-	 * This method is used to generate a number of random items for the character being built based on their background. The number of items to generate is determined by the item_count parameter, and the specific items generated may be influenced
-	 * by the character's background and other choices made during character creation.
+	 * This method is used to generate a number of random items for the character being built based on their background. The number of items to generate is determined by the item_count parameter, and the specific items generated may be
+	 * influenced by the character's background and other choices made during character creation.
 	 *
 	 * @param item_count An integer representing the number of random items to generate for the character.
 	 */
@@ -185,6 +185,7 @@ private:
 	int num_hobby_skill_ranks_{0};                 /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
 	int num_adolescent_spell_list_ranks_{0};       /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
 	int gold_{0};                                  /**< An integer representing the amount of gold the character being built starts with. */
+	int development_points_{0};                    /**< An integer representing the number of development points available for the character to spend during their apprenticeship. */
 
 	/* ------------------------------------------------------------------ */
 	/* Choices made                                                       */
@@ -223,7 +224,7 @@ private:
 	std::set<const SkillCategoryData*> restricted_skill_categories_{};                                 /**< Skill categories that are considered restricted */
 	std::map<const SubcategoriedSkillData*, int> skill_ranks_{};                                       /**< Skill ranks */
 	std::map<const SubcategoriedSkillData*, int> skill_professional_bonuses_{};                        /**< Skill professional bonuses */
-	std::map<const SubcategoriedSkillData*, int> skill_special_bonuses_{};                        /**< Skill special bonuses */
+	std::map<const SubcategoriedSkillData*, int> skill_special_bonuses_{};                             /**< Skill special bonuses */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> skillsub_development_types_{}; /**< Skill (base or subcategory) with their development type changed */
 	std::map<const SkillData*, SkillDevelopmentType::Type> skill_development_types_{};                 /**< Skill (base) with their development type changed */
 	std::map<const SkillCategoryData*, int> category_ranks_{};                                         /**< Skill category ranks */
@@ -351,6 +352,13 @@ private:
 	 * @return A set of spell list data pointers representing the available spell list choices for the character.
 	 */
 	std::set<const SpellListData*> getAdolescentSpellListChoices() const;
+
+	/**
+	 * @brief Calculates the number of development points available for the character to spend during their apprenticeship based on their choices and the rules for development points.
+	 *
+	 * This function calculates the total number of development points available to the character.
+	 */
+	void calculateDevelopmentPoints();
 };
 
 } // namespace rm::game::character
