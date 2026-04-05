@@ -402,4 +402,56 @@ void CharacterBuilder::setAdolescentSpellListChoice(const SpellListData& spell_l
 	adolescent_spell_list_choice_ = &spell_list;
 }
 
+void CharacterBuilder::makeStatGainRoll(StatType::Type stat_type) {
+	Stat& stat = stats_[stat_type];
+	stat.performStatGainRoll();
+}
+
+void CharacterBuilder::makeAllStatGainRolls() {
+	for (auto stat_type : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
+		makeStatGainRoll(stat_type);
+	}
+}
+
+void CharacterBuilder::backgroundMoneyRoll(int roll) {
+	// If the roll is less than 0 make a random d100 roll.
+	if (roll <= 0) {
+		roll = archid::Dice(100).roll().result(); 
+	}
+	if (roll < 3)
+		gold_ += 1;
+	else if (roll < 6)
+		gold_ += 2;
+	else if (roll < 16)
+		gold_ += 5;
+	else if (roll < 26)
+		gold_ += 10;
+	else if (roll < 36)
+		gold_ += 15;
+	else if (roll < 46)
+		gold_ += 20;
+	else if (roll < 56)
+		gold_ += 30;
+	else if (roll < 66)
+		gold_ += 35;
+	else if (roll < 71)
+		gold_ += 40;
+	else if (roll < 76)
+		gold_ += 50;
+	else if (roll < 81)
+		gold_ += 60;
+	else if (roll < 86)
+		gold_ += 70;
+	else if (roll < 91)
+		gold_ += 80;
+	else if (roll < 95)
+		gold_ += 100;
+	else if (roll < 98)
+		gold_ += 125;
+	else if (roll < 100)
+		gold_ += 150;
+	else
+		gold_ += 200;
+}
+
 } // namespace rm::game::character

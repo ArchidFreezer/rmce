@@ -13,6 +13,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setInt(obj, "num_adolescent_language_ranks", ref.num_adolescent_language_ranks_);
 	JsonConverter::setInt(obj, "num_hobby_skill_ranks", ref.num_hobby_skill_ranks_);
 	JsonConverter::setInt(obj, "num_spell_list_ranks", ref.num_adolescent_spell_list_ranks_);
+	JsonConverter::setInt(obj, "gold", ref.gold_);
 
 	// Core rule data references
 	if (ref.race_)
@@ -98,6 +99,17 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setDataEnumMap<SkillGroupData, SkillDevelopmentType::Type>(obj, "group_development_types", ref.group_development_types_);
 	JsonConverter::setDataPrimitiveMap<SpellListData, int>(obj, "spell_list_ranks", ref.spell_list_ranks_);
 
+	{
+		json::array items_array;
+		for (const auto& item : ref.items_) {
+			json::object item_obj;
+			JsonConverter::setString(item_obj, "item", item);
+			items_array.emplace_back(std::move(item_obj));
+		}
+		if (items_array.size())
+			obj["items"] = std::move(items_array);
+	}
+
 	return obj;
 }
 
@@ -124,6 +136,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.num_adolescent_language_ranks_ = JsonConverter::getInt(jsonObj, "num_adolescent_language_ranks", 0);
 	ref.num_hobby_skill_ranks_ = JsonConverter::getInt(jsonObj, "num_hobby_skill_ranks", 0);
 	ref.num_adolescent_spell_list_ranks_ = JsonConverter::getInt(jsonObj, "num_spell_list_ranks", 0);
+	ref.gold_ = JsonConverter::getInt(jsonObj, "gold", 0);
 
 	// Core rule data references
 	{
@@ -233,6 +246,18 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.group_special_bonuses_ = JsonConverter::getDataPrimitiveMap<SkillGroupData, int>(jsonObj, "group_special_bonuses", manager_);
 	ref.group_development_types_ = JsonConverter::getDataEnumMap<SkillGroupData, SkillDevelopmentType::Type>(jsonObj, "group_development_types", manager_);
 	ref.spell_list_ranks_ = JsonConverter::getDataPrimitiveMap<SpellListData, int>(jsonObj, "spell_list_ranks", manager_);
+	
+	{
+		const json::array items_array = JsonConverter::getJsonArray(jsonObj, "items");
+		for (const json::value& item_value : items_array) {
+			if (!item_value.is_object())
+				continue;
+			const json::object item_obj = item_value.as_object();
+			const std::string item = JsonConverter::getString(item_obj, "item");
+			if (!item.empty())
+				ref.items_.emplace_back(item);
+		}
+	}
 
 	return ref;
 }
