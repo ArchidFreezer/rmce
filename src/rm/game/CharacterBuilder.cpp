@@ -398,6 +398,11 @@ void CharacterBuilder::addAdolescentLanguageChoice(const LanguageAbility languag
 	setBestLanguageAbility(language);
 }
 
+void CharacterBuilder::addBackgroundLanguageChoice(const LanguageAbility language) {
+	background_language_choices_.emplace(language);
+	setBestLanguageAbility(language);
+}
+
 void CharacterBuilder::setAdolescentSpellListChoice(const SpellListData& spell_list) {
 	adolescent_spell_list_choice_ = &spell_list;
 }
@@ -416,7 +421,7 @@ void CharacterBuilder::makeAllStatGainRolls() {
 void CharacterBuilder::backgroundMoneyRoll(int roll) {
 	// If the roll is less than 0 make a random d100 roll.
 	if (roll <= 0) {
-		roll = archid::Dice(100).roll().result(); 
+		roll = archid::Dice(100).roll().result();
 	}
 	if (roll < 3)
 		gold_ += 1;
@@ -452,6 +457,23 @@ void CharacterBuilder::backgroundMoneyRoll(int roll) {
 		gold_ += 150;
 	else
 		gold_ += 200;
+}
+
+void CharacterBuilder::addSkillSpecialBonus(const SubcategoriedSkillData* skill, int bonus) {
+	skill_special_bonuses_.emplace(skill, bonus);
+}
+
+void CharacterBuilder::addCategorySpecialBonus(const SkillCategoryData* category, int bonus) {
+	category_special_bonuses_.emplace(category, bonus);
+}
+
+void CharacterBuilder::addItem(std::string_view item) {
+	items_.push_back(std::string(item));
+}
+
+void CharacterBuilder::generateBackgroundItems(int item_count) {
+	for (int i = 1; i <= item_count; i++)
+		addItem("Item " + std::to_string(i));
 }
 
 } // namespace rm::game::character

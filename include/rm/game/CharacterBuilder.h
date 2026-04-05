@@ -117,6 +117,57 @@ public:
 	 */
 	void backgroundMoneyRoll(int roll = -1);
 
+		/**
+	 * @brief Add a language choice for the character during character creation.
+	 *
+	 * This method is used to add a language choice for the character being built. The language choice is represented by a LanguageAbility object, which contains information about the language and the number of ranks in spoken, written,
+	 * and somatic components of the language. This method allows for adding multiple language choices for the character, which can be important for characters with high culture or specific backgrounds.
+	 *
+	 * @param language The LanguageAbility object representing the language choice to add for the character.
+	 */
+	void addBackgroundLanguageChoice(const LanguageAbility language);
+
+	/**
+	 * @brief Add a special bonus to a specific skill for the character being built.
+	 *
+	 * This method is used to add a special bonus to a specific skill for the character being built. The bonus is typically determined by the character's background or other choices made during character creation. This method allows for adding
+	 * bonuses to specific skills, which can be important for characters with certain backgrounds or professions.
+	 *
+	 * @param skill The SubcategoriedSkillData object representing the skill to which the bonus should be applied.
+	 * @param bonus An integer representing the amount of the bonus to add to the specified skill.
+	 */
+	void addSkillSpecialBonus(const SubcategoriedSkillData* skill, int bonus);
+
+	/**
+	 * @brief Add a special bonus to a specific skill category for the character being built.
+	 *
+	 * This method is used to add a special bonus to a specific skill category for the character being built. The bonus is typically determined by the character's background or other choices made during character creation. This method allows for
+	 * adding bonuses to specific skill categories, which can be important for characters with certain backgrounds or professions.
+	 *
+	 * @param category The SkillCategoryData object representing the skill category to which the bonus should be applied.
+	 * @param bonus An integer representing the amount of the bonus to add to the specified skill category.
+	 */
+	void addCategorySpecialBonus(const SkillCategoryData* category, int bonus);
+
+	/**
+	 * @brief Add an  item to the character.
+	 *
+	 * This method is used to add an item to the character being built. The item is typically determined by the character's background or other choices made during character creation.
+	 *
+	 * @param item The name of the item to add to the character.
+	 */
+	void addItem(std::string_view item);
+
+	/**
+	 * @brief Generate a number of random items for the character based on their background.
+	 *
+	 * This method is used to generate a number of random items for the character being built based on their background. The number of items to generate is determined by the item_count parameter, and the specific items generated may be influenced
+	 * by the character's background and other choices made during character creation.
+	 *
+	 * @param item_count An integer representing the number of random items to generate for the character.
+	 */
+	void generateBackgroundItems(int item_count);
+
 private:
 	rm::PersistentObjectManager* object_factory_{nullptr};
 
@@ -157,9 +208,8 @@ private:
 
 	std::map<const SubcategoriedSkillData*, int> hobby_skill_ranks_{}; /**< A map of skill data pointers to integers representing the skill ranks for each skill choice made during character creation. */
 	std::map<const SkillCategoryData*, int> hobby_category_ranks_{};   /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
-	std::set<LanguageAbility> adolescent_language_choices_{};          /**< A set of language ability pointers representing the hobby language choices for the character being built. */
-
-	std::map<std::string, const LanguageAbility> background_language_choices_; /**< Map of language names to their corresponding LanguageAbility objects for the character being built. */
+	std::set<LanguageAbility> adolescent_language_choices_{};          /**< A set of language abilities representing the hobby language choices for the character being built. */
+	std::set<LanguageAbility> background_language_choices_{};          /**< A set of language abilities representing the background language choices for the character being built. */
 
 	/* ------------------------------------------------------------------ */
 	/* Aggregated state                                                   */
@@ -173,6 +223,7 @@ private:
 	std::set<const SkillCategoryData*> restricted_skill_categories_{};                                 /**< Skill categories that are considered restricted */
 	std::map<const SubcategoriedSkillData*, int> skill_ranks_{};                                       /**< Skill ranks */
 	std::map<const SubcategoriedSkillData*, int> skill_professional_bonuses_{};                        /**< Skill professional bonuses */
+	std::map<const SubcategoriedSkillData*, int> skill_special_bonuses_{};                        /**< Skill special bonuses */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> skillsub_development_types_{}; /**< Skill (base or subcategory) with their development type changed */
 	std::map<const SkillData*, SkillDevelopmentType::Type> skill_development_types_{};                 /**< Skill (base) with their development type changed */
 	std::map<const SkillCategoryData*, int> category_ranks_{};                                         /**< Skill category ranks */

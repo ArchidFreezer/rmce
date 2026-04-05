@@ -15,12 +15,19 @@ void Stat::updateTemporary(int value) {
 }
 
 void Stat::performStatGainRoll() {
-	int gain = stat::getStatGain(potential_ - temporary_);
+	int difference = potential_ - temporary_;
+	int gain = stat::getStatGain(difference);
 
-	if (gain < 0) {
+	if (gain == 0)
+		return;
+	else if (gain < 0) {
 		// If the gain is negative then we need to ensure that we don't reduce the temporary stat value below 1.
 		gain = std::max(gain, 1 - temporary_);
+	} else if (gain > 0) {
+		// If the gain is positive then we need to ensure that we don't increase the temporary stat value above the potential stat value.
+		gain = std::min(gain, difference);
 	}
+
 	updateTemporary(gain);
 }
 
@@ -77,6 +84,10 @@ int getInitialPotentialValue(int temp_value) {
 };
 
 int getStatGain(int difference) {
+
+	if (difference == 0)
+		return 0;
+
 	// This uses two dice rolls and the difference between the stats determines how they are used.
 	int roll1 = archid::Dice(10).roll().result();
 	int roll2 = archid::Dice(10).roll().result();
