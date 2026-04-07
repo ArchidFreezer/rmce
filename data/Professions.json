@@ -1328,19 +1328,23 @@
                     "value" : "Everyman"
                 }
             ],
-            "skillSubcategoryDevelopmentTypeChoices" : [
+            "skillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
                     "options" : [
-                        "SKILL_SURVIVAL"
+                        {
+                            "id" : "SKILL_SURVIVAL"
+                        }
                     ]
                 },
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
                     "options" : [
-                        "SKILL_RIDING"
+                        {
+                            "id" : "SKILL_RIDING"
+                        }
                     ]
                 }
             ],
@@ -9098,19 +9102,23 @@
                     "value" : "Everyman"
                 }
             ],
-            "skillSubcategoryDevelopmentTypeChoices" : [
+            "skillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
                     "options" : [
-                        "SKILL_RIDING"
+                        {
+                            "id" : "SKILL_RIDING"
+                        }
                     ]
                 },
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
                     "options" : [
-                        "SKILL_REGION_LORE"
+                        {
+                            "id" : "SKILL_REGION_LORE"
+                        }
                     ]
                 }
             ],
@@ -10059,12 +10067,14 @@
                     "value" : "Everyman"
                 }
             ],
-            "skillSubcategoryDevelopmentTypeChoices" : [
+            "skillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
                     "options" : [
-                        "SKILL_LANGUAGES"
+                        {
+                            "id" : "SKILL_LANGUAGES"
+                        }
                     ]
                 }
             ],
@@ -13644,12 +13654,14 @@
                     "value" : "Occupational"
                 }
             ],
-            "skillSubcategoryDevelopmentTypeChoices" : [
+            "skillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
                     "options" : [
-                        "SKILL_LANGUAGES"
+                        {
+                            "id" : "SKILL_LANGUAGES"
+                        }
                     ]
                 }
             ],
@@ -18894,12 +18906,14 @@
                     "value" : "Everyman"
                 }
             ],
-            "skillSubcategoryDevelopmentTypeChoices" : [
+            "skillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
                     "options" : [
-                        "SKILL_METAL_CRAFTS"
+                        {
+                            "id" : "SKILL_METAL_LORE"
+                        }
                     ]
                 }
             ],
@@ -24125,14 +24139,14 @@
                             "id" : "SKILL_TACKLING"
                         }
                     ]
-                }
-            ],
-            "skillSubcategoryDevelopmentTypeChoices" : [
+                },
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
                     "options" : [
-                        "SKILL_SITUATIONAL_AWARENESS"
+                        {
+                            "id" : "SKILL_SITUATIONAL_AWARENESS"
+                        }
                     ]
                 }
             ],
@@ -26674,12 +26688,14 @@
                     "value" : "Everyman"
                 }
             ],
-            "skillSubcategoryDevelopmentTypeChoices" : [
+            "skillDevelopmentTypeChoices" : [
                 {
                     "num-choices" : 1,
                     "type" : "Everyman",
                     "options" : [
-                        "SKILL_SITUATIONAL_AWARENESS"
+                        {
+                            "id" : "SKILL_SITUATIONAL_AWARENESS"
+                        }
                     ]
                 }
             ],
