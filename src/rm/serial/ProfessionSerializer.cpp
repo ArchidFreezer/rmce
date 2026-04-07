@@ -18,7 +18,6 @@ json::value ProfessionSerializer::serializeObject(const ProfessionData& ref) con
 	JsonConverter::setSkillPrimitiveMap(obj, "skillBonuses", ref.skillBonuses());
 	JsonConverter::setSkillEnumMap(obj, "skillDevelopmentTypes", ref.skillDevelopmentTypes());
 	JsonConverter::setSkillChoiceEnumMap(obj, "skillDevelopmentTypeChoices", ref.skillDevelopmentTypeChoices());
-	JsonConverter::setDataChoiceEnumMap(obj, "skillSubcategoryDevelopmentTypeChoices", ref.skillSubcategoryDevelopmentTypeChoices());
 	JsonConverter::setDataPrimitiveMap(obj, "skillCategoryProfessionBonuses", ref.skillCategoryProfessionBonuses());
 	JsonConverter::setDataPrimitiveMap(obj, "skillCategorySpecialBonuses", ref.skillCategorySpecialBonuses());
 	JsonConverter::setDataEnumMap(obj, "skillCategorySkillDevelopmentTypes", ref.skillCategorySkillDevelopmentTypes());
@@ -66,7 +65,6 @@ const ProfessionData& ProfessionSerializer::deserializeObject(json::object& json
 	ref.setSkillBonuses(JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skillBonuses", manager_));
 	ref.setSkillDevelopmentTypes(JsonConverter::getSkillEnumMap<SkillDevelopmentType::Type>(jsonObj, "skillDevelopmentTypes", manager_));
 	ref.setSkillDevelopmentTypeChoices(JsonConverter::getSkillChoiceEnumMap<SkillDevelopmentType::Type>(jsonObj, "skillDevelopmentTypeChoices", manager_));
-	ref.setSkillSubcategoryDevelopmentTypeChoices(JsonConverter::getDataChoiceEnumMap<SkillData, SkillDevelopmentType::Type>(jsonObj, "skillSubcategoryDevelopmentTypeChoices", manager_));
 	ref.setSkillCategoryProfessionBonuses(JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "skillCategoryProfessionBonuses", manager_));
 	ref.setSkillCategorySpecialBonuses(JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "skillCategorySpecialBonuses", manager_));
 	ref.setSkillCategorySkillDevelopmentTypes(JsonConverter::getDataEnumMap<SkillCategoryData, SkillDevelopmentType::Type>(jsonObj, "skillCategorySkillDevelopmentTypes", manager_));
