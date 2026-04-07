@@ -72,14 +72,16 @@ void CharacterBuilderRequestHandler::requestInitialChoices(http::response<http::
 			magical_realms.insert(RealmType::fromString(realm.as_string()).value());
 		}
 		builder.setIntialChoices(serial_manager_.objectManager(), name, race_id, culture_id, profession_id, magical_realms);
-		id = builder.id();
+
+		builder.recalculateAggregatedState();
+
+		response.result(http::status::ok);
+		response.set(http::field::content_type, "application/json");
+		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to set initial choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
 	}
-	response.result(http::status::ok);
-	response.set(http::field::content_type, "application/json");
-	response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
 }
 
 void CharacterBuilderRequestHandler::requestStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
@@ -151,8 +153,10 @@ void CharacterBuilderRequestHandler::requestSetStats(http::response<http::string
 
 			int temporary = static_cast<int>(stat.as_object().at("temporary").as_int64());
 			int potential = static_cast<int>(stat.as_object().at("potential").as_int64());
-			builder.setStat(stat_type, temporary, potential);
+			builder.setInitialStat(stat_type, temporary, potential);
 		}
+
+		builder.recalculateAggregatedState();
 
 		// After setting the stats, we can immediately return the hobby choices. This allows the client to update the UI with the new hobby choices without needing to make a separate request.
 		http::request<http::string_body> hobby_request; // We need a dummy request object to pass to the hobby choices function, but it won't be used in that function so we can just create an empty one.
@@ -235,6 +239,9 @@ void CharacterBuilderRequestHandler::requestSetHobbyChoices(http::response<http:
 			builder.setAdolescentSpellListChoice(adolescent_spell_data);
 		}
 
+		// Apply all the existing choices
+		builder.recalculateAggregatedState();
+
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
 		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
@@ -260,10 +267,9 @@ void CharacterBuilderRequestHandler::requestSetBackgroundChoices(http::response<
 		// Stat gain rolls
 		bool stat_gains = json_body.as_object().at("statGains").as_bool();
 		if (stat_gains) {
-			builder.makeAllStatGainRolls();
+			builder.makeBackgroundStatGainRolls();
 		}
 
-		// Extra money roll
 		// Extra money roll
 		int extra_money = static_cast<int>(json_body.as_object().at("extraMoney").as_int64());
 		if (extra_money > 1) {
@@ -292,7 +298,7 @@ void CharacterBuilderRequestHandler::requestSetBackgroundChoices(http::response<
 			int value = static_cast<int>(skill_json.as_object().at("value").as_int64());
 
 			SubcategoriedSkillData& skill_data = serial_manager_.objectManager().subcategoriedSkillData(skill_id);
-			builder.addSkillSpecialBonus(&skill_data, value);
+			builder.addBackgroundSkillSpecialBonus(&skill_data, value);
 		}
 
 		// Category special bonus
@@ -302,12 +308,15 @@ void CharacterBuilderRequestHandler::requestSetBackgroundChoices(http::response<
 			int value = static_cast<int>(category_json.as_object().at("value").as_int64());
 
 			SkillCategoryData& category_data = serial_manager_.objectManager().get<SkillCategoryData>(category_id);
-			builder.addCategorySpecialBonus(&category_data, value);
+			builder.addBackgroundCategorySpecialBonus(&category_data, value);
 		}
 
 		// Special items
 		int item_count = static_cast<int>(json_body.as_object().at("backgroundItemCount").as_int64());
 		builder.generateBackgroundItems(item_count);
+
+		// Apply all the existing choices
+		builder.recalculateAggregatedState();
 
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");

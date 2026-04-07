@@ -34,6 +34,15 @@ public:
 	Character& build();
 
 	/**
+	 * @brief Reset the aggreagrated state of the builder to its initial state, then apply any choices that have been made to recalculate the aggregated state of the builder based on the current choices.
+	 *
+	 * This function allows the choices to be modified and reapplied safely. For example, if the player changes their background choice after making some other choices, the aggregated state can be reset and recalculated to reflect the new
+	 * background choice and its effects on the character's stats and abilities without needing to reset all the choices
+	 *
+	 */
+	void recalculateAggregatedState();
+
+	/**
 	 * @brief Sets the initial choices for character creation, including name, race, culture, profession, and magical realm(s).
 	 *
 	 * These are the primary choices that define the character that are made first and drive the choices available for the rest of the character creation process. The name is used for display purposes and may not be unique. The
@@ -59,7 +68,7 @@ public:
 	 * @param temp_value The temporary stat value to set for the specified stat type.
 	 * @param potential_value The potential stat value to set for the specified stat type.
 	 */
-	void setStat(StatType::Type stat_type, int temp_value, int potential_value);
+	void setInitialStat(StatType::Type stat_type, int temp_value, int potential_value);
 
 	/**
 	 * @brief Add a number of ranks to a skill chosen as a hobby skill during character creation.
@@ -97,15 +106,9 @@ public:
 	void setAdolescentSpellListChoice(const SpellListData& spell_list);
 
 	/**
-	 * @brief Makes a stat gain roll for the character being built for a specific stat type.
-	 * @param stat_type The type of stat for which to make the gain rolls.
+	 * @brief Makes background stat gain rolls for all stats for the character being built.
 	 */
-	void makeStatGainRoll(StatType::Type stat_type);
-
-	/**
-	 * @brief Makes stat gain rolls for all stats for the character being built.
-	 */
-	void makeAllStatGainRolls();
+	void makeBackgroundStatGainRolls();
 
 	/**
 	 * @brief Makes a background money roll for the character being built.
@@ -136,7 +139,7 @@ public:
 	 * @param skill The SubcategoriedSkillData object representing the skill to which the bonus should be applied.
 	 * @param bonus An integer representing the amount of the bonus to add to the specified skill.
 	 */
-	void addSkillSpecialBonus(const SubcategoriedSkillData* skill, int bonus);
+	void addBackgroundSkillSpecialBonus(const SubcategoriedSkillData* skill, int bonus);
 
 	/**
 	 * @brief Add a special bonus to a specific skill category for the character being built.
@@ -147,16 +150,7 @@ public:
 	 * @param category The SkillCategoryData object representing the skill category to which the bonus should be applied.
 	 * @param bonus An integer representing the amount of the bonus to add to the specified skill category.
 	 */
-	void addCategorySpecialBonus(const SkillCategoryData* category, int bonus);
-
-	/**
-	 * @brief Add an  item to the character.
-	 *
-	 * This method is used to add an item to the character being built. The item is typically determined by the character's background or other choices made during character creation.
-	 *
-	 * @param item The name of the item to add to the character.
-	 */
-	void addItem(std::string_view item);
+	void addBackgroundCategorySpecialBonus(const SkillCategoryData* category, int bonus);
 
 	/**
 	 * @brief Generate a number of random items for the character based on their background.
@@ -181,10 +175,9 @@ private:
 	const CultureTypeData* culture_type_{nullptr}; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
 	const ProfessionData* profession_{nullptr};    /**< The profession data for the character being built. */
 	std::set<RealmType::Type> magical_realms_{};   /**< A set of realm types representing the magical realm choices for the character being built. */
-	int num_adolescent_language_ranks_{0};         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
 	int num_hobby_skill_ranks_{0};                 /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
+	int num_adolescent_language_ranks_{0};         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
 	int num_adolescent_spell_list_ranks_{0};       /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
-	int gold_{0};                                  /**< An integer representing the amount of gold the character being built starts with. */
 	int development_points_{0};                    /**< An integer representing the number of development points available for the character to spend during their apprenticeship. */
 
 	/* ------------------------------------------------------------------ */
@@ -196,46 +189,59 @@ private:
 	 * made during character creation.
 	 */
 
-	std::set<const SkillCategoryData*> race_category_everyman_choices_{};              /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
-	std::map<std::string, const LanguageAbility> race_adolescent_languages_;           /**< Map of language names to their corresponding LanguageAbility objects for the character being built. */
+	/* Initial choices */
+	// Race
+	std::set<const SkillCategoryData*> race_category_everyman_choices_{}; /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
+	// Culture type
 	std::map<const SubcategoriedSkillData*, int> culture_type_category_skill_ranks_{}; /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
-	const SpellListData* adolescent_spell_list_choice_{}; /**< A pointer to a SpellListData object representing the spell list choice for the character being built, which may be determined by the culture type. */
-	std::set<SpellListData*> base_spell_list_choices_{};  /**< A set of spell list data pointers representing the spell list choices for the character being built. */
+	// Profession
+	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_development_type_choices_{};    /**< Skill (base or subcategory) with their development type changed */
+	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_category_development_type_choices_{}; /**< Skills from a category with their development type changed */
+	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};    /**< Skills from a group with their development type changed */
+	std::set<SpellListData*> prof_base_spell_list_choices_{};                                                      /**< A set of spell list data pointers representing the spell list choices for the character being built. */
 
-	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_subcategory_development_type_choices_{}; /**< Skill subcategories with their development type changed */
-	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_development_type_choices_{};             /**< Skill (base or subcategory) with their development type changed */
-	std::map<const SkillData*, SkillDevelopmentType::Type> prof_category_development_type_choices_{};                       /**< Skills from a category with their development type changed */
-	std::map<const SkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};                          /**< Skills from a group with their development type changed */
+	/* Stats generation */
+	std::unordered_map<StatType::Type, Stat> initial_stats_{}; /**< Map of stat types to their corresponding Stat objects for the character. */
 
+	/* Hobby/Adolescent choices */
 	std::map<const SubcategoriedSkillData*, int> hobby_skill_ranks_{}; /**< A map of skill data pointers to integers representing the skill ranks for each skill choice made during character creation. */
 	std::map<const SkillCategoryData*, int> hobby_category_ranks_{};   /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
+	const SpellListData* adolescent_spell_list_choice_{};              /**< A pointer to a SpellListData object representing the spell list choice for the character being built, which may be determined by the culture type. */
 	std::set<LanguageAbility> adolescent_language_choices_{};          /**< A set of language abilities representing the hobby language choices for the character being built. */
-	std::set<LanguageAbility> background_language_choices_{};          /**< A set of language abilities representing the background language choices for the character being built. */
+
+	/* Background choices */
+	std::unordered_map<StatType::Type, Stat> background_stats_{};                     /**< Map of stats, oonly populated if stat gain roll made with background options. */
+	int background_extra_gold_{0};                                                    /**< An integer representing the amount of gold the character being built starts with. */
+	std::set<LanguageAbility> background_language_choices_{};                         /**< A set of language abilities representing the background language choices for the character being built. */
+	std::map<const SubcategoriedSkillData*, int> background_skill_special_bonuses_{}; /**< Skill special bonuses */
+	std::map<const SkillCategoryData*, int> background_category_special_bonuses_{};   /**< Skill category special bonuses */
+	std::vector<std::string> background_items_{};                                     /**< Items the character genetrates with background options */
 
 	/* ------------------------------------------------------------------ */
 	/* Aggregated state                                                   */
 	/* ------------------------------------------------------------------ */
-	std::map<std::string, LanguageAbility> language_abilities_;                                        /**< Aggregated map of language names to their corresponding LanguageAbility objects for the character being built. */
-	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*> realm_progressions_;          /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. */
-	std::unordered_map<StatType::Type, Stat> stats_;                                                   /**< Map of stat types to their corresponding Stat objects for the character. */
-	std::set<const SubcategoriedSkillData*> everyman_skills_{};                                        /**< Skills that are considered everyman */
-	std::set<const SubcategoriedSkillData*> restricted_skills_{};                                      /**< Skills that are considered restricted */
-	std::set<const SkillCategoryData*> everyman_skill_categories_{};                                   /**< Skill categories that are considered everyman */
-	std::set<const SkillCategoryData*> restricted_skill_categories_{};                                 /**< Skill categories that are considered restricted */
-	std::map<const SubcategoriedSkillData*, int> skill_ranks_{};                                       /**< Skill ranks */
-	std::map<const SubcategoriedSkillData*, int> skill_professional_bonuses_{};                        /**< Skill professional bonuses */
-	std::map<const SubcategoriedSkillData*, int> skill_special_bonuses_{};                             /**< Skill special bonuses */
-	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> skillsub_development_types_{}; /**< Skill (base or subcategory) with their development type changed */
-	std::map<const SkillData*, SkillDevelopmentType::Type> skill_development_types_{};                 /**< Skill (base) with their development type changed */
-	std::map<const SkillCategoryData*, int> category_ranks_{};                                         /**< Skill category ranks */
-	std::map<const SkillCategoryData*, int> category_professional_bonuses_{};                          /**< Skill category professional bonuses */
-	std::map<const SkillCategoryData*, int> category_special_bonuses_{};                               /**< Skill category special bonuses */
-	std::map<const SkillCategoryData*, SkillDevelopmentType::Type> category_development_types_{};      /**< Skill categories that all skills within have their development type changed */
-	std::map<const SkillGroupData*, int> group_professional_bonuses_{};                                /**< Skill group professional bonuses */
-	std::map<const SkillGroupData*, int> group_special_bonuses_{};                                     /**< Skill group special bonuses */
-	std::map<const SkillGroupData*, SkillDevelopmentType::Type> group_development_types_{};            /**< Skill groups that all skills within have their development type changed */
-	std::map<const SpellListData*, int> spell_list_ranks_{};                                           /**< Spell list ranks */
-	std::vector<std::string> items_{};                                                                 /**< Items the character starts with */
+	int total_gold_{0};                            /**< An integer representing the total amount of gold the character being built starts with, including any background extra gold and any gold from items or other sources. */
+	std::set<LanguageAbility> language_abilities_; /**< Aggregated map of language names to their corresponding LanguageAbility objects for the character being built. */
+	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*> realm_progressions_;                    /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. */
+	std::unordered_map<StatType::Type, Stat> stats_{};                                                           /**< Map of stat types to their corresponding Stat objects for the character. */
+	std::set<const SubcategoriedSkillData*> everyman_skills_{};                                                  /**< Skills that are considered everyman */
+	std::set<const SubcategoriedSkillData*> restricted_skills_{};                                                /**< Skills that are considered restricted */
+	std::set<const SkillCategoryData*> everyman_skill_categories_{};                                             /**< Skill categories that are considered everyman */
+	std::set<const SkillCategoryData*> restricted_skill_categories_{};                                           /**< Skill categories that are considered restricted */
+	std::map<const SubcategoriedSkillData*, int> skill_ranks_{};                                                 /**< Skill ranks */
+	std::map<const SubcategoriedSkillData*, int> skill_professional_bonuses_{};                                  /**< Skill professional bonuses */
+	std::map<const SubcategoriedSkillData*, int> skill_special_bonuses_{};                                       /**< Skill special bonuses */
+	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> skill_development_types_{};              /**< Skill (base or subcategory) with their development type changed */
+	std::map<const SkillCategoryData*, int> category_ranks_{};                                                   /**< Skill category ranks */
+	std::map<const SkillCategoryData*, int> category_professional_bonuses_{};                                    /**< Skill category professional bonuses */
+	std::map<const SkillCategoryData*, int> category_special_bonuses_{};                                         /**< Skill category special bonuses */
+	std::map<const SkillCategoryData*, SkillDevelopmentType::Type> category_development_types_{};                /**< Skill categories that all skills within have their development type changed */
+	std::map<const SkillCategoryData*, rm::game::character::SkillDevelopmentCost> category_development_costs_{}; /**< Cost to purchase ranks for a skill category */
+	std::map<const SkillGroupData*, int> group_professional_bonuses_{};                                          /**< Skill group professional bonuses */
+	std::map<const SkillGroupData*, int> group_special_bonuses_{};                                               /**< Skill group special bonuses */
+	std::map<const SkillGroupData*, SkillDevelopmentType::Type> group_development_types_{};                      /**< Skill groups that all skills within have their development type changed */
+	std::map<const SpellListData*, int> spell_list_ranks_{};                                                     /**< Spell list ranks */
+	std::vector<std::string> total_items_{};                                                                     /**< Items the character starts with */
 
 	/* ------------------------------------------------------------------ */
 	/* Helper functions                                                   */
@@ -248,10 +254,11 @@ private:
 	 * cleared or if both the aggregated state and the specific choices made during character creation should be cleared, allowing for a complete reset.
 	 *
 	 * @param aggregate_state_only If `true`, only clears the aggregated state; if `false`, clears both the aggregated state and any selections made during character creation.
+	 * @param clear_stats If `true`, also clears the stats in the aggregated state. This is only used when fully resetting the builder
 	 */
-	void reset(bool aggregate_state_only = true);
+	void reset(bool aggregate_state_only = true, bool clear_stats = false);
 
-	void recalculateAggregatedState(); /**< Recalculates the aggregated state based on the current choices made to ensure consistency when selections are modified. */
+	void hardReset(); /**< Fully resets the builder, clearing all choices and aggregated state, including stats. This is used when setting new initial choices to ensure a clean slate for building the character. */
 
 	/**
 	 * @brief Applies the given language ability to the character being built, ensuring that if the character already has an ability for the same language, the best ranks are retained.
@@ -261,7 +268,7 @@ private:
 	 *
 	 * @param language_ability The language ability to apply.
 	 */
-	void setBestLanguageAbility(const LanguageAbility& language_ability);
+	void applyLanguageAbility(const LanguageAbility& language_ability);
 
 	/**
 	 * @brief Determines which of two skill development types has higher precedence.
@@ -321,6 +328,10 @@ private:
 
 	void applyProfessionChoices(); /**< Applies the choices associated with the character's profession. */
 
+	void applyHobbyChoices(); /**< Applies the hobby choices made during character creation to the character being built. */
+
+	void applyBackgroundChoices(); /**< Applies the background choices made during character creation to the character being built. */
+
 	/**
 	 * @brief Gets the maximum number of hobby skill ranks that can be allocated to a given skill based on the character's choices and the rules for hobby skill ranks.
 	 *
@@ -356,9 +367,11 @@ private:
 	/**
 	 * @brief Calculates the number of development points available for the character to spend during their apprenticeship based on their choices and the rules for development points.
 	 *
-	 * This function calculates the total number of development points available to the character.
+	 * This function calculates the total number of development points available to the character based on the stats parameter. This allows for the calculation to be made on either thae base stats or with any background stat gain rolls.
+	 *
+	 * @param stats The map of stat types to their corresponding Stat objects for the character, which may be used in the calculation of development points.
 	 */
-	void calculateDevelopmentPoints();
+	void calculateDevelopmentPoints(std::unordered_map<StatType::Type, Stat>& stats);
 };
 
 } // namespace rm::game::character
