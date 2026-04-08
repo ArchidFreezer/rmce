@@ -43,6 +43,20 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 		}
 		JsonConverter::setDataSet<SpellListData>(obj, "baseSpellListChoices", base_spell_lists);
 	}
+	{
+		json::array arr;
+		std::map<std::string, const SkillCategoryData*> sorted_categories{};
+		for (const auto& [category, cost] : ref.weapon_development_cost_choices_) {
+			sorted_categories.emplace(category->id(), category);
+		}
+		for (const auto& pair : sorted_categories) {
+			json::object category_cost_obj;
+			category_cost_obj["category"] = pair.first;
+			category_cost_obj["cost"] = ref.weapon_development_cost_choices_.at(pair.second).toString();
+			arr.emplace_back(std::move(category_cost_obj));
+		}
+		obj["weaponCategoryCostChoices"] = std::move(arr);
+	}
 
 	/* Initial Stats */
 	{
@@ -246,6 +260,17 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 		for (const SpellListData* spell_list : base_spell_lists) {
 			if (spell_list)
 				ref.prof_base_spell_list_choices_.insert(const_cast<SpellListData*>(spell_list));
+		}
+	}
+	{
+		json::array skillCategoryDevelopmentCostArr = JsonConverter::getJsonArray(jsonObj, "weaponCategoryCostChoices");
+		for (const auto& item : skillCategoryDevelopmentCostArr) {
+			if (item.is_object()) {
+				json::object obj = item.as_object();
+				std::string category_id = JsonConverter::getString(obj, "category");
+				std::string cost = JsonConverter::getString(obj, "cost");
+				ref.weapon_development_cost_choices_.insert_or_assign(&manager().get<SkillCategoryData>(category_id), std::move(rm::game::character::SkillDevelopmentCost(cost)));
+			}
 		}
 	}
 

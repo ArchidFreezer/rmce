@@ -55,7 +55,8 @@ public:
 	 * @param profession_id The identifier for the character's profession.
 	 * @param magical_realms The set of magical realms for the character. This may be fixed by the profession or for non-magical professions decided by the player from the available realm choices for the character.
 	 */
-	void setPrimaryDefinition(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id, const std::set<RealmType::Type> magical_realms);
+	void setPrimaryDefinition(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id,
+	                          const std::set<RealmType::Type> magical_realms);
 
 	/**
 	 * @brief Set the stat values for a specific stat type.
@@ -195,10 +196,11 @@ private:
 	// Culture type
 	std::map<const SubcategoriedSkillData*, int> culture_type_category_skill_ranks_{}; /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
 	// Profession
-	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_development_type_choices_{};    /**< Skill (base or subcategory) with their development type changed */
-	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_category_development_type_choices_{}; /**< Skills from a category with their development type changed */
-	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};    /**< Skills from a group with their development type changed */
-	std::set<SpellListData*> prof_base_spell_list_choices_{};                                                      /**< A set of spell list data pointers representing the spell list choices for the character being built. */
+	std::map<const SkillCategoryData*, rm::game::character::SkillDevelopmentCost> weapon_development_cost_choices_{}; /**< Cost to purchase ranks for weapon skill category */
+	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_development_type_choices_{};       /**< Skill (base or subcategory) with their development type changed */
+	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_category_development_type_choices_{};    /**< Skills from a category with their development type changed */
+	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};       /**< Skills from a group with their development type changed */
+	std::set<SpellListData*> prof_base_spell_list_choices_{};                                                         /**< A set of spell list data pointers representing the spell list choices for the character being built. */
 
 	/* Stats generation */
 	std::unordered_map<StatType::Type, Stat> initial_stats_{}; /**< Map of stat types to their corresponding Stat objects for the character. */
