@@ -101,7 +101,7 @@ void CharacterBuilder::recalculateAggregatedState() {
 	applyBackgroundChoices();
 }
 
-void CharacterBuilder::setIntialChoices(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id,
+void CharacterBuilder::setPrimaryDefinition(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id,
                                         const std::set<RealmType::Type> magical_realms) {
 	// This should always be the first call so we set the object factory here so it is available for the rest of the character creation process.
 	object_factory_ = &object_factory;
@@ -163,7 +163,9 @@ void CharacterBuilder::applyRace() {
 }
 
 void CharacterBuilder::applyRaceChoices() {
-	// No choices to apply at this time
+	for (const auto& skill : race_category_everyman_choices_) {
+		everyman_skills_.insert(skill);
+	}
 }
 
 void CharacterBuilder::applyCultureType() {

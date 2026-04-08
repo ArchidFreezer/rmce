@@ -27,8 +27,8 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 	// Get the operation from the path to determine which specific character builder task to perform
 	std::string_view operation = path.extractNextSegment("/rmce/operations/character/");
 
-	if (request.method() == http::verb::post && operation == "initial-choices")
-		requestInitialChoices(response, request);
+	if (request.method() == http::verb::post && operation == "primary-definition")
+		requestPrimaryDefinition(response, request);
 	else if (request.method() == http::verb::get && operation == "dump" && path.params().contains("id"))
 		requestDump(response, request, path.params().at("id"));
 	else if (request.method() == http::verb::post && operation == "stat-rolls")
@@ -48,7 +48,7 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 	}
 }
 
-void CharacterBuilderRequestHandler::requestInitialChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterBuilderRequestHandler::requestPrimaryDefinition(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
 
 	std::string id{};
@@ -71,7 +71,7 @@ void CharacterBuilderRequestHandler::requestInitialChoices(http::response<http::
 		for (const auto& realm : realms) {
 			magical_realms.insert(RealmType::fromString(realm.as_string()).value());
 		}
-		builder.setIntialChoices(serial_manager_.objectManager(), name, race_id, culture_id, profession_id, magical_realms);
+		builder.setPrimaryDefinition(serial_manager_.objectManager(), name, race_id, culture_id, profession_id, magical_realms);
 
 		builder.recalculateAggregatedState();
 
@@ -80,7 +80,7 @@ void CharacterBuilderRequestHandler::requestInitialChoices(http::response<http::
 		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
-		response.body() = R"({"error": "Failed to set initial choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
+		response.body() = R"({"error": "Failed to set primary choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
 	}
 }
 

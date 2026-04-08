@@ -54,7 +54,7 @@ private:
 	 * @param response The HTTP response object to populate with the result of the operation.
 	 * @param request The HTTP request containing the data for the operation in its body.
 	 */
-	void requestInitialChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+	void requestPrimaryDefinition(http::response<http::string_body>& response, const http::request<http::string_body>& request);
 
 	/**
 	 * @brief Requests the generation of potential stat values from temporary rolls and the potential roll.

@@ -1518,14 +1518,9 @@
                     "value" : 4
                 }
             ],
-            "skillCategoryChoicesEveryman" : [
-                {
-                    "num-choices" : 1,
-                    "options" : [
-                        "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
-                        "SKILLCATEGORY_WEAPON_1_H_EDGED"
-                    ]
-                }
+            "everymanCategories" : [
+                "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                "SKILLCATEGORY_WEAPON_1_H_EDGED"
             ]
         },
         {
@@ -2007,7 +2002,7 @@
             ],
             "skillCategoryChoicesEveryman" : [
                 {
-                    "num-choices" : 1,
+                    "num-choices" : 4,
                     "options" : [
                         "SKILLCATEGORY_WEAPON_2_HANDED",
                         "SKILLCATEGORY_WEAPON_POLE_ARMS"
@@ -2121,7 +2116,7 @@
             ],
             "skillCategoryChoicesEveryman" : [
                 {
-                    "num-choices" : 1,
+                    "num-choices" : 4,
                     "options" : [
                         "SKILLCATEGORY_WEAPON_2_HANDED",
                         "SKILLCATEGORY_WEAPON_POLE_ARMS"
@@ -2227,7 +2222,7 @@
             ],
             "skillCategoryChoicesEveryman" : [
                 {
-                    "num-choices" : 1,
+                    "num-choices" : 4,
                     "options" : [
                         "SKILLCATEGORY_WEAPON_1_H_EDGED",
                         "SKILLCATEGORY_WEAPON_2_HANDED"
