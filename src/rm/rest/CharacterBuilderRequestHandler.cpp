@@ -29,8 +29,8 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 
 	if (request.method() == http::verb::post && operation == "primary-definition")
 		requestPrimaryDefinition(response, request);
-	else if (request.method() == http::verb::get && operation == "dump" && path.params().contains("id"))
-		requestDump(response, request, path.params().at("id"));
+	else if (request.method() == http::verb::post && operation == "primary-choices")
+		requestPrimaryChoices(response, request);
 	else if (request.method() == http::verb::post && operation == "stat-rolls")
 		requestStatRolls(response, request);
 	else if (request.method() == http::verb::post && operation == "set-stats")
@@ -41,6 +41,8 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 		requestSetHobbyChoices(response, request);
 	else if (request.method() == http::verb::post && operation == "set-background-choices")
 		requestSetBackgroundChoices(response, request);
+	else if (request.method() == http::verb::get && operation == "dump" && path.params().contains("id"))
+		requestDump(response, request, path.params().at("id"));
 	else {
 		response.result(http::status::not_found);
 		response.set(http::field::content_type, "application/json");
@@ -81,6 +83,34 @@ void CharacterBuilderRequestHandler::requestPrimaryDefinition(http::response<htt
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to set primary choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
+	}
+}
+
+void CharacterBuilderRequestHandler::requestPrimaryChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+	using namespace rm::game::character;
+
+	try {
+		json::value json_body = json::parse(request.body());
+		if (!json_body.is_object()) {
+			response.result(http::status::bad_request);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON object"})";
+			return;
+		}
+		std::string id = json_body.as_object().at("id").as_string().c_str();
+
+		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
+		serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
+		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
+
+		builder.recalculateAggregatedState();
+
+		response.result(http::status::ok);
+		response.set(http::field::content_type, "application/json");
+		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
+	} catch (const std::exception& e) {
+		response.result(http::status::internal_server_error);
+		response.body() = R"({"error": "Failed to generate primary choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
 	}
 }
 

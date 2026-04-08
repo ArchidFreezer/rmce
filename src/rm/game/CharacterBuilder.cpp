@@ -118,7 +118,7 @@ void CharacterBuilder::setPrimaryDefinition(rm::PersistentObjectManager& object_
 	magical_realms_ = magical_realms;
 }
 
-/* Initial choices */
+/* Primary choices */
 void CharacterBuilder::applyRace() {
 	if (built_) {
 		throw std::runtime_error("CharacterBuilder: Cannot apply race after character has been built.");

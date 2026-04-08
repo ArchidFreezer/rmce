@@ -189,7 +189,7 @@ private:
 	 * made during character creation.
 	 */
 
-	/* Initial choices */
+	/* Primary choices */
 	// Race
 	std::set<const SubcategoriedSkillData*> race_category_everyman_choices_{}; /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
 	// Culture type
