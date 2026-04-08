@@ -61,10 +61,6 @@ void CharacterBuilder::reset(bool aggregate_state_only, bool clear_stats) {
 	language_abilities_.clear();
 	realm_progressions_.clear();
 	stats_.clear();
-	everyman_skills_.clear();
-	restricted_skills_.clear();
-	everyman_skill_categories_.clear();
-	restricted_skill_categories_.clear();
 	skill_ranks_.clear();
 	skill_professional_bonuses_.clear();
 	skill_special_bonuses_.clear();
@@ -73,10 +69,8 @@ void CharacterBuilder::reset(bool aggregate_state_only, bool clear_stats) {
 	category_professional_bonuses_.clear();
 	category_special_bonuses_.clear();
 	category_development_costs_.clear();
-	category_development_types_.clear();
 	group_professional_bonuses_.clear();
 	group_special_bonuses_.clear();
-	group_development_types_.clear();
 	spell_list_ranks_.clear();
 	total_items_.clear();
 }
@@ -135,22 +129,42 @@ void CharacterBuilder::applyRace() {
 		applyLanguageAbility(language_ability);
 	}
 
+	// We are going to pre-populate the skill development type map with all skills for convenience to make like easier later on when we need to check the development type of a skill. We will set the development type to standard for all
+	// skills to start with and then apply the everyman and restricted skills and categories on top of this, which will override the development type for those skills and categories as necessary.
+	for (const auto& skill_wrapper : object_factory_->getAll<SkillData>()) {
+		std::string skill_id = skill_wrapper.get().id();
+		const SubcategoriedSkillData& skill = object_factory_->subcategoriedSkillData(skill_id);
+		skill_development_types_.insert_or_assign(&skill, SkillDevelopmentType::Type::kStandard);
+	}
+
 	// Everyman and restricted skills - we need to insert these into a set to ensure that there are no duplicates and that they are easily accessible for checking if a skill is an everyman skill or not when applying the effects of the
 	// character's choices later on in the building process
 	for (const SubcategoriedSkillData* skill : race_->everymanSkills()) {
-		everyman_skills_.insert(skill);
+		SkillDevelopmentType::Type current_type = skill_development_types_.find(skill) != skill_development_types_.end() ? skill_development_types_.at(skill) : SkillDevelopmentType::Type::kStandard;
+		skill_development_types_.insert_or_assign(skill, getHighestPrecedenceDevelopmentType(current_type, SkillDevelopmentType::Type::kEveryman));
 	}
 
 	for (const SubcategoriedSkillData* skill : race_->restrictedSkills()) {
-		restricted_skills_.insert(skill);
+		SkillDevelopmentType::Type current_type = skill_development_types_.find(skill) != skill_development_types_.end() ? skill_development_types_.at(skill) : SkillDevelopmentType::Type::kStandard;
+		skill_development_types_.insert_or_assign(skill, getHighestPrecedenceDevelopmentType(current_type, SkillDevelopmentType::Type::kRestricted));
 	}
 
 	for (const SkillCategoryData* category : race_->everymanSkillCategories()) {
-		everyman_skill_categories_.insert(category);
+		// We have pre-populated skill_development_types_ with all base skills so we know they will exist
+		for (const auto& [skill, current_type] : skill_development_types_) {
+			if (&skill->skillData().category() == category) {
+				skill_development_types_.insert_or_assign(skill, getHighestPrecedenceDevelopmentType(current_type, SkillDevelopmentType::Type::kEveryman));
+			}
+		}
 	}
 
 	for (const SkillCategoryData* category : race_->restrictedSkillCategories()) {
-		restricted_skill_categories_.insert(category);
+		// We have pre-populated skill_development_types_ with all base skills so we know they will exist
+		for (const auto& [skill, current_type] : skill_development_types_) {
+			if (&skill->skillData().category() == category) {
+				skill_development_types_.insert_or_assign(skill, getHighestPrecedenceDevelopmentType(current_type, SkillDevelopmentType::Type::kRestricted));
+			}
+		}
 	}
 
 	// Realm progressions
@@ -164,7 +178,9 @@ void CharacterBuilder::applyRace() {
 
 void CharacterBuilder::applyRaceChoices() {
 	for (const auto& skill : race_category_everyman_choices_) {
-		everyman_skills_.insert(skill);
+		// This may be a skill with a subcategory defined so we can't assume it exists
+		SkillDevelopmentType::Type current_type = skill_development_types_.find(skill) != skill_development_types_.end() ? skill_development_types_.at(skill) : SkillDevelopmentType::Type::kStandard;
+		skill_development_types_.insert_or_assign(skill, getHighestPrecedenceDevelopmentType(current_type, SkillDevelopmentType::Type::kEveryman));
 	}
 }
 
@@ -234,28 +250,20 @@ void CharacterBuilder::applyProfession() {
 
 	// Set the development type for all skills in a skill category
 	for (const auto& [category, development_type] : profession_->skillCategorySkillDevelopmentTypes()) {
-		for (const SkillData& skill : object_factory_->getAll<SkillData>()) {
-			if (&skill.category() == category) {
-				const SubcategoriedSkillData& subcategoried_skill = object_factory_->subcategoriedSkillData(skill);
-				SkillDevelopmentType::Type current_type = skill_development_types_.find(&subcategoried_skill) != skill_development_types_.end() ? skill_development_types_.at(&subcategoried_skill) : SkillDevelopmentType::Type::kStandard;
-				skill_development_types_.insert_or_assign(&subcategoried_skill, getHighestPrecedenceDevelopmentType(current_type, development_type));
+		// We have pre-populated skill_development_types_ with all base skills so we know they will exist
+		for (const auto& [skill, current_type] : skill_development_types_) {
+			if (&skill->skillData().category() == category) {
+				skill_development_types_.insert_or_assign(skill, getHighestPrecedenceDevelopmentType(current_type, development_type));
 			}
 		}
 	}
 
 	// Set the development type for all skills in a skill group
 	for (const auto& [group, development_type] : profession_->skillGroupSkillDevelopmentTypes()) {
-		std::set<const SkillCategoryData*> categories_in_group; // We need to get all the categories in the group first so that we can then get all the skills in those categories and apply the development type to them
-		for (const SkillCategoryData& category : object_factory_->getAll<SkillCategoryData>()) {
-			if (&category.group() == group) {
-				categories_in_group.insert(&category);
-			}
-		}
-		for (const SkillData& skill : object_factory_->getAll<SkillData>()) {
-			if (categories_in_group.find(&skill.category()) != categories_in_group.end()) {
-				const SubcategoriedSkillData& subcategoried_skill = object_factory_->subcategoriedSkillData(skill);
-				SkillDevelopmentType::Type current_type = skill_development_types_.find(&subcategoried_skill) != skill_development_types_.end() ? skill_development_types_.at(&subcategoried_skill) : SkillDevelopmentType::Type::kStandard;
-				skill_development_types_.insert_or_assign(&subcategoried_skill, getHighestPrecedenceDevelopmentType(current_type, development_type));
+		// We have pre-populated skill_development_types_ with all base skills so we know they will exist
+		for (const auto& [skill, current_type] : skill_development_types_) {
+			if (&skill->skillData().category().group() == group) {
+				skill_development_types_.insert_or_assign(skill, getHighestPrecedenceDevelopmentType(current_type, development_type));
 			}
 		}
 	}

@@ -152,10 +152,6 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 		if (stats_array.size())
 			obj["stats"] = std::move(stats_array);
 	}
-	JsonConverter::setSkillSet(obj, "everymanSkills", ref.everyman_skills_);
-	JsonConverter::setSkillSet(obj, "restrictedSkills", ref.restricted_skills_);
-	JsonConverter::setDataSet<SkillCategoryData>(obj, "everymanSkillCategories", ref.everyman_skill_categories_);
-	JsonConverter::setDataSet<SkillCategoryData>(obj, "restrictedSkillCategories", ref.restricted_skill_categories_);
 	JsonConverter::setSkillPrimitiveMap<int>(obj, "skillRanks", ref.skill_ranks_);
 	JsonConverter::setSkillPrimitiveMap<int>(obj, "skillProfessionalBonuses", ref.skill_professional_bonuses_);
 	JsonConverter::setSkillPrimitiveMap<int>(obj, "skillSpecialBonuses", ref.skill_special_bonuses_);
@@ -163,7 +159,6 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setDataPrimitiveMap<SkillCategoryData, int>(obj, "categoryRanks", ref.category_ranks_);
 	JsonConverter::setDataPrimitiveMap<SkillCategoryData, int>(obj, "categoryProfessionalBonuses", ref.category_professional_bonuses_);
 	JsonConverter::setDataPrimitiveMap<SkillCategoryData, int>(obj, "categorySpecialBonuses", ref.category_special_bonuses_);
-	JsonConverter::setDataEnumMap<SkillCategoryData, SkillDevelopmentType::Type>(obj, "categoryDevelopmentTypes", ref.category_development_types_);
 	{
 		json::array arr;
 		std::map<std::string, const SkillCategoryData*> sorted_categories{};
@@ -180,7 +175,6 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	}
 	JsonConverter::setDataPrimitiveMap<SkillGroupData, int>(obj, "groupProfessionalBonuses", ref.group_professional_bonuses_);
 	JsonConverter::setDataPrimitiveMap<SkillGroupData, int>(obj, "groupSpecialBonuses", ref.group_special_bonuses_);
-	JsonConverter::setDataEnumMap<SkillGroupData, SkillDevelopmentType::Type>(obj, "groupDevelopmentTypes", ref.group_development_types_);
 	JsonConverter::setDataPrimitiveMap<SpellListData, int>(obj, "spellListRanks", ref.spell_list_ranks_);
 	{
 		json::array items_array;
@@ -397,10 +391,6 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 			ref.stats_.insert_or_assign(stat_type, stat);
 		}
 	}
-	ref.everyman_skills_ = JsonConverter::getSkillSet(jsonObj, "everymanSkills", manager_);
-	ref.restricted_skills_ = JsonConverter::getSkillSet(jsonObj, "restrictedSkills", manager_);
-	ref.everyman_skill_categories_ = JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "everymanSkillCategories", manager_);
-	ref.restricted_skill_categories_ = JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "restrictedSkillCategories", manager_);
 	ref.skill_ranks_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skillRanks", manager_);
 	ref.skill_professional_bonuses_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skillProfessionalBonuses", manager_);
 	ref.skill_special_bonuses_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skillSpecialBonuses", manager_);
@@ -408,7 +398,6 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.category_ranks_ = JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "categoryRanks", manager_);
 	ref.category_professional_bonuses_ = JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "categoryProfessionalBonuses", manager_);
 	ref.category_special_bonuses_ = JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "categorySpecialBonuses", manager_);
-	ref.category_development_types_ = JsonConverter::getDataEnumMap<SkillCategoryData, SkillDevelopmentType::Type>(jsonObj, "categoryDevelopmentTypes", manager_);
 	{
 		json::array skillCategoryDevelopmentCostArr = JsonConverter::getJsonArray(jsonObj, "categoryCosts");
 		for (const auto& item : skillCategoryDevelopmentCostArr) {
@@ -422,7 +411,6 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	}
 	ref.group_professional_bonuses_ = JsonConverter::getDataPrimitiveMap<SkillGroupData, int>(jsonObj, "groupProfessionalBonuses", manager_);
 	ref.group_special_bonuses_ = JsonConverter::getDataPrimitiveMap<SkillGroupData, int>(jsonObj, "groupSpecialBonuses", manager_);
-	ref.group_development_types_ = JsonConverter::getDataEnumMap<SkillGroupData, SkillDevelopmentType::Type>(jsonObj, "groupDevelopmentTypes", manager_);
 	ref.spell_list_ranks_ = JsonConverter::getDataPrimitiveMap<SpellListData, int>(jsonObj, "spellListRanks", manager_);
 	{
 		const json::array items_array = JsonConverter::getJsonArray(jsonObj, "totalItems");
