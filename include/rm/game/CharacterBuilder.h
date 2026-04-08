@@ -226,10 +226,6 @@ private:
 	std::set<LanguageAbility> language_abilities_; /**< Aggregated map of language names to their corresponding LanguageAbility objects for the character being built. */
 	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*> realm_progressions_;                    /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. */
 	std::unordered_map<StatType::Type, Stat> stats_{};                                                           /**< Map of stat types to their corresponding Stat objects for the character. */
-	std::set<const SubcategoriedSkillData*> everyman_skills_{};                                                  /**< Skills that are considered everyman */
-	std::set<const SubcategoriedSkillData*> restricted_skills_{};                                                /**< Skills that are considered restricted */
-	std::set<const SkillCategoryData*> everyman_skill_categories_{};                                             /**< Skill categories that are considered everyman */
-	std::set<const SkillCategoryData*> restricted_skill_categories_{};                                           /**< Skill categories that are considered restricted */
 	std::map<const SubcategoriedSkillData*, int> skill_ranks_{};                                                 /**< Skill ranks */
 	std::map<const SubcategoriedSkillData*, int> skill_professional_bonuses_{};                                  /**< Skill professional bonuses */
 	std::map<const SubcategoriedSkillData*, int> skill_special_bonuses_{};                                       /**< Skill special bonuses */
@@ -237,11 +233,9 @@ private:
 	std::map<const SkillCategoryData*, int> category_ranks_{};                                                   /**< Skill category ranks */
 	std::map<const SkillCategoryData*, int> category_professional_bonuses_{};                                    /**< Skill category professional bonuses */
 	std::map<const SkillCategoryData*, int> category_special_bonuses_{};                                         /**< Skill category special bonuses */
-	std::map<const SkillCategoryData*, SkillDevelopmentType::Type> category_development_types_{};                /**< Skill categories that all skills within have their development type changed */
 	std::map<const SkillCategoryData*, rm::game::character::SkillDevelopmentCost> category_development_costs_{}; /**< Cost to purchase ranks for a skill category */
 	std::map<const SkillGroupData*, int> group_professional_bonuses_{};                                          /**< Skill group professional bonuses */
 	std::map<const SkillGroupData*, int> group_special_bonuses_{};                                               /**< Skill group special bonuses */
-	std::map<const SkillGroupData*, SkillDevelopmentType::Type> group_development_types_{};                      /**< Skill groups that all skills within have their development type changed */
 	std::map<const SpellListData*, int> spell_list_ranks_{};                                                     /**< Spell list ranks */
 	std::vector<std::string> total_items_{};                                                                     /**< Items the character starts with */
 
