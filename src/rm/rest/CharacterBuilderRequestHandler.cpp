@@ -90,6 +90,7 @@ void CharacterBuilderRequestHandler::requestPrimaryChoices(http::response<http::
 	using namespace rm::game::character;
 
 	try {
+		std::string body = request.body();
 		json::value json_body = json::parse(request.body());
 		if (!json_body.is_object()) {
 			response.result(http::status::bad_request);
@@ -100,14 +101,18 @@ void CharacterBuilderRequestHandler::requestPrimaryChoices(http::response<http::
 		std::string id = json_body.as_object().at("id").as_string().c_str();
 
 		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
-		serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
+		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
+		std::string tmp1 = serial_manager_.serializeObject<CharacterBuilder>(deserialized);
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
+		std::string tmp2 = serial_manager_.serializeObject<CharacterBuilder>(builder);
 
 		builder.recalculateAggregatedState();
 
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
 		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
+		std::string serialized = response.body();
+		int x{};
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to generate primary choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";

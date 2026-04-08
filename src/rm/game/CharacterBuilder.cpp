@@ -267,6 +267,11 @@ void CharacterBuilder::applyProfession() {
 }
 
 void CharacterBuilder::applyProfessionChoices() {
+	// Apply the chosen weapon category costs
+	for (const auto& [category, cost] : weapon_development_cost_choices_) {
+		category_development_costs_.insert_or_assign(category, cost);
+	}
+
 	// We know the character knows these lists, but set the ranks to 0 as no ranks have been allocated yet.
 	for (const auto& spellList : prof_base_spell_list_choices_) {
 		spell_list_ranks_.insert_or_assign(spellList, 0);
