@@ -43,7 +43,7 @@ public:
 	void recalculateAggregatedState();
 
 	/**
-	 * @brief Sets the initial choices for character creation, including name, race, culture, profession, and magical realm(s).
+	 * @brief Sets the primary choices for character creation, including name, race, culture, profession, and magical realm(s).
 	 *
 	 * These are the primary choices that define the character that are made first and drive the choices available for the rest of the character creation process. The name is used for display purposes and may not be unique. The
 	 * object factory is used to retrieve the necessary data for the character's choices.
@@ -55,7 +55,7 @@ public:
 	 * @param profession_id The identifier for the character's profession.
 	 * @param magical_realms The set of magical realms for the character. This may be fixed by the profession or for non-magical professions decided by the player from the available realm choices for the character.
 	 */
-	void setIntialChoices(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id, const std::set<RealmType::Type> magical_realms);
+	void setPrimaryDefinition(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id, const std::set<RealmType::Type> magical_realms);
 
 	/**
 	 * @brief Set the stat values for a specific stat type.
@@ -189,9 +189,9 @@ private:
 	 * made during character creation.
 	 */
 
-	/* Initial choices */
+	/* Primary choices */
 	// Race
-	std::set<const SkillCategoryData*> race_category_everyman_choices_{}; /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
+	std::set<const SubcategoriedSkillData*> race_category_everyman_choices_{}; /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
 	// Culture type
 	std::map<const SubcategoriedSkillData*, int> culture_type_category_skill_ranks_{}; /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
 	// Profession

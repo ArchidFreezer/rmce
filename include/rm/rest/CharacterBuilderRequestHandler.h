@@ -54,7 +54,19 @@ private:
 	 * @param response The HTTP response object to populate with the result of the operation.
 	 * @param request The HTTP request containing the data for the operation in its body.
 	 */
-	void requestInitialChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+	void requestPrimaryDefinition(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+
+	/**
+	 * @brief Requests the generation of available choices for the primary character attributes based on the initial definition.
+	 *
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object for which to generate primary choices.
+	 * The function will return the available choices for the primary character attributes (such as everyman skill categories for the race choice, skill category choices for the culture type choice, and skill development type and spell list
+	 * choices for the profession choice) based on the initial definition of the character in the specified CharacterBuilder object.
+	 * 
+	 * @param response The HTTP response object to populate with the result of the operation.
+	 * @param request The HTTP request containing the data for the operation in its body.
+	 */
+	void requestPrimaryChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
 
 	/**
 	 * @brief Requests the generation of potential stat values from temporary rolls and the potential roll.

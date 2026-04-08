@@ -28,7 +28,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setInt(obj, "developmentPoints", ref.development_points_);
 	/* Initial choices */
 	// Race
-	JsonConverter::setDataSet<SkillCategoryData>(obj, "raceCategoryEverymanChoices", ref.race_category_everyman_choices_);
+	JsonConverter::setSkillSet(obj, "raceCategoryEverymanChoices", ref.race_category_everyman_choices_);
 	// Culture type
 	JsonConverter::setSkillPrimitiveMap<int>(obj, "cultureTypeCategorySkillRanks", ref.culture_type_category_skill_ranks_);
 	// Profession
@@ -234,7 +234,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.development_points_ = JsonConverter::getInt(jsonObj, "developmentPoints", 0);
 	// Initial choices
 	// Race
-	ref.race_category_everyman_choices_ = JsonConverter::getDataSet<SkillCategoryData>(jsonObj, "raceCategoryEverymanChoices", manager_);
+	ref.race_category_everyman_choices_ = JsonConverter::getSkillSet(jsonObj, "raceCategoryEverymanChoices", manager_);
 	// Culture Type
 	ref.culture_type_category_skill_ranks_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "cultureTypeCategorySkillRanks", manager_);
 	// Profession
