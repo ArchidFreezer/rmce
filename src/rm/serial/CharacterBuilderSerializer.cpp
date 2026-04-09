@@ -31,10 +31,14 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setSkillSet(obj, "raceCategoryEverymanChoices", ref.race_category_everyman_choices_);
 	// Culture type
 	JsonConverter::setSkillPrimitiveMap<int>(obj, "cultureTypeCategorySkillRanks", ref.culture_type_category_skill_ranks_);
+	// Culture
+	JsonConverter::setSkillPrimitiveMap<int>(obj, "hobbySkillRankChoices", ref.hobby_skill_rank_choices_);
+	JsonConverter::setDataPrimitiveMap<SkillCategoryData, int>(obj, "hobbyCategoryRankChoices", ref.hobby_category_rank_choices_);
 	// Profession
 	JsonConverter::setSkillEnumMap<SkillDevelopmentType::Type>(obj, "profSkillDevelopmentTypeChoices", ref.prof_skill_development_type_choices_);
 	JsonConverter::setSkillEnumMap<SkillDevelopmentType::Type>(obj, "profCategoryDevelopmentTypeChoices", ref.prof_category_development_type_choices_);
 	JsonConverter::setSkillEnumMap<SkillDevelopmentType::Type>(obj, "profGroupDevelopmentTypeChoices", ref.prof_group_development_type_choices_);
+
 	{
 		std::set<const SpellListData*> base_spell_lists;
 		for (const SpellListData* spell_list : ref.prof_base_spell_list_choices_) {
@@ -42,6 +46,14 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 				base_spell_lists.emplace(spell_list);
 		}
 		JsonConverter::setDataSet<SpellListData>(obj, "baseSpellListChoices", base_spell_lists);
+	}
+	{
+		std::set<const SpellListData*> spell_lists;
+		for (const SpellListData* spell_list : ref.adolescent_spell_list_choices_) {
+			if (spell_list)
+				spell_lists.emplace(spell_list);
+		}
+		JsonConverter::setDataSet<SpellListData>(obj, "adolescentSpellListChoices",spell_lists);
 	}
 	{
 		json::array arr;
@@ -245,15 +257,26 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.race_category_everyman_choices_ = JsonConverter::getSkillSet(jsonObj, "raceCategoryEverymanChoices", manager_);
 	// Culture Type
 	ref.culture_type_category_skill_ranks_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "cultureTypeCategorySkillRanks", manager_);
+	// Culture
+	ref.hobby_skill_rank_choices_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "hobbySkillRankChoices", manager_);
+	ref.hobby_category_rank_choices_ = JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "hobbyCategoryRankChoices", manager_);
 	// Profession
 	ref.prof_skill_development_type_choices_ = JsonConverter::getSkillEnumMap<SkillDevelopmentType::Type>(jsonObj, "profSkillDevelopmentTypeChoices", manager_);
 	ref.prof_category_development_type_choices_ = JsonConverter::getSkillEnumMap<SkillDevelopmentType::Type>(jsonObj, "profCategoryDevelopmentTypeChoices", manager_);
 	ref.prof_group_development_type_choices_ = JsonConverter::getSkillEnumMap<SkillDevelopmentType::Type>(jsonObj, "profGroupDevelopmentTypeChoices", manager_);
+
 	{
 		const std::set<const SpellListData*> base_spell_lists = JsonConverter::getDataSet<SpellListData>(jsonObj, "baseSpellListChoices", manager_);
 		for (const SpellListData* spell_list : base_spell_lists) {
 			if (spell_list)
 				ref.prof_base_spell_list_choices_.insert(const_cast<SpellListData*>(spell_list));
+		}
+	}
+	{
+		const std::set<const SpellListData*> spell_lists = JsonConverter::getDataSet<SpellListData>(jsonObj, "adolescentSpellListChoices", manager_);
+		for (const SpellListData* spell_list : spell_lists) {
+			if (spell_list)
+				ref.adolescent_spell_list_choices_.insert(const_cast<SpellListData*>(spell_list));
 		}
 	}
 	{
@@ -425,66 +448,6 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	}
 
 	return ref;
-}
-
-json::value CharacterBuilderSerializer::serializeHobbyChoices(const CharacterBuilder& ref) const {
-	json::object obj;
-	// Hobby skill choices
-	JsonConverter::setInt(obj, "numHobbyRanks", ref.num_hobby_skill_ranks_);
-	const CultureData* culture = ref.culture_;
-	if (culture) {
-		json::array hobby_skills_array;
-		for (const auto& skill : culture->hobbySkills()) {
-			json::object skill_obj;
-			JsonConverter::setString(skill_obj, "id", skill->skillData().id());
-			if (skill->subcategory()) {
-				JsonConverter::setString(skill_obj, "subcategory", skill->subcategory().value());
-			}
-			JsonConverter::setInt(skill_obj, "value", ref.getMaxHobbyRanksForSkill(skill));
-			hobby_skills_array.push_back(skill_obj);
-		}
-		if (hobby_skills_array.size())
-			obj["hobbySkills"] = hobby_skills_array;
-
-		json::array hobby_categories_array;
-		for (const auto& category : culture->hobbySkillCategories()) {
-			json::object category_obj;
-			JsonConverter::setString(category_obj, "id", category->id());
-			JsonConverter::setInt(category_obj, "value", ref.getMaxHobbyRanksForCategory(category));
-			hobby_categories_array.push_back(category_obj);
-		}
-		if (hobby_categories_array.size())
-			obj["hobbyCategories"] = hobby_categories_array;
-	}
-
-	// Background language choices
-	const RaceData* race = ref.race_;
-	if (race) {
-		JsonConverter::setInt(obj, "numLanguageRanks", ref.num_adolescent_language_ranks_);
-		json::array adolescent_languages_array;
-		for (const auto& [language_name, ability] : race->adolescentLanguageAbilities()) {
-			json::object language_obj;
-			JsonConverter::setString(language_obj, "language", ability.languageId());
-			if (ability.isSomatic())
-				JsonConverter::setInt(language_obj, "somantic", ability.somatic());
-			if (ability.isSpoken())
-				JsonConverter::setInt(language_obj, "spoken", ability.spoken());
-			if (ability.isWritten())
-				JsonConverter::setInt(language_obj, "written", ability.written());
-			adolescent_languages_array.push_back(language_obj);
-		}
-		if (adolescent_languages_array.size()) {
-			obj["adolescentLanguages"] = adolescent_languages_array;
-		}
-	}
-
-	// Adolescent spell list ranks
-	{
-		JsonConverter::setInt(obj, "numSpellListRanks", ref.num_adolescent_spell_list_ranks_);
-		JsonConverter::setDataSet(obj, "adolescentSpellLists", ref.getAdolescentSpellListChoices());
-	}
-
-	return obj;
 }
 
 } // namespace rm::serial

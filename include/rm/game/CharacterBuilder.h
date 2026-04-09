@@ -195,12 +195,16 @@ private:
 	std::set<const SubcategoriedSkillData*> race_category_everyman_choices_{}; /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
 	// Culture type
 	std::map<const SubcategoriedSkillData*, int> culture_type_category_skill_ranks_{}; /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
+	// Culture
+	std::map<const SubcategoriedSkillData*, int> hobby_skill_rank_choices_{}; /**< A map of skill data pointers to integers representing the skill ranks for each skill choice made during character creation. */
+	std::map<const SkillCategoryData*, int> hobby_category_rank_choices_{};          /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
 	// Profession
 	std::map<const SkillCategoryData*, rm::game::character::SkillDevelopmentCost> weapon_development_cost_choices_{}; /**< Cost to purchase ranks for weapon skill category */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_development_type_choices_{};       /**< Skill (base or subcategory) with their development type changed */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_category_development_type_choices_{};    /**< Skills from a category with their development type changed */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};       /**< Skills from a group with their development type changed */
-	std::set<SpellListData*> prof_base_spell_list_choices_{};                                                         /**< A set of spell list data pointers representing the spell list choices for the character being built. */
+	std::set<const SpellListData*> prof_base_spell_list_choices_{};           /**< A set of spell list data pointers representing the spell list choices for the character being built. */
+	std::set<const SpellListData*> adolescent_spell_list_choices_{};                                                  /**< A set of spell list data pointers representing the adolescent spell list choices for the character being built. */
 
 	/* Stats generation */
 	std::unordered_map<StatType::Type, Stat> initial_stats_{}; /**< Map of stat types to their corresponding Stat objects for the character. */
@@ -323,6 +327,8 @@ private:
 	void applyProfession();
 
 	void applyProfessionChoices(); /**< Applies the choices associated with the character's profession. */
+
+	void applyPrimaryDependents(); /**< Applies the effects that are dependent on multiple primary choices being set */
 
 	void applyHobbyChoices(); /**< Applies the hobby choices made during character creation to the character being built. */
 

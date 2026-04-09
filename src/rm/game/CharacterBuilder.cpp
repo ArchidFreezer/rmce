@@ -91,6 +91,7 @@ void CharacterBuilder::recalculateAggregatedState() {
 	applyCultureChoices();
 	applyProfession();
 	applyProfessionChoices();
+	applyPrimaryDependents();
 	applyHobbyChoices();
 	applyBackgroundChoices();
 }
@@ -110,6 +111,7 @@ void CharacterBuilder::setPrimaryDefinition(rm::PersistentObjectManager& object_
 	culture_type_ = &culture_->cultureType();
 	profession_ = &object_factory.get<ProfessionData>(profession_id);
 	magical_realms_ = magical_realms;
+	adolescent_spell_list_choices_ = getAdolescentSpellListChoices();
 }
 
 /* Primary choices */
@@ -206,7 +208,8 @@ void CharacterBuilder::applyCulture() {
 	if (built_) {
 		throw std::runtime_error("CharacterBuilder: Cannot apply culture after character has been built.");
 	}
-	// The culture only provides options and does not have any fixed effects so there is nothing to apply for the culture itself
+
+	// The culture defines also require the profession to be set so are calculated in the applyPrimaryDependents function
 }
 
 void CharacterBuilder::applyCultureChoices() {
@@ -304,6 +307,19 @@ void CharacterBuilder::applyProfessionChoices() {
 	}
 }
 
+void CharacterBuilder::applyPrimaryDependents() {
+	// Hobby skill/categories require the culture for the list of available choices and the profession for themax ranks for each choice
+	for (const SubcategoriedSkillData* skill : culture_->hobbySkills()) {
+		int max_ranks = getMaxHobbyRanksForSkill(skill);
+		hobby_skill_rank_choices_.emplace(skill, max_ranks);
+	}
+
+	for (const SkillCategoryData* category : culture_->hobbySkillCategories()) {
+		int max_ranks = getMaxHobbyRanksForCategory(category);
+		hobby_category_rank_choices_.emplace(category, max_ranks);
+	}
+}
+
 /* Stat allocations */
 void CharacterBuilder::setInitialStat(StatType::Type stat_type, int temp_value, int potential_value) {
 	Stat& stat = initial_stats_[stat_type]; // This will default construct a new Stat object if the stat has not been touched yet.
@@ -326,7 +342,7 @@ int CharacterBuilder::getMaxHobbyRanksForCategory(const SkillCategoryData* categ
 std::set<const SpellListData*> CharacterBuilder::getAdolescentSpellListChoices() const {
 	std::set<const SpellListData*> spell_list_choices;
 
-	// First we need to get the chracters realms to know which spell lists they have access to, as the spell list choices are based on the realms that the character has access to.
+	// First we need to get the characters realms to know which spell lists they have access to, as the spell list choices are based on the realms that the character has access to.
 	std::set<RealmType::Type> character_realms = magical_realms_;
 	for (const SpellListData& spell_list : object_factory_->getAll<SpellListData>()) {
 		// Only open lists are allowed for selection

@@ -36,8 +36,6 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 		requestStatRolls(response, request);
 	else if (request.method() == http::verb::post && operation == "set-stats")
 		requestSetStats(response, request);
-	else if (request.method() == http::verb::get && operation == "hobby-choices" && path.params().contains("id"))
-		requestHobbyChoices(response, request, path.params().at("id"));
 	else if (request.method() == http::verb::post && operation == "set-hobby-choices")
 		requestSetHobbyChoices(response, request);
 	else if (request.method() == http::verb::post && operation == "set-background-choices")
@@ -91,7 +89,6 @@ void CharacterBuilderRequestHandler::requestPrimaryChoices(http::response<http::
 	using namespace rm::game::character;
 
 	try {
-		std::string body = request.body();
 		json::value json_body = json::parse(request.body());
 		if (!json_body.is_object()) {
 			response.result(http::status::bad_request);
@@ -110,7 +107,6 @@ void CharacterBuilderRequestHandler::requestPrimaryChoices(http::response<http::
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
 		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
-		std::string serialized = response.body();
 		int x{};
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
@@ -183,32 +179,12 @@ void CharacterBuilderRequestHandler::requestSetStats(http::response<http::string
 
 		builder.recalculateAggregatedState();
 
-		// After setting the stats, we can immediately return the hobby choices. This allows the client to update the UI with the new hobby choices without needing to make a separate request.
-		http::request<http::string_body> hobby_request; // We need a dummy request object to pass to the hobby choices function, but it won't be used in that function so we can just create an empty one.
-		requestHobbyChoices(response, hobby_request, id);
-
+		response.result(http::status::ok);
+		response.set(http::field::content_type, "application/json");
+		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to set stats", "message": ")" + archid::escapeJson(e.what()) + R"("})";
-	}
-}
-
-void CharacterBuilderRequestHandler::requestHobbyChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request, std::string id) {
-	using namespace rm::game::character;
-
-	try {
-		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
-
-		rm::serial::CharacterBuilderSerializer serializer(serial_manager_.objectManager());
-		json::value serialized_hobby_choices = serializer.serializeHobbyChoices(builder);
-
-		response.result(http::status::ok);
-		response.set(http::field::content_type, "application/json");
-		response.body() = json::serialize(serialized_hobby_choices);
-
-	} catch (const std::exception& e) {
-		response.result(http::status::internal_server_error);
-		response.body() = R"({"error": "Failed to get hobby choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
 	}
 }
 
@@ -225,7 +201,6 @@ void CharacterBuilderRequestHandler::requestSetHobbyChoices(http::response<http:
 		}
 		std::string id = json_body.as_object().at("id").as_string().c_str();
 		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
-		std::string json_str = request.body();
 		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
 
