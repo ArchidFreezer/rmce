@@ -112,7 +112,7 @@ void CharacterBuilder::setPrimaryDefinition(rm::PersistentObjectManager& object_
 	culture_type_ = &culture_->cultureType();
 	profession_ = &object_factory.get<ProfessionData>(profession_id);
 	magical_realms_ = magical_realms;
-	adolescent_spell_list_choices_ = getAdolescentSpellListChoices();
+	adolescent_spell_list_options_ = getAdolescentSpellListOptions();
 }
 
 /* Primary choices */
@@ -352,8 +352,8 @@ int CharacterBuilder::getMaxHobbyRanksForCategory(const SkillCategoryData* categ
 	return max_ranks;
 }
 
-std::set<const SpellListData*> CharacterBuilder::getAdolescentSpellListChoices() const {
-	std::set<const SpellListData*> spell_list_choices;
+std::set<const SpellListData*> CharacterBuilder::getAdolescentSpellListOptions() const {
+	std::set<const SpellListData*> spell_list_options;
 
 	// First we need to get the characters realms to know which spell lists they have access to, as the spell list choices are based on the realms that the character has access to.
 	std::set<RealmType::Type> character_realms = magical_realms_;
@@ -373,11 +373,11 @@ std::set<const SpellListData*> CharacterBuilder::getAdolescentSpellListChoices()
 			}
 		}
 		if (count >= spell_list.realms().size()) {
-			spell_list_choices.insert(&spell_list);
+			spell_list_options.insert(&spell_list);
 		}
 	} // end for all spell lists
 
-	return spell_list_choices;
+	return spell_list_options;
 }
 
 void CharacterBuilder::addHobbySkillRankChoice(const SubcategoriedSkillData& skill, int ranks) {

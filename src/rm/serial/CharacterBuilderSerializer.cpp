@@ -49,11 +49,11 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	}
 	{
 		std::set<const SpellListData*> spell_lists;
-		for (const SpellListData* spell_list : ref.adolescent_spell_list_choices_) {
+		for (const SpellListData* spell_list : ref.adolescent_spell_list_options_) {
 			if (spell_list)
 				spell_lists.emplace(spell_list);
 		}
-		JsonConverter::setDataSet<SpellListData>(obj, "adolescentSpellListChoices",spell_lists);
+		JsonConverter::setDataSet<SpellListData>(obj, "adolescentSpellListOptions",spell_lists);
 	}
 	{
 		json::array arr;
@@ -273,10 +273,10 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 		}
 	}
 	{
-		const std::set<const SpellListData*> spell_lists = JsonConverter::getDataSet<SpellListData>(jsonObj, "adolescentSpellListChoices", manager_);
+		const std::set<const SpellListData*> spell_lists = JsonConverter::getDataSet<SpellListData>(jsonObj, "adolescentSpellListOptions", manager_);
 		for (const SpellListData* spell_list : spell_lists) {
 			if (spell_list)
-				ref.adolescent_spell_list_choices_.insert(const_cast<SpellListData*>(spell_list));
+				ref.adolescent_spell_list_options_.insert(const_cast<SpellListData*>(spell_list));
 		}
 	}
 	{

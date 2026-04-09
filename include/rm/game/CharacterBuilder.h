@@ -180,6 +180,7 @@ private:
 	int num_adolescent_language_ranks_{0};         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
 	int num_adolescent_spell_list_ranks_{0};       /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
 	int development_points_{0};                    /**< An integer representing the number of development points available for the character to spend during their apprenticeship. */
+	std::map<const TrainingPackageData*, int> training_package_costs_{}; /**< A map of training package data pointers to integers representing the cost for each training package. */
 
 	/* ------------------------------------------------------------------ */
 	/* Choices made                                                       */
@@ -204,8 +205,7 @@ private:
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_category_development_type_choices_{};    /**< Skills from a category with their development type changed */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};       /**< Skills from a group with their development type changed */
 	std::set<const SpellListData*> prof_base_spell_list_choices_{};                                                   /**< A set of spell list data pointers representing the spell list choices for the character being built. */
-	std::set<const SpellListData*> adolescent_spell_list_choices_{};                                                  /**< A set of spell list data pointers representing the adolescent spell list choices for the character being built. */
-	std::map<const TrainingPackageData*, int> training_package_costs_{};                                              /**< A map of training package data pointers to integers representing the cost for each training package. */
+	std::set<const SpellListData*> adolescent_spell_list_options_{};                                                  /**< A set of spell list data pointers representing the adolescent spell list options for the character being built. */
 
 	/* Stats generation */
 	std::unordered_map<StatType::Type, Stat> initial_stats_{}; /**< Map of stat types to their corresponding Stat objects for the character. */
@@ -365,7 +365,7 @@ private:
 	 *
 	 * @return A set of spell list data pointers representing the available spell list choices for the character.
 	 */
-	std::set<const SpellListData*> getAdolescentSpellListChoices() const;
+	std::set<const SpellListData*> getAdolescentSpellListOptions() const;
 
 	/**
 	 * @brief Calculates the number of development points available for the character to spend during their apprenticeship based on their choices and the rules for development points.
