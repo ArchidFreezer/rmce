@@ -1,5 +1,6 @@
 #include <CharacterBuilder.h>
 #include <EnumIterator.h>
+#include <TrainingPackageCostTable.h>
 
 namespace rm::game::character {
 
@@ -274,6 +275,18 @@ void CharacterBuilder::applyProfession() {
 	// Category costs
 	for (const auto& category : profession_->skillCategoriesWithCost()) {
 		category_development_costs_.insert_or_assign(category, profession_->skillCategoryDevelopmentCost(*category));
+	}
+
+	// Training package costs
+	{
+		using namespace rm::rule::table;
+		std::string id = "TRAININGPACKAGECOSTTABLE_TRAINING_PACKAGE_COST_TABLE";
+		TrainingPackageCostTable& table = object_factory_->get<TrainingPackageCostTable>(id);
+		for (const auto& training_package_wrapper : object_factory_->getAll<TrainingPackageData>()) {
+			const TrainingPackageData* training_package = &training_package_wrapper.get();
+			int cost = table.cell(profession_, training_package);
+			training_package_costs_.insert_or_assign(training_package, cost);
+		}
 	}
 }
 
