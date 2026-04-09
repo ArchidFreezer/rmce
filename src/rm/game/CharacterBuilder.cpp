@@ -112,7 +112,6 @@ void CharacterBuilder::setPrimaryDefinition(rm::PersistentObjectManager& object_
 	culture_type_ = &culture_->cultureType();
 	profession_ = &object_factory.get<ProfessionData>(profession_id);
 	magical_realms_ = magical_realms;
-	adolescent_spell_list_options_ = getAdolescentSpellListOptions();
 }
 
 /* Primary choices */
@@ -318,6 +317,9 @@ void CharacterBuilder::applyProfessionChoices() {
 		SkillDevelopmentType::Type current_type = skill_development_types_.find(skill) != skill_development_types_.end() ? skill_development_types_.at(skill) : SkillDevelopmentType::Type::kStandard;
 		skill_development_types_.insert_or_assign(skill, getHighestPrecedenceDevelopmentType(current_type, development_type));
 	}
+
+	// Place the spell lists into their respective skill categories so we can determine the DP cost for increasing raks during the apprenticeship phase
+	setSpellListCategories();
 }
 
 void CharacterBuilder::applyPrimaryDependents() {
@@ -378,6 +380,83 @@ std::set<const SpellListData*> CharacterBuilder::getAdolescentSpellListOptions()
 	} // end for all spell lists
 
 	return spell_list_options;
+}
+
+void CharacterBuilder::setSpellListCategories() {
+	// We know all the skill categories so get them at the start
+	const SkillCategoryData* arcane_base = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS");
+	const SkillCategoryData* arcane_closed = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS");
+	const SkillCategoryData* arcane_open = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS");
+	const SkillCategoryData* other_base = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS");
+	const SkillCategoryData* other_closed = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS");
+	const SkillCategoryData* other_open = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS");
+	const SkillCategoryData* other_training = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE");
+	const SkillCategoryData* own_base = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS");
+	const SkillCategoryData* own_other_base = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS");
+	const SkillCategoryData* own_closed = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS");
+	const SkillCategoryData* own_open = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS");
+	const SkillCategoryData* own_training = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE");
+
+	spell_list_categories_.clear();
+	// Get the characters realms
+	std::set<RealmType::Type> character_realms = magical_realms_;
+	for (const SpellListData& spell_list : object_factory_->getAll<SpellListData>()) {
+
+		// We can short-circuit arcane spells as they aren't realm tied
+		if (spell_list.realms().contains(RealmType::kArcane)) {
+			if (spell_list.type() == SpellListType::kBase) {
+				spell_list_categories_[arcane_base].emplace(&spell_list);
+			} else if (spell_list.type() == SpellListType::kClosed) {
+				spell_list_categories_[arcane_closed].emplace(&spell_list);
+			} else if (spell_list.type() == SpellListType::kOpen) {
+				spell_list_categories_[arcane_open].emplace(&spell_list);
+			} // There are no Arcane Training Package lists
+			continue;
+		}
+
+		// First find out if this list counts as being in the characters own realm.
+		bool own_realm{false};
+		int count{0};
+		for (RealmType::Type realm : spell_list.realms()) {
+			if (character_realms.contains(realm)) {
+				count++;
+			} else {
+				break;
+			}
+		}
+		own_realm = (count >= spell_list.realms().size());
+
+		// Then we can categorise the list based on the type and whether it is in the characters own realm or not.
+		if (own_realm) {
+			if (spell_list.type() == SpellListType::kBase) {
+				if (prof_base_spell_list_choices_.contains(&spell_list)) {
+					spell_list_categories_[own_base].emplace(&spell_list);
+				} else {
+					spell_list_categories_[own_other_base].emplace(&spell_list);
+				}
+			} else if (spell_list.type() == SpellListType::kClosed) {
+				spell_list_categories_[own_closed].emplace(&spell_list);
+			} else if (spell_list.type() == SpellListType::kOpen) {
+				spell_list_categories_[own_open].emplace(&spell_list);
+			} else if (spell_list.type() == SpellListType::kTrainingPackage) {
+				spell_list_categories_[own_training].emplace(&spell_list);
+			}
+			continue;
+		} else {
+			if (spell_list.type() == SpellListType::kBase) {
+				spell_list_categories_[other_base].emplace(&spell_list);
+			} else if (spell_list.type() == SpellListType::kClosed) {
+				spell_list_categories_[other_closed].emplace(&spell_list);
+			} else if (spell_list.type() == SpellListType::kOpen) {
+				spell_list_categories_[other_open].emplace(&spell_list);
+			} else if (spell_list.type() == SpellListType::kTrainingPackage) {
+				spell_list_categories_[other_training].emplace(&spell_list);
+			}
+			continue;
+		}
+
+	} // end for all spell lists
+
 }
 
 void CharacterBuilder::addHobbySkillRankChoice(const SubcategoriedSkillData& skill, int ranks) {

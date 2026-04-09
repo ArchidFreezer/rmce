@@ -26,6 +26,18 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setInt(obj, "numAdolescentLanguageRanks", ref.num_adolescent_language_ranks_);
 	JsonConverter::setInt(obj, "numAdolescentSpellListRanks", ref.num_adolescent_spell_list_ranks_);
 	JsonConverter::setInt(obj, "developmentPoints", ref.development_points_);
+
+	{
+		json::array arr;
+		for (const auto& [SkillCategoryData, list_set] : ref.spell_list_categories_) {
+			json::object category_obj;
+			JsonConverter::setString(category_obj, "category", SkillCategoryData->id());
+			JsonConverter::setDataSet<SpellListData>(category_obj, "spellLists", list_set);
+			arr.emplace_back(std::move(category_obj));
+		}
+		obj["categorySpellLists"] = std::move(arr);
+	}
+
 	/* Initial choices */
 	// Race
 	JsonConverter::setSkillSet(obj, "raceCategoryEverymanChoices", ref.race_category_everyman_choices_);
@@ -46,14 +58,6 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 				base_spell_lists.emplace(spell_list);
 		}
 		JsonConverter::setDataSet<SpellListData>(obj, "baseSpellListChoices", base_spell_lists);
-	}
-	{
-		std::set<const SpellListData*> spell_lists;
-		for (const SpellListData* spell_list : ref.adolescent_spell_list_options_) {
-			if (spell_list)
-				spell_lists.emplace(spell_list);
-		}
-		JsonConverter::setDataSet<SpellListData>(obj, "adolescentSpellListOptions",spell_lists);
 	}
 	{
 		json::array arr;
@@ -252,6 +256,21 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.num_adolescent_language_ranks_ = JsonConverter::getInt(jsonObj, "numAdolescentLanguageRanks", 0);
 	ref.num_adolescent_spell_list_ranks_ = JsonConverter::getInt(jsonObj, "numAdolescentSpellListRanks", 0);
 	ref.development_points_ = JsonConverter::getInt(jsonObj, "developmentPoints", 0);
+
+	{
+		const json::array spell_list_categories_array = JsonConverter::getJsonArray(jsonObj, "categorySpellLists");
+		for (const json::value& category_value : spell_list_categories_array) {
+			if (!category_value.is_object())
+				continue;
+			const json::object category_obj = category_value.as_object();
+			const std::string category_id = JsonConverter::getString(category_obj, "category");
+			const SkillCategoryData* category_data = &manager_.get<SkillCategoryData>(category_id);
+			const std::set<const SpellListData*> spell_lists = JsonConverter::getDataSet<SpellListData>(category_obj, "spellLists", manager_);
+			if (!spell_lists.empty())
+				ref.spell_list_categories_.insert_or_assign(category_data, spell_lists);
+		}
+	}
+
 	// Initial choices
 	// Race
 	ref.race_category_everyman_choices_ = JsonConverter::getSkillSet(jsonObj, "raceCategoryEverymanChoices", manager_);
@@ -270,13 +289,6 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 		for (const SpellListData* spell_list : base_spell_lists) {
 			if (spell_list)
 				ref.prof_base_spell_list_choices_.insert(const_cast<SpellListData*>(spell_list));
-		}
-	}
-	{
-		const std::set<const SpellListData*> spell_lists = JsonConverter::getDataSet<SpellListData>(jsonObj, "adolescentSpellListOptions", manager_);
-		for (const SpellListData* spell_list : spell_lists) {
-			if (spell_list)
-				ref.adolescent_spell_list_options_.insert(const_cast<SpellListData*>(spell_list));
 		}
 	}
 	{
