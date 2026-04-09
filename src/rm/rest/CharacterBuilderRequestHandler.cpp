@@ -2,6 +2,7 @@
 #include <CharacterStat.h>
 #include <Dice.h>
 #include <HttpPathParser.h>
+#include <JsonConverter.h>
 #include <StringUtils.h>
 #include <boost/json.hpp>
 #include <optional>
@@ -223,47 +224,11 @@ void CharacterBuilderRequestHandler::requestSetHobbyChoices(http::response<http:
 			return;
 		}
 		std::string id = json_body.as_object().at("id").as_string().c_str();
+		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
+		std::string json_str = request.body();
+		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
 
-		const auto& skills_json = json_body.as_object().at("hobbyRanks").as_array();
-		for (const auto& skill_json : skills_json) {
-			// Each stat is expected to be an object with "id", optional "subcategory" and "value"	fields
-			std::string skill_id = skill_json.as_object().at("id").as_string().c_str();
-			std::optional<std::string> subcategory = skill_json.as_object().contains("subcategory") ? std::optional<std::string>(skill_json.as_object().at("subcategory").as_string().c_str()) : std::nullopt;
-			int value = static_cast<int>(skill_json.as_object().at("value").as_int64());
-
-			SubcategoriedSkillData& skill_data = serial_manager_.objectManager().subcategoriedSkillData(skill_id, subcategory);
-			builder.addHobbySkillRankChoice(skill_data, value);
-		}
-
-		const auto& categories_json = json_body.as_object().at("hobbyCategoryRanks").as_array();
-		for (const auto& category_json : categories_json) {
-			std::string category_id = category_json.as_object().at("id").as_string().c_str();
-			int value = static_cast<int>(category_json.as_object().at("value").as_int64());
-
-			SkillCategoryData& category_data = serial_manager_.objectManager().get<SkillCategoryData>(category_id);
-			builder.addHobbyCategoryRankChoice(category_data, value);
-		}
-
-		const auto& languages_json = json_body.as_object().at("adolescentLanguages").as_array();
-		for (const auto& language_json : languages_json) {
-			std::string language_id = language_json.as_object().at("language").as_string().c_str();
-			int somatic = static_cast<int>(language_json.as_object().at("somatic").as_int64());
-			int spoken = static_cast<int>(language_json.as_object().at("spoken").as_int64());
-			int written = static_cast<int>(language_json.as_object().at("written").as_int64());
-
-			LanguageData& language_data = serial_manager_.objectManager().get<LanguageData>(language_id);
-			LanguageAbility language_ability(language_data, spoken, written, somatic);
-			builder.addAdolescentLanguageChoice(std::move(language_ability));
-		}
-
-		std::optional<std::string> adolescent_spell_list = get_optional_string(json_body.as_object(), "adolescentSpellList");
-		if (adolescent_spell_list.has_value() && !adolescent_spell_list->empty()) {
-			SpellListData& adolescent_spell_data = serial_manager_.objectManager().get<SpellListData>(adolescent_spell_list.value());
-			builder.setAdolescentSpellListChoice(adolescent_spell_data);
-		}
-
-		// Apply all the existing choices
 		builder.recalculateAggregatedState();
 
 		response.result(http::status::ok);
@@ -277,6 +242,7 @@ void CharacterBuilderRequestHandler::requestSetHobbyChoices(http::response<http:
 
 void CharacterBuilderRequestHandler::requestSetBackgroundChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
+	using namespace rm::serial;
 	try {
 		json::value json_body = json::parse(request.body());
 		if (!json_body.is_object()) {
@@ -306,9 +272,9 @@ void CharacterBuilderRequestHandler::requestSetBackgroundChoices(http::response<
 		const auto& languages_json = json_body.as_object().at("backgroundLanguages").as_array();
 		for (const auto& language_json : languages_json) {
 			std::string language_id = language_json.as_object().at("language").as_string().c_str();
-			int somatic = static_cast<int>(language_json.as_object().at("somatic").as_int64());
-			int spoken = static_cast<int>(language_json.as_object().at("spoken").as_int64());
-			int written = static_cast<int>(language_json.as_object().at("written").as_int64());
+			int somatic = JsonConverter::getInt(language_json.as_object(), "somatic", 0);
+			int spoken = JsonConverter::getInt(language_json.as_object(), "spoken", 0);
+			int written = JsonConverter::getInt(language_json.as_object(), "written", 0);
 
 			LanguageData& language_data = serial_manager_.objectManager().get<LanguageData>(language_id);
 			LanguageAbility language_ability(language_data, spoken, written, somatic);
@@ -319,7 +285,7 @@ void CharacterBuilderRequestHandler::requestSetBackgroundChoices(http::response<
 		const auto& skills_json = json_body.as_object().at("backgroundSkillBonus").as_array();
 		for (const auto& skill_json : skills_json) {
 			std::string skill_id = skill_json.as_object().at("id").as_string().c_str();
-			int value = static_cast<int>(skill_json.as_object().at("value").as_int64());
+			int value = JsonConverter::getInt(skill_json.as_object(), "value", 0);
 
 			SubcategoriedSkillData& skill_data = serial_manager_.objectManager().subcategoriedSkillData(skill_id);
 			builder.addBackgroundSkillSpecialBonus(&skill_data, value);
@@ -329,7 +295,7 @@ void CharacterBuilderRequestHandler::requestSetBackgroundChoices(http::response<
 		const auto& categories_json = json_body.as_object().at("backgroundCategoryBonus").as_array();
 		for (const auto& category_json : categories_json) {
 			std::string category_id = category_json.as_object().at("id").as_string().c_str();
-			int value = static_cast<int>(category_json.as_object().at("value").as_int64());
+			int value = JsonConverter::getInt(category_json.as_object(), "value", 0);
 
 			SkillCategoryData& category_data = serial_manager_.objectManager().get<SkillCategoryData>(category_id);
 			builder.addBackgroundCategorySpecialBonus(&category_data, value);

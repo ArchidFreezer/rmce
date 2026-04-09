@@ -527,17 +527,20 @@ void CharacterBuilder::calculateDevelopmentPoints(std::unordered_map<StatType::T
 void CharacterBuilder::applyLanguageAbility(const LanguageAbility& ability) {
 	// If the language already exists in the character's language abilities, we need to compare the existing ability with the new ability and keep the highest ranks in each category (spoken, written, somantic) to ensure that the character
 	// has the best possible ability for that language based on their choices. If the language does not already exist in the character's language abilities, we can simply add the new ability as is.
-	if (language_abilities_.find(ability) != language_abilities_.end()) {
-		const LanguageData& language = object_factory_->get<LanguageData>(ability.languageId());
-		LanguageAbility best_ability{language};
-		LanguageAbility existing_ability = *language_abilities_.find(ability);
-		if (ability.isSpoken())
-			best_ability.updateSpokenRanks(std::max(existing_ability.spoken(), ability.spoken()));
-		if (ability.isWritten())
-			best_ability.updateWrittenRanks(std::max(existing_ability.written(), ability.written()));
-		if (ability.isSomatic())
-			best_ability.updateSomanticRanks(std::max(existing_ability.somatic(), ability.somatic()));
-		language_abilities_.emplace(std::move(best_ability));
+	if (language_abilities_.contains(ability)) {
+		// Since sets contain immutable objects we need to extract the existing ability, compare it with the new ability, and then reinsert the updated ability back into the set. This is a bit of a workaround to update the existing ability
+		// in the set since we can't modify the objects in place.
+		auto node = language_abilities_.extract(ability);
+		if (ability.isSpoken() && ability.spoken() > node.value().spoken()) {
+			node.value().updateSpokenRanks(ability.spoken() - node.value().spoken());
+		}
+		if (ability.isWritten() && ability.written() > node.value().written()) {
+			node.value().updateWrittenRanks(ability.written() - node.value().written());
+		}
+		if (ability.isSomatic() && ability.somatic() > node.value().somatic()) {
+			node.value().updateSomanticRanks(ability.somatic() - node.value().somatic());
+		}
+		language_abilities_.insert(std::move(node));
 	} else {
 		language_abilities_.emplace(ability);
 	}
