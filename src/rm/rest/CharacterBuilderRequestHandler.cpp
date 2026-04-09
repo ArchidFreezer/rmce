@@ -102,9 +102,7 @@ void CharacterBuilderRequestHandler::requestPrimaryChoices(http::response<http::
 
 		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
 		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
-		std::string tmp1 = serial_manager_.serializeObject<CharacterBuilder>(deserialized);
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
-		std::string tmp2 = serial_manager_.serializeObject<CharacterBuilder>(builder);
 
 		builder.recalculateAggregatedState();
 
@@ -177,19 +175,10 @@ void CharacterBuilderRequestHandler::requestSetStats(http::response<http::string
 			return;
 		}
 		std::string id = json_body.as_object().at("id").as_string().c_str();
+
+		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
+		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
-
-		const auto& stats_json = json_body.as_object().at("stats").as_array();
-		std::map<std::string, int> stats;
-		for (const auto& stat : stats_json) {
-			// Each stat is expected to be an object with "stat", "temporary" and "potential"	fields
-			std::string stat_name = stat.as_object().at("stat").as_string().c_str();
-			StatType::Type stat_type = StatType::fromString(stat_name).value();
-
-			int temporary = static_cast<int>(stat.as_object().at("temporary").as_int64());
-			int potential = static_cast<int>(stat.as_object().at("potential").as_int64());
-			builder.setInitialStat(stat_type, temporary, potential);
-		}
 
 		builder.recalculateAggregatedState();
 
