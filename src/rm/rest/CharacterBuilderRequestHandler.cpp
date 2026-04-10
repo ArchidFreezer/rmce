@@ -253,9 +253,10 @@ void CharacterBuilderRequestHandler::requestSetBackgroundChoices(http::response<
 		const auto& skills_json = json_body.as_object().at("backgroundSkillBonus").as_array();
 		for (const auto& skill_json : skills_json) {
 			std::string skill_id = skill_json.as_object().at("id").as_string().c_str();
+			std::optional<std::string> subcategory = JsonConverter::getOptionalString(skill_json.as_object(), "subcategory");
 			int value = JsonConverter::getInt(skill_json.as_object(), "value", 0);
 
-			SubcategoriedSkillData& skill_data = serial_manager_.objectManager().subcategoriedSkillData(skill_id);
+			SubcategoriedSkillData& skill_data = serial_manager_.objectManager().subcategoriedSkillData(skill_id, subcategory);
 			builder.addBackgroundSkillSpecialBonus(&skill_data, value);
 		}
 
