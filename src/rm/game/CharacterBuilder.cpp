@@ -1,5 +1,8 @@
+#include <algorithm>
+#include <ranges>
 #include <CharacterBuilder.h>
 #include <EnumIterator.h>
+#include <TrainingPackageCostTable.h>
 
 namespace rm::game::character {
 
@@ -80,7 +83,7 @@ void CharacterBuilder::hardReset() {
 }
 
 void CharacterBuilder::recalculateAggregatedState() {
-	reset(true); // We reset the builder to clear the aggregated state and then reapply the choices to recalculate the aggregated state based on the current choices. This is a simple way to ensure consistency.
+	reset(true);             // We reset the builder to clear the aggregated state and then reapply the choices to recalculate the aggregated state based on the current choices. This is a simple way to ensure consistency.
 	stats_ = initial_stats_; // We start with the initial stats as the base for the aggregated state and then apply the effects of the choices on top of this.
 	calculateDevelopmentPoints(initial_stats_);
 	applyRace();
@@ -91,25 +94,9 @@ void CharacterBuilder::recalculateAggregatedState() {
 	applyCultureChoices();
 	applyProfession();
 	applyProfessionChoices();
+	applyPrimaryDependents();
 	applyHobbyChoices();
 	applyBackgroundChoices();
-}
-
-void CharacterBuilder::setPrimaryDefinition(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id,
-                                        const std::set<RealmType::Type> magical_realms) {
-	// This should always be the first call so we set the object factory here so it is available for the rest of the character creation process.
-	object_factory_ = &object_factory;
-
-	// First we need to completely reset the builder to ensure that any previous choices are cleared and do not interfere with the new choices being set. This is important as the initial choices drive the rest of the character creation
-	// process and if there are leftover choices from a previous setup it could lead to inconsistent state or unintended consequences.
-	reset(false);
-
-	name_ = name;
-	race_ = &object_factory.get<RaceData>(race_id);
-	culture_ = &object_factory.get<CultureData>(culture_id);
-	culture_type_ = &culture_->cultureType();
-	profession_ = &object_factory.get<ProfessionData>(profession_id);
-	magical_realms_ = magical_realms;
 }
 
 /* Primary choices */
@@ -206,7 +193,8 @@ void CharacterBuilder::applyCulture() {
 	if (built_) {
 		throw std::runtime_error("CharacterBuilder: Cannot apply culture after character has been built.");
 	}
-	// The culture only provides options and does not have any fixed effects so there is nothing to apply for the culture itself
+
+	// The culture defines also require the profession to be set so are calculated in the applyPrimaryDependents function
 }
 
 void CharacterBuilder::applyCultureChoices() {
@@ -272,6 +260,18 @@ void CharacterBuilder::applyProfession() {
 	for (const auto& category : profession_->skillCategoriesWithCost()) {
 		category_development_costs_.insert_or_assign(category, profession_->skillCategoryDevelopmentCost(*category));
 	}
+
+	// Training package costs
+	{
+		using namespace rm::rule::table;
+		std::string id = "TRAININGPACKAGECOSTTABLE_TRAINING_PACKAGE_COST_TABLE";
+		TrainingPackageCostTable& table = object_factory_->get<TrainingPackageCostTable>(id);
+		for (const auto& training_package_wrapper : object_factory_->getAll<TrainingPackageData>()) {
+			const TrainingPackageData* training_package = &training_package_wrapper.get();
+			int cost = table.cell(profession_, training_package);
+			training_package_costs_.insert_or_assign(training_package, cost);
+		}
+	}
 }
 
 void CharacterBuilder::applyProfessionChoices() {
@@ -302,6 +302,26 @@ void CharacterBuilder::applyProfessionChoices() {
 		SkillDevelopmentType::Type current_type = skill_development_types_.find(skill) != skill_development_types_.end() ? skill_development_types_.at(skill) : SkillDevelopmentType::Type::kStandard;
 		skill_development_types_.insert_or_assign(skill, getHighestPrecedenceDevelopmentType(current_type, development_type));
 	}
+
+	// Place the spell lists into their respective skill categories so we can determine the DP cost for increasing raks during the apprenticeship phase. This is expensive so we only do it when the drivers such as the realms or base spell
+	// lists change and then we cache the results for quick access later on when we need to check the category of a spell list.
+	if (set_spell_list_categories_) {
+		setSpellListCategories();
+		set_spell_list_categories_ = false;
+	}
+}
+
+void CharacterBuilder::applyPrimaryDependents() {
+	// Hobby skill/categories require the culture for the list of available choices and the profession for themax ranks for each choice
+	for (const SubcategoriedSkillData* skill : culture_->hobbySkills()) {
+		int max_ranks = getMaxHobbyRanksForSkill(skill);
+		hobby_skill_rank_choices_.emplace(skill, max_ranks);
+	}
+
+	for (const SkillCategoryData* category : culture_->hobbySkillCategories()) {
+		int max_ranks = getMaxHobbyRanksForCategory(category);
+		hobby_category_rank_choices_.emplace(category, max_ranks);
+	}
 }
 
 /* Stat allocations */
@@ -323,10 +343,10 @@ int CharacterBuilder::getMaxHobbyRanksForCategory(const SkillCategoryData* categ
 	return max_ranks;
 }
 
-std::set<const SpellListData*> CharacterBuilder::getAdolescentSpellListChoices() const {
-	std::set<const SpellListData*> spell_list_choices;
+std::set<const SpellListData*> CharacterBuilder::getAdolescentSpellListOptions() const {
+	std::set<const SpellListData*> spell_list_options;
 
-	// First we need to get the chracters realms to know which spell lists they have access to, as the spell list choices are based on the realms that the character has access to.
+	// First we need to get the characters realms to know which spell lists they have access to, as the spell list choices are based on the realms that the character has access to.
 	std::set<RealmType::Type> character_realms = magical_realms_;
 	for (const SpellListData& spell_list : object_factory_->getAll<SpellListData>()) {
 		// Only open lists are allowed for selection
@@ -344,11 +364,27 @@ std::set<const SpellListData*> CharacterBuilder::getAdolescentSpellListChoices()
 			}
 		}
 		if (count >= spell_list.realms().size()) {
-			spell_list_choices.insert(&spell_list);
+			spell_list_options.insert(&spell_list);
 		}
 	} // end for all spell lists
 
-	return spell_list_choices;
+	return spell_list_options;
+}
+
+void CharacterBuilder::setSpellListCategories() {
+	spell_list_categories_.clear();
+	for (const SpellListData& spell_list : object_factory_->getAll<SpellListData>()) {
+		const SkillCategoryData* category = nullptr;
+
+		if (prof_base_spell_list_choices_.contains(&spell_list)) {
+			// Short circuit if this is in the set of base lists
+			category = &object_factory_->get<SkillCategoryData>("SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS");
+		} else {
+			category = getSkillCategoryForSpellList(magical_realms_, spell_list, *object_factory_);
+		}
+
+		spell_list_categories_[category].emplace(&spell_list);
+	} // end for all spell lists
 }
 
 void CharacterBuilder::addHobbySkillRankChoice(const SubcategoriedSkillData& skill, int ranks) {
@@ -527,17 +563,20 @@ void CharacterBuilder::calculateDevelopmentPoints(std::unordered_map<StatType::T
 void CharacterBuilder::applyLanguageAbility(const LanguageAbility& ability) {
 	// If the language already exists in the character's language abilities, we need to compare the existing ability with the new ability and keep the highest ranks in each category (spoken, written, somantic) to ensure that the character
 	// has the best possible ability for that language based on their choices. If the language does not already exist in the character's language abilities, we can simply add the new ability as is.
-	if (language_abilities_.find(ability) != language_abilities_.end()) {
-		const LanguageData& language = object_factory_->get<LanguageData>(ability.languageId());
-		LanguageAbility best_ability{language};
-		LanguageAbility existing_ability = *language_abilities_.find(ability);
-		if (ability.isSpoken())
-			best_ability.updateSpokenRanks(std::max(existing_ability.spoken(), ability.spoken()));
-		if (ability.isWritten())
-			best_ability.updateWrittenRanks(std::max(existing_ability.written(), ability.written()));
-		if (ability.isSomatic())
-			best_ability.updateSomanticRanks(std::max(existing_ability.somatic(), ability.somatic()));
-		language_abilities_.emplace(std::move(best_ability));
+	if (language_abilities_.contains(ability)) {
+		// Since sets contain immutable objects we need to extract the existing ability, compare it with the new ability, and then reinsert the updated ability back into the set. This is a bit of a workaround to update the existing ability
+		// in the set since we can't modify the objects in place.
+		auto node = language_abilities_.extract(ability);
+		if (ability.isSpoken() && ability.spoken() > node.value().spoken()) {
+			node.value().updateSpokenRanks(ability.spoken() - node.value().spoken());
+		}
+		if (ability.isWritten() && ability.written() > node.value().written()) {
+			node.value().updateWrittenRanks(ability.written() - node.value().written());
+		}
+		if (ability.isSomatic() && ability.somatic() > node.value().somatic()) {
+			node.value().updateSomanticRanks(ability.somatic() - node.value().somatic());
+		}
+		language_abilities_.insert(std::move(node));
 	} else {
 		language_abilities_.emplace(ability);
 	}
@@ -561,6 +600,59 @@ void CharacterBuilder::addBackgroundSkillSpecialBonus(const SubcategoriedSkillDa
 
 void CharacterBuilder::addBackgroundCategorySpecialBonus(const SkillCategoryData* category, int bonus) {
 	background_category_special_bonuses_.emplace(category, bonus);
+}
+
+/* ------------------------------------------------------------------ */
+/* Free functions                                                     */
+/* ------------------------------------------------------------------ */
+
+const SkillCategoryData* getSkillCategoryForSpellList(const std::set<RealmType::Type>& realms, const SpellListData& spell_list, PersistentObjectManager& object_factory) {
+	// We have the categories pre-defined based on the realms and type of spell list in the setSpellListCategories function so we just need to find which category the spell list belongs to based on its realms and type.
+	std::string arcane_base_id = "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS";
+	std::string arcane_closed_id = "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS";
+	std::string arcane_open_id = "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS";
+	std::string other_base_id = "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS";
+	std::string other_closed_id = "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS";
+	std::string other_open_id = "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS";
+	std::string other_training_id = "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE";
+	std::string own_other_base_id = "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS";
+	std::string own_closed_id = "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS";
+	std::string own_open_id = "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS";
+	std::string own_training_id = "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE";
+
+	if (spell_list.realms().contains(RealmType::kArcane)) {
+		if (spell_list.type() == SpellListType::kBase) {
+			return &object_factory.get<SkillCategoryData>(arcane_base_id);
+		} else if (spell_list.type() == SpellListType::kClosed) {
+			return &object_factory.get<SkillCategoryData>(arcane_closed_id);
+		} else if (spell_list.type() == SpellListType::kOpen) {
+			return &object_factory.get<SkillCategoryData>(arcane_open_id);
+		}
+	} else {
+		bool own_realm = std::ranges::includes(realms, spell_list.realms());
+		if (own_realm) {
+			if (spell_list.type() == SpellListType::kBase) {
+				return &object_factory.get<SkillCategoryData>(own_other_base_id);
+			} else if (spell_list.type() == SpellListType::kClosed) {
+				return &object_factory.get<SkillCategoryData>(own_closed_id);
+			} else if (spell_list.type() == SpellListType::kOpen) {
+				return &object_factory.get<SkillCategoryData>(own_open_id);
+			} else if (spell_list.type() == SpellListType::kTrainingPackage) {
+				return &object_factory.get<SkillCategoryData>(own_training_id);
+			}
+		} else {
+			if (spell_list.type() == SpellListType::kBase) {
+				return &object_factory.get<SkillCategoryData>(other_base_id);
+			} else if (spell_list.type() == SpellListType::kClosed) {
+				return &object_factory.get<SkillCategoryData>(other_closed_id);
+			} else if (spell_list.type() == SpellListType::kOpen) {
+				return &object_factory.get<SkillCategoryData>(other_open_id);
+			} else if (spell_list.type() == SpellListType::kTrainingPackage) {
+				return &object_factory.get<SkillCategoryData>(other_training_id);
+			}
+		}
+	}
+	return nullptr;
 }
 
 } // namespace rm::game::character

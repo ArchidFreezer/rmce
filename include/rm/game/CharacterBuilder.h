@@ -43,22 +43,6 @@ public:
 	void recalculateAggregatedState();
 
 	/**
-	 * @brief Sets the primary choices for character creation, including name, race, culture, profession, and magical realm(s).
-	 *
-	 * These are the primary choices that define the character that are made first and drive the choices available for the rest of the character creation process. The name is used for display purposes and may not be unique. The
-	 * object factory is used to retrieve the necessary data for the character's choices.
-	 *
-	 * @param object_factory The object manager used to retrieve the necessary data for the character's choices.
-	 * @param name The name of the character.
-	 * @param race_id The identifier for the character's race.
-	 * @param culture_id The identifier for the character's culture.
-	 * @param profession_id The identifier for the character's profession.
-	 * @param magical_realms The set of magical realms for the character. This may be fixed by the profession or for non-magical professions decided by the player from the available realm choices for the character.
-	 */
-	void setPrimaryDefinition(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id,
-	                          const std::set<RealmType::Type> magical_realms);
-
-	/**
 	 * @brief Set the stat values for a specific stat type.
 	 *
 	 * This method is used to set the temporary and potential stat values for a specific stat type during character creation. The temporary value is typically set based on the initial rolls for the character's stats, while the potential
@@ -169,17 +153,20 @@ private:
 	/* ------------------------------------------------------------------ */
 	/* Basic data                                                         */
 	/* ------------------------------------------------------------------ */
-	bool built_{false};             /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
-	std::string name_{};            /**< The name of the character being built. This is used for display purposes and may not be unique. */
-	const RaceData* race_{nullptr}; /**< The race data for the character being built. */
-	const CultureData* culture_{nullptr};          /**< The culture data for the character being built. */
-	const CultureTypeData* culture_type_{nullptr}; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
-	const ProfessionData* profession_{nullptr};    /**< The profession data for the character being built. */
-	std::set<RealmType::Type> magical_realms_{};   /**< A set of realm types representing the magical realm choices for the character being built. */
-	int num_hobby_skill_ranks_{0};                 /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
-	int num_adolescent_language_ranks_{0};         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
-	int num_adolescent_spell_list_ranks_{0};       /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
-	int development_points_{0};                    /**< An integer representing the number of development points available for the character to spend during their apprenticeship. */
+	bool built_{false}; /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
+	bool set_spell_list_categories_{false}; /**< Flag indicating categories for spell lists should be calculated; this is an expensive operation only to be performed when either the character realms or base spell lists have changed. */
+	std::string name_{};                    /**< The name of the character being built. This is used for display purposes and may not be unique. */
+	const RaceData* race_{nullptr};         /**< The race data for the character being built. */
+	const CultureData* culture_{nullptr};   /**< The culture data for the character being built. */
+	const CultureTypeData* culture_type_{nullptr};                       /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
+	const ProfessionData* profession_{nullptr};                          /**< The profession data for the character being built. */
+	std::set<RealmType::Type> magical_realms_{};                         /**< A set of realm types representing the magical realm choices for the character being built. */
+	int num_hobby_skill_ranks_{0};                                       /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
+	int num_adolescent_language_ranks_{0};                               /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
+	int num_adolescent_spell_list_ranks_{0};                             /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
+	int development_points_{0};                                          /**< An integer representing the number of development points available for the character to spend during their apprenticeship. */
+	std::map<const TrainingPackageData*, int> training_package_costs_{}; /**< A map of training package data pointers to integers representing the cost for each training package. */
+	std::map<const SkillCategoryData*, std::set<const SpellListData*>> spell_list_categories_{}; /**< A map of skill categories to sets of spell lists representing the spell lists sorted into their respective skill categories. */
 
 	/* ------------------------------------------------------------------ */
 	/* Choices made                                                       */
@@ -195,12 +182,15 @@ private:
 	std::set<const SubcategoriedSkillData*> race_category_everyman_choices_{}; /**< A set of skill category data pointers representing the everyman skill category choices for the character being built. */
 	// Culture type
 	std::map<const SubcategoriedSkillData*, int> culture_type_category_skill_ranks_{}; /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
+	// Culture
+	std::map<const SubcategoriedSkillData*, int> hobby_skill_rank_choices_{}; /**< A map of skill data pointers to integers representing the skill ranks for each skill choice made during character creation. */
+	std::map<const SkillCategoryData*, int> hobby_category_rank_choices_{};   /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
 	// Profession
 	std::map<const SkillCategoryData*, rm::game::character::SkillDevelopmentCost> weapon_development_cost_choices_{}; /**< Cost to purchase ranks for weapon skill category */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_skill_development_type_choices_{};       /**< Skill (base or subcategory) with their development type changed */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_category_development_type_choices_{};    /**< Skills from a category with their development type changed */
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};       /**< Skills from a group with their development type changed */
-	std::set<SpellListData*> prof_base_spell_list_choices_{};                                                         /**< A set of spell list data pointers representing the spell list choices for the character being built. */
+	std::set<const SpellListData*> prof_base_spell_list_choices_{};                                                   /**< A set of spell list data pointers representing the spell list choices for the character being built. */
 
 	/* Stats generation */
 	std::unordered_map<StatType::Type, Stat> initial_stats_{}; /**< Map of stat types to their corresponding Stat objects for the character. */
@@ -324,6 +314,8 @@ private:
 
 	void applyProfessionChoices(); /**< Applies the choices associated with the character's profession. */
 
+	void applyPrimaryDependents(); /**< Applies the effects that are dependent on multiple primary choices being set */
+
 	void applyHobbyChoices(); /**< Applies the hobby choices made during character creation to the character being built. */
 
 	void applyBackgroundChoices(); /**< Applies the background choices made during character creation to the character being built. */
@@ -358,7 +350,20 @@ private:
 	 *
 	 * @return A set of spell list data pointers representing the available spell list choices for the character.
 	 */
-	std::set<const SpellListData*> getAdolescentSpellListChoices() const;
+	std::set<const SpellListData*> getAdolescentSpellListOptions() const;
+
+	/**
+	 * @brief Sorts the character's spell list choices into their respective skill categories based on the character's realm(s) and the type of spell list.
+	 *
+	 * This function organizes all spell lists into their corresponding skill categories, taking into account the base spell list choices, if any, of the character so it is preferable to call this function after all base spell list choices
+	 * have been made. The categorization of spell lists is based on predefined rules that sort spell lists into different skill categories depending on whether they are associated with the arcane realm or other realms, and whether they are
+	 * base, closed, open, or training package spell lists. This function populates the `spell_list_categories_` member variable with the appropriate categorization of the character's spell list choices.
+	 *
+	 * Given the number of spell lists and the complexity of the rules for categorizing them, this function is not designed to be called multiple times during character creation. It is intended to be called once after all base spell list
+	 * choices have been made.
+	 *
+	 */
+	void setSpellListCategories();
 
 	/**
 	 * @brief Calculates the number of development points available for the character to spend during their apprenticeship based on their choices and the rules for development points.
@@ -369,5 +374,25 @@ private:
 	 */
 	void calculateDevelopmentPoints(std::unordered_map<StatType::Type, Stat>& stats);
 };
+
+/* ------------------------------------------------------------------ */
+/* Free functions                                                     */
+/* ------------------------------------------------------------------ */
+
+/**
+ * @brief Gets the skill category that a given spell list belongs to based on the character's realm(s) and the type of spell list.
+ *
+ * This function determines which skill category a specific spell list belongs to by considering the character's current realm(s) and the type of spell list. The categorization of spell lists is based on predefined rules that sort
+ * spell lists into different skill categories depending on whether they are associated with the arcane realm or other realms, and whether they are base, closed, open, or training package spell lists. This function retrieves the
+ * appropriate skill category for the given spell list based on these criteria.
+ *
+ * The function makes no determination regarding the characters base spell lists choices. The caller should know the character's base spell list choices and use this function to determine which category any additional spell lists belong to.
+ *
+ * @param realms The set of realm types representing the character's realm(s).
+ * @param spell_list The SpellListData object representing the spell list for which to determine the skill category.
+ * @param object_manager The PersistentObjectManager used to retrieve the necessary data for determining the skill category.
+ * @return A pointer to the SkillCategoryData object representing the skill category that the given spell list belongs to, or `nullptr` if no matching category is found.
+ */
+const SkillCategoryData* getSkillCategoryForSpellList(const std::set<RealmType::Type>& realms, const SpellListData& spell_list, PersistentObjectManager& object_manager);
 
 } // namespace rm::game::character
