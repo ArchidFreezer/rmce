@@ -219,7 +219,12 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	// JSON).
 	CharacterBuilder& ref = manager_.get<CharacterBuilder>(id);
 
-	// Reset existing state and bind object manager
+	// We need to check whether we need to set the spell list catergories before we reset the builder.
+	std::set<RealmType::Type> magical_realms = JsonConverter::getEnumSet<RealmType::Type>(jsonObj, "magicalRealms");
+	std::set<const SpellListData*> base_spell_lists = JsonConverter::getDataSet<SpellListData>(jsonObj, "baseSpellListChoices", manager_);
+	ref.set_spell_list_categories_ = (ref.magical_realms_ != magical_realms) || (ref.prof_base_spell_list_choices_ != base_spell_lists);
+
+	// Reset existing state to clear everything and bind object manager
 	ref.reset(false);
 	ref.object_factory_ = &manager_;
 
@@ -251,7 +256,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 			ref.profession_ = &manager_.get<ProfessionData>(profession_id);
 	}
 
-	ref.magical_realms_ = JsonConverter::getEnumSet<RealmType::Type>(jsonObj, "magicalRealms");
+	ref.magical_realms_ = std::move(magical_realms);
 	ref.num_hobby_skill_ranks_ = JsonConverter::getInt(jsonObj, "numHobbySkillRanks", 0);
 	ref.num_adolescent_language_ranks_ = JsonConverter::getInt(jsonObj, "numAdolescentLanguageRanks", 0);
 	ref.num_adolescent_spell_list_ranks_ = JsonConverter::getInt(jsonObj, "numAdolescentSpellListRanks", 0);
@@ -284,13 +289,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.prof_category_development_type_choices_ = JsonConverter::getSkillEnumMap<SkillDevelopmentType::Type>(jsonObj, "profCategoryDevelopmentTypeChoices", manager_);
 	ref.prof_group_development_type_choices_ = JsonConverter::getSkillEnumMap<SkillDevelopmentType::Type>(jsonObj, "profGroupDevelopmentTypeChoices", manager_);
 	ref.training_package_costs_ = JsonConverter::getDataPrimitiveMap<TrainingPackageData, int>(jsonObj, "trainingPackageCosts", manager_);
-	{
-		const std::set<const SpellListData*> base_spell_lists = JsonConverter::getDataSet<SpellListData>(jsonObj, "baseSpellListChoices", manager_);
-		for (const SpellListData* spell_list : base_spell_lists) {
-			if (spell_list)
-				ref.prof_base_spell_list_choices_.insert(const_cast<SpellListData*>(spell_list));
-		}
-	}
+	ref.prof_base_spell_list_choices_ = std::move(base_spell_lists);
 	{
 		json::array skillCategoryDevelopmentCostArr = JsonConverter::getJsonArray(jsonObj, "weaponCategoryCostChoices");
 		for (const auto& item : skillCategoryDevelopmentCostArr) {

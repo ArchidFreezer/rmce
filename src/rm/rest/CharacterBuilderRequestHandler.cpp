@@ -51,9 +51,8 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 
 void CharacterBuilderRequestHandler::requestPrimaryDefinition(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
+	using namespace rm::serial;
 
-	std::string id{};
-	CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>();
 	try {
 		json::value json_body = json::parse(request.body());
 		if (!json_body.is_object()) {
@@ -63,16 +62,10 @@ void CharacterBuilderRequestHandler::requestPrimaryDefinition(http::response<htt
 			return;
 		}
 
-		std::string name = json_body.as_object().at("name").as_string().c_str();
-		std::string race_id = json_body.as_object().at("race").as_string().c_str();
-		std::string culture_id = json_body.as_object().at("culture").as_string().c_str();
-		std::string profession_id = json_body.as_object().at("profession").as_string().c_str();
-		const auto& realms = json_body.as_object().at("realms").as_array();
-		std::set<RealmType::Type> magical_realms;
-		for (const auto& realm : realms) {
-			magical_realms.insert(RealmType::fromString(realm.as_string()).value());
-		}
-		builder.setPrimaryDefinition(serial_manager_.objectManager(), name, race_id, culture_id, profession_id, magical_realms);
+		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
+		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
+		std::string id = deserialized.id();
+		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
 
 		builder.recalculateAggregatedState();
 
