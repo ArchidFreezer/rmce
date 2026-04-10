@@ -3251,7 +3251,7 @@
             ]
         },
         {
-            "id" : "PROFESSION_DëRNAKWMüN_KHAD",
+            "id" : "PROFESSION_DERNAKWMUN_KHAD",
             "name" : "Dërnakwmün-Khad",
             "description" : "This Dwarven order is a martial order that looks to the protection and warding of Dwarves and their homes.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",
@@ -3559,7 +3559,7 @@
             ]
         },
         {
-            "id" : "PROFESSION_DëRNAKWMüN_PøR",
+            "id" : "PROFESSION_DERNAKWMUN_POR",
             "name" : "Dërnakwmün-Pør",
             "description" : "The more martial of the dwarven cleric orders, accompanying Dwarven hosts to war, and found always in the company of soldiery.",
             "book" : "BOOK_RACES_CULTURES_UNDERGROUND_RACES",

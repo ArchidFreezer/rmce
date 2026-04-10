@@ -33,7 +33,9 @@ namespace rm::rule::table {
 			if (prof->id() == "PROFESSION_ILLUSIONIST") return 12;
 			if (prof->id() == "PROFESSION_ESSENCE_ALCHEMIST") return 13;
 			if (prof->id() == "PROFESSION_MANA_MOLDER") return 14;
-			if (prof->id() == "PROFESSION_CLERIC") return 15;
+		  if (prof->id() == "PROFESSION_DERNAKWMUN_KHAD") return 15;
+		  if (prof->id() == "PROFESSION_DERNAKWMUN_POR") return 15;
+		  if (prof->id() == "PROFESSION_CLERIC") return 15;
 			if (prof->id() == "PROFESSION_ANIMIST") return 16;
 			if (prof->id() == "PROFESSION_CHANNELING_ALCHEMIST") return 17;
 			if (prof->id() == "PROFESSION_PRIEST_OF_AGRICULTURE") return 18;
