@@ -43,22 +43,6 @@ public:
 	void recalculateAggregatedState();
 
 	/**
-	 * @brief Sets the primary choices for character creation, including name, race, culture, profession, and magical realm(s).
-	 *
-	 * These are the primary choices that define the character that are made first and drive the choices available for the rest of the character creation process. The name is used for display purposes and may not be unique. The
-	 * object factory is used to retrieve the necessary data for the character's choices.
-	 *
-	 * @param object_factory The object manager used to retrieve the necessary data for the character's choices.
-	 * @param name The name of the character.
-	 * @param race_id The identifier for the character's race.
-	 * @param culture_id The identifier for the character's culture.
-	 * @param profession_id The identifier for the character's profession.
-	 * @param magical_realms The set of magical realms for the character. This may be fixed by the profession or for non-magical professions decided by the player from the available realm choices for the character.
-	 */
-	void setPrimaryDefinition(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id,
-	                          const std::set<RealmType::Type> magical_realms);
-
-	/**
 	 * @brief Set the stat values for a specific stat type.
 	 *
 	 * This method is used to set the temporary and potential stat values for a specific stat type during character creation. The temporary value is typically set based on the initial rolls for the character's stats, while the potential

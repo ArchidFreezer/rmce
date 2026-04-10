@@ -99,23 +99,6 @@ void CharacterBuilder::recalculateAggregatedState() {
 	applyBackgroundChoices();
 }
 
-void CharacterBuilder::setPrimaryDefinition(rm::PersistentObjectManager& object_factory, const std::string& name, const std::string& race_id, const std::string& culture_id, const std::string& profession_id,
-                                            const std::set<RealmType::Type> magical_realms) {
-	// This should always be the first call so we set the object factory here so it is available for the rest of the character creation process.
-	object_factory_ = &object_factory;
-
-	// First we need to completely reset the builder to ensure that any previous choices are cleared and do not interfere with the new choices being set. This is important as the initial choices drive the rest of the character creation
-	// process and if there are leftover choices from a previous setup it could lead to inconsistent state or unintended consequences.
-	reset(false);
-
-	name_ = name;
-	race_ = &object_factory.get<RaceData>(race_id);
-	culture_ = &object_factory.get<CultureData>(culture_id);
-	culture_type_ = &culture_->cultureType();
-	profession_ = &object_factory.get<ProfessionData>(profession_id);
-	magical_realms_ = magical_realms;
-}
-
 /* Primary choices */
 void CharacterBuilder::applyRace() {
 	if (built_) {
