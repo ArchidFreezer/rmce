@@ -923,7 +923,7 @@
             ],
             "skillCategoryChoicesEveryman" : [
                 {
-                    "num-choices" : 5,
+                    "numChoices" : 5,
                     "options" : [
                         "SKILLCATEGORY_CRAFTS"
                     ]
@@ -1030,7 +1030,7 @@
             ],
             "skillCategoryChoicesEveryman" : [
                 {
-                    "num-choices" : 5,
+                    "numChoices" : 5,
                     "options" : [
                         "SKILLCATEGORY_CRAFTS"
                     ]
@@ -1129,7 +1129,7 @@
             ],
             "skillCategoryChoicesEveryman" : [
                 {
-                    "num-choices" : 5,
+                    "numChoices" : 5,
                     "options" : [
                         "SKILLCATEGORY_CRAFTS"
                     ]
@@ -1237,7 +1237,7 @@
             ],
             "skillCategoryChoicesEveryman" : [
                 {
-                    "num-choices" : 5,
+                    "numChoices" : 5,
                     "options" : [
                         "SKILLCATEGORY_CRAFTS"
                     ]
@@ -2002,7 +2002,7 @@
             ],
             "skillCategoryChoicesEveryman" : [
                 {
-                    "num-choices" : 4,
+                    "numChoices" : 4,
                     "options" : [
                         "SKILLCATEGORY_WEAPON_2_HANDED",
                         "SKILLCATEGORY_WEAPON_POLE_ARMS"
@@ -2116,7 +2116,7 @@
             ],
             "skillCategoryChoicesEveryman" : [
                 {
-                    "num-choices" : 4,
+                    "numChoices" : 4,
                     "options" : [
                         "SKILLCATEGORY_WEAPON_2_HANDED",
                         "SKILLCATEGORY_WEAPON_POLE_ARMS"
@@ -2222,7 +2222,7 @@
             ],
             "skillCategoryChoicesEveryman" : [
                 {
-                    "num-choices" : 4,
+                    "numChoices" : 4,
                     "options" : [
                         "SKILLCATEGORY_WEAPON_1_H_EDGED",
                         "SKILLCATEGORY_WEAPON_2_HANDED"
