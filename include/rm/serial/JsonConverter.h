@@ -1226,7 +1226,7 @@ public:
 	 * For example, if you have a JSON object like:
 	 * @code
 	 * {
-	 *     "spell-list-choices": [
+	 *     "spellListChoices": [
 	 *         {
 	 *             "numChoices": 1,
 	 *             "options": [
@@ -1299,7 +1299,7 @@ public:
 	 * For example, if you have a JSON object like:
 	 * @code
 	 * {
-	 *     "spell-list-choices": [
+	 *     "spellListChoices": [
 	 *         {
 	 *             "numChoices": 1,
 	 *             "value": "Everyman"
@@ -1323,7 +1323,7 @@ public:
 	 * You can retrieve the map of choices to their categories using this method:
 	 * @code
 	 * json::object obj = ...; // Assume this is your JSON object
-	 * std::map<GameRuleDataChoice<ItemData>, SpellCategory> choiceCategoryMap = JsonConverter::getSkillChoiceEnumMap<SpellCategory>(obj, "spell-list-choices", manager);
+	 * std::map<GameRuleDataChoice<ItemData>, SpellCategory> choiceCategoryMap = JsonConverter::getSkillChoiceEnumMap<SpellCategory>(obj, "spellListChoices", manager);
 	 * // choiceCategoryMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding SpellCategory enum values if those choices exist in the manager and the enum values are valid
 	 * @endcode
 	 *
@@ -1353,8 +1353,8 @@ public:
 	 * @endcode
 	 * You can convert this map into a JSON array using this method:
 	 * @code
-	 * JsonConverter::setSkillChoiceEnumMap<SpellCategory>(obj, "spell-list-choices", choiceCategoryMap);
-	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated SpellCategory as a string
+	 * JsonConverter::setSkillChoiceEnumMap<SpellCategory>(obj, "spellListChoices", choiceCategoryMap);
+	 * // The JSON object would now contain an array under "spellListChoices" with objects representing each GameRuleDataChoice and its associated SpellCategory as a string
 	 * @endcode
 	 *
 	 * @tparam EnumType The type of the enum values used as values in the input map.
@@ -1375,7 +1375,7 @@ public:
 	 * For example, if you have a JSON object like:
 	 * @code
 	 * {
-	 *     "spell-list-choices": [
+	 *     "spellListChoices": [
 	 *         {
 	 *             "numChoices": 1,
 	 *             "value": 5
@@ -1399,7 +1399,7 @@ public:
 	 * You can retrieve the map of choices to their values using this method:
 	 * @code
 	 * json::object obj = ...; // Assume this is your JSON object
-	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = JsonConverter::getSkillChoicePrimitiveMap<int>(obj, "spell-list-choices", manager);
+	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = JsonConverter::getSkillChoicePrimitiveMap<int>(obj, "spellListChoices", manager);
 	 * // choiceValueMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding integer values if those choices exist in the manager and the values are valid
 	 * @endcode
 	 *
@@ -1428,8 +1428,8 @@ public:
 	 * @endcode
 	 * You can convert this map into a JSON array using this method:
 	 * @code
-	 * JsonConverter::setSkillChoicePrimitiveMap<int>(obj, "spell-list-choices", choiceValueMap);
-	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated integer value
+	 * JsonConverter::setSkillChoicePrimitiveMap<int>(obj, "spellListChoices", choiceValueMap);
+	 * // The JSON object would now contain an array under "spellListChoices" with objects representing each GameRuleDataChoice and its associated integer value
 	 * @endcode
 	 *
 	 * @tparam Primitive The type of the primitive values used as values in the input map (e.g., int, float, double, bool).
@@ -1451,7 +1451,7 @@ public:
 	 * For example, if you have a JSON object like:
 	 * @code
 	 * {
-	 *     "spell-list-choices": [
+	 *     "spellListChoices": [
 	 *         {
 	 *             "numChoices": 1,
 	 *             "value": "Everyman"
@@ -1475,7 +1475,7 @@ public:
 	 * You can retrieve the map of choices to their categories using this method:
 	 * @code
 	 * json::object obj = ...; // Assume this is your JSON object
-	 * std::map<GameRuleDataChoice<ItemData>, SpellCategory> choiceCategoryMap = JsonConverter::getDataChoiceEnumMap<SpellCategory>(obj, "spell-list-choices", manager);
+	 * std::map<GameRuleDataChoice<ItemData>, SpellCategory> choiceCategoryMap = JsonConverter::getDataChoiceEnumMap<SpellCategory>(obj, "spellListChoices", manager);
 	 * // choiceCategoryMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding SpellCategory enum values if those choices exist in the manager and the enum values are valid
 	 * @endcode
 	 *
@@ -1505,8 +1505,8 @@ public:
 	 * @endcode
 	 * You can convert this map into a JSON array using this method:
 	 * @code
-	 * JsonConverter::setDataChoiceEnumMap<SpellCategory>(obj, "spell-list-choices", choiceCategoryMap);
-	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated SpellCategory as a string
+	 * JsonConverter::setDataChoiceEnumMap<SpellCategory>(obj, "spellListChoices", choiceCategoryMap);
+	 * // The JSON object would now contain an array under "spellListChoices" with objects representing each GameRuleDataChoice and its associated SpellCategory as a string
 	 * @endcode
 	 *
 	 * @tparam EnumType The type of the enum values used as values in the input map.
@@ -1527,7 +1527,7 @@ public:
 	 * For example, if you have a JSON object like:
 	 * @code
 	 * {
-	 *     "spell-list-choices": [
+	 *     "spellListChoices": [
 	 *         {
 	 *             "numChoices": 1,
 	 *             "value": 5
@@ -1551,7 +1551,7 @@ public:
 	 * You can retrieve the map of choices to their values using this method:
 	 * @code
 	 * json::object obj = ...; // Assume this is your JSON object
-	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = JsonConverter::getDataChoicePrimitiveMap<int>(obj, "spell-list-choices", manager);
+	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = JsonConverter::getDataChoicePrimitiveMap<int>(obj, "spellListChoices", manager);
 	 * // choiceValueMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding integer values if those choices exist in the manager and the values are valid
 	 * @endcode
 	 *
@@ -1580,8 +1580,8 @@ public:
 	 * @endcode
 	 * You can convert this map into a JSON array using this method:
 	 * @code
-	 * JsonConverter::setDataChoicePrimitiveMap<int>(obj, "spell-list-choices", choiceValueMap);
-	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated integer value
+	 * JsonConverter::setDataChoicePrimitiveMap<int>(obj, "spellListChoices", choiceValueMap);
+	 * // The JSON object would now contain an array under "spellListChoices" with objects representing each GameRuleDataChoice and its associated integer value
 	 * @endcode
 	 *
 	 * @tparam Primitive The type of the primitive values used as values in the input map (e.g., int, float, double, bool).
