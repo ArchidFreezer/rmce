@@ -21,6 +21,17 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	if (ref.profession_)
 		JsonConverter::setString(obj, "profession", ref.profession_->id());
 
+	// Pysique and development choices
+	JsonConverter::setBool(obj, "male", ref.male_);
+	JsonConverter::setBool(obj, "autoBuildModifier", ref.auto_build_modifier_);
+	JsonConverter::setInt(obj, "enteredBuildModifier", ref.entered_build_modifier_);
+	JsonConverter::setBool(obj, "autoHeight", ref.auto_height_);
+	JsonConverter::setInt(obj, "enteredHeight", ref.entered_height_);
+	JsonConverter::setInt(obj, "height", ref.height_);
+	JsonConverter::setInt(obj, "weight", ref.weight_);
+	JsonConverter::setString(obj, "buildDescription", ref.build_description_);
+	JsonConverter::setInt(obj, "lifespan", ref.lifespan_);
+
 	JsonConverter::setEnumSet(obj, "magicalRealms", ref.magical_realms_);
 	JsonConverter::setInt(obj, "numHobbySkillRanks", ref.num_hobby_skill_ranks_);
 	JsonConverter::setInt(obj, "numAdolescentLanguageRanks", ref.num_adolescent_language_ranks_);
@@ -137,6 +148,10 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 		if (items_array.size())
 			obj["backgroundItems"] = std::move(items_array);
 	}
+
+	/* Apprenticeship choices */
+	JsonConverter::setDataSet<TrainingPackageData>(obj, "apprenticeshipTrainingPackages", ref.apprenticeship_training_packages_);
+	JsonConverter::setEnumSet(obj, "apprenticeshipStatGains", ref.apprenticeship_stat_gains_);
 
 	/* Aggregated state */
 	JsonConverter::setInt(obj, "totalGold", ref.total_gold_);
@@ -255,6 +270,18 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 		if (!profession_id.empty())
 			ref.profession_ = &manager_.get<ProfessionData>(profession_id);
 	}
+
+	// Pysique and development choices
+	ref.male_ = JsonConverter::getBool(jsonObj, "male", true);
+	ref.auto_build_modifier_ = JsonConverter::getBool(jsonObj, "autoBuildModifier", true);
+	ref.entered_build_modifier_ = JsonConverter::getInt(jsonObj, "enteredBuildModifier", 0);
+	ref.auto_height_ = JsonConverter::getBool(jsonObj, "autoHeight", true);
+	ref.entered_height_ = JsonConverter::getInt(jsonObj, "enteredHeight", 0);
+	ref.height_ = JsonConverter::getInt(jsonObj, "height", 0);
+	ref.weight_ = JsonConverter::getInt(jsonObj, "weight", 0);
+	ref.build_description_ = JsonConverter::getString(jsonObj, "buildDescription");
+	ref.lifespan_ = JsonConverter::getInt(jsonObj, "lifespan", 0);
+
 
 	ref.magical_realms_ = std::move(magical_realms);
 	ref.num_hobby_skill_ranks_ = JsonConverter::getInt(jsonObj, "numHobbySkillRanks", 0);
@@ -386,6 +413,10 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 				ref.background_items_.emplace_back(item);
 		}
 	}
+
+  /* Apprenticeship choices */
+	ref.apprenticeship_training_packages_ = JsonConverter::getDataSet<TrainingPackageData>(jsonObj, "apprenticeshipTrainingPackages", manager_);
+	ref.apprenticeship_stat_gains_ = JsonConverter::getEnumSet<StatType::Type>(jsonObj, "apprenticeshipStatGains");
 
 	/* Aggregated state */
 	ref.total_gold_ = JsonConverter::getInt(jsonObj, "totalGold", 0);

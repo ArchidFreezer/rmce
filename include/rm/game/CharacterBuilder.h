@@ -43,6 +43,11 @@ public:
 	void recalculateAggregatedState();
 
 	/**
+	 * @brief Generates the height and weight of the character being built based on the physique choices selected during character creation.
+	 */
+	void generatePhysique();
+
+	/**
 	 * @brief Set the stat values for a specific stat type.
 	 *
 	 * This method is used to set the temporary and potential stat values for a specific stat type during character creation. The temporary value is typically set based on the initial rolls for the character's stats, while the potential
@@ -147,6 +152,23 @@ public:
 	 */
 	void generateBackgroundItems(int item_count);
 
+	/**
+	 * @brief Apply the choices made during the apprenticeship phase of character creation to the character being built.
+	 *
+	 * This method is used to apply the choices made during the apprenticeship phase of character creation to the character being built. This includes applying any stat gains from apprenticeship, as well as any training packages that were
+	 * selected. The training packages may have various effects on the character, such as providing additional gold, items, or special abilities, which will be applied to the character's aggregated state when this method is called.
+	 */
+	void applyApprenticeshipChoices();
+
+	/**
+	 * @brief Get the expected lifespan of the character being built
+	 *
+	 * @return An integer representing the expected lifespan of the character
+	 */
+	int expectedLifespan() const {
+		return lifespan_;
+	}
+
 private:
 	rm::PersistentObjectManager* object_factory_{nullptr};
 
@@ -192,6 +214,13 @@ private:
 	std::map<const SubcategoriedSkillData*, SkillDevelopmentType::Type> prof_group_development_type_choices_{};       /**< Skills from a group with their development type changed */
 	std::set<const SpellListData*> prof_base_spell_list_choices_{};                                                   /**< A set of spell list data pointers representing the spell list choices for the character being built. */
 
+	/* Physique */
+	bool male_{};          /**< A boolean indicating whether the character being built is male or not. This may be used for certain choices during character creation, such as determining the average height and weight for the character */
+	int entered_height_{}; /**< The entered height of the character */
+	bool auto_height_{};   /**< Whether to auto generate the height of the character */
+	int entered_build_modifier_{}; /**< The entered build modifier of the character */
+	bool auto_build_modifier_{};   /**< Whether to auto generate the build of the character */
+
 	/* Stats generation */
 	std::unordered_map<StatType::Type, Stat> initial_stats_{}; /**< Map of stat types to their corresponding Stat objects for the character. */
 
@@ -202,12 +231,17 @@ private:
 	std::set<LanguageAbility> adolescent_language_choices_{};          /**< A set of language abilities representing the hobby language choices for the character being built. */
 
 	/* Background choices */
-	std::unordered_map<StatType::Type, Stat> background_stats_{};                     /**< Map of stats, oonly populated if stat gain roll made with background options. */
+	std::unordered_map<StatType::Type, Stat> background_stats_{};                     /**< Map of stats, only populated if stat gain roll made with background options. */
 	int background_extra_gold_{0};                                                    /**< An integer representing the amount of gold the character being built starts with. */
 	std::set<LanguageAbility> background_language_choices_{};                         /**< A set of language abilities representing the background language choices for the character being built. */
 	std::map<const SubcategoriedSkillData*, int> background_skill_special_bonuses_{}; /**< Skill special bonuses */
 	std::map<const SkillCategoryData*, int> background_category_special_bonuses_{};   /**< Skill category special bonuses */
 	std::vector<std::string> background_items_{};                                     /**< Items the character genetrates with background options */
+
+	/* Apprenticeship choices */
+	// Most of the apprenticeship chpoices are directly applied to the aggregated state as they are made, but some need to be stored to be applied when the build method is called.
+	std::set<const TrainingPackageData*> apprenticeship_training_packages_{}; /**< Set of training package data pointers representing the training packages taken by the character being built. */
+	std::set<StatType::Type> apprenticeship_stat_gains_{};                    /**< Set of stats requiring a stat gain roll made with apprenticeship options. */
 
 	/* ------------------------------------------------------------------ */
 	/* Aggregated state                                                   */
@@ -228,6 +262,10 @@ private:
 	std::map<const SkillGroupData*, int> group_special_bonuses_{};                                               /**< Skill group special bonuses */
 	std::map<const SpellListData*, int> spell_list_ranks_{};                                                     /**< Spell list ranks */
 	std::vector<std::string> total_items_{};                                                                     /**< Items the character starts with */
+	int height_{};                                                                                               /**< Height of the character in inches */
+	int weight_{};                                                                                               /**< Weight of the character in lbs */
+	std::string build_description_{};                                                                            /**< General description of the frame of the character */
+	int lifespan_{};                                                                                             /**< Expected lifespan of the character if no external factors apply */
 
 	/* ------------------------------------------------------------------ */
 	/* Helper functions                                                   */
@@ -240,11 +278,11 @@ private:
 	 * cleared or if both the aggregated state and the specific choices made during character creation should be cleared, allowing for a complete reset.
 	 *
 	 * @param aggregate_state_only If `true`, only clears the aggregated state; if `false`, clears both the aggregated state and any selections made during character creation.
-	 * @param clear_stats If `true`, also clears the stats in the aggregated state. This is only used when fully resetting the builder
+	 * @param clear_auto_generated If `true`, also clears the auto-generated attributes in the aggregated state. This is only used when fully resetting the builder.
 	 */
-	void reset(bool aggregate_state_only = true, bool clear_stats = false);
+	void reset(bool aggregate_state_only = true, bool clear_auto_generated = false);
 
-	void hardReset(); /**< Fully resets the builder, clearing all choices and aggregated state, including stats. This is used when setting new initial choices to ensure a clean slate for building the character. */
+	void hardReset(); /**< Fully resets the builder, clearing all choices and aggregated state, including auto-generated attributes. This is used when setting new initial choices to ensure a clean slate for building the character. */
 
 	/**
 	 * @brief Applies the given language ability to the character being built, ensuring that if the character already has an ability for the same language, the best ranks are retained.

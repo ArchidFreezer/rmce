@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cmath>
 #include <ranges>
 #include <CharacterBuilder.h>
 #include <EnumIterator.h>
@@ -24,9 +25,13 @@ Character& CharacterBuilder::build() {
 	return character;
 }
 
-void CharacterBuilder::reset(bool aggregate_state_only, bool clear_stats) {
-	if (clear_stats) {
+void CharacterBuilder::reset(bool aggregate_state_only, bool clear_auto_generated) {
+	if (clear_auto_generated) {
 		initial_stats_.clear();
+		height_ = 0;
+		weight_ = 0;
+		lifespan_ = 0;
+		build_description_.clear();
 	}
 	if (!aggregate_state_only) {
 		built_ = false;
@@ -35,6 +40,11 @@ void CharacterBuilder::reset(bool aggregate_state_only, bool clear_stats) {
 		culture_ = nullptr;
 		culture_type_ = nullptr;
 		profession_ = nullptr;
+		male_ = true;
+		auto_build_modifier_ = true;
+		entered_build_modifier_ = 0;
+		auto_height_ = true;
+		entered_height_ = 0;
 		magical_realms_.clear();
 		num_hobby_skill_ranks_ = 0;
 		num_adolescent_language_ranks_ = 0;
@@ -324,6 +334,92 @@ void CharacterBuilder::applyPrimaryDependents() {
 	}
 }
 
+/* Physique */
+void CharacterBuilder::generatePhysique() {
+	if (built_) {
+		throw std::runtime_error("CharacterBuilder: Cannot generate physique after character has been built.");
+	}
+
+	// We use this value for both height and weight to ensure they are consistent with each other as they are both based on the same underlying distribution of body sizes for the race
+	float height_mean{(male_ ? race_->averageMaleHeight() : race_->averageFemaleHeight()) * 1.0f};
+
+	// Get the height - if the auto height option is selected, we generate a height based on the average height for the race and sex
+	int height{entered_height_};
+	if (auto_height_) {
+		float height_std_deviation{height_mean * 0.035f};
+		std::normal_distribution height_distribution{height_mean, height_std_deviation};
+		height = static_cast<int>(height_distribution(Random::mt));
+	}
+
+	height_ = height;
+
+	// Get the individuals build/frame
+	int char_build_modifier{entered_build_modifier_};
+	if (auto_build_modifier_) {
+		// Lets add some variance into this
+		std::normal_distribution build_distribution{1.0f, 2.2f};
+		char_build_modifier = static_cast<int>(build_distribution(Random::mt));
+	}
+
+	std::string build_label{};
+	if (char_build_modifier <= -10)
+		build_label = "Skeletal";
+	else if (char_build_modifier <= -7)
+		build_label = "Wasted";
+	else if (char_build_modifier <= -4)
+		build_label = "Thin";
+	else if (char_build_modifier <= -2)
+		build_label = "Slender";
+	else if (char_build_modifier <= 2)
+		build_label = "Normal";
+	else if (char_build_modifier <= 4)
+		build_label = "Stocky";
+	else if (char_build_modifier <= 7)
+		build_label = "Large";
+	else if (char_build_modifier <= 10)
+		build_label = "Obese";
+	else
+		build_label = "Blubbery";
+
+	build_description_ = build_label + " build";
+
+	// The weight is calculated using the following formula
+	// Weight = ( k × H^3 ) × FM × BM × GM
+	// H: Height in inches.
+	// k: Racial Density Constant.
+	// FM: Frame Modifier (The race's average skeletal "width").
+	// GM: Gender Modifier (1.0 for Male, 0.9 for Female).
+	// BM: Build Modifier (Individual character's physique).
+	//
+	// k = Race.buildModifier() / 100000 ; This is so we can use integers in the JSON file for the build modifier which is more intuitive to work with and then convert it to a small decimal value for the calculation
+	//     Human = 46 / 100000 = 0.00046
+	//
+	// There are some general buckets for these values that may be used for different races:
+	// Avian/Fey (k=0.00035 to 0.00040): High Elves, Kobolds, Sylphs.
+	// Standard  (k = 0.00045 to 0.00050): Humans, Gnolls, Goblins, Orcs.
+	// Solid     (k = 0.00055 to 0.00065): Dwarves, Troglodytes, Stone Giants.
+	//
+	// For our purposes GM is rolled into FM so that the Race.maleWeightModifier() and Race.femaleWeightModifier() functions will take into account both
+
+	// The racial density constant is a value that represents the average density of the tissue and bone structure
+	float racial_density{race_->buildModifier() / 100000.f};
+	float racial_frame_modifier{(male_ ? race_->maleWeightModifier() : race_->femaleWeightModifier()) / 100.f};
+
+	// Get the value as a percentage modifier based on the character's build modifier so that a value of 0 will be 1.0 (no change), a value of -10 will be 0.72 (28% lighter) and a value of 10 will be 1.28 (28% heavier).
+	// We use the 2.8 to give a wider spread of values to make it more meaningful.
+	float character_frame_modifier{(100.0f + (char_build_modifier * 2.8f)) / 100.0f};
+
+	weight_ = static_cast<int>((racial_density * std::pow(height, 3)) * racial_frame_modifier * character_frame_modifier);
+
+	// get the lifespan
+	int constitution_potential = stats_.at(StatType::kConstitution).potential();
+	float conMod = (constitution_potential - 50) / 100.0f;
+	float lifespanModifiedAverage = (race_->averageLifespan() * (1.0f + conMod));
+	float lifespanStdDeviation = race_->averageLifespan() / 10.0f;
+	std::normal_distribution lifespanDistribution{lifespanModifiedAverage, lifespanStdDeviation};
+	lifespan_ = static_cast<int>(lifespanDistribution(Random::mt));
+}
+
 /* Stat allocations */
 void CharacterBuilder::setInitialStat(StatType::Type stat_type, int temp_value, int potential_value) {
 	Stat& stat = initial_stats_[stat_type]; // This will default construct a new Stat object if the stat has not been touched yet.
@@ -546,6 +642,39 @@ void CharacterBuilder::applyBackgroundChoices() {
 
 	for (const auto& item : background_items_) {
 		total_items_.push_back(item);
+	}
+}
+
+void CharacterBuilder::applyApprenticeshipChoices() {
+
+	// First make any stat gain rolls if applicable.
+	if (!apprenticeship_stat_gains_.empty()) {
+		for (auto stat_type : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
+			stats_[stat_type].performStatGainRoll();
+		}
+		calculateDevelopmentPoints(stats_); // We need to recalculate the development points after applying the apprenticeship stat gains as the temporary values may have changed which would affect the total development points.
+	}
+
+	// Next process the training package data that is not already dealt with. The skills, spells, and languages are already applied to the aggregated data so we only need to deal with what is left.
+	for (const TrainingPackageData* training_package : apprenticeship_training_packages_) {
+		// The training package may have some special bonuses that we need to apply such as extra gold or items that are not already accounted for in the aggregated data.
+		total_gold_ += training_package->startingMoneyChange();
+
+		// The specials may be items, favours owed, or anything else that doesn't fit into the other categories and may be represented as a string description of the special. We will just add these to the total items list for now but we may
+		// want to separate them out into their own list if we want to display them differently in the character sheet or have different rules for how they are used.
+		int divisor{1}; // Each time a special is gained the chance is halved so we double the divisor.
+		for (const auto& [special, chance] : training_package->specials()) {
+			// Short circuit for the last item.
+			if (chance == 0) {
+				total_items_.push_back(special);
+			} else {
+				int roll = archid::Dice(100, 5).rollOpenHigh().result(); // Roll open-ended high d100 for the special item gain as per the rules for apprenticeship training package special gains.
+				if (roll + (chance / divisor) >= 100)	{
+					total_items_.push_back(special);
+					divisor *= 2;
+				}
+			}
+		}
 	}
 }
 
