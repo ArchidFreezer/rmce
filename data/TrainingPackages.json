@@ -700,7 +700,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -800,7 +800,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 3,
                     "options" : [
                         {
@@ -916,7 +916,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -1453,7 +1453,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -1588,7 +1588,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -1892,7 +1892,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -2827,7 +2827,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -3051,7 +3051,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -3707,7 +3707,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -4606,7 +4606,7 @@
             ],
             "lifestyleCategorySkillChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "options" : [
                         "SKILLCATEGORY_LORE_OBSCURE"
                     ]
@@ -4835,8 +4835,8 @@
             ],
             "languageChoices" : [
                 {
-                    "num-choices" : 2,
-                    "value" : 2,
+                    "numChoices" : 2,
+                    "value" : 4,
                     "options" : [
                         "LANGUAGE_DEMONIC_I",
                         "LANGUAGE_DEMONIC_II"
@@ -6155,7 +6155,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -6883,7 +6883,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 3,
                     "options" : [
                         {
@@ -7622,7 +7622,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -8223,7 +8223,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -9331,7 +9331,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -9343,7 +9343,7 @@
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -10053,7 +10053,7 @@
             ],
             "lifestyleCategorySkillChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "options" : [
                         "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES"
                     ]
@@ -11077,7 +11077,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -11489,7 +11489,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -11501,7 +11501,7 @@
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -12227,7 +12227,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -12445,7 +12445,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -12565,7 +12565,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -13224,7 +13224,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 2,
                     "options" : [
                         {
@@ -13366,7 +13366,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -13740,7 +13740,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -14202,7 +14202,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -14404,7 +14404,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -14418,7 +14418,7 @@
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -14907,7 +14907,7 @@
             ],
             "skillRankChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "value" : 1,
                     "options" : [
                         {
@@ -15861,7 +15861,7 @@
             ],
             "lifestyleCategorySkillChoices" : [
                 {
-                    "num-choices" : 2,
+                    "numChoices" : 2,
                     "options" : [
                         "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES"
                     ]

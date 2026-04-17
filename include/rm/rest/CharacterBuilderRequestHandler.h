@@ -62,7 +62,7 @@ private:
 	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object for which to generate primary choices.
 	 * The function will return the available choices for the primary character attributes (such as everyman skill categories for the race choice, skill category choices for the culture type choice, and skill development type and spell list
 	 * choices for the profession choice) based on the initial definition of the character in the specified CharacterBuilder object.
-	 * 
+	 *
 	 * @param response The HTTP response object to populate with the result of the operation.
 	 * @param request The HTTP request containing the data for the operation in its body.
 	 */
@@ -84,7 +84,7 @@ private:
 	 *
 	 * This operation takes the ID of a CharacterBuilder object and the temporary and potential values for each of the 10 stats from the request body as JSON, updates the corresponding CharacterBuilder object in the cache with those values,
 	 * and returns a success response. This allows the client to set the stat values for a character being created after generating them with the stat rolls endpoint.
-	 * 
+	 *
 	 * Expects a payload in the following format:
 	 * @code
 	 * {
@@ -103,10 +103,21 @@ private:
 	void requestSetStats(http::response<http::string_body>& response, const http::request<http::string_body>& request);
 
 	/**
+	 * @brief Sets the choices for generating the physique of a character being created.
+	 *
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object for which to set the choices.
+	 * The function will update the specified CharacterBuilder object in the cache with the provided choices and return a success response.
+	 *
+	 * @param response The HTTP response object to populate with the result of the operation.
+	 * @param request The HTTP request containing the data for the operation in its body.
+	 */
+	void requestPhysiqueChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+
+	/**
 	 * @brief Sets the selected hobby choices for a character being created.
 	 *
-	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object and the selected hobby choices to set for that object.
-	 * The function will update the specified CharacterBuilder object in the cache with the selected hobby choices and return a success response.
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object and the selected hobby choices to set for that
+	 * object. The function will update the specified CharacterBuilder object in the cache with the selected hobby choices and return a success response.
 	 *
 	 * @param response The HTTP response object to populate with the result of the operation.
 	 * @param request The HTTP request containing the data for the operation in its body.
@@ -116,8 +127,8 @@ private:
 	/**
 	 * @brief Sets the selected background choices for a character being created.
 	 *
-	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object and the selected background choices to set for that object.
-	 * The function will update the specified CharacterBuilder object in the cache with the selected background choices and return a success response.
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object and the selected background choices to set for
+	 * that object. The function will update the specified CharacterBuilder object in the cache with the selected background choices and return a success response.
 	 *
 	 * @param response The HTTP response object to be populated with the result of the request.
 	 * @param request The HTTP request object containing the background choices to be set.
@@ -125,10 +136,21 @@ private:
 	void requestSetBackgroundChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
 
 	/**
+	 * @brief Applies the level-up choices for a character being leveled up.
+	 *
+	 * This operation is specific to character aprrenticeship levelling and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object and the selected apprenticeship
+	 * choices to apply for that object. The function will update the specified CharacterBuilder object in the cache by applying the apprenticeship choices and return a success response.
+	 *
+	 * @param response The HTTP response object to be populated with the result of the request.
+	 * @param request The HTTP request object containing the apprenticeship choices to be applied.
+	 */
+	void requestSetApprenticeshipChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+
+	/**
 	 * @brief Dumps the current state of a CharacterBuilder object for debugging purposes.
 	 *
-	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request is expected to contain the ID of the CharacterBuilder object to dump in the query parameters. The function will return a JSON representation
-	 * of the current state of the specified CharacterBuilder object in the response, which can be used for debugging purposes to see all the choices that have been made for that character so far.
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request is expected to contain the ID of the CharacterBuilder object to dump in the query parameters. The function will return a JSON
+	 * representation of the current state of the specified CharacterBuilder object in the response, which can be used for debugging purposes to see all the choices that have been made for that character so far.
 	 *
 	 * @param response The HTTP response object to populate with the result of the operation.
 	 * @param request The HTTP request containing the data for the operation in its body.

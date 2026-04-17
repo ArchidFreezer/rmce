@@ -1226,9 +1226,9 @@ public:
 	 * For example, if you have a JSON object like:
 	 * @code
 	 * {
-	 *     "spell-list-choices": [
+	 *     "spellListChoices": [
 	 *         {
-	 *             "num-choices": 1,
+	 *             "numChoices": 1,
 	 *             "options": [
 	 *                 "SPELLLIST_ANIMAL_MASTERY",
 	 *                 "SPELLLIST_HERB_MASTERY",
@@ -1236,7 +1236,7 @@ public:
 	 *             ]
 	 *         },
 	 *         {
-	 *             "num-choices": 1,
+	 *             "numChoices": 1,
 	 *             "options": [
 	 *                 "SPELLLIST_FIRE_MASTERY",
 	 *                 "SPELLLIST_ICE_MASTERY"
@@ -1265,7 +1265,7 @@ public:
 	 * @brief Sets an array of GameRuleDataChoice objects in a JSON object with the specified key.
 	 *
 	 * This function takes a set of GameRuleDataChoice objects and converts it into a JSON array. Each GameRuleDataChoice is represented as a JSON object with fields corresponding to the properties of the GameRuleDataChoice, such as
-	 * "num-choices" and "options". The resulting JSON array is stored under the specified key in the JSON object.
+	 * "numChoices" and "options". The resulting JSON array is stored under the specified key in the JSON object.
 	 *
 	 * For example, if you have a set of GameRuleDataChoice objects:
 	 * @code
@@ -1299,9 +1299,9 @@ public:
 	 * For example, if you have a JSON object like:
 	 * @code
 	 * {
-	 *     "spell-list-choices": [
+	 *     "spellListChoices": [
 	 *         {
-	 *             "num-choices": 1,
+	 *             "numChoices": 1,
 	 *             "value": "Everyman"
 	 *             "options": [
 	 *                 "SPELLLIST_ANIMAL_MASTERY",
@@ -1310,7 +1310,7 @@ public:
 	 *             ],
 	 *         },
 	 *         {
-	 *             "num-choices": 1,
+	 *             "numChoices": 1,
 	 *             "value": "Occupational"
 	 *             "options": [
 	 *                 "SPELLLIST_FIRE_MASTERY",
@@ -1323,7 +1323,7 @@ public:
 	 * You can retrieve the map of choices to their categories using this method:
 	 * @code
 	 * json::object obj = ...; // Assume this is your JSON object
-	 * std::map<GameRuleDataChoice<ItemData>, SpellCategory> choiceCategoryMap = JsonConverter::getSkillChoiceEnumMap<SpellCategory>(obj, "spell-list-choices", manager);
+	 * std::map<GameRuleDataChoice<ItemData>, SpellCategory> choiceCategoryMap = JsonConverter::getSkillChoiceEnumMap<SpellCategory>(obj, "spellListChoices", manager);
 	 * // choiceCategoryMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding SpellCategory enum values if those choices exist in the manager and the enum values are valid
 	 * @endcode
 	 *
@@ -1353,8 +1353,8 @@ public:
 	 * @endcode
 	 * You can convert this map into a JSON array using this method:
 	 * @code
-	 * JsonConverter::setSkillChoiceEnumMap<SpellCategory>(obj, "spell-list-choices", choiceCategoryMap);
-	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated SpellCategory as a string
+	 * JsonConverter::setSkillChoiceEnumMap<SpellCategory>(obj, "spellListChoices", choiceCategoryMap);
+	 * // The JSON object would now contain an array under "spellListChoices" with objects representing each GameRuleDataChoice and its associated SpellCategory as a string
 	 * @endcode
 	 *
 	 * @tparam EnumType The type of the enum values used as values in the input map.
@@ -1375,9 +1375,9 @@ public:
 	 * For example, if you have a JSON object like:
 	 * @code
 	 * {
-	 *     "spell-list-choices": [
+	 *     "spellListChoices": [
 	 *         {
-	 *             "num-choices": 1,
+	 *             "numChoices": 1,
 	 *             "value": 5
 	 *             "options": [
 	 *                 "SPELLLIST_ANIMAL_MASTERY",
@@ -1386,7 +1386,7 @@ public:
 	 *             ],
 	 *         },
 	 *         {
-	 *             "num-choices": 1,
+	 *             "numChoices": 1,
 	 *             "value": 3
 	 *             "options": [
 	 *                 "SPELLLIST_FIRE_MASTERY",
@@ -1399,7 +1399,7 @@ public:
 	 * You can retrieve the map of choices to their values using this method:
 	 * @code
 	 * json::object obj = ...; // Assume this is your JSON object
-	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = JsonConverter::getSkillChoicePrimitiveMap<int>(obj, "spell-list-choices", manager);
+	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = JsonConverter::getSkillChoicePrimitiveMap<int>(obj, "spellListChoices", manager);
 	 * // choiceValueMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding integer values if those choices exist in the manager and the values are valid
 	 * @endcode
 	 *
@@ -1428,8 +1428,8 @@ public:
 	 * @endcode
 	 * You can convert this map into a JSON array using this method:
 	 * @code
-	 * JsonConverter::setSkillChoicePrimitiveMap<int>(obj, "spell-list-choices", choiceValueMap);
-	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated integer value
+	 * JsonConverter::setSkillChoicePrimitiveMap<int>(obj, "spellListChoices", choiceValueMap);
+	 * // The JSON object would now contain an array under "spellListChoices" with objects representing each GameRuleDataChoice and its associated integer value
 	 * @endcode
 	 *
 	 * @tparam Primitive The type of the primitive values used as values in the input map (e.g., int, float, double, bool).
@@ -1451,9 +1451,9 @@ public:
 	 * For example, if you have a JSON object like:
 	 * @code
 	 * {
-	 *     "spell-list-choices": [
+	 *     "spellListChoices": [
 	 *         {
-	 *             "num-choices": 1,
+	 *             "numChoices": 1,
 	 *             "value": "Everyman"
 	 *             "options": [
 	 *                 "SPELLLIST_ANIMAL_MASTERY",
@@ -1462,7 +1462,7 @@ public:
 	 *             ],
 	 *         },
 	 *         {
-	 *             "num-choices": 1,
+	 *             "numChoices": 1,
 	 *             "value": "Occupational"
 	 *             "options": [
 	 *                 "SPELLLIST_FIRE_MASTERY",
@@ -1475,7 +1475,7 @@ public:
 	 * You can retrieve the map of choices to their categories using this method:
 	 * @code
 	 * json::object obj = ...; // Assume this is your JSON object
-	 * std::map<GameRuleDataChoice<ItemData>, SpellCategory> choiceCategoryMap = JsonConverter::getDataChoiceEnumMap<SpellCategory>(obj, "spell-list-choices", manager);
+	 * std::map<GameRuleDataChoice<ItemData>, SpellCategory> choiceCategoryMap = JsonConverter::getDataChoiceEnumMap<SpellCategory>(obj, "spellListChoices", manager);
 	 * // choiceCategoryMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding SpellCategory enum values if those choices exist in the manager and the enum values are valid
 	 * @endcode
 	 *
@@ -1505,8 +1505,8 @@ public:
 	 * @endcode
 	 * You can convert this map into a JSON array using this method:
 	 * @code
-	 * JsonConverter::setDataChoiceEnumMap<SpellCategory>(obj, "spell-list-choices", choiceCategoryMap);
-	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated SpellCategory as a string
+	 * JsonConverter::setDataChoiceEnumMap<SpellCategory>(obj, "spellListChoices", choiceCategoryMap);
+	 * // The JSON object would now contain an array under "spellListChoices" with objects representing each GameRuleDataChoice and its associated SpellCategory as a string
 	 * @endcode
 	 *
 	 * @tparam EnumType The type of the enum values used as values in the input map.
@@ -1527,9 +1527,9 @@ public:
 	 * For example, if you have a JSON object like:
 	 * @code
 	 * {
-	 *     "spell-list-choices": [
+	 *     "spellListChoices": [
 	 *         {
-	 *             "num-choices": 1,
+	 *             "numChoices": 1,
 	 *             "value": 5
 	 *             "options": [
 	 *                 "SPELLLIST_ANIMAL_MASTERY",
@@ -1538,7 +1538,7 @@ public:
 	 *             ],
 	 *         },
 	 *         {
-	 *             "num-choices": 1,
+	 *             "numChoices": 1,
 	 *             "value": 3
 	 *             "options": [
 	 *                 "SPELLLIST_FIRE_MASTERY",
@@ -1551,7 +1551,7 @@ public:
 	 * You can retrieve the map of choices to their values using this method:
 	 * @code
 	 * json::object obj = ...; // Assume this is your JSON object
-	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = JsonConverter::getDataChoicePrimitiveMap<int>(obj, "spell-list-choices", manager);
+	 * std::map<GameRuleDataChoice<ItemData>, int> choiceValueMap = JsonConverter::getDataChoicePrimitiveMap<int>(obj, "spellListChoices", manager);
 	 * // choiceValueMap would contain entries mapping each GameRuleDataChoice for the spell list choices to their corresponding integer values if those choices exist in the manager and the values are valid
 	 * @endcode
 	 *
@@ -1580,8 +1580,8 @@ public:
 	 * @endcode
 	 * You can convert this map into a JSON array using this method:
 	 * @code
-	 * JsonConverter::setDataChoicePrimitiveMap<int>(obj, "spell-list-choices", choiceValueMap);
-	 * // The JSON object would now contain an array under "spell-list-choices" with objects representing each GameRuleDataChoice and its associated integer value
+	 * JsonConverter::setDataChoicePrimitiveMap<int>(obj, "spellListChoices", choiceValueMap);
+	 * // The JSON object would now contain an array under "spellListChoices" with objects representing each GameRuleDataChoice and its associated integer value
 	 * @endcode
 	 *
 	 * @tparam Primitive The type of the primitive values used as values in the input map (e.g., int, float, double, bool).
@@ -1967,7 +1967,7 @@ std::set<GameRuleDataChoice<GameRuleData>> JsonConverter::getDataChoiceSet(const
 				// Grab the choice object and create a GameRuleDataChoice from it
 				json::object choice_obj = item.as_object();
 				GameRuleDataChoice<GameRuleData> choice_data{};
-				choice_data.setNumChoices(getInt(choice_obj, "num-choices", 1));
+				choice_data.setNumChoices(getInt(choice_obj, "numChoices", 1));
 
 				// Loop through the options array and add each option to the GameRuleDataChoice
 				json::array option_array = getJsonArray(choice_obj, "options");
@@ -1991,7 +1991,7 @@ void JsonConverter::setDataChoiceSet(json::object& obj, const std::string& key, 
 	json::array arr;
 	for (const auto& item : choices) {
 		json::object choice_obj;
-		choice_obj["num-choices"] = item.numChoices();
+		choice_obj["numChoices"] = item.numChoices();
 
 		std::map<std::string, const GameRuleData*> sorted_options{};
 		for (const GameRuleData* option : item.options()) {
@@ -2020,7 +2020,7 @@ std::map<GameRuleDataChoice<SubcategoriedSkillData>, EnumType> JsonConverter::ge
 				// Grab the choice object and create a GameRuleDataChoice from it
 				json::object choice_obj = item.as_object();
 				GameRuleDataChoice<SubcategoriedSkillData> choice_data{};
-				choice_data.setNumChoices(getInt(choice_obj, "num-choices", 1));
+				choice_data.setNumChoices(getInt(choice_obj, "numChoices", 1));
 				// Loop through the options array and add each option to the GameRuleDataChoice
 				json::array option_array = getJsonArray(choice_obj, "options");
 				for (const auto& option_val : option_array) {
@@ -2045,7 +2045,7 @@ void JsonConverter::setSkillChoiceEnumMap(json::object& obj, const std::string& 
 	json::array arr;
 	for (const auto& [choice, enum_value] : map) {
 		json::object choice_obj;
-		choice_obj["num-choices"] = choice.numChoices();
+		choice_obj["numChoices"] = choice.numChoices();
 		std::map<std::string, const SubcategoriedSkillData*> sorted_options{};
 		for (const SubcategoriedSkillData* option : choice.options()) {
 			std::string option_key = option->skillData().id() + (option->subcategory() ? option->subcategory().value() : "");
@@ -2074,7 +2074,7 @@ std::map<GameRuleDataChoice<GameRuleData>, EnumType> JsonConverter::getDataChoic
 				// Grab the choice object and create a GameRuleDataChoice from it
 				json::object choice_obj = item.as_object();
 				GameRuleDataChoice<GameRuleData> choice_data{};
-				choice_data.setNumChoices(getInt(choice_obj, "num-choices", 1));
+				choice_data.setNumChoices(getInt(choice_obj, "numChoices", 1));
 				// Loop through the options array and add each option to the GameRuleDataChoice
 				json::array option_array = getJsonArray(choice_obj, "options");
 				for (const auto& option_val : option_array) {
@@ -2101,7 +2101,7 @@ void JsonConverter::setDataChoiceEnumMap(json::object& obj, const std::string& k
 	json::array arr;
 	for (const auto& [choice, enum_value] : map) {
 		json::object choice_obj;
-		choice_obj["num-choices"] = choice.numChoices();
+		choice_obj["numChoices"] = choice.numChoices();
 		std::map<std::string, const GameRuleData*> sorted_options{};
 		for (const GameRuleData* option : choice.options()) {
 			sorted_options.emplace(option->id(), option);
@@ -2212,7 +2212,7 @@ std::map<GameRuleDataChoice<SubcategoriedSkillData>, Primitive> JsonConverter::g
 				// Grab the choice object and create a GameRuleDataChoice from it
 				json::object choice_obj = item.as_object();
 				GameRuleDataChoice<SubcategoriedSkillData> choice_data{};
-				choice_data.setNumChoices(getInt(choice_obj, "num-choices", 1));
+				choice_data.setNumChoices(getInt(choice_obj, "numChoices", 1));
 				// Loop through the options array and add each option to the GameRuleDataChoice
 				json::array option_array = getJsonArray(choice_obj, "options");
 				for (const auto& option_val : option_array) {
@@ -2236,7 +2236,7 @@ void JsonConverter::setSkillChoicePrimitiveMap(json::object& obj, const std::str
 	json::array arr;
 	for (const auto& [choice, primitive_value] : map) {
 		json::object choice_obj;
-		choice_obj["num-choices"] = choice.numChoices();
+		choice_obj["numChoices"] = choice.numChoices();
 		std::map<std::string, const SubcategoriedSkillData*> sorted_options{};
 		for (const SubcategoriedSkillData* option : choice.options()) {
 			std::string option_key = option->skillData().id() + (option->subcategory() ? option->subcategory().value() : "");
@@ -2264,7 +2264,7 @@ std::map<GameRuleDataChoice<GameRuleData>, Primitive> JsonConverter::getDataChoi
 				// Grab the choice object and create a GameRuleDataChoice from it
 				json::object choice_obj = item.as_object();
 				GameRuleDataChoice<GameRuleData> choice_data{};
-				choice_data.setNumChoices(getInt(choice_obj, "num-choices", 1));
+				choice_data.setNumChoices(getInt(choice_obj, "numChoices", 1));
 				// Loop through the options array and add each option to the GameRuleDataChoice
 				json::array option_array = getJsonArray(choice_obj, "options");
 				for (const auto& option_val : option_array) {
@@ -2290,7 +2290,7 @@ void JsonConverter::setDataChoicePrimitiveMap(json::object& obj, const std::stri
 	json::array arr;
 	for (const auto& [choice, primitive_value] : map) {
 		json::object choice_obj;
-		choice_obj["num-choices"] = choice.numChoices();
+		choice_obj["numChoices"] = choice.numChoices();
 		std::map<std::string, const GameRuleData*> sorted_options{};
 		for (const GameRuleData* option : choice.options()) {
 			sorted_options.emplace(option->id(), option);

@@ -15,7 +15,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_ANIMAL_MASTERY",
                         "SPELLLIST_HERB_MASTERY",
@@ -344,7 +344,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_MANA_LAW",
                         "SPELLLIST_POWER_FOCUS",
@@ -648,7 +648,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_ARMOR_MASTERY",
                         "SPELLLIST_BATTLE_LAW",
@@ -965,7 +965,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_FAR_VOICE",
                         "SPELLLIST_HOLY_VISION",
@@ -1330,7 +1330,7 @@
             ],
             "skillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         {
@@ -1339,7 +1339,7 @@
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         {
@@ -1637,7 +1637,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CONTROLLING_SONGS",
                         "SPELLLIST_ENTERTAINING_WAYS",
@@ -1956,7 +1956,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_HOLY_ARMORING",
                         "SPELLLIST_HOLY_OFFICE",
@@ -2289,7 +2289,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 4,
+                    "numChoices" : 4,
                     "options" : [
                         "SPELLLIST_ARCANE_MOTIONS",
                         "SPELLLIST_CHANGES",
@@ -2598,7 +2598,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CHANNELS",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -2930,7 +2930,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CONCEALMENT_MASTERY",
                         "SPELLLIST_INFLUENCES",
@@ -3268,7 +3268,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CHANNELS",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -3576,7 +3576,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CHANNELS",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -3883,7 +3883,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_SEEMING_DEFENSES",
                         "SPELLLIST_SEEMING_ENCHANTMENT",
@@ -4214,7 +4214,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_ARMOR_ENHANCEMENTS",
                         "SPELLLIST_GENERAL_ENHANCEMENTS",
@@ -4282,7 +4282,7 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "type" : "Occupational",
                     "options" : [
                         "SKILLCATEGORY_CRAFTS"
@@ -4589,7 +4589,7 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLCATEGORY_COMBAT_MANOEUVRES"
@@ -4866,7 +4866,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_BLOOD_WAYS",
                         "SPELLLIST_BONE_WAYS",
@@ -5213,7 +5213,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_FEEL_TASTE_SMELL",
                         "SPELLLIST_GUISES",
@@ -5561,7 +5561,7 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Occupational",
                     "options" : [
                         "SKILLCATEGORY_CRAFTS"
@@ -5848,7 +5848,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_BLOOD_MASTERY",
                         "SPELLLIST_BONE_MASTERY",
@@ -6198,7 +6198,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_AMPLIFICATIONS",
                         "SPELLLIST_CONTAINING_WAYS",
@@ -6514,7 +6514,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_ASSASSINATION_MASTERY",
                         "SPELLLIST_DISGUISE_MASTERY",
@@ -6825,7 +6825,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_EARTH_LAW",
                         "SPELLLIST_FIRE_LAW",
@@ -7144,7 +7144,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_GLYPHS",
                         "SPELLLIST_MANA_BARRIERS",
@@ -7459,7 +7459,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_ATTACK_MASTERY",
                         "SPELLLIST_DEFENSE_MASTERY",
@@ -7527,7 +7527,7 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "type" : "Occupational",
                     "options" : [
                         "SKILLCATEGORY_CRAFTS"
@@ -7798,7 +7798,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_MIND_ATTACK",
                         "SPELLLIST_MIND_CONTROL",
@@ -8126,7 +8126,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_BODY_REINS",
                         "SPELLLIST_BODY_RENEWAL",
@@ -8447,7 +8447,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CONFUSING_WAYS",
                         "SPELLLIST_GAS_ALTERATION",
@@ -8783,7 +8783,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_HOLY_MISSION",
                         "SPELLLIST_THE_DEFENDER",
@@ -9104,7 +9104,7 @@
             ],
             "skillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         {
@@ -9113,7 +9113,7 @@
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         {
@@ -9409,7 +9409,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNION",
                         "SPELLLIST_EXORCISMS",
@@ -9726,7 +9726,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -10042,7 +10042,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -10069,7 +10069,7 @@
             ],
             "skillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         {
@@ -10368,7 +10368,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 5,
+                    "numChoices" : 5,
                     "options" : [
                         "SPELLLIST_CHANNELS",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -10378,7 +10378,7 @@
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "options" : [
                         "SPELLLIST_AQUATIC_FORMS",
                         "SPELLLIST_HORSE_MASTERY",
@@ -10712,7 +10712,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_DIVINE_MAGIC",
@@ -10749,7 +10749,7 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLCATEGORY_CRAFTS"
@@ -11016,7 +11016,7 @@
             ],
             "skillGroupSkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Occupational",
                     "options" : [
                         "SKILLGROUP_ARTISTIC"
@@ -11038,7 +11038,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DIVINE_AURA",
                         "SPELLLIST_LIFE_MASTERY",
@@ -11357,7 +11357,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_CHANNELS",
@@ -11676,7 +11676,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_CHANNELS",
@@ -11721,7 +11721,7 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Occupational",
                     "options" : [
                         "SKILLCATEGORY_ATHLETIC_ENDURANCE"
@@ -11990,7 +11990,7 @@
             ],
             "skillGroupSkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLGROUP_WEAPON"
@@ -12013,7 +12013,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CHANNELS",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -12052,7 +12052,7 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Occupational",
                     "options" : [
                         "SKILLCATEGORY_CRAFTS"
@@ -12335,7 +12335,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_DEATH_MASTERY",
@@ -12664,7 +12664,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_DEATH_MASTERY",
@@ -12980,7 +12980,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_DEATH_MASTERY",
@@ -13293,7 +13293,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CHANNELS",
                         "SPELLLIST_DEATH_MASTERY",
@@ -13617,7 +13617,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DIVINE_MAGIC",
                         "SPELLLIST_FAITH_S_SHIELD",
@@ -13656,7 +13656,7 @@
             ],
             "skillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         {
@@ -13958,7 +13958,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_CHANNELS",
@@ -14283,7 +14283,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DEATH_MASTERY",
                         "SPELLLIST_DIVINE_MAGIC",
@@ -14628,7 +14628,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DEATH_MASTERY",
                         "SPELLLIST_DIVINE_MAGIC",
@@ -14947,7 +14947,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_HOLY_ELEMENT",
@@ -15270,7 +15270,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_FAITH_S_SHIELD",
@@ -15323,7 +15323,7 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLCATEGORY_COMBAT_MANOEUVRES"
@@ -15606,7 +15606,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_LIFE_MASTERY",
@@ -15929,7 +15929,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_CRUSADE",
@@ -16278,7 +16278,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -16603,7 +16603,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -16926,7 +16926,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DIVINE_MAGIC",
                         "SPELLLIST_HOLY_ELEMENT",
@@ -17243,7 +17243,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_FAITH_S_SHIELD",
@@ -17562,7 +17562,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DIVINE_MAGIC",
                         "SPELLLIST_LIFE_MASTERY",
@@ -17893,7 +17893,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_HOLY_ELEMENT",
@@ -17948,14 +17948,14 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLCATEGORY_POWER_AWARENESS"
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLCATEGORY_POWER_MANIPULATION"
@@ -18218,7 +18218,7 @@
             ],
             "skillGroupSkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLGROUP_SPELLS"
@@ -18240,7 +18240,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CHANNELS",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -18561,7 +18561,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_DEATH_MASTERY",
@@ -18878,7 +18878,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_CHANNELS",
@@ -18908,7 +18908,7 @@
             ],
             "skillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         {
@@ -19207,7 +19207,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_HOLY_DEFENSES",
@@ -19527,7 +19527,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -19850,7 +19850,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_DIVINE_AURA",
@@ -20161,7 +20161,7 @@
             ],
             "skillGroupSkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Occupational",
                     "options" : [
                         "SKILLGROUP_ARTISTIC"
@@ -20183,7 +20183,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DIVINE_MAGIC",
                         "SPELLLIST_HOLY_ELEMENT",
@@ -20521,7 +20521,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_AQUATIC_FORMS",
                         "SPELLLIST_CHANNELS",
@@ -20854,7 +20854,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CEREMONIES",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -21181,7 +21181,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CHANNELS",
                         "SPELLLIST_DIVINE_MAGIC",
@@ -21494,7 +21494,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DEATH_MASTERY",
                         "SPELLLIST_HOLY_ELEMENT",
@@ -21541,14 +21541,14 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Occupational",
                     "options" : [
                         "SKILLCATEGORY_ATHLETIC_BRAWN"
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Occupational",
                     "options" : [
                         "SKILLCATEGORY_ATHLETIC_ENDURANCE"
@@ -21827,7 +21827,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMUNAL_WAYS",
                         "SPELLLIST_HOLY_ELEMENT",
@@ -22170,7 +22170,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DIVINE_MAGIC",
                         "SPELLLIST_FAITH_S_SHIELD",
@@ -22486,7 +22486,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CHANNELS",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -22819,7 +22819,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_BATTLEFIELD_HEALING",
                         "SPELLLIST_DEATH_MASTERY",
@@ -22880,7 +22880,7 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Occupational",
                     "options" : [
                         "SKILLCATEGORY_COMBAT_MANOEUVRES"
@@ -23149,14 +23149,14 @@
             ],
             "skillGroupSkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLGROUP_WEAPON"
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLGROUP_ARMOUR"
@@ -23179,7 +23179,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DIVINE_MAGIC",
                         "SPELLLIST_FAITH_S_SHIELD",
@@ -23499,7 +23499,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_CHANNELS",
                         "SPELLLIST_COMMUNAL_WAYS",
@@ -23798,7 +23798,7 @@
             ],
             "skillGroupSkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 2,
+                    "numChoices" : 2,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLGROUP_SCIENCE_ANALYTIC"
@@ -23822,7 +23822,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_INNER_WALLS",
                         "SPELLLIST_MOVING_WAYS",
@@ -24129,7 +24129,7 @@
             ],
             "skillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         {
@@ -24141,7 +24141,7 @@
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         {
@@ -24441,7 +24441,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMMANDING_WILL",
                         "SPELLLIST_INSCRIPTIONS",
@@ -25036,7 +25036,7 @@
             ],
             "skillGroupSkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 3,
+                    "numChoices" : 3,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLGROUP_LORE"
@@ -25059,7 +25059,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_FAR_VISIONS",
                         "SPELLLIST_FUTURE_VISIONS",
@@ -25400,7 +25400,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_FLESH_DESTRUCTION",
                         "SPELLLIST_FLUID_DESTRUCTION",
@@ -25725,7 +25725,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_ANIMAL_SUMMONS",
                         "SPELLLIST_PLANAR_SUMMONS",
@@ -26072,14 +26072,14 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLCATEGORY_COMBAT_MANOEUVRES"
                     ]
                 },
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLCATEGORY_LORE_OBSCURE"
@@ -26363,7 +26363,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_BODY_RENEWAL",
                         "SPELLLIST_EVASIONS",
@@ -26690,7 +26690,7 @@
             ],
             "skillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         {
@@ -26987,7 +26987,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_DOOM_S_LAW",
                         "SPELLLIST_FAITH_DESTRUCTION",
@@ -27315,7 +27315,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_COMBAT_ILLUSIONS",
                         "SPELLLIST_COMBAT_WAYS",
@@ -27654,7 +27654,7 @@
             ],
             "skillCategorySkillDevelopmentTypeChoices" : [
                 {
-                    "num-choices" : 1,
+                    "numChoices" : 1,
                     "type" : "Everyman",
                     "options" : [
                         "SKILLCATEGORY_COMBAT_MANOEUVRES"
@@ -27931,7 +27931,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_FAITH_BREAKER",
                         "SPELLLIST_MIND_BREAKER",
@@ -28235,7 +28235,7 @@
             ],
             "baseSpellListChoices" : [
                 {
-                    "num-choices" : 6,
+                    "numChoices" : 6,
                     "options" : [
                         "SPELLLIST_BODY_CONTROL",
                         "SPELLLIST_BODY_RENEWAL",
