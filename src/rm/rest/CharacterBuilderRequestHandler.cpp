@@ -5,16 +5,6 @@
 #include <JsonConverter.h>
 #include <StringUtils.h>
 #include <boost/json.hpp>
-#include <optional>
-
-// Helper function to safely extract a string value from a JSON object, returning std::nullopt if the key is not found or the value is not a string
-std::optional<std::string> get_optional_string(boost::json::object const& obj, std::string_view key) {
-	auto it = obj.find(key);
-	if (it != obj.end() && it->value().is_string()) {
-		return boost::json::value_to<std::string>(it->value());
-	}
-	return std::nullopt;
-}
 
 namespace rm::rest {
 
