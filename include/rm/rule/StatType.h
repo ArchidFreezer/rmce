@@ -2,8 +2,10 @@
 
 #include <iostream>
 #include <optional>
+#include <set>
 #include <string_view>
 
+#include <RealmType.h>
 #include <StringUtils.h>
 
 namespace rm::rule::enums {
@@ -95,6 +97,13 @@ const std::optional<Type> fromString(std::string_view sv);
  * @see toString()
  */
 void fromString(std::string_view sv, StatType::Type& type);
+
+/**
+ * @brief Get the set of stats associated with a realm
+ * @param realm RealmType::Type to get the stats for
+ * @return Set of StatType::Type associated with the realm
+ */
+const std::set<StatType::Type> statsForRealm(RealmType::Type realm);
 
 /**
  * @brief Checks if the stat is a primary stat or not

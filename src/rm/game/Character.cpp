@@ -46,6 +46,8 @@ void Character::updateStatDerivedData(StatType::Type stat_type) {
 	default:
 		break;
 	}
+
+	// TODO update skill stat bonuses when they are implemented
 }
 
 } // namespace rm::game::character

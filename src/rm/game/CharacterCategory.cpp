@@ -10,4 +10,8 @@ int Category::rankBonus() const {
 	return progression_type_->bonus(ranks_) + profession_bonus_ + special_bonus_;
 }
 
+const std::vector<StatType::Type>& Category::stats() const {
+	return stats_;
 }
+
+} // namespace rm::game::character

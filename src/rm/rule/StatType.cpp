@@ -44,4 +44,32 @@ namespace rm::rule::enums {
 		else throw std::invalid_argument("Invalid string value for StatType::Type: " + std::string(sv));
 	}
 
+	const std::set<StatType::Type> StatType::statsForRealm(RealmType::Type realm) {
+	    std::set<StatType::Type> stats;
+	    switch (realm) {
+	    case rm::rule::enums::RealmType::Type::kArms:
+	    case rm::rule::enums::RealmType::Type::kSubterfuge:
+	    case rm::rule::enums::RealmType::Type::kMundane:
+	    case rm::rule::enums::RealmType::Type::kNeutral:
+		    break;
+	    case rm::rule::enums::RealmType::Type::kArcane:
+		    stats.insert(kEmpathy);
+		    stats.insert(kIntuition);
+		    stats.insert(kPresence);
+		    break;
+	    case rm::rule::enums::RealmType::Type::kChanneling:
+		    stats.insert(kIntuition);
+		    break;
+	    case rm::rule::enums::RealmType::Type::kEssence:
+		    stats.insert(kEmpathy);
+		    break;
+	    case rm::rule::enums::RealmType::Type::kMentalism:
+		    stats.insert(kPresence);
+		    break;
+	    default:
+		    break;
+	    }
+	    return stats;
+    }
+
 } // namespace rm::rule::enums

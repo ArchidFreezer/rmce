@@ -55,6 +55,17 @@ Character& CharacterBuilder::build() {
 		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
 		category.development_cost_ = dev_cost;
+
+		// Set the stats used for the category.
+		if (category_type->useRealmStats()) {
+			for (const RealmType::Type& realm : magical_realms_) {
+				for (const StatType::Type& stat : StatType::statsForRealm(realm)) {
+					category.stats_.push_back(stat);
+				}
+			}
+		} else {
+			category.stats_ = category_type->stats();
+		}
 	}
 
 	for (const auto& [category_type, ranks] : category_ranks_) {

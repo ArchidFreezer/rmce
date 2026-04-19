@@ -28,10 +28,19 @@ public:
 	*/
 	int rankBonus() const;
 
+	/**
+	 * @brief Get the stats associated with this category, which are derived from the category data.
+	 * 
+	 * The stats will either be fixed by the catagory or may be the characters realm stats for magical based categories.
+	 * @return A vector of stat types associated with this category.
+	 */
+	const std::vector<StatType::Type>& stats() const;
+
 private:
 	const SkillCategoryData* category_data_{nullptr};
 	const SkillProgressionTypeData* progression_type_{nullptr};
 	SkillDevelopmentCost development_cost_{};
+	std::vector<StatType::Type> stats_{};
 	int profession_bonus_{0};
 	int ranks_{0};
 	int special_bonus_{0}; /**< Any special bonus for the category, such as from a training package or other source. This is added to the total bonus for the category after calculating the bonus from ranks. */
