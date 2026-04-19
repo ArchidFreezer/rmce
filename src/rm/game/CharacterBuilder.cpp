@@ -36,6 +36,9 @@ Character& CharacterBuilder::build() {
 	/* Derived data */
 	character.development_points_ = development_points_;
 	character.power_realms_ = magical_realms_;
+	character.spell_list_categories_ = spell_list_categories_;
+
+	/* Progression types */
 	character.bd_progression_ = &race_->armsProgression();
 	character.pp_progression_ = getPpProgression();
 
@@ -45,6 +48,8 @@ Character& CharacterBuilder::build() {
 	}
 
 	// TODO: Apply the complted builder properites to a new character.
+	// updateStatDerivedData
+
 	built_ = true;
 	return character;
 }
