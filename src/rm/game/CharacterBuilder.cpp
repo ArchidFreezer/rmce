@@ -19,7 +19,31 @@ Character& CharacterBuilder::build() {
 	}
 
 	Character& character = object_factory_->get<Character>();
+	/* Basic Data */
 	character.setName(name_);
+	character.male_ = male_;
+	character.race_ = race_;
+	character.culture_ = culture_;
+	character.profession_ = profession_;
+	character.stats_ = stats_;
+
+	/* Physical characteristics */
+	character.height_ = height_;
+	character.weight_ = weight_;
+	character.build_description_ = build_description_;
+	character.lifespan_ = lifespan_;
+
+	/* Derived data */
+	character.development_points_ = development_points_;
+	character.power_realms_ = magical_realms_;
+	character.bd_progression_ = &race_->armsProgression();
+	character.pp_progression_ = getPpProgression();
+
+	/* Learned abilities */
+	for (const LanguageAbility& language_ability : language_abilities_) {
+		character.setLanguageAbility(language_ability);
+	}
+
 	// TODO: Apply the complted builder properites to a new character.
 	built_ = true;
 	return character;
@@ -384,7 +408,7 @@ void CharacterBuilder::generatePhysique() {
 	build_description_ = build_label + " build";
 
 	// The weight is calculated using the following formula
-	// Weight = ( k × H^3 ) × FM × BM × GM
+	// Weight = ( k ï¿½ H^3 ) ï¿½ FM ï¿½ BM ï¿½ GM
 	// H: Height in inches.
 	// k: Racial Density Constant.
 	// FM: Frame Modifier (The race's average skeletal "width").
@@ -646,7 +670,6 @@ void CharacterBuilder::applyBackgroundChoices() {
 }
 
 void CharacterBuilder::applyApprenticeshipChoices() {
-
 	// First make any stat gain rolls if applicable.
 	if (!apprenticeship_stat_gains_.empty()) {
 		for (auto stat_type : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
@@ -669,7 +692,7 @@ void CharacterBuilder::applyApprenticeshipChoices() {
 				total_items_.push_back(special);
 			} else {
 				int roll = archid::Dice(100, 5).rollOpenHigh().result(); // Roll open-ended high d100 for the special item gain as per the rules for apprenticeship training package special gains.
-				if (roll + (chance / divisor) >= 100)	{
+				if (roll + (chance / divisor) >= 100) {
 					total_items_.push_back(special);
 					divisor *= 2;
 				}
@@ -731,6 +754,31 @@ void CharacterBuilder::addBackgroundCategorySpecialBonus(const SkillCategoryData
 	background_category_special_bonuses_.emplace(category, bonus);
 }
 
+const SkillProgressionTypeData* CharacterBuilder::getPpProgression() {
+	std::set<const SkillProgressionTypeData*> progressions{};
+	std::set<std::string_view> realm_names{}; // We sort the realm names so we can generate a consistent ID for the progression type to avoid duplication.
+	for (RealmType::Type realm : magical_realms_) {
+		if (isMagical(realm)) {
+			realm_names.insert(RealmType::toString(realm));
+			progressions.insert(realm_progressions_.at(realm));
+		}
+	}
+
+	if (progressions.size() == 1) {
+		return *progressions.begin();
+	} else if (progressions.size() > 1) {
+		SkillProgressionTypeData* combined{};
+		std::string id = "PP";
+		id += "_" + std::string(race_->id());
+		for (const auto& realm_name : realm_names) {
+			id += "_" + std::string(realm_name);
+		}
+		combined = &object_factory_->get<SkillProgressionTypeData>(id);
+		computeCombinedProgression(progressions, *combined);
+		return combined;
+	}
+	return nullptr;
+}
 /* ------------------------------------------------------------------ */
 /* Free functions                                                     */
 /* ------------------------------------------------------------------ */

@@ -411,6 +411,15 @@ private:
 	 * @param stats The map of stat types to their corresponding Stat objects for the character, which may be used in the calculation of development points.
 	 */
 	void calculateDevelopmentPoints(std::unordered_map<StatType::Type, Stat>& stats);
+
+	/**
+	 * @brief Gets the PP (Power Points) progression.
+	 * 
+	 * This function retrieves the PP progression for the character. The PP progression is based on magical realms from the profession.
+	 *
+	 * @return A pointer to the SkillProgressionTypeData object representing the character's PP progression.
+	 */
+	const SkillProgressionTypeData* getPpProgression();
 };
 
 /* ------------------------------------------------------------------ */
