@@ -33,6 +33,17 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
 		response.body() = R"({"version": "1.0.0", "api": "v1"})";
+	} else if (request.method() == http::verb::get && path.matchExact("/rmce/save")) {
+		try {
+			serial_manager_.save();
+			response.result(http::status::ok);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"save": "successful"})";
+		} catch (const std::exception& e) {
+			response.result(http::status::internal_server_error);
+			response.set(http::field::content_type, "application/json");
+			response.body() = R"({"error": "Save Failed", "message": ")" + std::string(e.what()) + R"("})";
+		}
 	} else if (path.match("/rmce/objects/")) {
 		ObjectRequestHandler handler {serial_manager_};
 		handler.handleRequest(request, response);
