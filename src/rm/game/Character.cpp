@@ -46,10 +46,9 @@ void Character::updateStatDerivedData(StatType::Type stat_type) {
 	default:
 		break;
 	}
-
 }
 
-	int Character::skillBonus(const SubcategoriedSkillData& skill) const {
+int Character::skillBonus(const SubcategoriedSkillData& skill) const {
 	int bonus{0};
 
 	auto it = skills_.find(&skill);
@@ -62,4 +61,6 @@ void Character::updateStatDerivedData(StatType::Type stat_type) {
 	}
 	return bonus;
 }
+
+} // namespace rm::game::character
 
