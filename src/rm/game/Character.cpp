@@ -63,4 +63,3 @@ int Character::skillBonus(const SubcategoriedSkillData& skill) const {
 }
 
 } // namespace rm::game::character
-
