@@ -33,6 +33,7 @@ json::value RaceSerializer::serializeObject(const RaceData& ref) const {
 	JsonConverter::setString(obj, "mentalismProgression", ref.mentalismProgression().id());
 	JsonConverter::setLanguageAbilities(obj, "startingLanguages", ref.startingLanguageAbilities());
 	JsonConverter::setLanguageAbilities(obj, "adolescentLanguages", ref.adolescentLanguageAbilities());
+	JsonConverter::setEnumPrimitiveMap<ResistanceType::Type, int>(obj, "resistanceBonuses", ref.resistanceBonuses());
 	JsonConverter::setEnumPrimitiveMap<StatType::Type, int>(obj, "statBonuses", ref.statBonuses());
 	JsonConverter::setSkillSet(obj, "everymanSkills", ref.everymanSkills());
 	JsonConverter::setSkillSet(obj, "restrictedSkills", ref.restrictedSkills());
@@ -94,6 +95,7 @@ const RaceData& RaceSerializer::deserializeObject(json::object& jsonObj) const {
 	ref.setStartingLanguageAbilities(JsonConverter::getLanguageAbilityMap(jsonObj, "startingLanguages", manager_));
 	ref.setAdolescentLanguageAbilities(JsonConverter::getLanguageAbilityMap(jsonObj, "adolescentLanguages", manager_));
 
+	ref.setResistanceBonuses(JsonConverter::getEnumPrimitiveMap<ResistanceType::Type, int>(jsonObj, "resistanceBonuses"));
 	ref.setStatBonuses(JsonConverter::getEnumPrimitiveMap<StatType::Type, int>(jsonObj, "statBonuses"));
 	ref.setEverymanSkills(JsonConverter::getSkillSet(jsonObj, "everymanSkills", manager_));
 	ref.setRestrictedSkills(JsonConverter::getSkillSet(jsonObj, "restrictedSkills", manager_));

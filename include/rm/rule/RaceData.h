@@ -16,6 +16,7 @@
 #include <SkillProgressionTypeData.h>
 #include <GameRuleDataChoice.h>
 #include <StatType.h>
+#include <ResistanceType.h>
 
 using namespace rm::rule::enums;
 
@@ -743,6 +744,52 @@ public:
 	}
 
 	/**
+	 * @brief Sets the racial bonus for a resistance
+	 *
+	 * @param resistance ResistanceType::Type to set the bonus for
+	 * @param bonus value of bonus
+	 */
+	void setResistanceBonus(ResistanceType::Type resistance, int bonus) {
+		resistance_bonuses_.emplace(resistance, bonus);
+	}
+
+	/**
+	 * @brief Sets the resistance bonuses by replacing the current resistance bonuses with the provided map.
+	 * @param resistance_bonuses A map containing resistance types and their corresponding bonus values to be set.
+	 */
+	void setResistanceBonuses(std::map<ResistanceType::Type, int> resistance_bonuses) {
+		resistance_bonuses_ = std::move(resistance_bonuses);
+	}
+
+	/**
+	 * @brief Gets the bonus that the race provides to a resistance
+	 *
+	 * @return bonus value
+	 */
+	int resistanceBonus(ResistanceType::Type resistance) const {
+		return resistance_bonuses_.count(resistance) ? resistance_bonuses_.at(resistance) // If the resistance is in the map return the bonus
+		                                             : 0;                                 // If the resistance is not in the map return 0
+	}
+
+	/**
+	 * @brief Gets a container with the resistances that the race has a bonus for
+	 * 
+	 * @return std::set of ResistanceType::Type with bonuses
+	 */
+	const std::set<ResistanceType::Type> resistancesWithBonus() const {
+		auto keys = std::views::keys(resistance_bonuses_);
+		return {keys.begin(), keys.end()};
+	}
+
+	/**
+	 * @brief Gets a reference to the map of resistance bonuses.
+	 * @return A reference to the map containing resistance type keys and their corresponding integer bonus values.
+	 */
+	const std::map<ResistanceType::Type, int>& resistanceBonuses() const {
+		return resistance_bonuses_;
+	}
+
+	/**
 	 * @brief Sets the racial bonus for a stat
 	 *
 	 * @param stat StatType::Type to set the bonus for
@@ -1111,6 +1158,7 @@ private:
 	const SkillProgressionTypeData* mentalism_progression_{};                                  /**< Skill progression for mentalism power point ranks */
 	std::map<std::string, const rm::game::character::LanguageAbility> starting_languages_{};   /**< Language ranks that members of the race learn prior to their adolescence */
 	std::map<std::string, const rm::game::character::LanguageAbility> adolescent_languages_{}; /**< Language ranks available to members of the race during adolescence */
+	std::map<ResistanceType::Type, int> resistance_bonuses_{};                                 /**< Racial resistance bonuses */
 	std::map<StatType::Type, int> stat_bonuses_{};                                             /**< Racial stats bonuses */
 	std::set<const SubcategoriedSkillData*> everyman_skills_{};                                /**< Skills that are considered everyman for the race */
 	std::set<const SubcategoriedSkillData*> restricted_skills_{};                              /**< Skills that are considered restricted for the race */

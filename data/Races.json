@@ -70,6 +70,24 @@
                     "written" : 6
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 15
+                },
+                {
+                    "id" : "Essence",
+                    "value" : 40
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : 40
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 20
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Agility",
@@ -204,6 +222,28 @@
                     "written" : 8
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Channeling",
+                    "value" : -5
+                },
+                {
+                    "id" : "Disease",
+                    "value" : -100
+                },
+                {
+                    "id" : "Essence",
+                    "value" : -5
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : -5
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 10
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Agility",
@@ -305,6 +345,28 @@
                     "language" : "LANGUAGE_NORTH_SPEECH",
                     "spoken" : 6,
                     "written" : 6
+                }
+            ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Channeling",
+                    "value" : -5
+                },
+                {
+                    "id" : "Disease",
+                    "value" : 100
+                },
+                {
+                    "id" : "Essence",
+                    "value" : -5
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : -5
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 10
                 }
             ],
             "statBonuses" : [
@@ -410,6 +472,28 @@
                     "language" : "LANGUAGE_WOOD_SPEECH",
                     "spoken" : 8,
                     "written" : 8
+                }
+            ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Channeling",
+                    "value" : -5
+                },
+                {
+                    "id" : "Disease",
+                    "value" : -100
+                },
+                {
+                    "id" : "Essence",
+                    "value" : -5
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : -5
+                },
+                {
+                    "id" : "Poison",
+                    "value" : -10
                 }
             ],
             "statBonuses" : [
@@ -536,6 +620,20 @@
                     "language" : "LANGUAGE_PLAINS_SPEECH",
                     "spoken" : 8,
                     "written" : 6
+                }
+            ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 5
+                },
+                {
+                    "id" : "Essence",
+                    "value" : 10
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 5
                 }
             ],
             "statBonuses" : [
@@ -670,6 +768,20 @@
                     "written" : 6
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Channeling",
+                    "value" : 20
+                },
+                {
+                    "id" : "Fear",
+                    "value" : 5
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : 5
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Constitution",
@@ -788,6 +900,20 @@
                     "written" : 2
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 5
+                },
+                {
+                    "id" : "Fear",
+                    "value" : 5
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 5
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Constitution",
@@ -884,6 +1010,24 @@
                     "language" : "LANGUAGE_SMALL_SPEECH",
                     "spoken" : 10,
                     "written" : 10
+                }
+            ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 15
+                },
+                {
+                    "id" : "Essence",
+                    "value" : 50
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : 40
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 30
                 }
             ],
             "statBonuses" : [
@@ -989,6 +1133,24 @@
                     "written" : 10
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 15
+                },
+                {
+                    "id" : "Essence",
+                    "value" : 50
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : 40
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 30
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Agility",
@@ -1090,6 +1252,24 @@
                     "language" : "LANGUAGE_SMALL_SPEECH",
                     "spoken" : 10,
                     "written" : 10
+                }
+            ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 15
+                },
+                {
+                    "id" : "Essence",
+                    "value" : 50
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : 40
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 30
                 }
             ],
             "statBonuses" : [
@@ -1194,6 +1374,20 @@
                     "language" : "LANGUAGE_SMALL_SPEECH",
                     "spoken" : 10,
                     "written" : 10
+                }
+            ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 15
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : 40
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 30
                 }
             ],
             "statBonuses" : [
@@ -1314,6 +1508,24 @@
                     "written" : 10
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Channeling",
+                    "value" : -5
+                },
+                {
+                    "id" : "Disease",
+                    "value" : 50
+                },
+                {
+                    "id" : "Essence",
+                    "value" : -5
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : -5
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Agility",
@@ -1406,6 +1618,16 @@
                     "written" : 8
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 5
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 5
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Constitution",
@@ -1474,6 +1696,16 @@
                     "language" : "LANGUAGE_HOBGOBLIN",
                     "spoken" : 8,
                     "written" : 8
+                }
+            ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 5
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 5
                 }
             ],
             "statBonuses" : [
@@ -1581,6 +1813,28 @@
                     "language" : "LANGUAGE_HOBGOBLIN",
                     "spoken" : 6,
                     "written" : 6
+                }
+            ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Channeling",
+                    "value" : 10
+                },
+                {
+                    "id" : "Disease",
+                    "value" : 5
+                },
+                {
+                    "id" : "Essence",
+                    "value" : 10
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : 10
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 5
                 }
             ],
             "statBonuses" : [
@@ -1765,6 +2019,20 @@
                     "written" : 6
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Channeling",
+                    "value" : -5
+                },
+                {
+                    "id" : "Essence",
+                    "value" : -5
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : -5
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Agility",
@@ -1868,6 +2136,20 @@
                     "written" : 6
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Channeling",
+                    "value" : -5
+                },
+                {
+                    "id" : "Essence",
+                    "value" : -5
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : -5
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Constitution",
@@ -1939,6 +2221,12 @@
                     "language" : "LANGUAGE_ORCISH",
                     "spoken" : 10,
                     "written" : 10
+                }
+            ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 5
                 }
             ],
             "statBonuses" : [
@@ -2080,6 +2368,16 @@
                     "written" : 3
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 10
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 5
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Constitution",
@@ -2194,6 +2492,24 @@
                     "written" : 4
                 }
             ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Disease",
+                    "value" : 15
+                },
+                {
+                    "id" : "Essence",
+                    "value" : 40
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : 40
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 20
+                }
+            ],
             "statBonuses" : [
                 {
                     "id" : "Constitution",
@@ -2278,6 +2594,20 @@
                     "language" : "LANGUAGE_TROGLODYTE",
                     "spoken" : 10,
                     "written" : 3
+                }
+            ],
+            "resistanceBonuses" : [
+                {
+                    "id" : "Channeling",
+                    "value" : 10
+                },
+                {
+                    "id" : "Disease",
+                    "value" : 20
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 20
                 }
             ],
             "statBonuses" : [
