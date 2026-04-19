@@ -408,7 +408,7 @@ void CharacterBuilder::generatePhysique() {
 	build_description_ = build_label + " build";
 
 	// The weight is calculated using the following formula
-	// Weight = ( k × H^3 ) × FM × BM × GM
+	// Weight = ( k ï¿½ H^3 ) ï¿½ FM ï¿½ BM ï¿½ GM
 	// H: Height in inches.
 	// k: Racial Density Constant.
 	// FM: Frame Modifier (The race's average skeletal "width").
