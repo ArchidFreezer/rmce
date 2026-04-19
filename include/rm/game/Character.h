@@ -1,6 +1,8 @@
 #pragma once
 
 #include <GameObject.h>
+#include <CharacterCategory.h>
+#include <CharacterSkill.h>
 #include <CharacterStat.h>
 #include <LanguageAbility.h>
 #include <RaceData.h>
@@ -54,6 +56,15 @@ public:
 	void updateStatTemporary(StatType::Type stat_type, int difference) {
 		stats_[stat_type].updateTemporary(difference);
 		updateStatDerivedData(stat_type);
+	}
+
+	/**
+	 * @brief Get the bonus for a given stat type.
+	 * @param stat_type The type of stat to retrieve the bonus for (e.g., strength, dexterity, etc.).
+	 * @return The bonus value for the specified stat type.
+	 */
+	int statBonus(StatType::Type stat_type) const {
+		return stats_.at(stat_type).bonus();
 	}
 
 	/**
@@ -491,6 +502,8 @@ private:
 
 	/* Learned abilities */
 	std::unordered_map<std::string, LanguageAbility> language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. */
+	std::map<const SubcategoriedSkillData*, Skill> skills_{};             /**< A map of SkillData pointers to Skill objects representing the character's skills. */
+	std::map<const SkillCategoryData*, Category> skill_categories_{};     /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
 
 	/* Utility functions */
 	void updateStatDerivedData(StatType::Type stat_type);
