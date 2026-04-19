@@ -1,6 +1,6 @@
 #pragma once
 
-#include <GameObject.h>
+#include <algorithm>
 
 namespace rm::game::character {
 
