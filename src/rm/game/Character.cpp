@@ -47,7 +47,20 @@ void Character::updateStatDerivedData(StatType::Type stat_type) {
 		break;
 	}
 
-	// TODO update skill stat bonuses when they are implemented
+}
+
+	int Character::skillBonus(const SubcategoriedSkillData& skill) const {
+	int bonus{0};
+
+	auto it = skills_.find(&skill);
+	if (it != skills_.end()) {
+		bonus += it->second.bonus();
+		// Now we need to add the stat bonus as that is not included
+		for (const auto& stat_type : it->second.stats()) {
+			bonus += statBonus(stat_type);
+		}
+	}
+	return bonus;
 }
 
 } // namespace rm::game::character

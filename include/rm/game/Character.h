@@ -474,6 +474,16 @@ public:
 		return development_points_;
 	}
 
+	/**
+	 * @brief Get the bonus for a given skill based on the number of ranks allocated to it and the category.
+	 *
+	 * This includes the bonus from ranks from the category and the applicable stats.
+	 *
+	 * @param skill The `SubcategoriedSkillData` object representing the skill to calculate the bonus for.
+	 * @return The total rank bonus for the specified skill.
+	 */
+	int skillBonus(const SubcategoriedSkillData& skill) const;
+
 private:
 	/* Basic data */
 	std::string name_;                               /**< The name of the character. This is used for display purposes and may not be unique. */

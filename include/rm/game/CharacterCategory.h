@@ -26,7 +26,7 @@ public:
 	 * 
 	 * @return The total bonus for this category, including any progression and/or special bonuses.
 	*/
-	int rankBonus() const;
+	int bonus() const;
 
 	/**
 	 * @brief Get the stats associated with this category, which are derived from the category data.
