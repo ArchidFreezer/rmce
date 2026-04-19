@@ -7,6 +7,7 @@
 #include <CultureData.h>
 #include <ProfessionData.h>
 #include <RealmType.h>
+#include <ResistanceType.h>
 #include <SkillProgressionTypeData.h>
 #include <StatType.h>
 #include <unordered_map>
@@ -36,12 +37,13 @@ public:
 	}
 
 	/**
-	 * @brief Sets the stat temp for a specific stat type.
+	 * @brief Sets the stat for a specific stat type.
 	 * @param stat_type The type of statistic to set.
-	 * @param temp_value The statistic temporary value to store.
+	 * @param stat The statistic to store.
 	 */
-	void setStat(StatType::Type stat_type, int temp_value) {
-		stats_[stat_type].setTemporary(temp_value);
+	void setStat(StatType::Type stat_type, Stat stat) {
+		stats_[stat_type] = stat;
+		updateStatDerivedData(stat_type);
 	}
 
 	/**
@@ -49,8 +51,9 @@ public:
 	 * @param stat_type The type of statistic to update.
 	 * @param difference The temporary value to add to the existing temporary value of the specified statistic.
 	 */
-	void updateStat(StatType::Type stat_type, int difference) {
+	void updateStatTemporary(StatType::Type stat_type, int difference) {
 		stats_[stat_type].updateTemporary(difference);
+		updateStatDerivedData(stat_type);
 	}
 
 	/**
@@ -82,6 +85,87 @@ public:
 	 */
 	void setRace(const RaceData& race) {
 		race_ = &race;
+	}
+
+	/**
+	 * @brief Get the race data of the character.
+	 *
+	 * @return A pointer to the race data of the character.
+	 */
+	const RaceData* race() const {
+		return race_;
+	}
+
+	/**
+	 * @brief Set the culture of the character.
+	 *
+	 * @param culture The culture data to set for the character.
+	 */
+	void setCulture(const CultureData& culture) {
+		culture_ = &culture;
+	}
+
+	/**
+	 * @brief Get the culture data of the character.
+	 *
+	 * @return A pointer to the culture data of the character.
+	 */
+	const CultureData* culture() const {
+		return culture_;
+	}
+
+	/**
+	 * @brief Set the profession of the character.
+	 *
+	 * @param profession The profession data to set for the character.
+	 */
+	void setProfession(const ProfessionData& profession) {
+		profession_ = &profession;
+	}
+
+	/**
+	 * @brief Get the profession data of the character.
+	 *
+	 * @return A pointer to the profession data of the character.
+	 */
+	const ProfessionData* profession() const {
+		return profession_;
+	}
+
+	/**
+	 * @brief Set the Body Development progression type for the character.
+	 *
+	 * @param progression The SkillProgressionTypeData to set for the character's Body Development progression.
+	 */
+	void setBodyDevelopmentProgression(const SkillProgressionTypeData& progression) {
+		bd_progression_ = &progression;
+	}
+
+	/**
+	 * @brief Get the Body Development progression type for the character.
+	 *
+	 * @return A pointer to the SkillProgressionTypeData for the character's Body Development progression.
+	 */
+	const SkillProgressionTypeData* bodyDevelopmentProgression() const {
+		return bd_progression_;
+	}
+
+	/**
+	 * @brief Set the Power Point progression type for the character.
+	 *
+	 * @param progression The SkillProgressionTypeData to set for the character's Power Point progression.
+	 */
+	void setPowerPointProgression(const SkillProgressionTypeData& progression) {
+		pp_progression_ = &progression;
+	}
+
+	/**
+	 * @brief Get the Power Point progression type for the character.
+	 *
+	 * @return A pointer to the SkillProgressionTypeData for the character's Power Point progression.
+	 */
+	const SkillProgressionTypeData* powerPointProgression() const {
+		return pp_progression_;
 	}
 
 	/**
@@ -139,37 +223,312 @@ public:
 	}
 
 	/**
-	 * @brief Set the realm progression for a specific realm type.
+	 * @brief Set whether the character is a player character or an NPC.
 	 *
-	 * The realm progressions are stored in an unordered map with the realm type as the key and a pointer to the corresponding `SkillProgressionTypeData` object as the value. These are for Power Point and Body Development progressions.
+	 * This is used to differentiate between characters that are controlled by the player and those that are controlled by the game. Player characters may have different interactions and behaviors compared to NPCs, so this flag can be used
+	 * to determine how the character should be treated in various situations.
 	 *
-	 * @param realm_type The type of realm to set the progression for. This should be a realm that has a Power Point stat and is the Arms realm.
-	 * @param progression The `SkillProgressionTypeData` object representing the progression to set for the specified realm type.
-	 * @throw std::invalid_argument if the specified realm type is not valid for realm progressions (i.e., it does not have a Power Point stat or is not the Arms realm).
+	 * @param is_player_character `true` if the character is a player character, `false` if it is an NPC.
 	 */
-	void setRealmProgression(RealmType::Type realm_type, const SkillProgressionTypeData& progression) {
-		if (!RealmType::isPpStat(realm_type) || !(realm_type == RealmType::kArms)) {
-			throw std::invalid_argument("Invalid realm type for realm progression. Realm progressions can only be set for realms that have a Power Point stat and are the Arms realm.");
-		}
-		realm_progressions_[realm_type] = &progression;
+	void setPlayerCharacter(bool is_player_character) {
+		player_character_ = is_player_character;
 	}
+
 	/**
-	 * @brief Get the race data of the character.
+	 * @brief Check if the character is a player character or an NPC.
 	 *
-	 * @return A pointer to the race data of the character.
+	 * This is used to differentiate between characters that are controlled by the player and those that are controlled by the game. Player characters may have different interactions and behaviors compared to NPCs, so this flag can be used
+	 * to determine how the character should be treated in various situations.
+	 *
+	 * @return `true` if the character is a player character, `false` if it is an NPC.
 	 */
-	const RaceData* race() const {
-		return race_;
+	bool isPlayerCharacter() const {
+		return player_character_;
+	}
+
+	/**
+	 * @brief Set whether the character is male or female.
+	 *
+	 * This is used to differentiate between male and female characters. Some interactions and behaviors may depend on the character's gender, so this flag can be used to determine how the character should be treated in various situations.
+	 *
+	 * @param is_male `true` if the character is male, `false` if the character is female.
+	 */
+	void setMale(bool is_male) {
+		male_ = is_male;
+	}
+
+	/**
+	 * @brief Check if the character is male or female.
+	 *
+	 * This is used to differentiate between male and female characters. Some interactions and behaviors may depend on the character's gender, so this flag can be used to determine how the character should be treated in various situations.
+	 *
+	 * @return `true` if the character is male, `false` if the character is female.
+	 */
+	bool isMale() const {
+		return male_;
+	}
+
+	/**
+	 * @brief Set the height of the character in inches.
+	 *
+	 * This is used to represent the physical height of the character. It can be used for display purposes and may also have an impact on certain interactions and behaviors in the game.
+	 *
+	 * @param height The height of the character in inches.
+	 */
+	void setHeight(int height) {
+		height_ = height;
+	}
+
+	/**
+	 * @brief Get the height of the character in inches.
+	 *
+	 * This is used to represent the physical height of the character. It can be used for display purposes and may also have an impact on certain interactions and behaviors in the game.
+	 *
+	 * @return The height of the character in inches.
+	 */
+	int height() const {
+		return height_;
+	}
+
+	/**
+	 * @brief Get the height of the character in feet and inches as a formatted string.
+	 *
+	 * This is used to represent the physical height of the character in a more human-readable format. It can be used for display purposes and may also have an impact on certain interactions and behaviors in the game.
+	 *
+	 * @return The height of the character in feet and inches as a formatted string (e.g., "5 ft 10 in").
+	 */
+	std::string heightInFeetAndInches() const {
+		int feet = height_ / 12;
+		int inches = height_ % 12;
+		return std::to_string(feet) + " ft " + std::to_string(inches) + " in";
+	}
+
+	/**
+	 * @brief Set the weight of the character in pounds.
+	 *
+	 * This is used to represent the physical weight of the character. It can be used for display purposes and may also have an impact on certain interactions and behaviors in the game.
+	 *
+	 * @param weight The weight of the character in pounds.
+	 */
+	void setWeight(int weight) {
+		weight_ = weight;
+	}
+
+	/**
+	 * @brief Get the weight of the character in pounds.
+	 *
+	 * This is used to represent the physical weight of the character. It can be used for display purposes and may also have an impact on certain interactions and behaviors in the game.
+	 *
+	 * @return The weight of the character in pounds.
+	 */
+	int weight() const {
+		return weight_;
+	}
+
+	/**
+	 * @brief Get the weight of the character in stone and pounds as a formatted string.
+	 *
+	 * This is used to represent the physical weight of the character in a more human-readable format. It can be used for display purposes and may also have an impact on certain interactions and behaviors in the game.
+	 *
+	 * @return The weight of the character in stone and pounds as a formatted string (e.g., "11 st 4 lb").
+	 */
+	std::string weightInStoneAndPounds() const {
+		int stone = weight_ / 14;
+		int pounds = weight_ % 14;
+		return std::to_string(stone) + " st " + std::to_string(pounds) + " lb";
+	}
+
+	/**
+	 * @brief Set the description of the character's build.
+	 *
+	 * This is used to represent the physical build of the character. It can be used for display purposes and may also have an impact on certain interactions and behaviors in the game.
+	 *
+	 * @param build_description A description of the character's build.
+	 */
+	void setBuildDescription(const std::string& build_description) {
+		build_description_ = build_description;
+	}
+
+	/**
+	 * @brief Get the description of the character's build.
+	 *
+	 * This is used to represent the physical build of the character. It can be used for display purposes and may also have an impact on certain interactions and behaviors in the game.
+	 *
+	 * @return A description of the character's build.
+	 */
+	const std::string& buildDescription() const {
+		return build_description_;
+	}
+
+	/**
+	 * @brief Set the expected lifespan of the character if no external factors apply.
+	 *
+	 * This is used to represent the expected lifespan of the character based on their race.
+	 */
+	void setLifespan(int lifespan) {
+		lifespan_ = lifespan;
+	}
+
+	/**
+	 * @brief Get the expected lifespan of the character if no external factors apply.
+	 *
+	 * This is used to represent the expected lifespan of the character based on their race.
+	 */
+	int lifespan() const {
+		return lifespan_;
+	}
+
+	/**
+	 * @brief Get the power realms that the character has access to.
+	 *
+	 * The power realms are represented as a set of `RealmType::Type` values, which indicate the different power realms that the character can access. This information can be used for display purposes and may also have an impact on
+	 * certain interactions and behaviors in the game.
+	 *
+	 * @return A constant reference to the set of power realms that the character has access to.
+	 */
+	const std::set<RealmType::Type>& powerRealms() const {
+		return power_realms_;
+	}
+
+	/**
+	 * @brief Set the power realms that the character has access to.
+	 *
+	 * The power realms are represented as a set of `RealmType::Type` values, which indicate the different power realms that the character can access. This information can be used for display purposes and may also have an impact on
+	 * certain interactions and behaviors in the game.
+	 *
+	 * @param power_realms A set of `RealmType::Type` values representing the power realms that the character has access to.
+	 */
+	void setPowerRealms(const std::set<RealmType::Type>& power_realms) {
+		power_realms_ = power_realms;
+	}
+
+	/**
+	 * @brief Check if the character has access to a specific power realm.
+	 *
+	 * The power realms are represented as a set of `RealmType::Type` values, which indicate the different power realms that the character can access. This information can be used for display purposes and may also have an impact on
+	 * certain interactions and behaviors in the game.
+	 *
+	 * @param realm The `RealmType::Type` value representing the power realm to check for.
+	 * @return `true` if the character has access to the specified power realm, `false` otherwise.
+	 */
+	bool isPowerRealm(RealmType::Type realm) const {
+		return power_realms_.find(realm) != power_realms_.end();
+	}
+
+	/**
+	 * @brief Add a power realm to the character's set of accessible power realms.
+	 *
+	 * The power realms are represented as a set of `RealmType::Type` values, which indicate the different power realms that the character can access. This information can be used for display purposes and may also have an impact on
+	 * certain interactions and behaviors in the game.
+	 *
+	 * @param realm The `RealmType::Type` value representing the power realm to add to the character's set of accessible power realms.
+	 */
+	void addPowerRealm(RealmType::Type realm) {
+		power_realms_.insert(realm);
+	}
+
+	/**
+	 * @brief Sets the development points value.
+	 *
+	 * The development points represent the number of points the character has for development and progression and are based on the character stats and are spent during the level up process. Not all points need to be spent each level up and
+	 * any unspent points may be arried forward to the next level up.
+	 *
+	 * @param development_points The new development points value to set.
+	 */
+	void setDevelopmentPoints(int development_points) {
+		development_points_ = development_points;
+	}
+
+	/**
+	 * @brief Modifies the development points value by adding a specified difference.
+	 *
+	 * The development points represent the number of points the character has for development and progression and are based on the character stats and are spent during the level up process. Not all points need to be spent each level up and
+	 * any unspent points may be arried forward to the next level up.
+	 *
+	 * @param difference The amount to add to the current development points value. This can be a positive or negative value, depending on whether you want to increase or decrease the development points.
+	 */
+	void modifyDevelopmentPoints(int difference) {
+		development_points_ += difference;
+	}
+
+	/**
+	 * @brief Get the current development points value.
+	 *
+	 * The development points represent the number of points the character has for development and progression and are based on the character stats and are spent during the level up process. Not all points need to be spent each level up and
+	 * any unspent points may be arried forward to the next level up.
+	 *
+	 * @return The current development points value for the character.
+	 */
+	int developmentPoints() const {
+		return development_points_;
 	}
 
 private:
-	std::string name_;              /**< The name of the character. This is used for display purposes and may not be unique. */
-	const RaceData* race_{nullptr}; /**< The race data for the character. */
-	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*>
-	    realm_progressions_; /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. These are for Power Point and Body Development progressions. */
-	std::unordered_map<StatType::Type, Stat> stats_; // Map of stat types to their corresponding Stat objects for the character. Each character will have 10 stats, such as strength, dexterity, etc.
-	std::unordered_map<std::string, LanguageAbility>
-	    language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. Each character can have multiple language abilities, which represent the languages they can communicate using. */
+	/* Basic data */
+	std::string name_;                               /**< The name of the character. This is used for display purposes and may not be unique. */
+	bool male_{false};                               /**< Whether the character is male or female. */
+	bool player_character_{false};                   /**< Whether the character is a player character or an NPC. */
+	const RaceData* race_{nullptr};                  /**< The race of the character. */
+	const CultureData* culture_{nullptr};            /**< The culture of the character. */
+	const ProfessionData* profession_{nullptr};      /**< The profession of the character. */
+	std::unordered_map<StatType::Type, Stat> stats_; /**< Map of stat types to their corresponding Stat objects for the character. Each character will have 10 stats, such as strength, dexterity, etc. */
+
+	/* Physical characteristics */
+	int height_{0};                 /**< The height of the character in inches. */
+	int weight_{0};                 /**< The weight of the character in pounds. */
+	std::string build_description_; /**< A description of the character's build, which may be used for display purposes. */
+	int lifespan_{0};               /**< The expected lifespan of the character in years, which may be used for display purposes and to determine age-related effects in the game. */
+
+	/* Derived data */
+	int development_points_{0};                         /**< The number of development points the character has, which may be used for character progression and development. */
+	std::set<RealmType::Type> power_realms_{};          /**< A set of realm types representing the magical realm choices for the character being built. */
+	std::map<ResistanceType::Type, int> resistances_{}; /**< A map of resistance roll bonuses for the character. */
+
+	/* Progression types */
+	const SkillProgressionTypeData* bd_progression_{nullptr}; /**< The SkillProgressionTypeData for the character's Body Development progression. */
+	const SkillProgressionTypeData* pp_progression_{nullptr}; /**< The SkillProgressionTypeData for the character's Power Point progression. */
+
+	/* Learned abilities */
+	std::unordered_map<std::string, LanguageAbility> language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. */
+
+	/* Utility functions */
+	void updateStatDerivedData(StatType::Type stat_type) {
+		switch (stat_type) {
+		case rm::rule::enums::StatType::kAgility:
+			break;
+		case rm::rule::enums::StatType::kConstitution: {
+			resistances_[ResistanceType::kPoison] = getStat(StatType::kConstitution).bonus() * 3; // TODO add racial bonus
+			resistances_[ResistanceType::kDisease] = getStat(StatType::kConstitution).bonus() * 3;
+			break;
+		}
+		case rm::rule::enums::StatType::kEmpathy: {
+			resistances_[ResistanceType::kEssence] = getStat(StatType::kEmpathy).bonus() * 3;
+			break;
+		}
+		case rm::rule::enums::StatType::kIntuition: {
+			resistances_[ResistanceType::kChanneling] = getStat(StatType::kIntuition).bonus() * 3;
+			break;
+		}
+		case rm::rule::enums::StatType::kMemory:
+			break;
+		case rm::rule::enums::StatType::kPresence: {
+			resistances_[ResistanceType::kMentalism] = getStat(StatType::kPresence).bonus() * 3;
+			break;
+		}
+		case rm::rule::enums::StatType::kQuickness:
+			break;
+		case rm::rule::enums::StatType::kReasoning:
+			break;
+		case rm::rule::enums::StatType::kSelfDiscipline: {
+			resistances_[ResistanceType::kFear] = getStat(StatType::kSelfDiscipline).bonus() * 3;
+			break;
+		}
+		case rm::rule::enums::StatType::kStrength:
+			break;
+		default:
+			break;
+		}
+	}
 };
 
 } // namespace rm::game::character
