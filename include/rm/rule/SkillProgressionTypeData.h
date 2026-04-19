@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <set>
 
 #include <GameRuleData.h>
 #include <SkillProgressionData.h>
@@ -156,5 +157,20 @@ private:
 	 */
 	int bonus(int ranks, float zero, float ten, float twenty, float thirty, float remaining) const;
 };
+
+/* ------------------------------------------------------------------ */
+/* Free functions                                                     */
+/* ------------------------------------------------------------------ */
+
+/**
+ * @brief Compute the combined progression from a set of progression types
+ *
+ * When a character has multiple magical realms, such as a hybrid caster, we need to combine the progression to determine the final power point progression. This function takes a set of progression types and computes the combined
+ * progression by averaging the bonuses provided by each progression type for the given number of ranks.
+ *
+ * @param progression_types A set of pointers to SkillProgressionTypeData objects representing the progression types to combine.
+ * @param combined_progression A reference to a SkillProgressionTypeData object where the combined progression will be stored.
+ */
+void computeCombinedProgression(const std::set<const SkillProgressionTypeData*>& progression_types, SkillProgressionTypeData& combined_progression);
 
 } // namespace rm::rule
