@@ -1,6 +1,8 @@
 #pragma once
 
 #include <GameObject.h>
+#include <CharacterCategory.h>
+#include <CharacterSkill.h>
 #include <CharacterStat.h>
 #include <LanguageAbility.h>
 #include <RaceData.h>
@@ -54,6 +56,15 @@ public:
 	void updateStatTemporary(StatType::Type stat_type, int difference) {
 		stats_[stat_type].updateTemporary(difference);
 		updateStatDerivedData(stat_type);
+	}
+
+	/**
+	 * @brief Get the bonus for a given stat type.
+	 * @param stat_type The type of stat to retrieve the bonus for (e.g., strength, dexterity, etc.).
+	 * @return The bonus value for the specified stat type.
+	 */
+	int statBonus(StatType::Type stat_type) const {
+		return stats_.at(stat_type).bonus();
 	}
 
 	/**
@@ -463,6 +474,16 @@ public:
 		return development_points_;
 	}
 
+	/**
+	 * @brief Get the bonus for a given skill based on the number of ranks allocated to it and the category.
+	 *
+	 * This includes the bonus from ranks from the category and the applicable stats.
+	 *
+	 * @param skill The `SubcategoriedSkillData` object representing the skill to calculate the bonus for.
+	 * @return The total rank bonus for the specified skill.
+	 */
+	int skillBonus(const SubcategoriedSkillData& skill) const;
+
 private:
 	/* Basic data */
 	std::string name_;                               /**< The name of the character. This is used for display purposes and may not be unique. */
@@ -480,9 +501,10 @@ private:
 	int lifespan_{0};               /**< The expected lifespan of the character in years, which may be used for display purposes and to determine age-related effects in the game. */
 
 	/* Derived data */
-	int development_points_{0};                         /**< The number of development points the character has, which may be used for character progression and development. */
-	std::set<RealmType::Type> power_realms_{};          /**< A set of realm types representing the magical realm choices for the character being built. */
-	std::map<ResistanceType::Type, int> resistances_{}; /**< A map of resistance roll bonuses for the character. */
+	int development_points_{0};                                                                  /**< The number of development points the character has, which may be used for character progression and development. */
+	std::set<RealmType::Type> power_realms_{};                                                   /**< A set of realm types representing the magical realm choices for the character being built. */
+	std::map<ResistanceType::Type, int> resistances_{};                                          /**< A map of resistance roll bonuses for the character. */
+	std::map<const SkillCategoryData*, std::set<const SpellListData*>> spell_list_categories_{}; /**< A map of skill categories to sets of spell lists representing the spell lists sorted into their respective skill categories. */
 
 	/* Progression types */
 	const SkillProgressionTypeData* bd_progression_{nullptr}; /**< The SkillProgressionTypeData for the character's Body Development progression. */
@@ -490,45 +512,11 @@ private:
 
 	/* Learned abilities */
 	std::unordered_map<std::string, LanguageAbility> language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. */
+	std::map<const SubcategoriedSkillData*, Skill> skills_{};             /**< A map of SkillData pointers to Skill objects representing the character's skills. */
+	std::map<const SkillCategoryData*, Category> skill_categories_{};     /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
 
 	/* Utility functions */
-	void updateStatDerivedData(StatType::Type stat_type) {
-		switch (stat_type) {
-		case rm::rule::enums::StatType::kAgility:
-			break;
-		case rm::rule::enums::StatType::kConstitution: {
-			resistances_[ResistanceType::kPoison] = getStat(StatType::kConstitution).bonus() * 3; // TODO add racial bonus
-			resistances_[ResistanceType::kDisease] = getStat(StatType::kConstitution).bonus() * 3;
-			break;
-		}
-		case rm::rule::enums::StatType::kEmpathy: {
-			resistances_[ResistanceType::kEssence] = getStat(StatType::kEmpathy).bonus() * 3;
-			break;
-		}
-		case rm::rule::enums::StatType::kIntuition: {
-			resistances_[ResistanceType::kChanneling] = getStat(StatType::kIntuition).bonus() * 3;
-			break;
-		}
-		case rm::rule::enums::StatType::kMemory:
-			break;
-		case rm::rule::enums::StatType::kPresence: {
-			resistances_[ResistanceType::kMentalism] = getStat(StatType::kPresence).bonus() * 3;
-			break;
-		}
-		case rm::rule::enums::StatType::kQuickness:
-			break;
-		case rm::rule::enums::StatType::kReasoning:
-			break;
-		case rm::rule::enums::StatType::kSelfDiscipline: {
-			resistances_[ResistanceType::kFear] = getStat(StatType::kSelfDiscipline).bonus() * 3;
-			break;
-		}
-		case rm::rule::enums::StatType::kStrength:
-			break;
-		default:
-			break;
-		}
-	}
+	void updateStatDerivedData(StatType::Type stat_type);
 };
 
 } // namespace rm::game::character

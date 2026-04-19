@@ -2,8 +2,10 @@
 #include <cmath>
 #include <ranges>
 #include <CharacterBuilder.h>
+#include <CharacterCategory.h>
 #include <EnumIterator.h>
 #include <TrainingPackageCostTable.h>
+#include <SkillDevelopmentCost.h>
 
 namespace rm::game::character {
 
@@ -36,6 +38,9 @@ Character& CharacterBuilder::build() {
 	/* Derived data */
 	character.development_points_ = development_points_;
 	character.power_realms_ = magical_realms_;
+	character.spell_list_categories_ = spell_list_categories_;
+
+	/* Progression types */
 	character.bd_progression_ = &race_->armsProgression();
 	character.pp_progression_ = getPpProgression();
 
@@ -44,7 +49,80 @@ Character& CharacterBuilder::build() {
 		character.setLanguageAbility(language_ability);
 	}
 
+	/* Apply category data */
+	// The profession should define a cost for every category so this loop should create all the Category objects in the character.
+	for (const auto& [category_type, dev_cost] : category_development_costs_) {
+		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		Category& category = it->second;
+		category.development_cost_ = dev_cost;
+
+		// Set the stats used for the category.
+		if (category_type->useRealmStats()) {
+			for (const RealmType::Type& realm : magical_realms_) {
+				for (const StatType::Type& stat : StatType::statsForRealm(realm)) {
+					category.stats_.push_back(stat);
+				}
+			}
+		} else {
+			category.stats_ = category_type->stats();
+		}
+	}
+
+	for (const auto& [category_type, ranks] : category_ranks_) {
+		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		Category& category = it->second;
+		category.ranks_ = ranks;
+	}
+
+	for (const auto& [category_type, prof_bonus] : category_professional_bonuses_) {
+		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		Category& category = it->second;
+		category.profession_bonus_ = prof_bonus;
+	}
+
+	for (const auto& [category_type, special_bonus] : category_special_bonuses_) {
+		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		Category& category = it->second;
+		category.special_bonus_ = special_bonus;
+	}
+
+	/* Apply skill data */
+	for (const auto& [skill_data, ranks] : skill_ranks_) {
+		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
+		Skill& skill = it->second;
+		skill.ranks_ = ranks;
+	}
+
+	for (const auto& [skill_data, prof_bonus] : skill_professional_bonuses_) {
+		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
+		Skill& skill = it->second;
+		skill.profession_bonus_ = prof_bonus;
+	}
+
+	for (const auto& [skill_data, special_bonus] : skill_special_bonuses_) {
+		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
+		Skill& skill = it->second;
+		skill.special_bonus_ = special_bonus;
+	}
+
+	for (const auto& [skill_data, dev_type] : skill_development_types_) {
+		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
+		Skill& skill = it->second;
+		skill.development_type_ = dev_type;
+	}
+
+	// Now we have all the modified skills we can iterate through them and add the appropriate category.
+	for (auto& [skill_data, skill] : character.skills_) {
+		const SkillCategoryData& category_data = skill_data->skillData().category();
+		auto category_it = character.skill_categories_.find(&category_data);
+		if (category_it != character.skill_categories_.end()) {
+			skill.category_ = &category_it->second;
+		}
+	}
+
 	// TODO: Apply the complted builder properites to a new character.
+	// updateStatDerivedData
+
 	built_ = true;
 	return character;
 }
