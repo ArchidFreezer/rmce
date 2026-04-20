@@ -93,7 +93,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 			JsonConverter::setString(stat_obj, "stat", toString(stat_type));
 			JsonConverter::setInt(stat_obj, "temporary", stat.temporary());
 			JsonConverter::setInt(stat_obj, "potential", stat.potential());
-			JsonConverter::setInt(stat_obj, "bonus", stat.bonus());
+			JsonConverter::setInt(stat_obj, "racialBonus", stat.racialBonus());
 			stats_array.emplace_back(std::move(stat_obj));
 		}
 		if (stats_array.size())
@@ -177,7 +177,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 			JsonConverter::setString(stat_obj, "stat", toString(stat_type));
 			JsonConverter::setInt(stat_obj, "temporary", stat.temporary());
 			JsonConverter::setInt(stat_obj, "potential", stat.potential());
-			JsonConverter::setInt(stat_obj, "bonus", stat.bonus());
+			JsonConverter::setInt(stat_obj, "racialBonus", stat.racialBonus());
 			stats_array.emplace_back(std::move(stat_obj));
 		}
 		if (stats_array.size())
@@ -342,12 +342,12 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 
 			const int temporary = JsonConverter::getInt(stat_obj, "temporary", 0);
 			const int potential = JsonConverter::getInt(stat_obj, "potential", 0);
-			const int bonus = JsonConverter::getInt(stat_obj, "bonus", 0);
+			const int racial_bonus = JsonConverter::getInt(stat_obj, "racialBonus", 0);
 
 			Stat stat{};
 			stat.setTemporary(temporary);
 			stat.setPotential(potential);
-			stat.setRacialBonus(bonus - rm::game::character::stat::getBasicBonus(temporary));
+			stat.setRacialBonus(racial_bonus);
 
 			ref.initial_stats_.insert_or_assign(stat_type, stat);
 		}
@@ -445,12 +445,12 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 
 			const int temporary = JsonConverter::getInt(stat_obj, "temporary", 0);
 			const int potential = JsonConverter::getInt(stat_obj, "potential", 0);
-			const int bonus = JsonConverter::getInt(stat_obj, "bonus", 0);
+			const int racial_bonus = JsonConverter::getInt(stat_obj, "racialBonus", 0);
 
 			Stat stat{};
 			stat.setTemporary(temporary);
 			stat.setPotential(potential);
-			stat.setRacialBonus(bonus - rm::game::character::stat::getBasicBonus(temporary));
+			stat.setRacialBonus(racial_bonus);
 
 			ref.stats_.insert_or_assign(stat_type, stat);
 		}

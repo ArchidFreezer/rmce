@@ -3,10 +3,10 @@
 namespace rm::game::character {
 
 int Skill::bonus() const {
-	int bonus {0};
+	int bonus{0};
 	bonus += progression_type_ != nullptr ? progression_type_->bonus(ranks_) : 0;
-	bonus += category_ != nullptr ? category_->rankBonus() : 0;
-	bonus += profession_bonus_ + special_bonus_ + stat_bonus_;
+	bonus += category_ != nullptr ? category_->bonus() : 0;
+	bonus += profession_bonus_ + special_bonus_;
 	return bonus;
 }
 
