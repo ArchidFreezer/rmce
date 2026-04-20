@@ -327,6 +327,7 @@ void CharacterBuilderRequestHandler::requestSetApprenticeshipChoices(http::respo
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
 
 		builder.applyApprenticeshipChoices();
+		builder.build();
 
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");

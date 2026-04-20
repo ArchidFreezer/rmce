@@ -15,11 +15,10 @@
 #include <unordered_map>
 #include <string>
 
-// Forward declaration to break the circular include with CharacterBuilderSerializer.h
+// Forward declaration to break the circular include with CharacterSerializer.h
 namespace rm::serial {
 class CharacterSerializer;
 } // namespace rm::serial
-
 
 namespace rm::game::character {
 
@@ -520,7 +519,7 @@ private:
 	/* Learned abilities */
 	std::unordered_map<std::string, LanguageAbility> language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. */
 	std::map<const SubcategoriedSkillData*, Skill> skills_{};             /**< A map of SkillData pointers to Skill objects representing the character's skills. */
-	std::map<const SkillCategoryData*, Category> skill_categories_{};     /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
+	std::map<const SkillCategoryData*, Category> categories_{};     /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
 
 	/* Utility functions */
 	void updateStatDerivedData(StatType::Type stat_type);

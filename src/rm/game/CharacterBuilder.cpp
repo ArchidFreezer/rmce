@@ -52,7 +52,7 @@ Character& CharacterBuilder::build() {
 	/* Apply category data */
 	// The profession should define a cost for every category so this loop should create all the Category objects in the character.
 	for (const auto& [category_type, dev_cost] : category_development_costs_) {
-		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
 		category.development_cost_ = dev_cost;
 
@@ -69,19 +69,19 @@ Character& CharacterBuilder::build() {
 	}
 
 	for (const auto& [category_type, ranks] : category_ranks_) {
-		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
 		category.ranks_ = ranks;
 	}
 
 	for (const auto& [category_type, prof_bonus] : category_professional_bonuses_) {
-		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
 		category.profession_bonus_ = prof_bonus;
 	}
 
 	for (const auto& [category_type, special_bonus] : category_special_bonuses_) {
-		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
 		category.special_bonus_ = special_bonus;
 	}
@@ -114,8 +114,8 @@ Character& CharacterBuilder::build() {
 	// Now we have all the modified skills we can iterate through them and add the appropriate category.
 	for (auto& [skill_data, skill] : character.skills_) {
 		const SkillCategoryData& category_data = skill_data->skillData().category();
-		auto category_it = character.skill_categories_.find(&category_data);
-		if (category_it != character.skill_categories_.end()) {
+		auto category_it = character.categories_.find(&category_data);
+		if (category_it != character.categories_.end()) {
 			skill.category_ = &category_it->second;
 		}
 	}
