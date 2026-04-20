@@ -52,9 +52,10 @@ Character& CharacterBuilder::build() {
 	/* Apply category data */
 	// The profession should define a cost for every category so this loop should create all the Category objects in the character.
 	for (const auto& [category_type, dev_cost] : category_development_costs_) {
-		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
 		category.development_cost_ = dev_cost;
+		category.progression_type_ = &category_type->skillCategoryProgression();
 
 		// Set the stats used for the category.
 		if (category_type->useRealmStats()) {
@@ -66,24 +67,36 @@ Character& CharacterBuilder::build() {
 		} else {
 			category.stats_ = category_type->stats();
 		}
+
+		// Check for any group bonuses
+		const SkillGroupData& group = category_type->group();
+		auto group_prof_bonus_it = group_professional_bonuses_.find(&group);
+		if (group_prof_bonus_it != group_professional_bonuses_.end()) {
+			category.profession_bonus_ += group_prof_bonus_it->second;
+		}
+
+		auto group_special_bonus_it = group_special_bonuses_.find(&group);
+		if (group_special_bonus_it != group_special_bonuses_.end()) {
+			category.special_bonus_ += group_special_bonus_it->second;
+		}
 	}
 
 	for (const auto& [category_type, ranks] : category_ranks_) {
-		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
 		category.ranks_ = ranks;
 	}
 
 	for (const auto& [category_type, prof_bonus] : category_professional_bonuses_) {
-		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
-		category.profession_bonus_ = prof_bonus;
+		category.profession_bonus_ += prof_bonus;
 	}
 
 	for (const auto& [category_type, special_bonus] : category_special_bonuses_) {
-		auto [it, inserted] = character.skill_categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
-		category.special_bonus_ = special_bonus;
+		category.special_bonus_ += special_bonus;
 	}
 
 	/* Apply skill data */
@@ -114,14 +127,18 @@ Character& CharacterBuilder::build() {
 	// Now we have all the modified skills we can iterate through them and add the appropriate category.
 	for (auto& [skill_data, skill] : character.skills_) {
 		const SkillCategoryData& category_data = skill_data->skillData().category();
-		auto category_it = character.skill_categories_.find(&category_data);
-		if (category_it != character.skill_categories_.end()) {
+		auto category_it = character.categories_.find(&category_data);
+		if (category_it != character.categories_.end()) {
 			skill.category_ = &category_it->second;
+			skill.progression_type_ = &category_data.defaultSkillProgression();
 		}
 	}
 
-	// TODO: Apply the complted builder properites to a new character.
-	// updateStatDerivedData
+	// Finally we need to update the derived data for the stats after all the choices have been applied. This needs to be done after applying all the choices to ensure that the derived data is calculated correctly based on the final values
+	// of the stats after all the choices have been applied.
+	for (const auto& [stat_type, stat] : stats_) {
+		character.updateStatDerivedData(stat_type);
+	}
 
 	built_ = true;
 	return character;
@@ -753,7 +770,6 @@ void CharacterBuilder::applyApprenticeshipChoices() {
 		for (auto stat_type : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
 			stats_[stat_type].performStatGainRoll();
 		}
-		calculateDevelopmentPoints(stats_); // We need to recalculate the development points after applying the apprenticeship stat gains as the temporary values may have changed which would affect the total development points.
 	}
 
 	// Next process the training package data that is not already dealt with. The skills, spells, and languages are already applied to the aggregated data so we only need to deal with what is left.

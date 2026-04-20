@@ -43,6 +43,7 @@ void PersistentObjectSerializationManager::load() {
 	deserializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 
 	deserializeAllObjects<rm::game::character::CharacterBuilder>("CharacterBuilders.json", "characterbuilders");
+	deserializeAllObjects<rm::game::character::Character>("Characters.json", "characters");
 }
 
 void PersistentObjectSerializationManager::save() {
@@ -75,6 +76,7 @@ void PersistentObjectSerializationManager::save() {
 	serializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 
 	serializeAllObjects<rm::game::character::CharacterBuilder>("CharacterBuilders.json", "characterbuilders");
+	serializeAllObjects<rm::game::character::Character>("Characters.json", "characters");
 }
 
 void PersistentObjectSerializationManager::save(std::string_view prefix) {

@@ -6,6 +6,11 @@
 #include <CharacterCategory.h>
 #include <SkillDevelopmentType.h>
 
+// Forward declaration to break the circular include with CharacterSerializer.h
+namespace rm::serial {
+class CharacterSerializer;
+} // namespace rm::serial
+
 namespace rm::game::character {
 
 using namespace rm::rule;
@@ -19,6 +24,7 @@ using namespace rm::rule;
  */
 class Skill {
 	friend class CharacterBuilder; /*< CharacterBuilder is a friend to allow it access to the private members of this class for building characters with specific stats and names */
+	friend class rm::serial::CharacterSerializer; /**< CharacterSerializer is a friend to allow it access to the private members of this class for serialisation and deserialisation */
 public:
 	/**
 	 * @brief Get the bonus for this skill based on the number of ranks allocated to it and the category.

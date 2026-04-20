@@ -15,6 +15,11 @@
 #include <unordered_map>
 #include <string>
 
+// Forward declaration to break the circular include with CharacterSerializer.h
+namespace rm::serial {
+class CharacterSerializer;
+} // namespace rm::serial
+
 namespace rm::game::character {
 
 using namespace rm::rule;
@@ -27,7 +32,8 @@ using namespace rm::rule::enums;
  * Each character has a set of stats, which are represented by the `Stat` class and stored in an unordered map with the stat type as the key. The character also has a name, which is used for display purposes and may not be unique.
  */
 class Character : public rm::game::GameObject {
-	friend class CharacterBuilder; /*< CharacterBuilder is a friend to allow it access to the private members of this class for building characters with specific stats and names */
+	friend class rm::serial::CharacterSerializer; /**< CharacterSerializer is a friend to allow it access to the private members of this class for serialisation and deserialisation */
+	friend class CharacterBuilder;                /*< CharacterBuilder is a friend to allow it access to the private members of this class for building characters with specific stats and names */
 public:
 	/**
 	 * @brief Get the character's stat for a given stat type (const version).
@@ -513,7 +519,7 @@ private:
 	/* Learned abilities */
 	std::unordered_map<std::string, LanguageAbility> language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. */
 	std::map<const SubcategoriedSkillData*, Skill> skills_{};             /**< A map of SkillData pointers to Skill objects representing the character's skills. */
-	std::map<const SkillCategoryData*, Category> skill_categories_{};     /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
+	std::map<const SkillCategoryData*, Category> categories_{};     /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
 
 	/* Utility functions */
 	void updateStatDerivedData(StatType::Type stat_type);

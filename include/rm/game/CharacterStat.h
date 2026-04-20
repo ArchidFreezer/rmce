@@ -59,6 +59,17 @@ public:
 	}
 
 	/**
+	 * @brief Gets the racial bonus value.
+	 *
+	 * This is typically only set at character creation when the race is set and is used frequently in the calculation of the total bonus for the stat, so we cache it for performance reasons.
+	 * 
+	 * @return The racial bonus value.
+	 */
+	int racialBonus() const {
+		return racial_bonus_;
+	}
+
+	/**
 	 * @brief Gets the potential stat value.
 	 * 
 	 * This value is calculated at character creation based on the temporary stat value and is very rarely modified during the game. It represents the maximum potential of the stat and is used to determine stat gains during levelling up and

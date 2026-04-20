@@ -93,7 +93,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 			JsonConverter::setString(stat_obj, "stat", toString(stat_type));
 			JsonConverter::setInt(stat_obj, "temporary", stat.temporary());
 			JsonConverter::setInt(stat_obj, "potential", stat.potential());
-			JsonConverter::setInt(stat_obj, "bonus", stat.bonus());
+			JsonConverter::setInt(stat_obj, "racialBonus", stat.racialBonus());
 			stats_array.emplace_back(std::move(stat_obj));
 		}
 		if (stats_array.size())
@@ -177,7 +177,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 			JsonConverter::setString(stat_obj, "stat", toString(stat_type));
 			JsonConverter::setInt(stat_obj, "temporary", stat.temporary());
 			JsonConverter::setInt(stat_obj, "potential", stat.potential());
-			JsonConverter::setInt(stat_obj, "bonus", stat.bonus());
+			JsonConverter::setInt(stat_obj, "racialBonus", stat.racialBonus());
 			stats_array.emplace_back(std::move(stat_obj));
 		}
 		if (stats_array.size())
@@ -297,9 +297,8 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 			const json::object category_obj = category_value.as_object();
 			const std::string category_id = JsonConverter::getString(category_obj, "category");
 			const SkillCategoryData* category_data = &manager_.get<SkillCategoryData>(category_id);
-			const std::set<const SpellListData*> spell_lists = JsonConverter::getDataSet<SpellListData>(category_obj, "spellLists", manager_);
-			if (!spell_lists.empty())
-				ref.spell_list_categories_.insert_or_assign(category_data, spell_lists);
+			std::set<const SpellListData*> spell_lists = JsonConverter::getDataSet<SpellListData>(category_obj, "spellLists", manager_);
+			ref.spell_list_categories_.insert_or_assign(category_data, std::move(spell_lists));
 		}
 	}
 
@@ -343,12 +342,12 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 
 			const int temporary = JsonConverter::getInt(stat_obj, "temporary", 0);
 			const int potential = JsonConverter::getInt(stat_obj, "potential", 0);
-			const int bonus = JsonConverter::getInt(stat_obj, "bonus", 0);
+			const int racial_bonus = JsonConverter::getInt(stat_obj, "racialBonus", 0);
 
 			Stat stat{};
 			stat.setTemporary(temporary);
 			stat.setPotential(potential);
-			stat.setRacialBonus(bonus - rm::game::character::stat::getBasicBonus(temporary));
+			stat.setRacialBonus(racial_bonus);
 
 			ref.initial_stats_.insert_or_assign(stat_type, stat);
 		}
@@ -446,12 +445,12 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 
 			const int temporary = JsonConverter::getInt(stat_obj, "temporary", 0);
 			const int potential = JsonConverter::getInt(stat_obj, "potential", 0);
-			const int bonus = JsonConverter::getInt(stat_obj, "bonus", 0);
+			const int racial_bonus = JsonConverter::getInt(stat_obj, "racialBonus", 0);
 
 			Stat stat{};
 			stat.setTemporary(temporary);
 			stat.setPotential(potential);
-			stat.setRacialBonus(bonus - rm::game::character::stat::getBasicBonus(temporary));
+			stat.setRacialBonus(racial_bonus);
 
 			ref.stats_.insert_or_assign(stat_type, stat);
 		}
