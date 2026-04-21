@@ -28,6 +28,8 @@ Character& CharacterBuilder::build() {
 	character.culture_ = culture_;
 	character.profession_ = profession_;
 	character.stats_ = stats_;
+	character.gold_ = total_gold_;
+	character.items_ = std::move(total_items_);
 
 	/* Physical characteristics */
 	character.height_ = height_;
