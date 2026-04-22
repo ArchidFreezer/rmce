@@ -1,4 +1,4 @@
-#include <CharacterBuilderRequestHandler.h>
+#include <CharacterOperationsRequestHandler.h>
 #include <CharacterStat.h>
 #include <Dice.h>
 #include <HttpPathParser.h>
@@ -8,7 +8,7 @@
 
 namespace rm::rest {
 
-void CharacterBuilderRequestHandler::handleRequest(const http::request<http::string_body>& request, http::response<http::string_body>& response) {
+void CharacterOperationsRequestHandler::handleRequest(const http::request<http::string_body>& request, http::response<http::string_body>& response) {
 	// Decode the request target to handle URL-encoded characters
 	std::string request_string = archid::uriDecode(request.target());
 
@@ -43,7 +43,7 @@ void CharacterBuilderRequestHandler::handleRequest(const http::request<http::str
 	}
 }
 
-void CharacterBuilderRequestHandler::requestPrimaryDefinition(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterOperationsRequestHandler::requestPrimaryDefinition(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
 	using namespace rm::serial;
 
@@ -72,7 +72,7 @@ void CharacterBuilderRequestHandler::requestPrimaryDefinition(http::response<htt
 	}
 }
 
-void CharacterBuilderRequestHandler::requestPhysiqueChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterOperationsRequestHandler::requestPhysiqueChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
 
 	try {
@@ -101,7 +101,7 @@ void CharacterBuilderRequestHandler::requestPhysiqueChoices(http::response<http:
 	}
 }
 
-void CharacterBuilderRequestHandler::requestPrimaryChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterOperationsRequestHandler::requestPrimaryChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
 
 	try {
@@ -130,7 +130,7 @@ void CharacterBuilderRequestHandler::requestPrimaryChoices(http::response<http::
 	}
 }
 
-void CharacterBuilderRequestHandler::requestStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterOperationsRequestHandler::requestStatRolls(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	try {
 		json::value json_body = json::parse(request.body());
 		if (!json_body.is_array()) {
@@ -173,7 +173,7 @@ void CharacterBuilderRequestHandler::requestStatRolls(http::response<http::strin
 	}
 }
 
-void CharacterBuilderRequestHandler::requestSetStats(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterOperationsRequestHandler::requestSetStats(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
 
 	try {
@@ -201,7 +201,7 @@ void CharacterBuilderRequestHandler::requestSetStats(http::response<http::string
 	}
 }
 
-void CharacterBuilderRequestHandler::requestSetHobbyChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterOperationsRequestHandler::requestSetHobbyChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
 
 	try {
@@ -228,7 +228,7 @@ void CharacterBuilderRequestHandler::requestSetHobbyChoices(http::response<http:
 	}
 }
 
-void CharacterBuilderRequestHandler::requestSetBackgroundChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterOperationsRequestHandler::requestSetBackgroundChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
 	using namespace rm::serial;
 	try {
@@ -306,7 +306,7 @@ void CharacterBuilderRequestHandler::requestSetBackgroundChoices(http::response<
 	}
 }
 
-void CharacterBuilderRequestHandler::requestSetApprenticeshipChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterOperationsRequestHandler::requestSetApprenticeshipChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
 
 	try {
@@ -336,7 +336,7 @@ void CharacterBuilderRequestHandler::requestSetApprenticeshipChoices(http::respo
 	}
 }
 
-void CharacterBuilderRequestHandler::requestDump(http::response<http::string_body>& response, const http::request<http::string_body>& request, std::string id) {
+void CharacterOperationsRequestHandler::requestDump(http::response<http::string_body>& response, const http::request<http::string_body>& request, std::string id) {
 	using namespace rm::game::character;
 
 	try {

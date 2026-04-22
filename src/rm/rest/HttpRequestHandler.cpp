@@ -1,5 +1,5 @@
 #include <set>
-#include <CharacterBuilderRequestHandler.h>
+#include <CharacterOperationsRequestHandler.h>
 #include <HttpPathParser.h>
 #include <HttpRequestHandler.h>
 #include <ObjectRequestHandler.h>
@@ -48,7 +48,7 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		ObjectRequestHandler handler {serial_manager_};
 		handler.handleRequest(request, response);
 	} else if (path.match("/rmce/operations/character/")) {
-		CharacterBuilderRequestHandler handler {serial_manager_};
+		CharacterOperationsRequestHandler handler {serial_manager_};
 		handler.handleRequest(request, response);
 	} else {
 		response.result(http::status::not_found);
