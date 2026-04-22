@@ -8,19 +8,19 @@ namespace http = boost::beast::http;
 namespace rm::rest {
 
 /**
- * @class CharacterBuilderRequestHandler
+ * @class CharacterOperationsRequestHandler
  * @brief Handles HTTP requests related to character creation.
  *
  * This class provides methods to handle specific HTTP requests for generating initial character creation choices and potential stat values based on temporary rolls. It interacts with the PersistentObjectManager to access necessary data
  * during request handling.
  */
-class CharacterBuilderRequestHandler {
+class CharacterOperationsRequestHandler {
 public:
 	/**
-	 * @brief Constructor to initialize the CharacterBuilderRequestHandler with a reference to the PersistentObjectSerializationManager
+	 * @brief Constructor to initialize the CharacterOperationsRequestHandler with a reference to the PersistentObjectSerializationManager
 	 * @param serial_manager Reference to PersistentObjectSerializationManager for data access and JSON serialization during request handling
 	 */
-	CharacterBuilderRequestHandler(PersistentObjectSerializationManager& serial_manager) : serial_manager_{serial_manager} {};
+	CharacterOperationsRequestHandler(PersistentObjectSerializationManager& serial_manager) : serial_manager_{serial_manager} {};
 
 	/**
 	 * @brief Handle an incoming HTTP request and prepare the response
