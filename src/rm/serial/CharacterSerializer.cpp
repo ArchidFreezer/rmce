@@ -11,6 +11,8 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 	JsonConverter::setString(obj, "name", ref.name_);
 	JsonConverter::setBool(obj, "male", ref.male_);
 	JsonConverter::setBool(obj, "playerCharacter", ref.player_character_);
+	JsonConverter::setInt(obj, "gold", ref.gold_);
+	JsonConverter::setStringSet(obj, "items", ref.items_);
 
 	// Core rule data references
 	if (ref.race_)
@@ -125,6 +127,8 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 	ref.setName(JsonConverter::getString(jsonObj, "name"));
 	ref.male_ = JsonConverter::getBool(jsonObj, "male");
 	ref.player_character_ = JsonConverter::getBool(jsonObj, "playerCharacter", false);
+	ref.gold_ = JsonConverter::getInt(jsonObj, "gold", 0);
+	ref.items_ = JsonConverter::getStringVector(jsonObj, "items");
 
 	// Core rule data references
 	{

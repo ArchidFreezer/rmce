@@ -490,15 +490,86 @@ public:
 	 */
 	int skillBonus(const SubcategoriedSkillData& skill) const;
 
+	/**
+	 * @brief Get the amount of gold the character has.
+	 *
+	 * This is used to represent the wealth of the character.
+	 *
+	 * @return The amount of gold the character has.
+	 */
+	int gold() const {
+		return gold_;
+	}
+
+	/**
+	 * @brief Set the amount of gold the character has.
+	 *
+	 * This is used to represent the wealth of the character.
+	 *
+	 * @param gold The new amount of gold for the character.
+	 */
+	void setGold(int gold) {
+		gold_ = gold;
+	}
+
+	/**
+	 * @brief Modifies the amount of gold the character has by adding a specified difference.
+	 *
+	 * This is used to represent the wealth of the character.
+	 *
+	 * @param difference The amount to add to the current gold value. This can be a positive or negative value, depending on whether you want to increase or decrease the character's gold.
+	 */
+	void changeGold(int difference) {
+		gold_ += difference;
+	}
+
+	/**
+	 * @brief Add an item to the character's inventory.
+	 *
+	 * The items are represented as a vector of strings, where each string is the name of an item.
+	 *
+	 * @param item_name The name of the item to add to the character's inventory.
+	 */
+	void addItem(const std::string& item_name) {
+		items_.push_back(item_name);
+	}
+
+	/**
+	 * @brief Remove an item from the character's inventory.
+	 *
+	 * The items are represented as a vector of strings, where each string is the name of an item.
+	 *
+	 * @param item_name The name of the item to remove from the character's inventory. If there are multiple items with the same name, only the first one will be removed.
+	 */
+	void removeItem(const std::string& item_name) {
+		auto it = std::find(items_.begin(), items_.end(), item_name);
+		if (it != items_.end()) {
+			items_.erase(it);
+		}
+	}
+
+	/**
+	 * @brief Get the items that the character has.
+	 *
+	 * The items are represented as a vector of strings, where each string is the name of an item.
+	 *
+	 * @return A vector of strings representing the names of the items that the character has.
+	 */
+	std::vector<std::string> items() const {
+		return items_;
+	}
+
 private:
 	/* Basic data */
 	std::string name_;                               /**< The name of the character. This is used for display purposes and may not be unique. */
 	bool male_{false};                               /**< Whether the character is male or female. */
 	bool player_character_{false};                   /**< Whether the character is a player character or an NPC. */
+	int gold_{0};                                    /**< The amount of gold the character has. */
 	const RaceData* race_{nullptr};                  /**< The race of the character. */
 	const CultureData* culture_{nullptr};            /**< The culture of the character. */
 	const ProfessionData* profession_{nullptr};      /**< The profession of the character. */
 	std::unordered_map<StatType::Type, Stat> stats_; /**< Map of stat types to their corresponding Stat objects for the character. Each character will have 10 stats, such as strength, dexterity, etc. */
+	std::vector<std::string> items_{};               /**< A vector of item names representing the items that the character has. */
 
 	/* Physical characteristics */
 	int height_{0};                 /**< The height of the character in inches. */
@@ -519,7 +590,7 @@ private:
 	/* Learned abilities */
 	std::unordered_map<std::string, LanguageAbility> language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. */
 	std::map<const SubcategoriedSkillData*, Skill> skills_{};             /**< A map of SkillData pointers to Skill objects representing the character's skills. */
-	std::map<const SkillCategoryData*, Category> categories_{};     /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
+	std::map<const SkillCategoryData*, Category> categories_{};           /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
 
 	/* Utility functions */
 	void updateStatDerivedData(StatType::Type stat_type);
