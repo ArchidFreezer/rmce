@@ -325,6 +325,7 @@ void CharacterBuilderRequestHandler::requestSetApprenticeshipChoices(http::respo
 
 		builder.applyApprenticeshipChoices();
 		builder.build();
+		serial_manager_.objectManager().deleteObject(id); // We can delete the builder from the cache as it is no longer needed after the character has been built and this will free up memory in the cache
 
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
