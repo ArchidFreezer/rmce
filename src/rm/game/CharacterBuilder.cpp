@@ -928,4 +928,30 @@ const SkillCategoryData* getSkillCategoryForSpellList(const std::set<RealmType::
 	return nullptr;
 }
 
+void ensureValidTemporaryStats(std::vector<int>& temp_stats) {
+	archid::Dice d76(76); // We use d76 and add 24 where it is used to ensure a hard floor of 25 for stats as the dice result is 1 to 76 inclusive.
+
+	// 1. Ensure that all stats are > 25
+	for (int& stat : temp_stats) {
+		if (stat < 25) {
+			stat = d76.roll(false).result() + 24;
+		}
+	}
+
+	// 2. Partially sort to put the 2 largest elements at the front (descending)
+	std::ranges::partial_sort(temp_stats, temp_stats.begin() + 2, std::ranges::greater());
+
+	// 3. Check if we have at least 2 values >= 90, if not re-roll the necessary number of values to get at least 2 values >= 90
+	if (temp_stats[0] < 90) {
+		do {
+			temp_stats[0] = d76.roll(false).result() + 24;
+		} while (temp_stats[0] < 90);
+	}
+	if (temp_stats[1] < 90) {
+		do {
+			temp_stats[1] = d76.roll(false).result() + 24;
+		} while (temp_stats[1] < 90);
+	}
+}
+
 } // namespace rm::game::character

@@ -442,4 +442,15 @@ private:
  */
 const SkillCategoryData* getSkillCategoryForSpellList(const std::set<RealmType::Type>& realms, const SpellListData& spell_list, PersistentObjectManager& object_manager);
 
+/**
+ * @brief Ensures that the temporary stats for the character being built are valid according to the rules for stat generation during character creation.
+ *
+ * This function checks the temporary stats for the character being built and ensures that they meet the requirements for valid stats during character creation. This includes ensuring that all stats are above a certain minimum value, that
+ * at least two stats are above a certain threshold, and that the highest two stats are sorted to the front of the list. If any of the stats do not meet these requirements, they will be re-rolled until they do.
+ *
+ * @param temp_stats A vector of integers representing the temporary stat values for the character being built, which will be modified by this function to ensure they are valid.
+ */
+void ensureValidTemporaryStats(std::vector<int>& temp_stats);
+
+
 } // namespace rm::game::character
