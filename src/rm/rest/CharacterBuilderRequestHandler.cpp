@@ -140,9 +140,8 @@ void CharacterBuilderRequestHandler::requestStatRolls(http::response<http::strin
 			return;
 		}
 
-		archid::Dice d100(100);
-		json::array result_array;
-
+		// Extract the data from the requestbody into a vector of ints for easier processing. We will validate the data in the next step, but we need to extract it first to perform the validation.
+		std::vector<int> data{};
 		for (const auto& element : json_body.as_array()) {
 			if (!element.is_object()) {
 				response.result(http::status::bad_request);
@@ -150,20 +149,18 @@ void CharacterBuilderRequestHandler::requestStatRolls(http::response<http::strin
 				response.body() = R"({"error": "Invalid request body", "message": "Each element must be a JSON object"})";
 				return;
 			}
-
 			const auto& obj = element.as_object();
-
-			// Parse temporary: re-roll any result < 25
 			int temporary = static_cast<int>(obj.at("temporary").as_int64());
-			if (temporary < 25) {
-				do {
-					temporary = d100.roll(false).result();
-				} while (temporary < 25);
-			}
+			data.push_back(temporary);
+		}
 
-			// Calculate potential from temporary and pot_roll
+		// Make sure that we have no stats <25 and at least 2 >=90
+		rm::game::character::ensureValidTemporaryStats(data);
+
+		// Now we know we have valid stats get the potentials and place them in the reults array.
+		json::array result_array;
+		for (int temporary : data) {
 			int potential = rm::game::character::stat::getInitialPotentialValue(temporary);
-
 			result_array.push_back(json::object({{"temporary", temporary}, {"potential", potential}}));
 		}
 
