@@ -49,17 +49,32 @@ void Character::updateStatDerivedData(StatType::Type stat_type) {
 }
 
 int Character::skillBonus(const SubcategoriedSkillData& skill) const {
-	int bonus{0};
+	int bonus{-25}; // The default bonus for no ranks in a skill with standard progression is -25, so we start with that and then update it if the character has any knowledge of the skill.
 
 	auto it = skills_.find(&skill);
 	if (it != skills_.end()) {
-		bonus += it->second.bonus();
-		// Now we need to add the stat bonus as that is not included
+		bonus = it->second.bonus();
+		// Now we need to add the stat bonus as that is chracter specific so not included in teh skill definition.
 		for (const auto& stat_type : it->second.stats()) {
 			bonus += statBonus(stat_type);
 		}
 	}
 	return bonus;
+}
+
+void Character::updateMaxHits() {
+	max_hits_ = skills_.at(body_devlopment_skill_).bonus();
+}
+
+void Character::updateMaxPowerPoints() {
+	max_power_points_ = skills_.at(power_point_skill_).bonus();
+}
+void Character::updateAllDerivedData() {
+	updateMaxHits();
+	updateMaxPowerPoints();
+	for (const auto& [stat_type, stat] : stats_) {
+		updateStatDerivedData(stat_type);
+	}
 }
 
 } // namespace rm::game::character

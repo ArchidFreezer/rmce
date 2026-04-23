@@ -49,19 +49,26 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 	JsonConverter::setEnumPrimitiveMap(obj, "resistances", ref.resistances_);
 	// Spell List Categories
 	{
+		// First sort the categories alphabetically by their ID to ensure a consistent order in the JSON output, which is important for testing and readability.
+		std::map<std::string_view, const SkillCategoryData*> categories{};
+		for (const auto& [category, list_set] : ref.spell_list_categories_) {
+			categories[category->id()] = category;
+		}
 		json::array arr;
-		for (const auto& [SkillCategoryData, list_set] : ref.spell_list_categories_) {
+		for (const auto& [category_id, category] : categories) {
+			const auto& list_set = ref.spell_list_categories_.at(category);
 			json::object category_obj;
-			JsonConverter::setString(category_obj, "category", SkillCategoryData->id());
+			JsonConverter::setString(category_obj, "category", std::string(category_id));
 			JsonConverter::setDataSet<SpellListData>(category_obj, "spellLists", list_set);
 			arr.emplace_back(std::move(category_obj));
 		}
 		obj["spellListCategories"] = std::move(arr);
 	}
 
-	/* Progression Types */
-	JsonConverter::setString(obj, "bodyDevelopmentProgressionType", ref.bd_progression_->id());
-	JsonConverter::setString(obj, "powerPointProgressionType", ref.pp_progression_->id());
+	JsonConverter::setInt(obj, "maxHits", ref.max_hits_);
+	JsonConverter::setInt(obj, "hits", ref.hits_);
+	JsonConverter::setInt(obj, "maxPowerPoints", ref.max_power_points_);
+	JsonConverter::setInt(obj, "powerPoints", ref.power_points_);
 
 	/* Learned Abilities */
 	// Languages
@@ -74,10 +81,16 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 	}
 	// Categories
 	{
-		json::array categories_array;
+		// First sort the categories alphabetically by their ID to ensure a consistent order in the JSON output, which is important for testing and readability.
+		std::map<std::string_view, const SkillCategoryData*> categories{};
 		for (const auto& [category, char_category] : ref.categories_) {
+			categories[category->id()] = category;
+		}
+		json::array categories_array;
+		for (const auto& [category_id, category] : categories) {
+			const auto& char_category = ref.categories_.at(category);
 			json::object category_obj;
-			JsonConverter::setString(category_obj, "id", category->id());
+			JsonConverter::setString(category_obj, "id", std::string(category_id));
 			JsonConverter::setString(category_obj, "progression", char_category.progression_type_->id());
 			JsonConverter::setString(category_obj, "developmentCost", char_category.development_cost_.toString());
 			JsonConverter::setEnumSet(category_obj, "stats", char_category.stats_);
@@ -92,15 +105,23 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 
 	// Skills
 	{
-		json::array skills_array;
+		// First sort the skills alphabetically by their ID to ensure a consistent order in the JSON output, which is important for testing and readability.
+		std::map<std::string_view, const SubcategoriedSkillData*> skills{};
 		for (const auto& [sub_skill, char_skill] : ref.skills_) {
+			skills[sub_skill->id()] = sub_skill;
+		}
+		json::array skills_array;
+		for (const auto& [sub_skill_id, sub_skill] : skills) {
+			const auto& char_skill = ref.skills_.at(sub_skill);
 			json::object skill_obj;
-			JsonConverter::setString(skill_obj, "id", sub_skill->id());
+			json::object skill_data_obj = JsonConverter::setSkill(*sub_skill);
+			skill_obj["skillData"] = std::move(skill_data_obj);
 			JsonConverter::setString(skill_obj, "progression", char_skill.progression_type_->id());
 			JsonConverter::setString(skill_obj, "developmentType", toString(char_skill.development_type_));
 			JsonConverter::setInt(skill_obj, "professionBonus", char_skill.profession_bonus_);
 			JsonConverter::setInt(skill_obj, "ranks", char_skill.ranks_);
 			JsonConverter::setInt(skill_obj, "specialBonus", char_skill.special_bonus_);
+			JsonConverter::setInt(skill_obj, "totalBonus", char_skill.bonus());
 			skills_array.emplace_back(std::move(skill_obj));
 		}
 		if (skills_array.size())
@@ -197,18 +218,6 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 		}
 	}
 
-	/* Progression Types */
-	{
-		const std::string bd_progression_id = JsonConverter::getString(jsonObj, "bodyDevelopmentProgressionType");
-		if (!bd_progression_id.empty())
-			ref.bd_progression_ = &manager_.get<SkillProgressionTypeData>(bd_progression_id);
-	}
-	{
-		const std::string pp_progression_id = JsonConverter::getString(jsonObj, "powerPointProgressionType");
-		if (!pp_progression_id.empty())
-			ref.pp_progression_ = &manager_.get<SkillProgressionTypeData>(pp_progression_id);
-	}
-
 	/* Learned Abilities */
 	// Languages
 	{
@@ -244,19 +253,37 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 			if (!skill_value.is_object())
 				continue;
 			const json::object skill_obj = skill_value.as_object();
-			const std::string skill_id = JsonConverter::getString(skill_obj, "id");
-			const SubcategoriedSkillData* sub_skill_data = &manager_.get<SubcategoriedSkillData>(skill_id);
+
+			const json::object& skill_data_obj = skill_obj.at("skillData").as_object();
+			const SubcategoriedSkillData* sub_skill_data = JsonConverter::getSkill(skill_data_obj, manager_);
 			Skill char_skill{};
-			char_skill.skill_data_ = sub_skill_data;
-			char_skill.category_ = &ref.categories_.at(&sub_skill_data->skillData().category());
-			char_skill.progression_type_ = &manager_.get<SkillProgressionTypeData>(JsonConverter::getString(skill_obj, "progression"));
-			fromString(JsonConverter::getString(skill_obj, "developmentType"), char_skill.development_type_);
-			char_skill.profession_bonus_ = JsonConverter::getInt(skill_obj, "professionBonus", 0);
-			char_skill.ranks_ = JsonConverter::getInt(skill_obj, "ranks", 0);
-			char_skill.special_bonus_ = JsonConverter::getInt(skill_obj, "specialBonus", 0);
-			ref.skills_.insert_or_assign(sub_skill_data, std::move(char_skill));
+			try {
+				char_skill.skill_data_ = sub_skill_data;
+				char_skill.category_ = &ref.categories_.at(&sub_skill_data->skillData().category());
+				char_skill.progression_type_ = &manager_.get<SkillProgressionTypeData>(JsonConverter::getString(skill_obj, "progression"));
+				fromString(JsonConverter::getString(skill_obj, "developmentType"), char_skill.development_type_);
+				char_skill.profession_bonus_ = JsonConverter::getInt(skill_obj, "professionBonus", 0);
+				char_skill.ranks_ = JsonConverter::getInt(skill_obj, "ranks", 0);
+				char_skill.special_bonus_ = JsonConverter::getInt(skill_obj, "specialBonus", 0);
+				// We do not need to set the total bonus as this is derived data that is calculated from the other values, so it will be generated when the character's data is updated after deserialization.
+				ref.skills_.insert_or_assign(sub_skill_data, std::move(char_skill));
+			} catch (const std::exception& e) {
+				// If there was an error deserializing the skills, log the error and continue deserializing the rest of the character's data. This will allow us to still load the character even if there was an issue with the skills,
+				// which is better than not loading the character at all.
+				std::cerr << "Error deserializing character skills: " << e.what() << std::endl;
+			}
 		}
 	}
+
+	/* Hits & PPs */
+	ref.hits_ = JsonConverter::getInt(jsonObj, "hits", 0);
+	ref.body_devlopment_skill_ = &manager_.subcategoriedSkillData(Character::BD_SKILL_ID);
+	ref.power_points_ = JsonConverter::getInt(jsonObj, "powerPoints", 0);
+	ref.power_point_skill_ = &manager_.subcategoriedSkillData(Character::PP_SKILL_ID);
+
+	// Finally perform any derived data updates that are necessary after deserialization. This will ensure that all the character's data is consistent and ready to be used in the game.
+	ref.updateAllDerivedData();
+
 	return ref;
 }
 

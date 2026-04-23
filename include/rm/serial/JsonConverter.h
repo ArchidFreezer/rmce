@@ -1743,13 +1743,25 @@ public:
 	 */
 	static std::set<std::string> getStringSet(const json::object& obj, const std::string& key);
 
+	/**
+	 * @brief Retrieves a subcategorized skill data object from a JSON object.
+	 * @param obj The JSON object containing the skill data.
+	 * @param manager The persistent object manager used to retrieve or manage the skill data.
+	 * @return A pointer to the subcategorized skill data object, or nullptr if the skill could not be retrieved.
+	 */
+	static const SubcategoriedSkillData* getSkill(const json::object& obj, rm::PersistentObjectManager& manager);
+
+	/**
+	 * @brief Sets a subcategorized skill data object in a JSON object.
+	 * @param skillData The subcategorized skill data to be set in the JSON object.
+	 * @return A JSON object representing the subcategorized skill data, which can be stored in a larger JSON structure.
+	 */
+	static const json::object setSkill(const SubcategoriedSkillData& skillData);
+
 private:
 	template<typename Primitive>
 	static Primitive getPrimitive(const json::object& obj, const std::string& key);
 
-	static const SubcategoriedSkillData* getSkill(const json::object& obj, rm::PersistentObjectManager& manager);
-
-	static const json::object setSkill(const SubcategoriedSkillData& skillData);
 };
 
 // Template implementations

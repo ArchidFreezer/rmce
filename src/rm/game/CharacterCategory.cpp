@@ -10,7 +10,11 @@ int Category::bonus() const {
 }
 
 const std::vector<StatType::Type>& Category::stats() const {
-	return stats_;
+	if (category_data_ != nullptr && !category_data_->useRealmStats()) {
+		return category_data_->stats();
+	} else {
+		return stats_;
+	}
 }
 
 } // namespace rm::game::character
