@@ -35,6 +35,12 @@ class Character : public rm::game::GameObject {
 	friend class rm::serial::CharacterSerializer; /**< CharacterSerializer is a friend to allow it access to the private members of this class for serialisation and deserialisation */
 	friend class CharacterBuilder;                /*< CharacterBuilder is a friend to allow it access to the private members of this class for building characters with specific stats and names */
 public:
+
+	/** @brief string_view of the ID for the body development skill, which is used to identify the skill in the game data and to reference it when building characters. */
+	static constexpr std::string_view BD_SKILL_ID{"SKILL_BODY_DEVELOPMENT"};
+	/** @brief string_view of the ID for the power point development skill, which is used to identify the skill in the game data and to reference it when building characters. */
+	static constexpr std::string_view PP_SKILL_ID{"SKILL_POWER_POINT_DEVELOPMENT"};
+
 	/**
 	 * @brief Get the character's stat for a given stat type (const version).
 	 * @param stat_type The type of stat to retrieve (e.g., strength, dexterity, etc.).
@@ -147,42 +153,6 @@ public:
 	 */
 	const ProfessionData* profession() const {
 		return profession_;
-	}
-
-	/**
-	 * @brief Set the Body Development progression type for the character.
-	 *
-	 * @param progression The SkillProgressionTypeData to set for the character's Body Development progression.
-	 */
-	void setBodyDevelopmentProgression(const SkillProgressionTypeData& progression) {
-		bd_progression_ = &progression;
-	}
-
-	/**
-	 * @brief Get the Body Development progression type for the character.
-	 *
-	 * @return A pointer to the SkillProgressionTypeData for the character's Body Development progression.
-	 */
-	const SkillProgressionTypeData* bodyDevelopmentProgression() const {
-		return bd_progression_;
-	}
-
-	/**
-	 * @brief Set the Power Point progression type for the character.
-	 *
-	 * @param progression The SkillProgressionTypeData to set for the character's Power Point progression.
-	 */
-	void setPowerPointProgression(const SkillProgressionTypeData& progression) {
-		pp_progression_ = &progression;
-	}
-
-	/**
-	 * @brief Get the Power Point progression type for the character.
-	 *
-	 * @return A pointer to the SkillProgressionTypeData for the character's Power Point progression.
-	 */
-	const SkillProgressionTypeData* powerPointProgression() const {
-		return pp_progression_;
 	}
 
 	/**
@@ -559,6 +529,40 @@ public:
 		return items_;
 	}
 
+	/**
+	 * @brief Get the maximum number of hit points the character has when fully rested.
+	 * @return int The maximum number of hit points the character has when fully rested, which is calculated based on the character's stats and other factors.
+	 */
+	int maxHits() const {
+		return max_hits_;
+	}
+
+	/**
+	 * @brief Get the number of hit points the character has.
+	 * 
+	 * @return number of hits the character has.
+	 */
+	int hits() const {
+		return hits_;
+	}
+
+	/**
+	 * @brief Get the maximum number of power points the character has when fully rested.
+	 * @return int The maximum number of power points the character has when fully rested, which is calculated based on the character's stats and other factors.
+	 */
+	int maxPowerPoints() const {
+		return max_power_points_;
+	}
+
+	/**
+	 * @brief Get the number of power points the character has.
+	 * 
+	 * @return number of power points the character has.
+	 */
+	int powerPoints() const {
+		return power_points_;
+	}
+
 private:
 	/* Basic data */
 	std::string name_;                               /**< The name of the character. This is used for display purposes and may not be unique. */
@@ -570,6 +574,10 @@ private:
 	const ProfessionData* profession_{nullptr};      /**< The profession of the character. */
 	std::unordered_map<StatType::Type, Stat> stats_; /**< Map of stat types to their corresponding Stat objects for the character. Each character will have 10 stats, such as strength, dexterity, etc. */
 	std::vector<std::string> items_{};               /**< A vector of item names representing the items that the character has. */
+	int max_hits_{0};                                /**< The maximum number of hit points the character has when fully rested, which is calculated based on the character's stats and other factors. */
+	int hits_{0};                                    /**< The number of hit points the character has, which is calculated based on the character's stats and other factors. */
+	int max_power_points_{0};                        /**< The maximum number of power points the character has when fully rested, which is calculated based on the character's stats and other factors. */
+	int power_points_{0};                            /**< The number of power points the character has, which is calculated based on the character's stats and other factors. */
 
 	/* Physical characteristics */
 	int height_{0};                 /**< The height of the character in inches. */
@@ -583,9 +591,9 @@ private:
 	std::map<ResistanceType::Type, int> resistances_{};                                          /**< A map of resistance roll bonuses for the character. */
 	std::map<const SkillCategoryData*, std::set<const SpellListData*>> spell_list_categories_{}; /**< A map of skill categories to sets of spell lists representing the spell lists sorted into their respective skill categories. */
 
-	/* Progression types */
-	const SkillProgressionTypeData* bd_progression_{nullptr}; /**< The SkillProgressionTypeData for the character's Body Development progression. */
-	const SkillProgressionTypeData* pp_progression_{nullptr}; /**< The SkillProgressionTypeData for the character's Power Point progression. */
+	/* Hits and PPs */
+	const SubcategoriedSkillData* body_devlopment_skill_{nullptr};
+	const SubcategoriedSkillData* power_point_skill_{nullptr};
 
 	/* Learned abilities */
 	std::unordered_map<std::string, LanguageAbility> language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. */
@@ -593,7 +601,10 @@ private:
 	std::map<const SkillCategoryData*, Category> categories_{};           /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
 
 	/* Utility functions */
+	void updateAllDerivedData();
 	void updateStatDerivedData(StatType::Type stat_type);
+	void updateMaxHits();
+	void updateMaxPowerPoints();
 };
 
 } // namespace rm::game::character

@@ -42,10 +42,6 @@ Character& CharacterBuilder::build() {
 	character.power_realms_ = magical_realms_;
 	character.spell_list_categories_ = spell_list_categories_;
 
-	/* Progression types */
-	character.bd_progression_ = &race_->armsProgression();
-	character.pp_progression_ = getPpProgression();
-
 	/* Learned abilities */
 	for (const LanguageAbility& language_ability : language_abilities_) {
 		character.setLanguageAbility(language_ability);
@@ -59,27 +55,25 @@ Character& CharacterBuilder::build() {
 		category.development_cost_ = dev_cost;
 		category.progression_type_ = &category_type->skillCategoryProgression();
 
-		// Set the stats used for the category.
+		// Set the stats used for the category if they are realm stats, otherwise let the character get them directly from the category data.
 		if (category_type->useRealmStats()) {
 			for (const RealmType::Type& realm : magical_realms_) {
 				for (const StatType::Type& stat : StatType::statsForRealm(realm)) {
 					category.stats_.push_back(stat);
 				}
 			}
-		} else {
-			category.stats_ = category_type->stats();
 		}
 
 		// Check for any group bonuses
 		const SkillGroupData& group = category_type->group();
 		auto group_prof_bonus_it = group_professional_bonuses_.find(&group);
 		if (group_prof_bonus_it != group_professional_bonuses_.end()) {
-			category.profession_bonus_ += group_prof_bonus_it->second;
+			category.profession_bonus_ = std::max(category.profession_bonus_, group_prof_bonus_it->second);
 		}
 
 		auto group_special_bonus_it = group_special_bonuses_.find(&group);
 		if (group_special_bonus_it != group_special_bonuses_.end()) {
-			category.special_bonus_ += group_special_bonus_it->second;
+			category.special_bonus_ = std::max(category.special_bonus_, group_special_bonus_it->second);
 		}
 	}
 
@@ -92,13 +86,13 @@ Character& CharacterBuilder::build() {
 	for (const auto& [category_type, prof_bonus] : category_professional_bonuses_) {
 		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
-		category.profession_bonus_ += prof_bonus;
+		category.profession_bonus_ = std::max(category.profession_bonus_, prof_bonus);
 	}
 
 	for (const auto& [category_type, special_bonus] : category_special_bonuses_) {
 		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
-		category.special_bonus_ += special_bonus;
+		category.special_bonus_ = std::max(category.special_bonus_, special_bonus);
 	}
 
 	/* Apply skill data */
@@ -136,11 +130,28 @@ Character& CharacterBuilder::build() {
 		}
 	}
 
-	// Finally we need to update the derived data for the stats after all the choices have been applied. This needs to be done after applying all the choices to ensure that the derived data is calculated correctly based on the final values
-	// of the stats after all the choices have been applied.
-	for (const auto& [stat_type, stat] : stats_) {
-		character.updateStatDerivedData(stat_type);
+	{
+		SubcategoriedSkillData& body_development_skill_data = object_factory_->subcategoriedSkillData(Character::BD_SKILL_ID);
+		character.body_devlopment_skill_ =  &body_development_skill_data;
+		auto [it, inserted] = character.skills_.try_emplace(&body_development_skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
+		Skill& body_development_skill = it->second;
+		body_development_skill.progression_type_ = &race_->armsProgression();
+		character.updateMaxHits();
+		character.hits_ = character.max_hits_; // Set the current hits for the character to the max based on the body development skill.
 	}
+
+	{
+		SubcategoriedSkillData& power_point_skill_data = object_factory_->subcategoriedSkillData(Character::PP_SKILL_ID);
+		character.power_point_skill_ = &power_point_skill_data;
+		auto [it, inserted] = character.skills_.try_emplace(&power_point_skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
+		Skill& power_point_skill = it->second;
+		power_point_skill.progression_type_ = getPpProgression();
+		character.updateMaxPowerPoints();
+		character.power_points_ = character.max_power_points_; // Set the current power points for the character to the max.
+	}
+
+	// Finally we need to update the derived data for the character now that we have all the base data set up. This will calculate all the derived data such as the stat bonuses, max HP & PP, etc.
+	character.updateAllDerivedData();
 
 	built_ = true;
 	return character;

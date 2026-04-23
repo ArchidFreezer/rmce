@@ -45,7 +45,7 @@ private:
 	const SkillCategoryData* category_data_{nullptr};
 	const SkillProgressionTypeData* progression_type_{nullptr};
 	SkillDevelopmentCost development_cost_{};
-	std::vector<StatType::Type> stats_{};
+	std::vector<StatType::Type> stats_{}; // This is only populated if the category is using realm stats, otherwise the stats are derived directly from the category data and this vector is left empty.
 	int profession_bonus_{0};
 	int ranks_{0};
 	int special_bonus_{0}; /**< Any special bonus for the category, such as from a training package or other source. This is added to the total bonus for the category after calculating the bonus from ranks. */
