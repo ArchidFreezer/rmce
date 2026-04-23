@@ -40,6 +40,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "\nAvailable endpoints:" << std::endl;
 		std::cout << "  GET     /                            - Root endpoint" << std::endl;
 		std::cout << "  GET     /health                      - Health check" << std::endl;
+		std::cout << "  GET     /rmce/save                   - Save game data" << std::endl;
 		std::cout << "  GET     /rmce/version                - API version" << std::endl;
 		std::cout << "  GET     /rmce/prefixes               - Get game object prefixes" << std::endl;
 		std::cout << "  GET     /rmce/objects/{prefix}       - Get all game objects" << std::endl;
