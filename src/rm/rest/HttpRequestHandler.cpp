@@ -2,7 +2,7 @@
 #include <CharacterOperationsRequestHandler.h>
 #include <HttpPathParser.h>
 #include <HttpRequestHandler.h>
-#include <ObjectRequestHandler.h>
+#include <DataRequestHandler.h>
 #include <StringUtils.h>
 
 namespace rm::rest {
@@ -13,12 +13,6 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 
 	// Extract path and query parameters
 	const HttpPathParser path(request_string);
-
-	// Get the type prefix from the path (e.g. "skill" from "/rmce/objects/skill")
-	std::string type_prefix = std::string(path.extractNextSegment("/rmce/objects/"));
-	// Get the ID from the path if it exists (e.g. "SKILL_ACTING" from "/rmce/objects/skill/SKILL_ACTING")
-	std::string id = type_prefix.empty() ? "" : std::string(path.extractNextSegment("/rmce/objects/" + type_prefix + "/"));
-
 
 	// Route handling
 	if (request.method() == http::verb::get && path.matchExact("/")) {
@@ -44,8 +38,8 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 			response.set(http::field::content_type, "application/json");
 			response.body() = R"({"error": "Save Failed", "message": ")" + std::string(e.what()) + R"("})";
 		}
-	} else if (path.match("/rmce/objects/")) {
-		ObjectRequestHandler handler {serial_manager_};
+	} else if (path.match("/rmce/data/")) {
+		DataRequestHandler handler {serial_manager_};
 		handler.handleRequest(request, response);
 	} else if (path.match("/rmce/operations/character/")) {
 		CharacterOperationsRequestHandler handler {serial_manager_};
