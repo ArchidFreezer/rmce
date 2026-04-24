@@ -8,19 +8,19 @@ namespace http = boost::beast::http;
 namespace rm::rest {
 
 /**
- * @class ObjectRequestHandler
+ * @class DataRequestHandler
  * @brief Handles HTTP requests related to game objects, including CRUD operations and listing/counting objects of specific types.
  *
  * This class processes HTTP requests that involve retrieving, creating, updating, or deleting game objects. It uses the PersistentObjectSerializationManager to access and manipulate the underlying data as needed for these operations. The
  * handler supports various endpoints for listing objects, counting objects, and retrieving specific objects by ID.
  */
-class ObjectRequestHandler {
+class DataRequestHandler {
 public:
 	/**
-	 * @brief Constructor to initialize the ObjectRequestHandler with a reference to the PersistentObjectSerializationManager
+	 * @brief Constructor to initialize the DataRequestHandler with a reference to the PersistentObjectSerializationManager
 	 * @param serial_manager Reference to PersistentObjectSerializationManager for data access and JSON serialization during request handling
 	 */
-	ObjectRequestHandler(PersistentObjectSerializationManager& serial_manager) : serial_manager_{serial_manager} {};
+	DataRequestHandler(PersistentObjectSerializationManager& serial_manager) : serial_manager_{serial_manager} {};
 
 	/**
 	 * @brief Handle an incoming HTTP request related to game objects and prepare the response

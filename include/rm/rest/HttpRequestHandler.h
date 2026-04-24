@@ -37,7 +37,7 @@ public:
 	 * |GET		 | / | Basic endpoint to check if the server is running |
 	 * |GET		 | /health | Endpoint to check the health status of the server |
 	 * |GET		 | /rmce/version | Endpoint to get the version of the API |
-	 * |* | /rmce/objects/\* | All endpoints related to game objects (handled by ObjectRequestHandler) |
+	 * |* | /rmce/objects/\* | All endpoints related to game objects (handled by DataRequestHandler) |
 	 * |* | /rmce/character-builder/\* | All endpoints related to character creation (handled by CharacterOperationsRequestHandler) |
 	 * 
 	 * @param request The HTTP request to handle
