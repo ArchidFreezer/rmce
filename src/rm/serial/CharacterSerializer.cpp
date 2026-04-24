@@ -33,6 +33,7 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 			JsonConverter::setInt(stat_obj, "temporary", stat.temporary());
 			JsonConverter::setInt(stat_obj, "potential", stat.potential());
 			JsonConverter::setInt(stat_obj, "racialBonus", stat.racialBonus());
+			JsonConverter::setInt(stat_obj, "totalBonus", stat.bonus());
 			stats_array.emplace_back(std::move(stat_obj));
 		}
 		if (stats_array.size())
@@ -99,6 +100,7 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 			JsonConverter::setInt(category_obj, "professionBonus", char_category.profession_bonus_);
 			JsonConverter::setInt(category_obj, "ranks", char_category.ranks_);
 			JsonConverter::setInt(category_obj, "specialBonus", char_category.special_bonus_);
+			JsonConverter::setInt(category_obj, "totalBonus", char_category.bonus());
 			categories_array.emplace_back(std::move(category_obj));
 		}
 		if (categories_array.size())
