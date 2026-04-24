@@ -25,6 +25,8 @@ Character& CharacterBuilder::build() {
 	character.setName(name_);
 	character.male_ = male_;
 	character.player_character_ = pc_;
+	character.level_ = 1;
+	character.experience_points_ = 10000; // Start with the minimum for level 1
 	character.race_ = race_;
 	character.culture_ = culture_;
 	character.profession_ = profession_;
