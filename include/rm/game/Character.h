@@ -563,11 +563,45 @@ public:
 		return power_points_;
 	}
 
+	/**
+	 * @brief Get the level of the character.
+	 * @return int The level of the character, which represents their overall power and progression in the game.
+	 */
+	int level() const {
+		return level_;
+	}
+
+	/**
+	 * @brief Sets the experience points value.
+	 * @param experience_points The new experience points value to set.
+	 */
+	void setExperiencePoints(int experience_points) {
+		experience_points_ = experience_points;
+	}
+
+	/**
+	 * @brief Modifies the experience points value by adding a specified difference.
+	 * @param difference The amount to add to the current experience points value. This can be a positive or negative value, depending on whether you want to increase or decrease the experience points.
+	 */
+	void addExperiencePoints(int difference) {
+		experience_points_ += difference;
+	}
+
+	/**
+	 * @brief Get the current experience points value.
+	 * @return The current experience points value for the character, which is used to determine when they level up.
+	 */
+	int experiencePoints() const {
+		return experience_points_;
+	}
+
 private:
 	/* Basic data */
 	std::string name_;                               /**< The name of the character. This is used for display purposes and may not be unique. */
 	bool male_{false};                               /**< Whether the character is male or female. */
 	bool player_character_{false};                   /**< Whether the character is a player character or an NPC. */
+	int level_{1};                                   /**< The level of the character, which represents their overall power and progression in the game. */
+	int experience_points_{0};                       /**< The amount of experience points the character has, which is used to determine when they level up. */
 	int gold_{0};                                    /**< The amount of gold the character has. */
 	const RaceData* race_{nullptr};                  /**< The race of the character. */
 	const CultureData* culture_{nullptr};            /**< The culture of the character. */

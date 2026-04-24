@@ -9,6 +9,8 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 	// Identity
 	JsonConverter::setString(obj, "id", ref.id());
 	JsonConverter::setString(obj, "name", ref.name_);
+	JsonConverter::setInt(obj, "level", ref.level());
+	JsonConverter::setInt(obj, "experiencePoints", ref.experiencePoints());
 	JsonConverter::setBool(obj, "male", ref.male_);
 	JsonConverter::setBool(obj, "playerCharacter", ref.player_character_);
 	JsonConverter::setInt(obj, "gold", ref.gold_);
@@ -147,6 +149,8 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 	// Populate the character's data from the JSON object
 	ref.setName(JsonConverter::getString(jsonObj, "name"));
 	ref.male_ = JsonConverter::getBool(jsonObj, "male");
+	ref.level_ = JsonConverter::getInt(jsonObj, "level", 1);
+	ref.experience_points_ = JsonConverter::getInt(jsonObj, "experiencePoints", 10000);
 	ref.player_character_ = JsonConverter::getBool(jsonObj, "playerCharacter", false);
 	ref.gold_ = JsonConverter::getInt(jsonObj, "gold", 0);
 	ref.items_ = JsonConverter::getStringVector(jsonObj, "items");

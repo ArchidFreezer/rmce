@@ -4,6 +4,8 @@
             "id" : "2200490a-16f7-49b4-bc4a-5550d947ef13",
             "name" : "Lod",
             "male" : true,
+            "level" : 1,
+            "experiencePoints" : 10000,
             "playerCharacter" : false,
             "gold" : 0,
             "items" : [
