@@ -9,6 +9,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	// Identity + basic state
 	JsonConverter::setString(obj, "id", ref.id());
 	JsonConverter::setString(obj, "name", ref.name_);
+	JsonConverter::setBool(obj, "pc", ref.pc_);
 	JsonConverter::setBool(obj, "built", ref.built_);
 
 	// Core rule data references
@@ -245,6 +246,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 
 	// Identity + basic state
 	ref.name_ = JsonConverter::getString(jsonObj, "name");
+	ref.pc_ = JsonConverter::getBool(jsonObj, "pc", true);
 	ref.built_ = JsonConverter::getBool(jsonObj, "built", false);
 	// Core rule data references
 	{

@@ -178,6 +178,7 @@ private:
 	bool built_{false}; /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
 	bool set_spell_list_categories_{false}; /**< Flag indicating categories for spell lists should be calculated; this is an expensive operation only to be performed when either the character realms or base spell lists have changed. */
 	std::string name_{};                    /**< The name of the character being built. This is used for display purposes and may not be unique. */
+	bool pc_{true};                         /**< A boolean indicating whether the character being built is a player character (PC) or a non-player character (NPC). */
 	const RaceData* race_{nullptr};         /**< The race data for the character being built. */
 	const CultureData* culture_{nullptr};   /**< The culture data for the character being built. */
 	const CultureTypeData* culture_type_{nullptr};                       /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
@@ -414,7 +415,7 @@ private:
 
 	/**
 	 * @brief Gets the PP (Power Points) progression.
-	 * 
+	 *
 	 * This function retrieves the PP progression for the character. The PP progression is based on magical realms from the profession.
 	 *
 	 * @return A pointer to the SkillProgressionTypeData object representing the character's PP progression.
@@ -451,6 +452,5 @@ const SkillCategoryData* getSkillCategoryForSpellList(const std::set<RealmType::
  * @param temp_stats A vector of integers representing the temporary stat values for the character being built, which will be modified by this function to ensure they are valid.
  */
 void ensureValidTemporaryStats(std::vector<int>& temp_stats);
-
 
 } // namespace rm::game::character
