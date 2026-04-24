@@ -1,10 +1,11 @@
 #include <sstream>
 #include <PersistentObjectManager.h>
 #include <GameRuleDatas.h>
+#include <Character.h>
 
 namespace rm {
 
-const std::set<std::string> PersistentObjectManager::getAllPrefixes() const {
+const std::set<std::string> PersistentObjectManager::getAllDataPrefixes() const {
 	std::set<std::string> result;
 	// Much as we would ike to use the type information in the cache to get the prefixes, this is not possible as some objects, e.g. SubcategoriedSkillData, are stored in the cache with the same type as other objects, e.g. SkillData This
 	// means we need to generate and maintain this list manually.
@@ -36,62 +37,85 @@ const std::set<std::string> PersistentObjectManager::getAllPrefixes() const {
 	return result;
 }
 
+const std::set<std::string> PersistentObjectManager::getAllObjectLabels() const {
+	std::set<std::string> result;
+	// Much as we would ike to use the type information in the cache to get the labels, this is not possible so we need to maintain this list manually.
+	result.insert("character");
+	return result;
+}
+
+const rm::game::GameObject* PersistentObjectManager::getAny(std::string_view id, std::string_view prefix) {
+	using namespace rm::game;
+
+	const GameObject* result{nullptr};
+
+	// We first need to determine the type of the object which is done be checking the prefix of the id.
+	std::string lprefix = archid::lcase(prefix);
+	if (lprefix == "character") {
+		result = &cache_.get<character::Character>(std::string(id));
+	} else {
+		throw std::out_of_range("Could not determine the object type for object with id " + std::string(id));
+	}
+
+	return result;
+}
+
 const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 	using namespace rm::rule;
 
 	const GameRuleData* result{nullptr};
 
 	// We first need to determine the type of the object which is done be checking the prefix of the id.
-	std::string prefix{id.substr(0, id.find('_'))};
-	if (prefix == "ANIMAL") {
+	std::string prefix = archid::lcase(id.substr(0, id.find('_')));
+	if (prefix == "animal") {
 		result = &cache_.get<AnimalData>(id);
-	} else if (prefix == "ARMOURTYPE") {
+	} else if (prefix == "armourtype") {
 		result = &cache_.get<ArmourTypeData>(id);
-	} else if (prefix == "ATTACKTABLE") {
+	} else if (prefix == "attacktable") {
 		result = &cache_.get<AttackTable>(id);
-	} else if (prefix == "BOOK") {
+	} else if (prefix == "book") {
 		result = &cache_.get<BookData>(id);
-	} else if (prefix == "CLIMATE") {
+	} else if (prefix == "climate") {
 		result = &cache_.get<ClimateData>(id);
-	} else if (prefix == "CREATUREPACE") {
+	} else if (prefix == "creaturepace") {
 		result = &cache_.get<CreaturePaceData>(id);
-	} else if (prefix == "CULTURE") {
+	} else if (prefix == "culture") {
 		result = &cache_.get<CultureData>(id);
-	} else if (prefix == "CULTURETYPE") {
+	} else if (prefix == "culturetype") {
 		result = &cache_.get<CultureTypeData>(id);
-	} else if (prefix == "DISEASE") {
+	} else if (prefix == "disease") {
 		result = &cache_.get<DiseaseData>(id);
-	} else if (prefix == "DISEASETYPE") {
+	} else if (prefix == "diseasetype") {
 		result = &cache_.get<DiseaseTypeData>(id);
-	} else if (prefix == "LANGUAGECATEGORY") {
+	} else if (prefix == "languagecategory") {
 		result = &cache_.get<LanguageCategoryData>(id);
-	} else if (prefix == "LANGUAGE") {
+	} else if (prefix == "language") {
 		result = &cache_.get<LanguageData>(id);
-	} else if (prefix == "POISON") {
+	} else if (prefix == "poison") {
 		result = &cache_.get<PoisonData>(id);
-	} else if (prefix == "POISONTYPE") {
+	} else if (prefix == "poisontype") {
 		result = &cache_.get<PoisonTypeData>(id);
-	} else if (prefix == "PROFESSION") {
+	} else if (prefix == "profession") {
 		result = &cache_.get<ProfessionData>(id);
-	} else if (prefix == "RACE") {
+	} else if (prefix == "race") {
 		result = &cache_.get<RaceData>(id);
-	} else if (prefix == "SKILLCATEGORY") {
+	} else if (prefix == "skillcategory") {
 		result = &cache_.get<SkillCategoryData>(id);
-	} else if (prefix == "SKILLGROUP") {
+	} else if (prefix == "skillgroup") {
 		result = &cache_.get<SkillGroupData>(id);
-	} else if (prefix == "SKILL") {
+	} else if (prefix == "skill") {
 		result = &cache_.get<SkillData>(id);
-	} else if (prefix == "SKILLPROGRESSIONTYPE") {
+	} else if (prefix == "skillprogressiontype") {
 		result = &cache_.get<SkillProgressionTypeData>(id);
-	} else if (prefix == "SPECIALATTACKTABLE") {
+	} else if (prefix == "specialattacktable") {
 		result = &cache_.get<SpecialAttackTable>(id);
-	} else if (prefix == "SPELLLIST") {
+	} else if (prefix == "spelllist") {
 		result = &cache_.get<SpellListData>(id);
-	} else if (prefix == "TRAININGPACKAGE") {
+	} else if (prefix == "trainingpackage") {
 		result = &cache_.get<TrainingPackageData>(id);
-	} else if (prefix == "TREASURECODE") {
+	} else if (prefix == "treasurecode") {
 		result = &cache_.get<TreasureCodeData>(id);
-	} else if (prefix == "WEAPONTYPE") {
+	} else if (prefix == "weapontype") {
 		result = &cache_.get<WeaponTypeData>(id);
 	} else {
 		throw std::out_of_range("Could not determine the object type for object with id " + id);
@@ -102,6 +126,7 @@ const rm::rule::GameRuleData* PersistentObjectManager::getAny(std::string id) {
 
 const std::set<std::string> PersistentObjectManager::getAllIds(std::string_view prefix) const {
 	using namespace rm::rule;
+	using namespace rm::game;
 
 	std::string lprefix = archid::lcase(std::string(prefix));
 
@@ -114,6 +139,8 @@ const std::set<std::string> PersistentObjectManager::getAllIds(std::string_view 
 		cache_.keys<AttackTable>(result);
 	} else if (lprefix == "book") {
 		cache_.keys<BookData>(result);
+	} else if (lprefix == "character") {
+		cache_.keys<character::Character>(result);
 	} else if (lprefix == "climate") {
 		cache_.keys<ClimateData>(result);
 	} else if (lprefix == "creaturepace") {

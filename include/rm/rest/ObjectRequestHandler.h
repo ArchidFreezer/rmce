@@ -8,37 +8,37 @@ namespace http = boost::beast::http;
 namespace rm::rest {
 
 /**
- * @class DataRequestHandler
+ * @class ObjectRequestHandler
  * @brief Handles HTTP requests related to game objects, including CRUD operations and listing/counting objects of specific types.
  *
  * This class processes HTTP requests that involve retrieving, creating, updating, or deleting game objects. It uses the PersistentObjectSerializationManager to access and manipulate the underlying data as needed for these operations. The
  * handler supports various endpoints for listing objects, counting objects, and retrieving specific objects by ID.
  */
-class DataRequestHandler {
+class ObjectRequestHandler {
 public:
 	/**
-	 * @brief Constructor to initialize the DataRequestHandler with a reference to the PersistentObjectSerializationManager
+	 * @brief Constructor to initialize the ObjectRequestHandler with a reference to the PersistentObjectSerializationManager
 	 * @param serial_manager Reference to PersistentObjectSerializationManager for data access and JSON serialization during request handling
 	 */
-	DataRequestHandler(PersistentObjectSerializationManager& serial_manager) : serial_manager_{serial_manager} {};
+	ObjectRequestHandler(PersistentObjectSerializationManager& serial_manager) : serial_manager_{serial_manager} {};
 
 	/**
 	 * @brief Handle an incoming HTTP request related to game objects and prepare the response
-	 * 
+	 *
 	 * The following requests are supported:
-	 * 
+	 *
 	 * | Method | Endpoint | Description |
 	 * |--------|----------|-------------|
-	 * |GET    | /rmce/data/count?types={types} | Get the count of objects of specific types (e.g. /rmce/data/count?types=skill,race) |
-	 * |GET    | /rmce/data/prefixes | Get a list of all known type prefixes for objects (e.g. "skill", "race") |
-	 * |GET    | /rmce/data/{type} | Get a list of all objects of a specific type (e.g. /rmce/data/skill) |
-	 * |GET    | /rmce/data/{type}?count | Get the count of objects of a specific type (e.g. /rmce/data/skill?count) |
-	 * |GET    | /rmce/data/{type}?ids | Get a list of all object IDs of a specific type (e.g. /rmce/data/skill?ids) |
-	 * |GET    | /rmce/data/{type}/{id} | Get a specific object by its type and ID (e.g. /rmce/data/skill/SKILL_ACTING) |
-	 * |POST   | /rmce/data/{type} | Create a new object of a specific type |
-	 * |PUT    | /rmce/data/{type} | Update an existing object by its type using the ID in the JSON payload |
-	 * |DELETE | /rmce/data/{type}/{id} | Delete an existing object by its type and ID |
-	 * 
+	 * |GET    | /rmce/objects/count?types={types} | Get the count of objects of specific types (e.g. /rmce/objects/count?types=character,location) |
+	 * |GET    | /rmce/objects/types | Get a list of all known type prefixes for objects (e.g. "character", "location") |
+	 * |GET    | /rmce/objects/{type} | Get a list of all objects of a specific type (e.g. /rmce/objects/character) |
+	 * |GET    | /rmce/objects/{type}?count | Get the count of objects of a specific type (e.g. /rmce/objects/character?count) |
+	 * |GET    | /rmce/objects/{type}?ids | Get a list of all object IDs of a specific type (e.g. /rmce/objects/character?ids) |
+	 * |GET    | /rmce/objects/{type}/{id} | Get a specific object by its type and ID (e.g. /rmce/objects/character/CHARACTER_1) |
+	 * |POST   | /rmce/objects/{type} | Create a new object of a specific type |
+	 * |PUT    | /rmce/objects/{type} | Update an existing object by its type using the ID in the JSON payload |
+	 * |DELETE | /rmce/objects/{type}/{id} | Delete an existing object by its type and ID |
+	 *
 	 * @param request The HTTP request to handle
 	 * @param response The HTTP response to populate based on the request
 	 */
@@ -48,10 +48,10 @@ private:
 	PersistentObjectSerializationManager& serial_manager_;
 
 	/**
-	 * @brief Requests prefixes and populates the HTTP response.
-	 * @param response The HTTP response object to populate with prefix data.
+	 * @brief Requests types and populates the HTTP response.
+	 * @param response The HTTP response object to populate with type data.
 	 */
-	void requestPrefixes(http::response<http::string_body>& response);
+	void requestTypes(http::response<http::string_body>& response);
 
 	/**
 	 * @brief Requests a list of objects of a specified type and populates the HTTP response.

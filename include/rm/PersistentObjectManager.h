@@ -5,6 +5,7 @@
 
 #include <PersistentCache.h>
 #include <SubcategoriedSkillData.h>
+#include <GameObject.h>
 
 namespace rm {
 
@@ -155,6 +156,18 @@ public:
 	const rm::rule::GameRuleData* getAny(std::string id);
 
 	/**
+	 * @brief Get a GameObject object with a specific ID without having to use the templated function and knowing the type
+	 *
+	 * This is useful for deserialisation when we want to get an object by its ID but we do not know the type of the object. The method will search through all types of GameRuleData objects in the cache and return the one with the matching
+	 * ID. If there are multiple objects with the same ID then it is undefined which one will be returned.
+	 *
+	 * @param id Unique ID of the object
+	 * @param prefix Prefix to match in the ID of the object, this is used as GameObjects use a GUID.
+	 * @return Pointer to the GameObject object with the matching ID or nullptr if no such object exists
+	 */
+	const rm::game::GameObject* getAny(std::string_view id, std::string_view prefix);
+
+	/**
 	 * @brief Get all IDs of GameRuleData objects with a specific prefix
 	 *
 	 * This is useful for deserialisation when we want to get all objects with a specific prefix in their ID, e.g. all skills that have IDs starting with "SKILL_". The method will search through all types of GameRuleData objects in the
@@ -200,7 +213,18 @@ public:
 	 *
 	 * @return Set of strings containing the unique prefixes of the GameRuleData objects in the cache
 	 */
-	const std::set<std::string> getAllPrefixes() const;
+	const std::set<std::string> getAllDataPrefixes() const;
+
+	/**
+	 * @brief Get all labels of GameObject objects in the cache
+	 *
+	 * Unlike GameRuleData objects, GameObject objects do not have a standardised prefix in their ID as they use a GUID, so instead they have a label that is used to identify the type of object. This method will return all the unique labels
+	 * of the GameObject objects in the cache, which can then be used to get all objects with a specific label using the #getAll method with the appropriate type. For example, if there is a label "character" then this can be used to get all
+	 * characters in the cache.
+	 * 
+	 * @return Set of strings containing the unique labels of the GameObject objects in the cache
+	 */
+	const std::set<std::string> getAllObjectLabels() const;
 
 	/**
 	 * @brief Get whether an object has been flagged as deleted

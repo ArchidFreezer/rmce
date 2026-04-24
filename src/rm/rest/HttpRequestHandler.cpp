@@ -3,6 +3,7 @@
 #include <HttpPathParser.h>
 #include <HttpRequestHandler.h>
 #include <DataRequestHandler.h>
+#include <ObjectRequestHandler.h>
 #include <StringUtils.h>
 
 namespace rm::rest {
@@ -40,6 +41,9 @@ void HttpRequestHandler::handleRequest(const http::request<http::string_body>& r
 		}
 	} else if (path.match("/rmce/data/")) {
 		DataRequestHandler handler {serial_manager_};
+		handler.handleRequest(request, response);
+	} else if (path.match("/rmce/objects/")) {
+		ObjectRequestHandler handler{serial_manager_};
 		handler.handleRequest(request, response);
 	} else if (path.match("/rmce/operations/character/")) {
 		CharacterOperationsRequestHandler handler {serial_manager_};

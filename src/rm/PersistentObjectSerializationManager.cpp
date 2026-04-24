@@ -91,6 +91,7 @@ void PersistentObjectSerializationManager::save(std::string_view prefix) {
 	if (clean_prefix == "armourtype") serializeAllObjects<rm::rule::ArmourTypeData>("ArmourTypes.json", "armourtypes");
 	if (clean_prefix == "attacktable") serializeAllObjects<rm::rule::table::AttackTable>("AttackTables.json", "attacktables");
 	if (clean_prefix == "book") serializeAllObjects<rm::rule::BookData>("Books.json", "books");
+	if (clean_prefix == "character") serializeAllObjects<rm::game::character::Character>("Characters.json", "characters");
 	if (clean_prefix == "climate") serializeAllObjects<rm::rule::ClimateData>("Climates.json", "climates");
 	if (clean_prefix == "creaturepace") serializeAllObjects<rm::rule::CreaturePaceData>("CreaturePaces.json", "creaturepaces");
 	if (clean_prefix == "culture") serializeAllObjects<rm::rule::CultureData>("Cultures.json", "cultures");
@@ -115,7 +116,7 @@ void PersistentObjectSerializationManager::save(std::string_view prefix) {
 	if (clean_prefix == "trainingpackagecost") serializeTsv<rm::rule::table::TrainingPackageCostTable>("TrainingPackageCosts.tsv");
 }
 
-std::string PersistentObjectSerializationManager::serializeAnyObject(const std::string& id) {
+std::string PersistentObjectSerializationManager::serializeAnyDataObject(const std::string& id) {
 	using namespace rm::serial;
 	// Get the object from the manager and determine its type, then call the appropriate serializer
 	auto obj = object_manager_.getAny(id);
@@ -170,7 +171,18 @@ std::string PersistentObjectSerializationManager::serializeAnyObject(const std::
 	} else if (auto weapon_type = dynamic_cast<const rule::WeaponTypeData*>(obj)) {
 		return serializeObject(*weapon_type);
 	} else {
-		throw std::runtime_error("Unknown object type for ID: " + id);
+		throw std::runtime_error("Unknown object type for ID: " + std::string(id));
+	}
+}
+
+std::string PersistentObjectSerializationManager::serializeAnyGameObject(std::string_view id, std::string_view label) {
+	using namespace rm::serial;
+	// Get the object from the manager and determine its type, then call the appropriate serializer
+	auto obj = object_manager_.getAny(id, label);
+	if (auto character = dynamic_cast<const game::character::Character*>(obj)) {
+		return serializeObject(*character);
+	} else {
+		throw std::runtime_error("Unknown game object type for ID: " + std::string(id));
 	}
 }
 
@@ -191,6 +203,8 @@ std::string PersistentObjectSerializationManager::serializeAllObjects(std::strin
 		return serializeAllObjects_Impl<rm::rule::table::AttackTable>(root_key);
 	} else if (lower_prefix == "book") {
 		return serializeAllObjects_Impl<rm::rule::BookData>(root_key);
+	} else if (lower_prefix == "character") {
+		return serializeAllObjects_Impl<rm::game::character::Character>(root_key);
 	} else if (lower_prefix == "climate") {
 		return serializeAllObjects_Impl<rm::rule::ClimateData>(root_key);
 	} else if (lower_prefix == "creaturepace") {
@@ -243,7 +257,7 @@ const std::string PersistentObjectSerializationManager::deserializeObject(json::
 
 	std::string lower_prefix = archid::lcase(prefix);
 
-	const rm::rule::GameRuleData* obj_ptr = nullptr;
+	const rm::Persistent* obj_ptr = nullptr;
 
 	if (lower_prefix == "animal") {
 		obj_ptr = &deserializeObject<rm::rule::AnimalData>(obj);
@@ -253,6 +267,8 @@ const std::string PersistentObjectSerializationManager::deserializeObject(json::
 		obj_ptr = &deserializeObject<rm::rule::table::AttackTable>(obj);
 	} else if (lower_prefix == "book") {
 		obj_ptr = &deserializeObject<rm::rule::BookData>(obj);
+	} else if (lower_prefix == "character") {
+		obj_ptr = &deserializeObject<rm::game::character::Character>(obj);
 	} else if (lower_prefix == "climate") {
 		obj_ptr = &deserializeObject<rm::rule::ClimateData>(obj);
 	} else if (lower_prefix == "creaturepace") {

@@ -1,1 +1,1 @@
-target_sources(rmce_rest PRIVATE "RestServer.cpp" "HttpRequestHandler.cpp" "CharacterOperationsRequestHandler.cpp" "HttpPathParser.cpp" "DataRequestHandler.cpp")
+target_sources(rmce_rest PRIVATE "RestServer.cpp" "HttpRequestHandler.cpp" "CharacterOperationsRequestHandler.cpp" "HttpPathParser.cpp" "DataRequestHandler.cpp" "ObjectRequestHandler.cpp")
