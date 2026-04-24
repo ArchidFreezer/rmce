@@ -9608,11 +9608,11 @@
             "profession" : "PROFESSION_RANGER",
             "stats" : [
                 {
-                    "stat" : "Strength",
+                    "stat" : "Agility",
                     "temporary" : 86,
-                    "potential" : 93,
-                    "racialBonus" : 2,
-                    "totalBonus" : 6
+                    "potential" : 94,
+                    "racialBonus" : 0,
+                    "totalBonus" : 4
                 },
                 {
                     "stat" : "Constitution",
@@ -9622,6 +9622,13 @@
                     "totalBonus" : 10
                 },
                 {
+                    "stat" : "Empathy",
+                    "temporary" : 44,
+                    "potential" : 76,
+                    "racialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
                     "stat" : "Intuition",
                     "temporary" : 97,
                     "potential" : 97,
@@ -9629,18 +9636,11 @@
                     "totalBonus" : 8
                 },
                 {
-                    "stat" : "Self Discipline",
-                    "temporary" : 69,
+                    "stat" : "Memory",
+                    "temporary" : 70,
                     "potential" : 82,
-                    "racialBonus" : 2,
-                    "totalBonus" : 2
-                },
-                {
-                    "stat" : "Agility",
-                    "temporary" : 86,
-                    "potential" : 94,
                     "racialBonus" : 0,
-                    "totalBonus" : 4
+                    "totalBonus" : 1
                 },
                 {
                     "stat" : "Presence",
@@ -9648,13 +9648,6 @@
                     "potential" : 84,
                     "racialBonus" : 0,
                     "totalBonus" : 3
-                },
-                {
-                    "stat" : "Memory",
-                    "temporary" : 70,
-                    "potential" : 82,
-                    "racialBonus" : 0,
-                    "totalBonus" : 1
                 },
                 {
                     "stat" : "Quickness",
@@ -9671,11 +9664,18 @@
                     "totalBonus" : 0
                 },
                 {
-                    "stat" : "Empathy",
-                    "temporary" : 44,
-                    "potential" : 76,
-                    "racialBonus" : 0,
-                    "totalBonus" : 0
+                    "stat" : "Self Discipline",
+                    "temporary" : 69,
+                    "potential" : 82,
+                    "racialBonus" : 2,
+                    "totalBonus" : 2
+                },
+                {
+                    "stat" : "Strength",
+                    "temporary" : 86,
+                    "potential" : 93,
+                    "racialBonus" : 2,
+                    "totalBonus" : 6
                 }
             ],
             "height" : 73,

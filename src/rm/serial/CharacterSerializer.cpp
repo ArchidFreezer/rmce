@@ -1,5 +1,6 @@
 #include <CharacterSerializer.h>
 #include <JsonConverter.h>
+#include <EnumIterator.h>
 
 namespace rm::serial {
 
@@ -27,9 +28,12 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 	// Stats
 	{
 		json::array stats_array;
-		for (const auto& [stat_type, stat] : ref.stats_) {
+		for (auto value : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
+			if (!ref.stats_.contains(value))
+				continue;
+			const auto& stat = ref.stats_.at(value);
 			json::object stat_obj;
-			JsonConverter::setString(stat_obj, "stat", toString(stat_type));
+			JsonConverter::setString(stat_obj, "stat", toString(value));
 			JsonConverter::setInt(stat_obj, "temporary", stat.temporary());
 			JsonConverter::setInt(stat_obj, "potential", stat.potential());
 			JsonConverter::setInt(stat_obj, "racialBonus", stat.racialBonus());
