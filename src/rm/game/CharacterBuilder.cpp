@@ -24,6 +24,7 @@ Character& CharacterBuilder::build() {
 	/* Basic Data */
 	character.setName(name_);
 	character.male_ = male_;
+	character.player_character_ = pc_;
 	character.race_ = race_;
 	character.culture_ = culture_;
 	character.profession_ = profession_;

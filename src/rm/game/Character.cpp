@@ -63,12 +63,13 @@ int Character::skillBonus(const SubcategoriedSkillData& skill) const {
 }
 
 void Character::updateMaxHits() {
-	max_hits_ = skills_.at(body_devlopment_skill_).bonus();
+	max_hits_ = skillBonus(*body_devlopment_skill_);
 }
 
 void Character::updateMaxPowerPoints() {
-	max_power_points_ = skills_.at(power_point_skill_).bonus();
+	max_power_points_ = skillBonus(*power_point_skill_);
 }
+
 void Character::updateAllDerivedData() {
 	updateMaxHits();
 	updateMaxPowerPoints();
