@@ -1,49 +1,49 @@
-#include <DataRequestHandler.h>
+#include <ObjectRequestHandler.h>
 #include <HttpPathParser.h>
 #include <StringUtils.h>
 
 namespace rm::rest {
 
-void DataRequestHandler::handleRequest(const http::request<http::string_body>& request, http::response<http::string_body>& response) {
+void ObjectRequestHandler::handleRequest(const http::request<http::string_body>& request, http::response<http::string_body>& response) {
 	// Decode the request target to handle URL-encoded characters
 	std::string request_string = archid::uriDecode(request.target());
 	// Extract path and query parameters
 	const HttpPathParser path(request_string);
-	// Get the type prefix from the path (e.g. "skill" from "/rmce/data/skill")
-	std::string type_prefix = std::string(path.extractNextSegment("/rmce/data/"));
-	// Get the ID from the path if it exists (e.g. "SKILL_ACTING" from "/rmce/data/skill/SKILL_ACTING")
-	std::string id = type_prefix.empty() ? "" : std::string(path.extractNextSegment("/rmce/data/" + type_prefix + "/"));
+	// Get the type prefix from the path (e.g. "character" from "/rmce/objects/character")
+	std::string type_prefix = std::string(path.extractNextSegment("/rmce/objects/"));
+	// Get the ID from the path if it exists (e.g. "CHARACTER_1" from "/rmce/objects/character/CHARACTER_1")
+	std::string id = type_prefix.empty() ? "" : std::string(path.extractNextSegment("/rmce/objects/" + type_prefix + "/"));
 
 	/***************************
 	 * Handle GET requests
 	 */
-	// Get the count of objects of a specific types (e.g. /rmce/data/count?type=skill,race)
-	if (request.method() == http::verb::get && path.matchExact("/rmce/data/count") && (path.params().find("types") != path.params().end())) {
+	// Get the count of objects of a specific types (e.g. /rmce/objects/count?types=character,race)
+	if (request.method() == http::verb::get && path.matchExact("/rmce/objects/count") && (path.params().find("types") != path.params().end())) {
 		const std::string& types = path.params().at("types");
 		requestCountMultiTypeObjects(response, types);
 	}
 
-	// Get a list of all known type prefixes for objects (e.g. /rmce/data/prefixes)
-	else if (request.method() == http::verb::get && (path.matchExact("/rmce/data/prefixes"))) {
-		requestPrefixes(response);
+	// Get a list of all known type prefixes for objects (e.g. /rmce/objects/prefixes)
+	else if (request.method() == http::verb::get && (path.matchExact("/rmce/objects/prefixes"))) {
+		requestTypes(response);
 	}
 
-	// Get a list of all objects of a specific type (e.g. /rmce/data/skill)
+	// Get a list of all objects of a specific type (e.g. /rmce/objects/character)
 	else if (request.method() == http::verb::get && !type_prefix.empty() && id.empty() && path.params().empty()) {
 		requestListObjects(response, type_prefix);
 	}
 
-	// Get a list of all object IDs of a specific type (e.g. /rmce/data/skill?ids)
+	// Get a list of all object IDs of a specific type (e.g. /rmce/objects/character?ids)
 	else if (request.method() == http::verb::get && !type_prefix.empty() && id.empty() && path.params().find("ids") != path.params().end()) {
 		requestListObjectIds(response, type_prefix);
 	}
 
-	// Get the count of objects of a specific type (e.g. /rmce/data/skill?count)
+	// Get the count of objects of a specific type (e.g. /rmce/objects/character?count)
 	else if (request.method() == http::verb::get && !type_prefix.empty() && id.empty() && path.params().find("count") != path.params().end()) {
 		requestCountTypeObjects(response, type_prefix);
 	}
 
-	// Get a specific object by ID (e.g. /rmce/data/skill/SKILL_ACTING)
+	// Get a specific object by ID (e.g. /rmce/objects/character/CHARACTER_1)
 	else if (request.method() == http::verb::get && !type_prefix.empty() && !id.empty()) {
 		requestObjectById(response, type_prefix, id);
 	}
@@ -51,7 +51,7 @@ void DataRequestHandler::handleRequest(const http::request<http::string_body>& r
 	/***************************
 	 * Handle POST requests
 	 */
-	// Create a new object of a specific type (e.g. POST /rmce/data/skill with JSON body containing the object data)
+	// Create a new object of a specific type (e.g. POST /rmce/objects/character with JSON body containing the object data)
 	else if (request.method() == http::verb::post && !type_prefix.empty()) {
 		requestCreateObject(response, type_prefix, request);
 	}
@@ -59,7 +59,7 @@ void DataRequestHandler::handleRequest(const http::request<http::string_body>& r
 	/***************************
 	 * Handle PUT requests
 	 */
-	// Update an existing object by ID (e.g. PUT /rmce/data/skill/SKILL_ACTING with JSON body containing the updated object data)
+	// Update an existing object by ID (e.g. PUT /rmce/objects/character/CHARACTER_1 with JSON body containing the updated object data)
 	else if (request.method() == http::verb::put && !type_prefix.empty()) {
 		requestUpdateObject(response, type_prefix, request);
 	}
@@ -67,7 +67,7 @@ void DataRequestHandler::handleRequest(const http::request<http::string_body>& r
 	/***************************
 	 * Handle DELETE requests
 	 */
-	// Delete an existing object by ID (e.g. DELETE /rmce/data/skill/SKILL_ACTING)
+	// Delete an existing object by ID (e.g. DELETE /rmce/objects/character/CHARACTER_1)
 	else if (request.method() == http::verb::delete_ && !type_prefix.empty() && !id.empty()) {
 		requestDeleteObject(response, type_prefix, id);
 	}
@@ -82,12 +82,12 @@ void DataRequestHandler::handleRequest(const http::request<http::string_body>& r
 	}
 }
 
-void DataRequestHandler::requestPrefixes(http::response<http::string_body>& response) {
+void ObjectRequestHandler::requestTypes(http::response<http::string_body>& response) {
 	response.result(http::status::ok);
 	response.set(http::field::content_type, "application/json");
 
 	try {
-		std::set<std::string> prefixes = serial_manager_.objectManager().getAllDataPrefixes();
+		std::set<std::string> prefixes = serial_manager_.objectManager().getAllObjectLabels();
 
 		std::ostringstream json;
 		std::string json_str = serial_manager_.serializeContainer(prefixes, "prefixes");
@@ -101,7 +101,7 @@ void DataRequestHandler::requestPrefixes(http::response<http::string_body>& resp
 	}
 }
 
-void DataRequestHandler::requestListObjects(http::response<http::string_body>& response, std::string_view type) {
+void ObjectRequestHandler::requestListObjects(http::response<http::string_body>& response, std::string_view type) {
 	response.set(http::field::content_type, "application/json");
 	try {
 		std::ostringstream json;
@@ -115,7 +115,7 @@ void DataRequestHandler::requestListObjects(http::response<http::string_body>& r
 	}
 }
 
-void DataRequestHandler::requestListObjectIds(http::response<http::string_body>& response, std::string_view type) {
+void ObjectRequestHandler::requestListObjectIds(http::response<http::string_body>& response, std::string_view type) {
 	response.set(http::field::content_type, "application/json");
 	try {
 		std::set<std::string> ids = serial_manager_.objectManager().getAllIds(type);
@@ -131,7 +131,7 @@ void DataRequestHandler::requestListObjectIds(http::response<http::string_body>&
 	}
 }
 
-void DataRequestHandler::requestCountTypeObjects(http::response<http::string_body>& response, std::string_view type) {
+void ObjectRequestHandler::requestCountTypeObjects(http::response<http::string_body>& response, std::string_view type) {
 	response.set(http::field::content_type, "application/json");
 	try {
 		size_t count = serial_manager_.objectManager().getAllIds(type).size(); // Placeholder
@@ -145,10 +145,10 @@ void DataRequestHandler::requestCountTypeObjects(http::response<http::string_bod
 	}
 }
 
-void DataRequestHandler::requestObjectById(http::response<http::string_body>& response, std::string_view type, std::string_view id) {
+void ObjectRequestHandler::requestObjectById(http::response<http::string_body>& response, std::string_view type, std::string_view id) {
 	response.set(http::field::content_type, "application/json");
 	try {
-		std::string obj_json_str = serial_manager_.serializeAnyDataObject(std::string(id));
+		std::string obj_json_str = serial_manager_.serializeAnyGameObject(id, type);
 		if (obj_json_str.empty()) {
 			response.result(http::status::not_found);
 			response.body() = R"({"error": "Object not found", "id": ")" + archid::escapeJson(std::string(id)) + R"("})";
@@ -162,7 +162,7 @@ void DataRequestHandler::requestObjectById(http::response<http::string_body>& re
 	}
 }
 
-void DataRequestHandler::requestCreateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request) {
+void ObjectRequestHandler::requestCreateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request) {
 	try {
 		json::value json_body = json::parse(request.body());
 		if (!json_body.is_object()) {
@@ -182,7 +182,7 @@ void DataRequestHandler::requestCreateObject(http::response<http::string_body>& 
 	}
 }
 
-void DataRequestHandler::requestUpdateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request) {
+void ObjectRequestHandler::requestUpdateObject(http::response<http::string_body>& response, std::string_view type, const http::request<http::string_body>& request) {
 	try {
 		json::value json_body = json::parse(request.body());
 		if (!json_body.is_object()) {
@@ -215,7 +215,7 @@ void DataRequestHandler::requestUpdateObject(http::response<http::string_body>& 
 	}
 }
 
-void DataRequestHandler::requestDeleteObject(http::response<http::string_body>& response, std::string_view type, std::string_view id) {
+void ObjectRequestHandler::requestDeleteObject(http::response<http::string_body>& response, std::string_view type, std::string_view id) {
 	response.set(http::field::content_type, "application/json");
 	try {
 		serial_manager_.objectManager().deleteObject(std::string(id));
@@ -228,7 +228,7 @@ void DataRequestHandler::requestDeleteObject(http::response<http::string_body>& 
 	}
 }
 
-void DataRequestHandler::requestCountMultiTypeObjects(http::response<http::string_body>& response, std::string_view types) {
+void ObjectRequestHandler::requestCountMultiTypeObjects(http::response<http::string_body>& response, std::string_view types) {
 	response.set(http::field::content_type, "application/json");
 	try {
 		std::vector<std::string> type_list = archid::tokenise(std::string(types), ",");
