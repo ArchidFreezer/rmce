@@ -86,6 +86,25 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 		}
 		JsonConverter::setLanguageAbilities(obj, "languageAbilities", language_abilities);
 	}
+
+	// Spell Lists
+	{
+		std::map<std::string_view, const SpellListData*> sorted_spell_lists{};
+		for (const auto& [spell_list, ranks] : ref.spell_list_ranks_) {
+			sorted_spell_lists[spell_list->id()] = spell_list;
+		}
+		json::array spell_list_ranks_array;
+		for (const auto& [spell_list_id, spell_list] : sorted_spell_lists) {
+			const auto& ranks = ref.spell_list_ranks_.at(spell_list);
+			json::object spell_list_obj;
+			JsonConverter::setString(spell_list_obj, "id", std::string(spell_list_id));
+			JsonConverter::setInt(spell_list_obj, "value", ranks);
+			spell_list_ranks_array.emplace_back(std::move(spell_list_obj));
+		}
+		if (spell_list_ranks_array.size())
+			obj["spellListRanks"] = std::move(spell_list_ranks_array);
+	}
+
 	// Categories
 	{
 		// First sort the categories alphabetically by their ID to ensure a consistent order in the JSON output, which is important for testing and readability.
@@ -236,6 +255,21 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 			ref.language_abilities_.insert_or_assign(id, ability);
 		}
 	}
+	
+	// Spell Lists
+	{
+		const json::array spell_list_ranks_array = JsonConverter::getJsonArray(jsonObj, "spellListRanks");
+		for (const json::value& spell_list_value : spell_list_ranks_array) {
+			if (!spell_list_value.is_object())
+				continue;
+			const json::object spell_list_obj = spell_list_value.as_object();
+			const std::string spell_list_id = JsonConverter::getString(spell_list_obj, "id");
+			const SpellListData* spell_list_data = &manager_.get<SpellListData>(spell_list_id);
+			const int ranks = JsonConverter::getInt(spell_list_obj, "value", 0);
+			ref.spell_list_ranks_.insert_or_assign(spell_list_data, ranks);
+		}
+	}
+
 	// Categories
 	{
 		const json::array categories_array = JsonConverter::getJsonArray(jsonObj, "categories");
