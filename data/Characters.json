@@ -4797,6 +4797,12 @@
                     "specialBonus" : 0,
                     "totalBonus" : -25
                 }
+            ],
+            "spellListRanks": [
+              {
+                "id": "SPELLLIST_AMPLIFICATIONS",
+                "value": 2
+              }
             ]
         },
         {
@@ -9588,6 +9594,12 @@
                     "specialBonus" : 0,
                     "totalBonus" : -20
                 }
+            ],
+            "spellListRanks": [
+              {
+                "id": "SPELLLIST_AMPLIFICATIONS",
+                "value": 2
+              }
             ]
         },
         {
@@ -14426,6 +14438,12 @@
                     "specialBonus" : 0,
                     "totalBonus" : -30
                 }
+            ],
+            "spellListRanks": [
+              {
+                "id": "SPELLLIST_AMPLIFICATIONS",
+                "value": 2
+              }
             ]
         }
     ]

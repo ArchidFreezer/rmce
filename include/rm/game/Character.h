@@ -633,6 +633,7 @@ private:
 	std::unordered_map<std::string, LanguageAbility> language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. */
 	std::map<const SubcategoriedSkillData*, Skill> skills_{};             /**< A map of SkillData pointers to Skill objects representing the character's skills. */
 	std::map<const SkillCategoryData*, Category> categories_{};           /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
+	std::map<const SpellListData*, int> spell_list_ranks_{};              /**< Spell list ranks */
 
 	/* Utility functions */
 	void updateAllDerivedData();

@@ -50,6 +50,10 @@ Character& CharacterBuilder::build() {
 		character.setLanguageAbility(language_ability);
 	}
 
+		/* Spell Lists */
+	character.spell_list_ranks_ = std::move(spell_list_ranks_); // The spell list categories are the same as the skill categories for the spell lists so we can just set them directly.
+
+
 	/* Apply category data */
 	// The profession should define a cost for every category so this loop should create all the Category objects in the character.
 	for (const auto& [category_type, dev_cost] : category_development_costs_) {
