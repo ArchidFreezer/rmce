@@ -153,12 +153,12 @@ public:
 	void generateBackgroundItems(int item_count);
 
 	/**
-	 * @brief Apply the choices made during the apprenticeship phase of character creation to the character being built.
+	 * @brief Apply the choices made during the levelling phase of character creation to the character being built.
 	 *
-	 * This method is used to apply the choices made during the apprenticeship phase of character creation to the character being built. This includes applying any stat gains from apprenticeship, as well as any training packages that were
+	 * This method is used to apply the choices made during the levelling phase of character creation to the character being built. This includes applying any stat gains from levelling, as well as any training packages that were
 	 * selected. The training packages may have various effects on the character, such as providing additional gold, items, or special abilities, which will be applied to the character's aggregated state when this method is called.
 	 */
-	void applyApprenticeshipChoices();
+	void applyLevellingChoices();
 
 	/**
 	 * @brief Get the expected lifespan of the character being built
@@ -239,10 +239,10 @@ private:
 	std::map<const SkillCategoryData*, int> background_category_special_bonuses_{};   /**< Skill category special bonuses */
 	std::vector<std::string> background_items_{};                                     /**< Items the character genetrates with background options */
 
-	/* Apprenticeship choices */
-	// Most of the apprenticeship chpoices are directly applied to the aggregated state as they are made, but some need to be stored to be applied when the build method is called.
-	std::set<const TrainingPackageData*> apprenticeship_training_packages_{}; /**< Set of training package data pointers representing the training packages taken by the character being built. */
-	std::set<StatType::Type> apprenticeship_stat_gains_{};                    /**< Set of stats requiring a stat gain roll made with apprenticeship options. */
+	/* Levelling choices */
+	// Most of the levelling choices are directly applied to the aggregated state as they are made, but some need to be stored to be applied when the build method is called.
+	std::set<const TrainingPackageData*> levelling_training_packages_{}; /**< Set of training package data pointers representing the training packages taken by the character being built. */
+	std::set<StatType::Type> levelling_stat_gains_{};                    /**< Set of stats requiring a stat gain roll made with levelling options. */
 
 	/* ------------------------------------------------------------------ */
 	/* Aggregated state                                                   */
