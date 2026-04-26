@@ -32,8 +32,8 @@ void CharacterOperationsRequestHandler::handleRequest(const http::request<http::
 		requestSetHobbyChoices(response, request);
 	else if (request.method() == http::verb::post && operation == "set-background-choices")
 		requestSetBackgroundChoices(response, request);
-	else if (request.method() == http::verb::post && operation == "set-apprenticeship-choices")
-		requestSetApprenticeshipChoices(response, request);
+	else if (request.method() == http::verb::post && operation == "set-levelling-choices")
+		requestSetLevellingChoices(response, request);
 	else if (request.method() == http::verb::get && operation == "dump" && path.params().contains("id"))
 		requestDump(response, request, path.params().at("id"));
 	else {
@@ -306,7 +306,7 @@ void CharacterOperationsRequestHandler::requestSetBackgroundChoices(http::respon
 	}
 }
 
-void CharacterOperationsRequestHandler::requestSetApprenticeshipChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterOperationsRequestHandler::requestSetLevellingChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
 
 	try {
@@ -323,7 +323,7 @@ void CharacterOperationsRequestHandler::requestSetApprenticeshipChoices(http::re
 		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
 
-		builder.applyApprenticeshipChoices();
+		builder.applyLevellingChoices();
 		builder.build();
 		serial_manager_.objectManager().deleteObject(id); // We can delete the builder from the cache as it is no longer needed after the character has been built and this will free up memory in the cache
 

@@ -150,9 +150,9 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 			obj["backgroundItems"] = std::move(items_array);
 	}
 
-	/* Apprenticeship choices */
-	JsonConverter::setDataSet<TrainingPackageData>(obj, "apprenticeshipTrainingPackages", ref.apprenticeship_training_packages_);
-	JsonConverter::setEnumSet(obj, "apprenticeshipStatGains", ref.apprenticeship_stat_gains_);
+	/* Levelling choices */
+	JsonConverter::setDataSet<TrainingPackageData>(obj, "levellingTrainingPackages", ref.levelling_training_packages_);
+	JsonConverter::setEnumSet(obj, "levellingStatGains", ref.levelling_stat_gains_);
 
 	/* Aggregated state */
 	JsonConverter::setInt(obj, "totalGold", ref.total_gold_);
@@ -415,9 +415,9 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 		}
 	}
 
-  /* Apprenticeship choices */
-	ref.apprenticeship_training_packages_ = JsonConverter::getDataSet<TrainingPackageData>(jsonObj, "apprenticeshipTrainingPackages", manager_);
-	ref.apprenticeship_stat_gains_ = JsonConverter::getEnumSet<StatType::Type>(jsonObj, "apprenticeshipStatGains");
+  /* Levelling choices */
+	ref.levelling_training_packages_ = JsonConverter::getDataSet<TrainingPackageData>(jsonObj, "levellingTrainingPackages", manager_);
+	ref.levelling_stat_gains_ = JsonConverter::getEnumSet<StatType::Type>(jsonObj, "levellingStatGains");
 
 	/* Aggregated state */
 	ref.total_gold_ = JsonConverter::getInt(jsonObj, "totalGold", 0);

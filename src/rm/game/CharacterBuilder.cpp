@@ -784,18 +784,23 @@ void CharacterBuilder::applyBackgroundChoices() {
 	}
 }
 
-void CharacterBuilder::applyApprenticeshipChoices() {
+void CharacterBuilder::applyLevellingChoices() {
 	// First make any stat gain rolls if applicable.
-	if (!apprenticeship_stat_gains_.empty()) {
+	if (!levelling_stat_gains_.empty()) {
 		for (auto stat_type : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
 			stats_[stat_type].performStatGainRoll();
 		}
 	}
 
 	// Next process the training package data that is not already dealt with. The skills, spells, and languages are already applied to the aggregated data so we only need to deal with what is left.
-	for (const TrainingPackageData* training_package : apprenticeship_training_packages_) {
+	for (const TrainingPackageData* training_package : levelling_training_packages_) {
 		// The training package may have some special bonuses that we need to apply such as extra gold or items that are not already accounted for in the aggregated data.
 		total_gold_ += training_package->startingMoneyChange();
+
+		/* Items should only be given during apprentiecship so short-circuit if this is not the initial creation */
+		if (built_) {
+			continue;
+		}
 
 		// The specials may be items, favours owed, or anything else that doesn't fit into the other categories and may be represented as a string description of the special. We will just add these to the total items list for now but we may
 		// want to separate them out into their own list if we want to display them differently in the character sheet or have different rules for how they are used.

@@ -138,13 +138,13 @@ private:
 	/**
 	 * @brief Applies the level-up choices for a character being leveled up.
 	 *
-	 * This operation is specific to character aprrenticeship levelling and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object and the selected apprenticeship
-	 * choices to apply for that object. The function will update the specified CharacterBuilder object in the cache by applying the apprenticeship choices and return a success response.
+	 * This operation is specific to character levelling and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object and the selected levelling
+	 * choices to apply for that object. The function will update the specified CharacterBuilder object in the cache by applying the levelling choices and return a success response.
 	 *
 	 * @param response The HTTP response object to be populated with the result of the request.
-	 * @param request The HTTP request object containing the apprenticeship choices to be applied.
+	 * @param request The HTTP request object containing the levelling choices to be applied.
 	 */
-	void requestSetApprenticeshipChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+	void requestSetLevellingChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request);
 
 	/**
 	 * @brief Dumps the current state of a CharacterBuilder object for debugging purposes.
