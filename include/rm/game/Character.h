@@ -638,6 +638,7 @@ private:
 	/* Utility functions */
 	void updateAllDerivedData();
 	void updateStatDerivedData(StatType::Type stat_type);
+	void updateDevelopmentPoints();
 	void updateMaxHits();
 	void updateMaxPowerPoints();
 };

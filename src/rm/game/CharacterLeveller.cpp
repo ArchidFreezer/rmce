@@ -96,6 +96,7 @@ void CharacterLeveller::levelUp() {
 	 * Finalize the level up by updating the character level and exp.
 	 */
 	character_->updateAllDerivedData();
+	character_->development_points_ += development_points_; // carry any unused development points over to the character for the next level up.
 	character_->hits_ = character_->max_hits_;
 	character_->power_points_ = character_->max_power_points_;
 	character_->level_++;
