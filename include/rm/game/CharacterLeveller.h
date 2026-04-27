@@ -27,6 +27,7 @@ private:
 	rm::PersistentObjectManager* object_factory_{nullptr};
 
 	Character* character_; /**< Reference to the character being levelled up. This is used to access and modify the character's stats, skills, and other attributes during the levelling process. */
+	int development_points_{0}; /**< Development points available for the character during the levelling process. */
 	std::map<const TrainingPackageData*, int> training_package_costs_{}; /**< A map of training package data pointers to integers representing the cost for each training package. */
 	std::set<const TrainingPackageData*> training_packages_{};           /**< Set of training package data pointers representing the training packages taken by the character being levelled. */
 	std::set<StatType::Type> stat_gains_{};                              /**< Set of stats requiring a stat gain roll made with levelling options. */

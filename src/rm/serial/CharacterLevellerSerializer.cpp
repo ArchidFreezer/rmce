@@ -9,6 +9,7 @@ json::value CharacterLevellerSerializer::serializeObject(const CharacterLeveller
 	// Identity + basic state
 	JsonConverter::setString(obj, "id", ref.id());
 	JsonConverter::setString(obj, "character", ref.character_->id());
+	JsonConverter::setInt(obj, "developmentPoints", ref.development_points_);
 	JsonConverter::setDataPrimitiveMap<TrainingPackageData, int>(obj, "trainingPackageCosts", ref.training_package_costs_);
 	JsonConverter::setDataSet<TrainingPackageData>(obj, "trainingPackages", ref.training_packages_);
 	JsonConverter::setEnumSet(obj, "statGains", ref.stat_gains_);
@@ -46,6 +47,7 @@ const CharacterLeveller& CharacterLevellerSerializer::deserializeObject(json::ob
 		ref.character_ = &manager_.get<Character>(characterId);
 	}
 
+	ref.development_points_ = JsonConverter::getInt(jsonObj, "developmentPoints", 0);
 	ref.training_package_costs_ = JsonConverter::getDataPrimitiveMap<TrainingPackageData, int>(jsonObj, "trainingPackageCosts", manager_);
 	ref.training_packages_ = JsonConverter::getDataSet<TrainingPackageData>(jsonObj, "trainingPackages", manager_);
 	ref.stat_gains_ = JsonConverter::getEnumSet<StatType::Type>(jsonObj, "statGains");

@@ -299,13 +299,13 @@ void CharacterOperationsRequestHandler::requestSetBackgroundChoices(http::respon
 		builder.recalculateAggregatedState();
 
 		// Now we have all the updates to the character we can create the character object at level 0.
-		builder.build();
+		Character& character = builder.build();
 
 		serial_manager_.objectManager().deleteObject(id); // We can delete the builder from the cache as it is no longer needed after the character has been built
 
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
-		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
+		response.body() = serial_manager_.serializeObject<Character>(character);
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to set hobby choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";
@@ -326,6 +326,7 @@ void CharacterOperationsRequestHandler::requestLevelUp(http::response<http::stri
 		}
 		// This API is called twice, the first time with only the character ID which expects the training package costs to be populated and then a second time with a payload of the selected levelling choices. To handle this we will check if
 		// the leveller id has been set on the leveller object, if not we will populate the training package costs and return, if it has been set we know that the client is sending the levelling choices and we can perform the level up operation.
+		std::string character_id = json_body.as_object().at("character").as_string().c_str();
 		std::string id = json_body.as_object().at("id").as_string().c_str();
 		bool has_id = !id.empty();
 
@@ -336,14 +337,15 @@ void CharacterOperationsRequestHandler::requestLevelUp(http::response<http::stri
 
 		if (!has_id) {
 			leveller.buildTrainingPackageCosts();
+			response.body() = serial_manager_.serializeObject<CharacterLeveller>(id);
 		} else {
 			leveller.levelUp();
 			serial_manager_.objectManager().deleteObject(id); // We can delete the leveller from the cache as it is no longer needed after the character has been built
+			response.body() = serial_manager_.serializeObject<Character>(character_id);
 		}
 
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
-		response.body() = serial_manager_.serializeObject<CharacterLeveller>(leveller);
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to set apprenticeship choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";

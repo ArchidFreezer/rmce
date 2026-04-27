@@ -70,9 +70,20 @@ void Character::updateMaxPowerPoints() {
 	max_power_points_ = skillBonus(*power_point_skill_);
 }
 
+void Character::updateDevelopmentPoints() {
+	development_points_ = 0;
+	for (const auto& [stat_type, stat] : stats_) {
+		if (StatType::isDevelopment(stat_type)) {
+			development_points_ += stat.temporary();
+		}
+	}
+	development_points_ = (development_points_ / 5);
+}
+
 void Character::updateAllDerivedData() {
 	updateMaxHits();
 	updateMaxPowerPoints();
+	updateDevelopmentPoints();
 	for (const auto& [stat_type, stat] : stats_) {
 		updateStatDerivedData(stat_type);
 	}
