@@ -297,6 +297,9 @@ void CharacterOperationsRequestHandler::requestSetBackgroundChoices(http::respon
 		// Apply all the existing choices
 		builder.recalculateAggregatedState();
 
+		// Now we have all the updates to the character we can create the character object at level 0.
+		builder.build();
+
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
 		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
@@ -324,7 +327,6 @@ void CharacterOperationsRequestHandler::requestSetLevellingChoices(http::respons
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
 
 		builder.applyLevellingChoices();
-		builder.build();
 		serial_manager_.objectManager().deleteObject(id); // We can delete the builder from the cache as it is no longer needed after the character has been built and this will free up memory in the cache
 
 		response.result(http::status::ok);
