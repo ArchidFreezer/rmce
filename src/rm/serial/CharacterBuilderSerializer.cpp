@@ -62,7 +62,6 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setSkillEnumMap<SkillDevelopmentType::Type>(obj, "profSkillDevelopmentTypeChoices", ref.prof_skill_development_type_choices_);
 	JsonConverter::setSkillEnumMap<SkillDevelopmentType::Type>(obj, "profCategoryDevelopmentTypeChoices", ref.prof_category_development_type_choices_);
 	JsonConverter::setSkillEnumMap<SkillDevelopmentType::Type>(obj, "profGroupDevelopmentTypeChoices", ref.prof_group_development_type_choices_);
-	JsonConverter::setDataPrimitiveMap<TrainingPackageData, int>(obj, "trainingPackageCosts", ref.training_package_costs_);
 	{
 		std::set<const SpellListData*> base_spell_lists;
 		for (const SpellListData* spell_list : ref.prof_base_spell_list_choices_) {
@@ -149,10 +148,6 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 		if (items_array.size())
 			obj["backgroundItems"] = std::move(items_array);
 	}
-
-	/* Levelling choices */
-	JsonConverter::setDataSet<TrainingPackageData>(obj, "levellingTrainingPackages", ref.levelling_training_packages_);
-	JsonConverter::setEnumSet(obj, "levellingStatGains", ref.levelling_stat_gains_);
 
 	/* Aggregated state */
 	JsonConverter::setInt(obj, "totalGold", ref.total_gold_);
@@ -316,7 +311,6 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.prof_skill_development_type_choices_ = JsonConverter::getSkillEnumMap<SkillDevelopmentType::Type>(jsonObj, "profSkillDevelopmentTypeChoices", manager_);
 	ref.prof_category_development_type_choices_ = JsonConverter::getSkillEnumMap<SkillDevelopmentType::Type>(jsonObj, "profCategoryDevelopmentTypeChoices", manager_);
 	ref.prof_group_development_type_choices_ = JsonConverter::getSkillEnumMap<SkillDevelopmentType::Type>(jsonObj, "profGroupDevelopmentTypeChoices", manager_);
-	ref.training_package_costs_ = JsonConverter::getDataPrimitiveMap<TrainingPackageData, int>(jsonObj, "trainingPackageCosts", manager_);
 	ref.prof_base_spell_list_choices_ = std::move(base_spell_lists);
 	{
 		json::array skillCategoryDevelopmentCostArr = JsonConverter::getJsonArray(jsonObj, "weaponCategoryCostChoices");
@@ -414,10 +408,6 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 				ref.background_items_.emplace_back(item);
 		}
 	}
-
-  /* Levelling choices */
-	ref.levelling_training_packages_ = JsonConverter::getDataSet<TrainingPackageData>(jsonObj, "levellingTrainingPackages", manager_);
-	ref.levelling_stat_gains_ = JsonConverter::getEnumSet<StatType::Type>(jsonObj, "levellingStatGains");
 
 	/* Aggregated state */
 	ref.total_gold_ = JsonConverter::getInt(jsonObj, "totalGold", 0);

@@ -1,5 +1,4844 @@
 {
     "characters" : [
-
+        {
+            "id" : "85924155-1a12-4d22-818d-8102c2eb4e79",
+            "name" : "Lop",
+            "level" : 0,
+            "experiencePoints" : 0,
+            "male" : true,
+            "playerCharacter" : false,
+            "gold" : 200,
+            "items" : [
+                "+1 spell adder or two +5 magic items",
+                "a Daily III spell item or a +2 spell adder, or three +5 non-magic items or three doses of a potion (with a level 1-5 spell)"
+            ],
+            "race" : "RACE_DWARVES",
+            "culture" : "CULTURE_MINING_GENERAL",
+            "profession" : "PROFESSION_DERNAKWMUN_KHAD",
+            "stats" : [
+                {
+                    "stat" : "Agility",
+                    "temporary" : 76,
+                    "potential" : 78,
+                    "racialBonus" : -2,
+                    "totalBonus" : 0
+                },
+                {
+                    "stat" : "Constitution",
+                    "temporary" : 69,
+                    "potential" : 79,
+                    "racialBonus" : 6,
+                    "totalBonus" : 6
+                },
+                {
+                    "stat" : "Empathy",
+                    "temporary" : 74,
+                    "potential" : 87,
+                    "racialBonus" : -4,
+                    "totalBonus" : -3
+                },
+                {
+                    "stat" : "Intuition",
+                    "temporary" : 98,
+                    "potential" : 98,
+                    "racialBonus" : 0,
+                    "totalBonus" : 9
+                },
+                {
+                    "stat" : "Memory",
+                    "temporary" : 97,
+                    "potential" : 97,
+                    "racialBonus" : 0,
+                    "totalBonus" : 8
+                },
+                {
+                    "stat" : "Presence",
+                    "temporary" : 76,
+                    "potential" : 82,
+                    "racialBonus" : -4,
+                    "totalBonus" : -2
+                },
+                {
+                    "stat" : "Quickness",
+                    "temporary" : 60,
+                    "potential" : 81,
+                    "racialBonus" : -2,
+                    "totalBonus" : -2
+                },
+                {
+                    "stat" : "Reasoning",
+                    "temporary" : 67,
+                    "potential" : 82,
+                    "racialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "stat" : "Self Discipline",
+                    "temporary" : 52,
+                    "potential" : 80,
+                    "racialBonus" : 2,
+                    "totalBonus" : 2
+                },
+                {
+                    "stat" : "Strength",
+                    "temporary" : 53,
+                    "potential" : 78,
+                    "racialBonus" : 2,
+                    "totalBonus" : 2
+                }
+            ],
+            "height" : 57,
+            "weight" : 142,
+            "buildDescription" : "Slender build",
+            "lifespan" : 343,
+            "developmentPoints" : 72,
+            "magicalRealms" : [
+                "Channeling"
+            ],
+            "resistances" : [
+                {
+                    "id" : "Channeling",
+                    "value" : 27
+                },
+                {
+                    "id" : "Channeling / Essence",
+                    "value" : 29
+                },
+                {
+                    "id" : "Channeling / Mentalism",
+                    "value" : 30
+                },
+                {
+                    "id" : "Disease",
+                    "value" : 33
+                },
+                {
+                    "id" : "Essence",
+                    "value" : 31
+                },
+                {
+                    "id" : "Essence / Mentalism",
+                    "value" : 32
+                },
+                {
+                    "id" : "Fear",
+                    "value" : 6
+                },
+                {
+                    "id" : "Mentalism",
+                    "value" : 34
+                },
+                {
+                    "id" : "Poison",
+                    "value" : 38
+                }
+            ],
+            "spellListCategories" : [
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_AMPLIFICATIONS",
+                        "SPELLLIST_ARCANE_MOTIONS",
+                        "SPELLLIST_CHANGES",
+                        "SPELLLIST_CHAOTIC_SENSES",
+                        "SPELLLIST_CONTAINING_WAYS",
+                        "SPELLLIST_DARK_ENTITIES",
+                        "SPELLLIST_FAITH_BREAKER",
+                        "SPELLLIST_HAND_OF_CHAOS",
+                        "SPELLLIST_HUNTER_S_CALL",
+                        "SPELLLIST_MANA_LAW",
+                        "SPELLLIST_MIND_BREAKER",
+                        "SPELLLIST_POWER_FOCUS",
+                        "SPELLLIST_POWER_LEECH",
+                        "SPELLLIST_POWER_LORE",
+                        "SPELLLIST_POWER_SUBVERSION",
+                        "SPELLLIST_POWER_S_MASTER",
+                        "SPELLLIST_SPELL_BANE",
+                        "SPELLLIST_SPELL_COORDINATION",
+                        "SPELLLIST_SPELL_HAND",
+                        "SPELLLIST_SPELL_PROTECTION",
+                        "SPELLLIST_SPELL_SHAPING",
+                        "SPELLLIST_SPELL_SHIELD",
+                        "SPELLLIST_SPELL_TRACKER",
+                        "SPELLLIST_TERROR",
+                        "SPELLLIST_VOID_LAW",
+                        "SPELLLIST_WARDS"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_ARCANE_HEALING",
+                        "SPELLLIST_ARCANE_SUMMONS",
+                        "SPELLLIST_ARCANE_VISIONS",
+                        "SPELLLIST_AURA_LORE",
+                        "SPELLLIST_BLADERUNES",
+                        "SPELLLIST_FIRE_MANIPULATION",
+                        "SPELLLIST_LIGHT_MANIPULATION",
+                        "SPELLLIST_NATURE_MANIPULATION",
+                        "SPELLLIST_POWER_MASTERY",
+                        "SPELLLIST_SHIFTING_LAW"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_ARCANE_BARRIERS",
+                        "SPELLLIST_ARCANE_FORCES",
+                        "SPELLLIST_ARCANE_SENSES",
+                        "SPELLLIST_ARCANE_SHIELD",
+                        "SPELLLIST_ARCANE_SIGNS",
+                        "SPELLLIST_DETECTION_LAW",
+                        "SPELLLIST_POWER_MANIPULATION",
+                        "SPELLLIST_REALM_LAW",
+                        "SPELLLIST_SPELL_INHIBITORS",
+                        "SPELLLIST_SPELL_TRIGGERS"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_ANIMAL_SUMMONS",
+                        "SPELLLIST_ARMOR_ENHANCEMENTS",
+                        "SPELLLIST_ARMOR_MASTERY",
+                        "SPELLLIST_ASSASSINATION_MASTERY",
+                        "SPELLLIST_ATTACK_MASTERY",
+                        "SPELLLIST_BATTLE_LAW",
+                        "SPELLLIST_BLOOD_MASTERY",
+                        "SPELLLIST_BLOOD_WAYS",
+                        "SPELLLIST_BODY_CONTROL",
+                        "SPELLLIST_BODY_REINS",
+                        "SPELLLIST_BODY_RENEWAL",
+                        "SPELLLIST_BONE_MASTERY",
+                        "SPELLLIST_BONE_WAYS",
+                        "SPELLLIST_CLEANSING",
+                        "SPELLLIST_COMBAT_ILLUSIONS",
+                        "SPELLLIST_COMBAT_WAYS",
+                        "SPELLLIST_COMMANDING_WILL",
+                        "SPELLLIST_CONCEALMENT_MASTERY",
+                        "SPELLLIST_CONCUSSION_MASTERY",
+                        "SPELLLIST_CONFUSING_WAYS",
+                        "SPELLLIST_CONTROLLING_SONGS",
+                        "SPELLLIST_DARKNESS",
+                        "SPELLLIST_DARK_CONTACTS",
+                        "SPELLLIST_DARK_SUMMONS",
+                        "SPELLLIST_DEFENSE_MASTERY",
+                        "SPELLLIST_DISGUISE_MASTERY",
+                        "SPELLLIST_DOOM_S_LAW",
+                        "SPELLLIST_EARTH_LAW",
+                        "SPELLLIST_ENTERTAINING_WAYS",
+                        "SPELLLIST_ENTITY_SUMMONS",
+                        "SPELLLIST_ESCAPES",
+                        "SPELLLIST_EVASIONS",
+                        "SPELLLIST_EXTERNAL_CONCENTRATION",
+                        "SPELLLIST_FAITH_DESTRUCTION",
+                        "SPELLLIST_FAR_VISIONS",
+                        "SPELLLIST_FAR_VOICE",
+                        "SPELLLIST_FEEL_TASTE_SMELL",
+                        "SPELLLIST_FIRE_LAW",
+                        "SPELLLIST_FLESH_DESTRUCTION",
+                        "SPELLLIST_FLUID_DESTRUCTION",
+                        "SPELLLIST_FORTRESS_LAW",
+                        "SPELLLIST_FUTURE_VISIONS",
+                        "SPELLLIST_GAS_ALTERATION",
+                        "SPELLLIST_GAS_DESTRUCTION",
+                        "SPELLLIST_GATHERING_SECRETS",
+                        "SPELLLIST_GENERAL_ENHANCEMENTS",
+                        "SPELLLIST_GLYPHS",
+                        "SPELLLIST_GUISES",
+                        "SPELLLIST_HIDING",
+                        "SPELLLIST_HOLY_VISION",
+                        "SPELLLIST_ICE_LAW",
+                        "SPELLLIST_ILLUSION_MASTERY",
+                        "SPELLLIST_INFLUENCES",
+                        "SPELLLIST_INNER_EYE",
+                        "SPELLLIST_INORGANIC_SKILLS",
+                        "SPELLLIST_INSCRIPTIONS",
+                        "SPELLLIST_ITEM_ANALYSIS",
+                        "SPELLLIST_ITEM_LORE",
+                        "SPELLLIST_LIGHT_LAW",
+                        "SPELLLIST_LIGHT_MOLDING",
+                        "SPELLLIST_LIQUID_ALTERATION",
+                        "SPELLLIST_LIQUID_GAS_SKILLS",
+                        "SPELLLIST_LOOK_OF_TERROR",
+                        "SPELLLIST_LORES",
+                        "SPELLLIST_MANA_BARRIERS",
+                        "SPELLLIST_MANA_ITEMS",
+                        "SPELLLIST_MANA_MOLDING",
+                        "SPELLLIST_MANA_SERVANTS",
+                        "SPELLLIST_MANA_WARRIORS",
+                        "SPELLLIST_MARTIAL_LAW",
+                        "SPELLLIST_MATTER_DISRUPTION",
+                        "SPELLLIST_MECHANISMS",
+                        "SPELLLIST_MEDITATIVE_HEALING",
+                        "SPELLLIST_MIND_ATTACK",
+                        "SPELLLIST_MIND_CONTROL",
+                        "SPELLLIST_MIND_DEATH",
+                        "SPELLLIST_MIND_DESTRUCTION",
+                        "SPELLLIST_MIND_DISEASE",
+                        "SPELLLIST_MIND_DOMINATION",
+                        "SPELLLIST_MIND_EROSION",
+                        "SPELLLIST_MIND_ILLUSIONS",
+                        "SPELLLIST_MIND_MERGE",
+                        "SPELLLIST_MIND_OVER_MATTER",
+                        "SPELLLIST_MIND_SENSE_MOLDING",
+                        "SPELLLIST_MIND_SPEECH",
+                        "SPELLLIST_MIND_SUBVERSION",
+                        "SPELLLIST_MIND_S_SHADOW",
+                        "SPELLLIST_MIND_VISIONS",
+                        "SPELLLIST_MISDIRECTIONS",
+                        "SPELLLIST_MONK_S_BRIDGE",
+                        "SPELLLIST_MONK_S_SENSE",
+                        "SPELLLIST_MOVEMENT_MASTERY",
+                        "SPELLLIST_MUSCLE_MASTERY",
+                        "SPELLLIST_MUSCLE_WAYS",
+                        "SPELLLIST_MYSTICAL_CHANGE",
+                        "SPELLLIST_NATURE_S_FORMS",
+                        "SPELLLIST_NATURE_S_HARMONY",
+                        "SPELLLIST_NERVE_AND_ORGAN_MASTERY",
+                        "SPELLLIST_NOMENCLATURE_MASTERY",
+                        "SPELLLIST_ORGANIC_SKILLS",
+                        "SPELLLIST_ORGAN_WAYS",
+                        "SPELLLIST_OTHER_REALM_IMBEDDING",
+                        "SPELLLIST_OWN_REALM_IMBEDDING",
+                        "SPELLLIST_PAST_VISIONS",
+                        "SPELLLIST_PHYSICAL_EROSION",
+                        "SPELLLIST_PHYSICAL_MANIPULATIONS",
+                        "SPELLLIST_PLANAR_SUMMONS",
+                        "SPELLLIST_POISON_MASTERY",
+                        "SPELLLIST_PRESENCE",
+                        "SPELLLIST_PROSTHETICS",
+                        "SPELLLIST_REVENGING_LAW",
+                        "SPELLLIST_SEEMING_DEFENSES",
+                        "SPELLLIST_SEEMING_ENCHANTMENT",
+                        "SPELLLIST_SEEMING_LAW",
+                        "SPELLLIST_SEEMING_MASTERY",
+                        "SPELLLIST_SEEMING_MEMORIES",
+                        "SPELLLIST_SEEMING_PROJECTION",
+                        "SPELLLIST_SENSES",
+                        "SPELLLIST_SENSE_CONTROL",
+                        "SPELLLIST_SOLID_ALTERATION",
+                        "SPELLLIST_SOLID_DESTRUCTION",
+                        "SPELLLIST_SOUL_DESTRUCTION",
+                        "SPELLLIST_SOUND_CONTROL",
+                        "SPELLLIST_SOUND_MOLDING",
+                        "SPELLLIST_SOUND_PROJECTION",
+                        "SPELLLIST_SPELL_DEFENSES",
+                        "SPELLLIST_STARLIGHTS",
+                        "SPELLLIST_STARLORE",
+                        "SPELLLIST_STARSENSE",
+                        "SPELLLIST_SUMMONING_BOND",
+                        "SPELLLIST_SUMMONING_CIRCLES",
+                        "SPELLLIST_SUMMONING_MASTERY",
+                        "SPELLLIST_SURFACE_WAYS",
+                        "SPELLLIST_SYMBOLISM",
+                        "SPELLLIST_TELEPORTALS",
+                        "SPELLLIST_THIEVING_LAW",
+                        "SPELLLIST_TRANSFORMATIONS",
+                        "SPELLLIST_UNDERSTANDING_MASTERY",
+                        "SPELLLIST_VISION_BORROWING",
+                        "SPELLLIST_VISION_GUARD",
+                        "SPELLLIST_WARDING_WAYS",
+                        "SPELLLIST_WARRIOR_LAW",
+                        "SPELLLIST_WARRIOR_S_ENHANCEMENTS",
+                        "SPELLLIST_WARRIOR_S_WEAPON",
+                        "SPELLLIST_WATER_LAW",
+                        "SPELLLIST_WAY_OF_THE_VOICE",
+                        "SPELLLIST_WEAPON_ENHANCEMENTS",
+                        "SPELLLIST_WEAPON_MASTERY",
+                        "SPELLLIST_WILL_OF_THE_WARRIOR",
+                        "SPELLLIST_WIND_LAW",
+                        "SPELLLIST_WYRD_MASTERY",
+                        "SPELLLIST_ZEN_AWARENESS",
+                        "SPELLLIST_ZEN_FOCUS"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_CIRCLE_MASTERY",
+                        "SPELLLIST_COUNTERSPELLS",
+                        "SPELLLIST_DISPELLING_WAYS",
+                        "SPELLLIST_EARTH_MASTERY",
+                        "SPELLLIST_ELEMENTAL_SUMMONS",
+                        "SPELLLIST_FAMILIAR_MASTERY",
+                        "SPELLLIST_FIRE_MASTERY",
+                        "SPELLLIST_GAS_MANIPULATION",
+                        "SPELLLIST_GATE_MASTERY",
+                        "SPELLLIST_INVISIBLE_WAYS",
+                        "SPELLLIST_LIGHT_MASTERY",
+                        "SPELLLIST_LIQUID_MANIPULATION",
+                        "SPELLLIST_LIVING_CHANGE",
+                        "SPELLLIST_LOFTY_BRIDGE",
+                        "SPELLLIST_MAGIC_STAFF",
+                        "SPELLLIST_MATTER_SHAPING",
+                        "SPELLLIST_MECHANISM_S_WAY",
+                        "SPELLLIST_MIND_MASTERY",
+                        "SPELLLIST_MIND_S_DOOR",
+                        "SPELLLIST_MOVEMENT",
+                        "SPELLLIST_RAPID_WAYS",
+                        "SPELLLIST_SENSE_MASTERY",
+                        "SPELLLIST_SHIELD_MASTERY",
+                        "SPELLLIST_SHIFTING",
+                        "SPELLLIST_SOLID_MANIPULATION",
+                        "SPELLLIST_SPEED",
+                        "SPELLLIST_SPELL_ENHANCEMENT",
+                        "SPELLLIST_SPELL_REINS",
+                        "SPELLLIST_SPIRIT_MASTERY",
+                        "SPELLLIST_TELEKINESIS",
+                        "SPELLLIST_WATER_MASTERY"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_AIR_MASTERY",
+                        "SPELLLIST_ALLUREMENT",
+                        "SPELLLIST_ANTICIPATIONS",
+                        "SPELLLIST_ATTACK_AVOIDANCE",
+                        "SPELLLIST_BRILLIANCE",
+                        "SPELLLIST_CLOAKING",
+                        "SPELLLIST_DAMAGE_RESISTANCE",
+                        "SPELLLIST_DELVING",
+                        "SPELLLIST_DELVING_WAYS",
+                        "SPELLLIST_DETECTING_WAYS",
+                        "SPELLLIST_DETECTIONS",
+                        "SPELLLIST_ELEMENTAL_SHIELDS",
+                        "SPELLLIST_ESSENCE_HAND",
+                        "SPELLLIST_ESSENCE_S_PERCEPTIONS",
+                        "SPELLLIST_FEY_CONJURY",
+                        "SPELLLIST_ILLUSIONS",
+                        "SPELLLIST_LESSER_ILLUSIONS",
+                        "SPELLLIST_PHYSICAL_ENHANCEMENT",
+                        "SPELLLIST_RUNE_MASTERY",
+                        "SPELLLIST_SELF_HEALING",
+                        "SPELLLIST_SHADOW_MASTERY",
+                        "SPELLLIST_SOUND_MASTERY",
+                        "SPELLLIST_SPELL_RESISTANCE",
+                        "SPELLLIST_SPELL_WALL",
+                        "SPELLLIST_SUSTAIN_BODY",
+                        "SPELLLIST_UNBARRING_WAYS"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE",
+                    "spellLists" : [
+                        "SPELLLIST_ANIMAL_BONDING",
+                        "SPELLLIST_ARACHNAMANCY",
+                        "SPELLLIST_BODY_SHIFTING",
+                        "SPELLLIST_BREWING_LORE",
+                        "SPELLLIST_CHARADES",
+                        "SPELLLIST_CORPIST_CASTING",
+                        "SPELLLIST_CRYSTALIST_CASTING",
+                        "SPELLLIST_DREAM_LAW",
+                        "SPELLLIST_DREAM_LORE",
+                        "SPELLLIST_DREAM_TRAVEL",
+                        "SPELLLIST_GARGOYLE_MASTERY",
+                        "SPELLLIST_GLASS_CERAMIC_CRAFTING",
+                        "SPELLLIST_GUILDCRAFT_MASTERY",
+                        "SPELLLIST_HEARTH_MAGIC",
+                        "SPELLLIST_HERBALIST_CASTING",
+                        "SPELLLIST_HOURI_S_BEGUILEMENT",
+                        "SPELLLIST_HOURI_S_KISSES",
+                        "SPELLLIST_ITEM_ENHANCEMENT",
+                        "SPELLLIST_KNOWLEDGE_MASTERY",
+                        "SPELLLIST_MAGICAL_ROPES",
+                        "SPELLLIST_MEDICAL_LAW",
+                        "SPELLLIST_MENDING_WAYS",
+                        "SPELLLIST_METAL_CRAFTING",
+                        "SPELLLIST_MIND_SHIFTING",
+                        "SPELLLIST_MIRROR_MAGIC",
+                        "SPELLLIST_NOMENIST_CASTING",
+                        "SPELLLIST_OCEAN_LAW",
+                        "SPELLLIST_PHYSICKS",
+                        "SPELLLIST_PREDICTIONS",
+                        "SPELLLIST_SACRED_GROUNDS",
+                        "SPELLLIST_SAILING_MASTERY",
+                        "SPELLLIST_SEA_MASTERY",
+                        "SPELLLIST_STONE_CRAFTING",
+                        "SPELLLIST_STRUCTURE_WARDINGS",
+                        "SPELLLIST_TRAVELER_S_WAYS",
+                        "SPELLLIST_WOOD_CRAFTING"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_CREATIONS",
+                        "SPELLLIST_LOCATING_WAYS",
+                        "SPELLLIST_LORE",
+                        "SPELLLIST_MUSCLE_LAW",
+                        "SPELLLIST_NERVE_LAW",
+                        "SPELLLIST_ORGAN_LAW",
+                        "SPELLLIST_SYMBOLIC_WAYS"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_CONCUSSION_S_WAYS",
+                        "SPELLLIST_DETECTION_MASTERY",
+                        "SPELLLIST_LIGHT_S_WAY",
+                        "SPELLLIST_LOFTY_MOVEMENTS",
+                        "SPELLLIST_NATURE_S_LAW",
+                        "SPELLLIST_PURIFICATIONS",
+                        "SPELLLIST_SOUND_S_WAY",
+                        "SPELLLIST_SPELL_DEFENSE",
+                        "SPELLLIST_WEATHER_WAYS"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_ANIMAL_MASTERY",
+                        "SPELLLIST_AQUATIC_FORMS",
+                        "SPELLLIST_BANISHMENTS",
+                        "SPELLLIST_BATTLEFIELD_HEALING",
+                        "SPELLLIST_CEREMONIES",
+                        "SPELLLIST_CHANTS",
+                        "SPELLLIST_COMMUNION",
+                        "SPELLLIST_CRUSADE",
+                        "SPELLLIST_CURSES",
+                        "SPELLLIST_DARK_CHANNELS",
+                        "SPELLLIST_DARK_LORE",
+                        "SPELLLIST_DEATH_MASTERY",
+                        "SPELLLIST_DISEASE",
+                        "SPELLLIST_DIVINE_AURA",
+                        "SPELLLIST_DIVINE_MAGIC",
+                        "SPELLLIST_EXORCISMS",
+                        "SPELLLIST_FAITH_S_SHIELD",
+                        "SPELLLIST_HERB_MASTERY",
+                        "SPELLLIST_HOLY_ARMORING",
+                        "SPELLLIST_HOLY_ARMS",
+                        "SPELLLIST_HOLY_DEFENSES",
+                        "SPELLLIST_HOLY_DISCIPLE",
+                        "SPELLLIST_HOLY_ELEMENT",
+                        "SPELLLIST_HOLY_HEALING",
+                        "SPELLLIST_HOLY_MISSION",
+                        "SPELLLIST_HOLY_OFFICE",
+                        "SPELLLIST_HOLY_SHIELDS",
+                        "SPELLLIST_HOLY_SYMBOL",
+                        "SPELLLIST_HOLY_TRANCES",
+                        "SPELLLIST_HOLY_WARDS",
+                        "SPELLLIST_HOLY_WEAPON",
+                        "SPELLLIST_HOLY_WEAPONS",
+                        "SPELLLIST_HOLY_WIND",
+                        "SPELLLIST_HOLY_WORKS",
+                        "SPELLLIST_HOLY_WRATH",
+                        "SPELLLIST_HORSE_MASTERY",
+                        "SPELLLIST_HUNTING_MASTERY",
+                        "SPELLLIST_INNER_WALLS",
+                        "SPELLLIST_INSECT_MASTERY",
+                        "SPELLLIST_INSPIRING_WAYS",
+                        "SPELLLIST_LAND_FORMS",
+                        "SPELLLIST_MOVING_WAYS",
+                        "SPELLLIST_NATURE_DOMINATION",
+                        "SPELLLIST_NATURE_S_GUISES",
+                        "SPELLLIST_NATURE_S_LORE",
+                        "SPELLLIST_NATURE_S_MOVEMENT_SENSES",
+                        "SPELLLIST_NATURE_S_PROTECTION",
+                        "SPELLLIST_NATURE_S_SUMMONS",
+                        "SPELLLIST_NATURE_S_WAY",
+                        "SPELLLIST_NECROMANCY",
+                        "SPELLLIST_PATH_MASTERY",
+                        "SPELLLIST_PLANT_MASTERY",
+                        "SPELLLIST_PROSELYTIZING",
+                        "SPELLLIST_SERPENT_LAW",
+                        "SPELLLIST_SPIRITUAL_VISION",
+                        "SPELLLIST_SPIRIT_DOMINATION",
+                        "SPELLLIST_SPIRIT_LAW",
+                        "SPELLLIST_STONE_MASTERY",
+                        "SPELLLIST_THE_DEFENDER",
+                        "SPELLLIST_THE_EYE",
+                        "SPELLLIST_THE_HUNTER",
+                        "SPELLLIST_THE_MASK",
+                        "SPELLLIST_THE_WILL",
+                        "SPELLLIST_TIME_LORE",
+                        "SPELLLIST_TREE_MASTERY",
+                        "SPELLLIST_VENGEANCE",
+                        "SPELLLIST_VOODOO_MAGIC",
+                        "SPELLLIST_WOUNDING"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_BARRIER_LAW",
+                        "SPELLLIST_BLOOD_LAW",
+                        "SPELLLIST_BONE_LAW",
+                        "SPELLLIST_CALM_SPIRITS",
+                        "SPELLLIST_CHANNELS",
+                        "SPELLLIST_COMMUNAL_WAYS",
+                        "SPELLLIST_LIFE_MASTERY",
+                        "SPELLLIST_PROTECTIONS",
+                        "SPELLLIST_REPULSIONS",
+                        "SPELLLIST_SUMMONS"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "spellLists" : [
+                        "SPELLLIST_PERIMETER_WARDINGS"
+                    ]
+                }
+            ],
+            "maxHits" : 0,
+            "hits" : 0,
+            "maxPowerPoints" : 14,
+            "powerPoints" : 14,
+            "languageAbilities" : [
+                {
+                    "language" : "LANGUAGE_COMMON_SPEECH",
+                    "spoken" : 5,
+                    "written" : 5
+                },
+                {
+                    "language" : "LANGUAGE_DWARVISH",
+                    "spoken" : 8,
+                    "written" : 6
+                },
+                {
+                    "language" : "LANGUAGE_ELVISH",
+                    "spoken" : 4,
+                    "written" : 4
+                },
+                {
+                    "language" : "LANGUAGE_HILL_SPEECH",
+                    "spoken" : 2
+                },
+                {
+                    "language" : "LANGUAGE_PLAINS_SPEECH",
+                    "spoken" : 6
+                }
+            ],
+            "spellListRanks" : [
+                {
+                    "id" : "SPELLLIST_BARRIER_LAW",
+                    "value" : 0
+                },
+                {
+                    "id" : "SPELLLIST_BLOOD_LAW",
+                    "value" : 0
+                },
+                {
+                    "id" : "SPELLLIST_BONE_LAW",
+                    "value" : 0
+                },
+                {
+                    "id" : "SPELLLIST_CALM_SPIRITS",
+                    "value" : 0
+                },
+                {
+                    "id" : "SPELLLIST_CHANNELS",
+                    "value" : 0
+                },
+                {
+                    "id" : "SPELLLIST_COMMUNAL_WAYS",
+                    "value" : 0
+                },
+                {
+                    "id" : "SPELLLIST_LIFE_MASTERY",
+                    "value" : 0
+                },
+                {
+                    "id" : "SPELLLIST_PROTECTIONS",
+                    "value" : 0
+                },
+                {
+                    "id" : "SPELLLIST_REPULSIONS",
+                    "value" : 0
+                },
+                {
+                    "id" : "SPELLLIST_SUMMONS",
+                    "value" : 0
+                }
+            ],
+            "categories" : [
+                {
+                    "id" : "SKILLCATEGORY_ARMOUR_HEAVY",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "11",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_ARMOUR_LIGHT",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:2:2",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 4
+                },
+                {
+                    "id" : "SKILLCATEGORY_ARMOUR_MEDIUM",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "10",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 4
+                },
+                {
+                    "id" : "SKILLCATEGORY_ARTISTIC_ACTIVE",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:5",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_ARTISTIC_PASSIVE",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:5",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_ATHLETIC_BRAWN",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "5",
+                    "professionBonus" : 0,
+                    "ranks" : 1,
+                    "specialBonus" : 0,
+                    "totalBonus" : 2
+                },
+                {
+                    "id" : "SKILLCATEGORY_ATHLETIC_ENDURANCE",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "3",
+                    "professionBonus" : 0,
+                    "ranks" : 1,
+                    "specialBonus" : 0,
+                    "totalBonus" : 2
+                },
+                {
+                    "id" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "3",
+                    "professionBonus" : 0,
+                    "ranks" : 1,
+                    "specialBonus" : 0,
+                    "totalBonus" : 2
+                },
+                {
+                    "id" : "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "6",
+                    "professionBonus" : 10,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 10
+                },
+                {
+                    "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:6",
+                    "professionBonus" : 10,
+                    "ranks" : 1,
+                    "specialBonus" : 0,
+                    "totalBonus" : 12
+                },
+                {
+                    "id" : "SKILLCATEGORY_AWARENESS_SENSES",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "3:7",
+                    "professionBonus" : 10,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -5
+                },
+                {
+                    "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "10",
+                    "professionBonus" : 0,
+                    "ranks" : 3,
+                    "specialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "id" : "SKILLCATEGORY_COMBAT_MANOEUVRES",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "10",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "id" : "SKILLCATEGORY_COMMUNICATION",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:2:2",
+                    "professionBonus" : 0,
+                    "ranks" : 1,
+                    "specialBonus" : 0,
+                    "totalBonus" : 2
+                },
+                {
+                    "id" : "SKILLCATEGORY_CRAFTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "4:10",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "id" : "SKILLCATEGORY_DIRECTED_SPELLS",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "3",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_INFLUENCE",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:4",
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -10
+                },
+                {
+                    "id" : "SKILLCATEGORY_LORE_GENERAL",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "1:3",
+                    "professionBonus" : 0,
+                    "ranks" : 3,
+                    "specialBonus" : 0,
+                    "totalBonus" : 6
+                },
+                {
+                    "id" : "SKILLCATEGORY_LORE_MAGICAL",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:4",
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -10
+                },
+                {
+                    "id" : "SKILLCATEGORY_LORE_OBSCURE",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "3:7",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_LORE_TECHNICAL",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:6",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "12",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "id" : "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "6",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "6",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_OUTDOOR_ANIMAL",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "3",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:7",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 4
+                },
+                {
+                    "id" : "SKILLCATEGORY_POWER_AWARENESS",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:5",
+                    "professionBonus" : 10,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -5
+                },
+                {
+                    "id" : "SKILLCATEGORY_POWER_MANIPULATION",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "4:10",
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "4",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "1:4",
+                    "professionBonus" : 0,
+                    "ranks" : 1,
+                    "specialBonus" : 0,
+                    "totalBonus" : 2
+                },
+                {
+                    "id" : "SKILLCATEGORY_SCIENCE_ANALYTIC_SPECIALISED",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "6:14",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "id" : "SKILLCATEGORY_SELF_CONTROL",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "5",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPECIAL_ATTACKS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "10",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPECIAL_DEFENCES",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "30",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "25",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "10:10",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "6:6",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "50",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "20",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "10:10",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "8:8",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "4:4:4",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "4:4:4",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "8:8",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "3:3:3",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "4:4:4",
+                    "stats" : [
+                        "Intuition"
+                    ],
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "id" : "SKILLCATEGORY_SUBTERFUGE_ATTACK",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "15",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "7",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_SUBTERFUGE_STEALTH",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "5",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "3:7",
+                    "professionBonus" : 0,
+                    "ranks" : 1,
+                    "specialBonus" : 0,
+                    "totalBonus" : 2
+                },
+                {
+                    "id" : "SKILLCATEGORY_TECHNICAL_TRADE_PROFESSIONAL",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "8",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "id" : "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "5:12",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "id" : "SKILLCATEGORY_URBAN",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "3",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -15
+                },
+                {
+                    "id" : "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "6",
+                    "professionBonus" : 5,
+                    "ranks" : 4,
+                    "specialBonus" : 0,
+                    "totalBonus" : 13
+                },
+                {
+                    "id" : "SKILLCATEGORY_WEAPON_1_H_EDGED",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "7",
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -10
+                },
+                {
+                    "id" : "SKILLCATEGORY_WEAPON_2_HANDED",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "9",
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -10
+                },
+                {
+                    "id" : "SKILLCATEGORY_WEAPON_MISSILE",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "9",
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -10
+                },
+                {
+                    "id" : "SKILLCATEGORY_WEAPON_MISSILE_ARTILLERY",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "9",
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -10
+                },
+                {
+                    "id" : "SKILLCATEGORY_WEAPON_POLE_ARMS",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "20",
+                    "professionBonus" : 5,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -10
+                },
+                {
+                    "id" : "SKILLCATEGORY_WEAPON_THROWN",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "20",
+                    "professionBonus" : 5,
+                    "ranks" : 1,
+                    "specialBonus" : 0,
+                    "totalBonus" : 7
+                }
+            ],
+            "skills" : [
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ACROBATICS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ACTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADMINISTRATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_BALANCE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_CONCENTRATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_DEFENSE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_DEFLECTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_EVASION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_LANDING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_LEAPING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_QUICKDRAW"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_RESISTANCE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_SPEED"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_STABILIZATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_STRENGTH"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADRENAL_TOUGHNESS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADVANCED_MATH"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ADVERTISING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ALCHEMY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ALERTNESS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 4,
+                    "specialBonus" : 0,
+                    "totalBonus" : 14
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_AMBUSH"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ANATOMY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ANIMAL_HANDLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ANIMAL_HEALING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ANIMAL_MASTERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ANIMAL_TRAINING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ANTHROPOLOGY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_APPRAISAL"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 10
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ARCHITECTURE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ARTIFACT_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ASTRONOMY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ATHLETIC_GAMES_BRAWN"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ATHLETIC_GAMES_ENDURANCE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ATHLETIC_GAMES_GYMNASTIC"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ATTUNEMENT"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 1
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BASIC_MATH"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BEGGING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BIOCHEMISTRY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BLIND_FIGHTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BLOCKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BOAT_PILOT"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BODY_DEVELOPMENT"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_BD_HIGH",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 0
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BONE_CARVING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BOXING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BRAWLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_BRIBERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CALLIGRAPHY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CAMOUFLAGE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CARTOGRAPHY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CAVING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Everyman",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 10
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHAIN_ARMOUR"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 10
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHANNELING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_BUDDHA_S_PALM"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_CLOTH_LANCE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_CONTINUOUS_STRIKES"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_DISTANCE_STRIKE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_ELEMENTAL_FIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_FALLING_LEAF"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_FANTASTIC_LEAP"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_FISTS_OF_IRON"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_HOLD_BREATH"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_INVINCIBLE_STANCE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_INVULNERABILITY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_LEAPING_STRIKE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_LIGHT_FEET"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_LIZARD_S_CLIMB"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_NO_SHADOW_ATTACK"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_POISON_FIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_RESIST_ELEMENTS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_RESIST_PAIN"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_RISE_OF_THE_PHOENIX"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_SENSE_WEAKNESS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CHI_POWERS_STICKING_TOUCH"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CIRCLE_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CLEANSING_TRANCE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CLIMBING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 1,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CONTACTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CONTORTIONS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CONTROL_LYCANTHROPY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_COOKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CORPUS_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_COUNTERFEITING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CULTURE_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -9
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_CULTURE_LORE",
+                        "subcategory" : "Own"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 3,
+                    "specialBonus" : 0,
+                    "totalBonus" : 15
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DANCING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DEATH_TRANCE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DEMON_DEVIL_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DETECT_TRAPS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -3
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DIAGNOSTICS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DIPLOMACY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DIRECTED_SPELLS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DIRECTION_SENSE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -20
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DISARMING_TRAPS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DISARM_FOE_ARMED"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DISARM_FOE_UNARMED"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DISGUISE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DISTANCE_RUNNING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DIVINATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -20
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DIVINATION_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DIVING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DOWSING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DRAFTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DRAGON_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DREAMWORLD_CONTROL"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DREAMWORLD_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DREAM_CONTROL"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DREAM_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DRIVING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DROWSING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_DUPING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ENGINEERING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_EVALUATE_ARMOUR"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_EVALUATE_METAL"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_EVALUATE_STONE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_EVALUATE_WEAPON"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FAERIE_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FAMILIAR_MASTERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FAUNA_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -9
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FEINT_ARMED"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FEINT_UNARMED"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FIRST_AID"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 8
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FLETCHING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FLORA_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -9
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FLYING_GLIDING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FORAGING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -11
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FORGERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_FRENZY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_GAMBLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_GIMMICKRY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_GLYPH_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_HEALING_TRANCE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_HERALDRY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -9
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_HERB_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_HERDING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_HIDING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_HIDING_ITEMS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_HISTORY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -9
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_HORTICULTURE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_HUNTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -11
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_HYPNOSIS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_INTERROGATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_JEWELRY_SMITHING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_JOUSTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_JUGGLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_JUMPING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LANGUAGES"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LEADERSHIP"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LEATHER_CRAFTS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Everyman",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 10
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIE_PERCEPTION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -3
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIP_READING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_ARCANE_BASE_LIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_ARCANE_CLOSED_LIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_ARCANE_OPEN_LIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_OTHER_REALM_BASE_LIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_OTHER_REALM_CLOSED_LIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_OTHER_REALM_OPEN_LIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_OTHER_REALM_TRAINING_PACKAGE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_OWN_REALM_CLOSED_LIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_OWN_REALM_OPEN_LIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_OWN_REALM_OTHER_BASE_LIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_OWN_REALM_OWN_BASE_LIST"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LIST_OWN_REALM_TRAINING_PACKAGE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LOCATE_HIDDEN"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -3
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LOCKING_HOLDS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_LOCK_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MAGICAL_LANGUAGE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MAGIC_RITUAL"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MAPPING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MARTIAL_ARTS_BLIND_FIGHTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MARTIAL_ARTS_STRIKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MARTIAL_ARTS_STYLE_ADVANCED"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MARTIAL_ARTS_STYLE_BASIC"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MARTIAL_ARTS_STYLE_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -9
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MARTIAL_ARTS_SWEEPING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MECHANITION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MEDITATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MENTAL_CONTROL_ASSAULT"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MENTAL_CONTROL_DEFENSE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_METAL_CRAFTS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Everyman",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_METAL_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MIDWIFERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MILITARY_ORGANIZATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MIMERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MIMICRY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MINGLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MINING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MISSILE_DEFLECTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MNEMONICS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MOUNTED_COMBAT"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_MUSIC"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_NAVIGATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_NERVE_STRIKES"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_OBSERVATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -3
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_OPERATING_EQUIPMENT"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ORIENTEERING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PAINTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PAPER_MAKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PHILOSOPHY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -9
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PICKING_LOCKS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PICKING_POCKETS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PLANAR_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PLATE_ARMOUR"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PLAY_INSTRUMENT"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_POETIC_IMPROVISATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_POETRY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_POISON_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_POISON_PERCEPTION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -3
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_POLE_VAULTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_POWER_PERCEPTION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -20
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_POWER_POINT_DEVELOPMENT"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 5
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_POWER_STRIKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_POWER_THROWING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PREPARE_HERBS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PREPARE_POISONS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PROPAGANDA"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PSYCHOLOGY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_PUBLIC_SPEAKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_QUICKDRAW"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_RACIAL_ATTACK"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_RAPPELLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_READING_TRACKS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -3
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_READ_RUNES"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -20
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_REALITY_AWARENESS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -20
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_REGION_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -9
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_REGION_LORE",
+                        "subcategory" : "Own"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 3,
+                    "specialBonus" : 0,
+                    "totalBonus" : 15
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_REGION_LORE",
+                        "subcategory" : "Own region"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 12
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_RELIGION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -9
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_RESEARCH"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_REVERSE_STROKE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_RIDING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_RIGID_LEATHER_ARMOUR"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 10
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ROPE_MASTERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_ROWING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SAILING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SANITY_HEALING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SCALING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SCRIBING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SCROUNGING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SCULPTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SECOND_AID"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SEDUCTION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SENSE_AMBUSH"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : 10
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SENSE_AWARENESS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -20
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SERVICE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SETTING_TRAPS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SEWING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SHIELD_MAKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SHIP_BUILDING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SIEGE_ENGINEERING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SIGNALING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SILENT_ATTACK"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SINGING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SITUATIONAL_AWARENESS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -20
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SKATING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SKIING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SKINNING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SLEEP_TRANCE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SOFT_LEATHER_ARMOUR"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -11
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SPATIAL_LOCATION_AWARENESS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -20
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SPELL_ARTISTRY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SPELL_CONCENTRATION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SPELL_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SPELL_MASTERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SPELL_TRICKERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SPINNING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SPRINTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_STALKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_STAR_GAZING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -11
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_STILT_WALKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_STONE_CRAFTS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Everyman",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_STONE_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_STREETWISE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_STUNNED_MANOEUVREING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_STUN_REMOVAL"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SUBDUAL"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SUMMONING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SURFING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SURGERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SURVEILLANCE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -3
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SURVIVAL"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -11
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SURVIVAL",
+                        "subcategory" : "underground"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Everyman",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -11
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SWASHBUCKLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SWIMMING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Restricted",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_SYMBOL_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TACKLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TACTICAL_GAMES"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TACTICS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TALE_TELLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TATTOOING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TEACHING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TIGHTROPE_WALKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TIME_SENSE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -20
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TRACKING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -3
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TRADING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TRADING_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TRANSCEND_ARMOR"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TRAPPING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TRAP_BUILDING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TRICKERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TUMBLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TUMBLING_EVASION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_TWO_WEAPON_COMBAT"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_UNDEAD_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_USING_PREPARED_HERBS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_USING_REMOVING_POISON"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_VENTRILOQUISM"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_VITAL_POINTS_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WARDING_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_1_H_CONCUSSION"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -2
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_1_H_CONCUSSION",
+                        "subcategory" : "WEAPONTYPE_BLACKJACK"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 4,
+                    "specialBonus" : 0,
+                    "totalBonus" : 25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_1_H_EDGED"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_2_HANDED"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_MISSILE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_MISSILE_ARTILLERY"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_POLE_ARMS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -25
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_STYLE_ADVANCED"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_STYLE_BASIC"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_STYLE_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -9
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_THROWN"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -8
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_THROWN",
+                        "subcategory" : "WEAPONTYPE_BOOMERANG_FIGHTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 1,
+                    "specialBonus" : 0,
+                    "totalBonus" : 10
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEATHER_WATCHING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -11
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAVING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEIGHT_LIFTING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -13
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WOOD_CRAFTS"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WRESTLING"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_XENO_LORE"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -30
+                }
+            ]
+        }
     ]
 }

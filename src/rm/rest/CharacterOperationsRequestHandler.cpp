@@ -5,6 +5,7 @@
 #include <JsonConverter.h>
 #include <StringUtils.h>
 #include <boost/json.hpp>
+#include <CharacterLeveller.h>
 
 namespace rm::rest {
 
@@ -32,8 +33,8 @@ void CharacterOperationsRequestHandler::handleRequest(const http::request<http::
 		requestSetHobbyChoices(response, request);
 	else if (request.method() == http::verb::post && operation == "set-background-choices")
 		requestSetBackgroundChoices(response, request);
-	else if (request.method() == http::verb::post && operation == "set-levelling-choices")
-		requestSetLevellingChoices(response, request);
+	else if (request.method() == http::verb::post && operation == "levelup")
+		requestLevelUp(response, request);
 	else if (request.method() == http::verb::get && operation == "dump" && path.params().contains("id"))
 		requestDump(response, request, path.params().at("id"));
 	else {
@@ -297,6 +298,11 @@ void CharacterOperationsRequestHandler::requestSetBackgroundChoices(http::respon
 		// Apply all the existing choices
 		builder.recalculateAggregatedState();
 
+		// Now we have all the updates to the character we can create the character object at level 0.
+		builder.build();
+
+		serial_manager_.objectManager().deleteObject(id); // We can delete the builder from the cache as it is no longer needed after the character has been built
+
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
 		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
@@ -306,10 +312,11 @@ void CharacterOperationsRequestHandler::requestSetBackgroundChoices(http::respon
 	}
 }
 
-void CharacterOperationsRequestHandler::requestSetLevellingChoices(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
+void CharacterOperationsRequestHandler::requestLevelUp(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
 	using namespace rm::game::character;
 
 	try {
+		std::string request_body = request.body();
 		json::value json_body = json::parse(request.body());
 		if (!json_body.is_object()) {
 			response.result(http::status::bad_request);
@@ -317,19 +324,26 @@ void CharacterOperationsRequestHandler::requestSetLevellingChoices(http::respons
 			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON object"})";
 			return;
 		}
+		// This API is called twice, the first time with only the character ID which expects the training package costs to be populated and then a second time with a payload of the selected levelling choices. To handle this we will check if
+		// the leveller id has been set on the leveller object, if not we will populate the training package costs and return, if it has been set we know that the client is sending the levelling choices and we can perform the level up operation.
 		std::string id = json_body.as_object().at("id").as_string().c_str();
+		bool has_id = !id.empty();
 
-		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
-		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
-		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
+		// This returns a const object, but we need a non-const reference to update the leveller with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
+		const CharacterLeveller& deserialized = serial_manager_.deserializeObject<CharacterLeveller>(json_body.as_object());
+		id = deserialized.id();
+		CharacterLeveller& leveller = serial_manager_.objectManager().get<CharacterLeveller>(id);
 
-		builder.applyLevellingChoices();
-		builder.build();
-		serial_manager_.objectManager().deleteObject(id); // We can delete the builder from the cache as it is no longer needed after the character has been built and this will free up memory in the cache
+		if (!has_id) {
+			leveller.buildTrainingPackageCosts();
+		} else {
+			leveller.levelUp();
+			serial_manager_.objectManager().deleteObject(id); // We can delete the leveller from the cache as it is no longer needed after the character has been built
+		}
 
 		response.result(http::status::ok);
 		response.set(http::field::content_type, "application/json");
-		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
+		response.body() = serial_manager_.serializeObject<CharacterLeveller>(leveller);
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to set apprenticeship choices", "message": ")" + archid::escapeJson(e.what()) + R"("})";

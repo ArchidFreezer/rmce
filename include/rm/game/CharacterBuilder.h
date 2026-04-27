@@ -153,14 +153,6 @@ public:
 	void generateBackgroundItems(int item_count);
 
 	/**
-	 * @brief Apply the choices made during the levelling phase of character creation to the character being built.
-	 *
-	 * This method is used to apply the choices made during the levelling phase of character creation to the character being built. This includes applying any stat gains from levelling, as well as any training packages that were
-	 * selected. The training packages may have various effects on the character, such as providing additional gold, items, or special abilities, which will be applied to the character's aggregated state when this method is called.
-	 */
-	void applyLevellingChoices();
-
-	/**
 	 * @brief Get the expected lifespan of the character being built
 	 *
 	 * @return An integer representing the expected lifespan of the character
@@ -188,7 +180,6 @@ private:
 	int num_adolescent_language_ranks_{0};                               /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
 	int num_adolescent_spell_list_ranks_{0};                             /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
 	int development_points_{0};                                          /**< An integer representing the number of development points available for the character to spend during their apprenticeship. */
-	std::map<const TrainingPackageData*, int> training_package_costs_{}; /**< A map of training package data pointers to integers representing the cost for each training package. */
 	std::map<const SkillCategoryData*, std::set<const SpellListData*>> spell_list_categories_{}; /**< A map of skill categories to sets of spell lists representing the spell lists sorted into their respective skill categories. */
 
 	/* ------------------------------------------------------------------ */
@@ -238,11 +229,6 @@ private:
 	std::map<const SubcategoriedSkillData*, int> background_skill_special_bonuses_{}; /**< Skill special bonuses */
 	std::map<const SkillCategoryData*, int> background_category_special_bonuses_{};   /**< Skill category special bonuses */
 	std::vector<std::string> background_items_{};                                     /**< Items the character genetrates with background options */
-
-	/* Levelling choices */
-	// Most of the levelling choices are directly applied to the aggregated state as they are made, but some need to be stored to be applied when the build method is called.
-	std::set<const TrainingPackageData*> levelling_training_packages_{}; /**< Set of training package data pointers representing the training packages taken by the character being built. */
-	std::set<StatType::Type> levelling_stat_gains_{};                    /**< Set of stats requiring a stat gain roll made with levelling options. */
 
 	/* ------------------------------------------------------------------ */
 	/* Aggregated state                                                   */

@@ -34,8 +34,8 @@ using namespace rm::rule::enums;
 class Character : public rm::game::GameObject {
 	friend class rm::serial::CharacterSerializer; /**< CharacterSerializer is a friend to allow it access to the private members of this class for serialisation and deserialisation */
 	friend class CharacterBuilder;                /*< CharacterBuilder is a friend to allow it access to the private members of this class for building characters with specific stats and names */
+	friend class CharacterLeveller;               /*< CharacterLeveller is a friend to allow it access to the private members of this class for levelling characters with specific stats and names */
 public:
-
 	/** @brief string_view of the ID for the body development skill, which is used to identify the skill in the game data and to reference it when building characters. */
 	static constexpr std::string_view BD_SKILL_ID{"SKILL_BODY_DEVELOPMENT"};
 	/** @brief string_view of the ID for the power point development skill, which is used to identify the skill in the game data and to reference it when building characters. */
@@ -539,7 +539,7 @@ public:
 
 	/**
 	 * @brief Get the number of hit points the character has.
-	 * 
+	 *
 	 * @return number of hits the character has.
 	 */
 	int hits() const {
@@ -556,7 +556,7 @@ public:
 
 	/**
 	 * @brief Get the number of power points the character has.
-	 * 
+	 *
 	 * @return number of power points the character has.
 	 */
 	int powerPoints() const {
