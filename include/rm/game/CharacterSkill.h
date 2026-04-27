@@ -23,7 +23,8 @@ using namespace rm::rule;
  * may have a profession bonus and a special bonus from other sources, which are added to the total bonus for the skill.
  */
 class Skill {
-	friend class CharacterBuilder; /*< CharacterBuilder is a friend to allow it access to the private members of this class for building characters with specific stats and names */
+	friend class CharacterBuilder;                /*< CharacterBuilder is a friend to allow it access to the private members of this class for building characters with specific stats and names */
+	friend class CharacterLeveller;               /**< CharacterLeveller is a friend to allow it access to the private members of this class for level up calculations */
 	friend class rm::serial::CharacterSerializer; /**< CharacterSerializer is a friend to allow it access to the private members of this class for serialisation and deserialisation */
 public:
 	/**

@@ -22,6 +22,7 @@ using namespace rm::rule;
  */
 class Category {
 	friend class CharacterBuilder;                /*< CharacterBuilder is a friend to allow it access to the private members of this class for building characters with specific stats and names */
+	friend class CharacterLeveller;               /**< CharacterLeveller is a friend to allow it access to the private members of this class for level up calculations */
 	friend class rm::serial::CharacterSerializer; /**< CharacterSerializer is a friend to allow it access to the private members of this class for serialisation and deserialisation */
 public:
 	/**

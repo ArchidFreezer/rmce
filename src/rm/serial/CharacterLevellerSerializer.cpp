@@ -38,6 +38,7 @@ const CharacterLeveller& CharacterLevellerSerializer::deserializeObject(json::ob
 	// Now we know we have an id, we can get the reference to the CharacterLeveller that we will populate with data. This will be either the newly created one (if there was no ID in the JSON) or an existing one (if there was an ID in the
 	// JSON).
 	CharacterLeveller& ref = manager_.get<CharacterLeveller>(id);
+	ref.object_factory_ = &manager_;
 
 	// Deserialize the character reference
 	std::string characterId = JsonConverter::getString(jsonObj, "character");

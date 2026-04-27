@@ -20,10 +20,9 @@ using namespace rm::rule;
 class CharacterLeveller : public GameObject {
 	friend class rm::serial::CharacterLevellerSerializer; /**< Serializer class is a friend to allow it access to the private members of this class for serialisation and deserialisation */
 public:
-	void levelUp(); /**< Level up the character by applying the stat gains and any bonuses or modifiers from training packages, professions, and other sources. This function should be called when the character levels up to apply the changes
-	                   to the character's stats and skills. */
-	void buildTrainingPackageCosts(); /**< Build the map of training package costs based on the character's current stats and the available training packages. This function calculates the cost for each training package and stores it in the
-	                                     `training_package_costs_` map for later use during the levelling process. */
+	void levelUp(); /**< Level up the character by applying the stat gains and any bonuses or modifiers from training packages, professions, and other sources. */
+	void buildTrainingPackageCosts(); /**< Build the map of training package costs based on the character's current stats and the available training packages. */
+	int getExpForLevel(int level);   /**< Get the minimum experience points required to reach a specific level. */
 private:
 	rm::PersistentObjectManager* object_factory_{nullptr};
 
