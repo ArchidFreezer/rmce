@@ -107,7 +107,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 		JsonConverter::setString(obj, "adolescentSpellListChoice", ref.adolescent_spell_list_choice_->id());
 	}
 	{
-		std::map<std::string, const LanguageAbility> language_abilities;
+		std::map<std::string, const LanguageRanks> language_abilities;
 		for (const auto& ability : ref.adolescent_language_choices_) {
 			language_abilities.emplace(ability.languageId(), ability);
 		}
@@ -130,7 +130,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	}
 	JsonConverter::setInt(obj, "backgroundExtraGold", ref.background_extra_gold_);
 	{
-		std::map<std::string, const LanguageAbility> language_abilities;
+		std::map<std::string, const LanguageRanks> language_abilities;
 		for (const auto& ability : ref.background_language_choices_) {
 			language_abilities.emplace(ability.languageId(), ability);
 		}
@@ -152,7 +152,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	/* Aggregated state */
 	JsonConverter::setInt(obj, "totalGold", ref.total_gold_);
 	{
-		std::map<std::string, const LanguageAbility> language_abilities;
+		std::map<std::string, const LanguageRanks> language_abilities;
 		for (const auto& ability : ref.language_abilities_) {
 			language_abilities.emplace(ability.languageId(), ability);
 		}
@@ -358,7 +358,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 			ref.adolescent_spell_list_choice_ = &manager_.get<SpellListData>(adolescent_spell_list_choice_id);
 	}
 	{
-		const std::map<std::string, const LanguageAbility> language_abilities = JsonConverter::getLanguageAbilityMap(jsonObj, "adolescentLanguageChoices", manager_);
+		const std::map<std::string, const LanguageRanks> language_abilities = JsonConverter::getLanguageAbilityMap(jsonObj, "adolescentLanguageChoices", manager_);
 		for (const auto& [language_name, ability] : language_abilities) {
 			ref.adolescent_language_choices_.emplace(ability);
 		}
@@ -390,7 +390,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	}
 	ref.background_extra_gold_ = JsonConverter::getInt(jsonObj, "backgroundExtraGold", 0);
 	{
-		const std::map<std::string, const LanguageAbility> language_abilities = JsonConverter::getLanguageAbilityMap(jsonObj, "backgroundLanguageChoices", manager_);
+		const std::map<std::string, const LanguageRanks> language_abilities = JsonConverter::getLanguageAbilityMap(jsonObj, "backgroundLanguageChoices", manager_);
 		for (const auto& [language_name, ability] : language_abilities) {
 			ref.background_language_choices_.emplace(ability);
 		}
@@ -412,7 +412,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	/* Aggregated state */
 	ref.total_gold_ = JsonConverter::getInt(jsonObj, "totalGold", 0);
 	{
-		const std::map<std::string, const LanguageAbility> language_abilities = JsonConverter::getLanguageAbilityMap(jsonObj, "languageAbilities", manager_);
+		const std::map<std::string, const LanguageRanks> language_abilities = JsonConverter::getLanguageAbilityMap(jsonObj, "languageAbilities", manager_);
 		for (const auto& [language_name, ability] : language_abilities) {
 			ref.language_abilities_.emplace(ability);
 		}

@@ -8,7 +8,7 @@
 #include <set>
 #include <sstream>
 #include <GameRuleDataChoice.h>
-#include <LanguageAbility.h>
+#include <LanguageRanks.h>
 #include <SubcategoriedSkillData.h>
 #include <PersistentObjectManager.h>
 
@@ -923,8 +923,8 @@ public:
 	/**
 	 * @brief Retrieves a map of language abilities from a JSON object using the specified key.
 	 *
-	 * This function retrieves a JSON array object associated with the given key and converts it into a map where the keys are strings and the values are LanguageAbility objects. It assumes that the JSON object has a structure where each
-	 *key is a string and each value can be converted to a LanguageAbility using a hypothetical `fromJson` function.
+	 * This function retrieves a JSON array object associated with the given key and converts it into a map where the keys are strings and the values are LanguageRanks objects. It assumes that the JSON object has a structure where each
+	 *key is a string and each value can be converted to a LanguageRanks using a hypothetical `fromJson` function.
 	 *
 	 * For example, if you have a JSON object like:
 	 * @code
@@ -947,28 +947,28 @@ public:
 	 * You can retrieve the map of language abilities using this method:
 	 * @code
 	 * json::object obj = ...; // Assume this is your JSON object
-	 * std::map<std::string, const rm::game::character::LanguageAbility> languageMap = JsonConverter::getLanguageAbilityMap(obj, "languageAbilities");
-	 * // languageMap would contain entries for "LANGUAGE_COMMON_SPEECH" and "LANGUAGE_HIGH_SPEECH" with their corresponding LanguageAbility objects
+	 * std::map<std::string, const rm::game::character::LanguageRanks> languageMap = JsonConverter::getLanguageAbilityMap(obj, "languageAbilities");
+	 * // languageMap would contain entries for "LANGUAGE_COMMON_SPEECH" and "LANGUAGE_HIGH_SPEECH" with their corresponding LanguageRanks objects
 	 * @endcode
 	 *
 	 * @param obj The JSON object to retrieve the language ability map from.
 	 * @param key The key associated with the language ability map in the JSON object.
-	 * @param manager A PersistentObjectManager used to look up language data when constructing LanguageAbility objects.
-	 * @return A map where each key is a string and each value is a LanguageAbility object, constructed from the corresponding entries in the JSON object.
+	 * @param manager A PersistentObjectManager used to look up language data when constructing LanguageRanks objects.
+	 * @return A map where each key is a string and each value is a LanguageRanks object, constructed from the corresponding entries in the JSON object.
 	 */
-	static std::map<std::string, const rm::game::character::LanguageAbility> getLanguageAbilityMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
+	static std::map<std::string, const rm::game::character::LanguageRanks> getLanguageAbilityMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager);
 
 	/**
 	 * @brief Converts a map of language abilities into a JSON array.
 	 *
-	 * This function takes a map where the keys are strings and the values are LanguageAbility objects, and converts it into a JSON array. Each entry in the map is converted into a JSON object with fields corresponding to the properties of
-	 * the LanguageAbility, such as "language", "somantic", "spoken", and "written". The resulting JSON array can be used to store or transmit the language abilities in a structured format.
+	 * This function takes a map where the keys are strings and the values are LanguageRanks objects, and converts it into a JSON array. Each entry in the map is converted into a JSON object with fields corresponding to the properties of
+	 * the LanguageRanks, such as "language", "somantic", "spoken", and "written". The resulting JSON array can be used to store or transmit the language abilities in a structured format.
 	 *
 	 * For example, if you have a map like:
 	 * @code
-	 * std::map<std::string, const rm::game::character::LanguageAbility> languageMap = {
-	 *     {"LANGUAGE_COMMON_SPEECH", LanguageAbility{...}},
-	 *     {"LANGUAGE_HIGH_SPEECH", LanguageAbility{...}}
+	 * std::map<std::string, const rm::game::character::LanguageRanks> languageMap = {
+	 *     {"LANGUAGE_COMMON_SPEECH", LanguageRanks{...}},
+	 *     {"LANGUAGE_HIGH_SPEECH", LanguageRanks{...}}
 	 * };
 	 * @endcode
 	 * You can convert this map into a JSON array using this method:
@@ -979,9 +979,9 @@ public:
 	 *
 	 * @param obj The JSON object to modify.
 	 * @param key The key under which to store the language ability array in the JSON object
-	 * @param language_map A map where each key is a string and each value is a LanguageAbility object to be converted into a JSON object.
+	 * @param language_map A map where each key is a string and each value is a LanguageRanks object to be converted into a JSON object.
 	 */
-	static void setLanguageAbilities(json::object& obj, const std::string& key, const std::map<std::string, const rm::game::character::LanguageAbility>& language_map);
+	static void setLanguageAbilities(json::object& obj, const std::string& key, const std::map<std::string, const rm::game::character::LanguageRanks>& language_map);
 
 	/**
 	 * @brief Retrieves a set of data objects of type GameRuleData from a JSON object using the specified key.

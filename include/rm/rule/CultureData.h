@@ -2,7 +2,7 @@
 
 #include <CultureTypeData.h>
 #include <GameRuleData.h>
-#include <LanguageAbility.h>
+#include <LanguageRanks.h>
 #include <ProfessionData.h>
 #include <TrainingPackageData.h>
 
@@ -112,9 +112,9 @@ public:
 
 	/**
 	 * @brief Add the number of ranks a member of the race gets in a language during adolescence
-	 * @param language LanguageAbility containing the ranks for a language
+	 * @param language LanguageRanks containing the ranks for a language
 	 */
-	void addLanguageAbility(rm::game::character::LanguageAbility language) {
+	void addLanguageAbility(rm::game::character::LanguageRanks language) {
 		languages_.emplace(language.languageId(), language);
 	}
 
@@ -122,42 +122,42 @@ public:
 	 * @brief Sets the language abilities map for this object.
 	 * @param languages A map associating language identifiers with their corresponding language ability levels.
 	 */
-	void setLanguageAbilities(std::map<std::string, const rm::game::character::LanguageAbility> languages) {
+	void setLanguageAbilities(std::map<std::string, const rm::game::character::LanguageRanks> languages) {
 		languages_ = std::move(languages);
 	}
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language LanguageData language to get the ability for
-	 * @return LanguageAbility language ability
+	 * @return LanguageRanks language ability
 	 */
-	const rm::game::character::LanguageAbility& languageAbility(const LanguageData& language) const {
+	const rm::game::character::LanguageRanks& languageAbility(const LanguageData& language) const {
 		return languageAbility(language.name());
 	}
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language_name name of the language to get the ability for
-	 * @return LanguageAbility language ability
+	 * @return LanguageRanks language ability
 	 */
-	const rm::game::character::LanguageAbility& languageAbility(const std::string& language_name) const {
+	const rm::game::character::LanguageRanks& languageAbility(const std::string& language_name) const {
 		return languages_.at(language_name);
 	}
 
 	/**
-	 * @brief Get a container with the LanguageAbility objects known during adolescence
-	 * @return std::vector of LanguageAbility object references
+	 * @brief Get a container with the LanguageRanks objects known during adolescence
+	 * @return std::vector of LanguageRanks object references
 	 */
-	const std::vector<rm::game::character::LanguageAbility>& languages() const {
+	const std::vector<rm::game::character::LanguageRanks>& languages() const {
 		auto values = std::views::values(languages_);
 		return {values.begin(), values.end()};
 	}
 
 	/**
-	 * @brief Get a container with the LanguageAbility objects known during adolescence
+	 * @brief Get a container with the LanguageRanks objects known during adolescence
 	 * @return std::map associating language identifiers with their corresponding language ability levels
 	 */
-	const std::map<std::string, const rm::game::character::LanguageAbility>& languageAbilities() const {
+	const std::map<std::string, const rm::game::character::LanguageRanks>& languageAbilities() const {
 		return languages_;
 	}
 
@@ -365,7 +365,7 @@ private:
 	std::string description_{};                                                     /**< General description of the culture */
 	const CultureTypeData* culture_type_{};                                         /**< Culture type this culture is based on */
 	bool high_culture_{};                                                           /**< Whether the culture has developed */
-	std::map<std::string, const rm::game::character::LanguageAbility> languages_{}; /**< Language ranks that members of the race learn prior during their adolescence */
+	std::map<std::string, const rm::game::character::LanguageRanks> languages_{}; /**< Language ranks that members of the race learn prior during their adolescence */
 	std::set<const SubcategoriedSkillData*> hobby_skills_{};                        /**< Set of skills that would typically be given skill ranks by adolescents of this culture */
 	std::set<const SkillCategoryData*> hobby_skill_categories_{};                   /**< Set of skill categories that would typically be given skill ranks by adolescents of this culture */
 	std::set<const ProfessionData*> preferred_professions_{};                       /**< Set of preferred professions for members of the culture */

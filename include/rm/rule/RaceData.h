@@ -9,7 +9,7 @@
 #include <CreatureSizeType.h>
 #include <CriticalTableType.h>
 #include <GameRuleData.h>
-#include <LanguageAbility.h>
+#include <LanguageRanks.h>
 #include <SkillCategoryData.h>
 #include <SkillDevelopmentCost.h>
 #include <SubcategoriedSkillData.h>
@@ -641,104 +641,104 @@ public:
 
 	/**
 	 * @brief Add the number of ranks a member of the race gets in a language during childhood
-	 * @param language LanguageAbility containing the ranks for a language
+	 * @param language LanguageRanks containing the ranks for a language
 	 */
-	void setStartingLanguageAbility(rm::game::character::LanguageAbility language) {
-		starting_languages_.emplace(language.language(), language);
+	void setStartingLanguageAbility(rm::game::character::LanguageRanks language) {
+		starting_languages_.emplace(language.languageName(), language);
 	}
 
 	/**
 	 * @brief Sets the object's collection of starting language abilities to the provided map.
-	 * @param languages A map of language names to LanguageAbility objects. The map is copied into the object's starting_languages_ member.
+	 * @param languages A map of language names to LanguageRanks objects. The map is copied into the object's starting_languages_ member.
 	 */
-	void setStartingLanguageAbilities(std::map<std::string, const rm::game::character::LanguageAbility> languages) {
+	void setStartingLanguageAbilities(std::map<std::string, const rm::game::character::LanguageRanks> languages) {
 		starting_languages_ = std::move(languages);
 	}
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language LanguageData language to get the ability for
-	 * @return LanguageAbility language ability
+	 * @return LanguageRanks language ability
 	 */
-	const rm::game::character::LanguageAbility& startingLanguageAbility(const LanguageData& language) const {
+	const rm::game::character::LanguageRanks& startingLanguageAbility(const LanguageData& language) const {
 		return startingLanguageAbility(language.name());
 	}
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language_name name of the language to get the ability for
-	 * @return LanguageAbility language ability
+	 * @return LanguageRanks language ability
 	 */
-	const rm::game::character::LanguageAbility& startingLanguageAbility(const std::string language_name) const {
+	const rm::game::character::LanguageRanks& startingLanguageAbility(const std::string language_name) const {
 		return starting_languages_.at(language_name);
 	}
 
 	/**
 	 * @brief Returns a const reference to the map of starting language abilities.
-	 * @return A const reference to a std::map that maps language names (std::string) to const LanguageAbility values. The reference refers to the internal starting_languages_ member and remains valid as long as the containing object exists
+	 * @return A const reference to a std::map that maps language names (std::string) to const LanguageRanks values. The reference refers to the internal starting_languages_ member and remains valid as long as the containing object exists
 	 * and the map is not modified.
 	 */
-	const std::map<std::string, const rm::game::character::LanguageAbility>& startingLanguageAbilities() const {
+	const std::map<std::string, const rm::game::character::LanguageRanks>& startingLanguageAbilities() const {
 		return starting_languages_;
 	}
 
 	/**
-	 * @brief Get a container with the LanguageAbility objects known during childhood
-	 * @return std::vector of LanguageAbility object references
+	 * @brief Get a container with the LanguageRanks objects known during childhood
+	 * @return std::vector of LanguageRanks object references
 	 */
-	const std::vector<rm::game::character::LanguageAbility> startingLanguages() const {
+	const std::vector<rm::game::character::LanguageRanks> startingLanguages() const {
 		auto values = std::views::values(starting_languages_);
 		return {values.begin(), values.end()};
 	}
 
 	/**
 	 * @brief Add the number of ranks a member of the race gets in a language during childhood
-	 * @param language LanguageAbility containing the ranks for a language
+	 * @param language LanguageRanks containing the ranks for a language
 	 */
-	void setAdolescentLanguageAbility(rm::game::character::LanguageAbility language) {
-		adolescent_languages_.emplace(language.language(), language);
+	void setAdolescentLanguageAbility(rm::game::character::LanguageRanks language) {
+		adolescent_languages_.emplace(language.languageName(), language);
 	}
 
 	/**
 	 * @brief Sets the object's collection of adolescent language abilities to the provided map.
-	 * @param languages A map of language names to LanguageAbility objects. The map is copied into the object's adolescent_languages_ member.
+	 * @param languages A map of language names to LanguageRanks objects. The map is copied into the object's adolescent_languages_ member.
 	 */
-	void setAdolescentLanguageAbilities(std::map<std::string, const rm::game::character::LanguageAbility> languages) {
+	void setAdolescentLanguageAbilities(std::map<std::string, const rm::game::character::LanguageRanks> languages) {
 		adolescent_languages_ = std::move(languages);
 	}
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language LanguageData language to get the ability for
-	 * @return LanguageAbility language ability
+	 * @return LanguageRanks language ability
 	 */
-	const rm::game::character::LanguageAbility& adolescentLanguageAbility(const LanguageData& language) const {
+	const rm::game::character::LanguageRanks& adolescentLanguageAbility(const LanguageData& language) const {
 		return adolescentLanguageAbility(language.name());
 	}
 
 	/**
 	 * @brief Gets the staring ability a member of the race has in a language
 	 * @param language_name name of the language to get the ability for
-	 * @return LanguageAbility language ability
+	 * @return LanguageRanks language ability
 	 */
-	const rm::game::character::LanguageAbility& adolescentLanguageAbility(const std::string language_name) const {
+	const rm::game::character::LanguageRanks& adolescentLanguageAbility(const std::string language_name) const {
 		return adolescent_languages_.at(language_name);
 	}
 
 	/**
 	 * @brief Returns a const reference to the internal map of adolescent language abilities.
-	 * @return A const reference to a std::map that maps language names (std::string) to const LanguageAbility objects for adolescents. The reference is to the internal member adolescent_languages_ and remains valid while the parent object
+	 * @return A const reference to a std::map that maps language names (std::string) to const LanguageRanks objects for adolescents. The reference is to the internal member adolescent_languages_ and remains valid while the parent object
 	 * exists and the map is not modified.
 	 */
-	const std::map<std::string, const rm::game::character::LanguageAbility>& adolescentLanguageAbilities() const {
+	const std::map<std::string, const rm::game::character::LanguageRanks>& adolescentLanguageAbilities() const {
 		return adolescent_languages_;
 	}
 
 	/**
-	 * @brief Get a container with the LanguageAbility objects known during childhood
-	 * @return std::set of LanguageAbility object references
+	 * @brief Get a container with the LanguageRanks objects known during childhood
+	 * @return std::set of LanguageRanks object references
 	 */
-	const std::vector<rm::game::character::LanguageAbility> adolescentLanguages() const {
+	const std::vector<rm::game::character::LanguageRanks> adolescentLanguages() const {
 		auto values = std::views::values(adolescent_languages_);
 		return {values.begin(), values.end()};
 	}
@@ -1156,8 +1156,8 @@ private:
 	const SkillProgressionTypeData* channeling_progression_{};                                 /**< Skill progression for channeling power point ranks */
 	const SkillProgressionTypeData* essence_progression_{};                                    /**< Skill progression for essence power point ranks */
 	const SkillProgressionTypeData* mentalism_progression_{};                                  /**< Skill progression for mentalism power point ranks */
-	std::map<std::string, const rm::game::character::LanguageAbility> starting_languages_{};   /**< Language ranks that members of the race learn prior to their adolescence */
-	std::map<std::string, const rm::game::character::LanguageAbility> adolescent_languages_{}; /**< Language ranks available to members of the race during adolescence */
+	std::map<std::string, const rm::game::character::LanguageRanks> starting_languages_{};   /**< Language ranks that members of the race learn prior to their adolescence */
+	std::map<std::string, const rm::game::character::LanguageRanks> adolescent_languages_{}; /**< Language ranks available to members of the race during adolescence */
 	std::map<ResistanceType::Type, int> resistance_bonuses_{};                                 /**< Racial resistance bonuses */
 	std::map<StatType::Type, int> stat_bonuses_{};                                             /**< Racial stats bonuses */
 	std::set<const SubcategoriedSkillData*> everyman_skills_{};                                /**< Skills that are considered everyman for the race */

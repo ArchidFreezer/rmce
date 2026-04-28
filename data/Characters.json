@@ -1,7 +1,7 @@
 {
     "characters" : [
         {
-            "id" : "85924155-1a12-4d22-818d-8102c2eb4e79",
+            "id" : "05fe25f5-f850-4a70-b591-121cd9cefb37",
             "name" : "Lop",
             "level" : 0,
             "experiencePoints" : 0,
@@ -9,116 +9,116 @@
             "playerCharacter" : false,
             "gold" : 200,
             "items" : [
-                "+1 spell adder or two +5 magic items",
-                "a Daily III spell item or a +2 spell adder, or three +5 non-magic items or three doses of a potion (with a level 1-5 spell)"
+                "+1 spell adder or one +10 non-magic item",
+                "+1 spell adder or one +10 magic item"
             ],
             "race" : "RACE_DWARVES",
-            "culture" : "CULTURE_MINING_GENERAL",
-            "profession" : "PROFESSION_DERNAKWMUN_KHAD",
+            "culture" : "CULTURE_ARCTIC_NOMADIC",
+            "profession" : "PROFESSION_ARMSMASTER",
             "stats" : [
                 {
                     "stat" : "Agility",
-                    "temporary" : 76,
-                    "potential" : 78,
+                    "temporary" : 92,
+                    "potential" : 92,
                     "racialBonus" : -2,
-                    "totalBonus" : 0
+                    "totalBonus" : 4
                 },
                 {
                     "stat" : "Constitution",
-                    "temporary" : 69,
-                    "potential" : 79,
+                    "temporary" : 87,
+                    "potential" : 88,
                     "racialBonus" : 6,
-                    "totalBonus" : 6
+                    "totalBonus" : 10
                 },
                 {
                     "stat" : "Empathy",
-                    "temporary" : 74,
-                    "potential" : 87,
+                    "temporary" : 75,
+                    "potential" : 84,
                     "racialBonus" : -4,
-                    "totalBonus" : -3
+                    "totalBonus" : -2
                 },
                 {
                     "stat" : "Intuition",
-                    "temporary" : 98,
-                    "potential" : 98,
+                    "temporary" : 59,
+                    "potential" : 73,
                     "racialBonus" : 0,
-                    "totalBonus" : 9
+                    "totalBonus" : 0
                 },
                 {
                     "stat" : "Memory",
-                    "temporary" : 97,
-                    "potential" : 97,
+                    "temporary" : 91,
+                    "potential" : 96,
                     "racialBonus" : 0,
-                    "totalBonus" : 8
+                    "totalBonus" : 5
                 },
                 {
                     "stat" : "Presence",
-                    "temporary" : 76,
-                    "potential" : 82,
+                    "temporary" : 63,
+                    "potential" : 84,
                     "racialBonus" : -4,
-                    "totalBonus" : -2
+                    "totalBonus" : -4
                 },
                 {
                     "stat" : "Quickness",
-                    "temporary" : 60,
-                    "potential" : 81,
+                    "temporary" : 87,
+                    "potential" : 93,
                     "racialBonus" : -2,
-                    "totalBonus" : -2
+                    "totalBonus" : 2
                 },
                 {
                     "stat" : "Reasoning",
-                    "temporary" : 67,
-                    "potential" : 82,
+                    "temporary" : 58,
+                    "potential" : 86,
                     "racialBonus" : 0,
                     "totalBonus" : 0
                 },
                 {
                     "stat" : "Self Discipline",
-                    "temporary" : 52,
-                    "potential" : 80,
+                    "temporary" : 39,
+                    "potential" : 63,
                     "racialBonus" : 2,
                     "totalBonus" : 2
                 },
                 {
                     "stat" : "Strength",
-                    "temporary" : 53,
-                    "potential" : 78,
+                    "temporary" : 56,
+                    "potential" : 66,
                     "racialBonus" : 2,
                     "totalBonus" : 2
                 }
             ],
-            "height" : 57,
-            "weight" : 142,
-            "buildDescription" : "Slender build",
-            "lifespan" : 343,
-            "developmentPoints" : 72,
+            "height" : 55,
+            "weight" : 135,
+            "buildDescription" : "Normal build",
+            "lifespan" : 404,
+            "developmentPoints" : 73,
             "magicalRealms" : [
-                "Channeling"
+                "Mentalism"
             ],
             "resistances" : [
                 {
                     "id" : "Channeling",
-                    "value" : 27
+                    "value" : 0
                 },
                 {
                     "id" : "Channeling / Essence",
-                    "value" : 29
+                    "value" : 17
                 },
                 {
                     "id" : "Channeling / Mentalism",
-                    "value" : 30
+                    "value" : 14
                 },
                 {
                     "id" : "Disease",
-                    "value" : 33
+                    "value" : 45
                 },
                 {
                     "id" : "Essence",
-                    "value" : 31
+                    "value" : 34
                 },
                 {
                     "id" : "Essence / Mentalism",
-                    "value" : 32
+                    "value" : 31
                 },
                 {
                     "id" : "Fear",
@@ -126,11 +126,11 @@
                 },
                 {
                     "id" : "Mentalism",
-                    "value" : 34
+                    "value" : 28
                 },
                 {
                     "id" : "Poison",
-                    "value" : 38
+                    "value" : 50
                 }
             ],
             "spellListCategories" : [
@@ -198,316 +198,57 @@
                 {
                     "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS",
                     "spellLists" : [
+                        "SPELLLIST_ANIMAL_MASTERY",
                         "SPELLLIST_ANIMAL_SUMMONS",
+                        "SPELLLIST_AQUATIC_FORMS",
                         "SPELLLIST_ARMOR_ENHANCEMENTS",
-                        "SPELLLIST_ARMOR_MASTERY",
-                        "SPELLLIST_ASSASSINATION_MASTERY",
-                        "SPELLLIST_ATTACK_MASTERY",
-                        "SPELLLIST_BATTLE_LAW",
-                        "SPELLLIST_BLOOD_MASTERY",
+                        "SPELLLIST_BANISHMENTS",
+                        "SPELLLIST_BATTLEFIELD_HEALING",
                         "SPELLLIST_BLOOD_WAYS",
-                        "SPELLLIST_BODY_CONTROL",
                         "SPELLLIST_BODY_REINS",
                         "SPELLLIST_BODY_RENEWAL",
-                        "SPELLLIST_BONE_MASTERY",
                         "SPELLLIST_BONE_WAYS",
+                        "SPELLLIST_CEREMONIES",
+                        "SPELLLIST_CHANNELS",
+                        "SPELLLIST_CHANTS",
                         "SPELLLIST_CLEANSING",
                         "SPELLLIST_COMBAT_ILLUSIONS",
                         "SPELLLIST_COMBAT_WAYS",
                         "SPELLLIST_COMMANDING_WILL",
+                        "SPELLLIST_COMMUNAL_WAYS",
+                        "SPELLLIST_COMMUNION",
                         "SPELLLIST_CONCEALMENT_MASTERY",
-                        "SPELLLIST_CONCUSSION_MASTERY",
                         "SPELLLIST_CONFUSING_WAYS",
-                        "SPELLLIST_CONTROLLING_SONGS",
+                        "SPELLLIST_CRUSADE",
+                        "SPELLLIST_CURSES",
                         "SPELLLIST_DARKNESS",
+                        "SPELLLIST_DARK_CHANNELS",
                         "SPELLLIST_DARK_CONTACTS",
+                        "SPELLLIST_DARK_LORE",
                         "SPELLLIST_DARK_SUMMONS",
-                        "SPELLLIST_DEFENSE_MASTERY",
-                        "SPELLLIST_DISGUISE_MASTERY",
+                        "SPELLLIST_DEATH_MASTERY",
+                        "SPELLLIST_DISEASE",
+                        "SPELLLIST_DIVINE_AURA",
+                        "SPELLLIST_DIVINE_MAGIC",
                         "SPELLLIST_DOOM_S_LAW",
                         "SPELLLIST_EARTH_LAW",
-                        "SPELLLIST_ENTERTAINING_WAYS",
                         "SPELLLIST_ENTITY_SUMMONS",
-                        "SPELLLIST_ESCAPES",
                         "SPELLLIST_EVASIONS",
-                        "SPELLLIST_EXTERNAL_CONCENTRATION",
+                        "SPELLLIST_EXORCISMS",
                         "SPELLLIST_FAITH_DESTRUCTION",
-                        "SPELLLIST_FAR_VISIONS",
+                        "SPELLLIST_FAITH_S_SHIELD",
                         "SPELLLIST_FAR_VOICE",
                         "SPELLLIST_FEEL_TASTE_SMELL",
                         "SPELLLIST_FIRE_LAW",
                         "SPELLLIST_FLESH_DESTRUCTION",
                         "SPELLLIST_FLUID_DESTRUCTION",
-                        "SPELLLIST_FORTRESS_LAW",
-                        "SPELLLIST_FUTURE_VISIONS",
                         "SPELLLIST_GAS_ALTERATION",
                         "SPELLLIST_GAS_DESTRUCTION",
-                        "SPELLLIST_GATHERING_SECRETS",
                         "SPELLLIST_GENERAL_ENHANCEMENTS",
                         "SPELLLIST_GLYPHS",
                         "SPELLLIST_GUISES",
-                        "SPELLLIST_HIDING",
-                        "SPELLLIST_HOLY_VISION",
-                        "SPELLLIST_ICE_LAW",
-                        "SPELLLIST_ILLUSION_MASTERY",
-                        "SPELLLIST_INFLUENCES",
-                        "SPELLLIST_INNER_EYE",
-                        "SPELLLIST_INORGANIC_SKILLS",
-                        "SPELLLIST_INSCRIPTIONS",
-                        "SPELLLIST_ITEM_ANALYSIS",
-                        "SPELLLIST_ITEM_LORE",
-                        "SPELLLIST_LIGHT_LAW",
-                        "SPELLLIST_LIGHT_MOLDING",
-                        "SPELLLIST_LIQUID_ALTERATION",
-                        "SPELLLIST_LIQUID_GAS_SKILLS",
-                        "SPELLLIST_LOOK_OF_TERROR",
-                        "SPELLLIST_LORES",
-                        "SPELLLIST_MANA_BARRIERS",
-                        "SPELLLIST_MANA_ITEMS",
-                        "SPELLLIST_MANA_MOLDING",
-                        "SPELLLIST_MANA_SERVANTS",
-                        "SPELLLIST_MANA_WARRIORS",
-                        "SPELLLIST_MARTIAL_LAW",
-                        "SPELLLIST_MATTER_DISRUPTION",
-                        "SPELLLIST_MECHANISMS",
-                        "SPELLLIST_MEDITATIVE_HEALING",
-                        "SPELLLIST_MIND_ATTACK",
-                        "SPELLLIST_MIND_CONTROL",
-                        "SPELLLIST_MIND_DEATH",
-                        "SPELLLIST_MIND_DESTRUCTION",
-                        "SPELLLIST_MIND_DISEASE",
-                        "SPELLLIST_MIND_DOMINATION",
-                        "SPELLLIST_MIND_EROSION",
-                        "SPELLLIST_MIND_ILLUSIONS",
-                        "SPELLLIST_MIND_MERGE",
-                        "SPELLLIST_MIND_OVER_MATTER",
-                        "SPELLLIST_MIND_SENSE_MOLDING",
-                        "SPELLLIST_MIND_SPEECH",
-                        "SPELLLIST_MIND_SUBVERSION",
-                        "SPELLLIST_MIND_S_SHADOW",
-                        "SPELLLIST_MIND_VISIONS",
-                        "SPELLLIST_MISDIRECTIONS",
-                        "SPELLLIST_MONK_S_BRIDGE",
-                        "SPELLLIST_MONK_S_SENSE",
-                        "SPELLLIST_MOVEMENT_MASTERY",
-                        "SPELLLIST_MUSCLE_MASTERY",
-                        "SPELLLIST_MUSCLE_WAYS",
-                        "SPELLLIST_MYSTICAL_CHANGE",
-                        "SPELLLIST_NATURE_S_FORMS",
-                        "SPELLLIST_NATURE_S_HARMONY",
-                        "SPELLLIST_NERVE_AND_ORGAN_MASTERY",
-                        "SPELLLIST_NOMENCLATURE_MASTERY",
-                        "SPELLLIST_ORGANIC_SKILLS",
-                        "SPELLLIST_ORGAN_WAYS",
-                        "SPELLLIST_OTHER_REALM_IMBEDDING",
-                        "SPELLLIST_OWN_REALM_IMBEDDING",
-                        "SPELLLIST_PAST_VISIONS",
-                        "SPELLLIST_PHYSICAL_EROSION",
-                        "SPELLLIST_PHYSICAL_MANIPULATIONS",
-                        "SPELLLIST_PLANAR_SUMMONS",
-                        "SPELLLIST_POISON_MASTERY",
-                        "SPELLLIST_PRESENCE",
-                        "SPELLLIST_PROSTHETICS",
-                        "SPELLLIST_REVENGING_LAW",
-                        "SPELLLIST_SEEMING_DEFENSES",
-                        "SPELLLIST_SEEMING_ENCHANTMENT",
-                        "SPELLLIST_SEEMING_LAW",
-                        "SPELLLIST_SEEMING_MASTERY",
-                        "SPELLLIST_SEEMING_MEMORIES",
-                        "SPELLLIST_SEEMING_PROJECTION",
-                        "SPELLLIST_SENSES",
-                        "SPELLLIST_SENSE_CONTROL",
-                        "SPELLLIST_SOLID_ALTERATION",
-                        "SPELLLIST_SOLID_DESTRUCTION",
-                        "SPELLLIST_SOUL_DESTRUCTION",
-                        "SPELLLIST_SOUND_CONTROL",
-                        "SPELLLIST_SOUND_MOLDING",
-                        "SPELLLIST_SOUND_PROJECTION",
-                        "SPELLLIST_SPELL_DEFENSES",
-                        "SPELLLIST_STARLIGHTS",
-                        "SPELLLIST_STARLORE",
-                        "SPELLLIST_STARSENSE",
-                        "SPELLLIST_SUMMONING_BOND",
-                        "SPELLLIST_SUMMONING_CIRCLES",
-                        "SPELLLIST_SUMMONING_MASTERY",
-                        "SPELLLIST_SURFACE_WAYS",
-                        "SPELLLIST_SYMBOLISM",
-                        "SPELLLIST_TELEPORTALS",
-                        "SPELLLIST_THIEVING_LAW",
-                        "SPELLLIST_TRANSFORMATIONS",
-                        "SPELLLIST_UNDERSTANDING_MASTERY",
-                        "SPELLLIST_VISION_BORROWING",
-                        "SPELLLIST_VISION_GUARD",
-                        "SPELLLIST_WARDING_WAYS",
-                        "SPELLLIST_WARRIOR_LAW",
-                        "SPELLLIST_WARRIOR_S_ENHANCEMENTS",
-                        "SPELLLIST_WARRIOR_S_WEAPON",
-                        "SPELLLIST_WATER_LAW",
-                        "SPELLLIST_WAY_OF_THE_VOICE",
-                        "SPELLLIST_WEAPON_ENHANCEMENTS",
-                        "SPELLLIST_WEAPON_MASTERY",
-                        "SPELLLIST_WILL_OF_THE_WARRIOR",
-                        "SPELLLIST_WIND_LAW",
-                        "SPELLLIST_WYRD_MASTERY",
-                        "SPELLLIST_ZEN_AWARENESS",
-                        "SPELLLIST_ZEN_FOCUS"
-                    ]
-                },
-                {
-                    "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS",
-                    "spellLists" : [
-                        "SPELLLIST_CIRCLE_MASTERY",
-                        "SPELLLIST_COUNTERSPELLS",
-                        "SPELLLIST_DISPELLING_WAYS",
-                        "SPELLLIST_EARTH_MASTERY",
-                        "SPELLLIST_ELEMENTAL_SUMMONS",
-                        "SPELLLIST_FAMILIAR_MASTERY",
-                        "SPELLLIST_FIRE_MASTERY",
-                        "SPELLLIST_GAS_MANIPULATION",
-                        "SPELLLIST_GATE_MASTERY",
-                        "SPELLLIST_INVISIBLE_WAYS",
-                        "SPELLLIST_LIGHT_MASTERY",
-                        "SPELLLIST_LIQUID_MANIPULATION",
-                        "SPELLLIST_LIVING_CHANGE",
-                        "SPELLLIST_LOFTY_BRIDGE",
-                        "SPELLLIST_MAGIC_STAFF",
-                        "SPELLLIST_MATTER_SHAPING",
-                        "SPELLLIST_MECHANISM_S_WAY",
-                        "SPELLLIST_MIND_MASTERY",
-                        "SPELLLIST_MIND_S_DOOR",
-                        "SPELLLIST_MOVEMENT",
-                        "SPELLLIST_RAPID_WAYS",
-                        "SPELLLIST_SENSE_MASTERY",
-                        "SPELLLIST_SHIELD_MASTERY",
-                        "SPELLLIST_SHIFTING",
-                        "SPELLLIST_SOLID_MANIPULATION",
-                        "SPELLLIST_SPEED",
-                        "SPELLLIST_SPELL_ENHANCEMENT",
-                        "SPELLLIST_SPELL_REINS",
-                        "SPELLLIST_SPIRIT_MASTERY",
-                        "SPELLLIST_TELEKINESIS",
-                        "SPELLLIST_WATER_MASTERY"
-                    ]
-                },
-                {
-                    "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS",
-                    "spellLists" : [
-                        "SPELLLIST_AIR_MASTERY",
-                        "SPELLLIST_ALLUREMENT",
-                        "SPELLLIST_ANTICIPATIONS",
-                        "SPELLLIST_ATTACK_AVOIDANCE",
-                        "SPELLLIST_BRILLIANCE",
-                        "SPELLLIST_CLOAKING",
-                        "SPELLLIST_DAMAGE_RESISTANCE",
-                        "SPELLLIST_DELVING",
-                        "SPELLLIST_DELVING_WAYS",
-                        "SPELLLIST_DETECTING_WAYS",
-                        "SPELLLIST_DETECTIONS",
-                        "SPELLLIST_ELEMENTAL_SHIELDS",
-                        "SPELLLIST_ESSENCE_HAND",
-                        "SPELLLIST_ESSENCE_S_PERCEPTIONS",
-                        "SPELLLIST_FEY_CONJURY",
-                        "SPELLLIST_ILLUSIONS",
-                        "SPELLLIST_LESSER_ILLUSIONS",
-                        "SPELLLIST_PHYSICAL_ENHANCEMENT",
-                        "SPELLLIST_RUNE_MASTERY",
-                        "SPELLLIST_SELF_HEALING",
-                        "SPELLLIST_SHADOW_MASTERY",
-                        "SPELLLIST_SOUND_MASTERY",
-                        "SPELLLIST_SPELL_RESISTANCE",
-                        "SPELLLIST_SPELL_WALL",
-                        "SPELLLIST_SUSTAIN_BODY",
-                        "SPELLLIST_UNBARRING_WAYS"
-                    ]
-                },
-                {
-                    "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE",
-                    "spellLists" : [
-                        "SPELLLIST_ANIMAL_BONDING",
-                        "SPELLLIST_ARACHNAMANCY",
-                        "SPELLLIST_BODY_SHIFTING",
-                        "SPELLLIST_BREWING_LORE",
-                        "SPELLLIST_CHARADES",
-                        "SPELLLIST_CORPIST_CASTING",
-                        "SPELLLIST_CRYSTALIST_CASTING",
-                        "SPELLLIST_DREAM_LAW",
-                        "SPELLLIST_DREAM_LORE",
-                        "SPELLLIST_DREAM_TRAVEL",
-                        "SPELLLIST_GARGOYLE_MASTERY",
-                        "SPELLLIST_GLASS_CERAMIC_CRAFTING",
-                        "SPELLLIST_GUILDCRAFT_MASTERY",
-                        "SPELLLIST_HEARTH_MAGIC",
-                        "SPELLLIST_HERBALIST_CASTING",
-                        "SPELLLIST_HOURI_S_BEGUILEMENT",
-                        "SPELLLIST_HOURI_S_KISSES",
-                        "SPELLLIST_ITEM_ENHANCEMENT",
-                        "SPELLLIST_KNOWLEDGE_MASTERY",
-                        "SPELLLIST_MAGICAL_ROPES",
-                        "SPELLLIST_MEDICAL_LAW",
-                        "SPELLLIST_MENDING_WAYS",
-                        "SPELLLIST_METAL_CRAFTING",
-                        "SPELLLIST_MIND_SHIFTING",
-                        "SPELLLIST_MIRROR_MAGIC",
-                        "SPELLLIST_NOMENIST_CASTING",
-                        "SPELLLIST_OCEAN_LAW",
-                        "SPELLLIST_PHYSICKS",
-                        "SPELLLIST_PREDICTIONS",
-                        "SPELLLIST_SACRED_GROUNDS",
-                        "SPELLLIST_SAILING_MASTERY",
-                        "SPELLLIST_SEA_MASTERY",
-                        "SPELLLIST_STONE_CRAFTING",
-                        "SPELLLIST_STRUCTURE_WARDINGS",
-                        "SPELLLIST_TRAVELER_S_WAYS",
-                        "SPELLLIST_WOOD_CRAFTING"
-                    ]
-                },
-                {
-                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
-                    "spellLists" : [
-                        "SPELLLIST_CREATIONS",
-                        "SPELLLIST_LOCATING_WAYS",
-                        "SPELLLIST_LORE",
-                        "SPELLLIST_MUSCLE_LAW",
-                        "SPELLLIST_NERVE_LAW",
-                        "SPELLLIST_ORGAN_LAW",
-                        "SPELLLIST_SYMBOLIC_WAYS"
-                    ]
-                },
-                {
-                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
-                    "spellLists" : [
-                        "SPELLLIST_CONCUSSION_S_WAYS",
-                        "SPELLLIST_DETECTION_MASTERY",
-                        "SPELLLIST_LIGHT_S_WAY",
-                        "SPELLLIST_LOFTY_MOVEMENTS",
-                        "SPELLLIST_NATURE_S_LAW",
-                        "SPELLLIST_PURIFICATIONS",
-                        "SPELLLIST_SOUND_S_WAY",
-                        "SPELLLIST_SPELL_DEFENSE",
-                        "SPELLLIST_WEATHER_WAYS"
-                    ]
-                },
-                {
-                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS",
-                    "spellLists" : [
-                        "SPELLLIST_ANIMAL_MASTERY",
-                        "SPELLLIST_AQUATIC_FORMS",
-                        "SPELLLIST_BANISHMENTS",
-                        "SPELLLIST_BATTLEFIELD_HEALING",
-                        "SPELLLIST_CEREMONIES",
-                        "SPELLLIST_CHANTS",
-                        "SPELLLIST_COMMUNION",
-                        "SPELLLIST_CRUSADE",
-                        "SPELLLIST_CURSES",
-                        "SPELLLIST_DARK_CHANNELS",
-                        "SPELLLIST_DARK_LORE",
-                        "SPELLLIST_DEATH_MASTERY",
-                        "SPELLLIST_DISEASE",
-                        "SPELLLIST_DIVINE_AURA",
-                        "SPELLLIST_DIVINE_MAGIC",
-                        "SPELLLIST_EXORCISMS",
-                        "SPELLLIST_FAITH_S_SHIELD",
                         "SPELLLIST_HERB_MASTERY",
+                        "SPELLLIST_HIDING",
                         "SPELLLIST_HOLY_ARMORING",
                         "SPELLLIST_HOLY_ARMS",
                         "SPELLLIST_HOLY_DEFENSES",
@@ -519,6 +260,7 @@
                         "SPELLLIST_HOLY_SHIELDS",
                         "SPELLLIST_HOLY_SYMBOL",
                         "SPELLLIST_HOLY_TRANCES",
+                        "SPELLLIST_HOLY_VISION",
                         "SPELLLIST_HOLY_WARDS",
                         "SPELLLIST_HOLY_WEAPON",
                         "SPELLLIST_HOLY_WEAPONS",
@@ -527,129 +269,400 @@
                         "SPELLLIST_HOLY_WRATH",
                         "SPELLLIST_HORSE_MASTERY",
                         "SPELLLIST_HUNTING_MASTERY",
+                        "SPELLLIST_ICE_LAW",
+                        "SPELLLIST_ILLUSION_MASTERY",
+                        "SPELLLIST_INFLUENCES",
+                        "SPELLLIST_INNER_EYE",
                         "SPELLLIST_INNER_WALLS",
+                        "SPELLLIST_INORGANIC_SKILLS",
+                        "SPELLLIST_INSCRIPTIONS",
                         "SPELLLIST_INSECT_MASTERY",
                         "SPELLLIST_INSPIRING_WAYS",
+                        "SPELLLIST_ITEM_ANALYSIS",
                         "SPELLLIST_LAND_FORMS",
+                        "SPELLLIST_LIFE_MASTERY",
+                        "SPELLLIST_LIGHT_LAW",
+                        "SPELLLIST_LIGHT_MOLDING",
+                        "SPELLLIST_LIQUID_ALTERATION",
+                        "SPELLLIST_LIQUID_GAS_SKILLS",
+                        "SPELLLIST_LOOK_OF_TERROR",
+                        "SPELLLIST_MANA_BARRIERS",
+                        "SPELLLIST_MANA_ITEMS",
+                        "SPELLLIST_MANA_MOLDING",
+                        "SPELLLIST_MANA_SERVANTS",
+                        "SPELLLIST_MANA_WARRIORS",
+                        "SPELLLIST_MATTER_DISRUPTION",
+                        "SPELLLIST_MECHANISMS",
+                        "SPELLLIST_MIND_DESTRUCTION",
+                        "SPELLLIST_MIND_OVER_MATTER",
+                        "SPELLLIST_MIND_SENSE_MOLDING",
+                        "SPELLLIST_MONK_S_BRIDGE",
+                        "SPELLLIST_MONK_S_SENSE",
+                        "SPELLLIST_MOVEMENT_MASTERY",
                         "SPELLLIST_MOVING_WAYS",
+                        "SPELLLIST_MUSCLE_WAYS",
+                        "SPELLLIST_MYSTICAL_CHANGE",
                         "SPELLLIST_NATURE_DOMINATION",
+                        "SPELLLIST_NATURE_S_FORMS",
                         "SPELLLIST_NATURE_S_GUISES",
+                        "SPELLLIST_NATURE_S_HARMONY",
                         "SPELLLIST_NATURE_S_LORE",
                         "SPELLLIST_NATURE_S_MOVEMENT_SENSES",
                         "SPELLLIST_NATURE_S_PROTECTION",
                         "SPELLLIST_NATURE_S_SUMMONS",
                         "SPELLLIST_NATURE_S_WAY",
                         "SPELLLIST_NECROMANCY",
+                        "SPELLLIST_NOMENCLATURE_MASTERY",
+                        "SPELLLIST_ORGANIC_SKILLS",
+                        "SPELLLIST_ORGAN_WAYS",
+                        "SPELLLIST_OTHER_REALM_IMBEDDING",
+                        "SPELLLIST_OWN_REALM_IMBEDDING",
                         "SPELLLIST_PATH_MASTERY",
+                        "SPELLLIST_PHYSICAL_EROSION",
+                        "SPELLLIST_PHYSICAL_MANIPULATIONS",
+                        "SPELLLIST_PLANAR_SUMMONS",
                         "SPELLLIST_PLANT_MASTERY",
                         "SPELLLIST_PROSELYTIZING",
+                        "SPELLLIST_PROTECTIONS",
+                        "SPELLLIST_REPULSIONS",
+                        "SPELLLIST_REVENGING_LAW",
+                        "SPELLLIST_SEEMING_DEFENSES",
+                        "SPELLLIST_SEEMING_ENCHANTMENT",
+                        "SPELLLIST_SEEMING_LAW",
+                        "SPELLLIST_SEEMING_MASTERY",
+                        "SPELLLIST_SEEMING_MEMORIES",
+                        "SPELLLIST_SEEMING_PROJECTION",
+                        "SPELLLIST_SENSES",
                         "SPELLLIST_SERPENT_LAW",
+                        "SPELLLIST_SOLID_ALTERATION",
+                        "SPELLLIST_SOLID_DESTRUCTION",
+                        "SPELLLIST_SOUL_DESTRUCTION",
+                        "SPELLLIST_SOUND_MOLDING",
+                        "SPELLLIST_SPELL_DEFENSES",
                         "SPELLLIST_SPIRITUAL_VISION",
                         "SPELLLIST_SPIRIT_DOMINATION",
                         "SPELLLIST_SPIRIT_LAW",
+                        "SPELLLIST_STARLIGHTS",
+                        "SPELLLIST_STARLORE",
+                        "SPELLLIST_STARSENSE",
                         "SPELLLIST_STONE_MASTERY",
+                        "SPELLLIST_SUMMONING_BOND",
+                        "SPELLLIST_SUMMONING_CIRCLES",
+                        "SPELLLIST_SUMMONING_MASTERY",
+                        "SPELLLIST_SUMMONS",
+                        "SPELLLIST_SURFACE_WAYS",
+                        "SPELLLIST_SYMBOLISM",
+                        "SPELLLIST_TELEPORTALS",
                         "SPELLLIST_THE_DEFENDER",
                         "SPELLLIST_THE_EYE",
                         "SPELLLIST_THE_HUNTER",
                         "SPELLLIST_THE_MASK",
                         "SPELLLIST_THE_WILL",
+                        "SPELLLIST_THIEVING_LAW",
                         "SPELLLIST_TIME_LORE",
+                        "SPELLLIST_TRANSFORMATIONS",
                         "SPELLLIST_TREE_MASTERY",
                         "SPELLLIST_VENGEANCE",
                         "SPELLLIST_VOODOO_MAGIC",
-                        "SPELLLIST_WOUNDING"
+                        "SPELLLIST_WARDING_WAYS",
+                        "SPELLLIST_WARRIOR_S_ENHANCEMENTS",
+                        "SPELLLIST_WARRIOR_S_WEAPON",
+                        "SPELLLIST_WATER_LAW",
+                        "SPELLLIST_WAY_OF_THE_VOICE",
+                        "SPELLLIST_WEAPON_ENHANCEMENTS",
+                        "SPELLLIST_WILL_OF_THE_WARRIOR",
+                        "SPELLLIST_WIND_LAW",
+                        "SPELLLIST_WOUNDING",
+                        "SPELLLIST_WYRD_MASTERY"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_BLOOD_LAW",
+                        "SPELLLIST_BONE_LAW",
+                        "SPELLLIST_CALM_SPIRITS",
+                        "SPELLLIST_CIRCLE_MASTERY",
+                        "SPELLLIST_COUNTERSPELLS",
+                        "SPELLLIST_CREATIONS",
+                        "SPELLLIST_DISPELLING_WAYS",
+                        "SPELLLIST_EARTH_MASTERY",
+                        "SPELLLIST_ELEMENTAL_SUMMONS",
+                        "SPELLLIST_FAMILIAR_MASTERY",
+                        "SPELLLIST_FIRE_MASTERY",
+                        "SPELLLIST_GATE_MASTERY",
+                        "SPELLLIST_INVISIBLE_WAYS",
+                        "SPELLLIST_LIGHT_MASTERY",
+                        "SPELLLIST_LIVING_CHANGE",
+                        "SPELLLIST_LOCATING_WAYS",
+                        "SPELLLIST_LOFTY_BRIDGE",
+                        "SPELLLIST_LORE",
+                        "SPELLLIST_MAGIC_STAFF",
+                        "SPELLLIST_MATTER_SHAPING",
+                        "SPELLLIST_MECHANISM_S_WAY",
+                        "SPELLLIST_MUSCLE_LAW",
+                        "SPELLLIST_NERVE_LAW",
+                        "SPELLLIST_ORGAN_LAW",
+                        "SPELLLIST_RAPID_WAYS",
+                        "SPELLLIST_SHIELD_MASTERY",
+                        "SPELLLIST_SPELL_ENHANCEMENT",
+                        "SPELLLIST_SPELL_REINS",
+                        "SPELLLIST_SPIRIT_MASTERY",
+                        "SPELLLIST_SYMBOLIC_WAYS",
+                        "SPELLLIST_WATER_MASTERY"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_AIR_MASTERY",
+                        "SPELLLIST_ALLUREMENT",
+                        "SPELLLIST_BARRIER_LAW",
+                        "SPELLLIST_CONCUSSION_S_WAYS",
+                        "SPELLLIST_DELVING_WAYS",
+                        "SPELLLIST_DETECTING_WAYS",
+                        "SPELLLIST_DETECTION_MASTERY",
+                        "SPELLLIST_ELEMENTAL_SHIELDS",
+                        "SPELLLIST_ESSENCE_HAND",
+                        "SPELLLIST_ESSENCE_S_PERCEPTIONS",
+                        "SPELLLIST_FEY_CONJURY",
+                        "SPELLLIST_LESSER_ILLUSIONS",
+                        "SPELLLIST_LIGHT_S_WAY",
+                        "SPELLLIST_LOFTY_MOVEMENTS",
+                        "SPELLLIST_NATURE_S_LAW",
+                        "SPELLLIST_PHYSICAL_ENHANCEMENT",
+                        "SPELLLIST_PURIFICATIONS",
+                        "SPELLLIST_RUNE_MASTERY",
+                        "SPELLLIST_SHADOW_MASTERY",
+                        "SPELLLIST_SOUND_MASTERY",
+                        "SPELLLIST_SOUND_S_WAY",
+                        "SPELLLIST_SPELL_DEFENSE",
+                        "SPELLLIST_SPELL_WALL",
+                        "SPELLLIST_SUSTAIN_BODY",
+                        "SPELLLIST_UNBARRING_WAYS",
+                        "SPELLLIST_WEATHER_WAYS"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE",
+                    "spellLists" : [
+                        "SPELLLIST_ARACHNAMANCY",
+                        "SPELLLIST_BREWING_LORE",
+                        "SPELLLIST_CORPIST_CASTING",
+                        "SPELLLIST_CRYSTALIST_CASTING",
+                        "SPELLLIST_GARGOYLE_MASTERY",
+                        "SPELLLIST_GLASS_CERAMIC_CRAFTING",
+                        "SPELLLIST_GUILDCRAFT_MASTERY",
+                        "SPELLLIST_HEARTH_MAGIC",
+                        "SPELLLIST_HERBALIST_CASTING",
+                        "SPELLLIST_ITEM_ENHANCEMENT",
+                        "SPELLLIST_MAGICAL_ROPES",
+                        "SPELLLIST_MENDING_WAYS",
+                        "SPELLLIST_METAL_CRAFTING",
+                        "SPELLLIST_MIRROR_MAGIC",
+                        "SPELLLIST_NOMENIST_CASTING",
+                        "SPELLLIST_OCEAN_LAW",
+                        "SPELLLIST_PERIMETER_WARDINGS",
+                        "SPELLLIST_PREDICTIONS",
+                        "SPELLLIST_SACRED_GROUNDS",
+                        "SPELLLIST_STONE_CRAFTING",
+                        "SPELLLIST_STRUCTURE_WARDINGS",
+                        "SPELLLIST_TRAVELER_S_WAYS",
+                        "SPELLLIST_WOOD_CRAFTING"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_GAS_MANIPULATION",
+                        "SPELLLIST_LIQUID_MANIPULATION",
+                        "SPELLLIST_MIND_MASTERY",
+                        "SPELLLIST_MIND_S_DOOR",
+                        "SPELLLIST_MOVEMENT",
+                        "SPELLLIST_SENSE_MASTERY",
+                        "SPELLLIST_SHIFTING",
+                        "SPELLLIST_SOLID_MANIPULATION",
+                        "SPELLLIST_SPEED",
+                        "SPELLLIST_TELEKINESIS"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_ANTICIPATIONS",
+                        "SPELLLIST_ATTACK_AVOIDANCE",
+                        "SPELLLIST_BRILLIANCE",
+                        "SPELLLIST_CLOAKING",
+                        "SPELLLIST_DAMAGE_RESISTANCE",
+                        "SPELLLIST_DELVING",
+                        "SPELLLIST_DETECTIONS",
+                        "SPELLLIST_ILLUSIONS",
+                        "SPELLLIST_SELF_HEALING",
+                        "SPELLLIST_SPELL_RESISTANCE"
+                    ]
+                },
+                {
+                    "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS",
+                    "spellLists" : [
+                        "SPELLLIST_ASSASSINATION_MASTERY",
+                        "SPELLLIST_ATTACK_MASTERY",
+                        "SPELLLIST_BLOOD_MASTERY",
+                        "SPELLLIST_BODY_CONTROL",
+                        "SPELLLIST_BONE_MASTERY",
+                        "SPELLLIST_CONCUSSION_MASTERY",
+                        "SPELLLIST_CONTROLLING_SONGS",
+                        "SPELLLIST_DEFENSE_MASTERY",
+                        "SPELLLIST_DISGUISE_MASTERY",
+                        "SPELLLIST_ENTERTAINING_WAYS",
+                        "SPELLLIST_ESCAPES",
+                        "SPELLLIST_EXTERNAL_CONCENTRATION",
+                        "SPELLLIST_FAR_VISIONS",
+                        "SPELLLIST_FUTURE_VISIONS",
+                        "SPELLLIST_GATHERING_SECRETS",
+                        "SPELLLIST_ITEM_LORE",
+                        "SPELLLIST_LORES",
+                        "SPELLLIST_MEDITATIVE_HEALING",
+                        "SPELLLIST_MIND_ATTACK",
+                        "SPELLLIST_MIND_CONTROL",
+                        "SPELLLIST_MIND_DEATH",
+                        "SPELLLIST_MIND_DISEASE",
+                        "SPELLLIST_MIND_DOMINATION",
+                        "SPELLLIST_MIND_EROSION",
+                        "SPELLLIST_MIND_ILLUSIONS",
+                        "SPELLLIST_MIND_MERGE",
+                        "SPELLLIST_MIND_SPEECH",
+                        "SPELLLIST_MIND_SUBVERSION",
+                        "SPELLLIST_MIND_S_SHADOW",
+                        "SPELLLIST_MIND_VISIONS",
+                        "SPELLLIST_MISDIRECTIONS",
+                        "SPELLLIST_MUSCLE_MASTERY",
+                        "SPELLLIST_NERVE_AND_ORGAN_MASTERY",
+                        "SPELLLIST_PAST_VISIONS",
+                        "SPELLLIST_POISON_MASTERY",
+                        "SPELLLIST_PRESENCE",
+                        "SPELLLIST_PROSTHETICS",
+                        "SPELLLIST_SENSE_CONTROL",
+                        "SPELLLIST_SOUND_CONTROL",
+                        "SPELLLIST_SOUND_PROJECTION",
+                        "SPELLLIST_UNDERSTANDING_MASTERY",
+                        "SPELLLIST_VISION_BORROWING",
+                        "SPELLLIST_VISION_GUARD",
+                        "SPELLLIST_ZEN_AWARENESS",
+                        "SPELLLIST_ZEN_FOCUS"
                     ]
                 },
                 {
                     "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
                     "spellLists" : [
-                        "SPELLLIST_BARRIER_LAW",
-                        "SPELLLIST_BLOOD_LAW",
-                        "SPELLLIST_BONE_LAW",
-                        "SPELLLIST_CALM_SPIRITS",
-                        "SPELLLIST_CHANNELS",
-                        "SPELLLIST_COMMUNAL_WAYS",
-                        "SPELLLIST_LIFE_MASTERY",
-                        "SPELLLIST_PROTECTIONS",
-                        "SPELLLIST_REPULSIONS",
-                        "SPELLLIST_SUMMONS"
+                        "SPELLLIST_ARMOR_MASTERY",
+                        "SPELLLIST_BATTLE_LAW",
+                        "SPELLLIST_FORTRESS_LAW",
+                        "SPELLLIST_MARTIAL_LAW",
+                        "SPELLLIST_WARRIOR_LAW",
+                        "SPELLLIST_WEAPON_MASTERY"
                     ]
                 },
                 {
                     "category" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
                     "spellLists" : [
-                        "SPELLLIST_PERIMETER_WARDINGS"
+                        "SPELLLIST_ANIMAL_BONDING",
+                        "SPELLLIST_BODY_SHIFTING",
+                        "SPELLLIST_CHARADES",
+                        "SPELLLIST_DREAM_LAW",
+                        "SPELLLIST_DREAM_LORE",
+                        "SPELLLIST_DREAM_TRAVEL",
+                        "SPELLLIST_HOURI_S_BEGUILEMENT",
+                        "SPELLLIST_HOURI_S_KISSES",
+                        "SPELLLIST_KNOWLEDGE_MASTERY",
+                        "SPELLLIST_MEDICAL_LAW",
+                        "SPELLLIST_MIND_SHIFTING",
+                        "SPELLLIST_PHYSICKS",
+                        "SPELLLIST_SAILING_MASTERY",
+                        "SPELLLIST_SEA_MASTERY"
                     ]
                 }
             ],
-            "maxHits" : 0,
-            "hits" : 0,
-            "maxPowerPoints" : 14,
-            "powerPoints" : 14,
-            "languageAbilities" : [
+            "maxHits" : 32,
+            "hits" : 32,
+            "maxPowerPoints" : -4,
+            "powerPoints" : -4,
+            "languages" : [
                 {
-                    "language" : "LANGUAGE_COMMON_SPEECH",
-                    "spoken" : 5,
-                    "written" : 5
+                    "id" : "LANGUAGE_PLAINS_SPEECH",
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "specialBonus" : 0,
+                    "spokenRanks" : 4,
+                    "spokenBonus" : 17,
+                    "writtenRanks" : 0,
+                    "writtenBonus" : -10,
+                    "somaticRanks" : 0,
+                    "somaticBonus" : -10
                 },
                 {
-                    "language" : "LANGUAGE_DWARVISH",
-                    "spoken" : 8,
-                    "written" : 6
+                    "id" : "LANGUAGE_DWARVISH",
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "specialBonus" : 0,
+                    "spokenRanks" : 8,
+                    "spokenBonus" : 29,
+                    "writtenRanks" : 6,
+                    "writtenBonus" : 23,
+                    "somaticRanks" : 0,
+                    "somaticBonus" : -10
                 },
                 {
-                    "language" : "LANGUAGE_ELVISH",
-                    "spoken" : 4,
-                    "written" : 4
+                    "id" : "LANGUAGE_COMMON_SPEECH",
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "specialBonus" : 0,
+                    "spokenRanks" : 5,
+                    "spokenBonus" : 20,
+                    "writtenRanks" : 5,
+                    "writtenBonus" : 20,
+                    "somaticRanks" : 0,
+                    "somaticBonus" : -10
                 },
                 {
-                    "language" : "LANGUAGE_HILL_SPEECH",
-                    "spoken" : 2
-                },
-                {
-                    "language" : "LANGUAGE_PLAINS_SPEECH",
-                    "spoken" : 6
+                    "id" : "LANGUAGE_ELVISH",
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "specialBonus" : 0,
+                    "spokenRanks" : 4,
+                    "spokenBonus" : 17,
+                    "writtenRanks" : 4,
+                    "writtenBonus" : 17,
+                    "somaticRanks" : 0,
+                    "somaticBonus" : -10
                 }
             ],
             "spellListRanks" : [
                 {
-                    "id" : "SPELLLIST_BARRIER_LAW",
+                    "id" : "SPELLLIST_ARMOR_MASTERY",
                     "value" : 0
                 },
                 {
-                    "id" : "SPELLLIST_BLOOD_LAW",
+                    "id" : "SPELLLIST_BATTLE_LAW",
                     "value" : 0
                 },
                 {
-                    "id" : "SPELLLIST_BONE_LAW",
+                    "id" : "SPELLLIST_FORTRESS_LAW",
                     "value" : 0
                 },
                 {
-                    "id" : "SPELLLIST_CALM_SPIRITS",
+                    "id" : "SPELLLIST_MARTIAL_LAW",
                     "value" : 0
                 },
                 {
-                    "id" : "SPELLLIST_CHANNELS",
+                    "id" : "SPELLLIST_WARRIOR_LAW",
                     "value" : 0
                 },
                 {
-                    "id" : "SPELLLIST_COMMUNAL_WAYS",
-                    "value" : 0
-                },
-                {
-                    "id" : "SPELLLIST_LIFE_MASTERY",
-                    "value" : 0
-                },
-                {
-                    "id" : "SPELLLIST_PROTECTIONS",
-                    "value" : 0
-                },
-                {
-                    "id" : "SPELLLIST_REPULSIONS",
-                    "value" : 0
-                },
-                {
-                    "id" : "SPELLLIST_SUMMONS",
+                    "id" : "SPELLLIST_WEAPON_MASTERY",
                     "value" : 0
                 }
             ],
@@ -657,29 +670,29 @@
                 {
                     "id" : "SKILLCATEGORY_ARMOUR_HEAVY",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "11",
-                    "professionBonus" : 0,
+                    "developmentCost" : "4:4:4",
+                    "professionBonus" : 10,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : 3
                 },
                 {
                     "id" : "SKILLCATEGORY_ARMOUR_LIGHT",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "2:2:2",
-                    "professionBonus" : 0,
+                    "developmentCost" : "1:1:1",
+                    "professionBonus" : 10,
                     "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : 4
+                    "totalBonus" : 24
                 },
                 {
                     "id" : "SKILLCATEGORY_ARMOUR_MEDIUM",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "10",
-                    "professionBonus" : 0,
-                    "ranks" : 2,
+                    "developmentCost" : "3:3:3",
+                    "professionBonus" : 10,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 4
+                    "totalBonus" : 3
                 },
                 {
                     "id" : "SKILLCATEGORY_ARTISTIC_ACTIVE",
@@ -688,7 +701,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -17
                 },
                 {
                     "id" : "SKILLCATEGORY_ARTISTIC_PASSIVE",
@@ -697,88 +710,88 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -21
                 },
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_BRAWN",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "5",
-                    "professionBonus" : 0,
-                    "ranks" : 1,
+                    "developmentCost" : "3:7",
+                    "professionBonus" : 5,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 2
+                    "totalBonus" : 6
                 },
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_ENDURANCE",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "3",
-                    "professionBonus" : 0,
-                    "ranks" : 1,
+                    "developmentCost" : "2:6",
+                    "professionBonus" : 5,
+                    "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : 2
+                    "totalBonus" : 25
                 },
                 {
                     "id" : "SKILLCATEGORY_ATHLETIC_GYMNASTICS",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "3",
-                    "professionBonus" : 0,
-                    "ranks" : 1,
+                    "developmentCost" : "3:6",
+                    "professionBonus" : 5,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 2
+                    "totalBonus" : 0
                 },
                 {
                     "id" : "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "6",
-                    "professionBonus" : 10,
-                    "ranks" : 0,
+                    "developmentCost" : "5:14",
+                    "professionBonus" : 0,
+                    "ranks" : 1,
                     "specialBonus" : 0,
-                    "totalBonus" : 10
+                    "totalBonus" : 2
                 },
                 {
                     "id" : "SKILLCATEGORY_AWARENESS_SEARCHING",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
                     "developmentCost" : "2:6",
-                    "professionBonus" : 10,
-                    "ranks" : 1,
+                    "professionBonus" : 0,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 12
+                    "totalBonus" : -13
                 },
                 {
                     "id" : "SKILLCATEGORY_AWARENESS_SENSES",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
                     "developmentCost" : "3:7",
-                    "professionBonus" : 10,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -5
+                    "totalBonus" : -13
                 },
                 {
                     "id" : "SKILLCATEGORY_BODY_DEVELOPMENT",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "10",
-                    "professionBonus" : 0,
-                    "ranks" : 3,
+                    "developmentCost" : "4:10",
+                    "professionBonus" : 10,
+                    "ranks" : 1,
                     "specialBonus" : 0,
-                    "totalBonus" : 0
+                    "totalBonus" : 32
                 },
                 {
                     "id" : "SKILLCATEGORY_COMBAT_MANOEUVRES",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "10",
-                    "professionBonus" : 0,
+                    "developmentCost" : "4:10",
+                    "professionBonus" : 10,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 0
+                    "totalBonus" : 18
                 },
                 {
                     "id" : "SKILLCATEGORY_COMMUNICATION",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "2:2:2",
+                    "developmentCost" : "3:3:3",
                     "professionBonus" : 0,
-                    "ranks" : 1,
+                    "ranks" : 8,
                     "specialBonus" : 0,
-                    "totalBonus" : 2
+                    "totalBonus" : 5
                 },
                 {
                     "id" : "SKILLCATEGORY_CRAFTS",
@@ -787,25 +800,25 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 0
+                    "totalBonus" : 11
                 },
                 {
                     "id" : "SKILLCATEGORY_DIRECTED_SPELLS",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "3",
+                    "developmentCost" : "15",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -5
                 },
                 {
                     "id" : "SKILLCATEGORY_INFLUENCE",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "2:4",
+                    "developmentCost" : "1:5",
                     "professionBonus" : 5,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -10
+                    "totalBonus" : -16
                 },
                 {
                     "id" : "SKILLCATEGORY_LORE_GENERAL",
@@ -814,25 +827,25 @@
                     "professionBonus" : 0,
                     "ranks" : 3,
                     "specialBonus" : 0,
-                    "totalBonus" : 6
+                    "totalBonus" : 16
                 },
                 {
                     "id" : "SKILLCATEGORY_LORE_MAGICAL",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "2:4",
-                    "professionBonus" : 5,
+                    "developmentCost" : "3:9",
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -10
+                    "totalBonus" : -5
                 },
                 {
                     "id" : "SKILLCATEGORY_LORE_OBSCURE",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "3:7",
+                    "developmentCost" : "3:9",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -5
                 },
                 {
                     "id" : "SKILLCATEGORY_LORE_TECHNICAL",
@@ -841,105 +854,105 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -5
                 },
                 {
                     "id" : "SKILLCATEGORY_MARTIAL_ARTS_COMBAT_MANOEUVRES",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "12",
+                    "developmentCost" : "6",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 0
+                    "totalBonus" : 8
                 },
                 {
                     "id" : "SKILLCATEGORY_MARTIAL_ARTS_STRIKES",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "6",
+                    "developmentCost" : "3:9",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -7
                 },
                 {
                     "id" : "SKILLCATEGORY_MARTIAL_ARTS_SWEEPS",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "6",
+                    "developmentCost" : "3:9",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -5
                 },
                 {
                     "id" : "SKILLCATEGORY_OUTDOOR_ANIMAL",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "3",
-                    "professionBonus" : 0,
-                    "ranks" : 0,
-                    "specialBonus" : 0,
-                    "totalBonus" : -15
-                },
-                {
-                    "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
-                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "2:7",
+                    "developmentCost" : "2:6",
                     "professionBonus" : 0,
                     "ranks" : 2,
                     "specialBonus" : 0,
                     "totalBonus" : 4
                 },
                 {
+                    "id" : "SKILLCATEGORY_OUTDOOR_ENVIRONMENTAL",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:6",
+                    "professionBonus" : 0,
+                    "ranks" : 3,
+                    "specialBonus" : 0,
+                    "totalBonus" : 13
+                },
+                {
                     "id" : "SKILLCATEGORY_POWER_AWARENESS",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "2:5",
-                    "professionBonus" : 10,
-                    "ranks" : 0,
+                    "developmentCost" : "4",
+                    "professionBonus" : 0,
+                    "ranks" : 1,
                     "specialBonus" : 0,
-                    "totalBonus" : -5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_POWER_MANIPULATION",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "4:10",
-                    "professionBonus" : 5,
+                    "developmentCost" : "6:12",
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -6
                 },
                 {
                     "id" : "SKILLCATEGORY_POWER_POINT_DEVELOPMENT",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "4",
+                    "developmentCost" : "6:12",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -4
+                },
+                {
+                    "id" : "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
+                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
+                    "developmentCost" : "2:5",
+                    "professionBonus" : 0,
+                    "ranks" : 0,
+                    "specialBonus" : 0,
+                    "totalBonus" : -10
+                },
+                {
+                    "id" : "SKILLCATEGORY_SCIENCE_ANALYTIC_SPECIALISED",
+                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
+                    "developmentCost" : "8",
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
                     "totalBonus" : 5
                 },
                 {
-                    "id" : "SKILLCATEGORY_SCIENCE_ANALYTIC_BASIC",
-                    "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "1:4",
-                    "professionBonus" : 0,
-                    "ranks" : 1,
-                    "specialBonus" : 0,
-                    "totalBonus" : 2
-                },
-                {
-                    "id" : "SKILLCATEGORY_SCIENCE_ANALYTIC_SPECIALISED",
-                    "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "6:14",
-                    "professionBonus" : 0,
-                    "ranks" : 0,
-                    "specialBonus" : 0,
-                    "totalBonus" : 0
-                },
-                {
                     "id" : "SKILLCATEGORY_SELF_CONTROL",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "5",
+                    "developmentCost" : "2:7",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
@@ -948,11 +961,11 @@
                 {
                     "id" : "SKILLCATEGORY_SPECIAL_ATTACKS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "10",
+                    "developmentCost" : "2:8",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 0
+                    "totalBonus" : 8
                 },
                 {
                     "id" : "SKILLCATEGORY_SPECIAL_DEFENCES",
@@ -966,173 +979,173 @@
                 {
                     "id" : "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "25",
+                    "developmentCost" : "40",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "10:10",
+                    "developmentCost" : "18",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "6:6",
+                    "developmentCost" : "12",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "50",
+                    "developmentCost" : "80",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "20",
+                    "developmentCost" : "45",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "10:10",
+                    "developmentCost" : "30",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "8:8",
+                    "developmentCost" : "12:12",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "4:4:4",
+                    "developmentCost" : "10:10",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "4:4:4",
+                    "developmentCost" : "8:8",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "8:8",
+                    "developmentCost" : "25",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "3:3:3",
+                    "developmentCost" : "6:6:6",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE",
                     "progression" : "SKILLPROGRESSIONTYPE_NONE",
-                    "developmentCost" : "4:4:4",
+                    "developmentCost" : "6:6:6",
                     "stats" : [
-                        "Intuition"
+                        "Presence"
                     ],
-                    "professionBonus" : 5,
+                    "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "id" : "SKILLCATEGORY_SUBTERFUGE_ATTACK",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "15",
+                    "developmentCost" : "8",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -9
                 },
                 {
                     "id" : "SKILLCATEGORY_SUBTERFUGE_MECHANICS",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "7",
+                    "developmentCost" : "6",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -11
                 },
                 {
                     "id" : "SKILLCATEGORY_SUBTERFUGE_STEALTH",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "5",
+                    "developmentCost" : "4",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -9
                 },
                 {
                     "id" : "SKILLCATEGORY_TECHNICAL_TRADE_GENERAL",
@@ -1141,7 +1154,7 @@
                     "professionBonus" : 0,
                     "ranks" : 1,
                     "specialBonus" : 0,
-                    "totalBonus" : 2
+                    "totalBonus" : 9
                 },
                 {
                     "id" : "SKILLCATEGORY_TECHNICAL_TRADE_PROFESSIONAL",
@@ -1150,7 +1163,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 0
+                    "totalBonus" : 5
                 },
                 {
                     "id" : "SKILLCATEGORY_TECHNICAL_TRADE_VOCATIONAL",
@@ -1159,79 +1172,79 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 0
+                    "totalBonus" : 5
                 },
                 {
                     "id" : "SKILLCATEGORY_URBAN",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "3",
+                    "developmentCost" : "4",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -15
+                    "totalBonus" : -19
                 },
                 {
                     "id" : "SKILLCATEGORY_WEAPON_1_H_CONCUSSION",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "6",
-                    "professionBonus" : 5,
-                    "ranks" : 4,
+                    "developmentCost" : "2:5",
+                    "professionBonus" : 10,
+                    "ranks" : 1,
                     "specialBonus" : 0,
-                    "totalBonus" : 13
+                    "totalBonus" : 20
                 },
                 {
                     "id" : "SKILLCATEGORY_WEAPON_1_H_EDGED",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "7",
-                    "professionBonus" : 5,
+                    "developmentCost" : "3:9",
+                    "professionBonus" : 10,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -10
+                    "totalBonus" : 3
                 },
                 {
                     "id" : "SKILLCATEGORY_WEAPON_2_HANDED",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "9",
-                    "professionBonus" : 5,
+                    "developmentCost" : "4:10",
+                    "professionBonus" : 10,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -10
+                    "totalBonus" : 3
                 },
                 {
                     "id" : "SKILLCATEGORY_WEAPON_MISSILE",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "9",
-                    "professionBonus" : 5,
-                    "ranks" : 0,
+                    "developmentCost" : "4",
+                    "professionBonus" : 10,
+                    "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : -10
+                    "totalBonus" : 24
                 },
                 {
                     "id" : "SKILLCATEGORY_WEAPON_MISSILE_ARTILLERY",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "9",
-                    "professionBonus" : 5,
+                    "developmentCost" : "4",
+                    "professionBonus" : 10,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -10
+                    "totalBonus" : -1
                 },
                 {
                     "id" : "SKILLCATEGORY_WEAPON_POLE_ARMS",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "20",
-                    "professionBonus" : 5,
+                    "developmentCost" : "4",
+                    "professionBonus" : 10,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -10
+                    "totalBonus" : 3
                 },
                 {
                     "id" : "SKILLCATEGORY_WEAPON_THROWN",
                     "progression" : "SKILLPROGRESSIONTYPE_CATEGORY_STANDARD",
-                    "developmentCost" : "20",
-                    "professionBonus" : 5,
-                    "ranks" : 1,
+                    "developmentCost" : "6",
+                    "professionBonus" : 10,
+                    "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : 7
+                    "totalBonus" : 24
                 }
             ],
             "skills" : [
@@ -1244,7 +1257,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -1255,7 +1268,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -32
                 },
                 {
                     "skillData" : {
@@ -1266,7 +1279,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1310,7 +1323,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1321,7 +1334,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1420,7 +1433,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1431,7 +1444,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1442,7 +1455,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1451,9 +1464,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_LIMITED",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 4,
+                    "ranks" : 1,
                     "specialBonus" : 0,
-                    "totalBonus" : 14
+                    "totalBonus" : 3
                 },
                 {
                     "skillData" : {
@@ -1464,7 +1477,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -24
                 },
                 {
                     "skillData" : {
@@ -1475,7 +1488,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1486,7 +1499,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -11
                 },
                 {
                     "skillData" : {
@@ -1497,7 +1510,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -11
                 },
                 {
                     "skillData" : {
@@ -1508,7 +1521,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -11
                 },
                 {
                     "skillData" : {
@@ -1519,7 +1532,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -11
                 },
                 {
                     "skillData" : {
@@ -1530,7 +1543,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1539,9 +1552,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 2,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 10
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1552,7 +1565,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1563,7 +1576,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -1574,7 +1587,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1585,7 +1598,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -9
                 },
                 {
                     "skillData" : {
@@ -1596,7 +1609,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : 10
                 },
                 {
                     "skillData" : {
@@ -1607,7 +1620,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -1616,9 +1629,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 2,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 1
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -1629,7 +1642,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1640,7 +1653,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
@@ -1651,7 +1664,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1662,7 +1675,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -1673,7 +1686,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -1684,7 +1697,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1695,7 +1708,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 0
+                    "totalBonus" : 32
                 },
                 {
                     "skillData" : {
@@ -1706,7 +1719,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -1717,7 +1730,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1728,7 +1741,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1739,7 +1752,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -31
                 },
                 {
                     "skillData" : {
@@ -1750,7 +1763,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -1761,7 +1774,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -26
                 },
                 {
                     "skillData" : {
@@ -1772,7 +1785,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -1781,9 +1794,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Everyman",
                     "professionBonus" : 0,
-                    "ranks" : 2,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 10
+                    "totalBonus" : -2
                 },
                 {
                     "skillData" : {
@@ -1792,20 +1805,20 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 2,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 10
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
                         "id" : "SKILL_CHANNELING"
                     },
                     "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
-                    "developmentType" : "Standard",
+                    "developmentType" : "Restricted",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -1816,7 +1829,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1827,7 +1840,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1838,7 +1851,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1849,7 +1862,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1860,7 +1873,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1893,7 +1906,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1937,7 +1950,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -1970,7 +1983,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -1992,7 +2005,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -2047,7 +2060,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -2058,7 +2071,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2078,9 +2091,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 1,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -2091,7 +2104,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -34
                 },
                 {
                     "skillData" : {
@@ -2102,7 +2115,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -2124,7 +2137,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -2135,7 +2148,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2146,7 +2159,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -26
                 },
                 {
                     "skillData" : {
@@ -2157,7 +2170,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -9
+                    "totalBonus" : 1
                 },
                 {
                     "skillData" : {
@@ -2169,7 +2182,7 @@
                     "professionBonus" : 0,
                     "ranks" : 3,
                     "specialBonus" : 0,
-                    "totalBonus" : 15
+                    "totalBonus" : 25
                 },
                 {
                     "skillData" : {
@@ -2180,7 +2193,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -32
                 },
                 {
                     "skillData" : {
@@ -2202,7 +2215,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2213,7 +2226,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -3
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -2224,7 +2237,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -2235,7 +2248,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -31
                 },
                 {
                     "skillData" : {
@@ -2246,7 +2259,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2255,9 +2268,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 0,
+                    "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : -20
+                    "totalBonus" : -7
                 },
                 {
                     "skillData" : {
@@ -2268,7 +2281,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -26
                 },
                 {
                     "skillData" : {
@@ -2279,7 +2292,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -2290,7 +2303,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -2301,7 +2314,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -26
                 },
                 {
                     "skillData" : {
@@ -2312,7 +2325,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : 10
                 },
                 {
                     "skillData" : {
@@ -2323,7 +2336,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -20
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -2334,7 +2347,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2345,7 +2358,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -2356,7 +2369,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -2367,7 +2380,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -2378,7 +2391,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2400,7 +2413,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2422,7 +2435,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2433,7 +2446,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -11
                 },
                 {
                     "skillData" : {
@@ -2444,7 +2457,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -2455,7 +2468,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -31
                 },
                 {
                     "skillData" : {
@@ -2466,7 +2479,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -2477,7 +2490,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -2488,7 +2501,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -2499,7 +2512,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -2510,7 +2523,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -2521,7 +2534,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2532,7 +2545,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -11
                 },
                 {
                     "skillData" : {
@@ -2543,7 +2556,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -9
+                    "totalBonus" : 1
                 },
                 {
                     "skillData" : {
@@ -2554,7 +2567,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -2565,7 +2578,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -2574,9 +2587,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 2,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 8
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
@@ -2587,7 +2600,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -2598,7 +2611,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -9
+                    "totalBonus" : 1
                 },
                 {
                     "skillData" : {
@@ -2609,7 +2622,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -2620,7 +2633,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -11
+                    "totalBonus" : -2
                 },
                 {
                     "skillData" : {
@@ -2631,7 +2644,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -26
                 },
                 {
                     "skillData" : {
@@ -2653,7 +2666,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
@@ -2664,7 +2677,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -2675,7 +2688,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2697,7 +2710,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -9
+                    "totalBonus" : 1
                 },
                 {
                     "skillData" : {
@@ -2708,7 +2721,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -2719,7 +2732,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -11
                 },
                 {
                     "skillData" : {
@@ -2728,9 +2741,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 0,
+                    "ranks" : 1,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
@@ -2741,7 +2754,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -26
                 },
                 {
                     "skillData" : {
@@ -2752,7 +2765,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -9
+                    "totalBonus" : 1
                 },
                 {
                     "skillData" : {
@@ -2763,7 +2776,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -2772,9 +2785,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 0,
+                    "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : -11
+                    "totalBonus" : 19
                 },
                 {
                     "skillData" : {
@@ -2785,7 +2798,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -2796,7 +2809,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -31
                 },
                 {
                     "skillData" : {
@@ -2807,7 +2820,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -2818,7 +2831,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -2829,7 +2842,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -2840,7 +2853,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -9
                 },
                 {
                     "skillData" : {
@@ -2851,7 +2864,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -10
                 },
                 {
                     "skillData" : {
@@ -2862,7 +2875,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -31
                 },
                 {
                     "skillData" : {
@@ -2871,9 +2884,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
                     "developmentType" : "Everyman",
                     "professionBonus" : 0,
-                    "ranks" : 2,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 10
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -2884,7 +2897,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -3
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -2895,7 +2908,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -10
                 },
                 {
                     "skillData" : {
@@ -2906,7 +2919,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -2917,7 +2930,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -2928,7 +2941,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -2939,7 +2952,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -2950,7 +2963,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -2961,7 +2974,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -2972,7 +2985,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -2983,7 +2996,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -2994,7 +3007,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -3005,7 +3018,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -3016,7 +3029,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -3027,7 +3040,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -3038,7 +3051,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -3
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -3049,7 +3062,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -3060,7 +3073,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -3071,7 +3084,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -10
                 },
                 {
                     "skillData" : {
@@ -3082,7 +3095,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -3093,7 +3106,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
@@ -3104,7 +3117,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -3115,7 +3128,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -3126,7 +3139,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -3137,7 +3150,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -3148,7 +3161,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -9
+                    "totalBonus" : 1
                 },
                 {
                     "skillData" : {
@@ -3159,7 +3172,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -3170,7 +3183,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3192,7 +3205,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -3203,7 +3216,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -3214,7 +3227,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -3225,7 +3238,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -3236,18 +3249,18 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
                         "id" : "SKILL_MILITARY_ORGANIZATION"
                     },
                     "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
-                    "developmentType" : "Standard",
+                    "developmentType" : "Occupational",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3258,7 +3271,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -32
                 },
                 {
                     "skillData" : {
@@ -3269,7 +3282,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -32
                 },
                 {
                     "skillData" : {
@@ -3280,7 +3293,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -34
                 },
                 {
                     "skillData" : {
@@ -3291,7 +3304,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3302,7 +3315,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -3324,7 +3337,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -3335,7 +3348,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -3346,7 +3359,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3357,7 +3370,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -3366,9 +3379,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 0,
+                    "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : -3
+                    "totalBonus" : -7
                 },
                 {
                     "skillData" : {
@@ -3379,7 +3392,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
@@ -3390,7 +3403,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
@@ -3401,7 +3414,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -3412,7 +3425,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -3423,7 +3436,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -9
+                    "totalBonus" : 1
                 },
                 {
                     "skillData" : {
@@ -3434,7 +3447,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -26
                 },
                 {
                     "skillData" : {
@@ -3445,7 +3458,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -24
                 },
                 {
                     "skillData" : {
@@ -3456,7 +3469,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -3467,7 +3480,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -3478,7 +3491,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -32
                 },
                 {
                     "skillData" : {
@@ -3489,7 +3502,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -32
                 },
                 {
                     "skillData" : {
@@ -3500,7 +3513,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -3511,7 +3524,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -3522,7 +3535,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -3
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -3533,7 +3546,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -3544,18 +3557,18 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -20
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
                         "id" : "SKILL_POWER_POINT_DEVELOPMENT"
                     },
-                    "progression" : "SKILLPROGRESSIONTYPE_PP_STANDARD",
+                    "progression" : "SKILLPROGRESSIONTYPE_PP_MINIMAL",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 5
+                    "totalBonus" : -4
                 },
                 {
                     "skillData" : {
@@ -3566,7 +3579,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -9
                 },
                 {
                     "skillData" : {
@@ -3577,7 +3590,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -9
                 },
                 {
                     "skillData" : {
@@ -3588,7 +3601,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3599,7 +3612,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3610,7 +3623,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -31
                 },
                 {
                     "skillData" : {
@@ -3621,7 +3634,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3632,7 +3645,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -31
                 },
                 {
                     "skillData" : {
@@ -3643,7 +3656,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -3654,7 +3667,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -3665,7 +3678,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -3676,7 +3689,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -3
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -3687,7 +3700,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -20
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -3698,7 +3711,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -20
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -3709,7 +3722,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -9
+                    "totalBonus" : 1
                 },
                 {
                     "skillData" : {
@@ -3721,19 +3734,7 @@
                     "professionBonus" : 0,
                     "ranks" : 3,
                     "specialBonus" : 0,
-                    "totalBonus" : 15
-                },
-                {
-                    "skillData" : {
-                        "id" : "SKILL_REGION_LORE",
-                        "subcategory" : "Own region"
-                    },
-                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
-                    "developmentType" : "Standard",
-                    "professionBonus" : 0,
-                    "ranks" : 2,
-                    "specialBonus" : 0,
-                    "totalBonus" : 12
+                    "totalBonus" : 25
                 },
                 {
                     "skillData" : {
@@ -3744,7 +3745,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -9
+                    "totalBonus" : 1
                 },
                 {
                     "skillData" : {
@@ -3755,7 +3756,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3766,7 +3767,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -3777,7 +3778,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -11
                 },
                 {
                     "skillData" : {
@@ -3786,9 +3787,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 2,
+                    "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 10
+                    "totalBonus" : 9
                 },
                 {
                     "skillData" : {
@@ -3799,7 +3800,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -3810,7 +3811,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : 10
                 },
                 {
                     "skillData" : {
@@ -3821,7 +3822,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
@@ -3832,7 +3833,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3843,7 +3844,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : 10
                 },
                 {
                     "skillData" : {
@@ -3854,7 +3855,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -3865,7 +3866,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -34
                 },
                 {
                     "skillData" : {
@@ -3876,7 +3877,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -3887,7 +3888,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3898,7 +3899,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -31
                 },
                 {
                     "skillData" : {
@@ -3909,7 +3910,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : 10
+                    "totalBonus" : 2
                 },
                 {
                     "skillData" : {
@@ -3920,7 +3921,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -20
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -3931,7 +3932,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -3942,7 +3943,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -26
                 },
                 {
                     "skillData" : {
@@ -3953,7 +3954,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -3964,7 +3965,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -3975,18 +3976,18 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
                         "id" : "SKILL_SIEGE_ENGINEERING"
                     },
                     "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
-                    "developmentType" : "Standard",
+                    "developmentType" : "Everyman",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -3997,7 +3998,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -10
                 },
                 {
                     "skillData" : {
@@ -4008,7 +4009,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -24
                 },
                 {
                     "skillData" : {
@@ -4019,7 +4020,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -32
                 },
                 {
                     "skillData" : {
@@ -4030,7 +4031,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -20
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -4041,7 +4042,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -4052,7 +4053,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -4063,7 +4064,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -4083,9 +4084,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 0,
+                    "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : -11
+                    "totalBonus" : 30
                 },
                 {
                     "skillData" : {
@@ -4096,7 +4097,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -20
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -4107,7 +4108,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -4129,7 +4130,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -4140,7 +4141,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -4151,7 +4152,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -4162,7 +4163,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -4173,7 +4174,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : 10
                 },
                 {
                     "skillData" : {
@@ -4182,9 +4183,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 0,
+                    "ranks" : 1,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
@@ -4193,9 +4194,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 0,
+                    "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : -11
+                    "totalBonus" : 19
                 },
                 {
                     "skillData" : {
@@ -4206,7 +4207,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -4217,7 +4218,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -4228,7 +4229,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -4239,7 +4240,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -34
                 },
                 {
                     "skillData" : {
@@ -4272,7 +4273,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -4283,7 +4284,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -4294,7 +4295,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -4305,7 +4306,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -4316,7 +4317,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -3
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -4327,7 +4328,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -11
+                    "totalBonus" : -2
                 },
                 {
                     "skillData" : {
@@ -4339,7 +4340,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -11
+                    "totalBonus" : -2
                 },
                 {
                     "skillData" : {
@@ -4350,7 +4351,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -4359,9 +4360,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Restricted",
                     "professionBonus" : 0,
-                    "ranks" : 0,
+                    "ranks" : 1,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : 28
                 },
                 {
                     "skillData" : {
@@ -4372,7 +4373,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -4383,7 +4384,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -22
                 },
                 {
                     "skillData" : {
@@ -4394,18 +4395,18 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
                         "id" : "SKILL_TACTICS"
                     },
                     "progression" : "SKILLPROGRESSIONTYPE_COMBINED",
-                    "developmentType" : "Standard",
+                    "developmentType" : "Everyman",
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -25
                 },
                 {
                     "skillData" : {
@@ -4416,7 +4417,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -32
                 },
                 {
                     "skillData" : {
@@ -4427,7 +4428,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -4438,7 +4439,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -31
                 },
                 {
                     "skillData" : {
@@ -4449,7 +4450,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -4460,7 +4461,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -20
+                    "totalBonus" : -28
                 },
                 {
                     "skillData" : {
@@ -4469,9 +4470,9 @@
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 0,
+                    "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : -3
+                    "totalBonus" : -7
                 },
                 {
                     "skillData" : {
@@ -4482,7 +4483,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -31
                 },
                 {
                     "skillData" : {
@@ -4493,7 +4494,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -4504,7 +4505,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -36
                 },
                 {
                     "skillData" : {
@@ -4515,7 +4516,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -4526,7 +4527,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -26
                 },
                 {
                     "skillData" : {
@@ -4537,7 +4538,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -24
                 },
                 {
                     "skillData" : {
@@ -4548,7 +4549,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -15
                 },
                 {
                     "skillData" : {
@@ -4559,7 +4560,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -4570,7 +4571,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -4581,7 +4582,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -4592,7 +4593,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -6
                 },
                 {
                     "skillData" : {
@@ -4603,7 +4604,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -26
                 },
                 {
                     "skillData" : {
@@ -4614,7 +4615,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -32
                 },
                 {
                     "skillData" : {
@@ -4625,7 +4626,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -4636,7 +4637,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -4647,19 +4648,19 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -2
+                    "totalBonus" : 5
                 },
                 {
                     "skillData" : {
                         "id" : "SKILL_WEAPON_1_H_CONCUSSION",
-                        "subcategory" : "WEAPONTYPE_BLACKJACK"
+                        "subcategory" : "WEAPONTYPE_CAT_O_NINE_TAILS_PENAL"
                     },
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 4,
+                    "ranks" : 1,
                     "specialBonus" : 0,
-                    "totalBonus" : 25
+                    "totalBonus" : 23
                 },
                 {
                     "skillData" : {
@@ -4670,7 +4671,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -4681,7 +4682,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -4692,7 +4693,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : 9
                 },
                 {
                     "skillData" : {
@@ -4703,7 +4704,19 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -16
+                },
+                {
+                    "skillData" : {
+                        "id" : "SKILL_WEAPON_MISSILE",
+                        "subcategory" : "WEAPONTYPE_BUURIK"
+                    },
+                    "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
+                    "developmentType" : "Standard",
+                    "professionBonus" : 0,
+                    "ranks" : 2,
+                    "specialBonus" : 0,
+                    "totalBonus" : 30
                 },
                 {
                     "skillData" : {
@@ -4714,7 +4727,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -25
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -4725,7 +4738,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -4736,7 +4749,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -12
                 },
                 {
                     "skillData" : {
@@ -4747,7 +4760,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -9
+                    "totalBonus" : 1
                 },
                 {
                     "skillData" : {
@@ -4758,19 +4771,19 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -8
+                    "totalBonus" : 9
                 },
                 {
                     "skillData" : {
                         "id" : "SKILL_WEAPON_THROWN",
-                        "subcategory" : "WEAPONTYPE_BOOMERANG_FIGHTING"
+                        "subcategory" : "WEAPONTYPE_BOOMERANG_RETURNING"
                     },
                     "progression" : "SKILLPROGRESSIONTYPE_STANDARD",
                     "developmentType" : "Standard",
                     "professionBonus" : 0,
-                    "ranks" : 1,
+                    "ranks" : 2,
                     "specialBonus" : 0,
-                    "totalBonus" : 10
+                    "totalBonus" : 30
                 },
                 {
                     "skillData" : {
@@ -4781,7 +4794,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -11
+                    "totalBonus" : -2
                 },
                 {
                     "skillData" : {
@@ -4792,7 +4805,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -4803,7 +4816,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -13
+                    "totalBonus" : -9
                 },
                 {
                     "skillData" : {
@@ -4814,7 +4827,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -19
                 },
                 {
                     "skillData" : {
@@ -4825,7 +4838,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 },
                 {
                     "skillData" : {
@@ -4836,7 +4849,7 @@
                     "professionBonus" : 0,
                     "ranks" : 0,
                     "specialBonus" : 0,
-                    "totalBonus" : -30
+                    "totalBonus" : -20
                 }
             ]
         }
