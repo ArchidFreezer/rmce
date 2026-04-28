@@ -461,6 +461,16 @@ public:
 	int skillBonus(const SubcategoriedSkillData& skill) const;
 
 	/**
+	 * @brief Get the bonus for a given skill category based on the applicable stats.
+	 *
+	 * This includes the bonus from ranks from the category and the applicable stats.
+	 *
+	 * @param category The `SkillCategoryData` object representing the skill category to calculate the bonus for.
+	 * @return The total rank bonus for the specified skill category.
+	 */
+	int categoryBonus(const SkillCategoryData& category) const;
+
+	/**
 	 * @brief Get the amount of gold the character has.
 	 *
 	 * This is used to represent the wealth of the character.

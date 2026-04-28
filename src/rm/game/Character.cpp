@@ -54,7 +54,20 @@ int Character::skillBonus(const SubcategoriedSkillData& skill) const {
 	auto it = skills_.find(&skill);
 	if (it != skills_.end()) {
 		bonus = it->second.bonus();
-		// Now we need to add the stat bonus as that is chracter specific so not included in teh skill definition.
+		// Now we need to add the stat bonus as that is character specific so not included in the skill definition.
+		for (const auto& stat_type : it->second.stats()) {
+			bonus += statBonus(stat_type);
+		}
+	}
+	return bonus;
+}
+
+int Character::categoryBonus(const SkillCategoryData& category) const {
+	int bonus{-25}; // The default bonus for no ranks in a skill with standard progression is -25, so we start with that and then update it if the character has any knowledge of the category.
+	auto it = categories_.find(&category);
+	if (it != categories_.end()) {
+		bonus = it->second.bonus();
+		// Now we need to add the stat bonus as that is character specific so not included in the category definition.
 		for (const auto& stat_type : it->second.stats()) {
 			bonus += statBonus(stat_type);
 		}

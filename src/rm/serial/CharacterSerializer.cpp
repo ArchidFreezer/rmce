@@ -123,7 +123,7 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 			JsonConverter::setInt(category_obj, "professionBonus", char_category.profession_bonus_);
 			JsonConverter::setInt(category_obj, "ranks", char_category.ranks_);
 			JsonConverter::setInt(category_obj, "specialBonus", char_category.special_bonus_);
-			JsonConverter::setInt(category_obj, "totalBonus", char_category.bonus());
+			JsonConverter::setInt(category_obj, "totalBonus", ref.categoryBonus(*category));
 			categories_array.emplace_back(std::move(category_obj));
 		}
 		if (categories_array.size())
@@ -148,7 +148,7 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 			JsonConverter::setInt(skill_obj, "professionBonus", char_skill.profession_bonus_);
 			JsonConverter::setInt(skill_obj, "ranks", char_skill.ranks_);
 			JsonConverter::setInt(skill_obj, "specialBonus", char_skill.special_bonus_);
-			JsonConverter::setInt(skill_obj, "totalBonus", char_skill.bonus());
+			JsonConverter::setInt(skill_obj, "totalBonus", ref.skillBonus(*sub_skill));
 			skills_array.emplace_back(std::move(skill_obj));
 		}
 		if (skills_array.size())
