@@ -92,9 +92,9 @@ void CharacterLeveller::levelUp() {
 		const LanguageData& language_data = language_rank.language();
 		if (auto char_language_it = character_->languages_.find(language_data.name()); char_language_it != character_->languages_.end()) {
 			Language& char_language = char_language_it->second;
-			char_language.updateSomaticRanks(language_rank.somaticRanks() - char_language.somaticRanks());
-			char_language.updateSpokenRanks(language_rank.spokenRanks() - char_language.spokenRanks());
-			char_language.updateWrittenRanks(language_rank.writtenRanks() - char_language.writtenRanks());
+			language_rank.somaticRanks() > 0 ? char_language.updateSomaticRanks(language_rank.somaticRanks() - char_language.somaticRanks()) : void();
+			language_rank.spokenRanks() > 0 ? char_language.updateSpokenRanks(language_rank.spokenRanks() - char_language.spokenRanks()) : void();
+			language_rank.writtenRanks() > 0 ? char_language.updateWrittenRanks(language_rank.writtenRanks() - char_language.writtenRanks()) : void();
 		} else {
 			// This is a new language so we need to add it to the character's languages map. We can just insert the language from the language rank as it already has the correct ranks set.
 			Language language;
