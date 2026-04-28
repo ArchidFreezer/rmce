@@ -173,13 +173,13 @@ private:
 	bool pc_{true};                         /**< A boolean indicating whether the character being built is a player character (PC) or a non-player character (NPC). */
 	const RaceData* race_{nullptr};         /**< The race data for the character being built. */
 	const CultureData* culture_{nullptr};   /**< The culture data for the character being built. */
-	const CultureTypeData* culture_type_{nullptr};                       /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
-	const ProfessionData* profession_{nullptr};                          /**< The profession data for the character being built. */
-	std::set<RealmType::Type> magical_realms_{};                         /**< A set of realm types representing the magical realm choices for the character being built. */
-	int num_hobby_skill_ranks_{0};                                       /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
-	int num_adolescent_language_ranks_{0};                               /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
-	int num_adolescent_spell_list_ranks_{0};                             /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
-	int development_points_{0};                                          /**< An integer representing the number of development points available for the character to spend during their apprenticeship. */
+	const CultureTypeData* culture_type_{nullptr}; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
+	const ProfessionData* profession_{nullptr};    /**< The profession data for the character being built. */
+	std::set<RealmType::Type> magical_realms_{};   /**< A set of realm types representing the magical realm choices for the character being built. */
+	int num_hobby_skill_ranks_{0};                 /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
+	int num_adolescent_language_ranks_{0};         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
+	int num_adolescent_spell_list_ranks_{0};       /**< An integer representing the number of adolescent spell list ranks for the character being built, which may be determined by the culture type. */
+	int development_points_{0};                    /**< An integer representing the number of development points available for the character to spend during their apprenticeship. */
 	std::map<const SkillCategoryData*, std::set<const SpellListData*>> spell_list_categories_{}; /**< A map of skill categories to sets of spell lists representing the spell lists sorted into their respective skill categories. */
 
 	/* ------------------------------------------------------------------ */
@@ -220,12 +220,12 @@ private:
 	std::map<const SubcategoriedSkillData*, int> hobby_skill_ranks_{}; /**< A map of skill data pointers to integers representing the skill ranks for each skill choice made during character creation. */
 	std::map<const SkillCategoryData*, int> hobby_category_ranks_{};   /**< A map of skill category data pointers to integers representing the skill ranks for each skill category choice made during character creation. */
 	const SpellListData* adolescent_spell_list_choice_{};              /**< A pointer to a SpellListData object representing the spell list choice for the character being built, which may be determined by the culture type. */
-	std::set<LanguageRanks> adolescent_language_choices_{};          /**< A set of language abilities representing the hobby language choices for the character being built. */
+	std::set<LanguageRanks> adolescent_language_choices_{};            /**< A set of language abilities representing the hobby language choices for the character being built. */
 
 	/* Background choices */
 	std::unordered_map<StatType::Type, Stat> background_stats_{};                     /**< Map of stats, only populated if stat gain roll made with background options. */
 	int background_extra_gold_{0};                                                    /**< An integer representing the amount of gold the character being built starts with. */
-	std::set<LanguageRanks> background_language_choices_{};                         /**< A set of language abilities representing the background language choices for the character being built. */
+	std::set<LanguageRanks> background_language_choices_{};                           /**< A set of language abilities representing the background language choices for the character being built. */
 	std::map<const SubcategoriedSkillData*, int> background_skill_special_bonuses_{}; /**< Skill special bonuses */
 	std::map<const SkillCategoryData*, int> background_category_special_bonuses_{};   /**< Skill category special bonuses */
 	std::vector<std::string> background_items_{};                                     /**< Items the character genetrates with background options */
@@ -233,7 +233,7 @@ private:
 	/* ------------------------------------------------------------------ */
 	/* Aggregated state                                                   */
 	/* ------------------------------------------------------------------ */
-	int total_gold_{0};                            /**< An integer representing the total amount of gold the character being built starts with, including any background extra gold and any gold from items or other sources. */
+	int total_gold_{2};                          /**< An integer representing the total amount of gold the character being built starts with, including any background extra gold and any gold from items or other sources. */
 	std::set<LanguageRanks> language_abilities_; /**< Aggregated map of language names to their corresponding LanguageRanks objects for the character being built. */
 	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*> realm_progressions_;                    /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. */
 	std::unordered_map<StatType::Type, Stat> stats_{};                                                           /**< Map of stat types to their corresponding Stat objects for the character. */
