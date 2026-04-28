@@ -80,7 +80,7 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 	/* Learned Abilities */
 	// Languages
 	{
-		std::map<std::string, const LanguageAbility> language_abilities;
+		std::map<std::string, const LanguageRanks> language_abilities;
 		for (const auto& [id, ability] : ref.language_abilities_) {
 			language_abilities.emplace(ability.languageId(), ability);
 		}
@@ -250,7 +250,7 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 	/* Learned Abilities */
 	// Languages
 	{
-		const std::map<std::string, const LanguageAbility> language_abilities = JsonConverter::getLanguageAbilityMap(jsonObj, "languageAbilities", manager_);
+		const std::map<std::string, const LanguageRanks> language_abilities = JsonConverter::getLanguageAbilityMap(jsonObj, "languageAbilities", manager_);
 		for (const auto& [id, ability] : language_abilities) {
 			ref.language_abilities_.insert_or_assign(id, ability);
 		}

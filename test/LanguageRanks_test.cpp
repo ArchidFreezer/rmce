@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include <LanguageAbility.h>
+#include <LanguageRanks.h>
 #include <LanguageData.h>
 
 using namespace rm;
@@ -8,14 +8,14 @@ using namespace rm::game::character;
 
 
 namespace {
-	TEST(LanguageAbility, construct) {
+	TEST(LanguageRanks, construct) {
 		rule::LanguageData lspw("LSPW_ID");
 		lspw.setName("LSPW");
 		lspw.setIsSomatic(false);
 		lspw.setIsSpoken(true);
 		lspw.setIsWritten(true);
 
-		LanguageAbility laspw(lspw);
+		LanguageRanks laspw(lspw);
 		EXPECT_EQ(laspw.isSomatic(), false);
 		EXPECT_EQ(laspw.isSpoken(), true);
 		EXPECT_EQ(laspw.isWritten(), true);
@@ -24,14 +24,14 @@ namespace {
 		EXPECT_EQ(laspw.written(), 0);
 	}
 
-	TEST(LanguageAbility, InvalidSomantic) {
+	TEST(LanguageRanks, InvalidSomantic) {
 		rule::LanguageData lspw("LSPW_ID");
 		lspw.setName("LSPW");
 		lspw.setIsSomatic(false);
 		lspw.setIsSpoken(true);
 		lspw.setIsWritten(true);
 
-		LanguageAbility laspw(lspw, 1, 1, 1);
+		LanguageRanks laspw(lspw, 1, 1, 1);
 		EXPECT_EQ(laspw.somatic(), 0);
 		EXPECT_EQ(laspw.spoken(), 1);
 		EXPECT_EQ(laspw.written(), 1);
@@ -46,28 +46,28 @@ namespace {
 		EXPECT_EQ(laspw.written(), 2);
 	}
 
-	TEST(LanguageAbility, NegativeSomantic) {
+	TEST(LanguageRanks, NegativeSomantic) {
 		rule::LanguageData lspw("LSPW_ID");
 		lspw.setName("LSPW");
 		lspw.setIsSomatic(true);
 		lspw.setIsSpoken(true);
 		lspw.setIsWritten(true);
 
-		LanguageAbility laspw(lspw);
+		LanguageRanks laspw(lspw);
 		EXPECT_NO_THROW(laspw.updateSomanticRanks(1));
 		EXPECT_EQ(laspw.somatic(), 1);
 		EXPECT_THROW(laspw.updateSomanticRanks(-2), InvalidLanguageRank);
 		EXPECT_EQ(laspw.somatic(), 1);
 	}
 
-	TEST(LanguageAbility, InvalidSpoken) {
+	TEST(LanguageRanks, InvalidSpoken) {
 		rule::LanguageData lspw("LSPW_ID");
 		lspw.setName("LSPW");
 		lspw.setIsSomatic(true);
 		lspw.setIsSpoken(false);
 		lspw.setIsWritten(true);
 
-		LanguageAbility laspw(lspw, 1, 1, 1);
+		LanguageRanks laspw(lspw, 1, 1, 1);
 		EXPECT_EQ(laspw.somatic(), 1);
 		EXPECT_EQ(laspw.spoken(), 0);
 		EXPECT_EQ(laspw.written(), 1);
@@ -82,28 +82,28 @@ namespace {
 		EXPECT_EQ(laspw.written(), 2);
 	}
 
-	TEST(LanguageAbility, NegativeSpoken) {
+	TEST(LanguageRanks, NegativeSpoken) {
 		rule::LanguageData lspw("LSPW_ID");
 		lspw.setName("LSPW");
 		lspw.setIsSomatic(true);
 		lspw.setIsSpoken(true);
 		lspw.setIsWritten(true);
 
-		LanguageAbility laspw(lspw);
+		LanguageRanks laspw(lspw);
 		EXPECT_NO_THROW(laspw.updateSpokenRanks(1));
 		EXPECT_EQ(laspw.spoken(), 1);
 		EXPECT_THROW(laspw.updateSpokenRanks(-2), InvalidLanguageRank);
 		EXPECT_EQ(laspw.spoken(), 1);
 	}
 
-	TEST(LanguageAbility, InvalidWritten) {
+	TEST(LanguageRanks, InvalidWritten) {
 		rule::LanguageData lspw("LSPW_ID");
 		lspw.setName("LSPW");
 		lspw.setIsSomatic(true);
 		lspw.setIsSpoken(true);
 		lspw.setIsWritten(false);
 
-		LanguageAbility laspw(lspw, 1, 1, 1);
+		LanguageRanks laspw(lspw, 1, 1, 1);
 		EXPECT_EQ(laspw.somatic(), 1);
 		EXPECT_EQ(laspw.spoken(), 1);
 		EXPECT_EQ(laspw.written(), 0);
@@ -118,14 +118,14 @@ namespace {
 		EXPECT_EQ(laspw.written(), 0);
 	}
 
-	TEST(LanguageAbility, NegativeWritten) {
+	TEST(LanguageRanks, NegativeWritten) {
 		rule::LanguageData lspw("LSPW_ID");
 		lspw.setName("LSPW");
 		lspw.setIsSomatic(true);
 		lspw.setIsSpoken(true);
 		lspw.setIsWritten(true);
 
-		LanguageAbility laspw(lspw);
+		LanguageRanks laspw(lspw);
 		EXPECT_NO_THROW(laspw.updateWrittenRanks(1));
 		EXPECT_EQ(laspw.written(), 1);
 		EXPECT_THROW(laspw.updateWrittenRanks(-2), InvalidLanguageRank);

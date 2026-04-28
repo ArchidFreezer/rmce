@@ -34,7 +34,7 @@ private:
 	std::map<const SubcategoriedSkillData*, int> skill_ranks_{};              /**< Skill ranks */
 	std::map<const SkillCategoryData*, int> category_ranks_{};           /**< Skill category ranks */
 	std::map<const SpellListData*, int> spell_list_ranks_{};                  /**< Spell list ranks */
-	std::set<LanguageAbility> language_abilities_;                       /**< Aggregated map of language names to their corresponding LanguageAbility objects for the character being built. */
+	std::set<LanguageRanks> language_abilities_;                       /**< Aggregated map of language names to their corresponding LanguageRanks objects for the character being built. */
 };
 
 } // namespace rm::game::character

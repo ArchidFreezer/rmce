@@ -4,7 +4,7 @@
 #include <CharacterCategory.h>
 #include <CharacterSkill.h>
 #include <CharacterStat.h>
-#include <LanguageAbility.h>
+#include <LanguageRanks.h>
 #include <RaceData.h>
 #include <CultureData.h>
 #include <ProfessionData.h>
@@ -176,7 +176,7 @@ public:
 	 *
 	 * @return A constant reference to the unordered map of language abilities for the character.
 	 */
-	const std::unordered_map<std::string, LanguageAbility>& languageAbilities() const {
+	const std::unordered_map<std::string, LanguageRanks>& languageAbilities() const {
 		return language_abilities_;
 	}
 
@@ -190,7 +190,7 @@ public:
 	 * @return A constant reference to the `LanguageAbility` object for the specified language.
 	 * @throw std::out_of_range if there is no language ability for the specified language name.
 	 */
-	const LanguageAbility& languageAbility(const std::string& language_name) const {
+	const LanguageRanks& languageAbility(const std::string& language_name) const {
 		if (!hasLanguageAbility(language_name)) {
 			throw std::out_of_range("There is no language ability for the language " + language_name);
 		}
@@ -205,7 +205,7 @@ public:
 	 *
 	 * @param language_ability The `LanguageAbility` object to set for the character. The language name from the `LanguageAbility` object will be used as the key in the unordered map.
 	 */
-	void setLanguageAbility(LanguageAbility language_ability) {
+	void setLanguageAbility(LanguageRanks language_ability) {
 		language_abilities_.emplace(language_ability.language(), language_ability);
 	}
 
@@ -630,7 +630,7 @@ private:
 	const SubcategoriedSkillData* power_point_skill_{nullptr};
 
 	/* Learned abilities */
-	std::unordered_map<std::string, LanguageAbility> language_abilities_; /**< Map of language names to their corresponding LanguageAbility objects for the character. */
+	std::unordered_map<std::string, LanguageRanks> language_abilities_; /**< Map of language names to their corresponding LanguageRanks objects for the character. */
 	std::map<const SubcategoriedSkillData*, Skill> skills_{};             /**< A map of SkillData pointers to Skill objects representing the character's skills. */
 	std::map<const SkillCategoryData*, Category> categories_{};           /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
 	std::map<const SpellListData*, int> spell_list_ranks_{};              /**< Spell list ranks */

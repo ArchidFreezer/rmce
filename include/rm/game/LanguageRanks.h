@@ -25,7 +25,7 @@ namespace rm::game::character {
 
 
 	/**
-	 * @class LanguageAbility
+	 * @class LanguageRanks
 	 * @brief Class representing the ability a character has in a language
 	 *
 	 * A character may develop their knowledge of a language in the game, with the spoken, written and any somantic components
@@ -33,16 +33,16 @@ namespace rm::game::character {
 	 * specific language.
 	 *
 	 */
-	class LanguageAbility {
+	class LanguageRanks {
 	public:
 
-		LanguageAbility(); /**< Default constructor */
+		LanguageRanks(); /**< Default constructor */
 
 		/**
 		 * @brief Constructor setting the language the ability is in
 		 * @param language LanguageData reference to the language
 		 */
-		LanguageAbility(const rule::LanguageData& language) : LanguageAbility(language, 0, 0, 0) {}
+		LanguageRanks(const rule::LanguageData& language) : LanguageRanks(language, 0, 0, 0) {}
 
 		/**
 		 * @brief Constructor
@@ -51,7 +51,7 @@ namespace rm::game::character {
 		 * @param written number of written ranks the character has
 		 * @param somantic number of somantic ranks the character has
 		 */
-		LanguageAbility(const rule::LanguageData& language, int spoken, int written, int somantic) : language_{ &language }, spoken_{ std::max(0,spoken) }, written_{ std::max(0,written) }, somatic_{ std::max(0,somantic) } {}
+		LanguageRanks(const rule::LanguageData& language, int spoken, int written, int somantic) : language_{ &language }, spoken_{ std::max(0,spoken) }, written_{ std::max(0,written) }, somatic_{ std::max(0,somantic) } {}
 
 		/**
 		 * @brief Set the language the ability is in
@@ -144,14 +144,14 @@ namespace rm::game::character {
 		bool isWritten() const { return language_->isWritten(); }
 
 		/**
-		 * @brief Overload the less than operator to allow for sorting of LanguageAbility objects
+		 * @brief Overload the less than operator to allow for sorting of LanguageRanks objects
 		 *
-		 * The overload is based on the id of the language, as this is a unique identifier for the language and allows for consistent ordering of LanguageAbility objects based on the language they represent.
+		 * The overload is based on the id of the language, as this is a unique identifier for the language and allows for consistent ordering of LanguageRanks objects based on the language they represent.
 		 *
-		 * @param other The other LanguageAbility object to compare against
-		 * @return `true` if this LanguageAbility is considered less than the other; `false` otherwise
+		 * @param other The other LanguageRanks object to compare against
+		 * @return `true` if this LanguageRanks is considered less than the other; `false` otherwise
 		 */
-		bool operator<(const LanguageAbility& other) const {
+		bool operator<(const LanguageRanks& other) const {
 			 return language_->id() < other.language_->id();
 		}
 

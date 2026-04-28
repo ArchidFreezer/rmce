@@ -46,7 +46,7 @@ Character& CharacterBuilder::build() {
 	character.spell_list_categories_ = spell_list_categories_;
 
 	/* Learned abilities */
-	for (const LanguageAbility& language_ability : language_abilities_) {
+	for (const LanguageRanks& language_ability : language_abilities_) {
 		character.setLanguageAbility(language_ability);
 	}
 
@@ -624,7 +624,7 @@ void CharacterBuilder::addHobbyCategoryRankChoice(const SkillCategoryData& categ
 	hobby_category_ranks_.insert_or_assign(&category, ranks);
 }
 
-void CharacterBuilder::addAdolescentLanguageChoice(const LanguageAbility language) {
+void CharacterBuilder::addAdolescentLanguageChoice(const LanguageRanks language) {
 	adolescent_language_choices_.emplace(language);
 	applyLanguageAbility(language);
 }
@@ -655,7 +655,7 @@ void CharacterBuilder::applyHobbyChoices() {
 
 /* Background data */
 
-void CharacterBuilder::addBackgroundLanguageChoice(const LanguageAbility language) {
+void CharacterBuilder::addBackgroundLanguageChoice(const LanguageRanks language) {
 	background_language_choices_.emplace(language);
 }
 
@@ -783,7 +783,7 @@ void CharacterBuilder::calculateDevelopmentPoints(std::unordered_map<StatType::T
 	development_points_ = (development_points / 5);
 }
 
-void CharacterBuilder::applyLanguageAbility(const LanguageAbility& ability) {
+void CharacterBuilder::applyLanguageAbility(const LanguageRanks& ability) {
 	// If the language already exists in the character's language abilities, we need to compare the existing ability with the new ability and keep the highest ranks in each category (spoken, written, somantic) to ensure that the character
 	// has the best possible ability for that language based on their choices. If the language does not already exist in the character's language abilities, we can simply add the new ability as is.
 	if (language_abilities_.contains(ability)) {

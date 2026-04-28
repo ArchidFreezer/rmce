@@ -266,7 +266,7 @@ void CharacterOperationsRequestHandler::requestSetBackgroundChoices(http::respon
 			int written = JsonConverter::getInt(language_json.as_object(), "written", 0);
 
 			LanguageData& language_data = serial_manager_.objectManager().get<LanguageData>(language_id);
-			LanguageAbility language_ability(language_data, spoken, written, somatic);
+			LanguageRanks language_ability(language_data, spoken, written, somatic);
 			builder.addBackgroundLanguageChoice(std::move(language_ability));
 		}
 

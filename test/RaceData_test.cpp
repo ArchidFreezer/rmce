@@ -11,12 +11,12 @@ namespace {
 		rule::LanguageData l1("L1_ID");
 		l1.setName("L1_NAME");
 		l1.setIsSomatic(true);
-		LanguageAbility la1(l1, 6, 4, 2);
+		LanguageRanks la1(l1, 6, 4, 2);
 		race.setAdolescentLanguageAbility(la1);
 
 		rule::LanguageData l2("L2_ID");
 		l2.setName("L2_NAME");
-		LanguageAbility la2(l2, 5, 5, 0);
+		LanguageRanks la2(l2, 5, 5, 0);
 		race.setAdolescentLanguageAbility(la2);
 
 		// Test the language form is passed through to the ability
@@ -38,12 +38,12 @@ namespace {
 		rule::LanguageData l1("L1_ID");
 		l1.setName("L1_NAME");
 		l1.setIsSomatic(true);
-		LanguageAbility la1(l1, 6, 4, 2);
+		LanguageRanks la1(l1, 6, 4, 2);
 		race.setStartingLanguageAbility(la1);
 
 		rule::LanguageData l2("L2_ID");
 		l2.setName("L2_NAME");
-		LanguageAbility la2(l2, 5, 5, 0);
+		LanguageRanks la2(l2, 5, 5, 0);
 		race.setStartingLanguageAbility(la2);
 
 		// Test the language form is passed through to the ability

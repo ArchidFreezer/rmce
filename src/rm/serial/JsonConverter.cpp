@@ -295,15 +295,15 @@ std::set<const SubcategoriedSkillData*> JsonConverter::getSkillSet(const json::o
 	return skill_set;
 }
 
-std::map<std::string, const rm::game::character::LanguageAbility> JsonConverter::getLanguageAbilityMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
-	std::map<std::string, const rm::game::character::LanguageAbility> map;
+std::map<std::string, const rm::game::character::LanguageRanks> JsonConverter::getLanguageAbilityMap(const json::object& obj, const std::string& key, rm::PersistentObjectManager& manager) {
+	std::map<std::string, const rm::game::character::LanguageRanks> map;
 	json::array abilityArray = getJsonArray(obj, key);
 	for (const auto& ability_val : abilityArray) {
 		if (!ability_val.is_object())
 			continue;
 		json::object abilityObj = ability_val.as_object();
 		std::string language_id = getString(abilityObj, "language");
-		rm::game::character::LanguageAbility ability(manager.get<LanguageData>(language_id));
+		rm::game::character::LanguageRanks ability(manager.get<LanguageData>(language_id));
 		if (abilityObj.find("spoken") != abilityObj.end()) {
 			int spoken = getInt(abilityObj, "spoken");
 			ability.updateSpokenRanks(spoken);
@@ -321,7 +321,7 @@ std::map<std::string, const rm::game::character::LanguageAbility> JsonConverter:
 	return map;
 }
 
-void JsonConverter::setLanguageAbilities(json::object& obj, const std::string& key, const std::map<std::string, const rm::game::character::LanguageAbility>& language_map) {
+void JsonConverter::setLanguageAbilities(json::object& obj, const std::string& key, const std::map<std::string, const rm::game::character::LanguageRanks>& language_map) {
 	json::array arr;
 	for (const auto& [language_id, ability] : language_map) {
 		json::object abilityObj;
