@@ -326,14 +326,14 @@ void JsonConverter::setLanguageAbilities(json::object& obj, const std::string& k
 	for (const auto& [language_id, ability] : language_map) {
 		json::object abilityObj;
 		abilityObj["language"] = language_id;
-		if (ability.somatic() > 0) {
-			abilityObj["somatic"] = ability.somatic();
+		if (ability.somaticRanks() > 0) {
+			abilityObj["somatic"] = ability.somaticRanks();
 		}
-		if (ability.spoken() > 0) {
-			abilityObj["spoken"] = ability.spoken();
+		if (ability.spokenRanks() > 0) {
+			abilityObj["spoken"] = ability.spokenRanks();
 		}
-		if (ability.written() > 0) {
-			abilityObj["written"] = ability.written();
+		if (ability.writtenRanks() > 0) {
+			abilityObj["written"] = ability.writtenRanks();
 		}
 		arr.push_back(abilityObj);
 	}

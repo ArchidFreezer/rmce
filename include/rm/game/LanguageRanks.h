@@ -86,7 +86,7 @@ namespace rm::game::character {
 		 * @brief Get the number of somatic ranks
 		 * @return somatic ranks
 		 */
-		int somatic() const { return isSomatic() ? std::max(0, somatic_) : 0; }
+		int somaticRanks() const { return isSomatic() ? std::max(0, somatic_) : 0; }
 
 		/**
 		 * @brief Check whether the language has a somatic component
@@ -110,7 +110,7 @@ namespace rm::game::character {
 		 * @brief Get the number of spoken ranks
 		 * @return spoken ranks
 		 */
-		int spoken() const { return isSpoken() ? std::max(0, spoken_) : 0; }
+		int spokenRanks() const { return isSpoken() ? std::max(0, spoken_) : 0; }
 
 		/**
 		 * @brief Check whether the language has a spoken comnponent
@@ -134,7 +134,7 @@ namespace rm::game::character {
 		 * @brief Get the number of written ranks
 		 * @return written ranks
 		 */
-		int written() const { return isWritten() ? std::max(0, written_) : 0; }
+		int writtenRanks() const { return isWritten() ? std::max(0, written_) : 0; }
 
 		/**
 		 * @brief Check whether the language has a written comnponent

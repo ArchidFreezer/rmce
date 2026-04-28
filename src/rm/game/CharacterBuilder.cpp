@@ -790,14 +790,14 @@ void CharacterBuilder::applyLanguageAbility(const LanguageRanks& ability) {
 		// Since sets contain immutable objects we need to extract the existing ability, compare it with the new ability, and then reinsert the updated ability back into the set. This is a bit of a workaround to update the existing ability
 		// in the set since we can't modify the objects in place.
 		auto node = language_abilities_.extract(ability);
-		if (ability.isSpoken() && ability.spoken() > node.value().spoken()) {
-			node.value().updateSpokenRanks(ability.spoken() - node.value().spoken());
+		if (ability.isSpoken() && ability.spokenRanks() > node.value().spokenRanks()) {
+			node.value().updateSpokenRanks(ability.spokenRanks() - node.value().spokenRanks());
 		}
-		if (ability.isWritten() && ability.written() > node.value().written()) {
-			node.value().updateWrittenRanks(ability.written() - node.value().written());
+		if (ability.isWritten() && ability.writtenRanks() > node.value().writtenRanks()) {
+			node.value().updateWrittenRanks(ability.writtenRanks() - node.value().writtenRanks());
 		}
-		if (ability.isSomatic() && ability.somatic() > node.value().somatic()) {
-			node.value().updateSomanticRanks(ability.somatic() - node.value().somatic());
+		if (ability.isSomatic() && ability.somaticRanks() > node.value().somaticRanks()) {
+			node.value().updateSomanticRanks(ability.somaticRanks() - node.value().somaticRanks());
 		}
 		language_abilities_.insert(std::move(node));
 	} else {

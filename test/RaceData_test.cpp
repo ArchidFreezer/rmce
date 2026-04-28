@@ -24,12 +24,12 @@ namespace {
 		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").isSpoken(), true);
 		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").isWritten(), true);
 
-		EXPECT_EQ(race.adolescentLanguageAbility("L1_NAME").spoken(), 6);
-		EXPECT_EQ(race.adolescentLanguageAbility("L1_NAME").written(), 4);
-		EXPECT_EQ(race.adolescentLanguageAbility("L1_NAME").somatic(), 2);
+		EXPECT_EQ(race.adolescentLanguageAbility("L1_NAME").spokenRanks(), 6);
+		EXPECT_EQ(race.adolescentLanguageAbility("L1_NAME").writtenRanks(), 4);
+		EXPECT_EQ(race.adolescentLanguageAbility("L1_NAME").somaticRanks(), 2);
 
-		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").written(), 5);
-		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").spoken(), 5);
+		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").writtenRanks(), 5);
+		EXPECT_EQ(race.adolescentLanguageAbility("L2_NAME").spokenRanks(), 5);
 	}
 
 	TEST(RaceData, StartingLanguageAbility) {
@@ -51,12 +51,12 @@ namespace {
 		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").isSpoken(), true);
 		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").isWritten(), true);
 
-		EXPECT_EQ(race.startingLanguageAbility("L1_NAME").spoken(), 6);
-		EXPECT_EQ(race.startingLanguageAbility("L1_NAME").written(), 4);
-		EXPECT_EQ(race.startingLanguageAbility("L1_NAME").somatic(), 2);
+		EXPECT_EQ(race.startingLanguageAbility("L1_NAME").spokenRanks(), 6);
+		EXPECT_EQ(race.startingLanguageAbility("L1_NAME").writtenRanks(), 4);
+		EXPECT_EQ(race.startingLanguageAbility("L1_NAME").somaticRanks(), 2);
 
-		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").written(), 5);
-		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").spoken(), 5);
+		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").writtenRanks(), 5);
+		EXPECT_EQ(race.startingLanguageAbility("L2_NAME").spokenRanks(), 5);
 	}
 
 	TEST(RaceData, StatBonus) {

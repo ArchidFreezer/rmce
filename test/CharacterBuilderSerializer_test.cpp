@@ -102,8 +102,8 @@ void validateAllFields(const json::object& out, PersistentObjectManager& manager
 
 	const std::map<std::string, const LanguageRanks> race_langs = serial::JsonConverter::getLanguageAbilityMap(out, "race_adolescent_language_choices", manager);
 	EXPECT_EQ(race_langs.size(), 1);
-	EXPECT_EQ(race_langs.at(kLanguageId).spoken(), 3);
-	EXPECT_EQ(race_langs.at(kLanguageId).written(), 2);
+	EXPECT_EQ(race_langs.at(kLanguageId).spokenRanks(), 3);
+	EXPECT_EQ(race_langs.at(kLanguageId).writtenRanks(), 2);
 
 	const std::map<const SubcategoriedSkillData*, int> culture_type_skill_ranks = serial::JsonConverter::getSkillPrimitiveMap<int>(out, "culture_type_category_skill_ranks", manager);
 	EXPECT_EQ(culture_type_skill_ranks.size(), 1);
@@ -148,13 +148,13 @@ void validateAllFields(const json::object& out, PersistentObjectManager& manager
 
 	const std::map<std::string, const LanguageRanks> background_langs = serial::JsonConverter::getLanguageAbilityMap(out, "background_language_choices", manager);
 	EXPECT_EQ(background_langs.size(), 1);
-	EXPECT_EQ(background_langs.at(kLanguageId).spoken(), 6);
-	EXPECT_EQ(background_langs.at(kLanguageId).written(), 5);
+	EXPECT_EQ(background_langs.at(kLanguageId).spokenRanks(), 6);
+	EXPECT_EQ(background_langs.at(kLanguageId).writtenRanks(), 5);
 
 	const std::map<std::string, const LanguageRanks> language_abilities = serial::JsonConverter::getLanguageAbilityMap(out, "language_abilities", manager);
 	EXPECT_EQ(language_abilities.size(), 1);
-	EXPECT_EQ(language_abilities.at(kLanguageId).spoken(), 8);
-	EXPECT_EQ(language_abilities.at(kLanguageId).written(), 7);
+	EXPECT_EQ(language_abilities.at(kLanguageId).spokenRanks(), 8);
+	EXPECT_EQ(language_abilities.at(kLanguageId).writtenRanks(), 7);
 
 	const std::map<RealmType::Type, std::string> realm_progressions = serial::JsonConverter::getEnumPrimitiveMap<RealmType::Type, std::string>(out, "realm_progressions");
 	EXPECT_EQ(realm_progressions.size(), 1);
