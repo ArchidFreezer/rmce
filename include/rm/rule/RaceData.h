@@ -644,7 +644,7 @@ public:
 	 * @param language LanguageRanks containing the ranks for a language
 	 */
 	void setStartingLanguageAbility(rm::game::character::LanguageRanks language) {
-		starting_languages_.emplace(language.language(), language);
+		starting_languages_.emplace(language.languageName(), language);
 	}
 
 	/**
@@ -696,7 +696,7 @@ public:
 	 * @param language LanguageRanks containing the ranks for a language
 	 */
 	void setAdolescentLanguageAbility(rm::game::character::LanguageRanks language) {
-		adolescent_languages_.emplace(language.language(), language);
+		adolescent_languages_.emplace(language.languageName(), language);
 	}
 
 	/**

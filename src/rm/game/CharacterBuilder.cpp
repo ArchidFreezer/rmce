@@ -46,23 +46,25 @@ Character& CharacterBuilder::build() {
 	character.spell_list_categories_ = spell_list_categories_;
 
 	/* Learned abilities */
-	for (const LanguageRanks& language_ability : language_abilities_) {
-		character.setLanguageAbility(language_ability);
-	}
-
 	/* Spell Lists */
 	character.spell_list_ranks_ = std::move(spell_list_ranks_); // The spell list categories are the same as the skill categories for the spell lists so we can just set them directly.
 
 	/* Apply category data */
 	// The profession should define a cost for every category so this loop should create all the Category objects in the character.
-	for (const auto& [category_type, dev_cost] : category_development_costs_) {
-		auto [it, inserted] = character.categories_.try_emplace(category_type); // Create a new category if it doesn't exist otherwise get the existing category to update it.
+	// We need to store some specific categories for late on so get them as we create them.
+	Category* communication_category{nullptr};
+	for (const auto& [category_data, dev_cost] : category_development_costs_) {
+		auto [it, inserted] = character.categories_.try_emplace(category_data); // Create a new category if it doesn't exist otherwise get the existing category to update it.
 		Category& category = it->second;
+		if (!inserted) {
+			throw std::runtime_error("CharacterBuilder: Duplicate category data found when building character. This should not happen as the builder should prevent this from happening when adding category data.");
+		}
+		category.category_data_ = category_data;
 		category.development_cost_ = dev_cost;
-		category.progression_type_ = &category_type->skillCategoryProgression();
+		category.progression_type_ = &category_data->skillCategoryProgression();
 
 		// Set the stats used for the category if they are realm stats, otherwise let the character get them directly from the category data.
-		if (category_type->useRealmStats()) {
+		if (category_data->useRealmStats()) {
 			for (const RealmType::Type& realm : magical_realms_) {
 				for (const StatType::Type& stat : StatType::statsForRealm(realm)) {
 					category.stats_.push_back(stat);
@@ -71,7 +73,7 @@ Character& CharacterBuilder::build() {
 		}
 
 		// Check for any group bonuses
-		const SkillGroupData& group = category_type->group();
+		const SkillGroupData& group = category_data->group();
 		auto group_prof_bonus_it = group_professional_bonuses_.find(&group);
 		if (group_prof_bonus_it != group_professional_bonuses_.end()) {
 			category.profession_bonus_ = std::max(category.profession_bonus_, group_prof_bonus_it->second);
@@ -80,6 +82,11 @@ Character& CharacterBuilder::build() {
 		auto group_special_bonus_it = group_special_bonuses_.find(&group);
 		if (group_special_bonus_it != group_special_bonuses_.end()) {
 			category.special_bonus_ = std::max(category.special_bonus_, group_special_bonus_it->second);
+		}
+
+		// Store off the specific categories we need for later so we can easily access them when we need to apply the appropriate bonuses to the skills.
+		if (category_data->id() == "SKILLCATEGORY_COMMUNICATION") {
+			communication_category = &category;
 		}
 	}
 
@@ -101,10 +108,25 @@ Character& CharacterBuilder::build() {
 		category.special_bonus_ = std::max(category.special_bonus_, special_bonus);
 	}
 
+	/* Languages */
+	for (const LanguageRanks& language_ability : language_abilities_) {
+		Language language{};
+		language.setLanguage(language_ability.language());
+		language_ability.spokenRanks() > 0 ? language.updateSpokenRanks(language_ability.spokenRanks()) : void();    // Only update the ranks if they are greater than 0
+		language_ability.writtenRanks() > 0 ? language.updateWrittenRanks(language_ability.writtenRanks()) : void(); // Only update the ranks if they are greater than 0
+		language_ability.somaticRanks() > 0 ? language.updateSomaticRanks(language_ability.somaticRanks()) : void(); // Only update the ranks if they are greater than 0
+		language.category_ = communication_category;                                                                 // All languages are in the communication category so we can just set this directly.
+		if (communication_category != nullptr) {
+			language.progression_type_ = &communication_category->category_data_->defaultSkillProgression(); // All languages use the default progression for the communication category so we can just set this directly.
+		}
+		character.setLanguageAbility(language);
+	}
+
 	/* Apply skill data */
 	for (const auto& [skill_data, ranks] : skill_ranks_) {
 		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
 		Skill& skill = it->second;
+		skill.skill_data_ = skill_data;
 		skill.ranks_ = ranks;
 	}
 
@@ -141,6 +163,7 @@ Character& CharacterBuilder::build() {
 		character.body_devlopment_skill_ = &body_development_skill_data;
 		auto [it, inserted] = character.skills_.try_emplace(&body_development_skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
 		Skill& body_development_skill = it->second;
+		body_development_skill.skill_data_ = &body_development_skill_data;
 		body_development_skill.progression_type_ = &race_->armsProgression();
 		character.updateMaxHits();
 		character.hits_ = character.max_hits_; // Set the current hits for the character to the max based on the body development skill.
@@ -151,6 +174,7 @@ Character& CharacterBuilder::build() {
 		character.power_point_skill_ = &power_point_skill_data;
 		auto [it, inserted] = character.skills_.try_emplace(&power_point_skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
 		Skill& power_point_skill = it->second;
+		power_point_skill.skill_data_ = &power_point_skill_data;
 		power_point_skill.progression_type_ = getPpProgression();
 		character.updateMaxPowerPoints();
 		character.power_points_ = character.max_power_points_; // Set the current power points for the character to the max.
@@ -408,7 +432,6 @@ void CharacterBuilder::applyProfession() {
 	for (const auto& category : profession_->skillCategoriesWithCost()) {
 		category_development_costs_.insert_or_assign(category, profession_->skillCategoryDevelopmentCost(*category));
 	}
-
 }
 
 void CharacterBuilder::applyProfessionChoices() {
@@ -797,7 +820,7 @@ void CharacterBuilder::applyLanguageAbility(const LanguageRanks& ability) {
 			node.value().updateWrittenRanks(ability.writtenRanks() - node.value().writtenRanks());
 		}
 		if (ability.isSomatic() && ability.somaticRanks() > node.value().somaticRanks()) {
-			node.value().updateSomanticRanks(ability.somaticRanks() - node.value().somaticRanks());
+			node.value().updateSomaticRanks(ability.somaticRanks() - node.value().somaticRanks());
 		}
 		language_abilities_.insert(std::move(node));
 	} else {

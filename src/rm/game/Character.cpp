@@ -75,6 +75,45 @@ int Character::categoryBonus(const SkillCategoryData& category) const {
 	return bonus;
 }
 
+int Character::languageSomaticBonus(const std::string& language_name) const {
+	int bonus{0};
+	auto it = languages_.find(language_name);
+	if (it != languages_.end()) {
+		bonus = it->second.somaticBonus();
+		// Now we need to add the stat bonus as that is character specific so not included in the language definition.
+		for (const auto& stat_type : it->second.stats()) {
+			bonus += statBonus(stat_type);
+		}
+	}
+	return bonus;
+}
+
+int Character::languageSpokenBonus(const std::string& language_name) const {
+	int bonus{0};
+	auto it = languages_.find(language_name);
+	if (it != languages_.end()) {
+		bonus = it->second.spokenBonus();
+		// Now we need to add the stat bonus as that is character specific so not included in the language definition.
+		for (const auto& stat_type : it->second.stats()) {
+			bonus += statBonus(stat_type);
+		}
+	}
+	return bonus;
+}
+
+int Character::languageWrittenBonus(const std::string& language_name) const {
+	int bonus{0};
+	auto it = languages_.find(language_name);
+	if (it != languages_.end()) {
+		bonus = it->second.writtenBonus();
+		// Now we need to add the stat bonus as that is character specific so not included in the language definition.
+		for (const auto& stat_type : it->second.stats()) {
+			bonus += statBonus(stat_type);
+		}
+	}
+	return bonus;
+}
+
 void Character::updateMaxHits() {
 	max_hits_ = skillBonus(*body_devlopment_skill_);
 }

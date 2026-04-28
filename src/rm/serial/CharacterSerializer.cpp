@@ -80,11 +80,24 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 	/* Learned Abilities */
 	// Languages
 	{
-		std::map<std::string, const LanguageRanks> language_abilities;
-		for (const auto& [id, ability] : ref.language_abilities_) {
-			language_abilities.emplace(ability.languageId(), ability);
+		json::array languages_array;
+		for (const auto& [lang_name, char_language] : ref.languages_) {
+			json::object language_obj;
+			JsonConverter::setString(language_obj, "id", char_language.languageId());
+			JsonConverter::setString(language_obj, "progression", char_language.progression_type_->id());
+			JsonConverter::setString(language_obj, "developmentType", toString(char_language.development_type_));
+			JsonConverter::setInt(language_obj, "professionBonus", char_language.profession_bonus_);
+			JsonConverter::setInt(language_obj, "specialBonus", char_language.special_bonus_);
+			JsonConverter::setInt(language_obj, "spokenRanks", char_language.spokenRanks());
+			JsonConverter::setInt(language_obj, "spokenBonus", ref.languageSpokenBonus(lang_name));
+			JsonConverter::setInt(language_obj, "writtenRanks", char_language.writtenRanks());
+			JsonConverter::setInt(language_obj, "writtenBonus", ref.languageWrittenBonus(lang_name));
+			JsonConverter::setInt(language_obj, "somaticRanks", char_language.somaticRanks());
+			JsonConverter::setInt(language_obj, "somaticBonus", ref.languageSomaticBonus(lang_name));
+			languages_array.emplace_back(std::move(language_obj));
 		}
-		JsonConverter::setLanguageAbilities(obj, "languageAbilities", language_abilities);
+		if (languages_array.size())
+			obj["languages"] = std::move(languages_array);
 	}
 
 	// Spell Lists
@@ -250,12 +263,35 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 	/* Learned Abilities */
 	// Languages
 	{
-		const std::map<std::string, const LanguageRanks> language_abilities = JsonConverter::getLanguageAbilityMap(jsonObj, "languageAbilities", manager_);
-		for (const auto& [id, ability] : language_abilities) {
-			ref.language_abilities_.insert_or_assign(id, ability);
+		const json::array languages_array = JsonConverter::getJsonArray(jsonObj, "languages");
+		for (const json::value& language_value : languages_array) {
+			if (!language_value.is_object())
+				continue;
+			const json::object language_obj = language_value.as_object();
+			const std::string language_id = JsonConverter::getString(language_obj, "id");
+			const LanguageData& language_data = manager_.get<LanguageData>(language_id);
+			Language char_language{};
+			char_language.setLanguage(language_data);
+			char_language.progression_type_ = &manager_.get<SkillProgressionTypeData>(JsonConverter::getString(language_obj, "progression"));
+			fromString(JsonConverter::getString(language_obj, "developmentType"), char_language.development_type_);
+			char_language.profession_bonus_ = JsonConverter::getInt(language_obj, "professionBonus", 0);
+			char_language.special_bonus_ = JsonConverter::getInt(language_obj, "specialBonus", 0);
+			int ranks = JsonConverter::getInt(language_obj, "spokenRanks", 0);
+			if (ranks > 0) {
+				char_language.updateSpokenRanks(ranks);
+			}
+			ranks = JsonConverter::getInt(language_obj, "writtenRanks", 0);
+			if (ranks > 0) {
+				char_language.updateWrittenRanks(ranks);
+			}
+			ranks = JsonConverter::getInt(language_obj, "somaticRanks", 0);
+			if (ranks > 0) {
+				char_language.updateSomaticRanks(ranks);
+			}
+			ref.languages_.insert_or_assign(language_id, std::move(char_language));
 		}
 	}
-	
+
 	// Spell Lists
 	{
 		const json::array spell_list_ranks_array = JsonConverter::getJsonArray(jsonObj, "spellListRanks");

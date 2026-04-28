@@ -36,7 +36,7 @@ namespace {
 		EXPECT_EQ(laspw.spokenRanks(), 1);
 		EXPECT_EQ(laspw.writtenRanks(), 1);
 
-		EXPECT_THROW(laspw.updateSomanticRanks(1), InvalidLanguageRank);
+		EXPECT_THROW(laspw.updateSomaticRanks(1), InvalidLanguageRank);
 		EXPECT_EQ(laspw.somaticRanks(), 0);
 
 		EXPECT_NO_THROW(laspw.updateSpokenRanks(1));
@@ -54,9 +54,9 @@ namespace {
 		lspw.setIsWritten(true);
 
 		LanguageRanks laspw(lspw);
-		EXPECT_NO_THROW(laspw.updateSomanticRanks(1));
+		EXPECT_NO_THROW(laspw.updateSomaticRanks(1));
 		EXPECT_EQ(laspw.somaticRanks(), 1);
-		EXPECT_THROW(laspw.updateSomanticRanks(-2), InvalidLanguageRank);
+		EXPECT_THROW(laspw.updateSomaticRanks(-2), InvalidLanguageRank);
 		EXPECT_EQ(laspw.somaticRanks(), 1);
 	}
 
@@ -72,7 +72,7 @@ namespace {
 		EXPECT_EQ(laspw.spokenRanks(), 0);
 		EXPECT_EQ(laspw.writtenRanks(), 1);
 
-		EXPECT_NO_THROW(laspw.updateSomanticRanks(1));
+		EXPECT_NO_THROW(laspw.updateSomaticRanks(1));
 		EXPECT_EQ(laspw.somaticRanks(), 2);
 
 		EXPECT_THROW(laspw.updateSpokenRanks(1), InvalidLanguageRank);
@@ -108,7 +108,7 @@ namespace {
 		EXPECT_EQ(laspw.spokenRanks(), 1);
 		EXPECT_EQ(laspw.writtenRanks(), 0);
 
-		EXPECT_NO_THROW(laspw.updateSomanticRanks(1));
+		EXPECT_NO_THROW(laspw.updateSomaticRanks(1));
 		EXPECT_EQ(laspw.somaticRanks(), 2);
 
 		EXPECT_NO_THROW(laspw.updateSpokenRanks(1));

@@ -2,7 +2,7 @@
 
 namespace rm::game::character {
 
-	void LanguageRanks::updateSomanticRanks(int ranks) {
+	void LanguageRanks::updateSomaticRanks(int ranks) {
 		if (!language_->isSomatic()) throw InvalidLanguageRank("Cannot update ranks as language " + language_->name() + " has no somatic form.");
 		if (somatic_ + ranks < 0) throw InvalidLanguageRank("Cannot update ranks by " + std::to_string(ranks) + " as " + language_->name() + " somatic ability only has " + std::to_string(somatic_) + " ranks.");
 		somatic_ += ranks;

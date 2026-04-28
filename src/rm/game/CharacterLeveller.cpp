@@ -89,7 +89,7 @@ void CharacterLeveller::levelUp() {
 	}
 
 	for (const auto& language_ability : language_abilities_) {
-		character_->setLanguageAbility(language_ability);
+		//character_->setLanguageAbility(language_ability);  // TODO Lang stuff
 	}
 
 	/*

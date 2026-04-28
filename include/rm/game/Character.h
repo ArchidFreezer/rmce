@@ -4,7 +4,7 @@
 #include <CharacterCategory.h>
 #include <CharacterSkill.h>
 #include <CharacterStat.h>
-#include <LanguageRanks.h>
+#include <CharacterLanguage.h>
 #include <RaceData.h>
 #include <CultureData.h>
 #include <ProfessionData.h>
@@ -14,6 +14,7 @@
 #include <StatType.h>
 #include <unordered_map>
 #include <string>
+
 
 // Forward declaration to break the circular include with CharacterSerializer.h
 namespace rm::serial {
@@ -165,7 +166,7 @@ public:
 	 * @return `true` if the character has a language ability for the specified language name, `false` otherwise.
 	 */
 	bool hasLanguageAbility(const std::string& language_name) const {
-		return language_abilities_.find(language_name) != language_abilities_.end();
+		return languages_.find(language_name) != languages_.end();
 	}
 
 	/**
@@ -176,8 +177,8 @@ public:
 	 *
 	 * @return A constant reference to the unordered map of language abilities for the character.
 	 */
-	const std::unordered_map<std::string, LanguageRanks>& languageAbilities() const {
-		return language_abilities_;
+	const std::unordered_map<std::string, Language>& languageAbilities() const {
+		return languages_;
 	}
 
 	/**
@@ -187,14 +188,14 @@ public:
 	 * they can communicate using.
 	 *
 	 * @param language_name The name of the language to retrieve the ability for.
-	 * @return A constant reference to the `LanguageAbility` object for the specified language.
+	 * @return A constant reference to the `Language` object for the specified language.
 	 * @throw std::out_of_range if there is no language ability for the specified language name.
 	 */
-	const LanguageRanks& languageAbility(const std::string& language_name) const {
+	const Language& languageAbility(const std::string& language_name) const {
 		if (!hasLanguageAbility(language_name)) {
 			throw std::out_of_range("There is no language ability for the language " + language_name);
 		}
-		return language_abilities_.at(language_name);
+		return languages_.at(language_name);
 	}
 
 	/**
@@ -203,10 +204,10 @@ public:
 	 * The language abilities are stored in an unordered map with the language name as the key and the corresponding `LanguageAbility` object as the value. Each character can have multiple language abilities, which represent the languages
 	 * they can communicate using.
 	 *
-	 * @param language_ability The `LanguageAbility` object to set for the character. The language name from the `LanguageAbility` object will be used as the key in the unordered map.
+	 * @param language_ability The `Language` object to set for the character. The language name from the `Language` object will be used as the key in the unordered map.
 	 */
-	void setLanguageAbility(LanguageRanks language_ability) {
-		language_abilities_.emplace(language_ability.language(), language_ability);
+	void setLanguageAbility(Language language_ability) {
+		languages_.emplace(language_ability.languageName(), language_ability);
 	}
 
 	/**
@@ -471,6 +472,36 @@ public:
 	int categoryBonus(const SkillCategoryData& category) const;
 
 	/**
+	 * @brief Get the bonus for the somatic component of a given language based on the applicable stats.
+	 *
+	 * This includes the bonus from ranks from the language and the applicable stats.
+	 *
+	 * @param language_name The name of the language to calculate the bonus for.
+	 * @return The total rank bonus for the specified language.
+	 */
+	int languageSomaticBonus(const std::string& language_name) const;
+
+	/**
+	 * @brief Get the bonus for the spoken component of a given language based on the applicable stats.
+	 *
+	 * This includes the bonus from ranks from the language and the applicable stats.
+	 *
+	 * @param language_name The name of the language to calculate the bonus for.
+	 * @return The total rank bonus for the specified language.
+	 */
+	int languageSpokenBonus(const std::string& language_name) const;
+
+	/**
+	 * @brief Get the bonus for the written component of a given language based on the applicable stats.
+	 *
+	 * This includes the bonus from ranks from the language and the applicable stats.
+	 *
+	 * @param language_name The name of the language to calculate the bonus for.
+	 * @return The total rank bonus for the specified language.
+	 */
+	int languageWrittenBonus(const std::string& language_name) const;
+
+	/**
 	 * @brief Get the amount of gold the character has.
 	 *
 	 * This is used to represent the wealth of the character.
@@ -640,7 +671,7 @@ private:
 	const SubcategoriedSkillData* power_point_skill_{nullptr};
 
 	/* Learned abilities */
-	std::unordered_map<std::string, LanguageRanks> language_abilities_; /**< Map of language names to their corresponding LanguageRanks objects for the character. */
+	std::unordered_map<std::string, Language> languages_; /**< Map of language names to their corresponding Language objects for the character. */
 	std::map<const SubcategoriedSkillData*, Skill> skills_{};             /**< A map of SkillData pointers to Skill objects representing the character's skills. */
 	std::map<const SkillCategoryData*, Category> categories_{};           /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
 	std::map<const SpellListData*, int> spell_list_ranks_{};              /**< Spell list ranks */

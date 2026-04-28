@@ -314,7 +314,7 @@ std::map<std::string, const rm::game::character::LanguageRanks> JsonConverter::g
 		}
 		if (abilityObj.find("somatic") != abilityObj.end()) {
 			int somatic = getInt(abilityObj, "somatic");
-			ability.updateSomanticRanks(somatic);
+			ability.updateSomaticRanks(somatic);
 		}
 		map.emplace(language_id, ability);
 	}
