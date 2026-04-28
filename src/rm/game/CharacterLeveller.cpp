@@ -88,8 +88,31 @@ void CharacterLeveller::levelUp() {
 		character_->spell_list_ranks_[spell_list] = rank;
 	}
 
-	for (const auto& language_ability : language_abilities_) {
-		//character_->setLanguageAbility(language_ability);  // TODO Lang stuff
+	for (const auto& language_rank : language_ranks_) {
+		const LanguageData& language_data = language_rank.language();
+		if (auto char_language_it = character_->languages_.find(language_data.name()); char_language_it != character_->languages_.end()) {
+			Language& char_language = char_language_it->second;
+			char_language.updateSomaticRanks(language_rank.somaticRanks() - char_language.somaticRanks());
+			char_language.updateSpokenRanks(language_rank.spokenRanks() - char_language.spokenRanks());
+			char_language.updateWrittenRanks(language_rank.writtenRanks() - char_language.writtenRanks());
+		} else {
+			// This is a new language so we need to add it to the character's languages map. We can just insert the language from the language rank as it already has the correct ranks set.
+			Language language;
+
+			language.setLanguage(language_data);
+			std::string category_id = "SKILLCATEGORY_COMMUNICATION"; // All languages are in the communication category, so we can hardcode this saving us from having to store the category in the JSON for each language.
+			SkillCategoryData& category_data = object_factory_->get<SkillCategoryData>(category_id);
+			Category* communication_category = &character_->categories_[&category_data];
+			language.category_ = communication_category; // All languages are in the communication category so we can just set this directly.
+			if (communication_category != nullptr) {
+				language.progression_type_ = &communication_category->category_data_->defaultSkillProgression(); // All languages use the default progression for the communication category so we can just set this directly.
+			}
+			language_rank.spokenRanks() > 0 ? language.updateSpokenRanks(language_rank.spokenRanks()) : void();    // Only update the ranks if they are greater than 0
+			language_rank.writtenRanks() > 0 ? language.updateWrittenRanks(language_rank.writtenRanks()) : void(); // Only update the ranks if they are greater than 0
+			language_rank.somaticRanks() > 0 ? language.updateSomaticRanks(language_rank.somaticRanks()) : void(); // Only update the ranks if they are greater than 0
+
+			character_->languages_.emplace(language_data.name(), language);
+		}
 	}
 
 	/*
