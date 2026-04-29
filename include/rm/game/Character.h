@@ -3,6 +3,7 @@
 #include <GameObject.h>
 #include <CharacterCategory.h>
 #include <CharacterSkill.h>
+#include <CharacterSpellList.h>
 #include <CharacterStat.h>
 #include <CharacterLanguage.h>
 #include <RaceData.h>
@@ -14,7 +15,6 @@
 #include <StatType.h>
 #include <unordered_map>
 #include <string>
-
 
 // Forward declaration to break the circular include with CharacterSerializer.h
 namespace rm::serial {
@@ -472,6 +472,16 @@ public:
 	int categoryBonus(const SkillCategoryData& category) const;
 
 	/**
+	 * @brief Get the bonus for a given spell list based on the applicable stats.
+	 *
+	 * This includes the bonus from ranks from the spell list and the applicable stats.
+	 *
+	 * @param spell_list The `SpellListData` object representing the spell list to calculate the bonus for.
+	 * @return The total rank bonus for the specified spell list.
+	 */
+	int spellListBonus(const SpellListData& spell_list) const;
+
+	/**
 	 * @brief Get the bonus for the somatic component of a given language based on the applicable stats.
 	 *
 	 * This includes the bonus from ranks from the language and the applicable stats.
@@ -671,10 +681,10 @@ private:
 	const SubcategoriedSkillData* power_point_skill_{nullptr};
 
 	/* Learned abilities */
-	std::unordered_map<std::string, Language> languages_; /**< Map of language names to their corresponding Language objects for the character. */
-	std::map<const SubcategoriedSkillData*, Skill> skills_{};             /**< A map of SkillData pointers to Skill objects representing the character's skills. */
-	std::map<const SkillCategoryData*, Category> categories_{};           /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
-	std::map<const SpellListData*, int> spell_list_ranks_{};              /**< Spell list ranks */
+	std::unordered_map<std::string, Language> languages_;       /**< Map of language names to their corresponding Language objects for the character. */
+	std::map<const SubcategoriedSkillData*, Skill> skills_{};   /**< A map of SkillData pointers to Skill objects representing the character's skills. */
+	std::map<const SkillCategoryData*, Category> categories_{}; /**< A map of SkillCategoryData pointers to Category objects representing the categories of skills the character has. */
+	std::map<const SpellListData*, SpellList> spell_lists_{};   /**< A map of SpellListData pointers to SpellList objects representing the character's spell lists. */
 
 	/* Utility functions */
 	void updateAllDerivedData();
@@ -683,5 +693,32 @@ private:
 	void updateMaxHits();
 	void updateMaxPowerPoints();
 };
+
+/* ------------------------------------------------------------------ */
+/* Free functions                                                     */
+/* ------------------------------------------------------------------ */
+
+/**
+ * @brief Get the skill category for a given spell list.
+ *
+ * This function takes a map of skill categories to sets of spell lists and a specific spell list, and returns the skill category that the spell list belongs to. If the spell list is not found in any of the categories, it returns
+ * `nullptr`.
+ *
+ * @param spell_list_categories A map of skill categories to sets of spell lists representing the spell lists sorted into their respective skill categories.
+ * @param spell_list The `SpellListData` object representing the spell list to find the category for.
+ * @return A pointer to the `SkillCategoryData` object representing the category that the specified spell list belongs to, or `nullptr` if the spell list is not found in any category.
+ */
+const SkillCategoryData* spellListCategory(std::map<const SkillCategoryData*, std::set<const SpellListData*>> spell_list_categories, const SpellListData& spell_list);
+
+/**
+ * @brief Get a map of spell lists to their corresponding rank costs for the character.
+ *
+ * This function calculates the cost for purchasing ranks during a level up for each spell list. This is based on the profession, the current number of ranks, and the type of spell list. The costs are returned as a map of `SpellListData`
+ * pointers to strings representing the rank costs for each spell list for the given character.
+ *
+ * @param character The character for which to calculate the spell list rank costs.
+ * @return A map of `SpellListData` pointers to strings representing the rank costs for each spell list for the given character.
+ */
+std::map<SpellListData*, std::string> spellListRankCosts(const Character& character);
 
 } // namespace rm::game::character

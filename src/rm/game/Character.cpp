@@ -75,6 +75,19 @@ int Character::categoryBonus(const SkillCategoryData& category) const {
 	return bonus;
 }
 
+int Character::spellListBonus(const SpellListData& spell_list) const {
+	int bonus{-30}; // The default bonus for no ranks in a spell list with limited progression is -30, so we start with that and then update it if the character has any knowledge of the spell list.
+	auto it = spell_lists_.find(&spell_list);
+	if (it != spell_lists_.end()) {
+		bonus = it->second.bonus();
+		// Now we need to add the stat bonus as that is character specific so not included in the spell list definition.
+		for (const auto& stat_type : it->second.stats()) {
+			bonus += statBonus(stat_type);
+		}
+	}
+	return bonus;
+}
+
 int Character::languageSomaticBonus(const std::string& language_name) const {
 	int bonus{0};
 	auto it = languages_.find(language_name);
@@ -139,6 +152,56 @@ void Character::updateAllDerivedData() {
 	for (const auto& [stat_type, stat] : stats_) {
 		updateStatDerivedData(stat_type);
 	}
+}
+
+/* ------------------------------------------------------------------ */
+/* Free functions                                                     */
+/* ------------------------------------------------------------------ */
+
+/* Helper function to find the category for a spell list. This is needed to apply the appropriate bonuses to the spell list based on the category it belongs to. */
+const SkillCategoryData* spellListCategory(std::map<const SkillCategoryData*, std::set<const SpellListData*>> spell_list_categories, const SpellListData& spell_list) {
+	for (const auto& [category, list_set] : spell_list_categories) {
+		for (const SpellListData* spell_list_data : list_set) {
+			if (spell_list_data == &spell_list) {
+				return category;
+			}
+		}
+	}
+	return nullptr;
+}
+
+
+std::map<SpellListData*, std::string> spellListRankCosts(const Character& character) {
+	std::map<SpellListData*, std::string> costs;
+	if (!character.profession()) {
+		return costs;
+	}
+
+	switch (character.profession()->spellUserType()) {
+	case SpellUserType::Type::kPure: {
+		//costs[character.profession()->spellList()] = "1 development point per rank";
+		break;
+	}
+	case SpellUserType::Type::kHybrid: {
+		//costs[character.profession()->spellList()] = "2 development points per rank";
+		break;
+	}
+	case SpellUserType::Type::kSemi: {
+		//costs[character.profession()->spellList()] = "3 development points per rank (1 for the spell list rank and 2 for the skill ranks)";
+		break;
+	}
+	case SpellUserType::Type::kNone: {
+		break;
+	}
+	case SpellUserType::Type::kChaotic: {
+		//costs[character.profession()->spellList()] = "3 development points per rank";
+		break;
+	}
+	default: {
+		break;
+	}
+	}
+	return costs;
 }
 
 } // namespace rm::game::character

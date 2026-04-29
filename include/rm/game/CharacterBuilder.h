@@ -233,7 +233,7 @@ private:
 	/* ------------------------------------------------------------------ */
 	/* Aggregated state                                                   */
 	/* ------------------------------------------------------------------ */
-	int total_gold_{2};                          /**< An integer representing the total amount of gold the character being built starts with, including any background extra gold and any gold from items or other sources. */
+	int total_gold_{0};                          /**< An integer representing the total amount of gold the character being built starts with, including any background extra gold and any gold from items or other sources. */
 	std::set<LanguageRanks> language_abilities_; /**< Aggregated map of language names to their corresponding LanguageRanks objects for the character being built. */
 	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*> realm_progressions_;                    /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. */
 	std::unordered_map<StatType::Type, Stat> stats_{};                                                           /**< Map of stat types to their corresponding Stat objects for the character. */
