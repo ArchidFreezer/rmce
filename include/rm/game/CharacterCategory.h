@@ -42,6 +42,14 @@ public:
 	 */
 	const std::vector<StatType::Type>& stats() const;
 
+	/**
+	 * @brief Get the category data associated with this category, which provides information about the category and its associated stats.
+	 * @return A reference to the SkillCategoryData object associated with this category.
+	 */
+	const SkillCategoryData& categoryData() const {
+		return *category_data_;
+	}
+
 private:
 	const SkillCategoryData* category_data_{nullptr};
 	const SkillProgressionTypeData* progression_type_{nullptr};

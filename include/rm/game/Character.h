@@ -646,6 +646,18 @@ public:
 		return experience_points_;
 	}
 
+	/**
+	 * @brief Get the character's spell lists.
+	 *
+	 * The spell lists are represented as a map of `SpellListData` pointers to `SpellList` objects, which represent the character's spell lists and their associated data. Each spell list has a certain number of ranks allocated to it, which contribute
+	 * to the character's abilities and bonuses in various situations.
+	 *
+	 * @return A constant reference to the map of spell lists for the character.
+	 */
+	const std::map<const SpellListData*, SpellList>& spellLists() const {
+		return spell_lists_;
+	}
+
 private:
 	/* Basic data */
 	std::string name_;                               /**< The name of the character. This is used for display purposes and may not be unique. */
@@ -715,10 +727,12 @@ const SkillCategoryData* spellListCategory(std::map<const SkillCategoryData*, st
  *
  * This function calculates the cost for purchasing ranks during a level up for each spell list. This is based on the profession, the current number of ranks, and the type of spell list. The costs are returned as a map of `SpellListData`
  * pointers to strings representing the rank costs for each spell list for the given character.
+ * 
+ * The map only contains the spell lists that the character already has ranks in as for all others the cost in the category is correct.
  *
  * @param character The character for which to calculate the spell list rank costs.
  * @return A map of `SpellListData` pointers to strings representing the rank costs for each spell list for the given character.
  */
-std::map<SpellListData*, std::string> spellListRankCosts(const Character& character);
+std::map<const SpellListData*, std::string> spellListsRankCosts(const Character& character);
 
 } // namespace rm::game::character

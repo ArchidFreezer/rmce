@@ -1,3 +1,4 @@
+#include <format>
 #include <Character.h>
 
 namespace rm::game::character {
@@ -170,36 +171,814 @@ const SkillCategoryData* spellListCategory(std::map<const SkillCategoryData*, st
 	return nullptr;
 }
 
+std::string chaoticSpellListCost(const SkillCategoryData& category, int ranks) {
+	std::string cost;
+	if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS") {
+		cost = "";
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS") {
+		if (ranks < 4) {
+			cost = "16:16";
+		} else if (ranks == 4) {
+			cost = "16";
+		} else if (ranks < 10) {
+			cost = "18";
+		} else if (ranks < 15) {
+			cost = "25";
+		} else if (ranks < 20) {
+			cost = "40";
+		} else {
+			cost = "60";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS") {
+		if (ranks < 9) {
+			cost = "11:11";
+		} else if (ranks == 9) {
+			cost = "11";
+		} else if (ranks < 15) {
+			cost = "12";
+		} else if (ranks < 20) {
+			cost = "18";
+		} else {
+			cost = "25";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "60";
+		} else if (ranks < 10) {
+			cost = "80";
+		} else if (ranks < 15) {
+			cost = "100";
+		} else if (ranks < 20) {
+			cost = "120";
+		} else {
+			cost = "140";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS") {
+		if (ranks < 5) {
+			cost = "25";
+		} else if (ranks < 10) {
+			cost = "40";
+		} else if (ranks < 15) {
+			cost = "60";
+		} else if (ranks < 20) {
+			cost = "80";
+		} else {
+			cost = "100";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS") {
+		if (ranks < 5) {
+			cost = "12";
+		} else if (ranks < 10) {
+			cost = "25";
+		} else if (ranks < 15) {
+			cost = "40";
+		} else if (ranks < 20) {
+			cost = "60";
+		} else {
+			cost = "80";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE") {
+		cost = "12:12";
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS") {
+		cost = "";
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS") {
+		cost = "";
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "25";
+		} else if (ranks < 10) {
+			cost = "40";
+		} else if (ranks < 15) {
+			cost = "60";
+		} else if (ranks < 20) {
+			cost = "80";
+		} else {
+			cost = "100";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS") {
+		cost = "6:6:6";
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE") {
+		cost = "6:6:6";
+	}
+	return cost;
+}
 
-std::map<SpellListData*, std::string> spellListRankCosts(const Character& character) {
-	std::map<SpellListData*, std::string> costs;
+std::string semiArcaneSpellListCost(const SkillCategoryData& category, int ranks) {
+	std::string cost;
+	if (category.name() == "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS") {
+		cost = "";
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS") {
+		if (ranks < 4) {
+			cost = "16:16";
+		} else if (ranks == 4) {
+			cost = "16";
+		} else if (ranks < 10) {
+			cost = "18";
+		} else if (ranks < 15) {
+			cost = "25";
+		} else if (ranks < 20) {
+			cost = "40";
+		} else {
+			cost = "60";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS") {
+		if (ranks < 9) {
+			cost = "11:11";
+		} else if (ranks == 9) {
+			cost = "11";
+		} else if (ranks < 15) {
+			cost = "12";
+		} else if (ranks < 20) {
+			cost = "18";
+		} else {
+			cost = "25";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "60";
+		} else if (ranks < 10) {
+			cost = "80";
+		} else if (ranks < 15) {
+			cost = "100";
+		} else if (ranks < 20) {
+			cost = "120";
+		} else {
+			cost = "140";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS") {
+		if (ranks < 5) {
+			cost = "25";
+		} else if (ranks < 10) {
+			cost = "40";
+		} else if (ranks < 15) {
+			cost = "60";
+		} else if (ranks < 20) {
+			cost = "80";
+		} else {
+			cost = "100";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS") {
+		if (ranks < 5) {
+			cost = "12";
+		} else if (ranks < 10) {
+			cost = "25";
+		} else if (ranks < 15) {
+			cost = "40";
+		} else if (ranks < 20) {
+			cost = "60";
+		} else {
+			cost = "80";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE") {
+		cost = "12:12";
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS") {
+		cost = "";
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS") {
+		cost = "";
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "25";
+		} else if (ranks < 10) {
+			cost = "40";
+		} else if (ranks < 15) {
+			cost = "60";
+		} else if (ranks < 20) {
+			cost = "80";
+		} else {
+			cost = "100";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS") {
+		if (ranks < 3) {
+			cost = "6:6:6";
+		} else if (ranks == 3) {
+			cost = "6:6:7";
+		} else if (ranks == 4) {
+			cost = "6:7:7";
+		} else if (ranks == 18) {
+			cost = "7:7:8";
+		} else if (ranks < 18) {
+			cost = "7:7:7";
+		} else if (ranks == 18) {
+			cost = "7:7:8";
+		} else if (ranks == 19) {
+			cost = "7:8:8";
+		} else {
+			cost = "8:8:8";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE") {
+		cost = "6:6:6";
+	}
+	return cost;
+}
+
+std::string pureArcaneSpellListCost(const SkillCategoryData& category, int ranks) {
+	std::string cost;
+	if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS") {
+		cost = "";
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS") {
+		if (ranks < 18) {
+			cost = "4:4:4";
+		} else if (ranks == 18) {
+			cost = "4:4:8";
+		} else if (ranks == 19) {
+			cost = "4:8:8";
+		} else {
+			cost = "8:8";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS") {
+		if (ranks < 18) {
+			cost = "4:4:4";
+		} else if (ranks == 18) {
+			cost = "4:4:6";
+		} else if (ranks == 19) {
+			cost = "4:6:6";
+		} else {
+			cost = "6:6:6";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS") {
+		if (ranks < 4) {
+			cost = "10:10";
+		} else if (ranks == 4) {
+			cost = "10";
+		} else if (ranks < 10) {
+			cost = "12";
+		} else if (ranks < 15) {
+			cost = "25";
+		} else if (ranks < 20) {
+			cost = "40";
+		} else {
+			cost = "60";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS") {
+		if (ranks < 4) {
+			cost = "6:6";
+		} else if (ranks == 4) {
+			cost = "6:8";
+		} else if (ranks < 9) {
+			cost = "8:8";
+		} else if (ranks == 9) {
+			cost = "8:10";
+		} else if (ranks < 14) {
+			cost = "10:10";
+		} else if (ranks == 14) {
+			cost = "10";
+		} else if (ranks < 20) {
+			cost = "12";
+		} else {
+			cost = "25";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS") {
+		if (ranks < 4) {
+			cost = "5:5";
+		} else if (ranks == 4) {
+			cost = "5:6";
+		} else if (ranks < 9) {
+			cost = "6:6";
+		} else if (ranks == 9) {
+			cost = "6:8";
+		} else if (ranks < 14) {
+			cost = "8:8";
+		} else if (ranks == 14) {
+			cost = "8:10";
+		} else if (ranks < 19) {
+			cost = "10:10";
+		} else if (ranks == 19) {
+			cost = "10";
+		} else {
+			cost = "12";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE") {
+		cost = "8:8";
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS") {
+		cost = "";
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS") {
+		cost = "";
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS") {
+		if (ranks < 4) {
+			cost = "12:12";
+		} else if (ranks < 5) {
+			cost = "12:16";
+		} else if (ranks < 9) {
+			cost = "16:16";
+		} else if (ranks == 9) {
+			cost = "16";
+		} else if (ranks < 15) {
+			cost = "18";
+		} else if (ranks < 20) {
+			cost = "25";
+		} else {
+			cost = "40";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS") {
+		if (ranks < 18) {
+			cost = "3:3:3";
+		} else if (ranks == 18) {
+			cost = "3:3:4";
+		} else if (ranks == 19) {
+			cost = "3:4:4";
+		} else {
+			cost = "4:4:4";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE") {
+		cost = "4:4:4";
+	}
+	return cost;
+}
+
+std::string noneSpellListCost(const SkillCategoryData& category, int ranks, int baseCost) {
+	std::string cost;
+	if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE") {
+		cost = "8:8:8";
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE") {
+		cost = "16:16";
+	} else {
+		if (ranks < 5) {
+			cost = std::format("{}", baseCost);
+		} else if (ranks < 10) {
+			cost = std::format("{}", baseCost * 2);
+		} else if (ranks < 15) {
+			cost = std::format("{}", baseCost * 3);
+		} else if (ranks < 20) {
+			cost = std::format("{}", baseCost * 4);
+		} else {
+			cost = std::format("{}", baseCost * 5);
+		}
+	}
+
+	return cost;
+}
+
+std::string semiSpellListCost(const SkillCategoryData& category, int ranks) {
+	std::string cost;
+	if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "40";
+		} else if (ranks < 10) {
+			cost = "60";
+		} else if (ranks < 15) {
+			cost = "80";
+		} else if (ranks < 20) {
+			cost = "100";
+		} else {
+			cost = "120";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS") {
+		if (ranks < 5) {
+			cost = "18";
+		} else if (ranks < 10) {
+			cost = "25";
+		} else if (ranks < 15) {
+			cost = "40";
+		} else if (ranks < 20) {
+			cost = "60";
+		} else {
+			cost = "80";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS") {
+		if (ranks < 5) {
+			cost = "12";
+		} else if (ranks < 10) {
+			cost = "25";
+		} else if (ranks < 15) {
+			cost = "40";
+		} else if (ranks < 20) {
+			cost = "60";
+		} else {
+			cost = "80";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "80";
+		} else if (ranks < 10) {
+			cost = "100";
+		} else if (ranks < 15) {
+			cost = "120";
+		} else if (ranks < 20) {
+			cost = "140";
+		} else {
+			cost = "160";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS") {
+		if (ranks < 5) {
+			cost = "45";
+		} else if (ranks < 10) {
+			cost = "60";
+		} else if (ranks < 15) {
+			cost = "80";
+		} else if (ranks < 20) {
+			cost = "100";
+		} else {
+			cost = "120";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS") {
+		if (ranks < 5) {
+			cost = "30";
+		} else if (ranks < 10) {
+			cost = "60";
+		} else if (ranks < 15) {
+			cost = "80";
+		} else if (ranks < 20) {
+			cost = "100";
+		} else {
+			cost = "120";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE") {
+		cost = "12:12";
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS") {
+		if (ranks < 4) {
+			cost = "10:10";
+		} else if (ranks == 4) {
+			cost = "10";
+		} else if (ranks < 10) {
+			cost = "12";
+		} else if (ranks < 15) {
+			cost = "25";
+		} else if (ranks < 20) {
+			cost = "40";
+		} else {
+			cost = "60";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS") {
+		if (ranks < 9) {
+			cost = "8:8";
+		} else if (ranks == 9) {
+			cost = "8";
+		} else if (ranks < 15) {
+			cost = "12";
+		} else if (ranks < 20) {
+			cost = "18";
+		} else {
+			cost = "25";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "25";
+		} else if (ranks < 10) {
+			cost = "40";
+		} else if (ranks < 15) {
+			cost = "60";
+		} else if (ranks < 20) {
+			cost = "80";
+		} else {
+			cost = "100";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS") {
+		cost = "6:6:6";
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE") {
+		cost = "6:6:6";
+	}
+	return cost;
+}
+
+std::string hybridSpellListCost(const SkillCategoryData& category, int ranks) {
+	std::string cost;
+	if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "12";
+		} else if (ranks < 10) {
+			cost = "25";
+		} else if (ranks < 15) {
+			cost = "40";
+		} else if (ranks < 20) {
+			cost = "60";
+		} else {
+			cost = "80";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS") {
+		if (ranks < 4) {
+			cost = "8:8";
+		} else if (ranks == 4) {
+			cost = "8:10";
+		} else if (ranks < 9) {
+			cost = "10:10";
+		} else if (ranks == 9) {
+			cost = "10";
+		} else if (ranks < 15) {
+			cost = "12";
+		} else if (ranks < 20) {
+			cost = "24";
+		} else {
+			cost = "40";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS") {
+		if (ranks < 4) {
+			cost = "5:5";
+		} else if (ranks == 4) {
+			cost = "5:6";
+		} else if (ranks < 9) {
+			cost = "6:6";
+		} else if (ranks == 9) {
+			cost = "6:8";
+		} else if (ranks < 14) {
+			cost = "8:8";
+		} else if (ranks == 14) {
+			cost = "8:10";
+		} else if (ranks < 19) {
+			cost = "10:10";
+		} else if (ranks == 19) {
+			cost = "10";
+		} else {
+			cost = "12";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "60";
+		} else if (ranks < 10) {
+			cost = "80";
+		} else if (ranks < 15) {
+			cost = "100";
+		} else if (ranks < 20) {
+			cost = "120";
+		} else {
+			cost = "140";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS") {
+		if (ranks < 5) {
+			cost = "25";
+		} else if (ranks < 10) {
+			cost = "40";
+		} else if (ranks < 15) {
+			cost = "60";
+		} else if (ranks < 20) {
+			cost = "80";
+		} else {
+			cost = "100";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS") {
+		if (ranks < 5) {
+			cost = "12";
+		} else if (ranks < 10) {
+			cost = "25";
+		} else if (ranks < 15) {
+			cost = "40";
+		} else if (ranks < 20) {
+			cost = "60";
+		} else {
+			cost = "80";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE") {
+		cost = "8:8";
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS") {
+		if (ranks < 3) {
+			cost = "4:4:4";
+		} else if (ranks == 3) {
+			cost = "4:4:6";
+		} else if (ranks == 4) {
+			cost = "4:6:6";
+		} else if (ranks < 8) {
+			cost = "6:6:6";
+		} else if (ranks == 8) {
+			cost = "6:6:8";
+		} else if (ranks == 9) {
+			cost = "6:8:8";
+		} else if (ranks < 14) {
+			cost = "8:8";
+		} else if (ranks == 14) {
+			cost = "8:10";
+		} else if (ranks < 19) {
+			cost = "10:10";
+		} else if (ranks == 19) {
+			cost = "10";
+		} else {
+			cost = "25";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS") {
+		if (ranks < 8) {
+			cost = "4:4:4";
+		} else if (ranks == 8) {
+			cost = "4:4:6";
+		} else if (ranks == 9) {
+			cost = "4:6:6";
+		} else if (ranks < 13) {
+			cost = "6:6:6";
+		} else if (ranks == 13) {
+			cost = "6:6:8";
+		} else if (ranks == 14) {
+			cost = "6:8";
+		} else if (ranks < 19) {
+			cost = "8:8";
+		} else if (ranks == 19) {
+			cost = "8";
+		} else {
+			cost = "12";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS") {
+		if (ranks < 4) {
+			cost = "10:10";
+		} else if (ranks == 4) {
+			cost = "10";
+		} else if (ranks < 10) {
+			cost = "12";
+		} else if (ranks < 15) {
+			cost = "25";
+		} else if (ranks < 20) {
+			cost = "40";
+		} else {
+			cost = "60";
+		}
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS") {
+		cost = "3:3:3";
+	} else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE") {
+		cost = "4:4:4";
+	}
+	return cost;
+}
+
+std::string pureSpellListCost(const SkillCategoryData& category, int ranks) {
+	std::string cost;
+	if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "25";
+		} else if (ranks < 10) {
+			cost = "40";
+		} else if (ranks < 15) {
+			cost = "60";
+		} else if (ranks < 20) {
+			cost = "80";
+		} else {
+			cost = "100";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_CLOSED_LISTS") {
+		if (ranks < 4) {
+			cost = "10:10";
+		} else if (ranks == 4) {
+			cost = "10";
+		} else if (ranks < 10) {
+			cost = "12";
+		} else if (ranks < 15) {
+			cost = "25";
+		} else if (ranks < 20) {
+			cost = "40";
+		} else {
+			cost = "60";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_ARCANE_OPEN_LISTS") {
+		if (ranks < 4) {
+			cost = "6:6";
+		} else if (ranks == 4) {
+			cost = "6:8";
+		} else if (ranks < 9) {
+			cost = "8:8";
+		} else if (ranks == 9) {
+			cost = "8:10";
+		} else if (ranks < 14) {
+			cost = "10:10";
+		} else if (ranks == 14) {
+			cost = "10";
+		} else if (ranks < 20) {
+			cost = "12";
+		} else {
+			cost = "25";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_BASE_LISTS") {
+		if (ranks < 5) {
+			cost = "50";
+		} else if (ranks < 10) {
+			cost = "70";
+		} else if (ranks < 15) {
+			cost = "90";
+		} else if (ranks < 20) {
+			cost = "110";
+		} else {
+			cost = "130";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_CLOSED_LISTS") {
+		if (ranks < 5) {
+			cost = "20";
+		} else if (ranks < 10) {
+			cost = "25";
+		} else if (ranks < 15) {
+			cost = "40";
+		} else if (ranks < 20) {
+			cost = "60";
+		} else {
+			cost = "80";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_OPEN_LISTS") {
+		if (ranks < 4) {
+			cost = "10:10";
+		} else if (ranks == 4) {
+			cost = "10";
+		} else if (ranks < 10) {
+			cost = "12";
+		} else if (ranks < 15) {
+			cost = "25";
+		} else if (ranks < 20) {
+			cost = "40";
+		} else {
+			cost = "60";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OTHER_REALM_TRAINING_PACKAGE") {
+		cost = "8:8";
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_CLOSED_LISTS") {
+		if (ranks < 18) {
+			cost = "4:4:4";
+		} else if (ranks == 18) {
+			cost = "4:4:8";
+		} else if (ranks == 19) {
+			cost = "4:8:8";
+		} else {
+			cost = "8:8";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OPEN_LISTS") {
+		if (ranks < 18) {
+			cost = "4:4:4";
+		} else if (ranks == 18) {
+			cost = "4:4:6";
+		} else if (ranks == 19) {
+			cost = "4:6:6";
+		} else {
+			cost = "6:6:6";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OTHER_BASE_LISTS") {
+		if (ranks < 4) {
+			cost = "8:8";
+		} else if (ranks < 5) {
+			cost = "8:10";
+		} else if (ranks < 9) {
+			cost = "10:10";
+		} else if (ranks == 9) {
+			cost = "10";
+		} else if (ranks < 15) {
+			cost = "12";
+		} else if (ranks < 20) {
+			cost = "25";
+		} else {
+			cost = "40";
+		}
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_OWN_BASE_LISTS") {
+		cost = "3:3:3";
+	} 
+	else if (category.id() == "SKILLCATEGORY_SPELLS_OWN_REALM_TRAINING_PACKAGE") {
+		cost = "4:4:4";
+	}
+	return cost;
+}
+
+std::map<const SpellListData*, std::string> spellListsRankCosts(const Character& character) {
+	std::map<const SpellListData*, std::string> costs;
 	if (!character.profession()) {
 		return costs;
 	}
 
-	switch (character.profession()->spellUserType()) {
-	case SpellUserType::Type::kPure: {
-		//costs[character.profession()->spellList()] = "1 development point per rank";
-		break;
-	}
-	case SpellUserType::Type::kHybrid: {
-		//costs[character.profession()->spellList()] = "2 development points per rank";
-		break;
-	}
-	case SpellUserType::Type::kSemi: {
-		//costs[character.profession()->spellList()] = "3 development points per rank (1 for the spell list rank and 2 for the skill ranks)";
-		break;
-	}
-	case SpellUserType::Type::kNone: {
-		break;
-	}
-	case SpellUserType::Type::kChaotic: {
-		//costs[character.profession()->spellList()] = "3 development points per rank";
-		break;
-	}
-	default: {
-		break;
-	}
+	for (auto& [spell_list_data, spell_list] : character.spellLists()) {
+		switch (character.profession()->spellUserType()) {
+		case SpellUserType::Type::kPure: {
+			costs[spell_list_data] = pureSpellListCost(spell_list.category().categoryData(), spell_list.ranks());
+			break;
+		}
+		case SpellUserType::Type::kHybrid: {
+			costs[spell_list_data] = hybridSpellListCost(spell_list.category().categoryData(), spell_list.ranks());
+			break;
+		}
+		case SpellUserType::Type::kSemi: {
+			costs[spell_list_data] = semiSpellListCost(spell_list.category().categoryData(), spell_list.ranks());
+			break;
+		}
+		case SpellUserType::Type::kNone: {
+			const SkillCategoryData& category = spell_list.category().categoryData();
+			std::optional<int> cost = character.profession()->skillCategoryDevelopmentCost(category).first();
+			costs[spell_list_data] = noneSpellListCost(category, spell_list.ranks(), cost.value_or(500));
+			break;
+		}
+		case SpellUserType::Type::kChaotic: {
+			costs[spell_list_data] = chaoticSpellListCost(spell_list.category().categoryData(), spell_list.ranks());
+			break;
+		}
+		default: {
+			break;
+		}
+		}
 	}
 	return costs;
 }

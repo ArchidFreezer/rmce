@@ -40,6 +40,22 @@ public:
 	 */
 	const std::vector<StatType::Type>& stats() const;
 
+	/**
+	 * @brief Gets the number of ranks gained.
+	 * @return The number of ranks.
+	 */
+	int ranks() const {
+		return ranks_;
+	}
+
+	/**
+	 * @brief Gets the category of the spell list.
+	 * @return Reference to the Category of the spell list.
+	 */
+	const Category& category() const {
+		return *category_;
+	}
+
 private:
 	const Category* category_{nullptr};
 	const SpellListData* spell_list_{nullptr};
