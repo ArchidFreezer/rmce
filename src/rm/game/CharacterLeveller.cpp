@@ -19,6 +19,10 @@ void CharacterLeveller::buildTrainingPackageCosts() {
 	}
 }
 
+void CharacterLeveller::buildSpellListCosts() {
+	spell_list_costs_ = spellListsRankCosts(*character_);
+}
+
 void CharacterLeveller::levelUp() {
 	/*
 	 * Stat gains

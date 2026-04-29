@@ -337,6 +337,7 @@ void CharacterOperationsRequestHandler::requestLevelUp(http::response<http::stri
 
 		if (!has_id) {
 			leveller.buildTrainingPackageCosts();
+			leveller.buildSpellListCosts();
 			response.body() = serial_manager_.serializeObject<CharacterLeveller>(id);
 		} else {
 			leveller.levelUp();
