@@ -1,4 +1,5 @@
 #include <RestServer.h>
+#include <Logger.h>
 #include <iostream>
 #include <csignal>
 #include <atomic>
@@ -13,6 +14,16 @@ void signalHandler(int signum) {
 }
 
 int main(int argc, char* argv[]) {
+	// Set log level from environment variable
+	auto log_level_env = std::getenv("RMCE_LOG_LEVEL");
+	auto level = spdlog::level::debug;
+	if (log_level_env) {
+		level = spdlog::level::from_str(log_level_env);
+	}
+	rm::util::Logger::init("rmce.log", level);
+
+	LOG_INFO("REST server example started");
+
 	try {
 		// Register signal handler
 		std::signal(SIGINT, signalHandler);
@@ -77,7 +88,11 @@ int main(int argc, char* argv[]) {
 		return 0;
 
 	} catch (const std::exception& e) {
-		std::cerr << "Error: " << e.what() << std::endl;
+		LOG_ERROR("Fatal error: {}", e.what());
 		return 1;
 	}
+
+	LOG_INFO("Application shutting down");
+	rm::util::Logger::shutdown();
+	return 0;
 }
