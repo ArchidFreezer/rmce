@@ -153,6 +153,18 @@ public:
 	void generateBackgroundItems(int item_count);
 
 	/**
+	 * @brief Set the special bonuses for spell lists for the character being built.
+	 *
+	 * This method is used to set the special bonuses for spell lists for the character being built. The bonuses are typically determined by the character's background or other choices made during character creation. This method allows
+	 * for setting bonuses for specific spell lists, which can be important for characters with certain backgrounds or professions that grant bonuses to specific types of magic.
+	 *
+	 * @param bonuses A map of SpellListData pointers to integers representing the amount of the bonus to add to each specified spell list.
+	 */
+	void setSpellListSpecialBonuses(std::map<const SpellListData*, int> bonuses) {
+		spell_list_special_bonuses_ = bonuses;
+	}
+
+	/**
 	 * @brief Get the expected lifespan of the character being built
 	 *
 	 * @return An integer representing the expected lifespan of the character
@@ -233,7 +245,7 @@ private:
 	/* ------------------------------------------------------------------ */
 	/* Aggregated state                                                   */
 	/* ------------------------------------------------------------------ */
-	int total_gold_{2};                          /**< An integer representing the total amount of gold the character being built starts with, including any background extra gold and any gold from items or other sources. */
+	int total_gold_{0};                          /**< An integer representing the total amount of gold the character being built starts with, including any background extra gold and any gold from items or other sources. */
 	std::set<LanguageRanks> language_abilities_; /**< Aggregated map of language names to their corresponding LanguageRanks objects for the character being built. */
 	std::unordered_map<RealmType::Type, const SkillProgressionTypeData*> realm_progressions_;                    /**< Map of realm types to their corresponding SkillProgressionTypeData objects for the character. */
 	std::unordered_map<StatType::Type, Stat> stats_{};                                                           /**< Map of stat types to their corresponding Stat objects for the character. */
@@ -248,6 +260,7 @@ private:
 	std::map<const SkillGroupData*, int> group_professional_bonuses_{};                                          /**< Skill group professional bonuses */
 	std::map<const SkillGroupData*, int> group_special_bonuses_{};                                               /**< Skill group special bonuses */
 	std::map<const SpellListData*, int> spell_list_ranks_{};                                                     /**< Spell list ranks */
+	std::map<const SpellListData*, int> spell_list_special_bonuses_{};                                           /**< Spell list special bonuses */
 	std::vector<std::string> total_items_{};                                                                     /**< Items the character starts with */
 	int height_{};                                                                                               /**< Height of the character in inches */
 	int weight_{};                                                                                               /**< Weight of the character in lbs */

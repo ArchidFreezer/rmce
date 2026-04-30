@@ -22,6 +22,7 @@ class CharacterLeveller : public GameObject {
 public:
 	void levelUp();                   /**< Level up the character by applying the stat gains and any bonuses or modifiers from training packages, professions, and other sources. */
 	void buildTrainingPackageCosts(); /**< Build the map of training package costs based on the character's current stats and the available training packages. */
+	void buildSpellListCosts();       /**< Build the map of spell list costs based on the character's propfession and spell list ranks. */
 	int getExpForLevel(int level);    /**< Get the minimum experience points required to reach a specific level. */
 private:
 	rm::PersistentObjectManager* object_factory_{nullptr};
@@ -34,7 +35,8 @@ private:
 	std::map<const SubcategoriedSkillData*, int> skill_ranks_{};         /**< Skill ranks */
 	std::map<const SkillCategoryData*, int> category_ranks_{};           /**< Skill category ranks */
 	std::map<const SpellListData*, int> spell_list_ranks_{};             /**< Spell list ranks */
-	std::set<LanguageRanks> language_ranks_;                         /**< Aggregated map of language names to their corresponding LanguageRanks objects for the character being built. */
+	std::map<const SpellListData*, std::string> spell_list_costs_{};     /**< Spell list rank costs */
+	std::set<LanguageRanks> language_ranks_;                             /**< Aggregated map of language names to their corresponding LanguageRanks objects for the character being built. */
 };
 
 } // namespace rm::game::character

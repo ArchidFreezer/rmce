@@ -182,6 +182,10 @@
           "value": 2
         },
         {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": 3
+        },
+        {
           "id": "SKILL_CULTURE_LORE",
           "subcategory": "Own",
           "value": 3
@@ -217,10 +221,6 @@
         {
           "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
           "value": 1
-        },
-        {
-          "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
-          "value": 3
         },
         {
           "id": "SKILLCATEGORY_COMMUNICATION",
@@ -300,6 +300,10 @@
           "value": 1
         },
         {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": 1
+        },
+        {
           "id": "SKILL_CULTURE_LORE",
           "subcategory": "Own",
           "value": 3
@@ -337,10 +341,6 @@
         },
         {
           "id": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
-          "value": 1
-        },
-        {
-          "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
           "value": 1
         },
         {
@@ -436,6 +436,10 @@
           "value": 1
         },
         {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": 2
+        },
+        {
           "id": "SKILL_CULTURE_LORE",
           "subcategory": "Own",
           "value": 3
@@ -471,10 +475,6 @@
         {
           "id": "SKILLCATEGORY_AWARENESS_PERCEPTIONS",
           "value": 1
-        },
-        {
-          "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
-          "value": 2
         },
         {
           "id": "SKILLCATEGORY_COMMUNICATION",
@@ -565,6 +565,10 @@
           "value": 2
         },
         {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": 2
+        },
+        {
           "id": "SKILL_CLIMBING",
           "value": 4
         },
@@ -619,10 +623,6 @@
         {
           "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
           "value": 1
-        },
-        {
-          "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
-          "value": 2
         },
         {
           "id": "SKILLCATEGORY_COMMUNICATION",
@@ -723,6 +723,10 @@
           "value": 2
         },
         {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": 2
+        },
+        {
           "id": "SKILL_CLIMBING",
           "value": 1
         },
@@ -765,10 +769,6 @@
         {
           "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
           "value": 1
-        },
-        {
-          "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
-          "value": 2
         },
         {
           "id": "SKILLCATEGORY_COMMUNICATION",
@@ -861,6 +861,10 @@
           "value": 4
         },
         {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": 3
+        },
+        {
           "id": "SKILL_CHAIN_ARMOUR",
           "value": 2
         },
@@ -907,10 +911,6 @@
         {
           "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
           "value": 1
-        },
-        {
-          "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
-          "value": 3
         },
         {
           "id": "SKILLCATEGORY_COMMUNICATION",
@@ -990,6 +990,10 @@
           "value": 2
         },
         {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": 2
+        },
+        {
           "id": "SKILL_CULTURE_LORE",
           "subcategory": "Own",
           "value": 3
@@ -1025,10 +1029,6 @@
         {
           "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
           "value": 1
-        },
-        {
-          "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
-          "value": 2
         },
         {
           "id": "SKILLCATEGORY_COMMUNICATION",
@@ -1128,6 +1128,10 @@
           "value": 2
         },
         {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": 2
+        },
+        {
           "id": "SKILL_CULTURE_LORE",
           "subcategory": "Own",
           "value": 3
@@ -1183,10 +1187,6 @@
         {
           "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
           "value": 1
-        },
-        {
-          "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
-          "value": 2
         },
         {
           "id": "SKILLCATEGORY_COMMUNICATION",
@@ -1291,6 +1291,10 @@
           "value": 2
         },
         {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": 1
+        },
+        {
           "id": "SKILL_CHAIN_ARMOUR",
           "value": 1
         },
@@ -1349,10 +1353,6 @@
         {
           "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
           "value": 2
-        },
-        {
-          "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
-          "value": 1
         },
         {
           "id": "SKILLCATEGORY_COMMUNICATION",
@@ -1441,6 +1441,10 @@
           "value": 6
         },
         {
+          "id": "SKILL_BODY_DEVELOPMENT",
+          "value": 1
+        },
+        {
           "id": "SKILL_CLIMBING",
           "value": 2
         },
@@ -1487,10 +1491,6 @@
         },
         {
           "id": "SKILLCATEGORY_AWARENESS_SEARCHING",
-          "value": 1
-        },
-        {
-          "id": "SKILLCATEGORY_BODY_DEVELOPMENT",
           "value": 1
         },
         {

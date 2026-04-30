@@ -46,8 +46,6 @@ Character& CharacterBuilder::build() {
 	character.spell_list_categories_ = spell_list_categories_;
 
 	/* Learned abilities */
-	/* Spell Lists */
-	character.spell_list_ranks_ = std::move(spell_list_ranks_); // The spell list categories are the same as the skill categories for the spell lists so we can just set them directly.
 
 	/* Apply category data */
 	// The profession should define a cost for every category so this loop should create all the Category objects in the character.
@@ -120,6 +118,24 @@ Character& CharacterBuilder::build() {
 			language.progression_type_ = &communication_category->category_data_->defaultSkillProgression(); // All languages use the default progression for the communication category so we can just set this directly.
 		}
 		character.setLanguageAbility(language);
+	}
+
+	/* Spell Lists */
+	for (const auto& [spell_list_data, ranks] : spell_list_ranks_) {
+		SpellList spell_list{};
+		spell_list.spell_list_ = spell_list_data;
+		const SkillCategoryData* category_data = spellListCategory(spell_list_categories_, *spell_list_data);
+		if (category_data != nullptr) {
+				spell_list.category_ = &character.categories_.at(category_data);
+				spell_list.progression_type_ = &category_data->defaultSkillProgression();
+		}
+		spell_list.ranks_ = ranks;
+		character.spell_lists_.emplace(spell_list_data, spell_list);
+	}
+
+	for (const auto& [spell_list_data, special_bonus] : spell_list_special_bonuses_) {
+		auto& spell_list = character.spell_lists_.at(spell_list_data);
+		spell_list.special_bonus_ = special_bonus;
 	}
 
 	/* Apply skill data */
@@ -232,7 +248,7 @@ void CharacterBuilder::reset(bool aggregate_state_only, bool clear_auto_generate
 		background_items_.clear();
 	}
 	// Clear the aggregated state regardless of whether we are resetting the entire builder or not, as the aggregated state needs to be recalculated based on the current choices after any reset.
-	total_gold_ = 0;
+	total_gold_ = 2; // This is the starting gold every character gets
 	language_abilities_.clear();
 	realm_progressions_.clear();
 	stats_.clear();

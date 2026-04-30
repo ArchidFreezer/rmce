@@ -16,6 +16,7 @@ json::value CharacterLevellerSerializer::serializeObject(const CharacterLeveller
 	JsonConverter::setSkillPrimitiveMap<int>(obj, "skillRanks", ref.skill_ranks_);
 	JsonConverter::setDataPrimitiveMap<SkillCategoryData, int>(obj, "categoryRanks", ref.category_ranks_);
 	JsonConverter::setDataPrimitiveMap<SpellListData, int>(obj, "spellListRanks", ref.spell_list_ranks_);
+	JsonConverter::setDataPrimitiveMap<SpellListData, std::string>(obj, "spellListCosts", ref.spell_list_costs_);
 	{
 		std::map<std::string, const LanguageRanks> language_ranks;
 		for (const auto& ability : ref.language_ranks_) {
@@ -54,6 +55,7 @@ const CharacterLeveller& CharacterLevellerSerializer::deserializeObject(json::ob
 	ref.skill_ranks_ = JsonConverter::getSkillPrimitiveMap<int>(jsonObj, "skillRanks", manager_);
 	ref.category_ranks_ = JsonConverter::getDataPrimitiveMap<SkillCategoryData, int>(jsonObj, "categoryRanks", manager_);
 	ref.spell_list_ranks_ = JsonConverter::getDataPrimitiveMap<SpellListData, int>(jsonObj, "spellListRanks", manager_);
+	ref.spell_list_costs_ = JsonConverter::getDataPrimitiveMap<SpellListData, std::string>(jsonObj, "spellListCosts", manager_);
 	{
 		const std::map<std::string, const LanguageRanks> language_ranks = JsonConverter::getLanguageAbilityMap(jsonObj, "languageRanks", manager_);
 		for (const auto& [language_name, ability] : language_ranks) {

@@ -19,6 +19,10 @@ void CharacterLeveller::buildTrainingPackageCosts() {
 	}
 }
 
+void CharacterLeveller::buildSpellListCosts() {
+	spell_list_costs_ = spellListsRankCosts(*character_);
+}
+
 void CharacterLeveller::levelUp() {
 	/*
 	 * Stat gains
@@ -85,7 +89,22 @@ void CharacterLeveller::levelUp() {
 	}
 
 	for (const auto& [spell_list, rank] : spell_list_ranks_) {
-		character_->spell_list_ranks_[spell_list] = rank;
+		// First we need to check if the character already has ranks in this spell list.
+		if (auto char_spell_list_it = character_->spell_lists_.find(spell_list); char_spell_list_it != character_->spell_lists_.end()) {
+			SpellList& char_spell_list = char_spell_list_it->second;
+			char_spell_list.ranks_ = rank;
+		} else {
+			// This is a new spell list so we need to add it to the character's spell lists map.
+			SpellList char_spell_list;
+			char_spell_list.spell_list_ = spell_list;
+			char_spell_list.ranks_ = rank;
+			const SkillCategoryData* category_data = spellListCategory(character_->spell_list_categories_, *spell_list);
+			if (category_data != nullptr) {
+				char_spell_list.category_ = &character_->categories_.at(category_data);
+				char_spell_list.progression_type_ = &category_data->defaultSkillProgression();
+			}
+			character_->spell_lists_.emplace(spell_list, char_spell_list);
+		}
 	}
 
 	for (const auto& language_rank : language_ranks_) {

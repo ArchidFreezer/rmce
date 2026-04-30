@@ -103,19 +103,24 @@ json::value CharacterSerializer::serializeObject(const Character& ref) const {
 	// Spell Lists
 	{
 		std::map<std::string_view, const SpellListData*> sorted_spell_lists{};
-		for (const auto& [spell_list, ranks] : ref.spell_list_ranks_) {
-			sorted_spell_lists[spell_list->id()] = spell_list;
+		for (const auto& [spell_list_data, spell_list] : ref.spell_lists_) {
+			sorted_spell_lists[spell_list_data->id()] = spell_list_data;
 		}
 		json::array spell_list_ranks_array;
-		for (const auto& [spell_list_id, spell_list] : sorted_spell_lists) {
-			const auto& ranks = ref.spell_list_ranks_.at(spell_list);
+		for (const auto& [spell_list_id, spell_list_data] : sorted_spell_lists) {
+			const auto& spell_list = ref.spell_lists_.at(spell_list_data);
 			json::object spell_list_obj;
 			JsonConverter::setString(spell_list_obj, "id", std::string(spell_list_id));
-			JsonConverter::setInt(spell_list_obj, "value", ranks);
+			JsonConverter::setString(spell_list_obj, "progression", spell_list.progression_type_->id());
+			JsonConverter::setString(spell_list_obj, "developmentType", toString(spell_list.development_type_));
+			JsonConverter::setInt(spell_list_obj, "professionBonus", spell_list.profession_bonus_);
+			JsonConverter::setInt(spell_list_obj, "ranks", spell_list.ranks_);
+			JsonConverter::setInt(spell_list_obj, "specialBonus", spell_list.special_bonus_);
+			JsonConverter::setInt(spell_list_obj, "totalBonus", ref.spellListBonus(*spell_list_data));
 			spell_list_ranks_array.emplace_back(std::move(spell_list_obj));
 		}
 		if (spell_list_ranks_array.size())
-			obj["spellListRanks"] = std::move(spell_list_ranks_array);
+			obj["spellLists"] = std::move(spell_list_ranks_array);
 	}
 
 	// Categories
@@ -247,6 +252,8 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 	ref.power_realms_ = JsonConverter::getEnumSet<RealmType::Type>(jsonObj, "magicalRealms");
 	ref.resistances_ = JsonConverter::getEnumPrimitiveMap<ResistanceType::Type, int>(jsonObj, "resistances");
 	// Spell List Categories
+	// We store the reverse mapping for when we create the character's spell lists, as the spell lists reference the categories, so we need to be able to get the category data from the category ID when we create the spell lists.
+	std::map<const SpellListData*, const SkillCategoryData*> spell_list_category_mapping{};
 	{
 		const json::array spell_list_categories_array = JsonConverter::getJsonArray(jsonObj, "spellListCategories");
 		for (const json::value& category_value : spell_list_categories_array) {
@@ -256,25 +263,17 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 			const std::string category_id = JsonConverter::getString(category_obj, "category");
 			const SkillCategoryData* category_data = &manager_.get<SkillCategoryData>(category_id);
 			std::set<const SpellListData*> spell_lists = JsonConverter::getDataSet<SpellListData>(category_obj, "spellLists", manager_);
+
+			// Cache the reverse mapping for this category and its spell lists so that we can set the category for the spell lists when we create them.
+			for (const SpellListData* spell_list_data : spell_lists) {
+				spell_list_category_mapping[spell_list_data] = category_data;
+			}
+
 			ref.spell_list_categories_.insert_or_assign(category_data, std::move(spell_lists));
 		}
 	}
 
 	/* Learned Abilities */
-	// Spell Lists
-	{
-		const json::array spell_list_ranks_array = JsonConverter::getJsonArray(jsonObj, "spellListRanks");
-		for (const json::value& spell_list_value : spell_list_ranks_array) {
-			if (!spell_list_value.is_object())
-				continue;
-			const json::object spell_list_obj = spell_list_value.as_object();
-			const std::string spell_list_id = JsonConverter::getString(spell_list_obj, "id");
-			const SpellListData* spell_list_data = &manager_.get<SpellListData>(spell_list_id);
-			const int ranks = JsonConverter::getInt(spell_list_obj, "value", 0);
-			ref.spell_list_ranks_.insert_or_assign(spell_list_data, ranks);
-		}
-	}
-
 	// Categories
 	{
 		const json::array categories_array = JsonConverter::getJsonArray(jsonObj, "categories");
@@ -295,6 +294,7 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 			ref.categories_.insert_or_assign(category_data, std::move(char_category));
 		}
 	}
+
 	// Skills
 	{
 		const json::array skills_array = JsonConverter::getJsonArray(jsonObj, "skills");
@@ -322,6 +322,28 @@ const Character& CharacterSerializer::deserializeObject(json::object& jsonObj) c
 				std::cerr << "Error deserializing character skills: " << e.what() << std::endl;
 			}
 		}
+
+		// Spell Lists
+		{
+			const json::array spell_lists_array = JsonConverter::getJsonArray(jsonObj, "spellLists");
+			for (const json::value& spell_list_value : spell_lists_array) {
+				if (!spell_list_value.is_object())
+					continue;
+				const json::object spell_list_obj = spell_list_value.as_object();
+				const std::string spell_list_id = JsonConverter::getString(spell_list_obj, "id");
+				const SpellListData* spell_list_data = &manager_.get<SpellListData>(spell_list_id);
+				SpellList char_spell_list{};
+				char_spell_list.spell_list_ = spell_list_data;
+				char_spell_list.category_ = &ref.categories_.at(spell_list_category_mapping.at(spell_list_data));
+				char_spell_list.progression_type_ = &manager_.get<SkillProgressionTypeData>(JsonConverter::getString(spell_list_obj, "progression"));
+				fromString(JsonConverter::getString(spell_list_obj, "developmentType"), char_spell_list.development_type_);
+				char_spell_list.profession_bonus_ = JsonConverter::getInt(spell_list_obj, "professionBonus", 0);
+				char_spell_list.ranks_ = JsonConverter::getInt(spell_list_obj, "ranks", 0);
+				char_spell_list.special_bonus_ = JsonConverter::getInt(spell_list_obj, "specialBonus", 0);
+				ref.spell_lists_.insert_or_assign(spell_list_data, std::move(char_spell_list));
+			}
+		}
+
 		// Languages
 		{
 			const json::array languages_array = JsonConverter::getJsonArray(jsonObj, "languages");
