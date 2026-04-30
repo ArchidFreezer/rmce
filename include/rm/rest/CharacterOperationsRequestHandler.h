@@ -103,6 +103,17 @@ private:
 	void requestSetStats(http::response<http::string_body>& response, const http::request<http::string_body>& request);
 
 	/**
+	 * @brief Automatically generates stat temporary and potential values for a CharacterBuilder object and assigns them.
+	 *
+	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON of the CharacterBuilder object. The function will update the specified CharacterBuilder
+	 * object in the cache with the assigned temporary and potential stat values based on the character profession and return the updated CharacterBuilder object.
+	 *
+	 * @param response The HTTP response object to populate with the CharacterBuilder result of the operation.
+	 * @param request The HTTP request containing the CharacterBuilder data for the operation in its body.
+	 */
+	void requestAutoStats(http::response<http::string_body>& response, const http::request<http::string_body>& request);
+
+	/**
 	 * @brief Sets the choices for generating the physique of a character being created.
 	 *
 	 * This operation is specific to character creation and does not follow the standard CRUD pattern. The request body is expected to contain JSON with the ID of the CharacterBuilder object for which to set the choices.

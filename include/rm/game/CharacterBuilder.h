@@ -34,6 +34,18 @@ public:
 	Character& build();
 
 	/**
+	 * @brief Automatically roll stats and assign them to the character being built.
+	 *
+	 * This method is used to automate the stat generation step. It will roll temporary and potential values and assign them to character stats based on the chosen profession.
+	 * The default parameter values are those used for PCs and may be adjusted for NPCs as desired based on whether we are creating MOBs or unique characters.
+	 * 
+	 * @param min The minimum temporary value to roll for each stat.
+	 * @param primeFloorMin The minimum value for the prime stats.
+	 * @param numPrimeFloorMin The number of prime floor stats that must meet or exceed the primeFloorMin value.
+	 */
+	void autoStats(int min = 25, int primeFloorMin = 90, int numPrimeFloorMin = 2);
+
+	/**
 	 * @brief Reset the aggreagrated state of the builder to its initial state, then apply any choices that have been made to recalculate the aggregated state of the builder based on the current choices.
 	 *
 	 * This function allows the choices to be modified and reapplied safely. For example, if the player changes their background choice after making some other choices, the aggregated state can be reset and recalculated to reflect the new
@@ -171,6 +183,14 @@ public:
 	 */
 	int expectedLifespan() const {
 		return lifespan_;
+	}
+
+	/**
+	 * @brief Sets the profession choice for the character being built.
+	 * @param profession A reference to the ProfessionData object representing the profession to set for the character.
+	 */
+	void setProfession(const ProfessionData& profession) {
+		profession_ = &profession;
 	}
 
 private:
@@ -449,7 +469,10 @@ const SkillCategoryData* getSkillCategoryForSpellList(const std::set<RealmType::
  * at least two stats are above a certain threshold, and that the highest two stats are sorted to the front of the list. If any of the stats do not meet these requirements, they will be re-rolled until they do.
  *
  * @param temp_stats A vector of integers representing the temporary stat values for the character being built, which will be modified by this function to ensure they are valid.
+ * @param min The minimum value that each stat must meet or exceed.
+ * @param primeFloorMin The minimum value that the prime stats must meet or exceed.
+ * @param numPrimeFloorMin The number of prime stats that must meet or exceed the primeFloorMin value.
  */
-void ensureValidTemporaryStats(std::vector<int>& temp_stats);
+void ensureValidTemporaryStats(std::vector<int>& temp_stats, int min, int primeFloorMin, int numPrimeFloorMin);
 
 } // namespace rm::game::character
