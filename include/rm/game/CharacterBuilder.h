@@ -153,6 +153,18 @@ public:
 	void generateBackgroundItems(int item_count);
 
 	/**
+	 * @brief Set the special bonuses for spell lists for the character being built.
+	 *
+	 * This method is used to set the special bonuses for spell lists for the character being built. The bonuses are typically determined by the character's background or other choices made during character creation. This method allows
+	 * for setting bonuses for specific spell lists, which can be important for characters with certain backgrounds or professions that grant bonuses to specific types of magic.
+	 *
+	 * @param bonuses A map of SpellListData pointers to integers representing the amount of the bonus to add to each specified spell list.
+	 */
+	void setSpellListSpecialBonuses(std::map<const SpellListData*, int> bonuses) {
+		spell_list_special_bonuses_ = bonuses;
+	}
+
+	/**
 	 * @brief Get the expected lifespan of the character being built
 	 *
 	 * @return An integer representing the expected lifespan of the character
@@ -248,6 +260,7 @@ private:
 	std::map<const SkillGroupData*, int> group_professional_bonuses_{};                                          /**< Skill group professional bonuses */
 	std::map<const SkillGroupData*, int> group_special_bonuses_{};                                               /**< Skill group special bonuses */
 	std::map<const SpellListData*, int> spell_list_ranks_{};                                                     /**< Spell list ranks */
+	std::map<const SpellListData*, int> spell_list_special_bonuses_{};                                           /**< Spell list special bonuses */
 	std::vector<std::string> total_items_{};                                                                     /**< Items the character starts with */
 	int height_{};                                                                                               /**< Height of the character in inches */
 	int weight_{};                                                                                               /**< Weight of the character in lbs */

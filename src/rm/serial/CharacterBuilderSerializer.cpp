@@ -203,6 +203,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setDataPrimitiveMap<SkillGroupData, int>(obj, "groupProfessionalBonuses", ref.group_professional_bonuses_);
 	JsonConverter::setDataPrimitiveMap<SkillGroupData, int>(obj, "groupSpecialBonuses", ref.group_special_bonuses_);
 	JsonConverter::setDataPrimitiveMap<SpellListData, int>(obj, "spellListRanks", ref.spell_list_ranks_);
+	JsonConverter::setDataPrimitiveMap<SpellListData, int>(obj, "spellListSpecialBonuses", ref.spell_list_special_bonuses_);
 	{
 		json::array items_array;
 		for (const auto& item : ref.total_items_) {
@@ -468,6 +469,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.group_professional_bonuses_ = JsonConverter::getDataPrimitiveMap<SkillGroupData, int>(jsonObj, "groupProfessionalBonuses", manager_);
 	ref.group_special_bonuses_ = JsonConverter::getDataPrimitiveMap<SkillGroupData, int>(jsonObj, "groupSpecialBonuses", manager_);
 	ref.spell_list_ranks_ = JsonConverter::getDataPrimitiveMap<SpellListData, int>(jsonObj, "spellListRanks", manager_);
+	ref.spell_list_special_bonuses_ = JsonConverter::getDataPrimitiveMap<SpellListData, int>(jsonObj, "spellListSpecialBonuses", manager_);
 	{
 		const json::array items_array = JsonConverter::getJsonArray(jsonObj, "totalItems");
 		for (const json::value& item_value : items_array) {

@@ -291,6 +291,9 @@ void CharacterOperationsRequestHandler::requestSetBackgroundChoices(http::respon
 			builder.addBackgroundCategorySpecialBonus(&category_data, value);
 		}
 
+		std::map<const SpellListData*, int> bonuses = JsonConverter::getDataPrimitiveMap<SpellListData, int>(json_body.as_object(), "spellListSpecialBonuses", serial_manager_.objectManager());
+		builder.setSpellListSpecialBonuses(std::move(bonuses));
+	
 		// Special items
 		int item_count = static_cast<int>(json_body.as_object().at("backgroundItemCount").as_int64());
 		builder.generateBackgroundItems(item_count);

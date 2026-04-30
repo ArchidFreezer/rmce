@@ -133,6 +133,11 @@ Character& CharacterBuilder::build() {
 		character.spell_lists_.emplace(spell_list_data, spell_list);
 	}
 
+	for (const auto& [spell_list_data, special_bonus] : spell_list_special_bonuses_) {
+		auto& spell_list = character.spell_lists_.at(spell_list_data);
+		spell_list.special_bonus_ = special_bonus;
+	}
+
 	/* Apply skill data */
 	for (const auto& [skill_data, ranks] : skill_ranks_) {
 		auto [it, inserted] = character.skills_.try_emplace(skill_data); // Create a new skill if it doesn't exist otherwise get the existing skill to update it.
