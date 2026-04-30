@@ -22,8 +22,6 @@ int main(int argc, char* argv[]) {
 	}
 	rm::util::Logger::init("rmce.log", level);
 
-	LOG_INFO("REST server example started");
-
 	try {
 		// Register signal handler
 		std::signal(SIGINT, signalHandler);
@@ -44,24 +42,24 @@ int main(int argc, char* argv[]) {
 			num_threads = std::atoi(argv[3]);
 		}
 
-		std::cout << "Starting REST API Server..." << std::endl;
-		std::cout << "Address: " << address << std::endl;
-		std::cout << "Port: " << port << std::endl;
-		std::cout << "Threads: " << num_threads << std::endl;
-		std::cout << "\nAvailable endpoints:" << std::endl;
-		std::cout << "  GET     /                            - Root endpoint" << std::endl;
-		std::cout << "  GET     /health                      - Health check" << std::endl;
-		std::cout << "  GET     /rmce/save                   - Save game data" << std::endl;
-		std::cout << "  GET     /rmce/version                - API version" << std::endl;
-		std::cout << "  GET     /rmce/prefixes               - Get game object prefixes" << std::endl;
-		std::cout << "  GET     /rmce/objects/{prefix}       - Get all game objects" << std::endl;
-		std::cout << "  GET     /rmce/objects/{prefix}?count - Count of game objects" << std::endl;
-		std::cout << "  GET     /rmce/objects/{prefix}?ids   - List of game object IDs" << std::endl;
-		std::cout << "  POST    /rmce/objects/{prefix}       - Create object" << std::endl;
-		std::cout << "  GET     /rmce/objects/{prefix}/{id}  - Get game object" << std::endl;
-		std::cout << "  PUT     /rmce/objects/{prefix}/{id}  - Update game object" << std::endl;
-		std::cout << "  DELETE  /rmce/objects/{prefix}/{id}  - Delete game object" << std::endl;
-		std::cout << "\nPress Ctrl+C to stop the server..." << std::endl;
+		LOG_INFO("Starting REST API Server...");
+		LOG_INFO("Address: {}", address);
+		LOG_INFO("Port: {}", port);
+		LOG_INFO("Threads: {}\n", num_threads);
+		LOG_INFO("Available endpoints:");
+		LOG_INFO("  GET     /                            - Root endpoint");
+		LOG_INFO("  GET     /health                      - Health check");
+		LOG_INFO("  GET     /rmce/save                   - Save game data");
+		LOG_INFO("  GET     /rmce/version                - API version");
+		LOG_INFO("  GET     /rmce/prefixes               - Get game object prefixes");
+		LOG_INFO("  GET     /rmce/objects/{prefix}       - Get all game objects");
+		LOG_INFO("  GET     /rmce/objects/{prefix}?count - Count of game objects");
+		LOG_INFO("  GET     /rmce/objects/{prefix}?ids   - List of game object IDs");
+		LOG_INFO("  POST    /rmce/objects/{prefix}       - Create object");
+		LOG_INFO("  GET     /rmce/objects/{prefix}/{id}  - Get game object");
+		LOG_INFO("  PUT     /rmce/objects/{prefix}/{id}  - Update game object");
+		LOG_INFO("  DELETE  /rmce/objects/{prefix}/{id}  - Delete game object");
+		LOG_INFO("\nPress Ctrl+C to stop the server...");
 
 		// Create the cache to store the game data and load it from file
 		rm::PersistentCache cache{};
@@ -79,12 +77,12 @@ int main(int argc, char* argv[]) {
 			std::this_thread::sleep_for(std::chrono::milliseconds(100));
 		}
 
-		std::cout << "\nShutting down..." << std::endl;
+		LOG_INFO("\nShutting down...");
 		server.stop();
 
 		json_manager.save();
 
-		std::cout << "Server shutdown complete." << std::endl;
+		LOG_INFO("Server shutdown complete.");
 		return 0;
 
 	} catch (const std::exception& e) {
