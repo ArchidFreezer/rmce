@@ -320,7 +320,7 @@ public:
 	 * @brief Set the number of months to acquire the package
 	 *
 	 * This is the amount of time the character needs to train before gaining the benefits of the package. This time should
-	 * be modified by a percentage equal to triple the character’s SD stat bonus (expressed as a percentage).
+	 * be modified by a percentage equal to triple the character's SD stat bonus (expressed as a percentage).
 	 *
 	 * Example: If a character has a +5 SD stat bonus, he would gain the benefits of a training package 15% earlier than
 	 * someone with a +0 SD bonus (i.e., 85% of the normal time). However, if the character has a -5 SD stat bonus, he
@@ -336,7 +336,7 @@ public:
 	 * @brief Set the number of months to acquire the package
 	 *
 	 * This is the amount of time the character needs to train before gaining the benefits of the package. This time should
-	 * be modified by a percentage equal to triple the character’s SD stat bonus (expressed as a percentage).
+	 * be modified by a percentage equal to triple the character's SD stat bonus (expressed as a percentage).
 	 *
 	 * Example: If a character has a +5 SD stat bonus, he would gain the benefits of a training package 15% earlier than
 	 * someone with a +0 SD bonus (i.e., 85% of the normal time). However, if the character has a -5 SD stat bonus, he

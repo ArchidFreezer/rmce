@@ -81,8 +81,6 @@ namespace rm::rule::table {
 			if (prof->id() == "PROFESSION_PRIEST_OF_WAR") return 18;
 			if (prof->id() == "PROFESSION_PRIEST_OF_WIND") return 18;
 			if (prof->id() == "PROFESSION_PRIEST_OF_WISDOM") return 18;
-			if (prof->id() == "PROFESSION_DëRNAKWMüN_PøR") return 18;
-			if (prof->id() == "PROFESSION_DëRNAKWMüN_KHAD") return 18;
 			if (prof->id() == "PROFESSION_MENTALIST") return 19;
 			if (prof->id() == "PROFESSION_LAY_HEALER") return 20;
 			if (prof->id() == "PROFESSION_MENTALISM_ALCHEMIST") return 21;

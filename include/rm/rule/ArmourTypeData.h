@@ -11,7 +11,7 @@ namespace rm::rule {
 /**
  * @class ArmourTypeData
  *
- * Armour types are designed to reflect the protective capability of one’s covering. Heavier coverings (e.g., ATs 15, 16, 19, 20, etc.) are usually much more cumbersome than light armour or mere clothing. It is easier to make contact with
+ * Armour types are designed to reflect the protective capability of one's covering. Heavier coverings (e.g., ATs 15, 16, 19, 20, etc.) are usually much more cumbersome than light armour or mere clothing. It is easier to make contact with
  * combatants in heavy armour in combat, but it resists penetration better than the less cumbersome armour types. Therefore, "critical strikes" achieved against the more cumbersome armour types will be less frequent and lower in severity.
  * However attacks resulting in just concussion hits will be more frequent (i.e., the hindrance due to these coverings make the target easier to strike but harder to seriously damage).
  *
@@ -170,9 +170,9 @@ public:
 	}
 
 	/**
-	 * @brief Sets the reduction in combatant’s Quickness stat bonus for his DB
+	 * @brief Sets the reduction in combatant's Quickness stat bonus for his DB
 	 *
-	 * This penalty can only reduce the armor wearer’s Quickness stat bonus. It will not reduce a combatant’s overall DB below
+	 * This penalty can only reduce the armor wearer's Quickness stat bonus. It will not reduce a combatant's overall DB below
 	 * the level that it would be at with a zero Quickness stat bonus.
 	 *
 	 * @param penalty Reduction in stat bonus
@@ -182,9 +182,9 @@ public:
 	}
 
 	/**
-	 * @brief Gets the reduction in combatant’s Quickness stat bonus for his DB
+	 * @brief Gets the reduction in combatant's Quickness stat bonus for his DB
 	 *
-	 * This penalty can only reduce the armor wearer’s Quickness stat bonus. It will not reduce a combatant’s overall DB below
+	 * This penalty can only reduce the armor wearer's Quickness stat bonus. It will not reduce a combatant's overall DB below
 	 * the level that it would be at with a zero Quickness stat bonus.
 	 *
 	 * @return int Reduction in stat bonus

@@ -28,7 +28,7 @@ namespace rm::rule::enums {
 			kCarefree, /**<  Does not believe that danger or misfortune exists for it */
 			kCruel, /**< Not only hostile, but delights in death, pain, and suffering */
 			kDomineering, /**< Desires power, attempts to control or dominate other creatures */
-			kGood, /**<  Opposed to “evil” (e.g., those who are cruel, hostile, belligerent, etc.); supportive of those who are also good */
+			kGood, /**<  Opposed to "evil" (e.g., those who are cruel, hostile, belligerent, etc.); supportive of those who are also good */
 			kGreedy, /**<  Will attack or attempt to steal from other creatures if the risk does not seem too high */
 			kHostile, /**<  Normally attacks other creatures on sight */
 			kHungry, /**<  If hungry, will attack anything edible; otherwise Normal */

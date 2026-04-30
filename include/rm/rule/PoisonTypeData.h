@@ -145,8 +145,8 @@ public:
 	/**
 	 * @brief Set the areas of the body that are affected by the poison if this is not defined.
 	 *
-	 * The area affected by a poison often varies. Sometimes the victim’s actions or the attack dictate the point of entry and the area first affected
-	 * (e.g., a maneuver of critical strike indicates that the snake injects the nerve poison in the victim’s leg), but occasionally there will be no
+	 * The area affected by a poison often varies. Sometimes the victim's actions or the attack dictate the point of entry and the area first affected
+	 * (e.g., a maneuver of critical strike indicates that the snake injects the nerve poison in the victim's leg), but occasionally there will be no
 	 * indication of the initially affected spot.
 	 *
 	 * @param areasAffected String describing the areas of the body that are affected by the poison if not specified.
@@ -158,8 +158,8 @@ public:
 	/**
 	 * @brief Get the areas of the body that are affected by the poison if this is not defined.
 	 *
-	 * The area affected by a poison often varies. Sometimes the victim’s actions or the attack dictate the point of entry and the area first affected
-	 * (e.g., a maneuver of critical strike indicates that the snake injects the nerve poison in the victim’s leg), but occasionally there will be no
+	 * The area affected by a poison often varies. Sometimes the victim's actions or the attack dictate the point of entry and the area first affected
+	 * (e.g., a maneuver of critical strike indicates that the snake injects the nerve poison in the victim's leg), but occasionally there will be no
 	 * indication of the initially affected spot.
 	 *
 	 * @return String describing the areas of the body that are affected by the poison if not specified.

@@ -15,7 +15,7 @@ namespace rm::rule::enums {
 	 * These are a general measure of the difficultly in performing a manoeuvre that is out of the ordinary. These are typically moving manoeuvres such as climbing, jumping, swimming, etc.
 	 * but could also be used for other types of manoeuvres such as performing a complex or unusual movement (e.g., acrobatics, dodging, tumbling, diving, etc.).
 	 *
-	 * Normally, a moving maneuver is limited to covering a distance no more than half of the character’s normal (not running) movement.
+	 * Normally, a moving maneuver is limited to covering a distance no more than half of the character's normal (not running) movement.
 	 */
 	namespace ManoeuvreDifficultyType {
 
