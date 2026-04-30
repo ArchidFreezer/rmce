@@ -31,6 +31,7 @@ find_package(Doxygen REQUIRED COMPONENTS dot)
 
 find_package(Boost REQUIRED COMPONENTS system)
 find_package(Boost REQUIRED COMPONENTS thread)
+find_package(spdlog REQUIRED)
 
 if (Doxygen_FOUND)
   add_subdirectory(docs)
