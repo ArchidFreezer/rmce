@@ -3412,7 +3412,7 @@
         },
         {
             "id" : "CULTURE_PLAINS_URBAN_UNDERCLASS",
-            "name" : "Plains Urban (Underclass",
+            "name" : "Plains Urban (Underclass)",
             "description" : "Unskilled laborers, teamsters, servants, and the criminal element make up the underclass of a Plains city. They wear plain clothes and usually cannot afford any jewelry at all.",
             "cultureType" : "CULTURETYPE_PLAINS",
             "highCulture" : true,
@@ -3521,7 +3521,7 @@
         },
         {
             "id" : "CULTURE_PLAINS_URBAN_UPPER_CLASS",
-            "name" : "Plains Urban (Upper Class",
+            "name" : "Plains Urban (Upper Class)",
             "description" : "The upper ranks of Plains cities are dominated by traditional aristocrats who owe their station to land ownership or military service. But one also finds those who have made considerable fortunes through commercial activities such as livestock trading and moneylending.",
             "cultureType" : "CULTURETYPE_PLAINS",
             "highCulture" : true,
