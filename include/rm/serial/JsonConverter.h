@@ -2341,7 +2341,7 @@ Primitive JsonConverter::getPrimitive(const json::object& obj, const std::string
 				return std::string(val.as_string());
 		}
 	}
-	return NULL;
+	return Primitive{};
 }
 
 } // namespace rm::serial
