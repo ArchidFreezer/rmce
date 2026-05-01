@@ -3,6 +3,7 @@
 #include <AnimalSerializer.h>
 #include <ArmourTypeSerializer.h>
 #include <AttackTableSerializer.h>
+#include <AutoCharacterBuilderSerializer.h>
 #include <BookSerializer.h>
 #include <CharacterSerializer.h>
 #include <CharacterBuilderSerializer.h>

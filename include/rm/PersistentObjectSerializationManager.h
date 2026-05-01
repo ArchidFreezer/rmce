@@ -433,6 +433,8 @@ std::unique_ptr<	serial::PersistentJsonSerializer<T>> PersistentObjectSerializat
 		return std::make_unique<ArmourTypeSerializer>(object_manager_);
 	} else if constexpr (std::is_same_v<T, table::AttackTable>) {
 		return std::make_unique<AttackTableSerializer>(object_manager_);
+	} else if constexpr (std::is_same_v<T, AutoCharacterBuilder>) {
+		return std::make_unique<AutoCharacterBuilderSerializer>(object_manager_);
 	} else if constexpr (std::is_same_v<T, BookData>) {
 		return std::make_unique<BookSerializer>(object_manager_);
 	} else if constexpr (std::is_same_v<T, Character>) {

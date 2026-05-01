@@ -21,6 +21,8 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 		JsonConverter::setString(obj, "cultureType", ref.culture_type_->id());
 	if (ref.profession_)
 		JsonConverter::setString(obj, "profession", ref.profession_->id());
+	if (ref.auto_builder_)
+		JsonConverter::setString(obj, "autoBuilder", ref.auto_builder_->id());
 
 	// Pysique and development choices
 	JsonConverter::setBool(obj, "male", ref.male_);
@@ -231,6 +233,14 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	// JSON).
 	CharacterBuilder& ref = manager_.get<CharacterBuilder>(id);
 
+	// Make sure we have an auto builder to use for this character builder. If the JSON does not specify an auto builder, we will use a default one from the manager, which will be a cached object with a generated ID..
+	std::string auto_builder_id = JsonConverter::getString(jsonObj, "autoBuilder");
+	if (auto_builder_id.empty()) {
+		AutoCharacterBuilder& tmp_auto_builder = manager_.get<AutoCharacterBuilder>();
+		auto_builder_id = tmp_auto_builder.id(); // Generate a new ID for the auto builder
+	}
+	ref.auto_builder_ = &manager_.get<AutoCharacterBuilder>(auto_builder_id);
+
 	// We need to check whether we need to set the spell list catergories before we reset the builder.
 	std::set<RealmType::Type> magical_realms = JsonConverter::getEnumSet<RealmType::Type>(jsonObj, "magicalRealms");
 	std::set<const SpellListData*> base_spell_lists = JsonConverter::getDataSet<SpellListData>(jsonObj, "baseSpellListChoices", manager_);
@@ -279,7 +289,6 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.weight_ = JsonConverter::getInt(jsonObj, "weight", 0);
 	ref.build_description_ = JsonConverter::getString(jsonObj, "buildDescription");
 	ref.lifespan_ = JsonConverter::getInt(jsonObj, "lifespan", 0);
-
 
 	ref.magical_realms_ = std::move(magical_realms);
 	ref.num_hobby_skill_ranks_ = JsonConverter::getInt(jsonObj, "numHobbySkillRanks", 0);

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <PersistentObjectManager.h>
+#include <AutoCharacterBuilder.h>
 #include <Character.h>
 #include <StatType.h>
 #include <string>
@@ -14,6 +15,10 @@ class CharacterBuilderSerializer;
 } // namespace rm::serial
 
 namespace rm::game::character {
+
+// Forward declaration to break the circular include with AutoCharacterBuilder.h
+class AutoCharacterBuilder;
+
 using namespace rm::rule;
 
 /**
@@ -25,7 +30,7 @@ using namespace rm::rule;
  */
 class CharacterBuilder : public GameObject {
 	friend class rm::serial::CharacterBuilderSerializer; /**< Serializer class is a friend to allow it access to the private members of this class for serialisation and deserialisation */
-
+	friend class AutoCharacterBuilder; /**< AutoCharacterBuilder is a friend to allow it access to the private members of this class for automatically generating characters with random choices for all attributes and stats */
 public:
 	/**
 	 * @brief Build and return a Character object based on the attributes and stats set in the builder.
@@ -38,7 +43,7 @@ public:
 	 *
 	 * This method is used to automate the stat generation step. It will roll temporary and potential values and assign them to character stats based on the chosen profession.
 	 * The default parameter values are those used for PCs and may be adjusted for NPCs as desired based on whether we are creating MOBs or unique characters.
-	 * 
+	 *
 	 * @param min The minimum temporary value to roll for each stat.
 	 * @param primeFloorMin The minimum value for the prime stats.
 	 * @param numPrimeFloorMin The number of prime floor stats that must meet or exceed the primeFloorMin value.
@@ -207,6 +212,7 @@ private:
 	const CultureData* culture_{nullptr};   /**< The culture data for the character being built. */
 	const CultureTypeData* culture_type_{nullptr}; /**< The culture type data for the character being built. This is derived from the culture and may be used for certain choices during character creation. */
 	const ProfessionData* profession_{nullptr};    /**< The profession data for the character being built. */
+	AutoCharacterBuilder* auto_builder_{nullptr};  /**< A pointer to an AutoCharacterBuilder object that can be used to automatically generate characters and may be null if not used. */
 	std::set<RealmType::Type> magical_realms_{};   /**< A set of realm types representing the magical realm choices for the character being built. */
 	int num_hobby_skill_ranks_{0};                 /**< An integer representing the number of hobby skill ranks for the character being built, which may be determined by the culture type. */
 	int num_adolescent_language_ranks_{0};         /**< An integer representing the number of adolescent language ranks for the character being built, which may be determined by the culture type. */
