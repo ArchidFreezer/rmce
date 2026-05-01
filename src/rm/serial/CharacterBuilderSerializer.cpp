@@ -240,6 +240,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 		auto_builder_id = tmp_auto_builder.id(); // Generate a new ID for the auto builder
 	}
 	ref.auto_builder_ = &manager_.get<AutoCharacterBuilder>(auto_builder_id);
+	ref.auto_builder_->setName(id); // Set the name to this character builder's ID so that it can be identified in the manager as the auto builder for this character builder
 
 	// We need to check whether we need to set the spell list catergories before we reset the builder.
 	std::set<RealmType::Type> magical_realms = JsonConverter::getEnumSet<RealmType::Type>(jsonObj, "magicalRealms");

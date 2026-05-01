@@ -6,6 +6,7 @@ namespace rm::serial {
 json::value AutoCharacterBuilderSerializer::serializeObject(const AutoCharacterBuilder& ref) const {
 	json::object obj;
 	JsonConverter::setString(obj, "id", ref.id());
+	JsonConverter::setString(obj, "name", ref.name_);
 
 	return obj;
 }
@@ -23,7 +24,8 @@ const AutoCharacterBuilder& AutoCharacterBuilderSerializer::deserializeObject(js
 	// JSON).
 	AutoCharacterBuilder& ref = manager_.get<AutoCharacterBuilder>(id);
 
-	// No data to deserialize for this class as it is just a helper for the character builder and does not have any state of its own.
+	// Identity + basic state
+	ref.name_ = JsonConverter::getString(jsonObj, "name");
 
 	return ref;
 }
