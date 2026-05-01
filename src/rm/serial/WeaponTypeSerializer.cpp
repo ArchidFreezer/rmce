@@ -10,7 +10,6 @@ json::value WeaponTypeSerializer::serializeObject(const WeaponTypeData& ref) con
 	JsonConverter::setString(obj, "id", ref.id());
 	JsonConverter::setString(obj, "name", ref.name());
 	JsonConverter::setString(obj, "notes", ref.notes());
-	JsonConverter::setString(obj, "skill", ref.skill().id());
 	JsonConverter::setString(obj, "book", ref.book().id());
 	JsonConverter::setString(obj, "attackTable", ref.attackTable().id());
 	JsonConverter::setInt(obj, "fumble", ref.fumble());
@@ -22,6 +21,7 @@ json::value WeaponTypeSerializer::serializeObject(const WeaponTypeData& ref) con
 	JsonConverter::setInt(obj, "minWeight", ref.minWeight());
 	JsonConverter::setInt(obj, "maxWeight", ref.maxWeight());
 	JsonConverter::setBool(obj, "woodenHaft", ref.woodenHaft());
+	JsonConverter::setDataSet(obj, "skills", ref.skills());
 
 	// Criticals
 	json::array criticals_arr;
@@ -60,8 +60,8 @@ const WeaponTypeData& WeaponTypeSerializer::deserializeObject(json::object& json
 	ref.setName(JsonConverter::getString(jsonObj, "name"));
 	ref.setNotes(JsonConverter::getString(jsonObj, "notes"));
 
-	std::string skill_id = JsonConverter::getString(jsonObj, "skill");
-	ref.setSkill(manager_.get<SkillData>(skill_id));
+	std::set<const SkillData*> skills = JsonConverter::getDataSet<SkillData>(jsonObj, "skills", manager_);
+	ref.setSkills(std::move(skills));
 
 	std::string book_id = JsonConverter::getString(jsonObj, "book");
 	ref.setBook(manager_.get<BookData>(book_id));

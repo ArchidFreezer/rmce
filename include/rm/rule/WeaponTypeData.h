@@ -68,19 +68,27 @@ public:
 	}
 
 	/**
-	 * @brief Set the skill the waepon uses
-	 * @param skill SkillData reference to a skill
+	 * @brief Set the skills the waepon uses
+	 * @param skills Set of SkillData pointers to the skills
 	 */
-	void setSkill(const SkillData& skill) {
-		skill_ = &skill;
+	void setSkills(std::set<const SkillData*> skills) {
+		skills_ = std::move(skills);
 	}
 
 	/**
-	 * @brief Get the skill the weapon uses
-	 * @return SkillData reference to the skill the weapon uses
+	 * @brief Add a skill the weapon uses
+	 * @param skill SkillData pointer to a skill
 	 */
-	const SkillData& skill() const {
-		return *skill_;
+	void addSkill(SkillData* skill) {
+		skills_.emplace(skill);
+	}
+
+	/**
+	 * @brief Get the skills the weapon uses
+	 * @return Set of SkillData pointers to the skills
+	 */
+	const std::set<const SkillData*>& skills() const {
+		return skills_;
 	}
 
 	/**
@@ -435,7 +443,7 @@ public:
 private:
 	std::string name_{};
 	std::string notes_{};
-	const SkillData* skill_{};
+	std::set<const SkillData*> skills_{};
 	const BookData* book_{};
 	const rm::rule::table::AttackTable* table_{};
 	int fumble_{};
