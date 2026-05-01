@@ -20,6 +20,13 @@ target_link_libraries(rm PUBLIC
     spdlog::spdlog_header_only
 )
 
+# Enable debug logging in non-Release builds
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    target_compile_definitions(rm PRIVATE SPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_INFO)
+else()
+    target_compile_definitions(rm PRIVATE SPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_TRACE)
+endif()
+
 # REST API Library
 find_package(boost_beast REQUIRED CONFIG)
 find_package(boost_system REQUIRED CONFIG)
@@ -50,5 +57,12 @@ target_link_libraries(rmce_rest PRIVATE
     Boost::url
     spdlog::spdlog_header_only
 )
+
+# Enable debug logging in non-Release builds
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    target_compile_definitions(rmce_rest PRIVATE SPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_INFO)
+else()
+    target_compile_definitions(rmce_rest PRIVATE SPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_TRACE)
+endif()
 
 target_compile_features(rmce_rest PUBLIC cxx_std_20)
