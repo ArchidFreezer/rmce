@@ -68,7 +68,7 @@ namespace rm::rule::enums {
 		case kCarefree: return "Does not believe that danger or misfortune exists for it";
 		case kCruel: return "Not only hostile, but delights in death, pain, and suffering";
 		case kDomineering: return "Desires power, attempts to control or dominate other creatures";
-		case kGood: return "Opposed to “evil” (e.g., those who are cruel, hostile, belligerent, etc.); supportive of those who are also good";
+		case kGood: return "Opposed to 'evil' (e.g., those who are cruel, hostile, belligerent, etc.); supportive of those who are also good";
 		case kGreedy: return "Will attack or attempt to steal from other creatures if the risk does not seem too high";
 		case kHostile: return "Normally attacks other creatures on sight";
 		case kHungry: return "If hungry, will attack anything edible; otherwise Normal";

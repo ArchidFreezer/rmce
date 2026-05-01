@@ -37,7 +37,7 @@ protected:
 };
 
 // -----------------------------------------------------------------------
-// get<id_persistent_object T>(string) — BookData is id_persistent_object
+// get<id_persistent_object T>(string) - BookData is id_persistent_object
 // -----------------------------------------------------------------------
 
 /**
@@ -79,7 +79,7 @@ TEST_F(PersistentObjectManagerTest, GetIdPersistentObject_PrefixedAndUnprefixedR
 }
 
 // -----------------------------------------------------------------------
-// get<default_persistent_object T>() — TestGameObject is default_persistent_object
+// get<default_persistent_object T>() - TestGameObject is default_persistent_object
 // -----------------------------------------------------------------------
 
 /**
@@ -314,7 +314,7 @@ TEST_F(PersistentObjectManagerTest, Keys_ClearsPriorSetContent) {
 }
 
 // -----------------------------------------------------------------------
-// create() — transient objects, not added to cache
+// create() - transient objects, not added to cache
 // -----------------------------------------------------------------------
 
 /**

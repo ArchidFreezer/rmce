@@ -4,6 +4,7 @@
 #include <CharacterBuilder.h>
 #include <CharacterCategory.h>
 #include <EnumIterator.h>
+#include <Logger.h>
 #include <TrainingPackageCostTable.h>
 #include <SkillDevelopmentCost.h>
 
@@ -1047,11 +1048,11 @@ void CharacterBuilder::autoStats(int min, int primeFloorMin, int numPrimeFloorMi
 	}
 
 	// Debugging output to check the assigned stats and weights
-	//for (auto stat_type : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
-	//	const Stat& stat = initial_stats_[stat_type];
-	//	int weight = stat_weights[stat_type];
-	//	std::cout << std::format("{:<17} | {:^5} | {:^5} | (weight: {})\n", StatType::toString(stat_type), stat.temporary(), stat.potential(), weight);
-	//}
+	for (auto stat_type : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
+		const Stat& stat = initial_stats_[stat_type];
+		int weight = stat_weights[stat_type];
+		LOG_INFO("{:<17} | {:^5} | {:^5} | (weight: {})\n", StatType::toString(stat_type), stat.temporary(), stat.potential(), weight);
+	}
 }
 
 /* ------------------------------------------------------------------ */
