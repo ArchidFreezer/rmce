@@ -24,6 +24,10 @@ project (RoleMasterCharacterEditor VERSION 0.1
                   DESCRIPTION "Rolemaster Character Editor"
                   LANGUAGES CXX)
 
+if(MSVC)
+  add_compile_options(/utf-8)
+endif()
+
 enable_testing()
 include(CTest)
 

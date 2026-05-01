@@ -17,6 +17,7 @@ target_include_directories(rm PUBLIC ${Boost_INCLUDE_DIRS}
 target_link_libraries(rm PUBLIC 
     Boost::boost  # Header-only Boost libraries
     Boost::json
+    spdlog::spdlog_header_only
 )
 
 # REST API Library
@@ -47,6 +48,7 @@ target_link_libraries(rmce_rest PRIVATE
     Boost::system
     Boost::thread
     Boost::url
+    spdlog::spdlog_header_only
 )
 
 target_compile_features(rmce_rest PUBLIC cxx_std_20)

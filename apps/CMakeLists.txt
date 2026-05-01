@@ -1,6 +1,6 @@
 add_executable (dataload "dataload.cpp")
 target_compile_features(dataload PRIVATE cxx_std_20)
-target_link_libraries(dataload PUBLIC archid rm spdlog::spdlog)
+target_link_libraries(dataload PUBLIC archid rm spdlog::spdlog_header_only)
 target_include_directories(dataload PUBLIC "${PROJECT_SOURCE_DIR}/include/archid"
                                            "${PROJECT_SOURCE_DIR}/include/rm")
 
@@ -21,7 +21,7 @@ target_link_libraries(rest_server_example
         rmce_rest
         Boost::system
         Boost::thread
-        spdlog::spdlog
+        spdlog::spdlog_header_only
 )
 
 target_include_directories(rest_server_example PUBLIC "${PROJECT_SOURCE_DIR}/include/archid"
