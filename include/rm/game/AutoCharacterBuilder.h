@@ -10,6 +10,7 @@ class AutoCharacterBuilderSerializer;
 namespace rm::rule {
 class ArmourTypeData;
 class SubcategoriedSkillData;
+class WeaponTypeData;
 } // namespace rm::rule
 
 namespace rm::game::character {
@@ -79,11 +80,11 @@ public:
 
 	/**
 	 * @brief Automatically select initial choices for the character being built based on the traits defined in this AutoCharacterBuilder object.
-	 * 
+	 *
 	 * This methos deals with the base choices from the porofession and  culture of the character being built. The choices are governed by the traits defined in this AutoCharacterBuilder object, which are used to weight the selection of
 	 * skills and other choices for the character being built. The traits are defined on scales of 1 - 9 to allow for a median value of 5 to be used for random generation and to allow for more extreme values to be generated for unique
 	 * characters or MOBs if desired. They are initialised to 0 to indicate that they have not been set yet and to allow for the auto generation of these values if they are not set by the caller.
-	*/
+	 */
 	void autoInitialChoices(CharacterBuilder& builder);
 
 private:
@@ -105,13 +106,26 @@ private:
 	int focussed_{0};         /**< An integer representing whether the character prefers to focus on a single skill (higher value) or be more of a generalist (lower value). */
 
 	/*
-	* Basic choices such as weapon and arnmour types
-	*/
+	 * Basic choices such as weapon and arnmour types
+	 */
 	const SubcategoriedSkillData* preferred_melee_{nullptr};
 	const SubcategoriedSkillData* preferred_ranged_{nullptr};
 	const ArmourTypeData* preferred_armour_{nullptr};
 
-	void setPreferredArmour(CharacterBuilder& builder);
+	/* ------------------------------------------------------------------ */
+	/* Helper functions                                                   */
+	/* ------------------------------------------------------------------ */
+
+	
+	void setPreferredArmour(CharacterBuilder& builder); /* Set the armour type that the character will focus on */
+	
+	void setRaceCategoryEverymanChoices(CharacterBuilder& builder); /* Select the skills that are Everyman from thos defined by the race, populating the builder.race_category_everyman_choices_ member */
+
+	void setCultureTypeCategorySkillRanks(CharacterBuilder& builder); /* Select the culture type category choices, which are weapon choices, populating the builder.culture_type_category_skill_ranks_ member */
 };
+
+std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, PersistentObjectManager& object_manager); /* Get the skills included in a category */
+
+std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, PersistentObjectManager& object_manager); /* Get the weapon types that use a skill */
 
 } // namespace rm::game::character

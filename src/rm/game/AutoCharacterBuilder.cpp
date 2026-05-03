@@ -4,7 +4,6 @@
 #include <ranges>
 #include <Dice.h>
 #include <EnumIterator.h>
-#include <Logger.h>
 
 namespace rm::game::character {
 
@@ -15,11 +14,84 @@ void AutoCharacterBuilder::autoInitialChoices(CharacterBuilder& builder) {
 
 	// We randomise the traits if they have not already been initialised.
 	ensureTraits();
+
+	// Set any racial everyman skill categories.
+	// These define one of more skill categories where a defined number of skills within the category should be defined as Everyman skills and populate the builder.race_category_everyman_choices_ member
+	setRaceCategoryEverymanChoices(builder);
+	// Set the culture type weapon category/skill choices
+	setCultureTypeCategorySkillRanks(builder);
+
 	setPreferredArmour(builder);
 
 	/* Culture choices */
 	const CultureData* culture = builder.culture_;
 	std::map<const SkillCategoryData*, int> culture_category_skill_ranks = culture->cultureType().skillCategorySkillRanks();
+}
+
+void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& builder) {
+	// Get any culture preferences for individual weapon skills
+	std::vector<const SubcategoriedSkillData*> culture_preferred_weapon_skills;
+	for (const WeaponTypeData* weapon_data : builder.culture_->cultureType().preferredWeapons()) {
+		for (const SkillData* skill_data : weapon_data->skills()) {
+			std::string id = skill_data->id();
+			SubcategoriedSkillData* subcategoried_skill_data = &builder.object_factory_->subcategoriedSkillData(id, weapon_data->name());
+			if (!std::ranges::contains(culture_preferred_weapon_skills, subcategoried_skill_data)) {
+				culture_preferred_weapon_skills.push_back(subcategoried_skill_data);
+			}
+		}
+	}
+
+	for (const auto& [skill_category_data, skill_rank] : builder.culture_->cultureType().skillCategorySkillRanks()) {
+		std::vector<const SkillData*> category_skills = getCategorySkills(*skill_category_data, *builder.object_factory_);
+
+		// Check for any intersection between the culture preferred weapon skills and the skills in this category. If there is an intersection then we pick one at rindom for now.
+		// TODO Perform some weighting based on the character traits.
+		std::vector<const SubcategoriedSkillData*> intersection;
+		for (const SubcategoriedSkillData* preferred_weapon_skill : culture_preferred_weapon_skills) {
+			if (std::ranges::contains(category_skills, &preferred_weapon_skill->skillData())) {
+				intersection.push_back(preferred_weapon_skill);
+			}
+		}
+
+		int num_intersections = intersection.size();
+		if (num_intersections > 0) {
+			const SubcategoriedSkillData* subcategoried_skill_data = intersection[Random::get(0, num_intersections - 1)];
+			builder.culture_type_category_skill_ranks_.emplace(subcategoried_skill_data, skill_rank);
+			LOG_TRACE("AutoCharacterBuilder: Setting weapon category skill rank choice for {} to {} based on culture preferred weapon {}.", skill_category_data->name(), skill_rank, subcategoried_skill_data->subcategory().value());
+		} else {
+			int num_category_skills = category_skills.size();
+			const SkillData* chosen_skill = category_skills[Random::get(0, num_category_skills - 1)];
+			std::string skill_id = chosen_skill->id();
+			// Pick a random weapon that uises the skill
+			std::vector<const WeaponTypeData*> skill_weapons = getSkillWeapons(*chosen_skill, *builder.object_factory_);
+			int num_skill_weapons = skill_weapons.size();
+			const WeaponTypeData* chosen_weapon = skill_weapons[Random::get(0, num_skill_weapons - 1)];
+			SubcategoriedSkillData* subcategoried_skill_data = &builder.object_factory_->subcategoriedSkillData(skill_id, chosen_weapon->name());
+			builder.culture_type_category_skill_ranks_.emplace(subcategoried_skill_data, skill_rank);
+			LOG_TRACE("AutoCharacterBuilder: Setting weapon category skill rank choice for {} to {} with no culture preferred weapon {}.", skill_category_data->name(), skill_rank, subcategoried_skill_data->subcategory().value());
+		}
+	}
+}
+
+void AutoCharacterBuilder::setRaceCategoryEverymanChoices(CharacterBuilder& builder) {
+	// We need to check for any racial everyman skill categories and if so then we need to make choices for those.
+	for (const auto& category_choice : builder.race_->categoryEverymanSkillChoices()) {
+		// Create the list of skills that are available in the category options to choose from.
+		std::vector<const SkillData*> skill_options;
+		for (const auto& category : category_choice.options()) {
+			skill_options.append_range(getCategorySkills(*category, *builder.object_factory_));
+		}
+
+		// Now we need to randomly select the required number of skills from the list of options to be the everyman skills for this category choice and add those to the builder member that tracks the everyman skill
+		std::ranges::shuffle(skill_options, Random::mt);
+		int num_choices = std::min(static_cast<int>(skill_options.size()), category_choice.numChoices());
+		for (int i = 0; i < num_choices; ++i) {
+			const SkillData* skill_data = skill_options[i];
+			std::string id = skill_data->id();
+			SubcategoriedSkillData& choice = builder.object_factory_->subcategoriedSkillData(id);
+			builder.race_category_everyman_choices_.insert(&choice);
+		}
+	}
 }
 
 void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
@@ -277,11 +349,11 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 		}
 	}
 	// Now we randomize the medium and low assignments to add some variance to the stat assignment process and then assign them to the remaining stat types.
-	std::shuffle(medium_stat_types.begin(), medium_stat_types.end(), Random::mt);
+	std::ranges::shuffle(medium_stat_types, Random::mt);
 	for (size_t i = 0; i < medium_stat_types.size(); ++i) {
 		builder.setInitialStat(medium_stat_types[i], medium_stats[i].temporary(), medium_stats[i].potential());
 	}
-	std::shuffle(low_stat_types.begin(), low_stat_types.end(), Random::mt);
+	std::ranges::shuffle(low_stat_types, Random::mt);
 	for (size_t i = 0; i < low_stat_types.size(); ++i) {
 		builder.setInitialStat(low_stat_types[i], low_stats[i].temporary(), low_stats[i].potential());
 	}
@@ -297,6 +369,26 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 		LOG_DEBUG("| {:<17} | {:^5} | {:^5} | {:^5} |", StatType::toString(stat_type), stat.temporary(), stat.potential(), weight);
 	}
 	LOG_DEBUG("{:-<{}}\n", "", 45);
+}
+
+std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, PersistentObjectManager& object_manager) {
+	std::vector<const SkillData*> category_skills;
+	for (const SkillData& skill : object_manager.getAll<SkillData>()) {
+		if (&skill.category() == &category) {
+			category_skills.emplace_back(&skill);
+		}
+	}
+	return std::move(category_skills);
+}
+
+std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, PersistentObjectManager& object_manager) {
+	std::vector<const WeaponTypeData*> skill_weapons;
+	for (const WeaponTypeData& weapon : object_manager.getAll<WeaponTypeData>()) {
+		if (std::ranges::contains(weapon.skills(), &skill)) {
+			skill_weapons.emplace_back(&weapon);
+		}
+	}
+	return std::move(skill_weapons);
 }
 
 } // namespace rm::game::character
