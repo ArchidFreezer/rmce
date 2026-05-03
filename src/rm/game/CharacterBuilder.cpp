@@ -375,6 +375,9 @@ void CharacterBuilder::applyCultureTypeChoices() {
 	for (const auto& [skill, ranks] : culture_type_category_skill_ranks_) {
 		int current_ranks = skill_ranks_.find(skill) != skill_ranks_.end() ? skill_ranks_.at(skill) : 0;
 		skill_ranks_.insert_or_assign(skill, std::max(current_ranks, ranks));
+		const SkillCategoryData* category = &skill->skillData().category();
+		current_ranks = category_ranks_.find(category) != category_ranks_.end() ? category_ranks_.at(category) : 0;
+		category_ranks_.insert_or_assign(category, std::max(current_ranks, ranks));
 	}
 }
 
