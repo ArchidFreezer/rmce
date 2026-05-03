@@ -4,7 +4,6 @@
 #include <ranges>
 #include <Dice.h>
 #include <EnumIterator.h>
-#include <Logger.h>
 
 namespace rm::game::character {
 
@@ -15,11 +14,79 @@ void AutoCharacterBuilder::autoInitialChoices(CharacterBuilder& builder) {
 
 	// We randomise the traits if they have not already been initialised.
 	ensureTraits();
+
+	// Set any racial everyman skill categories.
+	// These define one of more skill categories where a defined number of skills within the category should be defined as Everyman skills and populate the builder.race_category_everyman_choices_ member
+	setRaceCategoryEverymanChoices(builder);
+	// Set the culture type weapon category/skill choices
+	setCultureTypeCategorySkillRanks(builder);
+
+
+
 	setPreferredArmour(builder);
 
 	/* Culture choices */
 	const CultureData* culture = builder.culture_;
 	std::map<const SkillCategoryData*, int> culture_category_skill_ranks = culture->cultureType().skillCategorySkillRanks();
+}
+
+void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& builder) {
+	// Get any culture preferences for weapon skills
+	std::vector<const SkillData*> culture_preferred_weapon_skills;
+	for (const WeaponTypeData* weapon_data : builder.culture_->cultureType().preferredWeapons()) {
+		for (const SkillData* skill_data : weapon_data->skills()) {
+			if (!std::ranges::contains(culture_preferred_weapon_skills, skill_data)) {
+				culture_preferred_weapon_skills.push_back(skill_data);
+			}
+		}
+	}
+	// We are going to be performing an intersection om the vector so we need to sort it first. We can use the pointer address for the comparison so we can use the basic sort.
+	std::ranges::sort(culture_preferred_weapon_skills);
+
+	for (const auto& [skill_category_data, skill_rank] : builder.culture_->cultureType().skillCategorySkillRanks()) {
+		std::vector<const SkillData*> category_skills = getCategorySkills(*skill_category_data, *builder.object_factory_);
+		int num_category_skills = category_skills.size();
+		std::ranges::sort(category_skills);
+		std::string chosen_id{};
+
+		// Check for any intersection between the culture preferred weapon skills and the skills in this category. If there is an intersection then we pick one at rindom for now.
+		// TODO Perform some weighting based on the character traits.
+		std::vector<const SkillData*> intersection;
+		std::ranges::set_intersection(culture_preferred_weapon_skills, category_skills, std::back_inserter(intersection));
+		int num_intersections = intersection.size();
+		if (num_intersections > 0) {
+			const SkillData* chosen_skill = intersection[Random::get(0, num_intersections - 1)];
+			chosen_id = chosen_skill->id();
+			LOG_TRACE("AutoCharacterBuilder: Setting culture type category skill rank choice for {} to {} based on preferred weapon skill {}.", skill_category_data->name(), skill_rank, chosen_skill->name());
+		} else {
+			const SkillData* chosen_skill = category_skills[Random::get(0, num_category_skills - 1)];
+			chosen_id = chosen_skill->id();
+			LOG_TRACE("AutoCharacterBuilder: Setting culture type category skill rank choice for {} to {} with no preferred weapon skill {}.", skill_category_data->name(), skill_rank, chosen_skill->name());
+		}
+		SubcategoriedSkillData* skill_choice = &builder.object_factory_->subcategoriedSkillData(chosen_id);
+		builder.culture_type_category_skill_ranks_.emplace(skill_choice, skill_rank);
+	}
+}
+
+void AutoCharacterBuilder::setRaceCategoryEverymanChoices(CharacterBuilder& builder) {
+	// We need to check for any racial everyman skill categories and if so then we need to make choices for those.
+	for (const auto& category_choice : builder.race_->categoryEverymanSkillChoices()) {
+		// Create the list of skills that are available in the category options to choose from.
+		std::vector<const SkillData*> skill_options;
+		for (const auto& category : category_choice.options()) {
+			skill_options.append_range(getCategorySkills(*category, *builder.object_factory_));
+		}
+
+		// Now we need to randomly select the required number of skills from the list of options to be the everyman skills for this category choice and add those to the builder member that tracks the everyman skill
+		std::ranges::shuffle(skill_options, Random::mt);
+		int num_choices = std::min(static_cast<int>(skill_options.size()), category_choice.numChoices());
+		for (int i = 0; i < num_choices; ++i) {
+			const SkillData* skill_data = skill_options[i];
+			std::string id = skill_data->id();
+			SubcategoriedSkillData& choice = builder.object_factory_->subcategoriedSkillData(id);
+			builder.race_category_everyman_choices_.insert(&choice);
+		}
+	}
 }
 
 void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
@@ -277,11 +344,11 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 		}
 	}
 	// Now we randomize the medium and low assignments to add some variance to the stat assignment process and then assign them to the remaining stat types.
-	std::shuffle(medium_stat_types.begin(), medium_stat_types.end(), Random::mt);
+	std::ranges::shuffle(medium_stat_types, Random::mt);
 	for (size_t i = 0; i < medium_stat_types.size(); ++i) {
 		builder.setInitialStat(medium_stat_types[i], medium_stats[i].temporary(), medium_stats[i].potential());
 	}
-	std::shuffle(low_stat_types.begin(), low_stat_types.end(), Random::mt);
+	std::ranges::shuffle(low_stat_types, Random::mt);
 	for (size_t i = 0; i < low_stat_types.size(); ++i) {
 		builder.setInitialStat(low_stat_types[i], low_stats[i].temporary(), low_stats[i].potential());
 	}
@@ -297,6 +364,16 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 		LOG_DEBUG("| {:<17} | {:^5} | {:^5} | {:^5} |", StatType::toString(stat_type), stat.temporary(), stat.potential(), weight);
 	}
 	LOG_DEBUG("{:-<{}}\n", "", 45);
+}
+
+std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, PersistentObjectManager& object_manager) {
+	std::vector<const SkillData*> category_skills;
+	for (const SkillData& skill : object_manager.getAll<SkillData>()) {
+		if (&skill.category() == &category) {
+			category_skills.emplace_back(&skill);
+		}
+	}
+	return std::move(category_skills);
 }
 
 } // namespace rm::game::character
