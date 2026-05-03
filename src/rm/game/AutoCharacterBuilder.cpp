@@ -1,9 +1,137 @@
 #include <AutoCharacterBuilder.h>
 #include <algorithm>
+#include <Logger.h>
+#include <ranges>
+#include <Dice.h>
 #include <EnumIterator.h>
 #include <Logger.h>
 
 namespace rm::game::character {
+
+void AutoCharacterBuilder::autoInitialChoices(CharacterBuilder& builder) {
+	if (builder.built_) {
+		throw std::runtime_error("CharacterBuilder: Cannot auto initial choices after character has been built.");
+	}
+
+	// We randomise the traits if they have not already been initialised.
+	ensureTraits();
+	setPreferredArmour(builder);
+
+	/* Culture choices */
+	const CultureData* culture = builder.culture_;
+	std::map<const SkillCategoryData*, int> culture_category_skill_ranks = culture->cultureType().skillCategorySkillRanks();
+}
+
+void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
+	// We randomise the traits if they have not already been initialised.
+	ensureTraits();
+
+	// Create a map to store the weights for each armour type which we seed with a valure of 100.
+	std::map<const ArmourTypeData*, int> armour_weights;
+	for (const ArmourTypeData& armour_type_data : builder.object_factory_->getAll<ArmourTypeData>()) {
+		// We skip animal only armours unless the culture specifies them as they are not typical for characters.
+		if (armour_type_data.animalOnly() && !std::ranges::contains(builder.culture_->cultureType().preferredArmour(), &armour_type_data)) {
+			continue;
+		}
+		armour_weights[&armour_type_data] = 100;
+	}
+
+	// Before we check professions we need to determine if the profession provides and Transcend Armour skill bonus as this indicates the character is expected to wear armour and be able to cast.
+	bool transcend_armour{false};
+	for (auto& [skill_category_data, bonus] : builder.profession_->skillBonuses()) {
+		if (skill_category_data->id() == "SKILL_TRANSCEND_ARMOR") {
+			LOG_TRACE("AutoCharacterBuilder: Profession {} provides Transcend Armour skill bonus.", builder.profession_->name());
+			transcend_armour = true;
+			break;
+		}
+	}
+
+	// We need to consider the magic realm to determine the restrictions on metal or inert material.
+	if (std::ranges::contains(builder.magical_realms_, RealmType::Type::kEssence) && !transcend_armour) {
+		// Essence users cannot use any armour so limit to AT1 (Skin) and AT2 (Robes).
+		for (auto& [skill_category_data, weight] : armour_weights) {
+			if (skill_category_data->type() != ArmourType::kAT1 && skill_category_data->type() != ArmourType::kAT2) {
+				LOG_TRACE("AutoCharacterBuilder: Removing {} for Essence caster character with no Transcend Armour bonus.", skill_category_data->name());
+				armour_weights.erase(skill_category_data);
+			}
+		}
+	} else if (std::ranges::contains(builder.magical_realms_, RealmType::Type::kChanneling) && !transcend_armour) {
+		// Channeling users struggle to cast spells in metal armour so AT13 and above are removed.
+		for (auto& [skill_category_data, weight] : armour_weights) {
+			for (ArmourType::Type armour_type : archid::enum_range(ArmourType::kAT13, ArmourType::kAT20)) {
+				if (skill_category_data->type() == armour_type) {
+					LOG_TRACE("AutoCharacterBuilder: Removing {} for Channeling caster character with no Transcend Armour bonus.", skill_category_data->name());
+					armour_weights.erase(skill_category_data);
+				}
+			}
+		}
+	}
+
+	// Reduce the weight of armours with a missile attack penalty if the character is not expected to be in close combat and is not using combat casting as they are more likely to want to avoid the missile attack penalty.
+	if (combat_casting_ < 3 || combat_closeness_ < 4) {
+		for (const auto& [armour_type_data, weight] : armour_weights) {
+			LOG_TRACE("AutoCharacterBuilder: Reducing weight of {} with missile attack penalty of {} for ranged character.", armour_type_data->name(), armour_type_data->missileAttackPenalty());
+			armour_weights[armour_type_data] -= armour_type_data->missileAttackPenalty();
+		}
+	}
+
+	// Now check for any preferred armours from the culture that are still available and if so then weigh the options towards those.
+	for (const ArmourTypeData* preferred_armour : builder.culture_->cultureType().preferredArmour()) {
+		LOG_TRACE("AutoCharacterBuilder: Increasing weight of preferred {} for character culture.", preferred_armour->name());
+		armour_weights[preferred_armour] *= 10; // Heavily weight culture preferred armours.
+	}
+
+	// If the character has high Quickness bonus weight armour in favour of those with a smaller penalty unless going full melee.
+	if (aggression_ < 7 && combat_closeness_ < 7) {
+		int quickness_db_bonus = builder.stats_[StatType::kQuickness].bonus() * 3;
+		if (quickness_db_bonus > 0) {
+			for (const auto& [armour_type_data, weight] : armour_weights) {
+				if (armour_type_data->quicknessPenalty() > 0) {
+					LOG_TRACE("AutoCharacterBuilder: Decreasing weight of {} with Qui penalty of {} for character with Qui DB bonus of {}.", armour_type_data->name(), armour_type_data->quicknessPenalty(), quickness_db_bonus);
+					int armour_actual_penalty = std::max(0, armour_type_data->quicknessPenalty() - quickness_db_bonus);
+					armour_weights[armour_type_data] -= armour_actual_penalty * 2;
+				}
+			}
+		}
+	}
+
+	/* Pick a random AT from those available */
+	int sum_weights{0};
+	for (const auto& [armour_type_data, weight] : armour_weights) {
+		LOG_TRACE("AutoCharacterBuilder: Weight: {} - {}.", armour_type_data->name(), weight);
+		sum_weights += weight;
+	}
+	int random_weight{archid::Dice(sum_weights).roll().result()};
+	int current_weight{0};
+	for (const auto& [armour_type_data, weight] : armour_weights) {
+		current_weight += weight;
+		if (random_weight < current_weight) {
+			LOG_TRACE("AutoCharacterBuilder: Selected preferred armour type {} for character with random weight {} and current weight {}.", armour_type_data->name(), random_weight, current_weight);
+			preferred_armour_ = armour_type_data;
+			return;
+		}
+	}
+}
+
+void AutoCharacterBuilder::ensureTraits() {
+	// We randomise these if they have not already been initialised.
+	if (!aggression_) {
+		aggression_ = archid::Dice(9).roll().result();
+		LOG_TRACE("AutoCharacterBuilder: Set aggression to {}.", aggression_);
+	}
+	if (!combat_casting_) {
+		combat_casting_ = archid::Dice(9).roll().result();
+		LOG_TRACE("AutoCharacterBuilder: Set combat casting to {}.", combat_casting_);
+	}
+	if (!combat_closeness_) {
+		combat_closeness_ = archid::Dice(9).roll().result();
+		LOG_TRACE("AutoCharacterBuilder: Set combat closeness to {}.", combat_closeness_);
+	}
+	if (!focussed_) {
+		focussed_ = archid::Dice(9).roll().result();
+		LOG_TRACE("AutoCharacterBuilder: Set focussed to {}.", focussed_);
+	}
+}
 
 void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int primeFloorMin, int numPrimeFloorMin) const {
 	if (builder.built_) {
@@ -62,7 +190,7 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 	std::map<StatType::Type, int> stat_weights;
 	for (auto stat_type : archid::enum_range(StatType::kAgility, StatType::kStrength)) {
 		stat_weights[stat_type] = 0;
-		if (std::find(builder.profession_->stats().begin(), builder.profession_->stats().end(), stat_type) != builder.profession_->stats().end()) {
+		if (std::ranges::contains(builder.profession_->stats(), stat_type)) {
 			stat_weights[stat_type] += 10; // Prime stats get a big boost to ensure they are prioritized in the assignment
 		}
 		if (StatType::isDevelopment(stat_type)) {
@@ -94,13 +222,13 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 			}
 		}
 		for (StatType::Type stat_type : semi_realm_stats) {
-			stat_weights[stat_type] += 5; // Semi spell usres hsould only have a single magical stat.
+			stat_weights[stat_type] += 5; // Semi spell usres should only have a single magical stat.
 		}
-		stat_weights[StatType::kConstitution] += 5; // Semi spell users still want to be somewhat competent in combat so we give a small boost to agility to help with that.
+		stat_weights[StatType::kConstitution] += 5; // Semi spell users still want to be somewhat competent in combat so we give a small boost to their hits to help with that.
 		break;
 	}
 	case SpellUserType::kNone: {
-		// Boost the body development stats for non-spell users to ensure they have a good pool of development points to spend on combat skills and other abilities that will help them survive in combat.
+		// Boost the body development stats for non-spell users to ensure they have a good pool of hit points that will help them survive in combat.
 		stat_weights[StatType::kConstitution] += 5;
 		stat_weights[StatType::kSelfDiscipline] += 5;
 		break;

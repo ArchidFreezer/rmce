@@ -898,6 +898,10 @@ void CharacterBuilder::autoStats(int min, int primeFloorMin, int numPrimeFloorMi
 	auto_builder_->autoStats(*this, min, primeFloorMin, numPrimeFloorMin);
 }
 
+void CharacterBuilder::autoInitialChoices() {
+	auto_builder_->autoInitialChoices(*this);
+}
+
 /* ------------------------------------------------------------------ */
 /* Free functions                                                     */
 /* ------------------------------------------------------------------ */

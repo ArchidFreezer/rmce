@@ -51,6 +51,13 @@ public:
 	void autoStats(int min = 25, int primeFloorMin = 90, int numPrimeFloorMin = 2);
 
 	/**
+	 * @brief Automatically make choices based on the initial dfata such as profession and culture.
+	 *
+	 * This method is used to automate the initial choices based on the profession and culture in the character creation process.
+	 */
+	void autoInitialChoices();
+
+	/**
 	 * @brief Reset the aggreagrated state of the builder to its initial state, then apply any choices that have been made to recalculate the aggregated state of the builder based on the current choices.
 	 *
 	 * This function allows the choices to be modified and reapplied safely. For example, if the player changes their background choice after making some other choices, the aggregated state can be reset and recalculated to reflect the new

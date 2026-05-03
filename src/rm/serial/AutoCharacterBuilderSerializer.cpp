@@ -8,6 +8,14 @@ json::value AutoCharacterBuilderSerializer::serializeObject(const AutoCharacterB
 	JsonConverter::setString(obj, "id", ref.id());
 	JsonConverter::setString(obj, "name", ref.name_);
 
+	/*
+	 * Character trait varaibles used to assist in choices
+	 */
+	JsonConverter::setInt(obj, "aggression", ref.aggression_);
+	JsonConverter::setInt(obj, "combatCloseness", ref.combat_closeness_);
+	JsonConverter::setInt(obj, "combatCasting", ref.combat_casting_);
+	JsonConverter::setInt(obj, "focussed", ref.focussed_);
+
 	return obj;
 }
 
@@ -26,6 +34,14 @@ const AutoCharacterBuilder& AutoCharacterBuilderSerializer::deserializeObject(js
 
 	// Identity + basic state
 	ref.name_ = JsonConverter::getString(jsonObj, "name");
+
+	/*
+	 * Character trait varaibles used to assist in choices
+	 */
+	ref.aggression_ = JsonConverter::getInt(jsonObj, "aggression");
+	ref.combat_closeness_ = JsonConverter::getInt(jsonObj, "combatCloseness");
+	ref.combat_casting_ = JsonConverter::getInt(jsonObj, "combatCasting");
+	ref.focussed_ = JsonConverter::getInt(jsonObj, "focussed");
 
 	return ref;
 }
