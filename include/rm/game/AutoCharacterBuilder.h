@@ -118,15 +118,15 @@ private:
 	/* Helper functions                                                   */
 	/* ------------------------------------------------------------------ */
 
-	
 	void setPreferredArmour(CharacterBuilder& builder); /* Set the armour type that the character will focus on */
-	
+
 	void setRaceCategoryEverymanChoices(CharacterBuilder& builder); /* Select the skills that are Everyman from thos defined by the race, populating the builder.race_category_everyman_choices_ member */
 
 	void setCultureTypeCategorySkillRanks(CharacterBuilder& builder); /* Select the culture type category choices, which are weapon choices, populating the builder.culture_type_category_skill_ranks_ member */
 
 	void setProfessionSkillDevelopmentTypes(CharacterBuilder& builder); /* Select the profession skill development type choices, populating the builder.prof_skill_development_type_choices_ member */
 
+	std::vector<const SubcategoriedSkillData*> getSubcategoriesForSkill(CharacterBuilder& builder, const SkillData& skill); /* Get the common subcategories for a skill  */
 };
 
 std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, PersistentObjectManager& object_manager); /* Get the skills included in a category */

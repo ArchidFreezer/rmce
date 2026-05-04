@@ -105,12 +105,7 @@ void AutoCharacterBuilder::setProfessionSkillDevelopmentTypes(CharacterBuilder& 
 		// We may need to manipulate some of the skill choices so we keep a separate list of the actual options that we will select from.
 		std::vector<const SubcategoriedSkillData*> skill_options;
 		for (const auto& skill_choice : skill_choices.options()) {
-			if (&skill_choice->skillData() == &riding_skill) {
-				skill_options.append_range(getCultureMountSkills(*builder.culture_type_, *builder.object_factory_));
-				skill_options.append_range(getRaceMountSkills(*builder.race_, *builder.object_factory_));
-			} else {
-				skill_options.push_back(skill_choice);
-			}
+			skill_options.append_range(getSubcategoriesForSkill(builder, skill_choice->skillData()));
 		}
 		std::ranges::shuffle(skill_options, Random::mt);
 		int num_options = std::min(skill_choices.numChoices(), (int)skill_options.size());
@@ -119,6 +114,21 @@ void AutoCharacterBuilder::setProfessionSkillDevelopmentTypes(CharacterBuilder& 
 			builder.prof_skill_development_type_choices_.emplace(skill_data, development_type);
 		}
 	}
+}
+
+std::vector<const SubcategoriedSkillData*> AutoCharacterBuilder::getSubcategoriesForSkill(CharacterBuilder& builder, const SkillData& skill) {
+	// We currently only handle the riding skill, but this could be expanded later if needed.
+	std::vector<const SubcategoriedSkillData*> subcategories;
+
+	if (skill.id() == "SKILL_RIDING") {
+		subcategories.append_range(getCultureMountSkills(*builder.culture_type_, *builder.object_factory_));
+		subcategories.append_range(getRaceMountSkills(*builder.race_, *builder.object_factory_));
+	} else {
+		SubcategoriedSkillData& subcategoried_skill_data = builder.object_factory_->subcategoriedSkillData(skill);
+		subcategories.push_back(&subcategoried_skill_data);
+	}
+
+	return std::move(subcategories);
 }
 
 void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
@@ -434,7 +444,7 @@ std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTy
 	} else if (culture.id() == "CULTURETYPE_DESERT") {
 		mounts.push_back("Camel");
 		mounts.push_back("Horse");
-	} else  {
+	} else {
 		mounts.push_back("Horse");
 	}
 
