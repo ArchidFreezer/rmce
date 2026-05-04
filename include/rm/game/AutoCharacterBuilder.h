@@ -11,6 +11,8 @@ namespace rm::rule {
 class ArmourTypeData;
 class CultureTypeData;
 class RaceData;
+class SkillCategoryData;
+class SkillGroupData;
 class SubcategoriedSkillData;
 class WeaponTypeData;
 } // namespace rm::rule
@@ -130,6 +132,10 @@ private:
 };
 
 std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, PersistentObjectManager& object_manager); /* Get the skills included in a category */
+
+std::vector<const SkillData*> getGroupSkills(const SkillGroupData& group, PersistentObjectManager& object_manager); /* Get the skills included in a group */
+
+std::vector<const SkillCategoryData*> getGroupCategories(const SkillGroupData& group, PersistentObjectManager& object_manager); /* Get the skill categories included in a group */
 
 std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, PersistentObjectManager& object_manager); /* Get the weapon types that use a skill */
 

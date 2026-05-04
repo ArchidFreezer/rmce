@@ -418,6 +418,26 @@ std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& categor
 	return std::move(category_skills);
 }
 
+std::vector<const SkillData*> getGroupSkills(const SkillGroupData& group, PersistentObjectManager& object_manager) {
+	std::vector<const SkillData*> group_skills;
+	for (const SkillData& skill : object_manager.getAll<SkillData>()) {
+		if (&skill.category().group() == &group) {
+			group_skills.emplace_back(&skill);
+		}
+	}
+	return std::move(group_skills);
+}
+
+std::vector<const SkillCategoryData*> getGroupCategories(const SkillGroupData& group, PersistentObjectManager& object_manager) {
+	std::vector<const SkillCategoryData*> group_categories;
+	for (const SkillCategoryData& category : object_manager.getAll<SkillCategoryData>()) {
+		if (&category.group() == &group) {
+			group_categories.emplace_back(&category);
+		}
+	}
+	return std::move(group_categories);
+}
+
 std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, PersistentObjectManager& object_manager) {
 	std::vector<const WeaponTypeData*> skill_weapons;
 	for (const WeaponTypeData& weapon : object_manager.getAll<WeaponTypeData>()) {
