@@ -59,6 +59,18 @@ public:
 		return subcategory_;
 	}
 
+	/**
+	 * @brief Get the name of the skill with the subcategory in brackets if it exists
+	 * @return string name of the skill with the subcategory in brackets if it exists
+	 */
+	const std::string name() const {
+		std::string name = skill_data_->name();
+		if (subcategory_) {
+			name += " (" + subcategory_.value() + ")";
+		}
+		return name;
+	}
+
 private:
 	const SkillData* skill_data_{};            /**< Skill that the subcategory is for */
 	std::optional<std::string> subcategory_{}; /**< Optional subcategory name */
