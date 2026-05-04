@@ -44,25 +44,29 @@ public:
 	/**
 	 * @brief Constructor defining a development where no ranks may be purchased
 	 */
-	SkillDevelopmentCost() : SkillDevelopmentCost(0, 0, 0, 0) {}
+	SkillDevelopmentCost() : SkillDevelopmentCost(0, 0, 0, 0) {
+	}
 	/**
 	 * @brief Constructor defining a development where only a single rank may be purchased each level
 	 * @param one int Number of deveopment points to purchase first rank
 	 */
-	SkillDevelopmentCost(int one) : SkillDevelopmentCost(one, 0, 0, 0) {}
+	SkillDevelopmentCost(int one) : SkillDevelopmentCost(one, 0, 0, 0) {
+	}
 	/**
 	 * @brief Constructor defining a development where two ranks may be purchased each level
 	 * @param one int Number of deveopment points to purchase first rank
 	 * @param two int Number of deveopment points to purchase second rank
 	 */
-	SkillDevelopmentCost(int one, int two) : SkillDevelopmentCost(one, two, 0, 0) {}
+	SkillDevelopmentCost(int one, int two) : SkillDevelopmentCost(one, two, 0, 0) {
+	}
 	/**
 	 * @brief Constructor defining a development where three ranks may be purchased each level
 	 * @param one int Number of deveopment points to purchase first rank
 	 * @param two int Number of deveopment points to purchase second rank
 	 * @param three int Number of deveopment points to purchase third rank
 	 */
-	SkillDevelopmentCost(int one, int two, int three) : SkillDevelopmentCost(one, two, three, 0) {}
+	SkillDevelopmentCost(int one, int two, int three) : SkillDevelopmentCost(one, two, three, 0) {
+	}
 	/**
 	 * @brief Constructor defining a development where four ranks may be purchased each level
 	 * @param one int Number of deveopment points to purchase first rank
@@ -70,7 +74,8 @@ public:
 	 * @param three int Number of deveopment points to purchase third rank
 	 * @param four int Number of deveopment points to purchase fourth rank
 	 */
-	SkillDevelopmentCost(int one, int two, int three, int four) : one_{ one }, two_{ two }, three_{ three }, four_{ four } {}
+	SkillDevelopmentCost(int one, int two, int three, int four) : one_{one}, two_{two}, three_{three}, four_{four} {
+	}
 
 	/**
 	 * @brief Constructor that takes a sting in the form of costs delimited by colons.
@@ -82,10 +87,14 @@ public:
 	 */
 	SkillDevelopmentCost(const std::string& cost) {
 		std::vector<std::string> tokens = archid::tokenise(cost, ":");
-		if (tokens.size() > 0) one_ = stoi(tokens[0]);
-		if (tokens.size() > 1) two_ = stoi(tokens[1]);
-		if (tokens.size() > 2) three_ = stoi(tokens[2]);
-		if (tokens.size() > 3) four_ = stoi(tokens[3]);
+		if (tokens.size() > 0)
+			one_ = stoi(tokens[0]);
+		if (tokens.size() > 1)
+			two_ = stoi(tokens[1]);
+		if (tokens.size() > 2)
+			three_ = stoi(tokens[2]);
+		if (tokens.size() > 3)
+			four_ = stoi(tokens[3]);
 	}
 
 	/**
@@ -102,7 +111,12 @@ public:
 	 * @endcode
 	 * @return std::optional<int> cost, if available
 	 */
-	std::optional<int> first() const { if (one_) return one_; else return std::nullopt; }
+	std::optional<int> first() const {
+		if (one_)
+			return one_;
+		else
+			return std::nullopt;
+	}
 
 	/**
 	 * @brief The cost in development points to purchase a first rank
@@ -118,7 +132,9 @@ public:
 	 * @endcode
 	 * @return std::optional<int> cost, if available
 	 */
-	std::optional<int> one() const { return first(); }
+	std::optional<int> one() const {
+		return first();
+	}
 
 	/**
 	 * @brief The cost in development points to purchase a second rank
@@ -134,7 +150,12 @@ public:
 	 * @endcode
 	 * @return std::optional<int> cost, if available
 	 */
-	std::optional<int> second() const { if (two_) return two_; else return std::nullopt; }
+	std::optional<int> second() const {
+		if (two_)
+			return two_;
+		else
+			return std::nullopt;
+	}
 
 	/**
 	 * @brief The cost in development points to purchase two ranks
@@ -150,7 +171,10 @@ public:
 	 * @return std::optional<int> cost, if available
 	 */
 	std::optional<int> two() const {
-		if (one() && two_) return (one().value() + two_);	else return std::nullopt;
+		if (one() && two_)
+			return (one().value() + two_);
+		else
+			return std::nullopt;
 	}
 
 	/**
@@ -166,7 +190,12 @@ public:
 	 * @endcode
 	 * @return std::optional<int> cost, if available
 	 */
-	std::optional<int> third() const { if (three_) return three_; else return std::nullopt; }
+	std::optional<int> third() const {
+		if (three_)
+			return three_;
+		else
+			return std::nullopt;
+	}
 
 	/**
 	 * @brief The cost in development points to purchase three ranks
@@ -182,7 +211,10 @@ public:
 	 * @return std::optional<int> cost, if available
 	 */
 	std::optional<int> three() const {
-		if (two() && three_) return (two().value() + three_); else return std::nullopt;
+		if (two() && three_)
+			return (two().value() + three_);
+		else
+			return std::nullopt;
 	}
 
 	/**
@@ -199,7 +231,12 @@ public:
 	 * @endcode
 	 * @return std::optional<int> cost, if available
 	 */
-	std::optional<int> fourth() const { if (four_) return four_; else return std::nullopt; }
+	std::optional<int> fourth() const {
+		if (four_)
+			return four_;
+		else
+			return std::nullopt;
+	}
 
 	/**
 	 * @brief The cost in development points to purchase four ranks
@@ -215,7 +252,10 @@ public:
 	 * @return std::optional<int> cost, if available
 	 */
 	std::optional<int> four() const {
-		if (three() && four_) return (three().value() + four_); else return std::nullopt;
+		if (three() && four_)
+			return (three().value() + four_);
+		else
+			return std::nullopt;
 	}
 
 	/**
@@ -223,10 +263,14 @@ public:
 	 * @return int maximum number of ranks that may be purchased
 	 */
 	int maxRanks() const {
-		if (four_) return 4;
-		else if (three_) return 3;
-		else if (two_) return 2;
-		else if (one_) return 1;
+		if (four_)
+			return 4;
+		else if (three_)
+			return 3;
+		else if (two_)
+			return 2;
+		else if (one_)
+			return 1;
 		return 0;
 	}
 
@@ -236,10 +280,14 @@ public:
 	 * @return int maximum number of ranks that may be purchased with the given amount of development points
 	 */
 	int maxRanks(int cost) const {
-		if (four() && cost >= four().value()) return 4;
-		else if (three() && cost >= three().value()) return 3;
-		else if (two() && cost >= two().value()) return 2;
-		else if (one() && cost >= one().value()) return 1;
+		if (four() && cost >= four().value())
+			return 4;
+		else if (three() && cost >= three().value())
+			return 3;
+		else if (two() && cost >= two().value())
+			return 2;
+		else if (one() && cost >= one().value())
+			return 1;
 		return 0;
 	}
 
@@ -248,18 +296,35 @@ public:
 	 * @return string_view of the representation
 	 */
 	const std::string toString() const {
-		return ""
-			+ (first() ? std::to_string(one_) : "")
-			+ (second() ? ":" + std::to_string(two_) : "")
-			+ (third() ? ":" + std::to_string(three_) : "")
-			+ (fourth() ? ":" + std::to_string(four_) : "");
+		return "" + (first() ? std::to_string(one_) : "") + (second() ? ":" + std::to_string(two_) : "") + (third() ? ":" + std::to_string(three_) : "") + (fourth() ? ":" + std::to_string(four_) : "");
+	}
+
+	/**
+	 * @brief Override the less than operator
+	 *
+	 * The creation of this overload allows all SkillDevelopmentCost objects to be used as keys in sorted containers
+	 *
+	 * @param other SkillDevelopmentCost object to compare against
+	 * @return `true` if this object is consdiered to be < \a other
+	 * @return `false` if this object is not consdiered to be < \a other
+	 */
+	bool operator<(const SkillDevelopmentCost& other) const {
+		if (one_ != other.one_)
+			return one_ < other.one_;
+		if (two_ != other.two_)
+			return two_ < other.two_;
+		if (three_ != other.three_)
+			return three_ < other.three_;
+		if (four_ != other.four_)
+			return four_ < other.four_;
+		return false;
 	}
 
 private:
-	int one_{}; /**< Development point cost for first rank; 0 if unavailable */
-	int two_{}; /**< Development point cost for second rank; 0 if unavailable */
+	int one_{};   /**< Development point cost for first rank; 0 if unavailable */
+	int two_{};   /**< Development point cost for second rank; 0 if unavailable */
 	int three_{}; /**< Development point cost for third rank; 0 if unavailable */
-	int four_{}; /**< Development point cost for fourth rank; 0 if unavailable */
+	int four_{};  /**< Development point cost for fourth rank; 0 if unavailable */
 };
 
 } // namespace rm::game::character
