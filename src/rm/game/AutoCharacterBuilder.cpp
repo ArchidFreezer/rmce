@@ -26,6 +26,8 @@ void AutoCharacterBuilder::autoPrimaryChoices(CharacterBuilder& builder) {
 	setProfessionCategoryDevelopmentTypes(builder);
 	// Set skills whose development type is chosen based on the profession group choice, populating the builder.prof_group_development_type_choices_ member
 	setProfessionGroupDevelopmentTypes(builder);
+	// Set the base spell lists for the character based on the profession choice, populating the builder.prof_base_spell_list_choices_ member
+	setBaseSpellLists(builder);
 
 	setPreferredArmour(builder);
 
@@ -161,10 +163,9 @@ void AutoCharacterBuilder::setBaseSpellLists(CharacterBuilder& builder) {
 	}
 
 	// Get the profession list choices
-	int num_base_spell_list_choices = builder.profession_->baseSpellListChoices().size();
-	int num_choices = std::min(num_base_spell_list_choices, builder.profession_->numBaseSpellListChoices());
 
 	for (const GameRuleDataChoice spell_list_choice : builder.profession_->baseSpellListChoices()) {
+		int num_choices = std::min(spell_list_choice.numChoices(), spell_list_choice.numOptions());
 		std::set<const SpellListData*> spell_list_options_set = spell_list_choice.options();
 		std::vector<const SpellListData*> spell_list_options(spell_list_options_set.begin(), spell_list_options_set.end());
 		std::ranges::shuffle(spell_list_options, Random::mt);
