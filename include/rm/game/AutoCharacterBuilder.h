@@ -9,6 +9,8 @@ class AutoCharacterBuilderSerializer;
 
 namespace rm::rule {
 class ArmourTypeData;
+class CultureTypeData;
+class RaceData;
 class SubcategoriedSkillData;
 class WeaponTypeData;
 } // namespace rm::rule
@@ -122,10 +124,17 @@ private:
 	void setRaceCategoryEverymanChoices(CharacterBuilder& builder); /* Select the skills that are Everyman from thos defined by the race, populating the builder.race_category_everyman_choices_ member */
 
 	void setCultureTypeCategorySkillRanks(CharacterBuilder& builder); /* Select the culture type category choices, which are weapon choices, populating the builder.culture_type_category_skill_ranks_ member */
+
+	void setProfessionSkillDevelopmentTypes(CharacterBuilder& builder); /* Select the profession skill development type choices, populating the builder.prof_skill_development_type_choices_ member */
+
 };
 
 std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, PersistentObjectManager& object_manager); /* Get the skills included in a category */
 
 std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, PersistentObjectManager& object_manager); /* Get the weapon types that use a skill */
+
+std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTypeData& culture, PersistentObjectManager& object_manager); /* Get the subcategories of the riding skill for the typical mounts of a culture */
+
+std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& culture, PersistentObjectManager& object_manager); /* Get the subcategories of the riding skill for the typical mounts of a race */
 
 } // namespace rm::game::character

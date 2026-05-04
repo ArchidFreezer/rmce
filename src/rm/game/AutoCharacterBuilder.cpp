@@ -18,8 +18,10 @@ void AutoCharacterBuilder::autoInitialChoices(CharacterBuilder& builder) {
 	// Set any racial everyman skill categories.
 	// These define one of more skill categories where a defined number of skills within the category should be defined as Everyman skills and populate the builder.race_category_everyman_choices_ member
 	setRaceCategoryEverymanChoices(builder);
-	// Set the culture type weapon category/skill choices
+	// Set the culture type weapon category/skill choices, populating the builder.culture_type_category_skill_ranks_ member
 	setCultureTypeCategorySkillRanks(builder);
+	// Set skills whose development type is chosen based on the profession choice, populating the builder.prof_skill_development_type_choices_ member
+	setProfessionSkillDevelopmentTypes(builder);
 
 	setPreferredArmour(builder);
 
@@ -44,7 +46,7 @@ void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& bu
 	for (const auto& [skill_category_data, skill_rank] : builder.culture_->cultureType().skillCategorySkillRanks()) {
 		std::vector<const SkillData*> category_skills = getCategorySkills(*skill_category_data, *builder.object_factory_);
 
-		// Check for any intersection between the culture preferred weapon skills and the skills in this category. If there is an intersection then we pick one at rindom for now.
+		// Check for any intersection between the culture preferred weapon skills and the skills in this category. If there is an intersection then we pick one at random for now.
 		// TODO Perform some weighting based on the character traits.
 		std::vector<const SubcategoriedSkillData*> intersection;
 		for (const SubcategoriedSkillData* preferred_weapon_skill : culture_preferred_weapon_skills) {
@@ -62,7 +64,7 @@ void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& bu
 			int num_category_skills = category_skills.size();
 			const SkillData* chosen_skill = category_skills[Random::get(0, num_category_skills - 1)];
 			std::string skill_id = chosen_skill->id();
-			// Pick a random weapon that uises the skill
+			// Pick a random weapon that uses the skill
 			std::vector<const WeaponTypeData*> skill_weapons = getSkillWeapons(*chosen_skill, *builder.object_factory_);
 			int num_skill_weapons = skill_weapons.size();
 			const WeaponTypeData* chosen_weapon = skill_weapons[Random::get(0, num_skill_weapons - 1)];
@@ -90,6 +92,31 @@ void AutoCharacterBuilder::setRaceCategoryEverymanChoices(CharacterBuilder& buil
 			std::string id = skill_data->id();
 			SubcategoriedSkillData& choice = builder.object_factory_->subcategoriedSkillData(id);
 			builder.race_category_everyman_choices_.insert(&choice);
+		}
+	}
+}
+
+void AutoCharacterBuilder::setProfessionSkillDevelopmentTypes(CharacterBuilder& builder) {
+	// We need to add appropriate subcategories to the riding skill if it is one of the choices so get the skill data for the riding skill to compare against.
+	std::string riding_id = "SKILL_RIDING";
+	SkillData& riding_skill = builder.object_factory_->get<SkillData>(riding_id);
+
+	for (const auto& [skill_choices, development_type] : builder.profession_->skillDevelopmentTypeChoices()) {
+		// We may need to manipulate some of the skill choices so we keep a separate list of the actual options that we will select from.
+		std::vector<const SubcategoriedSkillData*> skill_options;
+		for (const auto& skill_choice : skill_choices.options()) {
+			if (&skill_choice->skillData() == &riding_skill) {
+				skill_options.append_range(getCultureMountSkills(*builder.culture_type_, *builder.object_factory_));
+				skill_options.append_range(getRaceMountSkills(*builder.race_, *builder.object_factory_));
+			} else {
+				skill_options.push_back(skill_choice);
+			}
+		}
+		std::ranges::shuffle(skill_options, Random::mt);
+		int num_options = std::min(skill_choices.numChoices(), (int)skill_options.size());
+		for (int i = 0; i < num_options; ++i) {
+			const SubcategoriedSkillData* skill_data = skill_options[i];
+			builder.prof_skill_development_type_choices_.emplace(skill_data, development_type);
 		}
 	}
 }
@@ -389,6 +416,68 @@ std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, Persi
 		}
 	}
 	return std::move(skill_weapons);
+}
+
+std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTypeData& culture, PersistentObjectManager& object_manager) {
+	std::vector<const SubcategoriedSkillData*> culture_mounts{};
+
+	// We are looking for the typical mounts that a culture uses and then apply these as subcategories of the riding skill, so we need that first.
+	std::string riding_id = "SKILL_RIDING";
+	SkillData& riding_skill = object_manager.get<SkillData>(riding_id);
+
+	std::vector<std::string> mounts{};
+	// The typical mounts are not defined in the culture data so we hard code some values based on the culture name for now.
+	// TODO Add culture mount preferences to the culture data to make this more data driven.
+	if (culture.id() == "CULTURETYPE_AQUATIC") {
+		mounts.push_back("Shark");
+		mounts.push_back("Dolphin");
+	} else if (culture.id() == "CULTURETYPE_DESERT") {
+		mounts.push_back("Camel");
+		mounts.push_back("Horse");
+	} else  {
+		mounts.push_back("Horse");
+	}
+
+	for (const std::string& mount : mounts) {
+		SubcategoriedSkillData& subcategoried_skill_data = object_manager.subcategoriedSkillData(riding_skill, mount);
+		culture_mounts.push_back(&subcategoried_skill_data);
+	}
+
+	return std::move(culture_mounts);
+}
+
+std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& race, PersistentObjectManager& object_manager) {
+	std::vector<const SubcategoriedSkillData*> race_mounts{};
+
+	// We are looking for the typical mounts that a race uses and then apply these as subcategories of the riding skill, so we need that first.
+	std::string riding_id = "SKILL_RIDING";
+	SkillData& riding_skill = object_manager.get<SkillData>(riding_id);
+
+	std::vector<std::string> mounts{};
+	// The typical mounts are not defined in the race data so we hard code some values based on the race name for now.
+	// TODO Add racial mount preferences to the race data to make this more data driven.
+
+	if (race.id() == "RACE_DWARVES") {
+		mounts.push_back("Wolf");
+		mounts.push_back("Bear");
+	} else if (race.id() == "RACE_GOBLINS") {
+		mounts.push_back("Boar");
+	} else if (race.name().starts_with("Halflings")) {
+		mounts.push_back("Pony");
+	} else if (race.id() == "RACE_HOBGOBLINs") {
+		mounts.push_back("Boar");
+		mounts.push_back("Breliss");
+	} else if (race.name().starts_with("Orcs")) {
+		mounts.push_back("Bat");
+		mounts.push_back("Wolf");
+	}
+
+	for (const std::string& mount : mounts) {
+		SubcategoriedSkillData& subcategoried_skill_data = object_manager.subcategoriedSkillData(riding_skill, mount);
+		race_mounts.push_back(&subcategoried_skill_data);
+	}
+
+	return std::move(race_mounts);
 }
 
 } // namespace rm::game::character
