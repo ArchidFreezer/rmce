@@ -55,7 +55,7 @@ public:
 	 *
 	 * This method is used to automate the initial choices based on the profession and culture in the character creation process.
 	 */
-	void autoInitialChoices();
+	void autoPrimaryChoices();
 
 	/**
 	 * @brief Reset the aggreagrated state of the builder to its initial state, then apply any choices that have been made to recalculate the aggregated state of the builder based on the current choices.

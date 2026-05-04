@@ -7,7 +7,7 @@
 
 namespace rm::game::character {
 
-void AutoCharacterBuilder::autoInitialChoices(CharacterBuilder& builder) {
+void AutoCharacterBuilder::autoPrimaryChoices(CharacterBuilder& builder) {
 	if (builder.built_) {
 		throw std::runtime_error("CharacterBuilder: Cannot auto initial choices after character has been built.");
 	}
@@ -22,6 +22,10 @@ void AutoCharacterBuilder::autoInitialChoices(CharacterBuilder& builder) {
 	setCultureTypeCategorySkillRanks(builder);
 	// Set skills whose development type is chosen based on the profession choice, populating the builder.prof_skill_development_type_choices_ member
 	setProfessionSkillDevelopmentTypes(builder);
+	// Set skills whose development type is chosen based on the profession category choice, populating the builder.prof_category_development_type_choices_ member
+	setProfessionCategoryDevelopmentTypes(builder);
+	// Set skills whose development type is chosen based on the profession group choice, populating the builder.prof_group_development_type_choices_ member
+	setProfessionGroupDevelopmentTypes(builder);
 
 	setPreferredArmour(builder);
 
@@ -59,7 +63,7 @@ void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& bu
 		if (num_intersections > 0) {
 			const SubcategoriedSkillData* subcategoried_skill_data = intersection[Random::get(0, num_intersections - 1)];
 			builder.culture_type_category_skill_ranks_.emplace(subcategoried_skill_data, skill_rank);
-			LOG_TRACE("AutoCharacterBuilder: Setting weapon category skill rank choice for {} to {} based on culture preferred weapon {}.", skill_category_data->name(), skill_rank, subcategoried_skill_data->subcategory().value());
+			LOG_TRACE("AutoCharacterBuilder: Setting {} skill ranks to weapon category {} for culture preferred weapon {}.", skill_rank, skill_category_data->name(), subcategoried_skill_data->subcategory().value());
 		} else {
 			int num_category_skills = category_skills.size();
 			const SkillData* chosen_skill = category_skills[Random::get(0, num_category_skills - 1)];
@@ -70,7 +74,7 @@ void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& bu
 			const WeaponTypeData* chosen_weapon = skill_weapons[Random::get(0, num_skill_weapons - 1)];
 			SubcategoriedSkillData* subcategoried_skill_data = &builder.object_factory_->subcategoriedSkillData(skill_id, chosen_weapon->name());
 			builder.culture_type_category_skill_ranks_.emplace(subcategoried_skill_data, skill_rank);
-			LOG_TRACE("AutoCharacterBuilder: Setting weapon category skill rank choice for {} to {} with no culture preferred weapon {}.", skill_category_data->name(), skill_rank, subcategoried_skill_data->subcategory().value());
+			LOG_TRACE("AutoCharacterBuilder: Setting {} skill ranks to weapon category {} with no culture preferred weapon {}.", skill_rank, skill_category_data->name(), subcategoried_skill_data->subcategory().value());
 		}
 	}
 }
@@ -97,10 +101,6 @@ void AutoCharacterBuilder::setRaceCategoryEverymanChoices(CharacterBuilder& buil
 }
 
 void AutoCharacterBuilder::setProfessionSkillDevelopmentTypes(CharacterBuilder& builder) {
-	// We need to add appropriate subcategories to the riding skill if it is one of the choices so get the skill data for the riding skill to compare against.
-	std::string riding_id = "SKILL_RIDING";
-	SkillData& riding_skill = builder.object_factory_->get<SkillData>(riding_id);
-
 	for (const auto& [skill_choices, development_type] : builder.profession_->skillDevelopmentTypeChoices()) {
 		// We may need to manipulate some of the skill choices so we keep a separate list of the actual options that we will select from.
 		std::vector<const SubcategoriedSkillData*> skill_options;
@@ -111,7 +111,81 @@ void AutoCharacterBuilder::setProfessionSkillDevelopmentTypes(CharacterBuilder& 
 		int num_options = std::min(skill_choices.numChoices(), (int)skill_options.size());
 		for (int i = 0; i < num_options; ++i) {
 			const SubcategoriedSkillData* skill_data = skill_options[i];
+			LOG_TRACE("AutoCharacterBuilder: Setting profession skill development type choice for {} to {}.", skill_data->name(), toString(development_type));
 			builder.prof_skill_development_type_choices_.emplace(skill_data, development_type);
+		}
+	}
+}
+
+void AutoCharacterBuilder::setProfessionCategoryDevelopmentTypes(CharacterBuilder& builder) {
+	for (const auto& [category_choices, development_type] : builder.profession_->skillCategorySkillDevelopmentTypeChoices()) {
+		// We may need to manipulate some of the skill choices so we keep a separate list of the actual options that we will select from.
+		std::vector<const SubcategoriedSkillData*> skill_options;
+		for (const auto& category_choice : category_choices.options()) {
+			for (const auto& skill_choice : getCategorySkills(*category_choice, *builder.object_factory_)) {
+				skill_options.append_range(getSubcategoriesForSkill(builder, *skill_choice));
+			}
+		}
+		std::ranges::shuffle(skill_options, Random::mt);
+		int num_options = std::min(category_choices.numChoices(), (int)skill_options.size());
+		for (int i = 0; i < num_options; ++i) {
+			const SubcategoriedSkillData* skill_data = skill_options[i];
+			LOG_TRACE("AutoCharacterBuilder: Setting profession skill category skill development type choice for {} to {}.", skill_data->name(), toString(development_type));
+			builder.prof_category_development_type_choices_.emplace(skill_data, development_type);
+		}
+	}
+}
+
+void AutoCharacterBuilder::setProfessionGroupDevelopmentTypes(CharacterBuilder& builder) {
+	for (const auto& [group_choices, development_type] : builder.profession_->skillGroupSkillDevelopmentTypeChoices()) {
+		// We may need to manipulate some of the skill choices so we keep a separate list of the actual options that we will select from.
+		std::vector<const SubcategoriedSkillData*> skill_options;
+		for (const auto& group_choice : group_choices.options()) {
+			for (const auto& skill_choice : getGroupSkills(*group_choice, *builder.object_factory_)) {
+				skill_options.append_range(getSubcategoriesForSkill(builder, *skill_choice));
+			}
+		}
+		std::ranges::shuffle(skill_options, Random::mt);
+		int num_options = std::min(group_choices.numChoices(), (int)skill_options.size());
+		for (int i = 0; i < num_options; ++i) {
+			const SubcategoriedSkillData* skill_data = skill_options[i];
+			LOG_TRACE("AutoCharacterBuilder: Setting profession skill group development type choice for {} to {}.", skill_data->name(), toString(development_type));
+			builder.prof_group_development_type_choices_.emplace(skill_data, development_type);
+		}
+	}
+}
+
+void AutoCharacterBuilder::setBaseSpellLists(CharacterBuilder& builder) {
+	if (builder.profession_->spellUserType() == SpellUserType::kNone) {
+		return; // No spell list choices to make if the profession is not a spell user.
+	}
+
+	// Get the profession list choices
+	int num_base_spell_list_choices = builder.profession_->baseSpellListChoices().size();
+	int num_choices = std::min(num_base_spell_list_choices, builder.profession_->numBaseSpellListChoices());
+
+	for (const GameRuleDataChoice spell_list_choice : builder.profession_->baseSpellListChoices()) {
+		std::set<const SpellListData*> spell_list_options_set = spell_list_choice.options();
+		std::vector<const SpellListData*> spell_list_options(spell_list_options_set.begin(), spell_list_options_set.end());
+		std::ranges::shuffle(spell_list_options, Random::mt);
+		for (int i = 0; i < num_choices; ++i) {
+			const SpellListData* spell_list_data = spell_list_options[i];
+			LOG_TRACE("AutoCharacterBuilder: Adding base spell list choice {}.", spell_list_data->name());
+			builder.prof_base_spell_list_choices_.emplace(spell_list_data);
+		}
+	}
+
+	// Pure spell users get 4 more lists from their own realm open/closed lists in addition to the profession list choices.
+	if (builder.profession_->spellUserType() == SpellUserType::kPure) {
+		std::vector<const SpellListData*> pure_spell_list_options;
+		pure_spell_list_options.append_range(getSpellLists(SpellListType::kOpen, builder.profession_->realms(), *builder.object_factory_));
+		pure_spell_list_options.append_range(getSpellLists(SpellListType::kClosed, builder.profession_->realms(), *builder.object_factory_));
+
+		std::ranges::shuffle(pure_spell_list_options, Random::mt);
+		for (int i = 0; i < 4 && i < (int)pure_spell_list_options.size(); ++i) {
+			const SpellListData* spell_list_data = pure_spell_list_options[i];
+			LOG_TRACE("AutoCharacterBuilder: Adding base spell list choice {} for pure spell user.", spell_list_data->name());
+			builder.prof_base_spell_list_choices_.emplace(spell_list_data);
 		}
 	}
 }
@@ -156,29 +230,26 @@ void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 	}
 
 	// We need to consider the magic realm to determine the restrictions on metal or inert material.
-	if (std::ranges::contains(builder.magical_realms_, RealmType::Type::kEssence) && !transcend_armour) {
+	if (std::ranges::contains(builder.magical_realms_, RealmType::kEssence) && !transcend_armour) {
 		// Essence users cannot use any armour so limit to AT1 (Skin) and AT2 (Robes).
-		for (auto& [skill_category_data, weight] : armour_weights) {
-			if (skill_category_data->type() != ArmourType::kAT1 && skill_category_data->type() != ArmourType::kAT2) {
-				LOG_TRACE("AutoCharacterBuilder: Removing {} for Essence caster character with no Transcend Armour bonus.", skill_category_data->name());
-				armour_weights.erase(skill_category_data);
-			}
-		}
-	} else if (std::ranges::contains(builder.magical_realms_, RealmType::Type::kChanneling) && !transcend_armour) {
+		std::erase_if(armour_weights, [](const auto& pair) {
+			const ArmourTypeData* skill_category_data = pair.first;
+			return skill_category_data->type() != ArmourType::kAT1 && skill_category_data->type() != ArmourType::kAT2;
+		});
+	} else if (std::ranges::contains(builder.magical_realms_, RealmType::kChanneling) && !transcend_armour) {
 		// Channeling users struggle to cast spells in metal armour so AT13 and above are removed.
-		for (auto& [skill_category_data, weight] : armour_weights) {
-			for (ArmourType::Type armour_type : archid::enum_range(ArmourType::kAT13, ArmourType::kAT20)) {
-				if (skill_category_data->type() == armour_type) {
-					LOG_TRACE("AutoCharacterBuilder: Removing {} for Channeling caster character with no Transcend Armour bonus.", skill_category_data->name());
-					armour_weights.erase(skill_category_data);
-				}
-			}
-		}
+		std::erase_if(armour_weights, [](const auto& pair) {
+			const ArmourTypeData* skill_category_data = pair.first;
+			return skill_category_data->type() >= ArmourType::kAT13;
+		});
 	}
 
 	// Reduce the weight of armours with a missile attack penalty if the character is not expected to be in close combat and is not using combat casting as they are more likely to want to avoid the missile attack penalty.
 	if (combat_casting_ < 3 || combat_closeness_ < 4) {
 		for (const auto& [armour_type_data, weight] : armour_weights) {
+			if (armour_type_data->missileAttackPenalty() <= 0) {
+				continue;
+			}
 			LOG_TRACE("AutoCharacterBuilder: Reducing weight of {} with missile attack penalty of {} for ranged character.", armour_type_data->name(), armour_type_data->missileAttackPenalty());
 			armour_weights[armour_type_data] -= armour_type_data->missileAttackPenalty();
 		}
@@ -186,8 +257,11 @@ void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 
 	// Now check for any preferred armours from the culture that are still available and if so then weigh the options towards those.
 	for (const ArmourTypeData* preferred_armour : builder.culture_->cultureType().preferredArmour()) {
-		LOG_TRACE("AutoCharacterBuilder: Increasing weight of preferred {} for character culture.", preferred_armour->name());
-		armour_weights[preferred_armour] *= 10; // Heavily weight culture preferred armours.
+		// Only increase the weight if the preferred armour is still available after any previous filtering.
+		if (armour_weights.contains(preferred_armour)) {
+			LOG_TRACE("AutoCharacterBuilder: Increasing weight of preferred {} for character culture.", preferred_armour->name());
+			armour_weights[preferred_armour] *= 10; // Heavily weight culture preferred armours.
+		}
 	}
 
 	// If the character has high Quickness bonus weight armour in favour of those with a smaller penalty unless going full melee.
@@ -408,7 +482,7 @@ void AutoCharacterBuilder::autoStats(CharacterBuilder& builder, int min, int pri
 	LOG_DEBUG("{:-<{}}\n", "", 45);
 }
 
-std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, PersistentObjectManager& object_manager) {
+std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, rm::PersistentObjectManager& object_manager) {
 	std::vector<const SkillData*> category_skills;
 	for (const SkillData& skill : object_manager.getAll<SkillData>()) {
 		if (&skill.category() == &category) {
@@ -418,7 +492,7 @@ std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& categor
 	return std::move(category_skills);
 }
 
-std::vector<const SkillData*> getGroupSkills(const SkillGroupData& group, PersistentObjectManager& object_manager) {
+std::vector<const SkillData*> getGroupSkills(const SkillGroupData& group, rm::PersistentObjectManager& object_manager) {
 	std::vector<const SkillData*> group_skills;
 	for (const SkillData& skill : object_manager.getAll<SkillData>()) {
 		if (&skill.category().group() == &group) {
@@ -428,7 +502,7 @@ std::vector<const SkillData*> getGroupSkills(const SkillGroupData& group, Persis
 	return std::move(group_skills);
 }
 
-std::vector<const SkillCategoryData*> getGroupCategories(const SkillGroupData& group, PersistentObjectManager& object_manager) {
+std::vector<const SkillCategoryData*> getGroupCategories(const SkillGroupData& group, rm::PersistentObjectManager& object_manager) {
 	std::vector<const SkillCategoryData*> group_categories;
 	for (const SkillCategoryData& category : object_manager.getAll<SkillCategoryData>()) {
 		if (&category.group() == &group) {
@@ -438,7 +512,7 @@ std::vector<const SkillCategoryData*> getGroupCategories(const SkillGroupData& g
 	return std::move(group_categories);
 }
 
-std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, PersistentObjectManager& object_manager) {
+std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, rm::PersistentObjectManager& object_manager) {
 	std::vector<const WeaponTypeData*> skill_weapons;
 	for (const WeaponTypeData& weapon : object_manager.getAll<WeaponTypeData>()) {
 		if (std::ranges::contains(weapon.skills(), &skill)) {
@@ -448,7 +522,7 @@ std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, Persi
 	return std::move(skill_weapons);
 }
 
-std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTypeData& culture, PersistentObjectManager& object_manager) {
+std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTypeData& culture, rm::PersistentObjectManager& object_manager) {
 	std::vector<const SubcategoriedSkillData*> culture_mounts{};
 
 	// We are looking for the typical mounts that a culture uses and then apply these as subcategories of the riding skill, so we need that first.
@@ -476,7 +550,7 @@ std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTy
 	return std::move(culture_mounts);
 }
 
-std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& race, PersistentObjectManager& object_manager) {
+std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& race, rm::PersistentObjectManager& object_manager) {
 	std::vector<const SubcategoriedSkillData*> race_mounts{};
 
 	// We are looking for the typical mounts that a race uses and then apply these as subcategories of the riding skill, so we need that first.
@@ -508,6 +582,18 @@ std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& ra
 	}
 
 	return std::move(race_mounts);
+}
+
+std::vector<const SpellListData*> getSpellLists(SpellListType::Type type, const std::set<RealmType ::Type>& realms, rm::PersistentObjectManager& object_manager) {
+	std::vector<const SpellListData*> spell_lists;
+
+	for (const SpellListData& spell_list : object_manager.getAll<SpellListData>()) {
+		if (spell_list.type() == type && std::ranges::equal(realms, spell_list.realms())) {
+			spell_lists.push_back(&spell_list);
+		}
+	}
+
+	return std::move(spell_lists);
 }
 
 } // namespace rm::game::character

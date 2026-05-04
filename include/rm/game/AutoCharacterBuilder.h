@@ -2,6 +2,7 @@
 
 #include <PersistentObjectManager.h>
 #include <CharacterBuilder.h>
+#include <SpellListType.h>
 
 namespace rm::serial {
 class AutoCharacterBuilderSerializer;
@@ -13,6 +14,7 @@ class CultureTypeData;
 class RaceData;
 class SkillCategoryData;
 class SkillGroupData;
+class SpellListData;
 class SubcategoriedSkillData;
 class WeaponTypeData;
 } // namespace rm::rule
@@ -89,7 +91,7 @@ public:
 	 * skills and other choices for the character being built. The traits are defined on scales of 1 - 9 to allow for a median value of 5 to be used for random generation and to allow for more extreme values to be generated for unique
 	 * characters or MOBs if desired. They are initialised to 0 to indicate that they have not been set yet and to allow for the auto generation of these values if they are not set by the caller.
 	 */
-	void autoInitialChoices(CharacterBuilder& builder);
+	void autoPrimaryChoices(CharacterBuilder& builder);
 
 private:
 	/* Basic data */
@@ -128,19 +130,27 @@ private:
 
 	void setProfessionSkillDevelopmentTypes(CharacterBuilder& builder); /* Select the profession skill development type choices, populating the builder.prof_skill_development_type_choices_ member */
 
+	void setProfessionCategoryDevelopmentTypes(CharacterBuilder& builder); /* Select the profession skill development type choices for categories, populating the builder.prof_category_development_type_choices_ member */
+
+	void setProfessionGroupDevelopmentTypes(CharacterBuilder& builder); /* Select the profession skill development type choices for groups, populating the builder.prof_group_development_type_choices_ member */
+
+	void setBaseSpellLists(CharacterBuilder& builder); /* Select the base spell list choices for the character, populating the builder.prof_base_spell_list_choices_ member */
+
 	std::vector<const SubcategoriedSkillData*> getSubcategoriesForSkill(CharacterBuilder& builder, const SkillData& skill); /* Get the common subcategories for a skill  */
 };
 
-std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, PersistentObjectManager& object_manager); /* Get the skills included in a category */
+std::vector<const SkillData*> getCategorySkills(const SkillCategoryData& category, rm::PersistentObjectManager& object_manager); /* Get the skills included in a category */
 
-std::vector<const SkillData*> getGroupSkills(const SkillGroupData& group, PersistentObjectManager& object_manager); /* Get the skills included in a group */
+std::vector<const SkillData*> getGroupSkills(const SkillGroupData& group, rm::PersistentObjectManager& object_manager); /* Get the skills included in a group */
 
-std::vector<const SkillCategoryData*> getGroupCategories(const SkillGroupData& group, PersistentObjectManager& object_manager); /* Get the skill categories included in a group */
+std::vector<const SkillCategoryData*> getGroupCategories(const SkillGroupData& group, rm::PersistentObjectManager& object_manager); /* Get the skill categories included in a group */
 
-std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, PersistentObjectManager& object_manager); /* Get the weapon types that use a skill */
+std::vector<const WeaponTypeData*> getSkillWeapons(const SkillData& skill, rm::PersistentObjectManager& object_manager); /* Get the weapon types that use a skill */
 
-std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTypeData& culture, PersistentObjectManager& object_manager); /* Get the subcategories of the riding skill for the typical mounts of a culture */
+std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTypeData& culture, rm::PersistentObjectManager& object_manager); /* Get the subcategories of the riding skill for the typical mounts of a culture */
 
-std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& culture, PersistentObjectManager& object_manager); /* Get the subcategories of the riding skill for the typical mounts of a race */
+std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& culture, rm::PersistentObjectManager& object_manager); /* Get the subcategories of the riding skill for the typical mounts of a race */
+
+std::vector<const SpellListData*> getSpellLists(SpellListType::Type type, const std::set<RealmType ::Type>& realms, rm::PersistentObjectManager& object_manager); /* Get the spell lists from the open spell lists of the given type */
 
 } // namespace rm::game::character

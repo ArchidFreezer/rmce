@@ -114,11 +114,15 @@ void CharacterOperationsRequestHandler::requestPrimaryChoices(http::response<htt
 			return;
 		}
 		std::string id = json_body.as_object().at("id").as_string().c_str();
+		bool auto_build = json_body.as_object().at("autoBuild").as_bool();
 
 		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
 		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
 
+		if (auto_build) {
+			builder.autoPrimaryChoices();
+		}
 		builder.recalculateAggregatedState();
 
 		response.result(http::status::ok);

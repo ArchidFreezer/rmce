@@ -902,8 +902,8 @@ void CharacterBuilder::autoStats(int min, int primeFloorMin, int numPrimeFloorMi
 	auto_build_ = false;
 }
 
-void CharacterBuilder::autoInitialChoices() {
-	auto_builder_->autoInitialChoices(*this);
+void CharacterBuilder::autoPrimaryChoices() {
+	auto_builder_->autoPrimaryChoices(*this);
 	auto_build_ = false;
 }
 
