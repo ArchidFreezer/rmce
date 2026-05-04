@@ -27,8 +27,6 @@ void CharacterOperationsRequestHandler::handleRequest(const http::request<http::
 		requestStatRolls(response, request);
 	else if (request.method() == http::verb::post && operation == "set-stats")
 		requestSetStats(response, request);
-	else if (request.method() == http::verb::post && operation == "auto-stats")
-		requestAutoStats(response, request);
 	else if (request.method() == http::verb::post && operation == "set-physique")
 		requestPhysiqueChoices(response, request);
 	else if (request.method() == http::verb::post && operation == "set-hobby-choices")
@@ -188,11 +186,15 @@ void CharacterOperationsRequestHandler::requestSetStats(http::response<http::str
 			return;
 		}
 		std::string id = json_body.as_object().at("id").as_string().c_str();
+		bool auto_build = json_body.as_object().at("autoBuild").as_bool();
 
 		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
 		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
 		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
 
+		if (auto_build) {
+			builder.autoStats();
+		}
 		builder.recalculateAggregatedState();
 
 		response.result(http::status::ok);
@@ -201,36 +203,6 @@ void CharacterOperationsRequestHandler::requestSetStats(http::response<http::str
 	} catch (const std::exception& e) {
 		response.result(http::status::internal_server_error);
 		response.body() = R"({"error": "Failed to set stats", "message": ")" + archid::escapeJson(e.what()) + R"("})";
-	}
-}
-
-void CharacterOperationsRequestHandler::requestAutoStats(http::response<http::string_body>& response, const http::request<http::string_body>& request) {
-	using namespace rm::game::character;
-
-	try {
-		json::value json_body = json::parse(request.body());
-		if (!json_body.is_object()) {
-			response.result(http::status::bad_request);
-			response.set(http::field::content_type, "application/json");
-			response.body() = R"({"error": "Invalid request body", "message": "Expected a JSON object"})";
-			return;
-		}
-		std::string id = json_body.as_object().at("id").as_string().c_str();
-
-		// This returns a const object, but we need a non-const reference to update the builder with the choices, so we will deserialize it first to update the cache and then get a non-const reference to it to perform the updates.
-		const CharacterBuilder& deserialized = serial_manager_.deserializeObject<CharacterBuilder>(json_body.as_object());
-		CharacterBuilder& builder = serial_manager_.objectManager().get<CharacterBuilder>(id);
-
-		builder.autoStats();
-		builder.recalculateAggregatedState();
-
-		response.result(http::status::ok);
-		response.set(http::field::content_type, "application/json");
-		response.body() = serial_manager_.serializeObject<CharacterBuilder>(builder);
-		int x{};
-	} catch (const std::exception& e) {
-		response.result(http::status::internal_server_error);
-		response.body() = R"({"error": "Failed to automatically assign the stats", "message": ")" + archid::escapeJson(e.what()) + R"("})";
 	}
 }
 

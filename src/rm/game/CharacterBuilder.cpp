@@ -899,10 +899,12 @@ const SkillProgressionTypeData* CharacterBuilder::getPpProgression() {
 /* ------------------------------------------------------------------ */
 void CharacterBuilder::autoStats(int min, int primeFloorMin, int numPrimeFloorMin) {
 	auto_builder_->autoStats(*this, min, primeFloorMin, numPrimeFloorMin);
+	auto_build_ = false;
 }
 
 void CharacterBuilder::autoInitialChoices() {
 	auto_builder_->autoInitialChoices(*this);
+	auto_build_ = false;
 }
 
 /* ------------------------------------------------------------------ */

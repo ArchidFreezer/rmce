@@ -211,6 +211,7 @@ private:
 	/* ------------------------------------------------------------------ */
 	/* Basic data                                                         */
 	/* ------------------------------------------------------------------ */
+	bool auto_build_{false}; /**< A boolean indicating whether the character should be automatically built with random/ai choices. This may be set for each step of the build process. */
 	bool built_{false}; /**< Flag to indicate whether the character has already been built. This is used to prevent building the character multiple times, which could lead to inconsistent state or unintended consequences. */
 	bool set_spell_list_categories_{false}; /**< Flag indicating categories for spell lists should be calculated; this is an expensive operation only to be performed when either the character realms or base spell lists have changed. */
 	std::string name_{};                    /**< The name of the character being built. This is used for display purposes and may not be unique. */

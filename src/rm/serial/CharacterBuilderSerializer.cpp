@@ -11,6 +11,7 @@ json::value CharacterBuilderSerializer::serializeObject(const CharacterBuilder& 
 	JsonConverter::setString(obj, "name", ref.name_);
 	JsonConverter::setBool(obj, "pc", ref.pc_);
 	JsonConverter::setBool(obj, "built", ref.built_);
+	JsonConverter::setBool(obj, "autoBuild", ref.auto_build_);
 
 	// Core rule data references
 	if (ref.race_)
@@ -255,6 +256,7 @@ const CharacterBuilder& CharacterBuilderSerializer::deserializeObject(json::obje
 	ref.name_ = JsonConverter::getString(jsonObj, "name");
 	ref.pc_ = JsonConverter::getBool(jsonObj, "pc", true);
 	ref.built_ = JsonConverter::getBool(jsonObj, "built", false);
+	ref.auto_build_ = JsonConverter::getBool(jsonObj, "autoBuild", false);
 	// Core rule data references
 	{
 		const std::string race_id = JsonConverter::getString(jsonObj, "race");
