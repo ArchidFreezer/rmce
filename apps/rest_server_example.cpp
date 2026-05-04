@@ -16,7 +16,7 @@ void signalHandler(int signum) {
 int main(int argc, char* argv[]) {
 	// Set log level from environment variable
 	auto log_level_env = std::getenv("RMCE_LOG_LEVEL");
-	auto level = spdlog::level::debug;
+	auto level = spdlog::level::trace;
 	if (log_level_env) {
 		level = spdlog::level::from_str(log_level_env);
 	}
