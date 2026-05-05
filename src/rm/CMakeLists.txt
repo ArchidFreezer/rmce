@@ -1,11 +1,11 @@
 find_package(boost_json REQUIRED CONFIG)
 add_library(rm STATIC)
-target_sources(rm PRIVATE "PersistentObjectManager.cpp" "PersistentObjectSerializationManager.cpp")
+target_sources(rm PRIVATE "AppConfig.cpp" "PersistentObjectManager.cpp" "PersistentObjectSerializationManager.cpp")
 add_subdirectory("game")
 add_subdirectory("rule")
 add_subdirectory("serial")
 add_subdirectory("rule/table")
-target_compile_features(rm PUBLIC cxx_std_20)
+target_compile_features(rm PUBLIC cxx_std_23)
 target_include_directories(rm PUBLIC ${Boost_INCLUDE_DIRS}
                                      "${PROJECT_SOURCE_DIR}/include/archid"
                                      "${PROJECT_SOURCE_DIR}/include/rm"
@@ -65,4 +65,4 @@ else()
     target_compile_definitions(rmce_rest PRIVATE SPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_TRACE)
 endif()
 
-target_compile_features(rmce_rest PUBLIC cxx_std_20)
+target_compile_features(rmce_rest PUBLIC cxx_std_23)
