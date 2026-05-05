@@ -206,6 +206,21 @@ public:
 	}
 
 	/**
+	 * @brief Get SubcategoriedSkillData objects
+	 *
+	 * SubcategoriedSkillData cannot be created with ID only as the ID is derived from optional arguments. In order to
+	 * allow these to be safely created and cached a custom factory method has been created
+	 * @param skill_id Unique identifier of the skill that is being wrapped
+	 * @param subcategory optional subcategory of @a skill_data
+	 * @return Reference to the SubcategoriedSkillData object with the matching skill and subcategory. If the object does not exist it will be created and added to the cache before being returned.
+	 * @throws out_of_range if a SubcategoriedSkillData with the given id has been flagged as deleted
+	 */
+	rm::rule::SubcategoriedSkillData& subcategoriedSkillData(std::string_view skill_id, std::optional<std::string_view> subcategory = std::nullopt) {
+		rm::rule::SkillData& skill = get<rm::rule::SkillData>(std::string(skill_id));
+		return (subcategory ? subcategoriedSkillData(skill, subcategory) : subcategoriedSkillData(skill));
+	}
+
+	/**
 	 * @brief Get all prefixes of GameRuleData objects in the cache
 	 *
 	 * This is useful for deserialisation when we want to get all objects with a specific prefix in their ID, e.g. all skills that have IDs starting with "SKILL_". This method will return all the prefixes, without the underscore, as
