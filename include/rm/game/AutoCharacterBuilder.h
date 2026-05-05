@@ -1,5 +1,6 @@
 #pragma once
 
+#include <map>
 #include <PersistentObjectManager.h>
 #include <CharacterBuilder.h>
 #include <SpellListType.h>
@@ -13,6 +14,7 @@ class ArmourTypeData;
 class CultureTypeData;
 class RaceData;
 class SkillCategoryData;
+class SkillDevelopmentCost;
 class SkillGroupData;
 class SpellListData;
 class SubcategoriedSkillData;
@@ -136,6 +138,8 @@ private:
 
 	void setBaseSpellLists(CharacterBuilder& builder); /* Select the base spell list choices for the character, populating the builder.prof_base_spell_list_choices_ member */
 
+	void allocateWeaponCosts(CharacterBuilder& builder); /* Allocate the weapon costs for the character, updating the builder.category_development_costs_ member */
+
 	std::vector<const SubcategoriedSkillData*> getSubcategoriesForSkill(CharacterBuilder& builder, const SkillData& skill); /* Get the common subcategories for a skill  */
 };
 
@@ -152,5 +156,9 @@ std::vector<const SubcategoriedSkillData*> getCultureMountSkills(const CultureTy
 std::vector<const SubcategoriedSkillData*> getRaceMountSkills(const RaceData& culture, rm::PersistentObjectManager& object_manager); /* Get the subcategories of the riding skill for the typical mounts of a race */
 
 std::vector<const SpellListData*> getSpellLists(SpellListType::Type type, const std::set<RealmType ::Type>& realms, rm::PersistentObjectManager& object_manager); /* Get the spell lists from the open spell lists of the given type */
+
+void logSkillCategoryCosts(std::map<const SkillDevelopmentCost, int>& category_costs); /* Log the skill category costs for debugging purposes */
+
+void logSkillCategoryWeights(std::multimap<int, const SkillCategoryData*>& category_weights); /* Log the skill category weights for debugging purposes */
 
 } // namespace rm::game::character

@@ -28,6 +28,8 @@ void AutoCharacterBuilder::autoPrimaryChoices(CharacterBuilder& builder) {
 	setProfessionGroupDevelopmentTypes(builder);
 	// Set the base spell lists for the character based on the profession choice, populating the builder.prof_base_spell_list_choices_ member
 	setBaseSpellLists(builder);
+	// Update the 7 weapon category costs from the profession choice, populating the builder.weapon_category_costs_ member
+	allocateWeaponCosts(builder);
 
 	setPreferredArmour(builder);
 
@@ -37,6 +39,8 @@ void AutoCharacterBuilder::autoPrimaryChoices(CharacterBuilder& builder) {
 }
 
 void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& builder) {
+	builder.culture_type_category_skill_ranks_.clear();
+
 	// Get any culture preferences for individual weapon skills
 	std::vector<const SubcategoriedSkillData*> culture_preferred_weapon_skills;
 	for (const WeaponTypeData* weapon_data : builder.culture_->cultureType().preferredWeapons()) {
@@ -51,6 +55,10 @@ void AutoCharacterBuilder::setCultureTypeCategorySkillRanks(CharacterBuilder& bu
 
 	for (const auto& [skill_category_data, skill_rank] : builder.culture_->cultureType().skillCategorySkillRanks()) {
 		std::vector<const SkillData*> category_skills = getCategorySkills(*skill_category_data, *builder.object_factory_);
+		if (category_skills.empty()) {
+			LOG_WARN("AutoCharacterBuilder: No skills found for culture preferred skill category {}. Skipping.", skill_category_data->name());
+			continue;
+		}
 
 		// Check for any intersection between the culture preferred weapon skills and the skills in this category. If there is an intersection then we pick one at random for now.
 		// TODO Perform some weighting based on the character traits.
@@ -162,8 +170,14 @@ void AutoCharacterBuilder::setBaseSpellLists(CharacterBuilder& builder) {
 		return; // No spell list choices to make if the profession is not a spell user.
 	}
 
-	// Get the profession list choices
+	// Logging buffer for table of spell list choices for debugging purposes.
+	std::string buffer;
+	buffer.reserve(1024);
+	// Header
+	buffer += std::format("\n| {:<35} |\n", "Spell List");
+	buffer += std::format("| {:-<35} |\n", "");
 
+	// Get the profession list choices
 	for (const GameRuleDataChoice spell_list_choice : builder.profession_->baseSpellListChoices()) {
 		int num_choices = std::min(spell_list_choice.numChoices(), spell_list_choice.numOptions());
 		std::set<const SpellListData*> spell_list_options_set = spell_list_choice.options();
@@ -171,7 +185,7 @@ void AutoCharacterBuilder::setBaseSpellLists(CharacterBuilder& builder) {
 		std::ranges::shuffle(spell_list_options, Random::mt);
 		for (int i = 0; i < num_choices; ++i) {
 			const SpellListData* spell_list_data = spell_list_options[i];
-			LOG_TRACE("AutoCharacterBuilder: Adding base spell list choice {}.", spell_list_data->name());
+			fmt::format_to(std::back_inserter(buffer), "| {:<35} |\n", spell_list_data->name());
 			builder.prof_base_spell_list_choices_.emplace(spell_list_data);
 		}
 	}
@@ -185,10 +199,173 @@ void AutoCharacterBuilder::setBaseSpellLists(CharacterBuilder& builder) {
 		std::ranges::shuffle(pure_spell_list_options, Random::mt);
 		for (int i = 0; i < 4 && i < (int)pure_spell_list_options.size(); ++i) {
 			const SpellListData* spell_list_data = pure_spell_list_options[i];
-			LOG_TRACE("AutoCharacterBuilder: Adding base spell list choice {} for pure spell user.", spell_list_data->name());
+			fmt::format_to(std::back_inserter(buffer), "| {:<35} |\n", spell_list_data->name());
 			builder.prof_base_spell_list_choices_.emplace(spell_list_data);
 		}
 	}
+	LOG_DEBUG("Spell Lists:{}", buffer);
+}
+
+void AutoCharacterBuilder::allocateWeaponCosts(CharacterBuilder& builder) {
+	PersistentObjectManager& object_manager = *builder.object_factory_;
+
+	// First get the weapon categories and the current costs. We don't care how they are allocated now we just need the set of costs as we will be reallocating them from scratch.
+	int expected_weapon_categories = 7; // We expect there to be 7 weapon categories as of the current game rules
+	std::vector<const SkillCategoryData*> weapon_categories = getGroupCategories(object_manager.get<SkillGroupData>("SKILLGROUP_WEAPON"), object_manager);
+	if (weapon_categories.size() != expected_weapon_categories) {
+		LOG_ERROR("AutoCharacterBuilder: Expected {} Weapon categories, but found {} for profession {}. Skipping weapon cost allocation.", expected_weapon_categories, weapon_categories.size(), builder.profession_->name());
+		return;
+	}
+
+	// Get references to each of the categories to make the code more readable later. We will use these as keys into a map to store the weights for each category based on the character traits and culture preferences.
+	const SkillCategoryData& concussion = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_1_H_CONCUSSION");
+	const SkillCategoryData& edged = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_1_H_EDGED");
+	const SkillCategoryData& two_handed = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_2_HANDED");
+	const SkillCategoryData& missile = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_MISSILE");
+	const SkillCategoryData& pole_arms = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_POLE_ARMS");
+	const SkillCategoryData& thrown = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_THROWN");
+	const SkillCategoryData& missile_artillery = object_manager.get<SkillCategoryData>("SKILLCATEGORY_WEAPON_MISSILE_ARTILLERY");
+
+	// Sort the costs that we have to allocate and store how many categeories can be allocated to each.
+	std::map<const SkillDevelopmentCost, int> weapon_category_cost_count;
+	for (const SkillCategoryData* weapon_category : weapon_categories) {
+		weapon_category_cost_count[builder.profession_->skillCategoryDevelopmentCost(*weapon_category)]++;
+	}
+	logSkillCategoryCosts(weapon_category_cost_count);
+
+	// Missile Artillery is a very niche category and will never be used for the initial weapon choice as it is only used for siege weapons, so we can remove this from the options and allocate it the worst cost at the end.
+	// We need to erase it after we have stored the costs to get all of them.
+	std::erase(weapon_categories, &missile_artillery);
+
+	// Store some other useful references for later.
+	const SubcategoriedSkillData& transcend_armour_skill = object_manager.subcategoriedSkillData("SKILL_TRANSCEND_ARMOR");
+	bool transcend_user = std::ranges::any_of(builder.profession_->skillBonuses(), [&transcend_armour_skill](const auto& skill_bonus) { return skill_bonus.first == &transcend_armour_skill && skill_bonus.second > 0; });
+
+	// Use a map to store the weight for each category for use at the end when we allocate the costs.
+	std::map<const SkillCategoryData*, int> weapon_category_weights;
+
+	// We start with the culture preferences as these are more likely to be strong preferences that we want to honour and then we can weight the remaining categories based on the character traits.
+	for (const auto& [skill, ranks] : builder.culture_type_category_skill_ranks_) {
+		if (std::ranges::contains(weapon_categories, &skill->skillData().category())) {
+			int weight = ranks * 50; // We give the culture preferred weapon categories a very high weight.
+			LOG_TRACE("AutoCharacterBuilder: Adding weight {} for culture preferred weapon category {} from weapon {}.", weight, skill->skillData().category().name(), skill->subcategory().value());
+			weapon_category_weights[&skill->skillData().category()] = weight; // We give the culture preferred weapon categories a very high weight.
+		}
+	}
+
+	// First pass is based on the caster type of the profession as this will have the biggest impact on the weapon category used.
+	SpellUserType::Type spell_user_type = builder.profession_->spellUserType();
+	if (spell_user_type == SpellUserType::kPure || spell_user_type == SpellUserType::kHybrid) {
+		// Pure casters are more likely to want to use quarterstaffs as they are a good weapon for casters which come under the 2-handed category.
+		for (const SkillCategoryData* weapon_category : weapon_categories) {
+			int weight = archid::Dice(10).roll().result(); // We give a small random weight to the categories to ensure we don't always end up with the same category at the top.
+			if (weapon_category == &two_handed) {
+				weight += 150; // We give a high weight to the 2-handed category for casters who are not transcend armour users as they are more likely to want to use quarterstaffs.
+			} else if (weapon_category == &missile) {
+				weight += 20; // We give a small weight to missile weapons as slings and bows can be good for casters who want to be able to attack from range.
+			} else if (weapon_category == &thrown) {
+				weight += 10; // We give a small weight to thrown weapons as these are better than melee.
+			} else {
+				weight += 0; // We give no weight to the other categories as they are not particularly good for casters.
+			}
+			weapon_category_weights[weapon_category] += weight;
+		}
+	} else if (spell_user_type == SpellUserType::kSemi || spell_user_type == SpellUserType::kChaotic) {
+		// Semi spell users are more likely to prefer ranged weapons unless they have the transcend armour skill that allows them to be effective in melee while still being able to cast.
+		if (transcend_user) {
+			// We can use any weapon type here as the character has specifically chosen to wear armour and is therefore expecting to be in closer combat.
+			for (const SkillCategoryData* weapon_category : weapon_categories) {
+				int weight = archid::Dice(10).roll().result(); // We give a small random weight to the categories to ensure we don't always end up with the same category at the top.
+				if (weapon_category == &missile) {
+					weight += 20; // Missile weapons aren;t a bad choice, just unlikely to be the optimal choice for a semi spell user who is a transcend armour user.
+				} else if (weapon_category == &thrown) {
+					weight += 10; // Thrown weapons are an unlikely choice for a semi spell user who is a transcend armour user.
+				} else {
+					weight += 100; // The rest are melee choices and we have no data to diffrentiate between them yet, we may update this in future.
+				}
+				weapon_category_weights[weapon_category] += weight;
+			}
+		} else {
+			for (const SkillCategoryData* weapon_category : weapon_categories) {
+				int weight = archid::Dice(10).roll().result(); // We give a small random weight to the categories to ensure we don't always end up with the same category at the top.
+				if (weapon_category == &missile) {
+					weight += 100; // Missile weapons are the likeliest choice for semi spell users.
+					if (combat_closeness_ < 4) {
+						weight += 50; // If the character is more ranged focused then we give an extra weight to missile weapons.
+					}
+				} else if (weapon_category == &thrown) {
+					weight += 50; // We give a small weight to thrown weapons as these are better than melee.
+					if (combat_closeness_ > 4 && combat_closeness_ < 8) {
+						weight += 50; // If the character is medium ranged focused then we give an extra weight to missile weapons.
+					}
+				} else {
+					weight += 25; // We give no weight to the other categories as they are not particularly good for casters.
+					if (combat_closeness_ > 8) {
+						weight += 100; // If the character insists on being in melee range then bump this up.
+					}
+				}
+				weapon_category_weights[weapon_category] += weight;
+			}
+		}
+	} else {
+		// Non spell users have no reason to prefer one weapon category over another based on their caster type so we give them all a small weight to ensure they are not at the bottom of the allocation order if there are culture
+		// preferences.
+		for (const SkillCategoryData* weapon_category : weapon_categories) {
+			int weight = archid::Dice(10).roll().result(); // We give a small random weight to the categories to ensure we don't always end up with the same category at the top.
+			if (weapon_category == &missile) {
+				if (combat_closeness_ < 4) {
+					weight += 100; // If the character is ranged focused then we give an extra weight to missile weapons.
+				}
+			} else if (weapon_category == &thrown) {
+				if (combat_closeness_ > 4 && combat_closeness_ < 8) {
+					weight += 25; // If the character is medium ranged focused then we give some weight to thrown weapons, but they are niche.
+				}
+			} else {
+				weight += 50; // The melee categories all get a decent weighting.
+
+				if (combat_closeness_ > 6) {
+					weight += 100; // If the character insists on being in melee range then bump this up.
+				}
+			}
+			weapon_category_weights[weapon_category] += weight;
+		}
+	}
+
+	// Now we reverse the weights into a multimap so that we can allocate the costs starting with the highest weighted categories first. We use a multimap in case there are multiple categories with the same weight as this allows us to
+	// randomise the order of those categories.
+	std::multimap<int, const SkillCategoryData*> weighted_weapon_categories;
+	for (const auto& [weapon_category, weight] : weapon_category_weights) {
+		weighted_weapon_categories.emplace(weight, weapon_category);
+	}
+	weighted_weapon_categories.emplace(-10, &missile_artillery);
+	logSkillCategoryWeights(weighted_weapon_categories);
+
+	// Now we have all the data we can start to process and output to the debug log.
+	// Pre-allocate a reasonable buffer to avoid multiple reallocations
+	std::string buffer;
+	buffer.reserve(1024);
+
+	// Header
+	buffer += std::format("\n| {:<8} | {:<18} |\n", "Cost", "Category");
+	buffer += "|----------|--------------------|\n";
+
+
+	for (const auto& [cost, count] : weapon_category_cost_count) {
+		for (int i = 0; i < count; ++i) {
+			if (weighted_weapon_categories.empty()) {
+				LOG_ERROR("AutoCharacterBuilder: No more weapon categories to allocate for profession {}. This should never happen.", builder.profession_->name());
+				return;
+			}
+			// Get the category with the highest weight and allocate the current cost to it.
+			auto it = weighted_weapon_categories.end();
+			--it; // We need to decrement the iterator as end() points to one past the last element.
+			const SkillCategoryData* weapon_category = it->second;
+			builder.category_development_costs_[weapon_category] = cost;
+			fmt::format_to(std::back_inserter(buffer), "| {:<8} | {:<18} |\n", cost.toString(), weapon_category->name());
+			weighted_weapon_categories.erase(it);
+		}
+	}
+	LOG_DEBUG("Weapon Skill Category Costs:{}", buffer);
 }
 
 std::vector<const SubcategoriedSkillData*> AutoCharacterBuilder::getSubcategoriesForSkill(CharacterBuilder& builder, const SkillData& skill) {
@@ -290,7 +467,7 @@ void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 	for (const auto& [armour_type_data, weight] : armour_weights) {
 		current_weight += weight;
 		if (random_weight < current_weight) {
-			LOG_TRACE("AutoCharacterBuilder: Selected preferred armour type {} for character with random weight {} and current weight {}.", armour_type_data->name(), random_weight, current_weight);
+			LOG_DEBUG("AutoCharacterBuilder: Selected preferred armour type {} for character with random weight {} and current weight {}.", armour_type_data->name(), random_weight, current_weight);
 			preferred_armour_ = armour_type_data;
 			return;
 		}
@@ -595,6 +772,53 @@ std::vector<const SpellListData*> getSpellLists(SpellListType::Type type, const 
 	}
 
 	return std::move(spell_lists);
+}
+
+void logSkillCategoryCosts(std::map<const SkillDevelopmentCost, int>& category_costs) {
+	auto logger = rm::util::Logger::get();
+
+	// Gate the logic to TRACE
+	if (logger && logger->should_log(spdlog::level::trace)) {
+		// Pre-allocate a reasonable buffer to avoid multiple reallocations
+		std::string buffer;
+		buffer.reserve(1024);
+
+		// Header
+		buffer += std::format("\n| {:<18} | {:<8} |\n", "Cost", "Count");
+		buffer += std::format("| {:-<18} | {:-<8} |\n", "", "");
+
+		for (const auto& [cost, val] : category_costs) {
+			// Append formatted row
+			fmt::format_to(std::back_inserter(buffer), "| {:<18} | {:<8} |\n", cost.toString(), val);
+		}
+
+		LOG_TRACE("Skill Category Cost Counts:{}", buffer);
+	}
+}
+
+void logSkillCategoryWeights(std::multimap<int, const SkillCategoryData*>& category_weights) {
+	auto logger = rm::util::Logger::get();
+
+	// Gate the logic to TRACE
+	if (logger && logger->should_log(spdlog::level::trace)) {
+		// Pre-allocate a reasonable buffer to avoid multiple reallocations
+		std::string buffer;
+		buffer.reserve(1024);
+
+		// Header
+		buffer += std::format("\n| {:<18} | {:<8} |\n", "Category", "Weight");
+		buffer += std::format("| {:-<18} | {:-<8} |\n", "", "");
+
+		for (const auto& [val, ptr] : category_weights) {
+			// Safety check for the pointer
+			std::string name = ptr ? ptr->name() : "nullptr";
+
+			// Append formatted row
+			fmt::format_to(std::back_inserter(buffer), "| {:<18} | {:<8} |\n", name, val);
+		}
+
+		LOG_TRACE("Skill Category Weights:{}", buffer);
+	}
 }
 
 } // namespace rm::game::character
