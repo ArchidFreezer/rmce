@@ -15,6 +15,7 @@ target_include_directories(rm PUBLIC ${Boost_INCLUDE_DIRS}
                                      "${PROJECT_SOURCE_DIR}/include/rm/serial")
 
 target_link_libraries(rm PUBLIC 
+    archid
     Boost::boost  # Header-only Boost libraries
     Boost::json
     spdlog::spdlog_header_only

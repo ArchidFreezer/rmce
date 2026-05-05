@@ -1,4 +1,5 @@
 {
-    "log-level": "debug",
-    "data-location": "./data"
+  "log-level": "debug",
+  "data-input": "C:/Projects/Rolemaster/rmce/data/",
+  "data-output": "C:/Projects/Rolemaster/rmce/data2/"
 }

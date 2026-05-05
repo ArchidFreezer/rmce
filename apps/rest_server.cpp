@@ -1,3 +1,4 @@
+#include <AppConfig.h>
 #include <RestServer.h>
 #include <Logger.h>
 #include <iostream>
@@ -14,15 +15,29 @@ void signalHandler(int signum) {
 }
 
 int main(int argc, char* argv[]) {
-	// Set log level from environment variable
-	auto log_level_env = std::getenv("RMCE_LOG_LEVEL");
-	auto level = spdlog::level::trace;
-	if (log_level_env) {
-		level = spdlog::level::from_str(log_level_env);
-	}
-	rm::util::Logger::init("rmce.log", level);
-
 	try {
+		// Determine the configuration file path
+		std::string config_path = "config.json";
+		if (argc >= 2) {
+			config_path = argv[1];
+		}
+
+		std::cout << "Loading configuration from: " << config_path << std::endl;
+
+		// Initialize the configuration singleton
+		rm::AppConfig::initialize(config_path);
+
+		// Get the configuration instance
+		auto config = rm::AppConfig::instance();
+
+		// Set log level from environment variable
+		auto log_level_env = config->logLevel();
+		auto level = spdlog::level::trace;
+		if (!log_level_env.empty()) {
+			level = spdlog::level::from_str(log_level_env);
+		}
+		rm::util::Logger::init("rmce.log", level);
+
 		// Register signal handler
 		std::signal(SIGINT, signalHandler);
 		std::signal(SIGTERM, signalHandler);
@@ -33,13 +48,13 @@ int main(int argc, char* argv[]) {
 		int num_threads = 4;
 
 		if (argc >= 2) {
-			address = argv[1];
-		}
-		if (argc >= 3) {
-			port = static_cast<unsigned short>(std::atoi(argv[2]));
+			address = argv[2];
 		}
 		if (argc >= 4) {
-			num_threads = std::atoi(argv[3]);
+			port = static_cast<unsigned short>(std::atoi(argv[3]));
+		}
+		if (argc >= 5) {
+			num_threads = std::atoi(argv[4]);
 		}
 
 		LOG_INFO("Starting REST API Server...");
@@ -65,12 +80,13 @@ int main(int argc, char* argv[]) {
 		rm::PersistentCache cache{};
 		rm::PersistentObjectManager object_factory{cache};
 		rm::PersistentObjectSerializationManager json_manager{object_factory};
+		json_manager.setDataDirectory(config->dataInput()); // Set the data directory for loading
 		json_manager.load();
 
 		rm::rest::RestServer server(address, port, num_threads);
 		server.setObjectManager(&json_manager);
 		server.start();
-		json_manager.setDataDirectory("../../../../data2/"); // Set the data directory for saving (optional if already set)
+		json_manager.setDataDirectory(config->dataOutput()); // Set the data directory for saving (optional if already set)
 
 		// Wait for stop signal
 		while (!stop_requested && server.isRunning()) {

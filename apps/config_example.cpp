@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
         // Access configuration values
         std::cout << "\nCurrent configuration:" << std::endl;
         std::cout << "  Log Level: " << config->logLevel() << std::endl;
-        std::cout << "  Data Location: " << config->dataLocation() << std::endl;
+        std::cout << "  Data Location: " << config->dataInput() << std::endl;
 
         // Demonstrate JSON representation
         std::cout << "\nJSON representation:" << std::endl;
