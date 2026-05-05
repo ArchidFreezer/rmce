@@ -49,8 +49,8 @@ add_custom_command(TARGET config_example POST_BUILD
 # Rest server
 find_package(boost_system REQUIRED CONFIG)
 find_package(boost_thread REQUIRED CONFIG)
-add_executable (rest_server_example "rest_server_example.cpp")
-target_link_libraries(rest_server_example
+add_executable (rest_server "rest_server.cpp")
+target_link_libraries(rest_server
     PRIVATE
         rmce_rest
         Boost::system
@@ -58,28 +58,28 @@ target_link_libraries(rest_server_example
         spdlog::spdlog_header_only
 )
 
-target_include_directories(rest_server_example PUBLIC "${PROJECT_SOURCE_DIR}/include/archid"
+target_include_directories(rest_server PUBLIC "${PROJECT_SOURCE_DIR}/include/archid"
                                            "${PROJECT_SOURCE_DIR}/include/rm")
 
-target_compile_features(rest_server_example PRIVATE cxx_std_23)
+target_compile_features(rest_server PRIVATE cxx_std_23)
 
 # Disable verbose logging in Release builds
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
-    target_compile_definitions(rest_server_example PRIVATE SPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_INFO)
+    target_compile_definitions(rest_server PRIVATE SPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_INFO)
 else()
-    target_compile_definitions(rest_server_example PRIVATE SPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_TRACE)
+    target_compile_definitions(rest_server PRIVATE SPDLOG_ACTIVE_LEVEL=SPDLOG_LEVEL_TRACE)
 endif()
 
 # Copy config.json to the output directory after every build
-add_custom_command(TARGET rest_server_example POST_BUILD
+add_custom_command(TARGET rest_server POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy
             "${PROJECT_SOURCE_DIR}/config.json"
-            "$<TARGET_FILE_DIR:rest_server_example>/config.json"
+            "$<TARGET_FILE_DIR:rest_server>/config.json"
     COMMENT "Copying config.json to executable directory"
 )
 
 # Install the example
-install(TARGETS rest_server_example
+install(TARGETS rest_server
     RUNTIME DESTINATION bin
 )
 
