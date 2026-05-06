@@ -30,11 +30,11 @@ int main(int argc, char* argv[]) {
 		// Get the configuration instance
 		auto config = rm::AppConfig::instance();
 
-		// Set log level from environment variable
-		auto log_level_env = config->logLevel();
+		// Set log level from config file
+		auto config_log_level = config->logLevel();
 		auto level = spdlog::level::trace;
-		if (!log_level_env.empty()) {
-			level = spdlog::level::from_str(log_level_env);
+		if (!config_log_level.empty()) {
+			level = spdlog::level::from_str(config_log_level);
 		}
 		rm::util::Logger::init("rmce.log", level);
 
@@ -43,9 +43,9 @@ int main(int argc, char* argv[]) {
 		std::signal(SIGTERM, signalHandler);
 
 		// Parse command line arguments
-		std::string address = "0.0.0.0";
-		unsigned short port = 8080;
-		int num_threads = 4;
+		std::string address = config->restHost();
+		unsigned short port = config->restPort();
+		int num_threads = config->restNumThreads();
 
 		if (argc >= 2) {
 			address = argv[2];

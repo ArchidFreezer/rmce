@@ -72,6 +72,9 @@ void AppConfig::fromJson(const json::object& json_obj) {
 	log_level_ = JsonConverter::getString(json_obj, "log-level", "debug");
 	data_input_ = JsonConverter::getString(json_obj, "data-input", "./data");
 	data_output_ = JsonConverter::getString(json_obj, "data-output", "./output");
+	rest_port_ = static_cast<unsigned short>(JsonConverter::getNestedInt(json_obj, "rest-server/port", 8080));
+	rest_num_threads_ = JsonConverter::getNestedInt(json_obj, "rest-server/num-threads", 4);
+	rest_host_ = JsonConverter::getNestedString(json_obj, "rest-server/host", "0.0.0.0");
 }
 
 json::object AppConfig::toJson() const {
@@ -84,6 +87,7 @@ json::object AppConfig::toJson() const {
 	JsonConverter::setString(obj, "log-level", log_level_);
 	JsonConverter::setString(obj, "data-input", data_input_);
 	JsonConverter::setString(obj, "data-output", data_output_);
+	JsonConverter::createNested(obj).beginObject("rest-server").setInt("port", rest_port_).setInt("num-threads", rest_num_threads_).setString("host", rest_host_).endObject();
 
 	return obj;
 }

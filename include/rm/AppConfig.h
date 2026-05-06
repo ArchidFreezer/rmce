@@ -114,6 +114,63 @@ public:
 	}
 
 	/**
+	 * @brief Get the REST API port setting.
+	 *
+	 * @return The configured REST API port as an unsigned short.
+	 */
+	unsigned short restPort() const {
+		return rest_port_;
+	}
+
+	/**
+	 * @brief Set the REST API port setting.
+	 *
+	 * @param rest_port The REST API port to set.
+	 */
+	void setRestPort(unsigned short rest_port) {
+		std::lock_guard<std::mutex> lock(mutex_);
+		rest_port_ = rest_port;
+	}
+
+	/**
+	 * @brief Get the number of REST threads to run.
+	 *
+	 * @return The number of REST threads to run.
+	 */
+	int restNumThreads() const {
+		return rest_num_threads_;
+	}
+
+	/**
+	 * @brief Set the number of REST threads to run setting.
+	 *
+	 * @param rest_num_threads The number of REST threads to run.
+	 */
+	void setRestNumThreads(int rest_num_threads) {
+		std::lock_guard<std::mutex> lock(mutex_);
+		rest_num_threads_ = rest_num_threads;
+	}
+
+	/**
+	 * @brief Get the REST API host setting.
+	 *
+	 * @return The configured REST API host as a string.
+	 */
+	std::string restHost() const {
+		return rest_host_;
+	}
+
+	/**
+	 * @brief Set the REST API host setting.
+	 *
+	 * @param rest_host The REST API host to set.
+	 */
+	void setRestHost(const std::string& rest_host) {
+		std::lock_guard<std::mutex> lock(mutex_);
+		rest_host_ = rest_host;
+	}
+
+	/**
 	 * @brief Save the current configuration to a JSON file.
 	 *
 	 * @param config_file_path Path to the JSON file to write. If empty, uses the path from initialization.
@@ -156,10 +213,13 @@ private:
 	void fromJson(const json::object& json_obj);
 
 	// Configuration fields
-	std::string log_level_{"info"};        /**< The log level setting (default: "info") */
-	std::string data_input_{"./data"};  /**< The data input path (default: "./data") */
-	std::string data_output_{"./output"};     /**< The data input path (default: "./output") */
-	std::string config_file_path_{};       /**< The path to the configuration file */
+	std::string log_level_{"info"};       /**< The log level setting (default: "info") */
+	std::string data_input_{"./data"};    /**< The data input path (default: "./data") */
+	std::string data_output_{"./output"}; /**< The data input path (default: "./output") */
+	unsigned short rest_port_{8080};      /**< The REST API port (default: "8080") */
+	int rest_num_threads_{4};             /**< The number of threads for the REST API server (default: 4) */
+	std::string rest_host_{"0.0.0.0"};    /**< The REST API host (default: "0.0.0.0") */
+	std::string config_file_path_{};      /**< The path to the configuration file */
 
 	// Thread safety
 	mutable std::mutex mutex_; /**< Mutex for thread-safe access to configuration fields */
