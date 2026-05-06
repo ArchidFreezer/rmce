@@ -165,7 +165,7 @@ void JsonConverter::setOptionalString(json::object& obj, const std::string& key,
 	}
 }
 
-json::object* JsonConverter::getNestedObject(json::object& obj, const std::string& path) {
+const json::object* JsonConverter::getNestedObject(const json::object& obj, const std::string& path) {
 	std::vector<std::string> parts;
 	std::stringstream ss(path);
 	std::string part;
@@ -176,7 +176,7 @@ json::object* JsonConverter::getNestedObject(json::object& obj, const std::strin
 		}
 	}
 
-	json::object* current = &obj;
+	const json::object* current = &obj;
 	for (size_t i = 0; i < parts.size(); ++i) {
 		auto it = current->find(parts[i]);
 		if (it == current->end())
@@ -194,7 +194,7 @@ json::object* JsonConverter::getNestedObject(json::object& obj, const std::strin
 	return current;
 }
 
-json::value* JsonConverter::getNestedValue(json::object& obj, const std::string& path) {
+const json::value* JsonConverter::getNestedValue(const json::object& obj, const std::string& path) {
 	std::vector<std::string> parts;
 	std::stringstream ss(path);
 	std::string part;
@@ -208,7 +208,7 @@ json::value* JsonConverter::getNestedValue(json::object& obj, const std::string&
 	if (parts.empty())
 		return nullptr;
 
-	json::object* current = &obj;
+	const json::object* current = &obj;
 	for (size_t i = 0; i < parts.size() - 1; ++i) {
 		auto it = current->find(parts[i]);
 		if (it == current->end() || !it->value().is_object())
@@ -220,7 +220,7 @@ json::value* JsonConverter::getNestedValue(json::object& obj, const std::string&
 	return it != current->end() ? &it->value() : nullptr;
 }
 
-int JsonConverter::getNestedInt(json::object& obj, const std::string& path, int defaultValue) {
+int JsonConverter::getNestedInt(const json::object& obj, const std::string& path, int defaultValue) {
 	if (auto* val = getNestedValue(obj, path)) {
 		if (val->is_string()) {
 			return atoi(val->as_string().c_str());
@@ -231,7 +231,7 @@ int JsonConverter::getNestedInt(json::object& obj, const std::string& path, int 
 	return defaultValue;
 }
 
-float JsonConverter::getNestedFloat(json::object& obj, const std::string& path, float defaultValue) {
+float JsonConverter::getNestedFloat(const json::object& obj, const std::string& path, float defaultValue) {
 	if (auto* val = getNestedValue(obj, path)) {
 		if (val->is_string()) {
 			return static_cast<float>(atof(val->as_string().c_str()));
@@ -242,7 +242,7 @@ float JsonConverter::getNestedFloat(json::object& obj, const std::string& path, 
 	return defaultValue;
 }
 
-double JsonConverter::getNestedDouble(json::object& obj, const std::string& path, double defaultValue) {
+double JsonConverter::getNestedDouble(const json::object& obj, const std::string& path, double defaultValue) {
 	if (auto* val = getNestedValue(obj, path)) {
 		if (val->is_string()) {
 			return atof(val->as_string().c_str());
@@ -253,7 +253,7 @@ double JsonConverter::getNestedDouble(json::object& obj, const std::string& path
 	return defaultValue;
 }
 
-std::string JsonConverter::getNestedString(json::object& obj, const std::string& path, const std::string& defaultValue) {
+std::string JsonConverter::getNestedString(const json::object& obj, const std::string& path, const std::string& defaultValue) {
 	if (auto* val = getNestedValue(obj, path)) {
 		if (val->is_string()) {
 			return std::string(val->as_string());
@@ -262,7 +262,7 @@ std::string JsonConverter::getNestedString(json::object& obj, const std::string&
 	return defaultValue;
 }
 
-std::set<std::string> JsonConverter::getNestedStringArray(json::object& obj, const std::string& path) {
+std::set<std::string> JsonConverter::getNestedStringArray(const json::object& obj, const std::string& path) {
 	std::set<std::string> result;
 	if (auto* val = getNestedValue(obj, path)) {
 		if (val->is_array()) {
@@ -276,7 +276,7 @@ std::set<std::string> JsonConverter::getNestedStringArray(json::object& obj, con
 	return result;
 }
 
-json::array JsonConverter::getJsonArray(const json::object& obj, const std::string& key) {
+const json::array JsonConverter::getJsonArray(const json::object& obj, const std::string& key) {
 	auto it = obj.find(key);
 	if (it != obj.end() && it->value().is_array()) {
 		return it->value().as_array();

@@ -453,7 +453,7 @@ public:
 	 * @param path The path string specifying the location of the nested object.
 	 * @return A pointer to the nested JSON object if found, or null if the path is invalid or the object does not exist.
 	 */
-	static json::object* getNestedObject(json::object& obj, const std::string& path);
+	static const json::object* getNestedObject(const json::object& obj, const std::string& path);
 
 	/**
 	 * @brief Retrieves a nested value from a JSON object using a path string.
@@ -480,7 +480,7 @@ public:
 	 * @param path The path string specifying the location of the nested value.
 	 * @return A pointer to the JSON value at the specified path, or nullptr if not found.
 	 */
-	static json::value* getNestedValue(json::object& obj, const std::string& path);
+	static const json::value* getNestedValue(const json::object& obj, const std::string& path);
 
 	/**
 	 * @brief Retrieves a nested integer value from a JSON object using a path string.
@@ -508,7 +508,7 @@ public:
 	 * @param defaultValue The default value to return if the path is not found or the value is not an integer. Defaults to 0.
 	 * @return The integer value at the specified path, or the default value if not found.
 	 */
-	static int getNestedInt(json::object& obj, const std::string& path, int defaultValue = 0);
+	static int getNestedInt(const json::object& obj, const std::string& path, int defaultValue = 0);
 
 	/**
 	 * @brief Retrieves a float value from a nested JSON object using a path string.
@@ -536,7 +536,7 @@ public:
 	 * @param defaultValue The default value to return if the path is not found or the value is not a float. Defaults to 0.0.
 	 * @return The float value at the specified path, or the default value if not found.
 	 */
-	static float getNestedFloat(json::object& obj, const std::string& path, float defaultValue = 0.0);
+	static float getNestedFloat(const json::object& obj, const std::string& path, float defaultValue = 0.0);
 
 	/**
 	 * @brief Retrieves a double value from a nested JSON object using a path string.
@@ -564,7 +564,7 @@ public:
 	 * @param defaultValue The default value to return if the path is not found or the value is not a double. Defaults to 0.0.
 	 * @return The double value at the specified path, or the default value if not found.
 	 */
-	static double getNestedDouble(json::object& obj, const std::string& path, double defaultValue = 0.0);
+	static double getNestedDouble(const json::object& obj, const std::string& path, double defaultValue = 0.0);
 
 	/**
 	 * @brief Retrieves a nested string value from a JSON object using a path notation.
@@ -591,7 +591,7 @@ public:
 	 * @param defaultValue The default value to return if the path is not found or the value is not a string. Defaults to an empty string.
 	 * @return The string value at the specified path, or the default value if not found.
 	 */
-	static std::string getNestedString(json::object& obj, const std::string& path, const std::string& defaultValue = "");
+	static std::string getNestedString(const json::object& obj, const std::string& path, const std::string& defaultValue = "");
 
 	/**
 	 * @brief Retrieves a nested array of strings from a JSON object using a path specification.
@@ -620,7 +620,7 @@ public:
 	 * @param path The path string specifying the location of the nested string array within the object.
 	 * @return A set containing the strings from the nested array.
 	 */
-	static std::set<std::string> getNestedStringArray(json::object& obj, const std::string& path);
+	static std::set<std::string> getNestedStringArray(const json::object& obj, const std::string& path);
 
 	/**
 	 * @brief Retrieves a string value from a JSON object by key, returning a default value if the key is not found.
@@ -709,7 +709,7 @@ public:
 	 * @param key The key associated with the array in the JSON object.
 	 * @return A JSON array if the key exists and is an array, otherwise an empty JSON array.
 	 */
-	static json::array getJsonArray(const json::object& obj, const std::string& key);
+	static const json::array getJsonArray(const json::object& obj, const std::string& key);
 
 	/**
 	 * @brief Retrieves an array of integers from a JSON object using the specified key.
