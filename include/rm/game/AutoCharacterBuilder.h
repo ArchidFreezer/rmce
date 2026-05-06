@@ -3,6 +3,7 @@
 #include <map>
 #include <PersistentObjectManager.h>
 #include <CharacterBuilder.h>
+#include <CharacterTraits.h>
 #include <SpellListType.h>
 
 namespace rm::serial {
@@ -89,11 +90,20 @@ public:
 	/**
 	 * @brief Automatically select initial choices for the character being built based on the traits defined in this AutoCharacterBuilder object.
 	 *
-	 * This methos deals with the base choices from the porofession and  culture of the character being built. The choices are governed by the traits defined in this AutoCharacterBuilder object, which are used to weight the selection of
+	 * This method deals with the base choices from the porofession and  culture of the character being built. The choices are governed by the traits defined in this AutoCharacterBuilder object, which are used to weight the selection of
 	 * skills and other choices for the character being built. The traits are defined on scales of 1 - 9 to allow for a median value of 5 to be used for random generation and to allow for more extreme values to be generated for unique
 	 * characters or MOBs if desired. They are initialised to 0 to indicate that they have not been set yet and to allow for the auto generation of these values if they are not set by the caller.
 	 */
 	void autoPrimaryChoices(CharacterBuilder& builder);
+
+	/**
+	 * @brief Automatically select hobby skill choices for the character being built based on the traits defined in this AutoCharacterBuilder object.
+	 *
+	 * This method deals with the hobby skill choices for the character being built. The choices are governed by the traits defined in this AutoCharacterBuilder object, which are used to weight the selection of skills and other choices
+	 * for the character being built. The traits are defined on scales of 1 - 9 to allow for a median value of 5 to be used for random generation and to allow for more extreme values to be generated for unique characters or MOBs if
+	 * desired. They are initialised to 0 to indicate that they have not been set yet and to allow for the auto generation of these values if they are not set by the caller.
+	 */
+	void autoHobbyChoices(CharacterBuilder& builder);
 
 private:
 	/* Basic data */
@@ -108,7 +118,8 @@ private:
 	 * The values are used for weighting the skill selection rather than stats as the stats are more of a means to an end for the character's abilities and the skills are what define the character's playstyle and role in the game, so it
 	 * makes more sense to use these values to weight the skill selection rather than the stat selection.
 	 */
-	int aggression_{0};       /**< An integer representing the aggression level of the character being built. */
+	CharacterTraits traits_{};
+
 	int combat_casting_{0};   /**< An integer representing whether the character prefers to use spells in combat (higher value) or not (lower value). */
 	int combat_closeness_{0}; /**< An integer representing whether the character prefers ranged attacks (low value) or melee (higher value). */
 	int focussed_{0};         /**< An integer representing whether the character prefers to focus on a single skill (higher value) or be more of a generalist (lower value). */

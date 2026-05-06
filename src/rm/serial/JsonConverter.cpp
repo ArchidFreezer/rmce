@@ -359,4 +359,38 @@ const json::object JsonConverter::setSkill(const SubcategoriedSkillData& skillDa
 	return obj;
 }
 
+const json::object* JsonConverter::getObject(const json::object& obj, std::string_view key) {
+	json::object ::const_iterator it = obj.find(key);
+	if (it != obj.end() && it->value().is_object()) {
+		return &it->value().as_object();
+	}
+	// If we get here then the key was not found or the value was not an object, so we return nullptr to indicate that the object could not be retrieved.
+	return nullptr;
+}
+
+rm::game::character::CharacterTraits JsonConverter::getCharacterTraits(const json::object& obj, std::string_view key) {
+	const json::object* trait_obj = getObject(obj, key);
+	rm::game::character::CharacterTraits traits;
+	if (!trait_obj) {
+		return traits; // Return default traits if the object is not found
+	}
+	traits.combat_ = getInt(*trait_obj, "combat");
+	traits.information_ = getInt(*trait_obj, "information");
+	traits.stealth_ = getInt(*trait_obj, "stealth");
+	traits.support_ = getInt(*trait_obj, "support");
+	traits.utility_ = getInt(*trait_obj, "utility");
+	return std::move(traits);
+}
+
+void JsonConverter::setCharacterTraits(json::object& obj, std::string_view key, const rm::game::character::CharacterTraits& traits) {
+	json::object trait_obj;
+	trait_obj["combat"] = traits.combat_;
+	trait_obj["information"] = traits.information_;
+	trait_obj["stealth"] = traits.stealth_;
+	trait_obj["support"] = traits.support_;
+	trait_obj["utility"] = traits.utility_;
+	obj[key] = trait_obj;
+}
+
+
 } // namespace rm::serial

@@ -443,7 +443,7 @@ void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 	}
 
 	// If the character has high Quickness bonus weight armour in favour of those with a smaller penalty unless going full melee.
-	if (aggression_ < 7 && combat_closeness_ < 7) {
+	if (traits_.combat_ < 7 && combat_closeness_ < 7) {
 		int quickness_db_bonus = builder.stats_[StatType::kQuickness].bonus() * 3;
 		if (quickness_db_bonus > 0) {
 			for (const auto& [armour_type_data, weight] : armour_weights) {
@@ -475,11 +475,29 @@ void AutoCharacterBuilder::setPreferredArmour(CharacterBuilder& builder) {
 }
 
 void AutoCharacterBuilder::ensureTraits() {
-	// We randomise these if they have not already been initialised.
-	if (!aggression_) {
-		aggression_ = archid::Dice(9).roll().result();
-		LOG_TRACE("AutoCharacterBuilder: Set aggression to {}.", aggression_);
+	/* Core characteristics that drive preferred abilities */
+	if (!traits_.combat_) {
+		traits_.combat_ = archid::Dice(9).roll().result();
+		LOG_TRACE("AutoCharacterBuilder: Set combat to {}.", traits_.combat_);
 	}
+	if (!traits_.information_) {
+		traits_.information_ = archid::Dice(9).roll().result();
+		LOG_TRACE("AutoCharacterBuilder: Set information to {}.", traits_.information_);
+	}
+	if (!traits_.stealth_) {
+		traits_.stealth_ = archid::Dice(9).roll().result();
+		LOG_TRACE("AutoCharacterBuilder: Set stealth to {}.", traits_.stealth_);
+	}
+	if (!traits_.support_) {
+		traits_.support_ = archid::Dice(9).roll().result();
+		LOG_TRACE("AutoCharacterBuilder: Set support to {}.", traits_.support_);
+	}
+	if (!traits_.utility_) {
+		traits_.utility_ = archid::Dice(9).roll().result();
+		LOG_TRACE("AutoCharacterBuilder: Set utility to {}.", traits_.utility_);
+	}
+
+	/* How combat is conducted */
 	if (!combat_casting_) {
 		combat_casting_ = archid::Dice(9).roll().result();
 		LOG_TRACE("AutoCharacterBuilder: Set combat casting to {}.", combat_casting_);
@@ -488,6 +506,8 @@ void AutoCharacterBuilder::ensureTraits() {
 		combat_closeness_ = archid::Dice(9).roll().result();
 		LOG_TRACE("AutoCharacterBuilder: Set combat closeness to {}.", combat_closeness_);
 	}
+
+	/* How to spend DPs on the preferred abilities */
 	if (!focussed_) {
 		focussed_ = archid::Dice(9).roll().result();
 		LOG_TRACE("AutoCharacterBuilder: Set focussed to {}.", focussed_);

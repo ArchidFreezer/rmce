@@ -11,7 +11,7 @@ json::value AutoCharacterBuilderSerializer::serializeObject(const AutoCharacterB
 	/*
 	 * Character trait varaibles used to assist in choices
 	 */
-	JsonConverter::setInt(obj, "aggression", ref.aggression_);
+	JsonConverter::setCharacterTraits(obj, "traits", ref.traits_);
 	JsonConverter::setInt(obj, "combatCloseness", ref.combat_closeness_);
 	JsonConverter::setInt(obj, "combatCasting", ref.combat_casting_);
 	JsonConverter::setInt(obj, "focussed", ref.focussed_);
@@ -28,8 +28,7 @@ const AutoCharacterBuilder& AutoCharacterBuilderSerializer::deserializeObject(js
 		id = tmp.id(); // Generate a new ID for this character builder
 	}
 
-	// Now we know we have an id, we can get the reference to the AutoCharacterBuilder that we will populate with data. This will be either the newly created one (if there was no ID in the JSON) or an existing one (if there was an ID in the
-	// JSON).
+	// Now we know we have an id, get the reference to the AutoCharacterBuilder that we will populate with data. This will be either the newly created one (if there was no ID in the JSON) or an existing one (if there was an ID in the JSON).
 	AutoCharacterBuilder& ref = manager_.get<AutoCharacterBuilder>(id);
 
 	// Identity + basic state
@@ -38,7 +37,7 @@ const AutoCharacterBuilder& AutoCharacterBuilderSerializer::deserializeObject(js
 	/*
 	 * Character trait varaibles used to assist in choices
 	 */
-	ref.aggression_ = JsonConverter::getInt(jsonObj, "aggression");
+	ref.traits_ = JsonConverter::getCharacterTraits(jsonObj, "traits");
 	ref.combat_closeness_ = JsonConverter::getInt(jsonObj, "combatCloseness");
 	ref.combat_casting_ = JsonConverter::getInt(jsonObj, "combatCasting");
 	ref.focussed_ = JsonConverter::getInt(jsonObj, "focussed");

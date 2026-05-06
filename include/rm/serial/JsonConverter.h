@@ -8,6 +8,7 @@
 #include <set>
 #include <sstream>
 #include <GameRuleDataChoice.h>
+#include <CharacterTraits.h>
 #include <LanguageRanks.h>
 #include <SubcategoriedSkillData.h>
 #include <PersistentObjectManager.h>
@@ -670,6 +671,14 @@ public:
 	 * @return The boolean value associated with the key, or the default value if the key is not found.
 	 */
 	static bool getBool(const json::object& obj, const std::string& key, bool default_value = false);
+
+	/**
+	 * @brief Retrieves a nested JSON object from a parent JSON object using the specified key.
+	 * @param obj The parent JSON object to search within.
+	 * @param key The key associated with the nested JSON object in the parent object.
+	 * @return The nested JSON object if found, or nullptr if key does not exist or the value is not an object.
+	 */
+	static const json::object* getObject(const json::object& obj, std::string_view key);
 
 	/**
 	 * @brief Retrieves an array of strings from a JSON object using the specified key.
@@ -1757,6 +1766,23 @@ public:
 	 * @return A JSON object representing the subcategorized skill data, which can be stored in a larger JSON structure.
 	 */
 	static const json::object setSkill(const SubcategoriedSkillData& skillData);
+
+	/**
+	 * @brief Retrieves character traits from a JSON object.
+	 * @param obj The JSON object containing the character traits data.
+	 * @param key The key associated with the character traits data in the JSON object.
+	 * @return A CharacterTraits object representing the character traits defined in the JSON object.
+	 */
+	static rm::game::character::CharacterTraits getCharacterTraits(const json::object& obj, std::string_view key);
+
+	/**
+	 * @brief Sets character traits in a JSON object.
+	 * 
+	 * @param obj The JSON object to modify with the character traits data.
+	 * @param key The key under which to store the character traits in the JSON object.
+	 * @param traits The CharacterTraits object containing the character traits data to be set in the
+	 */
+	static void setCharacterTraits(json::object& obj, std::string_view key, const rm::game::character::CharacterTraits& traits);
 
 private:
 	template<typename Primitive>
